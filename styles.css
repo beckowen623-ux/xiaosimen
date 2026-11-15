@@ -43,3 +43,21 @@ input[type=search]{width:100%;padding:11px 12px;border:1.5px solid var(--line);b
 .foot{color:var(--muted);font-size:12px;text-align:center;margin-top:24px}
 .kv{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:7px 0;font-size:14px}
 .kv:last-child{border-bottom:0}
+.qfig-img{max-width:100%;border:1px solid var(--line);border-radius:10px;cursor:zoom-in;display:block;margin:8px 0 4px}
+.fig-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:999;padding:16px}
+.fig-overlay.open{display:flex}
+.fig-overlay img{max-width:100%;max-height:86vh;object-fit:contain;background:#fff;border-radius:8px}
+.fig-overlay-tip{color:#fff;font-size:13px;margin-top:10px}
+/* 打卡 / 积分 */
+.checkin{background:linear-gradient(180deg,#fefce8,#fff);border-color:#fde68a}
+.checkin-nums{font-size:16px}
+.checkin-nums b{color:var(--brand);font-size:20px}
+.tag{display:inline-block;background:#f59e0b;color:#fff;border-radius:999px;padding:1px 8px;font-size:12px;vertical-align:2px}
+.points-bar{height:10px;background:#e5e7eb;border-radius:999px;overflow:hidden;margin:8px 0}
+.points-bar>i{display:block;height:100%;background:#f59e0b}
+.badges{margin-top:10px}
+.badge{display:inline-block;background:#fef3c7;border:1px solid #fcd34d;border-radius:999px;padding:3px 10px;font-size:13px;margin:2px 4px 2px 0}
+.kv.weak span{color:var(--bad);font-weight:600}
+.encourage{color:var(--good);font-weight:600;margin-top:8px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:#1f2937;color:#fff;padding:11px 18px;border-radius:999px;font-size:14px;max-width:88vw;text-align:center;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:1000}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}

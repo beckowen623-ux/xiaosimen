@@ -2353,6 +2353,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h03-q055", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      image: true,
       number: 55, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "2026年福建中考·地理第5题",
@@ -4696,6 +4697,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h04-q073", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      image: true,
       number: 73, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "2025年四川省广安市中考地理试题第20题",
@@ -4960,6 +4962,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h05-q085", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      image: true,
       number: 85, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年广东省深圳市中考地理试题（北美洲组）第1题",

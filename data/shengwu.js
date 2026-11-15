@@ -6557,6 +6557,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q152", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 152, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年福建省初中学业水平考试·生物第34题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -6887,6 +6888,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q100", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 100, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -6898,6 +6900,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q101", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 101, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -6909,6 +6912,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q102", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 102, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(4)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -6920,6 +6924,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q103", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 103, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(5)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
