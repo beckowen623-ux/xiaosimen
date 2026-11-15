@@ -221,7 +221,7 @@ function loadScript(src) {
   });
 }
 async function ensureBanks(subjectKeys) {
-  for (const key of subjectKeys) await loadScript(SUBJECTS[key].file + '?v=2');
+  for (const key of subjectKeys) await loadScript(SUBJECTS[key].file + '?v=3');
   return window.XIAOSIMEN_BANKS || {};
 }
 function allQuestions(banks, subjectKeys) {
@@ -382,6 +382,10 @@ function checkinCardHTML(all, progress) {
   const base = prevM ? prevM.points : 0;
   const pct = nextM ? Math.min(100, Math.round((c.totalPoints - base) / (nextM.points - base) * 100)) : 100;
   const madeUpToday = c.lastMakeupDate === todayStr();
+  const allBadges = [
+    ...POINT_MILESTONES.map(m => ({ name: m.name, req: `${m.points}分`, got: c.badges.includes(m.name) })),
+    ...STREAK_BADGES.map(b => ({ name: b.name, req: `连续${b.days}天`, got: c.badges.includes(b.name) })),
+  ];
   let statusLine = '';
   if (st.alreadyDone) statusLine = '今天已打卡 ✓ 明天继续来。';
   else if (st.isMakeupDay && st.makeupAllowed) statusLine = `昨天漏打了，今天可以补打：先清错题，再做 ${MAKEUP_FRESH_TARGET} 道新题，补上后连续天数接上。本月已补打 ${st.makeupUsed}/${st.makeupLimit} 次。`;
@@ -402,7 +406,10 @@ function checkinCardHTML(all, progress) {
         : `<button class="btn primary" id="checkinBtn" ${st.canCheckin ? '' : 'disabled'}>${st.isMakeupDay && st.makeupAllowed ? '补打并打卡' : '打卡'}</button>`}
     </div>
     ${st.canCheckin && st.clearN === 0 && !st.alreadyDone ? '<p class="muted">可以打卡了！</p>' : ''}
-    <p class="badges">${c.badges.length ? c.badges.map(b => `<span class="badge">🏅 ${esc(b)}</span>`).join('') : '<span class="muted">还没有徽章，打卡攒积分来拿。</span>'}</p>
+    <div class="badges">
+      <p class="muted">称号与徽章（没拿到的灰色显示）：</p>
+      ${allBadges.map(b => b.got ? `<span class="badge">🏅 ${esc(b.name)}</span>` : `<span class="badge locked">🔒 ${esc(b.name)} · ${esc(b.req)}</span>`).join('')}
+    </div>
   </section>`;
 }
 function sundayCardHTML(all, progress) {
@@ -573,7 +580,7 @@ async function showFigure(q) {
   const qid = q.id;
   const box = document.getElementById('qfig'); if (!box) return;
   try {
-    if (!window.XIAOSIMEN_FIGURES) await loadScript('./data/figures.js?v=2');
+    if (!window.XIAOSIMEN_FIGURES) await loadScript('./data/figures.js?v=3');
     // 用户可能已跳到下一题：只给当前这道题填图。
     if (!state.queue[state.idx] || state.queue[state.idx].id !== qid) return;
     const src = window.XIAOSIMEN_FIGURES && window.XIAOSIMEN_FIGURES[qid];
