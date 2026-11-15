@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小四门刷题 · 福州人教版</title>
+<meta name="description" content="福州人教版初中小四门（道德与法治、历史、地理、生物）碎片化刷题：选年级学期，自动排刷题顺序，错题按1/3/7天复习。">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./styles.css?v=1">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div>
+      <h1>小四门刷题</h1>
+      <p class="subtitle">福州 · 人教版 · 道法 / 历史 / 地理 / 生物</p>
+    </div>
+    <div class="streak" id="streakBox">连续学习 <b id="streakDays">0</b> 天</div>
+  </header>
+
+  <main id="view"></main>
+
+  <footer class="foot">
+    <p>进度只保存在本机浏览器（localStorage），换设备会丢失。题库为选择题知识题，答案与解析以人教版教材为准。</p>
+  </footer>
+</div>
+<script src="./data/daily-questions-xiaosimen.js?v=1"></script>
+<script src="./app.js?v=1"></script>
+</body>
+</html>
