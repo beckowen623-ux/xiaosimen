@@ -187,3 +187,7 @@
 - 删除四科主库里全部自创题（source 为 "自创-待替换"）：道法 142、历史 159、地理 158、生物 148，共 607 道；id 不重排、留空号；真题一题未动（删除脚本复核：保留题与删除前逐题比对一致，total 与章节 count 同步改）。备份在 `data/sourced/backup-<科目>-before-delete-selfcreated.js`。
 - 每日一题 28 道自创题已用第十波暂存的真题替换（每科 7 道，staging 在 `data/sourced/batch-10-*.js` 末尾 `BATCH10_*_DAILY`，startDate 2026-11-15 不变，脚本 `data/sourced/replace-daily-batch10.mjs`，备份在 `data/sourced/backup-daily-before-replace-real.js`）。
 - 删除后全库 **2400 道真题（每科 600）+ 每日一题 28 道真题**；`node tests/validate.mjs` PASS。
+
+## 2026-11-16 美化与修题（清新校园风）
+- daode-h05-q129（2025 江西第 1 题，二十届三中全会）：解析原为“时政题，解析略。”，已补写三中全会审议通过《决定》及 A/B/C 非三中全会文件。
+- daode-h05-q130（2025 江西第 2 题，“梦想”号）：解析原为“本题考查时政，解析略。”，已补写“梦想”号首艘大洋钻探船及三项干扰项身份。

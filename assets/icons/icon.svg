@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="小四门刷题">
+  <rect width="512" height="512" rx="96" fill="#0f766e"/>
+  <text x="256" y="300" font-size="230" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="700">四</text>
+  <rect x="96" y="360" width="320" height="26" rx="13" fill="#ffffff" opacity="0.9"/>
+  <rect x="128" y="404" width="256" height="16" rx="8" fill="#ffffff" opacity="0.55"/>
+</svg>
