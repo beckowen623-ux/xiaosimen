@@ -1,312 +1,42 @@
 window.XIAOSIMEN_BANKS ||= {};
 window.XIAOSIMEN_BANKS["dili"] = {
-  title: "地理", examLabel: "初中小四门", total: 616,
+  title: "地理", examLabel: "初中小四门", total: 600,
   chapters: [
-    { id: 1, title: "七年级上册 · 地球与地图", count: 103 },
-    { id: 2, title: "七年级下册 · 我们生活的大洲", count: 103 },
-    { id: 3, title: "八年级上册 · 从世界看中国", count: 96 },
-    { id: 4, title: "八年级下册 · 中国的地理差异", count: 112 },
-    { id: 5, title: "九年级上册 · 地理总复习（七年级）", count: 113 },
-    { id: 6, title: "九年级下册 · 地理总复习（八年级）", count: 89 }
+    { id: 1, title: "七年级上册 · 地球与地图", count: 102 },
+    { id: 2, title: "七年级下册 · 我们生活的大洲", count: 108 },
+    { id: 3, title: "八年级上册 · 从世界看中国", count: 91 },
+    { id: 4, title: "八年级下册 · 中国的地理差异", count: 107 },
+    { id: 5, title: "九年级上册 · 地理总复习（七年级）", count: 95 },
+    { id: 6, title: "九年级下册 · 地理总复习（八年级）", count: 97 }
   ],
   questions: [
-    {
-      id: "dili-h01-q001", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 1, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "地球的形状是（ ）。",
-      options: [{key:"A",text:"正圆球体"}, {key:"B",text:"两极稍扁、赤道略鼓的不规则球体"}, {key:"C",text:"圆柱体"}, {key:"D",text:"平面圆盘"}],
-      answer: ["B"],
-      explanation: "地球是一个两极稍扁、赤道略鼓的不规则球体，并不是正圆球体。",
-      trap: "易错点：不要选“正圆球体”，地球只是近似球体，两极部位略扁。"
-    },
-    {
-      id: "dili-h01-q002", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 2, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "地球的平均半径约为（ ）。",
-      options: [{key:"A",text:"约6357千米"}, {key:"B",text:"约6371千米"}, {key:"C",text:"约12742千米"}, {key:"D",text:"约40000千米"}],
-      answer: ["B"],
-      explanation: "地球的平均半径约6371千米，极半径约6357千米，赤道半径约6378千米，赤道周长约4万千米。",
-      trap: "易错点：约12742千米是地球的平均直径，约40000千米是赤道周长，不要混淆。"
-    },
-    {
-      id: "dili-h01-q003", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 3, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "赤道的周长约为（ ）。",
-      options: [{key:"A",text:"约2万千米"}, {key:"B",text:"约4万千米"}, {key:"C",text:"约6万千米"}, {key:"D",text:"约8万千米"}],
-      answer: ["B"],
-      explanation: "赤道是地球上最长的纬线圈，其周长约4万千米。",
-      trap: "易错点：赤道周长约4万千米，毛泽东诗句“坐地日行八万里”说的正是赤道周长约4万千米（八万里）。"
-    },
-    {
-      id: "dili-h01-q004", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 4, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "本初子午线是指（ ）。",
-      options: [{key:"A",text:"0°纬线"}, {key:"B",text:"0°经线"}, {key:"C",text:"180°经线"}, {key:"D",text:"赤道"}],
-      answer: ["B"],
-      explanation: "本初子午线就是0°经线，通过英国伦敦格林尼治天文台旧址，是东西经度的分界线。",
-      trap: "易错点：0°纬线是赤道，180°经线是国际日期变更线附近的经线，不要与本初子午线混淆。"
-    },
-    {
-      id: "dili-h01-q005", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 5, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "地球上最长的纬线是（ ）。",
-      options: [{key:"A",text:"北回归线"}, {key:"B",text:"南极圈"}, {key:"C",text:"赤道"}, {key:"D",text:"北极圈"}],
-      answer: ["C"],
-      explanation: "赤道是0°纬线，是地球上最长的纬线圈，纬度越高，纬线圈越短。",
-      trap: "易错点：纬线长度从赤道向两极递减，南北极点缩为一点。"
-    },
-    {
-      id: "dili-h01-q006", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 6, type: "multiple", meta: "多选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "关于经线和纬线的说法，正确的是（ ）。",
-      options: [{key:"A",text:"经线指示南北方向"}, {key:"B",text:"纬线指示东西方向"}, {key:"C",text:"所有经线的长度都相等"}, {key:"D",text:"所有纬线的长度都相等"}],
-      answer: ["A","B","C"],
-      explanation: "经线是连接南北两极的半圆，指示南北方向，长度都相等；纬线是与赤道平行的圆圈，指示东西方向，长度从赤道向两极递减，并不相等。",
-      trap: "易错点：只有经线长度相等，纬线长度不等，赤道最长。"
-    },
-    {
-      id: "dili-h01-q007", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 7, type: "judge", meta: "判断题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "地球自转的方向是自西向东，从北极上空看呈逆时针方向。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "地球自转方向是自西向东，从北极上空看呈逆时针方向，从南极上空看呈顺时针方向。",
-      trap: "易错点：从南极上空看是顺时针，判断时要看清题干说的是北极还是南极。"
-    },
-    {
-      id: "dili-h01-q008", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 8, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "地球自转一周的时间约为（ ），产生的地理现象主要是（ ）。",
-      options: [{key:"A",text:"约24小时，昼夜交替"}, {key:"B",text:"约一年，四季变化"}, {key:"C",text:"约24小时，四季变化"}, {key:"D",text:"约一年，昼夜交替"}],
-      answer: ["A"],
-      explanation: "地球自转一周约24小时（一昼夜），产生昼夜交替和时间差异；公转一周约一年，产生四季变化。",
-      trap: "易错点：自转对应昼夜交替，公转对应四季变化，不要颠倒。"
-    },
-    {
-      id: "dili-h01-q009", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 9, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "地球公转一周的时间约为（ ），产生的地理现象主要是（ ）。",
-      options: [{key:"A",text:"约24小时，昼夜交替"}, {key:"B",text:"约一年，四季变化和昼夜长短变化"}, {key:"C",text:"约一个月，潮汐变化"}, {key:"D",text:"约一年，昼夜交替"}],
-      answer: ["B"],
-      explanation: "地球公转一周约一年，公转时地轴倾斜、太阳直射点南北移动，造成四季变化和昼夜长短变化。",
-      trap: "易错点：四季变化是公转造成的，不是由自转造成的。"
-    },
-    {
-      id: "dili-h01-q010", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 10, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "地图的三要素是（ ）。",
-      options: [{key:"A",text:"比例尺、方向、图例"}, {key:"B",text:"经线、纬线、赤道"}, {key:"C",text:"图名、图例、注记"}, {key:"D",text:"比例尺、等高线、方向"}],
-      answer: ["A"],
-      explanation: "地图的三要素是比例尺、方向和图例，缺一不可。",
-      trap: "易错点：图名和注记也很常见，但不是地图三要素。"
-    },
-    {
-      id: "dili-h01-q011", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 11, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "在图幅相同的情况下，比例尺越大，地图表示的范围和内容分别是（ ）。",
-      options: [{key:"A",text:"范围越大，内容越简略"}, {key:"B",text:"范围越小，内容越详细"}, {key:"C",text:"范围越大，内容越详细"}, {key:"D",text:"范围越小，内容越简略"}],
-      answer: ["B"],
-      explanation: "图幅相同，比例尺越大，表示的实地范围越小，内容越详细；比例尺越小，范围越大，内容越简略。",
-      trap: "易错点：比例尺大小与范围大小成反比，与内容详略成正比。"
-    },
-    {
-      id: "dili-h01-q012", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 12, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "在等高线地形图上，等高线密集的地方表示（ ）。",
-      options: [{key:"A",text:"坡度较缓"}, {key:"B",text:"坡度较陡"}, {key:"C",text:"海拔较低"}, {key:"D",text:"海拔较高"}],
-      answer: ["B"],
-      explanation: "等高线密集，说明单位距离内海拔变化大，坡度较陡；等高线稀疏，坡度较缓。",
-      trap: "易错点：等高线疏密反映坡度陡缓，不直接反映海拔高低。"
-    },
-    {
-      id: "dili-h01-q013", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 13, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "海拔是指地面某点高出（ ）的垂直距离。",
-      options: [{key:"A",text:"另一地点"}, {key:"B",text:"海平面"}, {key:"C",text:"山顶"}, {key:"D",text:"河面"}],
-      answer: ["B"],
-      explanation: "海拔是地面某点高出海平面的垂直距离；相对高度是地面某点高出另一地点的垂直距离。",
-      trap: "易错点：海拔的基准面是海平面，相对高度的基准是另一地点，不要混淆。"
-    },
-    {
-      id: "dili-h01-q014", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 14, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "世界上面积最大的大洲是（ ）。",
-      options: [{key:"A",text:"非洲"}, {key:"B",text:"北美洲"}, {key:"C",text:"亚洲"}, {key:"D",text:"欧洲"}],
-      answer: ["C"],
-      explanation: "亚洲是世界上面积最大的大洲，面积约4400万平方千米，也是世界上人口最多的大洲。",
-      trap: "易错点：七大洲按面积由大到小是亚洲、非洲、北美洲、南美洲、南极洲、欧洲、大洋洲。"
-    },
-    {
-      id: "dili-h01-q015", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 15, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "聚落的主要形式是（ ）。",
-      options: [{key:"A",text:"乡村和城市"}, {key:"B",text:"工厂和学校"}, {key:"C",text:"村庄和牧场"}, {key:"D",text:"集镇和港口"}],
-      answer: ["A"],
-      explanation: "聚落是人类聚居和生活的场所，主要形式有乡村和城市两大类。",
-      trap: "易错点：聚落按规模和性质分为乡村和城市，工厂、学校只是聚落内的设施。"
-    },
-    {
-      id: "dili-h01-q016", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 16, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "下列不属于全球六大板块的是（ ）。",
-      options: [{key:"A",text:"亚欧板块"}, {key:"B",text:"非洲板块"}, {key:"C",text:"印度洋板块"}, {key:"D",text:"大西洋板块"}],
-      answer: ["D"],
-      explanation: "全球岩石圈由六大板块拼合而成：太平洋板块、亚欧板块、非洲板块、美洲板块、印度洋板块和南极洲板块，没有大西洋板块。",
-      trap: "易错点：六大板块中没有大西洋板块，太平洋板块是唯一几乎全部由海洋组成的板块。"
-    },
-    {
-      id: "dili-h01-q017", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 17, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "喜马拉雅山脉不断升高，主要是因为（ ）。",
-      options: [{key:"A",text:"亚欧板块与印度洋板块碰撞挤压"}, {key:"B",text:"非洲板块与印度洋板块张裂拉伸"}, {key:"C",text:"太平洋板块俯冲到美洲板块之下"}, {key:"D",text:"亚欧板块与太平洋板块张裂"}],
-      answer: ["A"],
-      explanation: "喜马拉雅山脉位于亚欧板块与印度洋板块的碰撞挤压地带，两大板块不断挤压使山脉持续升高。",
-      trap: "易错点：板块碰撞挤压形成高大山脉，板块张裂拉伸形成裂谷和海洋。"
-    },
-    {
-      id: "dili-h01-q018", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 18, type: "judge", meta: "判断题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "红海是由于非洲板块与印度洋板块张裂拉伸形成的，并且面积还在不断扩大。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "红海位于非洲板块与印度洋板块的张裂地带，两大板块不断张裂拉伸，红海面积不断扩大，未来可能形成新的大洋。",
-      trap: "易错点：红海扩大是张裂的例子，地中海缩小是碰撞挤压的例子，两者不要颠倒。"
-    },
-    {
-      id: "dili-h01-q019", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 19, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "亚洲与欧洲的分界线是（ ）。",
-      options: [{key:"A",text:"苏伊士运河"}, {key:"B",text:"白令海峡"}, {key:"C",text:"乌拉尔山脉、乌拉尔河、里海、大高加索山脉、黑海、土耳其海峡"}, {key:"D",text:"巴拿马运河"}],
-      answer: ["C"],
-      explanation: "亚洲与欧洲的分界线是乌拉尔山脉、乌拉尔河、里海、大高加索山脉、黑海、土耳其海峡；苏伊士运河是亚非分界线，白令海峡是亚美分界线，巴拿马运河是南北美洲分界线。",
-      trap: "易错点：四条分界线要成组记：亚欧、亚非（苏伊士运河）、亚美（白令海峡）、南北美洲（巴拿马运河）。"
-    },
-    {
-      id: "dili-h01-q020", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 20, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "四大洋中面积最大和最小的分别是（ ）。",
-      options: [{key:"A",text:"太平洋、北冰洋"}, {key:"B",text:"大西洋、印度洋"}, {key:"C",text:"太平洋、印度洋"}, {key:"D",text:"大西洋、北冰洋"}],
-      answer: ["A"],
-      explanation: "四大洋按面积由大到小是太平洋、大西洋、印度洋、北冰洋，太平洋最大，北冰洋最小。",
-      trap: "易错点：四大洋面积顺序是太平洋、大西洋、印度洋、北冰洋，印度洋比北冰洋大得多。"
-    },
-    {
-      id: "dili-h01-q021", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 21, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "“明天多云转晴，气温18—25℃”描述的是（ ）。",
-      options: [{key:"A",text:"气候"}, {key:"B",text:"天气"}, {key:"C",text:"四季变化"}, {key:"D",text:"昼夜长短"}],
-      answer: ["B"],
-      explanation: "天气是指一个地区短时间里的大气状况，是多变的；“明天多云转晴”是短时间的阴晴冷暖变化，描述的是天气。气候是指一个地区多年的平均天气状况，比较稳定。",
-      trap: "易错点：天气是短时间、多变的；气候是长时间、稳定的，看到“明天”“今天”多半是天气。"
-    },
-    {
-      id: "dili-h01-q022", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 22, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "世界年平均气温的分布规律是（ ）。",
-      options: [{key:"A",text:"由低纬度向高纬度递减"}, {key:"B",text:"由高纬度向低纬度递减"}, {key:"C",text:"由沿海向内陆递减"}, {key:"D",text:"各地大致相同"}],
-      answer: ["A"],
-      explanation: "世界年平均气温由低纬度向高纬度递减，赤道附近气温高，两极地区气温低，因为纬度越低，获得的太阳热量越多。",
-      trap: "易错点：气温高低主要受纬度因素影响，低纬高、高纬低；同纬度地区海陆和地形也会造成差异。"
-    },
-    {
-      id: "dili-h01-q023", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 23, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "世界年降水量最丰富的地区是（ ）。",
-      options: [{key:"A",text:"两极地区"}, {key:"B",text:"回归线附近的大陆西岸"}, {key:"C",text:"赤道附近地区"}, {key:"D",text:"南北纬40°—60°的大陆内部"}],
-      answer: ["C"],
-      explanation: "赤道附近地区气温高、空气受热上升，多对流雨，年降水量丰富；两极地区寒冷干燥、降水少，回归线附近大陆西岸受副热带高气压带控制，降水很少。",
-      trap: "易错点：赤道多雨、两极少雨；回归线附近是大陆东岸多雨、西岸少雨。"
-    },
-    {
-      id: "dili-h01-q024", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 24, type: "multiple", meta: "多选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "关于地中海气候的说法，正确的是（ ）。",
-      options: [{key:"A",text:"夏季炎热干燥"}, {key:"B",text:"冬季温和多雨"}, {key:"C",text:"主要分布在南北纬30°—40°的大陆西岸"}, {key:"D",text:"全年高温多雨"}],
-      answer: ["A","B","C"],
-      explanation: "地中海气候夏季受副热带高气压带控制，炎热干燥；冬季受西风带控制，温和多雨，主要分布在南北纬30°—40°的大陆西岸，如地中海沿岸。全年高温多雨是热带雨林气候的特征。",
-      trap: "易错点：地中海气候是“夏干冬雨”，与热带雨林气候的“全年高温多雨”正好相反。"
-    },
-    {
-      id: "dili-h01-q025", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 25, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "黄色人种主要分布在（ ）。",
-      options: [{key:"A",text:"欧洲"}, {key:"B",text:"非洲"}, {key:"C",text:"亚洲东部"}, {key:"D",text:"大洋洲"}],
-      answer: ["C"],
-      explanation: "世界三大人种中，黄色人种主要分布在亚洲东部，白色人种主要分布在欧洲、北美洲和大洋洲，黑色人种主要分布在非洲的中部和南部。",
-      trap: "易错点：人种分布要按大洲记：黄色人种在亚洲东部，黑色人种在非洲中南部，白色人种分布最广。"
-    },
-    {
-      id: "dili-h01-q026", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 26, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "我国南方地区的聚落多沿河分布，主要原因是（ ）。",
-      options: [{key:"A",text:"沿河地区水源充足、交通便利、土壤肥沃"}, {key:"B",text:"沿河地区地势高、不怕洪水"}, {key:"C",text:"沿河地区矿产资源丰富"}, {key:"D",text:"沿河地区气候寒冷"}],
-      answer: ["A"],
-      explanation: "聚落的形成和发展与水源、地形、交通等因素密切相关，南方地区聚落多沿河分布，因为沿河地区取水方便、交通便利、土壤肥沃，适宜居住和生产。",
-      trap: "易错点：聚落选址首先看水源和地形，平原地区聚落多沿河、沿交通线分布，山区聚落多分布在河谷低地。"
-    },
-    {
-      id: "dili-h01-q027", chapterId: 1, chapter: "七年级上册 · 地球与地图",
-      number: 27, type: "multiple", meta: "多选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "关于发达国家和发展中国家的说法，正确的是（ ）。",
-      options: [{key:"A",text:"发达国家主要分布在欧洲、北美洲和大洋洲"}, {key:"B",text:"发展中国家主要分布在亚洲、非洲和拉丁美洲"}, {key:"C",text:"发达国家与发展中国家之间的商谈称为“南北对话”"}, {key:"D",text:"发展中国家之间的合作称为“南北合作”"}],
-      answer: ["A","B","C"],
-      explanation: "发达国家主要分布在欧洲、北美洲和大洋洲，发展中国家主要分布在亚洲、非洲和拉丁美洲；发达国家与发展中国家之间的商谈称为“南北对话”，发展中国家之间的合作称为“南南合作”。",
-      trap: "易错点：“南南合作”是发展中国家之间的合作，“南北对话”是发达国家与发展中国家之间的商谈，不要混淆。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "dili-h01-q028", chapterId: 1, chapter: "七年级上册 · 地球与地图",
       number: 28, type: "single", meta: "单选题",
@@ -397,6 +127,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q036", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 36, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2024年福建中考地理变式题（《2024年福建省中考地理试题1-6题原题及变式题》book118试读版，文档内第9题；非原卷第9题）",
@@ -474,6 +205,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q043", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 43, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2022年中考地理考前信息必刷卷01（福建专用）第1题",
@@ -485,6 +217,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q044", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 44, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2022年中考地理考前信息必刷卷01（福建专用）第2题",
@@ -496,6 +229,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q045", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 45, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2022年中考地理考前信息必刷卷01（福建专用）第3题",
@@ -573,6 +307,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q052", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 52, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2018年山东省潍坊市中考地理试题第7题",
@@ -584,6 +319,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q053", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 53, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2018年山东省潍坊市中考地理试题第9题",
@@ -628,6 +364,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q057", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 57, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2019年福建省中考地理试题第3题（图中甲地位于中亚、经纬度递增方向改写为文字）",
@@ -639,6 +376,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q058", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 58, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2019年福建省中考地理试题第4题（图中甲地与北京的东西位置关系改写为文字）",
@@ -749,6 +487,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q068", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 68, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年福建中考·地理第1题（原题依托天气预报图，图中最高气温29℃、最低气温24℃的信息改写为文字，知识点、选项与答案未改）",
@@ -760,6 +499,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q069", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 69, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年福建中考·地理第2题（原题依托天气预报图，图中有降雨天气符号、紫外线弱、西南风2级的信息改写为文字，知识点、选项与答案未改）",
@@ -771,6 +511,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q070", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 70, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2025年福建中考·地理第3题",
@@ -782,6 +523,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q071", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 71, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2025年福建中考·地理第4题",
@@ -826,6 +568,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q075", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 75, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2026年福建中考·地理第18题（原题四个选项为天气符号图，符号所表示的天气改写为文字，知识点、选项与答案未改）",
@@ -857,28 +600,8 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "同一时刻，越往西的地方地方时越晚，正午（北京时间）来得越晚；④的观测时间最晚（13时15分），说明它最偏西。",
       trap: "易错点：正午来得越晚，位置越偏西；不要按'时间早就是西边'来想反了。"
     },
-    {
-      id: "dili-h02-q001", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 1, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "亚洲是世界上面积最大的大洲，其面积约为（ ）。",
-      options: [{key:"A",text:"约3000万平方千米"}, {key:"B",text:"约4400万平方千米"}, {key:"C",text:"约2400万平方千米"}, {key:"D",text:"约1800万平方千米"}],
-      answer: ["B"],
-      explanation: "亚洲面积约4400万平方千米，是世界上面积最大的大洲，约占世界陆地总面积的三分之一。",
-      trap: "易错点：约3000万平方千米是撒哈拉以南非洲的大致面积量级，不要张冠李戴。"
-    },
-    {
-      id: "dili-h02-q002", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 2, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "日本多火山、地震的主要原因是（ ）。",
-      options: [{key:"A",text:"位于亚欧板块与太平洋板块的交界处，地壳活动活跃"}, {key:"B",text:"位于板块内部，地壳稳定"}, {key:"C",text:"四面环海，气候湿润"}, {key:"D",text:"地形以山地丘陵为主"}],
-      answer: ["A"],
-      explanation: "日本位于亚欧板块与太平洋板块的交界处，地壳活动活跃，所以多火山、地震。",
-      trap: "易错点：火山、地震多分布在板块交界处，板块内部相对稳定。"
-    },
+
+
     {
       id: "dili-h02-q003", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
       number: 3, type: "single", meta: "单选题",
@@ -889,61 +612,11 @@ window.XIAOSIMEN_BANKS["dili"] = {
       answer: ["A"],
       explanation: "大连到鹿特丹的传统航道要经过马六甲海峡、苏伊士运河、直布罗陀海峡；莫桑比克海峡在非洲东南部，德雷克海峡在南美洲南端，土耳其海峡沟通黑海与地中海，都不在这条传统航道上。"
     },
-    {
-      id: "dili-h02-q004", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 4, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "印度大部分地区属于热带季风气候，一年明显分为（ ）。",
-      options: [{key:"A",text:"春季和秋季"}, {key:"B",text:"旱季和雨季"}, {key:"C",text:"寒季和暖季"}, {key:"D",text:"梅雨季和台风季"}],
-      answer: ["B"],
-      explanation: "印度以热带季风气候为主，一年分旱季和雨季。雨季时西南季风带来大量降水，若来得早、退得晚或风力强弱异常，容易造成水旱灾害。",
-      trap: "易错点：印度雨季降水主要来自西南季风，不是东北季风。"
-    },
-    {
-      id: "dili-h02-q005", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 5, type: "multiple", meta: "多选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "关于俄罗斯的说法，正确的是（ ）。",
-      options: [{key:"A",text:"地跨亚欧两洲"}, {key:"B",text:"世界上面积最大的国家"}, {key:"C",text:"首都莫斯科"}, {key:"D",text:"人口主要分布在亚洲部分"}],
-      answer: ["A","B","C"],
-      explanation: "俄罗斯地跨亚欧两洲，是世界上面积最大的国家，首都为莫斯科。俄罗斯人口和经济主要集中在欧洲部分，亚洲部分地广人稀。",
-      trap: "易错点：俄罗斯领土大部在亚洲，但人口主要分布在欧洲部分。"
-    },
-    {
-      id: "dili-h02-q006", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 6, type: "judge", meta: "判断题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "美国的首都是华盛顿，最大城市是纽约。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "美国的首都是华盛顿，最大城市是纽约。华盛顿是政治中心，纽约是最大的工商业城市和港口。",
-      trap: "易错点：不要把美国首都错记为纽约，纽约是最大城市，不是首都。"
-    },
-    {
-      id: "dili-h02-q007", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 7, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "美国农业生产的主要特点是（ ）。",
-      options: [{key:"A",text:"地区专门化、机械化程度高，商品率高"}, {key:"B",text:"以小农经营为主，机械化程度低"}, {key:"C",text:"主要依靠人力，商品率低"}, {key:"D",text:"粮食不能自给，大量进口"}],
-      answer: ["A"],
-      explanation: "美国农业实行地区专门化生产，机械化程度高，商品率高，是世界上的农业大国。",
-      trap: "易错点：美国农业不是小农经营，而是高度商品化的专门化生产。"
-    },
-    {
-      id: "dili-h02-q008", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 8, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "南极洲的气候特点是（ ）。",
-      options: [{key:"A",text:"温暖湿润"}, {key:"B",text:"酷寒、干燥、烈风"}, {key:"C",text:"高温多雨"}, {key:"D",text:"四季分明"}],
-      answer: ["B"],
-      explanation: "南极洲是世界上最寒冷的大洲，气候酷寒、干燥、多烈风，被称为“冰雪高原”“白色沙漠”。",
-      trap: "易错点：南极洲年降水量很少，虽冰雪覆盖却属于干燥的寒冷荒漠气候特征。"
-    },
+
+
+
+
+
     {
       id: "dili-h02-q009", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
       number: 9, type: "single", meta: "单选题",
@@ -954,204 +627,24 @@ window.XIAOSIMEN_BANKS["dili"] = {
       answer: ["A"],
       explanation: "亚洲水系呈放射状，河流从中部流向四周，说明亚洲地势中间高、四周低；河流由高处流向低处，放射状水系只能由中部高原、山地向四周发源形成。"
     },
-    {
-      id: "dili-h02-q010", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 10, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "亚洲河流的流向特点是（ ）。",
-      options: [{key:"A",text:"都自西向东流"}, {key:"B",text:"都自北向南流"}, {key:"C",text:"呈放射状流向周边的海洋"}, {key:"D",text:"都注入北冰洋"}],
-      answer: ["C"],
-      explanation: "亚洲地势中部高、四周低，河流多发源于中部高原和山地，呈放射状流向太平洋、印度洋、北冰洋等周边海洋。",
-      trap: "易错点：河流流向受地势决定，亚洲中部高、四周低，所以河流呈放射状。"
-    },
-    {
-      id: "dili-h02-q011", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 11, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "亚洲气候的显著特征是（ ）。",
-      options: [{key:"A",text:"气候单一，以温带海洋性气候为主"}, {key:"B",text:"气候复杂多样，季风气候显著，温带大陆性气候分布广"}, {key:"C",text:"全年高温多雨"}, {key:"D",text:"全年温和湿润"}],
-      answer: ["B"],
-      explanation: "亚洲气候复杂多样，季风气候显著，温带大陆性气候分布广；亚洲地跨寒、温、热三带，是世界上气候类型最多的大洲。",
-      trap: "易错点：亚洲气候类型最多，季风气候显著是其突出特征，不要只记一种气候。"
-    },
-    {
-      id: "dili-h02-q012", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 12, type: "judge", meta: "判断题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "亚洲是世界上跨纬度最广、东西距离最长的大洲。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "亚洲地跨寒、温、热三带，是世界上跨纬度最广的大洲；东西距离约1万多千米，也是东西距离最长的大洲。",
-      trap: "易错点：亚洲跨纬度最广、东西距离最长，这两个“最”常一起考。"
-    },
-    {
-      id: "dili-h02-q013", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 13, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "日本领土中面积最大的岛屿是（ ）。",
-      options: [{key:"A",text:"北海道"}, {key:"B",text:"本州岛"}, {key:"C",text:"四国岛"}, {key:"D",text:"九州岛"}],
-      answer: ["B"],
-      explanation: "日本领土由北海道、本州、四国、九州四个大岛及其附近的3900多个岛屿组成，其中本州岛面积最大，首都东京所在的关东平原就在本州岛上。",
-      trap: "易错点：日本四大岛中本州岛最大，北海道是第二大岛，不要以为最北的北海道最大。"
-    },
-    {
-      id: "dili-h02-q014", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 14, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "日本气候的主要特征是（ ）。",
-      options: [{key:"A",text:"以温带季风气候和亚热带季风气候为主，具有明显的海洋性特征"}, {key:"B",text:"以温带大陆性气候为主，冬冷夏热"}, {key:"C",text:"以热带雨林气候为主，全年高温多雨"}, {key:"D",text:"以地中海气候为主，夏季炎热干燥"}],
-      answer: ["A"],
-      explanation: "日本是岛国，四面环海，气候以温带季风气候和亚热带季风气候为主，海洋性特征明显，降水丰富。",
-      trap: "易错点：日本是季风气候，但因四面环海，海洋性比同纬度大陆地区更明显。"
-    },
-    {
-      id: "dili-h02-q015", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 15, type: "multiple", meta: "多选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "关于日本发展经济有利条件的说法，正确的是（ ）。",
-      options: [{key:"A",text:"海岸线曲折，多优良港湾，便于发展海洋运输"}, {key:"B",text:"科技发达，劳动力素质高"}, {key:"C",text:"国内市场广阔，经济发达"}, {key:"D",text:"矿产资源丰富，原料自给充足"}],
-      answer: ["A","B","C"],
-      explanation: "日本海岸线曲折，多优良港湾，科技发达，劳动力素质高，国内市场广阔，这些都有利于经济发展；但日本矿产资源贫乏，工业原料和能源严重依赖进口。",
-      trap: "易错点：日本最大的短板是矿产资源贫乏，发展经济靠进口原料、出口产品，靠的是科技和海运。"
-    },
-    {
-      id: "dili-h02-q016", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 16, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "东南亚地处“十字路口”，是指其位于（ ）。",
-      options: [{key:"A",text:"亚洲与大洋洲、太平洋与印度洋之间"}, {key:"B",text:"亚洲与欧洲、太平洋与大西洋之间"}, {key:"C",text:"亚洲与非洲、印度洋与大西洋之间"}, {key:"D",text:"北美洲与南美洲、太平洋与大西洋之间"}],
-      answer: ["A"],
-      explanation: "东南亚位于亚洲的东南部，包括中南半岛和马来群岛，地处亚洲与大洋洲、太平洋与印度洋的“十字路口”，马六甲海峡是其中最重要的通道。",
-      trap: "易错点：“十字路口”是两洲两洋：亚洲与大洋洲、太平洋与印度洋。"
-    },
-    {
-      id: "dili-h02-q017", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 17, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "东南亚的主要粮食作物和重要的热带经济作物分别是（ ）。",
-      options: [{key:"A",text:"水稻；天然橡胶、油棕、椰子、蕉麻"}, {key:"B",text:"小麦；棉花、甜菜"}, {key:"C",text:"玉米；咖啡、可可"}, {key:"D",text:"青稞；葡萄、橄榄"}],
-      answer: ["A"],
-      explanation: "东南亚气候湿热，盛产水稻，主要粮食作物是水稻；同时是世界上天然橡胶、油棕、椰子和蕉麻的最大产地。",
-      trap: "易错点：东南亚湿热的气候适合水稻和热带经济作物，小麦、甜菜是温带作物，不要张冠李戴。"
-    },
-    {
-      id: "dili-h02-q018", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 18, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "印度的主要粮食作物是（ ）。",
-      options: [{key:"A",text:"水稻和小麦"}, {key:"B",text:"玉米和高粱"}, {key:"C",text:"青稞和豌豆"}, {key:"D",text:"大豆和甜菜"}],
-      answer: ["A"],
-      explanation: "印度的主要粮食作物是水稻和小麦，水稻主要分布在恒河平原和沿海平原，小麦主要分布在德干高原西北部和恒河上游地区。",
-      trap: "易错点：印度水稻在雨水充足的恒河平原，小麦在降水较少的西北部，分布与降水条件对应。"
-    },
-    {
-      id: "dili-h02-q019", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 19, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "印度软件外包产业的中心城市是（ ）。",
-      options: [{key:"A",text:"新德里"}, {key:"B",text:"孟买"}, {key:"C",text:"班加罗尔"}, {key:"D",text:"加尔各答"}],
-      answer: ["C"],
-      explanation: "班加罗尔是印度的软件外包产业中心，被称为“印度硅谷”；新德里是首都，孟买是印度最大的城市和棉纺织工业中心，加尔各答是麻纺织工业中心。",
-      trap: "易错点：班加罗尔是软件中心，孟买是最大城市和棉纺织中心，加尔各答是麻纺织中心，分工不同。"
-    },
-    {
-      id: "dili-h02-q020", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 20, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "美国本土由48个州和哥伦比亚特区组成，此外还包括（ ）。",
-      options: [{key:"A",text:"阿拉斯加州和夏威夷州"}, {key:"B",text:"佛罗里达州和得克萨斯州"}, {key:"C",text:"加利福尼亚州和纽约州"}, {key:"D",text:"格陵兰岛和古巴"}],
-      answer: ["A"],
-      explanation: "美国由50个州组成，本土48个州加上阿拉斯加州（位于北美洲西北角）和夏威夷州（位于太平洋中部），首都是华盛顿。",
-      trap: "易错点：阿拉斯加州和夏威夷州不与本土相连，是美国的两个“飞地”州。"
-    },
-    {
-      id: "dili-h02-q021", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 21, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "俄罗斯大部分地区的气候类型是（ ）。",
-      options: [{key:"A",text:"温带海洋性气候"}, {key:"B",text:"温带大陆性气候"}, {key:"C",text:"温带季风气候"}, {key:"D",text:"地中海气候"}],
-      answer: ["B"],
-      explanation: "俄罗斯纬度高、国土辽阔，深居内陆，大部分地区属于温带大陆性气候，冬季漫长寒冷，夏季短促凉爽。",
-      trap: "易错点：俄罗斯是温带大陆性气候，不是季风气候；其北冰洋沿岸属于寒带气候。"
-    },
-    {
-      id: "dili-h02-q022", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 22, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "中东的石油资源主要分布在（ ）。",
-      options: [{key:"A",text:"地中海及其沿岸地区"}, {key:"B",text:"波斯湾及其沿岸地区"}, {key:"C",text:"红海及其沿岸地区"}, {key:"D",text:"黑海及其沿岸地区"}],
-      answer: ["B"],
-      explanation: "中东是世界上石油储量最大、产量和输出量最多的地区，石油主要分布在波斯湾及其沿岸地区，沙特阿拉伯是世界上最大的石油生产国和输出国之一。",
-      trap: "易错点：中东石油集中在波斯湾沿岸，“五海三洲”中的五海是地中海、黑海、里海、红海、阿拉伯海，石油不在地中海。"
-    },
-    {
-      id: "dili-h02-q023", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 23, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "中东地区水资源匮乏的主要原因是（ ）。",
-      options: [{key:"A",text:"纬度高，气温低，降水以固态为主"}, {key:"B",text:"以热带沙漠气候为主，降水稀少，蒸发旺盛"}, {key:"C",text:"人口稠密，工农业用水量小"}, {key:"D",text:"地处高原，河流短小"}],
-      answer: ["B"],
-      explanation: "中东大部分地区属于热带沙漠气候，降水稀少、蒸发旺盛，河流稀少，所以水资源匮乏，水比石油还宝贵。",
-      trap: "易错点：中东缺水是气候原因，不是人口原因；中东人口并不稠密，缺水主要是天上不下雨。"
-    },
-    {
-      id: "dili-h02-q024", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 24, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "欧洲西部的地形以（ ）为主，山地主要分布在北部和南部。",
-      options: [{key:"A",text:"高原"}, {key:"B",text:"平原"}, {key:"C",text:"盆地"}, {key:"D",text:"丘陵"}],
-      answer: ["B"],
-      explanation: "欧洲西部地形以平原为主，如西欧平原、波德平原，山地主要分布在北部（斯堪的纳维亚山脉）和南部（阿尔卑斯山脉），地势南北高、中间低。",
-      trap: "易错点：欧洲西部地势南北高、中间低，有利于大西洋湿润气流伸入内陆，这是温带海洋性气候广布的原因之一。"
-    },
-    {
-      id: "dili-h02-q025", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 25, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "欧洲西部畜牧业发达的主要原因是（ ）。",
-      options: [{key:"A",text:"地形以高原为主，适合放牧"}, {key:"B",text:"温带海洋性气候温和湿润，适合多汁牧草生长"}, {key:"C",text:"人口稀少，劳动力不足"}, {key:"D",text:"矿产资源丰富，饲料充足"}],
-      answer: ["B"],
-      explanation: "欧洲西部以温带海洋性气候为主，全年温和湿润，适合多汁牧草生长，畜牧业发达，乳畜产品产量大，被称为“世界乳畜业的摇篮”。",
-      trap: "易错点：畜牧业发达靠的是气候适合牧草生长，不是地形高原或矿产丰富。"
-    },
-    {
-      id: "dili-h02-q026", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 26, type: "multiple", meta: "多选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "关于撒哈拉以南非洲的说法，正确的是（ ）。",
-      options: [{key:"A",text:"是黑种人的故乡"}, {key:"B",text:"分布最广的气候是热带草原气候"}, {key:"C",text:"矿产资源丰富，金刚石、黄金的储量和产量居世界前列"}, {key:"D",text:"经济发达，工业化水平高"}],
-      answer: ["A","B","C"],
-      explanation: "撒哈拉以南的非洲是黑种人的故乡，分布最广的气候是热带草原气候，矿产资源丰富，金刚石、黄金的储量和产量居世界前列；但长期遭受殖民统治，经济落后，许多国家以出口初级产品为主。",
-      trap: "易错点：撒哈拉以南非洲资源丰富但经济落后，是“富饶大陆”与“贫困大陆”的反差，资源多不等于经济发达。"
-    },
-    {
-      id: "dili-h02-q027", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
-      number: 27, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "澳大利亚特有的动物有（ ）。",
-      options: [{key:"A",text:"袋鼠、考拉、鸭嘴兽"}, {key:"B",text:"大象、狮子、长颈鹿"}, {key:"C",text:"企鹅、北极熊、海豹"}, {key:"D",text:"熊猫、金丝猴、藏羚羊"}],
-      answer: ["A"],
-      explanation: "澳大利亚长期孤立于南半球海洋上，生物进化缓慢，保留了许多古老物种，袋鼠、考拉、鸭嘴兽等都是澳大利亚特有的动物，所以澳大利亚被称为“世界活化石博物馆”。",
-      trap: "易错点：大象、狮子、长颈鹿是非洲的动物，企鹅是南极的动物，熊猫是中国特有的动物。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "dili-h02-q028", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
       number: 28, type: "single", meta: "单选题",
@@ -1253,6 +746,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h02-q037", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      image: true,
       number: 37, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "2019年福建省中考地理试题第1题",
@@ -1264,6 +758,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h02-q038", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      image: true,
       number: 38, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "2019年福建省中考地理试题第2题",
@@ -1757,28 +1252,8 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "汽车公司投资建厂可以增加就业机会，促进当地基础设施建设；建厂会抬高而不是降低土地价格，会提高而不是降低工人收入，①③错误。",
       trap: "易错点：外资建厂带来的是就业和基建，是正面影响；'降低土地价格''降低工人收入'都是反向的，要排除。"
     },
-    {
-      id: "dili-h03-q001", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 1, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国的陆地面积约为（ ），在世界上居第（ ）位。",
-      options: [{key:"A",text:"约960万平方千米，第三位"}, {key:"B",text:"约960万平方千米，第一位"}, {key:"C",text:"约1260万平方千米，第三位"}, {key:"D",text:"约960万平方千米，第二位"}],
-      answer: ["A"],
-      explanation: "我国陆地面积约960万平方千米，居世界第三位，仅次于俄罗斯和加拿大。",
-      trap: "易错点：陆地面积约960万平方千米是约数，排名是第三位，不是第一位。"
-    },
-    {
-      id: "dili-h03-q002", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 2, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国领土的最北端和最南端分别是（ ）。",
-      options: [{key:"A",text:"漠河以北的黑龙江主航道中心线、曾母暗沙"}, {key:"B",text:"曾母暗沙、漠河以北的黑龙江主航道中心线"}, {key:"C",text:"帕米尔高原、曾母暗沙"}, {key:"D",text:"漠河以北的黑龙江主航道中心线、帕米尔高原"}],
-      answer: ["A"],
-      explanation: "我国最北端在漠河以北的黑龙江主航道中心线上，最南端在南沙群岛的曾母暗沙；最东端在黑龙江与乌苏里江主航道中心线的相交处，最西端在帕米尔高原上。",
-      trap: "易错点：帕米尔高原是最西端，不是南端或北端。"
-    },
+
+
     {
       id: "dili-h03-q003", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
       number: 3, type: "single", meta: "单选题",
@@ -1790,270 +1265,30 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "我国地势西高东低，大致呈三级阶梯状分布：第一级阶梯是青藏高原，第二级阶梯是高原和盆地，第三级阶梯是平原和丘陵；东高西低与事实相反。",
       trap: "“逐渐降低”单独说没错，但①③组合漏了“阶梯分布”这个核心特征，选①④最完整。"
     },
-    {
-      id: "dili-h03-q004", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 4, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国气候的主要特征是（ ）。",
-      options: [{key:"A",text:"气候单一，以温带大陆性气候为主"}, {key:"B",text:"气候复杂多样，季风气候显著"}, {key:"C",text:"全年高温多雨"}, {key:"D",text:"全年温和湿润"}],
-      answer: ["B"],
-      explanation: "我国气候复杂多样，季风气候显著：夏季普遍高温，冬季南北温差大，降水集中在夏秋季节。",
-      trap: "易错点：我国气候类型多样，不是单一气候；季风气候显著是重要特征。"
-    },
-    {
-      id: "dili-h03-q005", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 5, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国最长的河流是（ ），长度约（ ）千米。",
-      options: [{key:"A",text:"黄河，约5500千米"}, {key:"B",text:"长江，约6300千米"}, {key:"C",text:"黑龙江，约4400千米"}, {key:"D",text:"珠江，约2200千米"}],
-      answer: ["B"],
-      explanation: "长江是我国最长的河流，长度约6300千米，居世界第三位；黄河长度约5500千米，是我国第二长河。",
-      trap: "易错点：长江比黄河长，黄河约5500千米是第二长河的长度，不要颠倒。"
-    },
-    {
-      id: "dili-h03-q006", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 6, type: "multiple", meta: "多选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "关于我国自然资源的说法，正确的是（ ）。",
-      options: [{key:"A",text:"水资源人均占有量高于世界平均水平"}, {key:"B",text:"自然资源总量丰富，但人均占有量较少"}, {key:"C",text:"水资源空间分布南多北少、东多西少"}, {key:"D",text:"耕地在土地资源中所占比重较大"}],
-      answer: ["B","C"],
-      explanation: "我国自然资源总量丰富，但人均占有量较少；水资源空间分布不均，南多北少、东多西少。我国水资源人均占有量低于世界平均水平，耕地在土地资源中所占比重较小。",
-      trap: "易错点：总量丰富不等于人均丰富；耕地占比小，后备耕地不足。"
-    },
-    {
-      id: "dili-h03-q007", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 7, type: "judge", meta: "判断题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "秦岭—淮河一线是我国南方地区和北方地区的分界线。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "秦岭—淮河一线是我国南方地区和北方地区的分界线，大致与1月0℃等温线和800毫米年等降水量线一致。",
-      trap: "易错点：秦岭—淮河线也是暖温带与亚热带、湿润地区与半湿润地区的分界线，记住这一组对应关系。"
-    },
-    {
-      id: "dili-h03-q008", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 8, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国最大的工业基地是（ ）。",
-      options: [{key:"A",text:"辽中南工业基地"}, {key:"B",text:"京津唐工业基地"}, {key:"C",text:"沪宁杭工业基地"}, {key:"D",text:"珠江三角洲工业基地"}],
-      answer: ["C"],
-      explanation: "沪宁杭工业基地即长江三角洲工业基地，是我国最大的综合性工业基地；辽中南是我国著名的重工业基地，京津唐是北方最大的综合性工业基地，珠江三角洲以轻工业为主。",
-      trap: "易错点：最大的工业基地是沪宁杭，北方最大的是京津唐，不要混淆限定词。"
-    },
-    {
-      id: "dili-h03-q009", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 9, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国濒临的海洋自北向南依次是（ ）。",
-      options: [{key:"A",text:"渤海、黄海、东海、南海"}, {key:"B",text:"南海、东海、黄海、渤海"}, {key:"C",text:"黄海、渤海、东海、南海"}, {key:"D",text:"渤海、东海、黄海、南海"}],
-      answer: ["A"],
-      explanation: "我国从北向南濒临渤海、黄海、东海、南海四个海，其中渤海是我国的内海，台湾海峡属于东海。",
-      trap: "易错点：自北向南是渤海、黄海、东海、南海；渤海是内海，其他三个海是边缘海。"
-    },
-    {
-      id: "dili-h03-q010", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 10, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国面积最大的岛屿和第二大岛屿分别是（ ）。",
-      options: [{key:"A",text:"台湾岛、海南岛"}, {key:"B",text:"海南岛、台湾岛"}, {key:"C",text:"台湾岛、崇明岛"}, {key:"D",text:"海南岛、舟山群岛"}],
-      answer: ["A"],
-      explanation: "台湾岛面积约3.6万平方千米，是我国第一大岛；海南岛是第二大岛，崇明岛是第三大岛。",
-      trap: "易错点：第一大岛是台湾岛，不是海南岛；崇明岛是我国第三大岛，也是最大的冲积岛。"
-    },
-    {
-      id: "dili-h03-q011", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 11, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国省级行政区的数量是（ ）。",
-      options: [{key:"A",text:"23个省、5个自治区、4个直辖市、2个特别行政区，共34个"}, {key:"B",text:"22个省、5个自治区、4个直辖市、2个特别行政区，共33个"}, {key:"C",text:"23个省、4个自治区、4个直辖市、2个特别行政区，共33个"}, {key:"D",text:"23个省、5个自治区、3个直辖市、2个特别行政区，共33个"}],
-      answer: ["A"],
-      explanation: "我国共有34个省级行政区，包括23个省、5个自治区、4个直辖市和2个特别行政区。",
-      trap: "易错点：23+5+4+2=34，台湾省计入23个省之中，直辖市是北京、天津、上海、重庆。"
-    },
-    {
-      id: "dili-h03-q012", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 12, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "福建省的简称和省会城市分别是（ ）。",
-      options: [{key:"A",text:"闽、福州"}, {key:"B",text:"粤、广州"}, {key:"C",text:"浙、杭州"}, {key:"D",text:"赣、南昌"}],
-      answer: ["A"],
-      explanation: "福建省简称“闽”，省会是福州；广东省简称“粤”，省会广州；浙江省简称“浙”，省会杭州；江西省简称“赣”，省会南昌。",
-      trap: "易错点：福建简称“闽”，不要写成“福”；福州是福建省会，厦门是经济特区但不是省会。"
-    },
-    {
-      id: "dili-h03-q013", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 13, type: "multiple", meta: "多选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "关于我国民族的说法，正确的是（ ）。",
-      options: [{key:"A",text:"我国共有56个民族，汉族人口最多"}, {key:"B",text:"壮族是我国人口最多的少数民族"}, {key:"C",text:"我国民族分布的特点是大散居、小聚居、交错杂居"}, {key:"D",text:"汉族只分布在东部地区，西部没有汉族分布"}],
-      answer: ["A","B","C"],
-      explanation: "我国共有56个民族，汉族人口最多，壮族是人口最多的少数民族；民族分布的特点是大散居、小聚居、交错杂居，汉族主要分布在东部和中部，少数民族主要分布在西南、西北和东北地区。",
-      trap: "易错点：汉族分布遍及全国，东部和中部最集中；少数民族聚居区也有汉族居住，是交错杂居。"
-    },
-    {
-      id: "dili-h03-q014", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 14, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国地形的基本特征是（ ）。",
-      options: [{key:"A",text:"地形单一，以平原为主"}, {key:"B",text:"地形类型多样，山区面积广大"}, {key:"C",text:"地形以高原为主，没有平原"}, {key:"D",text:"地形以盆地为主，山区很少"}],
-      answer: ["B"],
-      explanation: "我国地形类型多样，五种基本地形齐全，山区面积广大，约占全国总面积的三分之二，平原面积较小。",
-      trap: "易错点：山区面积广大是我国地形的基本特征，这对发展林业、矿业、旅游业有利，但对耕作业不利。"
-    },
-    {
-      id: "dili-h03-q015", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 15, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列山脉中属于东西走向的是（ ）。",
-      options: [{key:"A",text:"横断山脉"}, {key:"B",text:"秦岭"}, {key:"C",text:"大兴安岭"}, {key:"D",text:"太行山"}],
-      answer: ["B"],
-      explanation: "东西走向的山脉主要有天山、阴山、昆仑山、秦岭、南岭；南北走向的主要有横断山脉；东北—西南走向的主要有大兴安岭、太行山、巫山、雪峰山等。",
-      trap: "易错点：秦岭是东西走向，大兴安岭、太行山是东北—西南走向，横断山脉是南北走向。"
-    },
-    {
-      id: "dili-h03-q016", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 16, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国面积最大的高原和水土流失最严重的高原分别是（ ）。",
-      options: [{key:"A",text:"青藏高原、黄土高原"}, {key:"B",text:"内蒙古高原、云贵高原"}, {key:"C",text:"黄土高原、青藏高原"}, {key:"D",text:"云贵高原、黄土高原"}],
-      answer: ["A"],
-      explanation: "青藏高原是我国面积最大的高原，平均海拔4000米以上；黄土高原土质疏松、植被稀少，是我国水土流失最严重的地区。",
-      trap: "易错点：四大高原是青藏高原、内蒙古高原、黄土高原、云贵高原，面积最大的是青藏高原，水土流失最严重的是黄土高原。"
-    },
-    {
-      id: "dili-h03-q017", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 17, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国面积最大的盆地和最大的沙漠分别是（ ）。",
-      options: [{key:"A",text:"塔里木盆地、塔克拉玛干沙漠"}, {key:"B",text:"准噶尔盆地、腾格里沙漠"}, {key:"C",text:"四川盆地、巴丹吉林沙漠"}, {key:"D",text:"柴达木盆地、塔克拉玛干沙漠"}],
-      answer: ["A"],
-      explanation: "塔里木盆地是我国面积最大的盆地，位于新疆南部，盆地内的塔克拉玛干沙漠是我国最大的沙漠，也是世界第二大流动沙漠。",
-      trap: "易错点：四大盆地中塔里木盆地最大，柴达木盆地海拔最高，四川盆地最湿润，准噶尔盆地纬度最高。"
-    },
-    {
-      id: "dili-h03-q018", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 18, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国的三大平原是（ ）。",
-      options: [{key:"A",text:"东北平原、华北平原、长江中下游平原"}, {key:"B",text:"成都平原、华北平原、长江中下游平原"}, {key:"C",text:"东北平原、关中平原、长江中下游平原"}, {key:"D",text:"东北平原、华北平原、珠江三角洲平原"}],
-      answer: ["A"],
-      explanation: "我国三大平原是东北平原、华北平原和长江中下游平原，其中东北平原面积最大，华北平原又称黄淮海平原，长江中下游平原地势低平、河湖众多。",
-      trap: "易错点：三大平原是东北、华北、长江中下游平原；成都平原和珠江三角洲平原面积较小，不在三大平原之列。"
-    },
-    {
-      id: "dili-h03-q019", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 19, type: "judge", meta: "判断题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国地势第二级阶梯与第三级阶梯的分界线是大兴安岭—太行山—巫山—雪峰山。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "我国地势第二级阶梯与第三级阶梯的分界线是大兴安岭—太行山—巫山—雪峰山；第一级阶梯与第二级阶梯的分界线是昆仑山脉—祁连山脉—横断山脉。",
-      trap: "易错点：两组分界线容易混淆，昆仑山—祁连山—横断山脉是一、二级阶梯分界线，大兴安岭—太行山—巫山—雪峰山是二、三级阶梯分界线。"
-    },
-    {
-      id: "dili-h03-q020", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 20, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国冬季南北温差大的主要原因是（ ）。",
-      options: [{key:"A",text:"纬度差异大，北方正午太阳高度小、白昼短，获得热量少"}, {key:"B",text:"夏季风影响范围不同"}, {key:"C",text:"地势高低不同"}, {key:"D",text:"距海远近不同"}],
-      answer: ["A"],
-      explanation: "我国冬季南北温差大，主要是因为纬度差异大，北方地区正午太阳高度小、白昼短，获得的太阳热量远少于南方；加上冬季风加剧了北方的寒冷。",
-      trap: "易错点：冬季温差大看纬度，夏季普遍高温、南北温差小；冬季风是加剧因素，不是根本原因。"
-    },
-    {
-      id: "dili-h03-q021", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 21, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国干湿地区的划分依据是（ ）。",
-      options: [{key:"A",text:"降水量与蒸发量的对比关系"}, {key:"B",text:"气温的高低"}, {key:"C",text:"海拔的高低"}, {key:"D",text:"距海的远近"}],
-      answer: ["A"],
-      explanation: "我国根据降水量与蒸发量的对比关系，将全国划分为湿润地区、半湿润地区、半干旱地区和干旱地区，干湿地区与降水量多少大体对应，但不完全等同。",
-      trap: "易错点：干湿地区看降水量与蒸发量的对比，不是只看降水量；800毫米等降水量线大致是湿润地区与半湿润地区的分界线。"
-    },
-    {
-      id: "dili-h03-q022", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 22, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "长江上、中、下游的分界点分别是（ ）。",
-      options: [{key:"A",text:"宜昌、湖口"}, {key:"B",text:"湖口、宜昌"}, {key:"C",text:"重庆、武汉"}, {key:"D",text:"宜宾、南京"}],
-      answer: ["A"],
-      explanation: "长江上游从源头到湖北宜昌，中游从宜昌到江西湖口，下游从湖口到入海口；三峡水利枢纽位于上游与中游的交界附近。",
-      trap: "易错点：长江分界点是宜昌、湖口；黄河上、中、下游的分界点是河口、桃花峪，不要混淆。"
-    },
-    {
-      id: "dili-h03-q023", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 23, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "黄河下游形成“地上河”的主要原因是（ ）。",
-      options: [{key:"A",text:"上游水量大，下游河道弯曲"}, {key:"B",text:"中游流经黄土高原，泥沙大量淤积在下游河床"}, {key:"C",text:"下游降水多，河水暴涨"}, {key:"D",text:"下游地势高，河水下切"}],
-      answer: ["B"],
-      explanation: "黄河中游流经黄土高原，携带大量泥沙，进入下游平原地区后流速减慢，泥沙沉积，河床不断抬高，形成“地上河”，治理黄河的关键是治沙。",
-      trap: "易错点：黄河泥沙主要来自中游黄土高原，治理的关键是治沙，根本措施是中游地区植树种草、保持水土。"
-    },
-    {
-      id: "dili-h03-q024", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 24, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "解决我国水资源空间分布不均的主要措施是（ ）。",
-      options: [{key:"A",text:"修建水库"}, {key:"B",text:"跨流域调水，如南水北调"}, {key:"C",text:"节约用水"}, {key:"D",text:"人工降雨"}],
-      answer: ["B"],
-      explanation: "我国水资源空间分布不均，南多北少、东多西少，解决空间分布不均的主要措施是跨流域调水，如南水北调工程；修建水库主要解决时间分布不均的问题。",
-      trap: "易错点：空间不均靠跨流域调水，时间不均靠修建水库，两类措施不要颠倒。"
-    },
-    {
-      id: "dili-h03-q025", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 25, type: "multiple", meta: "多选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "关于我国土地资源的说法，正确的是（ ）。",
-      options: [{key:"A",text:"土地资源类型齐全，耕地、林地、草地等都有分布"}, {key:"B",text:"耕地、林地所占比重小，草地所占比重大"}, {key:"C",text:"后备耕地资源不足，土地资源形势严峻"}, {key:"D",text:"我国耕地面积居世界首位，人均耕地充足"}],
-      answer: ["A","B","C"],
-      explanation: "我国土地资源类型齐全，但耕地、林地所占比重小，草地所占比重大，难以利用的土地比重大，后备耕地资源不足；我国耕地面积居世界前列，但人均耕地少，不到世界平均水平的一半。",
-      trap: "易错点：我国土地资源总量大但人均少，耕地比重小、后备耕地不足，基本国策是十分珍惜和合理利用每一寸土地。"
-    },
-    {
-      id: "dili-h03-q026", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 26, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "我国最大的商品粮生产基地是（ ）。",
-      options: [{key:"A",text:"江汉平原"}, {key:"B",text:"东北地区"}, {key:"C",text:"成都平原"}, {key:"D",text:"洞庭湖平原"}],
-      answer: ["B"],
-      explanation: "东北地区地势平坦、土壤肥沃、人均耕地多、机械化程度高，是我国最大的商品粮生产基地，主要生产玉米、大豆、春小麦等。",
-      trap: "易错点：东北是最大的商品粮基地；江汉平原、洞庭湖平原、成都平原也是重要商品粮基地，但规模小于东北。"
-    },
-    {
-      id: "dili-h03-q027", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
-      number: 27, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "长江被称为我国的“黄金水道”，主要是因为（ ）。",
-      options: [{key:"A",text:"长江沿岸金矿资源丰富"}, {key:"B",text:"长江干支流通航里程长，航运价值高"}, {key:"C",text:"长江水能资源最丰富"}, {key:"D",text:"长江是我国最长的河流"}],
-      answer: ["B"],
-      explanation: "长江干支流通航里程长，货运量大，航运价值高，被称为“黄金水道”；长江水能资源丰富主要在上游河段，是另外一个特点。",
-      trap: "易错点：“黄金水道”指的是航运价值，不是金矿也不是水能；长江是第一大河，黄河是第二长河。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "dili-h03-q028", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
       number: 28, type: "single", meta: "单选题",
@@ -2100,6 +1335,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h03-q032", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      image: true,
       number: 32, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "2022年中考地理考前信息必刷卷01（福建专用）第20题",
@@ -2111,6 +1347,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h03-q033", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      image: true,
       number: 33, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2022年中考地理考前信息必刷卷01（福建专用）第21题",
@@ -2342,6 +1579,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h03-q054", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      image: true,
       number: 54, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "2026年福建中考·地理第3题",
@@ -2376,6 +1614,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h03-q057", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      image: true,
       number: 57, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2026年福建中考·地理第9题（原题四个选项为地势剖面示意图，图中各示意图自西向东的地势变化改写为文字，知识点、选项与答案未改）",
@@ -2398,6 +1637,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h03-q059", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      image: true,
       number: 59, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "2026年福建中考·地理第11题",
@@ -2475,6 +1715,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h03-q066", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      image: true,
       number: 66, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2024年福建中考·地理第19题（原题四个选项为景观照片，照片下标注的文字改写为选项文字，知识点、选项与答案未改）",
@@ -2484,303 +1725,33 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "重庆地处山区，山地多梯田水田，与重庆相符；平原旱地对应华北平原的北京、天津，南水北调终点是北京，长江入海口在上海。",
       trap: "易错点：四个直辖市各有标志性景观，重庆是山城、多梯田；南水北调终点是北京，长江入海口是上海，不要张冠李戴。"
     },
-    {
-      id: "dili-h04-q001", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 1, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "北方地区的主要地形和耕地类型分别是（ ）。",
-      options: [{key:"A",text:"以平原和高原为主，耕地以旱地为主"}, {key:"B",text:"以丘陵和盆地为主，耕地以水田为主"}, {key:"C",text:"以高原和山地为主，耕地以水田为主"}, {key:"D",text:"以平原和丘陵为主，耕地以水田为主"}],
-      answer: ["A"],
-      explanation: "北方地区地形以平原和高原为主，如华北平原、黄土高原和东北平原，降水较少，耕地以旱地为主，主要种植小麦、玉米等。",
-      trap: "易错点：北方旱地、南方水田，是南北差异的典型标志。"
-    },
-    {
-      id: "dili-h04-q002", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 2, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "南方地区的主要气候和耕地类型分别是（ ）。",
-      options: [{key:"A",text:"温带季风气候，旱地"}, {key:"B",text:"亚热带季风气候和热带季风气候，水田"}, {key:"C",text:"温带大陆性气候，旱地"}, {key:"D",text:"高原山地气候，水田"}],
-      answer: ["B"],
-      explanation: "南方地区以亚热带季风气候和热带季风气候为主，降水丰富，河湖众多，耕地以水田为主，主要种植水稻。",
-      trap: "易错点：南方水田、北方旱地，与降水多少和热量条件对应。"
-    },
-    {
-      id: "dili-h04-q003", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 3, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "西北地区气候干旱的主要原因是（ ）。",
-      options: [{key:"A",text:"纬度高，气温低"}, {key:"B",text:"深居内陆，距海遥远，降水稀少"}, {key:"C",text:"海拔高，空气稀薄"}, {key:"D",text:"受副热带高气压带控制"}],
-      answer: ["B"],
-      explanation: "西北地区深居内陆，距海遥远，海洋水汽难以到达，降水稀少，气候干旱，突出的自然特征是干旱。",
-      trap: "易错点：海拔高、气温低是青藏地区高寒的原因，不是西北干旱的原因。"
-    },
-    {
-      id: "dili-h04-q004", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 4, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "青藏地区突出的自然特征是（ ），平均海拔约（ ）米以上。",
-      options: [{key:"A",text:"干旱，约1000米"}, {key:"B",text:"高寒，约4000米"}, {key:"C",text:"湿热，约500米"}, {key:"D",text:"高寒，约1000米"}],
-      answer: ["B"],
-      explanation: "青藏地区平均海拔约4000米以上，是世界上海拔最高的高原，被称为“世界屋脊”，突出的自然特征是高寒。",
-      trap: "易错点：干旱是西北地区的特征，高寒是青藏地区的特征。"
-    },
-    {
-      id: "dili-h04-q005", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 5, type: "multiple", meta: "多选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "关于我国四大地理区域的说法，正确的是（ ）。",
-      options: [{key:"A",text:"北方地区耕地以水田为主"}, {key:"B",text:"南方地区河流众多、水量丰富"}, {key:"C",text:"西北地区的自然特征是干旱"}, {key:"D",text:"青藏地区的自然特征是高寒"}],
-      answer: ["B","C","D"],
-      explanation: "北方地区耕地以旱地为主，不是水田；南方地区降水丰富、河流众多；西北地区干旱，青藏地区高寒。",
-      trap: "易错点：北方是旱地、南方是水田；西北干旱、青藏高寒，两组特征不要颠倒。"
-    },
-    {
-      id: "dili-h04-q006", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 6, type: "judge", meta: "判断题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "西北地区的农业主要分布在有水源的绿洲和河谷地带，如河西走廊、宁夏平原、河套平原。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "西北地区降水稀少，农业主要依靠灌溉，分布在有水源的绿洲和河谷地带，河西走廊、宁夏平原、河套平原都是著名的灌溉农业区。",
-      trap: "易错点：西北农业是灌溉农业，不是雨养农业，水源是决定性因素。"
-    },
-    {
-      id: "dili-h04-q007", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 7, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "我国北方地区的主要粮食作物是（ ）。",
-      options: [{key:"A",text:"水稻"}, {key:"B",text:"小麦、玉米"}, {key:"C",text:"青稞"}, {key:"D",text:"甘蔗"}],
-      answer: ["B"],
-      explanation: "北方地区降水较少、耕地为旱地，主要粮食作物是小麦和玉米；南方地区主要种植水稻，青藏地区主要种植青稞。",
-      trap: "易错点：水稻是南方的主要粮食作物，甘蔗是南方的主要糖料作物。"
-    },
-    {
-      id: "dili-h04-q008", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 8, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "被称为“高原之舟”的动物是（ ）。",
-      options: [{key:"A",text:"骆驼"}, {key:"B",text:"牦牛"}, {key:"C",text:"藏羚羊"}, {key:"D",text:"马"}],
-      answer: ["B"],
-      explanation: "牦牛耐高寒、善负重，是青藏高原特有的畜种，被称为“高原之舟”；骆驼被称为“沙漠之舟”，主要分布在西北干旱地区。",
-      trap: "易错点：“高原之舟”是牦牛，“沙漠之舟”是骆驼，不要混淆。"
-    },
-    {
-      id: "dili-h04-q009", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 9, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "我国四大地理区域分界线确定的主导因素，正确的一组是（ ）。",
-      options: [{key:"A",text:"北方地区与南方地区——气温和降水；北方地区与西北地区——季风；青藏地区与其他地区——地形"}, {key:"B",text:"北方地区与南方地区——地形；北方地区与西北地区——气温；青藏地区与其他地区——降水"}, {key:"C",text:"北方地区与南方地区——季风；北方地区与西北地区——地形；青藏地区与其他地区——气温"}, {key:"D",text:"北方地区与南方地区——降水；北方地区与西北地区——地形；青藏地区与其他地区——季风"}],
-      answer: ["A"],
-      explanation: "北方地区与南方地区的分界线是秦岭—淮河，主导因素是气温和降水；北方地区与西北地区的分界线大致接近400毫米等降水量线，主导因素是夏季风的影响；青藏地区与其他地区的分界线是地势第一、二级阶梯分界线，主导因素是地形地势。",
-      trap: "易错点：三组分界线的主导因素各不相同：南北看气温降水，北与西北看季风，青藏看地形。"
-    },
-    {
-      id: "dili-h04-q010", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 10, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "东北三省是指（ ）。",
-      options: [{key:"A",text:"黑龙江、吉林、辽宁"}, {key:"B",text:"河北、山西、山东"}, {key:"C",text:"江苏、浙江、安徽"}, {key:"D",text:"内蒙古、黑龙江、吉林"}],
-      answer: ["A"],
-      explanation: "东北三省是指黑龙江、吉林、辽宁三省，位于我国东北部，气候冷湿，黑土广布，是我国重要的商品粮基地和重工业基地。",
-      trap: "易错点：东北三省是黑、吉、辽，内蒙古自治区不属于东北三省，但东北地区有时也包括内蒙古东部。"
-    },
-    {
-      id: "dili-h04-q011", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 11, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "东北地区农业生产的主要特征是（ ）。",
-      options: [{key:"A",text:"一年两熟，以水稻为主"}, {key:"B",text:"一年一熟，以春小麦、玉米、大豆、甜菜为主"}, {key:"C",text:"一年三熟，以甘蔗为主"}, {key:"D",text:"两年三熟，以冬小麦为主"}],
-      answer: ["B"],
-      explanation: "东北地区纬度高、气温低，农作物一年一熟，主要作物有春小麦、玉米、大豆、甜菜等；水稻主要分布在辽河、松花江流域。",
-      trap: "易错点：东北一年一熟，华北两年三熟或一年两熟，南方一年两熟或三熟，熟制由北向南递增。"
-    },
-    {
-      id: "dili-h04-q012", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 12, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "黄土高原水土流失严重的人为原因是（ ）。",
-      options: [{key:"A",text:"土质疏松，垂直节理发育"}, {key:"B",text:"夏季降水集中，多暴雨"}, {key:"C",text:"植被破坏、开垦陡坡、过度放牧"}, {key:"D",text:"地表千沟万壑，坡度陡"}],
-      answer: ["C"],
-      explanation: "黄土高原水土流失的自然原因有土质疏松、降水集中多暴雨、地表破碎等，人为原因是植被破坏、开垦陡坡、过度放牧等；治理措施有植树种草、退耕还林还草、修建梯田和淤地坝等。",
-      trap: "易错点：题干问的是人为原因，土质疏松和降水集中是自然原因，不要选错限定词。"
-    },
-    {
-      id: "dili-h04-q013", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 13, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "北京的城市职能是（ ）。",
-      options: [{key:"A",text:"全国的经济中心"}, {key:"B",text:"全国的政治中心、文化中心、国际交往中心"}, {key:"C",text:"全国最大的工业基地"}, {key:"D",text:"全国最大的港口城市"}],
-      answer: ["B"],
-      explanation: "北京是我国的首都，是全国的政治中心、文化中心和国际交往中心；上海是我国最大的城市和经济中心，天津、上海是重要港口城市。",
-      trap: "易错点：北京是政治文化中心，不是经济中心；我国的经济中心是上海。"
-    },
-    {
-      id: "dili-h04-q014", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 14, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "长江三角洲地区的龙头城市和我国最大的城市是（ ）。",
-      options: [{key:"A",text:"南京"}, {key:"B",text:"杭州"}, {key:"C",text:"上海"}, {key:"D",text:"苏州"}],
-      answer: ["C"],
-      explanation: "长江三角洲地区以上海为龙头，南京、杭州为副中心，是我国经济最发达的地区之一；上海是我国最大的城市，也是我国最大的综合性工业基地沪宁杭工业基地的核心。",
-      trap: "易错点：长江三角洲的龙头是上海，珠江三角洲的龙头是广州，不要混淆。"
-    },
-    {
-      id: "dili-h04-q015", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 15, type: "multiple", meta: "多选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "关于长江三角洲地区发展经济有利条件的说法，正确的是（ ）。",
-      options: [{key:"A",text:"地处长江入海口，江海交汇，交通便利"}, {key:"B",text:"科技发达，人才众多"}, {key:"C",text:"矿产资源丰富，能源充足"}, {key:"D",text:"农业基础好，人口稠密，市场广阔"}],
-      answer: ["A","B","D"],
-      explanation: "长江三角洲地区地处江海交汇处，水陆交通便利，科技发达、人才众多，农业基础好、人口稠密、市场广阔；但该地区矿产资源和能源缺乏，需要从外地调入。",
-      trap: "易错点：长江三角洲最大的短板是矿产资源和能源缺乏，发展靠的是交通、科技和市场，不是资源。"
-    },
-    {
-      id: "dili-h04-q016", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 16, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "香港和澳门回归祖国的时间分别是（ ）。",
-      options: [{key:"A",text:"1997年、1999年"}, {key:"B",text:"1999年、1997年"}, {key:"C",text:"1997年、1997年"}, {key:"D",text:"1999年、1999年"}],
-      answer: ["A"],
-      explanation: "香港于1997年7月1日回归祖国，澳门于1999年12月20日回归祖国，两地都是我国的特别行政区，实行“一国两制”。",
-      trap: "易错点：香港1997年回归，澳门1999年回归，时间顺序是香港在前、澳门在后。"
-    },
-    {
-      id: "dili-h04-q017", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 17, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "台湾省的主要农产品和最大城市分别是（ ）。",
-      options: [{key:"A",text:"水稻、甘蔗；台北"}, {key:"B",text:"小麦、甜菜；高雄"}, {key:"C",text:"玉米、大豆；台中"}, {key:"D",text:"青稞、小麦；基隆"}],
-      answer: ["A"],
-      explanation: "台湾省气候温暖湿润，主要农产品有水稻、甘蔗、茶叶等，被称为“东方甜岛”；最大城市是台北，最大港口是高雄。",
-      trap: "易错点：台湾最大城市是台北，最大港口是高雄；“东方甜岛”指的是甘蔗产量大。"
-    },
-    {
-      id: "dili-h04-q018", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 18, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "与台湾省隔台湾海峡相望、距离台湾最近的省份是（ ）。",
-      options: [{key:"A",text:"广东省"}, {key:"B",text:"福建省"}, {key:"C",text:"浙江省"}, {key:"D",text:"江西省"}],
-      answer: ["B"],
-      explanation: "台湾省与福建省隔台湾海峡相望，福建是距离台湾最近的省份，福州与台北隔海相望，两岸交流密切。",
-      trap: "易错点：台湾海峡东岸是台湾，西岸是福建；广东与台湾隔海相望的海域主要是南海和台湾海峡南部，距离更远。"
-    },
-    {
-      id: "dili-h04-q019", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 19, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "新疆的地形特征是（ ）。",
-      options: [{key:"A",text:"三山夹两盆"}, {key:"B",text:"一山夹两盆"}, {key:"C",text:"两山夹一盆"}, {key:"D",text:"四周高、中间低"}],
-      answer: ["A"],
-      explanation: "新疆地形是“三山夹两盆”：北部是阿尔泰山脉，中部是天山山脉，南部是昆仑山脉，两盆是准噶尔盆地和塔里木盆地。",
-      trap: "易错点：新疆是三山夹两盆，天山横亘中部，把新疆分为北疆和南疆。"
-    },
-    {
-      id: "dili-h04-q020", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 20, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "我国最长的内流河和最大的沙漠分别是（ ）。",
-      options: [{key:"A",text:"塔里木河、塔克拉玛干沙漠"}, {key:"B",text:"黄河、腾格里沙漠"}, {key:"C",text:"长江、巴丹吉林沙漠"}, {key:"D",text:"塔里木河、巴丹吉林沙漠"}],
-      answer: ["A"],
-      explanation: "塔里木河是我国最长的内流河，全长约2179千米；塔克拉玛干沙漠是我国最大的沙漠，位于塔里木盆地中部。",
-      trap: "易错点：塔里木河是最长内流河，长江、黄河都是外流河；塔克拉玛干沙漠是我国最大沙漠。"
-    },
-    {
-      id: "dili-h04-q021", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 21, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "新疆瓜果特别甜的主要原因是（ ）。",
-      options: [{key:"A",text:"降水多，土壤肥沃"}, {key:"B",text:"光照强、昼夜温差大，有利于糖分积累"}, {key:"C",text:"海拔低，气温高"}, {key:"D",text:"靠近海洋，水汽充足"}],
-      answer: ["B"],
-      explanation: "新疆深居内陆，降水少、晴天多，光照强，白天光合作用强，夜晚气温低、呼吸作用弱，昼夜温差大，有利于糖分积累，所以瓜果特别甜。",
-      trap: "易错点：瓜果甜靠的是光照强、昼夜温差大，不是降水多；新疆降水稀少，农业靠绿洲和灌溉。"
-    },
-    {
-      id: "dili-h04-q022", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 22, type: "judge", meta: "判断题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "西气东输工程是将新疆的天然气输往长江三角洲和珠江三角洲地区。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "西气东输工程西起新疆塔里木盆地的轮南，东到上海，把新疆的天然气输往长江三角洲等东部地区，缓解了东部地区的能源紧张状况。",
-      trap: "易错点：西气东输主干线东到上海，惠及长江三角洲；西电东送则是把西部的水电、火电输往东部。"
-    },
-    {
-      id: "dili-h04-q023", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 23, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "青藏地区的主要农作物是（ ）。",
-      options: [{key:"A",text:"水稻、小麦"}, {key:"B",text:"青稞、小麦、豌豆"}, {key:"C",text:"玉米、大豆"}, {key:"D",text:"甘蔗、甜菜"}],
-      answer: ["B"],
-      explanation: "青藏地区海拔高、气温低，农业主要分布在河谷地带，称为河谷农业，主要农作物有青稞、小麦、豌豆等，青稞是青藏高原特有的粮食作物。",
-      trap: "易错点：青稞耐寒，是青藏高原特有的粮食作物；水稻、甘蔗是南方低海拔地区的作物。"
-    },
-    {
-      id: "dili-h04-q024", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 24, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "三江源地区是（ ）的发源地，被称为“中华水塔”。",
-      options: [{key:"A",text:"长江、黄河、澜沧江"}, {key:"B",text:"长江、黄河、珠江"}, {key:"C",text:"黄河、澜沧江、怒江"}, {key:"D",text:"长江、珠江、澜沧江"}],
-      answer: ["A"],
-      explanation: "三江源地区位于青海省南部，是长江、黄河、澜沧江的发源地，被称为“中华水塔”，是我国重要的水源涵养地和生态屏障。",
-      trap: "易错点：三江源的三江是长江、黄河、澜沧江，澜沧江出境后叫湄公河，不要误写成怒江或珠江。"
-    },
-    {
-      id: "dili-h04-q025", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 25, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "青藏铁路是世界上海拔最高、线路最长的高原铁路，其修建中克服的最大难题是（ ）。",
-      options: [{key:"A",text:"沙漠流沙"}, {key:"B",text:"多年冻土"}, {key:"C",text:"地震断裂带"}, {key:"D",text:"台风暴雨"}],
-      answer: ["B"],
-      explanation: "青藏铁路穿越多年冻土区，冻土随季节冻融会造成路基沉降和开裂，是修建中克服的最大难题；青藏铁路的建成结束了西藏不通铁路的历史。",
-      trap: "易错点：青藏铁路的三大难题是冻土、高寒缺氧、生态脆弱，其中冻土是最突出的技术难题。"
-    },
-    {
-      id: "dili-h04-q026", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 26, type: "multiple", meta: "多选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "关于青藏地区生态环境脆弱原因的说法，正确的是（ ）。",
-      options: [{key:"A",text:"海拔高、气温低，植被生长缓慢、恢复困难"}, {key:"B",text:"过度放牧、滥挖药材等人类活动加剧了草场退化"}, {key:"C",text:"降水丰富、河流众多，生态承载力强"}, {key:"D",text:"气候温暖湿润，适合植被快速恢复"}],
-      answer: ["A","B"],
-      explanation: "青藏地区海拔高、气温低，生态环境脆弱，植被一旦破坏很难恢复；过度放牧、滥挖药材等人类活动又加剧了草场退化。青藏地区降水并不丰富，气候高寒，不是温暖湿润。",
-      trap: "易错点：青藏地区生态环境脆弱是自然条件差加上人类活动破坏，不能只看一方面。"
-    },
-    {
-      id: "dili-h04-q027", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
-      number: 27, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "珠江三角洲地区工业发展的主要特点是（ ）。",
-      options: [{key:"A",text:"以重工业为主的综合性工业基地"}, {key:"B",text:"以轻工业为主的外向型经济"}, {key:"C",text:"以采矿业为主的资源型经济"}, {key:"D",text:"以高原农牧业为主的内向型经济"}],
-      answer: ["B"],
-      explanation: "珠江三角洲地区毗邻港澳，靠近东南亚，发展外向型经济，以轻工业为主，电子、服装、玩具等产品大量出口；但矿产资源和能源不足是其短板。",
-      trap: "易错点：珠江三角洲以轻工业为主，辽中南以重工业为主；珠江三角洲发展靠的是毗邻港澳、引进外资，不是靠矿产资源。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "dili-h04-q028", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
       number: 28, type: "single", meta: "单选题",
@@ -2860,6 +1831,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h04-q035", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      image: true,
       number: 35, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自人教版八年级地理下册第五章综合测试卷1第10题",
@@ -3091,6 +2063,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h04-q056", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      image: true,
       number: 56, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·地理第14题（原题依托'全长三角造'机器人图，图中整体研发和设计来自上海、线缆与谐波减速器来自苏州、伺服电机来自衢州、壳体来自宣城的信息改写为文字，知识点、选项与答案未改）",
@@ -3122,116 +2095,16 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "区域协作让各地发挥各自优势、密切配合，可以降低企业生产成本，也能带动相对落后地区发展、缩小区域经济差距；协作不会加大文化差异，也不会加剧恶性竞争，①③错误。",
       trap: "易错点：协作带来的是降成本、缩小差距，是正向影响；'加大差异''恶性竞争'都是反向的，要排除。"
     },
-    {
-      id: "dili-h05-q001", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 1, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "昼夜交替现象主要是由地球的（ ）运动产生的。",
-      options: [{key:"A",text:"自转"}, {key:"B",text:"公转"}, {key:"C",text:"绕月球运动"}, {key:"D",text:"绕太阳系中心运动"}],
-      answer: ["A"],
-      explanation: "地球自转产生昼夜交替和时间差异，地球公转产生四季变化和昼夜长短变化。",
-      trap: "易错点：昼夜交替是自转，四季变化是公转，复习时先分清这对概念。"
-    },
-    {
-      id: "dili-h05-q002", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 2, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "北京的经纬度约为40°N、116°E，该地位于（ ）。",
-      options: [{key:"A",text:"北半球、东半球"}, {key:"B",text:"北半球、西半球"}, {key:"C",text:"南半球、东半球"}, {key:"D",text:"南半球、西半球"}],
-      answer: ["A"],
-      explanation: "40°N说明在北半球，116°E在20°W—160°E的范围内，说明在东半球，所以北京位于北半球、东半球。",
-      trap: "易错点：东西半球的分界线是20°W和160°E，不是0°和180°经线。"
-    },
-    {
-      id: "dili-h05-q003", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 3, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "在没有指向标和经纬网的一般地图上，判定方向的方法是（ ）。",
-      options: [{key:"A",text:"上北下南，左西右东"}, {key:"B",text:"上南下北，左东右西"}, {key:"C",text:"指向标箭头指向北方"}, {key:"D",text:"经线指示东西方向"}],
-      answer: ["A"],
-      explanation: "一般地图采用“上北下南，左西右东”的方法判定方向；有指向标的地图按指向标判定，有经纬网的地图按经纬线判定。",
-      trap: "易错点：有指向标时要按指向标箭头方向，有经纬网时经线指示南北、纬线指示东西。"
-    },
-    {
-      id: "dili-h05-q004", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 4, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "赤道附近地区的主要气候类型是热带雨林气候，其特征是（ ）。",
-      options: [{key:"A",text:"全年高温多雨"}, {key:"B",text:"全年炎热干燥"}, {key:"C",text:"夏季高温多雨，冬季寒冷干燥"}, {key:"D",text:"全年温和湿润"}],
-      answer: ["A"],
-      explanation: "热带雨林气候主要分布在赤道附近，全年高温多雨，年降水量大，季节变化不明显。",
-      trap: "易错点：热带沙漠气候才是全年炎热干燥，热带雨林气候是高温多雨。"
-    },
-    {
-      id: "dili-h05-q005", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 5, type: "multiple", meta: "多选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "关于世界大洲和大洋的说法，正确的是（ ）。",
-      options: [{key:"A",text:"七大洲中面积最大的是亚洲"}, {key:"B",text:"四大洋中面积最大的是太平洋"}, {key:"C",text:"七大洲中面积最小的是大洋洲"}, {key:"D",text:"四大洋中面积最小的是印度洋"}],
-      answer: ["A","B","C"],
-      explanation: "七大洲中面积最大的是亚洲，最小的是大洋洲；四大洋中面积最大的是太平洋，最小的是北冰洋，不是印度洋。",
-      trap: "易错点：四大洋按面积由大到小是太平洋、大西洋、印度洋、北冰洋。"
-    },
-    {
-      id: "dili-h05-q006", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 6, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "世界上人口分布稠密的地区多位于中低纬度沿海平原地区。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "世界人口分布不均，亚洲东部和南部、欧洲西部、北美洲东部等中低纬度沿海平原地区人口稠密，因为那里气候温暖湿润、地形平坦、水源充足。",
-      trap: "易错点：高纬度、高海拔、干旱和湿热的地区人口稀疏，不要反推。"
-    },
-    {
-      id: "dili-h05-q007", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 7, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "日本的工业主要分布在（ ）。",
-      options: [{key:"A",text:"太平洋沿岸和濑户内海沿岸"}, {key:"B",text:"日本海沿岸"}, {key:"C",text:"北海道内陆"}, {key:"D",text:"九州岛中部山区"}],
-      answer: ["A"],
-      explanation: "日本矿产资源贫乏，工业原料和产品严重依赖国际市场，所以工业主要分布在太平洋沿岸和濑户内海沿岸，便于进口原料、出口产品。",
-      trap: "易错点：日本工业临海分布是为方便海运，不是为靠近矿产地。"
-    },
-    {
-      id: "dili-h05-q008", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 8, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "俄罗斯地跨亚欧两洲，但其人口和经济主要集中在（ ）。",
-      options: [{key:"A",text:"亚洲部分"}, {key:"B",text:"欧洲部分"}, {key:"C",text:"西伯利亚地区"}, {key:"D",text:"远东地区"}],
-      answer: ["B"],
-      explanation: "俄罗斯领土大部在亚洲，但人口和经济主要集中在欧洲部分，首都莫斯科也在欧洲部分。",
-      trap: "易错点：领土大部在亚洲不等于人口集中在亚洲，俄罗斯是欧洲国家。"
-    },
-    {
-      id: "dili-h05-q009", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 9, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "东西半球的分界线是（ ）。",
-      options: [{key:"A",text:"0°经线和180°经线"}, {key:"B",text:"20°W和160°E"}, {key:"C",text:"赤道和北极圈"}, {key:"D",text:"本初子午线和赤道"}],
-      answer: ["B"],
-      explanation: "东西半球的分界线是20°W和160°E组成的经线圈；南北半球的分界线是赤道（0°纬线）。",
-      trap: "易错点：东西半球分界线是20°W和160°E，不是0°和180°经线；东西经度的分界线才是本初子午线。"
-    },
-    {
-      id: "dili-h05-q010", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 10, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "地球自转的方向和周期分别是（ ）。",
-      options: [{key:"A",text:"自东向西，约24小时"}, {key:"B",text:"自西向东，约24小时"}, {key:"C",text:"自西向东，约一年"}, {key:"D",text:"自东向西，约一年"}],
-      answer: ["B"],
-      explanation: "地球自转方向是自西向东，周期约24小时（一昼夜），从北极上空看呈逆时针方向，从南极上空看呈顺时针方向。",
-      trap: "易错点：自转是自西向东、约24小时；公转也是自西向东，但周期约一年。"
-    },
+
+
+
+
+
+
+
+
+
+
     {
       id: "dili-h05-q011", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
       number: 11, type: "single", meta: "单选题",
@@ -3243,182 +2116,22 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "正午日影最短说明正午太阳高度最大，北回归线及其以北地区夏至日时正午太阳高度最大，此时太阳直射北回归线23.5°N。",
       trap: "登封在北回归线以北，正午太阳高度最大时太阳直射点离登封最近，即北回归线。"
     },
-    {
-      id: "dili-h05-q012", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 12, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "北半球夏季昼长夜短，冬季昼短夜长；南半球正好相反。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "由于地球公转时太阳直射点南北移动，北半球夏季昼长夜短、冬季昼短夜长，南半球的昼夜长短变化与北半球相反；赤道地区全年昼夜平分。",
-      trap: "易错点：南北半球的季节和昼夜长短变化正好相反，判断时要看清题干说的是哪个半球。"
-    },
-    {
-      id: "dili-h05-q013", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 13, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "比例尺的三种表示方法中，正确的公式是（ ）。",
-      options: [{key:"A",text:"比例尺=图上距离÷实地距离"}, {key:"B",text:"比例尺=实地距离÷图上距离"}, {key:"C",text:"比例尺=图上距离×实地距离"}, {key:"D",text:"比例尺=图上距离+实地距离"}],
-      answer: ["A"],
-      explanation: "比例尺=图上距离÷实地距离，比例尺有数字式、线段式和文字式三种表示方法；图上距离与实地距离的单位要统一后再计算。",
-      trap: "易错点：比例尺是图上距离比实地距离，分子是图上距离；计算时要先统一单位，如1千米=100000厘米。"
-    },
-    {
-      id: "dili-h05-q014", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 14, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "在等高线地形图上，等高线向高处凸出的部位是（ ）。",
-      options: [{key:"A",text:"山脊"}, {key:"B",text:"山谷"}, {key:"C",text:"山顶"}, {key:"D",text:"陡崖"}],
-      answer: ["B"],
-      explanation: "山谷是等高线向高处凸出的部位，山谷处容易形成河流；山脊是等高线向低处凸出的部位，山脊是分水岭；陡崖是多条等高线重合的部位。",
-      trap: "易错点：山谷等高线向高处凸出，山脊等高线向低处凸出，两者正好相反，是高频易错点。"
-    },
-    {
-      id: "dili-h05-q015", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 15, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "地球表面海洋和陆地的面积比例大致是（ ）。",
-      options: [{key:"A",text:"七分海洋、三分陆地"}, {key:"B",text:"三分海洋、七分陆地"}, {key:"C",text:"五分海洋、五分陆地"}, {key:"D",text:"九分海洋、一分陆地"}],
-      answer: ["A"],
-      explanation: "地球表面海洋面积约占71%，陆地面积约占29%，概括为“七分海洋、三分陆地”；陆地主要集中在北半球。",
-      trap: "易错点：海洋约71%、陆地约29%，是七分海洋三分陆地；陆地主要集中在北半球、东半球。"
-    },
-    {
-      id: "dili-h05-q016", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 16, type: "multiple", meta: "多选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "关于世界主要气候类型分布的说法，正确的是（ ）。",
-      options: [{key:"A",text:"热带雨林气候主要分布在赤道附近"}, {key:"B",text:"热带沙漠气候主要分布在回归线附近的大陆西岸和内陆"}, {key:"C",text:"温带季风气候主要分布在亚洲东部"}, {key:"D",text:"地中海气候主要分布在南北纬30°—40°的大陆西岸"}],
-      answer: ["A","B","C","D"],
-      explanation: "热带雨林气候分布在赤道附近，热带沙漠气候分布在回归线附近的大陆西岸和内陆，温带季风气候分布在亚洲东部，地中海气候分布在南北纬30°—40°的大陆西岸，四项说法都正确。",
-      trap: "易错点：气候类型要按纬度和海陆位置记，四个选项的分布规律各不相同，不要只记一个。"
-    },
-    {
-      id: "dili-h05-q017", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 17, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "2022年世界人口达到约80亿，世界人口增长的特点是（ ）。",
-      options: [{key:"A",text:"发达国家增长快，发展中国家增长慢"}, {key:"B",text:"发达国家增长慢，发展中国家增长快"}, {key:"C",text:"各国人口增长速度大致相同"}, {key:"D",text:"发达国家人口在减少，发展中国家人口不变"}],
-      answer: ["B"],
-      explanation: "2022年世界人口达到约80亿，人口增长存在地区差异：发达国家人口增长缓慢，有的国家甚至出现负增长；发展中国家人口增长较快，人口增长主要来自发展中国家。",
-      trap: "易错点：人口增长快慢与经济发展水平大体相反，发达国家慢、发展中国家快；世界人口最多的国家是印度和中国。"
-    },
-    {
-      id: "dili-h05-q018", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 18, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "世界上使用人数最多的语言和使用范围最广的语言分别是（ ）。",
-      options: [{key:"A",text:"汉语、英语"}, {key:"B",text:"英语、汉语"}, {key:"C",text:"汉语、法语"}, {key:"D",text:"西班牙语、英语"}],
-      answer: ["A"],
-      explanation: "汉语是世界上使用人数最多的语言，英语是世界上使用范围最广的语言；联合国六种工作语言是汉语、英语、法语、俄语、西班牙语、阿拉伯语。",
-      trap: "易错点：使用人数最多是汉语，使用范围最广是英语，两个“最”的主语不同。"
-    },
-    {
-      id: "dili-h05-q019", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 19, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "世界三大宗教是（ ）。",
-      options: [{key:"A",text:"基督教、伊斯兰教、佛教"}, {key:"B",text:"基督教、道教、佛教"}, {key:"C",text:"伊斯兰教、印度教、佛教"}, {key:"D",text:"基督教、伊斯兰教、印度教"}],
-      answer: ["A"],
-      explanation: "世界三大宗教是基督教、伊斯兰教、佛教，基督教是世界上信徒最多的宗教，伊斯兰教主要分布在西亚和北非，佛教起源于古印度。",
-      trap: "易错点：世界三大宗教是基督教、伊斯兰教、佛教；印度教、道教不是世界性宗教。"
-    },
-    {
-      id: "dili-h05-q020", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 20, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "亚洲是世界上人口最多的大洲，其人口约占世界人口的（ ）。",
-      options: [{key:"A",text:"约五分之一"}, {key:"B",text:"约三分之一"}, {key:"C",text:"约五分之三"}, {key:"D",text:"约十分之九"}],
-      answer: ["C"],
-      explanation: "亚洲是世界上人口最多的大洲，人口约占世界总人口的五分之三左右，其中东亚、东南亚和南亚是人口稠密的地区。",
-      trap: "易错点：亚洲人口约占世界人口的60%，即五分之三左右；欧洲、北美洲人口比重远低于亚洲。"
-    },
-    {
-      id: "dili-h05-q021", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 21, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "巴西是南美洲面积最大的国家，其首都和最大城市分别是（ ）。",
-      options: [{key:"A",text:"巴西利亚、圣保罗"}, {key:"B",text:"圣保罗、里约热内卢"}, {key:"C",text:"里约热内卢、巴西利亚"}, {key:"D",text:"巴西利亚、里约热内卢"}],
-      answer: ["A"],
-      explanation: "巴西是南美洲面积最大、人口最多的国家，首都是巴西利亚，最大城市是圣保罗；巴西拥有世界上面积最大的热带雨林——亚马孙热带雨林。",
-      trap: "易错点：巴西首都是巴西利亚，不是圣保罗；圣保罗是最大城市，里约热内卢是第二大城市和著名港口。"
-    },
-    {
-      id: "dili-h05-q022", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 22, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "世界上最大的淡水湖群和最大的淡水湖分别是（ ）。",
-      options: [{key:"A",text:"北美五大湖、苏必利尔湖"}, {key:"B",text:"北美五大湖、贝加尔湖"}, {key:"C",text:"非洲大湖群、维多利亚湖"}, {key:"D",text:"北美五大湖、密歇根湖"}],
-      answer: ["A"],
-      explanation: "北美五大湖是世界上最大的淡水湖群，位于美国和加拿大边境；其中苏必利尔湖是世界上面积最大的淡水湖，贝加尔湖是世界上最深的湖泊。",
-      trap: "易错点：面积最大的淡水湖是苏必利尔湖，最深的湖泊是贝加尔湖，两者不要混淆。"
-    },
-    {
-      id: "dili-h05-q023", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 23, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "我国在南极建立的第一个科学考察站是（ ）。",
-      options: [{key:"A",text:"长城站"}, {key:"B",text:"中山站"}, {key:"C",text:"昆仑站"}, {key:"D",text:"泰山站"}],
-      answer: ["A"],
-      explanation: "长城站是我国1985年在南极乔治王岛建立的第一个科学考察站；中山站是第二个南极考察站，昆仑站是第三个，泰山站是第四个；我国在北极建立的考察站是黄河站。",
-      trap: "易错点：南极考察站的建立顺序是长城站、中山站、昆仑站、泰山站，北极考察站是黄河站。"
-    },
-    {
-      id: "dili-h05-q024", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 24, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "南极洲被称为“冰雪高原”，它还是（ ）。",
-      options: [{key:"A",text:"平均海拔最高的大洲"}, {key:"B",text:"面积最大的大洲"}, {key:"C",text:"人口最多的大洲"}, {key:"D",text:"气温最高的大洲"}],
-      answer: ["A"],
-      explanation: "南极洲平均海拔约2350米，是世界上平均海拔最高的大洲，冰层平均厚度约2000米，淡水资源最丰富，但气候酷寒、干燥、多烈风。",
-      trap: "易错点：南极洲平均海拔最高，面积最大的是亚洲，人口最多的是亚洲，气温最低的是南极洲。"
-    },
-    {
-      id: "dili-h05-q025", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 25, type: "multiple", meta: "多选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "关于南极地区和北极地区的说法，正确的是（ ）。",
-      options: [{key:"A",text:"南极地区以陆地为主，北极地区以海洋为主"}, {key:"B",text:"南极地区比北极地区更加寒冷"}, {key:"C",text:"我国在南极地区和北极地区都建立了科学考察站"}, {key:"D",text:"北极地区是企鹅的主要栖息地"}],
-      answer: ["A","B","C"],
-      explanation: "南极地区中间是南极大陆、周围是海洋，北极地区中间是北冰洋、周围是陆地；南极地区比北极地区更寒冷；我国在南极建有长城站等考察站，在北极建有黄河站；企鹅主要生活在南极地区，北极地区有北极熊。",
-      trap: "易错点：企鹅在南极，北极熊在北极，两者生活的极地正好相反，是常考的对比点。"
-    },
-    {
-      id: "dili-h05-q026", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 26, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "东南亚地区华人、华侨分布广泛，其中华人占人口多数的国家是（ ）。",
-      options: [{key:"A",text:"印度尼西亚"}, {key:"B",text:"泰国"}, {key:"C",text:"新加坡"}, {key:"D",text:"马来西亚"}],
-      answer: ["C"],
-      explanation: "新加坡是东南亚华人占人口多数的国家，华人约占总人口的四分之三；马来西亚、泰国、印度尼西亚也有较多华人分布，但华人不是人口多数。",
-      trap: "易错点：新加坡华人占多数，马来西亚华人约占四分之一左右，不要以为东南亚各国华人都是多数。"
-    },
-    {
-      id: "dili-h05-q027", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
-      number: 27, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "火山和地震主要分布在板块交界的地带，板块内部的地壳相对稳定。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "全球火山和地震主要分布在板块交界的地带，如环太平洋火山地震带和地中海—喜马拉雅火山地震带；板块内部地壳相对稳定，火山、地震较少。",
-      trap: "易错点：两大火山地震带是环太平洋火山地震带和地中海—喜马拉雅火山地震带，都位于板块交界处。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "dili-h05-q028", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
       number: 28, type: "single", meta: "单选题",
@@ -3606,303 +2319,33 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "相对高度是指一个地点高出另一个地点的垂直距离，徒步起点海拔在200—300米，山顶的海拔是630米，相对高度在330—430米之间，400米符合条件。",
       trap: "易错点：相对高度是两地海拔的差——630减去200—300，得到330—430米，不要直接选山顶海拔630米。"
     },
-    {
-      id: "dili-h06-q001", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 1, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国一、二级阶梯的分界线是（ ）。",
-      options: [{key:"A",text:"昆仑山—祁连山—横断山脉"}, {key:"B",text:"大兴安岭—太行山—巫山—雪峰山"}, {key:"C",text:"秦岭—淮河"}, {key:"D",text:"天山—阴山"}],
-      answer: ["A"],
-      explanation: "一、二级阶梯的分界线是昆仑山—祁连山—横断山脉；二、三级阶梯的分界线是大兴安岭—太行山—巫山—雪峰山。",
-      trap: "易错点：两组分界线容易混淆，昆仑山—祁连山—横断山脉是一、二级阶梯分界线。"
-    },
-    {
-      id: "dili-h06-q002", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 2, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "黄河发源于（ ），注入（ ）。",
-      options: [{key:"A",text:"巴颜喀拉山，渤海"}, {key:"B",text:"唐古拉山，东海"}, {key:"C",text:"巴颜喀拉山，黄海"}, {key:"D",text:"唐古拉山，渤海"}],
-      answer: ["A"],
-      explanation: "黄河发源于青藏高原的巴颜喀拉山，注入渤海；长江发源于唐古拉山，注入东海。",
-      trap: "易错点：长江发源于唐古拉山、黄河发源于巴颜喀拉山，两条河的源头和入海口都要分清。"
-    },
-    {
-      id: "dili-h06-q003", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 3, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国降水的空间分布规律是（ ）。",
-      options: [{key:"A",text:"自东南沿海向西北内陆递减"}, {key:"B",text:"自西北内陆向东南沿海递减"}, {key:"C",text:"自南向北递增"}, {key:"D",text:"各地降水均匀"}],
-      answer: ["A"],
-      explanation: "受夏季风影响，我国降水自东南沿海向西北内陆递减，东南沿海降水多，西北内陆降水少。",
-      trap: "易错点：降水多少主要受夏季风和距海远近影响，东南多、西北少。"
-    },
-    {
-      id: "dili-h06-q004", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 4, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国人口分布的地理界线是（ ），该线以东人口多、以西人口少。",
-      options: [{key:"A",text:"黑河—腾冲一线"}, {key:"B",text:"秦岭—淮河一线"}, {key:"C",text:"大兴安岭—太行山一线"}, {key:"D",text:"漠河—曾母暗沙一线"}],
-      answer: ["A"],
-      explanation: "我国人口分布不均，以黑河—腾冲一线为界，线东人口稠密，线西人口稀疏。",
-      trap: "易错点：黑河—腾冲线是人口界线，秦岭—淮河线是南北分界线，不要混淆。"
-    },
-    {
-      id: "dili-h06-q005", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 5, type: "multiple", meta: "多选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "关于我国气候的说法，正确的是（ ）。",
-      options: [{key:"A",text:"季风气候显著"}, {key:"B",text:"夏季南北温差大"}, {key:"C",text:"冬季南北温差大"}, {key:"D",text:"降水集中在夏秋季节"}],
-      answer: ["A","C","D"],
-      explanation: "我国季风气候显著，降水集中在夏秋季节。夏季除青藏高原等地区外普遍高温，南北温差小；冬季南北温差大。",
-      trap: "易错点：夏季南北温差小、冬季南北温差大，是我国气温分布的一对典型特征。"
-    },
-    {
-      id: "dili-h06-q006", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 6, type: "judge", meta: "判断题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "长江是我国第一大河，长度、水量均居全国首位，航运价值高，有“黄金水道”之称。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "长江长度约6300千米，水量居全国首位，干支流通航里程长，有“黄金水道”之称。",
-      trap: "易错点：长江是第一大河，黄河是第二长河；“黄金水道”指的是长江。"
-    },
-    {
-      id: "dili-h06-q007", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 7, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "秦岭—淮河一线大致与我国1月（ ）等温线和（ ）毫米年等降水量线一致。",
-      options: [{key:"A",text:"0℃，800毫米"}, {key:"B",text:"10℃，400毫米"}, {key:"C",text:"0℃，400毫米"}, {key:"D",text:"-10℃，800毫米"}],
-      answer: ["A"],
-      explanation: "秦岭—淮河一线大致与1月0℃等温线和800毫米年等降水量线一致，也是暖温带与亚热带、湿润地区与半湿润地区的分界线。",
-      trap: "易错点：400毫米年等降水量线大致是半湿润地区与半干旱地区的分界线，不是秦岭—淮河线。"
-    },
-    {
-      id: "dili-h06-q008", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 8, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "青藏地区的农业主要分布在（ ），被称为河谷农业。",
-      options: [{key:"A",text:"高原面"}, {key:"B",text:"河谷地带"}, {key:"C",text:"沙漠绿洲"}, {key:"D",text:"沿海平原"}],
-      answer: ["B"],
-      explanation: "青藏地区海拔高、气温低，农业主要分布在海拔较低、热量较好的河谷地带，如雅鲁藏布江谷地、湟水谷地，称为河谷农业，主要种植青稞、小麦等。",
-      trap: "易错点：青藏是河谷农业，西北是灌溉农业（绿洲农业），不要混淆。"
-    },
-    {
-      id: "dili-h06-q009", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 9, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国陆上邻国和隔海相望的国家分别有（ ）。",
-      options: [{key:"A",text:"14个、6个"}, {key:"B",text:"6个、14个"}, {key:"C",text:"14个、14个"}, {key:"D",text:"6个、6个"}],
-      answer: ["A"],
-      explanation: "我国陆上邻国有14个，隔海相望的国家有6个（日本、韩国、菲律宾、马来西亚、文莱、印度尼西亚）；我国海岸线长约18000多千米。",
-      trap: "易错点：陆上邻国14个，隔海相望6个，两个数字不要颠倒。"
-    },
-    {
-      id: "dili-h06-q010", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 10, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国的内海是（ ）。",
-      options: [{key:"A",text:"渤海"}, {key:"B",text:"黄海"}, {key:"C",text:"东海"}, {key:"D",text:"南海"}],
-      answer: ["A"],
-      explanation: "渤海是我国的内海，位于辽东半岛与山东半岛之间；黄海、东海、南海是我国的边缘海。",
-      trap: "易错点：渤海是内海，琼州海峡是内海海峡；黄海、东海、南海是边缘海。"
-    },
-    {
-      id: "dili-h06-q011", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 11, type: "multiple", meta: "多选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "关于我国行政区的说法，正确的是（ ）。",
-      options: [{key:"A",text:"省级行政区共有34个"}, {key:"B",text:"直辖市有4个，分别是北京、天津、上海、重庆"}, {key:"C",text:"自治区有5个，分别是内蒙古、新疆、西藏、宁夏、广西"}, {key:"D",text:"特别行政区有3个，分别是香港、澳门、台湾"}],
-      answer: ["A","B","C"],
-      explanation: "我国省级行政区共34个，直辖市4个（北京、天津、上海、重庆），自治区5个（内蒙古、新疆、西藏、宁夏、广西），特别行政区2个（香港、澳门），台湾省是我国的一个省，不是特别行政区。",
-      trap: "易错点：特别行政区只有香港和澳门两个，台湾是省，不是特别行政区。"
-    },
-    {
-      id: "dili-h06-q012", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 12, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列省区与省会城市的搭配，正确的是（ ）。",
-      options: [{key:"A",text:"福建—厦门"}, {key:"B",text:"广东—广州"}, {key:"C",text:"四川—重庆"}, {key:"D",text:"新疆—兰州"}],
-      answer: ["B"],
-      explanation: "广东省会是广州，福建省会是福州（不是厦门），四川省会是成都（重庆是直辖市），新疆维吾尔自治区的首府是乌鲁木齐（兰州是甘肃省会）。",
-      trap: "易错点：福建省会是福州不是厦门，四川省会是成都不是重庆，新疆首府是乌鲁木齐不是兰州。"
-    },
-    {
-      id: "dili-h06-q013", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 13, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国地势三级阶梯中，第一级阶梯的平均海拔是（ ）。",
-      options: [{key:"A",text:"4000米以上"}, {key:"B",text:"1000—2000米"}, {key:"C",text:"500米以下"}, {key:"D",text:"2000—3000米"}],
-      answer: ["A"],
-      explanation: "我国地势第一级阶梯是青藏高原，平均海拔4000米以上；第二级阶梯平均海拔1000—2000米，以高原和盆地为主；第三级阶梯平均海拔500米以下，以平原和丘陵为主。",
-      trap: "易错点：三级阶梯的海拔要成组记：第一级4000米以上，第二级1000—2000米，第三级500米以下。"
-    },
-    {
-      id: "dili-h06-q014", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 14, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "四川盆地和柴达木盆地分别被称为（ ）。",
-      options: [{key:"A",text:"紫色盆地、聚宝盆"}, {key:"B",text:"聚宝盆、紫色盆地"}, {key:"C",text:"紫色盆地、天府之国"}, {key:"D",text:"天府之国、聚宝盆"}],
-      answer: ["A"],
-      explanation: "四川盆地土壤多为紫色土，被称为“紫色盆地”，成都平原被称为“天府之国”；柴达木盆地矿产资源丰富，被称为“聚宝盆”。",
-      trap: "易错点：“紫色盆地”是四川盆地，“聚宝盆”是柴达木盆地，“天府之国”是成都平原，三者不要混淆。"
-    },
-    {
-      id: "dili-h06-q015", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 15, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列地理界线中，不属于秦岭—淮河一线意义的是（ ）。",
-      options: [{key:"A",text:"南方地区与北方地区的分界线"}, {key:"B",text:"1月0℃等温线"}, {key:"C",text:"800毫米年等降水量线"}, {key:"D",text:"400毫米年等降水量线"}],
-      answer: ["D"],
-      explanation: "秦岭—淮河一线大致与1月0℃等温线、800毫米年等降水量线一致，是南方地区与北方地区、暖温带与亚热带、湿润地区与半湿润地区的分界线；400毫米年等降水量线大致是半湿润地区与半干旱地区的分界线，也是季风区与非季风区的分界线之一。",
-      trap: "易错点：秦岭—淮河线对应的是800毫米线，不是400毫米线；400毫米线对应的是半湿润与半干旱的分界。"
-    },
-    {
-      id: "dili-h06-q016", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 16, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国外流河与内流河的分界线大致是（ ）。",
-      options: [{key:"A",text:"大兴安岭—阴山—贺兰山—祁连山—巴颜喀拉山—冈底斯山"}, {key:"B",text:"昆仑山—祁连山—横断山脉"}, {key:"C",text:"大兴安岭—太行山—巫山—雪峰山"}, {key:"D",text:"秦岭—淮河"}],
-      answer: ["A"],
-      explanation: "我国外流河与内流河的分界线大致是大兴安岭—阴山—贺兰山—祁连山—巴颜喀拉山—冈底斯山一线，该线以东、以南多为外流河，以西、以北多为内流河。",
-      trap: "易错点：内外流分界线要与阶梯分界线区分开，昆仑山—祁连山—横断山脉是一、二级阶梯分界线。"
-    },
-    {
-      id: "dili-h06-q017", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 17, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "长江水能资源最丰富的河段是（ ）。",
-      options: [{key:"A",text:"上游河段"}, {key:"B",text:"中游河段"}, {key:"C",text:"下游河段"}, {key:"D",text:"入海口河段"}],
-      answer: ["A"],
-      explanation: "长江上游流经地势第一、二级阶梯，落差大、水流急，水能资源最丰富，三峡水利枢纽就建在上游与中游的交界附近；中下游地势平坦，水能较少，但航运价值高。",
-      trap: "易错点：水能看落差，上游落差大、水能丰富；航运看水量和水流平稳，中下游航运价值高。"
-    },
-    {
-      id: "dili-h06-q018", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 18, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "黄河凌汛容易发生的河段是（ ）。",
-      options: [{key:"A",text:"上游和下游河段"}, {key:"B",text:"中游河段"}, {key:"C",text:"源头河段"}, {key:"D",text:"全河段"}],
-      answer: ["A"],
-      explanation: "黄河上游和下游河段由低纬度流向高纬度，冬春季节河水封冻时，下游先解冻、上游后解冻（或上游先封冻、下游后封冻），冰坝阻塞河道，容易发生凌汛。",
-      trap: "易错点：凌汛发生在由低纬流向高纬的河段，黄河上游和下游都满足这个条件，中游由高纬流向低纬，不易发生凌汛。"
-    },
-    {
-      id: "dili-h06-q019", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 19, type: "judge", meta: "判断题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "南水北调工程的东线方案利用京杭大运河作为输水通道。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "南水北调工程分为东线、中线、西线三条线路，东线方案利用京杭大运河，把长江水输往华北地区；中线从丹江口水库引水到北京、天津，西线方案尚未实施。",
-      trap: "易错点：东线利用京杭大运河，中线从丹江口水库引水，两条线路的水源和通道都不同。"
-    },
-    {
-      id: "dili-h06-q020", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 20, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国煤炭、石油、铁矿、稀土的主要产地，正确的一组是（ ）。",
-      options: [{key:"A",text:"煤炭—山西、内蒙古；石油—黑龙江大庆、新疆；铁矿—辽宁鞍山、本溪；稀土—内蒙古白云鄂博"}, {key:"B",text:"煤炭—广东、福建；石油—西藏、青海；铁矿—海南、台湾；稀土—四川、云南"}, {key:"C",text:"煤炭—山西、内蒙古；石油—广东、福建；铁矿—辽宁鞍山、本溪；稀土—内蒙古白云鄂博"}, {key:"D",text:"煤炭—山西、内蒙古；石油—黑龙江大庆、新疆；铁矿—广东、福建；稀土—四川、云南"}],
-      answer: ["A"],
-      explanation: "我国煤炭主要分布在山西、内蒙古、陕西等地，石油主要分布在黑龙江大庆、新疆、山东等地，铁矿主要分布在辽宁鞍山、本溪、河北迁安等地，稀土主要分布在内蒙古白云鄂博。",
-      trap: "易错点：矿产分布要按省区记：煤在山西、内蒙古，油在大庆、新疆，铁在鞍山、本溪，稀土在白云鄂博。"
-    },
-    {
-      id: "dili-h06-q021", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 21, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国耕地主要分布在（ ）。",
-      options: [{key:"A",text:"东部季风区的平原和盆地"}, {key:"B",text:"西部高原和山地"}, {key:"C",text:"西北干旱的沙漠地区"}, {key:"D",text:"青藏高原的高寒地区"}],
-      answer: ["A"],
-      explanation: "我国耕地主要分布在东部季风区的平原和盆地，如东北平原、华北平原、长江中下游平原和四川盆地；西部地区以草地和林地为主，耕地很少。",
-      trap: "易错点：耕地在东部，林地在东北、西南，草地在西部；耕地、林地、草地的分布要分开记。"
-    },
-    {
-      id: "dili-h06-q022", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 22, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国工业的分布特点是（ ）。",
-      options: [{key:"A",text:"均匀分布在全国各地"}, {key:"B",text:"沿海、沿江、沿交通干线分布，东部密集、西部稀疏"}, {key:"C",text:"集中分布在西部高原地区"}, {key:"D",text:"集中分布在北部边疆地区"}],
-      answer: ["B"],
-      explanation: "我国工业主要沿海、沿江、沿交通干线分布，东部沿海地区工业最发达、最密集，西部地区工业相对稀疏，四大工业基地都分布在东部沿海地区。",
-      trap: "易错点：工业分布是东密西疏，沿海、沿江、沿交通干线；农业分布是东耕西牧，人口分布是东多西少，三者规律相近但不要混为一谈。"
-    },
-    {
-      id: "dili-h06-q023", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 23, type: "multiple", meta: "多选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "关于我国四大工业基地的说法，正确的是（ ）。",
-      options: [{key:"A",text:"辽中南工业基地是我国著名的重工业基地"}, {key:"B",text:"京津唐工业基地是我国北方最大的综合性工业基地"}, {key:"C",text:"沪宁杭工业基地是我国最大的综合性工业基地"}, {key:"D",text:"珠江三角洲工业基地是以轻工业为主的综合性工业基地"}],
-      answer: ["A","B","C","D"],
-      explanation: "辽中南工业基地是我国著名的重工业基地，京津唐工业基地是北方最大的综合性工业基地，沪宁杭工业基地是全国最大的综合性工业基地，珠江三角洲工业基地是以轻工业为主的综合性工业基地，四项说法都正确。",
-      trap: "易错点：四个基地的定语各不相同：辽中南是重工业，京津唐是北方最大综合性，沪宁杭是全国最大综合性，珠江三角洲是以轻工业为主。"
-    },
-    {
-      id: "dili-h06-q024", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 24, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国第一个国家级高新技术产业开发区是（ ）。",
-      options: [{key:"A",text:"北京中关村"}, {key:"B",text:"上海浦东"}, {key:"C",text:"深圳高新区"}, {key:"D",text:"武汉东湖"}],
-      answer: ["A"],
-      explanation: "北京中关村是我国第一个国家级高新技术产业开发区，被称为“中国硅谷”，依托北京众多的高校和科研机构，科技力量雄厚。",
-      trap: "易错点：第一个国家级高新技术产业开发区是北京中关村；上海浦东是经济开发区，不是高新技术产业开发区。"
-    },
-    {
-      id: "dili-h06-q025", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 25, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国东西向的铁路干线陇海线和兰新线，分别连接的是（ ）。",
-      options: [{key:"A",text:"连云港—兰州、兰州—乌鲁木齐"}, {key:"B",text:"北京—上海、北京—广州"}, {key:"C",text:"连云港—乌鲁木齐、兰州—上海"}, {key:"D",text:"北京—九龙、上海—昆明"}],
-      answer: ["A"],
-      explanation: "陇海线东起江苏连云港，西到甘肃兰州；兰新线从兰州到新疆乌鲁木齐，两线相连构成我国东西向的铁路大动脉；京沪线是北京—上海，京广线是北京—广州。",
-      trap: "易错点：陇海线是连云港—兰州，兰新线是兰州—乌鲁木齐，两线在兰州相接；京沪、京广是南北向干线。"
-    },
-    {
-      id: "dili-h06-q026", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 26, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列关于我国四大地理区域自然特征的对应关系，正确的是（ ）。",
-      options: [{key:"A",text:"北方地区—干旱"}, {key:"B",text:"南方地区—高寒"}, {key:"C",text:"西北地区—干旱"}, {key:"D",text:"青藏地区—湿热"}],
-      answer: ["C"],
-      explanation: "西北地区突出的自然特征是干旱，青藏地区突出的自然特征是高寒；北方地区温带季风气候、旱地农业，南方地区气候湿热、河湖众多。",
-      trap: "易错点：西北干旱、青藏高寒是两个最常考的区域特征，北方和南方不能用这两个词概括。"
-    },
-    {
-      id: "dili-h06-q027", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
-      number: 27, type: "judge", meta: "判断题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "我国自然资源总量丰富，但人均占有量较少，资源形势严峻。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "我国自然资源总量丰富，许多矿产资源储量居世界前列，但人口众多，人均占有量远低于世界平均水平；加上利用不合理、浪费和污染，资源形势比较严峻，要坚持节约资源、保护环境的基本国策。",
-      trap: "易错点：总量丰富不等于人均丰富，复习时要同时记住“总量”和“人均”两个角度。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "dili-h06-q028", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
       number: 28, type: "single", meta: "单选题",
@@ -4015,6 +2458,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h04-q059", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      image: true,
       number: 59, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自2025年四川省成都市中考地理试题第16题（原题依托水乡景观剪纸图，图中呈现的小桥、流水、人家、白墙黑檐楼房景观改写为文字，知识点、选项与答案未改）",
@@ -4026,6 +2470,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h04-q060", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      image: true,
       number: 60, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自2025年四川省成都市中考地理试题第17题（原题依托水乡景观剪纸图，图中呈现的小桥、流水、人家、白墙黑檐楼房景观改写为文字，知识点、选项与答案未改）",
@@ -4224,6 +2669,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h05-q054", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      image: true,
       number: 54, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省成都市中考地理试题第11题（原题依托水和沙温度变化实验结果示意图，图中中午沙的温度比水高、夜晚沙的温度比水低的信息改写为文字，知识点、选项与答案未改）",
@@ -4709,6 +3155,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h04-q074", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      image: true,
       number: 74, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自2025年广东省深圳市中考地理试题（徐霞客游记组）第2题（原题依托喀斯特景观图，图中石林、石峰属喀斯特地貌的信息改写为文字，知识点、选项与答案未改）",
@@ -4720,6 +3167,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h04-q075", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      image: true,
       number: 75, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自2025年广东省深圳市中考地理试题（徐霞客游记组）第3题（原题依托喀斯特景观图，“峭峰林立”地貌属喀斯特地貌的信息改写为文字，知识点、选项与答案未改）",
@@ -5660,6 +4108,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q089", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 89, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年四川省乐山市中考地理试题第3题（原题依托照片，图中晨雾漫江、远山清晰可见的信息已在题干材料中，改为直接设问，知识点、选项与答案未改）",
@@ -5671,6 +4120,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q090", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 90, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2025年四川省乐山市中考地理试题第5题",
@@ -5715,6 +4165,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q094", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 94, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年四川省内江市中考地理试题第1题（原题依托圭表示意图，图中M为正午日影、朝向正北的信息已在题干材料中，改为直接设问，知识点、选项与答案未改）",
@@ -5726,6 +4177,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h01-q095", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      image: true,
       number: 95, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年四川省内江市中考地理试题第2题（原题依托地球绕日公转示意图，图中丙处太阳直射南回归线、为北半球冬至日的信息改写为文字，图上编号改为节气名，知识点与答案未改）",
@@ -5869,6 +4321,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h03-q081", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      image: true,
       number: 81, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2025年四川省乐山市中考地理试题第2题（原题依托照片，图中峨眉山海拔3099米、大渡河桥海拔380米的信息改写为文字，知识点、选项与答案未改）",
@@ -6111,6 +4564,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h06-q075", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      image: true,
       number: 75, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省乐山市中考地理试题第4题（原题依托生命鸟巢示意图，改为直接设问，知识点、选项与答案未改）",
@@ -6166,6 +4620,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h06-q080", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      image: true,
       number: 80, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省内江市中考地理试题第11题（原题依托四组水土流失探究实验示意图，图中“图d为土质不同实验”的信息改写为文字，知识点、选项与答案未改）",
@@ -6177,6 +4632,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
     },
     {
       id: "dili-h06-q081", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      image: true,
       number: 81, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省内江市中考地理试题第12题（原题依托水土流失探究实验示意图，图中“图c为坡度陡缓实验”的信息改写为文字，知识点、选项与答案未改）",
@@ -6736,5 +5192,1429 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "长时间强降水会使山坡土体饱和、重量增加、稳定性下降，容易诱发滑坡、泥石流；地震由地壳运动引起，寒潮由冷空气南下引起，台风是热带气旋，都不是强降水直接诱发的。",
       trap: "强降水→土体变重变滑→滑坡，链条要连起来；地震、寒潮、台风各有自己的成因。"
     },
+    {
+      id: "dili-h01-q105", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 105, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年四川省眉山市中考地理试题第21题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题为 5 项多选（4 项正确），改编为单选“不正确的是”（选项为其中 3 项正确 + 1 项错误）",
+      stem: "留尼汪岛是印度洋西部的一个火山岛，地形以高原、山地为主。下列关于留尼汪岛地理位置的描述，不正确的是（ ）。",
+      options: [{key:"A",text:"位于南半球"}, {key:"B",text:"位于东半球"}, {key:"C",text:"位于热带"}, {key:"D",text:"位于北温带"}],
+      answer: ["D"],
+      explanation: "留尼汪岛位于南半球和东半球，地处热带，位于印度洋西部，东边约190公里是毛里求斯群岛，西边与非洲第一大岛马达加斯加相距约650公里。"
+    },
+    {
+      id: "dili-h01-q106", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 106, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年四川省南充市中考地理试题第12题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "从东、西半球看，南美洲位于（ ）半球。",
+      options: [{key:"A",text:"东半球"}, {key:"B",text:"西半球"}, {key:"C",text:"东、西半球都有"}, {key:"D",text:"无法判断"}],
+      answer: ["B"],
+      explanation: "20°W和160°E组成的经线圈是东西半球的分界线，南美洲主要位于20°W以西至160°E的范围，处在西半球。"
+    },
+    {
+      id: "dili-h01-q107", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 107, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第11题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "规划中的“两洋铁路”中线位于赤道附近。“两洋铁路”中线位于地球上的五带中的（ ）带。",
+      options: [{key:"A",text:"热带"}, {key:"B",text:"北温带"}, {key:"C",text:"南温带"}, {key:"D",text:"北寒带"}],
+      answer: ["A"],
+      explanation: "南北回归线之间的区域属于热带；“两洋铁路”中线位于赤道附近，处在热带。"
+    },
+    {
+      id: "dili-h01-q108", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 108, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第11题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "近年来，中国出口到巴西的产品以机械、电子产品等为主。中国出口到巴西的产品多为（ ）。",
+      options: [{key:"A",text:"工业制成品"}, {key:"B",text:"初级产品"}, {key:"C",text:"农产品"}, {key:"D",text:"矿产品"}],
+      answer: ["A"],
+      explanation: "机械、电子产品等属于工业制成品；从巴西进口的产品以大豆、牛肉、铁矿石等初级产品为主。"
+    },
+    {
+      id: "dili-h01-q109", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 109, type: "judge", meta: "判断题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年四川省眉山市中考地理试题第21题（非选择题改编为判断题，只改呈现形式，知识点与答案未改）",
+      stem: "甘蔗是喜温、喜光作物，年降水量要求800～1200毫米。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "甘蔗喜温、喜光，生长需要充足的水分，年降水量要求800～1200毫米；留尼汪岛气候湿热，适宜甘蔗种植，甘蔗是该岛的主要经济作物。"
+    },
+    {
+      id: "dili-h02-q104", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 104, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省宜宾市中考地理试题第21题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "货船从大连出发，沿传统航道前往鹿特丹，穿越马六甲海峡进入印度洋；经①运河进入②海，最终到达大西洋沿岸的鹿特丹。①②分别是（ ）。",
+      options: [{key:"A",text:"苏伊士运河、地中海"}, {key:"B",text:"巴拿马运河、加勒比海"}, {key:"C",text:"基尔运河、北海"}, {key:"D",text:"苏伊士运河、红海"}],
+      answer: ["A"],
+      explanation: "从印度洋前往大西洋沿岸的鹿特丹，传统航道经苏伊士运河进入地中海，再出直布罗陀海峡进入大西洋。"
+    },
+    {
+      id: "dili-h02-q105", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 105, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省宜宾市中考地理试题第21题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "货船沿北极航线前往鹿特丹，由我国③海进入太平洋，穿过④海峡，经北冰洋沿岸前往鹿特丹。③④分别是（ ）。",
+      options: [{key:"A",text:"东海、白令海峡"}, {key:"B",text:"南海、马六甲海峡"}, {key:"C",text:"黄海、台湾海峡"}, {key:"D",text:"渤海、琼州海峡"}],
+      answer: ["A"],
+      explanation: "北极航线从我国东海进入太平洋，穿过白令海峡进入北冰洋，沿北冰洋沿岸前往欧洲。"
+    },
+    {
+      id: "dili-h02-q106", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 106, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省宜宾市中考地理试题第21题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "货船沿北极航线经北冰洋沿岸前往鹿特丹，途中可能看到的最有资格代表北极地区的动物是（ ）。",
+      options: [{key:"A",text:"北极熊"}, {key:"B",text:"企鹅"}, {key:"C",text:"袋鼠"}, {key:"D",text:"大熊猫"}],
+      answer: ["A"],
+      explanation: "北极熊生活在北极地区，是北极地区的代表动物；企鹅主要生活在南极地区，袋鼠生活在澳大利亚，大熊猫生活在中国四川、陕西、甘肃的山区。"
+    },
+    {
+      id: "dili-h02-q107", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 107, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第11题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "规划中的“两洋铁路”中线跨越世界上水量最大的河流，该河流是（ ）。",
+      options: [{key:"A",text:"亚马孙河"}, {key:"B",text:"尼罗河"}, {key:"C",text:"长江"}, {key:"D",text:"密西西比河"}],
+      answer: ["A"],
+      explanation: "世界上水量最大的河流是亚马孙河，它流经热带雨林气候区，降水丰富，河流流量大；尼罗河是世界上最长的河流。"
+    },
+    {
+      id: "dili-h02-q108", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 108, type: "judge", meta: "判断题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第11题（非选择题改编为判断题，只改呈现形式，知识点与答案未改）",
+      stem: "南美洲赤道附近分布着大面积的热带雨林，被称为“地球之肺”，对全球生态平衡意义重大。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "南美洲赤道附近分布着大面积的热带雨林，植物通过光合作用吸收二氧化碳、释放氧气，被称为“地球之肺”，对维护全球生态平衡意义重大。"
+    },
+    {
+      id: "dili-h02-q109", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 109, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省南充市中考地理试题第12题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "亚马孙河的流向为（ ）。",
+      options: [{key:"A",text:"自西向东"}, {key:"B",text:"自东向西"}, {key:"C",text:"自北向南"}, {key:"D",text:"自南向北"}],
+      answer: ["A"],
+      explanation: "亚马孙河发源于安第斯山脉，自西向东注入大西洋。"
+    },
+    {
+      id: "dili-h02-q110", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 110, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省南充市中考地理试题第12题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "亚马孙河水量大的气候原因是（ ）。",
+      options: [{key:"A",text:"流域内以热带雨林气候为主，降水丰富"}, {key:"B",text:"流域内以热带沙漠气候为主，蒸发微弱"}, {key:"C",text:"流域内以温带海洋性气候为主，降水均匀"}, {key:"D",text:"流域内以热带草原气候为主，干湿季分明"}],
+      answer: ["A"],
+      explanation: "亚马孙河流域以热带雨林气候为主，全年高温多雨，降水丰富，河流流量大，成为世界上水量最大的河流。"
+    },
+    {
+      id: "dili-h02-q111", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 111, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省南充市中考地理试题第12题（非选择题改编为单选题，只改呈现形式，知识点与答案未改；原题“美洲国家”结合本题组南美洲语境明确为南美洲国家）",
+      stem: "南美洲国家均属于（ ）。",
+      options: [{key:"A",text:"发达国家"}, {key:"B",text:"发展中国家"}, {key:"C",text:"转型国家"}, {key:"D",text:"最不发达国家"}],
+      answer: ["B"],
+      explanation: "南美洲国家都是发展中国家；发达国家主要分布在欧洲、北美洲和大洋洲。"
+    },
+    {
+      id: "dili-h03-q098", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 98, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025年四川省成都市中考地理试题第28题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "长江发源于我国地势第（ ）级阶梯的（ ）高原，自（ ）向（ ）注入东海。",
+      options: [{key:"A",text:"一、青藏、西、东"}, {key:"B",text:"二、内蒙古、西、东"}, {key:"C",text:"一、云贵、东、西"}, {key:"D",text:"三、青藏、东、西"}],
+      answer: ["A"],
+      explanation: "长江发源于我国地势第一级阶梯的青藏高原（唐古拉山），自西向东注入东海。"
+    },
+    {
+      id: "dili-h03-q099", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 99, type: "multiple", meta: "多选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025年四川省宜宾市中考地理试题第21题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "与传统航道相比，北极航线的优势与劣势有（ ）。",
+      options: [{key:"A",text:"距离短，运输成本低"}, {key:"B",text:"通行时间短，多数时间不能通航"}, {key:"C",text:"全年可通航"}, {key:"D",text:"运输成本更高"}],
+      answer: ["A","B"],
+      explanation: "北极航线相比传统航线距离短，运输成本低；但北极东北航线通行时间短，多数时间不能通航，全年可通航的是传统航道。"
+    },
+    {
+      id: "dili-h03-q100", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 100, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025年四川省宜宾市中考地理试题第23题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "我国东部地区由北向南入冬时间变（ ），其主要影响因素是（ ）。",
+      options: [{key:"A",text:"晚、纬度位置"}, {key:"B",text:"早、纬度位置"}, {key:"C",text:"晚、海陆位置"}, {key:"D",text:"早、地形因素"}],
+      answer: ["A"],
+      explanation: "我国东部地区由北向南，纬度逐渐降低，气温逐渐升高，入冬时间越来越晚，主要影响因素是纬度位置。",
+      verify: "unverified-answer-page"
+    },
+    {
+      id: "dili-h03-q101", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 101, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025年四川省宜宾市中考地理试题第23题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "从哈尔滨出发一路向南旅行，抵达（ ）省的南端，之后乘船横渡（ ）海峡到海南。",
+      options: [{key:"A",text:"广东、琼州"}, {key:"B",text:"广西、台湾"}, {key:"C",text:"福建、渤海"}, {key:"D",text:"浙江、朝鲜"}],
+      answer: ["A"],
+      explanation: "从哈尔滨一路向南，抵达广东省的南端（雷州半岛），之后乘船横渡琼州海峡到达海南岛。",
+      verify: "unverified-answer-page"
+    },
+    {
+      id: "dili-h03-q102", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 102, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第12题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "东北地区大部分属于严寒地区，是由于其纬度较（ ）。",
+      options: [{key:"A",text:"高"}, {key:"B",text:"低"}, {key:"C",text:"适中"}, {key:"D",text:"与纬度无关"}],
+      answer: ["A"],
+      explanation: "东北地区纬度较高，接受太阳辐射少，气温低，大部分属于严寒地区。"
+    },
+    {
+      id: "dili-h03-q103", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 103, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第12题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "青藏地区大部分属于严寒地区，是由于其平均海拔较（ ）。",
+      options: [{key:"A",text:"高"}, {key:"B",text:"低"}, {key:"C",text:"适中"}, {key:"D",text:"与海拔无关"}],
+      answer: ["A"],
+      explanation: "青藏地区平均海拔高，气温低（海拔每升高100米，气温约下降0.6℃），大部分属于严寒地区。"
+    },
+    {
+      id: "dili-h03-q104", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 104, type: "multiple", meta: "多选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025年四川省眉山市中考地理试题第22题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "郑渝高铁货运对郑渝两地发展的促进作用有（ ）。",
+      options: [{key:"A",text:"使两地资源得到优化配置"}, {key:"B",text:"带动两地现代服务业等相关产业发展"}, {key:"C",text:"促进两地在经济、贸易、产业等方面的合作与协调发展"}, {key:"D",text:"阻碍两地经济发展"}],
+      answer: ["A","B","C"],
+      explanation: "郑渝高铁货运使两地资源得到优化配置，带动两地现代服务业等相关产业发展，促进两地在经济、贸易、产业等方面的合作，促进两地协调发展和经济发展。"
+    },
+    {
+      id: "dili-h04-q113", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 113, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年四川省成都市中考地理试题第27题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "下列信息中，能够推测出新疆干旱自然特征的是（ ）。",
+      options: [{key:"A",text:"沙漠面积广、有时令河分布"}, {key:"B",text:"河网密布、湖泊众多"}, {key:"C",text:"降水丰沛、森林广布"}, {key:"D",text:"水量丰富、沼泽广布"}],
+      answer: ["A"],
+      explanation: "新疆深居内陆，气候干旱，沙漠面积广，河流多为时令河；河网密布、降水丰沛、湖泊众多都与干旱特征不符。"
+    },
+    {
+      id: "dili-h04-q114", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 114, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年四川省成都市中考地理试题第27题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "新疆塔里木盆地的阻沙防护带主要分布在（ ）。",
+      options: [{key:"A",text:"盆地边缘地形平坦、城镇较多的地区"}, {key:"B",text:"盆地中心沙漠广布的地区"}, {key:"C",text:"高山顶部冰雪覆盖的地区"}, {key:"D",text:"绿洲内部水源充足的地区"}],
+      answer: ["A"],
+      explanation: "阻沙防护带主要分布在盆地边缘，该地区地形比较平坦，城镇较多，便于建设和防护。"
+    },
+    {
+      id: "dili-h04-q115", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 115, type: "multiple", meta: "多选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年四川省成都市中考地理试题第27题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "新疆喀什地区坚持开展耐盐碱高品质海水稻种植，海水稻大米品质优良。从气候、水源角度看，其主要原因是（ ）。",
+      options: [{key:"A",text:"光照强"}, {key:"B",text:"昼夜温差大"}, {key:"C",text:"高山冰雪融水灌溉，水质好"}, {key:"D",text:"降水丰沛"}],
+      answer: ["A","B","C"],
+      explanation: "喀什地区属于温带大陆性气候，光照强，昼夜温差大，利于农作物进行光合作用、积累养分；当地有高山冰雪融水灌溉，水质好。"
+    },
+    {
+      id: "dili-h04-q116", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 116, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年四川省成都市中考地理试题第27题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "新疆喀什地区的海鲜养殖基地位于天山山脉附近，其主要水源来自天山的大气降水和（ ）。",
+      options: [{key:"A",text:"高山冰雪融水"}, {key:"B",text:"地下水"}, {key:"C",text:"河流水"}, {key:"D",text:"湖泊水"}],
+      answer: ["A"],
+      explanation: "海鲜养殖基地位于天山山脉附近，主要水源来自天山的大气降水和高山冰雪融水。"
+    },
+    {
+      id: "dili-h04-q117", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 117, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年四川省成都市中考地理试题第27题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "下列关于新疆海鲜陆养产业有利影响的说法，正确的是（ ）。",
+      options: [{key:"A",text:"带动当地居民就业，提高水资源利用率，促进当地经济发展"}, {key:"B",text:"只能增加海鲜产量，对当地就业没有帮助"}, {key:"C",text:"会加剧海洋渔业压力"}, {key:"D",text:"会减少当地居民的食材种类"}],
+      answer: ["A"],
+      explanation: "海鲜陆养可以带动当地居民就业，提高水资源利用率，促进当地经济发展；还能缓解海洋渔业压力，保障海鲜供应稳定，丰富居民的食材。"
+    },
+    {
+      id: "dili-h04-q118", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 118, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年四川省成都市中考地理试题第30题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "东北三省的省级行政中心分别是哈尔滨、（ ）。",
+      options: [{key:"A",text:"长春、沈阳"}, {key:"B",text:"沈阳、长春"}, {key:"C",text:"大连、鞍山"}, {key:"D",text:"吉林、锦州"}],
+      answer: ["A"],
+      explanation: "东北三省的省级行政中心分别是黑龙江省哈尔滨、吉林省长春、辽宁省沈阳。"
+    },
+    {
+      id: "dili-h04-q119", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 119, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年四川省成都市中考地理试题第30题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题为 6 项多选（4 项正确），改编为单选“不属于”（选项为其中 3 项正确 + 1 项错误）",
+      stem: "根据东北三省的矿产资源，推测下列不属于该地区主要工业部门的是（ ）。",
+      options: [{key:"A",text:"钢铁"}, {key:"B",text:"机械"}, {key:"C",text:"石油"}, {key:"D",text:"纺织"}],
+      answer: ["D"],
+      explanation: "东北三省矿产资源种类多、储量大，依托丰富的资源成为我国最大的重工业基地，主要工业部门有钢铁、机械、石油、化学等。"
+    },
+    {
+      id: "dili-h04-q120", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 120, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年四川省南充市中考地理试题第15题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "新疆面临的主要生态环境问题是（ ）。",
+      options: [{key:"A",text:"土地荒漠化"}, {key:"B",text:"水土流失"}, {key:"C",text:"酸雨"}, {key:"D",text:"赤潮"}],
+      answer: ["A"],
+      explanation: "新疆地处我国西北地区，气候干旱，荒漠广布，面临的主要生态环境问题是土地荒漠化。"
+    },
+    {
+      id: "dili-h05-q114", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      number: 114, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2025年四川省眉山市中考地理试题第23题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "咸海所在地区的地形特征是（ ）。",
+      options: [{key:"A",text:"地势东南高、西北低，地形以丘陵、平原为主"}, {key:"B",text:"地势西北高、东南低，地形以高原、山地为主"}, {key:"C",text:"地势中间高、四周低，地形以盆地为主"}, {key:"D",text:"地势平坦，地形以平原为主"}],
+      answer: ["A"],
+      explanation: "咸海所在地区地势东南高、西北低，地形以丘陵、平原为主。"
+    },
+    {
+      id: "dili-h05-q115", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      number: 115, type: "multiple", meta: "多选题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2025年四川省眉山市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "咸海表面积正在减少的原因有（ ）。",
+      options: [{key:"A",text:"深居亚欧大陆内部，远离海洋，气候干旱，降水少"}, {key:"B",text:"气候变暖，气温上升，蒸发旺盛"}, {key:"C",text:"人们生产生活从河湖中大量取水"}, {key:"D",text:"降水增多，入湖水量增大"}],
+      answer: ["A","B","C"],
+      explanation: "咸海深居亚欧大陆内部，远离海洋，气候干旱，降水少；气候变暖使气温上升、蒸发旺盛；人们生产生活从河湖中大量取水，入湖水量减少，湖面不断萎缩。"
+    },
+    {
+      id: "dili-h05-q116", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      number: 116, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2025年四川省眉山市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题为 5 项多选（4 项正确），改编为单选“不正确的是”（选项为其中 3 项正确 + 1 项错误）",
+      stem: "下列关于咸海表面积减少产生的环境问题的描述，不正确的是（ ）。",
+      options: [{key:"A",text:"土壤盐碱化"}, {key:"B",text:"土地沙漠化"}, {key:"C",text:"生物多样性减少"}, {key:"D",text:"降水量大幅增加"}],
+      answer: ["D"],
+      explanation: "咸海萎缩导致土壤盐碱化、土地沙漠化、生物多样性减少，对局地气候的调节作用逐渐减弱，中亚地区的降水量大幅减少，极端天气频发。"
+    },
+    {
+      id: "dili-h05-q117", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      number: 117, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2025年四川省南充市中考地理试题第12题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "破坏热带雨林可能产生的全球性环境问题是（ ）。",
+      options: [{key:"A",text:"气候变暖"}, {key:"B",text:"臭氧层空洞"}, {key:"C",text:"酸雨加重"}, {key:"D",text:"土地荒漠化"}],
+      answer: ["A"],
+      explanation: "热带雨林被破坏后，吸收二氧化碳的能力减弱，大气中二氧化碳增多，会导致全球气候变暖。"
+    },
+    {
+      id: "dili-h05-q118", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      number: 118, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2025年四川省南充市中考地理试题第13题（非选择题改编为多选题，只改呈现形式，知识点与答案未改；原题答案“广阔……”截断，D项按常见固定表述补全为“广阔的市场”）；原题为 5 项多选（4 项正确），改编为单选“不属于”（选项为其中 3 项正确 + 1 项错误）",
+      stem: "中国和几内亚合作过程中，下列不属于中国最突出优势的是（ ）。",
+      options: [{key:"A",text:"先进的科学技术"}, {key:"B",text:"雄厚的资金"}, {key:"C",text:"丰富的管理经验"}, {key:"D",text:"丰富的铁矿资源"}],
+      answer: ["D"],
+      explanation: "中国在合作中的突出优势是先进的科学技术、雄厚的资金、丰富的管理经验和广阔的市场；丰富的铁矿资源是几内亚方面的优势。"
+    },
+    {
+      id: "dili-h06-q090", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 90, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省成都市中考地理试题第28题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "从流量、流速、结冰期等方面看，长江中下游河段发展航运的有利条件有（ ）。",
+      options: [{key:"A",text:"长江干流主要流经亚热带，无结冰期，全年可通航"}, {key:"B",text:"长江中下游河段地势低平，河道开阔，水流速度慢"}, {key:"C",text:"长江中下游河段落差大、水流急"}, {key:"D",text:"长江中下游河段结冰期长"}],
+      answer: ["A","B"],
+      explanation: "长江干流主要流经亚热带，无结冰期，全年可通航；长江中下游河段地势低平，河道开阔，水流速度慢，航运价值高。落差大、水流急是上中游水能丰富的原因，不利于航运。"
+    },
+    {
+      id: "dili-h06-q091", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 91, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省成都市中考地理试题第28题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "长江流域东部发展大数据产业的资源优势有（ ）。",
+      options: [{key:"A",text:"产业密集和技术先进"}, {key:"B",text:"人力资源优势"}, {key:"C",text:"城市密集"}, {key:"D",text:"矿产资源丰富"}],
+      answer: ["A","B","C"],
+      explanation: "长江流域东部发展大数据产业的资源优势有产业密集和技术先进、人力资源优势、城市密集。"
+    },
+    {
+      id: "dili-h06-q092", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 92, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省成都市中考地理试题第29题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "粤港澳大湾区地处我国大陆（ ）部，位于（ ）的海口，濒临（ ）海，由香港、澳门特别行政区及（ ）省部分城市组成。",
+      options: [{key:"A",text:"东南、珠江、南、广东"}, {key:"B",text:"西南、长江、东、广西"}, {key:"C",text:"东北、黄河、渤、福建"}, {key:"D",text:"西北、珠江、黄、湖南"}],
+      answer: ["A"],
+      explanation: "粤港澳大湾区地处我国大陆东南部，位于珠江的海口，濒临南海，由香港、澳门特别行政区及广东省部分城市组成。"
+    },
+    {
+      id: "dili-h06-q093", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 93, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省成都市中考地理试题第29题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题为 5 项多选（4 项正确），改编为单选“不属于”（选项为其中 3 项正确 + 1 项错误）",
+      stem: "下列不属于粤港澳大湾区发展人形机器人产业有利条件的是（ ）。",
+      options: [{key:"A",text:"政策支持"}, {key:"B",text:"科技力量雄厚"}, {key:"C",text:"产业基础好"}, {key:"D",text:"矿产资源丰富"}],
+      answer: ["D"],
+      explanation: "粤港澳大湾区发展人形机器人产业的有利条件是政策支持、科技力量雄厚、产业基础好、市场需求大。"
+    },
+    {
+      id: "dili-h06-q094", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 94, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省成都市中考地理试题第29题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "表1显示，我国60岁及以上人口所占比重由2000年的10.33%升至2020年的18.70%。根据表1所示我国人口年龄结构的变化，推测人形机器人未来可能的应用场景包括（ ）。",
+      options: [{key:"A",text:"养老领域"}, {key:"B",text:"工业生产"}, {key:"C",text:"养老领域和工业生产"}, {key:"D",text:"深海采矿"}],
+      answer: ["C"],
+      explanation: "我国60岁及以上老年人口比重不断上升，养老需求增大，人形机器人可应用于养老领域；同时也可应用于工业生产等领域。"
+    },
+    {
+      id: "dili-h06-q095", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 95, type: "judge", meta: "判断题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省宜宾市中考地理试题第23题（非选择题改编为判断题，只改呈现形式，知识点与答案未改）",
+      stem: "2010～2020年，我国60岁及以上老年人口所占比例由13.26%上升至18.70%，人口老龄化问题加重。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "2010年我国60岁及以上人口占13.26%，2020年升至18.70%，比重上升，说明人口老龄化问题加重。"
+    },
+    {
+      id: "dili-h06-q096", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 96, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省成都市中考地理试题第30题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "2025年2月，第九届亚洲冬季运动会在哈尔滨市成功举办。从气候角度分析，哈尔滨市举办亚洲冬季运动会的有利条件是（ ）。",
+      options: [{key:"A",text:"属于温带季风气候，冬季寒冷漫长，降雪量大且积雪期长"}, {key:"B",text:"属于温带大陆性气候，冬季温暖湿润"}, {key:"C",text:"属于亚热带季风气候，冬季温和少雨"}, {key:"D",text:"属于高原山地气候，终年积雪"}],
+      answer: ["A"],
+      explanation: "哈尔滨属于温带季风气候，冬季寒冷漫长，降雪量大且积雪期长，适宜举办冬季运动会。"
+    },
+    {
+      id: "dili-h06-q097", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 97, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省成都市中考地理试题第30题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题为 5 项多选（4 项正确），改编为单选“不属于”（选项为其中 3 项正确 + 1 项错误）",
+      stem: "下列不属于东北三省可开发的冰雪经济项目的是（ ）。",
+      options: [{key:"A",text:"冰雪旅游"}, {key:"B",text:"冰雪运动培训"}, {key:"C",text:"冰雪赛事"}, {key:"D",text:"热带海滨度假"}],
+      answer: ["D"],
+      explanation: "东北三省可开发的冰雪经济项目有冰雪旅游、冰雪运动培训、冰雪赛事、冰雪艺术等。"
+    },
+    {
+      id: "dili-h06-q098", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 98, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "四川省理塘县平均海拔约4042米。理塘县位于四川省（ ）部，地处我国（ ）地区。",
+      options: [{key:"A",text:"西南、青藏"}, {key:"B",text:"东南、西北"}, {key:"C",text:"东北、南方"}, {key:"D",text:"西北、北方"}],
+      answer: ["A"],
+      explanation: "理塘县位于四川省西南部，地处我国青藏地区，平均海拔约4042米。"
+    },
+    {
+      id: "dili-h06-q099", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 99, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "理塘县人数最多的少数民族是（ ），该民族的传统服饰是（ ）。",
+      options: [{key:"A",text:"藏族、藏袍"}, {key:"B",text:"彝族、彝袍"}, {key:"C",text:"羌族、羌绣"}, {key:"D",text:"苗族、苗绣"}],
+      answer: ["A"],
+      explanation: "理塘县人数最多的少数民族是藏族，该民族的传统服饰是藏袍。"
+    },
+    {
+      id: "dili-h06-q100", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 100, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "理塘县所处地形区的地形地势特征是（ ）。",
+      options: [{key:"A",text:"地形以山地和高原为主，地势起伏较大"}, {key:"B",text:"地形以平原为主，地势低平"}, {key:"C",text:"地形以丘陵为主，地势起伏和缓"}, {key:"D",text:"地形以盆地为主，四周高、中间低"}],
+      answer: ["A"],
+      explanation: "理塘县地处青藏地区，地形以山地和高原为主，地势起伏较大。"
+    },
+    {
+      id: "dili-h06-q101", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 101, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题 5 项，删去 1 项明显错误干扰项（全年高温），其余不变",
+      stem: "理塘县气候的气温特征有（ ）。",
+      options: [{key:"A",text:"全年低温"}, {key:"B",text:"夏季温和"}, {key:"C",text:"昼夜温差大"}, {key:"D",text:"夏季炎热"}],
+      answer: ["A","B","C"],
+      explanation: "理塘县海拔高，气温特征是全年低温，夏季温和，昼夜温差大。"
+    },
+    {
+      id: "dili-h06-q102", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 102, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "影响理塘县夏季气温的主要因素是（ ）。",
+      options: [{key:"A",text:"地形因素"}, {key:"B",text:"纬度位置"}, {key:"C",text:"海陆位置"}, {key:"D",text:"人类活动"}],
+      answer: ["A"],
+      explanation: "理塘县平均海拔约4042米，地势高导致气温低，影响其夏季气温的主要因素是地形因素。"
+    },
+    {
+      id: "dili-h06-q103", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 103, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省泸州市中考地理试题第23题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "陕西省南北差异明显，甲山脉是南北分界线的一部分。甲山脉的名称是（ ），该省的行政中心乙是（ ）。",
+      options: [{key:"A",text:"秦岭、西安"}, {key:"B",text:"太行山、太原"}, {key:"C",text:"巫山、重庆"}, {key:"D",text:"南岭、广州"}],
+      answer: ["A"],
+      explanation: "甲山脉是秦岭，陕西省的行政中心是西安；秦岭—淮河一线是我国南方地区与北方地区的分界线。"
+    },
+    {
+      id: "dili-h06-q104", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 104, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省泸州市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题 5 项，删去 1 项明显错误干扰项（有结冰期），其余不变",
+      stem: "陕南地区河流不同于陕北地区的水文特征有（ ）。",
+      options: [{key:"A",text:"流量大"}, {key:"B",text:"含沙量低"}, {key:"C",text:"无结冰期"}, {key:"D",text:"含沙量高"}],
+      answer: ["A","B","C"],
+      explanation: "陕南地区河流流量大、含沙量低、无结冰期；陕北地区河流流量较小、含沙量高、有结冰期。"
+    },
+    {
+      id: "dili-h06-q105", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 105, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省泸州市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "关中地区成为华夏文明重要发祥地的有利自然条件有（ ）。",
+      options: [{key:"A",text:"地形平坦，土壤肥沃，利于农耕"}, {key:"B",text:"气候适宜，降水适中"}, {key:"C",text:"河流提供水源"}, {key:"D",text:"地形崎岖，交通闭塞"}],
+      answer: ["A","B","C"],
+      explanation: "关中地区地形平坦，土壤肥沃，利于农耕；气候适宜，降水适中；河流提供水源，这些有利自然条件使其成为华夏文明的重要发祥地。"
+    },
+    {
+      id: "dili-h06-q106", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 106, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省泸州市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "陕北地区具有浓郁黄土风情的文化遗产有（ ）。",
+      options: [{key:"A",text:"安塞腰鼓"}, {key:"B",text:"窑洞"}, {key:"C",text:"秧歌"}, {key:"D",text:"傣家竹楼"}],
+      answer: ["A","B","C"],
+      explanation: "陕北地区具有浓郁黄土风情的文化遗产有安塞腰鼓、窑洞、秧歌；傣家竹楼是云南傣族的传统民居。"
+    },
+    {
+      id: "dili-h01-q110", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 110, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年四川省乐山市中考地理试题第21题第（1）小问第②空（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "乐山市某学校运动区、教学区、生活区中，银杏树主要分布在（ ）。",
+      options: [{key:"A",text:"教学区"}, {key:"B",text:"运动区"}, {key:"C",text:"生活区"}, {key:"D",text:"校门口"}],
+      answer: ["A"],
+      explanation: "从校园银杏树分布图可以看到，教学区内银杏树分布较为密集，数量明显多于运动区和生活区。"
+    },
+    {
+      id: "dili-h01-q111", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 111, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年四川省乐山市中考地理试题第21题第（1）小问第③空（原题为填空题，改编为单选题，图中东门、南门、北门的方向信息已写入题干，知识点与答案未改）",
+      stem: "根据校园银杏树分布图，图中东门、南门、北门指示了“上北下南、左西右东”，银杏树主要分布在校园的（ ）部。",
+      options: [{key:"A",text:"东"}, {key:"B",text:"西"}, {key:"C",text:"南"}, {key:"D",text:"北"}],
+      answer: ["A"],
+      explanation: "由图中学校的东门、南门、北门可知该地图“上北下南、左西右东”，据此可知银杏树主要分布在校园的东部。"
+    },
+    {
+      id: "dili-h01-q112", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 112, type: "judge", meta: "判断题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年四川省乐山市中考地理试题第21题第（1）小问第①空（原题为简述题，改编为判断题，知识点与答案未改）",
+      stem: "从学校平面图到校园银杏树分布图的制作过程是：先实地勘察、标记定位银杏树，再整理数据后在学校平面图上设计图例进行标注。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "制作校园银杏树分布图，首先要在学校平面图基础上明确银杏树在校园中的实际位置，通过实地调查、测量等方式进行标记；然后将这些标记绘制在学校平面图上，形成校园银杏树分布图。"
+    },
+    {
+      id: "dili-h01-q113", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 113, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年四川省内江市中考地理试题第19题第（1）小问（原题为填空题，改编为单选题，图中线段比例尺信息已写入题干，知识点与答案未改）",
+      stem: "长江三角洲简图中，线段比例尺表示单位长度代表实地距离100千米，图中上海与杭州的直线距离大约为线段比例尺的2倍。上海到杭州的最短距离约为（ ）千米。",
+      options: [{key:"A",text:"100"}, {key:"B",text:"150"}, {key:"C",text:"200"}, {key:"D",text:"300"}],
+      answer: ["C"],
+      explanation: "图中线段比例尺表示单位长度代表实地距离100千米，上海与杭州的直线距离大约为线段比例尺的2倍，故两地最短距离约为200千米。"
+    },
+    {
+      id: "dili-h01-q114", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 114, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年四川省成都市中考地理试题第1题（原题依托我国南极科学考察站分布示意图，图中各站位于南极圈以南还是以北的信息已写入题干，知识点、选项与答案未改）",
+      stem: "我国5个南极科学考察站中，中山站、泰山站、秦岭站、昆仑站位于南极圈以南，长城站位于南极圈以北。有极昼极夜现象的有（ ）。",
+      options: [{key:"A",text:"2个"}, {key:"B",text:"3个"}, {key:"C",text:"4个"}, {key:"D",text:"5个"}],
+      answer: ["C"],
+      explanation: "我国5个南极科学考察站中，中山站、泰山站、秦岭站、昆仑站位于南极圈以南，有极昼极夜现象，长城站位于南极圈以北，无极昼极夜现象，故有极昼极夜现象的有4个。"
+    },
+    {
+      id: "dili-h01-q115", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 115, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年四川省成都市中考地理试题第2题",
+      stem: "秦岭站主体建筑底层架空主要是为了（ ）。",
+      options: [{key:"A",text:"防积雪掩埋，抗大风"}, {key:"B",text:"防极地动物侵袭"}, {key:"C",text:"防止沙尘暴，抗严寒"}, {key:"D",text:"防暴雨洪涝灾害"}],
+      answer: ["A"],
+      explanation: "南极终年积雪，气候酷寒，干燥，多烈风，没有沙尘暴和暴雨洪涝。秦岭站主体建筑底层架空主要是为了防积雪掩埋，抗大风。"
+    },
+    {
+      id: "dili-h01-q116", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 116, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年四川省成都市中考地理试题第3题",
+      stem: "秦岭站主体建筑采用在国内模块化生产、运往现场拼装的绿色建站方式，其主要目的是（ ）。①节省运输时间②减少极地建筑垃圾③缩短建站时间④缩短运输距离",
+      options: [{key:"A",text:"①②"}, {key:"B",text:"②③"}, {key:"C",text:"③④"}, {key:"D",text:"①④"}],
+      answer: ["B"],
+      explanation: "南极距离遥远，生态脆弱，施工环境恶劣。主体建筑采用在国内模块化生产、运往现场拼装的绿色建站方式，其主要目的是③缩短建站时间、②减少极地建筑垃圾；模块化生产、现场拼装方式不会节省运输时间、缩短运输距离，①、④错误。"
+    },
+    {
+      id: "dili-h01-q117", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 117, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年四川省成都市中考地理试题第14题（原题依托地球公转示意图，图上编号改为节气名设问，知识点与答案未改）",
+      stem: "2023年9月21日，成都某中学组织学生观看“天宫课堂”第四课现场直播。当天，地球运行至公转轨道的（ ）附近。",
+      options: [{key:"A",text:"春分"}, {key:"B",text:"夏至"}, {key:"C",text:"秋分"}, {key:"D",text:"冬至"}],
+      answer: ["C"],
+      explanation: "9月23日前后为秋分日，太阳直射赤道，全球昼夜平分；2023年9月21日接近秋分，地球运行至公转轨道的秋分点附近。"
+    },
+    {
+      id: "dili-h02-q112", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 112, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省乐山市中考地理试题第20题第（1）小问第①空（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "伊塞克湖地区深居内陆，距海洋（ ）。",
+      options: [{key:"A",text:"遥远"}, {key:"B",text:"较近"}, {key:"C",text:"适中"}, {key:"D",text:"无法判断"}],
+      answer: ["A"],
+      explanation: "伊塞克湖地区深居内陆，距海洋遥远，受海洋水汽影响小，气候干旱，降水稀少。"
+    },
+    {
+      id: "dili-h02-q113", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 113, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省乐山市中考地理试题第20题第（1）小问第②空（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "伊塞克湖地区深居内陆，受海洋水汽影响小，气候干旱，降水（ ）。",
+      options: [{key:"A",text:"稀少"}, {key:"B",text:"丰沛"}, {key:"C",text:"均匀"}, {key:"D",text:"集中"}],
+      answer: ["A"],
+      explanation: "伊塞克湖地区深居内陆，受海洋水汽影响小，气候干旱，降水稀少；降水量小于蒸发量，蒸发旺盛，湖水微咸。"
+    },
+    {
+      id: "dili-h02-q114", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 114, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省乐山市中考地理试题第20题第（1）小问第⑤空（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "伊塞克湖地区盆地内部地形较平坦，周边有丰富的高山冰雪融水，适合牧草生长，适宜发展（ ）。",
+      options: [{key:"A",text:"畜牧业"}, {key:"B",text:"种植业"}, {key:"C",text:"林业"}, {key:"D",text:"渔业"}],
+      answer: ["A"],
+      explanation: "伊塞克湖地区盆地内部地形较平坦，盆地周边有较丰富的高山冰雪融水，有河流流经，适合牧草生长，牲畜有充足的饲料，所以适宜发展畜牧业。"
+    },
+    {
+      id: "dili-h02-q115", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 115, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省乐山市中考地理试题第20题第（1）小问第⑥空（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "伊塞克湖透明度超过12米，湖光山色，风景优美，湖水矿物质丰富，适合疗养，该地区适宜发展（ ）。",
+      options: [{key:"A",text:"旅游业"}, {key:"B",text:"采矿业"}, {key:"C",text:"重工业"}, {key:"D",text:"商业"}],
+      answer: ["A"],
+      explanation: "伊塞克湖透明度超过12米，水质优良，湖光山色，风景优美，适合观光；湖水矿物质丰富，适合疗养，综合来说适宜发展旅游业。"
+    },
+    {
+      id: "dili-h02-q116", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 116, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年四川省成都市中考地理试题第6题（原题依托美国本土农业带分布示意图，图中乳畜带分布的气候与市场信息已写入题干，知识点、选项与答案未改）",
+      stem: "美国乳畜带分布在东北部地区，这里气候湿冷，适合牧草的生长，为牲畜的成长提供了饲料；且该地区城市、人口分布密集，市场需求量大。影响乳畜带分布的主要因素是（ ）。",
+      options: [{key:"A",text:"地形、市场"}, {key:"B",text:"水源、政策"}, {key:"C",text:"气候、市场"}, {key:"D",text:"地形、政策"}],
+      answer: ["C"],
+      explanation: "乳畜带分布在美国东北部地区，这里气候湿冷，适合牧草的生长，为牲畜的成长提供了饲料；且该地区城市、人口分布密集，市场需求量大，因此气候和市场是影响乳畜带分布的主要因素。"
+    },
+    {
+      id: "dili-h02-q117", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 117, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2024年四川省成都市中考地理试题第7题（库内已有“美国农业生产的主要特点”题，本题问的是地区专业化生产之“便于”，设问不同而保留）",
+      stem: "美国农业地区专业化生产，便于（ ）。①推广先进的生物技术和耕作技术②发挥大规模机械化优势③增加农作物的熟制④大规模增加农业用地",
+      options: [{key:"A",text:"①②"}, {key:"B",text:"②③"}, {key:"C",text:"③④"}, {key:"D",text:"①④"}],
+      answer: ["A"],
+      explanation: "美国农业地区专业化生产，充分利用了不同地区的自然条件，便于推广先进的生物技术和耕作技术，①正确；生产各个过程和环节都实现了机械化和专业化，体现了大规模机械化优势，②正确；农作物熟制受自然条件特别是温度的影响，与专业化生产无关，③错误；专业化生产与农业用地规模没有直接关系，④错误。"
+    },
+    {
+      id: "dili-h02-q118", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 118, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年四川省成都市中考地理试题第30题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "欧洲西部图中A是（ ）洋。",
+      options: [{key:"A",text:"大西洋"}, {key:"B",text:"太平洋"}, {key:"C",text:"印度洋"}, {key:"D",text:"北冰洋"}],
+      answer: ["A"],
+      explanation: "欧洲西部西临大西洋，图中A是大西洋；欧洲西部北临北冰洋，南临地中海。"
+    },
+    {
+      id: "dili-h02-q119", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 119, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年四川省成都市中考地理试题第30题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "欧洲西部甲地位于五带中的（ ）。",
+      options: [{key:"A",text:"北温带"}, {key:"B",text:"热带"}, {key:"C",text:"南温带"}, {key:"D",text:"北寒带"}],
+      answer: ["A"],
+      explanation: "欧洲西部甲地位于中纬度地区，处在北温带；热带位于南北回归线之间，南温带、北寒带与甲地纬度不符。"
+    },
+    {
+      id: "dili-h02-q120", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 120, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年四川省成都市中考地理试题第30题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "欧洲西部甲地的地形类型为（ ），利于海洋上的暖湿气流深入内陆。",
+      options: [{key:"A",text:"平原"}, {key:"B",text:"高原"}, {key:"C",text:"山地"}, {key:"D",text:"丘陵"}],
+      answer: ["A"],
+      explanation: "欧洲西部甲地地形以平原为主，地势低平，利于海洋上的暖湿气流深入内陆，形成温带海洋性气候。"
+    },
+    {
+      id: "dili-h02-q121", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 121, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年四川省成都市中考地理试题第30题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "欧洲西部甲地地形以平原为主，利于海洋上的暖湿气流深入内陆，由此推断甲地的气候特征是（ ）。",
+      options: [{key:"A",text:"全年温和湿润"}, {key:"B",text:"全年高温多雨"}, {key:"C",text:"夏季高温多雨，冬季寒冷干燥"}, {key:"D",text:"全年寒冷干燥"}],
+      answer: ["A"],
+      explanation: "欧洲西部甲地地形以平原为主，利于海洋上的暖湿气流深入内陆，气候特征是全年温和湿润，属于温带海洋性气候。"
+    },
+    {
+      id: "dili-h03-q105", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 105, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025年四川省乐山市中考地理试题第6题（原题依托甲、乙两地气候资料图，图中甲地位于横断山区、乙地位于四川盆地的信息已写入题干，知识点、选项与答案未改）",
+      stem: "长江上游甲、乙两地气候资料显示：甲地位于横断山区，海拔高；乙地位于四川盆地，海拔低。乙地比甲地（ ）。",
+      options: [{key:"A",text:"夏季更热"}, {key:"B",text:"海拔更高"}, {key:"C",text:"降水更少"}, {key:"D",text:"冬季更冷"}],
+      answer: ["A"],
+      explanation: "从气候资料图可以看到，乙地比甲地夏季更热、降水更多、冬季气温更高；甲地位于横断山区，海拔高，乙地位于四川盆地，海拔低，所以乙地比甲地海拔更低。"
+    },
+    {
+      id: "dili-h03-q106", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 106, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2024年四川省成都市中考地理试题第4题（原题依托“北京中轴线”示意图，图中钟鼓楼向南延伸至永定门的信息已写入题干，知识点、选项与答案未改）",
+      stem: "北京中轴线由钟鼓楼向南延伸至永定门，其延伸方向大致是（ ）。",
+      options: [{key:"A",text:"东西走向"}, {key:"B",text:"南北走向"}, {key:"C",text:"东北—西南走向"}, {key:"D",text:"西北—东南走向"}],
+      answer: ["B"],
+      explanation: "在没有方向标的地图上，遵循“上北下南，左西右东”的原则确定方向，北京中轴线由钟鼓楼向南延伸至永定门，延伸方向大致为南北走向。"
+    },
+    {
+      id: "dili-h03-q107", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 107, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2024年四川省成都市中考地理试题第18题",
+      stem: "运行在横断山区的5633/5634次列车往返于成昆铁路，是助力乡村振兴的“公益慢火车”。成昆铁路经过的桥梁、隧道众多，主要影响因素是（ ）。",
+      options: [{key:"A",text:"气候"}, {key:"B",text:"地形"}, {key:"C",text:"资源"}, {key:"D",text:"城镇"}],
+      answer: ["B"],
+      explanation: "成昆铁路运行在横断山区，地形崎岖，山高谷深，修建铁路需要跨越众多河流与山地，因此桥梁、隧道众多，主要影响因素是地形。"
+    },
+    {
+      id: "dili-h03-q108", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 108, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2024年四川省成都市中考地理试题第19题（答案以原卷答案列表19.A，即①②为准）",
+      stem: "成昆铁路14号车厢被改造为运载家禽、牲畜的专用车厢，且不收取额外费用。14号车厢被改造为运载家禽牲畜的专用车厢，主要是为了（ ）。①改善列车车厢环境②便于家禽牲畜的运输③提升列车运输速度④降低列车运行成本",
+      options: [{key:"A",text:"①②"}, {key:"B",text:"②③"}, {key:"C",text:"③④"}, {key:"D",text:"①④"}],
+      answer: ["A"],
+      explanation: "14号车厢改造为运载家禽、牲畜的专用车厢，便于家禽牲畜的运输，也改善了列车车厢环境；与提升列车运输速度、降低列车运行成本无关。"
+    },
+    {
+      id: "dili-h03-q109", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 109, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2024年四川省成都市中考地理试题第20题",
+      stem: "与成昆铁路相比，成昆复线曼滩至喜德西的建设中采用“裁弯取直”是为了（ ）。",
+      options: [{key:"A",text:"缩短通行时间"}, {key:"B",text:"降低修建的难度"}, {key:"C",text:"增加运输运量"}, {key:"D",text:"增加交通运输方式"}],
+      answer: ["A"],
+      explanation: "成昆复线曼滩至喜德西段采用“裁弯取直”，缩短了线路里程，从而缩短通行时间，提高运输效率。"
+    },
+    {
+      id: "dili-h03-q110", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 110, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2024年四川省成都市中考地理试题第21题（原题依托3月6日全国入春进程图，图中季节划分的说明已改写为文字，知识点、选项与答案未改）",
+      stem: "2024年3月初，我国南方大部分地区已进入气象学意义上的春天。图示3月6日全国入春进程，以各地进入气象学意义上春天的时间划分，图中季节划分的主要依据可能是（ ）。",
+      options: [{key:"A",text:"地势"}, {key:"B",text:"风向"}, {key:"C",text:"气温"}, {key:"D",text:"降水"}],
+      answer: ["C"],
+      explanation: "气象学上入春以连续5日日平均气温达到10℃以上为标准，入春进程反映的是气温的南北差异，因此季节划分的主要依据是气温。"
+    },
+    {
+      id: "dili-h03-q111", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 111, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2024年四川省成都市中考地理试题第22题",
+      stem: "我国东部地区入春进程的方向一般是（ ）。",
+      options: [{key:"A",text:"由南向北"}, {key:"B",text:"由北向南"}, {key:"C",text:"由东向西"}, {key:"D",text:"由西向东"}],
+      answer: ["A"],
+      explanation: "我国东部地区南方纬度低、气温高，先进入春天；北方纬度高、气温低，后进入春天，入春进程一般由南向北推进。"
+    },
+    {
+      id: "dili-h03-q112", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 112, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2024年四川省成都市中考地理试题第24题（库内已有沙特阿拉伯平顶民居题，本题为新疆传统民居，不同地区、不同设问而保留）",
+      stem: "2024年春晚新疆喀什分会场选用新疆传统民居屋顶作为舞台。图示新疆传统民居采用平顶的建筑形式，其主要影响因素是（ ）。",
+      options: [{key:"A",text:"气温"}, {key:"B",text:"风沙"}, {key:"C",text:"降水"}, {key:"D",text:"地形"}],
+      answer: ["C"],
+      explanation: "新疆深居内陆，气候干旱，降水稀少，传统民居多采用平顶；降水多的地区多采用坡顶，以利于排水。平顶的建筑形式主要受降水因素影响。"
+    },
+    {
+      id: "dili-h04-q121", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 121, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年四川省成都市中考地理试题第9题",
+      stem: "凸显“绿色低碳”理念的成都世界园艺博览会，于2024年4月26日至10月28日在成都举行。成都世园会举行期间，成都（ ）。",
+      options: [{key:"A",text:"天气变化小，适宜游客出行"}, {key:"B",text:"没有气象灾害，绿植花卉损失小"}, {key:"C",text:"气候较凉爽，适宜游园观赏"}, {key:"D",text:"水热条件好，利于绿植花卉生长"}],
+      answer: ["D"],
+      explanation: "成都属于亚热带季风气候，夏季高温多雨，雨热同期，水热条件好，有利于绿植花卉的生长；4—10月成都气温较高，天气变化大，雷暴、大风、冰雹等对流天气频发，对绿植花卉伤害较大。"
+    },
+    {
+      id: "dili-h04-q122", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 122, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年四川省成都市中考地理试题第10题",
+      stem: "下列选项符合成都世园会“绿色低碳”理念的是（ ）。①展园数量历届最多②展园广泛运用节能设备③展园人文底蕴深厚④展园建有雨水收集储存系统",
+      options: [{key:"A",text:"①②"}, {key:"B",text:"①③"}, {key:"C",text:"②③"}, {key:"D",text:"②④"}],
+      answer: ["D"],
+      explanation: "绿色低碳意味着减少温室气体的排放。广泛使用节能设备，可以提高资源利用效率，符合绿色低碳理念，②正确；展园建有雨水收集储存系统，有利于节约水资源，实现水资源的循环利用，④正确；展园数量多、人文底蕴深厚与绿色低碳理念无关，①、③错误。"
+    },
+    {
+      id: "dili-h04-q123", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 123, type: "multiple", meta: "多选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2024年四川省成都市中考地理试题第26题第（2）小问（原题为简答列举题，改编为多选题，知识点与答案未改）",
+      stem: "华北平原是我国重要的棉花产区。以棉花为原料的工业产品有（ ）。",
+      options: [{key:"A",text:"棉布"}, {key:"B",text:"棉纱"}, {key:"C",text:"服装"}, {key:"D",text:"钢铁"}],
+      answer: ["A","B","C"],
+      explanation: "以棉花为原料的工业产品有棉布、棉纱、服装等；钢铁是以铁矿、煤炭等为原料的重工业产品，与棉花无关。"
+    },
+    {
+      id: "dili-h05-q119", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      number: 119, type: "judge", meta: "判断题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2024年四川省成都市中考地理试题第11题（原题依托我国1949年至2021年人口增长及生育政策变化图，改编为判断题，知识点与答案未改）",
+      stem: "1964—1982年是我国人口增长速度最快的时期。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "比较我国1949—2021年人口增长曲线中1953—1964年、1964—1982年、2000—2010年、2010—2020年四段线段的斜率，1964—1982年段的线段斜率最大，故该时期我国人口增长速度最快。"
+    },
+    {
+      id: "dili-h05-q120", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      number: 120, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2024年四川省成都市中考地理试题第12题",
+      stem: "我国不断调整人口生育政策，是为了（ ）。①保持适度的人口增长速度②提高老龄人口平均寿命③促使人口地区均衡分布④促进人口与社会经济均衡发展",
+      options: [{key:"A",text:"①②"}, {key:"B",text:"②③"}, {key:"C",text:"③④"}, {key:"D",text:"①④"}],
+      answer: ["D"],
+      explanation: "我国不断调整人口生育政策，是为了保持适度的人口增长速度，减少由于人口增长过快或过慢而产生的人口问题，①正确；也是为了使人口增长与经济发展和资源环境条件相适应，进而促进人口与社会经济均衡发展，④正确；提高老龄人口平均寿命要靠改善医疗条件，与生育政策无关，②错误；生育政策的调整主要为了解决人口出生率的问题，与人口地区分布关系不大，③错误。"
+    },
+    {
+      id: "dili-h05-q121", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      number: 121, type: "multiple", meta: "多选题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2024年四川省成都市中考地理试题第30题第（3）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "欧洲西部某乳畜农场当④围场放牧乳牛时，②③围场关闭休养；当②③围场放牧乳牛时，④围场关闭休养。该农场这种经营方式的好处有（ ）。",
+      options: [{key:"A",text:"利于牧草生长"}, {key:"B",text:"合理调整各种用地规模"}, {key:"C",text:"促进农场可持续发展"}, {key:"D",text:"增加放牧数量"}],
+      answer: ["A","B","C"],
+      explanation: "轮换放牧、围场休养利于牧草生长，合理调整各种用地规模，促进农场可持续发展；这种经营方式不是为了增加放牧数量。"
+    },
+    {
+      id: "dili-h06-q107", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 107, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省眉山市中考地理试题第24题第（1）小问（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "湖南省有色金属矿种类丰富，其中钨、锑、铅锌、锡、汞等的储量相当丰富，位居我国前列。请从能源、资源、交通方面分析，湖南省发展有色冶金工业的有利条件有（ ）。",
+      options: [{key:"A",text:"靠近煤矿、水电站，能源充足"}, {key:"B",text:"钨、锡、铅锌等有色金属资源丰富，原料充足"}, {key:"C",text:"铁路、高速公路等交通便利"}, {key:"D",text:"劳动力资源短缺"}],
+      answer: ["A","B","C"],
+      explanation: "湖南省发展有色冶金工业的有利条件：靠近煤矿、水电站，能源充足；钨、锡、铅锌等有色金属资源丰富，原料充足；铁路、高速公路等交通便利。"
+    },
+    {
+      id: "dili-h06-q108", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 108, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省眉山市中考地理试题第24题第（2）小问（非选择题改编为单选题（原题 5 个选项、4 项正确，删去 1 项正确表述后改编，只改呈现形式，知识点与答案未改））",
+      stem: "发展有色冶金工业的社会经济意义不包括（ ）。",
+      options: [{key:"A",text:"保障国家工业原料安全"}, {key:"B",text:"促进就业，有利于社会稳定"}, {key:"C",text:"将当地的资源优势转变为经济优势，促进经济发展"}, {key:"D",text:"提高矿山开采规模"}],
+      answer: ["D"],
+      explanation: "发展有色冶金工业的社会经济意义：保障国家工业原料安全；保障国防安全；促进就业，有利于社会稳定；将当地的资源优势转变为经济优势，促进经济发展。（原题为 5 选 4 多选题，改编为单选题时删去正确表述“保障国防安全”，其余知识点与答案未改。）"
+    },
+    {
+      id: "dili-h06-q109", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 109, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省眉山市中考地理试题第24题第（3）小问（非选择题改编为单选题（原题 5 个选项、4 项正确，删去 1 项正确表述后改编，只改呈现形式，知识点与答案未改））",
+      stem: "近几年湖南省关闭规模较小、采矿活动不规范的矿山的重要意义不包括（ ）。",
+      options: [{key:"A",text:"减少资源浪费和破坏"}, {key:"B",text:"减少安全事故"}, {key:"C",text:"减轻生态破坏"}, {key:"D",text:"增加矿产资源储量"}],
+      answer: ["D"],
+      explanation: "关闭规模较小、采矿活动不规范的矿山的重要意义：减少资源浪费和破坏；减少安全事故；减轻生态破坏；减少环境污染。（原题为 5 选 4 多选题，改编为单选题时删去正确表述“减少环境污染”，其余知识点与答案未改。）"
+    },
+    {
+      id: "dili-h06-q110", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 110, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省南充市中考地理试题第15题第（2）小问（非选择题改编为多选题，只改呈现形式，知识点与答案未改；原题答案区截断为“设置草方”，按常见固定表述补全为“设置草方格沙障”）",
+      stem: "新疆面临的主要生态环境问题是土地荒漠化。为解决该问题可采取的措施有（ ）。",
+      options: [{key:"A",text:"植树种草"}, {key:"B",text:"退耕还林还草"}, {key:"C",text:"设置草方格沙障"}, {key:"D",text:"围湖造田"}],
+      answer: ["A","B","C"],
+      explanation: "新疆地处我国西北地区，气候干旱，荒漠广布，面临的主要生态环境问题是土地荒漠化；为解决该问题可采取植树种草、退耕还林还草、设置草方格沙障等措施。"
+    },
+    {
+      id: "dili-h06-q111", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 111, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省南充市中考地理试题第15题第（3）小问（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "在新疆铺设光伏发电板实现经济与生态双重效益，其中经济效益的具体表现有（ ）。",
+      options: [{key:"A",text:"提供就业机会"}, {key:"B",text:"增加居民收入"}, {key:"C",text:"降低风速"}, {key:"D",text:"减少地表水分蒸发"}],
+      answer: ["A","B"],
+      explanation: "铺设光伏发电板实现经济与生态双重效益，经济效益表现为提供就业机会、增加居民收入；生态效益表现为降低风速、减少风沙流动、减少地表水分蒸发。"
+    },
+    {
+      id: "dili-h06-q112", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 112, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第12题第（3）小问（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
+      stem: "窑洞利用黄土易于开凿的特性，常位于山体南坡，是一种人地和谐的生态传统民居。窑洞建在黄土深厚的山体南坡的理由有（ ）。",
+      options: [{key:"A",text:"黄土深厚，利于挖掘"}, {key:"B",text:"南坡向阳，光照充足"}, {key:"C",text:"南坡背风，冬季温暖"}, {key:"D",text:"南坡降水丰沛"}],
+      answer: ["A","B","C"],
+      explanation: "窑洞建在黄土深厚的山体南坡，是因为黄土深厚便于挖掘，稳固性强；山体南坡为向阳坡，光照充足，且位于冬季风的背风坡，不易受冷空气的影响，冬季温暖。"
+    },
+    {
+      id: "dili-h06-q113", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 113, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第13题第（3）小问（非选择题改编为单选题（原题 5 个选项、4 项正确，删去 1 项正确表述后改编，只改呈现形式，知识点与答案未改））",
+      stem: "新中国成立以来，我国治理黄河流域水土流失采取的具体措施不包括（ ）。",
+      options: [{key:"A",text:"植树种草、退耕还林还草，恢复植被"}, {key:"B",text:"修建梯田、打坝淤地，拦截泥沙"}, {key:"C",text:"制定法规、调整农业结构、合理放牧，规范人类活动"}, {key:"D",text:"陡坡开垦，扩大耕地"}],
+      answer: ["D"],
+      explanation: "我国治理黄河流域水土流失采取的具体措施：生物措施有植树种草、退耕还林还草，恢复植被；工程措施有修建梯田、打坝淤地拦截泥沙，修建小浪底等水利枢纽调水调沙；管理措施有制定法规、调整农业结构、合理放牧，规范人类活动。（原题为 5 选 4 多选题，改编为单选题时删去正确表述“修建小浪底等水利枢纽，调水调沙”，其余知识点与答案未改。）"
+    },
+    {
+      id: "dili-h06-q114", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 114, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省宜宾市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "高西沟村位于黄河（ ）游河段，属于（ ）地形区。",
+      options: [{key:"A",text:"中、黄土高原"}, {key:"B",text:"上、青藏高原"}, {key:"C",text:"下、华北平原"}, {key:"D",text:"中、内蒙古高原"}],
+      answer: ["A"],
+      explanation: "高西沟村位于黄河中游河段，属于黄土高原地形区；该村黄土土质疏松，曾经存在严重的水土流失，是黄土高原水土保持治理的典型。",
+      verify: "unverified-answer-page"
+    },
+    {
+      id: "dili-h06-q115", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 115, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省宜宾市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
+      stem: "高西沟村的黄土土质疏松，曾经存在严重的生态环境问题是（ ）。",
+      options: [{key:"A",text:"水土流失"}, {key:"B",text:"土地荒漠化"}, {key:"C",text:"土壤盐碱化"}, {key:"D",text:"地面沉降"}],
+      answer: ["A"],
+      explanation: "高西沟村位于黄土高原，黄土土质疏松，降水集中且多暴雨，曾经存在严重的水土流失；土地荒漠化是西北干旱地区的主要生态环境问题，土壤盐碱化多见于华北平原等地。",
+      verify: "unverified-answer-page"
+    },
+    {
+      id: "dili-h06-q116", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 116, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省内江市中考地理试题第19题第（4）小问（原题为简答列举题，改编为多选题，知识点与答案未改）",
+      stem: "据图和材料，长江三角洲发展经济的有利条件有（ ）。",
+      options: [{key:"A",text:"地理位置优越，地处长江入海口，河海联运，交通便利"}, {key:"B",text:"人口稠密，劳动力资源丰富"}, {key:"C",text:"矿产资源丰富"}, {key:"D",text:"气候干旱，降水稀少"}],
+      answer: ["A","B"],
+      explanation: "长江三角洲地理位置优越，地处长江入海口，可以河海联运，交通便利，经济腹地广阔；长江三角洲人口稠密，劳动力资源丰富；经济发达，购买力强，消费市场广阔；拥有众多科研机构和高等院校，科技力量雄厚。"
+    },
+    {
+      id: "dili-h06-q117", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 117, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年四川省成都市中考地理试题第26题第（3）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "华北平原春季（3—5月）正值冬小麦返青。结合济南气候资料，华北平原春旱的成因有（ ）。",
+      options: [{key:"A",text:"冬小麦返青需水量大"}, {key:"B",text:"春季降水少"}, {key:"C",text:"春季升温快，蒸发旺盛"}, {key:"D",text:"夏季降水集中"}],
+      answer: ["A","B","C"],
+      explanation: "华北平原春旱的成因：冬小麦返青需水量大；春季降水少，升温快，蒸发旺盛。"
+    },
+    {
+      id: "dili-h06-q118", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 118, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年四川省成都市中考地理试题第26题第（4）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "太行山脉是京、津、冀地区众多河流的发源地，风沙的屏障。三十多年来，太行山区的森林覆盖率由13.1%提升到30%。对京津冀地区而言，太行山脉发挥的生态环境效益有（ ）。",
+      options: [{key:"A",text:"涵养水源"}, {key:"B",text:"保持水土"}, {key:"C",text:"防风沙"}, {key:"D",text:"提供铁矿资源"}],
+      answer: ["A","B","C"],
+      explanation: "太行山脉对京津冀地区发挥的生态环境效益有涵养水源、保持水土、防风沙、净化空气、调节气候等。"
+    },
+    {
+      id: "dili-h06-q119", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 119, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年四川省成都市中考地理试题第27题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "青海湖四周雪山连绵，冰川广布。由此推测青海湖湖水水量最大的季节是（ ）。",
+      options: [{key:"A",text:"春季"}, {key:"B",text:"夏季"}, {key:"C",text:"秋季"}, {key:"D",text:"冬季"}],
+      answer: ["B"],
+      explanation: "青海湖四周雪山连绵，冰川广布，夏季气温高，高山冰雪融水量大，湖水水量最大。"
+    },
+    {
+      id: "dili-h06-q120", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 120, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年四川省成都市中考地理试题第27题第（2）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "柴达木盆地是盐的世界，有察尔汗盐湖、万丈盐桥等景点。盐湖的开发利用方向有（ ）。",
+      options: [{key:"A",text:"发展旅游业"}, {key:"B",text:"提供建筑材料"}, {key:"C",text:"提供工业原料"}, {key:"D",text:"发展水稻种植"}],
+      answer: ["A","B","C"],
+      explanation: "盐湖的开发利用方向有发展旅游业、提供建筑材料、提供工业原料等；柴达木盆地气候干旱，不适宜发展水稻种植。"
+    },
+    {
+      id: "dili-h06-q121", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 121, type: "multiple", meta: "多选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年四川省成都市中考地理试题第27题第（4）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "如果三江源地区冰川不断消退，湖泊沼泽不断萎缩，草场不断退化，将会给黄河带来的影响可能有（ ）。",
+      options: [{key:"A",text:"流量减少"}, {key:"B",text:"河流含沙量增加"}, {key:"C",text:"流量增加"}, {key:"D",text:"河流含沙量减少"}],
+      answer: ["A","B"],
+      explanation: "三江源地区冰川不断消退，湖泊沼泽不断萎缩，草场不断退化，黄河源头水源涵养能力下降，流量会减少；植被破坏、水土流失加剧，河流含沙量会增加。"
+    },
+    {
+      id: "dili-h06-q122", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 122, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年四川省成都市中考地理试题第27题第（5）小问（原题为填空题，改编为单选题，知识点与答案未改；库内已有河谷农业青稞说明，本题直接设问谷地主要粮食作物，设问不同而保留）",
+      stem: "雅鲁藏布江谷地主要的粮食作物有（ ）和小麦等。",
+      options: [{key:"A",text:"青稞"}, {key:"B",text:"水稻"}, {key:"C",text:"玉米"}, {key:"D",text:"大豆"}],
+      answer: ["A"],
+      explanation: "雅鲁藏布江谷地是青藏高原上海拔较低、热量较好的河谷地带，发展河谷农业，主要的粮食作物有青稞和小麦等。"
+    },
+    {
+      id: "dili-h06-q123", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 123, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年四川省成都市中考地理试题第28题第（2）小问（原题为简答题，改编为单选题（原题 5 个选项、4 项正确，删去 1 项正确表述后改编），知识点与答案未改；库内已有南方地区水稻题，本题问的是水田农业的优越自然条件，设问不同而保留）",
+      stem: "长江中下游平原发展水田农业的优越自然条件不包括（ ）。",
+      options: [{key:"A",text:"地势平坦"}, {key:"B",text:"灌溉水源充足"}, {key:"C",text:"土壤肥沃"}, {key:"D",text:"地势高峻，气温低"}],
+      answer: ["D"],
+      explanation: "长江中下游平原发展水田农业的优越自然条件有地势平坦、雨热同期、灌溉水源充足、土壤肥沃。（原题为 5 选 4 多选题，改编为单选题时删去正确表述“雨热同期”，其余知识点与答案未改。）"
+    },
+    {
+      id: "dili-h06-q124", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      number: 124, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年四川省成都市中考地理试题第29题第（2）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "成都、上海两城市冬季气温较高的是（ ）。",
+      options: [{key:"A",text:"成都"}, {key:"B",text:"上海"}, {key:"C",text:"两市相同"}, {key:"D",text:"无法比较"}],
+      answer: ["A"],
+      explanation: "成都、上海两城市冬季气温较高的是成都，主要原因是成都位于四川盆地，北部秦岭山地阻挡冬季风，冬季气温较高。"
+    },
+    {
+      id: "dili-h01-q118", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 118, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年福建省中考地理试题第26题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "中国的二十四节气对指导农业生产与日常生活有重要意义。二十四节气反映了地球在公转轨道中的不同位置，地球公转一周的时间是（ ）。",
+      options: [{key:"A",text:"一年"}, {key:"B",text:"一个月"}, {key:"C",text:"一天"}, {key:"D",text:"一季"}],
+      answer: ["A"],
+      explanation: "原卷答案：二十四节气反映地球在公转轨道中的不同位置，地球公转一周是一年。"
+    },
+    {
+      id: "dili-h01-q119", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 119, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年福建省中考地理试题第26题第（3）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "唐诗《夏至五月中》写道“五月中”，此时气温高，主要原因是太阳直射点在（ ）半球，地面获得的太阳光热较多。",
+      options: [{key:"A",text:"北"}, {key:"B",text:"南"}, {key:"C",text:"东"}, {key:"D",text:"西"}],
+      answer: ["A"],
+      explanation: "原卷答案：五月中气温高，太阳直射点在北半球，获得太阳光热较多。"
+    },
+    {
+      id: "dili-h01-q120", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 120, type: "multiple", meta: "多选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年福建省中考地理试题第31题第（1）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "广州市拟新建某“阳光学校”，学生在适宜的自然光线中上课，又能在校园中充分利用阳光开展实践活动。从纬度位置的角度看，广州市的学校在阳光利用方面的优越性有（ ）。",
+      options: [{key:"A",text:"位于北回归线附近（以南），处于低纬度"}, {key:"B",text:"全年正午太阳高度角较大，光热较充足"}, {key:"C",text:"冬半年（秋分日至次年春分日）白昼较长"}, {key:"D",text:"全年昼夜等长"}],
+      answer: ["A","B","C"],
+      explanation: "原卷答案：广州位于北回归线附近（以南），处于低纬度，全年正午太阳高度角较大，光热较充足；与广州以北的纬度地带相比，自秋分日至次年春分日（北半球冬半年），广州的白昼较长，阳光较充足。广州不在赤道上，全年昼夜并不等长，D 错误。"
+    },
+    {
+      id: "dili-h01-q121", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 121, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年福建省中考地理试题第31题第（2）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "阳光教室采用透光玻璃砖建造的墙，与带窗户的水泥墙相比，白天教室被太阳光照射到的面积更（ ）；与透明落地玻璃窗相比，能使射入教室的太阳光强度变（ ），明亮而不刺眼，达到保护视力的目的。",
+      options: [{key:"A",text:"大、弱"}, {key:"B",text:"小、强"}, {key:"C",text:"大、强"}, {key:"D",text:"小、弱"}],
+      answer: ["A"],
+      explanation: "原卷答案：白天教室被太阳光照射到的面积更大，射入教室的太阳光强度变弱。"
+    },
+    {
+      id: "dili-h01-q122", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 122, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年福建省中考地理试题第12题（原题照录）",
+      stem: "世界人口密集区主要分布在（ ）。",
+      options: [{key:"A",text:"北半球中低纬度"}, {key:"B",text:"北半球中高纬度"}, {key:"C",text:"南半球中低纬度"}, {key:"D",text:"南半球中高纬度"}],
+      answer: ["A"],
+      explanation: "原卷参考答案：A。世界人口密集区主要分布在北半球中低纬度地区。"
+    },
+    {
+      id: "dili-h01-q123", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 123, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年福建省中考地理试题第26题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "1802年6月，地理学家洪堡考察钦博拉索火山。钦博拉索火山地处（ ）山脉，该山脉位于南极洲板块与（ ）板块交界地带。",
+      options: [{key:"A",text:"安第斯、美洲"}, {key:"B",text:"喜马拉雅、亚欧"}, {key:"C",text:"安第斯、太平洋"}, {key:"D",text:"落基、美洲"}],
+      answer: ["A"],
+      explanation: "原卷答案：安第斯、美洲、地壳运动活跃。安第斯山脉位于南极洲板块与美洲板块交界地带，地壳运动活跃，多火山分布。"
+    },
+    {
+      id: "dili-h01-q124", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 124, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年福建省中考地理试题第26题第（2）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "洪堡考察钦博拉索火山，总结出山地景观的垂直变化规律。地表的年平均气温由低纬向高纬（ ）。",
+      options: [{key:"A",text:"递减"}, {key:"B",text:"递增"}, {key:"C",text:"不变"}, {key:"D",text:"先增后减"}],
+      answer: ["A"],
+      explanation: "原卷答案：地表年平均气温由低纬向高纬递减。"
+    },
+    {
+      id: "dili-h01-q125", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 125, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年福建省中考地理试题第26题第（4）小问（原题为对话填空题，改编为单选题，知识点与答案未改）",
+      stem: "洪堡考察发现：地球是一个两极稍扁、赤道略鼓的不规则球体，赤道半径比极半径长约21千米；珠穆朗玛峰海拔8848.86米，是世界最高峰。地球表面离地心最远的地方是（ ）。",
+      options: [{key:"A",text:"钦博拉索火山之巅"}, {key:"B",text:"珠穆朗玛峰峰顶"}, {key:"C",text:"乞力马扎罗山顶"}, {key:"D",text:"厄尔布鲁士山顶"}],
+      answer: ["A"],
+      explanation: "原卷答案要点：地球形状是不规则球体，赤道半径比极半径长21千米，钦博拉索火山之巅是地球表面离地心最远的地方。赤道处地球半径最大，位于赤道附近的钦博拉索火山之巅离地心最远；珠穆朗玛峰是海拔最高峰，不是离地心最远的地方。"
+    },
+    {
+      id: "dili-h01-q126", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 126, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年福建省中考地理试题第27题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "平型关大捷是抗日战争中中国军队取得的首次大捷。平型关位于太原的（ ）方向，其周边区域地形类型以（ ）为主。",
+      options: [{key:"A",text:"东北、山地"}, {key:"B",text:"西南、山地"}, {key:"C",text:"东北、平原"}, {key:"D",text:"西南、丘陵"}],
+      answer: ["A"],
+      explanation: "原卷答案：东北（偏北）、山地。"
+    },
+    {
+      id: "dili-h01-q127", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 127, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年福建省中考地理试题第27题第（2）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "苦代公路图示段大部分沿山谷修建，在靠近平型关处的路段采用迂回路线，主要目的是（ ）。",
+      options: [{key:"A",text:"降低坡度"}, {key:"B",text:"缩短里程"}, {key:"C",text:"避开河流"}, {key:"D",text:"增加沿途景点"}],
+      answer: ["A"],
+      explanation: "原卷答案：苦代公路图示段大部分沿山谷修建，在靠近平型关处的路段采用迂回路线，主要目的是降低坡度。"
+    },
+    {
+      id: "dili-h01-q128", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 128, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年福建省中考地理试题第27题第（4）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "若量得八路军侦察兵行军路线的图上距离为2厘米，比例尺为1:80 000，则行军的实际水平距离为（ ）。",
+      options: [{key:"A",text:"1600米"}, {key:"B",text:"160米"}, {key:"C",text:"16000米"}, {key:"D",text:"16米"}],
+      answer: ["A"],
+      explanation: "原卷答案：1600米。2厘米×80 000=160 000厘米=1600米。"
+    },
+    {
+      id: "dili-h01-q129", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 129, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年福建省中考地理试题第29题第（1）小问（原题为纠错题，改编为单选题，知识点与答案未改）",
+      stem: "某中学生利用泡沫球、竹签、铁丝、记号笔和橡皮泥等器材制作简易地球仪。制作时应调整支架角度，使竹签（地轴）与桌面成（ ）角。",
+      options: [{key:"A",text:"66.5°"}, {key:"B",text:"90°"}, {key:"C",text:"23.5°"}, {key:"D",text:"45°"}],
+      answer: ["A"],
+      explanation: "原卷答案指出制作步骤⑤“使竹签与桌面垂直”是制作错误，应更正为“调整支架角度，使竹签与桌面成66.5°角”。"
+    },
+    {
+      id: "dili-h01-q130", chapterId: 1, chapter: "七年级上册 · 地球与地图",
+      number: 130, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年福建省中考地理试题第29题第（3）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "该学生利用自制地球仪演示地球自转。从北极上空俯视时，泡沫球呈现（ ）时针方向旋转；地球自转一周，经历的时长为（ ）。",
+      options: [{key:"A",text:"逆、1天"}, {key:"B",text:"顺、1天"}, {key:"C",text:"逆、1年"}, {key:"D",text:"顺、1年"}],
+      answer: ["A"],
+      explanation: "原卷答案：逆、1天（24小时）。从北极上空俯视，地球自转呈逆时针方向。"
+    },
+    {
+      id: "dili-h02-q122", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 122, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省成都市中考地理试题第26题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "撒哈拉以南非洲西临（ ）洋，绝大部分位于五带中的（ ）带。",
+      options: [{key:"A",text:"大西洋、热"}, {key:"B",text:"太平洋、温"}, {key:"C",text:"印度洋、热"}, {key:"D",text:"大西洋、寒"}],
+      answer: ["A"],
+      explanation: "原卷答案：①大西洋，②热带。撒哈拉以南非洲位于非洲大陆南部，西临大西洋；大部分位于南北回归线之间，属于热带，有“热带大陆”之称。"
+    },
+    {
+      id: "dili-h02-q123", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 123, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省成都市中考地理试题第26题第（2）小问（原题为简答题，改编为单选题，知识点与答案未改）",
+      stem: "撒哈拉以南非洲气候类型的分布特征是（ ）。",
+      options: [{key:"A",text:"以赤道为轴，南北对称分布"}, {key:"B",text:"由沿海向内陆递减"}, {key:"C",text:"以北回归线为轴对称分布"}, {key:"D",text:"南北分异明显"}],
+      answer: ["A"],
+      explanation: "原卷答案：以赤道为轴，南北对称分布。赤道穿过该地区中部，热带雨林气候分布在赤道附近，其南北两侧依次是热带草原气候、热带沙漠气候等。"
+    },
+    {
+      id: "dili-h02-q124", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 124, type: "multiple", meta: "多选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省成都市中考地理试题第26题第（3）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "茅草屋是非洲热带草原地区的传统民居，一般用树枝、泥土等筑薄墙，斜房顶铺茅草。下列关于茅草屋与当地自然环境关系的说法，正确的有（ ）。",
+      options: [{key:"A",text:"当地有丰富树枝、泥土、茅草，便于就地取材"}, {key:"B",text:"热带草原气候分干湿季，斜顶利于排水"}, {key:"C",text:"茅草墙体可通风散热"}, {key:"D",text:"墙体厚实，利于保暖"}],
+      answer: ["A","B","C"],
+      explanation: "原卷答案：当地有丰富树枝、泥土、茅草，便于就地取材；热带草原气候分干湿季，斜顶利于排水，茅草墙体可通风散热。茅草屋筑的是薄墙，通风散热而非保暖，D 错误。"
+    },
+    {
+      id: "dili-h02-q125", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 125, type: "multiple", meta: "多选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年四川省成都市中考地理试题第26题第（4）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "在坦桑尼亚、尼日利亚等国，通过选育水稻品种、引进先进设备、培训技术人员等方式，我国杂交水稻得到推广。推广我国杂交水稻对撒哈拉以南非洲农业发展的有利影响有（ ）。",
+      options: [{key:"A",text:"提高粮食产量，保障粮食安全"}, {key:"B",text:"提升农业技术水平"}, {key:"C",text:"促进农业经济发展"}, {key:"D",text:"增加粮食进口依赖"}],
+      answer: ["A","B","C"],
+      explanation: "原卷答案：提高粮食产量，保障粮食安全；提升农业技术水平；促进农业经济发展。推广杂交水稻是减少粮食进口依赖、保障粮食安全，D 错误。"
+    },
+    {
+      id: "dili-h02-q126", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 126, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年福建省中考地理试题第29题第（1）小问（原题为简答题，改编为单选题，知识点与答案未改）",
+      stem: "巴拿马运河流域河湖的水源主要来自降水。据预测2024年巴拿马有很大概率持续严重干旱。仅考虑降水对运河水量的影响，巴拿马运河通航能力较低的时段是（ ）。",
+      options: [{key:"A",text:"1~4月"}, {key:"B",text:"5~8月"}, {key:"C",text:"6~9月"}, {key:"D",text:"10~12月"}],
+      answer: ["A"],
+      explanation: "原卷答案：1~4月。原因：该时段降水较少，巴拿马运河的水量较小，运河水位较低，通过运河的船只数量较少，通航能力较低。"
+    },
+    {
+      id: "dili-h02-q127", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 127, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年福建省中考地理试题第29题第（3）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "与巴拿马运河相比，“干运河”（公路、铁路等）的运输优势是运输速度较（ ），受降水等自然环境影响较（ ）。",
+      options: [{key:"A",text:"快、小"}, {key:"B",text:"慢、大"}, {key:"C",text:"快、大"}, {key:"D",text:"慢、小"}],
+      answer: ["A"],
+      explanation: "原卷答案：运输速度较快，受降水等自然环境影响较小。"
+    },
+    {
+      id: "dili-h02-q128", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 128, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年福建省中考地理试题第30题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "北极东北航线位于（ ）洋，处于亚洲和欧洲的北部沿岸，正成为世界新航线。",
+      options: [{key:"A",text:"北冰洋"}, {key:"B",text:"太平洋"}, {key:"C",text:"大西洋"}, {key:"D",text:"印度洋"}],
+      answer: ["A"],
+      explanation: "原卷答案：北冰洋、亚洲。北极东北航线位于北冰洋，处于亚洲和欧洲的北部沿岸。"
+    },
+    {
+      id: "dili-h02-q129", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 129, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年福建省中考地理试题第30题第（2）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "与1月比，7月穿过北极东北航线的船舶数量较（ ），其自然原因是7月水温较（ ），海冰较少，通航里程较（ ）。",
+      options: [{key:"A",text:"多、高、长"}, {key:"B",text:"少、低、短"}, {key:"C",text:"多、低、短"}, {key:"D",text:"少、高、长"}],
+      answer: ["A"],
+      explanation: "原卷答案：多、高、长。与1月比，7月穿过北极东北航线的船舶数量较多，其自然原因是7月水温较高，海冰较少，通航里程较长。"
+    },
+    {
+      id: "dili-h02-q130", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 130, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2024年福建省中考地理试题第30题第（3）小问（原题为简答题，改编为单选题“不正确的是”，保留3项正确表述作干扰项，删去的1项正确表述写入说明，知识点与答案未改）",
+      stem: "某研究者认为，北极东北航线的新型运输模式可选择俄罗斯的普罗维杰尼亚港和挪威的卑尔根港分别作为东、西部支点港口。与普罗维杰尼亚港相比，下列关于卑尔根港优势的说法中，不正确的是（ ）。",
+      options: [{key:"A",text:"海岸线更长"}, {key:"B",text:"无冰期时间更长，全年无结冰期"}, {key:"C",text:"有铁路站点，运输方式更多样"}, {key:"D",text:"位于北极圈以北"}],
+      answer: ["D"],
+      explanation: "原卷答案：卑尔根港的优势是海岸线更长；无冰期时间更长，全年无结冰期；有铁路站点，运输方式更多样；存储空间更大。本题保留前3项正确表述作干扰项，删去的正确表述“存储空间更大”在此说明。卑尔根约位于60°N，在北极圈以南，“位于北极圈以北”错误。"
+    },
+    {
+      id: "dili-h02-q131", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 131, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年福建省中考地理试题第28题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "伊洛瓦底江流域面积大，上游山高谷深，中下游河谷宽阔，下游三角洲河网交织，有众多河流航线通往仰光港。伊洛瓦底江流域地势倾斜方向是（ ）。",
+      options: [{key:"A",text:"由北向南"}, {key:"B",text:"由南向北"}, {key:"C",text:"由东向西"}, {key:"D",text:"由西向东"}],
+      answer: ["A"],
+      explanation: "原卷答案：由北向南（北高南低），判断理由是河流自北向南注入海洋。"
+    },
+    {
+      id: "dili-h02-q132", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 132, type: "multiple", meta: "多选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年福建省中考地理试题第28题第（2）小问（原题为填空题，改编为多选题，知识点与答案未改）",
+      stem: "伊洛瓦底江上游水能资源丰富，其主要原因有（ ）。",
+      options: [{key:"A",text:"西南风（夏季风）带来充沛水汽，遇山地阻挡抬升，形成丰富降水"}, {key:"B",text:"河流流量大"}, {key:"C",text:"地势起伏大，河流落差大"}, {key:"D",text:"流域内人口稀少"}],
+      answer: ["A","B","C"],
+      explanation: "原卷答案：一方面，西南风（夏季风）带来充沛水汽，遇山地阻挡抬升，形成丰富降水，河流流量大；另一方面，地势起伏大，河流落差大。上游水能丰富与人口多少无关，D 错误。"
+    },
+    {
+      id: "dili-h02-q133", chapterId: 2, chapter: "七年级下册 · 我们生活的大洲",
+      number: 133, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年福建省中考地理试题第28题第（3）小问（原题为框图填空题，改编为单选题，知识点与答案未改）",
+      stem: "伊洛瓦底江中下游河段对该地区具有重要航运价值，航线通往仰光港，连通（ ），可实现江海联运。",
+      options: [{key:"A",text:"印度洋"}, {key:"B",text:"太平洋"}, {key:"C",text:"大西洋"}, {key:"D",text:"北冰洋"}],
+      answer: ["A"],
+      explanation: "原卷框图答案：流速慢（缓）、主要城市沿河分布、连通印度洋。伊洛瓦底江注入印度洋，航线通往仰光港，可实现江海联运。"
+    },
+    {
+      id: "dili-h03-q113", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 113, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025年江苏省宿迁市中考地理试题第1题（原题照录；答案据人人文库宿迁卷解析“从江苏省简图看，宿迁位于江苏北部偏西位置，即西北部”核对）",
+      stem: "宿迁市位于江苏省的（ ）部。",
+      options: [{key:"A",text:"东南"}, {key:"B",text:"西北"}, {key:"C",text:"西南"}, {key:"D",text:"东北"}],
+      answer: ["B"],
+      explanation: "原卷参考答案：B。从江苏省简图看，宿迁位于江苏北部偏西位置，即西北部。"
+    },
+    {
+      id: "dili-h03-q114", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 114, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2024年福建省中考地理试题第28题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改；原题中 M 河流向部分纯读图，未收）",
+      stem: "丹江口水库是南水北调中线工程的核心水源地，M 河为泗河支流，其流域位于秦巴山区。M 河流域易发生山洪的季节是（ ）。",
+      options: [{key:"A",text:"夏秋季"}, {key:"B",text:"冬春季"}, {key:"C",text:"春季"}, {key:"D",text:"冬季"}],
+      answer: ["A"],
+      explanation: "原卷答案：M 河自西南向东北流，易发生山洪的季节为夏秋季。夏秋季降水集中，易发山洪。"
+    },
+    {
+      id: "dili-h03-q115", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 115, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2024年福建省中考地理试题第28题第（2）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "昔日 M 河流域内水土流失严重，带来的危害主要表现在：耕地面积（ ），江河的泥沙（ ），抬高河床，导致生态恶化。",
+      options: [{key:"A",text:"减少、淤积"}, {key:"B",text:"增加、减少"}, {key:"C",text:"减少、减少"}, {key:"D",text:"增加、淤积"}],
+      answer: ["A"],
+      explanation: "原卷答案：耕地面积减少，江河的泥沙淤积（沉积），抬高河床。"
+    },
+    {
+      id: "dili-h03-q116", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 116, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2024年福建省中考地理试题第28题第（3）小问（原题为简答题，改编为单选题“不属于”，保留3项正确表述作干扰项，删去的1项正确表述写入说明，知识点与答案未改）",
+      stem: "M 河流域水土流失的治理：在海拔较高处种植茶树、桑树，在陡坡植树种草，在缓坡的梯田等地种樱花、梅花、紫荆花等。如今该小流域林草苍郁，花果飘香。下列关于治理措施产生的生态效益的说法中，不属于原卷答案的是（ ）。",
+      options: [{key:"A",text:"涵养水源"}, {key:"B",text:"保持水土"}, {key:"C",text:"调节气候"}, {key:"D",text:"增加粮食产量"}],
+      answer: ["D"],
+      explanation: "原卷生态效益答案为涵养水源、保持水土、调节气候、净化空气。本题保留前3项正确表述作干扰项，删去的正确表述“净化空气”在此说明；增加粮食产量不属于生态效益。"
+    },
+    {
+      id: "dili-h03-q117", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 117, type: "multiple", meta: "多选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2024年福建省中考地理试题第28题第（3）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "M 河流域水土流失治理措施产生的经济社会效益有（ ）。",
+      options: [{key:"A",text:"发展农产品加工业、观光休闲产业等多种产业"}, {key:"B",text:"增加就业机会"}, {key:"C",text:"增加居民收入"}, {key:"D",text:"减少耕地面积"}],
+      answer: ["A","B","C"],
+      explanation: "原卷经济社会效益答案：发展农产品加工业、观光休闲产业等多种产业；增加就业机会；增加居民收入。减少耕地面积是水土流失的危害，不是治理效益，D 错误。"
+    },
+    {
+      id: "dili-h03-q118", chapterId: 3, chapter: "八年级上册 · 从世界看中国",
+      number: 118, type: "multiple", meta: "多选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025年福建省中考地理试题第30题第（1）小问（原题为填空题，改编为多选题，知识点与答案未改）",
+      stem: "福建 C 县属低山丘陵区，历史上因植被破坏，降雨流水侵蚀严重，水土流失问题突出。每逢暴雨，有些地区甚至引发（ ）等地质灾害。",
+      options: [{key:"A",text:"滑坡"}, {key:"B",text:"泥石流"}, {key:"C",text:"崩塌"}, {key:"D",text:"台风"}],
+      answer: ["A","B","C"],
+      explanation: "原卷答案：滑坡、泥石流、崩塌（答对其中两点）。台风是气象灾害，不是地质灾害，D 错误。"
+    },
+    {
+      id: "dili-h04-q124", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 124, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年四川省广安市中考地理试题第17题（原题照录；选项①—④图示内容据夜雨聆风解析版文字化：①江南水乡、②黄土高原窑洞、③南方湿热地区高脚屋、④蒙古高原蒙古包）",
+      stem: "2024年11月6日—12日，中拉系列文化交流活动在秘鲁和巴西举行。小兰将体现中国传统民居特色的剪纸寄给秘鲁的朋友。图中四幅剪纸分别为：①江南水乡、②黄土高原窑洞、③南方湿热地区高脚屋、④蒙古高原蒙古包。小兰寄出的剪纸中反映江南地区传统民居的是（ ）。",
+      options: [{key:"A",text:"①"}, {key:"B",text:"②"}, {key:"C",text:"③"}, {key:"D",text:"④"}],
+      answer: ["A"],
+      explanation: "原卷解析：①是江南水乡，反映江南地区传统民居，A 正确；②是黄土高原的窑洞，B 错误；③是我国南方湿热地区的高脚屋，C 错误；④是蒙古高原的蒙古包，D 错误。"
+    },
+    {
+      id: "dili-h04-q125", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 125, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2024年福建省中考地理试题第27题第（1）小问（原题为框图填空题，改编为单选题，知识点与答案未改；本题只取“昼夜温差较大”一空）",
+      stem: "山西省甲县百河流域积极发展蟠桃种植产业。蟠桃树喜光，耐旱怕涝，冬季需低温休眠，果实生长期在5~8月。框图说明甲县蟠桃树生长的有利自然条件：夏季光照充足，光合作用强，晴天较多，昼夜温差较（ ）。",
+      options: [{key:"A",text:"大"}, {key:"B",text:"小"}, {key:"C",text:"不变"}, {key:"D",text:"先大后小"}],
+      answer: ["A"],
+      explanation: "原卷框图答案为光照、大、低、夏、水源：夏季光照充足，昼夜温差较大；冬季气温低，桃树病虫害少；全年降水较少，降水集中在夏季；位于河流沿岸，水源充足，便于灌溉。"
+    },
+    {
+      id: "dili-h04-q126", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 126, type: "multiple", meta: "多选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2024年福建省中考地理试题第27题第（2）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "福建某地引种山西甲县百河流域的蟠桃树后，蟠桃树出现“水土不服”。结合蟠桃树的生长习性（喜光，耐旱怕涝，冬季需低温休眠，果实生长期在5~8月），从气候方面说明其原因，正确的有（ ）。",
+      options: [{key:"A",text:"冬季福建气温比较高，不利于蟠桃树休眠"}, {key:"B",text:"生长期内福建降水量大，不利于蟠桃树生长"}, {key:"C",text:"生长期内福建雨季长，不利于蟠桃树生长"}, {key:"D",text:"福建光照不足，不利于蟠桃树生长"}],
+      answer: ["A","B","C"],
+      explanation: "原卷答案：冬季福建气温比较高，不利于蟠桃树休眠（或蟠桃树不适应暖冬环境）；生长期内福建降水量大且雨季长，不利于蟠桃树生长。福建光照充足，D 错误。"
+    },
+    {
+      id: "dili-h04-q127", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 127, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2024年福建省中考地理试题第27题第（3）小问（原题为简答题，改编为单选题“不属于”，保留3项正确表述作干扰项，删去的1项正确表述写入说明，知识点与答案未改）",
+      stem: "下列解决福建某地蟠桃树“水土不服”的农业科技措施中，不属于原卷答案的是（ ）。",
+      options: [{key:"A",text:"改良品种"}, {key:"B",text:"建设大棚，调温调湿"}, {key:"C",text:"加强技术管理"}, {key:"D",text:"扩大露天种植面积"}],
+      answer: ["D"],
+      explanation: "原卷答案：改良品种；建设大棚，调温调湿；加强技术管理；引进设施避雨栽培模式。本题保留前3项正确表述作干扰项，删去的正确表述“引进设施避雨栽培模式”在此说明；扩大露天种植面积无法解决降水多、雨季长的问题，不是原卷答案。"
+    },
+    {
+      id: "dili-h04-q128", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 128, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2024年福建省中考地理试题第31题第（3）小问（原题为简答题，改编为单选题，知识点与答案未改）",
+      stem: "学校拟为兴趣小组配备一块专属的阳光耕作园，要求学生在一年左右、在同一块地里轮流依次完成三种粮食作物的播种与收获。表4列出四种粮食作物：水稻（播种2月下旬，收获6月下旬~7月上旬，喜温喜湿）、青稞（播种3~5月，收获7~9月，适应高原高寒气候，耐寒耐旱）、玉米（播种7月上中旬，收获10月下旬，喜温喜光喜湿）、小麦（播种10月下旬~11月中旬，收获3月下旬，喜温凉耐旱）。从气温的角度看，不适合在该校园（广州）种植的一种粮食作物是（ ）。",
+      options: [{key:"A",text:"青稞"}, {key:"B",text:"水稻"}, {key:"C",text:"玉米"}, {key:"D",text:"小麦"}],
+      answer: ["A"],
+      explanation: "原卷答案：青稞。青稞适应高原高寒气候，广州全年气温较高，不适合青稞生长。"
+    },
+    {
+      id: "dili-h04-q129", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 129, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2024年福建省中考地理试题第31题第（4）小问（原题为填空题，改编为单选题，知识点与答案未改）",
+      stem: "在同一块地里，学生用最短时间（一年左右）轮流依次种植三种粮食作物。按种植时间顺序，依次应种植（ ）。",
+      options: [{key:"A",text:"水稻、玉米、小麦"}, {key:"B",text:"小麦、水稻、玉米"}, {key:"C",text:"玉米、水稻、小麦"}, {key:"D",text:"水稻、小麦、玉米"}],
+      answer: ["A"],
+      explanation: "原卷答案：水稻、玉米、小麦。水稻播种2月下旬、收获6月下旬~7月上旬；玉米播种7月上中旬、收获10月下旬；小麦播种10月下旬~11月中旬、收获3月下旬。青稞因不适合广州种植而排除。"
+    },
+    {
+      id: "dili-h04-q130", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 130, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年福建省中考地理试题第22题（原题照录）",
+      stem: "近年来，我国部分地区依托本地冰雪资源大力发展旅游业。图8示意我国国家级滑雪旅游度假地分布。滑雪旅游度假地共同的自然环境特征是（ ）。",
+      options: [{key:"A",text:"四季如春"}, {key:"B",text:"终年积雪"}, {key:"C",text:"河流平直"}, {key:"D",text:"地处山区"}],
+      answer: ["D"],
+      explanation: "原卷参考答案：D。滑雪需要山地坡度，滑雪旅游度假地共同的自然环境特征是地处山区。"
+    },
+    {
+      id: "dili-h04-q131", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 131, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年福建省中考地理试题第30题第（2）小问（原题为简答题，改编为单选题，知识点与答案未改；本题只取气候角度）",
+      stem: "福建 C 县是我国治理水土流失的成功典范。C 县经过科学试验，选择杨梅树作为水土保持的主要树种。杨梅树适宜生长温度为15℃~21℃，年降雨量1000毫米以上，怕积水。从气候角度看，C 县种植杨梅树的有利自然条件是（ ）。",
+      options: [{key:"A",text:"该县位于亚热带季风气候区，水热条件充足，雨热同期"}, {key:"B",text:"该县属于温带大陆性气候，降水稀少"}, {key:"C",text:"该县属于高原山地气候，气温低"}, {key:"D",text:"该县属于热带沙漠气候，干燥少雨"}],
+      answer: ["A"],
+      explanation: "原卷答案：该县位于亚热带季风气候区，水热条件充足（雨热同期），利于杨梅树生长；地形以低山丘陵为主，排水条件好，杨梅林地不易积水。"
+    },
+    {
+      id: "dili-h04-q132", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 132, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年福建省中考地理试题第30题第（3）小问（原题为简答题，改编为单选题“不属于”，保留3项正确表述作干扰项，删去的1项正确表述写入说明，知识点与答案未改）",
+      stem: "C 县在水土流失治理过程中，引领民众创业，修果园、建农庄、筑观光长廊，乡村旅游人数逐年增加。下列关于水土流失治理给当地经济、社会带来的积极影响的说法中，不属于原卷答案的是（ ）。",
+      options: [{key:"A",text:"增加就业机会"}, {key:"B",text:"增加居民收入"}, {key:"C",text:"促进基础设施建设"}, {key:"D",text:"减少耕地面积"}],
+      answer: ["D"],
+      explanation: "原卷答案：增加就业机会；增加居民收入；促进基础设施建设；带动相关产业发展。本题保留前3项正确表述作干扰项，删去的正确表述“带动相关产业发展”在此说明；减少耕地面积是水土流失的危害，不是治理带来的积极影响。"
+    },
+    {
+      id: "dili-h04-q133", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 133, type: "multiple", meta: "多选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年福建省中考地理试题第31题第（2）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "云南哈尼梯田体现了“森林—水系—村寨—梯田”一体的生态智慧。哈尼族人在森林下方山坡修筑沟渠，拦截溪流，并让水流依次经过村寨和梯田。森林对哈尼梯田农业生产的影响有（ ）。",
+      options: [{key:"A",text:"涵养水源，保障梯田用水，减少旱灾"}, {key:"B",text:"保持水土，减少洪水、滑坡、泥石流等对梯田的危害"}, {key:"C",text:"调节区域小气候，维护生物多样性"}, {key:"D",text:"遮挡阳光，减少梯田光照"}],
+      answer: ["A","B","C"],
+      explanation: "原卷答案：森林涵养水源，保障梯田用水，减少旱灾；森林保持水土，减少洪水、滑坡、泥石流等对梯田的危害；森林调节区域小气候；维护生物多样性，为农业生产提供稳定的自然环境。森林对梯田是保护作用，不是遮挡阳光减少光照，D 错误。"
+    },
+    {
+      id: "dili-h04-q134", chapterId: 4, chapter: "八年级下册 · 中国的地理差异",
+      number: 134, type: "multiple", meta: "多选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年福建省中考地理试题第31题第（3）小问（原题为简答题，改编为多选题，知识点与答案未改）",
+      stem: "哈尼族传统民居蘑菇房的建筑材料完全取自当地，村民夯土垒墙、以木构架，蘑菇房屋顶倾斜，上铺稻草。下列关于蘑菇房与当地自然环境关系的说法中，正确的有（ ）。",
+      options: [{key:"A",text:"当地黏土丰富，夯土垒墙，原料来源丰富"}, {key:"B",text:"当地森林广布，建房的木材来源充足"}, {key:"C",text:"当地降水量大且集中，屋顶倾斜有利于排水"}, {key:"D",text:"当地气候干旱，屋顶平坦利于晾晒"}],
+      answer: ["A","B","C"],
+      explanation: "原卷答案：当地黏土丰富，夯土垒墙，原料来源丰富；当地森林广布，建房的木材来源充足；当地降水量大且集中，屋顶倾斜有利于排水；当地气候暖湿，适宜水稻种植，稻草来源丰富。本题保留前3项正确表述，删去的正确表述“当地气候暖湿，适宜水稻种植，稻草来源丰富”在此说明；当地气候暖湿、降水多，屋顶倾斜利排水，D 错误。"
+    }
   ]
 };

@@ -221,7 +221,7 @@ function loadScript(src) {
   });
 }
 async function ensureBanks(subjectKeys) {
-  for (const key of subjectKeys) await loadScript(SUBJECTS[key].file + '?v=3');
+  for (const key of subjectKeys) await loadScript(SUBJECTS[key].file + '?v=4');
   return window.XIAOSIMEN_BANKS || {};
 }
 function allQuestions(banks, subjectKeys) {
@@ -580,7 +580,7 @@ async function showFigure(q) {
   const qid = q.id;
   const box = document.getElementById('qfig'); if (!box) return;
   try {
-    if (!window.XIAOSIMEN_FIGURES) await loadScript('./data/figures.js?v=3');
+    if (!window.XIAOSIMEN_FIGURES) await loadScript('./data/figures.js?v=4');
     // 用户可能已跳到下一题：只给当前这道题填图。
     if (!state.queue[state.idx] || state.queue[state.idx].id !== qid) return;
     const src = window.XIAOSIMEN_FIGURES && window.XIAOSIMEN_FIGURES[qid];

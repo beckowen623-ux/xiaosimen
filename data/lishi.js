@@ -1,347 +1,48 @@
 window.XIAOSIMEN_BANKS ||= {};
 window.XIAOSIMEN_BANKS["lishi"] = {
-  title: "历史", examLabel: "初中小四门", total: 522,
+  title: "历史", examLabel: "初中小四门", total: 600,
   chapters: [
-    { id: 1, title: "七年级上册 · 中国古代史（史前至南北朝）", count: 88 },
-    { id: 2, title: "七年级下册 · 中国古代史（隋唐至明清）", count: 77 },
-    { id: 3, title: "八年级上册 · 中国近代史（上）", count: 113 },
-    { id: 4, title: "八年级下册 · 中国现代史", count: 74 },
-    { id: 5, title: "九年级上册 · 世界古代史与近代史（上）", count: 88 },
-    { id: 6, title: "九年级下册 · 世界现代史", count: 82 }
+    { id: 1, title: "七年级上册 · 中国古代史（史前至南北朝）", count: 111 },
+    { id: 2, title: "七年级下册 · 中国古代史（隋唐至明清）", count: 93 },
+    { id: 3, title: "八年级上册 · 中国近代史（上）", count: 87 },
+    { id: 4, title: "八年级下册 · 中国现代史", count: 97 },
+    { id: 5, title: "九年级上册 · 世界古代史与近代史（上）", count: 104 },
+    { id: 6, title: "九年级下册 · 世界现代史", count: 108 }
   ],
   questions: [
-    {
-      id: "lishi-h01-q001", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 1, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "我国境内目前已确认的最早古人类是（ ）。",
-      options: [{key:"A",text:"山顶洞人"}, {key:"B",text:"北京人"}, {key:"C",text:"元谋人"}, {key:"D",text:"蓝田人"}],
-      answer: ["C"],
-      explanation: "元谋人发现于云南元谋，距今约170万年，是我国境内目前已确认的最早古人类。",
-      trap: "易错点：不要把北京人（距今约70万—20万年）当成最早的古人类。"
-    },
-    {
-      id: "lishi-h01-q002", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 2, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "北京人已经会（ ）。",
-      options: [{key:"A",text:"种植水稻"}, {key:"B",text:"使用天然火"}, {key:"C",text:"制作青铜器"}, {key:"D",text:"使用铁器"}],
-      answer: ["B"],
-      explanation: "北京人生活在北京周口店，会使用天然火并保存火种，过群居生活，使用打制石器。",
-      trap: "易错点：北京人是使用天然火，人工取火是山顶洞人时期才掌握的。"
-    },
-    {
-      id: "lishi-h01-q003", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 3, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "半坡居民生活在黄河流域，主要粮食作物是（ ）。",
-      options: [{key:"A",text:"水稻"}, {key:"B",text:"小麦"}, {key:"C",text:"粟"}, {key:"D",text:"玉米"}],
-      answer: ["C"],
-      explanation: "半坡遗址位于陕西西安附近的黄河流域，半坡居民种植粟，饲养猪狗，制作彩陶，住半地穴式房屋。",
-      trap: "易错点：种水稻的是长江流域的河姆渡居民；小麦、玉米在当时还不是主要作物。"
-    },
-    {
-      id: "lishi-h01-q004", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 4, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "河姆渡遗址位于（ ）流域。",
-      options: [{key:"A",text:"长江"}, {key:"B",text:"黄河"}, {key:"C",text:"珠江"}, {key:"D",text:"淮河"}],
-      answer: ["A"],
-      explanation: "河姆渡遗址位于浙江余姚的长江流域，河姆渡居民种植水稻，住干栏式房屋，使用磨制石器。",
-      trap: "易错点：河姆渡—长江—水稻—干栏式，半坡—黄河—粟—半地穴式，两组要成对记。"
-    },
-    {
-      id: "lishi-h01-q005", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 5, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "被后人尊为中华民族人文初祖的是（ ）。",
-      options: [{key:"A",text:"炎帝和黄帝"}, {key:"B",text:"尧和舜"}, {key:"C",text:"大禹"}, {key:"D",text:"秦始皇"}],
-      answer: ["A"],
-      explanation: "炎帝和黄帝被尊为中华民族的人文初祖，海内外华人常自称炎黄子孙。",
-      trap: "易错点：尧、舜、禹是传说中的部落首领，实行禅让制，但人文初祖特指炎帝和黄帝。"
-    },
-    {
-      id: "lishi-h01-q006", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 6, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "我国历史上第一个王朝是（ ）。",
-      options: [{key:"A",text:"商朝"}, {key:"B",text:"夏朝"}, {key:"C",text:"西周"}, {key:"D",text:"秦朝"}],
-      answer: ["B"],
-      explanation: "约公元前2070年，禹建立夏朝，这是我国历史上第一个王朝，标志着我国早期国家的产生。",
-      trap: "易错点：夏朝在商朝之前，时间约公元前2070年，不要记反顺序。"
-    },
-    {
-      id: "lishi-h01-q007", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 7, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "西周实行分封制，分封的对象不包括（ ）。",
-      options: [{key:"A",text:"王室子弟"}, {key:"B",text:"功臣"}, {key:"C",text:"先代贵族"}, {key:"D",text:"农民"}],
-      answer: ["D"],
-      explanation: "西周分封制把土地和人民分封给王室子弟、功臣和先代贵族，让他们在各地建立诸侯国，农民不是分封对象。",
-      trap: "易错点：分封的是贵族，不是普通农民；诸侯要向周王进贡、随从作战。"
-    },
-    {
-      id: "lishi-h01-q008", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 8, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "商朝人刻写在龟甲或兽骨上的文字是（ ）。",
-      options: [{key:"A",text:"金文"}, {key:"B",text:"甲骨文"}, {key:"C",text:"小篆"}, {key:"D",text:"隶书"}],
-      answer: ["B"],
-      explanation: "甲骨文是商朝人刻写在龟甲或兽骨上的文字，是我国已发现的最早的比较成熟的文字。",
-      trap: "易错点：金文是铸刻在青铜器上的文字；小篆是秦朝统一的文字。"
-    },
-    {
-      id: "lishi-h01-q009", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 9, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "提出“仁”的学说、创办私学的是（ ）。",
-      options: [{key:"A",text:"老子"}, {key:"B",text:"孔子"}, {key:"C",text:"墨子"}, {key:"D",text:"韩非子"}],
-      answer: ["B"],
-      explanation: "孔子是儒家学派创始人，提出“仁”的学说，主张“仁者爱人”，创办私学，晚年整理《诗》《书》等经典。",
-      trap: "易错点：老子是道家创始人，主张无为而治；墨子主张兼爱、非攻；韩非子是法家代表。"
-    },
-    {
-      id: "lishi-h01-q010", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 10, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "战国时期变法成效最显著、为秦统一奠定基础的是（ ）。",
-      options: [{key:"A",text:"吴起变法"}, {key:"B",text:"李悝变法"}, {key:"C",text:"商鞅变法"}, {key:"D",text:"王安石变法"}],
-      answer: ["C"],
-      explanation: "公元前356年，秦孝公任用商鞅变法，奖励耕战、废井田、实行县制等，使秦国国力大增，为统一六国奠定了基础。",
-      trap: "易错点：王安石变法是北宋时期的事，不要和战国变法混淆。"
-    },
-    {
-      id: "lishi-h01-q011", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 11, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "秦王嬴政统一六国、建立秦朝的时间是（ ）。",
-      options: [{key:"A",text:"公元前221年"}, {key:"B",text:"公元221年"}, {key:"C",text:"公元前207年"}, {key:"D",text:"公元前202年"}],
-      answer: ["A"],
-      explanation: "公元前221年，秦王嬴政统一六国，建立秦朝，定都咸阳，秦始皇是中国历史上第一个皇帝。",
-      trap: "易错点：注意是公元前221年，公元前207年是秦朝灭亡的时间。"
-    },
-    {
-      id: "lishi-h01-q012", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 12, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "秦朝在地方上推行的制度是（ ）。",
-      options: [{key:"A",text:"分封制"}, {key:"B",text:"郡县制"}, {key:"C",text:"行省制"}, {key:"D",text:"科举制"}],
-      answer: ["B"],
-      explanation: "秦朝废分封、行郡县，在地方实行郡县制，郡守、县令由皇帝直接任免，加强了中央集权。",
-      trap: "易错点：分封制是西周的制度；行省制是元朝的制度；科举制创立于隋朝。"
-    },
-    {
-      id: "lishi-h01-q013", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 13, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "两次出使西域、为丝绸之路开通奠定基础的是（ ）。",
-      options: [{key:"A",text:"张骞"}, {key:"B",text:"郑和"}, {key:"C",text:"玄奘"}, {key:"D",text:"鉴真"}],
-      answer: ["A"],
-      explanation: "汉武帝时张骞两次出使西域，打通了汉朝与西域的通道，为丝绸之路的开通奠定了基础。",
-      trap: "易错点：郑和是明朝下西洋；玄奘、鉴真是唐朝僧人，不要混淆。"
-    },
-    {
-      id: "lishi-h01-q014", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 14, type: "multiple", meta: "多选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "下列属于汉武帝巩固大一统措施的有（ ）。",
-      options: [{key:"A",text:"颁布推恩令"}, {key:"B",text:"实行盐铁专卖"}, {key:"C",text:"罢黜百家，独尊儒术"}, {key:"D",text:"实行分封制"}],
-      answer: ["A","B","C"],
-      explanation: "汉武帝颁布推恩令削弱诸侯王势力，实行盐铁专卖增加财政收入，采纳董仲舒建议罢黜百家、独尊儒术，统一了思想。分封制是西周的制度，汉武帝恰恰是削弱分封。",
-      trap: "易错点：推恩令、盐铁专卖、独尊儒术分别对应政治、经济、思想三个方面，分封制与汉武帝的政策方向相反。"
-    },
-    {
-      id: "lishi-h01-q015", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 15, type: "judge", meta: "判断题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "北魏孝文帝改革实行汉化政策，将都城迁到洛阳，促进了民族交融。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "北魏孝文帝改革推行汉化政策，迁都洛阳，改汉姓、学汉语、穿汉服、与汉人通婚，促进了北方民族交融。",
-      trap: "易错点：孝文帝改革的核心是汉化、迁都洛阳，不要与北魏统一黄河流域的道武帝混淆。"
-    },
-    {
-      id: "lishi-h01-q016", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 16, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "山顶洞人已经掌握了（ ）。",
-      options: [{key:"A",text:"天然火"}, {key:"B",text:"人工取火"}, {key:"C",text:"青铜冶炼"}, {key:"D",text:"铁器制作"}],
-      answer: ["B"],
-      explanation: "山顶洞人距今约3万年，会人工取火、制作磨制石器和骨针，过氏族生活。",
-      trap: "易错点：北京人是使用天然火，人工取火是山顶洞人掌握的。"
-    },
-    {
-      id: "lishi-h01-q017", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 17, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "传说中治水三过家门而不入的是（ ）。",
-      options: [{key:"A",text:"尧"}, {key:"B",text:"舜"}, {key:"C",text:"禹"}, {key:"D",text:"启"}],
-      answer: ["C"],
-      explanation: "大禹治水采用疏导的方法，三过家门而不入，后因治水有功得到民众爱戴，舜把首领位置让给了他。",
-      trap: "易错点：禹的父亲鲧治水用堵的方法失败了，禹用疏导的方法成功了。"
-    },
-    {
-      id: "lishi-h01-q018", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 18, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "公元前1046年，武王伐纣的决定性战役是（ ）。",
-      options: [{key:"A",text:"牧野之战"}, {key:"B",text:"巨鹿之战"}, {key:"C",text:"官渡之战"}, {key:"D",text:"赤壁之战"}],
-      answer: ["A"],
-      explanation: "公元前1046年，周武王在牧野之战中打败商纣王，商朝灭亡，周朝建立。",
-      trap: "易错点：巨鹿之战是秦末项羽打败秦军的战役，不要和牧野之战混淆。"
-    },
-    {
-      id: "lishi-h01-q019", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 19, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "商朝青铜器的典型代表、目前世界上出土的最重青铜器是（ ）。",
-      options: [{key:"A",text:"四羊方尊"}, {key:"B",text:"司母戊鼎"}, {key:"C",text:"曾侯乙编钟"}, {key:"D",text:"青铜立人像"}],
-      answer: ["B"],
-      explanation: "司母戊鼎（后母戊鼎）出土于河南安阳殷墟，是商朝青铜器的典型代表，也是目前世界上出土的最重的青铜器。",
-      trap: "易错点：四羊方尊也是商朝青铜器，但最重的是司母戊鼎；曾侯乙编钟是战国时期的。"
-    },
-    {
-      id: "lishi-h01-q020", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 20, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "春秋时期首先称霸的是（ ）。",
-      options: [{key:"A",text:"齐桓公"}, {key:"B",text:"晋文公"}, {key:"C",text:"楚庄王"}, {key:"D",text:"秦穆公"}],
-      answer: ["A"],
-      explanation: "春秋时期，齐桓公任用管仲为相，改革内政，发展生产，首先称霸，成为春秋首霸。",
-      trap: "易错点：春秋五霸一般指齐桓公、晋文公、楚庄王、吴王阖闾、越王勾践，首霸是齐桓公。"
-    },
-    {
-      id: "lishi-h01-q021", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 21, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "战国时期秦国蜀郡太守李冰主持修建、至今仍在发挥作用的水利工程是（ ）。",
-      options: [{key:"A",text:"郑国渠"}, {key:"B",text:"灵渠"}, {key:"C",text:"都江堰"}, {key:"D",text:"大运河"}],
-      answer: ["C"],
-      explanation: "都江堰由李冰主持修建，位于岷江上，使成都平原成为天府之国，至今仍在发挥防洪灌溉作用。",
-      trap: "易错点：郑国渠在关中，灵渠是秦朝沟通湘江和漓江的运河，大运河是隋朝的。"
-    },
-    {
-      id: "lishi-h01-q022", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 22, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "主张“兼爱”“非攻”的思想家是（ ）。",
-      options: [{key:"A",text:"孔子"}, {key:"B",text:"孟子"}, {key:"C",text:"墨子"}, {key:"D",text:"庄子"}],
-      answer: ["C"],
-      explanation: "墨子是墨家学派创始人，主张兼爱、非攻、尚贤、节用，反对战争。",
-      trap: "易错点：孔子主张仁，孟子主张仁政，庄子是道家代表，主张无为。"
-    },
-    {
-      id: "lishi-h01-q023", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 23, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "秦朝统一后在全国通行的货币是（ ）。",
-      options: [{key:"A",text:"刀形币"}, {key:"B",text:"布币"}, {key:"C",text:"圆形方孔钱"}, {key:"D",text:"五铢钱"}],
-      answer: ["C"],
-      explanation: "秦始皇统一货币，以秦国的圆形方孔半两钱为标准货币，在全国统一使用。",
-      trap: "易错点：五铢钱是汉武帝时统一发行的货币，不要和秦朝的圆形方孔钱混淆。"
-    },
-    {
-      id: "lishi-h01-q024", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 24, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "公元前209年，在大泽乡揭竿而起、发动我国历史上第一次大规模农民起义的是（ ）。",
-      options: [{key:"A",text:"陈胜、吴广"}, {key:"B",text:"刘邦、项羽"}, {key:"C",text:"黄巢、王仙芝"}, {key:"D",text:"李自成、张献忠"}],
-      answer: ["A"],
-      explanation: "公元前209年，陈胜、吴广在大泽乡发动起义，这是我国历史上第一次大规模的农民起义，沉重打击了秦朝统治。",
-      trap: "易错点：刘邦、项羽是秦末农民战争的领导者，但第一次大规模起义是大泽乡起义。"
-    },
-    {
-      id: "lishi-h01-q025", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 25, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "东汉时改进造纸术、使纸成为重要书写材料的是（ ）。",
-      options: [{key:"A",text:"张衡"}, {key:"B",text:"蔡伦"}, {key:"C",text:"华佗"}, {key:"D",text:"张仲景"}],
-      answer: ["B"],
-      explanation: "东汉蔡伦改进造纸术，用树皮、麻头、破布、旧渔网等作原料造出便于书写的纸，造纸术随后传到世界各地。",
-      trap: "易错点：张衡发明地动仪，华佗发明麻沸散，张仲景著《伤寒杂病论》。"
-    },
-    {
-      id: "lishi-h01-q026", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 26, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "公元200年，曹操以少胜多打败袁绍、为统一北方奠定基础的战役是（ ）。",
-      options: [{key:"A",text:"赤壁之战"}, {key:"B",text:"官渡之战"}, {key:"C",text:"淝水之战"}, {key:"D",text:"巨鹿之战"}],
-      answer: ["B"],
-      explanation: "公元200年，曹操在官渡之战中以少胜多打败袁绍，奠定了统一北方的基础。",
-      trap: "易错点：赤壁之战是208年孙刘联军打败曹操，淝水之战是383年东晋打败前秦。"
-    },
-    {
-      id: "lishi-h01-q027", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 27, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "公元383年，东晋以少胜多打败前秦的战役是（ ）。",
-      options: [{key:"A",text:"官渡之战"}, {key:"B",text:"赤壁之战"}, {key:"C",text:"淝水之战"}, {key:"D",text:"长平之战"}],
-      answer: ["C"],
-      explanation: "公元383年，东晋在淝水之战中以少胜多打败前秦，使南方政权得到巩固，北方再度分裂。",
-      trap: "易错点：淝水之战的双方是东晋和前秦，不要记成东晋和北魏。"
-    },
-    {
-      id: "lishi-h01-q028", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 28, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "把圆周率精确到小数点后第七位、领先世界近千年的数学家是（ ）。",
-      options: [{key:"A",text:"刘徽"}, {key:"B",text:"祖冲之"}, {key:"C",text:"贾思勰"}, {key:"D",text:"郦道元"}],
-      answer: ["B"],
-      explanation: "南北朝时期的祖冲之把圆周率精确到小数点后第七位，比欧洲早近千年，还著有《缀术》。",
-      trap: "易错点：贾思勰著《齐民要术》，郦道元著《水经注》，都是北朝时期的著作，但领域不同。"
-    },
-    {
-      id: "lishi-h01-q029", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 29, type: "multiple", meta: "多选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "下列属于秦始皇巩固统一措施的有（ ）。",
-      options: [{key:"A",text:"统一文字、货币和度量衡"}, {key:"B",text:"在地方实行分封制"}, {key:"C",text:"修筑长城、开凿灵渠"}, {key:"D",text:"统一车轨、修筑驰道"}],
-      answer: ["A","C","D"],
-      explanation: "秦始皇统一文字为小篆，统一货币为圆形方孔钱，统一度量衡，修筑长城、开凿灵渠，统一车轨、修筑驰道，巩固了统一。分封制是西周的制度，秦朝实行的是郡县制。",
-      trap: "易错点：秦朝废分封、行郡县，分封制与秦始皇的政策方向相反。"
-    },
-    {
-      id: "lishi-h01-q030", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
-      number: 30, type: "judge", meta: "判断题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "东汉张仲景著有《伤寒杂病论》，被后人尊为“医圣”。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "张仲景著有《伤寒杂病论》，奠定了中医治疗学的基础，被后人尊为医圣。",
-      trap: "易错点：华佗被尊为外科鼻祖，发明麻沸散；张仲景才是医圣。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "lishi-h01-q031", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 31, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2024年福建中考·历史第1题（图转文字）",
@@ -397,6 +98,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q036", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 36, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2023年福建中考·历史第1题（图转文字）",
@@ -430,6 +132,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q039", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 39, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2023年福建中考·历史第4题（图转文字）",
@@ -474,6 +177,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q043", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 43, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2022年福建中考·历史第1题（图转文字）",
@@ -496,6 +200,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q045", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 45, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2022年福建中考·历史第3题（图转文字）",
@@ -562,6 +267,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q051", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 51, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2024年北京市中考·历史第3题",
@@ -573,6 +279,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q052", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 52, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2024年北京市中考·历史第4题（图转文字）",
@@ -595,6 +302,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q054", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 54, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年福建中考·历史第1题（图转文字）",
@@ -672,6 +380,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q061", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 61, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2024年浙江省中考·历史与社会第13题",
@@ -681,17 +390,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "西周实行分封制，把土地和人民分封给王室子弟、功臣和先代贵族，让他们在各地建立诸侯国，目的是稳定政治形势，巩固疆土。分封制下诸侯要向周王进贡、随从作战。扩大选官范围是科举制的作用，加强中央集权、巩固大一统是秦朝郡县制的作用。",
       trap: "易错点：分封制的目的是'稳定政治形势，巩固疆土'，不是加强中央集权——分封制下诸侯权力很大，后来反而造成分裂。"
     },
-    {
-      id: "lishi-h02-q001", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 1, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "隋炀帝开通的大运河，以（ ）为中心。",
-      options: [{key:"A",text:"长安"}, {key:"B",text:"洛阳"}, {key:"C",text:"扬州"}, {key:"D",text:"涿郡"}],
-      answer: ["B"],
-      explanation: "隋朝大运河以洛阳为中心，北达涿郡，南至余杭，全长2000多公里，是古代世界上最长的运河。",
-      trap: "易错点：涿郡是北端，余杭是南端，中心是洛阳。"
-    },
+
     {
       id: "lishi-h02-q002", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
       number: 2, type: "single", meta: "单选题",
@@ -703,127 +402,17 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "科举制始于隋朝，隋炀帝时正式设置进士科，标志着科举制度正式确立；唐朝进一步完善科举制（如增加考试科目、殿试等），但并非创立时期；明朝实行八股取士，是科举制度的一种僵化表现；1905年清朝废除科举制度，与创立无关。",
       trap: "易错点：进士科创立＝隋炀帝＝科举制正式确立；唐朝是完善，不是创立。"
     },
-    {
-      id: "lishi-h02-q003", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 3, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "出现“贞观之治”局面的皇帝是（ ）。",
-      options: [{key:"A",text:"唐高祖"}, {key:"B",text:"唐太宗"}, {key:"C",text:"唐玄宗"}, {key:"D",text:"唐中宗"}],
-      answer: ["B"],
-      explanation: "唐太宗李世民统治时期，轻徭薄赋、知人善任、虚心纳谏，出现了贞观之治的局面。",
-      trap: "易错点：贞观是唐太宗的年号，开元是唐玄宗的年号，不要记混。"
-    },
-    {
-      id: "lishi-h02-q004", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 4, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "唐玄宗统治前期出现的盛世局面是（ ）。",
-      options: [{key:"A",text:"文景之治"}, {key:"B",text:"贞观之治"}, {key:"C",text:"开元盛世"}, {key:"D",text:"康乾盛世"}],
-      answer: ["C"],
-      explanation: "唐玄宗统治前期，励精图治，唐朝进入全盛时期，史称开元盛世。",
-      trap: "易错点：文景之治是西汉，贞观之治是唐太宗，康乾盛世是清朝。"
-    },
-    {
-      id: "lishi-h02-q005", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 5, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "960年建立北宋、结束五代十国分裂局面的是（ ）。",
-      options: [{key:"A",text:"赵匡胤"}, {key:"B",text:"赵光义"}, {key:"C",text:"朱元璋"}, {key:"D",text:"李世民"}],
-      answer: ["A"],
-      explanation: "960年，后周大将赵匡胤在陈桥驿发动兵变，建立宋朝，定都东京，史称北宋，结束了五代十国的分裂局面。",
-      trap: "易错点：朱元璋是明朝开国皇帝，李世民是唐太宗。"
-    },
-    {
-      id: "lishi-h02-q007", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 7, type: "multiple", meta: "多选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "下列属于隋唐时期史实的有（ ）。",
-      options: [{key:"A",text:"开通大运河"}, {key:"B",text:"创立科举制"}, {key:"C",text:"出现贞观之治"}, {key:"D",text:"实行闭关锁国政策"}],
-      answer: ["A","B","C"],
-      explanation: "大运河开通于隋朝，科举制创立于隋朝，贞观之治出现于唐太宗时期，都是隋唐史实。闭关锁国政策是清朝实行的。",
-      trap: "易错点：闭关锁国是清朝的政策，不要放到隋唐。"
-    },
-    {
-      id: "lishi-h02-q008", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 8, type: "judge", meta: "判断题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "清朝实行闭关锁国政策，严格限制对外贸易。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "清朝实行闭关锁国政策，只留广州一处通商，严格限制对外贸易，阻碍了中外交流和中国社会发展。",
-      trap: "易错点：闭关锁国不是完全断绝往来，而是严格限制，广州十三行仍可通商。"
-    },
-    {
-      id: "lishi-h02-q009", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 9, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "589年，隋文帝杨坚灭掉陈朝，结束南北分裂、统一全国，隋朝建立的时间是（ ）。",
-      options: [{key:"A",text:"581年"}, {key:"B",text:"589年"}, {key:"C",text:"605年"}, {key:"D",text:"618年"}],
-      answer: ["A"],
-      explanation: "581年杨坚建立隋朝，589年隋文帝灭陈，统一全国，结束了长期的分裂局面。",
-      trap: "易错点：581年是隋朝建立，589年是隋朝统一全国，两个时间都要分清。"
-    },
-    {
-      id: "lishi-h02-q010", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 10, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "唐太宗时，文成公主入藏嫁给吐蕃赞普（ ），促进了唐蕃友好关系。",
-      options: [{key:"A",text:"松赞干布"}, {key:"B",text:"尺带珠丹"}, {key:"C",text:"弃宗弄赞"}, {key:"D",text:"论钦陵"}],
-      answer: ["A"],
-      explanation: "唐太宗时，文成公主入藏，嫁给吐蕃赞普松赞干布，促进了汉藏友好和吐蕃经济文化的发展。",
-      trap: "易错点：金城公主入藏是唐中宗时的事，嫁给尺带珠丹，不要和文成公主混淆。"
-    },
-    {
-      id: "lishi-h02-q011", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 11, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "唐朝时西行天竺、回国后著有《大唐西域记》的高僧是（ ）。",
-      options: [{key:"A",text:"玄奘"}, {key:"B",text:"鉴真"}, {key:"C",text:"一行"}, {key:"D",text:"慧能"}],
-      answer: ["A"],
-      explanation: "玄奘西行天竺求法，历时17年回国，著有《大唐西域记》，对中外文化交流作出重要贡献。",
-      trap: "易错点：鉴真是东渡日本，玄奘是西行天竺，方向不要记反。"
-    },
-    {
-      id: "lishi-h02-q012", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 12, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "唐朝诗人中，被称为“诗圣”的是（ ）。",
-      options: [{key:"A",text:"李白"}, {key:"B",text:"杜甫"}, {key:"C",text:"白居易"}, {key:"D",text:"王维"}],
-      answer: ["B"],
-      explanation: "杜甫被称为诗圣，其诗反映社会现实，被称为诗史；李白被称为诗仙，白居易被称为诗魔。",
-      trap: "易错点：李白是诗仙，杜甫是诗圣，两人的称号最容易考反。"
-    },
-    {
-      id: "lishi-h02-q013", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 13, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "755年，安禄山、史思明发动叛乱，唐朝由盛转衰，这次叛乱是（ ）。",
-      options: [{key:"A",text:"安史之乱"}, {key:"B",text:"黄巢起义"}, {key:"C",text:"陈桥兵变"}, {key:"D",text:"靖康之变"}],
-      answer: ["A"],
-      explanation: "755年安史之乱爆发，持续8年，唐朝由盛转衰，安史之乱后藩镇割据局面出现。",
-      trap: "易错点：安史之乱是唐朝由盛转衰的转折点，黄巢起义是唐末农民起义。"
-    },
-    {
-      id: "lishi-h02-q014", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 14, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "1005年，北宋与辽签订的和约、此后宋辽保持百年和平的是（ ）。",
-      options: [{key:"A",text:"澶渊之盟"}, {key:"B",text:"绍兴和议"}, {key:"C",text:"隆兴和议"}, {key:"D",text:"澶州之战"}],
-      answer: ["A"],
-      explanation: "1005年，宋辽签订澶渊之盟，宋给辽岁币，辽宋之间保持了长期的和平局面。",
-      trap: "易错点：绍兴和议是南宋与金的和约，不要和澶渊之盟混淆。"
-    },
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "lishi-h02-q015", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
       number: 15, type: "single", meta: "单选题",
@@ -835,138 +424,18 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "交子最初出现于北宋初年的四川地区，因当地铁钱流通不便，商人发明纸币以方便交易，后由官府正式发行；北宋东京是交子流通后的使用地，并非最早出现的地方；南宋时间晚于交子出现的北宋初年；元大都使用纸币的时间也在其出现之后。",
       trap: "易错点：交子＝世界上最早的纸币＝北宋四川；东京是后来流通地，不是起源地。"
     },
-    {
-      id: "lishi-h02-q016", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 16, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "北宋毕昇发明的印刷术是（ ）。",
-      options: [{key:"A",text:"雕版印刷术"}, {key:"B",text:"活字印刷术"}, {key:"C",text:"套色印刷术"}, {key:"D",text:"石印术"}],
-      answer: ["B"],
-      explanation: "北宋毕昇发明活字印刷术，比欧洲早约400年，是中国古代四大发明之一。",
-      trap: "易错点：雕版印刷术在隋唐时已出现，毕昇发明的是活字印刷术。"
-    },
-    {
-      id: "lishi-h02-q017", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 17, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "1206年，铁木真统一蒙古草原，建立蒙古国，被尊称为（ ）。",
-      options: [{key:"A",text:"成吉思汗"}, {key:"B",text:"忽必烈"}, {key:"C",text:"窝阔台"}, {key:"D",text:"拖雷"}],
-      answer: ["A"],
-      explanation: "1206年，铁木真统一蒙古各部，建立蒙古国，被尊称为成吉思汗。",
-      trap: "易错点：忽必烈是成吉思汗的孙子，1271年定国号为元，不要和成吉思汗混淆。"
-    },
-    {
-      id: "lishi-h02-q018", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 18, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "元朝管理西藏事务的中央机构是（ ）。",
-      options: [{key:"A",text:"中书省"}, {key:"B",text:"枢密院"}, {key:"C",text:"宣政院"}, {key:"D",text:"理藩院"}],
-      answer: ["C"],
-      explanation: "元朝设立宣政院，负责管理全国佛教事务和西藏地区的军政事务，西藏正式成为中央直接管辖的地方行政区域。",
-      trap: "易错点：理藩院是清朝管理少数民族事务的机构，不要和宣政院混淆。"
-    },
-    {
-      id: "lishi-h02-q019", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 19, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "明朝郑和下西洋开始于（ ）。",
-      options: [{key:"A",text:"1405年"}, {key:"B",text:"1433年"}, {key:"C",text:"1492年"}, {key:"D",text:"1519年"}],
-      answer: ["A"],
-      explanation: "1405年至1433年，郑和七次下西洋，到达亚非30多个国家和地区，最远到达非洲东海岸和红海沿岸。",
-      trap: "易错点：1433年是郑和最后一次下西洋结束、回国的时间，1405年是第一次出发的时间。"
-    },
-    {
-      id: "lishi-h02-q020", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 20, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "明朝抗倭名将、平定东南沿海倭患的是（ ）。",
-      options: [{key:"A",text:"戚继光"}, {key:"B",text:"郑成功"}, {key:"C",text:"袁崇焕"}, {key:"D",text:"于谦"}],
-      answer: ["A"],
-      explanation: "明朝戚继光率领戚家军，在台州九战九捷，基本扫平东南沿海的倭患。",
-      trap: "易错点：郑成功是收复台湾的民族英雄，戚继光是抗倭名将，两人不要记混。"
-    },
-    {
-      id: "lishi-h02-q021", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 21, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "明朝李时珍编著的药物学巨著是（ ）。",
-      options: [{key:"A",text:"《齐民要术》"}, {key:"B",text:"《本草纲目》"}, {key:"C",text:"《天工开物》"}, {key:"D",text:"《农政全书》"}],
-      answer: ["B"],
-      explanation: "李时珍历时27年编著《本草纲目》，被誉为东方药物巨典。",
-      trap: "易错点：《齐民要术》是北朝贾思勰的农学著作，《天工开物》是明末宋应星的科技著作。"
-    },
-    {
-      id: "lishi-h02-q022", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 22, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "1662年，驱逐荷兰殖民者、收复台湾的民族英雄是（ ）。",
-      options: [{key:"A",text:"戚继光"}, {key:"B",text:"郑成功"}, {key:"C",text:"施琅"}, {key:"D",text:"林则徐"}],
-      answer: ["B"],
-      explanation: "1662年，郑成功驱逐荷兰殖民者，收复台湾。1684年，清政府在台湾设置台湾府，隶属福建省。",
-      trap: "易错点：施琅是清朝统一台湾的将领，郑成功才是收复台湾的民族英雄。"
-    },
-    {
-      id: "lishi-h02-q023", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 23, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "1689年，中俄签订的第一个边界条约是（ ）。",
-      options: [{key:"A",text:"《南京条约》"}, {key:"B",text:"《尼布楚条约》"}, {key:"C",text:"《瑷珲条约》"}, {key:"D",text:"《北京条约》"}],
-      answer: ["B"],
-      explanation: "1689年，中俄签订《尼布楚条约》，这是中俄两国签订的第一个边界条约，肯定了黑龙江和乌苏里江流域包括库页岛在内的广大地区都是中国的领土。",
-      trap: "易错点：《尼布楚条约》是平等条约，《瑷珲条约》是不平等条约，性质完全不同。"
-    },
-    {
-      id: "lishi-h02-q024", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 24, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "明末宋应星编著的、被誉为“中国17世纪的工艺百科全书”的著作是（ ）。",
-      options: [{key:"A",text:"《本草纲目》"}, {key:"B",text:"《农政全书》"}, {key:"C",text:"《天工开物》"}, {key:"D",text:"《梦溪笔谈》"}],
-      answer: ["C"],
-      explanation: "宋应星编著《天工开物》，总结了明代农业、手工业生产技术，被誉为中国17世纪的工艺百科全书。",
-      trap: "易错点：《梦溪笔谈》是北宋沈括的著作，《农政全书》是明末徐光启的著作。"
-    },
-    {
-      id: "lishi-h02-q025", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 25, type: "multiple", meta: "多选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "下列属于唐朝对外文化交流史实的有（ ）。",
-      options: [{key:"A",text:"玄奘西行天竺"}, {key:"B",text:"鉴真东渡日本"}, {key:"C",text:"日本遣唐使来华"}, {key:"D",text:"郑和七下西洋"}],
-      answer: ["A","B","C"],
-      explanation: "玄奘西行、鉴真东渡、日本遣唐使来华，都是唐朝对外文化交流的史实。郑和下西洋是明朝的事。",
-      trap: "易错点：鉴真东渡是唐朝，郑和下西洋是明朝，朝代不要记错。"
-    },
-    {
-      id: "lishi-h02-q026", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 26, type: "multiple", meta: "多选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "下列属于宋元时期科技文化成就的有（ ）。",
-      options: [{key:"A",text:"毕昇发明活字印刷术"}, {key:"B",text:"指南针应用于航海"}, {key:"C",text:"交子是世界上最早的纸币"}, {key:"D",text:"蔡伦改进造纸术"}],
-      answer: ["A","B","C"],
-      explanation: "毕昇发明活字印刷术、指南针应用于航海、交子是世界上最早的纸币，都是宋元时期的成就。蔡伦改进造纸术是东汉的事。",
-      trap: "易错点：蔡伦造纸是东汉，不要放到宋元时期。"
-    },
-    {
-      id: "lishi-h02-q027", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
-      number: 27, type: "judge", meta: "判断题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "元朝设立的澎湖巡检司，是管理澎湖和台湾的机构，台湾正式归属中央政权的管辖。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "元朝设立澎湖巡检司，管理澎湖和台湾，这是中央政权首次在台湾地区设立行政机构管辖台湾。",
-      trap: "易错点：澎湖巡检司是元朝设立的，不是明朝或清朝设立的。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "lishi-h02-q028", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
       number: 28, type: "single", meta: "单选题",
@@ -1068,6 +537,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q037", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 37, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2022年福建中考·历史第7题（图片选项转文字）",
@@ -1079,6 +549,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q038", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 38, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2022年福建中考·历史第8题（图转文字）",
@@ -1134,6 +605,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q043", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 43, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2024年北京市中考·历史第8题（图转文字）",
@@ -1156,6 +628,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q045", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 45, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2025年福建中考·历史第5题（图转文字）",
@@ -1167,6 +640,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q046", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 46, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2025年福建中考·历史第7题（图转文字）",
@@ -1200,6 +674,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q049", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 49, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2026年福建中考·历史第5题（图转文字）",
@@ -1211,6 +686,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q050", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 50, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2026年福建中考·历史第6题（图转文字）",
@@ -1255,6 +731,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q054", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 54, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2026年福建中考·历史第10题（图转文字）",
@@ -1264,50 +741,10 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "图中文物是白玉镂空云龙纹的帽顶，配金镶宝石底座，符合“明·金镶宝石白玉镂空云龙帽顶”的定名。A的绿玻璃扁瓶、B的三彩骆驼俑、D的红缎戏衣与图中白玉镂空帽顶的形制、材质均不符。",
       trap: "易错点：看清材质（白玉）、工艺（镂空）、纹饰（云龙）与器形（帽顶），四项要同时对上。"
     },
-    {
-      id: "lishi-h03-q001", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 1, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "林则徐虎门销烟发生于（ ）年。",
-      options: [{key:"A",text:"1839"}, {key:"B",text:"1840"}, {key:"C",text:"1842"}, {key:"D",text:"1856"}],
-      answer: ["A"],
-      explanation: "1839年，林则徐在广东虎门海滩当众销毁鸦片，虎门销烟是中国人民禁烟斗争的伟大胜利。",
-      trap: "易错点：虎门销烟是1839年，鸦片战争爆发是1840年，不要记混。"
-    },
-    {
-      id: "lishi-h03-q002", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 2, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "中国近代史上第一个不平等条约、割让香港岛的是（ ）。",
-      options: [{key:"A",text:"《南京条约》"}, {key:"B",text:"《天津条约》"}, {key:"C",text:"《北京条约》"}, {key:"D",text:"《马关条约》"}],
-      answer: ["A"],
-      explanation: "1842年，清政府被迫签订《南京条约》，割让香港岛给英国，这是中国近代史上第一个不平等条约，中国开始沦为半殖民地半封建社会。",
-      trap: "易错点：《马关条约》割让的是台湾全岛及所有附属岛屿、澎湖列岛；香港岛是《南京条约》割让的。"
-    },
-    {
-      id: "lishi-h03-q003", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 3, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "洋务运动前期以“自强”为口号，创办的近代军事工业有（ ）。",
-      options: [{key:"A",text:"江南制造总局"}, {key:"B",text:"汉阳铁厂"}, {key:"C",text:"轮船招商局"}, {key:"D",text:"开平煤矿"}],
-      answer: ["A"],
-      explanation: "江南制造总局是1865年由曾国藩、李鸿章创办的近代军事工业；汉阳铁厂、轮船招商局、开平煤矿是洋务运动后期以“求富”为口号创办的民用工业。",
-      trap: "易错点：军事工业看“自强”，民用工业看“求富”，江南制造总局是军事工业的代表。"
-    },
-    {
-      id: "lishi-h03-q004", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 4, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1898年戊戌变法又称（ ）。",
-      options: [{key:"A",text:"百日维新"}, {key:"B",text:"洋务运动"}, {key:"C",text:"辛亥革命"}, {key:"D",text:"新文化运动"}],
-      answer: ["A"],
-      explanation: "1898年，光绪帝颁布变法诏书，实行变法，因只维持了103天而被称为百日维新。",
-      trap: "易错点：戊戌变法是1898年，变法领导人是康有为、梁启超等维新派。"
-    },
+
+
+
+
     {
       id: "lishi-h03-q005", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
       number: 5, type: "single", meta: "单选题",
@@ -1319,250 +756,31 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "辛亥革命推翻了清朝的统治，结束了我国两千多年的封建帝制，建立了中国历史上第一个资产阶级共和国，使民主共和的观念深入人心。辛亥革命结束的是封建君主专制，不是封建制度；它没有改变中国半殖民地半封建社会的性质，没有解决主要矛盾；民主与科学是新文化运动的口号。",
       trap: "易错点：辛亥革命结束的是封建帝制（君主专制），不是整个封建制度；'封建制度终结'的说法过于绝对。"
     },
-    {
-      id: "lishi-h03-q006", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 6, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "新文化运动的两大口号是（ ）。",
-      options: [{key:"A",text:"民主与科学"}, {key:"B",text:"自强与求富"}, {key:"C",text:"自由与平等"}, {key:"D",text:"实业救国与教育救国"}],
-      answer: ["A"],
-      explanation: "新文化运动以陈独秀创办的《新青年》为主要阵地，高举民主与科学两面大旗，反对封建专制和封建礼教。",
-      trap: "易错点：自强与求富是洋务运动的口号，不要和新文化运动混淆。"
-    },
-    {
-      id: "lishi-h03-q007", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 7, type: "multiple", meta: "多选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列关于五四运动的说法正确的有（ ）。",
-      options: [{key:"A",text:"1919年5月4日在北京爆发"}, {key:"B",text:"导火索是巴黎和会上中国外交失败"}, {key:"C",text:"运动后期主力由学生转为工人"}, {key:"D",text:"五四运动后中国共产党立即成立"}],
-      answer: ["A","B","C"],
-      explanation: "五四运动于1919年5月4日在北京爆发，导火索是巴黎和会上中国外交失败，前期主力是学生，后期主力转为工人阶级。中国共产党成立于1921年，不是五四运动后立即成立。",
-      trap: "易错点：五四运动标志着中国新民主主义革命的开端，但中国共产党是1921年才成立的，中间隔了两年。"
-    },
-    {
-      id: "lishi-h03-q008", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 8, type: "judge", meta: "判断题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "中国共产党第一次全国代表大会于1921年在上海召开，标志着中国共产党的诞生。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "1921年7月，中共一大在上海召开，后转移到浙江嘉兴南湖，标志着中国共产党的诞生。",
-      trap: "易错点：一大原定在上海召开，因受巡捕注意转移到嘉兴南湖继续举行，地点要记全。"
-    },
-    {
-      id: "lishi-h03-q009", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 9, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1860年，英法联军攻入北京，火烧圆明园，这发生在（ ）。",
-      options: [{key:"A",text:"鸦片战争期间"}, {key:"B",text:"第二次鸦片战争期间"}, {key:"C",text:"甲午中日战争期间"}, {key:"D",text:"八国联军侵华期间"}],
-      answer: ["B"],
-      explanation: "1856年至1860年，英法联军发动第二次鸦片战争，1860年攻入北京，火烧圆明园。",
-      trap: "易错点：火烧圆明园是第二次鸦片战争，不是八国联军侵华战争。"
-    },
-    {
-      id: "lishi-h03-q010", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 10, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1851年，洪秀全在广西金田村发动起义，建立的政权是（ ）。",
-      options: [{key:"A",text:"太平天国"}, {key:"B",text:"中华民国"}, {key:"C",text:"大清帝国"}, {key:"D",text:"义和团"}],
-      answer: ["A"],
-      explanation: "1851年，洪秀全在广西金田村发动起义，建号太平天国，1853年定都天京。",
-      trap: "易错点：太平天国运动从1851年持续到1864年，天京是今天的南京。"
-    },
-    {
-      id: "lishi-h03-q011", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 11, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1876年至1878年，率军收复新疆、为新疆建省奠定基础的是（ ）。",
-      options: [{key:"A",text:"曾国藩"}, {key:"B",text:"李鸿章"}, {key:"C",text:"左宗棠"}, {key:"D",text:"张之洞"}],
-      answer: ["C"],
-      explanation: "左宗棠率军收复新疆，1878年基本收复除伊犁以外的新疆，1884年清政府在新疆设立行省。",
-      trap: "易错点：收复新疆的是左宗棠，创办福州船政局的也是左宗棠，不要记成李鸿章。"
-    },
-    {
-      id: "lishi-h03-q012", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 12, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1894年黄海海战中，指挥致远舰撞向敌舰、壮烈牺牲的管带是（ ）。",
-      options: [{key:"A",text:"邓世昌"}, {key:"B",text:"丁汝昌"}, {key:"C",text:"林永升"}, {key:"D",text:"刘步蟾"}],
-      answer: ["A"],
-      explanation: "1894年黄海海战中，邓世昌指挥致远舰奋勇杀敌，壮烈牺牲，体现了爱国精神。",
-      trap: "易错点：丁汝昌是北洋舰队提督，黄海海战中壮烈牺牲的致远舰管带是邓世昌。"
-    },
-    {
-      id: "lishi-h03-q013", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 13, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1895年签订的《马关条约》中，清政府割让给日本的是（ ）。",
-      options: [{key:"A",text:"香港岛"}, {key:"B",text:"台湾全岛及所有附属岛屿、澎湖列岛"}, {key:"C",text:"九龙司地方一区"}, {key:"D",text:"外兴安岭以南地区"}],
-      answer: ["B"],
-      explanation: "《马关条约》规定清政府割让辽东半岛、台湾全岛及所有附属岛屿、澎湖列岛给日本，赔偿日本军费白银二亿两。",
-      trap: "易错点：割让香港岛的是《南京条约》，割让九龙司地方一区的是《北京条约》。"
-    },
-    {
-      id: "lishi-h03-q014", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 14, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1901年签订的《辛丑条约》使中国（ ）。",
-      options: [{key:"A",text:"开始沦为半殖民地半封建社会"}, {key:"B",text:"大大加深了半殖民地化程度"}, {key:"C",text:"完全沦为半殖民地半封建社会"}, {key:"D",text:"开始出现资本主义萌芽"}],
-      answer: ["C"],
-      explanation: "《辛丑条约》规定清政府赔款白银4.5亿两，划定东交民巷为使馆界，允许帝国主义国家派兵驻扎，清政府完全沦为帝国主义统治中国的工具，中国完全沦为半殖民地半封建社会。",
-      trap: "易错点：《南京条约》是中国开始沦为半殖民地半封建社会，《马关条约》是大大加深，《辛丑条约》是完全沦为。"
-    },
-    {
-      id: "lishi-h03-q015", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 15, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1866年，左宗棠在福州创办的近代军事工业是（ ）。",
-      options: [{key:"A",text:"江南制造总局"}, {key:"B",text:"福州船政局"}, {key:"C",text:"安庆内军械所"}, {key:"D",text:"汉阳铁厂"}],
-      answer: ["B"],
-      explanation: "1866年，左宗棠在福州创办福州船政局，是洋务运动中规模最大的船舶修造厂，培养了大批海军和造船人才。",
-      trap: "易错点：福州船政局是左宗棠创办的，江南制造总局是曾国藩、李鸿章创办的，地点在上海。"
-    },
-    {
-      id: "lishi-h03-q016", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 16, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1895年，康有为、梁启超联合在京参加会试的举人上书光绪帝，史称（ ）。",
-      options: [{key:"A",text:"公车上书"}, {key:"B",text:"百日维新"}, {key:"C",text:"戊戌政变"}, {key:"D",text:"强学会"}],
-      answer: ["A"],
-      explanation: "1895年《马关条约》签订的消息传到北京，康有为、梁启超联合在京参加会试的1300多名举人上书光绪帝，揭开了变法维新的序幕。",
-      trap: "易错点：公车上书是1895年，戊戌变法是1898年，公车上书是变法维新的序幕。"
-    },
-    {
-      id: "lishi-h03-q017", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 17, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1905年，孙中山在东京成立中国同盟会，其革命纲领后来发展为（ ）。",
-      options: [{key:"A",text:"三民主义"}, {key:"B",text:"新三民主义"}, {key:"C",text:"民主与科学"}, {key:"D",text:"自强与求富"}],
-      answer: ["A"],
-      explanation: "1905年孙中山在东京成立中国同盟会，提出驱除鞑虏、恢复中华、建立民国、平均地权的纲领，后来发展为民族、民权、民生三大主义。",
-      trap: "易错点：新三民主义是孙中山在第一次国共合作时提出的，三民主义是同盟会的指导思想。"
-    },
-    {
-      id: "lishi-h03-q018", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 18, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1911年10月10日爆发的、史称辛亥革命的起义是（ ）。",
-      options: [{key:"A",text:"武昌起义"}, {key:"B",text:"黄花岗起义"}, {key:"C",text:"广州起义"}, {key:"D",text:"南昌起义"}],
-      answer: ["A"],
-      explanation: "1911年10月10日，武昌起义爆发，史称辛亥革命，推翻了清朝统治，结束了两千多年的封建帝制。",
-      trap: "易错点：南昌起义是1927年，黄花岗起义是1911年4月，武昌起义才是辛亥革命的开端。"
-    },
-    {
-      id: "lishi-h03-q019", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 19, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1915年，陈独秀在上海创办《青年杂志》，标志着新文化运动的兴起，该刊后改名为（ ）。",
-      options: [{key:"A",text:"《新青年》"}, {key:"B",text:"《民报》"}, {key:"C",text:"《每周评论》"}, {key:"D",text:"《湘江评论》"}],
-      answer: ["A"],
-      explanation: "1915年，陈独秀在上海创办《青年杂志》，1916年改名为《新青年》，成为新文化运动的主要阵地。",
-      trap: "易错点：《民报》是中国同盟会的机关报，《新青年》才是新文化运动的主要阵地。"
-    },
-    {
-      id: "lishi-h03-q020", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 20, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "中国现代文学史上第一篇白话小说、1918年发表于《新青年》的作品是（ ）。",
-      options: [{key:"A",text:"《阿Q正传》"}, {key:"B",text:"《狂人日记》"}, {key:"C",text:"《孔乙己》"}, {key:"D",text:"《药》"}],
-      answer: ["B"],
-      explanation: "1918年，鲁迅在《新青年》上发表《狂人日记》，这是中国现代文学史上第一篇白话小说。",
-      trap: "易错点：《阿Q正传》也是鲁迅的作品，但发表于1921年，不是第一篇白话小说。"
-    },
-    {
-      id: "lishi-h03-q021", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 21, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1927年8月1日，周恩来、贺龙等领导的、打响武装反抗国民党反动派第一枪的起义是（ ）。",
-      options: [{key:"A",text:"南昌起义"}, {key:"B",text:"秋收起义"}, {key:"C",text:"广州起义"}, {key:"D",text:"武昌起义"}],
-      answer: ["A"],
-      explanation: "1927年8月1日，南昌起义爆发，打响了武装反抗国民党反动派的第一枪，8月1日后来成为中国人民解放军的建军节。",
-      trap: "易错点：秋收起义是1927年9月毛泽东领导的，广州起义是1927年12月，南昌起义才是第一枪。"
-    },
-    {
-      id: "lishi-h03-q022", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 22, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1935年召开的、成为中国共产党历史上生死攸关转折点的会议是（ ）。",
-      options: [{key:"A",text:"中共一大"}, {key:"B",text:"遵义会议"}, {key:"C",text:"瓦窑堡会议"}, {key:"D",text:"洛川会议"}],
-      answer: ["B"],
-      explanation: "1935年1月，遵义会议召开，确立了以毛泽东为核心的党中央的正确领导，成为中国共产党历史上生死攸关的转折点。",
-      trap: "易错点：遵义会议是1935年，瓦窑堡会议也是1935年，但转折点特指遵义会议。"
-    },
-    {
-      id: "lishi-h03-q023", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 23, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1931年9月18日，日本关东军炸毁南满铁路、炮轰东北军驻地，史称（ ）。",
-      options: [{key:"A",text:"九一八事变"}, {key:"B",text:"卢沟桥事变"}, {key:"C",text:"一二八事变"}, {key:"D",text:"华北事变"}],
-      answer: ["A"],
-      explanation: "1931年9月18日，九一八事变爆发，日本开始侵占中国东北，揭开了日本侵华战争的序幕。",
-      trap: "易错点：九一八事变是1931年，卢沟桥事变是1937年，两个事变的时间和地点都要分清。"
-    },
-    {
-      id: "lishi-h03-q024", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 24, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1937年7月7日，日军进攻卢沟桥，史称卢沟桥事变，它标志着（ ）。",
-      options: [{key:"A",text:"中国局部抗战开始"}, {key:"B",text:"全国性抗日战争全面爆发"}, {key:"C",text:"抗日民族统一战线正式建立"}, {key:"D",text:"抗日战争胜利"}],
-      answer: ["B"],
-      explanation: "1937年7月7日，卢沟桥事变爆发，中国全国性抗日战争全面爆发，第二次国共合作开始形成。",
-      trap: "易错点：九一八事变后中国开始局部抗战，卢沟桥事变后才是全国性抗战全面爆发。"
-    },
-    {
-      id: "lishi-h03-q025", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 25, type: "multiple", meta: "多选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列关于近代不平等条约割地内容的说法正确的有（ ）。",
-      options: [{key:"A",text:"《南京条约》割让香港岛给英国"}, {key:"B",text:"《马关条约》割让台湾给日本"}, {key:"C",text:"《北京条约》割让九龙司地方一区给英国"}, {key:"D",text:"《辛丑条约》割让台湾给日本"}],
-      answer: ["A","B","C"],
-      explanation: "《南京条约》割香港岛，《马关条约》割台湾，《北京条约》割九龙司地方一区，都是正确的割地内容。《辛丑条约》没有割地内容，主要是赔款、划使馆界、允许驻兵。",
-      trap: "易错点：《辛丑条约》赔款4.5亿两，但没有割让领土，不要把割地记到它头上。"
-    },
-    {
-      id: "lishi-h03-q026", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 26, type: "multiple", meta: "多选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列属于中国人民抗日战争史实的有（ ）。",
-      options: [{key:"A",text:"卢沟桥事变后全国性抗战爆发"}, {key:"B",text:"台儿庄战役取得重大胜利"}, {key:"C",text:"百团大战沉重打击日军"}, {key:"D",text:"武昌起义推翻清朝统治"}],
-      answer: ["A","B","C"],
-      explanation: "卢沟桥事变、台儿庄战役、百团大战都是抗日战争的史实。武昌起义是1911年辛亥革命的开端，不是抗战史实。",
-      trap: "易错点：台儿庄战役是正面战场的最大胜利，百团大战是敌后战场的大规模进攻作战。"
-    },
-    {
-      id: "lishi-h03-q027", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
-      number: 27, type: "judge", meta: "判断题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "1936年10月，红军三大主力在甘肃会宁会师，标志着红军长征胜利结束。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "1936年10月，红一、红二、红四方面军在甘肃会宁胜利会师，红军长征胜利结束。",
-      trap: "易错点：长征开始于1934年10月中央红军长征，结束于1936年10月会宁会师。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "lishi-h03-q028", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
+      image: true,
       number: 28, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2024年福建中考·历史第11题（图转文字）",
@@ -1607,6 +825,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h03-q032", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
+      image: true,
       number: 32, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2024年福建中考·历史第29题（图转文字）",
@@ -1629,6 +848,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h03-q034", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
+      image: true,
       number: 34, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2022年福建中考·历史第15题（图转文字）",
@@ -1739,6 +959,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h03-q044", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
+      image: true,
       number: 44, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2025年福建中考·历史第15题（图转文字）",
@@ -1816,6 +1037,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h03-q051", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
+      image: true,
       number: 51, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2026年福建中考·历史第16题（图转文字）",
@@ -1904,6 +1126,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h03-q059", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
+      image: true,
       number: 59, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2024年湖北省武汉市中考·历史（图转文字；原始题号未标注）",
@@ -2080,6 +1303,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h03-q075", chapterId: 3, chapter: "八年级上册 · 中国近代史（上）",
+      image: true,
       number: 75, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2024年浙江省中考·历史与社会第16题（图转文字）",
@@ -2089,50 +1313,10 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "井冈山会师、遵义会议、《论持久战》、中共七大，都是中国共产党探索农村包围城市、武装夺取政权的革命新道路过程中的重大事件，共同体现'中国革命新道路的探索与实践'这一主题。全国工人运动高涨在1922—1923年，国民革命运动在1924—1927年，抗日民族统一战线建立于1937年，都与组图内容不符。",
       trap: "易错点：井冈山会师＋遵义会议＋《论持久战》＋中共七大，四个点合起来就是'中国革命新道路'；看到'七大'不要只想到抗战胜利，要看整组图。"
     },
-    {
-      id: "lishi-h04-q001", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 1, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "中华人民共和国成立的时间是（ ）。",
-      options: [{key:"A",text:"1949年10月1日"}, {key:"B",text:"1949年9月21日"}, {key:"C",text:"1950年10月1日"}, {key:"D",text:"1954年9月15日"}],
-      answer: ["A"],
-      explanation: "1949年10月1日，开国大典在北京天安门广场举行，中华人民共和国成立。",
-      trap: "易错点：1949年9月21日是中国人民政治协商会议第一届全体会议开幕的时间，不是开国大典的时间。"
-    },
-    {
-      id: "lishi-h04-q002", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 2, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1950年开始的土地改革废除了（ ）。",
-      options: [{key:"A",text:"封建土地所有制"}, {key:"B",text:"地主阶级的政治特权"}, {key:"C",text:"农业生产合作社"}, {key:"D",text:"人民公社制度"}],
-      answer: ["A"],
-      explanation: "1950年开始的土地改革废除了封建土地所有制，实行农民的土地所有制，解放了农村生产力。",
-      trap: "易错点：土地改革废除的是封建土地所有制，实行的是农民土地所有制，不是社会主义公有制。"
-    },
-    {
-      id: "lishi-h04-q003", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 3, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "抗美援朝战争中用身体堵住敌人机枪口的英雄是（ ）。",
-      options: [{key:"A",text:"黄继光"}, {key:"B",text:"邱少云"}, {key:"C",text:"董存瑞"}, {key:"D",text:"雷锋"}],
-      answer: ["A"],
-      explanation: "抗美援朝战争中，黄继光在上甘岭战役中用身体堵住敌人的机枪口，壮烈牺牲。",
-      trap: "易错点：邱少云是为保证潜伏成功、烈火烧身也不动；董存瑞是解放战争时期舍身炸碉堡。"
-    },
-    {
-      id: "lishi-h04-q004", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 4, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "“一五”计划的基本任务是集中主要力量发展（ ）。",
-      options: [{key:"A",text:"重工业"}, {key:"B",text:"轻工业"}, {key:"C",text:"农业"}, {key:"D",text:"商业"}],
-      answer: ["A"],
-      explanation: "1953年开始的“一五”计划，集中主要力量发展重工业，建立国家工业化和国防现代化的初步基础。",
-      trap: "易错点：“一五”计划的重点是重工业，鞍钢、武汉长江大桥等是其成就。"
-    },
+
+
+
+
     {
       id: "lishi-h04-q005", chapterId: 4, chapter: "八年级下册 · 中国现代史",
       number: 5, type: "single", meta: "单选题",
@@ -2144,248 +1328,28 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "三大改造于1956年底完成，标志着生产资料私有制转变为公有制，社会主义基本制度确立，我国进入社会主义初级阶段；土地改革完成于1952年，时间不符；1954年第一届全国人大通过《中华人民共和国宪法》，确立了人民代表大会制度；第一个五年计划侧重工业化建设，于1957年完成。",
       trap: "易错点：1956年＋社会主义基本制度建立＋进入社会主义初级阶段＝三大改造完成；土地改革是1952年，别记混。"
     },
-    {
-      id: "lishi-h04-q006", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 6, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "我国第一个经济特区是（ ）。",
-      options: [{key:"A",text:"深圳"}, {key:"B",text:"珠海"}, {key:"C",text:"厦门"}, {key:"D",text:"汕头"}],
-      answer: ["A"],
-      explanation: "1980年，我国在深圳、珠海、汕头、厦门设立经济特区，其中深圳是第一个经济特区。",
-      trap: "易错点：四个经济特区同年设立，但深圳是最早、发展最快的，要记清是深圳。"
-    },
-    {
-      id: "lishi-h04-q007", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 7, type: "multiple", meta: "多选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列属于改革开放以来我国取得的成就的有（ ）。",
-      options: [{key:"A",text:"设立深圳等经济特区"}, {key:"B",text:"实行家庭联产承包责任制"}, {key:"C",text:"2001年加入世界贸易组织"}, {key:"D",text:"实行闭关锁国政策"}],
-      answer: ["A","B","C"],
-      explanation: "改革开放以来，我国设立经济特区，农村实行家庭联产承包责任制，2001年加入世界贸易组织，对外开放不断扩大。闭关锁国是清朝的政策，与改革开放相反。",
-      trap: "易错点：家庭联产承包责任制是农村改革的措施，1980年代在全国推广，不要和土地改革混淆。"
-    },
-    {
-      id: "lishi-h04-q008", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 8, type: "judge", meta: "判断题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1978年党的十一届三中全会作出把党和国家工作中心转移到经济建设上来、实行改革开放的伟大决策。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "1978年12月，党的十一届三中全会召开，作出把工作中心转移到经济建设上来、实行改革开放的伟大决策，是新中国成立以来党的历史上具有深远意义的伟大转折。",
-      trap: "易错点：十一届三中全会是1978年，不要记成1979年或1980年。"
-    },
-    {
-      id: "lishi-h04-q009", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 9, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1949年9月，中国人民政治协商会议第一届全体会议在北平召开，通过的起临时宪法作用的文件是（ ）。",
-      options: [{key:"A",text:"《中华人民共和国宪法》"}, {key:"B",text:"《中国人民政治协商会议共同纲领》"}, {key:"C",text:"《中华人民共和国土地改革法》"}, {key:"D",text:"《中华民国临时约法》"}],
-      answer: ["B"],
-      explanation: "1949年9月，中国人民政治协商会议第一届全体会议通过《中国人民政治协商会议共同纲领》，起临时宪法的作用。",
-      trap: "易错点：《共同纲领》是1949年政协会议通过的，第一部《中华人民共和国宪法》是1954年制定的。"
-    },
-    {
-      id: "lishi-h04-q010", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 10, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "抗美援朝战争中，为保证潜伏任务成功、烈火烧身也不动弹、壮烈牺牲的英雄是（ ）。",
-      options: [{key:"A",text:"黄继光"}, {key:"B",text:"邱少云"}, {key:"C",text:"罗盛教"}, {key:"D",text:"杨根思"}],
-      answer: ["B"],
-      explanation: "1952年，邱少云在潜伏时被敌人燃烧弹点燃，为不暴露目标，烈火烧身纹丝不动，壮烈牺牲。",
-      trap: "易错点：黄继光是堵枪眼，邱少云是烈火烧身不动，罗盛教是抢救落水儿童牺牲。"
-    },
-    {
-      id: "lishi-h04-q011", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 11, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1957年建成通车、被称为“一桥飞架南北，天堑变通途”的大桥是（ ）。",
-      options: [{key:"A",text:"南京长江大桥"}, {key:"B",text:"武汉长江大桥"}, {key:"C",text:"九江长江大桥"}, {key:"D",text:"杭州钱塘江大桥"}],
-      answer: ["B"],
-      explanation: "武汉长江大桥于1957年建成通车，是“一五”计划的重大成就，也是我国在长江上修建的第一座铁路、公路两用桥。",
-      trap: "易错点：南京长江大桥建成于1968年，武汉长江大桥才是“一五”时期的成就。"
-    },
-    {
-      id: "lishi-h04-q012", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 12, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "三大改造中，对资本主义工商业的社会主义改造采取的主要方式是（ ）。",
-      options: [{key:"A",text:"没收"}, {key:"B",text:"和平赎买"}, {key:"C",text:"合作化"}, {key:"D",text:"公私合营一步到位"}],
-      answer: ["B"],
-      explanation: "对资本主义工商业的改造采取和平赎买的方式，通过公私合营逐步把资本主义工商业改造为社会主义全民所有制经济。",
-      trap: "易错点：和平赎买是针对资本主义工商业的，农业和手工业的改造方式是合作化。"
-    },
-    {
-      id: "lishi-h04-q013", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 13, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1956年召开的中共八大正确分析了我国国内的主要矛盾，提出党和人民的主要任务是（ ）。",
-      options: [{key:"A",text:"进行社会主义革命"}, {key:"B",text:"集中力量发展社会生产力"}, {key:"C",text:"开展阶级斗争"}, {key:"D",text:"实行改革开放"}],
-      answer: ["B"],
-      explanation: "中共八大正确分析了国内主要矛盾，提出党和人民的主要任务是集中力量发展社会生产力，实现国家工业化，逐步满足人民日益增长的物质和文化需要。",
-      trap: "易错点：八大正确分析了主要矛盾，但后来这一正确认识没有坚持下去，出现了失误。"
-    },
-    {
-      id: "lishi-h04-q014", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 14, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1978年，率先实行包产到户、拉开农村家庭联产承包责任制序幕的是安徽凤阳县的（ ）。",
-      options: [{key:"A",text:"小岗村"}, {key:"B",text:"华西村"}, {key:"C",text:"南街村"}, {key:"D",text:"大寨村"}],
-      answer: ["A"],
-      explanation: "1978年，安徽凤阳县小岗村18户农民率先实行包产到户，家庭联产承包责任制随后在全国推广。",
-      trap: "易错点：大寨村是农业学大寨的典型，华西村是乡镇企业典型，小岗村才是包产到户的发源地。"
-    },
-    {
-      id: "lishi-h04-q015", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 15, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1992年，中共十四大提出我国经济体制改革的目标是（ ）。",
-      options: [{key:"A",text:"建立计划经济体制"}, {key:"B",text:"建立社会主义市场经济体制"}, {key:"C",text:"实行家庭联产承包责任制"}, {key:"D",text:"建立经济特区"}],
-      answer: ["B"],
-      explanation: "1992年，中共十四大提出建立社会主义市场经济体制的目标，标志着我国经济体制改革进入新阶段。",
-      trap: "易错点：家庭联产承包责任制是农村改革，经济特区是对外开放，十四大的目标是建立社会主义市场经济体制。"
-    },
-    {
-      id: "lishi-h04-q016", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 16, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1997年7月1日，中国恢复对香港行使主权，香港回归祖国，这标志着（ ）。",
-      options: [{key:"A",text:"“一国两制”构想的成功实践"}, {key:"B",text:"台湾问题得到解决"}, {key:"C",text:"祖国完全统一"}, {key:"D",text:"中英建交"}],
-      answer: ["A"],
-      explanation: "1997年7月1日香港回归祖国，是“一国两制”构想的成功实践，洗雪了百年国耻。",
-      trap: "易错点：香港回归是“一国两制”的成功实践，但台湾问题尚未解决，祖国尚未完全统一。"
-    },
-    {
-      id: "lishi-h04-q017", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 17, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1999年12月20日，中国恢复对澳门行使主权，澳门回归祖国，澳门回归时实行的制度是（ ）。",
-      options: [{key:"A",text:"社会主义制度"}, {key:"B",text:"“一国两制”"}, {key:"C",text:"资本主义制度不变的过渡"}, {key:"D",text:"完全自治"}],
-      answer: ["B"],
-      explanation: "1999年12月20日澳门回归祖国，澳门特别行政区实行“一国两制”、高度自治，保持原有的资本主义制度和生活方式不变。",
-      trap: "易错点：澳门回归后实行“一国两制”，不是直接实行社会主义制度。"
-    },
-    {
-      id: "lishi-h04-q018", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 18, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1953年，周恩来在接见印度代表团时首次提出的、成为处理国与国关系基本准则的是（ ）。",
-      options: [{key:"A",text:"和平共处五项原则"}, {key:"B",text:"求同存异方针"}, {key:"C",text:"独立自主外交政策"}, {key:"D",text:"不结盟政策"}],
-      answer: ["A"],
-      explanation: "1953年，周恩来首次提出和平共处五项原则，即互相尊重主权和领土完整、互不侵犯、互不干涉内政、平等互利、和平共处。",
-      trap: "易错点：求同存异是1955年万隆会议上周恩来提出的方针，不要和和平共处五项原则混淆。"
-    },
-    {
-      id: "lishi-h04-q019", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 19, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1971年10月25日，第26届联合国大会通过决议，恢复中华人民共和国在联合国的（ ）。",
-      options: [{key:"A",text:"常任理事国席位"}, {key:"B",text:"合法权利"}, {key:"C",text:"观察员地位"}, {key:"D",text:"大会主席国地位"}],
-      answer: ["B"],
-      explanation: "1971年10月25日，第26届联合国大会通过2758号决议，恢复中华人民共和国在联合国的一切合法权利。",
-      trap: "易错点：中国恢复的是在联合国的一切合法权利，包括安理会常任理事国席位，但表述要记全。"
-    },
-    {
-      id: "lishi-h04-q020", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 20, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1964年10月16日，我国成功爆炸的第一颗原子弹，标志着我国（ ）。",
-      options: [{key:"A",text:"成为世界第二核大国"}, {key:"B",text:"国防力量达到世界第一"}, {key:"C",text:"跨入核国家行列"}, {key:"D",text:"氢弹研制成功"}],
-      answer: ["C"],
-      explanation: "1964年10月16日，我国第一颗原子弹爆炸成功，跨入核国家行列，打破了帝国主义的核垄断。",
-      trap: "易错点：1967年我国第一颗氢弹爆炸成功，不要和原子弹的时间混淆。"
-    },
-    {
-      id: "lishi-h04-q021", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 21, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1973年，袁隆平培育成功的杂交水稻是（ ）。",
-      options: [{key:"A",text:"粳型杂交水稻"}, {key:"B",text:"籼型杂交水稻"}, {key:"C",text:"糯型杂交水稻"}, {key:"D",text:"高粱杂交种"}],
-      answer: ["B"],
-      explanation: "1973年，袁隆平培育成功籼型杂交水稻，为解决中国人的吃饭问题作出巨大贡献，被誉为杂交水稻之父。",
-      trap: "易错点：袁隆平培育的是籼型杂交水稻，1973年是籼型杂交水稻培育成功的时间。"
-    },
-    {
-      id: "lishi-h04-q022", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 22, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "2003年，乘坐神舟五号飞船进入太空、成为我国首位航天员的是（ ）。",
-      options: [{key:"A",text:"杨利伟"}, {key:"B",text:"聂海胜"}, {key:"C",text:"翟志刚"}, {key:"D",text:"景海鹏"}],
-      answer: ["A"],
-      explanation: "2003年10月15日，杨利伟乘坐神舟五号飞船进入太空，我国成为世界上第三个能够独立开展载人航天活动的国家。",
-      trap: "易错点：聂海胜是神舟六号航天员，翟志刚是神舟七号航天员，首位是杨利伟。"
-    },
-    {
-      id: "lishi-h04-q023", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 23, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1951年，西藏和平解放，这标志着（ ）。",
-      options: [{key:"A",text:"祖国大陆获得统一"}, {key:"B",text:"西藏成为自治区"}, {key:"C",text:"西藏实行民主改革"}, {key:"D",text:"青藏铁路通车"}],
-      answer: ["A"],
-      explanation: "1951年，中央人民政府与西藏地方政府达成和平解放西藏的协议，西藏和平解放，祖国大陆获得统一。",
-      trap: "易错点：西藏自治区成立于1965年，西藏民主改革是1959年，不要和1951年和平解放混淆。"
-    },
-    {
-      id: "lishi-h04-q024", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 24, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1990年，我国决定开发开放上海浦东，浦东开发开放的目的是（ ）。",
-      options: [{key:"A",text:"设立第一个经济特区"}, {key:"B",text:"带动长江三角洲乃至整个长江流域经济腾飞"}, {key:"C",text:"实行家庭联产承包责任制"}, {key:"D",text:"恢复香港主权"}],
-      answer: ["B"],
-      explanation: "1990年，我国决定开发开放上海浦东，目的是以浦东开发开放为龙头，进一步开放长江沿岸城市，带动长江三角洲乃至整个长江流域的经济腾飞。",
-      trap: "易错点：第一个经济特区是1980年的深圳，浦东开发是1990年，定位是龙头带动。"
-    },
-    {
-      id: "lishi-h04-q025", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 25, type: "multiple", meta: "多选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列属于新中国成立初期巩固新生政权的措施的有（ ）。",
-      options: [{key:"A",text:"实行土地改革"}, {key:"B",text:"抗美援朝、保家卫国"}, {key:"C",text:"和平解放西藏"}, {key:"D",text:"实行家庭联产承包责任制"}],
-      answer: ["A","B","C"],
-      explanation: "土地改革、抗美援朝、和平解放西藏，都是新中国成立初期巩固新生政权的措施。家庭联产承包责任制是1978年改革开放后的农村改革措施。",
-      trap: "易错点：家庭联产承包责任制是改革开放时期的措施，不是建国初期的措施。"
-    },
-    {
-      id: "lishi-h04-q026", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 26, type: "multiple", meta: "多选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列属于我国取得的科技成就的有（ ）。",
-      options: [{key:"A",text:"“两弹一星”研制成功"}, {key:"B",text:"袁隆平培育籼型杂交水稻"}, {key:"C",text:"神舟五号载人飞船成功"}, {key:"D",text:"珍妮纺纱机发明"}],
-      answer: ["A","B","C"],
-      explanation: "“两弹一星”、杂交水稻、神舟五号载人飞船，都是我国的科技成就。珍妮纺纱机是英国第一次工业革命的成就。",
-      trap: "易错点：两弹一星中的原子弹是1964年、氢弹是1967年、卫星是1970年，时间跨度大，但都属于新中国科技成就。"
-    },
-    {
-      id: "lishi-h04-q027", chapterId: 4, chapter: "八年级下册 · 中国现代史",
-      number: 27, type: "judge", meta: "判断题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "1979年1月1日，中美两国正式建立外交关系。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "1979年1月1日，中美正式建交，中美关系进入新阶段。",
-      trap: "易错点：中美建交是1979年，中日邦交正常化是1972年，两个时间不要记混。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "lishi-h04-q028", chapterId: 4, chapter: "八年级下册 · 中国现代史",
       number: 28, type: "single", meta: "单选题",
@@ -2421,6 +1385,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h04-q031", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      image: true,
       number: 31, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自2022年福建中考·历史第16题（图转文字）",
@@ -2487,6 +1452,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h04-q037", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      image: true,
       number: 37, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自2024年北京市中考·历史第13题（图转文字）",
@@ -2716,127 +1682,17 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "1980年设置深圳等经济特区，1984年开放南通等14个沿海港口城市，1985年将长三角等划为沿海经济开放区，1992年开放重庆等沿江城市，逐步形成'经济特区——沿海开放城市——沿海经济开放区——内地'的全方位、多层次、宽领域的对外开放格局。关键词中的地名串联的正是这一格局。",
       trap: "易错点：深圳（特区）、南通（沿海开放城市）、长三角（经济开放区）、重庆（沿江开放城市）四个点连起来就是对外开放格局的推进路线。"
     },
-    {
-      id: "lishi-h05-q001", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 1, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "古代埃及文明的象征性建筑是（ ）。",
-      options: [{key:"A",text:"金字塔"}, {key:"B",text:"帕特农神庙"}, {key:"C",text:"罗马斗兽场"}, {key:"D",text:"空中花园"}],
-      answer: ["A"],
-      explanation: "金字塔是古代埃及法老的陵墓，是古代埃及文明的象征，其中胡夫金字塔是现存最大的金字塔。",
-      trap: "易错点：帕特农神庙是古希腊的建筑，罗马斗兽场是古罗马的建筑。"
-    },
-    {
-      id: "lishi-h05-q002", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 2, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "世界上现存最早的成文法典之一是（ ）。",
-      options: [{key:"A",text:"《汉谟拉比法典》"}, {key:"B",text:"《十二铜表法》"}, {key:"C",text:"《查士丁尼法典》"}, {key:"D",text:"《拿破仑法典》"}],
-      answer: ["A"],
-      explanation: "《汉谟拉比法典》是古巴比伦王汉谟拉比制定的法典，是世界上现存最早的比较完备的成文法典。",
-      trap: "易错点：《十二铜表法》是古罗马的法典；《拿破仑法典》是近代法国的法典。"
-    },
-    {
-      id: "lishi-h05-q003", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 3, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "文艺复兴时期创作《蒙娜丽莎》的艺术家是（ ）。",
-      options: [{key:"A",text:"达·芬奇"}, {key:"B",text:"米开朗琪罗"}, {key:"C",text:"拉斐尔"}, {key:"D",text:"莎士比亚"}],
-      answer: ["A"],
-      explanation: "达·芬奇是文艺复兴时期的艺术大师，代表作有《蒙娜丽莎》《最后的晚餐》等。",
-      trap: "易错点：米开朗琪罗的代表作是《大卫》；莎士比亚是文艺复兴时期的文学家，代表作是《哈姆雷特》。"
-    },
-    {
-      id: "lishi-h05-q004", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 4, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1492年率船队横渡大西洋、到达美洲的是（ ）。",
-      options: [{key:"A",text:"迪亚士"}, {key:"B",text:"达·伽马"}, {key:"C",text:"哥伦布"}, {key:"D",text:"麦哲伦"}],
-      answer: ["C"],
-      explanation: "1492年，哥伦布受西班牙王室资助，率船队横渡大西洋，到达美洲，开辟了通往美洲的新航路。",
-      trap: "易错点：迪亚士到达好望角，达·伽马到达印度，麦哲伦船队完成环球航行。"
-    },
-    {
-      id: "lishi-h05-q005", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 5, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1689年英国议会通过的限制王权的文件是（ ）。",
-      options: [{key:"A",text:"《人权宣言》"}, {key:"B",text:"《权利法案》"}, {key:"C",text:"《独立宣言》"}, {key:"D",text:"《拿破仑法典》"}],
-      answer: ["B"],
-      explanation: "1689年，英国议会通过《权利法案》，以法律形式限制王权，标志着英国君主立宪制的确立。",
-      trap: "易错点：《人权宣言》是法国大革命时期的文件；《独立宣言》是美国独立战争时期的文件。"
-    },
-    {
-      id: "lishi-h05-q006", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 6, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1776年发表《独立宣言》的国家是（ ）。",
-      options: [{key:"A",text:"英国"}, {key:"B",text:"法国"}, {key:"C",text:"美国"}, {key:"D",text:"德国"}],
-      answer: ["C"],
-      explanation: "1776年7月4日，美国大陆会议发表《独立宣言》，宣告北美13个殖民地脱离英国独立。",
-      trap: "易错点：《独立宣言》发表于1776年，美国独立战争开始于1775年，不要记混。"
-    },
-    {
-      id: "lishi-h05-q007", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 7, type: "multiple", meta: "多选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "下列属于第一次工业革命成就的有（ ）。",
-      options: [{key:"A",text:"珍妮纺纱机"}, {key:"B",text:"瓦特改良蒸汽机"}, {key:"C",text:"史蒂芬孙发明火车机车"}, {key:"D",text:"爱迪生发明电灯"}],
-      answer: ["A","B","C"],
-      explanation: "珍妮纺纱机、瓦特改良蒸汽机、史蒂芬孙发明的火车机车都是第一次工业革命的成就。爱迪生发明电灯属于第二次工业革命。",
-      trap: "易错点：第一次工业革命以蒸汽机为标志，第二次工业革命以电力为标志，电灯属于第二次工业革命。"
-    },
-    {
-      id: "lishi-h05-q008", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 8, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "第一次工业革命开始于18世纪60年代的英国，标志是珍妮纺纱机的发明。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "18世纪60年代，哈格里夫斯发明珍妮纺纱机，标志着第一次工业革命在英国开始。",
-      trap: "易错点：第一次工业革命开始于英国棉纺织业，珍妮纺纱机是标志，不是蒸汽机。"
-    },
-    {
-      id: "lishi-h05-q009", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 9, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "古代印度种姓制度中，地位最高的是（ ）。",
-      options: [{key:"A",text:"刹帝利"}, {key:"B",text:"婆罗门"}, {key:"C",text:"吠舍"}, {key:"D",text:"首陀罗"}],
-      answer: ["B"],
-      explanation: "古代印度种姓制度分为婆罗门、刹帝利、吠舍、首陀罗四个等级，婆罗门是祭司贵族，地位最高。",
-      trap: "易错点：刹帝利是军事和行政贵族，地位第二；首陀罗是最低等级，从事低贱职业。"
-    },
-    {
-      id: "lishi-h05-q010", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 10, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "佛教创立于公元前6世纪，创始人是（ ）。",
-      options: [{key:"A",text:"乔达摩·悉达多"}, {key:"B",text:"穆罕默德"}, {key:"C",text:"耶稣"}, {key:"D",text:"孔子"}],
-      answer: ["A"],
-      explanation: "佛教创立于公元前6世纪，创始人是乔达摩·悉达多，后被尊称为释迦牟尼。",
-      trap: "易错点：穆罕默德创立伊斯兰教，耶稣创立基督教，孔子创立儒家学派。"
-    },
-    {
-      id: "lishi-h05-q011", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 11, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "古希腊雅典民主政治发展到顶峰是在（ ）执政时期。",
-      options: [{key:"A",text:"梭伦"}, {key:"B",text:"伯里克利"}, {key:"C",text:"克里斯提尼"}, {key:"D",text:"亚历山大"}],
-      answer: ["B"],
-      explanation: "伯里克利执政时期，雅典民主政治发展到顶峰，雅典成为希腊的政治、经济和文化中心。",
-      trap: "易错点：梭伦改革奠定了雅典民主政治的基础，伯里克利时期才是顶峰。"
-    },
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "lishi-h05-q012", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
       number: 12, type: "single", meta: "单选题",
@@ -2848,171 +1704,21 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "公元前450年左右，罗马颁布成文法，因这部法刻在十二块青铜板上，被称为《十二铜表法》。它使量刑定罪有了文字依据，在一定程度上遏制了贵族对法律的曲解和滥用，是罗马法制建设的第一步。《汉谟拉比法典》是古巴比伦的法典；《查士丁尼法典》是拜占庭帝国时期的法典；《拿破仑法典》是近代法国的法典。",
       trap: "易错点：限制贵族随意解释习惯法、平民斗争的产物＝《十二铜表法》；《汉谟拉比法典》是古巴比伦的，不要张冠李戴。"
     },
-    {
-      id: "lishi-h05-q013", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 13, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "646年，日本效仿中国隋唐制度进行的改革是（ ）。",
-      options: [{key:"A",text:"大化改新"}, {key:"B",text:"明治维新"}, {key:"C",text:"幕府改革"}, {key:"D",text:"戊辰战争"}],
-      answer: ["A"],
-      explanation: "646年，日本进行大化改新，效仿中国隋唐制度，建立中央集权的天皇制封建国家。",
-      trap: "易错点：明治维新是1868年，大化改新是646年，两个改革相差1200多年。"
-    },
-    {
-      id: "lishi-h05-q014", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 14, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "610年，穆罕默德开始在麦加传教，创立的宗教是（ ）。",
-      options: [{key:"A",text:"佛教"}, {key:"B",text:"基督教"}, {key:"C",text:"伊斯兰教"}, {key:"D",text:"犹太教"}],
-      answer: ["C"],
-      explanation: "610年，穆罕默德在麦加开始传教，创立伊斯兰教，622年迁往麦地那，建立政教合一的国家。",
-      trap: "易错点：伊斯兰教创立于7世纪，创始人是穆罕默德，经典是《古兰经》。"
-    },
-    {
-      id: "lishi-h05-q015", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 15, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "文艺复兴的先驱、著有长诗《神曲》的意大利诗人是（ ）。",
-      options: [{key:"A",text:"但丁"}, {key:"B",text:"彼特拉克"}, {key:"C",text:"薄伽丘"}, {key:"D",text:"莎士比亚"}],
-      answer: ["A"],
-      explanation: "但丁著有长诗《神曲》，被誉为文艺复兴的先驱；彼特拉克被称为人文主义之父，薄伽丘著有《十日谈》。",
-      trap: "易错点：莎士比亚是英国文艺复兴时期的剧作家，代表作是《哈姆雷特》。"
-    },
-    {
-      id: "lishi-h05-q016", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 16, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1498年，率船队绕过好望角、到达印度的是（ ）。",
-      options: [{key:"A",text:"迪亚士"}, {key:"B",text:"达·伽马"}, {key:"C",text:"哥伦布"}, {key:"D",text:"麦哲伦"}],
-      answer: ["B"],
-      explanation: "1498年，达·伽马率船队绕过好望角，到达印度，开辟了从欧洲直通印度的海上航线。",
-      trap: "易错点：迪亚士1488年到达好望角，达·伽马1498年到达印度，两人不要记混。"
-    },
-    {
-      id: "lishi-h05-q017", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 17, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1519年至1522年，率船队完成人类历史上第一次环球航行的是（ ）。",
-      options: [{key:"A",text:"哥伦布"}, {key:"B",text:"迪亚士"}, {key:"C",text:"达·伽马"}, {key:"D",text:"麦哲伦船队"}],
-      answer: ["D"],
-      explanation: "1519年，麦哲伦率船队出发，1522年船队回到西班牙，完成了人类历史上第一次环球航行，证明了地球是圆的。",
-      trap: "易错点：麦哲伦本人在航行途中死于菲律宾，完成环球航行的是他的船队。"
-    },
-    {
-      id: "lishi-h05-q018", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 18, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1789年7月14日，巴黎人民攻占巴士底狱，标志着法国大革命的（ ）。",
-      options: [{key:"A",text:"结束"}, {key:"B",text:"开始"}, {key:"C",text:"高潮"}, {key:"D",text:"失败"}],
-      answer: ["B"],
-      explanation: "1789年7月14日，巴黎人民攻占巴士底狱，标志着法国大革命的开始。",
-      trap: "易错点：法国大革命结束的标志一般认为是1799年拿破仑发动雾月政变，攻占巴士底狱是开始。"
-    },
-    {
-      id: "lishi-h05-q019", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 19, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1789年，法国制宪会议通过的、宣称人们生来自由、权利平等的文件是（ ）。",
-      options: [{key:"A",text:"《权利法案》"}, {key:"B",text:"《独立宣言》"}, {key:"C",text:"《人权宣言》"}, {key:"D",text:"《拿破仑法典》"}],
-      answer: ["C"],
-      explanation: "1789年，法国制宪会议通过《人权宣言》，宣称人们生来自由，权利平等，私有财产神圣不可侵犯。",
-      trap: "易错点：《权利法案》是1689年英国的文件，《独立宣言》是1776年美国的文件。"
-    },
-    {
-      id: "lishi-h05-q020", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 20, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1804年，拿破仑称帝后颁布的、巩固法国大革命成果的法典是（ ）。",
-      options: [{key:"A",text:"《拿破仑法典》"}, {key:"B",text:"《人权宣言》"}, {key:"C",text:"《权利法案》"}, {key:"D",text:"《独立宣言》"}],
-      answer: ["A"],
-      explanation: "1804年，拿破仑颁布《法国民法典》，即《拿破仑法典》，巩固了法国大革命的成果，传播到欧洲大陆。",
-      trap: "易错点：《拿破仑法典》颁布于1804年，拿破仑称帝也是1804年，两个事件同年。"
-    },
-    {
-      id: "lishi-h05-q021", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 21, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1775年，莱克星顿的枪声标志着美国独立战争的（ ）。",
-      options: [{key:"A",text:"结束"}, {key:"B",text:"开始"}, {key:"C",text:"转折"}, {key:"D",text:"胜利"}],
-      answer: ["B"],
-      explanation: "1775年4月19日，莱克星顿的枪声标志着美国独立战争的开始，1783年英国承认美国独立。",
-      trap: "易错点：美国独立战争的转折点是1777年萨拉托加战役，莱克星顿是开始。"
-    },
-    {
-      id: "lishi-h05-q022", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 22, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1848年，马克思、恩格斯发表的、标志着马克思主义诞生的文件是（ ）。",
-      options: [{key:"A",text:"《共产党宣言》"}, {key:"B",text:"《资本论》"}, {key:"C",text:"《独立宣言》"}, {key:"D",text:"《人权宣言》"}],
-      answer: ["A"],
-      explanation: "1848年，马克思、恩格斯发表《共产党宣言》，标志着马克思主义的诞生。",
-      trap: "易错点：《资本论》是马克思的经济学巨著，发表于1867年，不是马克思主义诞生的标志。"
-    },
-    {
-      id: "lishi-h05-q023", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 23, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1868年，日本实行的、使日本走上资本主义道路的改革是（ ）。",
-      options: [{key:"A",text:"大化改新"}, {key:"B",text:"明治维新"}, {key:"C",text:"幕府改革"}, {key:"D",text:"黑船事件"}],
-      answer: ["B"],
-      explanation: "1868年，日本实行明治维新，学习西方，进行政治、经济、军事、文化改革，使日本走上资本主义道路。",
-      trap: "易错点：大化改新是646年学习隋唐，明治维新是1868年学习西方。"
-    },
-    {
-      id: "lishi-h05-q024", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 24, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1862年，林肯颁布的、扭转美国南北战争战局的文件是（ ）。",
-      options: [{key:"A",text:"《独立宣言》"}, {key:"B",text:"《解放黑人奴隶宣言》"}, {key:"C",text:"《宅地法》"}, {key:"D",text:"《人权宣言》"}],
-      answer: ["B"],
-      explanation: "1862年，林肯颁布《解放黑人奴隶宣言》，宣布南部叛乱各州的黑人奴隶获得自由，扭转了南北战争的战局。",
-      trap: "易错点：《解放黑人奴隶宣言》颁布于1862年，1863年1月1日生效，不要把颁布和生效时间记混。"
-    },
-    {
-      id: "lishi-h05-q025", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 25, type: "multiple", meta: "多选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "下列属于第二次工业革命成就的有（ ）。",
-      options: [{key:"A",text:"爱迪生发明电灯"}, {key:"B",text:"卡尔·本茨制造汽车"}, {key:"C",text:"莱特兄弟发明飞机"}, {key:"D",text:"珍妮纺纱机发明"}],
-      answer: ["A","B","C"],
-      explanation: "爱迪生发明电灯、卡尔·本茨制造汽车、莱特兄弟发明飞机，都是第二次工业革命的成就。珍妮纺纱机是第一次工业革命的标志。",
-      trap: "易错点：第二次工业革命以电力和内燃机为标志，珍妮纺纱机属于第一次工业革命。"
-    },
-    {
-      id: "lishi-h05-q026", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 26, type: "multiple", meta: "多选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "下列属于文艺复兴时期代表人物及其作品的有（ ）。",
-      options: [{key:"A",text:"达·芬奇《蒙娜丽莎》"}, {key:"B",text:"莎士比亚《哈姆雷特》"}, {key:"C",text:"但丁《神曲》"}, {key:"D",text:"贝多芬《英雄交响曲》"}],
-      answer: ["A","B","C"],
-      explanation: "达·芬奇的《蒙娜丽莎》、莎士比亚的《哈姆雷特》、但丁的《神曲》，都是文艺复兴时期的代表作品。贝多芬是19世纪的音乐家，代表作《英雄交响曲》不属于文艺复兴时期。",
-      trap: "易错点：贝多芬是古典主义向浪漫主义过渡的音乐家，比文艺复兴晚了300多年。"
-    },
-    {
-      id: "lishi-h05-q027", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
-      number: 27, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "1916年，第一次世界大战中的凡尔登战役异常惨烈，被称为“绞肉机”。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "1916年，德法两国在凡尔登展开激战，双方伤亡近百万人，凡尔登战役被称为绞肉机。",
-      trap: "易错点：凡尔登战役是1916年，索姆河战役也是1916年，两个战役同年但地点和交战方不同。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "lishi-h05-q028", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
       number: 28, type: "single", meta: "单选题",
@@ -3048,6 +1754,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h05-q031", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      image: true,
       number: 31, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年福建中考·历史第21题（图转文字）",
@@ -3125,6 +1832,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h05-q038", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      image: true,
       number: 38, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2022年福建中考·历史第24题（图转文字）",
@@ -3158,6 +1866,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h05-q041", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      image: true,
       number: 41, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年北京市中考·历史第16题（时间轴转文字）",
@@ -3202,6 +1911,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h05-q045", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      image: true,
       number: 45, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年福建中考·历史第22题（图表转文字）",
@@ -3279,6 +1989,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h05-q052", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      image: true,
       number: 52, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建中考·历史第24题（图转文字）",
@@ -3321,294 +2032,35 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "诗歌中'黑色的布料，如黑色的花冠笼罩在各国之顶''无情工作的机器''齿轮暴虐相迫'，描绘了工业革命时期工厂烟囱冒黑烟、机器压迫工人的景象，反映工业化进程带来的环境污染与社会问题。",
       trap: "易错点：诗中的'黑色''机器''暴虐相迫'指向污染和工人受压迫，不是人口增长或教育问题；先抓意象再选答案。"
     },
-    {
-      id: "lishi-h06-q001", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 1, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "第一次世界大战的导火索是（ ）。",
-      options: [{key:"A",text:"萨拉热窝事件"}, {key:"B",text:"凡尔登战役"}, {key:"C",text:"三国同盟成立"}, {key:"D",text:"三国协约成立"}],
-      answer: ["A"],
-      explanation: "1914年6月，萨拉热窝事件发生，成为第一次世界大战的导火索，一个月后奥匈帝国向塞尔维亚宣战，一战爆发。",
-      trap: "易错点：萨拉热窝事件是导火索，不是根本原因；一战的根本原因是帝国主义国家争夺霸权和殖民地。"
-    },
-    {
-      id: "lishi-h06-q002", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 2, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "一战后战胜国与德国签订的条约是（ ）。",
-      options: [{key:"A",text:"《凡尔赛条约》"}, {key:"B",text:"《九国公约》"}, {key:"C",text:"《慕尼黑协定》"}, {key:"D",text:"《雅尔塔协定》"}],
-      answer: ["A"],
-      explanation: "1919年，战胜国与德国签订《凡尔赛条约》，对德国进行惩罚和限制，凡尔赛体系由此建立。",
-      trap: "易错点：《九国公约》是华盛顿会议上签订的关于中国问题的条约；《慕尼黑协定》是二战前的绥靖政策产物。"
-    },
-    {
-      id: "lishi-h06-q003", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 3, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1933年美国为应对经济大危机实行的是（ ）。",
-      options: [{key:"A",text:"罗斯福新政"}, {key:"B",text:"战时共产主义政策"}, {key:"C",text:"新经济政策"}, {key:"D",text:"马歇尔计划"}],
-      answer: ["A"],
-      explanation: "1933年，罗斯福就任美国总统后实行新政，对金融、工业、农业等进行改革，使美国经济缓慢恢复过来。",
-      trap: "易错点：战时共产主义政策、新经济政策是苏俄（苏联）的政策；马歇尔计划是二战后美国援助西欧的计划。"
-    },
-    {
-      id: "lishi-h06-q004", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 4, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "第二次世界大战全面爆发的标志是（ ）。",
-      options: [{key:"A",text:"德国突袭波兰"}, {key:"B",text:"日本偷袭珍珠港"}, {key:"C",text:"德国进攻苏联"}, {key:"D",text:"慕尼黑阴谋"}],
-      answer: ["A"],
-      explanation: "1939年9月1日，德国突袭波兰，英法对德宣战，第二次世界大战全面爆发。",
-      trap: "易错点：日本偷袭珍珠港是1941年，标志着太平洋战争爆发、二战规模扩大；德国进攻苏联也是1941年。"
-    },
-    {
-      id: "lishi-h06-q005", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 5, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "第二次世界大战的重要转折点是（ ）。",
-      options: [{key:"A",text:"斯大林格勒战役"}, {key:"B",text:"诺曼底登陆"}, {key:"C",text:"中途岛海战"}, {key:"D",text:"攻克柏林"}],
-      answer: ["A"],
-      explanation: "斯大林格勒战役从1942年7月持续到1943年2月，苏军取得胜利，是第二次世界大战的重要转折点。",
-      trap: "易错点：中途岛海战是太平洋战场的转折点，诺曼底登陆开辟了欧洲第二战场，都不是二战全局的转折点。"
-    },
-    {
-      id: "lishi-h06-q006", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 6, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "冷战开始的标志是（ ）。",
-      options: [{key:"A",text:"杜鲁门主义出台"}, {key:"B",text:"马歇尔计划实施"}, {key:"C",text:"北约成立"}, {key:"D",text:"华约成立"}],
-      answer: ["A"],
-      explanation: "1947年，美国总统杜鲁门提出杜鲁门主义，标志着美苏冷战的开始。",
-      trap: "易错点：马歇尔计划是1947年提出的经济援助计划，北约成立于1949年，都在杜鲁门主义之后。"
-    },
-    {
-      id: "lishi-h06-q007", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 7, type: "multiple", meta: "多选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列关于二战后世界的说法正确的有（ ）。",
-      options: [{key:"A",text:"1945年联合国成立"}, {key:"B",text:"1991年苏联解体标志冷战结束"}, {key:"C",text:"经济全球化趋势不断加强"}, {key:"D",text:"国际联盟是在二战后成立的"}],
-      answer: ["A","B","C"],
-      explanation: "1945年联合国成立，1991年苏联解体标志着冷战结束，二战后经济全球化趋势不断加强。国际联盟成立于1920年，是一战后的产物。",
-      trap: "易错点：国际联盟是一战后成立的，联合国才是二战后成立的，不要记混。"
-    },
-    {
-      id: "lishi-h06-q008", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 8, type: "judge", meta: "判断题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1945年雅尔塔会议决定成立联合国。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "1945年2月，美、英、苏三国首脑在雅尔塔举行会议，决定战后成立联合国，同年10月联合国正式成立。",
-      trap: "易错点：雅尔塔会议决定成立联合国，联合国正式成立是1945年10月，时间要分清。"
-    },
-    {
-      id: "lishi-h06-q009", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 9, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1917年11月7日，彼得格勒武装起义胜利，俄国十月革命取得胜利，其领导者是（ ）。",
-      options: [{key:"A",text:"斯大林"}, {key:"B",text:"列宁"}, {key:"C",text:"托洛茨基"}, {key:"D",text:"赫鲁晓夫"}],
-      answer: ["B"],
-      explanation: "1917年11月7日，在列宁领导下，彼得格勒武装起义胜利，十月革命取得胜利，建立了世界上第一个社会主义国家。",
-      trap: "易错点：十月革命的领导者是列宁，斯大林是列宁去世后苏联的主要领导人。"
-    },
-    {
-      id: "lishi-h06-q010", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 10, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1921年，列宁领导苏俄实行的、利用市场和商品货币关系恢复发展经济的政策是（ ）。",
-      options: [{key:"A",text:"战时共产主义政策"}, {key:"B",text:"新经济政策"}, {key:"C",text:"农业集体化"}, {key:"D",text:"工业化政策"}],
-      answer: ["B"],
-      explanation: "1921年，列宁领导苏俄实行新经济政策，以固定的粮食税代替余粮征集制，利用市场和商品货币关系恢复发展经济。",
-      trap: "易错点：战时共产主义政策是1918年至1921年实行的，新经济政策是1921年开始实行的。"
-    },
-    {
-      id: "lishi-h06-q011", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 11, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "斯大林模式的主要特点是（ ）。",
-      options: [{key:"A",text:"高度集中的计划经济体制"}, {key:"B",text:"自由放任的市场经济"}, {key:"C",text:"混合经济体制"}, {key:"D",text:"殖民经济体制"}],
-      answer: ["A"],
-      explanation: "斯大林模式是高度集中的计划经济体制，权力高度集中，片面发展重工业，忽视农业和轻工业。",
-      trap: "易错点：斯大林模式的特点是高度集中，不要记成自由放任的市场经济。"
-    },
-    {
-      id: "lishi-h06-q012", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 12, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1921年至1922年召开的华盛顿会议上，九国签订的关于中国问题的条约是（ ）。",
-      options: [{key:"A",text:"《凡尔赛条约》"}, {key:"B",text:"《九国公约》"}, {key:"C",text:"《四国条约》"}, {key:"D",text:"《五国海军条约》"}],
-      answer: ["B"],
-      explanation: "华盛顿会议上，九国签订《九国公约》，宣称尊重中国的主权和独立及领土和行政的完整，但实际上是列强共同支配中国的协定。",
-      trap: "易错点：《九国公约》是华盛顿会议的成果，《凡尔赛条约》是巴黎和会的成果。"
-    },
-    {
-      id: "lishi-h06-q013", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 13, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1929年，资本主义世界经济大危机爆发的起点是（ ）。",
-      options: [{key:"A",text:"伦敦股市崩溃"}, {key:"B",text:"纽约股市崩溃"}, {key:"C",text:"巴黎股市崩溃"}, {key:"D",text:"柏林股市崩溃"}],
-      answer: ["B"],
-      explanation: "1929年10月，美国纽约股市崩溃，资本主义世界经济大危机爆发，并迅速波及整个资本主义世界。",
-      trap: "易错点：经济大危机从美国开始，1929年纽约股市崩溃是爆发的标志。"
-    },
-    {
-      id: "lishi-h06-q014", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 14, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1938年，英法等国与德意签订《慕尼黑协定》，把捷克斯洛伐克的苏台德地区割让给德国，这是绥靖政策的（ ）。",
-      options: [{key:"A",text:"开始"}, {key:"B",text:"顶点"}, {key:"C",text:"结束"}, {key:"D",text:"转折"}],
-      answer: ["B"],
-      explanation: "1938年《慕尼黑协定》的签订，是绥靖政策发展到顶点的标志，助长了法西斯的侵略气焰。",
-      trap: "易错点：慕尼黑阴谋是1938年，绥靖政策的顶点，不是绥靖政策的开始。"
-    },
-    {
-      id: "lishi-h06-q015", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 15, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1941年12月7日，日本偷袭美国海军基地，太平洋战争爆发，该基地是（ ）。",
-      options: [{key:"A",text:"中途岛"}, {key:"B",text:"珍珠港"}, {key:"C",text:"关岛"}, {key:"D",text:"菲律宾"}],
-      answer: ["B"],
-      explanation: "1941年12月7日，日本偷袭珍珠港，重创美国太平洋舰队，第二天美国对日宣战，太平洋战争爆发。",
-      trap: "易错点：珍珠港事件是1941年，中途岛海战是1942年，珍珠港是太平洋战争爆发的标志。"
-    },
-    {
-      id: "lishi-h06-q016", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 16, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1944年6月6日，美英盟军在法国诺曼底登陆，开辟了欧洲第二战场，这次登陆的代号是（ ）。",
-      options: [{key:"A",text:"霸王行动"}, {key:"B",text:"火炬行动"}, {key:"C",text:"市场花园行动"}, {key:"D",text:"诺曼底行动"}],
-      answer: ["A"],
-      explanation: "1944年6月6日，美英盟军在法国诺曼底登陆，代号霸王行动，开辟了欧洲第二战场，加速了德国法西斯的灭亡。",
-      trap: "易错点：诺曼底登陆的代号是霸王行动，1944年6月6日是登陆日，也被称为D日。"
-    },
-    {
-      id: "lishi-h06-q017", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 17, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1945年成立的联合国，总部设在（ ）。",
-      options: [{key:"A",text:"日内瓦"}, {key:"B",text:"纽约"}, {key:"C",text:"巴黎"}, {key:"D",text:"伦敦"}],
-      answer: ["B"],
-      explanation: "1945年10月，联合国正式成立，总部设在美国纽约，其宗旨是维护国际和平与安全。",
-      trap: "易错点：国际联盟的总部在日内瓦，联合国的总部在纽约，不要记混。"
-    },
-    {
-      id: "lishi-h06-q018", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 18, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1947年，美国提出援助西欧复兴的计划是（ ）。",
-      options: [{key:"A",text:"杜鲁门主义"}, {key:"B",text:"马歇尔计划"}, {key:"C",text:"门户开放政策"}, {key:"D",text:"租借法案"}],
-      answer: ["B"],
-      explanation: "1947年，美国国务卿马歇尔提出援助西欧复兴的马歇尔计划，1948年开始实施，扶持和控制西欧国家。",
-      trap: "易错点：杜鲁门主义是1947年提出的冷战政策，马歇尔计划是1947年提出的经济援助计划，两者同年但内容不同。"
-    },
-    {
-      id: "lishi-h06-q019", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 19, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1949年，以美国为首的西方国家成立的军事政治集团是（ ）。",
-      options: [{key:"A",text:"华沙条约组织"}, {key:"B",text:"北大西洋公约组织"}, {key:"C",text:"欧洲共同体"}, {key:"D",text:"东南亚条约组织"}],
-      answer: ["B"],
-      explanation: "1949年，以美国为首的西方国家成立北大西洋公约组织，简称北约，与1955年成立的华约对峙。",
-      trap: "易错点：北约成立于1949年，华约成立于1955年，北约比华约早6年。"
-    },
-    {
-      id: "lishi-h06-q020", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 20, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1991年12月25日，苏联解体，这标志着（ ）。",
-      options: [{key:"A",text:"第一次世界大战结束"}, {key:"B",text:"第二次世界大战结束"}, {key:"C",text:"冷战结束"}, {key:"D",text:"联合国成立"}],
-      answer: ["C"],
-      explanation: "1991年12月25日，苏联解体，标志着冷战结束，世界格局向多极化方向发展。",
-      trap: "易错点：苏联解体是1991年，冷战结束的标志也是苏联解体，不要记成柏林墙倒塌。"
-    },
-    {
-      id: "lishi-h06-q021", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 21, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1947年，印度独立后的第一任总理是（ ）。",
-      options: [{key:"A",text:"甘地"}, {key:"B",text:"尼赫鲁"}, {key:"C",text:"英迪拉·甘地"}, {key:"D",text:"拉奥"}],
-      answer: ["B"],
-      explanation: "1947年8月15日，印度独立，尼赫鲁成为印度独立后的第一任总理。",
-      trap: "易错点：甘地是印度独立运动的领导人，但不是印度独立后的第一任总理。"
-    },
-    {
-      id: "lishi-h06-q022", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 22, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1960年，非洲有17个国家独立，这一年被称为（ ）。",
-      options: [{key:"A",text:"非洲独立年"}, {key:"B",text:"非洲解放年"}, {key:"C",text:"非洲统一年"}, {key:"D",text:"非洲觉醒年"}],
-      answer: ["A"],
-      explanation: "1960年，非洲有17个国家独立，这一年被称为非洲独立年，标志着非洲民族解放运动进入新阶段。",
-      trap: "易错点：1960年被称为非洲独立年，1990年纳米比亚独立标志着非洲独立运动的最终胜利。"
-    },
-    {
-      id: "lishi-h06-q023", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 23, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "第三次科技革命的核心是（ ）。",
-      options: [{key:"A",text:"蒸汽机的广泛使用"}, {key:"B",text:"电力的广泛应用"}, {key:"C",text:"电子计算机的广泛使用"}, {key:"D",text:"内燃机的发明"}],
-      answer: ["C"],
-      explanation: "第三次科技革命以原子能、电子计算机、空间技术和生物工程的发明和应用为主要标志，其中电子计算机的广泛使用是核心。",
-      trap: "易错点：蒸汽机是第一次工业革命的标志，电力是第二次工业革命的标志，电子计算机是第三次科技革命的核心。"
-    },
-    {
-      id: "lishi-h06-q024", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 24, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1995年1月1日成立的、致力于推动世界贸易自由化的国际组织是（ ）。",
-      options: [{key:"A",text:"国际联盟"}, {key:"B",text:"联合国"}, {key:"C",text:"世界贸易组织"}, {key:"D",text:"欧洲联盟"}],
-      answer: ["C"],
-      explanation: "1995年1月1日，世界贸易组织正式成立，致力于推动世界贸易自由化，中国于2001年加入世界贸易组织。",
-      trap: "易错点：世界贸易组织成立于1995年，关贸总协定是1947年成立的，不要记混。"
-    },
-    {
-      id: "lishi-h06-q025", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 25, type: "multiple", meta: "多选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列属于凡尔赛—华盛顿体系内容的有（ ）。",
-      options: [{key:"A",text:"巴黎和会签订《凡尔赛条约》"}, {key:"B",text:"华盛顿会议签订《九国公约》"}, {key:"C",text:"雅尔塔会议决定成立联合国"}, {key:"D",text:"慕尼黑会议签订《慕尼黑协定》"}],
-      answer: ["A","B"],
-      explanation: "巴黎和会签订《凡尔赛条约》、华盛顿会议签订《九国公约》，都是凡尔赛—华盛顿体系的内容。雅尔塔会议是二战时期的会议，慕尼黑会议是1938年绥靖政策的产物，都不属于凡尔赛—华盛顿体系。",
-      trap: "易错点：凡尔赛—华盛顿体系是一战后形成的，雅尔塔体系是二战后形成的，不要记混。"
-    },
-    {
-      id: "lishi-h06-q026", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 26, type: "multiple", meta: "多选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列关于冷战的说法正确的有（ ）。",
-      options: [{key:"A",text:"杜鲁门主义出台标志冷战开始"}, {key:"B",text:"北约成立于1949年"}, {key:"C",text:"华约成立于1955年"}, {key:"D",text:"联合国成立标志冷战开始"}],
-      answer: ["A","B","C"],
-      explanation: "杜鲁门主义出台标志冷战开始，北约成立于1949年，华约成立于1955年，都是正确的。联合国成立于1945年，是二战后维护和平的国际组织，不是冷战开始的标志。",
-      trap: "易错点：冷战开始的标志是1947年杜鲁门主义出台，结束的标志是1991年苏联解体。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "lishi-h06-q027", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      image: true,
       number: 27, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年吉林省长春市中考·历史（图转文字；原始题号未标注）",
@@ -3618,17 +2070,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "1945年5月8日，德国举行无条件投降仪式，欧洲战争结束。斯大林格勒战役在1942年7月至1943年2月，诺曼底登陆在1944年6月，日本正式签署投降书在1945年9月2日。",
       trap: "易错点：1945年5月8日是德国投降，1945年9月2日才是日本投降，两个时间不要记混。"
     },
-    {
-      id: "lishi-h06-q028", chapterId: 6, chapter: "九年级下册 · 世界现代史",
-      number: 28, type: "judge", meta: "判断题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "1993年，欧洲联盟成立，欧洲一体化进程加快。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "1993年11月1日，《马斯特里赫特条约》生效，欧洲联盟成立，欧洲一体化进程加快。",
-      trap: "易错点：欧共体成立于1967年，欧盟成立于1993年，两个组织和时间都要分清。"
-    },
+
     {
       id: "lishi-h06-q029", chapterId: 6, chapter: "九年级下册 · 世界现代史",
       number: 29, type: "single", meta: "单选题",
@@ -3829,6 +2271,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h06-q047", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      image: true,
       number: 47, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年福建中考·历史第28题（图转文字）",
@@ -3851,6 +2294,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h06-q049", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      image: true,
       number: 49, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建中考·历史第27题（图表转文字）",
@@ -3873,6 +2317,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h06-q051", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      image: true,
       number: 51, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年江苏省苏州市中考·历史（图转文字；原始题号未标注）",
@@ -3961,6 +2406,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h06-q059", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      image: true,
       number: 59, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省遂宁市中考·历史（思维导图转文字；原始题号未标注）",
@@ -3972,6 +2418,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h06-q060", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      image: true,
       number: 60, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省成都市中考·历史（图转文字；原始题号未标注）",
@@ -3994,6 +2441,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h06-q062", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      image: true,
       number: 62, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年吉林省中考·历史（图转文字；原始题号未标注）",
@@ -4005,6 +2453,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h06-q063", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      image: true,
       number: 63, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年西藏自治区中考·历史（图转文字；原始题号未标注）",
@@ -4016,6 +2465,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h06-q064", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      image: true,
       number: 64, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年青海省中考·历史（图转文字；原始题号未标注）",
@@ -4610,6 +3060,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q064", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 64, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2025年云南省中考·历史第3题",
@@ -4632,6 +3083,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q066", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 66, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2022年湖北省宜昌市中考·历史第2题（图转文字）",
@@ -4676,6 +3128,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q070", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 70, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "2025年四川省广安市中考·历史第1题",
@@ -4764,6 +3217,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q061", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 61, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2025年四川省广安市中考·历史第5题（图转文字）",
@@ -5314,6 +3768,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h01-q085", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      image: true,
       number: 85, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年黑龙江省齐齐哈尔市中考·历史第2题（图转文字）",
@@ -5424,6 +3879,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q074", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 74, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2025年江苏省连云港市中考·历史第4题（图转文字）",
@@ -5435,6 +3891,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h02-q075", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      image: true,
       number: 75, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2025年江苏省连云港市中考·历史第5题（图转文字）",
@@ -5622,6 +4079,7 @@ window.XIAOSIMEN_BANKS["lishi"] = {
     },
     {
       id: "lishi-h05-q085", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      image: true,
       number: 85, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年江苏省连云港市中考·历史第15题（年代尺转文字）",
@@ -5752,5 +4210,2376 @@ window.XIAOSIMEN_BANKS["lishi"] = {
       explanation: "周恩来在万隆会议上的发言照片属于一手史料，是对当时历史场景的真实记录，能够直观、真实地反映万隆会议这一历史事件，而万隆会议促进了亚非拉民族独立运动，加速了全球殖民体系瓦解的历史进程，所以该照片对于研究这一时期亚非拉民族独立运动具有很高的可信度和史料价值；电影是经过艺术加工后的产物，关于章西女王的电影会包含很多编剧和导演的主观创作元素；拉丁美洲人民传诵玻利瓦尔的英雄故事，在传诵过程中可能会因主观情感、记忆偏差等因素而发生内容的改变和夸大；某班同学编排介绍甘地的历史短剧是基于同学们对甘地相关历史的理解和演绎，其中会包含很多主观创作和改编的内容。",
       trap: "易错点：最可信的史料＝当时的照片（一手史料）；电影、传诵的故事、学生编排的短剧都有艺术加工和主观成分，可信度低。"
     },
+    {
+      id: "lishi-h01-q089", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 89, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2023年四川省乐山市中考·历史第1题（图转文字）",
+      stem: "典籍承载中华文脉，思想塑造轴心文明。下图所示典籍为《论语》，记录了中国古代一位教育家的思想。这位教育家是（ ）",
+      options: [{key:"A",text:"老子"}, {key:"B",text:"孔子"}, {key:"C",text:"墨子"}, {key:"D",text:"韩非子"}],
+      answer: ["B"],
+      explanation: "《论语》是春秋时期思想家、教育家孔子的弟子及再传弟子记录孔子及其弟子言行而编成的语录文集，成书于战国前期，因此这位教育家是孔子。"
+    },
+    {
+      id: "lishi-h01-q090", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 90, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年四川省自贡市中考·历史第1题",
+      stem: "秦始皇为解决战国以来“言语异声，文字异形”问题，采取的措施是（ ）",
+      options: [{key:"A",text:"建立皇帝制度"}, {key:"B",text:"统一文字"}, {key:"C",text:"统一度量衡"}, {key:"D",text:"统一车轨"}],
+      answer: ["B"],
+      explanation: "战国时期语言和文字不统一，秦始皇为加强中央集权，统一文字，规定小篆为全国标准字体，后推广隶书。"
+    },
+    {
+      id: "lishi-h01-q091", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 91, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年四川省自贡市中考·历史第2题",
+      stem: "读史明智，学史崇德。小文同学研学参观陕西韩城司马迁祠后，进行了深入学习：阅读书籍《司马迁之人格与风格》，观看央视纪录片《风追司马》，编写历史小报《铁笔写春秋》等。他能从中感悟到司马迁（ ）",
+      options: [{key:"A",text:"秉笔直书的风骨"}, {key:"B",text:"仁爱济世的品德"}, {key:"C",text:"驱荷逐夷的决心"}, {key:"D",text:"保疆戍边的壮举"}],
+      answer: ["A"],
+      explanation: "司马迁是《史记》的作者，以“秉笔直书”著称，即如实记录历史，不避讳权贵，体现史家风骨。"
+    },
+    {
+      id: "lishi-h01-q092", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 92, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年四川省自贡市中考·历史第3题（图转文字）",
+      stem: "文物承载着丰富的历史信息。某校历史兴趣小组进行探究性学习时，收集了以下素材，旨在研究（ ）素材：着汉服的北魏文官俑、孝文帝时铸造的铜钱、北魏墓碑上的书法（局部）",
+      options: [{key:"A",text:"君权强化"}, {key:"B",text:"经济活跃"}, {key:"C",text:"民族交融"}, {key:"D",text:"文学繁荣"}],
+      answer: ["C"],
+      explanation: "着汉服的北魏文官俑体现北魏服饰受汉族影响，孝文帝时铸造的铜钱反映北魏经济生活与汉族交流，北魏墓碑上的书法展现文化艺术方面的融合，这些素材都围绕北魏时期民族交融的主题。"
+    },
+    {
+      id: "lishi-h01-q093", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 93, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年山东省菏泽市中考·历史（原始题号未标注）",
+      stem: "2024年掀起龙年寻“龙”热潮。二里头遗址出土的绿松石龙形器再次走进大众视野，被誉为“华夏第一龙”，彰显了二里头文化是中华文明总进程的核心与引领者。此文物可以用来研究（ ）",
+      options: [{key:"A",text:"夏朝文明"}, {key:"B",text:"商朝文明"}, {key:"C",text:"西周文明"}, {key:"D",text:"东周文明"}],
+      answer: ["A"],
+      explanation: "二里头遗址是夏朝后期的一座都城遗址，出土了用于祭祀的精美玉器、成套的青铜酒器、镶嵌绿松石的精美铜牌等，反映了夏朝时期的文明进程。"
+    },
+    {
+      id: "lishi-h01-q094", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 94, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖北省中考·历史（原始题号未标注）",
+      stem: "据考证，商朝的汉字数量计4400个以上，已经识别的字在1500个以上。现在常用的汉字多数在商朝已经定型，如祖、父、妣（bǐ）、母、兄、弟、姑、子等亲属称谓当时已出现。这说明商朝（ ）",
+      options: [{key:"A",text:"文字较为成熟"}, {key:"B",text:"统治范围扩大"}, {key:"C",text:"社会等级森严"}, {key:"D",text:"王权色彩浓厚"}],
+      answer: ["A"],
+      explanation: "商朝汉字数量超4400个，已识别超1500个，常用汉字多数在商朝已经定型，表明商朝的文字已具备一定规模和规范，能够较为成熟地记录信息、表达含义。"
+    },
+    {
+      id: "lishi-h02-q081", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 81, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年四川省乐山市中考·历史第2题",
+      stem: "泱泱巴蜀，巍巍天府。以下是部分先贤治蜀的事迹，将其按时代先后顺序排列正确的是（ ）①李冰 秦国 蜀郡郡守 主持修建都江堰，此后成都平原成为“天府之国” ②文翁 西汉 蜀郡太守 创办郡学石室，发展教育，自此“蜀学比于齐鲁” ③诸葛亮 蜀汉 丞相 励精图治，注重农桑，鞠躬尽瘁，公忠体国 ④范成大 南宋 四川置制使 表彰名士，善于教化，政绩斐然，促进社会经济发展",
+      options: [{key:"A",text:"①②③④"}, {key:"B",text:"②③④①"}, {key:"C",text:"①④②③"}, {key:"D",text:"④③②①"}],
+      answer: ["A"],
+      explanation: "李冰是战国时期秦国的蜀郡郡守，文翁是西汉蜀郡太守，诸葛亮是三国时期蜀汉丞相，范成大是南宋四川置制使，按时代先后顺序排列是①②③④。"
+    },
+    {
+      id: "lishi-h02-q082", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 82, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年四川省乐山市中考·历史第3题",
+      stem: "以下是樊树志《国史十六讲》描述某时期的关键词：“李世民与武则天”“盛唐气象：海纳百川的博大胸怀”“东西方文明的交汇中心——长安”。这一时期的阶段特征是（ ）",
+      options: [{key:"A",text:"早期国家与社会变革"}, {key:"B",text:"繁荣与开放的时代"}, {key:"C",text:"政权分立与民族交融"}, {key:"D",text:"民族关系发展和社会变化"}],
+      answer: ["B"],
+      explanation: "李世民与武则天、盛唐气象、东西方文明交汇中心长安，都是唐朝的特征，唐朝政治清明、经济繁荣、中外文化交流频繁，阶段特征是繁荣与开放的时代。"
+    },
+    {
+      id: "lishi-h02-q083", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 83, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2023年四川省乐山市中考·历史第4题（图转文字）",
+      stem: "文化发展与生产力水平密切相关。下图显示中国古代南北方人才比重：北宋之前北方人才比重超过南方，南方人才在北宋之后开始超过北方。南北方人才比重发生变化的根本原因是（ ）",
+      options: [{key:"A",text:"明清社会文化繁荣"}, {key:"B",text:"科举考试快速发展"}, {key:"C",text:"南方政局更加稳定"}, {key:"D",text:"经济重心逐渐南移"}],
+      answer: ["D"],
+      explanation: "宋代南方经济发展逐渐超过北方，经济重心逐渐南移，文化发展与生产力水平密切相关，南北方人才比重变化的根本原因是经济重心逐渐南移。"
+    },
+    {
+      id: "lishi-h02-q084", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 84, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年四川省乐山市中考·历史第5题",
+      stem: "国学大师王国维说：“凡一代有一代之文学……唐之诗，宋之词，元之曲，皆所谓一代之文学。”明清时期的“一代之文学”是（ ）",
+      options: [{key:"A",text:"杂剧"}, {key:"B",text:"散文"}, {key:"C",text:"小说"}, {key:"D",text:"戏曲"}],
+      answer: ["C"],
+      explanation: "明清时期文学艺术的发展与市民文化结合起来，小说等大众化的文学艺术形式有了突出的发展，明清时期的“一代之文学”是小说。"
+    },
+    {
+      id: "lishi-h02-q085", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 85, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年四川省自贡市中考·历史第4题",
+      stem: "据《元史·地理志》记载，元朝在继承发展历代边疆管理模式的基础上，对边疆实施了长时间和比较稳定的统治，使边疆治理呈现出与内地一体化的趋向。这得益于（ ）",
+      options: [{key:"A",text:"分封制"}, {key:"B",text:"郡县制"}, {key:"C",text:"科举制"}, {key:"D",text:"行省制"}],
+      answer: ["D"],
+      explanation: "行省制是元朝首创的地方行政制度，将全国划分为多个行省，直接管辖边疆地区，有利于实现中央对边疆的有效控制，使边疆治理呈现出与内地一体化的趋向。"
+    },
+    {
+      id: "lishi-h02-q086", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 86, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年四川省自贡市中考·历史第5题",
+      stem: "小明同学完成《中国古代的政治家》专题学习后，撰写了如下人物小传。据此判断，他学习的是（ ）人物：________ 事迹：平定三藩、统一台湾、抗击沙俄 评价：励精图治、开疆拓土",
+      options: [{key:"A",text:"宋太祖"}, {key:"B",text:"铁木真"}, {key:"C",text:"忽必烈"}, {key:"D",text:"康熙"}],
+      answer: ["D"],
+      explanation: "平定三藩是康熙皇帝1673—1681年平定吴三桂等“三藩之乱”，统一台湾是康熙于1683年派施琅率军攻占台湾，抗击沙俄是康熙在1685—1688年发动雅克萨之战，最终签订《尼布楚条约》。"
+    },
+    {
+      id: "lishi-h02-q087", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 87, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年湖南省邵阳市中考·历史（原始题号未标注）",
+      stem: "哈佛大学教授艾利森说，我也从中国智慧中学到很多经验，比如1005年的澶渊之盟，交战双方提出，我们不能够打败对方，但可以商讨一个条约，形成对抗的伙伴关系，在一些领域里激烈敌对，但在另外一些领域内结为伙伴。艾利森对澶渊之盟的叙述（ ）",
+      options: [{key:"A",text:"比较符合历史史实"}, {key:"B",text:"完全违背历史真相"}, {key:"C",text:"是研究澶渊之盟的重要史料"}, {key:"D",text:"属于恶意诋毁中国的言论"}],
+      answer: ["A"],
+      explanation: "澶渊之盟后，宋辽之间保持了长久的和平，边境贸易兴盛，艾利森认为军事对抗可以转变为其他领域的合作，比较符合历史史实。"
+    },
+    {
+      id: "lishi-h02-q088", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 88, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年四川省内江市中考·历史（原始题号未标注）",
+      stem: "10-13世纪，经过300多年的分裂和对峙，中华大地逐渐走向大统一。这一历史进程中，下列重大事件按时间先后排列，正确的是（ ）①蒙古灭西夏和金朝 ②元灭南宋，完成了全国统一 ③宋太祖和其后继者结束中原和南方的分裂割据局面 ④铁木真统一蒙古草原",
+      options: [{key:"A",text:"①②④③"}, {key:"B",text:"③④①②"}, {key:"C",text:"②③①④"}, {key:"D",text:"④②③①"}],
+      answer: ["B"],
+      explanation: "③宋太祖结束中原和南方的分裂割据局面在960年后，④铁木真统一蒙古草原在1206年，①蒙古灭西夏（1227年）和金（1234年），②元灭南宋、完成全国统一在1279年，按时间先后顺序是③④①②。"
+    },
+    {
+      id: "lishi-h02-q089", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 89, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年黑龙江省大庆市中考·历史（原始题号未标注）",
+      stem: "我国历史上第一个由少数民族贵族为主建立的全国性的统一王朝，其版图是我国历史上最大的。这一王朝是（ ）",
+      options: [{key:"A",text:"夏朝"}, {key:"B",text:"西周"}, {key:"C",text:"元朝"}, {key:"D",text:"明朝"}],
+      answer: ["C"],
+      explanation: "1271年忽必烈改国号为元，次年定都大都，元朝是我国历史上第一个由少数民族贵族为主建立的全国性的统一王朝，版图是我国历史上最大的。"
+    },
+    {
+      id: "lishi-h02-q090", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 90, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2022年江苏省盐城市中考·历史（原始题号未标注）",
+      stem: "宋初，大臣赵普提出“稍夺其权，制其钱谷，收其精兵，则天下自安矣。”此建议针对的问题是（ ）",
+      options: [{key:"A",text:"农民起义"}, {key:"B",text:"积贫积弱"}, {key:"C",text:"外族入侵"}, {key:"D",text:"君弱臣强"}],
+      answer: ["D"],
+      explanation: "宋太祖从政治、财政、军事上加强中央集权，针对的是唐末以来君弱臣强、藩镇割据的问题，“稍夺其权，制其钱谷，收其精兵”正是为了解决君弱臣强。"
+    },
+    {
+      id: "lishi-h02-q091", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 91, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年黑龙江省大庆市中考·历史（原始题号未标注）",
+      stem: "宋代黄河、长江及运河沿岸兴起了很多商业城市，城市中的店铺不断增加；北宋前期，四川地区出现世界上最早的纸币——“交子”。这主要体现了宋代（ ）",
+      options: [{key:"A",text:"商业贸易的繁荣"}, {key:"B",text:"活字印刷术的发明"}, {key:"C",text:"行省制度的设立"}, {key:"D",text:"对边疆地区的管辖"}],
+      answer: ["A"],
+      explanation: "宋代黄河、长江及运河沿岸兴起了很多商业城市，城市中的店铺不断增加，北宋前期四川地区出现世界上最早的纸币“交子”，这些都是宋代商业贸易繁荣的具体表现。"
+    },
+    {
+      id: "lishi-h02-q092", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 92, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年江苏省南通市中考·历史（原始题号未标注）",
+      stem: "从早晨开始，百姓穿上新衣，往来拜年，并燃放爆竹。各坊、巷摆设食物、日用品……开设舞场、歌馆，车马交驰，热闹异常。这一场景出现于宋代传统节日中的（ ）",
+      options: [{key:"A",text:"春节"}, {key:"B",text:"端午节"}, {key:"C",text:"中秋节"}, {key:"D",text:"重阳节"}],
+      answer: ["A"],
+      explanation: "宋代称春节为元旦，最受重视，元旦那天盛行燃放鞭炮，穿新衣，往来拜年，大街上搭彩棚，摆满各色货物，歌馆、舞场挤满了人。"
+    },
+    {
+      id: "lishi-h02-q093", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 93, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年甘肃省兰州市中考·历史（原始题号未标注）",
+      stem: "沈括《梦溪笔谈》卷十八《技艺》记载：“庆历中，有布衣毕昇，又为活版，其法用胶泥刻字，薄如钱唇，每字为一印，火烧令坚。……欲印则以一铁范置铁板上，乃密布字印。”该记载描述的是（ ）",
+      options: [{key:"A",text:"造纸术"}, {key:"B",text:"火药"}, {key:"C",text:"印刷术"}, {key:"D",text:"指南针"}],
+      answer: ["C"],
+      explanation: "沈括《梦溪笔谈》记载，庆历年间布衣毕昇“又为活版，其法用胶泥刻字”，描述的是北宋毕昇发明的活字印刷术。"
+    },
+    {
+      id: "lishi-h02-q094", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 94, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年四川省雅安市中考·历史（原始题号未标注）",
+      stem: "宋代统治者深知文教的社会功能，在政治上突出文治的同时，进一步强化和完善科举制，学校教育和科举制的联系也日益紧密。这种做法（ ）",
+      options: [{key:"A",text:"避免了统治危机的出现"}, {key:"B",text:"提高了整个社会的文化素养"}, {key:"C",text:"增加了政府的财政收入"}, {key:"D",text:"阻碍了科学技术的发展进步"}],
+      answer: ["B"],
+      explanation: "宋朝注重文教事业，改革和发展了科举制，在全国范围营造了浓厚的读书风气，促进了整个社会文化素养的提高，造就了宋朝科技发达、文化昌盛、人才辈出的文治局面。"
+    },
+    {
+      id: "lishi-h04-q076", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 76, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年甘肃省兰州市中考·历史（原始题号未标注）",
+      stem: "1953—1956年，中国工业总产值平均每年增长19.6%，工业生产所取得的成就，是旧中国一百年所不能比的，为我国建立独立完整的工业体系奠定了基础。这得益于（ ）",
+      options: [{key:"A",text:"中共八大"}, {key:"B",text:"改革开放"}, {key:"C",text:"“一五”计划"}, {key:"D",text:"土地改革"}],
+      answer: ["C"],
+      explanation: "1953—1957年的“一五”计划核心是优先发展重工业，建立工业化基础，1953—1956年工业总产值年均增长19.6%正是“一五”计划的成果。"
+    },
+    {
+      id: "lishi-h04-q077", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 77, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年天津市中考·历史（原始题号未标注）",
+      stem: "1953~1957年鞍山钢铁公司无缝钢管厂等三大工程建成并投产，体现了国家（ ）",
+      options: [{key:"A",text:"集中主要力量发展重工业"}, {key:"B",text:"开展人民公社化运动"}, {key:"C",text:"实行城市经济体制改革"}, {key:"D",text:"确立社会主义市场经济体制"}],
+      answer: ["A"],
+      explanation: "鞍山钢铁公司无缝钢管厂等三大工程是“一五”计划的代表性成就，“一五”计划的核心任务是集中力量发展重工业，以奠定工业化基础。"
+    },
+    {
+      id: "lishi-h04-q078", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 78, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年四川省南充市中考·历史（原始题号未标注）",
+      stem: "下表是1953—1957年工业生产发展的部分情况，该表可用于说明我国（ ）工业生产年平均增长速度：中国18%，英国4.1%，美国2.8%；增产400万吨钢所用时间：中国5年，英国24年，美国15年",
+      options: [{key:"A",text:"工业发展水平世界领先"}, {key:"B",text:"“一五”计划取得的成就"}, {key:"C",text:"国民经济调整任务完成"}, {key:"D",text:"社会主义制度的初步建立"}],
+      answer: ["B"],
+      explanation: "1953—1957年是“一五”计划时期，表格中我国工业生产年平均增长速度、增产400万吨钢所用时间等数据，体现出“一五”计划期间我国工业快速发展，取得显著成就。"
+    },
+    {
+      id: "lishi-h04-q079", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 79, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年江苏省镇江市中考·历史（原始题号未标注）",
+      stem: "1954年毛泽东指出，第一届全国人民代表大会“具有伟大的历史意义，这次会议是标志着我国人民从1949年以来的新胜利和新发展的里程碑”。这次会议的最大成果是（ ）",
+      options: [{key:"A",text:"确定了民主革命纲领"}, {key:"B",text:"分析了当时国内主要矛盾"}, {key:"C",text:"提出“一国两制”构想"}, {key:"D",text:"制定第一部社会主义宪法"}],
+      answer: ["D"],
+      explanation: "1954年召开的第一届全国人民代表大会通过了我国第一部社会主义类型的宪法——《中华人民共和国宪法》，这是这次会议的最大成果。"
+    },
+    {
+      id: "lishi-h04-q080", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 80, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年新疆维吾尔自治区中考·历史（原始题号未标注）",
+      stem: "它把汪洋大海般的农业个体经济改造为集体经济，使农业生产关系发生了根本性变化。这在中国几千年农耕文明发展史上是一次伟大而深刻的变革。“它”指的是（ ）",
+      options: [{key:"A",text:"土地改革"}, {key:"B",text:"第一个五年计划"}, {key:"C",text:"公私合营"}, {key:"D",text:"农业合作化运动"}],
+      answer: ["D"],
+      explanation: "农业合作化运动把分散的个体农民组织起来参加农业生产合作社，把汪洋大海般的农业个体经济改造为集体经济，使农业生产关系发生了根本性变化。"
+    },
+    {
+      id: "lishi-h04-q081", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 81, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年四川省自贡市中考·历史第9题",
+      stem: "《中国共产党简史》指出：1956年三大改造的完成，引发中国历史上最深刻的变革，标志着这个占世界1/4人口的东方大国进入社会主义社会。据此可知，三大改造的实质是（ ）",
+      options: [{key:"A",text:"集中力量发展重工业"}, {key:"B",text:"变革生产资料私有制"}, {key:"C",text:"改造资本主义工商业"}, {key:"D",text:"开展社会主义工业化"}],
+      answer: ["B"],
+      explanation: "三大改造通过将农业、手工业和资本主义工商业的生产资料私有制转变为社会主义公有制，确立了社会主义基本制度，其核心在于所有制的变革。"
+    },
+    {
+      id: "lishi-h04-q082", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 82, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年江苏省苏州市中考·历史（原始题号未标注）",
+      stem: "读下表，国家实行的这项政策是（ ）时间：1956.7-1966.9；对象：公私合营企业私股股东；措施：发放股息；年息：5厘",
+      options: [{key:"A",text:"减租减息政策"}, {key:"B",text:"手工业合作化"}, {key:"C",text:"赎买政策"}, {key:"D",text:"扩大企业自主权"}],
+      answer: ["C"],
+      explanation: "1956年7月至1966年9月，国家向公私合营企业私股股东发放股息（年息5厘），这是社会主义改造中对资本主义工商业实行的赎买政策。"
+    },
+    {
+      id: "lishi-h04-q083", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 83, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年山东省烟台市中考·历史（原始题号未标注）",
+      stem: "“由于中国向社会主义的过渡将是在无产阶级掌握政权并建立起强大的社会主义国营经济的条件下进行的，而中国的民族资产阶级又具有两面性，这就保证了这种过渡可以采取和平转变的方式。”为此，我们国家（ ）",
+      options: [{key:"A",text:"制定“一五”计划"}, {key:"B",text:"开展手工业合作化"}, {key:"C",text:"实行了赎买政策"}, {key:"D",text:"进行国有企业改革"}],
+      answer: ["C"],
+      explanation: "中国的民族资产阶级具有两面性，在无产阶级掌握政权并建立强大社会主义国营经济的条件下，过渡可以采取和平转变的方式，国家为此实行了赎买政策。"
+    },
+    {
+      id: "lishi-h04-q084", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 84, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年山东省日照市中考·历史（原始题号未标注）",
+      stem: "开展史料研习，应选择典型、可信、有价值、有说服力的史料。雷锋是中华民族的时代楷模，雷锋精神教育和影响了几代中国人。研究雷锋精神的首选史料是（ ）",
+      options: [{key:"A",text:"《雷锋精神读本》"}, {key:"B",text:"《雷锋日记》"}, {key:"C",text:"电影《雷锋》"}, {key:"D",text:"《伟大战士》"}],
+      answer: ["B"],
+      explanation: "日记是记录个人日常生活和思考的原始资料，《雷锋日记》直接反映了雷锋的思想、行为和情感，是研究雷锋精神最直接、最真实的首选史料。"
+    },
+    {
+      id: "lishi-h04-q085", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 85, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年贵州省贵阳市中考·历史（图转文字；原始题号未标注）",
+      stem: "下图中的内容包括“辽宁舰”、中国人民解放军火箭军、歼—20战机，它们反映的共同主题是（ ）",
+      options: [{key:"A",text:"我国的国防建设"}, {key:"B",text:"我国的外交成就"}, {key:"C",text:"我国的文化事业发展"}, {key:"D",text:"我国的社会生活变迁"}],
+      answer: ["A"],
+      explanation: "“辽宁舰”是海军装备，中国人民解放军火箭军是战略威慑力量，歼—20战机是空军装备，均属于我国国防军事领域的内容，共同反映了我国的国防建设主题。"
+    },
+    {
+      id: "lishi-h04-q086", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 86, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年山东省青岛市中考·历史（原始题号未标注）",
+      stem: "“信仰为旗，万里海疆写忠诚。向实而备，越是艰险越向前。”人民海军成立75年以来，从小艇到巨舰，从近岸到深蓝，从单兵到体系，以第四代装备为引领、第三代装备为主体的现代化人民海军正在形成，大国战舰向着全面建成世界一流海军破浪远航。这体现了（ ）",
+      options: [{key:"A",text:"人民海军装备全部依靠自主研发"}, {key:"B",text:"人民海军的现代化水平不断提高"}, {key:"C",text:"海军始终是我国实力最强的军种"}, {key:"D",text:"人民海军已经多次完成出访任务"}],
+      answer: ["B"],
+      explanation: "人民海军成立75年以来，从小艇到巨舰，从近岸到深蓝，从单兵到体系，以第四代装备为引领、第三代装备为主体的现代化人民海军正在形成，体现了人民海军现代化水平不断提高。"
+    },
+    {
+      id: "lishi-h04-q087", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 87, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2023年四川省乐山市中考·历史第9题",
+      stem: "据某年《人民日报》报道：“当国旗图案在政协会议上通过后，许多机关、团体、学校、商号以至民宅，立即自发去订新式国旗。光永茂实业公司一家，三天就做了四千多面。包揽做国旗的新建被服厂各单位，连明连夜地赶，也还是不能满足顾客的要求。顾客们成排地挤在门前急着买，一定要想在十月一日中央人民政府成立盛典时挂出来，或挂的更早一些。”材料反映当时（ ）",
+      options: [{key:"A",text:"人民期盼新生政权"}, {key:"B",text:"土地改革已经完成"}, {key:"C",text:"祖国大陆实现统一"}, {key:"D",text:"社会主义制度建立"}],
+      answer: ["A"],
+      explanation: "国旗图案在政协会议上通过后，人民自发订做国旗，一定要赶在十月一日中央人民政府成立盛典时挂出来，反映当时人民期盼新生政权。"
+    },
+    {
+      id: "lishi-h04-q088", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 88, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年四川省自贡市中考·历史第11题",
+      stem: "2016年以来，粤港澳大湾区建设成就显著：2021年，首个5G智慧港口开港；2023年，广铁复兴号智能型动车组首发、超级工程深中通道主线正式贯通；2025年，大湾区至成渝地区首趟“海运+铁路”冷链运输班列开行。这体现出（ ）",
+      options: [{key:"A",text:"三线建设成就突出"}, {key:"B",text:"外交领域取得突破"}, {key:"C",text:"“一国两制”充满活力"}, {key:"D",text:"国企改革有序推进"}],
+      answer: ["C"],
+      explanation: "粤港澳大湾区5G智慧港口、复兴号动车组、深中通道贯通等成就，均属于区域协同发展的重大工程，体现粤港澳在“一国两制”框架下的深度融合与创新活力。"
+    },
+    {
+      id: "lishi-h05-q089", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 89, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2023年四川省乐山市中考·历史第12题",
+      stem: "苏格拉底、柏拉图和亚里士多德奠定了西方哲学的基础。他们生活在（ ）",
+      options: [{key:"A",text:"古代印度"}, {key:"B",text:"古代埃及"}, {key:"C",text:"古代希腊"}, {key:"D",text:"古代罗马"}],
+      answer: ["C"],
+      explanation: "苏格拉底、柏拉图和亚里士多德并称为“希腊三贤”，都是古希腊的哲学家，奠定了西方哲学的基础。"
+    },
+    {
+      id: "lishi-h05-q090", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 90, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2023年四川省乐山市中考·历史第13题（图转文字）",
+      stem: "新航路开辟打破了世界相互隔绝的状态，促进了物种交换。下图中，玉米、番薯、蔗糖、草莓、番茄、南瓜、辣椒、花生、羊驼、向日葵等从“新世界”流向了旧世界。图中的“新世界”指的是（ ）",
+      options: [{key:"A",text:"美洲"}, {key:"B",text:"亚洲"}, {key:"C",text:"欧洲"}, {key:"D",text:"非洲"}],
+      answer: ["A"],
+      explanation: "1492年哥伦布发现美洲，原产于美洲的玉米、番薯、番茄、辣椒、花生等物种传入世界其他地区，图中的“新世界”指的是美洲。"
+    },
+    {
+      id: "lishi-h05-q091", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 91, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2025年四川省自贡市中考·历史第13题",
+      stem: "有学者认为：1492年开始了一场引人注目的大交换，这里的“大交换”指“新大陆”和“旧大陆”之间各种植物、动物以及疾病、宗教、文化、人口的互相传播和交流。这种交换始于（ ）",
+      options: [{key:"A",text:"郑和下西洋"}, {key:"B",text:"哥伦布发现美洲"}, {key:"C",text:"麦哲伦船队环球航行"}, {key:"D",text:"三角贸易的开始"}],
+      answer: ["B"],
+      explanation: "1492年哥伦布发现美洲新大陆，打破了美洲与亚欧大陆相对隔绝的状态，出现新大陆和旧大陆之间植物、动物以及疾病、宗教、文化、人口的互相传播和交流，即“大交换”。"
+    },
+    {
+      id: "lishi-h05-q092", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 92, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2025年四川省自贡市中考·历史第16题",
+      stem: "17世纪的科学巨匠牛顿，通过研究发现宇宙间所有物体，无论是巨大的星体，还是微小的尘粒，都是相互吸引的。与此相关的是（ ）",
+      options: [{key:"A",text:"万有引力定律"}, {key:"B",text:"生物进化论"}, {key:"C",text:"钋和镭的发现"}, {key:"D",text:"电磁感应现象"}],
+      answer: ["A"],
+      explanation: "牛顿发现宇宙间所有物体相互吸引，提出万有引力定律，解释了物体间的引力作用。"
+    },
+    {
+      id: "lishi-h06-q083", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 83, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2023年四川省乐山市中考·历史第15题",
+      stem: "20世纪上半叶，亚非拉民族民主运动高涨。其中发生在非洲地区的是（ ）",
+      options: [{key:"A",text:"纳米比亚的独立"}, {key:"B",text:"埃及的华夫脱运动"}, {key:"C",text:"墨西哥的卡德纳斯改革"}, {key:"D",text:"印度的非暴力不合作运动"}],
+      answer: ["B"],
+      explanation: "一战之后20世纪20年代，非洲的埃及兴起了华夫脱运动，迫使英国政府1922年有条件地承认埃及独立；纳米比亚独立于1990年，墨西哥卡德纳斯改革在美洲，印度非暴力不合作运动在亚洲。"
+    },
+    {
+      id: "lishi-h06-q084", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 84, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2023年四川省乐山市中考·历史第16题",
+      stem: "第二次世界大战以来，尤其是冷战结束后，美国一些理论家提出：如果世界趋向一种共同语言，它应该是美式英语；如果世界正在由电视、广播和音乐联系在一起，那节目同样也应该是美国的；如果共同的价值观正在形成，它应该是符合美国人愿望的价值观。这种论调本质上体现的是（ ）",
+      options: [{key:"A",text:"维护世界和平"}, {key:"B",text:"尊重文化多样性"}, {key:"C",text:"文化霸权主义"}, {key:"D",text:"政治多极化趋势"}],
+      answer: ["C"],
+      explanation: "美国一些理论家主张世界共同语言应是美式英语、共同价值观应符合美国人愿望，这种把本国语言、价值观强加于其他国家的主张，本质上体现的是文化霸权主义。"
+    },
+    {
+      id: "lishi-h06-q085", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 85, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年四川省自贡市中考·历史第17题",
+      stem: "下表是苏俄（联）时期工农业生产值增长情况。该现象产生的原因是（ ）1913—1925年俄国/苏俄/苏联的工农业生产情况：农业生产总值（%）1913年100、1920年67、1925年112；工业生产指数（以1913年为100）1913年100、1920年13.8、1925年75.5",
+      options: [{key:"A",text:"战时共产主义政策的实施"}, {key:"B",text:"新经济政策的出台"}, {key:"C",text:"苏联模式的确立"}, {key:"D",text:"工业化成就突出"}],
+      answer: ["B"],
+      explanation: "1920年苏俄工农业产值大幅下降，1925年农业恢复并超过战前水平、工业也有所回升，这是1921年实施的新经济政策允许市场调节和私营经济、推动经济恢复的成效。"
+    },
+    {
+      id: "lishi-h06-q086", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 86, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省自贡市中考·历史第18题（图转文字）",
+      stem: "思维导图是可视化知识结构的有效途径。下面思维导图呈现了美苏在政治（共产党和工人情报局对应杜鲁门主义）、经济（经济互助委员会对应马歇尔计划）、军事（华约组织对应北约组织）领域的对抗举措，还有朝鲜战争、古巴导弹危机等美苏冷战背景下的冲突事件。从下面思维导图中可得出（ ）",
+      options: [{key:"A",text:"经济全球化"}, {key:"B",text:"美苏两极对峙"}, {key:"C",text:"文化多样化"}, {key:"D",text:"社会信息化"}],
+      answer: ["B"],
+      explanation: "思维导图呈现了美苏在政治、经济、军事领域的对抗举措，还有朝鲜战争、古巴导弹危机等冷战背景下的冲突事件，集中体现了二战后美苏两极对峙的格局。"
+    },
+    {
+      id: "lishi-h06-q087", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 87, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年江西省抚州市中考一模·历史（图转文字；原始题号未标注）",
+      stem: "下图漫画展示的是德、法、英三国拿着各自的钱袋，谈论海洋和陆地划分的问题。出现这一场景的根源在于（ ）",
+      options: [{key:"A",text:"对海外市场和原料的争夺"}, {key:"B",text:"传统殖民观念的驱使"}, {key:"C",text:"帝国主义国家经济政治发展不平衡"}, {key:"D",text:"对欧洲霸权地位的争夺"}],
+      answer: ["C"],
+      explanation: "第二次工业革命后，美国、德国等后起的资本主义国家迅速发展，国力大大增强，对殖民地的需求增加，而英、法等老牌资本主义国家实力衰弱却占有大量殖民地，帝国主义国家间经济政治发展不平衡，矛盾日益激化，最终爆发一战。"
+    },
+    {
+      id: "lishi-h06-q088", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 88, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年广东省中考模拟预测·历史（原始题号未标注）",
+      stem: "1914年6月，奥匈帝国皇储斐迪南大公为了向塞尔维亚炫耀武力，到波斯尼亚检阅军队。6月28日，斐迪南大公夫妇在萨拉热窝被塞尔维亚族青年普林西普刺杀。这一事件成为第一次世界大战的（ ）",
+      options: [{key:"A",text:"开始标志"}, {key:"B",text:"转折点"}, {key:"C",text:"结束标志"}, {key:"D",text:"导火线"}],
+      answer: ["D"],
+      explanation: "1914年6月28日萨拉热窝事件发生后，奥匈帝国以此为借口，在德国支持下向塞尔维亚宣战，随后欧洲列强纷纷卷入战争，萨拉热窝事件成为第一次世界大战的导火线。"
+    },
+    {
+      id: "lishi-h06-q089", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 89, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年湖南省中考一模·历史（原始题号未标注）",
+      stem: "美国黑人领袖杜波斯对第一次世界大战有这样的评价：“这场战争既是一个结局，也是一个开端。迟早将出现独立的中国、自治的印度、代议制的埃及、非洲人的非洲。”这表明第一次世界大战（ ）",
+      options: [{key:"A",text:"动摇了欧洲的优势地位"}, {key:"B",text:"促进了民族意识的觉醒"}, {key:"C",text:"使殖民地摆脱殖民统治"}, {key:"D",text:"具有民族解放运动性质"}],
+      answer: ["B"],
+      explanation: "杜波斯的评价预言亚非地区将出现独立国家，表明一战推动了殖民地半殖民地国家民族意识的觉醒；一战后亚非拉民族解放运动高涨。"
+    },
+    {
+      id: "lishi-h06-q090", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 90, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年甘肃省白银市中考一模·历史（原始题号未标注）",
+      stem: "福煦在《凡尔赛条约》签订后说道：“这不是和平，是二十年的休战。”华盛顿会议后，极度失望的日本人喊出要与美国的“决裂”“报复”，甚至直接将美国视作军事对抗的敌手。这揭示了（ ）",
+      options: [{key:"A",text:"新世界秩序的脆弱性"}, {key:"B",text:"大国间的矛盾趋于缓和"}, {key:"C",text:"殖民地反抗必然爆发"}, {key:"D",text:"美国对战后世界的主导"}],
+      answer: ["A"],
+      explanation: "一战后确立的凡尔赛—华盛顿体系暂时调整了帝国主义国家之间的矛盾，但没有从根本上消除矛盾，因此也不可能长期维持下去，揭示了新世界秩序的脆弱性。"
+    },
+    {
+      id: "lishi-h06-q091", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 91, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年重庆市开州区中考一模·历史（原始题号未标注）",
+      stem: "一战后，通过巴黎和会和华盛顿会议，帝国主义列强建立了“凡尔赛—华盛顿体系”，它确立了帝国主义在欧洲、西亚、非洲、东亚以及太平洋地区的统治秩序。这“两次会议”（ ）",
+      options: [{key:"A",text:"维护了世界的和平与发展"}, {key:"B",text:"解决了帝国主义国家之间的矛盾"}, {key:"C",text:"都严重损害了中国的主权"}, {key:"D",text:"成功实现了美国称霸世界的野心"}],
+      answer: ["C"],
+      explanation: "巴黎和会上把德国在中国山东的特权转让给日本，引发了中国的五四运动；华盛顿会议签订的《九国公约》使中国又恢复到几个帝国主义国家共同支配的局面，两次会议均损害了中国的主权。"
+    },
+    {
+      id: "lishi-h06-q092", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 92, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年重庆市垫江县中考模拟预测·历史（原始题号未标注）",
+      stem: "莫斯科保卫战中，苏联老人、妇女、儿童纷纷上前线为军队运输物资、照顾伤员，甚至搬运弹药，苏联普通老百姓宁愿自己挨饿，也要将粮食留给战士。这反映了（ ）",
+      options: [{key:"A",text:"人民为反法西斯战争作出贡献"}, {key:"B",text:"反法西斯战争的艰巨性"}, {key:"C",text:"世界反法西斯联盟已正式形成"}, {key:"D",text:"德军在苏德战场的失败"}],
+      answer: ["A"],
+      explanation: "莫斯科保卫战中苏联老人、妇女、儿童等普通老百姓积极参与运输物资、照顾伤员、搬运弹药，宁愿自己挨饿也要将粮食留给战士，充分体现了苏联人民为反法西斯战争作出了巨大贡献。"
+    },
+    {
+      id: "lishi-h06-q093", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 93, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年河南省周口市中考一模·历史（原始题号未标注）",
+      stem: "二战后，美国联合西欧一些国家签订条约。该条约旨在确保成员国之间在军事上的合作与防御，防止外部威胁，特别是苏联的侵略。材料中的“条约”应为（ ）",
+      options: [{key:"A",text:"《凡尔赛和约》"}, {key:"B",text:"《华沙条约》"}, {key:"C",text:"《联合国家宣言》"}, {key:"D",text:"《北大西洋公约》"}],
+      answer: ["D"],
+      explanation: "1949年，美国联合西欧一些国家签订《北大西洋公约》，旨在确保成员国之间在军事上的合作与防御，防止外部威胁，特别是苏联的侵略。"
+    },
+    {
+      id: "lishi-h06-q094", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 94, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年四川省绵阳市中考模拟预测·历史（表转文字；原始题号未标注）",
+      stem: "下表史事与结论对应正确的是（ ）A. 北约的成立——企图通过援助西欧恢复经济，稳定资本主义制度 B. 杜鲁门主义出台——美、苏战时同盟关系正式破裂，冷战开始 C. 不结盟运动兴起——世界形势发展的总趋势走向缓和，世界多极化趋势增强 D. 苏联的解体——标志着发展中国家已成为国际政治舞台上的一支重要力量",
+      options: [{key:"A",text:"北约的成立——企图通过援助西欧恢复经济，稳定资本主义制度"}, {key:"B",text:"杜鲁门主义出台——美、苏战时同盟关系正式破裂，冷战开始"}, {key:"C",text:"不结盟运动兴起——世界形势发展的总趋势走向缓和，世界多极化趋势增强"}, {key:"D",text:"苏联的解体——标志着发展中国家已成为国际政治舞台上的一支重要力量"}],
+      answer: ["B"],
+      explanation: "1947年杜鲁门提出以“遏制共产主义”作为国家政治意识形态和对外政策的指导思想，即杜鲁门主义，它的出台标志着美苏战时同盟关系正式破裂、美苏之间冷战的开始；通过经济援助西欧恢复经济、稳定资本主义制度的是马歇尔计划。"
+    },
+    {
+      id: "lishi-h01-q095", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 95, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年河南省中考·历史（图转文字；原始题号未标注）",
+      stem: "《史记》记载商纣王封周文王为西伯时，赐他“弓矢斧钺，使得征伐”；在描绘周武王指挥牧野之战时，“左杖黄钺，右秉白旄（máo）以麾”。据此推测，河南偃师二里头出土的玉钺（图略）在当时可能是（ ）",
+      options: [{key:"A",text:"最高祭祀权的代表"}, {key:"B",text:"高级生产工具"}, {key:"C",text:"军事统帅权的象征"}, {key:"D",text:"诸侯国的徽标"}],
+      answer: ["C"],
+      explanation: "材料中“弓矢斧钺，使得征伐”“周武王指挥牧野之战”都与战争有关，玉钺是军事统帅权的象征；玉钺贵重，是身份的象征，不是生产工具，也不涉及祭祀和诸侯国徽标。"
+    },
+    {
+      id: "lishi-h01-q096", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 96, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2023年海南省中考·历史（原始题号未标注）",
+      stem: "江西吴城遗址是长江以南地区最早发现的商代遗址，打破了“商文化不过长江”的论断。该遗址属于（ ）",
+      options: [{key:"A",text:"文献史料"}, {key:"B",text:"图像史料"}, {key:"C",text:"实物史料"}, {key:"D",text:"口述史料"}],
+      answer: ["C"],
+      explanation: "吴城遗址是中国南方一处规模较大的商代中晚期都邑遗址，遗址内发现陶窑区、冶炼区、居住区、墓葬区、祭祀广场等遗迹，出土陶器、原始瓷器、铜器、石器等遗物数千件，这些都属于实物史料。"
+    },
+    {
+      id: "lishi-h01-q097", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 97, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2023年四川省眉山市中考·历史（原始题号未标注）",
+      stem: "殷商卜辞中有赛马和比箭的相关记载。周代已经有完备的比箭礼仪，天子者称为“大射礼”，贵族比赛，则称为“乡射礼”。由此可知商周（ ）",
+      options: [{key:"A",text:"祭祀活动很盛行"}, {key:"B",text:"竞技体育已出现"}, {key:"C",text:"军备竞赛已开始"}, {key:"D",text:"分封制度已建立"}],
+      answer: ["B"],
+      explanation: "材料中“赛”和“比”侧重表示比较并较量本领、技术的高低，其适用范围较窄，对象多为文艺、体育、娱乐等对抗性活动，表明商周时期竞技体育已出现。"
+    },
+    {
+      id: "lishi-h01-q098", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 98, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年四川省眉山市中考·历史（图转文字；原始题号未标注）",
+      stem: "史料是认识历史的主要依据，下图所示史料有人面鱼纹彩陶盆、司母戊鼎、商鞅方升、圆形方孔半两钱（图略）。这些史料属于（ ）",
+      options: [{key:"A",text:"文献史料"}, {key:"B",text:"口述史料"}, {key:"C",text:"实物史料"}, {key:"D",text:"图像史料"}],
+      answer: ["C"],
+      explanation: "人面鱼纹彩陶盆、司母戊鼎、商鞅方升、圆形方孔半两钱都属于真实存在、可以亲眼见到的文物，属于实物史料；文献史料的主要展现形式是文字，口述史料是亲历者口述，图像史料是图片，均与题意不符。"
+    },
+    {
+      id: "lishi-h01-q099", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 99, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年山东省烟台市中考·历史（原始题号未标注）",
+      stem: "殷墟遗址是一座商文明的巨大宝库，在人类文明史上占有极其重要的地位。下列文物出土于这座“宝库”的是（ ）",
+      options: [{key:"A",text:"人面鱼纹彩陶盆"}, {key:"B",text:"司母戊鼎"}, {key:"C",text:"毛公鼎"}, {key:"D",text:"商鞅铜方量"}],
+      answer: ["B"],
+      explanation: "司母戊鼎是迄今世界出土的最重的青铜器，是商王祖庚或祖甲为祭祀其母戊所制，是商朝时期青铜文化的代表作，出土于殷墟遗址；人面鱼纹彩陶盆是半坡居民的生活用具，毛公鼎是西周青铜器，商鞅铜方量是战国商鞅变法时期的。"
+    },
+    {
+      id: "lishi-h01-q100", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 100, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年广东省中考·历史（图转文字；原始题号未标注）",
+      stem: "下图是甲骨文“男”字的构形及释文（图略）。据图，甲骨文“男”字由“田（田地）”和“耒（翻土工具）”组成。据此推测，古代“男”字的出现可能源于（ ）",
+      options: [{key:"A",text:"劳动生产"}, {key:"B",text:"分封制度"}, {key:"C",text:"兼并战争"}, {key:"D",text:"祭祀礼仪"}],
+      answer: ["A"],
+      explanation: "甲骨文“男”字由“田”和“耒”组成，体现在田地间进行耕种，因此古代“男”字的出现可能源于劳动生产。"
+    },
+    {
+      id: "lishi-h01-q101", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 101, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2023年江苏省淮安市中考·历史（原始题号未标注）",
+      stem: "“一片甲骨惊天下”，甲骨的挖掘出土有非常重要的价值。刻有文字的甲骨可以用来研究（ ）①商周时期的历史 ②印刷技术的改进 ③汉字字体的演变 ④书写材料的变迁",
+      options: [{key:"A",text:"①②③"}, {key:"B",text:"①③④"}, {key:"C",text:"①②④"}, {key:"D",text:"②③④"}],
+      answer: ["B"],
+      explanation: "甲骨文是商周时期刻在龟甲和兽骨上的文字，是中国已发现的古代文字中年代最早、体系较为完整的文字，对中国文字的形成与发展有深远的影响，可用于研究商周历史、汉字字体演变和书写材料变迁；甲骨文与印刷术无关。"
+    },
+    {
+      id: "lishi-h01-q102", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 102, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年江西省中考·历史（原始题号未标注）",
+      stem: "随着吴国、楚国等力量的消长，它们在江西的势力范围也不断变化，大致形成了“吴头楚尾”的态势。江西“吴头楚尾”的历史缘于（ ）",
+      options: [{key:"A",text:"商汤灭夏"}, {key:"B",text:"盘庚迁殷"}, {key:"C",text:"武王伐纣"}, {key:"D",text:"诸侯争霸"}],
+      answer: ["D"],
+      explanation: "春秋时期，周王室衰微，诸侯势力崛起，各诸侯国为争夺土地、人口和霸权展开争霸战争。吴国、楚国等诸侯国在争霸过程中势力范围不断变化，在江西地区形成“吴头楚尾”的态势，这一历史现象源于诸侯争霸。"
+    },
+    {
+      id: "lishi-h02-q095", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 95, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年吉林省长春市中考·历史（原始题号未标注）",
+      stem: "下列有关商鞅变法与王安石变法相同点的表述，正确的是（ ）",
+      options: [{key:"A",text:"背景：爆发农民起义"}, {key:"B",text:"目的：实现富国强兵"}, {key:"C",text:"内容：废除井田制度"}, {key:"D",text:"影响：奠定统一基础"}],
+      answer: ["B"],
+      explanation: "为了确立新的政治经济秩序，以求富国强兵，在兼并战争中取胜，秦孝公任用商鞅主持变法；1069年，宋神宗任用王安石主持变法，希望通过变法摆脱统治危机，实现富国强兵。两者目的相同，都是为了实现富国强兵。"
+    },
+    {
+      id: "lishi-h02-q096", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 96, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2022年广东省深圳市中考·历史（原始题号未标注）",
+      stem: "北宋时期，政府乐于见到人们的鉴赏喜好从贵金属转向陶瓷，这一转变有利于金属货币的流通，并向少数民族政权换取和平。可见政府支持这一转变的主要意图是（ ）",
+      options: [{key:"A",text:"引导贵族生活方式的转变"}, {key:"B",text:"推动文化教育事业的发展"}, {key:"C",text:"提倡节俭以保持士人清廉"}, {key:"D",text:"促进经济发展和支付岁币"}],
+      answer: ["D"],
+      explanation: "北宋时期与辽、西夏签订条约，需要支付大量岁币以换取和平，政府乐于见到鉴赏喜好从贵金属转向陶瓷，有利于金属货币流通、促进经济发展和支付岁币。"
+    },
+    {
+      id: "lishi-h02-q097", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 97, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2022年山东省聊城市中考·历史（图转文字；原始题号未标注）",
+      stem: "下列古钱币的形制与铸币文字蕴含着丰富的历史信息（图略）。这最适合用来研究，中国古代（ ）秦半两钱、唐开元通宝、契丹货币、西夏货币",
+      options: [{key:"A",text:"民族交融的加强"}, {key:"B",text:"冶铁技术的进步"}, {key:"C",text:"抑商政策的演变"}, {key:"D",text:"征税方式的变化"}],
+      answer: ["A"],
+      explanation: "秦朝的货币和唐朝的货币结合中国“天圆地方”的文化创制，而契丹和西夏的货币形态与中原王朝货币有一定的相似性，体现了其对中原文化的学习，反映了中国古代民族交融的加强。"
+    },
+    {
+      id: "lishi-h02-q098", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 98, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年江苏省淮安市中考·历史（原始题号未标注）",
+      stem: "诗歌、谚语往往折射出一定的历史信息。下列搭配不正确的是（ ）",
+      options: [{key:"A",text:"“苏湖熟，天下足。”——休养生息"}, {key:"B",text:"“朝为田舍郎，暮登天子堂。”——科举取士"}, {key:"C",text:"“做人莫做军，做铁莫做针。”——重文轻武"}, {key:"D",text:"“胡人有妇解汉音，汉女亦解调胡琴。”——民族交融"}],
+      answer: ["A"],
+      explanation: "本题为逆向选择题。“苏湖熟，天下足”反映宋代农业的发展情况，与休养生息无关；“朝为田舍郎，暮登天子堂”体现科举取士，“做人莫做军，做铁莫做针”反映宋朝重文轻武，“胡人有妇解汉音，汉女亦解调胡琴”反映民族交融。"
+    },
+    {
+      id: "lishi-h02-q099", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 99, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2023年江苏省徐州市中考·历史（图转文字；原始题号未标注）",
+      stem: "下图中不同朝代经济分布的变化说明（ ）汉代经济分布区、唐后期经济分布、宋代经济分布（图略）：汉代主要经济区位于北方黄河流域，唐后期主要经济区位于长江中下游地区，宋代主要经济区位于东南地区",
+      options: [{key:"A",text:"统一市场形成"}, {key:"B",text:"中央集权强化"}, {key:"C",text:"国家版图扩展"}, {key:"D",text:"经济重心南移"}],
+      answer: ["D"],
+      explanation: "汉代主要经济区位于北方黄河流域，唐后期主要经济区位于长江中下游地区，宋代主要经济区位于东南地区，由此可见古代经济重心南移。"
+    },
+    {
+      id: "lishi-h02-q100", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 100, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2023年湖南省常德市中考·历史（图转文字；原始题号未标注）",
+      stem: "下列是中国古代主要朝代（时期）沿革示意图（部分，图略），在相应的空格内依次填入秦→□→东汉→三国→西晋→……□→唐→……→□→明→清（ ）",
+      options: [{key:"A",text:"西汉、宋、元"}, {key:"B",text:"汉、东晋、元"}, {key:"C",text:"西汉、隋、元"}, {key:"D",text:"汉、五代、宋"}],
+      answer: ["C"],
+      explanation: "西汉灭亡后，刘秀于公元25年建立东汉，定都洛阳；隋朝灭亡后，618年李渊称帝，建立唐朝；1368年朱元璋称帝，建立明朝，随后明军占领元大都，结束了元朝的统治。依次应填西汉、隋、元。"
+    },
+    {
+      id: "lishi-h02-q101", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 101, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年山东省济南市中考·历史（原始题号未标注）",
+      stem: "元朝建立后，在吐蕃地区设立宣慰使司都元帅府，行使行政管理权，由中央机构直接统辖。这一“中央机构”是（ ）",
+      options: [{key:"A",text:"中书省"}, {key:"B",text:"宣政院"}, {key:"C",text:"枢密院"}, {key:"D",text:"御史台"}],
+      answer: ["B"],
+      explanation: "元朝建立后，对西藏地区行使管理权，在这一地区设立宣慰使司都元帅府，由宣政院直接管辖，掌管西藏的军民各项事务。"
+    },
+    {
+      id: "lishi-h02-q102", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 102, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年江苏省盐城市中考·历史（原始题号未标注）",
+      stem: "“我不要半星热血红尘洒，都只在八尺旗枪素练悬。等他四下里皆瞧见，这就是咱苌弘化碧，望帝啼鹃。……若果有一腔怨气喷如火，定要感的六出冰花滚似绵……从今以后，着这楚州亢旱三年!”该作品的作者是（ ）",
+      options: [{key:"A",text:"李清照"}, {key:"B",text:"辛弃疾"}, {key:"C",text:"马致远"}, {key:"D",text:"关汉卿"}],
+      answer: ["D"],
+      explanation: "题干内容出自元代关汉卿的《窦娥冤（节选）》，元代最优秀的杂剧作家是关汉卿，代表作是悲剧《窦娥冤》。"
+    },
+    {
+      id: "lishi-h02-q103", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 103, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2023年山东省青岛市中考·历史（图转文字；原始题号未标注）",
+      stem: "文物是鲜活的历史。下列元墓出土的杂剧陶俑（图略）反映了（ ）据题干图片，元墓出土的杂剧陶俑形态各异，有吹口哨的、有吹笛子的、有击节板的、有跳舞的",
+      options: [{key:"A",text:"都市文化生活"}, {key:"B",text:"商业发展规模"}, {key:"C",text:"海外贸易状况"}, {key:"D",text:"经济重心南移"}],
+      answer: ["A"],
+      explanation: "元墓出土的杂剧陶俑形态各异，有吹口哨的、有吹笛子的、有击节板的、有跳舞的，反映了都市文化生活的多样性。"
+    },
+    {
+      id: "lishi-h02-q104", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 104, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年四川省攀枝花市中考·历史（原始题号未标注）",
+      stem: "宋朝市民阶层不断壮大，市民文化生活丰富多彩。瓦子是娱乐兼营商业的场所，勾栏内商业广告琳琅满目。这反映了宋朝（ ）",
+      options: [{key:"A",text:"社会风气开放"}, {key:"B",text:"科学技术领先"}, {key:"C",text:"都市商业繁荣"}, {key:"D",text:"民族交融加强"}],
+      answer: ["C"],
+      explanation: "随着都市商业发展，宋代的市民阶层不断壮大，市民文化也丰富起来，开封城内出现了许多娱乐兼营商业的场所，叫作“瓦子”，勾栏内商业广告琳琅满目，反映出当时都市商业繁荣。"
+    },
+    {
+      id: "lishi-h02-q105", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 105, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年黑龙江省哈尔滨市中考·历史（原始题号未标注）",
+      stem: "某学生拟办一份历史手抄报，准备了下面的素材。据此推断这份手抄报的主题是（ ）北宋时的匠人毕昇发明活字印刷术；北宋末年，中国的海船上开始使用指南针；宋元时期，火药武器广泛用于战争",
+      options: [{key:"A",text:"统一多民族国家建立"}, {key:"B",text:"民族关系的不断发展"}, {key:"C",text:"宋元时期科学技术的成就"}, {key:"D",text:"中国古代经济重心的南移"}],
+      answer: ["C"],
+      explanation: "印刷术、指南针、火药都属于科技发展，材料反映的是宋元时期科学技术的进步。（原文“毕异”系“毕昇”的OCR误读，已订正。）"
+    },
+    {
+      id: "lishi-h02-q106", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 106, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2019年江苏省南京市中考·历史第16题（非选择题改编为选择题）",
+      stem: "两宋时期，“兴庆”是哪一政权的都城？（ ）",
+      options: [{key:"A",text:"辽"}, {key:"B",text:"西夏"}, {key:"C",text:"金"}, {key:"D",text:"南宋"}],
+      answer: ["B"],
+      explanation: "11世纪前期，党项族首领元昊称大夏皇帝，定都兴庆府，史称西夏。"
+    },
+    {
+      id: "lishi-h02-q107", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 107, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年广东省梅州市兴宁市宋声学校中考一模·历史（图转文字）",
+      stem: "唐太宗在家训《帝范·君体第一》中将其一生执政经验高度浓缩，其中有这样一句话：“夫民者，国之先；国者，君之本。”这体现了唐太宗（ ）",
+      options: [{key:"A",text:"以民为本"}, {key:"B",text:"勤俭节约"}, {key:"C",text:"虚心纳谏"}, {key:"D",text:"广纳贤才"}],
+      answer: ["A"],
+      explanation: "“夫民者，国之先；国者，君之本”的意思是人民是国家生存的根基，国家是君王统治的根本，体现了唐太宗以民为本的思想。"
+    },
+    {
+      id: "lishi-h04-q089", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 89, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年四川省眉山市中考·历史（原始题号未标注）",
+      stem: "“新中国成立初期，百废待兴，用于五年计划建设的有限财力，如果平均使用，可能一事无成。中共中央经过反复权衡和深入讨论，作出了优先发展重工业的决策。”这说明第一个五年计划（ ）",
+      options: [{key:"A",text:"改变了农业至上的传统观念"}, {key:"B",text:"实现各行业的均衡协调发展"}, {key:"C",text:"改变了中国工业落后的面貌"}, {key:"D",text:"体现了中国国情的客观要求"}],
+      answer: ["D"],
+      explanation: "在当时中国经济基础薄弱、财力有限的国情下，优先发展重工业是符合实际情况的决策；第一个五年计划只是初步改变了中国工业落后的面貌，“改变了”表述不准确。"
+    },
+    {
+      id: "lishi-h04-q090", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 90, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年四川省宜宾市中考·历史（表转文字；原始题号未标注）",
+      stem: "下表列出了沈阳飞机制造厂研发制造国产战斗机的进程。从仿制到自制，从设计到试飞，再到生产定型，历时三十余年。这反映了当时我国（ ）1951年：沈阳飞机制造厂创建，命名为“国营112厂”；1956年：第一架仿制的歼-5型战斗机试制成功；1965年：歼-8型战斗机设计工作全面展开；1969年：第一架摆脱仿制模式的歼-8型战斗机首次试飞成功；1986年：国务院、中央军委常规军工产品定型委员会批准歼-8型战斗机生产定型",
+      options: [{key:"A",text:"艰苦创业，领先世界"}, {key:"B",text:"独立自主，和平共处"}, {key:"C",text:"自主创新，开拓进取"}, {key:"D",text:"开放包容，互惠互利"}],
+      answer: ["C"],
+      explanation: "从仿制到自制，历时三十余年不断研发，体现了我国航空工业自主创新、开拓进取的精神；材料未提及“领先世界”，当时我国航空工业与世界先进水平有差距。"
+    },
+    {
+      id: "lishi-h04-q091", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 91, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年山西省中考·历史（图转文字；原始题号未标注）",
+      stem: "下图反映了我国社会主义工业化建设的成就（图略）：第一辆解放牌汽车驶下装配线、鞍山大型轧钢厂建成投产、武汉长江大桥通车。这些成就的取得主要得益于（ ）",
+      options: [{key:"A",text:"第一个五年计划实施"}, {key:"B",text:"《中华人民共和国宪法》的颁布"}, {key:"C",text:"科教兴国战略的制定"}, {key:"D",text:"国防力量和军队建设发展迅速"}],
+      answer: ["A"],
+      explanation: "“一五”计划（1953—1957年）重点发展重工业，图中“第一辆解放牌汽车驶下装配线”“鞍山大型轧钢厂建成投产”“武汉长江大桥通车”都是“一五”计划期间的标志性成就。"
+    },
+    {
+      id: "lishi-h04-q092", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 92, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2024年山东省威海市中考·历史（表转文字；原始题号未标注）",
+      stem: "如表是《人民日报》元旦社论标题（部分年份）。1956年的元旦社论标题是（ ）1956年：□；1980年：《迎接大有作为的年代》；1992年：《在改革开放中稳步发展》；2024年：《满怀信心以中国式现代化全面推进强国建设、民族复兴伟业》",
+      options: [{key:"A",text:"《将革命进行到底》"}, {key:"B",text:"《奋进在全面建设小康社会的征程上》"}, {key:"C",text:"《为全面地提早完成和超额完成五年计划而奋斗》"}, {key:"D",text:"《坚持四项基本原则是搞好改革、开放的根本保证》"}],
+      answer: ["C"],
+      explanation: "1953—1957年我国实施第一个五年计划。《人民日报》于1956年元旦发表题为《为全面地提早完成和超额完成五年计划而奋斗》的社论，明确提出了又多、又快、又好、又省的要求。"
+    },
+    {
+      id: "lishi-h04-q093", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 93, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年陕西省中考·历史（原始题号未标注）",
+      stem: "第一个五年计划期间，我国以苏联帮助兴建的156个项目为中心，先后施工1万多个工业项目，钢铁、煤炭、电力、机械制造等各个领域快速发展，捷报频传。苏联大规模援助中国的直接原因是（ ）",
+      options: [{key:"A",text:"中华人民共和国成立"}, {key:"B",text:"抗美援朝战争的影响"}, {key:"C",text:"三大改造的进行"}, {key:"D",text:"中国加入华约组织"}],
+      answer: ["B"],
+      explanation: "在抗美援朝战争中，中国得到了苏联的军事援助；苏联意识到一个强大的中国对其在远东的利益至关重要，因此提供了大规模的工业援助，帮助中国快速发展经济、增强国力。"
+    },
+    {
+      id: "lishi-h04-q094", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 94, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2023年甘肃省兰州市中考·历史（原始题号未标注）",
+      stem: "王树恩《新中国“一五计划”出台的台前幕后》中谈到：“1952年，现代工业在工农业总产值中的比重只有26．6%，重工业在工业总产值中的比重只有35．5%。”这表明建国初我国（ ）",
+      options: [{key:"A",text:"工业水平很高"}, {key:"B",text:"工业水平很低"}, {key:"C",text:"工业门类齐全"}, {key:"D",text:"农业水平高"}],
+      answer: ["B"],
+      explanation: "1952年现代工业在工农业总产值中的比重只有26．6%，重工业在工业总产值中的比重只有35．5%，表明制定第一个五年计划的现实国情是工业水平很低。"
+    },
+    {
+      id: "lishi-h04-q095", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 95, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2023年黑龙江省齐齐哈尔市中考·历史（原始题号未标注）",
+      stem: "为了有计划地进行社会主义建设，我国政府编制了发展国民经济的第一个五年计划。下列属于第一个五年计划期间取得的成就是（ ）",
+      options: [{key:"A",text:"建成武汉长江大桥"}, {key:"B",text:"人工合成结晶牛胰岛素"}, {key:"C",text:"建设大庆油田"}, {key:"D",text:"第一颗原子弹爆炸成功"}],
+      answer: ["A"],
+      explanation: "第一个五年计划从1953年开始执行，到1957年底绝大部分指标大幅度超额完成，1957年武汉长江大桥建成；人工合成结晶牛胰岛素是1965年，大庆油田于1959年发现，第一颗原子弹爆炸成功是1964年，均与题干时间不符。"
+    },
+    {
+      id: "lishi-h04-q096", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 96, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2023年湖北省宜昌市中考·历史（原始题号未标注）",
+      stem: "在社会主义革命和社会主义建设道路的探索过程中，我国取得巨大成就的指导思想是（ ）",
+      options: [{key:"A",text:"毛泽东思想"}, {key:"B",text:"邓小平理论"}, {key:"C",text:"“三个代表”重要思想"}, {key:"D",text:"科学发展观"}],
+      answer: ["A"],
+      explanation: "社会主义革命时期（1949年新中国成立到1956年社会主义制度确立）和社会主义建设道路的探索时期（1956年到1978年党的十一届三中全会之前），都是以毛泽东同志为核心的党的第一代中央领导集体带领全党全国人民进行的，指导思想是毛泽东思想。"
+    },
+    {
+      id: "lishi-h04-q097", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 97, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年广东省深圳市中考·历史（表转文字；原始题号未标注）",
+      stem: "1949年—1952年，中国工业生产总值中国营、私营经济所占比例如下表所示（表转文字）：1949年，国营经济占工业产值比例43．8%，私营经济占56．2%；1952年，国营经济占67．3%，私营经济占32．7%。这样的变化（ ）",
+      options: [{key:"A",text:"有利于社会性质的变化"}, {key:"B",text:"得益于三大改造的推进"}, {key:"C",text:"反映土地改革基本完成"}, {key:"D",text:"改变了工业落后的面貌"}],
+      answer: ["A"],
+      explanation: "1949—1952年是国民经济恢复时期，国营经济占比不断提升，公有制经济逐步发展，有利于向社会主义过渡，促进社会性质的变化；三大改造开始于1953年，时间不符。"
+    },
+    {
+      id: "lishi-h04-q098", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 98, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2024年江苏省淮安市中考·历史（图转文字；原始题号未标注）",
+      stem: "雷锋在日记中写道：“我每成长一分，前进一步，这里面都渗透着党的亲切关怀和苦心栽培。”雷锋生平大事记显示，他1954年加入农业合作社。这得益于（ ）",
+      options: [{key:"A",text:"实行土地改革"}, {key:"B",text:"实施第一个五年计划"}, {key:"C",text:"开展三大改造"}, {key:"D",text:"确立人民代表大会制度"}],
+      answer: ["C"],
+      explanation: "1953年开始，我国对农业、手工业、资本主义工商业进行社会主义改造，农业的社会主义改造采取建立生产合作社的方式进行；雷锋1954年加入农业合作社，得益于三大改造的开展。"
+    },
+    {
+      id: "lishi-h04-q099", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 99, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2024年江苏省常州市中考·历史（表转文字；原始题号未标注）",
+      stem: "下面的表格归纳了新中国初期，为巩固人民政权，建设新生的共和国，党和政府领导人民进行的一系列探索和斗争。表中的①②③处分别应填写（ ）1950年—1953年，抗美援朝，大大提高了我国国际地位；1950年—1952年，①，彻底摧毁了封建土地制度；1953年—1956年，②，社会主义制度在我国建立起来；1953年—1957年，③，我国开始改变工业落后的面貌",
+      options: [{key:"A",text:"三大改造、一五计划、土地改革"}, {key:"B",text:"三大改造、土地改革、一五计划"}, {key:"C",text:"土地改革、一五计划、三大改造"}, {key:"D",text:"土地改革、三大改造、一五计划"}],
+      answer: ["D"],
+      explanation: "1950年到1952年的土地改革彻底废除了两千多年来的封建土地剥削制度，①处填土地改革；1953年到1956年对农业、手工业和资本主义工商业进行社会主义改造，标志社会主义制度在我国建立起来，②处填三大改造；1953年到1957年开展第一个五年计划，开始初步改变我国工业落后的面貌，③处填一五计划。"
+    },
+    {
+      id: "lishi-h04-q100", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 100, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2023年江苏省镇江市中考·历史（原始题号未标注）",
+      stem: "上海水泥厂创办于20世纪20年代，在当时资本主义的经营管理和剥削制度下，工人的积极性不高，最高的产量还达不到设计能力的90%。1956年后，工人的积极性充分发挥出来，产量超过设计能力的40%。促使这一变化的主要原因是（ ）",
+      options: [{key:"A",text:"建立生产合作社"}, {key:"B",text:"实行公私合营"}, {key:"C",text:"开展大跃进运动"}, {key:"D",text:"推行一五计划"}],
+      answer: ["B"],
+      explanation: "上海水泥厂属于资本主义工商业，国家对资本主义工商业的社会主义改造通过公私合营改善了企业的管理制度和劳保条件，工人积极性充分发挥出来，促进了产量提高。"
+    },
+    {
+      id: "lishi-h04-q101", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 101, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年甘肃省平凉市中考·历史（原始题号未标注）",
+      stem: "20世纪50年代后期至60年代前期，在麦地稻田、车间矿洞、水渠大坝、茫茫荒原，中国人民进行各种“大会战”。“抓晴天，抢阴天，小风小雪是好天，汽灯底下是白天，争取一天当两天！”“宁肯少活20年，拼命也要拿下大油田！”等成为时代标语。这反映出（ ）",
+      options: [{key:"A",text:"国民经济恢复工作取得了初步成效"}, {key:"B",text:"农业合作化运动极大解放了农村生产力"}, {key:"C",text:"举国支援抗美援朝战争的坚定决心"}, {key:"D",text:"中国人民全面建设社会主义的高昂热情"}],
+      answer: ["D"],
+      explanation: "题干时间是20世纪50年代后期至60年代前期，对应全面建设社会主义时期（1956—1966年），材料内容体现了这时期中国人民在工业（如大庆油田开发）、农业等领域高涨的建设热情。"
+    },
+    {
+      id: "lishi-h04-q102", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 102, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年四川省德阳市中考·历史（原始题号未标注）",
+      stem: "1960年，“头上青天一顶，脚下荒原一片”，几万人一下子集中到人烟稀少的荒原上开发大油田，吃穿住都成难题。北风“嗖嗖”，大雪飘飘，零下40多摄氏度的冬天，没有房住就挤进地窝子，口粮严重不足就拣冻白菜和菜叶子充饥。这反映出当时（ ）",
+      options: [{key:"A",text:"清正廉洁的精神"}, {key:"B",text:"艰苦创业的精神"}, {key:"C",text:"严谨治学的精神"}, {key:"D",text:"改革创新的精神"}],
+      answer: ["B"],
+      explanation: "1960年大庆油田工人在极端艰苦条件下开发油田的场景，突出其不畏艰难、自力更生的精神，即艰苦创业的精神。"
+    },
+    {
+      id: "lishi-h04-q103", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 103, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年陕西省中考·历史（原始题号未标注）",
+      stem: "历史解释是指以史料为依据，客观地认识和评判历史的态度和方法。下列属于历史解释的是（ ）",
+      options: [{key:"A",text:"2012年，中国航空母舰“辽宁舰”交接入列"}, {key:"B",text:"2015年，中国第二炮兵部队更名为火箭军"}, {key:"C",text:"2016年，中国人民解放军成立五大战区，调整组建五大军种"}, {key:"D",text:"1949年以来，中国国防和军队建设发展迅速，取得了巨大成就"}],
+      answer: ["D"],
+      explanation: "“1949年以来，中国国防和军队建设发展迅速，取得了巨大成就”是对较长历史时期的整体状况进行的基于客观事实的评价和分析，属于历史解释；其余三项只是在陈述具体时间和事件，属于历史史实。"
+    },
+    {
+      id: "lishi-h04-q104", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 104, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年山东省东营市中考·历史（原始题号未标注）",
+      stem: "面对强国强军的时代要求，我国深化国防和军队改革，将中国人民解放军调整组建为五大军种，其中，火箭军的前身是（ ）",
+      options: [{key:"A",text:"海军"}, {key:"B",text:"空军"}, {key:"C",text:"第二炮兵部队"}, {key:"D",text:"战略支援部队"}],
+      answer: ["C"],
+      explanation: "2015年，第二炮兵部队更名为火箭军；2015年12月31日，中国人民解放军调整组建的五大军种包括陆军、海军、空军、火箭军和战略支援部队。"
+    },
+    {
+      id: "lishi-h05-q093", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 93, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2023年四川省乐山市中考·历史第14题",
+      stem: "出版于19世纪中期，提出“资本主义社会必将被没有阶级剥削和压迫的共产主义社会所取代”的著作是（ ）",
+      options: [{key:"A",text:"《人权宣言》"}, {key:"B",text:"《独立宣言》"}, {key:"C",text:"《资本论》"}, {key:"D",text:"《共产党宣言》"}],
+      answer: ["D"],
+      explanation: "《共产党宣言》发表于1848年，指出人类进入资本主义时代，整个社会日益分裂为两大对立阶级：资产阶级和无产阶级，资本主义社会必将被没有阶级剥削和压迫的共产主义社会所取代。"
+    },
+    {
+      id: "lishi-h05-q094", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 94, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2025年四川省自贡市中考·历史第14题",
+      stem: "从前车马很慢，人力畜力有局限。第一次工业革命后，火车的发明为人们提供了便捷廉价的交通工具，汽船的发明加强了洲际联系，开创了交通新纪元。新式交通工具的革新有赖于（ ）",
+      options: [{key:"A",text:"蒸汽机的改良"}, {key:"B",text:"电力广泛应用"}, {key:"C",text:"内燃机的发明"}, {key:"D",text:"化学工业兴起"}],
+      answer: ["A"],
+      explanation: "第一次工业革命中，蒸汽机经过瓦特改良后成为主要动力来源，直接推动了火车（蒸汽机车）和汽船的发展；电力、内燃机、化学工业属于第二次工业革命。"
+    },
+    {
+      id: "lishi-h05-q095", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 95, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2025年广东省梅州市兴宁市宋声学校中考一模·历史（图转文字）",
+      stem: "下图是一幅关于公元前2500年左右的亚非文明分布地图（图略），图中标示了古代埃及、两河流域、古代印度、古代中国等文明的位置。这些古代文明发生和发展的地理环境主要是（ ）",
+      options: [{key:"A",text:"大河流经"}, {key:"B",text:"环海多山"}, {key:"C",text:"平原很少"}, {key:"D",text:"岛屿众多"}],
+      answer: ["A"],
+      explanation: "古代埃及产生于尼罗河流域，两河流域文明产生于幼发拉底河和底格里斯河流域，古代印度文明产生于印度河流域，古代中国产生于黄河长江流域，这些文明古国都在大河流域诞生。"
+    },
+    {
+      id: "lishi-h05-q096", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 96, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "12世纪建立了巴黎大学、牛津大学；13世纪出现了剑桥大学；14世纪又有罗马大学、佛罗伦萨大学和维也纳大学相继建立起来。这些大学的名称充分说明中世纪大学（ ）",
+      options: [{key:"A",text:"与城市的兴起密切相关"}, {key:"B",text:"享有完全自由和自治权"}, {key:"C",text:"受益于商品经济的发展"}, {key:"D",text:"满足了社会分工的需要"}],
+      answer: ["A"],
+      explanation: "中世纪大学大多建立在城市中，反映了城市作为文化和教育中心的地位，这些大学都以城市命名，如巴黎、牛津、剑桥、罗马、佛罗伦萨和维也纳，表明它们的建立与这些城市的兴起和发展密切相关。"
+    },
+    {
+      id: "lishi-h05-q097", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 97, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "改编自2025年广东省梅州市兴宁市宋声学校中考一模·历史（表转文字）",
+      stem: "以下是一组有关中西方同一时期相关内容的对比表，其中“①②”处应填写的是（ ）西方：文艺复兴、人文主义、①、资本原始积累；中国：②、郑和下西洋、荡平倭患、葡萄牙人攫取澳门租住权",
+      options: [{key:"A",text:"①新航路开辟；②废除丞相"}, {key:"B",text:"①法国大革命；②废除丞相"}, {key:"C",text:"①工业革命的进行；②八股取士"}, {key:"D",text:"①美国独立战争；②设三司"}],
+      answer: ["A"],
+      explanation: "这些内容主要反映了15至16世纪的历史事件。新航路开辟发生在15至16世纪，是西方在文艺复兴时期的重要事件；废除丞相则是中国在同一时期明朝加强中央集权的政治改革。"
+    },
+    {
+      id: "lishi-h05-q098", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 98, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "“1764年，英国通过《食糖法》，对输入北美的食糖、糖浆、咖啡、丝绸、棉布等商品课以重税，同时规定英国需要的木材、皮革商品，殖民地只能输往英国。”这可以用来分析（ ）",
+      options: [{key:"A",text:"美国独立战争爆发的原因"}, {key:"B",text:"法国大革命的过程"}, {key:"C",text:"“三角贸易”的性质"}, {key:"D",text:"工业革命的影响"}],
+      answer: ["A"],
+      explanation: "英国对北美殖民地征收重税，并限制北美经济的发展，阻碍了北美资本主义发展；同时英国希望北美殖民地永远做它的原料产地和商品市场，从而引发了北美独立战争。"
+    },
+    {
+      id: "lishi-h05-q099", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 99, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "“它由一个内陆国家扩张成为一个濒临海洋的强国。它开始告别东方，走向西方；告别中古，走向近代；告别愚昧与落后，迈进现代化的门槛。”此观点适合评价（ ）",
+      options: [{key:"A",text:"彼得一世改革"}, {key:"B",text:"美国南北战争"}, {key:"C",text:"日本明治维新"}, {key:"D",text:"俄国十月革命"}],
+      answer: ["A"],
+      explanation: "彼得一世改革前，俄国是一个内陆国家，经济文化落后。彼得一世改革向西方学习，在军事、经济、文化教育等方面进行了一系列改革，使俄国成为濒临海洋的强国，开启了俄国近代化的进程。"
+    },
+    {
+      id: "lishi-h05-q100", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 100, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "“一方面，资本家攫取了大部分的社会财富，他们日益富裕；另一方面，广大工人获得的收入却难以糊口，他们对不公平的社会现状越来越不满。”据此可推断，工业化（ ）",
+      options: [{key:"A",text:"导致社会矛盾激化"}, {key:"B",text:"提高了妇女的社会地位"}, {key:"C",text:"致使教育水平降低"}, {key:"D",text:"大大提高了社会生产力"}],
+      answer: ["A"],
+      explanation: "随着工业革命的进行，社会贫富分化越来越明显，广大工人对社会不公平的现状越来越不满，社会矛盾激化。"
+    },
+    {
+      id: "lishi-h06-q095", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 95, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2025年安徽省滁州市中考一模·历史（图转文字）",
+      stem: "下图为1944年盟军在诺曼底登陆的场景（图略）。下图所示的军事行动（ ）",
+      options: [{key:"A",text:"加速了德国法西斯的灭亡"}, {key:"B",text:"使得意大利无条件投降"}, {key:"C",text:"使二战的规模空前扩大"}, {key:"D",text:"标志着欧洲战事的结束"}],
+      answer: ["A"],
+      explanation: "诺曼底登陆是第二次世界大战期间盟军在欧洲西线战场发起的一场大规模攻势，成功开辟了欧洲第二战场，使德国法西斯陷入两线作战的困境，大大加速了其灭亡的进程；意大利无条件投降发生在诺曼底登陆之前，珍珠港事件使二战达到最大规模，欧洲战事结束是在德国投降之后。"
+    },
+    {
+      id: "lishi-h06-q096", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 96, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年山东省淄博市中考一模·历史",
+      stem: "以下是李铭同学制作的图说历史卡片。据此判断，图说历史的主题应是（ ）1944年诺曼底登陆；1945年2月雅尔塔会议召开；1945年苏联红军攻克柏林；1945年八路军对日军发起大反攻",
+      options: [{key:"A",text:"秩序打破 走向战争"}, {key:"B",text:"绥靖纵容 战火速燃"}, {key:"C",text:"攻守易形 战争拐点"}, {key:"D",text:"同盟联合 共铸胜利"}],
+      answer: ["D"],
+      explanation: "1944年诺曼底登陆开辟了欧洲第二战场，1945年2月雅尔塔会议协调盟军行动，1945年苏联红军攻克柏林是苏联红军对德国法西斯的最后决战，1945年八路军对日军发起大反攻是抗日战争后期的反攻行动，上述四个事件都体现了反法西斯同盟在军事、政治等方面的合作，最终共同铸就了反法西斯战争的胜利。"
+    },
+    {
+      id: "lishi-h06-q097", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 97, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年天津市蓟州区中考一模·历史",
+      stem: "《华沙条约》规定：任何一个成员国如果受到武装攻击，其他缔约国将以一切方式进行援助。材料中的“缔约国”（ ）",
+      options: [{key:"A",text:"都是西欧的社会主义国家"}, {key:"B",text:"都加入了经济互助委员会"}, {key:"C",text:"自始至终没有退出过该组织"}, {key:"D",text:"实际上处在苏联的控制之下"}],
+      answer: ["D"],
+      explanation: "1955年，苏联同7个东欧社会主义国家缔结了《华沙条约》，华沙条约组织成立。华约实际上处在苏联的控制之下，是为了应对美国为首的北约成立的。"
+    },
+    {
+      id: "lishi-h06-q098", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 98, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年安徽省合肥市中考一模·历史",
+      stem: "1945年，美苏两国在朝鲜半岛以北纬38度线为界，分别接受日军投降，这就是“三八线”的来历。1961年，民主德国为阻止居民外流和西方势力的渗透，修筑了“反法西斯防卫墙”。这一“线”一“墙”的产生（ ）",
+      options: [{key:"A",text:"都是双方军事斗争的结果"}, {key:"B",text:"都预示世界局势趋向紧张"}, {key:"C",text:"都是美苏冷战的必然产物"}, {key:"D",text:"都推动了区域经济的发展"}],
+      answer: ["B"],
+      explanation: "三八线是冷战初期美苏势力划分的直接结果，柏林墙本质上是美苏在欧洲对抗的产物，这都为后来朝鲜半岛的分裂、德国的分裂埋下了隐患，预示着世界局势趋向紧张；三八线是美苏协商划分，未发生直接军事冲突，1945年冷战尚未开始。"
+    },
+    {
+      id: "lishi-h06-q099", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 99, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年广东省东莞市中考一模·历史",
+      stem: "20世纪六七十年代，拉丁美洲经济学家提出了“依附理论”。该理论认为在世界经济领域中，存在着“中心—外围”层次，“中心”国家造成了“外围”国家的不发展，“外围”国家应独立发展民族经济，逐渐摆脱依附关系。这一理论的提出和实施（ ）",
+      options: [{key:"A",text:"旨在切断与西方国家的联系"}, {key:"B",text:"意味着拉丁美洲民族意识开始觉醒"}, {key:"C",text:"有利于建立国际经济新秩序"}, {key:"D",text:"改变了不平等的国际经济分工体系"}],
+      answer: ["C"],
+      explanation: "“中心”国家指的是发达国家，“外围”国家指的是发展中国家，经济学家提出“外围”国家应独立发展民族经济，逐渐摆脱依附关系，这有利于建立有利于发展中国家的新秩序。"
+    },
+    {
+      id: "lishi-h01-q103", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 103, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年贵州省黔南州中考·历史（原始题号未标注）",
+      stem: "随着禅让制被打破，中国历史进入王位世袭的“家天下”时代。这一时代始于（ ）",
+      options: [{key:"A",text:"夏朝"}, {key:"B",text:"商朝"}, {key:"C",text:"西周"}, {key:"D",text:"东周"}],
+      answer: ["A"],
+      explanation: "禹的儿子启继位，世袭制代替禅让制，“公天下”变成“家天下”。"
+    },
+    {
+      id: "lishi-h01-q104", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 104, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2023年湖北省十堰市中考·历史（原始题号未标注）",
+      stem: "下列朝代建立的先后顺序正确的是（ ）",
+      options: [{key:"A",text:"夏、周、商"}, {key:"B",text:"夏、商、周"}, {key:"C",text:"商、夏、周"}, {key:"D",text:"周、夏、商"}],
+      answer: ["B"],
+      explanation: "约公元前2070年禹建夏；约公元前1600年汤建商；公元前1046年武王伐纣建西周。"
+    },
+    {
+      id: "lishi-h01-q105", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 105, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年四川省德阳市中考·历史（原始题号未标注）",
+      stem: "不同类型的史料为史学研究提供了载体，像商周的遗迹、秦汉的史书、唐宋的诗词、明清的档案等。其中史料价值最高的是（ ）",
+      options: [{key:"A",text:"商周的遗迹"}, {key:"B",text:"秦汉的史书"}, {key:"C",text:"唐宋的诗词"}, {key:"D",text:"明清的档案"}],
+      answer: ["A"],
+      explanation: "商周的遗迹属于第一手史料（原始史料），是当时社会直接留下的实物证据，最直接、最真实。"
+    },
+    {
+      id: "lishi-h01-q106", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 106, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年江苏省宿迁市中考·历史（原始题号未标注）",
+      stem: "“在郭家庄发掘的160号商代墓中，出土青铜礼器40件……器表均有精美的纹饰和族徽文字，还有28件青铜乐器和生产工具，220件青铜兵器和900多枚铜镞。”对上述材料解读准确的是（ ）",
+      options: [{key:"A",text:"青铜器种类单一"}, {key:"B",text:"器表上文字是甲骨文"}, {key:"C",text:"青铜器功能多样"}, {key:"D",text:"商代人缺乏审美意识"}],
+      answer: ["C"],
+      explanation: "出土青铜器有礼器、乐器、生产工具、兵器等，种类丰富，功能多样。"
+    },
+    {
+      id: "lishi-h01-q107", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 107, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年宁夏中考·历史（原始题号未标注）",
+      stem: "据考古发现，西周时期，祭祀、宴享等活动都按等级使用鼎、簋等，王及王室墓葬出土的鼎、簋等数量比其他贵族的数量大得多，而且锡含量高。这体现出西周时期（ ）",
+      options: [{key:"A",text:"中央集权制不断发展"}, {key:"B",text:"青铜礼器与贵族权力地位相结合"}, {key:"C",text:"贫富分化私有制产生"}, {key:"D",text:"青铜器的制作工艺高超且数量多"}],
+      answer: ["B"],
+      explanation: "礼器的类型和数量反映了权力的大小和严格的等级界限。"
+    },
+    {
+      id: "lishi-h01-q108", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 108, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年江西省中考·历史（图转文字；原始题号未标注）",
+      stem: "下图是甲骨文中的“史”字：“一个人手里拿一块用来记录的板，两只脚叉开站着”，指负责记录事情的人。“史”字的造字方法是（ ）",
+      options: [{key:"A",text:"象形"}, {key:"B",text:"指事"}, {key:"C",text:"形声"}, {key:"D",text:"假借"}],
+      answer: ["A"],
+      explanation: "象形是用图形和线条把物体外形特征勾画出来，“史”字采取象形造字法。"
+    },
+    {
+      id: "lishi-h01-q109", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 109, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2023年西藏中考·历史（原始题号未标注）",
+      stem: "甲骨文是中国已发现的古代文字中年代最早、体系较为完整的文字，对中国文字的形成与发展有深远的影响。目前所知，我国有文字可考的历史开始于（ ）",
+      options: [{key:"A",text:"夏朝"}, {key:"B",text:"商朝"}, {key:"C",text:"西周"}, {key:"D",text:"战国"}],
+      answer: ["B"],
+      explanation: "甲骨文是商周时期刻写在龟甲和兽骨上的文字，我国有文字可考的历史从商朝开始。"
+    },
+    {
+      id: "lishi-h01-q110", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 110, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年广东省深圳市中考·历史（原始题号未标注）",
+      stem: "公元前544年，鲁襄公宴请晋卿范献子，举行射礼时，鲁国公室竟凑不够6个熟悉礼仪又善用弓矢的官属，只好从大夫的家臣中借。这反映了（ ）",
+      options: [{key:"A",text:"铁制工具的推广"}, {key:"B",text:"分封制度的衰落"}, {key:"C",text:"社会经济的萧条"}, {key:"D",text:"兼并战争的残酷"}],
+      answer: ["B"],
+      explanation: "鲁国公室人才匮乏，需向大夫家臣借人，反映公室衰微、卿大夫崛起，分封制瓦解。"
+    },
+    {
+      id: "lishi-h01-q111", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 111, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年广东省深圳市中考·历史（原始题号未标注）",
+      stem: "春秋时期，许多诸侯国都在扩建自己的都城，如鲁都曲阜，秦都雍城其规模不小于周王都城洛阳，这体现了（ ）",
+      options: [{key:"A",text:"王室衰微"}, {key:"B",text:"政权林立"}, {key:"C",text:"沉迷享乐"}, {key:"D",text:"政治腐败"}],
+      answer: ["A"],
+      explanation: "诸侯国都城规模甚至不小于周王都洛邑，反映当时王室衰微的时代特征。"
+    },
+    {
+      id: "lishi-h01-q112", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 112, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年山东省济宁市中考·历史（原始题号未标注）",
+      stem: "东周时期，周桓王因不满郑国不来朝觐，率军征讨，结果战败而归。这一事件反映出当时（ ）",
+      options: [{key:"A",text:"周王室权力衰微"}, {key:"B",text:"郑国国君成为霸主"}, {key:"C",text:"周桓王霸道好战"}, {key:"D",text:"君主专制受到冲击"}],
+      answer: ["A"],
+      explanation: "周平王东迁后周王室统治力大减，诸侯不再听从王命，周桓王征讨郑国却战败而归，直接反映周王室权威和实力大幅下降。"
+    },
+    {
+      id: "lishi-h01-q113", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 113, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年江苏省扬州市中考·历史（原始题号未标注）",
+      stem: "扬州有历史记载的筑城记录始于吴王夫差开邗沟、筑邗城。当时应是（ ）",
+      options: [{key:"A",text:"春秋时期"}, {key:"B",text:"汉朝"}, {key:"C",text:"唐朝"}, {key:"D",text:"宋朝"}],
+      answer: ["A"],
+      explanation: "前770年到前476年是春秋时期，公元前486年吴王夫差开邗沟，贯通江淮。"
+    },
+    {
+      id: "lishi-h01-q114", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 114, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年四川省泸州市中考·历史（原始题号未标注）",
+      stem: "从春秋到战国，民族关系出现了重要变化。春秋时期还属于“四夷”的秦、楚等国，在战国时期已经认同于华夏，中原诸国也承认了秦、楚是华夏族的组成部分，与齐、燕、赵、魏、韩并称七雄，形成七个地区性的多民族国家。这表明（ ）",
+      options: [{key:"A",text:"华夏认同观念得到发展"}, {key:"B",text:"百家争鸣繁荣局面出现"}, {key:"C",text:"诸侯国之间的矛盾消除"}, {key:"D",text:"统一多民族封建国家建立"}],
+      answer: ["A"],
+      explanation: "春秋时被视为“夷狄”的秦、楚，到战国时被视为华夏族的组成部分，华夏认同观念渐趋强化。"
+    },
+    {
+      id: "lishi-h01-q115", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 115, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2023年山东省济宁市中考·历史（原始题号未标注）",
+      stem: "春秋时期，鲁国国君朝觐周王仅3次，而朝齐、晋、楚三国竟达33次之多。对此合理的解释是（ ）",
+      options: [{key:"A",text:"周王室地位已经衰落"}, {key:"B",text:"鲁国到王都路途遥远"}, {key:"C",text:"鲁国国君是春秋霸主"}, {key:"D",text:"周王不是鲁国的宗亲"}],
+      answer: ["A"],
+      explanation: "鲁国弃周天子转而投靠诸侯大国，体现周王室地位衰落，分封制失去对诸侯的有效约束。"
+    },
+    {
+      id: "lishi-h01-q116", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 116, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2023年江苏省苏州市中考·历史（表转文字；原始题号未标注）",
+      stem: "下表为《春秋战国铁器出土情况对比》。由此可知，当时（ ）表：广西平乐银山岭出土铁器181件、铁农具91件；河南辉县固围村93件、58件；长沙衡阳61座楚墓70余件、17件；辽宁抚顺莲花堡80余件、68件；山西长治分水岭36件、21件。",
+      options: [{key:"A",text:"铁器使用区域较为广泛"}, {key:"B",text:"铁农具制造技术成熟"}, {key:"C",text:"南方冶铁业较北方发达"}, {key:"D",text:"铁主要用于制造农具"}],
+      answer: ["A"],
+      explanation: "广西、河南、长沙、辽宁、山西等地均出土铁制器具，说明铁器使用区域较为广泛。"
+    },
+    {
+      id: "lishi-h01-q117", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 117, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年湖南省中考·历史（图转文字；原始题号未标注）",
+      stem: "小郑同学在学习某一历史事件时，设计了一张资料卡（见下图）。据此推测，他学习的是（ ）资料卡内容：政治上推行县制，加强中央集权；经济上鼓励耕织，生产粮食、布帛多的人可免除徭役；军事上奖励军功，对有军功者授予爵位并赏赐土地。",
+      options: [{key:"A",text:"商鞅变法"}, {key:"B",text:"孝文帝改革"}, {key:"C",text:"戊戌变法"}, {key:"D",text:"王安石变法"}],
+      answer: ["A"],
+      explanation: "推行县制、鼓励耕织、奖励军功均与商鞅变法内容完全契合。"
+    },
+    {
+      id: "lishi-h01-q118", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 118, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年河南省中考·历史（原始题号未标注）",
+      stem: "战国时期，当诸侯们摒弃出身背景，以人的才能为原则选任官员时，“布衣卿相”“养士”成为当时独特的风景线。材料反映了战国时期（ ）",
+      options: [{key:"A",text:"诸侯争霸导致社会动荡不安"}, {key:"B",text:"制度改革带来社会风气变化"}, {key:"C",text:"社会变革引起思想文化活跃"}, {key:"D",text:"百家争鸣提升士人思想素养"}],
+      answer: ["B"],
+      explanation: "战国各国为富国强兵推行变法，打破“世卿世禄制”，转而以才能选拔官员，社会风气从重视血缘转向重视才能。"
+    },
+    {
+      id: "lishi-h01-q119", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 119, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年黑龙江省中考·历史（原始题号未标注）",
+      stem: "以下是某同学在一节历史课堂上整理的笔记。由此可知，他本节课学习的内容是（ ）1．商鞅变法为秦国统一中国奠定基础。2．孝文帝改革增强了北魏实力。3．王安石变法使北宋政府的财政收入有所增加。",
+      options: [{key:"A",text:"经济重心南移"}, {key:"B",text:"改革推动发展"}, {key:"C",text:"国家走向统一"}, {key:"D",text:"君主专制强化"}],
+      answer: ["B"],
+      explanation: "商鞅变法、孝文帝改革、王安石变法均属不同时期的重大改革，都强调改革对国家发展的积极影响。"
+    },
+    {
+      id: "lishi-h01-q120", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 120, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年广西中考·历史（原始题号未标注）",
+      stem: "商鞅变法时期，军功是秦人获得政治权利的主要途径，国君的宗族没有军功也不能享受世袭爵位的特权。秦国的这一改革措施有利于（ ）",
+      options: [{key:"A",text:"改进生产技术"}, {key:"B",text:"增强军事实力"}, {key:"C",text:"维护周王统治"}, {key:"D",text:"完善户籍管理"}],
+      answer: ["B"],
+      explanation: "商鞅变法以军功授爵，废除宗族世袭特权，激励秦人奋勇杀敌，提升军队战斗力。"
+    },
+    {
+      id: "lishi-h01-q121", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 121, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年青海省西宁市中考·历史（原始题号未标注）",
+      stem: "蜀郡郡守于岷江修堤作堰、疏通水道，于是蜀沃野千里。该工程（ ）",
+      options: [{key:"A",text:"防御外敌的入侵"}, {key:"B",text:"促进商业贸易繁荣"}, {key:"C",text:"扩大手工业规模"}, {key:"D",text:"发挥防洪灌溉作用"}],
+      answer: ["D"],
+      explanation: "公元前256年，秦国蜀郡郡守李冰主持在岷江上修建都江堰，发挥防洪、灌溉、水运等多方面作用，成都平原成为沃野，被称为“天府之国”。"
+    },
+    {
+      id: "lishi-h01-q122", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 122, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年山东省德州市中考·历史（图转文字；原始题号未标注）",
+      stem: "文物是了解历史的重要依据。以下文物共同反映了春秋战国时期（ ）文物：铁农具、勾践剑、铜冰鉴。",
+      options: [{key:"A",text:"农业耕种技术的提高"}, {key:"B",text:"纺织业的进步"}, {key:"C",text:"冶炼铸造技术的发展"}, {key:"D",text:"煮盐业的兴盛"}],
+      answer: ["C"],
+      explanation: "铁农具、勾践剑、铜冰鉴都涉及铁和铜的冶炼，体现冶炼铸造技术的发展。"
+    },
+    {
+      id: "lishi-h01-q123", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 123, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年山东省青岛市中考·历史（原始题号未标注）",
+      stem: "公元前3世纪中期，赵国大儒荀卿在游历秦国后写道，“入境观其风俗：其百姓朴，其服不挑（佻），甚畏有司而顺……其百吏肃然，莫不恭俭。”下列最能推动这些“风俗”形成的是（ ）",
+      options: [{key:"A",text:"百家争鸣"}, {key:"B",text:"商鞅变法"}, {key:"C",text:"秦朝统一"}, {key:"D",text:"儒学传播"}],
+      answer: ["B"],
+      explanation: "商鞅变法推行严明法制和奖惩制度，形成秦国严肃、俭朴的社会风俗，百姓畏惧官吏，百吏肃然有序。"
+    },
+    {
+      id: "lishi-h01-q124", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 124, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年内蒙古中考·历史（原始题号未标注）",
+      stem: "春秋时期，社会经济有很大发展。尤其是春秋后期，新的生产工具和耕作方式出现，促进了农业上的深耕细作，并为开发山林、扩大耕地创造了条件。“新的生产工具和耕作方式”是指（ ）",
+      options: [{key:"A",text:"铁制农具和耧车"}, {key:"B",text:"曲辕犁和牛耕"}, {key:"C",text:"铁制农具和牛耕"}, {key:"D",text:"曲辕犁和耧车"}],
+      answer: ["C"],
+      explanation: "春秋时期开始出现铁农具，春秋末年已使用牛耕，战国时期牛耕进一步推广，铁制农具和牛耕的推广促进农业深耕细作。"
+    },
+    {
+      id: "lishi-h01-q125", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 125, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2023年内蒙古兴安盟中考·历史（图转文字；原始题号未标注）",
+      stem: "据《华阳国志·蜀志》记载：“水旱从人，不知饥馑。时无荒年，天下谓之‘天府’也。”这段史料记载反映的是战国后期的水利工程（ ）",
+      options: [{key:"A",text:"灵渠"}, {key:"B",text:"都江堰"}, {key:"C",text:"郑国渠"}, {key:"D",text:"隋朝大运河"}],
+      answer: ["B"],
+      explanation: "公元前256年，秦国蜀郡郡守李冰主持在成都附近的岷江上修建都江堰，使成都平原成为沃野，变成天府之国。"
+    },
+    {
+      id: "lishi-h01-q126", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 126, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2023年山东省聊城市中考·历史（原始题号未标注）",
+      stem: "“论至德者不和于俗，成大功者不谋于众。是以圣人苟可以强国，不法其故；苟可以利民，不循其礼。”这段话主要蕴含了（ ）",
+      options: [{key:"A",text:"赏罚分明的理念"}, {key:"B",text:"无为而治的观念"}, {key:"C",text:"为政以德的思想"}, {key:"D",text:"变革进取的精神"}],
+      answer: ["D"],
+      explanation: "圣人只要能够使国家强盛，就不必沿用旧的成法；只要能够利于百姓，就不必遵循旧的礼制，倡导变革进取。"
+    },
+    {
+      id: "lishi-h01-q127", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 127, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年吉林省中考·历史（原始题号未标注）",
+      stem: "春秋战国时期，创办私学，主张“有教无类”，扩大了受教育范围的大教育家是（ ）",
+      options: [{key:"A",text:"老子"}, {key:"B",text:"孔子"}, {key:"C",text:"墨子"}, {key:"D",text:"韩非"}],
+      answer: ["B"],
+      explanation: "孔子是儒家学派创始人，主张有教无类，打破贵族垄断教育的局面，创办私学，广收门徒。"
+    },
+    {
+      id: "lishi-h01-q128", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 128, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年四川省遂宁市中考·历史（原始题号未标注）",
+      stem: "朱绍侯等主编的《中国古代史》中写道：“到了战国时期，夺权胜利的地主阶级为了巩固和扩展利益，先后开展了社会改革，掀起了变法运动。面对当时的社会大变革，人们提出不同的主张，形成了‘百家争鸣’的局面。”作者意在说明（ ）",
+      options: [{key:"A",text:"人民群众是物质生产的主要承担者"}, {key:"B",text:"阶级斗争是历史发展的直接动力"}, {key:"C",text:"劳动在人类社会发展中的重要作用"}, {key:"D",text:"社会变革促进了思想文化的发展"}],
+      answer: ["D"],
+      explanation: "地主阶级夺权后开展社会改革、变法运动，面对社会大变革人们提出各种主张，形成百家争鸣，强调社会变革对思想文化的影响。"
+    },
+    {
+      id: "lishi-h01-q129", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 129, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年四川省达州市中考·历史（原始题号未标注）",
+      stem: "2025年5月，中共中央、国务院印发了修订后的《党政机关厉行节约反对浪费条例》。该条例精神与古代哪位思想家的主张一脉相承（ ）",
+      options: [{key:"A",text:"老子：无为而治"}, {key:"B",text:"孟子：实行仁政"}, {key:"C",text:"墨子：提倡节俭"}, {key:"D",text:"韩非：依法治国"}],
+      answer: ["C"],
+      explanation: "该条例精神与墨子主张节俭相一致。"
+    },
+    {
+      id: "lishi-h01-q130", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 130, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年安徽省中考·历史（原始题号未标注）",
+      stem: "春秋战国时期，某学派主张“圣人之道，为而不争”。该学派是（ ）",
+      options: [{key:"A",text:"儒家"}, {key:"B",text:"墨家"}, {key:"C",text:"道家"}, {key:"D",text:"法家"}],
+      answer: ["C"],
+      explanation: "道家强调顺应自然、无为而治，老子提出“上善若水，水善利万物而不争”，与题干“为而不争”一致。"
+    },
+    {
+      id: "lishi-h01-q131", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 131, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年山东省日照市中考·历史（原始题号未标注）",
+      stem: "荀子认为：人生而有欲求，而可供享用物质资料不足，因此需要制定礼仪，明确人们贫、富、贵、贱的分别，使社会有秩序发展。这表明荀子（ ）",
+      options: [{key:"A",text:"推崇仁政"}, {key:"B",text:"强调礼法并用"}, {key:"C",text:"主张礼治"}, {key:"D",text:"追求精神自由"}],
+      answer: ["C"],
+      explanation: "战国时期的荀子主张实行礼治，明确尊卑等级，以维系社会秩序。"
+    },
+    {
+      id: "lishi-h01-q132", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 132, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2024年山东省青岛市中考·历史（表转文字；原始题号未标注）",
+      stem: "某同学在读书时做了如下摘要。据此可知，这四位思想家（ ）摘要：老子主张“为无为，则无不治”；孔子主张“道之以德，齐之以礼”；墨子主张“夫尚贤者，政之本也”；韩非主张“圣人之治也，审于法禁”。",
+      options: [{key:"A",text:"都认可了儒家思想的主导地位"}, {key:"B",text:"都宣扬了以法治国的主张"}, {key:"C",text:"都满足了当时统治阶级的需求"}, {key:"D",text:"都提出了自己的治国方略"}],
+      answer: ["D"],
+      explanation: "四位思想家都提出了自己独特的治国理念或方略：老子无为而治，孔子德治与礼制，墨子尚贤，韩非法治。"
+    },
+    {
+      id: "lishi-h01-q133", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 133, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "1963年6月至7月，考古学家对黑龙江省莺歌岭遗址进行了发掘。其文化遗存有方形的半地穴式建筑、陶器、骨角器及少量磨制石器。据此推断，此遗址属于（ ）",
+      options: [{key:"A",text:"旧石器时代"}, {key:"B",text:"新石器时代"}, {key:"C",text:"青铜时代"}, {key:"D",text:"铁器时代"}],
+      answer: ["B"],
+      explanation: "新石器时代是以使用磨制石器为标志的人类物质文化发展阶段。"
+    },
+    {
+      id: "lishi-h01-q134", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 134, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史（图转文字）",
+      stem: "从下图中可以得到的信息是甲骨文（ ）（图示甲骨文的象形字、指事字、会意字、形声字）",
+      options: [{key:"A",text:"造字方法丰富多样"}, {key:"B",text:"出现年代领先他国"}, {key:"C",text:"记载的内容非常单一"}, {key:"D",text:"使用的时间最为悠久"}],
+      answer: ["A"],
+      explanation: "甲骨文已经具备汉字的构成方法，如象形字、指事字、会意字、形声字等。"
+    },
+    {
+      id: "lishi-h01-q135", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 135, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "下面材料反映的是周朝的（ ）封建亲戚，以蕃屏周。——《左传》",
+      options: [{key:"A",text:"禅让制"}, {key:"B",text:"分封制"}, {key:"C",text:"皇帝制"}, {key:"D",text:"郡县制"}],
+      answer: ["B"],
+      explanation: "西周实行分封制，周天子把土地、平民、奴隶分给亲属、功臣等，封他们为诸侯。"
+    },
+    {
+      id: "lishi-h01-q136", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 136, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史（图转文字）",
+      stem: "下图所示是刻有错金铭文的秦国铜虎符，铭文大意为：凡要调动50人以上的带甲兵士，左符要与君王的右符符合，才能调动秦国军队。该文物上的铭文意在强调（ ）",
+      options: [{key:"A",text:"当时中外交流很频繁"}, {key:"B",text:"严格考核官员"}, {key:"C",text:"君主对军权的绝对控制"}, {key:"D",text:"手工技术高超"}],
+      answer: ["C"],
+      explanation: "秦国军权掌握在君主手中，君主的权力高度集中，体现君主对军权的绝对控制。"
+    },
+    {
+      id: "lishi-h01-q137", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 137, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "西晋末年，北方汉族人往往选择在乡野之间依附宗族中的豪杰聚居，修建被称为“坞”的小型寨堡。寨堡周围往往既有险阻又有可以耕种和灌溉的土地。这一现象反映出当时北方（ ）",
+      options: [{key:"A",text:"政府加强对地方的控制"}, {key:"B",text:"贫瘠地区得到开发"}, {key:"C",text:"战乱频繁、社会动荡"}, {key:"D",text:"人口大量向南迁移"}],
+      answer: ["C"],
+      explanation: "西晋末年八王之乱、北方游牧民族内迁，战乱频繁、社会动荡。"
+    },
+    {
+      id: "lishi-h01-q138", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 138, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "迄今为止，考古学者发现年代最早的木构水井是在（ ）",
+      options: [{key:"A",text:"元谋人遗址"}, {key:"B",text:"北京人遗址"}, {key:"C",text:"山顶洞人遗址"}, {key:"D",text:"河姆渡遗址"}],
+      answer: ["D"],
+      explanation: "河姆渡遗址发现了年代最早的木构水井。"
+    },
+    {
+      id: "lishi-h01-q139", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 139, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "向汉武帝建议“罢黜百家，独尊儒术”的是（ ）",
+      options: [{key:"A",text:"孟子"}, {key:"B",text:"韩非"}, {key:"C",text:"主父偃"}, {key:"D",text:"董仲舒"}],
+      answer: ["D"],
+      explanation: "董仲舒向汉武帝建议“罢黜百家，独尊儒术”。"
+    },
+    {
+      id: "lishi-h01-q140", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 140, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "北魏孝文帝即位后，推行汉化措施，规定官员在朝廷中必须使用（ ）",
+      options: [{key:"A",text:"汉语"}, {key:"B",text:"鲜卑语"}, {key:"C",text:"匈奴语"}, {key:"D",text:"蒙古语"}],
+      answer: ["A"],
+      explanation: "北魏孝文帝推行汉化措施，规定官员在朝廷中必须使用汉语。"
+    },
+    {
+      id: "lishi-h01-q141", chapterId: 1, chapter: "七年级上册 · 中国古代史（史前至南北朝）",
+      number: 141, type: "judge", meta: "判断题",
+      grade: "七上", stage: "7-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "老子是春秋后期楚国人，道家学派的创始人。",
+      options: [],
+      answer: ["true"],
+      explanation: "老子是春秋后期楚国人，道家学派的创始人，说法正确。"
+    },
+    {
+      id: "lishi-h02-q108", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 108, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2023年辽宁省阜新市中考·历史（原始题号未标注）",
+      stem: "元朝的疆域“北逾阴山，西极流沙，东尽辽左，南越海表”，超越汉朝和唐朝。为加强对全国的有效统治，元朝实行了（ ）",
+      options: [{key:"A",text:"分封制"}, {key:"B",text:"郡县制"}, {key:"C",text:"刺史制度"}, {key:"D",text:"行省制度"}],
+      answer: ["D"],
+      explanation: "元世祖忽必烈在中央设中书省，在地方设行中书省，简称行省，行省制度为省级行政制度的形成奠定了基础。"
+    },
+    {
+      id: "lishi-h02-q109", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 109, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "专题05《辽宋夏金元时期：民族关系发展和社会变化》讲义（解析版）变式题（原始题号未标注）",
+      stem: "谢和耐在《南宋社会生活史》中说：“（宋代中国）现代化的程度令人吃惊，货币经济、纸钞、流通票据、高度发展的茶盐企业非常独特……”对此材料解读正确的是（ ）",
+      options: [{key:"A",text:"银企之间票据流通频繁"}, {key:"B",text:"宋代茶盐企业也采取现代管理制度"}, {key:"C",text:"宋代社会商品经济活跃"}, {key:"D",text:"中国早在宋代已经进入现代化行列"}],
+      answer: ["C"],
+      explanation: "宋朝货币经济、纸钞、流通票据发达，说明宋朝商品经济非常活跃。"
+    },
+    {
+      id: "lishi-h02-q110", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 110, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "专题05《辽宋夏金元时期：民族关系发展和社会变化》讲义（解析版）变式题（原始题号未标注）",
+      stem: "在这种解放性的发明的刺激下，中国文学像一股奔放的洪流滚滚而来。古代的经典有成百种的版本，成千种的注释。从来没有人能够像宋朝的学者这样支配文化。材料中解放性发明的发明者是（ ）",
+      options: [{key:"A",text:"蔡伦"}, {key:"B",text:"毕昇"}, {key:"C",text:"李冰"}, {key:"D",text:"李春"}],
+      answer: ["B"],
+      explanation: "“解放性的发明”指活字印刷术，其发明者是北宋毕昇。"
+    },
+    {
+      id: "lishi-h02-q111", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 111, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "《蔡忠惠公文集》中写道：“今世用人，大率以文词进。大臣，文士也；近伺之臣，文士也……边防大帅，文士也；天下转运使，文士也；虽有武臣，盖仅有也。”这一现象体现的统治策略是（ ）",
+      options: [{key:"A",text:"以法治国"}, {key:"B",text:"重文轻武"}, {key:"C",text:"重农抑商"}, {key:"D",text:"无为而治"}],
+      answer: ["B"],
+      explanation: "宋太祖有意重用文臣掌握军政大权，宋太宗继续采取抑制武将、提升文官地位的政策，文臣统兵格局逐渐形成。"
+    },
+    {
+      id: "lishi-h02-q112", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 112, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "《元史·地理志》记载：“元有天下，薄海内外，人迹所及，皆置驿传，使驿往来，如行国中。”上述材料反映了元朝（ ）",
+      options: [{key:"A",text:"农业经济发展"}, {key:"B",text:"文明辐射四方"}, {key:"C",text:"丝绸之路受阻"}, {key:"D",text:"陆路交通发达"}],
+      answer: ["D"],
+      explanation: "元代设置大量驿站，形成覆盖全国的陆路交通网，陆路向西通往中亚、西亚及东欧。"
+    },
+    {
+      id: "lishi-h02-q113", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 113, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "曹雪芹在《红楼梦》中提出了自己“事迹原委，可以消愁破闷，歪诗熟话，可以喷饭供酒”的创作主张，反映了明清小说在创作理念上的世俗化、生活化。这种创作理念体现了（ ）",
+      options: [{key:"A",text:"君主专制的衰落"}, {key:"B",text:"市民阶层的审美追求"}, {key:"C",text:"中外文化的交流"}, {key:"D",text:"古典小说的渐趋成熟"}],
+      answer: ["B"],
+      explanation: "随着商品经济发展和市民文化繁荣，清代小说创作大放异彩，体现市民阶层的审美追求。"
+    },
+    {
+      id: "lishi-h02-q114", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 114, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "在位20多年，开创了唐朝“贞观之治”盛世局面的是（ ）",
+      options: [{key:"A",text:"秦始皇"}, {key:"B",text:"汉高祖"}, {key:"C",text:"隋文帝"}, {key:"D",text:"唐太宗"}],
+      answer: ["D"],
+      explanation: "唐太宗在位20多年，开创了唐朝“贞观之治”盛世局面。"
+    },
+    {
+      id: "lishi-h02-q115", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 115, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "词风委婉、细腻、清秀的宋代女词人是（ ）",
+      options: [{key:"A",text:"李白"}, {key:"B",text:"苏轼"}, {key:"C",text:"李清照"}, {key:"D",text:"辛弃疾"}],
+      answer: ["C"],
+      explanation: "李清照是词风委婉、细腻、清秀的宋代女词人。"
+    },
+    {
+      id: "lishi-h02-q116", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 116, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "北宋末年，中国的海船上开始使用（ ）",
+      options: [{key:"A",text:"罗盘"}, {key:"B",text:"指南针"}, {key:"C",text:"司南"}, {key:"D",text:"磁石"}],
+      answer: ["B"],
+      explanation: "北宋末年，中国的海船上开始使用指南针。"
+    },
+    {
+      id: "lishi-h02-q117", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 117, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "中国历史上有许多大治之年。唐玄宗统治前期“留心理道，革去弊讹，不六七年，天下大理。”材料中“天下大理”的局面被誉为（ ）",
+      options: [{key:"A",text:"文景之治"}, {key:"B",text:"贞观之治"}, {key:"C",text:"开元盛世"}, {key:"D",text:"康乾盛世"}],
+      answer: ["C"],
+      explanation: "唐玄宗统治前期，年号“开元”，政局稳定，经济繁荣，被誉为“开元盛世”。"
+    },
+    {
+      id: "lishi-h02-q118", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 118, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "下列是某校历史学习小组进行《一座城门见证唐朝历史》的主题探究时收集的材料（唐朝开远门、文成公主与吐蕃和亲、大秦国僧人、胡商）。材料反映出唐朝（ ）",
+      options: [{key:"A",text:"中外交往友好共处"}, {key:"B",text:"人才汇集经济繁荣"}, {key:"C",text:"兼容并包繁荣开放"}, {key:"D",text:"民族交融国家统一"}],
+      answer: ["C"],
+      explanation: "唐蕃和亲促进了吐蕃经济和社会发展；当时国内各族和国外的商人、使者、艺人、学子、僧侣、工匠等云集长安，反映唐朝兼容并包、繁荣开放。"
+    },
+    {
+      id: "lishi-h02-q119", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 119, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "“日本前后共任命19次遣唐使节团，成行15次。另外还有10次非正式的日本使者，唐朝也10次派使节团访问日本。遣唐使节团成员早期200人左右，后期多达到500人。”这段材料不能说明的是（ ）",
+      options: [{key:"A",text:"唐代文化以其独特的魅力辐射邻近国家"}, {key:"B",text:"唐朝兼收并蓄的对外政策，促进了中日文化交流与发展"}, {key:"C",text:"日本遣唐使团次数多，规模大"}, {key:"D",text:"通过吸收盛唐先进文化，日本从奴隶社会过渡到封建社会"}],
+      answer: ["D"],
+      explanation: "材料说明唐代文化辐射邻近国家、唐朝兼收并蓄促进中日文化交流、遣唐使团次数多规模大；无法得知日本从奴隶社会过渡到封建社会。"
+    },
+    {
+      id: "lishi-h02-q120", chapterId: 2, chapter: "七年级下册 · 中国古代史（隋唐至明清）",
+      number: 120, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "17—18世纪，当欧洲上空的“理性之光”将人们引向光明，东方的中国人正在逐步被禁锢于“思想的牢笼。”“思想的牢笼”指的是（ ）",
+      options: [{key:"A",text:"焚书坑儒"}, {key:"B",text:"罢黜百家，独尊儒术"}, {key:"C",text:"八股取文、文字狱"}, {key:"D",text:"闭关锁国"}],
+      answer: ["C"],
+      explanation: "17—18世纪是我国明清统治时期，明清实行八股取士和文字狱，钳制思想。"
+    },
+    {
+      id: "lishi-h04-q105", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 105, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年江苏省扬州市中考·历史（图转文字；原始题号未标注）",
+      stem: "下图为1954年发行的纪念邮票《普选》。下列表述中与之关联最密切的是（ ）",
+      options: [{key:"A",text:"和平共处五项原则的提出"}, {key:"B",text:"人民代表大会制度的确立"}, {key:"C",text:"第一个五年计划超额完成"}, {key:"D",text:"“一国两制”构想的实践"}],
+      answer: ["B"],
+      explanation: "1954年召开第一届全国人民代表大会，其召开的基础是通过广泛的普选产生人大代表，第一届全国人民代表大会确立了人民代表大会制度为我国的根本政治制度。"
+    },
+    {
+      id: "lishi-h04-q106", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 106, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年广东省广州市中考·历史（原始题号未标注）",
+      stem: "1965年，卫生部响应毛主席“把医疗卫生工作的重点放到农村去”的号召，大力培训农村卫生人员，为百姓提供简单的医疗服务，人民健康水平从而得到普遍提升。这体现了我国（ ）",
+      options: [{key:"A",text:"民族区域自治的合理性"}, {key:"B",text:"普及义务教育的紧迫性"}, {key:"C",text:"社会主义制度的优越性"}, {key:"D",text:"推动西部开发的前瞻性"}],
+      answer: ["C"],
+      explanation: "卫生部将医疗卫生资源向农村倾斜，提升农村人民健康水平，正是社会主义制度下以人民为中心的发展理念的体现。"
+    },
+    {
+      id: "lishi-h04-q107", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 107, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2023年湖南省邵阳市中考·历史（表转文字；原始题号未标注）",
+      stem: "下边是张燕同学制作的“中国现代史大事年表”学习卡片中的1953年部分，其中错误的一项是（ ）1953年：A．开始实施“一五计划”；B．抗美援朝战争结束；C．首次提出和平共处五项原则；D．我国进入社会主义初级阶段。",
+      options: [{key:"A",text:"A"}, {key:"B",text:"B"}, {key:"C",text:"C"}, {key:"D",text:"D"}],
+      answer: ["D"],
+      explanation: "1956年底三大改造完成，标志社会主义基本制度在我国建立起来，我国从此进入社会主义初级阶段；1953年开始实施“一五计划”，抗美援朝战争结束，首次提出和平共处五项原则，A、B、C均符合史实。"
+    },
+    {
+      id: "lishi-h04-q108", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 108, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年贵州省贵阳市中考·历史（原始题号未标注）",
+      stem: "下列处应填写的人物分别是（ ）1960年，某人参加中国人民解放军，多次立功受奖。他以公而忘私、助人为乐的共产主义风格和言行一致的工作作风，成为全国人民学习的榜样。1962年，某人任河南兰考县委书记，为了改变当地的落后面貌，虽然身患重病，仍顽强工作，直到生命的最后一息，被人民称颂为“党的好干部”。",
+      options: [{key:"A",text:"王进喜、雷锋"}, {key:"B",text:"雷锋、焦裕禄"}, {key:"C",text:"王进喜、焦裕禄"}, {key:"D",text:"雷锋、邓稼先"}],
+      answer: ["B"],
+      explanation: "雷锋是解放军战士，以无私奉献闻名；焦裕禄是兰考县委书记，带病工作直至去世。"
+    },
+    {
+      id: "lishi-h04-q109", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 109, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年江苏省苏州市中考·历史（原始题号未标注）",
+      stem: "1956年，我国的社会主义基本制度建立起来后，开始了艰辛的探索，取得了伟大的建设成就。其中在当时世界上居于领先地位的是（ ）",
+      options: [{key:"A",text:"第一辆解放牌汽车诞生"}, {key:"B",text:"建成武汉长江大桥"}, {key:"C",text:"第一颗原子弹爆炸成功"}, {key:"D",text:"人工合成结晶牛胰岛素"}],
+      answer: ["D"],
+      explanation: "人工合成结晶牛胰岛素（1965年）为世界首次，开创人工合成蛋白质先河，属国际领先。"
+    },
+    {
+      id: "lishi-h04-q110", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 110, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年贵州省贵阳市中考·历史（原始题号未标注；图转文字）",
+      stem: "下图为国防建设的成就拼图，①辽宁舰 ②火箭军 ③歼-20。以上图片反映的主题是（ ）",
+      options: [{key:"A",text:"国防建设的成就"}, {key:"B",text:"新中国成立初期外交成就"}, {key:"C",text:"改革开放后科技成就"}, {key:"D",text:"改革开放后农村经济体制改革"}],
+      answer: ["A"],
+      explanation: "图片展示了辽宁舰、火箭军、歼-20等国防建设成就。"
+    },
+    {
+      id: "lishi-h04-q111", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 111, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2023年海南省中考·历史（原始题号未标注；表转文字）",
+      stem: "某同学整理了2012-2021年国防费占GDP的比重图、2022年世界主要国家军费开支数据表，分析认为中国国防费占GDP的比重较低，军费开支远低于美国。这表明（ ）",
+      options: [{key:"A",text:"国防建设落后于经济发展"}, {key:"B",text:"国防费占GDP比重越高越好"}, {key:"C",text:"我国军费开支远超美国"}, {key:"D",text:"富国与强军的统一"}],
+      answer: ["D"],
+      explanation: "2012-2021年中国国防费占GDP的比重维持在1.3%左右，军费开支远低于美国，体现富国与强军的统一。"
+    },
+    {
+      id: "lishi-h04-q112", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 112, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2023年四川省乐山市中考·历史（图转文字）",
+      stem: "改革开放以来，中国共产党总结历史经验，不断艰辛探索，找到了实现中华民族伟大复兴的正确道路。下图所示内容（1982年提出建设有中国特色的社会主义……2022年提出以中国式现代化全面推进中华民族伟大复兴）的主题是（ ）",
+      options: [{key:"A",text:"中国特色社会主义的发展历程"}, {key:"B",text:"对外开放格局的形成过程"}, {key:"C",text:"社会主义市场经济体制的建立"}, {key:"D",text:"社会主义民主政治的发展"}],
+      answer: ["A"],
+      explanation: "图中所示的是中国特色社会主义的发展历程。"
+    },
+    {
+      id: "lishi-h04-q113", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 113, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年四川省自贡市中考·历史（图转文字）",
+      stem: "下图为新华社记者于20世纪50年代初拍摄的一张珍贵照片（选自《国家记忆：新中国70年影像志》）：雇农“郁金友分到伍畝（同‘五亩’）田”，准备插到地里去做标帜。与此相关的史事是（ ）",
+      options: [{key:"A",text:"土地改革"}, {key:"B",text:"农业合作化运动"}, {key:"C",text:"人民公社化运动"}, {key:"D",text:"家庭联产承包责任制"}],
+      answer: ["A"],
+      explanation: "20世纪50年代初，我国开展土地改革，废除封建剥削土地制度，实行农民土地所有制。"
+    },
+    {
+      id: "lishi-h04-q114", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 114, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年四川省自贡市中考·历史",
+      stem: "1978年12月18日，党的重要会议在北京召开。有学者指出：这次会议重新确立了党的思想路线、政治路线和组织路线，给严冬带来了春天的讯息，具有划时代意义。对“划时代意义”解读正确的是（ ）",
+      options: [{key:"A",text:"开天辟地，焕然一新"}, {key:"B",text:"多党合作，政治协商"}, {key:"C",text:"民主集中，当家作主"}, {key:"D",text:"改革开放，伟大转折"}],
+      answer: ["D"],
+      explanation: "中共十一届三中全会作出改革开放决策，是新中国成立以来党的历史上具有深远意义的伟大转折。"
+    },
+    {
+      id: "lishi-h04-q115", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 115, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年四川省自贡市中考·历史",
+      stem: "科技兴则民族兴，科技强则国家强。改革开放以来，墨子“传信”、神舟飞天、高铁奔驰、“天眼”探空、北斗组网、超算“发威”、C919首飞、“福建舰”下海，中国科技全方位突破。这反映出（ ）",
+      options: [{key:"A",text:"生物科学技术突破"}, {key:"B",text:"文化事业迅速发展"}, {key:"C",text:"对外开放日益扩大"}, {key:"D",text:"综合国力不断提升"}],
+      answer: ["D"],
+      explanation: "科技是综合国力的重要组成部分，中国科技全方位突破反映综合国力不断增强。"
+    },
+    {
+      id: "lishi-h04-q116", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 116, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史（图转文字）",
+      stem: "下图为1953年出版的《我们热爱劳动》年画。该作品反映的时代风貌是（ ）",
+      options: [{key:"A",text:"抗美援朝保家卫国"}, {key:"B",text:"一五计划崇尚劳动"}, {key:"C",text:"双百方针激发活力"}, {key:"D",text:"改革开放树立新风"}],
+      answer: ["B"],
+      explanation: "“一五”计划时期崇尚劳动的时代风貌。"
+    },
+    {
+      id: "lishi-h04-q117", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 117, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "1985年3月23日，国务院下发了《国务院关于营口市享受沿海开放城市某些权限的批复》，作为全国第一批沿海开放城市，营口市正以开放的姿态融入全球发展浪潮。以下城市中属于我国第一批沿海开放城市的是（ ）",
+      options: [{key:"A",text:"深圳"}, {key:"B",text:"汕头"}, {key:"C",text:"厦门"}, {key:"D",text:"大连"}],
+      answer: ["D"],
+      explanation: "1984年5月，国家确定大连等十四个城市为第一批沿海开放城市；深圳、汕头、厦门是1980年设置的经济特区。"
+    },
+    {
+      id: "lishi-h04-q118", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 118, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "澳门自1999年回归以来，社会稳定，经济快速发展，市民安居乐业。澳门同胞积极参与粤港澳大湾区建设。澳门回归与发展，主要归功于（ ）",
+      options: [{key:"A",text:"“一国两制”构想的实行"}, {key:"B",text:"谈判双方的共同努力"}, {key:"C",text:"“两弹一星”的成功研制"}, {key:"D",text:"两岸关系历史性突破"}],
+      answer: ["A"],
+      explanation: "1999年在“一国两制”构想指导下，澳门顺利回归祖国，后经济取得快速发展。"
+    },
+    {
+      id: "lishi-h04-q119", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 119, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "中共十一届三中全会以后，邓小平的重要贡献有（ ）①提出建设有中国特色的社会主义 ②签署中国加入世界贸易组织议定书 ③在党的十三大上阐明社会主义初级阶段理论 ④提出党在社会主义初级阶段的基本路线 ⑤南方视察途中，发表了一系列重要谈话",
+      options: [{key:"A",text:"①③④⑤"}, {key:"B",text:"①②③④"}, {key:"C",text:"②③④⑤"}, {key:"D",text:"①②④⑤"}],
+      answer: ["A"],
+      explanation: "1982年中共十二大邓小平提出建设有中国特色的社会主义；1987年十三大阐明社会主义初级阶段理论、概括党在社会主义初级阶段的基本路线；1992年南方谈话；签署中国加入世界贸易组织议定书是2001年，邓小平已经逝世。"
+    },
+    {
+      id: "lishi-h04-q120", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 120, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "由于美国与中国的贸易关系恶化，尤其是华为、中兴等一系列中国品牌被列入美国所谓的“实体名单”，中国科技制造业底层技术，芯片的自主化能力就被民众广泛关注，多数网民都认为科学技术应得到更多的重视，实现科技强国，以下属于我国为实现科技强国而制定的政策措施是（ ）",
+      options: [{key:"A",text:"九年义务教育"}, {key:"B",text:"西部大开发战略"}, {key:"C",text:"“星球大战计划”"}, {key:"D",text:"“863计划”"}],
+      answer: ["D"],
+      explanation: "1986年国务院组织论证“863计划”，实施有力推动了我国高技术的进步。"
+    },
+    {
+      id: "lishi-h04-q121", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 121, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "建国初期中国民主同盟主席张澜在政协会议上说：“我们的新制度，当然放弃了旧民主主义中所谓的总统制、内阁制那一套陈腐的旧东西，同时我们亦不同于苏联及东欧各国的政权治权合一的制度。根据我们的民主集中制，中国人民把政权掌握在自己的手里，而人民又确确实实有了一个集中行使立法权和行政权的最高权力机关。这是理论与实际一致的一种制度。”这个“新制度”指的是（ ）",
+      options: [{key:"A",text:"人民代表大会制度"}, {key:"B",text:"多党合作和政治协商制度"}, {key:"C",text:"民族区域自治制度"}, {key:"D",text:"“一国两制”"}],
+      answer: ["A"],
+      explanation: "人民代表大会制度为我国的根本政治制度，人民代表大会为国家最高权力机关。"
+    },
+    {
+      id: "lishi-h04-q122", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 122, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "2019年是中华人民共和国成立（ ）",
+      options: [{key:"A",text:"50周年"}, {key:"B",text:"70周年"}, {key:"C",text:"90周年"}, {key:"D",text:"100周年"}],
+      answer: ["B"],
+      explanation: "1949年中华人民共和国成立，2019年是成立70周年。"
+    },
+    {
+      id: "lishi-h04-q123", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 123, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "1950年10月，在抗美援朝战争中担任中国人民志愿军司令员的是（ ）",
+      options: [{key:"A",text:"朱德"}, {key:"B",text:"陈毅"}, {key:"C",text:"彭德怀"}, {key:"D",text:"刘伯承"}],
+      answer: ["C"],
+      explanation: "1950年10月，彭德怀担任中国人民志愿军司令员。"
+    },
+    {
+      id: "lishi-h04-q124", chapterId: 4, chapter: "八年级下册 · 中国现代史",
+      number: 124, type: "judge", meta: "判断题",
+      grade: "八下", stage: "8-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "邓小平是我国改革开放和社会主义现代化建设的总设计师。",
+      options: [],
+      answer: ["true"],
+      explanation: "邓小平是我国改革开放和社会主义现代化建设的总设计师，说法正确。"
+    },
+    {
+      id: "lishi-h05-q101", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 101, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "843年，查理曼的三个孙子缔结条约，将帝国一分为三，形成以后德意志、法兰西和意大利三个国家的雏形。843年处于（ ）",
+      options: [{key:"A",text:"公元前8世纪中期"}, {key:"B",text:"公元8世纪中期"}, {key:"C",text:"公元前9世纪中期"}, {key:"D",text:"公元9世纪中期"}],
+      answer: ["D"],
+      explanation: "843年处于公元9世纪中期（一个世纪前30年为前期，中间40年为中期，后30年为后期）。"
+    },
+    {
+      id: "lishi-h05-q102", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 102, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "796年，法兰克王国国王查理写信给教皇利奥三世：“我的天职是用武力保卫教会，使它不受异教徒的攻击蹂躏”（ ）",
+      options: [{key:"A",text:"开始信仰基督教"}, {key:"B",text:"普遍建立起封建制度"}, {key:"C",text:"王权和教权互相利用"}, {key:"D",text:"普遍建立起庄园制度"}],
+      answer: ["C"],
+      explanation: "材料表述了用王权保卫教权，体现王权和教权互相利用。"
+    },
+    {
+      id: "lishi-h05-q103", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 103, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "新航路开辟后，欧洲人把美洲的玉米、土豆等作物传遍世界，带来了饮食革命和世界性的人口爆炸；同时也把鼠疫、流感等带到美洲，致使大量印第安人死亡。这反映了（ ）",
+      options: [{key:"A",text:"物种交换的多元影响"}, {key:"B",text:"殖民扩张的残酷性"}, {key:"C",text:"美洲的文明优于欧洲"}, {key:"D",text:"世界市场最终形成"}],
+      answer: ["A"],
+      explanation: "新航路开辟促进了食物物种交流和疾病传播，反映物种交换的多元影响。"
+    },
+    {
+      id: "lishi-h05-q104", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 104, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "图中所指的斜线部分为历史上先后形成的欧洲贸易中心区（图1贸易中心区在地中海沿岸，图2贸易中心区在大西洋沿岸），造成图中贸易中心区变化的最主要原因应是（ ）",
+      options: [{key:"A",text:"新航路的开辟"}, {key:"B",text:"殖民活动的开展"}, {key:"C",text:"全球化的推动"}, {key:"D",text:"工业革命的影响"}],
+      answer: ["A"],
+      explanation: "新航路开辟后，世界主要商道和贸易中心从地中海沿岸转移到大西洋沿岸。"
+    },
+    {
+      id: "lishi-h05-q105", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 105, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "公元15世纪，美洲印第安人培育的玉米被引进到欧洲。此传播现象的实现得益于图中路线（ ）（图中路线②为哥伦布发现美洲的路线；路线①为迪亚士航线，③为达·伽马航线，④为麦哲伦航线）",
+      options: [{key:"A",text:"①"}, {key:"B",text:"②"}, {key:"C",text:"③"}, {key:"D",text:"④"}],
+      answer: ["B"],
+      explanation: "路线②反映哥伦布发现美洲的路线，哥伦布发现美洲使洲际交往增多，美洲物种玉米能够引进到欧洲。"
+    },
+    {
+      id: "lishi-h05-q106", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 106, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "麦哲伦船队历时近三年，完成了环球探险旅行，最终将西欧到美洲、再到亚洲和非洲的航路连接成一条线，彻底改变了以前海上航路分散孤立、彼此之间毫无联系的状态。以上材料主要表述的是麦哲伦船队环球航行的（ ）",
+      options: [{key:"A",text:"背景"}, {key:"B",text:"过程"}, {key:"C",text:"条件"}, {key:"D",text:"影响"}],
+      answer: ["D"],
+      explanation: "材料描述的是新航路开辟的影响，打破了世界各地区之间相对孤立的状态，使世界开始连为一个整体。"
+    },
+    {
+      id: "lishi-h05-q107", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 107, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "“凡未经议会准许，借口国王特权，为国王而征收，或供国王使用而征收金钱，超出议会准许之时限或方式者，皆为非法。向国王请愿，乃臣民之权利，一切对此项请愿之判罪或控告，皆为非法。除经议会同意外，平时在本王国内征募或维持常备军，皆属违法。”上述条款出自（ ）",
+      options: [{key:"A",text:"《拿破仑法典》"}, {key:"B",text:"《权利法案》"}, {key:"C",text:"《独立宣言》"}, {key:"D",text:"美国1787年宪法"}],
+      answer: ["B"],
+      explanation: "材料体现议会在王权之上、议会至上的原则，是1689年英国《权利法案》。"
+    },
+    {
+      id: "lishi-h05-q108", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 108, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "下图是英国资产阶级革命关键要素示意图。图中的F1代表革命发展的动力，F2是制约革命发展的阻力。对示意图解读正确的是（ ）",
+      options: [{key:"A",text:"F1是工业革命的推动"}, {key:"B",text:"F1是资本主义经济的发展"}, {key:"C",text:"F2是外国势力的干涉"}, {key:"D",text:"F2是君主立宪制的确立"}],
+      answer: ["B"],
+      explanation: "资本主义经济发展是英国资产阶级革命的根本原因，属于动力；工业革命在英国资产阶级革命之后；英国资产阶级革命没有遭到外国势力干涉；君主立宪制的确立是英国资产阶级革命的成果。"
+    },
+    {
+      id: "lishi-h05-q109", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 109, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "下图是1689年前后，中英两国的君主（英国威廉、玛丽与中国康熙帝）。对此，下列选项说法错误的是（ ）",
+      options: [{key:"A",text:"当时中国是君主专制，而英国是君主立宪制"}, {key:"B",text:"威廉和玛丽入主英国是“光荣革命”的结果"}, {key:"C",text:"英王威廉、玛丽同中国皇帝康熙帝一样掌握最高权力"}, {key:"D",text:"康熙帝促进了统一多民族国家的发展"}],
+      answer: ["C"],
+      explanation: "此题为逆向选择题。1689年，英王威廉、玛丽是立宪君主，权力受议会限制；中国皇帝康熙则掌握最高权力。"
+    },
+    {
+      id: "lishi-h05-q110", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 110, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "17世纪，英国在经历了长期的探索和尝试之后确立了君主立宪制。下图为英国君主立宪制确立的历程（1640年议会重新召开揭开革命序幕……1689年颁布《权利法案》），其中“①”处应为（ ）",
+      options: [{key:"A",text:"颁布《大宪章》"}, {key:"B",text:"处死国王查理一世"}, {key:"C",text:"“光荣革命”爆发"}, {key:"D",text:"克伦威尔独揽大权"}],
+      answer: ["C"],
+      explanation: "1688年英国发生政变，议会废黜詹姆士二世，迎请玛丽和威廉入主英国，史称“光荣革命”。"
+    },
+    {
+      id: "lishi-h05-q111", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 111, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "17、18世纪，资产阶级革命时代来临。其中英国资产阶级革命经历了曲折、复杂的过程，最终为资本主义制度的确立开辟了道路。图是英国资产阶级革命进程时间轴，方框中应填写的事件是（ ）（时间轴方框位于1689年处）",
+      options: [{key:"A",text:"英国宣布成为共和国"}, {key:"B",text:"克伦威尔就任护国主"}, {key:"C",text:"颁布《权利法案》"}, {key:"D",text:"议会通过《王位继承法》"}],
+      answer: ["C"],
+      explanation: "1689年，议会通过了《权利法案》，英国议会的权力日益超过国王，君主立宪制逐渐形成。"
+    },
+    {
+      id: "lishi-h05-q112", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 112, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "陈衡哲在《西洋史》中肯定了拿破仑对内的建设，有些是有永久价值的，“其中尤以《拿破仑法典》的影响最为远大。”这一观点是基于该法典（ ）",
+      options: [{key:"A",text:"以法律明确约束了国王权力"}, {key:"B",text:"创设分权制衡的政府运行机制"}, {key:"C",text:"废除了欧洲各地的封建特权"}, {key:"D",text:"成为西方国家民法的参照蓝本"}],
+      answer: ["D"],
+      explanation: "1804年拿破仑颁布《法典》，确立了资产阶级民法的基本原则，成为资本主义各国立法的典范。"
+    },
+    {
+      id: "lishi-h05-q113", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 113, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "下面时间轴上的空格应填入的史实是（ ）（时间轴空格位于1804年处）",
+      options: [{key:"A",text:"法国大革命"}, {key:"B",text:"拿破仑帝国建立"}, {key:"C",text:"内战的爆发"}, {key:"D",text:"拿破仑对外战争"}],
+      answer: ["B"],
+      explanation: "1804年，经公民投票，法国改为帝国，史称“法兰西第一帝国”，拿破仑加冕称帝。"
+    },
+    {
+      id: "lishi-h05-q114", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 114, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "《拿破仑法典》草案在法案评审委员会上遭到了共和主义者的反对，拿破仑认为法国不能“以形而上学来进行统治”，将所有持敌视立场的委员全部清洗出局。1804年，草案在没有任何异议的情况下获得通过。由此可知，《拿破仑法典》的制定（ ）",
+      options: [{key:"A",text:"宣告了自由、民主、平等原则"}, {key:"B",text:"一定程度上体现了拿破仑的专制独裁"}, {key:"C",text:"顺应了发展资本主义的趋势"}, {key:"D",text:"大量吸收了其他国家法典的优秀成果"}],
+      answer: ["B"],
+      explanation: "拿破仑将持敌视立场的委员全部清洗出局，使草案在没有任何异议的情况下获得通过，说明《拿破仑法典》的制定在一定程度上体现了拿破仑的专制独裁。"
+    },
+    {
+      id: "lishi-h05-q115", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 115, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "对如图年代尺解读最全面、最准确的是（ ）（年代尺标注1689、1787、1789、1804：1689年英国议会通过《权利法案》，1787年美国制定宪法，1789年法国制宪会议通过《人权宣言》，1804年拿破仑颁布《拿破仑法典》）",
+      options: [{key:"A",text:"拿破仑对外战争"}, {key:"B",text:"西方国家民主化进程"}, {key:"C",text:"殖民扩张与反殖民斗争"}, {key:"D",text:"欧洲资产阶级革命"}],
+      answer: ["B"],
+      explanation: "四个事件都反映了西方国家民主政治的进程，反映出西方国家的民主化进程。"
+    },
+    {
+      id: "lishi-h05-q116", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 116, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "专题14《中考周年热点大事·世界史篇》（测试，解析版）",
+      stem: "列宁指出：“拿破仑的帝国主义战争持续了许多年，占去整整一个时代……历史经过了充满战争和悲剧的这一整个时代，从封建主义向自由的资本主义前进。”这说明拿破仑的帝国主义战争（ ）",
+      options: [{key:"A",text:"加速资本主义制度的扩展"}, {key:"B",text:"巩固资产阶级革命的成果"}, {key:"C",text:"开启了真正意义上的欧洲历史"}, {key:"D",text:"造成西欧各国力量的变化"}],
+      answer: ["A"],
+      explanation: "拿破仑的帝国主义战争推动了欧洲各国资本主义的发展，加速资本主义制度的扩展。"
+    },
+    {
+      id: "lishi-h05-q117", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 117, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2025年四川省自贡市中考·历史",
+      stem: "2013年，联合国教科文组织对某部入选《世界记忆名录》的著作这样评述：它第一次较为完整系统地阐述了科学社会主义的基本原则，阐明了社会发展的基本规律，是全人类共有的精神财富。该著作是（ ）",
+      options: [{key:"A",text:"《权利法案》"}, {key:"B",text:"《战争与和平》"}, {key:"C",text:"《共产党宣言》"}, {key:"D",text:"《庶民的胜利》"}],
+      answer: ["C"],
+      explanation: "1848年《共产党宣言》发表，第一次较为完整系统地阐述了科学社会主义的基本原理，标志着马克思主义的诞生。"
+    },
+    {
+      id: "lishi-h05-q118", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 118, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "一位英国人这样说道：“阿根廷和北美的西部草原有我们的牛群；秘鲁运来它的白银；南非和澳大利亚的黄金则流到伦敦；印度人和中国人为我们种植茶叶……”这是（ ）",
+      options: [{key:"A",text:"西欧城市兴起的表现"}, {key:"B",text:"新航路开辟的结果"}, {key:"C",text:"亚历山大东征的影响"}, {key:"D",text:"海外殖民扩张的影响"}],
+      answer: ["D"],
+      explanation: "19世纪中期，英国的对外殖民扩张使世界市场初步形成，世界各地经济联系加强。"
+    },
+    {
+      id: "lishi-h05-q119", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 119, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "詹姆士布恩是一位生活在18世纪40—90年代极富经营头脑的英国某织布厂厂主，1785年后，他把工厂搬迁到交通便利的地方，詹姆士布恩搬迁工厂是因为（ ）",
+      options: [{key:"A",text:"珍妮纺纱机的发明"}, {key:"B",text:"瓦特改良蒸汽机"}, {key:"C",text:"火车、轮船的出现"}, {key:"D",text:"内燃机的发明"}],
+      answer: ["B"],
+      explanation: "1785年，瓦特的改良蒸汽机开始用作纺织机械的动力，并很快推广开来。"
+    },
+    {
+      id: "lishi-h05-q120", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 120, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "历史学家罗英渠在《美洲史论》中写道：“他所指挥的军队解放的国土十倍于西班牙的国土，比西、法、德、英、意五个国家加在一起还大一倍半……成为委内瑞拉、哥伦比亚、厄瓜多尔、秘鲁、玻利维亚、巴拿马六个国家的奠基者”。“他”是（ ）",
+      options: [{key:"A",text:"华盛顿"}, {key:"B",text:"章西女王"}, {key:"C",text:"甘地"}, {key:"D",text:"玻利瓦尔"}],
+      answer: ["D"],
+      explanation: "玻利瓦尔率领军队解放了西班牙在南美洲的殖民地，成为六个国家的奠基者，被授予“解放者”称号。"
+    },
+    {
+      id: "lishi-h05-q121", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 121, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "“以前它是个前工业时代的封建国家，到19世纪末，新日本——西方影响和日本传统的混合物——成为一个正在上升的帝国。它很快成为西方一个可怕的竞争对手。”促使日本完成以上重大跨越的根本因素是（ ）",
+      options: [{key:"A",text:"发动战争，开拓海外市场"}, {key:"B",text:"解放奴隶，维护国家统一"}, {key:"C",text:"明治维新，发展资本主义"}, {key:"D",text:"科技立国，重视人才培养"}],
+      answer: ["C"],
+      explanation: "1868年，日本进行了明治维新改革，使日本经济迅速发展，走上了资本主义道路。"
+    },
+    {
+      id: "lishi-h05-q122", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 122, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "西欧城市重新兴起的意义是（ ）",
+      options: [{key:"A",text:"推动了西欧封建社会的发展，教会和世俗封建主势力得到空前的加强"}, {key:"B",text:"促使封建主日益贪婪，加紧对市民的剥削"}, {key:"C",text:"形成了早期资本主义的雏形——市民阶级，为资本主义的兴起准备了条件"}, {key:"D",text:"提高了西欧国际社会的地位，使之成为世界贸易的中心"}],
+      answer: ["C"],
+      explanation: "西欧城市重新兴起和工商业迅速发展，形成了市民阶级，孕育了早期的资产阶级，为资本主义的兴起准备了条件。"
+    },
+    {
+      id: "lishi-h05-q123", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 123, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2024年重庆市西南大附中中考一模·历史（图转文字）",
+      stem: "从14—16世纪西欧手工业发展图中得出的信息最准确是（ ）（图示：14至16世纪，西欧动力技术出现重大变革，风力、水力等自然力取代人力和畜力成为新的生产动力，风车、水车广泛运用，机械和半机械装置在纺织、冶炼、采矿等行业中开始使用，出现了租地农场和手工工场）",
+      options: [{key:"A",text:"资本主义萌芽必然促进商品经济的发展"}, {key:"B",text:"手工工场推动了资本主义萌芽的产生"}, {key:"C",text:"商品经济的发展是手工工场产生的前提"}, {key:"D",text:"动力技术的进步是由于社会分工的扩大"}],
+      answer: ["C"],
+      explanation: "生产动力和生产工具的重大变革使西欧社会生产力显著进步，社会分工进一步扩大，商品经济迅速发展，出现了租地农场和手工工场。"
+    },
+    {
+      id: "lishi-h05-q124", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 124, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "在古希腊，对许多学科都有贡献且被称为百科全书式学者的是（ ）",
+      options: [{key:"A",text:"德谟克利特"}, {key:"B",text:"亚里士多德"}, {key:"C",text:"苏格拉底"}, {key:"D",text:"牛顿"}],
+      answer: ["B"],
+      explanation: "亚里士多德是古希腊百科全书式的学者。"
+    },
+    {
+      id: "lishi-h05-q125", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 125, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "从9世纪开始，一种新的农业经济组织形式在西欧逐渐流行开来。这就是（ ）",
+      options: [{key:"A",text:"王国"}, {key:"B",text:"领地"}, {key:"C",text:"城市"}, {key:"D",text:"庄园"}],
+      answer: ["D"],
+      explanation: "从9世纪开始，庄园在西欧逐渐流行开来。"
+    },
+    {
+      id: "lishi-h05-q126", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 126, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "从646年开始，日本仿效唐朝的典章制度，进行了一系列改革，史称（ ）",
+      options: [{key:"A",text:"大化改新"}, {key:"B",text:"农奴制改革"}, {key:"C",text:"明治维新"}, {key:"D",text:"卡德纳斯改革"}],
+      answer: ["A"],
+      explanation: "646年，日本仿效唐朝典章制度进行改革，史称大化改新。"
+    },
+    {
+      id: "lishi-h05-q127", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 127, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "下列作品中，属于莎士比亚的代表作是（ ）",
+      options: [{key:"A",text:"《神曲》"}, {key:"B",text:"《哈姆雷特》"}, {key:"C",text:"《高老头》"}, {key:"D",text:"《复活》"}],
+      answer: ["B"],
+      explanation: "《哈姆雷特》是莎士比亚的代表作。"
+    },
+    {
+      id: "lishi-h05-q128", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 128, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "下列航海家中，始终认为自己到达的就是亚洲的印度，还把当地人称为“印第安人”的是（ ）",
+      options: [{key:"A",text:"迪亚士"}, {key:"B",text:"达·伽马"}, {key:"C",text:"哥伦布"}, {key:"D",text:"麦哲伦"}],
+      answer: ["C"],
+      explanation: "哥伦布始终认为自己到达的就是亚洲的印度，把当地人称为“印第安人”。"
+    },
+    {
+      id: "lishi-h05-q129", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 129, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "通过经济、军事等改革，开启了俄国近代化进程的是（ ）",
+      options: [{key:"A",text:"苏联解体"}, {key:"B",text:"十月革命"}, {key:"C",text:"二月革命"}, {key:"D",text:"彼得一世改革"}],
+      answer: ["D"],
+      explanation: "彼得一世通过经济、军事等改革，开启了俄国近代化进程。"
+    },
+    {
+      id: "lishi-h05-q130", chapterId: 5, chapter: "九年级上册 · 世界古代史与近代史（上）",
+      number: 130, type: "single", meta: "单选题",
+      grade: "九上", stage: "9-up",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "宣布“从1863年元旦起，南方叛乱地区的奴隶永远获得自由，并可以以自由人的身份加入北方军队”的文献是（ ）",
+      options: [{key:"A",text:"《汉谟拉比法典》"}, {key:"B",text:"《十二铜表法》"}, {key:"C",text:"《罗马民法大全》"}, {key:"D",text:"《解放黑人奴隶宣言》"}],
+      answer: ["D"],
+      explanation: "《解放黑人奴隶宣言》宣布从1863年元旦起，南方叛乱地区的奴隶永远获得自由。"
+    },
+    {
+      id: "lishi-h06-q100", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 100, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2024年江苏省镇江市中考·历史（原始题号未标注）",
+      stem: "“到1942年9月中旬时，德国人已打到这座城市的中心；在那里，他们陷入了困境……此后，苏联人全线反攻，迫使德国人反攻为守。”材料描述的这场战役是（ ）",
+      options: [{key:"A",text:"凡尔登战役"}, {key:"B",text:"莫斯科保卫战"}, {key:"C",text:"斯大林格勒保卫战"}, {key:"D",text:"偷袭珍珠港"}],
+      answer: ["C"],
+      explanation: "1942年7月德国集中兵力进攻苏联战略重镇斯大林格勒，次年2月德军投降，斯大林格勒保卫战是第二次世界大战的转折点。"
+    },
+    {
+      id: "lishi-h06-q101", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 101, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年吉林省长春市中考·历史（图转文字；原始题号未标注）",
+      stem: "下图漫画中，青年振臂高呼，迎接冲破黑暗的霞光，漫画上标注的日期是1945年5月8日。漫画反映的史实是（ ）",
+      options: [{key:"A",text:"斯大林格勒战役"}, {key:"B",text:"诺曼底登陆战役"}, {key:"C",text:"德国签署投降书"}, {key:"D",text:"日本签署投降书"}],
+      answer: ["C"],
+      explanation: "1945年5月8日德国举行无条件投降仪式。"
+    },
+    {
+      id: "lishi-h06-q102", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 102, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2024年青海省西宁市中考·历史（原始题号未标注）",
+      stem: "1947年，马歇尔提出“美国应该尽其所能帮助世界恢复正常经济状态，并使‘自由制度’得以存续”，就此美国提出了帮助欧洲恢复战争创伤的计划。材料说明该计划的目的是（ ）",
+      options: [{key:"A",text:"加速资本原始积累"}, {key:"B",text:"推动和平局面形成"}, {key:"C",text:"加快欧洲走向联合"}, {key:"D",text:"稳定资本主义制度"}],
+      answer: ["D"],
+      explanation: "马歇尔计划是美国冷战经济方面的主要措施，目的是用经济手段控制西欧，稳定资本主义阵营，对抗苏联等社会主义阵营。"
+    },
+    {
+      id: "lishi-h06-q103", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 103, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年吉林省中考·历史（图转文字；原始题号未标注）",
+      stem: "下面示意图反映的历史事件是（ ）示意图内容：1949年，美、英等12个国家的代表在华盛顿签署《北大西洋公约》，北约成立；1955年，苏联同7个东欧社会主义国家缔结《华沙条约》，“华约”成立。",
+      options: [{key:"A",text:"美国独立战争"}, {key:"B",text:"第一次世界大战"}, {key:"C",text:"第二次世界大战"}, {key:"D",text:"冷战"}],
+      answer: ["D"],
+      explanation: "北约成立与华约成立，美苏双方互相敌对，进而发展为两大集团的全面冷战对峙，两极格局形成。"
+    },
+    {
+      id: "lishi-h06-q104", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 104, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年辽宁省丹东市中考一模·历史（模拟卷按用户决定计入真题）",
+      stem: "实现了美国长期追求的“门户开放”等目的，使日本独霸中国的企图未能实现。然而中国仍未摆脱被几个帝国主义国家共同支配的局面的条约是（ ）",
+      options: [{key:"A",text:"《南京条约》"}, {key:"B",text:"《辛丑条约》"}, {key:"C",text:"《凡尔赛条约》"}, {key:"D",text:"《九国公约》"}],
+      answer: ["D"],
+      explanation: "1922年华盛顿会议针对中国问题通过《九国公约》，实现了美国长期追求的“门户开放”的目的，使日本独霸中国的企图未能实现，维持了几个帝国主义国家共同支配中国的局面。"
+    },
+    {
+      id: "lishi-h06-q105", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 105, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年四川省绵阳市中考模拟预测·历史（模拟卷按用户决定计入真题）",
+      stem: "下图史事与结论对应正确的是（ ）选项：A 北约的成立——企图通过援助西欧恢复经济，稳定资本主义制度；B 杜鲁门主义出台——美、苏战时同盟关系正式破裂，冷战开始；C 不结盟运动兴起——世界形势发展的总趋势走向缓和，世界多极化趋势增强；D 苏联的解体——标志着发展中国家已成为国际政治舞台上的一支重要力量。",
+      options: [{key:"A",text:"北约的成立——企图通过援助西欧恢复经济，稳定资本主义制度"}, {key:"B",text:"杜鲁门主义出台——美、苏战时同盟关系正式破裂，冷战开始"}, {key:"C",text:"不结盟运动兴起——世界形势发展的总趋势走向缓和，世界多极化趋势增强"}, {key:"D",text:"苏联的解体——标志着发展中国家已成为国际政治舞台上的一支重要力量"}],
+      answer: ["B"],
+      explanation: "1947年杜鲁门提出以“遏制共产主义”作为国家政治意识形态和对外政策的指导思想，称为“杜鲁门主义”；杜鲁门主义的出台标志着美苏战时同盟关系正式破裂、美苏之间冷战的开始。"
+    },
+    {
+      id: "lishi-h06-q106", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 106, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "改编自2024年山东泰安中考历史真题（专题15《硝烟中的重塑》典例17（2），材料分析题改编为选择题）",
+      stem: "冷战开始后，德国问题便成为冷战的焦点。美、英、法、苏等国在各自的占领区内推行有利于本国的政策。德国逐渐分裂为两个不同的经济、政治实体。1949年，德国正式分裂。二战后对德国实行分区占领，是哪次会议提出的？（ ）",
+      options: [{key:"A",text:"雅尔塔会议"}, {key:"B",text:"波茨坦会议"}, {key:"C",text:"开罗会议"}, {key:"D",text:"德黑兰会议"}],
+      answer: ["A"],
+      explanation: "1945年2月，美、英、苏三国首脑在雅尔塔召开会议，决定战后德国由美、英、苏等国实行分区占领；1949年，德国分裂为德意志联邦共和国和德意志民主共和国，德国分裂是冷战的产物。",
+      trap: "易错点：波茨坦会议也讨论了德国问题，但分区占领的决定是雅尔塔会议提出的；开罗会议讨论对日作战，德黑兰会议讨论开辟欧洲第二战场。"
+    },
+    {
+      id: "lishi-h06-q107", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 107, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年重庆市中考·历史（图转文字）",
+      stem: "绘制历史示意图有助于从整体上理解历史。下面的示意图（19世纪末20世纪初，主要资本主义国家相继过渡到帝国主义阶段，帝国主义国家之间的矛盾十分尖锐，形成了以德国为首的三国同盟和以英国为首的三国协约两大敌对帝国主义侵略集团，两大集团疯狂扩军备战）可以帮助我们学习（ ）",
+      options: [{key:"A",text:"第一次世界大战的背景"}, {key:"B",text:"凡尔赛体系下蕴含的矛盾"}, {key:"C",text:"第二次世界大战的经过"}, {key:"D",text:"两极格局下的对抗和冲突"}],
+      answer: ["A"],
+      explanation: "图示内容为一战前两大军事集团的形成与扩军备战，属于第一次世界大战的背景。"
+    },
+    {
+      id: "lishi-h06-q108", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 108, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年湖南省怀化市中考·历史",
+      stem: "第一次世界大战形成了两大军事集团，其中不属于协约国的国家是（ ）",
+      options: [{key:"A",text:"英国"}, {key:"B",text:"法国"}, {key:"C",text:"德国"}, {key:"D",text:"俄国"}],
+      answer: ["C"],
+      explanation: "英、法、俄为三国协约，德、奥匈帝国、意大利为三国同盟，德国不属于协约国。"
+    },
+    {
+      id: "lishi-h06-q109", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 109, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年山东省潍坊市中考·历史",
+      stem: "一战前，一位德国大臣说：“皇上首要的和基本的思想就是粉碎英国的霸权，以有利于德国”。这表明德国参加一战是为了（ ）",
+      options: [{key:"A",text:"扼杀巴黎公社"}, {key:"B",text:"争夺世界霸权"}, {key:"C",text:"解放黑人奴隶"}, {key:"D",text:"推动欧洲联合"}],
+      answer: ["B"],
+      explanation: "后起的帝国主义国家德国要求重新分割世界，与英、法、俄等老牌帝国主义国家展开激烈争夺。"
+    },
+    {
+      id: "lishi-h06-q110", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 110, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年重庆市中考·历史",
+      stem: "历史的发展是普遍联系的。下列历史事件或现象之间因果联系对应正确的是（ ）",
+      options: [{key:"A",text:"唐太宗简法轻刑——唐太宗被拥戴为“天可汗”"}, {key:"B",text:"林则徐虎门销烟——沙俄侵占了中国大片领土"}, {key:"C",text:"三国同盟与三国协约的形成——第一次世界大战的爆发"}, {key:"D",text:"“凡尔赛体系”的形成——美国成为唯一的超级大国"}],
+      answer: ["C"],
+      explanation: "三国同盟与三国协约两大军事集团形成，疯狂扩军备战，导致第一次世界大战爆发。"
+    },
+    {
+      id: "lishi-h06-q111", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 111, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年山东省滨州市中考·历史（图转文字）",
+      stem: "以下是徐杰同学搜集到的四幅欧洲历史地图，请你帮他辨认一下，哪一幅是第一次世界大战后的形势图？（A图包含“奥地利”“匈牙利”“捷克斯洛伐克”“阿尔萨斯和洛林”等地名）",
+      options: [{key:"A",text:"（A图）"}, {key:"B",text:"（B图）"}, {key:"C",text:"（C图）"}, {key:"D",text:"（D图）"}],
+      answer: ["A"],
+      explanation: "A图显示奥匈帝国分裂为奥地利、匈牙利、捷克斯洛伐克等，法国收回阿尔萨斯和洛林，是一战后的形势图。"
+    },
+    {
+      id: "lishi-h06-q112", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 112, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年江苏省苏州市中考·历史",
+      stem: "史论结合是历史学科的重要特点之一。在历史学习的过程中，要注意区分史实与史论。下列表述中，属于“史论”的是（ ）",
+      options: [{key:"A",text:"一战爆发之后，意大利参加了协约国集团作战"}, {key:"B",text:"1916年，德、法两国军队在凡尔登展开了血战"}, {key:"C",text:"一战是帝国主义争夺霸权和殖民地的不义之战"}, {key:"D",text:"一战中，交战国使用了坦克和潜艇等新式武器"}],
+      answer: ["C"],
+      explanation: "史实即历史事实，史论即对历史事件和历史人物的评论。“一战是帝国主义争夺霸权和殖民地的不义之战”属于史论。"
+    },
+    {
+      id: "lishi-h06-q113", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 113, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年江苏省南京市中考·历史",
+      stem: "1917年3月25日《申报》刊文报道：“十六日夜间，（哈尔滨）各界俄人皆手执国旗，由军乐队率领沿街欢呼鸣啦，并拍电俄京祝贺。十七日，租界内满街悬旗，俄人皆彼此道贺。”“俄人”庆贺的是（ ）",
+      options: [{key:"A",text:"农奴制度的废除"}, {key:"B",text:"推翻沙皇专制统治"}, {key:"C",text:"人民委员会成立"}, {key:"D",text:"社会主义革命胜利"}],
+      answer: ["B"],
+      explanation: "1917年3月，俄国发生“二月革命”，推翻了沙皇专制统治，建立了资产阶级临时政府。"
+    },
+    {
+      id: "lishi-h06-q114", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 114, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年山西省中考·历史（图转文字）",
+      stem: "王华同学以“俄国（共俄、苏联）的发展历程”为主题，制作了下面的资料卡片，并对其所反映的史实进行了解读，其中正确的是（ ）（图一：废除农奴制改革；图二：彼得格勒武装起义；图三：斯大林农业集体化；图四：德国法西斯投降）",
+      options: [{key:"A",text:"图一：加强了沙皇专制权力，开启了俄国近代化的进程"}, {key:"B",text:"图二：见证了彼得格勒武装起义的成功，十月革命胜利"}, {key:"C",text:"图三：实行了新经济政策，苏联出现农业集体化的浪潮"}, {key:"D",text:"图四：标志着苏联卫国战争胜利，第二次世界大战结束"}],
+      answer: ["B"],
+      explanation: "图一废除农奴制改革使俄国走上了资本主义道路；图二十月革命胜利，建立了社会主义国家；图三是斯大林的农业集体化，不是新经济政策；图四是德国法西斯投降，不是二战结束。"
+    },
+    {
+      id: "lishi-h06-q115", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 115, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年江苏省苏州市中考·历史",
+      stem: "在俄罗斯长篇小说《切温古尔》中有这样一段话：“令人费解的是，（红军来了）分了土地，却又把每一粒粮食收走了。你倒是自己去尝尝这样的滋味吧！”为改变这种情况，苏俄开始实施（ ）",
+      options: [{key:"A",text:"土地改革政策"}, {key:"B",text:"战时共产主义政策"}, {key:"C",text:"新经济政策"}, {key:"D",text:"社会主义工业化"}],
+      answer: ["C"],
+      explanation: "小说反映的是苏俄实行“战时共产主义政策”，1921年苏俄政府放弃“战时共产主义政策”，开始实行新经济政策。"
+    },
+    {
+      id: "lishi-h06-q116", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 116, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年山东省滨州市中考·历史",
+      stem: "苏联国歌《牢不可破的联盟》中唱道：“伟大俄罗斯，永久缔联盟；独立共和国，自由结合成。各民族意志，建立的苏联。……伟大的列宁，指明了前程。斯大林教导，要忠于人民，并激励我们，去建立功勋。”我们从歌词中不能得到的信息是（ ）",
+      options: [{key:"A",text:"苏联是世界上第一个社会主义国家"}, {key:"B",text:"各族人民自愿加入苏维埃共和国联盟"}, {key:"C",text:"列宁对社会主义道路的探索成就显著"}, {key:"D",text:"斯大林模式促成经济建设的辉煌成就"}],
+      answer: ["A"],
+      explanation: "歌词体现各族人民自愿加入苏维埃共和国联盟、列宁对社会主义道路的探索成就显著、斯大林模式促成经济建设的辉煌成就；世界上第一个社会主义国家是苏俄而非苏联，且歌词中无法得到。"
+    },
+    {
+      id: "lishi-h06-q117", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 117, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年内蒙古自治区呼和浩特市中考·历史",
+      stem: "1921年华盛顿会议召开，这次会议上扩张受到限制的国家是（ ）",
+      options: [{key:"A",text:"中国"}, {key:"B",text:"日本"}, {key:"C",text:"美国"}, {key:"D",text:"英国"}],
+      answer: ["B"],
+      explanation: "华盛顿会议使日本受到一定抑制，使中国回归到几个帝国主义国家共同支配的局面。"
+    },
+    {
+      id: "lishi-h06-q118", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 118, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年安徽省中考·历史",
+      stem: "经过总结教训，列宁认为，既然还不能实现从小生产到社会主义的直接过渡，作为小生产和交换的自发产物的资本主义在一定程度上就是不可避免的。为此苏俄实施了（ ）",
+      options: [{key:"A",text:"战时共产主义政策"}, {key:"B",text:"新经济政策"}, {key:"C",text:"社会主义工业化"}, {key:"D",text:"农业集体化"}],
+      answer: ["B"],
+      explanation: "1921年，苏俄在列宁领导下放弃战时共产主义政策，开始实行新经济政策，把社会主义同市场、商品货币关系和资本主义直接联系起来，促进了经济的恢复和发展。"
+    },
+    {
+      id: "lishi-h06-q119", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 119, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年江苏省南京市中考·历史",
+      stem: "“在冰冻的条件下，食不果腹、衣难御寒的工人们却在工作岗位上连续工作16个小时”，“1929年4月，由列宁格勒工人倡议并最终在全国形成了劳动竞赛”。上述壮举的目的是（ ）",
+      options: [{key:"A",text:"恢复国民经济"}, {key:"B",text:"实现工业化"}, {key:"C",text:"缓解经济危机"}, {key:"D",text:"推广苏联模式"}],
+      answer: ["B"],
+      explanation: "1926年苏联开始进行社会主义工业化建设，1928—1937年先后提前完成第一个、第二个“五年计划”，由落后的农业国变成了强大的工业国。"
+    },
+    {
+      id: "lishi-h06-q120", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 120, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年湖北省黄石市中考·历史",
+      stem: "在第二次世界大战中，苏联武器装备全面更新。苏制HC-2坦克超过德国“虎式”坦克的威力，火箭炮（“喀秋莎”）、强击机等新型武器都有极大地发展，其主要原因是（ ）",
+      options: [{key:"A",text:"新经济政策的实施"}, {key:"B",text:"苏联社会主义工业化建设"}, {key:"C",text:"农业集体化的实行"}, {key:"D",text:"苏联社会主义改革"}],
+      answer: ["B"],
+      explanation: "斯大林时期，苏联社会主义工业化建设开始，实行两个五年计划，大力发展重工业，为反法西斯战争的胜利奠定了基础。"
+    },
+    {
+      id: "lishi-h06-q121", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 121, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年山东省潍坊市中考·历史",
+      stem: "《文明》一书调侃：“冷战”时期最为让人难以理解的事情，或许就是为什么苏联生产不出一条像样的牛仔裤。这暴露了（ ）",
+      options: [{key:"A",text:"战时共产主义的缺陷"}, {key:"B",text:"农奴制的落后性"}, {key:"C",text:"新经济政策的局限性"}, {key:"D",text:"苏联模式的弊端"}],
+      answer: ["D"],
+      explanation: "苏联实行两个五年计划，重点发展重工业，忽视轻工业，农轻重比例国民经济严重失调，即苏联模式的弊端。"
+    },
+    {
+      id: "lishi-h06-q122", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 122, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年黑龙江省齐齐哈尔市中考·历史",
+      stem: "学会抓关键词是学习历史的重要方法之一。下列与“斗争方式不同”这一关键词相吻合的民族英雄是（ ）",
+      options: [{key:"A",text:"章西女王"}, {key:"B",text:"玻利瓦尔"}, {key:"C",text:"圣马丁"}, {key:"D",text:"甘地"}],
+      answer: ["D"],
+      explanation: "章西女王、玻利瓦尔、圣马丁均是武装斗争，甘地是非暴力的和平方式。"
+    },
+    {
+      id: "lishi-h06-q123", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 123, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年山东省滨州市中考·历史",
+      stem: "以下史料说明甘地和凯末尔领导的民族独立斗争（ ）（甘地说“我并不是因为印度衰弱才号召印度实行非暴力主义，而正是因为认识了印度的力量才号召印度实行非暴力主义。”凯末尔说：“我们国家与我国民族的唯一使命是用我们的刺刀把敌人从我们的土地上赶走。”）",
+      options: [{key:"A",text:"原因不同"}, {key:"B",text:"方式不同"}, {key:"C",text:"目的不同"}, {key:"D",text:"影响不同"}],
+      answer: ["B"],
+      explanation: "甘地发动非暴力不合作运动，凯末尔组建土耳其国民军武装斗争，两人民族独立斗争方式不同。"
+    },
+    {
+      id: "lishi-h06-q124", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 124, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "1922年，在一次欧洲经济会议上，苏俄政府代表团声明：准备在经济上实行对外开放，把一部分森林、矿产资源甚至肥沃的耕地租让给外资经营开发，但拒绝任何不平等交易。这表明当时苏俄（ ）",
+      options: [{key:"A",text:"新经济政策得到落实"}, {key:"B",text:"与西方国家间的矛盾已消除"}, {key:"C",text:"工业化建设成就巨大"}, {key:"D",text:"建立了高度集中的经济体制"}],
+      answer: ["A"],
+      explanation: "1922年苏俄新经济政策已经实施，自愿将资源转租给外国资本经营，是新经济政策的体现。"
+    },
+    {
+      id: "lishi-h06-q125", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 125, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "“这次行动将对德军形成东西两面夹击之势，开辟了欧洲第二战场。”“这次行动”指的是（ ）",
+      options: [{key:"A",text:"凡尔登战役"}, {key:"B",text:"莫斯科保卫战"}, {key:"C",text:"诺曼底登陆"}, {key:"D",text:"攻克柏林战役"}],
+      answer: ["C"],
+      explanation: "1944年6月，美英盟军在法国诺曼底海岸登陆，开辟了对德作战欧洲第二战场。"
+    },
+    {
+      id: "lishi-h06-q126", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 126, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2025年广东省梅州市兴宁市宋声学校中考一模·历史",
+      stem: "1950年前非洲独立的国家只有3个。到20世纪50年代末，已经达到41个，约占非洲总面积的84%。这突出反映了（ ）",
+      options: [{key:"A",text:"民族独立浪潮的高涨"}, {key:"B",text:"社会主义力量的壮大"}, {key:"C",text:"资本主义经济的发展"}, {key:"D",text:"经济全球化趋势加强"}],
+      answer: ["A"],
+      explanation: "20世纪60年代，非洲原为殖民地的国家纷纷独立，非洲民族独立运动高涨。"
+    },
+    {
+      id: "lishi-h06-q127", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 127, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2024年重庆市西南大附中中考一模·历史（图转文字）",
+      stem: "如图是加拿大为纪念某组织建立50周年而发行的邮票。该组织（ ）",
+      options: [{key:"A",text:"标志着美苏战时同盟关系正式破裂"}, {key:"B",text:"标志着欧洲冷战对峙局面基本形成"}, {key:"C",text:"是以美国为首的军事实体"}, {key:"D",text:"标志着两极格局正式形成"}],
+      answer: ["C"],
+      explanation: "邮票是加拿大为纪念北约组织建立50周年而发行的邮票。1949年，以美国为首的12个西方国家签订《北大西洋公约》，建立北大西洋公约组织。"
+    },
+    {
+      id: "lishi-h06-q128", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 128, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "2018年6月12日上午，朝鲜最高领导人金正恩与美国总统特朗普在新加坡举行首次会晤。会后特朗普表示不再有来自朝鲜的核威胁，朝鲜将会有潜力巨大的未来。对此解读正确的是（ ）",
+      options: [{key:"A",text:"和平与发展是当今时代的主题"}, {key:"B",text:"美国放弃了称霸世界的计划"}, {key:"C",text:"朝鲜具有和美国抗衡的实力"}, {key:"D",text:"多极化的世界格局已经形成"}],
+      answer: ["A"],
+      explanation: "双方尽量避免冲突，体现和平与发展是当今世界两大主题。"
+    },
+    {
+      id: "lishi-h06-q129", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 129, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2024年重庆市西南大附中中考一模·历史（图转文字）",
+      stem: "下图所示是德国领土版图的变动情况。其变动的依据是（ ）",
+      options: [{key:"A",text:"雅尔塔会议的决定"}, {key:"B",text:"波茨坦会议的决定"}, {key:"C",text:"《北大西洋公约》的规定"}, {key:"D",text:"《华沙条约》的规定"}],
+      answer: ["A"],
+      explanation: "1945年2月雅尔塔会议决定彻底打败德国，对德国实行军事占领；二战后在分区占领基础上形成了两个独立的国家。"
+    },
+    {
+      id: "lishi-h06-q130", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 130, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2024年重庆市西南大附中中考一模·历史",
+      stem: "当今的世界格局仍处于一个过渡期，在这个过程中出现了权力的转移和扩散。权力从传统强国欧美向新兴大国转移，并扩散至其他地区力量中心，世界格局有进入“碎片化”时代的征兆。这反映了（ ）",
+      options: [{key:"A",text:"多极世界格局已经形成"}, {key:"B",text:"世界经济的区域集团化"}, {key:"C",text:"美国已丧失世界霸主地位"}, {key:"D",text:"世界格局的多极化趋势"}],
+      answer: ["D"],
+      explanation: "世界格局正在向多极化趋势发展。"
+    },
+    {
+      id: "lishi-h06-q131", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 131, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "1914年6月28日，斐迪南大公夫妇被塞尔维亚族青年普林西普刺杀。这一事件被称为（ ）",
+      options: [{key:"A",text:"萨拉热窝事件"}, {key:"B",text:"凡尔登战役"}, {key:"C",text:"莫斯科保卫战"}, {key:"D",text:"斯大林格勒保卫战"}],
+      answer: ["A"],
+      explanation: "1914年6月28日，萨拉热窝事件发生，成为第一次世界大战的导火线。"
+    },
+    {
+      id: "lishi-h06-q132", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 132, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "发展中国家作为一支新兴独立的政治力量登上了国际舞台，开始于（ ）",
+      options: [{key:"A",text:"巴黎和会"}, {key:"B",text:"华盛顿会议"}, {key:"C",text:"雅尔塔会议"}, {key:"D",text:"万隆会议"}],
+      answer: ["D"],
+      explanation: "1955年万隆会议，发展中国家作为一支新兴独立的政治力量登上了国际舞台。"
+    },
+    {
+      id: "lishi-h06-q133", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 133, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "1990年，所有非洲国家都摆脱了殖民主义枷锁的标志是（ ）",
+      options: [{key:"A",text:"利比亚独立"}, {key:"B",text:"埃及独立"}, {key:"C",text:"阿尔及利亚独立"}, {key:"D",text:"纳米比亚独立"}],
+      answer: ["D"],
+      explanation: "1990年纳米比亚独立，标志着所有非洲国家都摆脱了殖民主义枷锁。"
+    },
+    {
+      id: "lishi-h06-q134", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 134, type: "single", meta: "单选题",
+      grade: "九下", stage: "9-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "1945年10月成立的影响最大的国际组织——联合国，其总部地点设在美国的（ ）",
+      options: [{key:"A",text:"巴黎"}, {key:"B",text:"纽约"}, {key:"C",text:"日内瓦"}, {key:"D",text:"伦敦"}],
+      answer: ["B"],
+      explanation: "联合国总部设在美国纽约。"
+    },
+    {
+      id: "lishi-h06-q135", chapterId: 6, chapter: "九年级下册 · 世界现代史",
+      number: 135, type: "judge", meta: "判断题",
+      grade: "九下", stage: "9-down",
+      source: "2019年黑龙江省绥化市中考·历史",
+      stem: "第二次世界大战后，美国企图通过“马歇尔计划”援助亚洲恢复经济，稳定资本主义制度。",
+      options: [],
+      answer: ["false"],
+      explanation: "马歇尔计划是美国援助西欧恢复经济的计划，不是援助亚洲，说法错误。"
+    }
   ]
 };

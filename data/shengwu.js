@@ -1,59 +1,19 @@
 window.XIAOSIMEN_BANKS ||= {};
 window.XIAOSIMEN_BANKS["shengwu"] = {
-  title: "生物", examLabel: "初中小四门", total: 632,
+  title: "生物", examLabel: "初中小四门", total: 600,
   chapters: [
-    { id: 1, title: "七年级上册 · 生物和生物圈", count: 152 },
-    { id: 2, title: "七年级下册 · 人体生命活动", count: 117 },
-    { id: 3, title: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护", count: 79 },
-    { id: 4, title: "八年级下册 · 生物圈中生命的延续和发展、健康地生活", count: 98 },
-    { id: 5, title: "九年级上册 · 生物总复习（七年级）", count: 103 },
-    { id: 6, title: "九年级下册 · 生物总复习（八年级）", count: 83 }
+    { id: 1, title: "七年级上册 · 生物和生物圈", count: 170 },
+    { id: 2, title: "七年级下册 · 人体生命活动", count: 113 },
+    { id: 3, title: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护", count: 83 },
+    { id: 4, title: "八年级下册 · 生物圈中生命的延续和发展、健康地生活", count: 94 },
+    { id: 5, title: "九年级上册 · 生物总复习（七年级）", count: 79 },
+    { id: 6, title: "九年级下册 · 生物总复习（八年级）", count: 61 }
   ],
   questions: [
-    {
-      id: "shengwu-h01-q001", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 1, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "下列各项中，属于生物的是（ ）。",
-      options: [{key:"A",text:"机器人"}, {key:"B",text:"钟乳石"}, {key:"C",text:"珊瑚"}, {key:"D",text:"蘑菇"}],
-      answer: ["D"],
-      explanation: "蘑菇是真菌，能进行新陈代谢、生长和繁殖，属于生物。机器人、钟乳石没有生命特征；珊瑚是珊瑚虫分泌的石灰质骨骼，不是生物本身。",
-      trap: "易错点：珊瑚不是生物，珊瑚虫才是生物；会动、会长大不等于生物，要看是否具有生命特征。"
-    },
-    {
-      id: "shengwu-h01-q002", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 2, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "“含羞草受到触碰后叶片合拢”说明生物具有的特征是（ ）。",
-      options: [{key:"A",text:"需要营养"}, {key:"B",text:"能对外界刺激作出反应"}, {key:"C",text:"能进行呼吸"}, {key:"D",text:"能排出体内废物"}],
-      answer: ["B"],
-      explanation: "含羞草受触碰后叶片合拢，是生物对外界刺激作出的反应，即应激性。",
-      trap: "易错点：应激性是“对外界刺激作出反应”，不要和生长、繁殖混淆。"
-    },
-    {
-      id: "shengwu-h01-q003", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 3, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "生物圈的范围包括（ ）。",
-      options: [{key:"A",text:"大气圈的全部、水圈的全部、岩石圈的全部"}, {key:"B",text:"大气圈的底部、水圈的大部、岩石圈的表面"}, {key:"C",text:"大气圈的底部、水圈的全部、岩石圈的全部"}, {key:"D",text:"大气圈的全部、水圈的大部、岩石圈的表面"}],
-      answer: ["B"],
-      explanation: "生物圈是地球上所有生物与其环境的总和，范围是大气圈的底部、水圈的大部和岩石圈的表面。",
-      trap: "易错点：生物圈不是整个大气圈、水圈、岩石圈，只是其中有生物分布的那一部分。"
-    },
-    {
-      id: "shengwu-h01-q004", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 4, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "在生态系统中，生产者主要是指（ ）。",
-      options: [{key:"A",text:"细菌和真菌"}, {key:"B",text:"食草动物"}, {key:"C",text:"绿色植物"}, {key:"D",text:"食肉动物"}],
-      answer: ["C"],
-      explanation: "绿色植物能通过光合作用制造有机物，是生态系统中的生产者；细菌和真菌是分解者，动物是消费者。",
-      trap: "易错点：生产者≠所有生物，只有能自己制造有机物的绿色植物等才是生产者。"
-    },
+
+
+
+
     {
       id: "shengwu-h01-q005", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
       number: 5, type: "single", meta: "单选题",
@@ -65,27 +25,17 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "食物链以生产者开始，不包括非生物部分和分解者；苜蓿是生产者，野兔吃苜蓿，鹰吃野兔，正确的食物链是苜蓿→野兔→鹰。阳光是非生物部分、细菌是分解者，都不写入食物链。",
       trap: "易错点：食物链从生产者写起，不写阳光和细菌。"
     },
-    {
-      id: "shengwu-h01-q006", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 6, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "与动物细胞相比，植物细胞特有的结构是（ ）。",
-      options: [{key:"A",text:"细胞膜、细胞质、细胞核"}, {key:"B",text:"细胞壁、叶绿体、液泡"}, {key:"C",text:"细胞核、线粒体、叶绿体"}, {key:"D",text:"细胞壁、细胞膜、线粒体"}],
-      answer: ["B"],
-      explanation: "植物细胞特有的结构是细胞壁、叶绿体和液泡；细胞膜、细胞质、细胞核、线粒体是动植物细胞共有的。",
-      trap: "易错点：线粒体动植物细胞都有，不是植物特有的；液泡在成熟植物细胞中明显，动物细胞一般没有大液泡。"
-    },
+
     {
       id: "shengwu-h01-q007", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
       number: 7, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "用显微镜观察时，目镜为10×、物镜为40×，则物像的放大倍数是（ ）。",
-      options: [{key:"A",text:"10倍"}, {key:"B",text:"40倍"}, {key:"C",text:"50倍"}, {key:"D",text:"400倍"}],
-      answer: ["D"],
-      explanation: "显微镜的放大倍数＝目镜放大倍数×物镜放大倍数，即10×40＝400倍，放大的是物像的长度或宽度。",
-      trap: "易错点：放大倍数是相乘不是相加；放大的是长度或宽度，不是面积或体积。"
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第17题（模拟卷）",
+      stem: "用显微镜观察洋葱表皮细胞装片的同一部位时，选择下列哪种目镜和物镜的组合，视野中的细胞体积最大？（ ）。",
+      options: [{key:"A",text:"目镜5×物镜40×"}, {key:"B",text:"目镜10×物镜40×"}, {key:"C",text:"目镜10×物镜10×"}, {key:"D",text:"目镜16×物镜10×"}],
+      answer: ["B"],
+      explanation: "显微镜的放大倍数＝目镜放大倍数×物镜放大倍数，放大倍数越大，看到的细胞体积越大；A 是 200 倍，B 是 400 倍，C 是 100 倍，D 是 160 倍，所以 B 组合看到的细胞体积最大。",
+      trap: "易错点：放大倍数是目镜和物镜相乘，不是相加；倍数越大细胞越大、数目越少、视野越暗。"
     },
     {
       id: "shengwu-h01-q008", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
@@ -98,182 +48,32 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "植物细胞分裂时，细胞核先由一个分成两个，然后细胞质分成两份，最后在两个新细胞核之间的细胞质中央形成新的细胞膜，并产生新的细胞壁。",
       trap: "易错点：分裂顺序是细胞核→细胞质→细胞膜（细胞壁），不要记反。"
     },
-    {
-      id: "shengwu-h01-q009", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 9, type: "multiple", meta: "多选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "下列属于生物共同特征的有（ ）。",
-      options: [{key:"A",text:"需要营养"}, {key:"B",text:"能进行呼吸"}, {key:"C",text:"能生长和繁殖"}, {key:"D",text:"能对外界刺激作出反应"}],
-      answer: ["A","B","C","D"],
-      explanation: "生物的共同特征包括：生活需要营养；能进行呼吸；能排出体内产生的废物；能对外界刺激作出反应；能生长和繁殖；除病毒外，生物都由细胞构成；有遗传和变异的特性。题中四项都是。",
-      trap: "易错点：多选题要逐项判断，生物的共同特征有多条，不要只选最熟悉的一两项。"
-    },
-    {
-      id: "shengwu-h01-q010", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 10, type: "judge", meta: "判断题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "生物圈是地球上最大的生态系统。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "生物圈是地球上所有生物与其环境的总和，包括了地球上所有的生态系统，是最大的生态系统。",
-      trap: "易错点：生物圈本身就是一个生态系统，而且是最大的，不要误认为它只是生态系统的集合、不是生态系统。"
-    },
-    {
-      id: "shengwu-h01-q011", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 11, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "绿色植物进行光合作用的场所、原料和产物分别是（ ）。",
-      options: [{key:"A",text:"线粒体；二氧化碳和水；有机物和氧气"}, {key:"B",text:"叶绿体；二氧化碳和水；有机物和氧气"}, {key:"C",text:"叶绿体；有机物和氧气；二氧化碳和水"}, {key:"D",text:"液泡；二氧化碳和水；有机物和氧气"}],
-      answer: ["B"],
-      explanation: "光合作用在叶绿体中进行，以二氧化碳和水为原料，在光能作用下制造有机物（主要是淀粉），释放氧气。",
-      trap: "易错点：光合作用场所是叶绿体，呼吸作用场所是线粒体，两者不要混淆；光合作用的原料是二氧化碳和水，不是氧气。"
-    },
-    {
-      id: "shengwu-h01-q012", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 12, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "植物呼吸作用的实质是（ ）。",
-      options: [{key:"A",text:"合成有机物，储存能量"}, {key:"B",text:"分解有机物，释放能量"}, {key:"C",text:"吸收二氧化碳，释放氧气"}, {key:"D",text:"吸收氧气，合成淀粉"}],
-      answer: ["B"],
-      explanation: "呼吸作用是细胞利用氧，将有机物分解成二氧化碳和水，并将储存在有机物中的能量释放出来，供生命活动利用。",
-      trap: "易错点：光合作用合成有机物、储存能量；呼吸作用分解有机物、释放能量，两者正好相反。"
-    },
-    {
-      id: "shengwu-h01-q013", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 13, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "植物蒸腾作用的主要器官和水分散失的“门户”分别是（ ）。",
-      options: [{key:"A",text:"根；根毛"}, {key:"B",text:"茎；导管"}, {key:"C",text:"叶；气孔"}, {key:"D",text:"花；花瓣"}],
-      answer: ["C"],
-      explanation: "蒸腾作用是水分以水蒸气状态从植物体内散失到体外的过程，主要器官是叶，水分散失的门户是气孔。",
-      trap: "易错点：根是吸收水分的主要器官，叶才是蒸腾作用的主要器官；气孔是气体交换和水分散失的门户。"
-    },
+
+
+
+
+
     {
       id: "shengwu-h01-q014", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
       number: 14, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "种子萌发所需要的外界条件是（ ）。",
-      options: [{key:"A",text:"适宜的温度、一定的水分、充足的空气"}, {key:"B",text:"充足的阳光、肥沃的土壤、适宜的温度"}, {key:"C",text:"一定的水分、充足的阳光、肥沃的土壤"}, {key:"D",text:"适宜的温度、充足的空气、肥沃的土壤"}],
-      answer: ["A"],
-      explanation: "种子萌发需要适宜的温度、一定的水分和充足的空气；阳光和肥沃的土壤不是种子萌发必需的外界条件。",
-      trap: "易错点：种子萌发不需要阳光（有些种子在黑暗中也能萌发），不要把阳光当作必需条件。"
-    },
-    {
-      id: "shengwu-h01-q015", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 15, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "植物生长需要量最多的无机盐是含氮、含磷和含钾的无机盐，其中含氮的无机盐能促进（ ）。",
-      options: [{key:"A",text:"枝叶的生长"}, {key:"B",text:"开花和结果"}, {key:"C",text:"茎秆的健壮"}, {key:"D",text:"根系的生长"}],
-      answer: ["A"],
-      explanation: "含氮的无机盐能促进细胞的分裂和生长，使枝叶长得繁茂；含磷的无机盐能促进幼苗发育和花的开放，使果实、种子提早成熟；含钾的无机盐能使茎秆健壮，促进淀粉形成。",
-      trap: "易错点：氮—枝叶，磷—开花结果，钾—茎秆健壮，三者作用要对应记清。"
-    },
-    {
-      id: "shengwu-h01-q016", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 16, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "在载玻片上写了一个字母“p”，用显微镜观察时看到的物像是（ ）。",
-      options: [{key:"A",text:"p"}, {key:"B",text:"d"}, {key:"C",text:"b"}, {key:"D",text:"q"}],
-      answer: ["B"],
-      explanation: "显微镜下看到的物像是倒像，上下、左右都颠倒，字母p旋转180°后是d。",
-      trap: "易错点：显微镜成像是上下左右都颠倒的倒像，不是只左右颠倒。"
-    },
-    {
-      id: "shengwu-h01-q017", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 17, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "用显微镜观察时，视野太暗，应该采取的措施是（ ）。",
-      options: [{key:"A",text:"换用高倍物镜"}, {key:"B",text:"缩小光圈"}, {key:"C",text:"换用大光圈或凹面镜"}, {key:"D",text:"把反光镜转向阴天时的平面镜"}],
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第4题（模拟卷）",
+      stem: "将颗粒完整饱满的种子分成甲、乙两组，在相同的适宜温度下播种，甲组种在肥沃湿润的土壤中，乙组种在贫瘠湿润的土壤中，这两组种子的发芽状况是（ ）。",
+      options: [{key:"A",text:"甲先萌发"}, {key:"B",text:"乙先萌发"}, {key:"C",text:"同时萌发"}, {key:"D",text:"乙不萌发"}],
       answer: ["C"],
-      explanation: "视野太暗时要增加进光量，可换用大光圈或凹面镜；光线太强时才用小光圈或平面镜。",
-      trap: "易错点：凹面镜聚光、使视野变亮，平面镜反光较弱；高倍物镜会使视野更暗、范围更小。"
+      explanation: "种子萌发的外界条件是一定的水分、适宜的温度和充足的空气，与土壤肥沃或贫瘠无关；甲、乙两组都满足萌发的外界条件和自身条件（颗粒完整饱满、有活力的胚），所以同时萌发。",
+      trap: "易错点：种子萌发不需要肥沃的土壤；肥沃影响的是幼苗长大后的生长，不是萌发本身。"
     },
-    {
-      id: "shengwu-h01-q018", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 18, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "制作洋葱鳞片叶内表皮细胞临时装片时，盖盖玻片的正确方法是（ ）。",
-      options: [{key:"A",text:"直接把盖玻片平放在水滴上"}, {key:"B",text:"用镊子夹起盖玻片一侧，使另一侧先接触水滴，再缓缓放下"}, {key:"C",text:"把盖玻片竖起来快速扣下"}, {key:"D",text:"先滴碘液再盖盖玻片"}],
-      answer: ["B"],
-      explanation: "盖盖玻片时让一侧先接触水滴，再缓缓放下，可以避免盖玻片下面产生气泡，影响观察。",
-      trap: "易错点：直接平放或快速扣下容易产生气泡；碘液是在盖好盖玻片后，从一侧滴加、另一侧用吸水纸吸引来染色的。"
-    },
-    {
-      id: "shengwu-h01-q019", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 19, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "细胞中能控制物质进出的结构是（ ）。",
-      options: [{key:"A",text:"细胞壁"}, {key:"B",text:"细胞膜"}, {key:"C",text:"细胞核"}, {key:"D",text:"液泡"}],
-      answer: ["B"],
-      explanation: "细胞膜能控制物质的进出，让有用的物质进入细胞，把其他物质挡在细胞外面；细胞核是遗传信息库，细胞壁起保护和支持作用，液泡内含细胞液。",
-      trap: "易错点：细胞壁全透性、只起保护支持作用，控制物质进出的是细胞膜。"
-    },
-    {
-      id: "shengwu-h01-q020", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 20, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "植物细胞中，能将光能转变成化学能的结构是（ ）。",
-      options: [{key:"A",text:"线粒体"}, {key:"B",text:"细胞核"}, {key:"C",text:"叶绿体"}, {key:"D",text:"液泡"}],
-      answer: ["C"],
-      explanation: "叶绿体是光合作用的场所，能把光能转变成化学能，储存在制造的有机物中；线粒体是呼吸作用的场所，能把有机物中的化学能释放出来。",
-      trap: "易错点：叶绿体—光能变化学能、储存能量；线粒体—释放能量，两者不要混淆。"
-    },
-    {
-      id: "shengwu-h01-q021", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 21, type: "multiple", meta: "多选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "下列属于植物组织的有（ ）。",
-      options: [{key:"A",text:"保护组织"}, {key:"B",text:"分生组织"}, {key:"C",text:"营养组织"}, {key:"D",text:"输导组织"}],
-      answer: ["A","B","C","D"],
-      explanation: "植物的主要组织有保护组织、分生组织、营养组织、输导组织和机械组织；细胞分化形成不同的组织，组织再构成器官。",
-      trap: "易错点：上皮组织、肌肉组织、结缔组织、神经组织是动物（人体）的组织，不是植物的。"
-    },
-    {
-      id: "shengwu-h01-q022", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 22, type: "judge", meta: "判断题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "绿色植物白天只进行光合作用，晚上只进行呼吸作用。（ ）",
-      options: [],
-      answer: ["false"],
-      explanation: "绿色植物白天光合作用和呼吸作用同时进行，晚上没有光、只进行呼吸作用；呼吸作用时时刻刻都在进行。",
-      trap: "易错点：白天两种作用同时进行，只是光合作用强度大于呼吸作用；不要以为白天不呼吸。"
-    },
-    {
-      id: "shengwu-h01-q023", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 23, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "根尖吸收水分和无机盐的主要部位是（ ）。",
-      options: [{key:"A",text:"根冠"}, {key:"B",text:"分生区"}, {key:"C",text:"伸长区"}, {key:"D",text:"成熟区"}],
-      answer: ["D"],
-      explanation: "成熟区有大量根毛，大大增加了吸收面积，是根尖吸收水分和无机盐的主要部位；根冠起保护作用，分生区细胞能分裂，伸长区细胞能迅速伸长。",
-      trap: "易错点：吸收的主要部位是成熟区（根毛区），不是分生区；分生区只负责分裂产生新细胞。"
-    },
-    {
-      id: "shengwu-h01-q024", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 24, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "植物体内运输有机物的结构是（ ）。",
-      options: [{key:"A",text:"导管"}, {key:"B",text:"筛管"}, {key:"C",text:"气孔"}, {key:"D",text:"根毛"}],
-      answer: ["B"],
-      explanation: "筛管运输光合作用制造的有机物，导管运输水分和无机盐；气孔是气体交换和水分散失的门户，根毛吸收水分和无机盐。",
-      trap: "易错点：导管—水和无机盐（由下向上），筛管—有机物（由上向下为主），两者不要记反。"
-    },
+
+
+
+
+
+
+
+
+
+
     {
       id: "shengwu-h01-q025", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
       number: 25, type: "single", meta: "单选题",
@@ -285,61 +85,21 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "雄蕊（花药、花丝）和雌蕊（柱头、花柱、子房）与果实和种子的形成有直接关系，是花的主要结构；花瓣、花萼、花托、花柄起保护或支持作用。",
       trap: "易错点：花的主要结构不是最显眼的花瓣，而是与繁殖直接相关的雄蕊和雌蕊。"
     },
-    {
-      id: "shengwu-h01-q026", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 26, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "绿色开花植物受精后，发育成种子的是（ ）。",
-      options: [{key:"A",text:"子房"}, {key:"B",text:"子房壁"}, {key:"C",text:"胚珠"}, {key:"D",text:"受精卵"}],
-      answer: ["C"],
-      explanation: "受精后，子房发育成果实，子房壁发育成果皮，胚珠发育成种子，受精卵发育成胚；果实由果皮和种子组成。",
-      trap: "易错点：子房—果实，胚珠—种子，受精卵—胚，三者要一一对应。"
-    },
-    {
-      id: "shengwu-h01-q027", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 27, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "菜豆种子萌发时，发育成茎和叶的结构是（ ）。",
-      options: [{key:"A",text:"胚根"}, {key:"B",text:"胚芽"}, {key:"C",text:"胚轴"}, {key:"D",text:"子叶"}],
-      answer: ["B"],
-      explanation: "种子萌发时，胚根最先突破种皮发育成根，胚芽发育成茎和叶，胚轴发育成连接根和茎的部分，子叶提供营养；胚是新植物的幼体。",
-      trap: "易错点：胚根—根，胚芽—茎和叶，胚轴—连接部分，子叶—提供营养，不要张冠李戴。"
-    },
+
+
     {
       id: "shengwu-h01-q028", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
       number: 28, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "下列植物中，属于裸子植物的是（ ）。",
-      options: [{key:"A",text:"水稻"}, {key:"B",text:"花生"}, {key:"C",text:"银杏"}, {key:"D",text:"苹果"}],
+      source: "2025年湖南省长沙市中考生物真题第1题",
+      stem: "中国植物园的图标由银杏和水杉组成。银杏和水杉都属于（ ）。",
+      options: [{key:"A",text:"苔藓植物"}, {key:"B",text:"蕨类植物"}, {key:"C",text:"裸子植物"}, {key:"D",text:"被子植物"}],
       answer: ["C"],
-      explanation: "裸子植物的种子裸露，没有果皮包被，如松、杉、柏、银杏、苏铁；水稻、花生、苹果的种子外面有果皮包被，属于被子植物。",
-      trap: "易错点：区分裸子植物和被子植物的关键是种子外面有没有果皮包被，不是有没有花或果实的外形。"
+      explanation: "银杏和水杉的种子裸露，没有果皮包被，不能形成果实，都属于裸子植物；苔藓植物和蕨类植物用孢子繁殖，被子植物的种子外面有果皮包被，能形成果实。",
+      trap: "易错点：银杏的“白果”是种子不是果实；判断裸子植物还是被子植物，看种子外面有没有果皮包被。"
     },
-    {
-      id: "shengwu-h01-q029", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 29, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "下列关于藻类植物的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"有根、茎、叶的分化"}, {key:"B",text:"生活在水中，没有根、茎、叶的分化"}, {key:"C",text:"靠种子繁殖后代"}, {key:"D",text:"大多生活在陆地上"}],
-      answer: ["B"],
-      explanation: "藻类植物大多生活在水中，结构简单，没有根、茎、叶的分化，靠孢子繁殖；苔藓植物有茎和叶、没有真正的根，蕨类植物有根、茎、叶的分化。",
-      trap: "易错点：藻类—无根茎叶分化，苔藓—有茎叶无真根，蕨类—有根茎叶，三者分化程度依次提高。"
-    },
-    {
-      id: "shengwu-h01-q030", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
-      number: 30, type: "single", meta: "单选题",
-      grade: "七上", stage: "7-up",
-      source: "自创-待替换",
-      stem: "为了提高大棚蔬菜的产量，下列措施中最合理的是（ ）。",
-      options: [{key:"A",text:"适当增加大棚内二氧化碳的浓度"}, {key:"B",text:"减少光照时间"}, {key:"C",text:"适当增加大棚内氧气的浓度"}, {key:"D",text:"白天和夜晚都提高大棚温度"}],
-      answer: ["A"],
-      explanation: "二氧化碳是光合作用的原料，适当增加二氧化碳浓度、延长光照时间、适当提高白天温度，都能增强光合作用、提高产量；夜晚适当降温可减弱呼吸作用、减少有机物消耗。",
-      trap: "易错点：增加氧气会增强呼吸作用、消耗有机物；夜晚提高温度会增强呼吸作用，反而降低产量。"
-    },
+
+
     {
       id: "shengwu-h01-q031", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
       number: 31, type: "single", meta: "单选题",
@@ -936,6 +696,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q085", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 85, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2024年广东省初中学业水平考试·生物第7题（原题为番茄果肉细胞图示标号①细胞壁②细胞核，改为文字选项）",
@@ -1035,6 +796,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q094", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 94, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2024年四川省成都市初中学业水平考试·生物第4题（原题有图，已将图中①②③所指结构用文字注明，知识点和答案未改）",
@@ -1057,6 +819,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q096", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 96, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2024年四川省成都市初中学业水平考试·生物第6题（原题有装置图，已删去“如图所示”，知识点和答案未改）",
@@ -1145,6 +908,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q104", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 104, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2024年江苏省苏州市初中学业水平考试·生物第48题（原题有示意图，已按材料文字改写题干，知识点和答案未改）",
@@ -1154,105 +918,15 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "精白米在精制过程中去掉了胚，没有完整的胚就不能萌发成幼苗；糙米是水稻的果实（颖果），由子房发育而来；水稻是单子叶植物，胚中只有一片子叶。",
       trap: "易错点：种子萌发的关键是具有完整而有活力的胚；精白米只剩胚乳，不能萌发。"
     },
-    {
-      id: "shengwu-h02-q001", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 1, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "淀粉、蛋白质、脂肪开始被消化的部位依次是（ ）。",
-      options: [{key:"A",text:"口腔、胃、小肠"}, {key:"B",text:"口腔、小肠、胃"}, {key:"C",text:"胃、口腔、小肠"}, {key:"D",text:"小肠、胃、口腔"}],
-      answer: ["A"],
-      explanation: "淀粉在口腔中开始被唾液淀粉酶消化；蛋白质在胃中开始被胃液消化；脂肪在小肠中开始被胆汁乳化、被肠液和胰液消化。",
-      trap: "易错点：胆汁不含消化酶，只能把脂肪乳化成小颗粒；脂肪的化学性消化在小肠。"
-    },
-    {
-      id: "shengwu-h02-q002", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 2, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "人体进行气体交换的主要场所是（ ）。",
-      options: [{key:"A",text:"鼻"}, {key:"B",text:"气管"}, {key:"C",text:"支气管"}, {key:"D",text:"肺"}],
-      answer: ["D"],
-      explanation: "肺是呼吸系统的主要器官，是气体交换的场所；肺泡外包绕着丰富的毛细血管，肺泡壁和毛细血管壁都很薄，利于气体交换。",
-      trap: "易错点：鼻、咽、喉、气管、支气管是呼吸道，只起清洁、湿润、温暖空气和保证气流畅通的作用，不进行气体交换。"
-    },
-    {
-      id: "shengwu-h02-q003", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 3, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "下列关于人体心脏的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"心脏有四个腔，左右心房、左右心室互不相通"}, {key:"B",text:"左心室壁最厚，体循环由此开始"}, {key:"C",text:"右心室中流的是动脉血"}, {key:"D",text:"心脏的四个腔中，左心房壁最厚"}],
-      answer: ["B"],
-      explanation: "心脏有左心房、左心室、右心房、右心室四个腔，同侧心房与心室相通，左右两侧不相通；左心室壁最厚，将血液泵向全身，体循环从左心室开始；右心室中流的是静脉血。",
-      trap: "易错点：左心室壁最厚是因为它要把血液输送到全身，收缩力最强；不要误认为左心房壁最厚。"
-    },
-    {
-      id: "shengwu-h02-q004", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 4, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "肾单位的结构包括（ ）。",
-      options: [{key:"A",text:"肾小球、肾小囊、肾小管"}, {key:"B",text:"肾皮质、肾髓质、肾盂"}, {key:"C",text:"肾小球、肾小管、输尿管"}, {key:"D",text:"肾小囊、肾小管、膀胱"}],
-      answer: ["A"],
-      explanation: "肾单位是肾脏结构和功能的基本单位，由肾小球、肾小囊和肾小管组成；尿液的形成包括肾小球的过滤作用和肾小管的重吸收作用。",
-      trap: "易错点：肾皮质、肾髓质、肾盂是肾脏的大体结构，不是肾单位的组成；输尿管、膀胱属于泌尿系统的其他器官。"
-    },
-    {
-      id: "shengwu-h02-q005", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 5, type: "multiple", meta: "多选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "下列属于人体内分泌腺的有（ ）。",
-      options: [{key:"A",text:"垂体"}, {key:"B",text:"甲状腺"}, {key:"C",text:"胰岛"}, {key:"D",text:"唾液腺"}],
-      answer: ["A","B","C"],
-      explanation: "内分泌腺没有导管，分泌物激素直接进入血液，如垂体、甲状腺、胰岛、肾上腺、性腺等；唾液腺有导管，分泌物经导管排出，属于外分泌腺。",
-      trap: "易错点：胰岛是内分泌腺，胰腺整体既有内分泌部（胰岛）又有外分泌部；唾液腺、汗腺、肝脏等属于外分泌腺。"
-    },
-    {
-      id: "shengwu-h02-q006", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 6, type: "judge", meta: "判断题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "神经元是神经系统结构和功能的基本单位。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "神经元又叫神经细胞，是构成神经系统结构和功能的基本单位，由细胞体和突起组成，能接受刺激、产生并传导兴奋。",
-      trap: "易错点：神经元是神经系统的基本单位，神经系统由脑、脊髓和它们发出的神经组成，不要把神经和神经元混淆。"
-    },
-    {
-      id: "shengwu-h02-q007", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 7, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "下列反射中，属于条件反射的是（ ）。",
-      options: [{key:"A",text:"膝跳反射"}, {key:"B",text:"眨眼反射"}, {key:"C",text:"听到铃声走进教室"}, {key:"D",text:"婴儿吮吸反射"}],
-      answer: ["C"],
-      explanation: "条件反射是出生后在生活过程中逐渐形成的后天性反射，需要大脑皮层的参与；听到铃声走进教室是后天学习形成的。膝跳反射、眨眼反射、吮吸反射都是生来就有的非条件反射。",
-      trap: "易错点：非条件反射生来就有、神经中枢在脑干或脊髓；条件反射后天形成、需要大脑皮层参与。"
-    },
-    {
-      id: "shengwu-h02-q008", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 8, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "胰岛素分泌不足会引起（ ）。",
-      options: [{key:"A",text:"侏儒症"}, {key:"B",text:"呆小症"}, {key:"C",text:"糖尿病"}, {key:"D",text:"巨人症"}],
-      answer: ["C"],
-      explanation: "胰岛素能调节糖的代谢，促进血糖合成糖原、加速血糖分解，降低血糖浓度；分泌不足会使血糖浓度升高，引起糖尿病。侏儒症是幼年生长激素分泌不足，巨人症是幼年生长激素分泌过多，呆小症是幼年甲状腺激素分泌不足。",
-      trap: "易错点：胰岛素—糖尿病，生长激素—侏儒症/巨人症，甲状腺激素—呆小症/甲亢，激素与疾病要一一对应。"
-    },
-    {
-      id: "shengwu-h02-q009", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 9, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "人类和现代类人猿的共同祖先是（ ）。",
-      options: [{key:"A",text:"森林古猿"}, {key:"B",text:"长臂猿"}, {key:"C",text:"黑猩猩"}, {key:"D",text:"大猩猩"}],
-      answer: ["A"],
-      explanation: "人类和现代类人猿的共同祖先是森林古猿，森林古猿一部分进化成现代类人猿，另一部分进化成人类；现代类人猿不是人类的祖先。",
-      trap: "易错点：人类是由森林古猿进化来的，不是现代类人猿进化来的；现代类人猿和人类是“远亲”，不是祖先和后代的关系。"
-    },
+
+
+
+
+
+
+
+
+
     {
       id: "shengwu-h02-q010", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
       number: 10, type: "single", meta: "单选题",
@@ -1264,204 +938,34 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "睾丸是男性主要的生殖器官，能产生精子并分泌雄性激素；附睾贮存和输送精子，输精管输送精子。",
       trap: "易错点：产生精子的是睾丸，附睾只负责贮存和输送。"
     },
-    {
-      id: "shengwu-h02-q011", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 11, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "精子与卵细胞结合形成受精卵的场所是（ ）。",
-      options: [{key:"A",text:"卵巢"}, {key:"B",text:"子宫"}, {key:"C",text:"输卵管"}, {key:"D",text:"阴道"}],
-      answer: ["C"],
-      explanation: "精子与卵细胞在输卵管内结合形成受精卵，受精卵一边分裂一边向子宫移动，植入子宫内膜后继续发育；卵巢产生卵细胞，子宫是胚胎发育的场所。",
-      trap: "易错点：受精在输卵管，发育在子宫；不要把受精和怀孕的场所混淆。"
-    },
-    {
-      id: "shengwu-h02-q012", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 12, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "胎儿与母体进行物质交换的结构是（ ）。",
-      options: [{key:"A",text:"脐带"}, {key:"B",text:"胎盘"}, {key:"C",text:"子宫"}, {key:"D",text:"卵巢"}],
-      answer: ["B"],
-      explanation: "胎盘是胎儿与母体进行物质交换的器官，胎儿通过胎盘、脐带从母体获得氧气和养料，排出二氧化碳等废物；脐带是连接胎儿和胎盘的通道。",
-      trap: "易错点：直接进行物质交换的是胎盘，脐带只是连接通道；胎儿的血液和母体的血液并不直接混合。"
-    },
-    {
-      id: "shengwu-h02-q013", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 13, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "下列属于男性第二性征的是（ ）。",
-      options: [{key:"A",text:"身高迅速增长"}, {key:"B",text:"喉结突出、声音变粗"}, {key:"C",text:"体重迅速增加"}, {key:"D",text:"心肺功能增强"}],
-      answer: ["B"],
-      explanation: "进入青春期后，在性激素的作用下出现第二性征：男性喉结突出、声音变粗、长胡须，女性乳房增大、声音变细；身高体重迅速增长是青春期的显著特点，不是第二性征。",
-      trap: "易错点：第二性征是在性激素作用下出现的性别差异特征，身高体重增长是青春期的共同特点。"
-    },
-    {
-      id: "shengwu-h02-q014", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 14, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "人体生命活动所需能量的主要来源是（ ）。",
-      options: [{key:"A",text:"蛋白质"}, {key:"B",text:"脂肪"}, {key:"C",text:"糖类"}, {key:"D",text:"维生素"}],
-      answer: ["C"],
-      explanation: "糖类是人体主要的供能物质；蛋白质是构成人体细胞的基本物质，也是供能物质；脂肪是备用能源物质；维生素既不参与构成细胞，也不提供能量。",
-      trap: "易错点：糖类—主要供能，蛋白质—构成修复，脂肪—备用能源，维生素—调节生命活动但不供能。"
-    },
-    {
-      id: "shengwu-h02-q015", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 15, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "人体缺乏维生素C会患（ ）。",
-      options: [{key:"A",text:"夜盲症"}, {key:"B",text:"脚气病"}, {key:"C",text:"坏血病"}, {key:"D",text:"佝偻病"}],
-      answer: ["C"],
-      explanation: "缺乏维生素C会患坏血病；缺乏维生素A会患夜盲症，缺乏维生素B1会患脚气病，缺乏维生素D会患佝偻病（儿童）或骨质疏松症（中老年人）。",
-      trap: "易错点：维生素A—夜盲症，B1—脚气病，C—坏血病，D—佝偻病，要一一对应。"
-    },
-    {
-      id: "shengwu-h02-q016", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 16, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "食物经过消化道时，依次经过的器官是（ ）。",
-      options: [{key:"A",text:"口腔→咽→食管→胃→小肠→大肠→肛门"}, {key:"B",text:"口腔→食管→咽→胃→大肠→小肠→肛门"}, {key:"C",text:"口腔→咽→胃→食管→小肠→大肠→肛门"}, {key:"D",text:"口腔→胃→咽→食管→小肠→大肠→肛门"}],
-      answer: ["A"],
-      explanation: "消化道依次是口腔、咽、食管、胃、小肠、大肠、肛门；小肠是消化和吸收的主要场所，大肠能吸收少量水、无机盐和部分维生素。",
-      trap: "易错点：咽在口腔之后、食管之前，胃之后是小肠、不是大肠，顺序不要记乱。"
-    },
-    {
-      id: "shengwu-h02-q017", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 17, type: "multiple", meta: "多选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "下列属于人体消化腺的有（ ）。",
-      options: [{key:"A",text:"唾液腺"}, {key:"B",text:"胃腺"}, {key:"C",text:"肝脏"}, {key:"D",text:"胰腺"}],
-      answer: ["A","B","C","D"],
-      explanation: "消化腺包括唾液腺、胃腺、肝脏、胰腺和肠腺，都能分泌消化液；其中肝脏分泌的胆汁不含消化酶，只能把脂肪乳化成小颗粒。",
-      trap: "易错点：肝脏是人体最大的消化腺，分泌的胆汁不含消化酶，只起乳化作用。"
-    },
-    {
-      id: "shengwu-h02-q018", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 18, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "肺泡适于进行气体交换的特点不包括（ ）。",
-      options: [{key:"A",text:"肺泡数量多"}, {key:"B",text:"肺泡外包绕着丰富的毛细血管"}, {key:"C",text:"肺泡壁和毛细血管壁都很薄，只由一层上皮细胞构成"}, {key:"D",text:"肺泡内有纤毛，能清扫灰尘"}],
-      answer: ["D"],
-      explanation: "肺泡数量多、外包绕丰富毛细血管、肺泡壁和毛细血管壁都很薄，都利于气体交换；有纤毛、能清扫灰尘的是呼吸道（气管、支气管）内表面的黏膜，不是肺泡。",
-      trap: "易错点：肺泡的特点是多、薄、毛细血管丰富；纤毛属于呼吸道，不是肺泡的结构。"
-    },
-    {
-      id: "shengwu-h02-q019", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 19, type: "judge", meta: "判断题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "吸气时，膈肌收缩，膈顶部下降，胸廓容积扩大。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "吸气时肋间肌和膈肌收缩，胸廓前后径、左右径和上下径都扩大，胸廓容积扩大，肺内气压降低，外界气体进入肺；呼气时相反。",
-      trap: "易错点：吸气—膈肌收缩、膈顶下降；呼气—膈肌舒张、膈顶上升，不要记反。"
-    },
-    {
-      id: "shengwu-h02-q020", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 20, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "肺循环的起点和终点分别是（ ）。",
-      options: [{key:"A",text:"左心室、右心房"}, {key:"B",text:"右心室、左心房"}, {key:"C",text:"左心房、右心室"}, {key:"D",text:"右心房、左心室"}],
-      answer: ["B"],
-      explanation: "肺循环：右心室→肺动脉→肺部毛细血管→肺静脉→左心房；体循环：左心室→主动脉→全身毛细血管→上下腔静脉→右心房。",
-      trap: "易错点：肺循环起点是右心室、终点是左心房；体循环起点是左心室、终点是右心房，两条路线不要混淆。"
-    },
-    {
-      id: "shengwu-h02-q021", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 21, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "下列关于动脉血的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"含氧少、颜色暗红"}, {key:"B",text:"含氧丰富、颜色鲜红"}, {key:"C",text:"只存在于动脉中"}, {key:"D",text:"只存在于体循环中"}],
-      answer: ["B"],
-      explanation: "动脉血含氧丰富、颜色鲜红，静脉血含氧少、颜色暗红；动脉血不只存在于动脉中，肺静脉中流的也是动脉血，肺动脉中流的是静脉血。",
-      trap: "易错点：动脉血和静脉血是按含氧量和颜色区分的，不是按所在的血管区分的；肺动脉中流静脉血，肺静脉中流动脉血。"
-    },
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "shengwu-h02-q022", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
       number: 22, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "输血时一般应遵循的原则是（ ）。",
-      options: [{key:"A",text:"输入O型血最安全"}, {key:"B",text:"输入AB型血最安全"}, {key:"C",text:"输同型血"}, {key:"D",text:"输入血量越少越好"}],
-      answer: ["C"],
-      explanation: "输血时应以输同型血为原则，否则受血者的红细胞会凝集成团、阻碍血液循环；O型血可少量、缓慢地输给其他血型的人，但大量输血时仍应输同型血。",
-      trap: "易错点：O型血不是万能血，大量输血必须输同型血；AB型血的人可少量接受其他血型，但原则仍是同型血。"
-    },
-    {
-      id: "shengwu-h02-q023", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 23, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "与血浆相比，原尿中不含有的成分是（ ）。",
-      options: [{key:"A",text:"水"}, {key:"B",text:"无机盐"}, {key:"C",text:"葡萄糖"}, {key:"D",text:"大分子蛋白质"}],
+      source: "2025年湖南省长沙市中考生物真题第9题",
+      stem: "某O型血的幼儿因病需要大量输血，根据输血原则，他输入血液的血型应是（ ）。",
+      options: [{key:"A",text:"A型血"}, {key:"B",text:"B型血"}, {key:"C",text:"AB型血"}, {key:"D",text:"O型血"}],
       answer: ["D"],
-      explanation: "血液流经肾小球时，血浆中的水、无机盐、葡萄糖、尿素等小分子物质过滤到肾小囊中形成原尿，大分子蛋白质和血细胞不能过滤过去，所以原尿中没有大分子蛋白质和血细胞。",
-      trap: "易错点：原尿和血浆相比，少了大分子蛋白质；尿液和原尿相比，少了葡萄糖（被肾小管全部重吸收）。"
+      explanation: "输血以输同型血为原则；O型血可以输给任何血型的人，但只能接受O型血，大量输血时更必须输同型血。",
+      trap: "易错点：O型血是万能供血者，但只能接受O型血；AB型血是万能受血者，但只能输给AB型血的人。"
     },
-    {
-      id: "shengwu-h02-q024", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 24, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "健康人尿液中不应该含有的成分是（ ）。",
-      options: [{key:"A",text:"水"}, {key:"B",text:"无机盐"}, {key:"C",text:"尿素"}, {key:"D",text:"葡萄糖"}],
-      answer: ["D"],
-      explanation: "原尿流经肾小管时，全部的葡萄糖、大部分的水和部分无机盐被重吸收回血液，剩下的水、无机盐和尿素形成尿液；健康人尿液中没有葡萄糖，尿液中有葡萄糖可能是肾小管病变或糖尿病。",
-      trap: "易错点：原尿中有葡萄糖，尿液中没有；尿液中有蛋白质或血细胞，说明肾小球可能病变。"
-    },
-    {
-      id: "shengwu-h02-q025", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 25, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "反射弧的正确组成顺序是（ ）。",
-      options: [{key:"A",text:"感受器→传入神经→神经中枢→传出神经→效应器"}, {key:"B",text:"感受器→传出神经→神经中枢→传入神经→效应器"}, {key:"C",text:"效应器→传入神经→神经中枢→传出神经→感受器"}, {key:"D",text:"感受器→神经中枢→传入神经→传出神经→效应器"}],
-      answer: ["A"],
-      explanation: "反射弧由感受器、传入神经、神经中枢、传出神经、效应器五部分组成；反射活动必须通过完整的反射弧才能完成，任何一个环节受损，反射都不能完成。",
-      trap: "易错点：传入神经把信号传进中枢，传出神经把指令传出中枢，两者方向不要记反。"
-    },
-    {
-      id: "shengwu-h02-q026", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 26, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "近视眼的成像位置和矫正方法分别是（ ）。",
-      options: [{key:"A",text:"成像在视网膜前方，用凸透镜矫正"}, {key:"B",text:"成像在视网膜前方，用凹透镜矫正"}, {key:"C",text:"成像在视网膜后方，用凸透镜矫正"}, {key:"D",text:"成像在视网膜后方，用凹透镜矫正"}],
-      answer: ["B"],
-      explanation: "近视眼的晶状体曲度过大或眼球前后径过长，物像落在视网膜前方，看不清远处物体，用凹透镜矫正；远视眼物像落在视网膜后方，用凸透镜矫正。",
-      trap: "易错点：近视—像在前、凹透镜，远视—像在后、凸透镜；视觉形成的部位是视网膜，产生视觉的部位是大脑皮层。"
-    },
-    {
-      id: "shengwu-h02-q027", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 27, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "耳中能感受声波振动、产生神经冲动的结构是（ ）。",
-      options: [{key:"A",text:"鼓膜"}, {key:"B",text:"听小骨"}, {key:"C",text:"耳蜗"}, {key:"D",text:"半规管"}],
-      answer: ["C"],
-      explanation: "耳蜗内有听觉感受器，能感受声波振动并产生神经冲动，经听神经传到大脑皮层形成听觉；鼓膜接受声波振动，听小骨传导振动，半规管与平衡感觉有关。",
-      trap: "易错点：耳蜗—听觉感受器，半规管和前庭—平衡感受器；产生听觉的部位是大脑皮层，不是耳蜗。"
-    },
-    {
-      id: "shengwu-h02-q028", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
-      number: 28, type: "single", meta: "单选题",
-      grade: "七下", stage: "7-down",
-      source: "自创-待替换",
-      stem: "某地区儿童中“大脖子病”（地方性甲状腺肿）发病率较高，其主要原因是（ ）。",
-      options: [{key:"A",text:"饮食中缺碘"}, {key:"B",text:"饮食中缺钙"}, {key:"C",text:"饮食中缺铁"}, {key:"D",text:"饮食中缺维生素D"}],
-      answer: ["A"],
-      explanation: "碘是合成甲状腺激素的原料，饮食中缺碘会引起甲状腺激素合成不足、甲状腺代偿性肿大，形成地方性甲状腺肿；缺钙会患佝偻病或骨质疏松，缺铁会患缺铁性贫血。",
-      trap: "易错点：缺碘—地方性甲状腺肿，甲状腺激素分泌过多—甲亢，幼年分泌不足—呆小症，三者不要混淆。"
-    },
+
+
+
+
+
+
     {
       id: "shengwu-h02-q029", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
       number: 29, type: "single", meta: "单选题",
@@ -1475,6 +979,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h02-q030", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      image: true,
       number: 30, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2025年福建省初中学业水平考试·生物第12题（原题为耳结构图示标号，改为文字选项）",
@@ -1497,6 +1002,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h02-q032", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      image: true,
       number: 32, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2025年福建省初中学业水平考试·生物第15题（原题为器官图示标号①脑②心脏③肾脏④血管，改为文字选项）",
@@ -1508,6 +1014,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h02-q033", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      image: true,
       number: 33, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2025年福建省初中学业水平考试·生物第16题（原题为关节图示标号，改为文字选项）",
@@ -2003,6 +1510,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h02-q078", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      image: true,
       number: 78, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "2024年广东省初中学业水平考试·生物第18题",
@@ -2069,6 +1577,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h02-q084", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      image: true,
       number: 84, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2024年四川省成都市初中学业水平考试·生物第8题（原题有装置图，已删去“如图所示”，知识点和答案未改）",
@@ -2177,17 +1686,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "输卵管是精子与卵细胞结合形成受精卵的场所，堵塞后精子与卵细胞不能结合；卵细胞由卵巢产生，雌激素由卵巢分泌，胚胎在子宫内发育、通过胎盘从母体获得营养。",
       trap: "易错点：受精的场所是输卵管，胚胎发育的场所是子宫；卵巢产生卵细胞并分泌雌激素。"
     },
-    {
-      id: "shengwu-h03-q001", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 1, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列关于病毒的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"病毒有细胞结构，能独立生活"}, {key:"B",text:"病毒由蛋白质外壳和内部的遗传物质组成"}, {key:"C",text:"病毒属于原核生物"}, {key:"D",text:"所有病毒对人类都有害"}],
-      answer: ["B"],
-      explanation: "病毒没有细胞结构，由蛋白质外壳和内部的遗传物质组成，只能寄生在活细胞内生活；病毒不是原核生物，也不是真核生物；有的病毒可用于制疫苗、防治害虫等，并非都有害。",
-      trap: "易错点：病毒无细胞结构、不能独立生活，必须寄生；细菌才有细胞结构但无成形细胞核。"
-    },
+
     {
       id: "shengwu-h03-q002", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
       number: 2, type: "single", meta: "单选题",
@@ -2199,105 +1698,15 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "制作酸奶利用乳酸菌的发酵作用，乳酸菌在无氧条件下将牛奶中的乳糖转化为乳酸；酵母菌用于酿酒、发面，醋酸菌用于制醋。",
       trap: "易错点：酸奶—乳酸菌；米酒—酵母菌；食醋—醋酸菌，不要混淆。"
     },
-    {
-      id: "shengwu-h03-q003", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 3, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列动物中，属于腔肠动物的是（ ）。",
-      options: [{key:"A",text:"涡虫"}, {key:"B",text:"水螅"}, {key:"C",text:"蚯蚓"}, {key:"D",text:"蛔虫"}],
-      answer: ["B"],
-      explanation: "腔肠动物的主要特征是身体辐射对称、体表有刺细胞、有口无肛门，代表动物有水螅、水母、海葵、海蜇、珊瑚虫；涡虫属于扁形动物，蚯蚓属于环节动物，蛔虫属于线形动物。",
-      trap: "易错点：腔肠动物—辐射对称、有口无肛门；扁形动物—两侧对称、有口无肛门，两者都有口无肛门，要看对称方式区分。"
-    },
-    {
-      id: "shengwu-h03-q004", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 4, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "血吸虫寄生在人体内，其消化器官简单、生殖器官特别发达，这体现了（ ）。",
-      options: [{key:"A",text:"寄生生活对环境的适应"}, {key:"B",text:"自由生活的特征"}, {key:"C",text:"变态发育的特征"}, {key:"D",text:"社会行为的特征"}],
-      answer: ["A"],
-      explanation: "血吸虫、绦虫等寄生扁形动物消化器官简单、生殖器官特别发达，是对寄生生活的适应；涡虫营自由生活，消化器官相对发达。",
-      trap: "易错点：寄生生活的动物往往消化器官退化、生殖器官发达，这是适应，不是退化无用。"
-    },
-    {
-      id: "shengwu-h03-q005", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 5, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "蚯蚓在土壤中活动时，协助其运动的结构是（ ）。",
-      options: [{key:"A",text:"足"}, {key:"B",text:"刚毛"}, {key:"C",text:"外骨骼"}, {key:"D",text:"鳍"}],
-      answer: ["B"],
-      explanation: "蚯蚓属于环节动物，身体由许多相似的体节构成，依靠肌肉收缩和刚毛的协助在土壤中运动；蚯蚓没有足和外骨骼，鳍是鱼类的运动器官。",
-      trap: "易错点：环节动物身体分节、靠刚毛协助运动；蚯蚓靠湿润的体表进行呼吸，不是靠肺。"
-    },
-    {
-      id: "shengwu-h03-q006", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 6, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列动物中，属于软体动物的是（ ）。",
-      options: [{key:"A",text:"河蚌"}, {key:"B",text:"蜘蛛"}, {key:"C",text:"蜈蚣"}, {key:"D",text:"水蛭"}],
-      answer: ["A"],
-      explanation: "软体动物的身体柔软，大多有贝壳保护，代表动物有河蚌、扇贝、蜗牛、乌贼、章鱼等；蜘蛛、蜈蚣属于节肢动物，水蛭属于环节动物。",
-      trap: "易错点：软体动物身体柔软、有外套膜，大多有贝壳；乌贼、章鱼贝壳退化，但仍是软体动物。"
-    },
-    {
-      id: "shengwu-h03-q007", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 7, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "节肢动物是动物界中种类最多的类群，其主要特征不包括（ ）。",
-      options: [{key:"A",text:"体表有坚韧的外骨骼"}, {key:"B",text:"身体和附肢都分节"}, {key:"C",text:"身体由许多相似的体节构成"}, {key:"D",text:"足和触角分节"}],
-      answer: ["C"],
-      explanation: "节肢动物的特征是体表有坚韧的外骨骼，身体和附肢都分节；“身体由许多相似的体节构成”是环节动物的特征，节肢动物的体节有分化、并不相似。",
-      trap: "易错点：环节动物—体节相似，节肢动物—体节分化、外骨骼，两者都要分节，但特征不同。"
-    },
-    {
-      id: "shengwu-h03-q008", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 8, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "鱼在水中游泳时，提供前进动力的主要结构是（ ）。",
-      options: [{key:"A",text:"胸鳍和腹鳍"}, {key:"B",text:"尾鳍和躯干部的摆动"}, {key:"C",text:"背鳍"}, {key:"D",text:"鳃"}],
-      answer: ["B"],
-      explanation: "鱼通过尾部和躯干部的摆动以及尾鳍的摆动产生前进的动力；胸鳍、腹鳍、背鳍主要起平衡和转换方向的作用，鳃是呼吸器官。",
-      trap: "易错点：尾鳍+躯干摆动—动力，胸鳍腹鳍—平衡，鳃—呼吸，功能不要混淆。"
-    },
-    {
-      id: "shengwu-h03-q009", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 9, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列关于两栖动物的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"幼体生活在水中，用鳃呼吸"}, {key:"B",text:"成体生活在陆地上，只用肺呼吸"}, {key:"C",text:"生殖和发育摆脱了对水环境的依赖"}, {key:"D",text:"幼体和成体都用肺呼吸"}],
-      answer: ["A"],
-      explanation: "两栖动物幼体生活在水中、用鳃呼吸，成体大多生活在陆地上、用肺呼吸、皮肤辅助呼吸；生殖和发育离不开水，属于变态发育。",
-      trap: "易错点：两栖动物成体用肺呼吸、皮肤辅助呼吸，不是只用肺；生殖离不开水，所以不是真正的陆生脊椎动物。"
-    },
-    {
-      id: "shengwu-h03-q010", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 10, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "家鸽在飞行时能进行双重呼吸，与此有关的结构是（ ）。",
-      options: [{key:"A",text:"肺和气囊"}, {key:"B",text:"肺和鳃"}, {key:"C",text:"气管和支气管"}, {key:"D",text:"肺和皮肤"}],
-      answer: ["A"],
-      explanation: "家鸽有气囊辅助肺完成双重呼吸：吸气和呼气时，气体都能经过肺进行气体交换，大大提高了气体交换的效率，适应飞行时对氧气的大量需求。",
-      trap: "易错点：双重呼吸是吸气和呼气时气体两次经过肺，气囊本身不进行气体交换，只是辅助呼吸。"
-    },
-    {
-      id: "shengwu-h03-q011", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 11, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "哺乳动物特有的结构和特征是（ ）。",
-      options: [{key:"A",text:"体表被毛、胎生哺乳"}, {key:"B",text:"体温恒定"}, {key:"C",text:"用肺呼吸"}, {key:"D",text:"体内受精"}],
-      answer: ["A"],
-      explanation: "哺乳动物的特征是体表被毛、胎生、哺乳，体内有膈；鸟类也体温恒定、用肺呼吸、体内受精，所以这些不是哺乳动物特有的。",
-      trap: "易错点：胎生哺乳是哺乳动物特有的；体温恒定鸟类和哺乳类都有，用肺呼吸、体内受精爬行类、鸟类、哺乳类都有。"
-    },
+
+
+
+
+
+
+
+
+
     {
       id: "shengwu-h03-q012", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
       number: 12, type: "single", meta: "单选题",
@@ -2309,105 +1718,15 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "屈肘时肱二头肌收缩、肱三头肌舒张，伸肘时相反；运动时骨起杠杆作用，关节起支点作用，骨骼肌起动力作用，需要多组肌肉协调配合。",
       trap: "易错点：屈肘—二头肌收缩，伸肘—三头肌收缩；骨骼肌只能收缩牵拉骨、不能推开骨，所以动作要成对肌肉配合。"
     },
-    {
-      id: "shengwu-h03-q013", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 13, type: "multiple", meta: "多选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列属于学习行为的有（ ）。",
-      options: [{key:"A",text:"鹦鹉学舌"}, {key:"B",text:"蜘蛛结网"}, {key:"C",text:"老马识途"}, {key:"D",text:"猴子骑车"}],
-      answer: ["A","C","D"],
-      explanation: "学习行为是在遗传因素的基础上，通过环境因素的作用，由生活经验和学习获得的行为，如鹦鹉学舌、老马识途、猴子骑车；蜘蛛结网是生来就有的先天性行为。",
-      trap: "易错点：先天性行为生来就有、不需要学习，学习行为后天获得；判断时看行为是不是生来就有的。"
-    },
-    {
-      id: "shengwu-h03-q014", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 14, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列动物群体中，具有社会行为的是（ ）。",
-      options: [{key:"A",text:"一群蝗虫"}, {key:"B",text:"一群蜜蜂"}, {key:"C",text:"一群鲫鱼"}, {key:"D",text:"一群青蛙"}],
-      answer: ["B"],
-      explanation: "社会行为的特征是群体内部形成一定的组织、成员之间有明确分工，有的还有等级，如蜜蜂、蚂蚁、白蚁、狒狒等；蝗虫、鲫鱼、青蛙的群体没有明确分工和等级，不属于社会行为。",
-      trap: "易错点：社会行为要有组织、分工、等级三个特征，缺一不可；只是聚在一起不等于社会行为。"
-    },
-    {
-      id: "shengwu-h03-q015", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 15, type: "judge", meta: "判断题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "蚯蚓的体表始终保持湿润，有利于它进行呼吸。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "蚯蚓没有专门的呼吸器官，靠湿润的体表与外界进行气体交换；体表干燥时气体交换受阻，蚯蚓会因缺氧而死亡。",
-      trap: "易错点：蚯蚓呼吸靠体表，不是靠肺或鳃；做实验时要保持蚯蚓体表湿润。"
-    },
-    {
-      id: "shengwu-h03-q016", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 16, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列关于细菌的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"细菌有成形的细胞核"}, {key:"B",text:"细菌有叶绿体，能进行光合作用"}, {key:"C",text:"细菌没有成形的细胞核，只有DNA集中的区域"}, {key:"D",text:"所有细菌都对人类有害"}],
-      answer: ["C"],
-      explanation: "细菌是单细胞生物，没有成形的细胞核，只有DNA集中的区域，属于原核生物；细菌没有叶绿体，大多利用现成的有机物生活；有的细菌对人类有益，如乳酸菌、根瘤菌。",
-      trap: "易错点：细菌—无成形细胞核（原核），真菌—有成形细胞核（真核）；细菌的芽孢是休眠体，不是生殖细胞。"
-    },
-    {
-      id: "shengwu-h03-q017", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 17, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "下列关于真菌的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"真菌没有成形的细胞核"}, {key:"B",text:"酵母菌是单细胞真菌，蘑菇是多细胞真菌"}, {key:"C",text:"真菌都能进行光合作用"}, {key:"D",text:"真菌都由一个细胞构成"}],
-      answer: ["B"],
-      explanation: "真菌有成形的细胞核，属于真核生物；酵母菌是单细胞真菌，蘑菇、霉菌是多细胞真菌；真菌没有叶绿体，不能进行光合作用，靠现成的有机物生活。",
-      trap: "易错点：酵母菌—单细胞真菌，蘑菇—多细胞真菌；真菌和细菌都没有叶绿体，都是异养。"
-    },
-    {
-      id: "shengwu-h03-q018", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 18, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "在培养基上观察细菌和真菌的菌落，下列区分方法正确的是（ ）。",
-      options: [{key:"A",text:"细菌菌落较大，呈绒毛状"}, {key:"B",text:"真菌菌落较小，表面光滑黏稠"}, {key:"C",text:"细菌菌落较小，表面光滑黏稠或粗糙干燥；真菌菌落较大，呈绒毛状、絮状或蜘蛛网状"}, {key:"D",text:"细菌和真菌的菌落无法区分"}],
-      answer: ["C"],
-      explanation: "一个细菌或真菌繁殖后形成的肉眼可见的集合体叫菌落；细菌菌落较小、表面光滑黏稠或粗糙干燥，真菌菌落较大、呈绒毛状、絮状或蜘蛛网状，常有红、绿、黄、褐、黑等颜色。",
-      trap: "易错点：细菌菌落—小、光滑黏稠，真菌菌落—大、绒毛状，两者大小和形态正好相反。"
-    },
-    {
-      id: "shengwu-h03-q019", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 19, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "地衣是真菌与藻类共生形成的，下列叙述正确的是（ ）。",
-      options: [{key:"A",text:"藻类为真菌提供有机物，真菌为藻类提供水分和无机盐"}, {key:"B",text:"真菌为藻类提供有机物，藻类为真菌提供水分"}, {key:"C",text:"两者是寄生关系"}, {key:"D",text:"两者是竞争关系"}],
-      answer: ["A"],
-      explanation: "地衣中藻类能进行光合作用，为真菌提供有机物；真菌为藻类提供水分和无机盐，两者互惠互利，属于共生关系；根瘤菌与豆科植物共生也是共生关系。",
-      trap: "易错点：共生是互惠互利，寄生是一方受益、一方受害，竞争是双方都受害，三者要区分。"
-    },
-    {
-      id: "shengwu-h03-q020", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 20, type: "single", meta: "单选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "根据病毒寄生的细胞不同，病毒可以分为（ ）。",
-      options: [{key:"A",text:"动物病毒、植物病毒和细菌病毒"}, {key:"B",text:"DNA病毒和RNA病毒"}, {key:"C",text:"有益病毒和有害病毒"}, {key:"D",text:"单细胞病毒和多细胞病毒"}],
-      answer: ["A"],
-      explanation: "根据寄主的不同，病毒分为动物病毒、植物病毒和细菌病毒（又叫噬菌体）；病毒没有细胞结构，由蛋白质外壳和内部的遗传物质组成，只能寄生在活细胞内。",
-      trap: "易错点：按寄主分是动物、植物、细菌病毒三类；噬菌体是寄生在细菌体内的病毒，不是细菌。"
-    },
-    {
-      id: "shengwu-h03-q021", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
-      number: 21, type: "multiple", meta: "多选题",
-      grade: "八上", stage: "8-up",
-      source: "自创-待替换",
-      stem: "生物多样性的内涵包括（ ）。",
-      options: [{key:"A",text:"生物种类的多样性"}, {key:"B",text:"基因的多样性"}, {key:"C",text:"生态系统的多样性"}, {key:"D",text:"生物形态的多样性"}],
-      answer: ["A","B","C"],
-      explanation: "生物多样性包括生物种类的多样性、基因的多样性和生态系统的多样性三个层次；生物种类的多样性实质上是基因的多样性，我国被称为“裸子植物的故乡”。",
-      trap: "易错点：生物多样性只有三个内涵，没有“形态的多样性”这一项；保护生物多样性的根本措施是保护生物的栖息环境、保护生态系统的多样性。"
-    },
+
+
+
+
+
+
+
+
+
     {
       id: "shengwu-h03-q022", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
       number: 22, type: "single", meta: "单选题",
@@ -2674,6 +1993,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h03-q046", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      image: true,
       number: 46, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "2024年广东省初中学业水平考试·生物第23题",
@@ -2718,6 +2038,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h03-q050", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      image: true,
       number: 50, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2024年四川省成都市初中学业水平考试·生物第18题（原题有图，已删去“（如图）”，四种植物名称都在题干中，知识点和答案未改）",
@@ -2793,380 +2114,50 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "葡萄干是脱水减少水分、抑制微生物生长繁殖；脱水香菇同样是脱水保存；速冻海鲜和冷藏鲜奶是低温抑制微生物的生长繁殖，腌渍果脯是利用高盐或高糖渗出水分。",
       trap: "易错点：食品保存的原理主要有脱水、低温、高盐高糖、真空等，判断时先看清每种方法的原理再对应。"
     },
-    {
-      id: "shengwu-h04-q001", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 1, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列繁殖方式中，属于无性生殖的是（ ）。",
-      options: [{key:"A",text:"用种子繁殖水稻"}, {key:"B",text:"用嫁接繁殖苹果"}, {key:"C",text:"用受精卵繁殖青蛙"}, {key:"D",text:"用鸡蛋孵化小鸡"}],
-      answer: ["B"],
-      explanation: "无性生殖是不经过两性生殖细胞结合，由母体直接产生新个体，如嫁接、扦插、组织培养等；用种子、受精卵、鸡蛋繁殖都经过两性生殖细胞结合，属于有性生殖。",
-      trap: "易错点：判断有性/无性生殖的关键是是否经过两性生殖细胞结合，不是看有没有种子或卵。"
-    },
-    {
-      id: "shengwu-h04-q002", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 2, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "家蚕的发育过程属于完全变态发育，其正确的发育顺序是（ ）。",
-      options: [{key:"A",text:"卵→幼虫→蛹→成虫"}, {key:"B",text:"卵→蛹→幼虫→成虫"}, {key:"C",text:"幼虫→卵→蛹→成虫"}, {key:"D",text:"卵→若虫→成虫"}],
-      answer: ["A"],
-      explanation: "完全变态发育经过卵、幼虫、蛹、成虫四个时期，如家蚕、蜜蜂、蝴蝶等；不完全变态发育经过卵、若虫、成虫三个时期，如蝗虫、蟋蟀等。",
-      trap: "易错点：完全变态有蛹期，不完全变态没有蛹期，若虫与成虫形态相似。"
-    },
-    {
-      id: "shengwu-h04-q003", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 3, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "基因是（ ）。",
-      options: [{key:"A",text:"有遗传效应的DNA片段"}, {key:"B",text:"DNA分子的全部"}, {key:"C",text:"染色体的全部"}, {key:"D",text:"细胞核的全部"}],
-      answer: ["A"],
-      explanation: "染色体主要由DNA和蛋白质组成，DNA上具有特定遗传效应的片段叫基因，基因控制生物的性状。",
-      trap: "易错点：基因是DNA的一部分，不是整个DNA，也不是整个染色体；染色体、DNA、基因是从大到小的包含关系。"
-    },
-    {
-      id: "shengwu-h04-q004", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 4, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "豌豆的高茎（D）对矮茎（d）为显性，基因组成为Dd的豌豆表现为（ ）。",
-      options: [{key:"A",text:"矮茎"}, {key:"B",text:"高茎"}, {key:"C",text:"高茎和矮茎都有"}, {key:"D",text:"无法确定"}],
-      answer: ["B"],
-      explanation: "显性基因控制的性状能表现出来，隐性基因控制的性状只有在两个隐性基因同时存在时才表现；Dd中含显性基因D，所以表现为高茎。",
-      trap: "易错点：Dd是杂合子，表现显性性状；只有dd才表现矮茎。"
-    },
-    {
-      id: "shengwu-h04-q005", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 5, type: "multiple", meta: "多选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列属于可遗传变异来源的有（ ）。",
-      options: [{key:"A",text:"基因突变"}, {key:"B",text:"基因重组"}, {key:"C",text:"染色体变异"}, {key:"D",text:"单纯由环境引起的变异"}],
-      answer: ["A","B","C"],
-      explanation: "可遗传的变异是由遗传物质改变引起的，包括基因突变、基因重组和染色体变异；单纯由环境引起的变异，遗传物质没有改变，是不可遗传的变异。",
-      trap: "易错点：可遗传变异的关键是遗传物质是否改变，环境引起的变异一般不可遗传，除非环境引起了遗传物质的改变。"
-    },
-    {
-      id: "shengwu-h04-q006", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 6, type: "judge", meta: "判断题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "化石是研究生物进化最直接、最重要的证据。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "化石是生物的遗体、遗物或生活痕迹经过若干万年的复杂变化形成的，是研究生物进化最直接、最重要的证据。",
-      trap: "易错点：化石是最直接的证据，比较解剖学、胚胎学等是间接证据，不要混淆。"
-    },
-    {
-      id: "shengwu-h04-q007", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 7, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "达尔文自然选择学说的主要内容是（ ）。",
-      options: [{key:"A",text:"用进废退、获得性遗传"}, {key:"B",text:"过度繁殖、生存斗争、遗传变异、适者生存"}, {key:"C",text:"生物都是由原始生命进化来的"}, {key:"D",text:"环境变化直接导致物种改变"}],
-      answer: ["B"],
-      explanation: "达尔文自然选择学说认为：生物过度繁殖、生存斗争、遗传和变异、适者生存，适应环境的个体得以生存和繁殖，不适应的被淘汰。",
-      trap: "易错点：“用进废退、获得性遗传”是拉马克的观点，不是达尔文自然选择学说的内容。"
-    },
-    {
-      id: "shengwu-h04-q008", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 8, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "传染病流行的三个基本环节是（ ）。",
-      options: [{key:"A",text:"病原体、传播途径、易感人群"}, {key:"B",text:"传染源、传播途径、易感人群"}, {key:"C",text:"传染源、病原体、易感人群"}, {key:"D",text:"病原体、传染源、传播途径"}],
-      answer: ["B"],
-      explanation: "传染病流行的三个基本环节是传染源、传播途径和易感人群，缺少其中任何一个环节，传染病就流行不起来。",
-      trap: "易错点：病原体是引起传染病的细菌、病毒等，不是流行环节；传染源是指能够散播病原体的人或动物。"
-    },
-    {
-      id: "shengwu-h04-q009", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 9, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "接种疫苗后，人体获得的免疫属于（ ）。",
-      options: [{key:"A",text:"非特异性免疫"}, {key:"B",text:"特异性免疫"}, {key:"C",text:"自然免疫"}, {key:"D",text:"先天性免疫"}],
-      answer: ["B"],
-      explanation: "疫苗通常是减毒或灭活的病原体，接种后能刺激人体产生相应的抗体，只对特定的病原体起作用，属于特异性免疫（后天获得的）。",
-      trap: "易错点：皮肤、黏膜的屏障作用和吞噬细胞的吞噬作用属于非特异性免疫；接种疫苗、患过某种传染病后获得的免疫属于特异性免疫。"
-    },
-    {
-      id: "shengwu-h04-q010", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 10, type: "multiple", meta: "多选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列属于健康生活方式的有（ ）。",
-      options: [{key:"A",text:"合理膳食、均衡营养"}, {key:"B",text:"坚持体育锻炼"}, {key:"C",text:"按时作息、不熬夜"}, {key:"D",text:"拒绝吸烟、酗酒和吸毒"}],
-      answer: ["A","B","C","D"],
-      explanation: "健康的生活方式包括合理膳食、适量运动、按时作息、拒绝吸烟酗酒吸毒、保持愉快心情、积极参加集体活动等。",
-      trap: "易错点：健康生活方式是多方面的，饮食、运动、作息、远离烟酒毒品都要做到，不要只选一两项。"
-    },
-    {
-      id: "shengwu-h04-q011", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 11, type: "judge", meta: "判断题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "处方药必须凭执业医师或执业助理医师的处方才可调配、购买和使用。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "处方药必须凭医师处方购买和使用，非处方药（OTC）不需要凭医师处方即可自行判断、购买和使用，但也要按说明服用。",
-      trap: "易错点：处方药≠非处方药，OTC标志是非处方药；处方药不能自行购买服用。"
-    },
-    {
-      id: "shengwu-h04-q012", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 12, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "对心跳、呼吸骤停的患者进行心肺复苏时，胸外心脏按压的部位是（ ）。",
-      options: [{key:"A",text:"胸骨上段"}, {key:"B",text:"胸骨下段约1/3处"}, {key:"C",text:"左胸乳头正上方"}, {key:"D",text:"腹部正中"}],
-      answer: ["B"],
-      explanation: "胸外心脏按压的部位是胸骨下段约1/3处（两乳头连线中点），按压深度成人至少5厘米，频率100~120次/分，按压与人工呼吸的比例为30:2。",
-      trap: "易错点：按压部位不是胸骨上段，也不是腹部；按压前要先判断患者是否还有心跳、呼吸，拨打120。"
-    },
-    {
-      id: "shengwu-h04-q013", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 13, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "克隆羊“多莉”的诞生利用的生物技术是（ ）。",
-      options: [{key:"A",text:"转基因技术"}, {key:"B",text:"发酵技术"}, {key:"C",text:"克隆技术"}, {key:"D",text:"杂交技术"}],
-      answer: ["C"],
-      explanation: "克隆羊多莉是通过体细胞核移植等克隆技术培育的，属于无性生殖，其遗传物质主要来自提供细胞核的母羊。",
-      trap: "易错点：克隆是不经过两性生殖细胞结合的无性生殖；转基因是把外源基因转入生物体内，杂交是有性生殖。"
-    },
-    {
-      id: "shengwu-h04-q014", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 14, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列关于艾滋病的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"与艾滋病患者握手、共餐会传染艾滋病"}, {key:"B",text:"艾滋病主要通过性接触、血液和母婴三种途径传播"}, {key:"C",text:"蚊虫叮咬会传播艾滋病"}, {key:"D",text:"艾滋病病毒主要攻击人体的红细胞"}],
-      answer: ["B"],
-      explanation: "艾滋病由人类免疫缺陷病毒（HIV）引起，主要通过性接触、血液和母婴三种途径传播；日常握手、共餐、共用毛巾等不会传播，蚊虫叮咬也不会传播；HIV主要攻击人体的免疫细胞（T淋巴细胞）。",
-      trap: "易错点：艾滋病只有三种传播途径，日常接触不传染；HIV攻击的是免疫系统，不是红细胞。"
-    },
-    {
-      id: "shengwu-h04-q015", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 15, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "嫁接成活的关键是（ ）。",
-      options: [{key:"A",text:"接穗与砧木的树皮对齐"}, {key:"B",text:"接穗与砧木的形成层紧密结合"}, {key:"C",text:"接穗比砧木粗"}, {key:"D",text:"嫁接后多浇水"}],
-      answer: ["B"],
-      explanation: "嫁接时要使接穗与砧木的形成层紧密结合，以确保成活；嫁接后长出的新植株表现出的是接穗的性状，能保持接穗的优良性状。",
-      trap: "易错点：嫁接成活的关键是形成层对齐结合，不是树皮对齐；嫁接属于无性生殖，没有两性生殖细胞的结合。"
-    },
-    {
-      id: "shengwu-h04-q016", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 16, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "利用植物组织培养技术繁殖后代的优点不包括（ ）。",
-      options: [{key:"A",text:"繁殖速度快"}, {key:"B",text:"能保持亲本的优良性状"}, {key:"C",text:"能培育无病毒植株"}, {key:"D",text:"能产生新的基因组合、培育新品种"}],
-      answer: ["D"],
-      explanation: "组织培养属于无性生殖，能快速繁殖、保持亲本优良性状，还能培育无病毒植株；产生新的基因组合要靠有性生殖（基因重组）或诱变育种，组织培养做不到。",
-      trap: "易错点：无性生殖的后代只具有母体的遗传特性，不会产生新的基因组合；杂交育种才利用基因重组。"
-    },
-    {
-      id: "shengwu-h04-q017", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 17, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "蝗虫的发育过程属于不完全变态发育，其正确的发育顺序是（ ）。",
-      options: [{key:"A",text:"卵→幼虫→蛹→成虫"}, {key:"B",text:"卵→若虫→成虫"}, {key:"C",text:"卵→蛹→若虫→成虫"}, {key:"D",text:"若虫→卵→成虫"}],
-      answer: ["B"],
-      explanation: "不完全变态发育经过卵、若虫、成虫三个时期，如蝗虫、蟋蟀、螳螂等；完全变态发育经过卵、幼虫、蛹、成虫四个时期，如家蚕、蜜蜂、蝴蝶等。",
-      trap: "易错点：不完全变态没有蛹期，若虫与成虫形态相似、只是翅和生殖器官未发育成熟。"
-    },
-    {
-      id: "shengwu-h04-q018", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 18, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "青蛙的生殖和发育特点是（ ）。",
-      options: [{key:"A",text:"体内受精、变态发育"}, {key:"B",text:"体外受精、变态发育"}, {key:"C",text:"体内受精、直接发育"}, {key:"D",text:"体外受精、直接发育"}],
-      answer: ["B"],
-      explanation: "青蛙属于两栖动物，雌雄蛙抱对后在水中体外受精，受精卵在水中发育成蝌蚪，蝌蚪经过变态发育变成幼蛙；青蛙的生殖和发育离不开水。",
-      trap: "易错点：青蛙—体外受精、变态发育；鸟类—体内受精、卵生；哺乳类—体内受精、胎生。"
-    },
-    {
-      id: "shengwu-h04-q019", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 19, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "鸟的生殖和发育过程一般包括（ ）。",
-      options: [{key:"A",text:"求偶、交配、筑巢、产卵、孵卵、育雏"}, {key:"B",text:"交配、产卵、孵卵"}, {key:"C",text:"筑巢、产卵、育雏"}, {key:"D",text:"求偶、产卵、孵卵"}],
-      answer: ["A"],
-      explanation: "鸟的生殖和发育过程一般包括求偶、交配、筑巢、产卵、孵卵、育雏六个阶段，每个阶段都伴随复杂的繁殖行为；不是所有鸟都有全部六个阶段，如杜鹃不筑巢、不孵卵、不育雏。",
-      trap: "易错点：鸟的繁殖行为有六个阶段，但不是每种鸟都齐全；杜鹃是例外，不要记成所有鸟都一样。"
-    },
-    {
-      id: "shengwu-h04-q020", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 20, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "人体体细胞中有23对染色体，生殖细胞（精子或卵细胞）中的染色体数目是（ ）。",
-      options: [{key:"A",text:"23对"}, {key:"B",text:"23条"}, {key:"C",text:"46条"}, {key:"D",text:"46对"}],
-      answer: ["B"],
-      explanation: "生殖细胞中的染色体数目是体细胞的一半：体细胞23对（46条），生殖细胞23条；受精卵的染色体数目恢复为23对，子代体细胞与亲代相同。",
-      trap: "易错点：生殖细胞染色体减半（23条），受精后恢复（23对）；基因在亲子代间传递的桥梁是生殖细胞。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "shengwu-h04-q021", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
       number: 21, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列各组性状中，属于相对性状的是（ ）。",
-      options: [{key:"A",text:"人的有耳垂和无耳垂"}, {key:"B",text:"人的身高和体重"}, {key:"C",text:"豌豆的高茎和圆粒"}, {key:"D",text:"小麦的抗锈病和小麦的早熟"}],
-      answer: ["A"],
-      explanation: "相对性状是指同种生物同一性状的不同表现形式，如有耳垂和无耳垂、能卷舌和不能卷舌；身高和体重是不同的性状，高茎和圆粒、抗锈病和早熟也是不同的性状，不是相对性状。",
-      trap: "易错点：相对性状必须是同种生物、同一性状、不同表现，三个条件缺一不可。"
-    },
-    {
-      id: "shengwu-h04-q022", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 22, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "豌豆高茎（D）对矮茎（d）为显性，基因组成为Dd的豌豆自交，后代中高茎与矮茎的比例约为（ ）。",
-      options: [{key:"A",text:"1:1"}, {key:"B",text:"3:1"}, {key:"C",text:"1:3"}, {key:"D",text:"全部是高茎"}],
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第13题（模拟卷）",
+      stem: "下列属于相对性状的一组的是（ ）。",
+      options: [{key:"A",text:"球形西瓜和磨盘形南瓜"}, {key:"B",text:"豌豆的红花和白花"}, {key:"C",text:"玉米的圆粒和黄粒"}, {key:"D",text:"兔的白毛与鼠的黑毛"}],
       answer: ["B"],
-      explanation: "Dd自交后代基因型为DD:Dd:dd=1:2:1，其中DD和Dd都表现为高茎，dd表现为矮茎，所以高茎与矮茎的比例约为3:1。",
-      trap: "易错点：基因型比例1:2:1，表现型比例3:1，两者不要混淆；Dd自交后代会出现矮茎，不会全是高茎。"
+      explanation: "相对性状是指同种生物同一性状的不同表现形式；豌豆的红花和白花是同一性状（花色）的不同表现形式，是相对性状。球形西瓜和磨盘形南瓜、兔的白毛与鼠的黑毛都不是同种生物；玉米的圆粒和黄粒是同一个生物的两种性状（粒形和粒色），不是相对性状。",
+      trap: "易错点：相对性状要同时满足同种生物、同一性状、不同表现三个条件，缺一不可。"
     },
-    {
-      id: "shengwu-h04-q023", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 23, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "人的性别决定主要取决于（ ）。",
-      options: [{key:"A",text:"母亲提供的卵细胞含X还是含Y染色体"}, {key:"B",text:"父亲提供的精子含X还是含Y染色体"}, {key:"C",text:"受精卵发育时的营养条件"}, {key:"D",text:"母亲怀孕时的体温"}],
-      answer: ["B"],
-      explanation: "卵细胞只含X染色体，精子含X或含Y染色体：含X精子与卵细胞结合发育成女孩（XX），含Y精子与卵细胞结合发育成男孩（XY），所以生男生女取决于父亲提供的精子类型。",
-      trap: "易错点：生男生女取决于父亲，不是母亲；含X精子与含Y精子数量基本相等，所以生男生女的概率基本相等。"
-    },
-    {
-      id: "shengwu-h04-q024", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 24, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "白化病是一种隐性遗传病，一对正常夫妇生了一个患白化病的孩子，这对夫妇的基因组成最可能是（ ）。",
-      options: [{key:"A",text:"AA和AA"}, {key:"B",text:"Aa和Aa"}, {key:"C",text:"AA和Aa"}, {key:"D",text:"aa和aa"}],
-      answer: ["B"],
-      explanation: "白化病由隐性基因a控制，患病孩子的基因组成是aa，两个a分别来自父母，所以父母表现正常但都带有隐性基因a，基因组成都是Aa；Aa与Aa的后代有1/4的概率患病。",
-      trap: "易错点：正常夫妇生出患病孩子，说明父母都是杂合子Aa；隐性遗传病患者的基因组成一定是aa。"
-    },
-    {
-      id: "shengwu-h04-q025", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 25, type: "multiple", meta: "多选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列变异中，属于可遗传变异的有（ ）。",
-      options: [{key:"A",text:"杂交水稻的高产性状"}, {key:"B",text:"用射线处理种子培育出的太空椒"}, {key:"C",text:"水肥充足条件下小麦穗大粒多"}, {key:"D",text:"用生长素处理获得的无子番茄"}],
-      answer: ["A","B"],
-      explanation: "杂交水稻利用了基因重组，太空椒利用了基因突变，遗传物质都发生了改变，属于可遗传变异；水肥充足引起的小麦穗大粒多和生长素处理获得的无子番茄，遗传物质没有改变，属于不可遗传变异。",
-      trap: "易错点：可遗传变异的关键是遗传物质是否改变，环境和生长素引起的变异一般不可遗传。"
-    },
-    {
-      id: "shengwu-h04-q026", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 26, type: "judge", meta: "判断题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "近亲结婚会使后代患隐性遗传病的概率大大增高，所以我国婚姻法禁止直系血亲和三代以内的旁系血亲结婚。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "近亲之间携带相同隐性致病基因的概率较高，结婚后后代患隐性遗传病的概率大大增高；我国婚姻法规定直系血亲和三代以内的旁系血亲之间禁止结婚。",
-      trap: "易错点：禁止的是直系血亲和三代以内的旁系血亲，不是所有亲戚；近亲结婚增加的是隐性遗传病的发病概率。"
-    },
-    {
-      id: "shengwu-h04-q027", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 27, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "米勒实验模拟的是（ ）。",
-      options: [{key:"A",text:"原始地球条件，合成了氨基酸等有机小分子"}, {key:"B",text:"现代地球条件，合成了蛋白质"}, {key:"C",text:"原始海洋条件，诞生了原始生命"}, {key:"D",text:"火山喷发条件，合成了核酸"}],
-      answer: ["A"],
-      explanation: "米勒实验模拟原始地球的条件（原始大气、闪电等），合成了氨基酸等有机小分子，支持了生命起源的第一阶段：从无机小分子物质生成有机小分子物质。",
-      trap: "易错点：米勒实验合成的是氨基酸等有机小分子，不是蛋白质、核酸，更不是原始生命；原始大气中没有氧气。"
-    },
-    {
-      id: "shengwu-h04-q028", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 28, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "始祖鸟化石是爬行类进化成鸟类的证据，其特征是（ ）。",
-      options: [{key:"A",text:"既有爬行类的特征，又有鸟类的特征"}, {key:"B",text:"只有爬行类的特征"}, {key:"C",text:"只有鸟类的特征"}, {key:"D",text:"既有鱼类的特征，又有鸟类的特征"}],
-      answer: ["A"],
-      explanation: "始祖鸟既有爬行类的特征（如牙齿、爪、长尾），又有鸟类的特征（如羽毛、翅膀），是爬行类进化成鸟类的过渡类型，是生物进化的重要证据。",
-      trap: "易错点：过渡类型化石同时具有两类生物的特征，是进化历程的直接证据；始祖鸟连接的是爬行类和鸟类，不是鱼类和鸟类。"
-    },
-    {
-      id: "shengwu-h04-q029", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 29, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "按照达尔文自然选择学说，长颈鹿的长颈是（ ）。",
-      options: [{key:"A",text:"长颈鹿经常伸长脖子吃树叶、脖子越伸越长的结果"}, {key:"B",text:"自然选择的结果，适应环境的个体得以生存和繁殖"}, {key:"C",text:"人工选择的结果"}, {key:"D",text:"长颈鹿主动变异的结果"}],
-      answer: ["B"],
-      explanation: "达尔文认为，长颈鹿群体中存在颈长短不同的变异，颈长的个体能吃到高处的树叶、容易生存和繁殖，颈短的个体容易被淘汰，经过长期自然选择，长颈成为普遍特征；“用进废退”是拉马克的观点。",
-      trap: "易错点：达尔文—自然选择、适者生存；拉马克—用进废退、获得性遗传，两者不要混淆。"
-    },
-    {
-      id: "shengwu-h04-q030", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 30, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "下列疾病中，属于传染病的是（ ）。",
-      options: [{key:"A",text:"糖尿病"}, {key:"B",text:"流行性感冒"}, {key:"C",text:"近视眼"}, {key:"D",text:"心脏病"}],
-      answer: ["B"],
-      explanation: "传染病是由病原体引起的、能在人与人之间或人与动物之间传播的疾病，具有传染性和流行性，如流行性感冒、水痘、乙肝等；糖尿病、近视眼、心脏病不由病原体引起、不传染。",
-      trap: "易错点：传染病必须由病原体引起、能传播，缺一不可；糖尿病是胰岛素分泌不足引起的，不传染。"
-    },
-    {
-      id: "shengwu-h04-q031", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 31, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "接种疫苗属于预防传染病措施中的（ ）。",
-      options: [{key:"A",text:"控制传染源"}, {key:"B",text:"切断传播途径"}, {key:"C",text:"保护易感人群"}, {key:"D",text:"消灭病原体"}],
-      answer: ["C"],
-      explanation: "接种疫苗能使人体产生相应的抗体，提高对特定传染病的抵抗力，属于保护易感人群；隔离患者属于控制传染源，教室通风消毒属于切断传播途径。",
-      trap: "易错点：三类措施要会归类——隔离患者—控制传染源，通风消毒—切断传播途径，接种疫苗、锻炼身体—保护易感人群。"
-    },
-    {
-      id: "shengwu-h04-q032", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 32, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "人体的第三道防线是（ ）。",
-      options: [{key:"A",text:"皮肤和黏膜"}, {key:"B",text:"体液中的杀菌物质和吞噬细胞"}, {key:"C",text:"免疫器官和免疫细胞"}, {key:"D",text:"血液中的红细胞"}],
-      answer: ["C"],
-      explanation: "人体的三道防线：第一道是皮肤和黏膜，第二道是体液中的杀菌物质和吞噬细胞，第三道是免疫器官和免疫细胞；第一、二道防线属于非特异性免疫，第三道防线属于特异性免疫。",
-      trap: "易错点：第一道—皮肤黏膜，第二道—杀菌物质+吞噬细胞，第三道—免疫器官+免疫细胞；红细胞运输氧气，不属于防线。"
-    },
-    {
-      id: "shengwu-h04-q033", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 33, type: "judge", meta: "判断题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "抗体能针对多种抗原起作用，所以接种一种疫苗可以预防多种传染病。（ ）",
-      options: [],
-      answer: ["false"],
-      explanation: "抗体由淋巴细胞产生，一种抗体只能针对特定的抗原起作用，所以一种疫苗一般只能预防一种传染病；接种卡介苗只能预防结核病，不能预防其他传染病。",
-      trap: "易错点：抗体具有特异性，一种抗体只针对一种抗原；特异性免疫只对特定的病原体起作用。"
-    },
-    {
-      id: "shengwu-h04-q034", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
-      number: 34, type: "single", meta: "单选题",
-      grade: "八下", stage: "8-down",
-      source: "自创-待替换",
-      stem: "对呼吸骤停的患者进行人工呼吸前，首先应该（ ）。",
-      options: [{key:"A",text:"立即进行胸外心脏按压"}, {key:"B",text:"清除患者口鼻内的异物和污物，保持呼吸道畅通"}, {key:"C",text:"给患者喂水"}, {key:"D",text:"把患者搬到床上"}],
-      answer: ["B"],
-      explanation: "人工呼吸前要先清除患者口鼻内的异物和污物、保持呼吸道畅通，再捏住鼻子、口对口吹气；胸外心脏按压与人工呼吸配合进行，比例为30:2。",
-      trap: "易错点：人工呼吸的前提是呼吸道畅通，否则吹进去的气到不了肺；按压与吹气的比例是30:2。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "shengwu-h04-q035", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
       number: 35, type: "single", meta: "单选题",
@@ -3521,6 +2512,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h04-q067", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      image: true,
       number: 67, type: "multiple", meta: "多选题",
       grade: "八下", stage: "8-down",
       source: "改编自2024年江苏省苏州市初中学业水平考试·生物第39题（原题有结构示意图，已删去“如图为支原体结构示意图”，结构特征都在题干文字中，知识点和答案未改）",
@@ -3596,270 +2588,30 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "连续18小时没睡的变化是感觉兴奋、但注意力和反应变慢；心跳加速、血压升高是第2～3天的变化，时常感觉饥饿、频繁进食是第4～6天的变化，患老年痴呆和患癌概率提升是30天以上长期睡眠不足的影响。",
       trap: "易错点：材料题要按时间对号入座，18小时、第2～3天、第4～6天、30天以上的变化各不相同，不要张冠李戴。"
     },
-    {
-      id: "shengwu-h05-q001", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 1, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "除病毒外，生物体结构和功能的基本单位是（ ）。",
-      options: [{key:"A",text:"组织"}, {key:"B",text:"器官"}, {key:"C",text:"系统"}, {key:"D",text:"细胞"}],
-      answer: ["D"],
-      explanation: "除病毒外，生物体都是由细胞构成的，细胞是生物体结构和功能的基本单位；组织、器官、系统都是由细胞构成的更高层次结构。",
-      trap: "易错点：病毒没有细胞结构，所以表述要加“除病毒外”；细胞是基本单位，不是组织或器官。"
-    },
-    {
-      id: "shengwu-h05-q002", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 2, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "下列关于光合作用和呼吸作用的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"光合作用在白天和夜晚都能进行"}, {key:"B",text:"呼吸作用在白天和夜晚都能进行"}, {key:"C",text:"光合作用吸收氧气、释放二氧化碳"}, {key:"D",text:"呼吸作用制造有机物、储存能量"}],
-      answer: ["B"],
-      explanation: "光合作用需要光，只在有光时进行；呼吸作用不需要光，时刻都在进行。光合作用吸收二氧化碳、释放氧气，制造有机物、储存能量；呼吸作用吸收氧气、释放二氧化碳，分解有机物、释放能量。",
-      trap: "易错点：光合作用只在有光时进行，呼吸作用时时刻刻都在进行；两者气体进出和能量变化正好相反。"
-    },
-    {
-      id: "shengwu-h05-q003", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 3, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "人体消化和吸收营养物质的主要场所是（ ）。",
-      options: [{key:"A",text:"胃"}, {key:"B",text:"小肠"}, {key:"C",text:"大肠"}, {key:"D",text:"口腔"}],
-      answer: ["B"],
-      explanation: "小肠长约5~6米，内表面有大量环形皱襞和小肠绒毛，大大增加了消化和吸收的面积，且含有多种消化液，是消化和吸收的主要场所。",
-      trap: "易错点：胃只能初步消化蛋白质，大肠只能吸收少量水、无机盐和部分维生素，主要场所是小肠。"
-    },
-    {
-      id: "shengwu-h05-q004", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 4, type: "multiple", meta: "多选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "下列属于人体排泄途径的有（ ）。",
-      options: [{key:"A",text:"排尿"}, {key:"B",text:"排汗"}, {key:"C",text:"呼出二氧化碳"}, {key:"D",text:"排出粪便"}],
-      answer: ["A","B","C"],
-      explanation: "排泄是指人体将二氧化碳、尿素、多余的水和无机盐等代谢废物排出体外的过程，途径有排尿、排汗和呼出气体；粪便不是代谢废物，排出粪便（排遗）不属于排泄。",
-      trap: "易错点：排泄≠排遗，粪便中的食物残渣没有进入血液循环，排出粪便是排遗，不是排泄。"
-    },
-    {
-      id: "shengwu-h05-q005", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 5, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "人体呼出的气体中，二氧化碳的含量比吸入的气体中高。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "吸入的气体中氧气约占21%、二氧化碳约占0.03%；呼出的气体中氧气约占16%、二氧化碳约占4%，因为组织细胞呼吸作用消耗了氧气、产生了二氧化碳。",
-      trap: "易错点：呼出气体中氧气减少、二氧化碳增多，但氮气含量基本不变；呼出气体中仍含有较多的氧气。"
-    },
-    {
-      id: "shengwu-h05-q006", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 6, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "下列关于血液成分的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"血浆能运输养料和废物"}, {key:"B",text:"红细胞能吞噬病菌"}, {key:"C",text:"白细胞能运输氧气"}, {key:"D",text:"血小板能吞噬病菌"}],
-      answer: ["A"],
-      explanation: "血浆能运载血细胞，运输养料和废物；红细胞能运输氧气和部分二氧化碳；白细胞能吞噬病菌、起防御保护作用；血小板能止血和加速凝血。",
-      trap: "易错点：红细胞—运氧，白细胞—吞噬病菌，血小板—止血凝血，血浆—运输，四者功能不要张冠李戴。"
-    },
-    {
-      id: "shengwu-h05-q007", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 7, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "人体神经系统中，协调运动、维持身体平衡的主要结构是（ ）。",
-      options: [{key:"A",text:"大脑"}, {key:"B",text:"小脑"}, {key:"C",text:"脑干"}, {key:"D",text:"脊髓"}],
-      answer: ["B"],
-      explanation: "大脑是最高级中枢，有感觉、运动、语言等多种神经中枢；小脑能协调运动、维持身体平衡；脑干有调节心跳、呼吸、血压等基本生命活动的中枢；脊髓是反射和传导的通道。",
-      trap: "易错点：大脑—高级中枢，小脑—协调运动维持平衡，脑干—基本生命活动，脊髓—反射与传导。"
-    },
-    {
-      id: "shengwu-h05-q008", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 8, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "在生态系统中，能量流动的特点是（ ）。",
-      options: [{key:"A",text:"循环流动、逐级增加"}, {key:"B",text:"单向流动、逐级递减"}, {key:"C",text:"循环流动、逐级递减"}, {key:"D",text:"单向流动、逐级增加"}],
-      answer: ["B"],
-      explanation: "生态系统中的能量沿食物链单向流动、逐级递减，传递效率一般为10%~20%；物质则可以循环利用。",
-      trap: "易错点：能量单向递减、不能循环，物质可以循环；不要把能量流动和物质循环混淆。"
-    },
-    {
-      id: "shengwu-h05-q009", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 9, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "“猎豹追捕羚羊”说明生物具有的特征是（ ）。",
-      options: [{key:"A",text:"需要营养"}, {key:"B",text:"能生长和繁殖"}, {key:"C",text:"能对外界刺激作出反应"}, {key:"D",text:"能排出体内废物"}],
-      answer: ["A"],
-      explanation: "猎豹追捕羚羊是为了获取食物，说明生物的生活需要营养；含羞草叶片合拢、草履虫趋向有利刺激才说明能对外界刺激作出反应。",
-      trap: "易错点：追捕、取食对应“需要营养”，受刺激后作出反应才对应“应激性”，不要看到动物在动就选应激性。"
-    },
-    {
-      id: "shengwu-h05-q010", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 10, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "下列因素中，属于生物因素的是（ ）。",
-      options: [{key:"A",text:"阳光"}, {key:"B",text:"温度"}, {key:"C",text:"水分"}, {key:"D",text:"捕食者"}],
-      answer: ["D"],
-      explanation: "影响生物生活的环境因素分为非生物因素（阳光、温度、水分、空气、土壤等）和生物因素（其他生物对该生物的影响，如捕食、竞争、共生、寄生等）。",
-      trap: "易错点：阳光、温度、水、空气都是非生物因素；生物因素是指其他生物的影响，如天敌、竞争者、传粉昆虫等。"
-    },
-    {
-      id: "shengwu-h05-q011", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 11, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "在“草→兔→鹰”这条食物链中，鹰获得的能量最终来源于（ ）。",
-      options: [{key:"A",text:"草"}, {key:"B",text:"兔"}, {key:"C",text:"太阳能"}, {key:"D",text:"土壤"}],
-      answer: ["C"],
-      explanation: "生态系统中能量的最终来源是太阳能，绿色植物通过光合作用把太阳能固定在制造的有机物中，再沿食物链传递给消费者和分解者。",
-      trap: "易错点：能量最终来源于太阳能，不是生产者；生产者只是把太阳能固定下来，不是能量的最终来源。"
-    },
-    {
-      id: "shengwu-h05-q012", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 12, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "用显微镜观察时，由低倍物镜换成高倍物镜后，视野和细胞的变化是（ ）。",
-      options: [{key:"A",text:"视野变亮，细胞变小、数目增多"}, {key:"B",text:"视野变暗，细胞变大、数目减少"}, {key:"C",text:"视野变亮，细胞变大、数目减少"}, {key:"D",text:"视野变暗，细胞变小、数目增多"}],
-      answer: ["B"],
-      explanation: "换成高倍物镜后，放大倍数增大，看到的细胞变大、数目减少，视野变暗、范围变小；低倍镜下视野较亮、细胞较小、数目较多。",
-      trap: "易错点：高倍镜—细胞大、数目少、视野暗；低倍镜—细胞小、数目多、视野亮，两者正好相反。"
-    },
-    {
-      id: "shengwu-h05-q013", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 13, type: "multiple", meta: "多选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "下列结构中，动植物细胞都具有的有（ ）。",
-      options: [{key:"A",text:"细胞膜"}, {key:"B",text:"细胞质"}, {key:"C",text:"细胞核"}, {key:"D",text:"线粒体"}],
-      answer: ["A","B","C","D"],
-      explanation: "动植物细胞共有的结构是细胞膜、细胞质、细胞核和线粒体；植物细胞特有的结构是细胞壁、叶绿体和液泡。",
-      trap: "易错点：线粒体动植物细胞都有，是呼吸作用的场所；叶绿体、细胞壁、液泡才是植物细胞特有的。"
-    },
-    {
-      id: "shengwu-h05-q014", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 14, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "人体皮肤的表皮属于（ ）。",
-      options: [{key:"A",text:"上皮组织"}, {key:"B",text:"肌肉组织"}, {key:"C",text:"结缔组织"}, {key:"D",text:"神经组织"}],
-      answer: ["A"],
-      explanation: "上皮组织由上皮细胞构成，具有保护、分泌等功能，分布在体表和体内管腔内表面，如皮肤的表皮、消化道内表面；肌肉组织能收缩舒张，结缔组织有支持、连接、保护、营养等功能，神经组织能感受刺激、传导兴奋。",
-      trap: "易错点：表皮—上皮组织，真皮—结缔组织；组织类型要按功能和分布区分，不要只看名字。"
-    },
-    {
-      id: "shengwu-h05-q015", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 15, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "下列关于光合作用的叙述，错误的是（ ）。",
-      options: [{key:"A",text:"光合作用的场所是叶绿体"}, {key:"B",text:"光合作用的原料是二氧化碳和水"}, {key:"C",text:"光合作用需要光才能进行"}, {key:"D",text:"光合作用释放能量，供生命活动利用"}],
-      answer: ["D"],
-      explanation: "光合作用制造有机物、储存能量；释放能量、供生命活动利用的是呼吸作用。光合作用在叶绿体中进行，以二氧化碳和水为原料，需要光才能进行。",
-      trap: "易错点：光合作用—储存能量，呼吸作用—释放能量；D项说的是呼吸作用，不是光合作用。"
-    },
-    {
-      id: "shengwu-h05-q016", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 16, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "农田适时中耕松土的主要目的是（ ）。",
-      options: [{key:"A",text:"减少水分蒸发"}, {key:"B",text:"促进根的呼吸作用"}, {key:"C",text:"抑制光合作用"}, {key:"D",text:"减少蒸腾作用"}],
-      answer: ["B"],
-      explanation: "中耕松土能增加土壤中的空气含量，促进根的呼吸作用，有利于根吸收水分和无机盐；水淹的农田要及时排涝，也是为了保证根的正常呼吸。",
-      trap: "易错点：中耕松土—促进根呼吸，不是保水；呼吸作用需要氧气，土壤板结、积水都会抑制根的呼吸。"
-    },
-    {
-      id: "shengwu-h05-q017", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 17, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "植物蒸腾作用的意义不包括（ ）。",
-      options: [{key:"A",text:"促进水分和无机盐在植物体内的运输"}, {key:"B",text:"降低叶片表面的温度"}, {key:"C",text:"促进植物对水分的吸收"}, {key:"D",text:"制造有机物，储存能量"}],
-      answer: ["D"],
-      explanation: "蒸腾作用能促进水分和无机盐的运输、促进根对水分的吸收、降低叶面温度；制造有机物、储存能量是光合作用的作用，不是蒸腾作用的意义。",
-      trap: "易错点：蒸腾作用—运输水分、降温、促进吸收；光合作用—制造有机物，两者意义不要混淆。"
-    },
-    {
-      id: "shengwu-h05-q018", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 18, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "绿色植物光合作用制造的有机物，只供植物自身生长发育利用。（ ）",
-      options: [],
-      answer: ["false"],
-      explanation: "绿色植物光合作用制造的有机物，一部分供自身利用，多余的通过食物链进入其他生物体内；动物和人直接或间接以植物为食，生态系统中的有机物最终都来自光合作用。",
-      trap: "易错点：光合作用制造的有机物养活了整个生物圈，不是只供植物自己用；没有光合作用，动物和人就没有食物来源。"
-    },
-    {
-      id: "shengwu-h05-q019", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 19, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "肝脏分泌的胆汁对脂肪的消化起作用，其作用方式是（ ）。",
-      options: [{key:"A",text:"把脂肪分解成甘油和脂肪酸"}, {key:"B",text:"把脂肪乳化成小颗粒，增加与消化酶的接触面积"}, {key:"C",text:"把脂肪分解成葡萄糖"}, {key:"D",text:"把脂肪直接吸收进血液"}],
-      answer: ["B"],
-      explanation: "胆汁不含消化酶，不能把脂肪分解成甘油和脂肪酸，只能把脂肪乳化成小颗粒，增加脂肪与消化酶的接触面积，有利于脂肪的化学性消化。",
-      trap: "易错点：胆汁—乳化脂肪（物理性消化），不是化学性消化；真正把脂肪分解成甘油和脂肪酸的是肠液和胰液中的酶。"
-    },
-    {
-      id: "shengwu-h05-q020", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 20, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "血液流经小肠绒毛内的毛细血管后，血液成分发生的变化是（ ）。",
-      options: [{key:"A",text:"由动脉血变成静脉血，营养物质增多"}, {key:"B",text:"由静脉血变成动脉血，营养物质增多"}, {key:"C",text:"由动脉血变成静脉血，氧气增多"}, {key:"D",text:"由静脉血变成动脉血，氧气增多"}],
-      answer: ["A"],
-      explanation: "血液流经小肠时，小肠绒毛吸收的营养物质进入血液，同时组织细胞消耗氧气、产生二氧化碳，所以血液由含氧丰富的动脉血变成含氧较少的静脉血，营养物质增多。",
-      trap: "易错点：流经小肠后营养物质增多、氧气减少，是动脉血变动脉血；流经肺部毛细血管后才是静脉血变动脉血。"
-    },
-    {
-      id: "shengwu-h05-q021", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 21, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "血液流经肺部毛细血管后，血液成分发生的变化是（ ）。",
-      options: [{key:"A",text:"由动脉血变成静脉血，氧气减少"}, {key:"B",text:"由静脉血变成动脉血，氧气增多"}, {key:"C",text:"由动脉血变成静脉血，二氧化碳减少"}, {key:"D",text:"由静脉血变成动脉血，二氧化碳增多"}],
-      answer: ["B"],
-      explanation: "血液流经肺部毛细血管时，肺泡中的氧气进入血液，血液中的二氧化碳进入肺泡，所以血液由含氧较少的静脉血变成含氧丰富的动脉血，二氧化碳减少。",
-      trap: "易错点：流经肺后氧气增多、二氧化碳减少，是静脉血变动脉血；流经组织细胞后正好相反。"
-    },
-    {
-      id: "shengwu-h05-q022", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 22, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "与血浆相比，原尿中含量基本不变、但在尿液中含量大大减少的成分是（ ）。",
-      options: [{key:"A",text:"大分子蛋白质"}, {key:"B",text:"葡萄糖"}, {key:"C",text:"尿素"}, {key:"D",text:"血细胞"}],
-      answer: ["B"],
-      explanation: "原尿中的葡萄糖与血浆中基本相同，流经肾小管时被全部重吸收回血液，所以尿液中没有葡萄糖；尿素在原尿和尿液中都有，尿液中尿素含量相对升高。",
-      trap: "易错点：葡萄糖—原尿有、尿液无（全部重吸收）；大分子蛋白质和血细胞—血浆有、原尿和尿液都没有（不能过滤）。"
-    },
-    {
-      id: "shengwu-h05-q023", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 23, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "膝跳反射的神经中枢位于（ ）。",
-      options: [{key:"A",text:"大脑"}, {key:"B",text:"小脑"}, {key:"C",text:"脑干"}, {key:"D",text:"脊髓"}],
-      answer: ["D"],
-      explanation: "膝跳反射是非条件反射，神经中枢在脊髓；大脑是条件反射的神经中枢，小脑协调运动、维持平衡，脑干调节心跳、呼吸等基本生命活动。",
-      trap: "易错点：非条件反射的中枢在脊髓或脑干，条件反射的中枢在大脑皮层；膝跳反射是最简单的非条件反射。"
-    },
-    {
-      id: "shengwu-h05-q024", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
-      number: 24, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
-      source: "自创-待替换",
-      stem: "酸雨形成的主要原因是（ ）。",
-      options: [{key:"A",text:"大量燃烧煤、石油等，排放过多的二氧化硫和氮氧化物"}, {key:"B",text:"大量使用化肥"}, {key:"C",text:"大量排放二氧化碳"}, {key:"D",text:"大量砍伐森林"}],
-      answer: ["A"],
-      explanation: "酸雨主要是人为向大气中排放大量二氧化硫和氮氧化物等酸性物质造成的；二氧化碳过多会引起温室效应，大量砍伐森林会破坏生态平衡、加剧水土流失。",
-      trap: "易错点：酸雨—二氧化硫+氮氧化物，温室效应—二氧化碳，两者成因不同，不要混淆。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "shengwu-h05-q025", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
       number: 25, type: "single", meta: "单选题",
@@ -4181,6 +2933,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q054", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 54, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年福建中考·生物第4题（原题为细胞结构图示标号，改为文字选项，知识点、选项与答案未改）",
@@ -4203,6 +2956,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q056", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 56, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年福建中考·生物第8题（原题为黄豆种子结构图示标号，改为文字选项，知识点、选项与答案未改）",
@@ -4247,6 +3001,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q060", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 60, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年福建中考·生物第13题（原题为骨、关节、肌肉模型图，题干补写模型构成，知识点、选项与答案未改）",
@@ -4291,6 +3046,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q064", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 64, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年福建中考·生物第22题（原题为四组实验装置图，改为文字叙述，知识点、选项与答案未改）",
@@ -4302,6 +3058,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q065", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 65, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年福建中考·生物第1题（原题为动植物细胞模型图示标号，改为文字选项，知识点、选项与答案未改）",
@@ -4335,6 +3092,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q068", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 68, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年福建中考·生物第8题（原题为食物网图，改为文字写出两条食物链，知识点、选项与答案未改）",
@@ -4346,6 +3104,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q069", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 69, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年福建中考·生物第18题（原题为物质含量变化曲线图，改为文字叙述，知识点、选项与答案未改）",
@@ -4357,6 +3116,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q070", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 70, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年福建中考·生物第24题（原题为分类等级树状图，改为文字叙述，知识点、选项与答案未改）",
@@ -4368,6 +3128,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q071", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 71, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年福建中考·生物第25题（原题为叶绿素含量与气孔开放程度柱状图，数据改为文字叙述，知识点、选项与答案未改）",
@@ -4390,6 +3151,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q073", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 73, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建中考·生物第4题（原题为根尖结构图示标号，改为文字选项，知识点、选项与答案未改）",
@@ -4456,6 +3218,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q079", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 79, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建中考·生物第15题（原题为生物关系图，改为文字写出两条食物链，知识点、选项与答案未改）",
@@ -4467,6 +3230,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q080", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 80, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建中考·生物第20题（原题为实验装置图，题干补写甲、乙两瓶所装种子，知识点、选项与答案未改）",
@@ -4489,6 +3253,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q082", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 82, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建中考·生物第22题（原题为小鱼尾鳍血管示意图，题干补写①②③的血管特征与血流方向，知识点、选项与答案未改）",
@@ -4511,6 +3276,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h05-q084", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      image: true,
       number: 84, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建中考·生物第25题（原题为处理方式表与叶绿素含量柱状图，数据改为文字叙述，知识点、选项与答案未改）",
@@ -4520,39 +3286,9 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "乙组（只加T菌）与对照组基本相同，但丙组只用了一半剂量的M菌、加了一半T菌，叶绿素含量却比甲组（全量M菌）更高，说明T菌与M菌配合能提高叶绿素含量，T菌起了作用，所以C不合理。A是控制单一变量的要求，B符合数据，D符合丙组含量最高的实验结果。",
       trap: "易错点：单看乙组容易以为T菌没用，但丙组高于甲组说明两种菌配合效果更好；做实验要控制菌剂总量相等。"
     },
-    {
-      id: "shengwu-h06-q001", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 1, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "人的性别决定与性染色体有关，正常男性体细胞中的性染色体组成是（ ）。",
-      options: [{key:"A",text:"XX"}, {key:"B",text:"XY"}, {key:"C",text:"X"}, {key:"D",text:"Y"}],
-      answer: ["B"],
-      explanation: "人体细胞中有23对染色体，其中22对常染色体和1对性染色体；女性性染色体为XX，男性为XY，生男生女取决于父亲提供的精子是含X染色体还是含Y染色体。",
-      trap: "易错点：生男生女取决于父亲，不是母亲；男性体细胞性染色体是XY，生殖细胞（精子）是X或Y。"
-    },
-    {
-      id: "shengwu-h06-q002", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 2, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列育种方法中，利用了可遗传变异原理的是（ ）。",
-      options: [{key:"A",text:"用生长素处理获得无子番茄"}, {key:"B",text:"用射线处理种子培育出新品种小麦"}, {key:"C",text:"把水肥充足条件下的小麦种到贫瘠土壤中"}, {key:"D",text:"用嫁接方法培育新品种苹果"}],
-      answer: ["B"],
-      explanation: "用射线处理种子可引起基因突变，属于可遗传变异，能培育新品种；生长素处理获得的无子番茄遗传物质未变，环境改变引起的变异不可遗传，嫁接属于无性生殖、没有产生新基因组合。",
-      trap: "易错点：诱变育种利用基因突变，属于可遗传变异；环境引起的变异和无子番茄都不可遗传。"
-    },
-    {
-      id: "shengwu-h06-q003", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 3, type: "multiple", meta: "多选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列属于预防传染病措施的有（ ）。",
-      options: [{key:"A",text:"隔离传染病患者"}, {key:"B",text:"教室通风、消毒"}, {key:"C",text:"接种疫苗"}, {key:"D",text:"加强体育锻炼"}],
-      answer: ["A","B","C","D"],
-      explanation: "隔离患者属于控制传染源；教室通风、消毒属于切断传播途径；接种疫苗和加强锻炼属于保护易感人群，都是预防传染病的有效措施。",
-      trap: "易错点：预防措施分三类——控制传染源、切断传播途径、保护易感人群，要会把具体措施归类。"
-    },
+
+
+
     {
       id: "shengwu-h06-q004", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
       number: 4, type: "single", meta: "单选题",
@@ -4564,215 +3300,25 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "细菌属于原核生物，没有成形的细胞核；酵母菌属于真核生物，有成形的细胞核。细菌和酵母菌都有细胞膜、细胞质和细胞壁等结构。",
       trap: "易错点：细菌—原核、无成形细胞核；酵母菌—真菌、真核、有成形细胞核；两者都有细胞膜、细胞质、细胞壁。"
     },
-    {
-      id: "shengwu-h06-q005", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 5, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "细菌的生殖方式是（ ）。",
-      options: [{key:"A",text:"分裂生殖"}, {key:"B",text:"孢子生殖"}, {key:"C",text:"出芽生殖"}, {key:"D",text:"有性生殖"}],
-      answer: ["A"],
-      explanation: "细菌通过分裂生殖进行繁殖，一个细菌横裂成两个细菌，繁殖速度快；孢子生殖是真菌等常用的生殖方式，出芽生殖是酵母菌等的方式。",
-      trap: "易错点：细菌—分裂生殖，真菌—孢子生殖，酵母菌还可出芽生殖；细菌在不良环境下形成芽孢是休眠体，不是生殖方式。"
-    },
-    {
-      id: "shengwu-h06-q006", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 6, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列免疫方式中，属于特异性免疫的是（ ）。",
-      options: [{key:"A",text:"皮肤的屏障作用"}, {key:"B",text:"唾液中溶菌酶的杀菌作用"}, {key:"C",text:"接种卡介苗预防结核病"}, {key:"D",text:"白细胞吞噬病菌"}],
-      answer: ["C"],
-      explanation: "接种卡介苗能使人体产生只针对结核杆菌的抗体，属于特异性免疫；皮肤屏障、溶菌酶杀菌、白细胞吞噬病菌对多种病原体都起作用，属于非特异性免疫。",
-      trap: "易错点：特异性免疫针对特定病原体、后天获得；非特异性免疫人人生来就有、不针对特定病原体。"
-    },
-    {
-      id: "shengwu-h06-q007", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 7, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列属于转基因技术应用的是（ ）。",
-      options: [{key:"A",text:"用乳酸菌制作酸奶"}, {key:"B",text:"用酵母菌酿酒"}, {key:"C",text:"培育抗虫棉"}, {key:"D",text:"用扦插繁殖月季"}],
-      answer: ["C"],
-      explanation: "抗虫棉是将苏云金杆菌的抗虫基因转入棉花体内培育的，属于转基因技术；酸奶、酿酒利用的是发酵技术，扦插属于无性生殖。",
-      trap: "易错点：转基因是把外源基因转入生物体内并表达；发酵是利用微生物的代谢，扦插是无性生殖，三者不同。"
-    },
-    {
-      id: "shengwu-h06-q008", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 8, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列关于生物进化的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"越古老的地层中，化石生物越复杂、越高等"}, {key:"B",text:"生物进化的总体趋势是由简单到复杂、由低等到高等、由水生到陆生"}, {key:"C",text:"高等生物都是由低等生物直接变成的"}, {key:"D",text:"生物进化与环境变化无关"}],
-      answer: ["B"],
-      explanation: "化石在地层中的分布规律是：越古老的地层中，化石生物越简单、越低等、水生生物越多；越晚近的地层中，化石生物越复杂、越高等、陆生生物越多。生物进化的总体趋势是由简单到复杂、由低等到高等、由水生到陆生。",
-      trap: "易错点：古老地层—简单低等水生，晚近地层—复杂高等陆生，不要记反；进化是长期自然选择的结果，与环境密切相关。"
-    },
-    {
-      id: "shengwu-h06-q009", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 9, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "无脊椎动物与脊椎动物的主要区别是（ ）。",
-      options: [{key:"A",text:"体内有无脊柱"}, {key:"B",text:"生活在水中还是陆地"}, {key:"C",text:"身体是否分节"}, {key:"D",text:"有无贝壳"}],
-      answer: ["A"],
-      explanation: "体内没有由脊椎骨组成的脊柱的动物叫无脊椎动物，如腔肠动物、扁形动物、环节动物、软体动物、节肢动物；体内有脊柱的叫脊椎动物，如鱼、两栖动物、爬行动物、鸟、哺乳动物。",
-      trap: "易错点：区分无脊椎和脊椎动物的唯一标准是体内有无脊柱，不是生活环境、是否分节或有无贝壳。"
-    },
-    {
-      id: "shengwu-h06-q010", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 10, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列动物中，与家鸽一样属于恒温动物的是（ ）。",
-      options: [{key:"A",text:"鲫鱼"}, {key:"B",text:"青蛙"}, {key:"C",text:"家兔"}, {key:"D",text:"蜥蜴"}],
-      answer: ["C"],
-      explanation: "恒温动物只有鸟类和哺乳类，体温不随环境温度变化而改变；鲫鱼（鱼类）、青蛙（两栖类）、蜥蜴（爬行类）都是变温动物，体温随环境温度变化。",
-      trap: "易错点：恒温动物只有鸟类和哺乳类两类；鱼、两栖、爬行都是变温动物。"
-    },
-    {
-      id: "shengwu-h06-q011", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 11, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "细菌和真菌在生态系统中的主要作用是（ ）。",
-      options: [{key:"A",text:"生产者，制造有机物"}, {key:"B",text:"消费者，吃掉动植物"}, {key:"C",text:"分解者，参与物质循环"}, {key:"D",text:"非生物成分，调节气候"}],
-      answer: ["C"],
-      explanation: "大多数细菌和真菌能分解动植物的遗体遗物，把有机物分解成二氧化碳、水和无机盐，供生产者重新利用，是生态系统中的分解者，参与物质循环。",
-      trap: "易错点：细菌真菌大多是分解者，不是生产者（没有叶绿体、不能光合作用）；少数寄生细菌真菌会引起动植物患病，但主要作用仍是分解。"
-    },
-    {
-      id: "shengwu-h06-q012", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 12, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "生物分类的等级从大到小依次是界、门、纲、目、科、属、种，其中最小的等级是（ ）。",
-      options: [{key:"A",text:"界"}, {key:"B",text:"门"}, {key:"C",text:"属"}, {key:"D",text:"种"}],
-      answer: ["D"],
-      explanation: "生物分类从大到小的等级依次是界、门、纲、目、科、属、种，种是最基本的分类单位，同种生物的亲缘关系最近；分类等级越大，包含的生物种类越多、亲缘关系越远。",
-      trap: "易错点：等级越大—种类越多、亲缘越远；等级越小—种类越少、亲缘越近；种是最小等级，不是属。"
-    },
-    {
-      id: "shengwu-h06-q013", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 13, type: "multiple", meta: "多选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列属于保护生物多样性措施的有（ ）。",
-      options: [{key:"A",text:"建立自然保护区"}, {key:"B",text:"迁地保护，建立动植物园、濒危物种繁育中心"}, {key:"C",text:"建立种质库，保存濒危物种的基因"}, {key:"D",text:"加强法制宣传，提高保护意识"}],
-      answer: ["A","B","C","D"],
-      explanation: "保护生物多样性的措施包括就地保护（建立自然保护区，是最有效的措施）、迁地保护、建立种质库和加强法制教育等；保护生物多样性的根本措施是保护生物的栖息环境、保护生态系统的多样性。",
-      trap: "易错点：最有效的措施是建立自然保护区，根本措施是保护栖息环境；两者表述不同，不要混淆。"
-    },
-    {
-      id: "shengwu-h06-q014", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 14, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列繁殖方式中，属于有性生殖的是（ ）。",
-      options: [{key:"A",text:"用扦插繁殖月季"}, {key:"B",text:"用嫁接繁殖桃树"}, {key:"C",text:"用种子繁殖玉米"}, {key:"D",text:"用组织培养繁殖兰花"}],
-      answer: ["C"],
-      explanation: "用种子繁殖经过两性生殖细胞结合、形成受精卵，属于有性生殖；扦插、嫁接、组织培养都不经过两性生殖细胞结合，属于无性生殖。",
-      trap: "易错点：判断有性/无性生殖的关键是是否经过两性生殖细胞结合；种子繁殖是有性生殖，扦插嫁接是无性生殖。"
-    },
-    {
-      id: "shengwu-h06-q015", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 15, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列昆虫的发育过程，属于完全变态发育的是（ ）。",
-      options: [{key:"A",text:"蝗虫"}, {key:"B",text:"蟋蟀"}, {key:"C",text:"蝴蝶"}, {key:"D",text:"螳螂"}],
-      answer: ["C"],
-      explanation: "蝴蝶的发育经过卵、幼虫、蛹、成虫四个时期，属于完全变态发育；蝗虫、蟋蟀、螳螂的发育经过卵、若虫、成虫三个时期，属于不完全变态发育。",
-      trap: "易错点：完全变态—有蛹期（蝶、蚊、蝇、蜜蜂、家蚕），不完全变态—无蛹期（蝗虫、蟋蟀、螳螂、蝼蛄）。"
-    },
-    {
-      id: "shengwu-h06-q016", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 16, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "把大鼠生长激素基因转入小鼠体内，得到转基因超级鼠，说明（ ）。",
-      options: [{key:"A",text:"基因控制生物的性状"}, {key:"B",text:"性状控制基因"}, {key:"C",text:"基因与性状无关"}, {key:"D",text:"环境决定生物的性状"}],
-      answer: ["A"],
-      explanation: "转基因超级鼠因为转入了大鼠生长激素基因而长得比普通小鼠大，说明基因控制生物的性状；生物的性状由基因控制，同时也受环境的影响。",
-      trap: "易错点：基因—控制性状，性状—基因的表现；转基因超级鼠是基因控制性状的经典证据。"
-    },
-    {
-      id: "shengwu-h06-q017", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 17, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列关于染色体、DNA和基因关系的叙述，正确的是（ ）。",
-      options: [{key:"A",text:"染色体由DNA和蛋白质组成，基因是DNA上具有遗传效应的片段"}, {key:"B",text:"基因由染色体和蛋白质组成"}, {key:"C",text:"DNA由基因和染色体组成"}, {key:"D",text:"染色体、DNA和基因是三个互不相关的概念"}],
-      answer: ["A"],
-      explanation: "染色体主要由DNA和蛋白质组成，DNA是主要的遗传物质，基因是DNA上具有特定遗传效应的片段；三者是从大到小的包含关系：染色体包含DNA，DNA包含基因。",
-      trap: "易错点：染色体>DNA>基因，是包含关系；基因不是由染色体组成的，DNA也不是由基因组成的。"
-    },
-    {
-      id: "shengwu-h06-q018", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 18, type: "judge", meta: "判断题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "生男生女取决于父亲提供的精子是含X染色体还是含Y染色体。（ ）",
-      options: [],
-      answer: ["true"],
-      explanation: "卵细胞只含X染色体，精子含X或含Y染色体：含X精子受精发育成女孩，含Y精子受精发育成男孩，所以生男生女取决于父亲；含X精子与含Y精子数量基本相等，生男生女概率基本相等。",
-      trap: "易错点：生男生女取决于父亲，不是母亲；不要把责任归于母亲，这是常见的错误观念。"
-    },
-    {
-      id: "shengwu-h06-q019", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 19, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列证据中，研究生物进化最直接、最重要的证据是（ ）。",
-      options: [{key:"A",text:"化石"}, {key:"B",text:"比较解剖学"}, {key:"C",text:"胚胎学"}, {key:"D",text:"分子生物学"}],
-      answer: ["A"],
-      explanation: "化石是生物的遗体、遗物或生活痕迹经过若干万年的复杂变化形成的，是研究生物进化最直接、最重要的证据；比较解剖学、胚胎学、分子生物学提供的是间接证据。",
-      trap: "易错点：化石是最直接的证据，其他是间接证据；化石在地层中的分布规律是越古老的地层中化石生物越简单、越低等。"
-    },
-    {
-      id: "shengwu-h06-q020", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 20, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "关于地球上生命的起源，科学界的主流观点认为原始生命诞生于（ ）。",
-      options: [{key:"A",text:"原始大气中"}, {key:"B",text:"原始海洋中"}, {key:"C",text:"原始陆地上"}, {key:"D",text:"火山口中"}],
-      answer: ["B"],
-      explanation: "生命起源的化学进化说认为：原始地球上无机小分子物质在原始海洋中经过长期演变，形成有机小分子、有机大分子，最终诞生原始生命；原始海洋是原始生命的摇篮。",
-      trap: "易错点：原始生命诞生于原始海洋，不是原始大气或陆地；原始大气中没有氧气，原始海洋为生命起源提供了场所和条件。"
-    },
-    {
-      id: "shengwu-h06-q021", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 21, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列行为中，不会传播艾滋病的是（ ）。",
-      options: [{key:"A",text:"与艾滋病患者握手、共餐"}, {key:"B",text:"与艾滋病患者共用注射器"}, {key:"C",text:"输入被艾滋病病毒污染的血液"}, {key:"D",text:"艾滋病母亲怀孕时将病毒传给胎儿"}],
-      answer: ["A"],
-      explanation: "艾滋病主要通过性接触、血液和母婴三种途径传播；日常握手、共餐、共用毛巾、拥抱等不会传播，蚊虫叮咬也不会传播；HIV主要攻击人体的免疫细胞。",
-      trap: "易错点：艾滋病只有三种传播途径，日常接触不传染；不要歧视艾滋病患者，握手共餐是安全的。"
-    },
-    {
-      id: "shengwu-h06-q022", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 22, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列情况中，属于特异性免疫的是（ ）。",
-      options: [{key:"A",text:"皮肤的屏障作用"}, {key:"B",text:"唾液中溶菌酶的杀菌作用"}, {key:"C",text:"患过水痘的人不再患水痘"}, {key:"D",text:"白细胞吞噬侵入人体的病菌"}],
-      answer: ["C"],
-      explanation: "患过水痘后人体产生了只针对水痘病毒的抗体，再次接触水痘病毒时能迅速将其清除，属于特异性免疫；皮肤屏障、溶菌酶杀菌、白细胞吞噬都对多种病原体起作用，属于非特异性免疫。",
-      trap: "易错点：特异性免疫针对特定病原体、后天获得；非特异性免疫人人生来就有、不针对特定病原体。"
-    },
-    {
-      id: "shengwu-h06-q023", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
-      number: 23, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
-      source: "自创-待替换",
-      stem: "下列生物技术的应用中，利用了发酵技术的是（ ）。",
-      options: [{key:"A",text:"培育抗虫棉"}, {key:"B",text:"克隆羊多莉"}, {key:"C",text:"用乳酸菌制作泡菜"}, {key:"D",text:"用组织培养繁殖兰花"}],
-      answer: ["C"],
-      explanation: "制作泡菜利用乳酸菌的发酵作用，属于发酵技术；抗虫棉利用转基因技术，克隆羊利用克隆技术，组织培养属于无性生殖技术。",
-      trap: "易错点：发酵—利用微生物代谢（酸奶、泡菜、酿酒、制醋），转基因—外源基因转入，克隆—体细胞核移植，三者要区分。"
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       id: "shengwu-h06-q024", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
       number: 24, type: "single", meta: "单选题",
@@ -5248,6 +3794,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h06-q067", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      image: true,
       number: 67, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建中考·生物第9题（原题为药品说明书图，改为文字叙述，知识点、选项与答案未改）",
@@ -5303,6 +3850,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h06-q072", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      image: true,
       number: 72, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建中考·生物第19题（原题为四组包含关系图，改为文字选项，知识点、选项与答案未改）",
@@ -5314,6 +3862,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h06-q073", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      image: true,
       number: 73, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建中考·生物第24题（原题为古猿进化树状图，改为文字叙述，知识点、选项与答案未改）",
@@ -5391,6 +3940,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q111", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 111, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年四川省成都市初中学业水平模拟考试·生物第3题（原题为叶结构图示标号①栅栏组织②叶脉③海绵组织④气孔，已将标号含义写成文字选项，知识点和答案未改）",
@@ -5402,6 +3952,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q112", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 112, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年四川省成都市初中学业水平模拟考试·生物第6题（原题为光合作用与呼吸作用关系概念图，①为光合作用的场所、②为呼吸作用的场所、③为二氧化碳和水、④为有机物和氧气，已按概念图含义改写题干，知识点和答案未改）",
@@ -5435,6 +3986,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h02-q096", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      image: true,
       number: 96, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "改编自2024年湖北省初中学业水平考试·生物第5题（原题为图示标号①舌②脑干③大脑④小脑，已将标号含义写成文字选项，知识点和答案未改）",
@@ -5457,6 +4009,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h02-q098", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      image: true,
       number: 98, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "2025年四川省成都市初中学业水平模拟考试·生物第7题",
@@ -5468,6 +4021,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h02-q099", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      image: true,
       number: 99, type: "single", meta: "单选题",
       grade: "七下", stage: "7-down",
       source: "2025年四川省成都市初中学业水平模拟考试·生物第11题",
@@ -5622,6 +4176,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h03-q070", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      image: true,
       number: 70, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2024年湖北省初中学业水平考试·生物第14题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5633,6 +4188,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h03-q071", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      image: true,
       number: 71, type: "single", meta: "单选题",
       grade: "八上", stage: "8-up",
       source: "改编自2025年四川省成都市初中学业水平模拟考试·生物第17题（原题为银杏种子纵切图示标号①外种皮②中种皮③胚，已将标号含义写进题干，知识点和答案未改）",
@@ -5853,6 +4409,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h04-q092", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      image: true,
       number: 92, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自2025年四川省成都市初中学业水平模拟考试·生物第16题（原题有克隆过程图，题干已按解析写明A猴为供细胞核者，知识点和答案未改）",
@@ -6029,6 +4586,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q127", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 127, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2024年湖北省初中学业水平考试·生物第14题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -6040,6 +4598,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q128", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 128, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2024年湖北省初中学业水平考试·生物第14题第(4)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -6425,6 +4984,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q140", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 140, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年四川省泸州市初中学业水平考试·生物第2题（原题为生理过程示意图，A、B、C所指过程已按解析写成文字，知识点和答案未改）",
@@ -6458,6 +5018,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q143", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 143, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年四川省泸州市初中学业水平考试·生物第7题第(3)小题（原题为食物网示意图，图中食物链已按解析逐条写成文字，知识点和答案未改）",
@@ -6546,6 +5107,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h01-q151", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      image: true,
       number: 151, type: "single", meta: "单选题",
       grade: "七上", stage: "7-up",
       source: "改编自2025年福建省初中学业水平考试·生物第27题第(2)小题（原题为豌豆生命周期示意图，图中②所指茎和叶已写成文字，知识点和答案未改；原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -6701,6 +5263,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     },
     {
       id: "shengwu-h04-q097", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      image: true,
       number: 97, type: "single", meta: "单选题",
       grade: "八下", stage: "8-down",
       source: "改编自2025年四川省泸州市初中学业水平考试·生物第6题（原题为杂交实验示意图，杂交组合已按解析写成文字，知识点和答案未改）",
@@ -6967,5 +5530,1281 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       explanation: "永生干花形态完整、花色鲜艳、造型立体，最能保留花朵原型；腊叶标本和塑封标本造型都是平整的。",
       trap: "易错点：“保留原型”看形态＋花色＋造型三项，永生干花三项都是最好的。"
     },
+    {
+      id: "shengwu-h01-q153", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 153, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省初中学业水平考试·生物第4题",
+      stem: "在制作生态瓶的综合实践活动中，设计评价量表需考虑多个评价点。下列与生态系统自动调节能力有关的评价点是（ ）。",
+      options: [{key:"A",text:"生态瓶整体美观，清洁"}, {key:"B",text:"生态系统模式图呈现完整、清晰、准确"}, {key:"C",text:"生态瓶放置位置、环境条件等有详细记录"}, {key:"D",text:"一段时间后动植物状态良好，种类不变，数量变化不大"}],
+      answer: ["D"],
+      explanation: "生态系统的自动调节能力体现在维持生物种类和数量相对稳定的能力上；一段时间后动植物状态良好、种类不变、数量变化不大，说明生态系统保持了相对稳定。生态瓶是否美观、模式图是否清晰、记录是否详细，都与自动调节能力无关。",
+      trap: "易错点：自动调节能力看的是种类和数量能不能保持相对稳定，不是看做得好不好看、记得全不全。"
+    },
+    {
+      id: "shengwu-h01-q154", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 154, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省初中学业水平考试·生物第6题",
+      stem: "桃树枝条上具有分生组织的结构是（ ）。",
+      options: [{key:"A",text:"形成层"}, {key:"B",text:"筛管"}, {key:"C",text:"导管"}, {key:"D",text:"表皮"}],
+      answer: ["A"],
+      explanation: "形成层属于分生组织，细胞能不断分裂产生新细胞，使茎不断加粗；筛管和导管属于输导组织，分别运输有机物和水、无机盐；表皮属于保护组织。",
+      trap: "易错点：分生组织的特点是细胞小、细胞壁薄、细胞核大、细胞质浓，能不断分裂；形成层、芽的生长点、根尖的分生区都属于分生组织。"
+    },
+    {
+      id: "shengwu-h01-q155", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 155, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省初中学业水平考试·生物第7题",
+      stem: "下列生产生活中的做法，有利于保证呼吸作用正常进行的是（ ）。",
+      options: [{key:"A",text:"晒干种子"}, {key:"B",text:"冷藏水果和蔬菜"}, {key:"C",text:"中耕松土"}, {key:"D",text:"降低储粮仓内氧含量"}],
+      answer: ["C"],
+      explanation: "中耕松土能增加土壤中的空气，促进根的呼吸作用；晒干种子、冷藏水果和蔬菜、降低储粮仓内氧含量，都是通过抑制呼吸作用来减少有机物消耗、延长保存时间的做法。",
+      trap: "易错点：中耕松土是促进根呼吸，不是保水；呼吸作用需要氧气，土壤板结、积水都会抑制根的呼吸。"
+    },
+    {
+      id: "shengwu-h01-q156", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 156, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年湖南省初中学业水平考试·生物第26题第(1)小题（原为非选择题填空，图示标号①改为文字选项，知识点和答案未改）",
+      stem: "洋葱鳞片叶外表皮细胞的糖类和色素等物质储存在（ ）。",
+      options: [{key:"A",text:"细胞壁"}, {key:"B",text:"液泡"}, {key:"C",text:"细胞核"}, {key:"D",text:"叶绿体"}],
+      answer: ["B"],
+      explanation: "液泡内的细胞液中溶解着糖类、色素等多种物质；细胞壁起保护和支持作用，细胞核是遗传信息库，洋葱鳞片叶外表皮细胞没有叶绿体。",
+      trap: "易错点：紫色洋葱外表皮的紫色就来自液泡中的色素；叶绿体只存在于植物绿色部分的细胞中。"
+    },
+    {
+      id: "shengwu-h01-q157", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 157, type: "judge", meta: "判断题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年湖南省初中学业水平考试·生物第26题第(2)小题（原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "洋葱鳞片叶外表皮细胞和牛的小肠绒毛细胞都具有细胞核，大肠杆菌只有DNA集中区域，没有成形的细胞核，属于原核生物。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "洋葱表皮细胞和小肠绒毛细胞都是真核细胞，都有成形的细胞核；大肠杆菌是细菌，没有成形的细胞核，只有DNA集中区域，属于原核生物。",
+      trap: "易错点：有没有成形的细胞核是区分真核生物和原核生物的依据；细菌都没有成形的细胞核。"
+    },
+    {
+      id: "shengwu-h01-q158", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 158, type: "judge", meta: "判断题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年湖南省初中学业水平考试·生物第26题第(4)小题（原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "在食草动物的胃肠内，生活着一些菌群，可以帮助动物分解纤维素，动物又为这些细菌提供生存的场所和食物，食草动物和菌群是共生关系。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "两种生物共同生活、相互依存、彼此有利的关系叫共生；菌群帮助动物分解纤维素，动物为菌群提供生存的场所和食物，双方都获利，属于共生关系。",
+      trap: "易错点：共生是双方都获利；一方获利、一方受害是寄生，一方获利、一方既不受益也不受害是附生。"
+    },
+    {
+      id: "shengwu-h01-q159", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 159, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年湖南省初中学业水平考试·生物第27题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改）",
+      stem: "土壤中的铅被植物的根吸收后，会沿着（ ）直接或间接进入动物体内，最终危害人体健康。",
+      options: [{key:"A",text:"食物链"}, {key:"B",text:"食物网"}, {key:"C",text:"生态系统"}, {key:"D",text:"生物圈"}],
+      answer: ["A"],
+      explanation: "土壤中的铅被植物的根吸收后，会沿着食物链在生物体内富集，直接或间接进入动物体内，最终危害人体健康；有害物质沿食物链积累，营养级越高的生物体内含量越多。",
+      trap: "易错点：有毒物质沿食物链富集，不是沿食物网、生态系统或生物圈这几个笼统概念进入动物体内。"
+    },
+    {
+      id: "shengwu-h01-q160", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 160, type: "judge", meta: "判断题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年湖南省初中学业水平考试·生物第27题第(2)小题（原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "辣椒、上海青、樱桃萝卜的主要可食用器官依次是果实、叶、根。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "辣椒的可食用部分是果实，上海青的可食用部分是叶，樱桃萝卜的可食用部分是根；根、茎、叶是营养器官，花、果实、种子是生殖器官。",
+      trap: "易错点：判断可食用器官要看吃的是植物的哪一部分，不是看整株植物叫什么。"
+    },
+    {
+      id: "shengwu-h01-q161", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 161, type: "judge", meta: "判断题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年湖南省初中学业水平考试·生物第30题第(1)小题（原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "在探究植物散失水分的结构的实验中，A组与B组对照，A组相对湿度比B组高，由此推测，小叶女贞散失水分的主要器官是叶。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "A组与B组对照，A组相对湿度更高，说明小叶女贞散失的水分主要来自叶；叶是植物散失水分的主要器官，气孔是植物散失水分的门户。",
+      trap: "易错点：对照实验要控制单一变量；相对湿度高说明散失的水分多。"
+    },
+    {
+      id: "shengwu-h01-q162", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 162, type: "judge", meta: "判断题",
+      grade: "七上", stage: "7-up",
+      source: "改编自2025年湖南省初中学业水平考试·生物第30题第(3)小题（原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "小叶女贞叶片的气孔主要分布在下表皮，上表皮也有少量气孔。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "把叶片浸在温水中观察，发现仅下表皮有气泡出现，说明气孔主要分布在下表皮；C组仅下表皮涂凡士林后相对湿度仍然略上升，说明上表皮也有气孔。",
+      trap: "易错点：气孔是气体交换和水分散失的门户，陆生植物叶片的气孔一般下表皮多于上表皮。"
+    },
+    {
+      id: "shengwu-h01-q163", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 163, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省长沙市中考生物真题第2题",
+      stem: "谚语“清明雨水多，竹笋满山坡”中，促进竹笋生长的生态因素是（ ）。",
+      options: [{key:"A",text:"空气"}, {key:"B",text:"阳光"}, {key:"C",text:"水分"}, {key:"D",text:"温度"}],
+      answer: ["C"],
+      explanation: "环境中影响生物生活的因素叫生态因素，包括非生物因素和生物因素；“清明雨水多”说明雨水充足促进了竹笋生长，水分属于非生物因素。",
+      trap: "易错点：生态因素包括非生物因素（光、温度、水、空气等）和生物因素；谚语里直接点出的就是答案的线索。"
+    },
+    {
+      id: "shengwu-h01-q164", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 164, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省长沙市中考生物真题第3题",
+      stem: "某种植物可以通过输导组织向叶片输送有毒物质防止昆虫啃食。龟甲（一种昆虫）能巧妙选择食用部位，避免因毒液流出而中毒。据此推测，龟甲在取食时没有破坏的结构是（ ）。",
+      options: [{key:"A",text:"叶肉"}, {key:"B",text:"叶脉"}, {key:"C",text:"上表皮"}, {key:"D",text:"下表皮"}],
+      answer: ["B"],
+      explanation: "叶脉里有导管和筛管等输导组织，有毒物质通过输导组织输送到叶片；龟甲没有破坏含有输导组织的叶脉，就不会因毒液流出而中毒。叶肉属于营养组织，表皮属于保护组织。",
+      trap: "易错点：叶脉里有输导组织，是运输水分、无机盐和有机物的通道；叶肉是光合作用的主要场所。"
+    },
+    {
+      id: "shengwu-h01-q165", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 165, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省长沙市中考生物真题第4题",
+      stem: "芦根是芦苇的根，可制成中药，具有清热生津的作用。芦根所属的结构层次是（ ）。",
+      options: [{key:"A",text:"细胞"}, {key:"B",text:"组织"}, {key:"C",text:"器官"}, {key:"D",text:"植物体"}],
+      answer: ["C"],
+      explanation: "根是绿色开花植物的六大器官之一，由不同的组织按照一定的次序结合在一起构成；细胞、组织、器官、植物体是不同的结构层次，根属于器官层次。",
+      trap: "易错点：绿色开花植物的六大器官是根、茎、叶、花、果实、种子；芦根就是芦苇的根，是器官。"
+    },
+    {
+      id: "shengwu-h01-q166", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 166, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省长沙市中考生物真题第5题",
+      stem: "春季植树时，移栽的树苗被剪去大量的枝叶，这样能提高移栽成活率的原因是（ ）。",
+      options: [{key:"A",text:"降低了叶片的光合作用"}, {key:"B",text:"降低了叶片的蒸腾作用"}, {key:"C",text:"促进了植物的呼吸作用"}, {key:"D",text:"促进了水和无机盐的吸收"}],
+      answer: ["B"],
+      explanation: "叶是蒸腾作用的主要部位；移栽时幼根和根毛受到损伤，吸水能力弱，剪去部分枝叶可以降低蒸腾作用，减少水分散失，有利于成活。",
+      trap: "易错点：移栽成活的关键是减少水分散失、保护根；剪枝叶是降蒸腾，不是降光合。"
+    },
+    {
+      id: "shengwu-h01-q167", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 167, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省长沙市中考生物真题第6题",
+      stem: "截至2020年底，中国西南野生生物种质资源库已保存野生植物种子10601种。要长期保存种子，种质资源库应保持（ ）。",
+      options: [{key:"A",text:"温暖潮湿"}, {key:"B",text:"低温潮湿"}, {key:"C",text:"温暖干燥"}, {key:"D",text:"低温干燥"}],
+      answer: ["D"],
+      explanation: "在低温、干燥的条件下，种子的呼吸作用最微弱，消耗的有机物最少，有利于延长种子的寿命；高温、潮湿会增强呼吸作用，缩短种子寿命。",
+      trap: "易错点：保存种子要抑制呼吸作用，条件是低温、干燥、缺氧；温暖潮湿正好相反，会让种子萌发或霉变。"
+    },
+    {
+      id: "shengwu-h01-q168", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 168, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2024年安徽省初中（八年级）学业水平考试·生物第1题",
+      stem: "人类的生存和发展离不开环境，人类的活动既能改善环境，也会破坏环境。下列人类活动中属于破坏环境的是（ ）。",
+      options: [{key:"A",text:"发展生态农业"}, {key:"B",text:"开展植树造林"}, {key:"C",text:"建立自然保护区"}, {key:"D",text:"排放高辐射核污水"}],
+      answer: ["D"],
+      explanation: "排放高辐射核污水会对水体造成严重污染，威胁生态系统和人类健康，属于破坏环境的活动；发展生态农业、开展植树造林、建立自然保护区都有利于保护环境。",
+      trap: "易错点：建立自然保护区是保护生物多样性最为有效的措施，属于改善环境，不是破坏环境。"
+    },
+    {
+      id: "shengwu-h01-q169", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 169, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第2题（模拟卷）",
+      stem: "在植树过程中，为了提高树苗成活率，应该采取的措施是（ ）①带土移栽 ②去掉部分叶片移栽 ③在烈日炎炎的中午移栽 ④尽量利用早晚移栽",
+      options: [{key:"A",text:"②④"}, {key:"B",text:"①②④"}, {key:"C",text:"②③"}, {key:"D",text:"①③④"}],
+      answer: ["B"],
+      explanation: "移栽时带土可以保护幼根和根毛，去掉部分叶片可以降低蒸腾作用，尽量利用早晚移栽可以减少水分散失；在烈日炎炎的中午移栽会使蒸腾作用过强，不利于成活。",
+      trap: "易错点：提高移栽成活率的核心是减少水分散失、保护根；带土、去叶、傍晚移栽都是为这个目的服务的。"
+    },
+    {
+      id: "shengwu-h02-q118", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 118, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年湖南省初中学业水平考试·生物第8题",
+      stem: "在青春期的变化中，属于心理变化的是（ ）。",
+      options: [{key:"A",text:"身高突增"}, {key:"B",text:"心脏收缩能力增强"}, {key:"C",text:"肺活量增加"}, {key:"D",text:"有较强的独立意识"}],
+      answer: ["D"],
+      explanation: "身高突增、心脏收缩能力增强、肺活量增加都属于身体变化；有较强的独立意识属于心理变化。青春期在身体和心理上都会发生显著变化。",
+      trap: "易错点：青春期的变化分身体变化和心理变化两类；独立意识、逆反心理等属于心理变化。"
+    },
+    {
+      id: "shengwu-h02-q119", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 119, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年湖南省初中学业水平考试·生物第9题",
+      stem: "某人皮下毛细血管溢血，不易凝血，出现淤点。此人血液检验报告单中偏离正常值范围的成分可能是（ ）。",
+      options: [{key:"A",text:"血小板"}, {key:"B",text:"红细胞"}, {key:"C",text:"白细胞"}, {key:"D",text:"血红蛋白"}],
+      answer: ["A"],
+      explanation: "血小板有止血和加速凝血的作用；血小板数量偏低时，皮下毛细血管出血后不易凝血，会出现淤点。红细胞运输氧，白细胞吞噬病菌，血红蛋白是红细胞内运输氧的蛋白质。",
+      trap: "易错点：不易凝血首先想血小板；红细胞少是贫血，白细胞多常提示有炎症。"
+    },
+    {
+      id: "shengwu-h02-q120", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 120, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年湖南省初中学业水平考试·生物第10题",
+      stem: "切脉是我国传统医学的诊断方法之一，下列直接影响脉搏的心脏结构是（ ）。",
+      options: [{key:"A",text:"左心房"}, {key:"B",text:"右心房"}, {key:"C",text:"左心室"}, {key:"D",text:"右心室"}],
+      answer: ["C"],
+      explanation: "脉搏是动脉的搏动，由左心室收缩将血液泵入主动脉引起；左心室壁最厚，收缩力最强，直接影响脉搏。",
+      trap: "易错点：脉搏来自左心室射血，不是右心室；左心室壁最厚，因为它要把血液泵到全身。"
+    },
+    {
+      id: "shengwu-h02-q121", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 121, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年湖南省初中学业水平考试·生物第12题",
+      stem: "神舟二十号载人飞船发射的画面在我们眼球中成像的部位是（ ）。",
+      options: [{key:"A",text:"角膜"}, {key:"B",text:"晶状体"}, {key:"C",text:"巩膜"}, {key:"D",text:"视网膜"}],
+      answer: ["D"],
+      explanation: "外界物体的光线经角膜、晶状体等折射后，在视网膜上形成清晰的物像；视网膜上有感光细胞，能感受光的刺激产生神经冲动，再经视神经传到大脑形成视觉。",
+      trap: "易错点：成像在视网膜上，形成视觉是在大脑皮层的视觉中枢；晶状体起折射、调节作用，不成像。"
+    },
+    {
+      id: "shengwu-h02-q122", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 122, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年湖南省初中学业水平考试·生物第29题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改）",
+      stem: "验证人呼吸道某项生理功能的模型中，缠绕空心管的细软管模拟的是（ ）。",
+      options: [{key:"A",text:"毛细血管"}, {key:"B",text:"动脉"}, {key:"C",text:"静脉"}, {key:"D",text:"气管"}],
+      answer: ["A"],
+      explanation: "细软管中流动的红墨水模拟血液，缠绕在模拟呼吸道的空心管外的细软管模拟的是肺部周围的毛细血管；空心管模拟的是呼吸道。",
+      trap: "易错点：模型里的细软管模拟的是毛细血管，不是动脉或静脉；毛细血管壁薄、管腔细，利于物质交换。"
+    },
+    {
+      id: "shengwu-h02-q123", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 123, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "改编自2025年湖南省初中学业水平考试·生物第29题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改）",
+      stem: "将温度计置于模拟呼吸道的空心管中，先在注射器注红墨水之前读数，再在红墨水充满细软管之后读数，发现温度上升，该装置验证的呼吸道的生理功能是（ ）。",
+      options: [{key:"A",text:"温暖空气"}, {key:"B",text:"湿润空气"}, {key:"C",text:"清洁空气"}, {key:"D",text:"进行气体交换"}],
+      answer: ["A"],
+      explanation: "红墨水模拟温度约37℃的血液，血液流经细软管后空心管内温度上升，说明呼吸道能使吸入的空气变得温暖；呼吸道对吸入的空气还有湿润和清洁的作用，但本装置验证的是温暖空气。",
+      trap: "易错点：呼吸道对空气有温暖、湿润、清洁三个作用；温度上升对应的是温暖空气。"
+    },
+    {
+      id: "shengwu-h02-q124", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 124, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年湖南省长沙市中考生物真题第7题",
+      stem: "青春期是生长发育发生重要变化的时期。下列青少年行为习惯不健康的是（ ）。",
+      options: [{key:"A",text:"腰背挺直、坐姿端正"}, {key:"B",text:"规律进餐、足量饮水"}, {key:"C",text:"劳逸结合、睡眠充足"}, {key:"D",text:"躺卧看书、直视强光"}],
+      answer: ["D"],
+      explanation: "躺卧看书、直视强光会危害眼睛健康，容易形成近视，是不健康的行为；腰背挺直、规律进餐、劳逸结合都是健康的生活方式。",
+      trap: "易错点：健康的生活方式包括合理营养、坚持锻炼、按时作息、不吸烟不喝酒等；躺卧看书最伤眼睛。"
+    },
+    {
+      id: "shengwu-h02-q125", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 125, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年湖南省长沙市中考生物真题第8题",
+      stem: "端午佳节，家人团聚包粽子。下列包粽子的原材料中富含淀粉的是（ ）。",
+      options: [{key:"A",text:"糯米"}, {key:"B",text:"食盐"}, {key:"C",text:"咸蛋黄"}, {key:"D",text:"五花肉"}],
+      answer: ["A"],
+      explanation: "糯米的主要成分是淀粉，淀粉属于糖类，是最主要的供能物质；食盐主要含有无机盐，咸蛋黄、五花肉富含脂肪和蛋白质。",
+      trap: "易错点：淀粉属于糖类；米、面、薯类等主食都富含淀粉。"
+    },
+    {
+      id: "shengwu-h02-q126", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 126, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年湖南省长沙市中考生物真题第10题（原题有图，各选项可独立判断）",
+      stem: "如图是显微镜下小鱼尾鳍内毛细血管的血液流动情况。要观察与图中毛细血管相连的小动脉，恰当的操作是（ ）。",
+      options: [{key:"A",text:"换用高倍目镜"}, {key:"B",text:"调节细准焦螺旋"}, {key:"C",text:"换用较大的光圈"}, {key:"D",text:"向右下移动培养皿"}],
+      answer: ["B"],
+      explanation: "细准焦螺旋能较小幅度地升降镜筒，使焦距更准确，调出更加清晰的物像；观察小鱼尾鳍内血液流动应该用低倍显微镜，换用高倍目镜会使视野变暗变窄；显微镜下看到的物像是上下左右均颠倒的，图中要观察的小动脉在视野的偏左上方，应向左上方移动培养皿。",
+      trap: "易错点：调清晰用细准焦螺旋；物像移动方向与玻片移动方向相反。"
+    },
+    {
+      id: "shengwu-h02-q127", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 127, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年湖南省长沙市中考生物真题第11题",
+      stem: "尿毒症患者不能正常形成尿液，病情严重时会危及生命，需进行器官移植。患者需移植的器官是（ ）。",
+      options: [{key:"A",text:"肾脏"}, {key:"B",text:"心脏"}, {key:"C",text:"肝脏"}, {key:"D",text:"皮肤"}],
+      answer: ["A"],
+      explanation: "肾脏是形成尿液的器官，尿的形成包括肾小球和肾小囊内壁的滤过作用、肾小管的重吸收作用；尿毒症患者不能正常形成尿液，需移植肾脏。",
+      trap: "易错点：形成尿液的器官是肾脏；心脏是血液循环的动力器官，肝脏是人体内最大的消化腺。"
+    },
+    {
+      id: "shengwu-h02-q128", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 128, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025年湖南省长沙市中考生物真题第12题",
+      stem: "在冬奥会滑雪比赛中，运动员协调运动、维持身体平衡的结构是（ ）。",
+      options: [{key:"A",text:"大脑"}, {key:"B",text:"脑干"}, {key:"C",text:"小脑"}, {key:"D",text:"脊髓"}],
+      answer: ["C"],
+      explanation: "小脑的主要功能是使运动协调、准确，维持身体的平衡；大脑是调节机体活动的最高级中枢，脑干有心血管中枢、呼吸中枢等重要的生命活动中枢，脊髓是调节躯体运动的低级中枢。",
+      trap: "易错点：维持平衡、协调运动是小脑；大脑管高级活动，脑管生命中枢，脊髓管低级反射和传导。"
+    },
+    {
+      id: "shengwu-h03-q081", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 81, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025年湖南省初中学业水平考试·生物第15题",
+      stem: "扬子鳄在炎热时会在阴凉处栖身，在较冷时会晒太阳。这是为了（ ）。",
+      options: [{key:"A",text:"追踪猎物"}, {key:"B",text:"调节体温"}, {key:"C",text:"寻找配偶"}, {key:"D",text:"躲避天敌"}],
+      answer: ["B"],
+      explanation: "扬子鳄属于爬行动物，是变温动物，体温随环境温度变化；通过栖身阴凉处或晒太阳来调节体温。",
+      trap: "易错点：变温动物的体温随环境变化，要靠行为调节；恒温动物只有鸟类和哺乳动物。"
+    },
+    {
+      id: "shengwu-h03-q082", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 82, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025年湖南省初中学业水平考试·生物第16题",
+      stem: "某同学想详细了解桦尺蛾的生长发育和行为，最好查阅的书籍是（ ）。",
+      options: [{key:"A",text:"《生物学》"}, {key:"B",text:"《动物学》"}, {key:"C",text:"《无脊椎动物学》"}, {key:"D",text:"《昆虫学》"}],
+      answer: ["D"],
+      explanation: "桦尺蛾属于昆虫纲，研究昆虫的生长发育和行为最专业的书籍是《昆虫学》；《动物学》《无脊椎动物学》范围过大，不够具体。",
+      trap: "易错点：桦尺蛾是昆虫，不是一般的无脊椎动物；越具体的书越对口。"
+    },
+    {
+      id: "shengwu-h03-q083", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 83, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025年湖南省初中学业水平考试·生物第17题",
+      stem: "在光学显微镜下观察青霉的装片，可观察到的是（ ）。",
+      options: [{key:"A",text:"菌丝"}, {key:"B",text:"芽孢"}, {key:"C",text:"叶绿体"}, {key:"D",text:"DNA"}],
+      answer: ["A"],
+      explanation: "青霉属于真菌，由菌丝构成，在光学显微镜下可以观察到菌丝；芽孢是细菌的休眠体，青霉没有叶绿体，DNA在光学显微镜下看不到。",
+      trap: "易错点：青霉是真菌不是细菌，没有芽孢也没有叶绿体；芽孢是细菌度过不良环境的休眠体。"
+    },
+    {
+      id: "shengwu-h03-q084", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 84, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025年湖南省初中学业水平考试·生物第18题",
+      stem: "病毒不能独立生活。科研人员培养禽流感病毒，可选择的培养基是（ ）。",
+      options: [{key:"A",text:"土壤浸出液"}, {key:"B",text:"肉汤"}, {key:"C",text:"牛肉膏培养基"}, {key:"D",text:"活的鸡胚胎"}],
+      answer: ["D"],
+      explanation: "病毒没有细胞结构，不能独立生活，只能寄生在活细胞内繁殖；培养病毒必须用活的宿主细胞，活的鸡胚胎可以提供活细胞。土壤浸出液、肉汤、牛肉膏培养基都只能培养细菌等，不能培养病毒。",
+      trap: "易错点：病毒必须寄生在活细胞里；凡是“培养病毒”都选活细胞、活胚胎，不能选普通培养基。"
+    },
+    {
+      id: "shengwu-h03-q085", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 85, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025年湖南省初中学业水平考试·生物第19题",
+      stem: "人类活动会影响生态环境。下列做法有利于环境保护的是（ ）。",
+      options: [{key:"A",text:"私自携带外来物种入境"}, {key:"B",text:"盗挖或移栽濒危植物"}, {key:"C",text:"积极参与植树造林"}, {key:"D",text:"偷猎或圈养野生动物"}],
+      answer: ["C"],
+      explanation: "植树造林能改善生态环境、保护生物多样性；私自携带外来物种入境可能造成生物入侵，盗挖濒危植物和偷猎野生动物都会破坏生物多样性。",
+      trap: "易错点：外来物种入侵、盗挖濒危植物、偷猎都是破坏生物多样性的行为；植树造林是保护环境的正面做法。"
+    },
+    {
+      id: "shengwu-h03-q086", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 86, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第20题（模拟卷）",
+      stem: "关于下列动物的形态结构与其生活环境、生活习性相适应的叙述，错误的是（ ）。",
+      options: [{key:"A",text:"蝗虫的体表有外骨骼，适于陆地生活"}, {key:"B",text:"家兔有发达的盲肠，有助于消化植物纤维"}, {key:"C",text:"家鸽体内有发达的气囊，适于进行气体交换"}, {key:"D",text:"河蚌的外套膜能分泌形成贝壳，起保护作用"}],
+      answer: ["C"],
+      explanation: "家鸽体内有发达的气囊，气囊能暂时储存气体、辅助呼吸，但进行气体交换的场所是肺，气囊不能进行气体交换；蝗虫的外骨骼能防止体内水分蒸发，家兔发达的盲肠有助于消化植物纤维，河蚌的外套膜能分泌形成贝壳。",
+      trap: "易错点：鸟类进行气体交换的是肺，不是气囊；气囊只起储存气体、辅助呼吸的作用。"
+    },
+    {
+      id: "shengwu-h03-q087", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 87, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第22题（模拟卷）",
+      stem: "下列例子中，哪一项不能体现动物在生物圈中的作用（ ）。",
+      options: [{key:"A",text:"蚂蚁群体成员之间分工合作，共同维持群体的生活"}, {key:"B",text:"重庆某地遭遇罕见蝗灾，紧急请求支援大量的青蛙、麻雀和蛇"}, {key:"C",text:"为了提高农作物的产量，在温室大棚中放养蜜蜂或熊蜂"}, {key:"D",text:"苍耳果实表面的钩刺钩挂在路过动物的皮毛上"}],
+      answer: ["A"],
+      explanation: "蚂蚁群体成员分工合作属于社会行为，不能体现动物在生物圈中的作用；动物在生物圈中的作用包括维持生态平衡、促进物质循环、帮助植物传粉和传播种子，B体现维持生态平衡，C体现帮助植物传粉，D体现帮助植物传播种子。",
+      trap: "易错点：社会行为不等于动物在生物圈中的作用；动物在生物圈中的作用只有三条：维持生态平衡、促进物质循环、帮助植物传粉和传播种子。"
+    },
+    {
+      id: "shengwu-h03-q088", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 88, type: "judge", meta: "判断题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第29题第(2)小题（模拟卷，原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "抹香鲸和棕颈鹭的体内都有脊柱，因此同属于脊椎动物。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "脊椎动物的体内都有由脊椎骨构成的脊柱；抹香鲸是哺乳动物，棕颈鹭是鸟类，二者体内都有脊柱，同属于脊椎动物。",
+      trap: "易错点：有没有脊柱是区分脊椎动物和无脊椎动物的依据；鱼类、两栖类、爬行类、鸟类、哺乳类都是脊椎动物。"
+    },
+    {
+      id: "shengwu-h03-q089", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 89, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第30题第(3)小题（模拟卷，原为非选择题，改为单选题，选项按资料二表格所列原因写出，知识点和答案未改）",
+      stem: "由资料二可知，哺乳类和鸟类濒危或受到威胁的主要原因是（ ）。",
+      options: [{key:"A",text:"偷猎"}, {key:"B",text:"栖息地丧失"}, {key:"C",text:"外来物种的影响"}, {key:"D",text:"其他原因"}],
+      answer: ["B"],
+      explanation: "资料二的表格显示，鸟类濒危或受到威胁的原因中栖息地丧失占60%，哺乳类中栖息地丧失占32%，都是占比最高的原因；保护哺乳类和鸟类最根本的措施是保护生物的栖息环境、保护生态系统的多样性。",
+      trap: "易错点：看表格要找占比最高的一项；栖息地丧失是生物多样性面临威胁的主要原因。"
+    },
+    {
+      id: "shengwu-h04-q099", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 99, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年湖南省初中学业水平考试·生物第13题",
+      stem: "从食品安全的角度辨析，下列能安全食用的是（ ）。",
+      options: [{key:"A",text:"煮熟的发霉花生"}, {key:"B",text:"检疫合格的鲜肉"}, {key:"C",text:"削除腐烂部分的水果"}, {key:"D",text:"无法辨认的蘑菇"}],
+      answer: ["B"],
+      explanation: "发霉花生即使煮熟仍含有黄曲霉毒素，不能食用；腐烂水果中霉菌毒素已扩散到未腐烂部分，削除后仍不安全；无法辨认的蘑菇可能有毒；检疫合格的鲜肉可以安全食用。",
+      trap: "易错点：霉变食物煮熟也不能吃，毒素耐高温；腐烂水果的毒素会扩散，削掉坏的部分也不安全。"
+    },
+    {
+      id: "shengwu-h04-q100", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 100, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年湖南省初中学业水平考试·生物第20题",
+      stem: "彩鹬雄鸟独自孵化、抚养后代。彩鹬雄鸟没有参与的繁殖行为是（ ）。",
+      options: [{key:"A",text:"交配"}, {key:"B",text:"育雏"}, {key:"C",text:"孵卵"}, {key:"D",text:"产卵"}],
+      answer: ["D"],
+      explanation: "产卵是雌鸟的繁殖行为，雄鸟不能产卵；彩鹬雄鸟参与交配、孵卵和育雏。鸟类的繁殖行为一般包括求偶、交配、筑巢、产卵、孵卵和育雏等阶段。",
+      trap: "易错点：产卵只能是雌鸟；彩鹬是雄鸟孵卵育雏的特例，但产卵仍然是雌鸟的事。"
+    },
+    {
+      id: "shengwu-h04-q101", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 101, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年湖南省初中学业水平考试·生物第21题",
+      stem: "在某个经常刮大风的海岛上，无翅和残翅的昆虫特别多。下列叙述不正确的是（ ）。",
+      options: [{key:"A",text:"无翅和残翅的昆虫在繁殖过程中会发生变异"}, {key:"B",text:"无翅和残翅的昆虫不容易被吹到大海而淹死"}, {key:"C",text:"无翅和残翅的昆虫生存、繁殖后代的机会更多"}, {key:"D",text:"无翅和残翅的昆虫特别多，不是自然选择的结果"}],
+      answer: ["D"],
+      explanation: "海岛上经常刮大风，有翅昆虫容易被吹到海里淹死，无翅和残翅的昆虫容易存活下来并繁殖后代，这是自然选择的结果；变异是不定向的，自然选择是定向的。",
+      trap: "易错点：变异是不定向的，环境对变异起选择作用；“不是自然选择的结果”这个说法本身就是错的。"
+    },
+    {
+      id: "shengwu-h04-q102", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 102, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年湖南省初中学业水平考试·生物第22题",
+      stem: "湖南科学家汤飞凡为了收集临床数据主动感染，并通过研究发现沙眼病是由沙眼衣原体引起。汤飞凡感染的沙眼衣原体是沙眼病的（ ）。",
+      options: [{key:"A",text:"传染源"}, {key:"B",text:"传播途径"}, {key:"C",text:"病原体"}, {key:"D",text:"易感人群"}],
+      answer: ["C"],
+      explanation: "病原体是指引起传染病的细菌、病毒、寄生虫等生物，沙眼衣原体是引起沙眼病的病原体；传染源是指能够散播病原体的人或动物，传播途径是指病原体离开传染源到达健康人所经过的途径，易感人群是指对某种传染病缺乏免疫力而容易感染该病的人群。",
+      trap: "易错点：病原体是“引起传染病的生物”，传染源是“能散播病原体的人或动物”，两个概念不要混。"
+    },
+    {
+      id: "shengwu-h04-q103", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 103, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年湖南省初中学业水平考试·生物第23题",
+      stem: "接种乙肝疫苗后能刺激人体产生抗体。下列说法不正确的是（ ）。",
+      options: [{key:"A",text:"该抗体由淋巴细胞产生"}, {key:"B",text:"接种该疫苗可以保护易感人群"}, {key:"C",text:"该抗体也可预防百日咳"}, {key:"D",text:"接种该疫苗属于特异性免疫"}],
+      answer: ["C"],
+      explanation: "抗体具有特异性，只能对特定的病原体起作用，乙肝疫苗产生的抗体只能预防乙肝，不能预防百日咳；抗体由淋巴细胞产生，接种疫苗属于保护易感人群，疫苗刺激产生的免疫属于特异性免疫。",
+      trap: "易错点：抗体只对特定的病原体起作用；一种抗体不能预防另一种病。"
+    },
+    {
+      id: "shengwu-h04-q104", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 104, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年湖南省初中学业水平考试·生物第24题",
+      stem: "培育一株开出多个品种花的树状月季，运用的技术是（ ）。",
+      options: [{key:"A",text:"嫁接"}, {key:"B",text:"杂交技术"}, {key:"C",text:"扦插"}, {key:"D",text:"组织培养"}],
+      answer: ["A"],
+      explanation: "嫁接能把不同品种月季的枝或芽接到同一株月季上，使一株开出多个品种的花，并保持接穗的优良性状；杂交技术会产生新性状，不能保证开出指定的多个品种，扦插和组织培养只能繁殖同一品种。",
+      trap: "易错点：一株多品种只能是嫁接；扦插和组织培养繁殖的都是同一品种。"
+    },
+    {
+      id: "shengwu-h04-q105", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 105, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025年湖南省初中学业水平考试·生物第25题",
+      stem: "下列生活习惯有利于青少年健康成长的是（ ）。",
+      options: [{key:"A",text:"长时间看学习视频"}, {key:"B",text:"饭前便后洗手"}, {key:"C",text:"吃饭时大声说笑"}, {key:"D",text:"剧烈运动后立即喝冷饮"}],
+      answer: ["B"],
+      explanation: "饭前便后洗手能切断传染病的传播途径，有利于健康；长时间看学习视频会损害视力，吃饭时大声说笑容易使食物误入气管，剧烈运动后立即喝冷饮会刺激肠胃。",
+      trap: "易错点：饭前便后洗手属于切断传播途径；吃饭时不要大声说笑，会厌软骨来不及盖住喉口，食物容易误入气管。"
+    },
+    {
+      id: "shengwu-h04-q106", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 106, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年湖南省初中学业水平考试·生物第28题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改）",
+      stem: "桑基鱼塘是池中养殖、池埂种桑、桑叶养蚕、蚕茧缫丝、蚕粪养鱼、塘泥肥田的高效人工生态系统。蚕在发育阶段中的（ ）期吐丝。",
+      options: [{key:"A",text:"卵"}, {key:"B",text:"幼虫"}, {key:"C",text:"蛹"}, {key:"D",text:"成虫"}],
+      answer: ["B"],
+      explanation: "蚕的发育经过卵、幼虫、蛹、成虫四个时期，属于完全变态发育；蚕在幼虫期吐丝结茧，化蛹。",
+      trap: "易错点：吐丝的是幼虫，不是成虫；家蚕的发育是完全变态发育，要经过蛹期。"
+    },
+    {
+      id: "shengwu-h04-q107", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 107, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年湖南省初中学业水平考试·生物第31题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改）",
+      stem: "在豌豆杂交实验中，在植株A的花粉未成熟时剪除雄蕊并用小袋包住花朵，去除雄蕊的目的是避免（ ）。",
+      options: [{key:"A",text:"自花传粉"}, {key:"B",text:"异花传粉"}, {key:"C",text:"风力传粉"}, {key:"D",text:"昆虫传粉"}],
+      answer: ["A"],
+      explanation: "豌豆是自花传粉植物，在花粉未成熟时去除雄蕊并套袋，可以避免自花传粉，再蘸取另一植株的成熟花粉涂在柱头上进行人工异花传粉。",
+      trap: "易错点：去雄+套袋是为了防止自花传粉；豌豆是自花传粉、闭花受粉的植物。"
+    },
+    {
+      id: "shengwu-h04-q108", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 108, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年湖南省初中学业水平考试·生物第31题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改）",
+      stem: "豌豆种子的胚由（ ）发育而成。",
+      options: [{key:"A",text:"受精卵"}, {key:"B",text:"子房壁"}, {key:"C",text:"胚珠"}, {key:"D",text:"花托"}],
+      answer: ["A"],
+      explanation: "受精后，受精卵发育成胚，胚珠发育成种子，子房壁发育成豆荚（果皮）；种子的胚是新植物的幼体。",
+      trap: "易错点：受精卵发育成胚，胚珠发育成种子，子房壁发育成果皮，子房发育成果实。"
+    },
+    {
+      id: "shengwu-h04-q109", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 109, type: "judge", meta: "判断题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025年湖南省初中学业水平考试·生物第31题第(5)小题（原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "豌豆植株A上有少量豆荚因病虫害变黄，从能否遗传给后代的角度判断，这属于不可遗传的变异。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "由环境因素（病虫害）引起的变异，遗传物质没有发生改变，不能遗传给后代，属于不可遗传的变异；由遗传物质改变引起的变异才能遗传给后代。",
+      trap: "易错点：能不能遗传看遗传物质有没有改变；环境引起的变异一般不能遗传。"
+    },
+    {
+      id: "shengwu-h01-q170", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 170, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省初中学业水平考试·生物第1题",
+      stem: "蜜蜂在花间飞舞，采集花蜜。这说明蜜蜂具有的生物特征是（ ）。",
+      options: [{key:"A",text:"能进行呼吸"}, {key:"B",text:"需要营养"}, {key:"C",text:"能生长和繁殖"}, {key:"D",text:"能排出体内产生的废物"}],
+      answer: ["B"],
+      explanation: "蜜蜂采集花蜜是为了获取营养物质，说明生物的生活需要营养；生物的共同特征还包括能进行呼吸、能排出体内产生的废物、能对外界刺激作出反应、能生长和繁殖等。",
+      trap: "易错点：采集花蜜对应的是“需要营养”；飞行、采蜜这些生命活动本身不能直接对应呼吸或繁殖。"
+    },
+    {
+      id: "shengwu-h01-q171", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 171, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省初中学业水平考试·生物第2题",
+      stem: "梭梭的根系连成片可阻挡风沙，减缓沙丘的流动。这体现生物与环境的关系是（ ）。",
+      options: [{key:"A",text:"生物影响环境"}, {key:"B",text:"生物适应环境"}, {key:"C",text:"生物依赖环境"}, {key:"D",text:"环境影响生物"}],
+      answer: ["A"],
+      explanation: "梭梭的根系阻挡风沙、减缓沙丘流动，是生物的活动改变了周围的环境，体现生物影响环境；生物适应环境是指生物的形态结构适合环境，如仙人掌的叶变成刺。",
+      trap: "易错点：题干说的是梭梭“改变了”风沙环境，是生物影响环境；如果是环境让梭梭长成这样，才是环境影响生物。"
+    },
+    {
+      id: "shengwu-h01-q172", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 172, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省初中学业水平考试·生物第3题",
+      stem: "下列属于森林生态系统的是（ ）。",
+      options: [{key:"A",text:"岳麓山"}, {key:"B",text:"洞庭湖"}, {key:"C",text:"浏阳河"}, {key:"D",text:"凤凰古城"}],
+      answer: ["A"],
+      explanation: "岳麓山以森林植被为主，动植物种类繁多，属于森林生态系统；洞庭湖属于湖泊生态系统，浏阳河属于河流生态系统，凤凰古城是人文景观、不是生态系统类型。",
+      trap: "易错点：判断生态系统类型看主要的生物和环境特点；湖泊、河流属于淡水生态系统，山林属于森林生态系统。"
+    },
+    {
+      id: "shengwu-h01-q173", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 173, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025年湖南省初中学业水平考试·生物第5题",
+      stem: "水稻根尖的表皮细胞向外凸起形成根毛的部位是（ ）。",
+      options: [{key:"A",text:"根冠"}, {key:"B",text:"伸长区"}, {key:"C",text:"分生区"}, {key:"D",text:"成熟区"}],
+      answer: ["D"],
+      explanation: "成熟区也叫根毛区，表皮细胞向外凸起形成根毛，大大增加了吸收水分和无机盐的面积，是根吸收水分和无机盐的主要部位；根冠起保护作用，分生区细胞能不断分裂，伸长区细胞能迅速伸长。",
+      trap: "易错点：成熟区=根毛区，是吸收的主要部位；分生区管分裂，伸长区管长长，根冠管保护。"
+    },
+    {
+      id: "shengwu-h01-q174", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 174, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第4题（模拟卷）",
+      stem: "在适宜条件下，一粒种子能萌发长成一棵参天大树。种子结构中，将来发育成新植物而被称为“幼小的生命体”的是（ ）。",
+      options: [{key:"A",text:"胚芽"}, {key:"B",text:"胚根"}, {key:"C",text:"子叶"}, {key:"D",text:"胚"}],
+      answer: ["D"],
+      explanation: "胚是种子的主要结构，包括胚芽、胚轴、胚根和子叶四部分，是新植物的幼体；种子萌发时胚根发育成根，胚芽发育成茎和叶，子叶或胚乳提供营养。",
+      trap: "易错点：胚芽、胚根、子叶都只是胚的一部分；被称为“幼小的生命体”的是整个胚。"
+    },
+    {
+      id: "shengwu-h01-q175", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 175, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第8题（模拟卷）",
+      stem: "绿色植物养育了生物圈中的其他生物。下列关于绿色植物生活的描述正确的是（ ）。",
+      options: [{key:"A",text:"“清明前后，种瓜点豆”表明种子的萌发需要一定的环境条件"}, {key:"B",text:"植物生长所需要的无机盐只有含氮的、含磷的和含钾的无机盐"}, {key:"C",text:"在花的结构中雌蕊比雄蕊重要，因为雌蕊才和果实的形成有关"}, {key:"D",text:"蒸腾作用散失了植物吸收的大部分水，这对植物来说是一种浪费"}],
+      answer: ["A"],
+      explanation: "“清明前后，种瓜点豆”说明播种要看时节，种子的萌发需要适宜的温度、一定的水分和充足的空气等环境条件；植物生长需要多种无机盐，含氮、含磷、含钾的只是需要量最多的三种；花的主要结构是雄蕊和雌蕊，两者都与果实和种子的形成有关；蒸腾作用能促进水分吸收和运输、降低叶片温度，不是浪费。",
+      trap: "易错点：需要量最多的无机盐≠只需要这三种；雄蕊和雌蕊都是花的主要结构；蒸腾作用对植物有积极意义。"
+    },
+    {
+      id: "shengwu-h01-q176", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 176, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第12题（模拟卷）",
+      stem: "细胞作为生命活动的基本单位，其结构和功能高度统一。下列叙述不正确的是（ ）。",
+      options: [{key:"A",text:"红细胞数量多，且富含血红蛋白，有利于输送氧气"}, {key:"B",text:"神经元的细胞体有许多突起，有利于接受刺激产生并传导兴奋"}, {key:"C",text:"叶肉细胞中含有许多叶绿体，有利于进行光合作用"}, {key:"D",text:"细胞壁不仅具有支持和保护作用，还能控制物质的进出"}],
+      answer: ["D"],
+      explanation: "控制物质进出的是细胞膜，不是细胞壁；细胞壁位于植物细胞的最外面，只起保护和支持作用。红细胞富含血红蛋白利于运输氧，神经元的突起利于传导兴奋，叶肉细胞含叶绿体利于光合作用，都是结构与功能相适应的例子。",
+      trap: "易错点：细胞壁管保护和支持，细胞膜管物质进出；两个结构的功能不要混淆。"
+    },
+    {
+      id: "shengwu-h01-q177", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 177, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第17题（模拟卷）",
+      stem: "在一定条件下，森林生态系统具有相对的稳定性，这是因为森林生态系统（ ）。",
+      options: [{key:"A",text:"具有一定的自我调节能力"}, {key:"B",text:"能吸水、蓄水和散失水分"}, {key:"C",text:"有微生物不断分解有机物"}, {key:"D",text:"能维持生物圈碳-氧平衡"}],
+      answer: ["A"],
+      explanation: "生态系统具有一定的自我调节能力，生物种类越多、营养结构越复杂，自我调节能力越强，生态系统就越稳定；森林生态系统动植物种类繁多，自我调节能力较强。吸水蓄水、分解有机物、维持碳氧平衡都是森林生态系统的作用，但不是它保持相对稳定的原因。",
+      trap: "易错点：生态系统保持稳定的根本原因是自我调节能力；自我调节能力是有限的，超过限度生态平衡会被破坏。"
+    },
+    {
+      id: "shengwu-h01-q178", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 178, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第18题（模拟卷）",
+      stem: "隆冬时节，瓜农为提高黄瓜产量，在大棚内放置了三个煤球炉。甲的做法是在天气晴朗的白天，三个煤球炉同时烧着，晚上烧两个；而乙的做法是在天气晴朗的白天烧两个，晚上烧三个。你认为这两个人的做法及理由合理的是（ ）。",
+      options: [{key:"A",text:"乙，因为晚上烧三个能提高大棚的温度，有利于黄瓜的光合作用"}, {key:"B",text:"乙，因为白天烧两个能提高大棚的温度，有利于黄瓜的呼吸作用"}, {key:"C",text:"甲，因为白天煤球炉能释放二氧化碳和提高大棚温度，有利于植物的光合作用"}, {key:"D",text:"甲，因为晚上煤球炉能释放二氧化碳和提高大棚温度，有利于植物的呼吸作用"}],
+      answer: ["C"],
+      explanation: "光合作用在白天进行，需要光和二氧化碳；白天多烧煤球炉既能提高大棚温度，又能增加二氧化碳浓度，有利于光合作用、提高产量。晚上植物只进行呼吸作用，不进行光合作用，晚上多烧炉子既浪费燃料，又会因呼吸作用过强消耗更多有机物。",
+      trap: "易错点：光合作用只在白天进行，晚上烧炉子帮不上光合作用；提高产量的关键是白天增强光合作用、晚上降低呼吸作用。"
+    },
+    {
+      id: "shengwu-h01-q179", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 179, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第1题（模拟卷）",
+      stem: "上个世纪，科学家希尔为了探究光合作用在哪里进行，曾经设计类似下图实验。把刚采摘的且生长旺盛的树叶捣碎，采用某种方法获得含有叶绿体的滤液，分成三等份。把其中两份直接放入A、B培养皿，第三份除去叶绿体后放入C培养皿。将三个培养皿置于同一地点，A、C培养皿接受光照，B培养皿遮光处理。一段时间后，观察到A培养皿中产生气泡，其中的气体能使带火星的木条复燃；B、C培养皿中未产生气泡。结合所学知识，分析判断下列叙述，其中不正确的是（ ）。",
+      options: [{key:"A",text:"培养皿A中气泡内的气体是氧气"}, {key:"B",text:"培养皿B中无气泡产生是因为缺乏二氧化碳"}, {key:"C",text:"通过比较A、C培养皿中的现象，可知光合作用的场所是叶绿体"}, {key:"D",text:"通过比较A、B培养皿中的现象，可知光照是光合作用的必要条件"}],
+      answer: ["B"],
+      explanation: "能使带火星的木条复燃的气体是氧气，A 正确；B 培养皿遮光处理，无气泡是因为缺乏光照、不能进行光合作用，而不是缺乏二氧化碳，B 错误；A 与 C 对照，变量是有无叶绿体，可知光合作用的场所是叶绿体，C 正确；A 与 B 对照，变量是有无光照，可知光照是光合作用的必要条件，D 正确。",
+      trap: "易错点：对照实验要找准变量；B 皿遮光，缺的是光，不是二氧化碳。"
+    },
+    {
+      id: "shengwu-h01-q180", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 180, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第3题（模拟卷；原题“遗传信息科”按来源解析订正为“遗传信息库”）",
+      stem: "人体细胞的“遗传信息库”是（ ）。",
+      options: [{key:"A",text:"细胞壁"}, {key:"B",text:"细胞膜"}, {key:"C",text:"细胞核"}, {key:"D",text:"细胞质"}],
+      answer: ["C"],
+      explanation: "细胞核是遗传信息库，细胞核中有遗传物质，能传递遗传信息；细胞壁起保护和支持作用，细胞膜能控制物质的进出，细胞质能流动、加速物质交换。",
+      trap: "易错点：遗传信息在细胞核里；人体细胞没有细胞壁，看到“细胞壁”选项可直接排除。"
+    },
+    {
+      id: "shengwu-h01-q181", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 181, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第5题（模拟卷）",
+      stem: "小明非常喜欢家里的三角梅，想要增加种植，最恰当的方式是（ ）。",
+      options: [{key:"A",text:"种子繁殖"}, {key:"B",text:"扦插"}, {key:"C",text:"压条"}, {key:"D",text:"嫁接"}],
+      answer: ["B"],
+      explanation: "扦插是剪取植物的茎、叶、根、芽等插入土中或水中生根后栽种，属于无性生殖，能保持母体的优良性状，繁殖速度快，是增加种植三角梅最恰当的方式；用种子繁殖属于有性生殖，后代容易发生变异。",
+      trap: "易错点：想要保持优良性状、快速增加种植，用无性生殖；扦插、嫁接、压条都是无性生殖，三角梅常用扦插。"
+    },
+    {
+      id: "shengwu-h01-q182", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 182, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第6题（模拟卷）",
+      stem: "雷鸟的羽毛会随季节的改变而发生变化。关于这种现象，说法正确的是（ ）。",
+      options: [{key:"A",text:"环境改变生物"}, {key:"B",text:"环境影响生物"}, {key:"C",text:"生物影响环境"}, {key:"D",text:"生物适应环境"}],
+      answer: ["D"],
+      explanation: "生活在寒带的雷鸟冬天羽毛纯白，与白雪环境色彩相似，不容易被敌害发现，便于捕食猎物，这是生物对环境的适应；具有保护色的动物不容易被发现，对躲避敌害或捕猎都有利。",
+      trap: "易错点：保护色是生物适应环境的表现；环境影响生物是指环境条件直接改变生物的生活，如温度影响分布。"
+    },
+    {
+      id: "shengwu-h01-q183", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 183, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第7题（模拟卷）",
+      stem: "磕伤的苹果不易储藏，其主要原因是（ ）。",
+      options: [{key:"A",text:"保护组织受损，保护功能下降"}, {key:"B",text:"营养组织受损，储藏的营养物质易流失"}, {key:"C",text:"输导组织受损，营养无法运输"}, {key:"D",text:"分生组织受损，无法产生新细胞"}],
+      answer: ["A"],
+      explanation: "苹果的果皮属于保护组织，位于植物体各器官的表面，起保护内部柔嫩部分的作用；果皮磕伤后保护作用下降，微生物容易侵入，所以不易储藏。营养组织储藏营养，输导组织运输物质，分生组织能不断分裂产生新细胞。",
+      trap: "易错点：果皮是保护组织；磕伤破坏的是保护功能，不是营养或运输。"
+    },
+    {
+      id: "shengwu-h01-q184", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 184, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第9题（模拟卷）",
+      stem: "种植玉米时，要用农药拌种以防止害虫啃咬种子，但农药并不会进入玉米种子的细胞内，原因是玉米种子的细胞具有（ ）。",
+      options: [{key:"A",text:"细胞壁"}, {key:"B",text:"细胞膜"}, {key:"C",text:"细胞质"}, {key:"D",text:"细胞核"}],
+      answer: ["B"],
+      explanation: "细胞膜能控制物质的进出，既不让有害的物质进来，也不让有用的物质轻易出去，具有选择透过性，也有保护作用；细胞壁位于最外面，起保护和支持作用；细胞质具有流动性，细胞核内含遗传物质。",
+      trap: "易错点：控制物质进出的是细胞膜，不是细胞壁；细胞壁只管保护和支持。"
+    },
+    {
+      id: "shengwu-h01-q185", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 185, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第10题（模拟卷）",
+      stem: "下列关于生态系统的描述，正确的一项是（ ）。",
+      options: [{key:"A",text:"一片森林中的所有动物、植物、微生物构成森林生态系统"}, {key:"B",text:"生态系统中的物质和能量是沿着食物链和食物网流动的"}, {key:"C",text:"在一个生态系统中，各种生物的数量是恒定不变的"}, {key:"D",text:"生态系统的自动调节能力是无限度的"}],
+      answer: ["B"],
+      explanation: "生态系统中的物质和能量是沿着食物链和食物网流动的；一片森林中的所有动物、植物、微生物缺少非生物部分，不能构成生态系统；生态平衡是动态的，各种生物的数量是相对稳定、不是恒定不变的；生态系统的自动调节能力是有限的。",
+      trap: "易错点：构成生态系统要有生物部分和非生物部分，缺一不可；自动调节能力有限，数量相对稳定不是恒定不变。"
+    },
+    {
+      id: "shengwu-h01-q186", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 186, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第12题（模拟卷）",
+      stem: "玉米种子在未出土前的萌发过程中所发生的变化，错误的是（ ）。",
+      options: [{key:"A",text:"含水量增加"}, {key:"B",text:"呼吸变旺盛"}, {key:"C",text:"有机物总量增加"}, {key:"D",text:"细胞数量增多"}],
+      answer: ["C"],
+      explanation: "玉米种子未出土前萌发时，先吸收水分，呼吸作用变得旺盛，细胞不断分裂使数量增加；但有机物被不断用于呼吸作用而减少，不是增加，因为此时幼苗还不能进行光合作用制造有机物。",
+      trap: "易错点：种子萌发时有机物只消耗不制造，总量减少；出土见光后能光合作用了，有机物才会增加。"
+    },
+    {
+      id: "shengwu-h01-q187", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 187, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第19题（模拟卷）",
+      stem: "新鲜水果用保鲜薄膜包裹或放入冰箱冷藏室可延长存放时间，主要是因为包裹或冷藏后可以（ ）。",
+      options: [{key:"A",text:"不让水分散失"}, {key:"B",text:"杀死内部的细菌"}, {key:"C",text:"减少水果果皮损伤"}, {key:"D",text:"抑制呼吸作用"}],
+      answer: ["D"],
+      explanation: "水果进行呼吸作用时需要消耗氧气、分解细胞内储存的有机物；抑制水果的呼吸作用可以减少有机物的消耗，延长贮藏时间。保鲜薄膜包裹减少氧气进入、冷藏降低温度，都能抑制呼吸作用。",
+      trap: "易错点：保鲜的核心是抑制呼吸作用、减少有机物消耗；不是杀死细菌，也不是只防水分散失。"
+    },
+    {
+      id: "shengwu-h01-q188", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 188, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第34题（模拟卷）",
+      stem: "现代农业基地利用温室栽培蔬菜、瓜果等，以下措施中不能提高农作物产量的是（ ）。",
+      options: [{key:"A",text:"适当延长光照时间，增加光照强度"}, {key:"B",text:"保持温室内的温度白天低，夜间高"}, {key:"C",text:"光照条件下适当增加二氧化碳浓度"}, {key:"D",text:"合理密植，及时松土、灌溉、施肥"}],
+      answer: ["B"],
+      explanation: "白天温度低，光合作用减弱，制造的有机物少；夜间温度高，呼吸作用分解的有机物多，农作物体内积累的有机物少，所以不能提高产量。正确做法是白天温度高、夜间温度低。延长光照、增加二氧化碳、合理密植都能促进光合作用、提高产量。",
+      trap: "易错点：提高产量要白天增强光合作用、晚上降低呼吸作用；白天低温、夜间高温正好相反。"
+    },
+    {
+      id: "shengwu-h02-q129", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 129, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第13题（模拟卷）",
+      stem: "同学们在中考考试中，先要仔细审题，认真思考，然后书写作答。完成审题、思考、作答等活动的神经中枢位于（ ）。",
+      options: [{key:"A",text:"大脑"}, {key:"B",text:"小脑"}, {key:"C",text:"脑干"}, {key:"D",text:"脊髓"}],
+      answer: ["A"],
+      explanation: "大脑是调节人体生命活动的最高级中枢，审题、思考、作答等需要分析、判断的活动都在大脑皮层完成；小脑能协调运动、维持身体平衡，脑干有调节呼吸、心跳等生命活动的中枢，脊髓是调节躯体运动的低级中枢。",
+      trap: "易错点：需要思考、分析的活动看大脑；小脑管协调平衡，脑干管心跳呼吸，脊髓管低级反射。"
+    },
+    {
+      id: "shengwu-h02-q130", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 130, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第14题（模拟卷）",
+      stem: "下列有关人体生命活动调节的叙述中，正确的是（ ）。",
+      options: [{key:"A",text:"手遇到烫的东西会缩回，这一反射活动受大脑的支配"}, {key:"B",text:"神经调节的基本方式是反射，反射是通过反射弧这种神经结构来完成的"}, {key:"C",text:"内分泌腺分泌的激素由导管运送到毛细血管，并随着血液循环送到全身各处"}, {key:"D",text:"人体内胰岛素分泌不足时，会导致血糖浓度低于正常水平"}],
+      answer: ["B"],
+      explanation: "神经调节的基本方式是反射，反射活动的结构基础是反射弧；手遇到烫的东西缩回是非条件反射，神经中枢在脊髓，不受大脑支配；内分泌腺没有导管，激素直接进入腺体内的毛细血管；胰岛素分泌不足会导致血糖浓度高于正常水平，引起糖尿病。",
+      trap: "易错点：缩手反射的中枢在脊髓；内分泌腺无导管；胰岛素不足血糖升高，不是降低。"
+    },
+    {
+      id: "shengwu-h02-q131", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 131, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第23题（模拟卷）",
+      stem: "下列有关生物体生理活动的叙述顺序判断正确的是（ ）。",
+      options: [{key:"A",text:"人体肺循环的路线是：右心室→肺动脉→肺部毛细血管网→肺静脉→左心房"}, {key:"B",text:"松树体内水分输送的方向是：叶→茎→根"}, {key:"C",text:"人的生殖发育顺序是：受精卵→胎儿→胚胎→新生儿"}, {key:"D",text:"某生态系统中能量流动的方向是：狼→野兔→草"}],
+      answer: ["A"],
+      explanation: "肺循环的途径是右心室→肺动脉→肺部毛细血管→肺静脉→左心房；植物体内水分运输的方向是土壤中的水分→根→茎→叶；人的生殖发育顺序是受精卵→胚胎→胎儿→新生儿；生态系统中的能量沿食物链从生产者流向消费者，应该是草→野兔→狼。",
+      trap: "易错点：肺循环从右心室出发、回到左心房；能量流动从生产者开始，箭头指向消费者。"
+    },
+    {
+      id: "shengwu-h02-q132", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 132, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第24题（模拟卷）",
+      stem: "下列组织中属于动物组织的是（ ）。",
+      options: [{key:"A",text:"保护组织"}, {key:"B",text:"上皮组织"}, {key:"C",text:"营养组织"}, {key:"D",text:"输导组织"}],
+      answer: ["B"],
+      explanation: "人体的基本组织有上皮组织、肌肉组织、神经组织和结缔组织；保护组织、营养组织、输导组织都是植物的组织，植物的主要组织还有分生组织和机械组织。",
+      trap: "易错点：保护、营养、输导组织是植物的；上皮、肌肉、神经、结缔组织是动物的。"
+    },
+    {
+      id: "shengwu-h02-q133", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 133, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第25题（模拟卷）",
+      stem: "氧气从外界进入组织细胞需要经过几个阶段，按顺序排列分别是（ ）。①肺的通气②肺内气体交换③气体在血液中的运输④组织气体交换⑤气体扩散",
+      options: [{key:"A",text:"①②④⑤"}, {key:"B",text:"②③④⑤"}, {key:"C",text:"①②③④⑤"}, {key:"D",text:"①②③④"}],
+      answer: ["D"],
+      explanation: "呼吸的全过程包括四个环节：肺的通气（肺与外界的气体交换）、肺泡内的气体交换（肺泡与血液的气体交换）、气体在血液中的运输、血液与组织细胞间的气体交换；气体扩散是气体交换的原理，不是独立的环节。",
+      trap: "易错点：呼吸全过程只有四个环节；气体扩散是交换的方式，不是单独一个阶段。"
+    },
+    {
+      id: "shengwu-h02-q134", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 134, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第26题（模拟卷）",
+      stem: "患心绞痛的病人，可服下列哪种药（ ）。",
+      options: [{key:"A",text:"硝酸甘油"}, {key:"B",text:"小柴胡颗粒"}, {key:"C",text:"牛黄解毒丸"}, {key:"D",text:"阿司匹林"}],
+      answer: ["A"],
+      explanation: "心绞痛的药物治疗应增加冠状动脉血流量、减少心肌耗氧量，硝酸甘油是最广泛用于抗心绞痛的药物；小柴胡颗粒、牛黄解毒丸、阿司匹林不是治疗心绞痛的对症药物。",
+      trap: "易错点：心绞痛对硝酸甘油；用药要对症，不能凭药名猜。"
+    },
+    {
+      id: "shengwu-h02-q135", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 135, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第35题（模拟卷）",
+      stem: "小强的妈妈绣十字绣时，不小心被针刺到了左手食指，她迅速缩回左手，并感觉到疼痛。对上述反射活动分析错误的是（ ）。",
+      options: [{key:"A",text:"上述反射活动都是高级神经活动"}, {key:"B",text:"针刺是引起缩手反射的非条件刺激"}, {key:"C",text:"缩手反射的感觉器位于左手食指的皮肤内"}, {key:"D",text:"上述反射活动说明脊髓有反射和传导功能"}],
+      answer: ["A"],
+      explanation: "缩手反射的神经中枢在脊髓灰质内，是人生来就有的简单反射，属于低级神经活动；缩手后会感到疼痛，感觉是在大脑皮层的感觉中枢形成的，属于高级神经活动，所以“上述反射活动都是高级神经活动”是错误的。针刺是引起缩手反射的非条件刺激，感受器在左手食指的皮肤内；这一过程说明脊髓有反射和传导功能。",
+      trap: "易错点：缩手反射本身是低级神经活动，只有“感觉到疼痛”才是高级神经活动；反射和感觉要分开看。"
+    },
+    {
+      id: "shengwu-h03-q090", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 90, type: "judge", meta: "判断题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第29题第(5)小题（模拟卷，原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "墨西哥湾的生态环境遭受破坏将危及数百个物种的生存。由此可见，保护生态系统的多样性是保护生物多样性的根本措施。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "生物多样性包括基因多样性、物种多样性和生态系统多样性；保护生物的栖息环境、保护生态系统的多样性，是保护生物多样性的根本措施。墨西哥湾原油泄漏破坏生态环境、危及众多物种，正说明生态系统多样性是根本。",
+      trap: "易错点：保护生物多样性的根本措施是保护生态系统的多样性；建立自然保护区是最有效的措施，两者不要混淆。"
+    },
+    {
+      id: "shengwu-h03-q091", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 91, type: "judge", meta: "判断题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第30题第(1)小题（模拟卷，原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "哺乳类的生殖方式为胎生。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "哺乳动物特有的生殖发育特点是胎生、哺乳，胚胎在母体子宫内发育，出生后以母乳喂养；胎生提高了后代的成活率。",
+      trap: "易错点：胎生、哺乳是哺乳动物特有的生殖发育特点；鸟类、爬行类等是卵生。"
+    },
+    {
+      id: "shengwu-h03-q092", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 92, type: "judge", meta: "判断题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第30题第(2)小题（模拟卷，原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "由资料一可知，生物多样性面临的威胁主要体现为物种灭绝的速度加快。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "资料一显示，地质年代鸟类平均 300 年灭绝 1 种、兽类平均 8000 年灭绝 1 种，到 1600 年至 1700 年每 10 年灭绝 1 种动物，1850 年到 1950 年鸟兽的平均灭绝速度已达每年 1 种，物种灭绝的速度明显加快，这是生物多样性面临威胁的主要体现。",
+      trap: "易错点：看资料要对比地质年代和近现代的灭绝速度；速度加快是人类活动加剧的后果。"
+    },
+    {
+      id: "shengwu-h03-q093", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 93, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第2题（模拟卷）",
+      stem: "两栖动物是由水生向陆生过渡的类型，它不是真正陆地动物的原因是（ ）。",
+      options: [{key:"A",text:"四肢不够发达"}, {key:"B",text:"体表没有覆盖鳞片"}, {key:"C",text:"受精作用和幼体发育离不开水"}, {key:"D",text:"仍然用鳃呼吸"}],
+      answer: ["C"],
+      explanation: "两栖动物的生殖和发育都离不开水：水中产卵、水中受精，幼体生活在水中、用鳃呼吸，成体既能生活在水中也能生活在潮湿的陆地上，用肺呼吸、皮肤辅助呼吸；所以两栖动物不是真正适应陆地生活的动物。成体用肺呼吸，不是始终用鳃呼吸。",
+      trap: "易错点：两栖动物离不开水的关键在生殖和幼体发育；成体已经用肺呼吸了。"
+    },
+    {
+      id: "shengwu-h03-q094", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 94, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第13题（模拟卷）",
+      stem: "下列有关脊椎动物的叙述，正确的是（ ）。",
+      options: [{key:"A",text:"鱼类生活在水中，游泳的主要动力来自鳍"}, {key:"B",text:"爬行类是真正适应陆地环境的脊椎动物"}, {key:"C",text:"两栖类的生殖过程不受水的限制"}, {key:"D",text:"鸟类的体温随环境温度的变化而变化"}],
+      answer: ["B"],
+      explanation: "爬行类和鸟类、哺乳类的生殖以及幼体的发育都脱离了水的限制，是真正适应陆生环境的脊椎动物；鱼类向前游动时的动力主要来自躯干部和尾部的摆动，鳍起协调作用；两栖类的生殖发育都离不开水；鸟类是恒温动物，体温不随环境温度变化。",
+      trap: "易错点：真正适应陆地看生殖发育是否摆脱水的限制；鱼游泳靠躯干和尾摆动，鳍只起协调作用。"
+    },
+    {
+      id: "shengwu-h03-q095", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 95, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第15题（模拟卷）",
+      stem: "在我国西部大开发的战略中，“保护天然林”和“退耕还林”是两项重要内容，采取这两项措施的首要任务是（ ）。",
+      options: [{key:"A",text:"开展生态旅游"}, {key:"B",text:"发展畜牧业"}, {key:"C",text:"增加木材产量"}, {key:"D",text:"改善生态环境"}],
+      answer: ["D"],
+      explanation: "我国西部地区自然环境先天不足、生态脆弱，受到破坏后原始植被很难恢复，造成严重的水土流失与沙漠化；“保护天然林”和“退耕还林（草）”的主要目的都是保护自然环境中的森林和草原，从而改善生态环境、保护生物多样性。",
+      trap: "易错点：退耕还林的首要任务是改善生态环境，不是发展旅游、畜牧或增加木材产量。"
+    },
+    {
+      id: "shengwu-h03-q096", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 96, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第30题（模拟卷）",
+      stem: "节肢动物和环节动物的共同特征是（ ）。",
+      options: [{key:"A",text:"具有外骨骼"}, {key:"B",text:"身体分节"}, {key:"C",text:"具有贝壳"}, {key:"D",text:"足分节"}],
+      answer: ["B"],
+      explanation: "节肢动物的身体由许多体节构成，并且分部，体表有外骨骼，足和触角分节；环节动物的身体也由许多体节构成，用刚毛辅助运动；二者的共同特征是身体分节。环节动物体外没有外骨骼，足也不分节，二者都没有贝壳。",
+      trap: "易错点：外骨骼、足分节是节肢动物特有的；身体分节才是两者的共同点。"
+    },
+    {
+      id: "shengwu-h03-q097", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 97, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第5题（模拟卷）",
+      stem: "造成野生动物濒危和灭绝的主要原因是（ ）。",
+      options: [{key:"A",text:"自然选择"}, {key:"B",text:"人类对野生动物资源的不合理开发和利用"}, {key:"C",text:"物种退化"}, {key:"D",text:"人类对野生动植物的过度狩猎"}],
+      answer: ["B"],
+      explanation: "随着人类的发展，乱砍滥伐、过度放牧、不合理开垦、环境污染使生物的栖息环境遭到破坏，滥捕乱杀、偷猎也使生物种类减少；造成野生动物濒危和灭绝的主要原因是人类对野生动植物资源的不合理开发和利用，过度狩猎只是其中一个方面。",
+      trap: "易错点：主要原因是人类不合理开发利用这个总概括；过度狩猎只是其中一种表现，不能代替总原因。"
+    },
+    {
+      id: "shengwu-h03-q098", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 98, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第6题（模拟卷）",
+      stem: "在动物进化历程中，身体最先开始分节的是哪一动物类群？（ ）。",
+      options: [{key:"A",text:"环节动物"}, {key:"B",text:"节肢动物"}, {key:"C",text:"扁形动物"}, {key:"D",text:"软体动物"}],
+      answer: ["A"],
+      explanation: "无脊椎动物的进化历程是原始单细胞动物→原始腔肠动物→原始扁形动物→原始线形动物→原始环节动物→原始软体动物→原始节肢动物；环节动物的身体由许多彼此相似的环状体节构成，是身体最先开始分节的动物类群，身体分节有利于灵活运动。",
+      trap: "易错点：分节最先出现在环节动物；节肢动物出现得更晚，扁形动物身体还不分节。"
+    },
+    {
+      id: "shengwu-h03-q099", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 99, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第7题（模拟卷）",
+      stem: "某生物学习小组利用甲、乙、丙三种动物探究动物的绕道取食行为。动物甲、乙、丙完成绕道取食前的尝试次数分别是165次、32次、5次。三种动物的学习能力从低到高的顺序是（ ）。",
+      options: [{key:"A",text:"甲、乙、丙"}, {key:"B",text:"乙、甲、丙"}, {key:"C",text:"丙、乙、甲"}, {key:"D",text:"甲、丙、乙"}],
+      answer: ["A"],
+      explanation: "“尝试”与“错误”是常见的学习行为；动物越高等，学习能力越强，经过的“尝试”与“错误”的次数就越少。甲尝试 165 次最多、学习能力最低，丙尝试 5 次最少、学习能力最高，所以学习能力从低到高的顺序是甲、乙、丙。",
+      trap: "易错点：尝试次数越多，学习能力越低；顺序是从低到高，不要排反了。"
+    },
+    {
+      id: "shengwu-h04-q110", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 110, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第6题（模拟卷）",
+      stem: "研究人员用显微注射器将大鼠生长激素基因注射到小鼠的受精卵中，再将受精卵注入母鼠的输卵管，培育出转基因鼠，下列有关叙述，不正确的是（ ）。",
+      options: [{key:"A",text:"被研究的性状是鼠个体的大小"}, {key:"B",text:"控制这个性状的基因是大鼠生长激素基因"}, {key:"C",text:"在生物传宗接代的过程中，传下去的是性状"}, {key:"D",text:"转基因鼠的获得，说明基因控制性状"}],
+      answer: ["C"],
+      explanation: "转基因技术是把一种生物的基因转入另一种生物体内，使其产生特定性状；被研究的性状是鼠个体的大小，控制这个性状的基因是大鼠生长激素基因，转基因鼠的获得说明基因控制性状。在生物传宗接代的过程中，传下去的是基因，不是性状，性状是基因的表现。",
+      trap: "易错点：传宗接代传下去的是基因，不是性状；基因控制性状，性状是基因加环境共同作用的结果。"
+    },
+    {
+      id: "shengwu-h04-q111", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 111, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第10题（模拟卷）",
+      stem: "下列有关人类染色体与遗传病的叙述，正确的是（ ）。",
+      options: [{key:"A",text:"男性精子的染色体组成一定是22条常染色体+Y"}, {key:"B",text:"正常人体细胞的染色体一条来自父方，一条来自母方"}, {key:"C",text:"近亲结婚能引起后代染色体数目变异，增加了患遗传病的机会"}, {key:"D",text:"白化病不是遗传病"}],
+      answer: ["B"],
+      explanation: "正常人体细胞中的染色体是成对存在的，一条来自父方，一条来自母方；男性精子的染色体组成是 22 条常染色体+X 或 22 条常染色体+Y，不一定是含 Y 的那一种；近亲结婚增加的是后代患隐性遗传病的机会，不是引起染色体数目变异；白化病是隐性遗传病。",
+      trap: "易错点：精子有 X 精子和 Y 精子两种；近亲结婚增加隐性遗传病风险，不改变染色体数目。"
+    },
+    {
+      id: "shengwu-h04-q112", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 112, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届湖南省长沙市长郡教育集团中考生物最后冲刺模拟试卷第21题（模拟卷）",
+      stem: "当人患感冒时，下列应对措施可取的是（ ）。①服用上次感冒时用的那种药②请医生诊断，凭医生的处方买药服用③到药店购买OTC（非处方药）标志的感冒药，按药品说明书服用④到药店购买R（处方药）标志的感冒药，按药品说明书服用",
+      options: [{key:"A",text:"①④"}, {key:"B",text:"②③"}, {key:"C",text:"①③"}, {key:"D",text:"③④"}],
+      answer: ["B"],
+      explanation: "安全用药是指根据病情需要，正确选择药物的品种、剂量和服用时间；非处方药（OTC）不需要医师处方即可自行判断、购买和使用，处方药（R）必须凭执业医师处方才可调配、购买和使用。患感冒时应请医生诊断、凭处方买药，或购买非处方药按说明书服用；不能服用上次剩下的药，也不能自行购买处方药。",
+      trap: "易错点：OTC 是非处方药，可自行购买；R 是处方药，必须凭处方；上次的药不能照搬，因为病情可能不同。"
+    },
+    {
+      id: "shengwu-h04-q113", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 113, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第16题（模拟卷）",
+      stem: "下列叙述符合达尔文自然选择学说的是（ ）。",
+      options: [{key:"A",text:"棉铃虫为了适应农药环境而产生了抗药性"}, {key:"B",text:"将野生红鲫鱼培育成为五彩缤纷的金鱼"}, {key:"C",text:"猎豹和斑马奔跑迅速是两者相互选择的结果"}, {key:"D",text:"食蚁兽的长舌是因为长期舔食树缝中的蚂蚁反复伸长所致"}],
+      answer: ["C"],
+      explanation: "达尔文自然选择学说的基本思想是适者生存、不适者被淘汰；猎豹和斑马在长期的相互选择中都变得奔跑迅速，符合自然选择学说。棉铃虫的抗药性变异本来就存在，农药只是起了选择作用，不是“为了适应而产生”；培育金鱼是人工选择；食蚁兽长舌“用进废退”的说法是拉马克的观点，不是达尔文的。",
+      trap: "易错点：变异是不定向的，环境只起选择作用；“为了适应而产生变异”是错的；用进废退是拉马克的观点。"
+    },
+    {
+      id: "shengwu-h04-q114", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 114, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第20题（模拟卷）",
+      stem: "2014年1月份，浙江等地率先发现H7N9型禽流感，其病原体是全球首次发现的新亚型流感病毒。有关下列说法，正确的是（ ）。",
+      options: [{key:"A",text:"H7N9型禽流感的病原体有细胞结构，能独立生活"}, {key:"B",text:"研制注射H7N9型禽流感疫苗是预防该病流行的有效措施"}, {key:"C",text:"发现H7N9型禽流感患者及时隔离治疗属于切断传播途径"}, {key:"D",text:"H7N9型禽流感病毒侵入人体能刺激淋巴细胞产生抗体参与，属于非特异性免疫"}],
+      answer: ["B"],
+      explanation: "病毒没有细胞结构，主要由内部的核酸和外部的蛋白质外壳组成，不能独立生活，只能寄生在活细胞里；研制注射 H7N9 禽流感疫苗是预防该病流行的最有效措施，有利于保护易感人群。发现患者及时隔离治疗属于控制传染源；病毒刺激淋巴细胞产生抗体，只对该病毒有效，属于特异性免疫。",
+      trap: "易错点：病毒无细胞结构、不能独立生活；隔离患者是控制传染源；抗体只对特定病原体有效，是特异性免疫。"
+    },
+    {
+      id: "shengwu-h04-q115", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 115, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第21题（模拟卷）",
+      stem: "每年的12月1日为世界艾滋病日，艾滋病已被全世界广泛关注。下面关于艾滋病的说法中不正确的是（ ）。",
+      options: [{key:"A",text:"艾滋病的病原体是人类免疫缺陷病毒（HIV）"}, {key:"B",text:"艾滋病的传播途径主要有不安全性行为、毒品注射、输血或输入不洁的血液制品和使用病人用过的注射器等"}, {key:"C",text:"目前预防艾滋病亟待解决的问题是研制艾滋病疫苗"}, {key:"D",text:"艾滋病具有很强的传染性，面对艾滋病患者，我们要避而远之，不能和他们说话，更不能和他们握手"}],
+      answer: ["D"],
+      explanation: "艾滋病的病原体是人类免疫缺陷病毒（HIV），主要通过性传播、血液传播、母婴传播，日常的说话、握手、饮食、普通接触不会传播艾滋病；全社会都应关心艾滋病病人，减轻他们的心理负担。目前预防艾滋病亟待解决的问题是研制艾滋病疫苗。",
+      trap: "易错点：艾滋病不通过日常接触传播；不要歧视艾滋病患者，握手、说话、共同学习都不会感染。"
+    },
+    {
+      id: "shengwu-h04-q116", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 116, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第31题（模拟卷）",
+      stem: "科学家把人的生长激素基因导入大肠杆菌，获得了能够生产生长激素的“工程菌”。下列相关叙述不正确的是（ ）。",
+      options: [{key:"A",text:"“工程菌”获得利用了转基因技术"}, {key:"B",text:"“工程菌”生产生长激素这种变异不能遗传给后代"}, {key:"C",text:"“工程菌”生产的生长激素能够调节人体的生长发育"}, {key:"D",text:"人的生长激素基因在细菌细胞内得到了成功表达，说明基因控制性状"}],
+      answer: ["B"],
+      explanation: "把人的生长激素基因导入大肠杆菌用的是转基因技术；“工程菌”中含有人的生长激素基因，遗传物质发生了改变，这种变异属于可遗传变异，能够遗传给后代，所以 B 错误。生长激素能促进人体生长发育；基因在细菌细胞内成功表达产生生长激素，说明基因控制性状。",
+      trap: "易错点：遗传物质改变引起的变异是可遗传的变异；转基因改变了遗传物质，所以能遗传。"
+    },
+    {
+      id: "shengwu-h04-q117", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 117, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第36题第(2)小题（模拟卷，原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改）",
+      stem: "水痘是一种呼吸道传染病，由带状疱疹病毒感染引起，通过空气和飞沫传播。某校发现6名同学感染了水痘，为防止疫情扩散，学校让该6名同学离校诊治，待痊愈后再返校。这种做法在传染病的预防措施中属于（ ）。",
+      options: [{key:"A",text:"控制传染源"}, {key:"B",text:"切断传播途径"}, {key:"C",text:"保护易感人群"}, {key:"D",text:"以上都不是"}],
+      answer: ["A"],
+      explanation: "传染病的预防措施有控制传染源、切断传播途径、保护易感人群；传染源是指能够散播病原体的人或动物，让患水痘的同学离校诊治属于控制传染源。教室、宿舍喷洒消毒液属于切断传播途径，未出过水痘且未接种疫苗的同学及时接种属于保护易感人群。",
+      trap: "易错点：管住病人是控制传染源；消毒环境是切断传播途径；给健康人打疫苗是保护易感人群。"
+    },
+    {
+      id: "shengwu-h04-q118", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 118, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第37题（模拟卷，原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改）",
+      stem: "为预防H7N9禽流感，科研人员正在努力研制疫苗。接种疫苗后，可刺激人体内的（ ）产生相应的抗体，从而提高对特定传染病的抵抗力。",
+      options: [{key:"A",text:"红细胞"}, {key:"B",text:"血小板"}, {key:"C",text:"淋巴细胞"}, {key:"D",text:"吞噬细胞"}],
+      answer: ["C"],
+      explanation: "抗体是抗原物质侵入人体后，刺激淋巴细胞产生的一种抵抗该抗原物质的特殊蛋白质；疫苗作为抗原进入人体，能刺激淋巴细胞产生相应的抗体，这种免疫只对特定的病原体起作用，属于特异性免疫。红细胞运输氧，血小板止血和凝血，吞噬细胞属于第二道防线。",
+      trap: "易错点：产生抗体的是淋巴细胞；抗体具有特异性，只对特定的病原体起作用。"
+    },
+    {
+      id: "shengwu-h04-q119", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 119, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第38题（模拟卷，原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改）",
+      stem: "1910年5月，摩尔根在红眼的果蝇群中发现了一只异常的白眼果蝇，这种现象在生物学上叫做（ ）。",
+      options: [{key:"A",text:"遗传"}, {key:"B",text:"变异"}, {key:"C",text:"进化"}, {key:"D",text:"适应"}],
+      answer: ["B"],
+      explanation: "生物的亲代与子代之间以及子代的个体之间在性状上的差异叫做变异；红眼果蝇群中出现白眼果蝇，是子代个体之间在性状上的差异，属于变异。遗传是指亲代与子代之间在性状上的相似。",
+      trap: "易错点：亲子相似是遗传，亲子之间或子代之间的差异是变异；白眼是新出现的差异性状。"
+    },
+    {
+      id: "shengwu-h04-q120", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 120, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第38题（模拟卷，原为非选择题填空，改为单选题，选项为改编时补写，知识点和答案未改；原题“白眼雌性果蝇”与“白眼雄性果蝇”笔误，已统一为雄性）",
+      stem: "摩尔根发现的这只白眼雄性果蝇，体细胞中有4对染色体，其性别决定方式与人类相同。这只白眼雄性果蝇体细胞的染色体组成是（ ）。",
+      options: [{key:"A",text:"3对+XX"}, {key:"B",text:"3对+XY"}, {key:"C",text:"4对+XX"}, {key:"D",text:"4对+XY"}],
+      answer: ["B"],
+      explanation: "果蝇体细胞中有 4 对染色体，其中 3 对是常染色体，1 对是性染色体；果蝇的性别决定方式与人类相同，雄性的性染色体是 XY，雌性是 XX，所以白眼雄性果蝇体细胞的染色体组成是 3 对+XY。",
+      trap: "易错点：4 对染色体=3 对常染色体+1 对性染色体；雄性是 XY，雌性是 XX。"
+    },
+    {
+      id: "shengwu-h04-q121", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 121, type: "judge", meta: "判断题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第38题（模拟卷，原为非选择题，改为判断题，知识点和答案未改）",
+      stem: "长翅果蝇的幼虫在25℃环境下发育成长翅果蝇；在35～37℃环境下，部分幼虫发育成残翅果蝇。这说明生物的性状只由基因决定，与环境无关。（ ）",
+      options: [],
+      answer: ["false"],
+      explanation: "生物的性状由基因控制，同时也受环境的影响；同一基因组成的长翅果蝇幼虫，在不同温度环境下发育成不同的性状（长翅或残翅），正说明环境能影响性状的表现。残翅果蝇的后代无论在 25℃ 还是 35～37℃ 环境下都只发育成残翅果蝇，说明残翅性状是由基因决定的。",
+      trap: "易错点：性状=基因+环境；同一基因型在不同环境下性状可以不同。"
+    },
+    {
+      id: "shengwu-h01-q189", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 189, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第9题（模拟卷）",
+      stem: "张聪家的毛桃树上结有毛桃和黄桃两种不同的果实，这里采用的繁殖方式是（ ）。",
+      options: [{key:"A",text:"压条"}, {key:"B",text:"扦插"}, {key:"C",text:"种子繁殖"}, {key:"D",text:"嫁接"}],
+      answer: ["D"],
+      explanation: "嫁接是把一个植物体的芽或枝接在另一个植物体上，使结合在一起的两部分长成一个完整的植物体，属于无性繁殖，后代能保持接穗优良性状的稳定；要让一棵毛桃树上结毛桃和黄桃两种果实，可以把不同品种桃树的枝或芽作接穗嫁接到一棵桃树上。压条、扦插也属于无性繁殖，但不能让同一棵树结两种果实；种子繁殖属于有性繁殖，后代容易发生变异。",
+      trap: "易错点：一棵树结两种果实，关键是嫁接；嫁接能保持接穗的优良性状，砧木一般不改变接穗的遗传性。"
+    },
+    {
+      id: "shengwu-h01-q190", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 190, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第21题（模拟卷）",
+      stem: "下列有关生物体结构层次的叙述，正确的是（ ）。",
+      options: [{key:"A",text:"所有生物都是由细胞构成的"}, {key:"B",text:"绿色开花植物的根、茎和叶被称为营养器官"}, {key:"C",text:"人体的胃只由上皮组织、肌肉组织和神经组织构成"}, {key:"D",text:"多细胞生物体具有细胞、组织、器官和系统四个层次"}],
+      answer: ["B"],
+      explanation: "绿色开花植物的根、茎和叶被称为营养器官，花、果实、种子属于生殖器官；病毒没有细胞结构，除病毒外生物体都是由细胞构成的；胃由上皮组织、结缔组织、肌肉组织和神经组织等构成，是一个器官；多细胞动物具有细胞、组织、器官和系统四个层次，植物体没有系统这个层次。",
+      trap: "易错点：病毒没有细胞结构；植物体没有系统，系统是动物体才有的结构层次。"
+    },
+    {
+      id: "shengwu-h01-q191", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 191, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第26题（模拟卷）",
+      stem: "在显微镜的使用中，下列操作与结果不相符的是（ ）。",
+      options: [{key:"A",text:"转动转换器——更换物镜"}, {key:"B",text:"转动粗准焦螺旋——较大幅度升降镜筒"}, {key:"C",text:"转动凹面镜——调节视野亮度"}, {key:"D",text:"向左上方移动装片——物像向左上方移动"}],
+      answer: ["D"],
+      explanation: "显微镜成的是倒立的像，像的移动方向和物体的移动方向相反；向左上方移动装片，物像就向右下方移动，所以 D 不相符。物镜安装在转换器上，转动转换器更换的是物镜；转动粗准焦螺旋能较大幅度地升降镜筒；反光镜的凹面镜能使光线汇聚、增强视野亮度。",
+      trap: "易错点：显微镜下物像移动方向与装片移动方向相反；要把物像移到视野中央，装片要向物像所在的反方向移。"
+    },
+    {
+      id: "shengwu-h01-q192", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 192, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第35题（模拟卷）",
+      stem: "餐桌上出现的下列“食材”中，与其他三项不属于同一结构层次的是（ ）。",
+      options: [{key:"A",text:"猪肝"}, {key:"B",text:"土豆"}, {key:"C",text:"鸭血"}, {key:"D",text:"番茄"}],
+      answer: ["C"],
+      explanation: "细胞经过分化形成组织，组织按一定次序联合起来形成器官；猪肝、土豆、番茄都由不同的组织构成，属于器官，鸭血属于组织（血液属于结缔组织），所以鸭血与其他三项不在同一结构层次。",
+      trap: "易错点：血液属于组织，不是器官；器官是由多种组织构成的，组织是由形态相似、结构功能相同的细胞群构成的。"
+    },
+    {
+      id: "shengwu-h01-q193", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 193, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第11题（模拟卷）",
+      stem: "在探究“水分对鼠妇生活的影响”实验中属于变量的是（ ）。",
+      options: [{key:"A",text:"温度"}, {key:"B",text:"湿度"}, {key:"C",text:"光照"}, {key:"D",text:"土壤"}],
+      answer: ["B"],
+      explanation: "对照实验中除了要探究的条件不同以外，其他条件都应当相同；本实验探究的是水分对鼠妇生活的影响，唯一的变量就是水分，与水分有关的选项是湿度。温度、光照、土壤都应保持相同，不是变量。",
+      trap: "易错点：找变量要看探究的问题是什么；探究水分，变量就是湿度，不要被温度、光照这些常见变量干扰。"
+    },
+    {
+      id: "shengwu-h01-q194", chapterId: 1, chapter: "七年级上册 · 生物和生物圈",
+      number: 194, type: "single", meta: "单选题",
+      grade: "七上", stage: "7-up",
+      source: "2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第27题（模拟卷）",
+      stem: "北京周边地区的森林植被类型是（ ）。",
+      options: [{key:"A",text:"热带雨林"}, {key:"B",text:"落叶阔叶林"}, {key:"C",text:"寒温带针叶林"}, {key:"D",text:"温带荒漠"}],
+      answer: ["B"],
+      explanation: "落叶阔叶林分布区四季分明，夏季炎热多雨，冬季寒冷，这里的植物主要是冬季完全落叶的阔叶树；北京四季分明，夏季炎热多雨，冬季寒冷，森林植被类型是落叶阔叶林。热带雨林分布在全年高温多雨的地区，寒温带针叶林由耐寒的针叶树种组成，温带荒漠以旱生灌木和肉质植物为主，都不符合北京的气候特点。",
+      trap: "易错点：看植被类型先看气候；北京四季分明、冬冷夏热多雨，对应落叶阔叶林。"
+    },
+    {
+      id: "shengwu-h02-q136", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 136, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第15题（模拟卷）",
+      stem: "下列哪种生活方式有利于青春期发育（ ）。",
+      options: [{key:"A",text:"任何事情都不和家长交流"}, {key:"B",text:"经常上网熬夜"}, {key:"C",text:"不吸烟，不喝酒"}, {key:"D",text:"经常找理由不上体育课"}],
+      answer: ["C"],
+      explanation: "健康的生活方式包括合理膳食、规律起居、保证睡眠、劳逸结合、戒烟限酒、适量运动、心理平衡等；不吸烟、不喝酒可以减少心血管疾病和呼吸系统疾病的发病率，促进身体健康。青春期生理和心理都发生很大变化，任何事情都不和家长交流不利于心理健康；经常熬夜会使大脑得不到充分休息；体育锻炼能改善血液循环、促进心血管健康，应积极参加。",
+      trap: "易错点：青春期发育既要身体健康也要心理健康；不交流、熬夜、不运动都不利于青春期发育。"
+    },
+    {
+      id: "shengwu-h02-q137", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 137, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第22题（模拟卷）",
+      stem: "每一天我们都要从食物中获取不同的营养物质，在这些营养物质中，不能为人体提供能量，但对维持正常生命活动却很重要的是（ ）。",
+      options: [{key:"A",text:"蛋白质、无机盐、水"}, {key:"B",text:"脂肪、维生素、糖类"}, {key:"C",text:"维生素、无机盐、水"}, {key:"D",text:"脂肪、蛋白质、糖类"}],
+      answer: ["C"],
+      explanation: "食物所含的六类营养物质中，能为人体提供能量的是糖类、脂肪和蛋白质；水、无机盐和维生素不能为人体提供能量，但对维持正常生命活动却有重要的意义：维生素对人体的生命活动有重要的调节作用，水是人体各项生命活动进行的载体，无机盐是构成人体组织的重要材料。",
+      trap: "易错点：供能的三类是糖类、脂肪、蛋白质；不供能的三类是水、无机盐、维生素，看到组合先分供能还是不供能。"
+    },
+    {
+      id: "shengwu-h02-q138", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 138, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第23题（模拟卷）",
+      stem: "人体的生命活动受神经和激素的调节。下列有关叙述不正确的是（ ）。",
+      options: [{key:"A",text:"指鼻游戏时完成的越准确，说明小脑越发达"}, {key:"B",text:"反射弧是反射的生理基础，一般包括五部分"}, {key:"C",text:"神经系统是由大脑、小脑和脊髓以及发出的神经组成"}, {key:"D",text:"感觉地震到来之际，心跳加快，血压升高，肾上腺激素分泌增加"}],
+      answer: ["C"],
+      explanation: "神经系统由脑、脊髓和它们所发出的神经组成，脑包括大脑、小脑和脑干；C 把脑说成只有大脑和小脑，遗漏了脑干，所以不正确。小脑的主要功能是使运动协调、准确，维持身体的平衡；反射弧包括感受器、传入神经、神经中枢、传出神经和效应器五部分；情绪激动时肾上腺分泌肾上腺素增多，促使心跳加快、血压升高。",
+      trap: "易错点：脑由大脑、小脑和脑干三部分组成，不要漏掉脑干；神经系统的中枢部分是脑和脊髓。"
+    },
+    {
+      id: "shengwu-h02-q139", chapterId: 2, chapter: "七年级下册 · 人体生命活动",
+      number: 139, type: "single", meta: "单选题",
+      grade: "七下", stage: "7-down",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第29题（模拟卷）",
+      stem: "运动员出国参加比赛，由于时差的原因，白天没劲，想睡，晚上兴奋，这是因为（ ）。",
+      options: [{key:"A",text:"舟车劳顿"}, {key:"B",text:"体内的生物钟还未调拨过来"}, {key:"C",text:"饮食不习惯"}, {key:"D",text:"出国前超负荷训练"}],
+      answer: ["B"],
+      explanation: "生物钟又称生理钟，是生物体内的一种无形的“时钟”，是生物体生命活动的内在节律性，由生物体内的时间结构序所决定；人的生物钟是可以调整的，运动员出国参加比赛，由于时差的原因，白天没劲、晚上兴奋，是因为体内的生物钟还未调整过来。",
+      trap: "易错点：时差反应看生物钟；生物钟是生命活动的内在节律，不是舟车劳顿或饮食不习惯造成的。"
+    },
+    {
+      id: "shengwu-h03-q100", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 100, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第24题（模拟卷）",
+      stem: "用性引诱剂诱杀农业害虫是利用（ ）。",
+      options: [{key:"A",text:"昆虫的取食行为"}, {key:"B",text:"昆虫之间的通讯"}, {key:"C",text:"昆虫的学习行为"}, {key:"D",text:"昆虫的迁徙行为"}],
+      answer: ["B"],
+      explanation: "动物通讯是指个体通过释放一种或几种刺激性信号，引起接受个体产生行为反应；性外激素多由雌虫分泌并释放，引诱雄虫前来交配，具有专一性。用性引诱剂吸引雄性昆虫前来诱杀农业害虫，是利用昆虫之间的通讯（通过气味、性外激素进行信息交流）。",
+      trap: "易错点：性引诱剂模拟的是性外激素，属于动物通讯中的气味通讯；不是取食、学习或迁徙行为。"
+    },
+    {
+      id: "shengwu-h03-q101", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 101, type: "single", meta: "单选题",
+      grade: "八上", stage: "8-up",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第31题（模拟卷）",
+      stem: "将糖和酵母菌放入装有温开水的玻璃瓶中搅拌，把挤瘪的小气球套在瓶口，一段时间后，小气球会胀大起来，对此现象合理的解释是（ ）。",
+      options: [{key:"A",text:"酵母菌分解糖产生氧气"}, {key:"B",text:"酵母菌分解糖产生二氧化碳"}, {key:"C",text:"酵母菌分解糖产生乳酸"}, {key:"D",text:"酵母菌利用糖合成淀粉"}],
+      answer: ["B"],
+      explanation: "酵母菌是单细胞真菌，在无氧条件下能进行发酵，把葡萄糖分解产生二氧化碳和酒精；实验中加入的酵母菌分解水中的糖产生二氧化碳气体，气体增多使小气球胀大起来。酵母菌发酵不产生氧气，也不产生乳酸（乳酸是乳酸菌发酵的产物）。",
+      trap: "易错点：酵母菌发酵产二氧化碳和酒精，气球胀大是二氧化碳增多的结果；产乳酸的是乳酸菌，不是酵母菌。"
+    },
+    {
+      id: "shengwu-h03-q102", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 102, type: "judge", meta: "判断题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025届江苏省南京师大附中中考冲刺卷·生物第36题第(1)小题（模拟卷，原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "野鸭的迁徙行为和喜鹊的繁殖行为，从动物获得途径看，都属于先天性行为。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "先天性行为是动物生来就有的，由动物体内的遗传物质所决定的行为，是动物的一种本能，不会丧失；野鸭每到冬季来临之前的迁徙行为和喜鹊的繁殖行为，都是动物生来就有的先天性行为。",
+      trap: "易错点：先天性行为生来就有、由遗传物质决定；学习行为是后天通过生活经验和学习获得的，两者看获得途径区分。"
+    },
+    {
+      id: "shengwu-h03-q103", chapterId: 3, chapter: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      number: 103, type: "judge", meta: "判断题",
+      grade: "八上", stage: "8-up",
+      source: "改编自2025届江苏省南京师大附中中考冲刺卷·生物第36题第(2)小题（模拟卷，原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "野马在野外饮水训练后形成的水坑饮水行为，属于学习行为。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "学习行为是在遗传因素的基础上，通过环境因素的作用，由生活经验和学习获得的行为；资料中人们对野马进行了野外饮水训练，把导水入槽的橡胶管一步步拉向水坑，诱导野马去水坑饮水，野马形成的水坑饮水行为属于学习行为。学习行为比先天性行为更有利于动物的生存和繁殖。",
+      trap: "易错点：学习行为是后天获得的，要看有没有训练、学习的过程；野马本来只会在水槽中饮水，水坑饮水是训练后学会的。"
+    },
+    {
+      id: "shengwu-h04-q122", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 122, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第1题（模拟卷）",
+      stem: "学习了性状的遗传后，同学们议论纷纷：甲：“基因组成相同，性状不一定相同”乙：“性状表现相同，但基因组成不一定相同”丙：“隐性基因控制的性状一定被隐藏起来”丁：“生物的变异都能遗传给后代”上述四位同学的说法，不正确的是（ ）。",
+      options: [{key:"A",text:"甲乙"}, {key:"B",text:"甲乙丙"}, {key:"C",text:"丙丁"}, {key:"D",text:"甲乙丙丁"}],
+      answer: ["C"],
+      explanation: "基因控制生物的性状，但性状还受环境的影响，基因组成相同则性状不一定相同，甲正确；性状表现相同则基因组成不一定相同，如双眼皮的基因组成可以是 AA 或 Aa，乙正确；当控制性状的一对基因都是隐性基因时，隐性性状就会表现出来，丙错误；只有遗传物质改变引起的变异才能遗传给后代，环境引起的变异不能遗传，丁错误。所以不正确的是丙、丁。",
+      trap: "易错点：性状由基因和环境共同决定；隐性基因成对时才表现隐性性状；只有可遗传的变异才能遗传给后代。"
+    },
+    {
+      id: "shengwu-h04-q123", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 123, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第3题（模拟卷）",
+      stem: "下列生活方式与健康的生活不符的是（ ）。",
+      options: [{key:"A",text:"多抽烟多喝酒"}, {key:"B",text:"坏血病患者要多吃蔬菜和水果"}, {key:"C",text:"可以用云南白药治疗跌打损伤"}, {key:"D",text:"处方药一定要遵医嘱"}],
+      answer: ["A"],
+      explanation: "健康的生活方式包括生活有规律、合理膳食、合理用药、积极参加文娱活动和体育运动、不吸烟、不酗酒、拒绝毒品等；酗酒和吸烟都会损伤心脏和血管，导致心血管疾病。坏血病是缺乏维生素 C 引起的，新鲜水果和蔬菜中维生素 C 含量多；云南白药可用于治疗跌打损伤；处方药必须凭医师处方购买和使用，要遵医嘱。",
+      trap: "易错点：吸烟酗酒是最典型的不健康生活方式；坏血病补维生素 C，处方药遵医嘱，都是健康生活方式的内容。"
+    },
+    {
+      id: "shengwu-h04-q124", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 124, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第25题（模拟卷）",
+      stem: "下列关于生物生殖发育的描述中正确的是（ ）。",
+      options: [{key:"A",text:"胎儿通过胎盘从母体获得营养物质"}, {key:"B",text:"所有鸡卵都能孵化成小鸡"}, {key:"C",text:"蚊子和蝗虫都进行不完全变态发育"}, {key:"D",text:"雌蛙鸣叫是青蛙的繁殖行为"}],
+      answer: ["A"],
+      explanation: "胎儿通过胎盘从母体中获得营养物质和氧；只有受精的鸡卵才可能孵化出小鸡；蚊的发育经过受精卵—幼虫—蛹—成虫四个阶段，属于完全变态发育，蝗虫的发育经过受精卵—幼虫—成虫三个阶段，属于不完全变态发育；雄蛙鸣叫属于青蛙的繁殖行为，雌蛙不会鸣叫。",
+      trap: "易错点：鸡卵要受精才能孵化；蚊子是完全变态、蝗虫是不完全变态；鸣叫求偶的是雄蛙。"
+    },
+    {
+      id: "shengwu-h04-q125", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 125, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第27题（模拟卷）",
+      stem: "近年来，抗生素的滥用成为人们关注的一个焦点问题，其主要的结果就是导致细菌群体的抗药性增强。根据达尔文的进化论分析，细菌抗药性增强的主要原因是（ ）。",
+      options: [{key:"A",text:"不断的接受抗生素刺激，细菌的抗药性就会增强"}, {key:"B",text:"细菌产生了抗药性的定向变异"}, {key:"C",text:"抗生素对发生抗药性变异的个体进行了选择，只有抗药性强的个体才能生存并繁衍"}, {key:"D",text:"抗药细菌繁殖能力比不抗药细菌繁殖能力强"}],
+      answer: ["C"],
+      explanation: "遗传变异是生物进化的基础，细菌的抗药性变异本来就存在；使用抗生素时，把抗药性弱的细菌杀死，抗药性强的细菌活下来并繁衍，这叫适者生存；经过抗生素的长期选择，细菌的抗药性越来越强。变异是不定向的，不是“为了适应而产生”，也不是抗生素刺激出来的。",
+      trap: "易错点：变异在先、选择在后；抗生素只起选择作用，不会定向诱导出抗药性变异。"
+    },
+    {
+      id: "shengwu-h04-q126", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 126, type: "single", meta: "单选题",
+      grade: "八下", stage: "8-down",
+      source: "2025届江苏省南京师大附中中考冲刺卷·生物第30题（模拟卷）",
+      stem: "正常女性的体细胞中染色体的组成是（ ）。",
+      options: [{key:"A",text:"22对+XX"}, {key:"B",text:"22条+X"}, {key:"C",text:"22对+XY"}, {key:"D",text:"XX"}],
+      answer: ["A"],
+      explanation: "人的体细胞内有 23 对染色体，其中 22 对与性别无关，叫常染色体，1 对与性别有关，叫性染色体；男性的性染色体是 XY，女性的性染色体是 XX，所以正常女性体细胞的染色体组成是 22对+XX；卵细胞中的染色体组成是 22条+X。",
+      trap: "易错点：体细胞是成对的 22对+XX，不要写成 22条+X（那是卵细胞）；男性是 22对+XY。"
+    },
+    {
+      id: "shengwu-h04-q127", chapterId: 4, chapter: "八年级下册 · 生物圈中生命的延续和发展、健康地生活",
+      number: 127, type: "judge", meta: "判断题",
+      grade: "八下", stage: "8-down",
+      source: "改编自2025届江苏省苏州市张家港市达标名校中考考前最后一卷·生物第36题第(5)小题（模拟卷，原为非选择题填空，改为判断题，知识点和答案未改）",
+      stem: "水痘临床实验结果表明，B药的辅助治疗是有效的。（ ）",
+      options: [],
+      answer: ["true"],
+      explanation: "临床实验中，1 组在 A 药相同剂量的基础上服用 B 药，治疗 1 周总有效率 97.83%，2 组只用 A 药不服用 B 药，总有效率 76.09%；两组其他条件相同，服用 B 药的 1 组总有效率明显更高，说明 B 药的辅助治疗是有效的。该实验中 1、2 组形成对照，唯一的变量是是否服用 B 药。",
+      trap: "易错点：看对照实验先找变量；两组总有效率相差 20% 以上，B 药辅助治疗有效，不是无效。"
+    }
   ]
 };
