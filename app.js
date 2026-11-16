@@ -625,6 +625,11 @@ function quickModesHTML(queue, progress) {
           ${icon('chevron-right', 'quick-arrow')}
         </button>`).join('')}
       </div>
+      <a class="key-points-entry tone-shengwu" href="./key-points.html">
+        <span class="tile-icon">${icon('book-open')}</span>
+        <span class="quick-name"><strong>考点速记</strong><small>应知应会 · 易错辨析 · 回忆自测</small></span>
+        ${icon('arrow-right', 'quick-arrow')}
+      </a>
     </section>`;
 }
 function subjectProgressHTML(progress) {

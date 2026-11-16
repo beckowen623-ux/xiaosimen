@@ -110,6 +110,47 @@ else {
   console.log(`daily: ${daily.questions.length} 道，startDate=${daily.startDate}`);
 }
 
+// 考点速记的每册、每类和来源引用都要能在静态页面中加载。
+const pointIds = new Set();
+for (const subject of subjects) {
+  const dataFile = `data/key-points-${subject}.js`;
+  if (!fs.existsSync(path.join(root, dataFile))) { fail(`考点速记缺少 ${dataFile}`); continue; }
+  const data = loadDataFile(dataFile).XIAOSIMEN_KEY_POINTS?.[subject];
+  if (!Array.isArray(data?.items) || !data.items.length || !data.sources) {
+    fail(`${subject}: 考点或来源缺失`);
+    continue;
+  }
+  const stages = Object.keys(STAGE_GRADE).slice(0, ['dili', 'shengwu'].includes(subject) ? 4 : 6);
+  for (const stage of stages) {
+    if (!data.items.some(item => item.stage === stage)) fail(`${subject}: ${STAGE_GRADE[stage]}缺考点`);
+  }
+  for (const type of ['core', 'trap']) {
+    if (!data.items.some(item => item.type === type)) fail(`${subject}: 缺少 ${type} 类型`);
+  }
+  for (const [ref, source] of Object.entries(data.sources)) {
+    let protocol;
+    try { protocol = new URL(source?.url).protocol; } catch { /* 无效的来源地址 */ }
+    if (typeof source?.label !== 'string' || !source.label.trim() ||
+        protocol !== 'https:') {
+      fail(`${subject}: 来源 ${ref} 缺少标签或 HTTPS 链接`);
+    }
+  }
+  for (const item of data.items) {
+    const id = item.id;
+    if (!new RegExp(`^${subject}-[a-z0-9-]+$`).test(id) || pointIds.has(id)) fail(`考点 ID 无效或重复: ${id}`);
+    pointIds.add(id);
+    if (!stages.includes(item.stage) || !['core', 'trap'].includes(item.type)) fail(`${id}: 册次或分类无效`);
+    for (const field of ['title', 'topic', 'rule', 'pitfall', 'question', 'answer']) {
+      if (typeof item[field] !== 'string' || !item[field].trim()) fail(`${id}: 缺少 ${field}`);
+    }
+    if (!Array.isArray(item.refs) || !item.refs.length || item.refs.some(ref => !Object.hasOwn(data.sources, ref))) {
+      fail(`${id}: 来源引用不存在`);
+    }
+  }
+  console.log(`考点速记 ${subject}: ${data.items.length} 条`);
+}
+console.log(`考点速记合计: ${pointIds.size} 条`);
+
 // ---- buildQueue 真实代码测试：只取 app.js 核心部分（界面之前），在 vm 里跑 ----
 const appSrc = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
 const coreSrc = appSrc.split('// ---------- 界面 ----------')[0];

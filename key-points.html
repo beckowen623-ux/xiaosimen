@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="人教版初中小四门考点速记。分册查看道法、历史、地理、生物学的应知应会、易错辨析和回忆自测。">
+  <title>考点速记 · 小四门刷题</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/icon.svg">
+  <link rel="stylesheet" href="./styles.css?v=9">
+  <link rel="stylesheet" href="./key-points.css?v=1">
+  <script src="./data/key-points-daode.js?v=1" defer></script>
+  <script src="./data/key-points-lishi.js?v=1" defer></script>
+  <script src="./data/key-points-dili.js?v=1" defer></script>
+  <script src="./data/key-points-shengwu.js?v=1" defer></script>
+  <script src="./key-points.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#view">跳到主要内容</a>
+  <div id="app">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./">
+          <img src="./assets/icons/icon.svg" width="42" height="42" alt="">
+          <span><b>小四门刷题</b><small>福州 · 人教版</small></span>
+        </a>
+        <div class="topbar-tools"><a href="./">返回题库</a></div>
+      </div>
+    </header>
+    <main class="page points-page" id="view" tabindex="-1">
+      <section class="study-hero points-hero" aria-labelledby="pointsTitle">
+        <img class="hero-art" src="./assets/study-desk.webp" alt="" width="960" height="640">
+        <div class="hero-content">
+          <h1 id="pointsTitle">考点速记</h1>
+          <p>按人教版教材分册。记住要点，辨清易混概念，再试着回答卡片里的自测。</p>
+        </div>
+      </section>
+      <section class="card point-filters" id="pointFilters" aria-label="筛选考点" hidden>
+        <div class="point-subjects" id="pointSubjects" role="group" aria-label="科目"></div>
+        <div class="point-fields">
+          <input id="pointSearch" type="search" aria-label="搜索本学科考点" placeholder="搜索本学科考点">
+          <select id="pointStage" aria-label="册次"></select>
+          <select id="pointType" aria-label="考点类型">
+            <option value="">全部类型</option>
+            <option value="core">应知应会</option>
+            <option value="trap">易错辨析</option>
+          </select>
+        </div>
+      </section>
+      <p class="points-summary" id="pointStatus" role="status">正在加载考点…</p>
+      <div id="pointResults"></div>
+      <noscript><p class="card">启用 JavaScript 后可查看考点和自测。</p></noscript>
+    </main>
+    <footer class="foot"><a href="./">返回小四门题库</a></footer>
+  </div>
+</body>
+</html>

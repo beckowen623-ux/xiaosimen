@@ -13,6 +13,11 @@
 3. 可随机练习、只做未做题，或打开跨学期的错题本、到期复习和收藏题。
 4. 每日一题每天轮换一道。展开答题卡后可跳题，长题组每页展示 40 道。查看解析后仍可再次作答。
 5. 换网址或设备时，先在原网址的「进度管理」下载备份，再到新网址导入。导入会覆盖新网址在当前浏览器里的记录。
+6. 从首页「考点」或「练习模式」下的「考点速记」进入分册复习。可按科目、册次和考点类型筛选，也可搜关键词。每张卡的自测答案和参考来源可展开。
+
+## 考点速记
+
+`key-points.html` 从 `data/key-points-<科目>.js` 读取知识卡。册次参照人教版教材，内容参考教育部课标与福建原卷。带真题索引的卡片会标出年份和题号。每张卡独立于选择题练习，打开自测答案无需提交答题记录。
 
 ## 自动刷题顺序 buildQueue(stage)
 
@@ -72,6 +77,8 @@ window.XIAOSIMEN_BANKS["dili"] = {
 
 ```
 index.html  app.js  styles.css  manifest.webmanifest  README.md
+key-points.html  key-points.js  key-points.css
+data/key-points-*.js
 data/daode.js  data/lishi.js  data/dili.js  data/shengwu.js
 data/daily-questions-xiaosimen.js
 data/figures/

@@ -161,6 +161,13 @@ input[type=search]::placeholder { color: #67736c; }
 .quick-name strong { font-size: 14px; }
 .quick-name small { color: var(--muted); }
 .quick-arrow { color: var(--muted); margin-left: auto; width: 15px; }
+.key-points-entry {
+  display: flex; align-items: center; gap: 10px; min-height: 62px; margin-top: 10px; padding: 9px 12px;
+  background: var(--green-soft); border: 1px solid #d5e4d8; border-radius: 13px; color: var(--green-dark); text-decoration: none;
+}
+.key-points-entry .tile-icon { background: #d9eadd; }
+.key-points-entry:hover { border-color: var(--green); }
+.practice #headerKeyPoints { display: none; }
 
 .subject-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
 .subject-entry { padding: 12px; background: #fff; border: 1px solid #e8e6de; border-radius: 12px; min-width: 0; }
