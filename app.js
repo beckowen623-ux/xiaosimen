@@ -1,6 +1,7 @@
 /* 小四门刷题 · 福州人教版 · 纯静态 + localStorage
  * 仿 beckowen623-ux/quiz-bank-app 的结构（懒加载 .js 题库、localStorage 进度、SRS 错题复习），
- * 去掉了付费锁 / 兑换码 / admin / 计算器 / 主观题分支。只做单选、多选、判断。
+ * 去掉了付费锁 / 兑换码 / admin / 计算器。
+ * 题型：单选、多选、判断（自动判分）；填空（自动判分）；材料分析 / 论述 / 简答（对照得分点自评）。
  */
 'use strict';
 const STORAGE_KEY = 'xiaosimen-quiz-v1';
@@ -323,6 +324,76 @@ function dueQuestions(all, progress) {
   });
 }
 
+// ---------- 主观题（材料分析 / 论述 / 简答）与填空题 ----------
+// data/subjective-<科目>.js 用紧凑格式书写，这里展开成与选择题相同的题目对象。
+// id = 科目-z<章>-<序号>（主观题）或 科目-k<章>-<序号>（填空题），按文件内顺序编号。
+function expandSubjective(subject, list, chapters = []) {
+  const counters = {};
+  return list.map(entry => {
+    const blank = typeof entry.b === 'string';
+    const key = (blank ? 'k' : 'z') + entry.c;
+    counters[key] = (counters[key] || 0) + 1;
+    const stage = STAGES[entry.c - 1] || STAGES[0];
+    const base = {
+      id: `${subject}-${key}-${String(counters[key]).padStart(2, '0')}`,
+      subject, subjectLabel: SUBJECTS[subject].label,
+      chapterId: entry.c, chapter: chapters.find(c => c.id === entry.c)?.title || '',
+      number: counters[key], grade: stage.grade, stage: stage.stage,
+      explanation: entry.exp || '', source: entry.src || '',
+    };
+    if (blank) {
+      const blanks = entry.a.map(alts => alts.split('|'));
+      return { ...base, type: 'blank', meta: '填空题', stem: entry.b, blanks, answer: blanks.map(alts => alts[0]) };
+    }
+    const points = entry.p.map(([text, score, keys]) => ({ text, score, keys: keys ? keys.split('|') : [] }));
+    return {
+      ...base, type: 'essay', meta: entry.m || '简答题', material: entry.mat || '', stem: entry.q,
+      points, score: points.reduce((sum, p) => sum + p.score, 0),
+      sample: entry.ex || '', method: entry.how || '', answer: [],
+    };
+  });
+}
+async function loadSubjective() {
+  await Promise.allSettled(SUBJECT_ORDER.map(key => loadScript(`./data/subjective-${key}.js?v=${SUBJECTIVE_VERSION}`)));
+  const raw = window.XIAOSIMEN_SUBJECTIVE || {};
+  return SUBJECT_ORDER.flatMap(key => expandSubjective(key, raw[key] || [], banks?.[key]?.chapters));
+}
+function normAnswer(text) {
+  return String(text || '').normalize('NFKC').toLowerCase()
+    .replace(/[\s，,。.、；;：:“”"'‘’《》<>（）()【】\[\]—\-_·…!！?？]/g, '');
+}
+function blankMatches(input, alts) {
+  const u = normAnswer(input);
+  if (!u) return false;
+  return alts.some(alt => {
+    const a = normAnswer(alt);
+    return u === a || u.replace(/年$/, '') === a.replace(/年$/, '') || (a.length >= 2 && u.includes(a) && u.length <= a.length + 2);
+  });
+}
+function essayHits(q, text) {
+  const t = normAnswer(text);
+  return q.points.map(p => !!t && p.keys.some(k => { const kk = normAnswer(k); return kk && t.includes(kk); }));
+}
+// 当前学期能练的主观题 / 填空题：所选科目（默认本学期在学科目）+ 本学期及以前的章节；
+// 没做过的排前面（本学期新课在前、往前复习在后，四科轮换），做过的排后面。
+function subjectiveScope(type, stage = state.stage, subject = state.drillSubject) {
+  const subjects = subject ? [subject] : activeSubjectsForStage(stage);
+  const order = stageOrder(stage);
+  return subjectiveQuestions.filter(q => q.type === type && subjects.includes(q.subject) && stageOrder(q.stage) <= order);
+}
+function subjectiveQueue(type, progress) {
+  const scope = subjectiveScope(type);
+  const fresh = scope.filter(q => !hasAnswered(qProgress(progress, q.id)));
+  const done = scope.filter(q => hasAnswered(qProgress(progress, q.id)));
+  const byStage = list => [...new Set(list.map(q => q.stage))].sort((a, b) => stageOrder(b) - stageOrder(a))
+    .flatMap(stage => interleave(SUBJECT_ORDER.map(key => list.filter(q => q.stage === stage && q.subject === key))));
+  const ordered = byStage(fresh);
+  // 会考 / 中考冲刺学期：福建中考真题大题排最前面。
+  const examStage = ['8-down', '9-up', '9-down'].includes(state.stage);
+  const real = q => /中考/.test(q.source);
+  return [...(examStage ? [...ordered.filter(real), ...ordered.filter(q => !real(q))] : ordered), ...shuffle(done)];
+}
+
 // ---------- 核心：自动刷题顺序 buildQueue(stage) ----------
 // 规则（也在 README.md 里写清楚）：
 //  1. 到期错题最先：SRS 到期（1/3/7/14 天）的题插在队首；
@@ -400,7 +471,7 @@ function recordAnswer(q, selected, correct, opts) {
   const p = loadProgress();
   const today = todayStr();
   const prev = p.banks[q.id] || { attempts: 0, wrongCount: 0 };
-  const next = { ...prev, done: true, revealed: false, correct, wrong: !correct, selected: [...selected], attempts: (prev.attempts || 0) + 1, lastAt: Date.now() };
+  const next = { ...prev, ...(opts?.extra || {}), done: true, revealed: false, correct, wrong: !correct, selected: [...selected], attempts: (prev.attempts || 0) + 1, lastAt: Date.now() };
   if (!correct) {
     next.wrongCount = (prev.wrongCount || 0) + 1;
     next.srs = { stage: 0, due: todayStr(REVIEW_INTERVALS[0]) }; // 明天复习
@@ -458,11 +529,13 @@ const stagePref = progress => Object.hasOwn(STAGE_MAP, progress.stage) ? progres
 const state = {
   stage: stagePref(loadProgress()), mode: 'all', queue: [], idx: 0, streakCorrect: 0,
   keyword: '', searchSubject: '', clearPending: new Set(), clearTotal: 0, navOpen: false,
+  drillSubject: '', session: new Map(), keys: null,
 };
 const MODE_LABEL = {
   all: '按学期练习', random: '随机练习', random20: '今日新题', unfinished: '只做未做题',
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
+  essay: '主观题提分', blank: '填空速记', retry: '本组错题重练',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -473,10 +546,24 @@ const STAGE_HINT = {
   '9-up': '道法、历史本学期新课和七、八年级复习。',
   '9-down': '道法、历史新课和初中三年总复习。',
 };
-const TYPE_LABEL = { single: '单选题', multiple: '多选题', judge: '判断题' };
+const TYPE_LABEL = { single: '单选题', multiple: '多选题', judge: '判断题', blank: '填空题', essay: '主观题' };
+const SUBJECTIVE_VERSION = 1;
+const ESSAY_PASS = 0.6; // 自评得分率 ≥60% 算过关，否则进错题本
+// 各类主观题的通用答题方法（题目没有专属提示时显示）
+const METHOD_TIPS = {
+  判断说理: '三步走：① 亮明判断（✓ / ×）；② 用教材观点说理由（为什么对 / 错在哪）；③ 提出正确做法。',
+  时事点评: '一句话概括主旨 → 体现了什么理念（以人民为中心、创新、绿色……）→ 有什么意义（对国家、社会、个人）。',
+  材料分析题: '先圈设问关键词（原因 / 影响 / 特点 / 关系），再到材料里找对应信息，最后“材料信息 + 教材观点”分点作答，一点一句。',
+  论述题: '小论文三件套：观点（主题一句话）→ 史实 / 论据（至少两条，写清时间、人物、事件）→ 结论升华。',
+  简答题: '按“是什么—为什么—怎么做”或“背景—内容—意义”分点作答，用①②③标号，关键词写准。',
+  探究题: '按“提出问题 → 分析问题（用到哪些条件）→ 解决问题（具体步骤）”写，问题要具体可操作。',
+  综合题: '先读图读题找关键信息，再用课本术语分点回答，因果关系写完整。',
+  实验探究: '紧扣“变量—对照—现象—结论”：找准唯一变量，说清每一步操作的目的。',
+};
 const fmt = new Intl.NumberFormat('zh-CN');
 let banks;
 let bankQuestions = [];
+let subjectiveQuestions = [];
 let library = [];
 let toastTimer;
 
@@ -484,7 +571,7 @@ function esc(s) {
   return String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 }
 function icon(name, cls = '') {
-  return `<svg class="icon ${cls}" aria-hidden="true"><use href="./assets/icons/ui.svg#${name}"></use></svg>`;
+  return `<svg class="icon ${cls}" aria-hidden="true"><use href="./assets/icons/ui.svg?v=2#${name}"></use></svg>`;
 }
 function meter(value, max, label, cls = '') {
   return `<progress class="meter ${cls}" max="${max || 1}" value="${Math.min(value, max)}" aria-label="${esc(label)}"></progress>`;
@@ -521,8 +608,14 @@ function subjectChip(key, label) {
   return `<span class="chip tone-${esc(key)}">${esc(label || SUBJECTS[key]?.label || '')}</span>`;
 }
 function displayAnswer(q) {
-  return q.type === 'judge' ? (q.answer[0] === 'true' ? '正确' : '错误') : q.answer.join('、');
+  if (q.type === 'judge') return q.answer[0] === 'true' ? '正确' : '错误';
+  if (q.type === 'essay') return q.points.map((p, i) => `${'①②③④⑤⑥⑦⑧⑨'[i] || i + 1}${p.text}`).join('；');
+  return q.answer.join('、');
 }
+function materialHTML(text) {
+  return String(text || '').split('\n').map(p => p.trim()).filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
+}
+function isSubjective(q) { return q?.type === 'essay' || q?.type === 'blank'; }
 function resumeIndex(queue, progress) {
   const stage = state.stage;
   if (Object.hasOwn(progress.resumeByStage || {}, stage)) {
@@ -632,11 +725,51 @@ function quickModesHTML(queue, progress) {
       </a>
     </section>`;
 }
+function drillCardHTML(progress) {
+  if (!subjectiveQuestions.length) return '';
+  const essays = subjectiveScope('essay');
+  const blanks = subjectiveScope('blank');
+  const records = list => list.map(q => qProgress(progress, q.id)).filter(hasAnswered);
+  const essayDone = records(essays);
+  const blankDone = records(blanks);
+  const rate = essayDone.filter(r => r.total).length
+    ? Math.round(essayDone.filter(r => r.total).reduce((s, r) => s + r.score / r.total, 0) / essayDone.filter(r => r.total).length * 100) + '%' : '—';
+  const blankAcc = blankDone.length ? Math.round(blankDone.filter(r => r.correct).length / blankDone.length * 100) + '%' : '—';
+  const realCount = essays.filter(q => /中考/.test(q.source)).length;
+  const chips = ['', ...SUBJECT_ORDER].map(key => {
+    const n = subjectiveScope('essay', state.stage, key).length + subjectiveScope('blank', state.stage, key).length;
+    if (key && !n) return '';
+    return `<button type="button" class="drill-chip ${key ? 'tone-' + key : ''}" data-drill="${key}" aria-pressed="${state.drillSubject === key}">${key ? SUBJECTS[key].short : '本学期科目'}${key ? `<span>${n}</span>` : ''}</button>`;
+  }).join('');
+  return `
+    <section class="card drill-card" aria-labelledby="drillTitle">
+      <div class="section-heading">
+        <h2 id="drillTitle">${icon('target')} 主观题提分</h2>
+        <span class="drill-badge">中考大题 · 得分点自评</span>
+      </div>
+      <div class="drill-chips" role="group" aria-label="选择科目">${chips}</div>
+      <div class="drill-grid">
+        <button class="drill-tile" data-mode="essay" type="button">
+          <span class="drill-icon">${icon('pen-line')}</span>
+          <span class="drill-text"><strong>材料分析 · 论述 · 简答</strong>
+            <small>${fmt.format(essays.length)} 道${realCount ? `（福建中考真题 ${realCount}）` : ''} · 已写 ${essayDone.length} · 平均得分率 ${rate}</small></span>
+          ${icon('arrow-right', 'quick-arrow')}
+        </button>
+        <button class="drill-tile" data-mode="blank" type="button">
+          <span class="drill-icon">${icon('text-cursor-input')}</span>
+          <span class="drill-text"><strong>填空速记</strong>
+            <small>${fmt.format(blanks.length)} 道 · 已做 ${blankDone.length} · 正确率 ${blankAcc}</small></span>
+          ${icon('arrow-right', 'quick-arrow')}
+        </button>
+      </div>
+      <p class="muted drill-note">${icon('lightbulb')} 先自己写，再对照得分点打分；得分率不到 60% 的题自动进错题本，按 1、3、7、14 天复习。</p>
+    </section>`;
+}
 function subjectProgressHTML(progress) {
   const weak = weakChapters(bankQuestions, progress);
   return `
     <section class="card subject-card" aria-labelledby="subjectTitle">
-      <div class="section-heading"><h2 id="subjectTitle">四科进度</h2><span class="muted">题库共 ${fmt.format(bankQuestions.length)} 道</span></div>
+      <div class="section-heading"><h2 id="subjectTitle">四科进度</h2><span class="muted">选择题 ${fmt.format(bankQuestions.length)} 道${subjectiveQuestions.length ? ` · 主观/填空 ${fmt.format(subjectiveQuestions.length)} 道` : ''}</span></div>
       <div class="subject-grid">
       ${SUBJECT_ORDER.map(key => {
         const items = banks[key].questions;
@@ -692,6 +825,7 @@ function renderHome(focus = '') {
       ${checkinCardHTML(progress, checkinStatus(library, progress))}
     </div>
     ${quickModesHTML(queue, progress)}
+    ${drillCardHTML(progress)}
     <div class="dashboard-lower">
       ${subjectProgressHTML(progress)}
       <div class="daily-column">${dailyCardHTML(progress)}${reviewCardsHTML(progress)}</div>
@@ -718,6 +852,11 @@ function renderHome(focus = '') {
     renderHome('stageSelect');
   });
   view.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => startPractice(btn.dataset.mode)));
+  view.querySelectorAll('[data-drill]').forEach(btn => btn.addEventListener('click', () => {
+    state.drillSubject = btn.dataset.drill;
+    renderHome();
+    view.querySelector(`[data-drill="${state.drillSubject}"]`)?.focus();
+  }));
   byId('dailyBtn')?.addEventListener('click', () => beginPractice([dailyQuestion()], 'daily'));
   byId('checkinBtn')?.addEventListener('click', () => {
     const res = persist(() => doCheckin(library, loadProgress()));
@@ -730,7 +869,7 @@ function renderHome(focus = '') {
   byId('searchSubject').addEventListener('change', event => { state.searchSubject = event.target.value; doSearch(); });
   byId('searchOut').addEventListener('click', event => {
     const id = event.target.closest('button[data-qid]')?.dataset.qid;
-    if (id) beginPractice([bankQuestions.find(q => q.id === id)], 'single');
+    if (id) beginPractice([library.find(q => q.id === id)], 'single');
   });
   doSearch();
   if (focus) moveFocus(byId(focus), focus === 'homeTitle');
@@ -740,12 +879,12 @@ function doSearch() {
   const status = byId('searchStatus');
   const out = byId('searchOut');
   if (!kw) { status.textContent = ''; out.replaceChildren(); return; }
-  const hits = bankQuestions.filter(q =>
+  const hits = [...bankQuestions, ...subjectiveQuestions].filter(q =>
     (!state.searchSubject || q.subject === state.searchSubject) &&
     [q.chapter, q.stem, q.material || '', q.explanation || ''].some(text => text.normalize('NFKC').toLowerCase().includes(kw)));
   status.textContent = hits.length ? `找到 ${hits.length} 道${hits.length > 20 ? '，显示前 20 道' : ''}` : '没有找到相关题目。试试更短的关键词。';
   out.innerHTML = hits.slice(0, 20).map(q => `<article class="search-hit">
-    <div>${subjectChip(q.subject)} <span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
+    <div>${subjectChip(q.subject)} ${isSubjective(q) ? `<span class="chip">${esc(q.meta)}</span> ` : ''}<span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
     <button class="btn" data-qid="${q.id}">做这道 ${icon('arrow-right')}</button>
   </article>`).join('');
 }
@@ -761,6 +900,12 @@ function startPractice(mode) {
     return;
   }
   let queue;
+  if (mode === 'essay' || mode === 'blank') {
+    queue = subjectiveQueue(mode, progress);
+    if (!queue.length) { toast('当前学期还没有这类题，换个科目或年级学期试试。'); return; }
+    beginPractice(queue, mode);
+    return;
+  }
   if (mode === 'sunday') {
     queue = sundayMock(bankQuestions, progress);
   } else if (['wrong', 'due', 'favorite'].includes(mode)) {
@@ -791,6 +936,7 @@ function beginPractice(queue, mode, index = 0) {
   state.navOpen = false;
   state.clearPending = new Set(mode === 'clearWrong' ? queue.map(q => q.id) : []);
   state.clearTotal = state.clearPending.size;
+  state.session = new Map();
   renderPractice();
 }
 
@@ -856,61 +1002,147 @@ function renderAnswerSheet(page = Math.floor(state.idx / 40), previous = null) {
   byId('navNext')?.addEventListener('click', () => renderAnswerSheet(page + 1, 'navNext'));
   if (previous) (grid.querySelector(`#${previous}:enabled`) || grid.querySelector('button'))?.focus();
 }
-function renderPractice() {
-  const q = state.queue[state.idx];
-  if (!q) { renderHome('homeTitle'); return; }
-  document.body.classList.add('practice');
-  byId('headerSearch').hidden = true;
-  const progress = loadProgress();
+// 练习页外壳：进度、科目/题型、材料、题干、配图、作答区、结果区、操作按钮、答题卡。
+function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提交答案', submitDisabled = true, revealLabel = '查看解析' }) {
   const rec = qProgress(progress, q.id);
   const clearing = state.mode === 'clearWrong';
-  const type = TYPE_LABEL[q.type] || '选择题';
   const total = state.queue.length;
   const position = state.idx + 1;
-  const required = q.type === 'multiple' ? 2 : 1;
-  const maximum = q.type === 'multiple' ? q.maxSelections || 4 : 1;
-  const choices = q.type === 'judge' ? [{ key: 'true', text: '正确' }, { key: 'false', text: '错误' }] : q.options;
-  let selected = [];
-  let finished = false;
-  refreshStreak(progress);
-  view.innerHTML = `
-    <div class="practice-shell">
-      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} 返回首页</button><span>${esc(MODE_LABEL[state.mode])}${['all', 'random', 'random20', 'unfinished'].includes(state.mode) ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
+  const typeLabel = q.type === 'essay' ? q.meta : (TYPE_LABEL[q.type] || '选择题');
+  const studyMode = ['all', 'random', 'random20', 'unfinished', 'essay', 'blank'].includes(state.mode);
+  return `
+    <div class="practice-shell tone-${esc(q.subject)}">
+      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} 返回首页</button><span>${esc(MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
       <section class="card question-card" aria-labelledby="questionTitle">
         <div class="question-progress">
           <div class="progress-label"><strong>${clearing ? '订正进度' : `第 ${position} <span>/ ${total} 题</span>`}</strong><span id="qProg">${questionStats(progress)}</span></div>
           ${clearing ? meter(state.clearTotal - state.clearPending.size, state.clearTotal, '错题订正进度') : meter(position, total, `第 ${position} 题，共 ${total} 题`)}
         </div>
-        <div class="question-meta">${subjectChip(q.subject, q.subjectLabel)}<span class="chip">${type}</span><span class="chapter-tag">${esc(q.chapter)}</span></div>
-        ${q.material ? `<div class="material">${expParas(q.material)}</div>` : ''}
-        <h1 id="questionTitle" tabindex="-1">${esc(q.stem)}</h1>
+        <div class="question-meta">${subjectChip(q.subject, q.subjectLabel)}<span class="chip type-chip">${esc(typeLabel)}</span>${q.type === 'essay' ? `<span class="chip score-chip">${q.score} 分</span>` : ''}${/中考/.test(q.source || '') && isSubjective(q) ? '<span class="chip real-chip">中考真题</span>' : ''}<span class="chapter-tag">${esc(q.chapter)}</span></div>
+        ${q.material ? `<div class="material">${isSubjective(q) ? `<p class="material-label">材料</p>${materialHTML(q.material)}` : expParas(q.material)}</div>` : ''}
+        ${title}
         ${q.image ? '<div id="qfig"></div>' : ''}
-        ${q.type === 'multiple' ? `<p class="muted selection-hint">请选择 ${required}–${maximum} 项后提交。</p>` : ''}
-        <div class="options" role="group" aria-label="${type}选项">
-          ${choices.map((o, i) => `<button class="opt" type="button" data-choice="${i}" aria-pressed="false">
-            ${q.type === 'judge' ? '' : `<span class="opt-key">${esc(o.key)}</span>`}<span class="opt-text">${esc(o.text)}</span><span class="opt-status"></span>
-          </button>`).join('')}
-        </div>
+        ${body}
         <div id="result" tabindex="-1"></div>
         <div class="question-actions">
           <div class="question-tools">
-            <button class="btn text-button" id="revealBtn">查看解析</button>
+            <button class="btn text-button" id="revealBtn">${icon('eye')} ${revealLabel}</button>
             <button class="btn text-button" id="favBtn" aria-pressed="${!!rec?.favorite}">${icon('bookmark')} ${rec?.favorite ? '已收藏' : '收藏'}</button>
           </div>
           <div class="question-flow">
-            <button class="btn primary" id="submitBtn" disabled>提交答案</button>
+            <button class="btn primary" id="submitBtn" ${submitDisabled ? 'disabled' : ''}>${submitLabel}</button>
             <button class="btn" id="nextBtn" ${clearing || total === 1 ? 'hidden' : ''}>${position < total ? '跳过' : '结束练习'} ${icon('arrow-right')}</button>
           </div>
         </div>
       </section>
       ${!clearing && total > 1 ? `<details class="card navbox" id="navBox" ${state.navOpen ? 'open' : ''}><summary>答题卡 <span class="muted">${total} 道</span></summary><div id="qNav"></div></details>` : ''}
     </div>`;
-  if (q.image) renderFigure(q);
-  const optionButtons = [...view.querySelectorAll('[data-choice]')];
+}
+// 外壳里通用按钮的事件；返回结束作答后切换按钮状态的函数。
+function wireShell(q) {
   const submit = byId('submitBtn');
   const reveal = byId('revealBtn');
   const next = byId('nextBtn');
-  const result = byId('result');
+  byId('backBtn').addEventListener('click', () => renderHome('homeTitle'));
+  byId('favBtn').addEventListener('click', event => {
+    const favorited = persist(() => toggleFavorite(q.id));
+    if (favorited === undefined) return;
+    event.currentTarget.innerHTML = `${icon('bookmark')} ${favorited ? '已收藏' : '收藏'}`;
+    event.currentTarget.setAttribute('aria-pressed', String(favorited));
+  });
+  next.addEventListener('click', () => {
+    if (state.idx < state.queue.length - 1) goToQuestion(state.idx + 1);
+    else finishPractice();
+  });
+  const nav = byId('navBox');
+  if (nav) {
+    nav.addEventListener('toggle', () => {
+      state.navOpen = nav.open;
+      if (nav.open && !byId('qNav').childElementCount) renderAnswerSheet();
+    });
+  }
+  if (q.image) renderFigure(q);
+  state.keys = { submit, next, options: [] };
+  return function finishUI() {
+    const result = byId('result');
+    byId('qProg').textContent = questionStats(loadProgress());
+    if (state.mode === 'clearWrong') view.querySelector('.question-progress progress').value = state.clearTotal - state.clearPending.size;
+    submit.hidden = true;
+    reveal.hidden = true;
+    if (state.keys) state.keys.submit = null;
+    next.hidden = false;
+    next.classList.add('primary');
+    next.innerHTML = `${state.idx < state.queue.length - 1 ? '下一题' : '完成练习'} ${icon('arrow-right')}`;
+    if (byId('navBox')?.open) renderAnswerSheet();
+    const resultTop = result.getBoundingClientRect().top;
+    result.focus({ preventScroll: true });
+    if (resultTop > window.innerHeight - 120) result.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  };
+}
+function sourceHTML(q) {
+  return `${q.source ? `<details class="source-details"><summary>题目来源</summary><p>${esc(q.source)}</p></details>` : ''}
+    ${q.verify === 'unverified-answer-page' ? '<p class="result-note">此题答案按教材核对，原卷答案页待核。</p>' : ''}`;
+}
+// 作答后的公共记账：积分提示、订正队列、本组小结。
+function afterAnswer(q, correct, res, extra = {}) {
+  const clearing = state.mode === 'clearWrong';
+  state.session.set(q.id, { correct, ...extra });
+  state.streakCorrect = correct ? state.streakCorrect + 1 : 0;
+  if (clearing && !correct) {
+    state.queue.push(q);
+    toast('这道题已放回队尾，稍后再做一次。');
+  } else if (clearing && state.clearPending.delete(q.id) && !state.clearPending.size) {
+    toast('错题订正完成。');
+  } else if (correct && state.streakCorrect % 5 === 0) {
+    toast(`连续答对 ${state.streakCorrect} 题${res.points ? ` · +${res.points} 分` : ''}`);
+  } else if (res.points > 0) {
+    toast(`+${res.points} 分`);
+  }
+  refreshStreak();
+}
+function answerOptions(q) {
+  return { mode: state.mode, stage: state.stage, nextId: state.queue[state.idx + 1]?.id };
+}
+function onReveal(q) {
+  persist(() => recordReveal(q.id));
+  if (state.mode === 'clearWrong') {
+    state.queue.push(q);
+    toast('看过解析后，这道题会在队尾再出现。');
+  }
+}
+
+function renderPractice() {
+  const q = state.queue[state.idx];
+  if (!q) { renderHome('homeTitle'); return; }
+  document.body.classList.add('practice');
+  byId('headerSearch').hidden = true;
+  refreshStreak();
+  if (q.type === 'essay') return renderEssay(q);
+  if (q.type === 'blank') return renderBlank(q);
+  renderChoice(q);
+}
+
+function renderChoice(q) {
+  const progress = loadProgress();
+  const type = TYPE_LABEL[q.type] || '选择题';
+  const required = q.type === 'multiple' ? 2 : 1;
+  const maximum = q.type === 'multiple' ? q.maxSelections || 4 : 1;
+  const choices = q.type === 'judge' ? [{ key: 'true', text: '正确' }, { key: 'false', text: '错误' }] : q.options;
+  let selected = [];
+  let finished = false;
+  view.innerHTML = practiceShellHTML(q, progress, {
+    title: `<h1 id="questionTitle" tabindex="-1">${esc(q.stem)}</h1>`,
+    body: `${q.type === 'multiple' ? `<p class="muted selection-hint">请选择 ${required}–${maximum} 项后提交。</p>` : ''}
+      <div class="options" role="group" aria-label="${type}选项">
+        ${choices.map((o, i) => `<button class="opt" type="button" data-choice="${i}" aria-pressed="false">
+          ${q.type === 'judge' ? `<span class="opt-key">${o.key === 'true' ? '✓' : '✗'}</span>` : `<span class="opt-key">${esc(o.key)}</span>`}<span class="opt-text">${esc(o.text)}</span><span class="opt-status"></span>
+        </button>`).join('')}
+      </div>`,
+  });
+  const finishUI = wireShell(q);
+  const optionButtons = [...view.querySelectorAll('[data-choice]')];
+  const submit = byId('submitBtn');
+  state.keys.options = optionButtons;
   function showResult(correct) {
     finished = true;
     const preview = correct === null;
@@ -925,25 +1157,13 @@ function renderPractice() {
     });
     const verdict = preview ? '参考解析' : correct ? '答对了' : '答错了';
     const tone = preview ? 'preview' : correct ? 'correct' : 'incorrect';
-    result.innerHTML = `<div class="result-panel ${tone}">
+    byId('result').innerHTML = `<div class="result-panel ${tone}">
       <p class="result-title"><strong>${verdict}</strong><span>正确答案 <b>${esc(displayAnswer(q))}</b></span></p>
       <div class="exp-body">${expParas(q.explanation)}</div>
       ${q.trap ? `<p class="result-note">易错点 · ${esc(q.trap.replace(/^易错点[：:]\s*/, ''))}</p>` : ''}
-      ${q.source ? `<details class="source-details"><summary>题目来源</summary><p>${esc(q.source)}</p></details>` : ''}
-      ${q.verify === 'unverified-answer-page' ? '<p class="result-note">此题答案按教材核对，原卷答案页待核。</p>' : ''}
+      ${sourceHTML(q)}
     </div>`;
-    const score = byId('qProg');
-    score.textContent = questionStats(loadProgress());
-    if (clearing) view.querySelector('.question-progress progress').value = state.clearTotal - state.clearPending.size;
-    submit.hidden = true;
-    reveal.hidden = true;
-    next.hidden = false;
-    next.classList.add('primary');
-    next.innerHTML = `${state.idx < state.queue.length - 1 ? '下一题' : '完成练习'} ${icon('arrow-right')}`;
-    if (byId('navBox')?.open) renderAnswerSheet();
-    const resultTop = result.getBoundingClientRect().top;
-    result.focus({ preventScroll: true });
-    if (resultTop > window.innerHeight - 120) result.scrollIntoView({ block: 'start' });
+    finishUI();
   }
   optionButtons.forEach((btn, i) => btn.addEventListener('click', () => {
     if (finished) return;
@@ -956,60 +1176,235 @@ function renderPractice() {
     });
     submit.disabled = selected.length < required;
   }));
-  byId('backBtn').addEventListener('click', () => renderHome('homeTitle'));
-  byId('favBtn').addEventListener('click', event => {
-    const favorited = persist(() => toggleFavorite(q.id));
-    if (favorited === undefined) return;
-    event.currentTarget.innerHTML = `${icon('bookmark')} ${favorited ? '已收藏' : '收藏'}`;
-    event.currentTarget.setAttribute('aria-pressed', String(favorited));
-  });
-  next.addEventListener('click', () => {
-    if (state.idx < state.queue.length - 1) {
-      goToQuestion(state.idx + 1);
-    } else {
-      keepPosition(null);
-      renderHome('homeTitle');
-    }
-  });
-  reveal.addEventListener('click', () => {
+  byId('revealBtn').addEventListener('click', () => {
     if (finished) return;
-    persist(() => recordReveal(q.id));
-    if (clearing) {
-      state.queue.push(q);
-      toast('看过解析后，这道题会在队尾再出现。');
-    }
+    onReveal(q);
     showResult(null);
   });
   submit.addEventListener('click', () => {
     if (finished || selected.length < required) return;
     const correct = isSameSet(selected, q.answer);
-    const res = persist(() => recordAnswer(q, selected, correct, {
-      mode: state.mode, stage: state.stage, nextId: state.queue[state.idx + 1]?.id,
-    }));
+    const res = persist(() => recordAnswer(q, selected, correct, answerOptions(q)));
     if (!res) return;
-    state.streakCorrect = correct ? state.streakCorrect + 1 : 0;
-    if (clearing && !correct) {
-      state.queue.push(q);
-      toast('这道题已放回队尾，稍后再做一次。');
-    } else if (clearing && state.clearPending.delete(q.id) && !state.clearPending.size) {
-      toast('错题订正完成。');
-    } else if (correct && state.streakCorrect % 5 === 0) {
-      toast(`连续答对 ${state.streakCorrect} 题${res.points ? ` · +${res.points} 分` : ''}`);
-    } else if (res.points > 0) {
-      toast(`+${res.points} 分`);
-    }
-    refreshStreak();
+    afterAnswer(q, correct, res);
     showResult(correct);
   });
-  const nav = byId('navBox');
-  if (nav) {
-    nav.addEventListener('toggle', () => {
-      state.navOpen = nav.open;
-      if (nav.open && !byId('qNav').childElementCount) renderAnswerSheet();
-    });
-  }
   moveFocus(byId('questionTitle'), true);
 }
+
+function renderBlank(q) {
+  const progress = loadProgress();
+  const parts = q.stem.split('____');
+  const width = alts => Math.min(14, Math.max(4, ...alts.map(a => a.length + 2)));
+  const stemHTML = parts.map((part, i) => esc(part) + (i < parts.length - 1
+    ? `<span class="blank-slot"><span class="blank-no" aria-hidden="true">${i + 1}</span><input class="blank-input" data-blank="${i}" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="${i < parts.length - 2 ? 'next' : 'done'}" aria-label="第 ${i + 1} 空" style="--w:${width(q.blanks[i])}em"></span>`
+    : '')).join('');
+  let finished = false;
+  view.innerHTML = practiceShellHTML(q, progress, {
+    title: `<h1 id="questionTitle" class="blank-stem" tabindex="-1">${stemHTML}</h1>`,
+    body: `<p class="muted selection-hint">在横线处填写答案，回车跳到下一空；同义写法也能判对。</p>`,
+    submitDisabled: false, revealLabel: '看答案',
+  });
+  const finishUI = wireShell(q);
+  const inputs = [...view.querySelectorAll('.blank-input')];
+  const submit = byId('submitBtn');
+  function showResult(correct, marks) {
+    finished = true;
+    inputs.forEach((input, i) => {
+      input.readOnly = true;
+      if (marks) input.classList.add(marks[i] ? 'right' : 'wrong');
+    });
+    const preview = correct === null;
+    const verdict = preview ? '参考答案' : correct ? '全部填对' : `填对 ${marks.filter(Boolean).length} / ${marks.length} 空`;
+    const tone = preview ? 'preview' : correct ? 'correct' : 'incorrect';
+    byId('result').innerHTML = `<div class="result-panel ${tone}">
+      <p class="result-title"><strong>${verdict}</strong></p>
+      <ol class="blank-answers">${q.blanks.map((alts, i) => `<li><b>${esc(alts[0])}</b>${alts.length > 1 ? `<span class="muted">（也可写：${esc(alts.slice(1).join('、'))}）</span>` : ''}${marks && !marks[i] ? `<span class="your">你填：${esc(inputs[i].value || '未填')}</span>` : ''}</li>`).join('')}</ol>
+      <div class="exp-body">${expParas(q.explanation)}</div>
+      ${sourceHTML(q)}
+    </div>`;
+    finishUI();
+  }
+  inputs.forEach((input, i) => input.addEventListener('keydown', event => {
+    if (event.key !== 'Enter' || event.isComposing) return;
+    event.preventDefault();
+    if (finished) { byId('nextBtn').click(); return; }
+    if (inputs[i + 1]) inputs[i + 1].focus();
+    else submit.click();
+  }));
+  byId('revealBtn').addEventListener('click', () => {
+    if (finished) return;
+    onReveal(q);
+    showResult(null);
+  });
+  submit.addEventListener('click', () => {
+    if (finished) return;
+    if (!inputs.some(input => input.value.trim())) { toast('先填写答案，或点「看答案」。'); inputs[0].focus(); return; }
+    const marks = inputs.map((input, i) => blankMatches(input.value, q.blanks[i]));
+    const correct = marks.every(Boolean);
+    const res = persist(() => recordAnswer(q, inputs.map(input => input.value.trim()), correct, answerOptions(q)));
+    if (!res) return;
+    afterAnswer(q, correct, res);
+    showResult(correct, marks);
+  });
+  window.scrollTo(0, 0);
+  inputs[0].focus({ preventScroll: true });
+}
+
+function renderEssay(q) {
+  const progress = loadProgress();
+  const draftKey = 'xiaosimen-draft-' + q.id;
+  let draft = '';
+  try { draft = sessionStorage.getItem(draftKey) || ''; } catch { /* 无存储权限时不保存草稿 */ }
+  const tip = q.method || METHOD_TIPS[q.meta] || METHOD_TIPS['简答题'];
+  let finished = false;
+  view.innerHTML = practiceShellHTML(q, progress, {
+    title: `<h1 id="questionTitle" tabindex="-1">${esc(q.stem)}</h1>`,
+    body: `<div class="essay-box">
+        <details class="method-tip"><summary>${icon('lightbulb')} 答题思路</summary><p>${esc(tip)}</p></details>
+        <label class="essay-label" for="essayInput">${icon('pen-line')} 我的答案</label>
+        <textarea id="essayInput" rows="7" placeholder="分点作答，例如：&#10;① ……&#10;② ……&#10;也可以先写在本子上，写完直接点「对照得分点」。">${esc(draft)}</textarea>
+        <div class="essay-meta"><span id="essayCount">${draft.length} 字</span><span>满分 ${q.score} 分 · ${q.points.length} 个得分点</span></div>
+      </div>
+      <div id="scoring"></div>`,
+    submitLabel: `${icon('list-checks')} 对照得分点`, submitDisabled: false, revealLabel: '直接看参考答案',
+  });
+  const finishUI = wireShell(q);
+  const input = byId('essayInput');
+  const submit = byId('submitBtn');
+  const reveal = byId('revealBtn');
+  input.addEventListener('input', () => {
+    byId('essayCount').textContent = `${input.value.trim().length} 字`;
+    try { sessionStorage.setItem(draftKey, input.value); } catch { /* 忽略 */ }
+  });
+  input.addEventListener('keydown', event => {
+    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) { event.preventDefault(); submit.click(); }
+  });
+  function referenceHTML(checked) {
+    return `<div class="ref-block">
+        <p class="ref-title">得分点（满分 ${q.score} 分）</p>
+        <ol class="point-ref">${q.points.map((p, i) => `<li class="${checked ? (checked[i] ? 'got' : 'miss') : ''}"><span>${esc(p.text)}</span><b>${p.score} 分</b></li>`).join('')}</ol>
+      </div>
+      ${q.sample ? `<details class="ref-sample" open><summary>参考示例</summary>${materialHTML(q.sample)}</details>` : ''}
+      <div class="exp-body">${expParas(q.explanation)}</div>
+      ${sourceHTML(q)}`;
+  }
+  function showResult(score, checked) {
+    finished = true;
+    input.readOnly = true;
+    const preview = score === null;
+    const pass = !preview && score / q.score >= ESSAY_PASS;
+    const tone = preview ? 'preview' : pass ? 'correct' : 'incorrect';
+    const verdict = preview ? '参考答案' : `自评 ${score} / ${q.score} 分 · ${pass ? '过关' : '未过关，已加入错题本'}`;
+    byId('scoring').replaceChildren();
+    byId('result').innerHTML = `<div class="result-panel ${tone}">
+      <p class="result-title"><strong>${verdict}</strong>${preview ? '' : `<span>得分率 ${Math.round(score / q.score * 100)}%</span>`}</p>
+      ${referenceHTML(checked)}
+    </div>`;
+    finishUI();
+  }
+  reveal.addEventListener('click', () => {
+    if (finished) return;
+    onReveal(q);
+    byId('scoring').replaceChildren();
+    showResult(null);
+  });
+  submit.addEventListener('click', () => {
+    if (finished) return;
+    const hits = essayHits(q, input.value);
+    const written = input.value.trim().length > 0;
+    submit.hidden = true;
+    reveal.hidden = true;
+    input.readOnly = true;
+    const scoring = byId('scoring');
+    scoring.innerHTML = `<div class="score-panel">
+        <p class="score-head"><strong>${icon('list-checks')} 对照得分点，给自己打分</strong>
+          <span class="muted">${written ? '已按关键词预先勾选，请对照意思如实调整。' : '对照你写在本子上的答案，勾选答到的要点。'}</span></p>
+        <ul class="point-list">${q.points.map((p, i) => `<li><label class="point-item">
+          <input type="checkbox" data-point="${i}" ${hits[i] ? 'checked' : ''}>
+          <span class="point-text">${esc(p.text)}${hits[i] ? '<em>关键词命中</em>' : ''}</span>
+          <span class="point-score">${p.score} 分</span></label></li>`).join('')}</ul>
+        <div class="score-foot"><span class="score-total">自评 <b id="selfScore">0</b> / ${q.score} 分</span>
+          <button class="btn primary" id="confirmScore" type="button">${icon('check')} 确认得分</button></div>
+      </div>`;
+    const boxes = [...scoring.querySelectorAll('[data-point]')];
+    const total = () => boxes.reduce((sum, box, i) => sum + (box.checked ? q.points[i].score : 0), 0);
+    const update = () => { byId('selfScore').textContent = total(); };
+    boxes.forEach(box => box.addEventListener('change', update));
+    update();
+    state.keys.submit = byId('confirmScore');
+    byId('confirmScore').addEventListener('click', () => {
+      if (finished) return;
+      const score = total();
+      const checked = boxes.map(box => box.checked);
+      const correct = score / q.score >= ESSAY_PASS;
+      const res = persist(() => recordAnswer(q, checked.flatMap((c, i) => c ? [String(i)] : []), correct, {
+        ...answerOptions(q), extra: { score, total: q.score },
+      }));
+      if (!res) return;
+      try { sessionStorage.removeItem(draftKey); } catch { /* 忽略 */ }
+      afterAnswer(q, correct, res, { score, total: q.score });
+      showResult(score, checked);
+    });
+    scoring.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    boxes[0]?.focus({ preventScroll: true });
+  });
+  moveFocus(byId('questionTitle'), true);
+}
+
+// 一组题做完：给出本组小结（正确率、主观题得分、错题重练）。
+function finishPractice() {
+  keepPosition(null);
+  if (state.queue.length < 2 || !state.session.size) { renderHome('homeTitle'); return; }
+  renderSummary();
+}
+function renderSummary() {
+  document.body.classList.add('practice');
+  const results = [...state.session.entries()];
+  const right = results.filter(([, r]) => r.correct).length;
+  const essays = results.filter(([, r]) => r.total);
+  const essayScore = essays.reduce((s, [, r]) => s + r.score, 0);
+  const essayTotal = essays.reduce((s, [, r]) => s + r.total, 0);
+  const wrongQs = dedupeById(results.filter(([, r]) => !r.correct).map(([id]) => library.find(q => q.id === id)).filter(Boolean));
+  const acc = Math.round(right / results.length * 100);
+  const cheer = acc >= 90 ? '太棒了，保持这个状态！' : acc >= 70 ? '不错，把错题再过一遍就更稳了。' : '别灰心，错题已进错题本，按时复习就能拿下。';
+  view.innerHTML = `
+    <div class="practice-shell">
+      <section class="card summary-card" aria-labelledby="summaryTitle">
+        <span class="summary-icon">${icon('trophy')}</span>
+        <p class="summary-kicker">${esc(MODE_LABEL[state.mode] || '练习')} · 本组完成</p>
+        <h1 id="summaryTitle" tabindex="-1">${cheer}</h1>
+        <div class="summary-stats">
+          <div><b>${results.length}</b><span>本组作答</span></div>
+          <div><b>${right}</b><span>答对 / 过关</span></div>
+          <div><b>${acc}%</b><span>正确率</span></div>
+          ${essayTotal ? `<div><b>${essayScore}<small>/${essayTotal}</small></b><span>主观题得分</span></div>` : ''}
+        </div>
+        ${wrongQs.length ? `<div class="summary-wrong"><p class="ref-title">需要再看的题（${wrongQs.length}）</p>
+          <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
+        <div class="summary-actions">
+          ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本组错题</button>` : ''}
+          <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} 返回首页</button>
+        </div>
+      </section>
+    </div>`;
+  byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, 'retry'));
+  byId('homeBtn').addEventListener('click', () => renderHome('homeTitle'));
+  state.keys = null;
+  moveFocus(byId('summaryTitle'), true);
+}
+// 键盘快捷键：1–4 / A–D 选选项，回车提交或下一题（输入框内不拦截）。
+document.addEventListener('keydown', event => {
+  if (!document.body.classList.contains('practice') || !state.keys || event.ctrlKey || event.metaKey || event.altKey) return;
+  if (event.target.closest?.('input, textarea, select, button, summary, a, dialog') || document.querySelector('dialog[open]')) return;
+  const { options, submit, next } = state.keys;
+  const index = '1234'.indexOf(event.key) >= 0 ? '1234'.indexOf(event.key) : 'abcd'.indexOf(event.key.toLowerCase());
+  if (index >= 0 && options[index] && !options[index].disabled) { event.preventDefault(); options[index].click(); return; }
+  if (event.key === 'Enter') {
+    if (submit && !submit.hidden && !submit.disabled) { event.preventDefault(); submit.click(); }
+    else if (next && !next.hidden) { event.preventDefault(); next.click(); }
+  }
+});
 
 const progressDialog = byId('progressDialog');
 const importInput = byId('importFile');
@@ -1095,10 +1490,13 @@ figureDialog.addEventListener('close', () => byId('figureFull').removeAttribute(
 async function init() {
   try {
     const loadDaily = dailyQuestions().length ? null : loadScript('./data/daily-questions-xiaosimen.js?v=7').catch(console.warn);
+    const subjectiveReady = Promise.allSettled(SUBJECT_ORDER.map(key => loadScript(`./data/subjective-${key}.js?v=${SUBJECTIVE_VERSION}`)));
     banks = await ensureBanks(SUBJECT_ORDER);
     await loadDaily;
+    await subjectiveReady;
     bankQuestions = allQuestions(banks, SUBJECT_ORDER);
-    library = [...bankQuestions, ...dailyQuestions()];
+    subjectiveQuestions = await loadSubjective().catch(error => { console.warn(error); return []; });
+    library = [...bankQuestions, ...subjectiveQuestions, ...dailyQuestions()];
     renderHome();
   } catch (error) {
     console.error(error);

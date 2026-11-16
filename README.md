@@ -19,6 +19,36 @@
 
 `key-points.html` 从 `data/key-points-<科目>.js` 读取知识卡。册次参照人教版教材，内容参考教育部课标与福建原卷。带真题索引的卡片会标出年份和题号。每张卡独立于选择题练习，打开自测答案无需提交答题记录。
 
+## 主观题提分（材料分析 / 论述 / 简答 / 填空）
+
+首页「主观题提分」卡片，可按科目筛选，题目范围 = 当前年级学期及以前的章节。
+
+- **材料分析 · 论述 · 简答**（`type: essay`）：孩子先在文本框（或本子上）作答，点「对照得分点」，系统按关键词预先勾选命中的得分点，孩子对照意思如实调整后「确认得分」。自评得分率 ≥ 60% 算过关；不到 60% 进错题本，和选择题一样按 1、3、7、14 天复习、参加错题清零。每题都有答题思路、得分点、参考示例（有的话）、解析和出处。草稿在关闭页面前暂存在 sessionStorage。
+- **填空速记**（`type: blank`）：题干里 `____` 处直接输入，回车跳下一空，自动判分；每空可配多个可接受写法（如“西域都护|西域都护府”）。
+- 会考 / 中考冲刺学期（八下、九上、九下）福建中考真题大题排在最前。
+- 一组题做完显示本组小结：作答数、正确率、主观题得分，可一键「重练本组错题」。
+- 选择题支持键盘：1–4 / A–D 选择，回车提交、下一题。
+
+题目来源：
+- 福建中考真题小问 32 道：历史 2024—2026 年第 29—32 题全部小问（参考答案依福建省教育考试院公布的参考答案，得分点由本应用按答案拆分）；道德与法治 2025 年第 26—29 题、2026 年第 26—27 题（原卷答案页未收录，参考答案按统编教材观点整理，出处已注明）。
+- 其余论述 / 简答题按人教版（统编）教材各册核心考点编写，出处写明“依据人教版××册××课编写”；填空题为教材核心概念。
+
+数据文件 `data/subjective-<科目>.js`，紧凑格式（`app.js` 的 `expandSubjective()` 负责展开）：
+
+```js
+window.XIAOSIMEN_SUBJECTIVE.lishi = [
+  { c: 3, m: '材料分析题', src: '2024年福建中考·历史第29题',
+    mat: '材料……', q: '设问……（8分）',
+    p: [['得分点文字', 3, '关键词|同义词'], ...],   // 分值合计必须等于题干“（N分）”
+    ex: '参考示例（可省）', how: '答题思路（可省）', exp: '解析' },
+  { c: 1, b: '公元前____年，秦灭六国，定都____。', a: ['221|前221|公元前221', '咸阳'], exp: '……' },
+];
+```
+
+- `c` 是章节 id（1 七上 … 6 九下），决定 grade / stage。
+- 题目 id 按“科目-z<章>-<序号>”（主观）/“科目-k<章>-<序号>”（填空）在文件内顺序生成，**只在末尾追加新题**，中间插入会让后面的题 id 变化、进度错位。
+- `node tests/validate.mjs` 会校验：id 唯一、章节存在、得分点分值合计 = 题干分值、空格数 = 答案数、标准答案能被自己判对、每个得分点的关键词能在得分点原文里命中。
+
 ## 自动刷题顺序 buildQueue(stage)
 
 实现位置：`app.js` 里的 `buildQueue(stage, banks, progress)`，配合 `interleave()`、`dueQuestions()`、`applyMode()`。
@@ -66,7 +96,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
 };
 ```
 
-- `type`：只做 `single`（单选）、`multiple`（多选，至少选 2 项才能提交，最多选 `maxSelections`，默认 4）、`judge`（判断）。
+- `type`（选择题题库）：`single`（单选）、`multiple`（多选，至少选 2 项才能提交，最多选 `maxSelections`，默认 4）、`judge`（判断）。
 - 判断题统一用 `answer: ["true"] / ["false"]`，`options` 留空，由渲染合成“正确 / 错误”。
 - `total` 必须等于 `questions.length`，`chapters[].count` 必须等于该章实际题数。
 - 每题都有 `grade`（如“七上”）和 `stage`（如“7-up”），不要把年级塞进 `meta`；`meta` 是原题型文字。
@@ -80,12 +110,13 @@ index.html  app.js  styles.css  manifest.webmanifest  README.md
 key-points.html  key-points.js  key-points.css
 data/key-points-*.js
 data/daode.js  data/lishi.js  data/dili.js  data/shengwu.js
+data/subjective-daode.js  data/subjective-lishi.js  data/subjective-dili.js  data/subjective-shengwu.js
 data/daily-questions-xiaosimen.js
 data/figures/
 tests/validate.mjs
 ```
 
-没有 `functions/`、`admin.html`、付费锁、兑换码、计算器、主观题分支。
+没有 `functions/`、`admin.html`、付费锁、兑换码、计算器。
 
 ## 自检
 

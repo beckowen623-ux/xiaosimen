@@ -351,6 +351,54 @@ else {
   }
 }
 
+// ---- 主观题 / 填空题：data/subjective-<科目>.js 展开后逐题校验 ----
+{
+  const { expandSubjective, blankMatches, essayHits } = sandbox;
+  if (typeof expandSubjective !== 'function') fail('app.js 里没有 expandSubjective 函数');
+  else {
+    const subjIds = new Set();
+    let essayN = 0, blankN = 0, realN = 0;
+    for (const s of subjects) {
+      const w = loadDataFile(`data/subjective-${s}.js`);
+      const raw = w.XIAOSIMEN_SUBJECTIVE && w.XIAOSIMEN_SUBJECTIVE[s];
+      if (!Array.isArray(raw) || !raw.length) { fail(`${s}: 主观题文件为空`); continue; }
+      const list = expandSubjective(s, raw, banks[s].chapters);
+      for (const q of list) {
+        if (subjIds.has(q.id) || allIds.has(q.id)) fail(`主观题 id 重复: ${q.id}`);
+        subjIds.add(q.id);
+        if (!q.chapter) fail(`${q.id}: 章节 ${q.chapterId} 不存在`);
+        if (STAGE_GRADE[q.stage] !== q.grade) fail(`${q.id}: grade/stage 不匹配`);
+        if (!q.explanation) fail(`${q.id}: 缺 exp 解析`);
+        if (!q.stem || !q.stem.trim()) fail(`${q.id}: 题干为空`);
+        if (q.type === 'blank') {
+          blankN++;
+          const slots = q.stem.split('____').length - 1;
+          if (!slots || slots !== q.blanks.length) fail(`${q.id}: 空格数 ${slots} 与答案数 ${q.blanks.length} 不一致`);
+          q.blanks.forEach((alts, i) => {
+            if (!alts.every(a => a.trim())) fail(`${q.id}: 第 ${i + 1} 空有空答案`);
+            if (!blankMatches(alts[0], alts)) fail(`${q.id}: 标准答案自己判不对`);
+          });
+          if (/_{5,}/.test(q.stem) || /_{1,3}(?!_)/.test(q.stem.replace(/____/g, ''))) fail(`${q.id}: 题干里有不是 4 个下划线的空`);
+        } else if (q.type === 'essay') {
+          essayN++;
+          if (/中考/.test(q.source)) realN++;
+          if (!q.source) fail(`${q.id}: 缺 src 出处`);
+          if (!q.points.length) fail(`${q.id}: 没有得分点`);
+          for (const p of q.points) if (!(p.score > 0) || !p.text) fail(`${q.id}: 得分点格式不对`);
+          const m = q.stem.match(/（(\d+)分）/);
+          if (m && Number(m[1]) !== q.score) fail(`${q.id}: 题干写 ${m[1]} 分，得分点合计 ${q.score} 分`);
+          if (!m) fail(`${q.id}: 题干末尾缺“（N分）”`);
+          // 把所有得分点原文当作答案，关键词应全部命中
+          const hits = essayHits(q, q.points.map(p => p.text).join('；'));
+          q.points.forEach((p, i) => { if (p.keys.length && !hits[i]) fail(`${q.id}: 第 ${i + 1} 个得分点的关键词在得分点原文里一个都没有`); });
+        } else fail(`${q.id}: 未知主观题类型 ${q.type}`);
+      }
+      console.log(`主观题 ${s}: 论述/材料 ${list.filter(q => q.type === 'essay').length} 道，填空 ${list.filter(q => q.type === 'blank').length} 道`);
+    }
+    console.log(`主观题合计: ${essayN} 道（其中福建中考真题小问 ${realN} 道）+ 填空 ${blankN} 道`);
+  }
+}
+
 console.log('\n--- 每门每学期题数 ---');
 for (const s of subjects) {
   console.log(`${s}: ` + ['7-up', '7-down', '8-up', '8-down', '9-up', '9-down'].map(st => `${st}=${stats[s][st] || 0}`).join(' '));
