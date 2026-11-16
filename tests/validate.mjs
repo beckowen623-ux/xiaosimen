@@ -69,41 +69,32 @@ for (const s of subjects) {
   console.log(`${s}: ${bank.questions.length} 道 (single ${typeCount.single || 0} / multiple ${typeCount.multiple || 0} / judge ${typeCount.judge || 0})`);
 }
 
-// ---- 配图校验：data/figures.js + data/figures-2.js（base64 data URI，按题 id 映射） ----
-// figures.js 已接近单次推送上限（约 5 MB），新增图放 figures-2.js；两文件在同一个沙箱里合并进 window.XIAOSIMEN_FIGURES。
-function loadFigures() {
-  const sandbox = { window: {}, console };
-  vm.createContext(sandbox);
-  for (const rel of ['data/figures.js', 'data/figures-2.js']) {
-    vm.runInContext(fs.readFileSync(path.join(root, rel), 'utf8'), sandbox, { filename: rel });
-  }
-  return sandbox.window;
-}
-const figW = loadFigures();
-const figures = figW.XIAOSIMEN_FIGURES;
-if (!figures || typeof figures !== 'object') fail('data/figures.js 缺 window.XIAOSIMEN_FIGURES');
-else {
-  const figRe = /^data:image\/jpeg;base64,[A-Za-z0-9+/]+={0,2}$/;
-  let figCount = 0;
-  for (const s of subjects) {
-    for (const q of banks[s].questions) {
-      if (q.image === true) {
-        figCount++;
-        const src = figures[q.id];
-        if (!src) fail(`${q.id}: 有 image 字段但 figures 里没有对应图`);
-        else if (typeof src !== 'string' || !figRe.test(src)) fail(`${q.id}: figures 里 data URI 格式不对`);
-      } else if (q.image !== undefined) fail(`${q.id}: image 字段应为 true`);
+// ---- 配图校验：有 image: true 的题必须在 data/figures/ 有同名 JPEG ----
+const figureDir = path.join(root, 'data/figures');
+const expectedFigures = new Set();
+let figureBytes = 0;
+for (const subject of subjects) {
+  for (const q of banks[subject].questions) {
+    if (q.image === undefined) continue;
+    if (q.image !== true) { fail(`${q.id}: image 字段应为 true`); continue; }
+    const name = q.id + '.jpg';
+    expectedFigures.add(name);
+    const file = path.join(figureDir, name);
+    if (!fs.existsSync(file)) { fail(`${q.id}: 缺少配图 ${name}`); continue; }
+    const jpeg = fs.readFileSync(file);
+    if (jpeg.length < 4 || jpeg.readUInt16BE(0) !== 0xffd8 || jpeg.readUInt16BE(jpeg.length - 2) !== 0xffd9) {
+      fail(`${q.id}: 配图 JPEG 格式异常`);
     }
+    figureBytes += jpeg.length;
   }
-  for (const fid of Object.keys(figures)) {
-    if (!allIds.has(fid)) fail(`figures 里有多余的图 ${fid}（题库中无此题）`);
-  }
-  const figBytes = fs.statSync(path.join(root, 'data/figures.js')).size + fs.statSync(path.join(root, 'data/figures-2.js')).size;
-  const dataBytes = subjects.reduce((a, s) => a + fs.statSync(path.join(root, `data/${s}.js`)).size, 0);
-  const totalBytes = figBytes + dataBytes;
-  console.log(`figures: ${Object.keys(figures).length} 张图（${figCount} 道题带图），figures.js + figures-2.js ${(figBytes / 1024).toFixed(0)} KB；四科 data + figures 合计 ${(totalBytes / 1048576).toFixed(2)} MB（上限 12 MB）`);
-  if (totalBytes > 12 * 1048576) fail(`四科 data + figures 合计超 12 MB：${(totalBytes / 1048576).toFixed(2)} MB`);
 }
+for (const name of fs.readdirSync(figureDir)) {
+  if (!expectedFigures.has(name)) fail(`多余的配图文件 ${name}`);
+}
+const bankBytes = subjects.reduce((total, key) => total + fs.statSync(path.join(root, `data/${key}.js`)).size, 0);
+const totalBytes = figureBytes + bankBytes;
+console.log(`figures: ${expectedFigures.size} 道题带图，独立 JPEG ${(figureBytes / 1024).toFixed(0)} KB；四科题库和配图合计 ${(totalBytes / 1048576).toFixed(2)} MiB`);
+if (totalBytes > 12 * 1048576) fail(`四科题库和配图超 12 MiB：${(totalBytes / 1048576).toFixed(2)} MiB`);
 
 // 每日一题
 const dailyW = loadDataFile('data/daily-questions-xiaosimen.js');
@@ -195,10 +186,14 @@ else {
   // 订正答对 +2
   r = recordAnswer(q2, [...q2.answer], true, { mode: 'wrong' });
   eq(r.points, 2, '错题订正答对 +2');
-  eq(r.rec.srs.stage, 1, '订正答对进第 2 级');
-  // SRS 四级走完才掌握：错 1 次后连续答对 4 次
+  eq(r.rec.srs, { stage: 0, due: tstr(1) }, '提前订正保留次日复习');
+  eq(clearWrongList(all, sandbox.loadProgress()).some(q => q.id === q2.id), false, '提前订正后等到期再复习');
+  // SRS 四级走完才掌握：连续 4 次到期答对，提前重答不消耗复习次数。
   recordAnswer(q3, [q3.options.find(o => !q3.answer.includes(o.key)).key], false, { mode: 'all' });
   for (let i = 0; i < 4; i++) {
+    const review = sandbox.loadProgress();
+    review.banks[q3.id].srs.due = today;
+    sandbox.saveProgress(review);
     const rr = recordAnswer(q3, [...q3.answer], true, { mode: 'due' });
     if (i < 3 && (!rr.rec.srs || rr.rec.srs.stage !== i + 1)) fail(`打卡测试 SRS 第 ${i + 1} 次答对应在 stage ${i + 1}`);
     if (i === 3 && (rr.rec.srs !== null || rr.rec.mastered !== true)) fail('打卡测试 SRS 第 4 次答对后应掌握');
@@ -272,6 +267,47 @@ else {
     if (!wq.every(q => mock.slice(0, 5).some(m => m.id === q.id))) fail('打卡测试 周日小测应把本周错题排在前面');
   }
   console.log('打卡 / 积分 / 补打规则检查通过');
+}
+
+// 复用现有本机数据时，预览、重复练习和薄弱章不能混入新题计划。
+{
+  const { recordAnswer, recordReveal, loadProgress, saveProgress, checkinStatus, allQuestions, todayStr } = sandbox;
+  const stage = '7-up';
+  const [first, second] = buildQueue(stage, banks, { banks: {} });
+  const progress = { banks: { [first.id]: { done: true, correct: true, attempts: 1, revealed: true } } };
+  if (applyMode([first, second], 'random20', progress).some(q => q.id === first.id)) fail('20 道新题抽到了之前已答过的题');
+  saveProgress(progress);
+  recordAnswer(first, first.answer, true, { mode: 'all' });
+  if (checkinStatus(allQuestions(banks, subjects), loadProgress()).freshDone !== 0) fail('重复回答了旧题，今日新题数不应增加');
+  if (loadProgress().banks[first.id].revealed) fail('提交答案后仍被计作仅预览');
+  if (typeof recordReveal !== 'function') fail('缺少保留已作答结果的查看答案逻辑');
+  else {
+    recordReveal(first.id);
+    recordReveal(second.id);
+    const saved = loadProgress();
+    if (!saved.banks[first.id].correct || saved.banks[first.id].revealed) fail('再次查看答案覆盖了真实作答结果');
+    if (!applyMode([second], 'unfinished', saved).length) fail('仅查看答案的新题应仍可继续练习');
+    recordAnswer(second, second.answer, true, { mode: 'random20' });
+    if (loadProgress().checkin.dayStats.first[second.id] !== 1) fail('预览后第一次正式作答应计入新题');
+  }
+  const weak = { banks: Object.fromEntries(banks.dili.questions.slice(0, 3).map(q => [q.id, { done: true, correct: false }])) };
+  if (buildQueue('9-up', banks, weak).some(q => q.subject === 'dili')) fail('薄弱章节不应把地理插入初三队列');
+
+  // 老版本的学习日期与题目进度来自两个键。导入时只写入一个完整快照。
+  const { createProgressBackup, readProgressBackup } = sandbox;
+  if (!createProgressBackup || !readProgressBackup) fail('缺少可迁移的进度备份');
+  else {
+    const legacy = { banks: { [first.id]: { done: true, correct: true, favorite: true, attempts: 1 } }, stage: '8-down', resumeByStage: { '8-down': first.id }, checkin: { totalPoints: 38, streak: 2 } };
+    saveProgress(legacy);
+    store['xiaosimen-growth-v1'] = JSON.stringify({ studyDays: [todayStr()] });
+    const backup = createProgressBackup();
+    const restored = readProgressBackup(JSON.stringify(backup));
+    if (JSON.stringify(restored) !== JSON.stringify({ ...legacy, studyDays: [todayStr()] })) fail('备份恢复丢失旧版学习日期、做题位置或打卡进度');
+    try {
+      readProgressBackup(JSON.stringify({ ...backup, progress: { ...legacy, checkin: { streak: '<img>' }, studyDays: [] } }));
+      fail('导入接受了无效的打卡字段');
+    } catch { /* 应拒绝格式损坏的备份 */ }
+  }
 }
 
 console.log('\n--- 每门每学期题数 ---');

@@ -1,30 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>小四门刷题 · 福州人教版</title>
-<meta name="description" content="福州人教版初中小四门（道德与法治、历史、地理、生物）碎片化刷题：选年级学期，自动排刷题顺序，错题按1/3/7/14天复习，每日打卡积分、错题清零、补打。">
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="stylesheet" href="./styles.css?v=7">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="福州人教版小四门刷题。按年级和学期练习道德与法治、历史、地理、生物，订正错题、跟踪进度和每日打卡。">
+  <title>小四门刷题 · 福州人教版</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/icon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css?v=8">
+  <script src="./data/daily-questions-xiaosimen.js?v=7" defer></script>
+  <script src="./app.js?v=8" defer></script>
 </head>
 <body>
-<div id="app">
-  <header class="topbar">
-    <div>
-      <h1>小四门刷题</h1>
-      <p class="subtitle">福州 · 人教版 · 道法 / 历史 / 地理 / 生物</p>
+  <a class="skip-link" href="#view">跳到主要内容</a>
+  <div id="app">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./" id="homeLink">
+          <img src="./assets/icons/icon.svg" width="42" height="42" alt="">
+          <span><b>小四门刷题</b><small>福州 · 人教版</small></span>
+        </a>
+        <div class="topbar-tools">
+          <a href="#searchPanel" id="headerSearch" hidden>找题</a>
+          <button class="header-button" type="button" id="progressButton">进度管理</button>
+          <span class="streak" id="streakBox" hidden>连续学习 <b id="streakDays">0</b> 天</span>
+        </div>
+      </div>
+    </header>
+    <main id="view" class="page" tabindex="-1">
+      <div class="card loading-card" role="status">正在加载题库…</div>
+      <noscript><p class="card">请启用 JavaScript，然后刷新页面开始练习。</p></noscript>
+    </main>
+    <footer class="foot">学习记录保存在当前浏览器。换设备或网址前，可在「进度管理」下载备份。</footer>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog class="dialog" id="progressDialog" aria-labelledby="progressTitle">
+    <div class="dialog-head">
+      <h2 id="progressTitle">进度管理</h2>
+      <form method="dialog"><button class="btn text-button" aria-label="关闭进度管理">关闭</button></form>
     </div>
-    <div class="streak" id="streakBox" title="有答题的每一天都算；打卡天数见下方打卡卡片">已坚持学习 <b id="streakDays">0</b> 天</div>
-  </header>
-
-  <main id="view"></main>
-
-  <footer class="foot">
-    <p>进度只保存在本机浏览器（localStorage），换设备会丢失。题库为选择题知识题，答案与解析以人教版教材为准。</p>
-  </footer>
-</div>
-<script src="./data/daily-questions-xiaosimen.js?v=7"></script>
-<script src="./app.js?v=7"></script>
+    <p class="muted">备份包含答题记录、错题、收藏、打卡积分和练习位置。文件只在本机处理。</p>
+    <div class="dialog-actions">
+      <button class="btn primary" id="exportBtn" type="button">下载备份</button>
+      <button class="btn" id="importBtn" type="button">选择备份文件</button>
+      <input type="file" id="importFile" accept=".json,application/json" hidden>
+    </div>
+    <p id="importMessage" class="muted" role="status"></p>
+    <div class="dialog-actions" id="importPreview" hidden>
+      <button class="btn primary" id="confirmImport" type="button">覆盖并导入</button>
+      <button class="btn" id="cancelImport" type="button">取消</button>
+    </div>
+    <p class="data-reset"><button class="btn text-button danger" id="resetBtn" type="button">清空本机进度</button></p>
+  </dialog>
+  <dialog class="dialog figure-dialog" id="figureDialog" aria-label="查看题目配图">
+    <form method="dialog"><button class="btn text-button" aria-label="关闭配图">关闭</button></form>
+    <img id="figureFull" alt="题目配图放大">
+    <p class="muted" id="figureSource"></p>
+  </dialog>
 </body>
 </html>

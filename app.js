@@ -6,7 +6,7 @@
 const STORAGE_KEY = 'xiaosimen-quiz-v1';
 const GROWTH_KEY = 'xiaosimen-growth-v1';
 const REVIEW_INTERVALS = [1, 3, 7, 14]; // 错题复习间隔（天）：答对进一级，答错退回第 1 级；连续答对 4 次算掌握
-// ---------- 打卡 / 积分 / 补打规则（见 DESIGN-checkin.md） ----------
+// ---------- 打卡 / 积分 / 补打规则 ----------
 const CHECKIN_POINTS = { checkin: 10, correct: 1, reviewCorrect: 2, accuracy90: 5, perfect: 10, weekFull: 30 };
 const POINT_MILESTONES = [
   { points: 100, name: '坚持者' }, { points: 300, name: '刷题达人' },
@@ -22,10 +22,10 @@ const MAKEUP_FRESH_TARGET = 40; // 补打当天要做 40 道新题（双倍量�
 const REMEDIATION_MODES = ['clearWrong', 'wrong', 'due', 'everWrong'];
 const SUBJECT_ORDER = ['daode', 'lishi', 'dili', 'shengwu'];
 const SUBJECTS = {
-  daode:   { label: '道德与法治', short: '道法', file: './data/daode.js',   global: 'XIAOSIMEN_BANKS' },
-  lishi:   { label: '历史',       short: '历史', file: './data/lishi.js',   global: 'XIAOSIMEN_BANKS' },
-  dili:    { label: '地理',       short: '地理', file: './data/dili.js',    global: 'XIAOSIMEN_BANKS' },
-  shengwu: { label: '生物',       short: '生物', file: './data/shengwu.js', global: 'XIAOSIMEN_BANKS' },
+  daode: { label: '道德与法治', short: '道法' },
+  lishi: { label: '历史', short: '历史' },
+  dili: { label: '地理', short: '地理' },
+  shengwu: { label: '生物', short: '生物' },
 };
 // 年级+学期，共 6 档。stage 是机器值，grade 是中文值，存在每道题上。
 const STAGES = [
@@ -80,9 +80,75 @@ function interleave(groups) {
 function dedupeById(list) { const seen = new Set(); return list.filter(q => { if (seen.has(q.id)) return false; seen.add(q.id); return true; }); }
 
 // ---------- 进度（localStorage） ----------
-function loadProgress() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { banks: {} }; } catch (e) { return { banks: {} }; } }
+function isRecord(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+function readStored(key) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key));
+    return isRecord(value) ? value : {};
+  } catch {
+    return {};
+  }
+}
+function loadProgress() {
+  const progress = readStored(STORAGE_KEY);
+  if (!isRecord(progress.banks)) progress.banks = {};
+  return progress;
+}
 function saveProgress(p) { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); }
 function qProgress(p, qid) { return (p.banks && p.banks[qid]) || null; }
+function hasAnswered(record) {
+  // 旧版查看解析会写入 done 和 revealed，已有 attempts 的记录仍是真实作答。
+  return !!(record?.done && (!record.revealed || record.attempts > 0));
+}
+function studyDates(progress) {
+  const dates = progress.studyDays ?? readStored(GROWTH_KEY).studyDays;
+  return Array.isArray(dates) ? dates : [];
+}
+function createProgressBackup() {
+  const progress = loadProgress();
+  return {
+    app: 'xiaosimen',
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    progress: { ...progress, studyDays: studyDates(progress) },
+  };
+}
+function readProgressBackup(text) {
+  const backup = JSON.parse(text);
+  const p = backup?.progress;
+  const date = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value);
+  const id = value => typeof value === 'string' && /^[a-z0-9-]+$/.test(value);
+  const count = value => Number.isSafeInteger(value) && value >= 0;
+  const strings = (value, validate) => Array.isArray(value) && value.every(validate);
+  const map = (value, key, item) => isRecord(value) && Object.entries(value).every(([k, v]) => key(k) && item(v));
+  const stage = value => Object.hasOwn(STAGE_MAP, value);
+  const c = p?.checkin;
+  const validCheckin = c === undefined || (isRecord(c) &&
+    ['streak', 'totalPoints', 'pointsToday'].every(k => c[k] === undefined || count(c[k])) &&
+    ['lastDate', 'lastMakeupDate', 'pointsDate', 'weekKey'].every(k => !c[k] || date(c[k])) &&
+    (c.weekDays === undefined || strings(c.weekDays, date)) &&
+    (c.badges === undefined || strings(c.badges, value => typeof value === 'string')) &&
+    (c.dayStats === undefined || (isRecord(c.dayStats) && date(c.dayStats.date) && map(c.dayStats.first, id, value => value === 0 || value === 1))) &&
+    (c.clear === undefined || (isRecord(c.clear) && date(c.clear.date) && strings(c.clear.done, id))) &&
+    (c.scored === undefined || map(c.scored, id, count)) &&
+    (c.makeup === undefined || (isRecord(c.makeup) && count(c.makeup.countThisMonth) && typeof c.makeup.month === 'string')));
+  const validRecords = isRecord(p?.banks) && Object.entries(p.banks).every(([key, value]) => {
+    if (!isRecord(value)) return false;
+    if (key === '__meta') return value.lastQuestionId === undefined || id(value.lastQuestionId);
+    return id(key) &&
+      ['done', 'revealed', 'correct', 'wrong', 'favorite', 'mastered'].every(k => value[k] === undefined || typeof value[k] === 'boolean') &&
+      ['attempts', 'wrongCount', 'lastAt'].every(k => value[k] === undefined || count(value[k])) &&
+      (value.srs == null || (isRecord(value.srs) && count(value.srs.stage) && value.srs.stage < REVIEW_INTERVALS.length && date(value.srs.due)));
+  });
+  if (backup?.app !== 'xiaosimen' || backup.version !== 1 || !validRecords || !validCheckin ||
+      !strings(p.studyDays, date) || (p.stage !== undefined && !stage(p.stage)) ||
+      (p.resumeByStage !== undefined && !map(p.resumeByStage, stage, value => value === null || id(value)))) {
+    throw new Error('无效的小四门进度备份');
+  }
+  return p;
+}
 // ---------- 打卡 / 积分（存在 progress.checkin 里） ----------
 // checkin: { lastDate, streak, totalPoints, pointsToday, pointsDate, badges:[], weekFull, weekKey, weekDays:[],
 //   dayStats:{ date, first:{qid:1/0} }, scored:{qid:分}, makeup:{ countThisMonth, month }, lastMakeupDate, clear:{ date, done:[qid] } }
@@ -100,15 +166,15 @@ function getCheckin(p) {
   if (!Array.isArray(p.checkin.weekDays)) p.checkin.weekDays = [];
   return p.checkin;
 }
-// 今日待清的错题：未掌握且有 SRS 记录的题（= 昨天错过的 + 到期要复习的），减去今天已清完的。
+// 今日先订正尚未答对的错题，再复习已到期的题。
 function clearWrongList(all, progress) {
   const c = getCheckin(progress);
+  const today = todayStr();
   const doneSet = new Set(c.clear.done || []);
   return all.filter(q => {
     const p = qProgress(progress, q.id);
     if (!p || p.mastered || !p.srs) return false;
-    if (doneSet.has(q.id)) return false;
-    return true;
+    return p.wrong || (!doneSet.has(q.id) && p.srs.due && p.srs.due <= today);
   }).sort((a, b) => {
     const pa = qProgress(progress, a.id), pb = qProgress(progress, b.id);
     const da = (pa.srs && pa.srs.due) || '9999', db = (pb.srs && pb.srs.due) || '9999';
@@ -122,7 +188,7 @@ function chapterStats(all, progress) {
     const key = q.subject + '|' + q.chapterId;
     if (!map[key]) map[key] = { subject: q.subject, subjectLabel: q.subjectLabel, chapterId: q.chapterId, chapter: q.chapter, attempted: 0, correct: 0 };
     const r = qProgress(progress, q.id);
-    if (r && r.done && !r.revealed) { map[key].attempted++; if (r.correct) map[key].correct++; }
+    if (hasAnswered(r)) { map[key].attempted++; if (r.correct) map[key].correct++; }
   }
   return Object.values(map);
 }
@@ -194,35 +260,49 @@ function sundayMock(all, progress) {
     return p && !p.mastered && (p.wrongCount || 0) > 0 && !(p.lastAt && p.lastAt >= weekStartMs);
   });
   const weakKeys = new Set(weakChapters(all, progress).map(w => w.subject + '|' + w.chapterId));
-  const weakQs = all.filter(q => weakKeys.has(q.subject + '|' + q.chapterId) && !((qProgress(progress, q.id) || {}).done));
-  const rest = all.filter(q => !((qProgress(progress, q.id) || {}).done));
+  const weakQs = all.filter(q => weakKeys.has(q.subject + '|' + q.chapterId) && !hasAnswered(qProgress(progress, q.id)));
+  const rest = all.filter(q => !hasAnswered(qProgress(progress, q.id)));
   return dedupeById([...shuffle(wrongThisWeek), ...shuffle(otherWrong), ...shuffle(weakQs), ...shuffle(rest)]).slice(0, 20);
 }
-function loadGrowth() { try { return JSON.parse(localStorage.getItem(GROWTH_KEY)) || { studyDays: [] }; } catch (e) { return { studyDays: [] }; } }
-function saveGrowth(g) { localStorage.setItem(GROWTH_KEY, JSON.stringify(g)); }
-function markStudiedToday() {
-  const g = loadGrowth(); const t = todayStr();
-  if (!g.studyDays.includes(t)) { g.studyDays.push(t); saveGrowth(g); }
-  return g.studyDays.length;
-}
-function streakDays() {
-  const g = loadGrowth(); const days = new Set(g.studyDays); let n = 0; const d = new Date();
-  while (true) { const s = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); if (!days.has(s)) break; n++; d.setDate(d.getDate() - 1); }
+function streakDays(progress = loadProgress()) {
+  const days = new Set(studyDates(progress));
+  let day = days.has(todayStr()) ? todayStr() : todayStr(-1);
+  let n = 0;
+  while (days.has(day)) {
+    n++;
+    day = addDays(day, -1);
+  }
   return n;
 }
 
 // ---------- 题库加载（懒加载 .js，全局变量合并） ----------
-const loadedScripts = new Set();
+const loadedScripts = new Map();
 function loadScript(src) {
-  if (loadedScripts.has(src)) return Promise.resolve();
-  return new Promise((resolve, reject) => {
-    const s = document.createElement('script'); s.src = src; s.onload = () => { loadedScripts.add(src); resolve(); }; s.onerror = reject;
-    document.head.appendChild(s);
-  });
+  if (!loadedScripts.has(src)) {
+    const request = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = () => {
+        script.remove();
+        loadedScripts.delete(src);
+        reject(new Error('无法加载题库 ' + src));
+      };
+      document.head.appendChild(script);
+    });
+    loadedScripts.set(src, request);
+  }
+  return loadedScripts.get(src);
 }
 async function ensureBanks(subjectKeys) {
-  for (const key of subjectKeys) await loadScript(SUBJECTS[key].file + '?v=7');
-  return window.XIAOSIMEN_BANKS || {};
+  await Promise.all(subjectKeys.map(key => loadScript(`./data/${key}.js?v=7`)));
+  const banks = window.XIAOSIMEN_BANKS || {};
+  const missing = subjectKeys.filter(key => !banks[key]?.questions?.length);
+  if (missing.length) {
+    missing.forEach(key => loadedScripts.delete(`./data/${key}.js?v=7`));
+    throw new Error('题库内容不完整');
+  }
+  return banks;
 }
 function allQuestions(banks, subjectKeys) {
   const out = [];
@@ -245,7 +325,7 @@ function dueQuestions(all, progress) {
 
 // ---------- 核心：自动刷题顺序 buildQueue(stage) ----------
 // 规则（也在 README.md 里写清楚）：
-//  1. 到期错题最先：SRS 到期（1/3/7 天）的题插在队首；
+//  1. 到期错题最先：SRS 到期（1/3/7/14 天）的题插在队首；
 //  2. 平时：当前学期新课按人教版章节顺序，四门轮着刷（interleave）；
 //  3. 初二下学期：新课后自动回滚复习七年级到八年级地理、生物（备战会考），
 //     包括地理/生物的总复习章（九上/九下章，内容是七、八年级总复习，提前用于会考冲刺）；
@@ -287,20 +367,19 @@ function buildQueue(stage, banks, progress) {
   }
   // 薄弱章节（正确率 <60%）的未做题优先插在新课前面，最多 10 道。
   const weakKeys = new Set(weakChapters(all, progress).map(w => w.subject + '|' + w.chapterId));
-  const weakQs = weakKeys.size ? all.filter(q => weakKeys.has(q.subject + '|' + q.chapterId) && !((qProgress(progress, q.id) || {}).done))
+  const weakQs = weakKeys.size ? [...current, ...review].filter(q => weakKeys.has(q.subject + '|' + q.chapterId) && !hasAnswered(qProgress(progress, q.id)))
     .sort((a, b) => (a.chapterId - b.chapterId) || (a.number - b.number)).slice(0, 10) : [];
   return dedupeById([...due, ...weakQs, ...current, ...review]);
 }
-// 按模式筛队列。注意：随机 20 题是真截取（原仓库的“随机20题”是假的，只 shuffle 不 slice）。
-function applyMode(queue, mode, progress) {
+function applyMode(queue, mode, progress, freshLimit = DAILY_FRESH_TARGET) {
   const p = progress || loadProgress();
-  const isDone = q => { const r = qProgress(p, q.id); return r && r.done; };
+  const isNew = q => !hasAnswered(qProgress(p, q.id));
   const isWrong = q => { const r = qProgress(p, q.id); return r && r.wrong; };
   const isFav = q => { const r = qProgress(p, q.id); return r && r.favorite; };
   switch (mode) {
     case 'random': return shuffle(queue);
-    case 'random20': return shuffle(queue).slice(0, 20);
-    case 'unfinished': return queue.filter(q => !isDone(q));
+    case 'random20': return shuffle(queue.filter(isNew)).slice(0, freshLimit);
+    case 'unfinished': return queue.filter(isNew);
     case 'wrong': return queue.filter(isWrong);
     case 'favorite': return queue.filter(isFav);
     case 'everWrong': return queue.filter(q => { const r = qProgress(p, q.id); return r && (r.wrong || (r.wrongCount || 0) > 0); });
@@ -310,15 +389,23 @@ function applyMode(queue, mode, progress) {
   }
 }
 function isSameSet(a, b) { if (!a || !b || a.length !== b.length) return false; const s = new Set(a); return b.every(x => s.has(x)); }
+function recordReveal(qid) {
+  const p = loadProgress();
+  const prev = p.banks[qid] || {};
+  if (hasAnswered(prev)) return;
+  p.banks[qid] = { ...prev, revealed: true };
+  saveProgress(p);
+}
 function recordAnswer(q, selected, correct, opts) {
-  const p = loadProgress(); p.banks = p.banks || {};
+  const p = loadProgress();
+  const today = todayStr();
   const prev = p.banks[q.id] || { attempts: 0, wrongCount: 0 };
-  const next = { ...prev, done: true, correct, wrong: !correct, selected: [...selected], attempts: (prev.attempts || 0) + 1, lastAt: Date.now() };
+  const next = { ...prev, done: true, revealed: false, correct, wrong: !correct, selected: [...selected], attempts: (prev.attempts || 0) + 1, lastAt: Date.now() };
   if (!correct) {
     next.wrongCount = (prev.wrongCount || 0) + 1;
     next.srs = { stage: 0, due: todayStr(REVIEW_INTERVALS[0]) }; // 明天复习
     next.mastered = false;
-  } else if (prev.srs && !prev.mastered) {
+  } else if (prev.srs?.due && prev.srs.due <= today && !prev.mastered) {
     const stage = (prev.srs.stage || 0) + 1;
     if (stage >= REVIEW_INTERVALS.length) { next.srs = null; next.mastered = true; }
     else next.srs = { stage, due: todayStr(REVIEW_INTERVALS[stage]) };
@@ -327,7 +414,7 @@ function recordAnswer(q, selected, correct, opts) {
   // ---- 积分：答对 +1，错题订正答对 +2；每题每天只计一次分 ----
   // ---- 当日新题首答正确率：只统计非订正模式的首答（订正题反复答会把正确率刷高） ----
   const mode = (opts && opts.mode) || 'all';
-  const remediation = REMEDIATION_MODES.includes(mode) || (prev.wrongCount || 0) > 0 || !!(prev.srs && !prev.mastered);
+  const remediation = REMEDIATION_MODES.includes(mode) || prev.wrong || !!(prev.srs && !prev.mastered);
   let points = 0;
   const c = getCheckin(p);
   if (correct && !c.scored[q.id]) {
@@ -335,440 +422,687 @@ function recordAnswer(q, selected, correct, opts) {
     c.scored[q.id] = points;
     c.totalPoints += points; c.pointsToday += points;
   }
-  if (!REMEDIATION_MODES.includes(mode) && mode !== 'sunday' && c.dayStats.first[q.id] === undefined) {
+  if (!hasAnswered(prev) && !REMEDIATION_MODES.includes(mode) && mode !== 'sunday' && c.dayStats.first[q.id] === undefined) {
     c.dayStats.first[q.id] = correct ? 1 : 0;
   }
-  saveProgress(p); markStudiedToday();
+  if (correct && remediation && !c.clear.done.includes(q.id)) c.clear.done.push(q.id);
+  if (!correct) c.clear.done = c.clear.done.filter(id => id !== q.id);
+  if (mode === 'all' && opts?.stage) p.resumeByStage = { ...p.resumeByStage, [opts.stage]: opts.nextId || null };
+  const dates = studyDates(p);
+  p.studyDays = dates.includes(today) ? dates : [...dates, today];
+  saveProgress(p);
   return { rec: next, points };
 }
 function toggleFavorite(qid) {
   const p = loadProgress(); p.banks = p.banks || {}; const prev = p.banks[qid] || {};
   p.banks[qid] = { ...prev, favorite: !prev.favorite }; saveProgress(p); return p.banks[qid].favorite;
 }
+function dailyQuestions() {
+  return window.DAILY_QUESTIONS_XIAOSIMEN?.questions || [];
+}
 // 每日一题：按日期轮换
 function dailyQuestion() {
-  const d = window.DAILY_QUESTIONS_XIAOSIMEN; if (!d || !d.questions || !d.questions.length) return null;
+  const questions = dailyQuestions();
+  if (!questions.length) return null;
+  const d = window.DAILY_QUESTIONS_XIAOSIMEN;
   const start = new Date(d.startDate + 'T00:00:00+08:00');
   const todayChina = new Date(todayStr() + 'T00:00:00+08:00'); // 按中国日期轮换
   const days = Math.max(0, Math.floor((todayChina - start) / 86400000));
-  return d.questions[days % d.questions.length];
+  return questions[days % questions.length];
 }
 
 // ---------- 界面 ----------
-const view = document.getElementById('view');
-const state = { stage: '7-up', mode: 'all', queue: [], idx: 0, selected: [], submitted: false, subjectFilter: '', chapterFilter: '', keyword: '', streakCorrect: 0, clearTotal: 0, clearPassed: 0 };
-const MODE_LABEL = { all: '按顺序', random: '随机顺序', random20: '每天 20 题', unfinished: '只做未做题', wrong: '错题本', everWrong: '曾错题', due: '今日待复习', favorite: '收藏题', clearWrong: '错题清零', sunday: '周日小测', daily: '每日一题', single: '单题' };
-const ENCOURAGE = ['已经连续答对 5 题了，状态正好，继续！', '连续答对 10 题，真稳。', '连续答对 15 题，今天的手感可以记下来。', '连续答对 20 题，照这个节奏，明天还能更好。', '还在连对，越刷越顺。'];
-// 轻提示：不打断刷题，3 秒自动消失
-let toastTimer = null;
-function toast(msg) {
-  let t = document.getElementById('toast');
-  if (!t) { t = document.createElement('div'); t.id = 'toast'; t.className = 'toast'; document.body.appendChild(t); }
-  t.textContent = msg; t.classList.add('show');
-  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+const byId = id => document.getElementById(id);
+const view = byId('view');
+const stagePref = progress => Object.hasOwn(STAGE_MAP, progress.stage) ? progress.stage : STAGES[0].stage;
+const state = {
+  stage: stagePref(loadProgress()), mode: 'all', queue: [], idx: 0, streakCorrect: 0,
+  keyword: '', searchSubject: '', clearPending: new Set(), clearTotal: 0, navOpen: false,
+};
+const MODE_LABEL = {
+  all: '按学期练习', random: '随机练习', random20: '今日新题', unfinished: '只做未做题',
+  wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
+  sunday: '周日小测', daily: '每日一题', single: '单题练习',
+};
+const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
+const STAGE_HINT = {
+  '7-up': '本学期新课按四科轮练。',
+  '7-down': '先练本学期新课，再复习七上内容。',
+  '8-up': '先练本学期新课，再复习七年级内容。',
+  '8-down': '八下新课后，继续复习地理和生物会考内容。',
+  '9-up': '道法、历史本学期新课和七、八年级复习。',
+  '9-down': '道法、历史新课和初中三年总复习。',
+};
+const TYPE_LABEL = { single: '单选题', multiple: '多选题', judge: '判断题' };
+const fmt = new Intl.NumberFormat('zh-CN');
+let banks;
+let bankQuestions = [];
+let library = [];
+let toastTimer;
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 }
-function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
-// 解析按句分段：原解析常是多句粘在一起，分段后好读
-function expParas(text) {
-  const parts = String(text || '').split(/(?<=。)/).map(p => p.trim()).filter(Boolean);
-  if (!parts.length) return '<p>（暂无解析）</p>';
-  return parts.map(p => `<p>${esc(p)}</p>`).join('');
+function icon(name, cls = '') {
+  return `<svg class="icon ${cls}" aria-hidden="true"><use href="./assets/icons/ui.svg#${name}"></use></svg>`;
 }
-function stageLabel(stage) { const s = STAGE_MAP[stage]; return s ? s.label : stage; }
-function refreshStreak() { const el = document.getElementById('streakDays'); if (el) el.textContent = String(streakDays()); }
-// ---------- 首页卡片：打卡 / 周日小测 / 今日错题速览 ----------
-// 下一枚徽章的进度环（小 SVG 圆环）
-function ringSVG(pct, size) {
-  const s = size || 26, r = 11, c = 2 * Math.PI * r;
-  const off = c * (1 - Math.min(100, Math.max(0, pct)) / 100);
-  return `<svg class="ring" width="${s}" height="${s}" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="${r}" fill="none" stroke="#e5e7eb" stroke-width="3"/><circle cx="13" cy="13" r="${r}" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 13 13)"/></svg>`;
+function meter(value, max, label, cls = '') {
+  return `<progress class="meter ${cls}" max="${max || 1}" value="${Math.min(value, max)}" aria-label="${esc(label)}"></progress>`;
 }
-// 徽章分组：已拿到的金色、下一枚带进度环、其余的收起
-function badgeGroupHTML(title, items) {
-  const got = items.filter(b => b.got);
-  const next = items.find(b => !b.got);
-  const rest = items.filter(b => !b.got && b !== next);
-  return `<div class="badge-group"><p class="muted">${title}</p><p>${got.map(b => `<span class="badge">🏅 ${esc(b.name)}</span>`).join('')}${next ? `<span class="badge next">${ringSVG(next.pct)}${esc(next.name)} · ${esc(next.req)}（还差 ${esc(next.left)}）</span>` : ''}</p>${rest.length ? `<details class="badge-more"><summary>其余 ${rest.length} 个</summary><p>${rest.map(b => `<span class="badge locked">🔒 ${esc(b.name)} · ${esc(b.req)}</span>`).join('')}</p></details>` : ''}</div>`;
+function toast(message) {
+  const el = byId('toast');
+  el.textContent = message;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 3500);
 }
-function checkinCardHTML(all, progress) {
-  const c = getCheckin(progress);
-  const st = checkinStatus(all, progress);
-  const nextM = POINT_MILESTONES.find(m => c.totalPoints < m.points);
-  const prevM = [...POINT_MILESTONES].reverse().find(m => c.totalPoints >= m.points);
-  const base = prevM ? prevM.points : 0;
-  const pct = nextM ? Math.min(100, Math.round((c.totalPoints - base) / (nextM.points - base) * 100)) : 100;
-  const madeUpToday = c.lastMakeupDate === todayStr();
-  let statusLine = '';
-  if (st.alreadyDone) statusLine = '今天已打卡 ✓ 明天继续来。';
-  else if (st.isMakeupDay && st.makeupAllowed) statusLine = `昨天漏打了，今天可以补打：先清错题，再做 ${MAKEUP_FRESH_TARGET} 道新题，补上后连续天数接上。本月已补打 ${st.makeupUsed}/${st.makeupLimit} 次。`;
-  else if (st.isMakeupDay) statusLine = `昨天漏打了，本月补打次数已用完（${st.makeupUsed}/${st.makeupLimit}），今天打卡连续天数将重新计算。`;
-  else if (st.gap >= 3 && c.lastDate) statusLine = `连续打卡已断开（漏了 ${st.gap - 1} 天），今天打卡重新开始。`;
-  else statusLine = '先清错题，再做 20 道新题，即可打卡。';
-  return `
-  <section class="card checkin">
-    <h2>今日打卡</h2>
-    ${c.totalPoints === 0 && c.streak === 0 ? '<p class="guide">👋 第一次来？今天先做 20 道新题就能打卡 +10 分，连续打卡每天还有加成。</p>' : ''}
-    <p class="checkin-nums">连续打卡 <b>${c.streak}</b> 天${madeUpToday ? ' <span class="tag">已补打</span>' : ''} · 总积分 <b>${c.totalPoints}</b> 分 · 今日已得 <b>${c.pointsToday}</b> 分</p>
-    <p class="muted">连续打卡只计按时打卡的天数；顶栏“已坚持学习”是有答题的每一天。</p>
-    <p class="muted">${nextM ? `距「${nextM.name}」还差 ${nextM.points - c.totalPoints} 分` : '已拿到最高称号「满分冲刺者」'}</p>
-    <div class="points-bar"><i style="width:${pct}%"></i></div>
-    <p>${esc(statusLine)}</p>
-    <p class="muted">${st.clearN > 0 ? `错题清零：还有 ${st.clearN} 道没过` : '错题清零：已清完 ✓'} · 今日新题：已做 ${st.freshDone}/${st.freshTarget} 道</p>
-    <div class="row">
-      ${st.alreadyDone ? '<p class="done-line">✓ 今日已打卡，明天继续来。</p>'
-        : st.clearN > 0 ? `<button class="btn primary" id="clearBtn">去清错题（${st.clearN} 道）→</button>`
-        : `<button class="btn primary" id="checkinBtn" ${st.canCheckin ? '' : 'disabled'}>${st.isMakeupDay && st.makeupAllowed ? '补打并打卡' : '打卡'}</button>`}
-    </div>
-    ${!st.alreadyDone && st.clearN === 0 && !st.canCheckin ? `<p class="muted">还差 ${st.freshTarget - st.freshDone} 道新题就能打卡</p>` : ''}
-    ${st.canCheckin && st.clearN === 0 && !st.alreadyDone ? '<p class="muted">可以打卡了！</p>' : ''}
-    <div class="badges">
-      ${badgeGroupHTML('积分称号', POINT_MILESTONES.map((m, i) => {
-        const b = i === 0 ? 0 : POINT_MILESTONES[i - 1].points;
-        return { name: m.name, req: `${m.points}分`, got: c.badges.includes(m.name), pct: Math.round((c.totalPoints - b) / (m.points - b) * 100), left: `${m.points - c.totalPoints} 分` };
-      }))}
-      ${badgeGroupHTML('连续徽章', STREAK_BADGES.map(b => ({ name: b.name, req: `连续${b.days}天`, got: c.badges.includes(b.name), pct: Math.round(c.streak / b.days * 100), left: `${b.days - c.streak} 天` })))}
-    </div>
-  </section>`;
-}
-function sundayCardHTML(all, progress) {
-  if (weekdayOf(todayStr()) !== 0) return '';
-  return `
-  <section class="card">
-    <h2>周日小测</h2>
-    <p class="muted">每周日一套 20 道混合卷：本周错题 + 薄弱章节 + 未做题。答对一样有积分，但不计入打卡的 20 道新题。</p>
-    <button class="btn small" id="sundayBtn">开始周测（20 道）</button>
-  </section>`;
-}
-function todayWrongCardHTML(all, progress) {
-  const startMs = Date.parse(todayStr() + 'T00:00:00+08:00');
-  const list = all.filter(q => { const p = qProgress(progress, q.id); return p && p.wrong && p.lastAt && p.lastAt >= startMs; });
-  if (!list.length) return '';
-  return `
-  <section class="card">
-    <h2>今日错题速览</h2>
-    <p class="muted">睡前回顾：只看题 + 答案，不计分、不计入打卡。今天共错 ${list.length} 道。</p>
-    ${list.slice(0, 8).map(q => `<div class="kv"><span>${esc(q.stem.slice(0, 42))}…</span><span class="ans-nowrap">答案：${esc(q.answer.join('、'))}</span></div>`).join('')}
-    <p><button class="btn small" id="reviewBtn">去订正这些错题 →</button></p>
-  </section>`;
-}
-async function renderHome() {
-  document.body.classList.remove('practice');
-  refreshStreak();
-  const banks = await ensureBanks(SUBJECT_ORDER);
-  const progress = loadProgress();
-  const all = allQuestions(banks, SUBJECT_ORDER);
-  const daily = dailyQuestion();
-  const dailyDone = daily ? !!qProgress(progress, daily.id) : false;
-  const counts = {};
-  for (const key of SUBJECT_ORDER) counts[key] = (banks[key] && banks[key].total) || 0;
-  const total = Object.values(counts).reduce((a, b) => a + b, 0);
-  const weak = weakChapters(all, progress);
-  // 每科已做数 / 正确率（“查看答案”的不计入正确率）
-  const subjStats = {};
-  for (const key of SUBJECT_ORDER) {
-    const qs = all.filter(q => q.subject === key);
-    let done = 0, correct = 0;
-    for (const q of qs) { const r = qProgress(progress, q.id); if (r && r.done && !r.revealed) { done++; if (r.correct) correct++; } }
-    subjStats[key] = { total: qs.length, done, correct };
+function persist(action) {
+  try {
+    return action();
+  } catch (error) {
+    console.error(error);
+    toast('当前浏览器无法保存学习记录，请检查站点存储权限。');
+    return undefined;
   }
-  const weakHTML = weak.length
-    ? `<h3>薄弱章节（正确率低于 60%，标红优先复习）</h3>` + weak.map(w => `<div class="kv weak"><span>${esc(w.subjectLabel)} · ${esc(w.chapter)}</span><span>${Math.round(w.correct / w.attempted * 100)}%（${w.correct}/${w.attempted}）</span></div>`).join('')
-    : `<p class="muted">暂无薄弱章节（每章至少做 3 道才统计）。</p>`;
+}
+function refreshStreak(progress) {
+  byId('streakDays').textContent = streakDays(progress);
+  byId('streakBox').hidden = false;
+}
+function moveFocus(element, scroll = false) {
+  if (scroll) window.scrollTo(0, 0);
+  element?.focus({ preventScroll: true });
+}
+function expParas(text) {
+  const parts = String(text || '').split(/(?<=。)|\n/).map(p => p.trim()).filter(Boolean);
+  return parts.length ? parts.map(p => `<p>${esc(p)}</p>`).join('') : '<p>暂无解析</p>';
+}
+function subjectChip(key, label) {
+  return `<span class="chip tone-${esc(key)}">${esc(label || SUBJECTS[key]?.label || '')}</span>`;
+}
+function displayAnswer(q) {
+  return q.type === 'judge' ? (q.answer[0] === 'true' ? '正确' : '错误') : q.answer.join('、');
+}
+function resumeIndex(queue, progress) {
+  const stage = state.stage;
+  if (Object.hasOwn(progress.resumeByStage || {}, stage)) {
+    return Math.max(0, queue.findIndex(q => q.id === progress.resumeByStage[stage]));
+  }
+  const last = queue.findIndex(q => q.id === progress.banks.__meta?.lastQuestionId);
+  return (last + 1) % (queue.length || 1);
+}
+function keepPosition(qid) {
+  if (state.mode !== 'all') return;
+  persist(() => {
+    const p = loadProgress();
+    p.resumeByStage = { ...p.resumeByStage, [state.stage]: qid };
+    saveProgress(p);
+  });
+}
+
+function checkinCardHTML(progress, stats) {
+  const c = getCheckin(progress);
+  const canMakeup = stats.isMakeupDay && stats.makeupAllowed;
+  const needed = Math.max(0, stats.freshTarget - stats.freshDone);
+  const activeStreak = stats.gap <= 1 || canMakeup ? c.streak : 0;
+  let action;
+  if (stats.alreadyDone) {
+    action = '<p class="checked-in">✓ 今天已打卡</p>';
+  } else if (stats.clearN) {
+    action = `<button class="btn primary" data-mode="clearWrong">订正 ${stats.clearN} 道错题 ${icon('arrow-right')}</button>`;
+  } else if (stats.canCheckin) {
+    action = `<button class="btn primary" id="checkinBtn">${canMakeup ? '补打并打卡' : '立即打卡'} ${icon('check')}</button>`;
+  } else {
+    action = `<button class="btn primary" data-mode="random20">去做今日新题 ${icon('arrow-right')}</button>`;
+  }
+  let note = '先订正错题，再完成今日新题。';
+  if (stats.alreadyDone) note = c.lastMakeupDate === todayStr() ? '今日已补上昨天的打卡。' : '明天继续完成新题。';
+  else if (canMakeup) note = `昨天漏打，今天完成 ${stats.freshTarget} 道新题可补打。`;
+  else if (stats.isMakeupDay) note = '本月补打次数已用完，今天重新累计。';
+  else if (stats.canCheckin) note = '今日任务完成，可以领取打卡积分。';
+  const next = POINT_MILESTONES.find(m => c.totalPoints < m.points);
+  const badgeList = [
+    ...POINT_MILESTONES.map(b => ({ name: b.name, requirement: `${b.points} 分` })),
+    ...STREAK_BADGES.map(b => ({ name: b.name, requirement: `连续 ${b.days} 天` })),
+  ];
+  return `
+    <section class="card checkin-card" aria-labelledby="checkinTitle">
+      <div class="section-heading">
+        <h2 id="checkinTitle">${icon('calendar-check')} 今日打卡</h2>
+        <span class="checkin-total">${fmt.format(c.totalPoints)} 积分</span>
+      </div>
+      <div class="checkin-progress">
+        <div class="progress-label"><span>今日新题</span><strong>${Math.min(stats.freshDone, stats.freshTarget)}<span> / ${stats.freshTarget}</span></strong></div>
+        ${meter(stats.freshDone, stats.freshTarget, '今日新题进度')}
+        <p class="muted">${esc(note)}</p>
+      </div>
+      ${action}
+      <div class="checkin-footer"><span>${icon('flame')} 打卡连续 <b>${activeStreak}</b> 天</span><span>今日积分 <b>+${c.pointsToday}</b></span></div>
+      <details class="badges">
+        <summary>称号与徽章</summary>
+        <p class="muted mobile-study-streak">已连续学习 ${streakDays(progress)} 天，按有作答的日期计算。</p>
+        <p class="muted">${next ? `距「${next.name}」还差 ${next.points - c.totalPoints} 分。` : '已获得最高积分称号。'}</p>
+        <ul class="badges-list">${badgeList.map(b => `<li>${c.badges.includes(b.name) ? '✓ ' : ''}${b.name}<span>${b.requirement}</span></li>`).join('')}</ul>
+      </details>
+    </section>`;
+}
+
+function studyHeroHTML(queue, progress) {
+  const idx = resumeIndex(queue, progress);
+  const subjects = activeSubjectsForStage(state.stage);
+  return `
+    <section class="study-hero">
+      <img class="hero-art" src="./assets/study-desk.webp" alt="" width="960" height="640" fetchpriority="high">
+      <div class="hero-content">
+        <div class="stage-field">
+          <label for="stageSelect">年级学期</label>
+          <select id="stageSelect">${STAGES.map(s => `<option value="${s.stage}" ${s.stage === state.stage ? 'selected' : ''}>${s.label}</option>`).join('')}</select>
+        </div>
+        <h1 id="homeTitle" tabindex="-1">${idx > 0 ? '继续练习' : '按学期刷题'}</h1>
+        <p class="hero-meta">${subjects.map(k => SUBJECTS[k].short).join(' · ')} <span> / </span> ${fmt.format(queue.length)} 道</p>
+        <div class="hero-actions">
+          <button class="btn hero-primary" id="startBtn" data-mode="all">${idx > 0 ? '继续练习' : '开始练习'} ${icon('arrow-right')}</button>
+          <button class="btn hero-secondary" data-mode="random">${icon('shuffle')} 随机练习</button>
+        </div>
+        <p class="hero-hint">${idx > 0 ? `上次练到第 ${idx + 1} 题` : STAGE_HINT[state.stage]}</p>
+      </div>
+    </section>`;
+}
+function quickModesHTML(queue, progress) {
+  const options = [
+    { name: '只做未做题', mode: 'unfinished', q: queue, icon: 'list-checks', tone: 'shengwu' },
+    { name: '错题本', mode: 'wrong', q: library, icon: 'notebook-pen', tone: 'lishi' },
+    { name: '到期复习', mode: 'due', q: library, icon: 'calendar-check', tone: 'dili' },
+    { name: '收藏题', mode: 'favorite', q: library, icon: 'bookmark', tone: 'daode' },
+  ];
+  return `
+    <section class="quick-section" aria-labelledby="modesTitle">
+      <div class="section-heading"><h2 id="modesTitle">练习模式</h2></div>
+      <div class="quick-grid">
+        ${options.map(entry => `<button class="quick-card tone-${entry.tone}" data-mode="${entry.mode}">
+          <span class="tile-icon">${icon(entry.icon)}</span>
+          <span class="quick-name"><strong>${entry.name}</strong><small>${fmt.format(applyMode(entry.q, entry.mode, progress).length)} 道</small></span>
+          ${icon('chevron-right', 'quick-arrow')}
+        </button>`).join('')}
+      </div>
+    </section>`;
+}
+function subjectProgressHTML(progress) {
+  const weak = weakChapters(bankQuestions, progress);
+  return `
+    <section class="card subject-card" aria-labelledby="subjectTitle">
+      <div class="section-heading"><h2 id="subjectTitle">四科进度</h2><span class="muted">题库共 ${fmt.format(bankQuestions.length)} 道</span></div>
+      <div class="subject-grid">
+      ${SUBJECT_ORDER.map(key => {
+        const items = banks[key].questions;
+        const answered = items.map(q => qProgress(progress, q.id)).filter(hasAnswered);
+        const acc = answered.length ? Math.round(answered.filter(r => r.correct).length / answered.length * 100) + '%' : '—';
+        return `<article class="subject-entry tone-${key}">
+          <div class="subject-heading"><span class="tile-icon">${icon(SUBJECT_ICON[key])}</span><div><h3>${SUBJECTS[key].label}</h3><p>${EXAM_STAGE[key] === '8-down' ? '初二会考' : '初三中考'}</p></div></div>
+          ${meter(answered.length, items.length, SUBJECTS[key].label + '练习进度')}
+          <div class="subject-stats"><span>已做 ${answered.length} / ${items.length}</span><span>正确率 ${acc}</span></div>
+        </article>`;
+      }).join('')}
+      </div>
+      ${weak.length ? `<details class="weak-chapters"><summary>薄弱章节（${weak.length}）</summary>
+        <ul>${weak.map(w => `<li><span>${esc(w.subjectLabel)} · ${esc(w.chapter)}</span><strong>${Math.round(w.correct / w.attempted * 100)}%</strong></li>`).join('')}</ul>
+      </details>` : ''}
+    </section>`;
+}
+function dailyCardHTML(progress) {
+  const q = dailyQuestion();
+  return `
+    <section class="card daily-card" aria-labelledby="dailyTitle">
+      <div class="section-heading"><h2 id="dailyTitle">${icon('book-open')} 每日一题</h2><span class="muted">${todayStr().slice(5).replace('-', ' / ')}</span></div>
+      ${q ? `<div>${subjectChip(q.subject, q.subjectLabel)}</div>
+        <p class="daily-stem">${esc(q.stem)}</p>
+        <button class="btn" id="dailyBtn">${hasAnswered(qProgress(progress, q.id)) ? '重做今日一题' : '做今日一题'} ${icon('arrow-right')}</button>`
+        : '<p class="muted">每日一题暂未加载。</p>'}
+    </section>`;
+}
+function reviewCardsHTML(progress) {
+  const since = Date.parse(todayStr() + 'T00:00:00+08:00');
+  const wrong = library.filter(q => {
+    const p = qProgress(progress, q.id);
+    return p?.wrong && p.lastAt >= since;
+  });
+  const sunday = weekdayOf(todayStr()) === 0;
+  return `
+    ${sunday ? `<section class="card mini-card"><div><h2>周日小测</h2><p class="muted">本周错题、薄弱章节和未做题，共 20 道。</p></div><button class="btn" data-mode="sunday">开始小测 ${icon('arrow-right')}</button></section>` : ''}
+    ${wrong.length ? `<details class="card wrong-today"><summary>今日错题速览 <span class="muted">${wrong.length} 道</span></summary>
+      <ol>${wrong.slice(0, 8).map(q => `<li><span>${esc(q.stem)}</span><strong>答案 ${esc(displayAnswer(q))}</strong></li>`).join('')}</ol>
+      <button class="btn" data-mode="clearWrong">去订正 ${icon('arrow-right')}</button>
+    </details>` : ''}`;
+}
+function renderHome(focus = '') {
+  if (!banks) return;
+  document.body.classList.remove('practice');
+  const progress = loadProgress();
+  const queue = buildQueue(state.stage, banks, progress);
+  refreshStreak(progress);
+  byId('headerSearch').hidden = false;
   view.innerHTML = `
-  ${checkinCardHTML(all, progress)}
-  <section class="card">
-    <h2>1 · 选年级和学期</h2>
-    <p class="muted">选完自动排刷题顺序：到期错题最先 → 本学期新课四门轮刷 → 到考前自动回滚复习。</p>
-    <div class="grid">${STAGES.map(s => `
-      <button class="btn ${state.stage === s.stage ? 'selected' : ''}" data-stage="${s.stage}">
-        ${esc(s.label)}<span class="sub">${s.stage === '8-down' ? '地理、生物会考前' : s.stage === '9-down' ? '道法、历史中考前总复习' : '新课 + 前面内容复习'}</span>
-      </button>`).join('')}</div>
-    <p class="muted" id="stageHint"></p>
-  </section>
-  <section class="card">
-    <h2>2 · 开始刷题</h2>
-    <div class="row">
-      <button class="btn primary" id="startBtn">按这个顺序开始做 →</button>
-      <button class="btn small" id="start20Btn">每天 20 题</button>
+    <div class="dashboard-top">
+      ${studyHeroHTML(queue, progress)}
+      ${checkinCardHTML(progress, checkinStatus(library, progress))}
     </div>
-    <div class="row" style="margin-top:8px">
-      <button class="btn small" data-mode="random">随机顺序</button>
-      <button class="btn small" data-mode="unfinished">只做未做题</button>
-      <button class="btn small" data-mode="wrong">错题本</button>
-      <button class="btn small" data-mode="due">今日待复习</button>
-      <button class="btn small" data-mode="favorite">收藏题</button>
+    ${quickModesHTML(queue, progress)}
+    <div class="dashboard-lower">
+      ${subjectProgressHTML(progress)}
+      <div class="daily-column">${dailyCardHTML(progress)}${reviewCardsHTML(progress)}</div>
     </div>
-    <p class="muted">当前档：<b id="curStage">${esc(stageLabel(state.stage))}</b> · 自动包含科目：${activeSubjectsForStage(state.stage).map(k => SUBJECTS[k].label).join('、')}</p>
-    <div id="queueInfo" class="muted"></div>
-  </section>
-  <section class="card">
-    <h2>每日一题</h2>
-    ${daily ? `<p class="clamp2"><b>[${esc(daily.subjectLabel || daily.subject || '')}]</b> ${esc(daily.stem)}</p>
-    <p class="muted">${dailyDone ? '今天这道已做过' : '每天一题，按日期轮换'}</p>
-    <button class="btn small" id="dailyBtn">做今日一题</button>` : '<p class="muted">暂无每日一题</p>'}
-  </section>
-  ${sundayCardHTML(all, progress)}
-  ${todayWrongCardHTML(all, progress)}
-  <section class="card">
-    <h2>题库与进度</h2>
-    ${SUBJECT_ORDER.map(k => { const st2 = subjStats[k]; const pct2 = st2.total ? Math.round(st2.done / st2.total * 100) : 0; const acc = st2.done ? Math.round(st2.correct / st2.done * 100) : null;
-      return `<div class="subj-row">
-      <div class="subj-head"><span class="subj-dot" style="background:var(--subj-${k})"></span><b>${esc(SUBJECTS[k].label)}</b><span class="muted">已做 ${st2.done}/${st2.total} · 正确率 ${acc === null ? '—' : acc + '%'} · ${EXAM_STAGE[k] === '8-down' ? '初二会考' : '初三中考'}</span></div>
-      <div class="progress subj-bar"><i style="width:${pct2}%;background:var(--subj-${k})"></i></div>
-    </div>`; }).join('')}
-    <div class="kv"><span>合计</span><span>${total} 道选择题</span></div>
-    ${weakHTML}
-    <h3>按章节 / 关键词找题</h3>
-    <input type="search" id="searchBox" placeholder="搜章节、题干、知识点，如：地球、宪法、秦始皇" value="${esc(state.keyword)}">
-    <div id="searchOut" style="margin-top:8px"></div>
-    <p style="margin-top:12px"><button class="btn small" id="resetBtn">清空本机进度</button></p>
-  </section>`;
-  document.querySelectorAll('[data-stage]').forEach(b => b.addEventListener('click', () => { state.stage = b.dataset.stage; renderHome(); }));
-  document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => startPractice(b.dataset.mode)));
-  const clearBtn = document.getElementById('clearBtn');
-  if (clearBtn) clearBtn.addEventListener('click', () => startPractice('clearWrong'));
-  const reviewBtn = document.getElementById('reviewBtn');
-  if (reviewBtn) reviewBtn.addEventListener('click', () => startPractice('clearWrong'));
-  const sundayBtn = document.getElementById('sundayBtn');
-  if (sundayBtn) sundayBtn.addEventListener('click', () => startPractice('sunday'));
-  const checkinBtn = document.getElementById('checkinBtn');
-  if (checkinBtn) checkinBtn.addEventListener('click', () => {
-    const res = doCheckin(all, loadProgress());
-    if (!res.ok) { toast('还不能打卡：先清错题，再做满今日新题。'); return; }
-    let msg = `${res.isMakeup ? '补打成功！' : '打卡成功！'}+${res.points} 分（打卡 ${res.breakdown.checkin} + 连续加成 ${res.breakdown.streakBonus}${res.breakdown.accBonus ? ' + 正确率奖励 ' + res.breakdown.accBonus : ''}${res.breakdown.weekBonus ? ' + 全勤 ' + res.breakdown.weekBonus : ''}），连续打卡 ${res.streak} 天`;
-    if (res.newBadges.length) msg += `，新徽章：${res.newBadges.join('、')}`;
-    toast(msg);
+    <section class="card search-card" id="searchPanel" aria-labelledby="searchTitle">
+      <div class="section-heading"><h2 id="searchTitle">${icon('search')} 按章节或关键词找题</h2></div>
+      <div class="search-fields">
+        <input type="search" id="searchBox" aria-label="题目关键词" placeholder="试试输入「宋代」或「等高线」" value="${esc(state.keyword)}">
+        <select id="searchSubject" aria-label="搜索科目">
+          <option value="">全部科目</option>
+          ${SUBJECT_ORDER.map(key => `<option value="${key}" ${state.searchSubject === key ? 'selected' : ''}>${SUBJECTS[key].label}</option>`).join('')}
+        </select>
+      </div>
+      <p class="muted" id="searchStatus" role="status"></p>
+      <div id="searchOut" class="search-results"></div>
+    </section>`;
+  byId('stageSelect').addEventListener('change', event => {
+    state.stage = event.target.value;
+    persist(() => {
+      const latest = loadProgress();
+      latest.stage = state.stage;
+      saveProgress(latest);
+    });
+    renderHome('stageSelect');
+  });
+  view.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => startPractice(btn.dataset.mode)));
+  byId('dailyBtn')?.addEventListener('click', () => beginPractice([dailyQuestion()], 'daily'));
+  byId('checkinBtn')?.addEventListener('click', () => {
+    const res = persist(() => doCheckin(library, loadProgress()));
+    if (!res) return;
+    if (!res.ok) { toast('请先完成今日打卡任务。'); renderHome(); return; }
+    toast(`${res.isMakeup ? '补打成功' : '打卡成功'}，+${res.points} 分${res.newBadges.length ? ' · 获得「' + res.newBadges.join('、') + '」' : ''}`);
     renderHome();
   });
-  document.getElementById('startBtn').addEventListener('click', () => startPractice('all'));
-  document.getElementById('start20Btn').addEventListener('click', () => startPractice('random20'));
-  document.getElementById('dailyBtn').addEventListener('click', () => { if (daily) { state.queue = [daily]; state.idx = 0; state.mode = 'daily'; renderPractice(); } });
-  document.getElementById('resetBtn').addEventListener('click', () => { if (confirm('确定清空本机所有刷题进度吗？')) { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem(GROWTH_KEY); renderHome(); } });
-  const searchBox = document.getElementById('searchBox');
-  searchBox.addEventListener('input', () => { state.keyword = searchBox.value; doSearch(banks); });
-  updateQueueInfo(banks, progress);
-  if (state.keyword) doSearch(banks);
+  byId('searchBox').addEventListener('input', event => { state.keyword = event.target.value; doSearch(); });
+  byId('searchSubject').addEventListener('change', event => { state.searchSubject = event.target.value; doSearch(); });
+  byId('searchOut').addEventListener('click', event => {
+    const id = event.target.closest('button[data-qid]')?.dataset.qid;
+    if (id) beginPractice([bankQuestions.find(q => q.id === id)], 'single');
+  });
+  doSearch();
+  if (focus) moveFocus(byId(focus), focus === 'homeTitle');
 }
-function updateQueueInfo(banks, progress) {
-  const el = document.getElementById('queueInfo'); if (!el) return;
-  const q = buildQueue(state.stage, banks, progress);
-  const dueN = dueQuestions(allQuestions(banks, activeSubjectsForStage(state.stage)), progress).length;
-  const orderNote = state.stage === '8-down' ? '先刷八下新课，再回滚复习七、八年级地理、生物，备战会考。'
-    : state.stage === '9-down' ? '先刷九下道法、历史新课，再进七到九年级道法、历史总复习。'
-    : state.stage === '9-up' ? '只刷道法、历史新课，之后复习七、八年级道法、历史。'
-    : '先刷本学期新课（四门轮着刷），再复习前面学期的内容。';
-  el.textContent = `这个档自动排好 ${q.length} 道题（含到期错题 ${dueN} 道在最前面）。${orderNote}`;
-  const hint = document.getElementById('stageHint');
-  if (hint) hint.textContent = state.stage === '8-down' ? '本学期末地理、生物会考：刷完八下新课会自动回滚七、八年级地理、生物。'
-    : (state.stage === '9-up' || state.stage === '9-down') ? '地理、生物已考完，本档只排道法、历史。'
-    : '本学期新课四门轮着刷，前面学过的内容也会排在后面复习。';
+function doSearch() {
+  const kw = state.keyword.trim().normalize('NFKC').toLowerCase();
+  const status = byId('searchStatus');
+  const out = byId('searchOut');
+  if (!kw) { status.textContent = ''; out.replaceChildren(); return; }
+  const hits = bankQuestions.filter(q =>
+    (!state.searchSubject || q.subject === state.searchSubject) &&
+    [q.chapter, q.stem, q.material || '', q.explanation || ''].some(text => text.normalize('NFKC').toLowerCase().includes(kw)));
+  status.textContent = hits.length ? `找到 ${hits.length} 道${hits.length > 20 ? '，显示前 20 道' : ''}` : '没有找到相关题目。试试更短的关键词。';
+  out.innerHTML = hits.slice(0, 20).map(q => `<article class="search-hit">
+    <div>${subjectChip(q.subject)} <span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
+    <button class="btn" data-qid="${q.id}">做这道 ${icon('arrow-right')}</button>
+  </article>`).join('');
 }
-function doSearch(banks) {
-  const out = document.getElementById('searchOut'); if (!out) return;
-  const kw = (state.keyword || '').trim(); if (!kw) { out.innerHTML = ''; return; }
-  const all = allQuestions(banks, SUBJECT_ORDER);
-  const hits = all.filter(q => (q.chapter + q.stem + (q.material || '') + (q.explanation || '')).includes(kw)).slice(0, 20);
-  out.innerHTML = hits.length ? hits.map(q => `<div class="kv"><span>[${esc(q.subjectLabel)} · ${esc(q.chapter)}] ${esc(q.stem.slice(0, 60))}…</span><button class="btn small" data-qid="${esc(q.id)}">做这道</button></div>`).join('') : '<p class="muted">没找到相关题目，换个关键词试试。</p>';
-  out.querySelectorAll('[data-qid]').forEach(b => b.addEventListener('click', () => {
-    const q = all.find(x => x.id === b.dataset.qid); if (q) { state.queue = [q]; state.idx = 0; state.mode = 'single'; renderPractice(); }
-  }));
-}
-async function startPractice(mode) {
-  const banks = await ensureBanks(SUBJECT_ORDER);
+
+function startPractice(mode) {
   const progress = loadProgress();
-  const all = allQuestions(banks, SUBJECT_ORDER);
-  let queue;
-  if (mode === 'clearWrong') {
-    queue = clearWrongList(all, progress);
-    if (!queue.length) { toast('今天的错题已经清零了，去做 20 道新题吧。'); return; }
-    state.clearTotal = queue.length; state.clearPassed = 0;
-  } else if (mode === 'sunday') {
-    queue = sundayMock(all, progress);
-    if (!queue.length) { alert('今天没有可出的周测题。'); return; }
-  } else {
-    // 每天第一次进练习（批量刷题模式），先清错题：不清完不让刷新的。
-    // 每日一题、单题查找是单次查看，不拦截；错题本/待复习本身就是订正，也不拦截。
-    const clearN = clearWrongList(all, progress).length;
-    if (clearN > 0 && ['all', 'random', 'random20', 'unfinished', 'favorite'].includes(mode)) {
-      toast(`先清错题：今天还有 ${clearN} 道错题没过，先把它们做对再刷新的。`);
-      startPractice('clearWrong'); return;
-    }
-    const base = buildQueue(state.stage, banks, progress);
-    queue = applyMode(base, mode, progress);
+  const clear = clearWrongList(library, progress);
+  const studyMode = ['all', 'random', 'random20', 'unfinished'].includes(mode);
+  if (mode === 'clearWrong' || (studyMode && clear.length)) {
+    if (!clear.length) { toast('今天的错题已经订正完了。'); return; }
+    if (mode !== 'clearWrong') toast(`先订正 ${clear.length} 道错题，再继续练习。`);
+    beginPractice(clear, 'clearWrong');
+    return;
   }
-  if (!queue.length) { alert(mode === 'wrong' ? '错题本还是空的，先去刷题吧。' : mode === 'due' ? '今天没有到期要复习的错题。' : '这个模式下没有题目。'); return; }
-  state.mode = mode; state.queue = queue; state.idx = 0;
-  // 断点续做：回到上次没做完的那道（错题清零每次从头清）
-  const lastId = (progress.banks && progress.banks.__meta && progress.banks.__meta.lastQuestionId) || '';
-  const li = mode === 'clearWrong' ? -1 : queue.findIndex(q => q.id === lastId);
-  if (li > 0) state.idx = li;
+  let queue;
+  if (mode === 'sunday') {
+    queue = sundayMock(bankQuestions, progress);
+  } else if (['wrong', 'due', 'favorite'].includes(mode)) {
+    queue = applyMode(library, mode, progress);
+  } else {
+    const base = buildQueue(state.stage, banks, progress);
+    const stats = mode === 'random20' ? checkinStatus(library, progress) : null;
+    const remaining = stats ? Math.max(0, stats.freshTarget - stats.freshDone) : undefined;
+    if (remaining === 0) { renderHome(); toast('今日新题已完成。'); return; }
+    queue = applyMode(base, mode, progress, remaining);
+  }
+  if (!queue.length) {
+    const empty = {
+      wrong: '错题本是空的。', favorite: '还没有收藏题目。', due: '今天没有到期的错题。',
+      random20: '本档新题已做完，可切换学期继续。', unfinished: '本档题目已全部作答。',
+    };
+    toast(empty[mode] || '当前没有可练习的题目。');
+    return;
+  }
+  beginPractice(queue, mode, mode === 'all' ? resumeIndex(queue, progress) : 0);
+}
+function beginPractice(queue, mode, index = 0) {
+  if (!queue[index]) return;
+  state.mode = mode;
+  state.queue = queue;
+  state.idx = index;
+  state.streakCorrect = 0;
+  state.navOpen = false;
+  state.clearPending = new Set(mode === 'clearWrong' ? queue.map(q => q.id) : []);
+  state.clearTotal = state.clearPending.size;
   renderPractice();
 }
-// ---------- 题目配图（data/figures.js + data/figures-2.js，base64 data URI，按题 id 映射） ----------
-// 图只在带 image: true 的题上按需懒加载；点图放大查看，点任意处关闭。
-async function showFigure(q) {
-  const qid = q.id;
-  const box = document.getElementById('qfig'); if (!box) return;
-  try {
-    if (!window.XIAOSIMEN_FIGURES) await loadScript('./data/figures.js?v=7');
-    try { await loadScript('./data/figures-2.js?v=7'); } catch (e) { /* 续图文件缺失时只影响新增图 */ }
-    // 用户可能已跳到下一题：只给当前这道题填图。
-    if (!state.queue[state.idx] || state.queue[state.idx].id !== qid) return;
-    const src = window.XIAOSIMEN_FIGURES && window.XIAOSIMEN_FIGURES[qid];
-    if (!src) { box.innerHTML = '<p class="muted">本题配图暂未加载</p>'; return; }
-    box.innerHTML = '';
-    const wrap = document.createElement('div'); wrap.className = 'fig-wrap';
-    const img = document.createElement('img');
-    img.src = src; img.alt = '题目配图（点开放大）'; img.className = 'qfig-img';
-    img.addEventListener('click', () => openFigureZoom(src, q.source));
-    const zoomBtn = document.createElement('button'); zoomBtn.type = 'button'; zoomBtn.className = 'fig-zoom-btn'; zoomBtn.textContent = '🔍 放大';
-    zoomBtn.addEventListener('click', (e) => { e.stopPropagation(); openFigureZoom(src, q.source); });
-    wrap.appendChild(img); wrap.appendChild(zoomBtn); box.appendChild(wrap);
-    const tip = document.createElement('p'); tip.className = 'muted'; tip.textContent = '点图可放大查看';
-    box.appendChild(tip);
-  } catch (e) { box.innerHTML = '<p class="muted">本题配图加载失败</p>'; }
+
+function renderFigure(q) {
+  if (!q.image) return;
+  const wrap = byId('qfig');
+  const src = `./data/figures/${encodeURIComponent(q.id)}.jpg`;
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'figure-button';
+  btn.innerHTML = `<img alt="题目配图" decoding="async"><span>${icon('zoom-in')} 放大配图</span>`;
+  const img = btn.querySelector('img');
+  img.addEventListener('error', () => {
+    const retry = document.createElement('button');
+    retry.type = 'button';
+    retry.className = 'btn';
+    retry.textContent = '配图加载失败 · 点击重试';
+    retry.addEventListener('click', () => renderFigure(q));
+    wrap.replaceChildren(retry);
+  });
+  img.src = src;
+  btn.addEventListener('click', () => {
+    byId('figureFull').src = src;
+    byId('figureSource').textContent = q.source || '';
+    byId('figureDialog').showModal();
+  });
+  wrap.replaceChildren(btn);
 }
-function openFigureZoom(src, source) {
-  let ov = document.getElementById('figOverlay');
-  if (!ov) {
-    ov = document.createElement('div'); ov.id = 'figOverlay'; ov.className = 'fig-overlay';
-    ov.innerHTML = '<img id="figZoomImg" alt="题目配图（放大）"><p class="fig-overlay-tip" id="figOverlayTip">点任意处关闭</p>';
-    ov.addEventListener('click', () => { ov.classList.remove('open'); });
-    document.body.appendChild(ov);
-  }
-  document.getElementById('figZoomImg').src = src;
-  const tip = document.getElementById('figOverlayTip');
-  if (tip) tip.textContent = '点任意处关闭' + (source ? ' · 来源：' + source : '');
-  ov.classList.add('open');
+function questionStats(progress) {
+  if (state.mode === 'clearWrong') return `已订正 ${state.clearTotal - state.clearPending.size} / ${state.clearTotal} 道`;
+  const attempted = state.queue.map(q => qProgress(progress, q.id)).filter(hasAnswered);
+  if (!attempted.length) return '';
+  return `本组已做 ${attempted.length} 道 · 正确率 ${Math.round(attempted.filter(r => r.correct).length / attempted.length * 100)}%`;
 }
-// 队列进度文案：当前题号 + 已做/正确率（“查看答案”的不计入正确率）
-function queueProgressText() {
+function goToQuestion(idx) {
+  state.idx = idx;
+  keepPosition(state.queue[idx].id);
+  renderPractice();
+}
+function renderAnswerSheet(page = Math.floor(state.idx / 40), previous = null) {
+  const grid = byId('qNav');
   const total = state.queue.length;
+  const pageSize = 40;
+  const end = Math.min((page + 1) * pageSize, total);
   const progress = loadProgress();
-  let done = 0, correct = 0;
-  for (const q of state.queue) { const r = qProgress(progress, q.id); if (r && r.done && !r.revealed) { done++; if (r.correct) correct++; } }
-  const acc = done ? Math.round(correct / done * 100) : 0;
-  return `第 ${state.idx + 1} / ${total} 题 · ${stageLabel(state.stage)} · ${MODE_LABEL[state.mode] || state.mode}${state.mode === 'clearWrong' ? ` · 已过 ${state.clearPassed}/${state.clearTotal} 道` : ''} · 已做 ${done}/${total} · 正确率 ${done ? acc + '%' : '—'}`;
-}
-// 队列变化后（错题答错回队尾）只刷新题号和答题卡，不重渲染整页（解析要留在屏上）。
-function refreshQueueUI() {
-  const prog = document.getElementById('qProg');
-  if (prog) prog.textContent = queueProgressText();
-  const nc = document.getElementById('navCount');
-  if (nc) nc.textContent = `共 ${state.queue.length} 道 · 点开展开`;
-  const nav = document.getElementById('qNav');
-  if (nav) {
-    const progress = loadProgress();
-    nav.innerHTML = state.queue.map((qq, i) => {
-      const r = qProgress(progress, qq.id) || {};
-      return `<button data-i="${i}" class="${i === state.idx ? 'cur' : ''} ${r.done ? (r.wrong ? 'wrong' : 'done') : ''}">${i + 1}</button>`;
-    }).join('');
-    nav.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { state.idx = Number(b.dataset.i); renderPractice(); }));
-  }
+  grid.innerHTML = `
+    <div class="nav-grid">
+      ${state.queue.slice(page * pageSize, end).map((q, slot) => {
+        const i = page * pageSize + slot;
+        const r = qProgress(progress, q.id);
+        const style = hasAnswered(r) ? (r.correct ? 'done' : 'wrong') : '';
+        const result = hasAnswered(r) ? (r.correct ? '答对' : '答错') : '未做';
+        return `<button type="button" data-index="${i}" class="${style}" aria-label="第 ${i + 1} 题，${result}" ${i === state.idx ? 'aria-current="step"' : ''}>${i + 1}</button>`;
+      }).join('')}
+    </div>
+    ${total > pageSize ? `<div class="nav-paging">
+      <button class="btn" id="navPrev" ${page === 0 ? 'disabled' : ''}>${icon('chevron-left')} 上一组</button>
+      <span class="muted">${page * pageSize + 1}–${end} / ${total}</span>
+      <button class="btn" id="navNext" ${end >= total ? 'disabled' : ''}>下一组 ${icon('chevron-right')}</button>
+    </div>` : ''}`;
+  grid.querySelectorAll('[data-index]').forEach(btn => btn.addEventListener('click', () => goToQuestion(Number(btn.dataset.index))));
+  byId('navPrev')?.addEventListener('click', () => renderAnswerSheet(page - 1, 'navPrev'));
+  byId('navNext')?.addEventListener('click', () => renderAnswerSheet(page + 1, 'navNext'));
+  if (previous) (grid.querySelector(`#${previous}:enabled`) || grid.querySelector('button'))?.focus();
 }
 function renderPractice() {
-  document.body.classList.add('practice'); // 做题页收起副标题，给题干留地方
-  refreshStreak();
-  const q = state.queue[state.idx]; if (!q) { renderHome(); return; }
-  const progress = loadProgress(); const rec = qProgress(progress, q.id) || {};
+  const q = state.queue[state.idx];
+  if (!q) { renderHome('homeTitle'); return; }
+  document.body.classList.add('practice');
+  byId('headerSearch').hidden = true;
+  const progress = loadProgress();
+  const rec = qProgress(progress, q.id);
+  const clearing = state.mode === 'clearWrong';
+  const type = TYPE_LABEL[q.type] || '选择题';
   const total = state.queue.length;
+  const position = state.idx + 1;
+  const required = q.type === 'multiple' ? 2 : 1;
+  const maximum = q.type === 'multiple' ? q.maxSelections || 4 : 1;
+  const choices = q.type === 'judge' ? [{ key: 'true', text: '正确' }, { key: 'false', text: '错误' }] : q.options;
+  let selected = [];
+  let finished = false;
+  refreshStreak(progress);
   view.innerHTML = `
-  <section class="card">
-    <p><button class="btn small" id="backBtn">← 回首页</button></p>
-    <p class="chips"><span class="chip chip-${esc(q.subject || '')}">${esc(q.subjectLabel)}</span><span class="chip">${esc(q.chapter)}</span><span class="chip">${esc(q.grade || '')}</span><span class="chip">${q.type === 'single' ? '单选' : q.type === 'multiple' ? '多选' : '判断'}</span></p>
-    <div class="progress"><i style="width:${Math.round(((state.idx) / total) * 100)}%"></i></div>
-    <p class="muted" id="qProg">${queueProgressText()}</p>
-    <h2 style="font-size:18px">${esc(q.stem)}</h2>
-    <div id="qfig"></div>
-    <div id="opts"></div>
-    <div id="result"></div>
-    <div class="row" style="margin-top:12px">
-      <button class="btn small" id="submitBtn">提交</button>
-      <button class="btn small" id="revealBtn">查看答案</button>
-      <button class="btn small" id="favBtn">${rec.favorite ? '★ 已收藏' : '☆ 收藏'}</button>
-      <button class="btn small" id="nextBtn">下一题 →</button>
-    </div>
-    <details class="navbox" id="navBox">
-      <summary>答题卡 <span class="muted" id="navCount">共 ${total} 道 · 点开展开</span></summary>
-      <div class="nav" id="qNav">${state.queue.map((qq, i) => {
-      const r = qProgress(progress, qq.id) || {};
-      return `<button data-i="${i}" class="${i === state.idx ? 'cur' : ''} ${r.done ? (r.wrong ? 'wrong' : 'done') : ''}">${i + 1}</button>`;
-    }).join('')}</div>
-    </details>
-  </section>`;
-  const optsEl = document.getElementById('opts');
-  const opts = q.type === 'judge' ? [{ key: 'true', text: '正确' }, { key: 'false', text: '错误' }] : (q.options || []);
-  state.selected = []; state.submitted = false;
-  if (q.image) { const figBox = document.getElementById('qfig'); if (figBox) figBox.innerHTML = '<div class="fig-skel"></div>'; showFigure(q); } // 带配图的题：题干下方显示原卷图，点开放大（加载前先显示骨架占位）
-  opts.forEach(o => {
-    const b = document.createElement('button'); b.className = 'opt';
-    b.innerHTML = (q.type === 'judge' ? '' : `<span class="opt-key">${esc(o.key)}</span>`) + `<span class="opt-text">${esc(o.text)}</span>`;
-    b.addEventListener('click', () => {
-      if (state.submitted) return;
-      if (q.type === 'multiple') {
-        const max = q.maxSelections || 4;
-        if (state.selected.includes(o.key)) state.selected = state.selected.filter(x => x !== o.key);
-        else if (state.selected.length < max) state.selected.push(o.key);
-        [...optsEl.children].forEach((el, i) => el.classList.toggle('picked', state.selected.includes(opts[i].key)));
-      } else { state.selected = [o.key]; [...optsEl.children].forEach(el => el.classList.remove('picked')); b.classList.add('picked'); }
-    });
-    optsEl.appendChild(b);
-  });
-  document.getElementById('backBtn').addEventListener('click', renderHome);  document.getElementById('favBtn').addEventListener('click', e => { const f = toggleFavorite(q.id); e.target.textContent = f ? '★ 已收藏' : '☆ 收藏'; });
-  document.getElementById('nextBtn').addEventListener('click', () => { if (state.idx < state.queue.length - 1) { state.idx++; renderPractice(); } else renderHome(); });
-  document.querySelectorAll('.nav button').forEach(b => b.addEventListener('click', () => { state.idx = Number(b.dataset.i); renderPractice(); }));
-  document.getElementById('revealBtn').addEventListener('click', () => {
-    // “查看答案”只记做过、不记答对（原仓库会把查看答案算成答对，正确率会注水，已改掉）。
-    const p = loadProgress(); p.banks = p.banks || {}; const prev = p.banks[q.id] || {};
-    p.banks[q.id] = { ...prev, done: true, revealed: true }; saveProgress(p);
-    showResult(q, null, false);
-  });
-  document.getElementById('submitBtn').addEventListener('click', () => {
-    if (state.submitted) return; // 已出解析，重复点提交不再重复计分
-    if (!state.selected.length) { alert('请先选一个答案'); return; }
-    if (q.type === 'multiple' && state.selected.length < 2) { alert('多选题至少选 2 项才能提交'); return; }
-    const correct = isSameSet(state.selected, q.answer);
-    const res = recordAnswer(q, state.selected, correct, { mode: state.mode });
-    const p = loadProgress(); p.banks = p.banks || {}; p.banks.__meta = { lastQuestionId: q.id }; saveProgress(p);
-    let note = '';
-    if (state.mode === 'clearWrong') {
-      if (correct) {
-        const p2 = loadProgress(); const c = getCheckin(p2);
-        if (!c.clear.done.includes(q.id)) { c.clear.done.push(q.id); state.clearPassed++; }
-        saveProgress(p2);
-        refreshQueueUI(); // “已过 X/Y 道”立即更新
-        if (state.clearPassed >= state.clearTotal) note = '错题清零完成！可以开始今日 20 道新题了。';
-      } else {
-        state.queue.push(q); // 答错放回队尾，稍后再出现，直到答对
-        note = '这道还没过，已放回队尾，稍后再来一次。';
-        refreshQueueUI(); // 题号和答题卡立即多一格
-      }
-    }
-    if (correct) state.streakCorrect++; else state.streakCorrect = 0;
-    if (note) toast(note);
-    else if (correct && res.points > 0) toast(`+${res.points} 分`);
-    showResult(q, state.selected, correct);
-  });
-  function showResult(qq, selected, correct) {
-    state.submitted = true;
-    [...optsEl.children].forEach((el, i) => {
-      const key = opts[i].key;
-      if (qq.answer.includes(key)) el.classList.add('right');
-      if (selected && selected.includes(key) && !qq.answer.includes(key)) el.classList.add('wrong');
-    });
-    const verdict = selected === null ? '答案' : correct ? '答对了 ✓' : '答错了 ✗';
-    const verdictCls = selected === null ? 'verdict-reveal' : correct ? 'verdict-right' : 'verdict-wrong';
-    document.getElementById('result').innerHTML = `<div class="explain">
-      <p class="ans-line"><b class="${verdictCls}">${verdict}</b> 正确答案：<b class="ans-key">${esc(qq.answer.join('、'))}</b></p>
-      <div class="exp-body">${expParas(qq.explanation || '')}</div>
-      ${qq.trap ? `<p class="trap-line">易错点：${esc(String(qq.trap).replace(/^易错点[：:]\s*/, ''))}</p>` : ''}
+    <div class="practice-shell">
+      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} 返回首页</button><span>${esc(MODE_LABEL[state.mode])}${['all', 'random', 'random20', 'unfinished'].includes(state.mode) ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
+      <section class="card question-card" aria-labelledby="questionTitle">
+        <div class="question-progress">
+          <div class="progress-label"><strong>${clearing ? '订正进度' : `第 ${position} <span>/ ${total} 题</span>`}</strong><span id="qProg">${questionStats(progress)}</span></div>
+          ${clearing ? meter(state.clearTotal - state.clearPending.size, state.clearTotal, '错题订正进度') : meter(position, total, `第 ${position} 题，共 ${total} 题`)}
+        </div>
+        <div class="question-meta">${subjectChip(q.subject, q.subjectLabel)}<span class="chip">${type}</span><span class="chapter-tag">${esc(q.chapter)}</span></div>
+        ${q.material ? `<div class="material">${expParas(q.material)}</div>` : ''}
+        <h1 id="questionTitle" tabindex="-1">${esc(q.stem)}</h1>
+        ${q.image ? '<div id="qfig"></div>' : ''}
+        ${q.type === 'multiple' ? `<p class="muted selection-hint">请选择 ${required}–${maximum} 项后提交。</p>` : ''}
+        <div class="options" role="group" aria-label="${type}选项">
+          ${choices.map((o, i) => `<button class="opt" type="button" data-choice="${i}" aria-pressed="false">
+            ${q.type === 'judge' ? '' : `<span class="opt-key">${esc(o.key)}</span>`}<span class="opt-text">${esc(o.text)}</span><span class="opt-status"></span>
+          </button>`).join('')}
+        </div>
+        <div id="result" tabindex="-1"></div>
+        <div class="question-actions">
+          <div class="question-tools">
+            <button class="btn text-button" id="revealBtn">查看解析</button>
+            <button class="btn text-button" id="favBtn" aria-pressed="${!!rec?.favorite}">${icon('bookmark')} ${rec?.favorite ? '已收藏' : '收藏'}</button>
+          </div>
+          <div class="question-flow">
+            <button class="btn primary" id="submitBtn" disabled>提交答案</button>
+            <button class="btn" id="nextBtn" ${clearing || total === 1 ? 'hidden' : ''}>${position < total ? '跳过' : '结束练习'} ${icon('arrow-right')}</button>
+          </div>
+        </div>
+      </section>
+      ${!clearing && total > 1 ? `<details class="card navbox" id="navBox" ${state.navOpen ? 'open' : ''}><summary>答题卡 <span class="muted">${total} 道</span></summary><div id="qNav"></div></details>` : ''}
     </div>`;
-    if (selected !== null && correct && state.streakCorrect > 0 && state.streakCorrect % 5 === 0) {
-      const enc = ENCOURAGE[Math.min(Math.floor(state.streakCorrect / 5) - 1, ENCOURAGE.length - 1)];
-      document.getElementById('result').insertAdjacentHTML('beforeend', `<p class="encourage">${esc(enc)}</p>`);
+  if (q.image) renderFigure(q);
+  const optionButtons = [...view.querySelectorAll('[data-choice]')];
+  const submit = byId('submitBtn');
+  const reveal = byId('revealBtn');
+  const next = byId('nextBtn');
+  const result = byId('result');
+  function showResult(correct) {
+    finished = true;
+    const preview = correct === null;
+    optionButtons.forEach((btn, i) => {
+      const key = choices[i].key;
+      const right = q.answer.includes(key);
+      const wrong = !preview && selected.includes(key) && !right;
+      btn.disabled = true;
+      btn.classList.toggle('right', right);
+      btn.classList.toggle('wrong', wrong);
+      btn.querySelector('.opt-status').textContent = right ? '正确项' : wrong ? '选错' : '';
+    });
+    const verdict = preview ? '参考解析' : correct ? '答对了' : '答错了';
+    const tone = preview ? 'preview' : correct ? 'correct' : 'incorrect';
+    result.innerHTML = `<div class="result-panel ${tone}">
+      <p class="result-title"><strong>${verdict}</strong><span>正确答案 <b>${esc(displayAnswer(q))}</b></span></p>
+      <div class="exp-body">${expParas(q.explanation)}</div>
+      ${q.trap ? `<p class="result-note">易错点 · ${esc(q.trap.replace(/^易错点[：:]\s*/, ''))}</p>` : ''}
+      ${q.source ? `<details class="source-details"><summary>题目来源</summary><p>${esc(q.source)}</p></details>` : ''}
+      ${q.verify === 'unverified-answer-page' ? '<p class="result-note">此题答案按教材核对，原卷答案页待核。</p>' : ''}
+    </div>`;
+    const score = byId('qProg');
+    score.textContent = questionStats(loadProgress());
+    if (clearing) view.querySelector('.question-progress progress').value = state.clearTotal - state.clearPending.size;
+    submit.hidden = true;
+    reveal.hidden = true;
+    next.hidden = false;
+    next.classList.add('primary');
+    next.innerHTML = `${state.idx < state.queue.length - 1 ? '下一题' : '完成练习'} ${icon('arrow-right')}`;
+    if (byId('navBox')?.open) renderAnswerSheet();
+    const resultTop = result.getBoundingClientRect().top;
+    result.focus({ preventScroll: true });
+    if (resultTop > window.innerHeight - 120) result.scrollIntoView({ block: 'start' });
+  }
+  optionButtons.forEach((btn, i) => btn.addEventListener('click', () => {
+    if (finished) return;
+    const key = choices[i].key;
+    if (maximum === 1) selected = [key];
+    else if (selected.includes(key)) selected = selected.filter(value => value !== key);
+    else if (selected.length < maximum) selected.push(key);
+    optionButtons.forEach((option, index) => {
+      option.setAttribute('aria-pressed', String(selected.includes(choices[index].key)));
+    });
+    submit.disabled = selected.length < required;
+  }));
+  byId('backBtn').addEventListener('click', () => renderHome('homeTitle'));
+  byId('favBtn').addEventListener('click', event => {
+    const favorited = persist(() => toggleFavorite(q.id));
+    if (favorited === undefined) return;
+    event.currentTarget.innerHTML = `${icon('bookmark')} ${favorited ? '已收藏' : '收藏'}`;
+    event.currentTarget.setAttribute('aria-pressed', String(favorited));
+  });
+  next.addEventListener('click', () => {
+    if (state.idx < state.queue.length - 1) {
+      goToQuestion(state.idx + 1);
+    } else {
+      keepPosition(null);
+      renderHome('homeTitle');
     }
-    // 答完停在解析页，等孩子手动点“下一题”（按钮标成主按钮）；不再 0.9 秒自动跳题
-    const nb = document.getElementById('nextBtn'); if (nb) nb.classList.add('primary');
+  });
+  reveal.addEventListener('click', () => {
+    if (finished) return;
+    persist(() => recordReveal(q.id));
+    if (clearing) {
+      state.queue.push(q);
+      toast('看过解析后，这道题会在队尾再出现。');
+    }
+    showResult(null);
+  });
+  submit.addEventListener('click', () => {
+    if (finished || selected.length < required) return;
+    const correct = isSameSet(selected, q.answer);
+    const res = persist(() => recordAnswer(q, selected, correct, {
+      mode: state.mode, stage: state.stage, nextId: state.queue[state.idx + 1]?.id,
+    }));
+    if (!res) return;
+    state.streakCorrect = correct ? state.streakCorrect + 1 : 0;
+    if (clearing && !correct) {
+      state.queue.push(q);
+      toast('这道题已放回队尾，稍后再做一次。');
+    } else if (clearing && state.clearPending.delete(q.id) && !state.clearPending.size) {
+      toast('错题订正完成。');
+    } else if (correct && state.streakCorrect % 5 === 0) {
+      toast(`连续答对 ${state.streakCorrect} 题${res.points ? ` · +${res.points} 分` : ''}`);
+    } else if (res.points > 0) {
+      toast(`+${res.points} 分`);
+    }
+    refreshStreak();
+    showResult(correct);
+  });
+  const nav = byId('navBox');
+  if (nav) {
+    nav.addEventListener('toggle', () => {
+      state.navOpen = nav.open;
+      if (nav.open && !byId('qNav').childElementCount) renderAnswerSheet();
+    });
+  }
+  moveFocus(byId('questionTitle'), true);
+}
+
+const progressDialog = byId('progressDialog');
+const importInput = byId('importFile');
+let importProgress;
+let importRevision = 0;
+function showImportMessage(message = '', preview = false) {
+  byId('importMessage').textContent = message;
+  byId('importPreview').hidden = !preview;
+}
+byId('progressButton').addEventListener('click', () => progressDialog.showModal());
+progressDialog.addEventListener('close', () => {
+  importRevision++;
+  importProgress = null;
+  showImportMessage();
+});
+byId('exportBtn').addEventListener('click', () => {
+  const data = createProgressBackup();
+  const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `xiaosimen-${todayStr()}-backup.json`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 3000);
+});
+byId('importBtn').addEventListener('click', () => importInput.click());
+importInput.addEventListener('change', async () => {
+  const revision = ++importRevision;
+  const file = importInput.files[0];
+  importInput.value = '';
+  importProgress = null;
+  if (!file) { showImportMessage(); return; }
+  if (file.size > 4 * 1024 * 1024) { showImportMessage('备份文件过大，请选择从本应用下载的 JSON 文件。'); return; }
+  showImportMessage('正在读取备份…');
+  try {
+    const progress = readProgressBackup(await file.text());
+    if (revision !== importRevision || !progressDialog.open) return;
+    importProgress = progress;
+    const count = Object.values(progress.banks).filter(hasAnswered).length;
+    showImportMessage(`备份包含 ${count} 道作答记录。确认后将覆盖当前网址的本机进度。`, true);
+  } catch {
+    if (revision !== importRevision) return;
+    showImportMessage('无法读取此备份，请选择从小四门刷题下载的 JSON 文件。');
+  }
+});
+byId('cancelImport').addEventListener('click', () => { importProgress = null; showImportMessage(); });
+byId('confirmImport').addEventListener('click', () => {
+  if (!importProgress) return;
+  const done = persist(() => { saveProgress(importProgress); return true; });
+  if (!done) return;
+  state.stage = stagePref(importProgress);
+  progressDialog.close();
+  renderHome('homeTitle');
+  toast('学习进度已导入。');
+});
+byId('resetBtn').addEventListener('click', () => {
+  if (!confirm('确定清空当前浏览器的小四门答题、收藏和打卡记录？')) return;
+  const done = persist(() => {
+    saveProgress({ banks: {}, studyDays: [], stage: state.stage });
+    localStorage.removeItem(GROWTH_KEY);
+    return true;
+  });
+  if (!done) return;
+  progressDialog.close();
+  renderHome('homeTitle');
+  toast('本机进度已清空。');
+});
+byId('homeLink').addEventListener('click', event => {
+  if (banks && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+    event.preventDefault();
+    renderHome('homeTitle');
+  }
+});
+byId('headerSearch').addEventListener('click', event => {
+  const search = byId('searchBox');
+  if (!search) return;
+  event.preventDefault();
+  search.focus();
+});
+const figureDialog = byId('figureDialog');
+figureDialog.addEventListener('click', event => { if (event.target === figureDialog) figureDialog.close(); });
+figureDialog.addEventListener('close', () => byId('figureFull').removeAttribute('src'));
+
+async function init() {
+  try {
+    const loadDaily = dailyQuestions().length ? null : loadScript('./data/daily-questions-xiaosimen.js?v=7').catch(console.warn);
+    banks = await ensureBanks(SUBJECT_ORDER);
+    await loadDaily;
+    bankQuestions = allQuestions(banks, SUBJECT_ORDER);
+    library = [...bankQuestions, ...dailyQuestions()];
+    renderHome();
+  } catch (error) {
+    console.error(error);
+    view.innerHTML = '<section class="card loading-card"><h1>题库暂时无法加载</h1><p class="muted">检查网络后再试一次。</p><button class="btn primary" id="retryBtn">重新加载</button></section>';
+    byId('retryBtn').addEventListener('click', async event => {
+      event.currentTarget.disabled = true;
+      event.currentTarget.textContent = '正在加载…';
+      await init();
+    });
   }
 }
-renderHome();
+init();

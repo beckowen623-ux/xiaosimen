@@ -1,1 +1,15 @@
-{"background_color":"#fafaf5","description":"福州人教版初中小四门（道德与法治、历史、地理、生物）碎片化刷题","display":"standalone","icons":[{"purpose":"any","sizes":"512x512","src":"assets/icons/icon.svg","type":"image/svg+xml"}],"name":"小四门刷题","short_name":"小四门刷题","start_url":"/?from=app","theme_color":"#0f766e"}
+{
+  "name": "小四门刷题",
+  "short_name": "小四门刷题",
+  "description": "福州人教版初中小四门练习、错题复习与每日打卡",
+  "lang": "zh-CN",
+  "id": "./",
+  "start_url": "./?from=app",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#f6f5ef",
+  "background_color": "#f6f5ef",
+  "icons": [
+    { "src": "./assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
