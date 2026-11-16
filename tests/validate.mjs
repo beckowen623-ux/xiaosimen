@@ -69,8 +69,17 @@ for (const s of subjects) {
   console.log(`${s}: ${bank.questions.length} 道 (single ${typeCount.single || 0} / multiple ${typeCount.multiple || 0} / judge ${typeCount.judge || 0})`);
 }
 
-// ---- 配图校验：data/figures.js（base64 data URI，按题 id 映射） ----
-const figW = loadDataFile('data/figures.js');
+// ---- 配图校验：data/figures.js + data/figures-2.js（base64 data URI，按题 id 映射） ----
+// figures.js 已接近单次推送上限（约 5 MB），新增图放 figures-2.js；两文件在同一个沙箱里合并进 window.XIAOSIMEN_FIGURES。
+function loadFigures() {
+  const sandbox = { window: {}, console };
+  vm.createContext(sandbox);
+  for (const rel of ['data/figures.js', 'data/figures-2.js']) {
+    vm.runInContext(fs.readFileSync(path.join(root, rel), 'utf8'), sandbox, { filename: rel });
+  }
+  return sandbox.window;
+}
+const figW = loadFigures();
 const figures = figW.XIAOSIMEN_FIGURES;
 if (!figures || typeof figures !== 'object') fail('data/figures.js 缺 window.XIAOSIMEN_FIGURES');
 else {
@@ -89,10 +98,10 @@ else {
   for (const fid of Object.keys(figures)) {
     if (!allIds.has(fid)) fail(`figures 里有多余的图 ${fid}（题库中无此题）`);
   }
-  const figBytes = fs.statSync(path.join(root, 'data/figures.js')).size;
+  const figBytes = fs.statSync(path.join(root, 'data/figures.js')).size + fs.statSync(path.join(root, 'data/figures-2.js')).size;
   const dataBytes = subjects.reduce((a, s) => a + fs.statSync(path.join(root, `data/${s}.js`)).size, 0);
   const totalBytes = figBytes + dataBytes;
-  console.log(`figures: ${Object.keys(figures).length} 张图（${figCount} 道题带图），figures.js ${(figBytes / 1024).toFixed(0)} KB；四科 data + figures 合计 ${(totalBytes / 1048576).toFixed(2)} MB（上限 12 MB）`);
+  console.log(`figures: ${Object.keys(figures).length} 张图（${figCount} 道题带图），figures.js + figures-2.js ${(figBytes / 1024).toFixed(0)} KB；四科 data + figures 合计 ${(totalBytes / 1048576).toFixed(2)} MB（上限 12 MB）`);
   if (totalBytes > 12 * 1048576) fail(`四科 data + figures 合计超 12 MB：${(totalBytes / 1048576).toFixed(2)} MB`);
 }
 

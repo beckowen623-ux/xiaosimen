@@ -221,7 +221,7 @@ function loadScript(src) {
   });
 }
 async function ensureBanks(subjectKeys) {
-  for (const key of subjectKeys) await loadScript(SUBJECTS[key].file + '?v=4');
+  for (const key of subjectKeys) await loadScript(SUBJECTS[key].file + '?v=5');
   return window.XIAOSIMEN_BANKS || {};
 }
 function allQuestions(banks, subjectKeys) {
@@ -574,13 +574,14 @@ async function startPractice(mode) {
   if (li > 0) state.idx = li;
   renderPractice();
 }
-// ---------- 题目配图（data/figures.js，base64 data URI，按题 id 映射） ----------
+// ---------- 题目配图（data/figures.js + data/figures-2.js，base64 data URI，按题 id 映射） ----------
 // 图只在带 image: true 的题上按需懒加载；点图放大查看，点任意处关闭。
 async function showFigure(q) {
   const qid = q.id;
   const box = document.getElementById('qfig'); if (!box) return;
   try {
-    if (!window.XIAOSIMEN_FIGURES) await loadScript('./data/figures.js?v=4');
+    if (!window.XIAOSIMEN_FIGURES) await loadScript('./data/figures.js?v=5');
+    try { await loadScript('./data/figures-2.js?v=5'); } catch (e) { /* 续图文件缺失时只影响新增图 */ }
     // 用户可能已跳到下一题：只给当前这道题填图。
     if (!state.queue[state.idx] || state.queue[state.idx].id !== qid) return;
     const src = window.XIAOSIMEN_FIGURES && window.XIAOSIMEN_FIGURES[qid];
