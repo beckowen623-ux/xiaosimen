@@ -32,6 +32,17 @@ try {
 }
 
 const LETTERS = ["A", "B", "C", "D"];
+const PROVINCES = /北京|天津|上海|重庆|福建|江苏|浙江|安徽|江西|山东|河南|湖北|湖南|广东|广西|海南|四川|贵州|云南|西藏|陕西|甘肃|青海|宁夏|新疆|内蒙古|黑龙江|吉林|辽宁|河北|山西/;
+const FUJIAN_PLACES = /福州|厦门|宁化|泉州|漳州|莆田|三明|南平|龙岩|宁德/;
+// 题目标签直接写出处：2025 福建中考、改编自 2025 四川中考、2025 江苏模考……
+function sourceTag(source) {
+  const text = String(source || "");
+  const year = text.match(/(20\d\d)/)?.[1];
+  if (!year) return "Claude 精选";
+  const place = text.match(PROVINCES)?.[0] || (FUJIAN_PLACES.test(text) ? "福建" : "");
+  const kind = /模|期中|期末|适应性|最后一卷|联考|预测/.test(text) ? "模考" : /中考|学业水平/.test(text) ? "中考" : "考题";
+  return `${/改编/.test(text) ? "改编自 " : ""}${year} ${place}${kind}`;
+}
 const yearOf = q => Number((q.source || "").match(/(20\d\d)/)?.[1] || 0);
 const needsPicture = q => figures.has(q.id) || /如图|下图|图中|读图|示意图|图示|据图|观察图|右图|左图|上图/.test(q.stem || "");
 
@@ -45,7 +56,7 @@ function pickBank(subject, chapterId) {
   const chosen = [];
   for (let i = 0; i < BANK_COUNT && i * step < recent.length; i += 1) chosen.push(recent[Math.floor(i * step)]);
   return chosen.map(q => ({
-    type: "choice", tag: "Claude 精选", source: q.source || "",
+    type: "choice", tag: sourceTag(q.source), source: q.source || "",
     stem: q.stem, options: q.options.map(o => ({ key: o.key, text: o.text })),
     answer: q.answer[0], explanation: q.explanation || "",
   }));
@@ -65,7 +76,7 @@ function toChoice([kp, stem, options, explanation]) {
   const ordered = options.map((text, i) => ({ text, correct: i === 0 }));
   const rotated = [...ordered.slice(4 - shift), ...ordered.slice(0, 4 - shift)];
   return {
-    type: "choice", tag: "Claude 冲刺", kp,
+    type: "choice", tag: "Claude 新题 · 易错点", kp,
     stem, options: rotated.map((o, i) => ({ key: LETTERS[i], text: o.text })),
     answer: LETTERS[rotated.findIndex(o => o.correct)], explanation,
   };
@@ -83,7 +94,7 @@ function subjectiveFor(subject, chapterId) {
     });
   }
   const essays = list.filter(item => Array.isArray(item.p)).slice(0, 2).map(item => ({
-    type: "essay", tag: item.m || "主观题", source: item.src || "", kind: item.m || "简答题",
+    type: "essay", tag: /20\d\d/.test(item.src || "") ? sourceTag(item.src) : (item.m || "主观题"), source: item.src || "", kind: item.m || "简答题",
     material: item.mat || "", stem: item.q,
     points: item.p.map(([text, score]) => ({ text, score })),
     score: item.p.reduce((sum, [, score]) => sum + score, 0),

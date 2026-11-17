@@ -732,6 +732,7 @@ async function loadPurchaseOptions() {
   }
 }
 
+window.addEventListener?.('quiz-sprint-buy', () => openUnlock());
 function openUnlock(message = '') {
   byId('unlockReason').textContent = message || '开通后可练全部题目、自动复习错题并参加周日小测。';
   redeemMessage.textContent = '';

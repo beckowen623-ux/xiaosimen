@@ -160,12 +160,29 @@ async function sprintPapers(context) {
   return json({ ok: true, papers: SPRINT_PAPERS });
 }
 
-// 样题：每个科目第 1 套的前 5 道选择题，所有人都能看。
-const PREVIEW = SPRINT_PAPERS.filter((paper, index, all) => all.findIndex(p => p.subject === paper.subject) === index)
-  .map(paper => ({ ...paper, preview: true,
-    sections: [{ ...paper.sections[0], items: paper.sections[0].items.slice(0, 5) }] }));
+// 样题：每一套都给 5 道（尽量覆盖不同出处，再带上 Claude 新题），所有人都能看。
+function previewItems(paper) {
+  const all = paper.sections.flatMap(section => section.items.filter(item => item.type === "choice" || item.type === "judge"));
+  const fresh = all.filter(item => /Claude/.test(item.tag || ""));
+  const picked = [];
+  const seen = new Set();
+  const year = item => Number(String(item.tag || "").match(/20\d\d/)?.[0] || 0);
+  for (const item of [...all].sort((a, b) => year(b) - year(a))) {
+    if (picked.length >= 3) break;
+    if (/Claude/.test(item.tag || "") || seen.has(item.tag)) continue;
+    seen.add(item.tag);
+    picked.push(item);
+  }
+  for (const item of [...fresh, ...all]) {
+    if (picked.length >= 5) break;
+    if (!picked.includes(item)) picked.push(item);
+  }
+  return picked;
+}
+const PREVIEW = SPRINT_PAPERS.map(paper => ({ ...paper, preview: true,
+  sections: [{ title: "样题（5 题）", note: "选完立刻判对错、看解析。", items: previewItems(paper) }] }));
 function sprintPreview() {
-  return json({ ok: true, preview: true, papers: PREVIEW });
+  return json({ ok: true, preview: true, total: SPRINT_PAPERS.length, papers: PREVIEW });
 }
 
 async function cashQr(context) {

@@ -68,3 +68,23 @@
 .friend-banner .referral-message { color: #fff; }
 .sprint-promise { margin: 4px 0 8px; font-size: 13px; font-weight: 600; color: #8a5a00; }
 .referral-sprint .sprint-promise { flex-basis: 100%; }
+.sprint-ask { color: #17473d; font-weight: 700; white-space: nowrap; }
+.sp-options { display: grid; gap: 8px; margin: 8px 0 4px; }
+.sp-judge { grid-template-columns: 1fr 1fr; }
+.sp-opt { text-align: left; padding: 10px 12px; min-height: 44px; border: 1px solid #c9d8d2; border-radius: 10px; background: #fff; color: #1b2422; font: inherit; line-height: 1.5; cursor: pointer; }
+.sp-opt.picked { border-color: #17473d; background: #e7f0eb; }
+.sp-opt.right { border-color: #16803c; background: #e3f6e8; color: #0f5a2a; font-weight: 600; }
+.sp-opt.wrong { border-color: #be123c; background: #fde8ec; color: #8f0f2f; }
+.sp-opt:disabled { cursor: default; opacity: 1; }
+.sp-submit { margin-top: 6px; min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #17473d; background: #17473d; color: #fff; font: inherit; cursor: pointer; }
+.sp-text { width: 100%; margin-top: 6px; padding: 8px 10px; border: 1px solid #c9d8d2; border-radius: 8px; font: inherit; }
+.sp-explain { margin: 6px 0 2px; padding: 8px 10px; border-radius: 8px; background: #f4f7f5; font-size: 14.5px; line-height: 1.7; }
+.sp-explain small { color: #6b7774; }
+.sp-mark { margin-left: 4px; font-size: 13px; font-weight: 700; }
+.sp-mark.ok { color: #16803c; }
+.sp-mark.bad { color: #be123c; }
+.sp-score { padding: 10px 14px; text-align: center; background: #17473d; color: #fff; font-weight: 700; }
+.sp-score[hidden] { display: none; }
+.sp-finish-box { margin: 18px 0 8px; padding: 14px 16px; border-radius: 12px; background: #fff7df; border: 1px solid #f0d38a; }
+.sp-finish-box p { margin: 6px 0 10px; }
+@media print { .sp-score { display: none !important; } }

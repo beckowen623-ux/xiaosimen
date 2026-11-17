@@ -124,13 +124,28 @@
   };
   let siteKey = "full";
   const BYLINE = "出题：Claude · Opus 5.5 根据考点与历年真题精选、改编、新出 ｜ 作者亲测";
+  let lastShare = "";
+  const EXTRA = {
+    xiaosimen: { text: "还会根据大家的留言需求，不定期加更 Claude 制作的主科应试抓考点模拟卷。", from: "x4m" },
+    full: { text: "还会根据大家的留言需求，不定期加更其他考试科目的 Claude 抓考点模拟卷。", from: "tinawin" },
+  };
+  function extraNode() {
+    const extra = EXTRA[siteKey] || EXTRA.full;
+    const line = node("p", extra.text + " ", "sprint-promise");
+    const ask = node("a", "去留言提需求 →", "sprint-ask");
+    ask.href = `https://elx.cc.cd/?panel=feedback&from=${extra.from}`;
+    ask.target = "_blank";
+    ask.rel = "noopener";
+    line.append(ask);
+    return line;
+  }
   const PROMISE = "每月至少更新一次，考前 2—3 个月加密更新。邀请成功 1 位朋友，就永久解锁全部卷子和以后的每一次更新。";
 
   function sprintCard(profile, message) {
     const card = node("div", "", "referral-sprint" + (profile.sprint ? " unlocked" : ""));
-    card.append(node("p", SPRINT_STORY[siteKey] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"));
+    card.append(node("p", SPRINT_STORY[siteKey] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"), extraNode());
     if (profile.sprint) {
-      card.append(node("strong", "📝 冲刺卷已解锁"), button("打开冲刺卷", () => openSprint(message)));
+      card.append(node("strong", "📝 冲刺卷已解锁"), button("📱 在线做 / 打印冲刺卷", () => openSprint(message)));
     } else {
       card.append(node("strong", "📝 冲刺卷 · 邀请 1 位朋友即可解锁"));
     }
@@ -262,8 +277,8 @@
     head.append(node("strong", "📝 冲刺卷 · Claude 出题"), node("span", options.count || "", "referral-badge"));
     const status = node("p", "", "referral-message");
     status.setAttribute("role", "status");
-    card.append(head, node("p", SPRINT_STORY[key] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"),
-      button("打开冲刺卷", () => openAny(status)), status);
+    card.append(head, node("p", SPRINT_STORY[key] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"), extraNode(),
+      button("📱 在线做 / 打印冲刺卷", () => openAny(status)), status);
     container.append(card);
   }
 
@@ -281,7 +296,7 @@
       const preview = await fetch("/api/access/sprint-preview", { method: "POST", cache: "no-store" });
       const data = await preview.json();
       message.textContent = "";
-      if (preview.ok && data.ok) showSprint(data.papers || [], { preview: true, unlocked: full.status === 403 });
+      if (preview.ok && data.ok) showSprint(data.papers || [], { preview: true, unlocked: full.status === 403, fullCount: data.total });
     } catch {
       message.textContent = "网络暂时不可用，请重试。";
     }
@@ -319,7 +334,7 @@
     const body = paper.sections.map(section => {
       const items = section.items.map(item => {
         n += 1;
-        const tag = item.tag ? `<span class="sprint-tag${/冲刺/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
+        const tag = item.tag ? `<span class="sprint-tag${/Claude/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
         if (item.type === "choice") {
           answers.push(`<li><b>${n}. ${esc(item.answer)}</b> ${esc(item.explanation)}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</li>`);
           return `<li class="sprint-q"><p>${n}. ${esc(item.stem)} ${item.multi ? '<span class="sprint-tag">多选</span>' : ""}${tag}</p><ol class="sprint-options">${item.options.map(o => `<li>${esc(o.key)}. ${esc(o.text)}</li>`).join("")}</ol></li>`;
@@ -343,7 +358,75 @@
       `<section class="sprint-answers${showAnswers ? "" : " hidden-answers"}"><h3>参考答案与解析</h3><ol class="sprint-key">${answers.join("")}</ol></section>`;
   }
 
+  // ---- 在线做题：点选即判对错、看解析，底部计分；做完给出下一步 ----
+  const SCORE_KEY = "sprint-score-";
+  const readScore = id => { try { return localStorage.getItem(SCORE_KEY + id) || ""; } catch { return ""; } };
+  const saveScore = (id, value) => { try { localStorage.setItem(SCORE_KEY + id, value); } catch { /* 隐私模式 */ } };
+  const practiceState = new Map();
+
+  function practiceHTML(paper) {
+    const st = practiceState.get(paper.id) || {};
+    let n = 0;
+    const body = paper.sections.map(section => {
+      const items = section.items.map(item => {
+        n += 1;
+        const s = st[n] || {};
+        const tag = item.tag ? `<span class="sprint-tag${/Claude/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
+        const reveal = s.done ? `<div class="sp-explain">${item.type === "essay"
+          ? `<b>得分点：</b>${item.points.map(p => `${esc(p.text)}（${p.score}分）`).join("；")}${item.sample ? `<br><b>参考答案：</b>${esc(item.sample)}` : ""}`
+          : `<b>答案：${esc(Array.isArray(item.answer) ? item.answer.join("；") : item.answer)}</b> ${esc(item.explanation || "")}`}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</div>` : "";
+        const mark = s.done && s.correct !== undefined ? `<span class="sp-mark ${s.correct ? "ok" : "bad"}">${s.correct ? "✓ 答对" : "✗ 答错"}</span>` : "";
+        let control = "";
+        if (item.type === "choice") {
+          const picked = s.picked || [];
+          control = `<div class="sp-options">${item.options.map(o => {
+            let cls = picked.includes(o.key) ? " picked" : "";
+            if (s.done && item.answer.includes(o.key)) cls += " right";
+            else if (s.done && picked.includes(o.key)) cls += " wrong";
+            return `<button type="button" class="sp-opt${cls}" data-n="${n}" data-key="${esc(o.key)}" ${s.done ? "disabled" : ""}>${esc(o.key)}. ${esc(o.text)}</button>`;
+          }).join("")}</div>${item.multi && !s.done ? `<button type="button" class="sp-submit" data-submit="${n}">提交</button>` : ""}`;
+        } else if (item.type === "judge") {
+          control = `<div class="sp-options sp-judge">${["√", "×"].map(v => {
+            let cls = s.picked === v ? " picked" : "";
+            if (s.done && item.answer === v) cls += " right";
+            else if (s.done && s.picked === v) cls += " wrong";
+            return `<button type="button" class="sp-opt${cls}" data-n="${n}" data-judge="${v}" ${s.done ? "disabled" : ""}>${v === "√" ? "√ 正确" : "× 错误"}</button>`;
+          }).join("")}</div>`;
+        } else if (item.type === "blank") {
+          control = s.done ? "" : `<button type="button" class="sp-submit" data-reveal="${n}">想好了，看答案</button>`;
+        } else {
+          control = `<textarea class="sp-text" rows="4" placeholder="先自己写，再对照得分点" data-text="${n}">${esc(s.text || "")}</textarea>${s.done ? "" : `<button type="button" class="sp-submit" data-reveal="${n}">对照得分点</button>`}`;
+        }
+        const material = item.material ? `<blockquote>${esc(item.material)}</blockquote>` : "";
+        const head = item.type === "essay" ? `${n}. ${esc(item.kind || "主观题")}（${item.score}分）${tag}${material}<br>${esc(item.stem)}` : `${n}. ${esc(item.stem)} ${item.multi ? '<span class="sprint-tag">多选</span>' : ""}${tag}`;
+        return `<li class="sprint-q"><p>${head} ${mark}</p>${control}${reveal}</li>`;
+      }).join("");
+      return `<section><h3>${esc(section.title)}</h3>${section.note ? `<p class="sprint-note">${esc(section.note)}</p>` : ""}<ol class="sprint-list">${items}</ol></section>`;
+    }).join("");
+    return `<header class="sprint-head"><h2>${esc(paper.title)}</h2><p class="sprint-byline">${esc(BYLINE)}</p></header>${body}<div class="sp-finish" data-finish></div>`;
+  }
+
+  function tally(paper) {
+    const st = practiceState.get(paper.id) || {};
+    let n = 0, total = 0, done = 0, right = 0;
+    for (const section of paper.sections) for (const item of section.items) {
+      n += 1;
+      if (item.type !== "choice" && item.type !== "judge") continue;
+      total += 1;
+      if (st[n]?.done) { done += 1; if (st[n].correct) right += 1; }
+    }
+    return { total, done, right };
+  }
+
+  function itemAt(paper, index) {
+    let n = 0;
+    for (const section of paper.sections) for (const item of section.items) { n += 1; if (n === index) return item; }
+    return null;
+  }
+
   function showSprint(papers, mode = {}) {
+    const preview = Boolean(mode.preview);
+    const fullCount = mode.fullCount || papers.length;
     previewHint = mode.unlocked
       ? "完整卷子：把“🎁 邀请好友”里的专属链接发给朋友，有 1 位用它买了题库，就永久解锁全部卷子和以后的每次更新（每月至少一次，考前加密）。"
       : "完整卷子：购买题库后，邀请 1 位朋友，就永久解锁全部卷子和以后的每次更新（每月至少一次，考前加密）。";
@@ -358,25 +441,120 @@
     groups.forEach(g => groupSelect.append(new Option(g, g)));
     const paperSelect = node("select");
     paperSelect.setAttribute("aria-label", "哪一套");
+    let practice = true;
+    let showAnswers = false;
+    const modeToggle = button("打印版", () => {
+      practice = !practice;
+      modeToggle.textContent = practice ? "打印版" : "在线做题";
+      answerToggle.hidden = practice;
+      printButton.hidden = practice;
+      render();
+    });
     const answerToggle = button("显示答案", () => {
       showAnswers = !showAnswers;
       answerToggle.textContent = showAnswers ? "隐藏答案" : "显示答案";
       render();
     });
+    const printButton = button("打印", () => window.print());
+    answerToggle.hidden = true;
+    printButton.hidden = true;
     const close = () => { overlay.remove(); document.body.classList.remove("sprint-printing"); };
-    bar.append(groupSelect, paperSelect, answerToggle, button("打印", () => window.print()), button("关闭", close));
+    bar.append(groupSelect, paperSelect, modeToggle, answerToggle, printButton, button("关闭", close));
     const sheet = node("article", "", "sprint-paper");
-    overlay.append(bar, sheet);
-    let showAnswers = false;
+    const scoreBar = node("div", "", "sp-score");
+    overlay.append(bar, sheet, scoreBar);
+    const current = () => papers.find(p => p.id === paperSelect.value) || papers[0];
     const fillPapers = () => {
+      const selected = paperSelect.value;
       paperSelect.replaceChildren();
-      papers.filter(p => p.group === groupSelect.value).forEach(p => paperSelect.append(new Option(p.term || p.title, p.id)));
+      papers.filter(p => p.group === groupSelect.value).forEach(p => {
+        const score = readScore(p.id);
+        paperSelect.append(new Option((p.term || p.title) + (score ? ` ✓${score}` : ""), p.id));
+      });
+      if (selected && [...paperSelect.options].some(o => o.value === selected)) paperSelect.value = selected;
+    };
+    const updateScore = () => {
+      const paper = current();
+      if (!practice) { scoreBar.hidden = true; return; }
+      const { total, done, right } = tally(paper);
+      scoreBar.hidden = false;
+      scoreBar.textContent = `已做 ${done}/${total} · 答对 ${right}`;
+      const finish = sheet.querySelector("[data-finish]");
+      if (!finish || !total || done < total) return;
+      const pct = Math.round((right / total) * 100) + "%";
+      if (!preview) saveScore(paper.id, pct);
+      finish.innerHTML = "";
+      const box = node("div", "", "sp-finish-box");
+      if (preview) {
+        box.append(node("strong", `样题做完：答对 ${right}/${total}。`),
+          node("p", `这一套完整版还有更多题，全部 ${fullCount} 套都在等你。${previewHint}`));
+        if (!mode.unlocked) box.append(button("我要完整卷", () => { close(); window.dispatchEvent(new CustomEvent("quiz-sprint-buy")); }));
+        else box.append(button("去邀请朋友", () => { close(); openReferral(); }));
+      } else {
+        box.append(node("strong", `这套做完了：答对 ${right}/${total}（${pct}）。`),
+          node("p", right / total >= 0.8 ? "稳！换一套继续，或者把它分享给正在备考的朋友。" : "错的题看一眼解析，过两天再做一遍，进步最快。"));
+        if (lastShare) {
+          const status = node("p", "", "referral-message");
+          box.append(button("把卷子推荐给朋友（复制邀请文案）", () => copyText(lastShare, status)), status);
+        }
+      }
+      finish.append(box);
+      fillPapers();
     };
     const render = () => {
-      const paper = papers.find(p => p.id === paperSelect.value) || papers[0];
-      sheet.innerHTML = paperHTML(paper, showAnswers);
+      const paper = current();
+      sheet.innerHTML = practice ? practiceHTML(paper) : paperHTML(paper, showAnswers);
       sheet.scrollTop = 0;
+      updateScore();
     };
+    sheet.addEventListener("click", event => {
+      if (!practice) return;
+      const paper = current();
+      const st = practiceState.get(paper.id) || {};
+      practiceState.set(paper.id, st);
+      const opt = event.target.closest(".sp-opt");
+      const submit = event.target.closest("[data-submit]");
+      const reveal = event.target.closest("[data-reveal]");
+      let index = 0;
+      if (opt) {
+        index = Number(opt.dataset.n);
+        const item = itemAt(paper, index);
+        const s = st[index] ||= {};
+        if (s.done) return;
+        if (opt.dataset.judge) {
+          s.picked = opt.dataset.judge;
+          s.correct = s.picked === item.answer;
+          s.done = true;
+        } else if (item.multi) {
+          s.picked ||= [];
+          const key = opt.dataset.key;
+          s.picked = s.picked.includes(key) ? s.picked.filter(k => k !== key) : [...s.picked, key];
+        } else {
+          s.picked = [opt.dataset.key];
+          s.correct = item.answer === opt.dataset.key;
+          s.done = true;
+        }
+      } else if (submit) {
+        index = Number(submit.dataset.submit);
+        const item = itemAt(paper, index);
+        const s = st[index] ||= {};
+        if (!s.picked?.length) return;
+        s.correct = [...s.picked].sort().join("") === String(item.answer).split("").sort().join("");
+        s.done = true;
+      } else if (reveal) {
+        index = Number(reveal.dataset.reveal);
+        const s = st[index] ||= {};
+        const text = sheet.querySelector(`[data-text="${index}"]`);
+        if (text) s.text = text.value;
+        s.done = true;
+      } else {
+        return;
+      }
+      const y = sheet.scrollTop;
+      sheet.innerHTML = practiceHTML(paper);
+      sheet.scrollTop = y;
+      updateScore();
+    });
     groupSelect.addEventListener("change", () => { fillPapers(); render(); });
     paperSelect.addEventListener("change", render);
     overlay.addEventListener("keydown", event => { if (event.key === "Escape") close(); });
@@ -385,6 +563,11 @@
     document.body.append(overlay);
     document.body.classList.add("sprint-printing");
     groupSelect.focus();
+  }
+
+  function openReferral() {
+    const box = document.querySelector("#referralPanel details");
+    if (box) { box.open = true; box.scrollIntoView({ behavior: "smooth", block: "start" }); }
   }
 
   function mount(panel, profile, key) {
@@ -399,7 +582,7 @@
     const url = new URL(site.url);
     url.searchParams.set("from", "referral");
     url.searchParams.set("invite", profile.code);
-    const share = `我在用的${site.label}，推荐给你。\n点我的专属链接，可以先免费试，再用好友价 14.9 元买（省 5 元）：\n${url.href}\n如果兑换时提示填邀请码，填 ${profile.code}`;
+    const share = lastShare = `我在用的${site.label}，推荐给你。\n点我的专属链接，可以先免费试，再用好友价 14.9 元买（省 5 元）：\n${url.href}\n如果兑换时提示填邀请码，填 ${profile.code}`;
     const message = node("p", "", "referral-message");
     message.setAttribute("role", "status");
     const left = Math.max(0, profile.required - profile.invited);
