@@ -640,7 +640,7 @@ let referralProfile = null;
 function hasFullAccess() { return paidAccess || legacyTrialDays() > 0; }
 
 function showReferralProfile() {
-  window.QuizReferrals?.mountTeaser?.(byId("sprintTeaser"), "xiaosimen", { count: "24 套 · 可打印", showFriend: !paidAccess });
+  window.QuizReferrals?.mountTeaser?.(byId("sprintTeaser"), "xiaosimen", { count: "24 套 · 可打印", showFriend: !paidAccess, paid: paidAccess });
   window.QuizReferrals?.mount(byId("referralPanel"), referralProfile, "xiaosimen");
 }
 

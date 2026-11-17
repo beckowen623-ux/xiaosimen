@@ -245,6 +245,102 @@
   }
 
   // 首页入口：所有人都能看到。已解锁的直接看全部；没解锁的看样题（每科第 1 套前 5 题）。
+
+  // ---- 上传新卷子（已购用户）----
+  const UPLOAD_TEXT = {
+    xiaosimen: {
+      body: "学校发的月考卷、期中期末卷、孩子做错没弄懂的题，拍照或传文件上来。Claude 会按考点整理：哪些是高频考点、错在哪、同类题怎么练。整理好的题会更新进冲刺卷，大家的孩子一起练。",
+      placeholder: "比如：八年级下 生物 期中卷（选填）",
+    },
+    full: {
+      body: "刚考完、还记得几道原题？机构发的新押题卷？传上来，Claude 帮你按大纲考点对一遍，把高频考点更新进冲刺卷，大家一起提前练。",
+      placeholder: "比如：2026 中级会计实务 回忆题（选填）",
+    },
+  };
+  const UPLOAD_TYPES = ["image/jpeg", "image/png", "image/webp", "application/pdf", "text/plain",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+  const UPLOAD_MAX = 15 * 1024 * 1024;
+
+  async function photoBlob(file) {
+    const bitmap = await createImageBitmap(file);
+    const scale = Math.min(1, 2200 / Math.max(bitmap.width, bitmap.height));
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.round(bitmap.width * scale);
+    canvas.height = Math.round(bitmap.height * scale);
+    canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+    return new Promise(resolve => canvas.toBlob(resolve, "image/webp", 0.82));
+  }
+
+  function renderMyUploads(list, target) {
+    target.replaceChildren();
+    if (!list?.length) return;
+    target.append(node("p", "我传过的：", "upload-mine-title"));
+    for (const item of list.slice(0, 8)) {
+      const line = node("p", "", "upload-mine");
+      line.append(node("span", item.name), node("span", item.status === "adopted" ? "🎉 已采用，冲刺卷已永久解锁" : "待作者整理", item.status === "adopted" ? "upload-ok" : "upload-wait"));
+      target.append(line);
+    }
+  }
+
+  function uploadBox(key, paid) {
+    const box = node("div", "", "upload-box");
+    box.append(node("strong", "📮 把新卷子交给 Claude，帮你抓考点"));
+    if (!paid) {
+      box.append(node("p", "买了题库后，可以在这里上传手上的新卷子。被采用的，送冲刺卷永久解锁。", "upload-small"));
+      return box;
+    }
+    const text = UPLOAD_TEXT[key] || UPLOAD_TEXT.full;
+    box.append(node("p", text.body), node("p", "🎁 被采用的，送你冲刺卷永久解锁（和邀请成功 1 位朋友一样）。", "upload-gift"));
+    const note = node("input", "", "upload-note");
+    note.type = "text";
+    note.maxLength = 100;
+    note.placeholder = text.placeholder;
+    const label = node("label", "", "referral-action upload-pick");
+    const input = node("input");
+    input.type = "file";
+    input.multiple = true;
+    input.hidden = true;
+    input.accept = "image/*,.pdf,.docx,.txt,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+    label.append("📷 拍照 / 选文件上传", input);
+    const status = node("p", "", "referral-message");
+    status.setAttribute("role", "status");
+    const mine = node("div", "", "upload-mine-list");
+    box.append(note, label, status, mine,
+      node("p", "支持照片、PDF、Word（.docx）、TXT，单个不超过 15MB，每天最多 5 个。上传前请遮住姓名、学校、电话等信息。上传即同意题目经改编后用于题库和冲刺卷更新。", "upload-small"));
+    input.addEventListener("change", async () => {
+      const files = [...input.files].slice(0, 5);
+      input.value = "";
+      if (!files.length) return;
+      let done = 0;
+      for (const file of files) {
+        status.textContent = `正在上传 ${done + 1}/${files.length}：${file.name}`;
+        try {
+          let body = file;
+          let type = file.type || (/\.txt$/i.test(file.name) ? "text/plain" : /\.pdf$/i.test(file.name) ? "application/pdf" : /\.docx$/i.test(file.name) ? UPLOAD_TYPES[5] : "");
+          if (/^image\//.test(type)) { body = await photoBlob(file); type = "image/webp"; }
+          if (!UPLOAD_TYPES.includes(type)) { status.textContent = `${file.name}：只支持照片、PDF、Word（.docx）和 TXT。`; continue; }
+          if (!body || body.size > UPLOAD_MAX) { status.textContent = `${file.name} 超过 15MB。PDF 太大的话，可以分页拍照上传。`; continue; }
+          const response = await fetch("/api/access/upload", {
+            method: "POST",
+            headers: { "Content-Type": type, "X-Upload": "1", "X-File-Name": encodeURIComponent(file.name), "X-Note": encodeURIComponent(note.value.trim()) },
+            body,
+          });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok || !data.ok) { status.textContent = data.message || "上传失败，请稍后再试。"; break; }
+          done += 1;
+          renderMyUploads(data.uploads, mine);
+        } catch {
+          status.textContent = "上传失败，请换个网络再试。";
+          break;
+        }
+      }
+      if (done) status.textContent = `已上传 ${done} 个，谢谢你！作者整理后，被采用的会在这里显示 🎉。`;
+    });
+    fetch("/api/access/my-uploads", { method: "POST", cache: "no-store" })
+      .then(r => r.json()).then(data => { if (data.ok) renderMyUploads(data.uploads, mine); }).catch(() => {});
+    return box;
+  }
+
   async function friendBanner(container) {
     const code = incoming();
     if (!code) return;
@@ -279,6 +375,7 @@
     status.setAttribute("role", "status");
     card.append(head, node("p", SPRINT_STORY[key] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"), extraNode(),
       button("📱 在线做 / 打印冲刺卷", () => openAny(status)), status);
+    card.append(uploadBox(key, Boolean(options.paid)));
     container.append(card);
   }
 

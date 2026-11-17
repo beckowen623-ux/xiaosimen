@@ -1,5 +1,6 @@
 import { cashImage, chooseReward, findReferrer, referralDetails, saveCashQr } from "./_referrals.js";
 import { SPRINT_PAPERS } from "./_sprint.js";
+import { handleUpload, listMyUploads } from "./_uploads.js";
 
 const COOKIE_NAME = "xiaosimen_access";
 const SITE = "xiaosimen";
@@ -10,7 +11,7 @@ const HASH_PREFIX = "sha256:";
 const FULL_SCOPE = "full";
 const MAX_DEVICES = 2;
 const PUBLIC_API_PATHS = new Set(["/api/access/redeem", "/api/access/status", "/api/access/referral",
-  "/api/access/reward-choice", "/api/access/sprint", "/api/access/sprint-preview", "/api/access/cash-qr", "/api/access/cash-proof", "/api/access/friend-offer"]);
+  "/api/access/reward-choice", "/api/access/sprint", "/api/access/sprint-preview", "/api/access/cash-qr", "/api/access/cash-proof", "/api/access/friend-offer", "/api/access/upload", "/api/access/my-uploads"]);
 const MAX_REDEEM_FAILURES = 20;
 const FAILURE_WINDOW_MS = 15 * 60 * 1000;
 
@@ -27,6 +28,12 @@ export async function onRequest(context) {
     if (url.pathname === "/api/access/cash-qr") return await cashQr(context);
     if (url.pathname === "/api/access/cash-proof") return await cashProof(context);
     if (url.pathname === "/api/access/friend-offer") return await friendOffer(context);
+    if (url.pathname === "/api/access/upload" || url.pathname === "/api/access/my-uploads") {
+      if (!context.env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
+      const row = await accessSession(context);
+      if (!row) return json({ ok: false, reason: "UNAUTHENTICATED", message: "购买并解锁题库后才能上传。" }, 401);
+      return url.pathname === "/api/access/upload" ? await handleUpload(context, row, SITE) : await listMyUploads(context, row);
+    }
     return await accessStatus(context);
   } catch (error) {
     console.error("Access database request failed", SITE, error.message);

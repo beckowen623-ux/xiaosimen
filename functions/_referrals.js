@@ -37,7 +37,7 @@ export async function referralDetails(DB, code) {
   if (!row) throw new Error("Referral profile could not be created.");
 
   const reward = await DB.prepare(
-    "SELECT c.reward_choice, c.cash_paid_at, r.qr_at, r.proof_at FROM access_codes c LEFT JOIN referral_cash r ON r.code_id = c.id WHERE c.id = ?"
+    "SELECT c.reward_choice, c.cash_paid_at, c.sprint_unlocked, r.qr_at, r.proof_at FROM access_codes c LEFT JOIN referral_cash r ON r.code_id = c.id WHERE c.id = ?"
   ).bind(code.id).first();
   const prefix = row.target_scope === "xiaosimen" ? "xiaosimen_cross" : "accounting_cross";
   const { results } = await DB.prepare("SELECT key, value FROM site_config WHERE key IN (?, ?)")
@@ -49,7 +49,8 @@ export async function referralDetails(DB, code) {
     required: REFERRAL_THRESHOLD,
     target: row.target_scope,
     rewardCode: row.reward_code || "",
-    sprint: Number(row.invited) >= SPRINT_THRESHOLD,
+    // 邀请成功 1 位，或上传的卷子被作者采用，都永久解锁冲刺卷。
+    sprint: Number(row.invited) >= SPRINT_THRESHOLD || Number(reward?.sprint_unlocked) === 1,
     sprintRequired: SPRINT_THRESHOLD,
     rewardChoice: reward?.reward_choice || "",
     cashAmount: CASH_REWARD,
