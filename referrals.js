@@ -99,6 +99,153 @@
     }, "image/png");
   }
 
+
+  const SPRINT_HINTS = {
+    xiaosimen: "（道法、历史、地理、生物每科每册一套，可打印）",
+    full: "（按高频考点组卷，可在线做、可打印）",
+  };
+  const sprintHint = key => SPRINT_HINTS[key] || "";
+
+  function sprintCard(profile, message) {
+    const card = node("div", "", "referral-sprint" + (profile.sprint ? " unlocked" : ""));
+    if (profile.sprint) {
+      card.append(node("strong", "📝 冲刺卷已解锁"), button("打开冲刺卷", () => openSprint(message)));
+    } else {
+      card.append(node("strong", "📝 冲刺卷 · 邀请 1 位朋友即可解锁"));
+    }
+    return card;
+  }
+
+  function bigReward(panel, profile, key, target, message) {
+    if (profile.invited < profile.required || profile.rewardCode) return null;
+    const box = node("div", "", "referral-offer referral-big");
+    const cash = profile.cashAmount || 15;
+    if (profile.rewardChoice === "cash") {
+      box.append(node("strong", profile.cashPaid ? `🎉 返现 ${cash} 元已转给你` : `已选择返现 ${cash} 元`));
+      if (!profile.cashPaid) box.append(node("p", `请在闲鱼给卖家留言你的邀请码 ${profile.code}，卖家核对后转账给你。`));
+      return box;
+    }
+    if (profile.rewardChoice === "bank") {
+      box.append(node("strong", `已选择${target.label}完整版`), node("p", "卖家发放奖励码后会显示在这里，也可以在闲鱼提醒卖家。"));
+      return box;
+    }
+    box.append(node("strong", `🎉 邀满 ${profile.required} 位，选一份大奖（选定后不能改）`));
+    const choose = async choice => {
+      message.textContent = "正在提交…";
+      try {
+        const response = await fetch("/api/access/reward-choice", {
+          method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ choice }),
+        });
+        const data = await response.json();
+        if (!response.ok || !data.ok) { message.textContent = data.message || "提交失败，请重试。"; return; }
+        mount(panel, data.referral, key);
+      } catch {
+        message.textContent = "网络暂时不可用，请重试。";
+      }
+    };
+    box.append(button(`返现 ${cash} 元`, () => {
+      if (confirm(`确定选择返现 ${cash} 元吗？选定后不能改成题库。`)) choose("cash");
+    }), button(`要${target.label}完整版`, () => {
+      if (confirm(`确定选择${target.label}完整版吗？选定后不能改成返现。`)) choose("bank");
+    }));
+    return box;
+  }
+
+  // ---- 冲刺卷：在线看、显示答案、打印 ----
+  let sprintCache = null;
+  const esc = value => String(value ?? "").replace(/[&<>"']/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch]);
+
+  async function openSprint(message) {
+    if (!sprintCache) {
+      message.textContent = "正在打开冲刺卷…";
+      try {
+        const response = await fetch("/api/access/sprint", { method: "POST", cache: "no-store" });
+        const data = await response.json();
+        if (!response.ok || !data.ok) { message.textContent = "冲刺卷暂时打不开，请刷新后再试。"; return; }
+        sprintCache = data.papers || [];
+        message.textContent = "";
+      } catch {
+        message.textContent = "网络暂时不可用，请重试。";
+        return;
+      }
+    }
+    if (!sprintCache.length) {
+      message.textContent = "冲刺卷正在出题，上线后会出现在这里。";
+      return;
+    }
+    showSprint(sprintCache);
+  }
+
+  function paperHTML(paper, showAnswers) {
+    let n = 0;
+    const answers = [];
+    const body = paper.sections.map(section => {
+      const items = section.items.map(item => {
+        n += 1;
+        const tag = item.tag ? `<span class="sprint-tag${item.tag === "考点冲刺" ? " hot" : ""}">${esc(item.tag)}</span>` : "";
+        if (item.type === "choice") {
+          answers.push(`<li><b>${n}. ${esc(item.answer)}</b> ${esc(item.explanation)}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</li>`);
+          return `<li class="sprint-q"><p>${n}. ${esc(item.stem)} ${item.multi ? '<span class="sprint-tag">多选</span>' : ""}${tag}</p><ol class="sprint-options">${item.options.map(o => `<li>${esc(o.key)}. ${esc(o.text)}</li>`).join("")}</ol></li>`;
+        }
+        if (item.type === "judge") {
+          answers.push(`<li><b>${n}. ${esc(item.answer)}</b> ${esc(item.explanation)}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</li>`);
+          return `<li class="sprint-q"><p>${n}. ${esc(item.stem)} ${tag}</p></li>`;
+        }
+        if (item.type === "blank") {
+          answers.push(`<li><b>${n}. ${esc(item.answer.join("；"))}</b> ${esc(item.explanation)}</li>`);
+          return `<li class="sprint-q"><p>${n}. ${esc(item.stem)}</p></li>`;
+        }
+        const points = item.points.map(p => `${esc(p.text)}（${p.score}分）`).join("；");
+        answers.push(`<li><b>${n}. 得分点：</b>${points}${item.sample ? `<br>参考答案：${esc(item.sample)}` : ""}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</li>`);
+        return `<li class="sprint-q"><p>${n}. ${esc(item.kind || "主观题")}（${item.score}分）${tag}</p>${item.material ? `<blockquote>${esc(item.material)}</blockquote>` : ""}<p>${esc(item.stem)}</p><div class="sprint-lines"></div></li>`;
+      }).join("");
+      return `<section><h3>${esc(section.title)}</h3>${section.note ? `<p class="sprint-note">${esc(section.note)}</p>` : ""}<ol class="sprint-list">${items}</ol></section>`;
+    }).join("");
+    return `<header class="sprint-head"><h2>${esc(paper.title)}</h2><p>姓名________ 用时________ 得分________</p></header>${body}` +
+      `<section class="sprint-answers${showAnswers ? "" : " hidden-answers"}"><h3>参考答案与解析</h3><ol class="sprint-key">${answers.join("")}</ol></section>`;
+  }
+
+  function showSprint(papers) {
+    document.querySelector(".sprint-overlay")?.remove();
+    const groups = [...new Set(papers.map(p => p.group))];
+    const overlay = node("div", "", "sprint-overlay");
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-label", "冲刺卷");
+    const bar = node("div", "", "sprint-bar");
+    const groupSelect = node("select");
+    groupSelect.setAttribute("aria-label", "科目");
+    groups.forEach(g => groupSelect.append(new Option(g, g)));
+    const paperSelect = node("select");
+    paperSelect.setAttribute("aria-label", "哪一套");
+    const answerToggle = button("显示答案", () => {
+      showAnswers = !showAnswers;
+      answerToggle.textContent = showAnswers ? "隐藏答案" : "显示答案";
+      render();
+    });
+    const close = () => { overlay.remove(); document.body.classList.remove("sprint-printing"); };
+    bar.append(groupSelect, paperSelect, answerToggle, button("打印", () => window.print()), button("关闭", close));
+    const sheet = node("article", "", "sprint-paper");
+    overlay.append(bar, sheet);
+    let showAnswers = false;
+    const fillPapers = () => {
+      paperSelect.replaceChildren();
+      papers.filter(p => p.group === groupSelect.value).forEach(p => paperSelect.append(new Option(p.term || p.title, p.id)));
+    };
+    const render = () => {
+      const paper = papers.find(p => p.id === paperSelect.value) || papers[0];
+      sheet.innerHTML = paperHTML(paper, showAnswers);
+      sheet.scrollTop = 0;
+    };
+    groupSelect.addEventListener("change", () => { fillPapers(); render(); });
+    paperSelect.addEventListener("change", render);
+    overlay.addEventListener("keydown", event => { if (event.key === "Escape") close(); });
+    fillPapers();
+    render();
+    document.body.append(overlay);
+    document.body.classList.add("sprint-printing");
+    groupSelect.focus();
+  }
+
   function mount(panel, profile, key) {
     if (!panel) return;
     panel.hidden = !profile;
@@ -113,11 +260,12 @@
     const share = `我在用的${site.label}，推荐给你。\n在闲鱼下单时备注我的邀请码 ${profile.code}，立减 5 元；收到兑换码解锁时再填一次。\n先免费试试：${url.href}`;
     const message = node("p", "", "referral-message");
     message.setAttribute("role", "status");
-    const progress = profile.rewardCode
-      ? `已发放${target.label}奖励。`
-      : profile.invited >= profile.required
-        ? "邀请已达标，等待作者发放奖励。"
-        : `已经有 ${profile.invited} 位朋友用你的邀请码买了题库，还差 ${Math.max(0, profile.required - profile.invited)} 位。`;
+    const left = Math.max(0, profile.required - profile.invited);
+    const progress = profile.invited >= profile.required
+      ? `已经有 ${profile.invited} 位朋友用你的邀请码买了题库，两档奖励都拿到了。`
+      : profile.invited > 0
+        ? `已经有 ${profile.invited} 位朋友用你的邀请码买了题库，冲刺卷已解锁；再邀 ${left} 位，可领大奖。`
+        : "还没有朋友用你的邀请码。邀请 1 位就能解锁冲刺卷。";
 
     const box = node("details", "", "referral-box");
     try { box.open = localStorage.getItem(OPEN_KEY) === "1"; } catch { /* 隐私模式 */ }
@@ -125,7 +273,7 @@
     const done = Math.min(profile.invited, profile.required);
     const summary = node("summary", "", "referral-summary");
     summary.append(node("span", "🎁 邀请好友", "referral-title"),
-      node("span", profile.rewardCode ? "奖励已发放" : `朋友省 5 元 · 已邀 ${done}/${profile.required}`, "referral-badge"));
+      node("span", profile.sprint ? `冲刺卷已解锁 · 已邀 ${done}/${profile.required}` : `朋友省 5 元 · 已邀 ${done}/${profile.required}`, "referral-badge"));
     box.append(summary);
 
     const steps = node("ol", "", "referral-steps");
@@ -133,13 +281,18 @@
       node("li", "把下面的邀请码（或分享图）发给想买题库的朋友。"),
       node("li", "朋友在闲鱼下单时，在备注里写上邀请码，就能便宜 5 元。"),
       node("li", "朋友收到兑换码、在题库里解锁时，再填一次邀请码，就算你邀请成功。"),
-      node("li", `成功邀请 ${profile.required} 位，送你${target.label}完整版。`));
-    box.append(node("p", progress, "referral-progress"), steps, node("strong", profile.code, "referral-code"));
+      node("li", `邀请成功 1 位：解锁冲刺卷${sprintHint(key)}。`),
+      node("li", `邀请满 ${profile.required} 位：返现 ${profile.cashAmount || 15} 元，或送你${target.label}完整版，二选一。`));
+    box.append(node("p", progress, "referral-progress"));
+    box.append(sprintCard(profile, message));
+    box.append(steps, node("strong", profile.code, "referral-code"));
     const actions = node("div", "", "referral-actions");
     actions.append(button("复制邀请文案", () => copyText(share, message)),
       button("保存分享图", () => saveCard(profile.code, site, url, message)));
     box.append(actions);
 
+    const big = bigReward(panel, profile, key, target, message);
+    if (big) box.append(big);
     if (profile.rewardCode) {
       const gift = node("div", "", "referral-offer");
       const redeem = link("去" + target.label + "兑换", target.url);

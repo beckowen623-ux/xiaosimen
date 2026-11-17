@@ -1,4 +1,6 @@
 export const REFERRAL_THRESHOLD = 3;
+export const SPRINT_THRESHOLD = 1;
+export const CASH_REWARD = 15;
 const alphabet = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
 
 export function newReferralCode() {
@@ -34,6 +36,7 @@ export async function referralDetails(DB, code) {
   ).bind(code.id).first();
   if (!row) throw new Error("Referral profile could not be created.");
 
+  const reward = await DB.prepare("SELECT reward_choice, cash_paid_at FROM access_codes WHERE id = ?").bind(code.id).first();
   const prefix = row.target_scope === "xiaosimen" ? "xiaosimen_cross" : "accounting_cross";
   const { results } = await DB.prepare("SELECT key, value FROM site_config WHERE key IN (?, ?)")
     .bind(prefix + "_purchase_link", prefix + "_purchase_text").all();
@@ -44,9 +47,26 @@ export async function referralDetails(DB, code) {
     required: REFERRAL_THRESHOLD,
     target: row.target_scope,
     rewardCode: row.reward_code || "",
+    sprint: Number(row.invited) >= SPRINT_THRESHOLD,
+    sprintRequired: SPRINT_THRESHOLD,
+    rewardChoice: reward?.reward_choice || "",
+    cashAmount: CASH_REWARD,
+    cashPaid: Boolean(reward?.cash_paid_at),
     offer: {
       link: offers.get(prefix + "_purchase_link") || "",
       text: offers.get(prefix + "_purchase_text") || "",
     },
   };
+}
+
+// 邀满 3 位后，买家选择返现或另一个题库；选定后不能再改（站长按选择发放）。
+export async function chooseReward(DB, code, choice) {
+  if (!["cash", "bank"].includes(choice)) return { ok: false, status: 400, message: "请选择返现或题库。" };
+  const details = await referralDetails(DB, code);
+  if (!details) return { ok: false, status: 403, message: "这个兑换码不参加邀请奖励。" };
+  if (details.invited < REFERRAL_THRESHOLD) return { ok: false, status: 409, message: `还差 ${REFERRAL_THRESHOLD - details.invited} 位朋友。` };
+  if (details.rewardCode || details.rewardChoice) return { ok: true, referral: details };
+  await DB.prepare("UPDATE access_codes SET reward_choice = ?, reward_choice_at = ? WHERE id = ? AND reward_choice IS NULL")
+    .bind(choice, new Date().toISOString(), code.id).run();
+  return { ok: true, referral: await referralDetails(DB, code) };
 }

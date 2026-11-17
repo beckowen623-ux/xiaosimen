@@ -1,4 +1,5 @@
-import { findReferrer, referralDetails } from "./_referrals.js";
+import { chooseReward, findReferrer, referralDetails } from "./_referrals.js";
+import { SPRINT_PAPERS } from "./_sprint.js";
 
 const COOKIE_NAME = "xiaosimen_access";
 const SITE = "xiaosimen";
@@ -8,7 +9,8 @@ const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 const HASH_PREFIX = "sha256:";
 const FULL_SCOPE = "full";
 const MAX_DEVICES = 2;
-const PUBLIC_API_PATHS = new Set(["/api/access/redeem", "/api/access/status", "/api/access/referral"]);
+const PUBLIC_API_PATHS = new Set(["/api/access/redeem", "/api/access/status", "/api/access/referral",
+  "/api/access/reward-choice", "/api/access/sprint"]);
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
@@ -17,6 +19,8 @@ export async function onRequest(context) {
   try {
     if (url.pathname === "/api/access/redeem") return await redeem(context);
     if (url.pathname === "/api/access/referral") return await accessReferral(context);
+    if (url.pathname === "/api/access/reward-choice") return await rewardChoice(context);
+    if (url.pathname === "/api/access/sprint") return await sprintPapers(context);
     return await accessStatus(context);
   } catch (error) {
     console.error("Access database request failed", SITE, error.message);
@@ -110,6 +114,29 @@ async function accessReferral(context) {
   const row = await accessSession(context);
   if (!row) return json({ ok: false, reason: "UNAUTHENTICATED" }, 401);
   return json({ ok: true, referral: await referralDetails(context.env.DB, row) });
+}
+
+async function rewardChoice(context) {
+  if (context.request.method !== "POST") return json({ ok: false }, 405);
+  if (!context.env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
+  if (!(context.request.headers.get("content-type") || "").includes("application/json")) return json({ ok: false }, 415);
+  const row = await accessSession(context);
+  if (!row) return json({ ok: false, reason: "UNAUTHENTICATED" }, 401);
+  const body = await context.request.json().catch(() => ({}));
+  const result = await chooseReward(context.env.DB, row, String(body?.choice || ""));
+  if (!result.ok) return json({ ok: false, message: result.message }, result.status);
+  return json({ ok: true, referral: result.referral });
+}
+
+// 邀请奖励：冲刺卷只发给已解锁、且至少成功邀请 1 位朋友的买家，不放在公开静态文件里。
+async function sprintPapers(context) {
+  if (context.request.method !== "POST") return json({ ok: false }, 405);
+  if (!context.env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
+  const row = await accessSession(context);
+  if (!row) return json({ ok: false, reason: "UNAUTHENTICATED" }, 401);
+  const referral = await referralDetails(context.env.DB, row);
+  if (!referral?.sprint) return json({ ok: false, reason: "LOCKED", required: referral?.sprintRequired || 1 }, 403);
+  return json({ ok: true, papers: SPRINT_PAPERS });
 }
 
 async function accessSession({ request, env }) {
