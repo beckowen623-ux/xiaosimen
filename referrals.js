@@ -105,9 +105,16 @@
     full: "（按高频考点组卷，可在线做、可打印）",
   };
   const sprintHint = key => SPRINT_HINTS[key] || "";
+  const SPRINT_STORY = {
+    xiaosimen: "这套卷子，是我和 Claude（Anthropic 的 Opus 5.5 模型）的一次“与神对话”：它按课标和中考考点把每一册过了一遍，从中考真题里挑出最该做的题，又专门为易错点新出了冲刺题。我先让孩子做了一遍——哪儿没掌握，一套做完一目了然。真心好用，忍不住想分享给你。",
+    full: "这套卷子，是我和 Claude（Anthropic 的 Opus 5.5 模型）的一次“与神对话”：它按考试大纲的高频考点，从历年真题里挑出最该做的题，又新出了概念和判断冲刺题。我自己先刷了一遍——哪个考点不稳，一套做完清清楚楚。真心好用，忍不住想分享给你。",
+  };
+  let siteKey = "full";
+  const BYLINE = "出题：Claude · Opus 5.5 按大纲考点组卷 ｜ 作者亲测";
 
   function sprintCard(profile, message) {
     const card = node("div", "", "referral-sprint" + (profile.sprint ? " unlocked" : ""));
+    card.append(node("p", SPRINT_STORY[siteKey] || SPRINT_STORY.full, "sprint-story"));
     if (profile.sprint) {
       card.append(node("strong", "📝 冲刺卷已解锁"), button("打开冲刺卷", () => openSprint(message)));
     } else {
@@ -122,7 +129,35 @@
     const cash = profile.cashAmount || 15;
     if (profile.rewardChoice === "cash") {
       box.append(node("strong", profile.cashPaid ? `🎉 返现 ${cash} 元已转给你` : `已选择返现 ${cash} 元`));
-      if (!profile.cashPaid) box.append(node("p", `请在闲鱼给卖家留言你的邀请码 ${profile.code}，卖家核对后转账给你。`));
+      if (profile.cashPaid) {
+        if (profile.cashProof) box.append(button("查看转账截图", () => showProof(message)));
+        return box;
+      }
+      box.append(node("p", profile.cashQr
+        ? "收款码已上传，卖家转账后会在这里放上转账截图。想换一张也可以重新上传。"
+        : "上传你的微信或支付宝收款码，卖家扫码转账后，会在这里回传转账截图。"));
+      const label = node("label", "", "referral-action");
+      const input = node("input");
+      input.type = "file";
+      input.accept = "image/*";
+      input.hidden = true;
+      label.append(profile.cashQr ? "重新上传收款码" : "上传收款码", input);
+      input.addEventListener("change", async () => {
+        if (!input.files[0]) return;
+        message.textContent = "正在上传…";
+        try {
+          const image = await shrink(input.files[0], 900);
+          const response = await fetch("/api/access/cash-qr", {
+            method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ image }),
+          });
+          const data = await response.json();
+          if (!response.ok || !data.ok) { message.textContent = data.message || "上传失败，请重试。"; return; }
+          mount(panel, data.referral, key);
+        } catch {
+          message.textContent = "上传失败，请换一张图片再试。";
+        }
+      });
+      box.append(label);
       return box;
     }
     if (profile.rewardChoice === "bank") {
@@ -151,6 +186,70 @@
     return box;
   }
 
+
+  async function shrink(file, maxSide) {
+    const bitmap = await createImageBitmap(file);
+    const scale = Math.min(1, maxSide / Math.max(bitmap.width, bitmap.height));
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.round(bitmap.width * scale);
+    canvas.height = Math.round(bitmap.height * scale);
+    canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+    return canvas.toDataURL("image/webp", 0.88);
+  }
+
+  async function showProof(message) {
+    try {
+      const response = await fetch("/api/access/cash-proof", { method: "POST", cache: "no-store" });
+      const data = await response.json();
+      if (!response.ok || !data.ok) { message.textContent = "截图暂时打不开，请稍后再试。"; return; }
+      const overlay = node("div", "", "sprint-overlay proof-overlay");
+      const bar = node("div", "", "sprint-bar");
+      bar.append(node("strong", "转账截图", "proof-title"), button("关闭", () => overlay.remove()));
+      const img = node("img", "", "proof-image");
+      img.src = data.image;
+      img.alt = "卖家回传的转账截图";
+      overlay.append(bar, img);
+      document.body.append(overlay);
+    } catch {
+      message.textContent = "网络暂时不可用，请重试。";
+    }
+  }
+
+  // 首页入口：所有人都能看到。已解锁的直接看全部；没解锁的看样题（每科第 1 套前 5 题）。
+  function mountTeaser(container, key, options = {}) {
+    if (!container) return;
+    siteKey = key;
+    container.replaceChildren();
+    const card = node("div", "", "sprint-teaser");
+    const head = node("div", "", "sprint-teaser-head");
+    head.append(node("strong", "📝 冲刺卷 · Claude 出题"), node("span", options.count || "", "referral-badge"));
+    const status = node("p", "", "referral-message");
+    status.setAttribute("role", "status");
+    card.append(head, node("p", SPRINT_STORY[key] || SPRINT_STORY.full, "sprint-story"),
+      button("打开冲刺卷", () => openAny(status)), status);
+    container.append(card);
+  }
+
+  async function openAny(message) {
+    message.textContent = "正在打开…";
+    try {
+      const full = await fetch("/api/access/sprint", { method: "POST", cache: "no-store" });
+      if (full.ok) {
+        const data = await full.json();
+        sprintCache = data.papers || [];
+        message.textContent = "";
+        if (sprintCache.length) showSprint(sprintCache);
+        return;
+      }
+      const preview = await fetch("/api/access/sprint-preview", { method: "POST", cache: "no-store" });
+      const data = await preview.json();
+      message.textContent = "";
+      if (preview.ok && data.ok) showSprint(data.papers || [], { preview: true, unlocked: full.status === 403 });
+    } catch {
+      message.textContent = "网络暂时不可用，请重试。";
+    }
+  }
+
   // ---- 冲刺卷：在线看、显示答案、打印 ----
   let sprintCache = null;
   const esc = value => String(value ?? "").replace(/[&<>"']/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch]);
@@ -176,6 +275,7 @@
     showSprint(sprintCache);
   }
 
+  let previewHint = "";
   function paperHTML(paper, showAnswers) {
     let n = 0;
     const answers = [];
@@ -201,11 +301,15 @@
       }).join("");
       return `<section><h3>${esc(section.title)}</h3>${section.note ? `<p class="sprint-note">${esc(section.note)}</p>` : ""}<ol class="sprint-list">${items}</ol></section>`;
     }).join("");
-    return `<header class="sprint-head"><h2>${esc(paper.title)}</h2><p>姓名________ 用时________ 得分________</p></header>${body}` +
+    const lock = paper.preview ? `<div class="sprint-lock">这是样题（前 5 题）。${previewHint}</div>` : "";
+    return `<header class="sprint-head"><h2>${esc(paper.title)}</h2><p class="sprint-byline">${esc(BYLINE)}</p><p>姓名________ 用时________ 得分________</p></header>${body}${lock}` +
       `<section class="sprint-answers${showAnswers ? "" : " hidden-answers"}"><h3>参考答案与解析</h3><ol class="sprint-key">${answers.join("")}</ol></section>`;
   }
 
-  function showSprint(papers) {
+  function showSprint(papers, mode = {}) {
+    previewHint = mode.unlocked
+      ? "邀请 1 位朋友用你的邀请码买题库，就能解锁全部冲刺卷。邀请码在页面里的“🎁 邀请好友”。"
+      : "购买题库后，邀请 1 位朋友，就能解锁全部冲刺卷。";
     document.querySelector(".sprint-overlay")?.remove();
     const groups = [...new Set(papers.map(p => p.group))];
     const overlay = node("div", "", "sprint-overlay");
@@ -247,6 +351,7 @@
   }
 
   function mount(panel, profile, key) {
+    siteKey = key;
     if (!panel) return;
     panel.hidden = !profile;
     panel.replaceChildren();
@@ -312,5 +417,5 @@
     panel.append(box);
   }
 
-  window.QuizReferrals = { incoming, load, mount };
+  window.QuizReferrals = { incoming, load, mount, mountTeaser };
 })();

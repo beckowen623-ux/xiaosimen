@@ -36,7 +36,9 @@ export async function referralDetails(DB, code) {
   ).bind(code.id).first();
   if (!row) throw new Error("Referral profile could not be created.");
 
-  const reward = await DB.prepare("SELECT reward_choice, cash_paid_at FROM access_codes WHERE id = ?").bind(code.id).first();
+  const reward = await DB.prepare(
+    "SELECT c.reward_choice, c.cash_paid_at, r.qr_at, r.proof_at FROM access_codes c LEFT JOIN referral_cash r ON r.code_id = c.id WHERE c.id = ?"
+  ).bind(code.id).first();
   const prefix = row.target_scope === "xiaosimen" ? "xiaosimen_cross" : "accounting_cross";
   const { results } = await DB.prepare("SELECT key, value FROM site_config WHERE key IN (?, ?)")
     .bind(prefix + "_purchase_link", prefix + "_purchase_text").all();
@@ -52,6 +54,8 @@ export async function referralDetails(DB, code) {
     rewardChoice: reward?.reward_choice || "",
     cashAmount: CASH_REWARD,
     cashPaid: Boolean(reward?.cash_paid_at),
+    cashQr: Boolean(reward?.qr_at),
+    cashProof: Boolean(reward?.proof_at),
     offer: {
       link: offers.get(prefix + "_purchase_link") || "",
       text: offers.get(prefix + "_purchase_text") || "",
@@ -69,4 +73,32 @@ export async function chooseReward(DB, code, choice) {
   await DB.prepare("UPDATE access_codes SET reward_choice = ?, reward_choice_at = ? WHERE id = ? AND reward_choice IS NULL")
     .bind(choice, new Date().toISOString(), code.id).run();
   return { ok: true, referral: await referralDetails(DB, code) };
+}
+
+// 收款码 / 转账截图：浏览器先压缩成 webp/jpeg/png 的 data URL，再存进 D1。
+export const MAX_IMAGE_CHARS = 900000;
+export function validImage(value) {
+  const text = String(value || "");
+  return text.length <= MAX_IMAGE_CHARS && /^data:image\/(webp|png|jpeg);base64,[A-Za-z0-9+/]+=*$/.test(text) ? text : "";
+}
+
+export async function saveCashQr(DB, code, image) {
+  const details = await referralDetails(DB, code);
+  if (!details || details.rewardChoice !== "cash" || details.invited < REFERRAL_THRESHOLD) {
+    return { ok: false, status: 409, message: "选择返现后才能上传收款码。" };
+  }
+  if (details.cashPaid) return { ok: false, status: 409, message: "返现已经完成。" };
+  const data = validImage(image);
+  if (!data) return { ok: false, status: 400, message: "图片无效或太大，请换一张截图。" };
+  await DB.prepare(
+    "INSERT INTO referral_cash (code_id, qr_image, qr_at) VALUES (?, ?, ?) " +
+    "ON CONFLICT(code_id) DO UPDATE SET qr_image = excluded.qr_image, qr_at = excluded.qr_at"
+  ).bind(code.id, data, new Date().toISOString()).run();
+  return { ok: true, referral: await referralDetails(DB, code) };
+}
+
+export async function cashImage(DB, codeId, kind) {
+  const column = kind === "proof" ? "proof_image" : "qr_image";
+  const row = await DB.prepare(`SELECT ${column} AS image FROM referral_cash WHERE code_id = ?`).bind(codeId).first();
+  return row?.image || "";
 }
