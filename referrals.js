@@ -123,11 +123,12 @@
     full: "这套卷子，是我和 Claude（Anthropic 的 Opus 5.5 模型）的一次“与神对话”：它按考试大纲的高频考点，从历年真题里挑出最该做的题，又新出了概念和判断冲刺题。我自己先刷了一遍——哪个考点不稳，一套做完清清楚楚。真心好用，忍不住想分享给你。",
   };
   let siteKey = "full";
-  const BYLINE = "出题：Claude · Opus 5.5 按大纲考点组卷 ｜ 作者亲测";
+  const BYLINE = "出题：Claude · Opus 5.5 根据考点与历年真题精选、改编、新出 ｜ 作者亲测";
+  const PROMISE = "每月至少更新一次，考前 2—3 个月加密更新。邀请成功 1 位朋友，就永久解锁全部卷子和以后的每一次更新。";
 
   function sprintCard(profile, message) {
     const card = node("div", "", "referral-sprint" + (profile.sprint ? " unlocked" : ""));
-    card.append(node("p", SPRINT_STORY[siteKey] || SPRINT_STORY.full, "sprint-story"));
+    card.append(node("p", SPRINT_STORY[siteKey] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"));
     if (profile.sprint) {
       card.append(node("strong", "📝 冲刺卷已解锁"), button("打开冲刺卷", () => openSprint(message)));
     } else {
@@ -147,8 +148,8 @@
         return box;
       }
       box.append(node("p", profile.cashQr
-        ? "收款码已上传，卖家转账后会在这里放上转账截图。想换一张也可以重新上传。"
-        : "上传你的微信或支付宝收款码，卖家扫码转账后，会在这里回传转账截图。"));
+        ? "收款码已上传。作者确认后 24 小时内打款，打款截图会放在这里。想换一张也可以重新上传。"
+        : "上传你的微信或支付宝收款码。作者确认后 24 小时内打款，并在这里回传打款截图。"));
       const label = node("label", "", "referral-action");
       const input = node("input");
       input.type = "file";
@@ -261,7 +262,7 @@
     head.append(node("strong", "📝 冲刺卷 · Claude 出题"), node("span", options.count || "", "referral-badge"));
     const status = node("p", "", "referral-message");
     status.setAttribute("role", "status");
-    card.append(head, node("p", SPRINT_STORY[key] || SPRINT_STORY.full, "sprint-story"),
+    card.append(head, node("p", SPRINT_STORY[key] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"),
       button("打开冲刺卷", () => openAny(status)), status);
     container.append(card);
   }
@@ -318,7 +319,7 @@
     const body = paper.sections.map(section => {
       const items = section.items.map(item => {
         n += 1;
-        const tag = item.tag ? `<span class="sprint-tag${item.tag === "考点冲刺" ? " hot" : ""}">${esc(item.tag)}</span>` : "";
+        const tag = item.tag ? `<span class="sprint-tag${/冲刺/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
         if (item.type === "choice") {
           answers.push(`<li><b>${n}. ${esc(item.answer)}</b> ${esc(item.explanation)}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</li>`);
           return `<li class="sprint-q"><p>${n}. ${esc(item.stem)} ${item.multi ? '<span class="sprint-tag">多选</span>' : ""}${tag}</p><ol class="sprint-options">${item.options.map(o => `<li>${esc(o.key)}. ${esc(o.text)}</li>`).join("")}</ol></li>`;
@@ -344,8 +345,8 @@
 
   function showSprint(papers, mode = {}) {
     previewHint = mode.unlocked
-      ? "邀请 1 位朋友用你的邀请码买题库，就能解锁全部冲刺卷。邀请码在页面里的“🎁 邀请好友”。"
-      : "购买题库后，邀请 1 位朋友，就能解锁全部冲刺卷。";
+      ? "完整卷子：把“🎁 邀请好友”里的专属链接发给朋友，有 1 位用它买了题库，就永久解锁全部卷子和以后的每次更新（每月至少一次，考前加密）。"
+      : "完整卷子：购买题库后，邀请 1 位朋友，就永久解锁全部卷子和以后的每次更新（每月至少一次，考前加密）。";
     document.querySelector(".sprint-overlay")?.remove();
     const groups = [...new Set(papers.map(p => p.group))];
     const overlay = node("div", "", "sprint-overlay");
@@ -422,8 +423,9 @@
       node("li", "点“复制邀请文案”，把你的专属链接发给想买题库的朋友。"),
       node("li", "朋友点开链接，页面上就有好友价 14.9 元的购买入口，省 5 元。"),
       node("li", "朋友买到兑换码、解锁题库后，自动算你邀请成功，不用你做任何事。"),
-      node("li", `邀请成功 1 位：解锁冲刺卷${sprintHint(key)}。`),
-      node("li", `邀请满 ${profile.required} 位：返现 ${profile.cashAmount || 15} 元，或送你${target.label}完整版，二选一。`));
+      node("li", `邀请成功 1 位：马上解锁冲刺卷${sprintHint(key)}，以后每月的更新也永久免费。`),
+      node("li", `邀请成功 ${profile.required} 位：这里会出现两个选项，二选一——返现 ${profile.cashAmount || 15} 元，或送你${target.label}完整版。`),
+      node("li", `选返现的：上传你的微信或支付宝收款码，作者确认后 24 小时内打款，并在这里回传打款截图。`));
     box.append(node("p", progress, "referral-progress"));
     box.append(sprintCard(profile, message));
     box.append(steps, node("strong", profile.code, "referral-code"));

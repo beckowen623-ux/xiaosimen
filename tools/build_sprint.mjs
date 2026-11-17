@@ -45,7 +45,7 @@ function pickBank(subject, chapterId) {
   const chosen = [];
   for (let i = 0; i < BANK_COUNT && i * step < recent.length; i += 1) chosen.push(recent[Math.floor(i * step)]);
   return chosen.map(q => ({
-    type: "choice", tag: "真题", source: q.source || "",
+    type: "choice", tag: "Claude 精选", source: q.source || "",
     stem: q.stem, options: q.options.map(o => ({ key: o.key, text: o.text })),
     answer: q.answer[0], explanation: q.explanation || "",
   }));
@@ -65,7 +65,7 @@ function toChoice([kp, stem, options, explanation]) {
   const ordered = options.map((text, i) => ({ text, correct: i === 0 }));
   const rotated = [...ordered.slice(4 - shift), ...ordered.slice(0, 4 - shift)];
   return {
-    type: "choice", tag: "考点冲刺", kp,
+    type: "choice", tag: "Claude 冲刺", kp,
     stem, options: rotated.map((o, i) => ({ key: LETTERS[i], text: o.text })),
     answer: LETTERS[rotated.findIndex(o => o.correct)], explanation,
   };
@@ -101,7 +101,7 @@ for (const [subject, label] of SUBJECTS) {
     const bank = pickBank(subject, chapterId);
     const fresh = authoredFor(subject, chapterId).map(toChoice);
     const { essays, blanks } = subjectiveFor(subject, chapterId);
-    const sections = [{ title: "一、选择题", note: "每题只有一个正确答案。标“考点冲刺”的是按易错考点新出的题。", items: [...bank, ...fresh] }];
+    const sections = [{ title: "一、选择题", note: "每题只有一个正确答案。", items: [...bank, ...fresh] }];
     if (blanks.length) sections.push({ title: "二、填空速记", items: blanks });
     if (essays.length) sections.push({ title: blanks.length ? "三、主观题" : "二、主观题", note: "先自己写，再对照得分点给自己打分。", items: essays });
     papers.push({
