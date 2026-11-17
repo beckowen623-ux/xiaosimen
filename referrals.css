@@ -99,3 +99,5 @@
 .upload-mine span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .upload-ok { color: #16803c; white-space: nowrap; font-weight: 700; }
 .upload-wait { color: #6b7774; white-space: nowrap; }
+.upload-file { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; pointer-events: none; }
+.upload-box { position: relative; }

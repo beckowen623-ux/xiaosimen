@@ -286,7 +286,12 @@
     const box = node("div", "", "upload-box");
     box.append(node("strong", "📮 把新卷子交给 Claude，帮你抓考点"));
     if (!paid) {
-      box.append(node("p", "买了题库后，可以在这里上传手上的新卷子。被采用的，送冲刺卷永久解锁。", "upload-small"));
+      const hint = node("p", "", "referral-message");
+      box.append(node("p", "手上有新卷子？买了题库后就能在这里上传。被采用的，送冲刺卷永久解锁。", "upload-small"),
+        button("📷 上传卷子", () => {
+          hint.replaceChildren(node("span", "购买并解锁题库后就能上传（已经买了的，先在本页输入兑换码解锁）。 "),
+            button("我要购买 / 输入兑换码", () => window.dispatchEvent(new CustomEvent("quiz-sprint-buy"))));
+        }), hint);
       return box;
     }
     const text = UPLOAD_TEXT[key] || UPLOAD_TEXT.full;
@@ -295,17 +300,19 @@
     note.type = "text";
     note.maxLength = 100;
     note.placeholder = text.placeholder;
-    const label = node("label", "", "referral-action upload-pick");
-    const input = node("input");
+    const input = node("input", "", "upload-file");
     input.type = "file";
     input.multiple = true;
-    input.hidden = true;
+    input.tabIndex = -1;
+    input.setAttribute("aria-hidden", "true");
     input.accept = "image/*,.pdf,.docx,.txt,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document";
-    label.append("📷 拍照 / 选文件上传", input);
+    // 用真按钮 + 不完全隐藏的文件控件，微信等手机内置浏览器也能弹出选择框。
+    const pick = button("📷 拍照 / 选文件上传", () => input.click());
+    pick.classList.add("upload-pick");
     const status = node("p", "", "referral-message");
     status.setAttribute("role", "status");
     const mine = node("div", "", "upload-mine-list");
-    box.append(note, label, status, mine,
+    box.append(note, pick, input, status, mine,
       node("p", "支持照片、PDF、Word（.docx）、TXT，单个不超过 15MB，每天最多 5 个。上传前请遮住姓名、学校、电话等信息。上传即同意题目经改编后用于题库和冲刺卷更新。", "upload-small"));
     input.addEventListener("change", async () => {
       const files = [...input.files].slice(0, 5);
