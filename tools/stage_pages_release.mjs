@@ -51,6 +51,9 @@ for (const file of readdirSync(data, { withFileTypes: true })) {
     copyFileSync(join(data, file.name), join(publicData, file.name));
   }
 }
+// 题目配图（157 张 jpg，按题 id 命名）必须一起发布，否则线上显示“配图加载失败”。
+cpSync(join(project, "data", "figures"), join(publicData, "figures"), { recursive: true });
+
 // 每次发布按文件内容生成版本号（?v=内容哈希），文件一改，访客浏览器就会拿新文件。
 for (const page of ["index.html", "key-points.html"]) {
   const file = join(output, page);
