@@ -640,7 +640,7 @@ let referralProfile = null;
 function hasFullAccess() { return paidAccess || legacyTrialDays() > 0; }
 
 function showReferralProfile() {
-  window.QuizReferrals?.mountTeaser?.(byId("sprintTeaser"), "xiaosimen", { count: "24 套 · 可打印" });
+  window.QuizReferrals?.mountTeaser?.(byId("sprintTeaser"), "xiaosimen", { count: "24 套 · 可打印", showFriend: !paidAccess });
   window.QuizReferrals?.mount(byId("referralPanel"), referralProfile, "xiaosimen");
 }
 
@@ -760,6 +760,8 @@ redeemForm.addEventListener('submit', async event => {
         DEVICE_LIMIT: '这个兑换码在小四门已激活两个浏览器。',
         INVALID_CODE: '兑换码无效，或不适用于小四门。',
         INVALID_REFERRAL: '邀请码有误，请核对或留空后继续。',
+        REFERRAL_REQUIRED: '这是好友价兑换码，请填写邀请你的朋友的邀请码（ALIX- 开头，问朋友要）。',
+        RATE_LIMITED: '尝试次数太多，请 15 分钟后再试。',
         UNAVAILABLE: '兑换服务暂时不可用，请稍后再试。',
       };
       redeemMessage.textContent = messages[data.reason] || '兑换失败，请稍后再试。';

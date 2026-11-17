@@ -10,7 +10,7 @@ const HASH_PREFIX = "sha256:";
 const FULL_SCOPE = "full";
 const MAX_DEVICES = 2;
 const PUBLIC_API_PATHS = new Set(["/api/access/redeem", "/api/access/status", "/api/access/referral",
-  "/api/access/reward-choice", "/api/access/sprint", "/api/access/sprint-preview", "/api/access/cash-qr", "/api/access/cash-proof"]);
+  "/api/access/reward-choice", "/api/access/sprint", "/api/access/sprint-preview", "/api/access/cash-qr", "/api/access/cash-proof", "/api/access/friend-offer"]);
 const MAX_REDEEM_FAILURES = 20;
 const FAILURE_WINDOW_MS = 15 * 60 * 1000;
 
@@ -26,6 +26,7 @@ export async function onRequest(context) {
     if (url.pathname === "/api/access/sprint-preview") return sprintPreview();
     if (url.pathname === "/api/access/cash-qr") return await cashQr(context);
     if (url.pathname === "/api/access/cash-proof") return await cashProof(context);
+    if (url.pathname === "/api/access/friend-offer") return await friendOffer(context);
     return await accessStatus(context);
   } catch (error) {
     console.error("Access database request failed", SITE, error.message);
@@ -66,7 +67,7 @@ async function redeem({ request, env }) {
   }
 
   const codeRow = await env.DB.prepare(
-    "SELECT id, used_at, reward_for_code_id FROM access_codes WHERE code_hash = ? AND access_scope IN (" + scopeParams + ") LIMIT 1"
+    "SELECT id, used_at, reward_for_code_id, friend_price FROM access_codes WHERE code_hash = ? AND access_scope IN (" + scopeParams + ") LIMIT 1"
   ).bind(await sha256(normalizedCode), ...PRODUCT_SCOPES).first();
   if (!codeRow) {
     await env.DB.prepare("INSERT INTO redeem_failures (ip, failed_at) VALUES (?, ?)").bind(ip, new Date().toISOString()).run();
@@ -83,6 +84,10 @@ async function redeem({ request, env }) {
   }
 
   let referrer = null;
+  // 好友价码首次兑换必须带邀请码（页面会自动带上从邀请链接记住的码）。
+  if (codeRow.used_at == null && Number(codeRow.friend_price) === 1 && !String(referralCode).trim()) {
+    return json({ ok: false, reason: "REFERRAL_REQUIRED" }, 400);
+  }
   if (codeRow.used_at == null && codeRow.reward_for_code_id == null && String(referralCode).trim()) {
     referrer = await findReferrer(env.DB, referralCode, codeRow.id);
     if (!referrer) return json({ ok: false, reason: "INVALID_REFERRAL" }, 400);
@@ -172,6 +177,16 @@ async function cashQr(context) {
   const result = await saveCashQr(context.env.DB, row, body?.image);
   if (!result.ok) return json({ ok: false, message: result.message }, result.status);
   return json({ ok: true, referral: result.referral });
+}
+
+// 好友专享价商品入口（后台“闲鱼购买设置”里填写），只给通过邀请链接进来的访客展示。
+async function friendOffer({ env }) {
+  if (!env.DB) return json({ ok: false }, 503);
+  const prefix = SITE === "xiaosimen" ? "xiaosimen_friend" : "accounting_friend";
+  const { results } = await env.DB.prepare("SELECT key, value FROM site_config WHERE key IN (?, ?)")
+    .bind(prefix + "_purchase_link", prefix + "_purchase_text").all();
+  const values = new Map((results || []).map(row => [row.key, row.value]));
+  return json({ ok: true, link: values.get(prefix + "_purchase_link") || "", text: values.get(prefix + "_purchase_text") || "" });
 }
 
 async function cashProof(context) {

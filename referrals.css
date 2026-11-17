@@ -61,3 +61,8 @@
 .proof-overlay { align-items: center; }
 .proof-title { color: #fff; align-self: center; margin-right: auto; }
 .proof-image { max-width: min(96vw, 520px); max-height: 80vh; margin: 16px auto; object-fit: contain; }
+.friend-banner { margin: 14px 0; padding: 14px 16px; border-radius: 14px; background: #17473d; color: #fff; }
+.friend-banner strong { font-size: 16px; }
+.friend-banner p { margin: 6px 0; color: #e3f1ea; font-size: 14px; line-height: 1.6; }
+.friend-banner .referral-action { background: #ffe5aa; color: #3b2a00; border-color: #ffe5aa; font-weight: 700; }
+.friend-banner .referral-message { color: #fff; }

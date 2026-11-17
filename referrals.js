@@ -4,12 +4,25 @@
     full: { label: "考证题库", url: "https://tinawin.cc.cd/" },
     xiaosimen: { label: "小四门题库", url: "https://x4m.cc.cd/" },
   };
-  const discount = "朋友在闲鱼下单时备注这个邀请码，立减 5 元。";
+  const discount = "朋友点你的专属链接，用好友价在闲鱼下单，省 5 元。";
   const OPEN_KEY = "quiz-referral-open";
 
+  const INVITE_KEY = "quiz-invite";
+  const INVITE_DAYS = 60;
   function incoming() {
-    const code = new URLSearchParams(location.search).get("invite")?.trim().toUpperCase() || "";
-    return /^ALIX-[A-Z0-9]{8}$/.test(code) ? code : "";
+    const valid = value => /^ALIX-[A-Z0-9]{8}$/.test(value) ? value : "";
+    const fromLink = valid(new URLSearchParams(location.search).get("invite")?.trim().toUpperCase() || "");
+    try {
+      if (fromLink) {
+        localStorage.setItem(INVITE_KEY, JSON.stringify({ code: fromLink, at: Date.now() }));
+        return fromLink;
+      }
+      const saved = JSON.parse(localStorage.getItem(INVITE_KEY) || "null");
+      if (saved && Date.now() - saved.at < INVITE_DAYS * 864e5) return valid(saved.code);
+    } catch {
+      // 隐私模式下只认链接里的邀请码。
+    }
+    return fromLink;
   }
 
   async function load() {
@@ -80,8 +93,8 @@
     text("爱丽克丝的小站", 56, 80, 28, 600, "#246456");
     text("一起练习 · " + site.label, 56, 150, 43, 700, "#163b33");
     text(code, 56, 255, 76, 750, "#17473d");
-    text("闲鱼下单备注邀请码 · 立减 5 元", 56, 320, 33, 700, "#24574b");
-    text("收到兑换码后，兑换时再填一次。", 56, 371, 28, 500, "#24574b");
+    text("好友专享价 14.9 元 · 立省 5 元", 56, 320, 33, 700, "#24574b");
+    text("打开下面的网址，或兑换时填上方邀请码", 56, 371, 28, 500, "#24574b");
     text(address.host, 56, 433, 25, 500, "#24574b");
     canvas.toBlob(blob => {
       if (!blob) {
@@ -216,10 +229,33 @@
   }
 
   // 首页入口：所有人都能看到。已解锁的直接看全部；没解锁的看样题（每科第 1 套前 5 题）。
+  async function friendBanner(container) {
+    const code = incoming();
+    if (!code) return;
+    let offer = {};
+    try {
+      const response = await fetch("/api/access/friend-offer", { method: "POST", cache: "no-store" });
+      if (response.ok) offer = await response.json();
+    } catch {
+      // 没取到商品入口时，仍提示邀请码已记住。
+    }
+    const banner = node("div", "", "friend-banner");
+    banner.append(node("strong", "🎁 朋友邀请你：好友专享价 14.9 元，省 5 元"),
+      node("p", `先免费试用；觉得好再去闲鱼买好友价。买到兑换码后回到这里兑换，邀请码 ${code} 已自动带上。`));
+    const actions = node("div", "", "referral-actions");
+    const status = node("p", "", "referral-message");
+    const buy = link("去闲鱼买好友价", offer.link);
+    if (buy) actions.append(buy);
+    if (offer.text) actions.append(button("复制闲鱼口令", () => copyText(offer.text, status)));
+    if (actions.childElementCount) banner.append(actions, status);
+    container.prepend(banner);
+  }
+
   function mountTeaser(container, key, options = {}) {
     if (!container) return;
     siteKey = key;
     container.replaceChildren();
+    if (options.showFriend) friendBanner(container);
     const card = node("div", "", "sprint-teaser");
     const head = node("div", "", "sprint-teaser-head");
     head.append(node("strong", "📝 冲刺卷 · Claude 出题"), node("span", options.count || "", "referral-badge"));
@@ -362,7 +398,7 @@
     const url = new URL(site.url);
     url.searchParams.set("from", "referral");
     url.searchParams.set("invite", profile.code);
-    const share = `我在用的${site.label}，推荐给你。\n在闲鱼下单时备注我的邀请码 ${profile.code}，立减 5 元；收到兑换码解锁时再填一次。\n先免费试试：${url.href}`;
+    const share = `我在用的${site.label}，推荐给你。\n点我的专属链接，可以先免费试，再用好友价 14.9 元买（省 5 元）：\n${url.href}\n如果兑换时提示填邀请码，填 ${profile.code}`;
     const message = node("p", "", "referral-message");
     message.setAttribute("role", "status");
     const left = Math.max(0, profile.required - profile.invited);
@@ -383,9 +419,9 @@
 
     const steps = node("ol", "", "referral-steps");
     steps.append(
-      node("li", "把下面的邀请码（或分享图）发给想买题库的朋友。"),
-      node("li", "朋友在闲鱼下单时，在备注里写上邀请码，就能便宜 5 元。"),
-      node("li", "朋友收到兑换码、在题库里解锁时，再填一次邀请码，就算你邀请成功。"),
+      node("li", "点“复制邀请文案”，把你的专属链接发给想买题库的朋友。"),
+      node("li", "朋友点开链接，页面上就有好友价 14.9 元的购买入口，省 5 元。"),
+      node("li", "朋友买到兑换码、解锁题库后，自动算你邀请成功，不用你做任何事。"),
       node("li", `邀请成功 1 位：解锁冲刺卷${sprintHint(key)}。`),
       node("li", `邀请满 ${profile.required} 位：返现 ${profile.cashAmount || 15} 元，或送你${target.label}完整版，二选一。`));
     box.append(node("p", progress, "referral-progress"));
