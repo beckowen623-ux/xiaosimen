@@ -1,7 +1,7 @@
 (() => {
   "use strict";
   const targets = {
-    full: { label: "会计题库", url: "https://tinawin.cc.cd/" },
+    full: { label: "考证题库", url: "https://tinawin.cc.cd/" },
     xiaosimen: { label: "小四门题库", url: "https://x4m.cc.cd/" },
   };
   const discount = "闲鱼下单时备注邀请码立减 5 元，收到兑换码后兑换时再填一次。";

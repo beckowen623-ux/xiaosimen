@@ -674,7 +674,7 @@ function availableQueue(progress) {
 }
 
 function accountingRecommendation() {
-  return '<a class="cross-bank-link" data-cross-bank href="https://tinawin.cc.cd/?from=x4m">家长自己在考证？中级会计题库 →</a>';
+  return '<a class="cross-bank-link" data-cross-bank href="https://tinawin.cc.cd/?from=x4m">家长自己在考证？会计 / 审计 / 软考题库 →</a>';
 }
 
 view.addEventListener('click', event => {
