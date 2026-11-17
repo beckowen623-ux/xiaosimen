@@ -1,4 +1,4 @@
-.quiz-referral { margin: 16px 0; padding: 16px; border: 1px solid #d4e3da; border-radius: 14px; background: #f4f9f5; color: #1d3e34; }
+.quiz-referral { margin: 16px 0; padding: 0; border: 1px solid #d4e3da; border-radius: 14px; background: #f4f9f5; color: #1d3e34; }
 .quiz-referral[hidden] { display: none; }
 .quiz-referral h2 { margin: 0 0 6px; font-size: 18px; }
 .quiz-referral p { margin: 5px 0; }
@@ -9,3 +9,14 @@
 .referral-message:empty { display: none; }
 .referral-input { display: block; margin-top: 8px; }
 .referral-input input { display: block; width: min(100%, 340px); margin-top: 4px; padding: 8px; border: 1px solid #c8d8d3; border-radius: 8px; font: inherit; }
+.referral-box > summary { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 13px 16px; cursor: pointer; list-style: none; }
+.referral-box > summary::-webkit-details-marker { display: none; }
+.referral-box > summary::after { content: "展开 ▾"; flex: none; font-size: 13px; color: #24574b; }
+.referral-box[open] > summary::after { content: "收起 ▴"; }
+.referral-title { font-weight: 700; font-size: 16px; white-space: nowrap; }
+.referral-badge { margin-left: auto; padding: 2px 9px; border-radius: 999px; background: #dff0e5; font-size: 13px; white-space: nowrap; }
+.referral-box > :not(summary) { margin-left: 16px; margin-right: 16px; }
+.referral-box[open] { padding-bottom: 14px; }
+.referral-steps { padding-left: 1.3em; line-height: 1.7; }
+.referral-progress { font-weight: 600; }
+.referral-box .referral-code { font-size: 20px; padding: 6px 12px; border: 1px dashed #8fb8a3; border-radius: 8px; background: #fff; }

@@ -4,7 +4,8 @@
     full: { label: "考证题库", url: "https://tinawin.cc.cd/" },
     xiaosimen: { label: "小四门题库", url: "https://x4m.cc.cd/" },
   };
-  const discount = "闲鱼下单时备注邀请码立减 5 元，收到兑换码后兑换时再填一次。";
+  const discount = "朋友在闲鱼下单时备注这个邀请码，立减 5 元。";
+  const OPEN_KEY = "quiz-referral-open";
 
   function incoming() {
     const code = new URLSearchParams(location.search).get("invite")?.trim().toUpperCase() || "";
@@ -109,27 +110,42 @@
     const url = new URL(site.url);
     url.searchParams.set("from", "referral");
     url.searchParams.set("invite", profile.code);
-    const share = `一起练习${site.label}。\n${discount}\n邀请码 ${profile.code}\n${url.href}`;
+    const share = `我在用的${site.label}，推荐给你。\n在闲鱼下单时备注我的邀请码 ${profile.code}，立减 5 元；收到兑换码解锁时再填一次。\n先免费试试：${url.href}`;
     const message = node("p", "", "referral-message");
     message.setAttribute("role", "status");
     const progress = profile.rewardCode
       ? `已发放${target.label}奖励。`
       : profile.invited >= profile.required
         ? "邀请已达标，等待作者发放奖励。"
-        : `已邀请 ${profile.invited} / ${profile.required} 位有效新买家，达标可获${target.label}。`;
+        : `已经有 ${profile.invited} 位朋友用你的邀请码买了题库，还差 ${Math.max(0, profile.required - profile.invited)} 位。`;
 
-    panel.append(node("h2", "邀请好友"), node("p", progress), node("p", discount), node("strong", profile.code, "referral-code"));
+    const box = node("details", "", "referral-box");
+    try { box.open = localStorage.getItem(OPEN_KEY) === "1"; } catch { /* 隐私模式 */ }
+    box.addEventListener("toggle", () => { try { localStorage.setItem(OPEN_KEY, box.open ? "1" : "0"); } catch { /* 隐私模式 */ } });
+    const done = Math.min(profile.invited, profile.required);
+    const summary = node("summary", "", "referral-summary");
+    summary.append(node("span", "🎁 邀请好友", "referral-title"),
+      node("span", profile.rewardCode ? "奖励已发放" : `朋友省 5 元 · 已邀 ${done}/${profile.required}`, "referral-badge"));
+    box.append(summary);
+
+    const steps = node("ol", "", "referral-steps");
+    steps.append(
+      node("li", "把下面的邀请码（或分享图）发给想买题库的朋友。"),
+      node("li", "朋友在闲鱼下单时，在备注里写上邀请码，就能便宜 5 元。"),
+      node("li", "朋友收到兑换码、在题库里解锁时，再填一次邀请码，就算你邀请成功。"),
+      node("li", `成功邀请 ${profile.required} 位，送你${target.label}完整版。`));
+    box.append(node("p", progress, "referral-progress"), steps, node("strong", profile.code, "referral-code"));
     const actions = node("div", "", "referral-actions");
     actions.append(button("复制邀请文案", () => copyText(share, message)),
       button("保存分享图", () => saveCard(profile.code, site, url, message)));
-    panel.append(actions);
+    box.append(actions);
 
     if (profile.rewardCode) {
       const gift = node("div", "", "referral-offer");
       const redeem = link("去" + target.label + "兑换", target.url);
       gift.append(node("strong", "奖励兑换码 " + profile.rewardCode),
         button("复制奖励码", () => copyText(profile.rewardCode, message)), redeem);
-      panel.append(gift);
+      box.append(gift);
     } else {
       const offer = node("div", "", "referral-offer");
       offer.append(node("strong", "已购专享 · " + target.label + " 9.9 元"));
@@ -137,9 +153,10 @@
       if (purchase) offer.append(purchase);
       if (profile.offer?.text) offer.append(button("复制闲鱼口令", () => copyText(profile.offer.text, message)));
       if (!purchase && !profile.offer?.text) offer.append(node("p", "购买时可向作者询问已购专享入口。"));
-      panel.append(offer);
+      box.append(offer);
     }
-    panel.append(message);
+    box.append(message);
+    panel.append(box);
   }
 
   window.QuizReferrals = { incoming, load, mount };

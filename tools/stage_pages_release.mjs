@@ -1,5 +1,6 @@
 import { copyFileSync, cpSync, existsSync, lstatSync, mkdirSync, readFileSync, readdirSync, realpathSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 
 const project = realpathSync(fileURLToPath(new URL("../", import.meta.url)));
@@ -49,5 +50,16 @@ for (const file of readdirSync(data, { withFileTypes: true })) {
   if (file.isFile() && file.name.endsWith(".js")) {
     copyFileSync(join(data, file.name), join(publicData, file.name));
   }
+}
+// 每次发布按文件内容生成版本号（?v=内容哈希），文件一改，访客浏览器就会拿新文件。
+for (const page of ["index.html", "key-points.html"]) {
+  const file = join(output, page);
+  const html = readFileSync(file, "utf8").replace(/(["'])\.\/([\w./-]+\.(?:js|css))\?v=[\w-]+\1/g, (match, quote, path) => {
+    const target = join(output, path);
+    if (!existsSync(target)) return match;
+    const hash = createHash("sha256").update(readFileSync(target)).digest("hex").slice(0, 10);
+    return `${quote}./${path}?v=${hash}${quote}`;
+  });
+  writeFileSync(file, html);
 }
 console.log(output);
