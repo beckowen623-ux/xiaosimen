@@ -4,13 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f5ef">
+  <meta name="xiaosimen-paid-launch-date" content="">
   <meta name="description" content="福州人教版小四门刷题。按年级和学期练习道德与法治、历史、地理、生物：选择题、填空速记、材料分析与论述题（得分点自评），订正错题、跟踪进度和每日打卡。">
   <title>小四门刷题 · 福州人教版</title>
   <link rel="icon" type="image/svg+xml" href="./assets/icons/icon.svg">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=10">
+  <link rel="stylesheet" href="./styles.css?v=13">
   <script src="./data/daily-questions-xiaosimen.js?v=7" defer></script>
-  <script src="./app.js?v=10" defer></script>
+  <link rel="stylesheet" href="./referrals.css?v=1">
+  <script src="./referrals.js?v=2" defer></script>
+  <script src="./app.js?v=14" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#view">跳到主要内容</a>
@@ -33,7 +36,10 @@
       <div class="card loading-card" role="status">正在加载题库…</div>
       <noscript><p class="card">请启用 JavaScript，然后刷新页面开始练习。</p></noscript>
     </main>
-    <footer class="foot">学习记录保存在当前浏览器。换设备或网址前，可在「进度管理」下载备份。</footer>
+    <footer class="foot">
+      <a class="author-home-link" href="https://elx.cc.cd/?from=xiaosimen&amp;panel=feedback">作者的个人主页</a> · 有问题欢迎留言
+      <div>学习记录保存在当前浏览器。换设备或网址前，可在「进度管理」下载备份。</div>
+    </footer>
   </div>
   <div class="toast" id="toast" role="status"></div>
   <dialog class="dialog" id="progressDialog" aria-labelledby="progressTitle">
@@ -53,6 +59,35 @@
       <button class="btn" id="cancelImport" type="button">取消</button>
     </div>
     <p class="data-reset"><button class="btn text-button danger" id="resetBtn" type="button">清空本机进度</button></p>
+  </dialog>
+  <dialog class="dialog" id="unlockDialog" aria-labelledby="unlockTitle">
+    <div class="dialog-head">
+      <h2 id="unlockTitle">小四门·提分工具</h2>
+      <form method="dialog"><button class="btn text-button" aria-label="关闭兑换窗口">关闭</button></form>
+    </div>
+    <p class="muted" id="unlockReason"></p>
+    <div class="access-offers">
+      <section id="schoolOffer">
+        <h3>小四门完整版 ¥19.9</h3>
+        <a class="btn" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买</a>
+        <button class="btn" type="button" hidden>复制闲鱼口令</button>
+      </section>
+      <section id="bundleOffer">
+        <h3>双题库套餐 ¥29.8</h3>
+        <a class="btn" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买套餐</a>
+        <button class="btn" type="button" hidden>复制套餐口令</button>
+      </section>
+    </div>
+    <p class="muted">兑换后每个适用题库可激活两个浏览器。套餐码可在两个题库分别兑换。</p>
+    <form class="redeem-form" id="redeemForm">
+      <label for="accessCode">已有兑换码</label>
+      <div class="dialog-actions">
+        <input type="text" id="accessCode" maxlength="64" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required>
+        <button class="btn primary" type="submit">兑换</button>
+      </div>
+      <label class="referral-input">邀请码（首次兑换时选填）<input id="inviteCode" type="text" maxlength="13" autocomplete="off" autocapitalize="characters"></label>
+    </form>
+    <p id="redeemMessage" class="muted" role="status"></p>
   </dialog>
   <dialog class="dialog figure-dialog" id="figureDialog" aria-label="查看题目配图">
     <form method="dialog"><button class="btn text-button" aria-label="关闭配图">关闭</button></form>

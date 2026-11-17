@@ -168,6 +168,64 @@ const sandbox = {
 vm.createContext(sandbox);
 vm.runInContext(coreSrc, sandbox, { filename: 'app-core.js' });
 const { buildQueue, applyMode } = sandbox;
+
+{
+  const { startLegacyTrial, legacyTrialDays } = sandbox;
+  if (!startLegacyTrial || !legacyTrialDays) fail('缺少老用户 7 天完整版体验');
+  else {
+    const launch = '2026-11-17';
+    const startedAt = Date.parse('2026-11-17T09:00:00+08:00');
+    const day = 86400000;
+    const key = 'xiaosimen-legacy-trial-start-v1';
+    const oldProgress = { studyDays: ['2026-11-17', '2026-11-15'], banks: { sample: { done: true } } };
+    const oldProgressText = JSON.stringify(oldProgress);
+    startLegacyTrial({ studyDays: [launch, '2026-11-18'] }, launch, startedAt);
+    if (legacyTrialDays(startedAt) !== 0 || key in store) fail('上线当日或之后首次作答的新用户不能开通老用户体验');
+    startLegacyTrial(oldProgress, launch, Date.parse('2026-11-16T23:59:59+08:00'));
+    if (key in store) fail('上线之前不能开始倒计时');
+    startLegacyTrial(oldProgress, launch, startedAt);
+    const firstRecord = store[key];
+    if (JSON.stringify(oldProgress) !== oldProgressText) fail('开通体验不应覆盖原答题进度');
+    if (legacyTrialDays(startedAt) !== 7 || legacyTrialDays(startedAt + day) !== 6) fail('体验从首次开通起倒计时 7 天');
+    startLegacyTrial(oldProgress, launch, startedAt + 3 * day);
+    if (store[key] !== firstRecord || legacyTrialDays(startedAt + 7 * day - 1) !== 1) fail('再次进入不能重置起算时间');
+    startLegacyTrial(oldProgress, launch, startedAt + 7 * day);
+    if (legacyTrialDays(startedAt + 7 * day) !== 0 || store[key] !== firstRecord) fail('准确到期后不能重开体验');
+    delete store[key];
+    store['xiaosimen-growth-v1'] = JSON.stringify({ studyDays: ['2026-11-16'] });
+    startLegacyTrial({ banks: oldProgress.banks }, launch, startedAt);
+    if (legacyTrialDays(startedAt) !== 7) fail('更早版本单独保存的作答日期也应识别');
+    delete store[key];
+    delete store['xiaosimen-growth-v1'];
+  }
+}
+
+// The trial picks separate quotas per term and subject and does not count fill-in questions as essay samples.
+if (typeof sandbox.trialQuestionIds !== "function") fail("缺少免费题范围选择");
+else {
+  const sample = (subject, stage) => Array.from({ length: 21 }, (_, i) => ({
+    id: [subject, stage, i + 1].join("-"), subject, stage, chapterId: 1, number: i + 1,
+  }));
+  const objectives = [...sample("lishi", "7-up"), ...sample("lishi", "7-down"), ...sample("dili", "7-up")];
+  const subjective = [
+    { id: "blank", subject: "lishi", type: "blank" },
+    ...[1, 2, 3].map(i => ({ id: "essay" + i, subject: "lishi", type: "essay" })),
+    { id: "essay-dili", subject: "dili", type: "essay" },
+  ];
+  const allowed = sandbox.trialQuestionIds(objectives, subjective);
+  if (allowed.size !== 63 || !allowed.has("lishi-7-down-20") || allowed.has("lishi-7-down-21") ||
+      allowed.has("dili-7-up-21") || allowed.has("blank") || allowed.has("essay3") || !allowed.has("essay-dili")) {
+    fail("免费范围应为每科每学期前 20 道客观题、每科前 2 道主观题");
+  }
+  const day = "2026-11-17";
+  const trial = sandbox.extendShareTrial({ days: [], ids: [] }, day, objectives.filter(q => !allowed.has(q.id)));
+  if (trial.ids.length !== 3 || sandbox.extendShareTrial(trial, day, objectives) !== trial) {
+    fail("每日分享最多领一次 3 道额外试题");
+  }
+  const capped = sandbox.extendShareTrial({ days: [], ids: Array.from({ length: 29 }, (_, i) => "old-" + i) }, day, objectives);
+  if (capped.ids.length !== 30) fail("分享额外试题最多累计 30 道");
+}
+
 if (typeof buildQueue !== 'function') fail('app.js 里没有 buildQueue 函数');
 else {
   const emptyProgress = { banks: {} };

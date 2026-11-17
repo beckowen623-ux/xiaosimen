@@ -1,0 +1,4 @@
+.deploy-pages/
+.deploy-preview/
+.wrangler/
+.dev.vars

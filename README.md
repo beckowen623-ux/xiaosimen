@@ -2,7 +2,15 @@
 
 福州 · 人教版 · 初中小四门（道德与法治、历史、地理、生物）碎片化刷题应用。
 
-仿 `beckowen623-ux/quiz-bank-app` 的结构做的全新仓库：**纯静态前端 + localStorage 进度，无后端、无账号、无付费**。原仓库一个字也没动。
+前端使用静态文件，学习进度保存在浏览器。Cloudflare Pages Functions 通过共用的 D1 数据库处理小四门和双题库套餐兑换。
+
+## 免费练习与兑换
+
+- 每日一题和考点速记开放。每学期每科前 20 道客观题、每科前 2 道主观题可试做。错题本可以查看错误记录。
+- 分享每日一题可在当前浏览器每天领取 3 道额外客观题，最多累计 30 道。额外题按领取时选择的学期练习顺序分配。
+- 小四门完整版 19.9 元。双题库套餐 29.8 元，同一个码在两个题库分别激活，每站最多两个浏览器。
+- 购买单题库后可在首页查看邀请码。三位新买家首次兑换时填同一个邀请码，管理员发放奖励后，可在这里领取另一个题库的兑换码。
+- 从已有进度备份导入的题仍可回顾。错题自动复习、填空、周日小测和积分称号由完整版解锁。
 
 ## 怎么用
 
@@ -127,6 +135,22 @@ node --check app.js
 
 ## 域名与发布
 
+Cloudflare Pages 项目 `xiaosimen` 已连接 GitHub 仓库 `beckowen623-ux/xiaosimen`，生产分支为 `main`，启用了自动部署。正式发布时，在生产 D1 的 007、008、009 迁移通过验收并获站长批准后，使用以下 Pages 设置，再推送已批准的版本。
+
+| 后台设置 | 值 |
+| --- | --- |
+| Build configuration → Root directory | 留空（仓库根目录） |
+| Build configuration → Build command | `node tools/stage_pages_release.mjs` |
+| Build configuration → Build output directory | `.deploy-pages` |
+| Production → Bindings → D1 database | 变量名 `DB`，数据库 `quiz-bank-access` |
+| Production → Variables and secrets | `XIAOSIMEN_PAID_LAUNCH_DATE` 为首次收费上线的北京时间日期，格式 `YYYY-MM-DD` |
+
+构建命令会在每次检出后生成发布目录，静态产物包含网页、样式、图片和运行所需的题库 JS。测试脚本和原始资料目录留在源码中。Pages Functions 从仓库根目录的 `functions/` 构建。生产构建设置和 D1 绑定由 Pages 后台管理，仓库的 Wrangler 配置供本地开发使用。[Cloudflare Pages 构建设置](https://developers.cloudflare.com/pages/configuration/build-configuration/) · [Pages Wrangler 配置](https://developers.cloudflare.com/pages/functions/wrangler-configuration/)
+
+本地在仓库根目录运行同一条 Node 命令可复现静态打包。Windows 也可运行 `./tools/stage_pages_release.ps1`，两者调用同一构建脚本。
+
+首次收费上线的日期由站长确认后写入生产变量，后续发布沿用同一天。已有上线日前作答日期的浏览器，首次打开新版后获得 7 天完整版体验，首页显示剩余天数。开始时间单独保存在该浏览器，到期后继续保留练习记录。Cloudflare 的 `main` 构建会检查日期，以免日期缺失时提前发布付费限制。在本地设置相同变量即可演练体验。
+
 Cloudflare Pages 托管仓库中的静态文件，自定义域名为 `x4m.cc.cd`。仍在旧 GitHub Pages 地址练习的同学，可先在原址升级后下载进度备份，再在新域名导入。两处地址由浏览器分别保存进度。
 
 ## 题数统计（打标 + 福建第二波 + 生物章名修正 + 宁化合并 + 道法第二波 + 地理/生物/历史第三波 + 福建 2024–2026 第四波 + 外省真题第五波 + 外省真题第六波 + 外省真题第七波 + 外省真题第八波全部合并后 + 第九波（地理 50 道）后 + 第十波后 + 第十一波后 + 第十二波全部合并 + 删除自创题后，`node tests/validate.mjs` 输出，2026-11-15）
@@ -157,7 +181,6 @@ Cloudflare Pages 托管仓库中的静态文件，自定义域名为 `x4m.cc.cd`
 
 ## 原仓库的坑，这里已避开
 
-- 付费锁是软锁，题库文件仍公开可下载——本应用免费，不做付费锁。
 - `total` 手工数、两处要对上——这里用测试强制校验。
 - 题库是 JS 全局变量，文件名 / 全局变量名 / 映射表三者必须一致，否则静默加载失败——这里统一成一个 `XIAOSIMEN_BANKS`。
 - 判断题答案格式不统一——这里统一 `true/false`。

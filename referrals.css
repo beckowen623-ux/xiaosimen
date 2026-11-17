@@ -1,0 +1,11 @@
+.quiz-referral { margin: 16px 0; padding: 16px; border: 1px solid #d4e3da; border-radius: 14px; background: #f4f9f5; color: #1d3e34; }
+.quiz-referral[hidden] { display: none; }
+.quiz-referral h2 { margin: 0 0 6px; font-size: 18px; }
+.quiz-referral p { margin: 5px 0; }
+.referral-code { display: inline-block; padding: 4px 7px; margin: 4px 0; font-family: ui-monospace, monospace; letter-spacing: .06em; }
+.referral-actions, .referral-offer { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.referral-action { display: inline-flex; align-items: center; padding: 6px 10px; min-height: 36px; border: 1px solid #b9d2c1; border-radius: 8px; background: #fff; color: #17473d; font: inherit; text-decoration: none; cursor: pointer; }
+.referral-offer { border-top: 1px solid #d4e3da; padding-top: 10px; margin-top: 12px; }
+.referral-message:empty { display: none; }
+.referral-input { display: block; margin-top: 8px; }
+.referral-input input { display: block; width: min(100%, 340px); margin-top: 4px; padding: 8px; border: 1px solid #c8d8d3; border-radius: 8px; font: inherit; }

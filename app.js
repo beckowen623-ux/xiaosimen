@@ -1,11 +1,13 @@
 /* 小四门刷题 · 福州人教版 · 纯静态 + localStorage
  * 仿 beckowen623-ux/quiz-bank-app 的结构（懒加载 .js 题库、localStorage 进度、SRS 错题复习），
- * 去掉了付费锁 / 兑换码 / admin / 计算器。
  * 题型：单选、多选、判断（自动判分）；填空（自动判分）；材料分析 / 论述 / 简答（对照得分点自评）。
  */
 'use strict';
 const STORAGE_KEY = 'xiaosimen-quiz-v1';
 const GROWTH_KEY = 'xiaosimen-growth-v1';
+const LEGACY_TRIAL_KEY = 'xiaosimen-legacy-trial-start-v1';
+const DAY_MS = 86_400_000;
+const LEGACY_TRIAL_MS = 7 * DAY_MS;
 const REVIEW_INTERVALS = [1, 3, 7, 14]; // 错题复习间隔（天）：答对进一级，答错退回第 1 级；连续答对 4 次算掌握
 // ---------- 打卡 / 积分 / 补打规则 ----------
 const CHECKIN_POINTS = { checkin: 10, correct: 1, reviewCorrect: 2, accuracy90: 5, perfect: 10, weekFull: 30 };
@@ -107,6 +109,25 @@ function studyDates(progress) {
   const dates = progress.studyDays ?? readStored(GROWTH_KEY).studyDays;
   return Array.isArray(dates) ? dates : [];
 }
+function legacyTrialStartedAt() {
+  const { startedAt } = readStored(LEGACY_TRIAL_KEY);
+  return Number.isSafeInteger(startedAt) && startedAt > 0 ? startedAt : null;
+}
+function startLegacyTrial(progress, launchDate, now = Date.now()) {
+  const launchAt = Date.parse(launchDate + 'T00:00:00+08:00');
+  if (!(now >= launchAt) || localStorage.getItem(LEGACY_TRIAL_KEY) !== null) return;
+  const studiedBeforeLaunch = studyDates(progress).some(date =>
+    typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date) && date < launchDate);
+  if (studiedBeforeLaunch) {
+    localStorage.setItem(LEGACY_TRIAL_KEY, JSON.stringify({ startedAt: now }));
+  }
+}
+function legacyTrialDays(now = Date.now()) {
+  const startedAt = legacyTrialStartedAt();
+  if (startedAt === null) return 0;
+  const remaining = LEGACY_TRIAL_MS - Math.max(0, now - startedAt);
+  return Math.max(0, Math.ceil(remaining / DAY_MS));
+}
 function createProgressBackup() {
   const progress = loadProgress();
   return {
@@ -199,7 +220,7 @@ function weakChapters(all, progress) {
     .sort((a, b) => (a.correct / a.attempted) - (b.correct / b.attempted));
 }
 // 打卡状态：今天能不能打、是不是补打、还差什么
-function checkinStatus(all, progress) {
+function checkinStatus(all, progress, requiresCorrections = true) {
   const c = getCheckin(progress);
   const today = todayStr();
   const alreadyDone = c.lastDate === today;
@@ -207,15 +228,15 @@ function checkinStatus(all, progress) {
   const isMakeupDay = gap === 2; // 昨天漏打 1 天
   const makeupUsed = (c.makeup && c.makeup.countThisMonth) || 0;
   const makeupAllowed = isMakeupDay && makeupUsed < MAKEUP_MONTH_LIMIT;
-  const clearN = clearWrongList(all, progress).length;
+  const clearN = requiresCorrections ? clearWrongList(all, progress).length : 0;
   const freshDone = Object.keys(c.dayStats.first || {}).length;
   const freshTarget = (isMakeupDay && makeupAllowed) ? MAKEUP_FRESH_TARGET : DAILY_FRESH_TARGET;
   const canCheckin = !alreadyDone && clearN === 0 && freshDone >= freshTarget;
   return { alreadyDone, gap, isMakeupDay, makeupAllowed, makeupUsed, makeupLimit: MAKEUP_MONTH_LIMIT, clearN, freshDone, freshTarget, canCheckin };
 }
 // 执行打卡（调用前先用 checkinStatus 确认 canCheckin）。返回明细，供首页提示。
-function doCheckin(all, progress) {
-  const st = checkinStatus(all, progress);
+function doCheckin(all, progress, requiresCorrections = true) {
+  const st = checkinStatus(all, progress, requiresCorrections);
   if (!st.canCheckin) return { ok: false, status: st };
   const c = getCheckin(progress);
   const today = todayStr();
@@ -402,11 +423,11 @@ function subjectiveQueue(type, progress) {
 //     包括地理/生物的总复习章（九上/九下章，内容是七、八年级总复习，提前用于会考冲刺）；
 //  4. 初三上学期：只留道法、历史新课，之后轻量复习七、八年级道法、历史；
 //  5. 初三下学期：新课后自动进七到九年级道法、历史总复习。
-function buildQueue(stage, banks, progress) {
+function buildQueue(stage, banks, progress, includeDue = true) {
   const active = activeSubjectsForStage(stage);
   const all = allQuestions(banks, SUBJECT_ORDER); // 全部题，用于错题/复习判断
   const order = stageOrder(stage);
-  const due = dueQuestions(all.filter(q => active.includes(q.subject)), progress);
+  const due = includeDue ? dueQuestions(all.filter(q => active.includes(q.subject)), progress) : [];
   // 当前学期新课：按科目分组，每组内按 chapterId、number 排序，再四门轮刷。
   const currentGroups = active.map(key =>
     all.filter(q => q.subject === key && q.stage === stage)
@@ -522,6 +543,50 @@ function dailyQuestion() {
   return questions[days % questions.length];
 }
 
+const TRIAL_QUESTIONS_PER_TERM = 20;
+const TRIAL_ESSAYS_PER_SUBJECT = 2;
+const SHARE_REWARD = 3;
+const SHARE_CAP = 30;
+const SHARE_TRIAL_KEY = 'xiaosimen-share-trial-v1';
+const FULL_ONLY_MODES = new Set(['blank', 'clearWrong', 'due', 'retry', 'sunday']);
+
+function trialQuestionIds(objectives, subjective) {
+  const allowed = new Set();
+  const counts = new Map();
+  const ordered = [...objectives].sort((a, b) => (a.chapterId - b.chapterId) || (a.number - b.number));
+  for (const q of ordered) {
+    const group = q.subject + '|' + q.stage;
+    const count = counts.get(group) || 0;
+    if (count >= TRIAL_QUESTIONS_PER_TERM) continue;
+    counts.set(group, count + 1);
+    allowed.add(q.id);
+  }
+  counts.clear();
+  for (const q of subjective) {
+    if (q.type !== 'essay') continue;
+    const count = counts.get(q.subject) || 0;
+    if (count >= TRIAL_ESSAYS_PER_SUBJECT) continue;
+    counts.set(q.subject, count + 1);
+    allowed.add(q.id);
+  }
+  return allowed;
+}
+
+function extendShareTrial(trial, day, candidates) {
+  if (trial.days.includes(day) || trial.ids.length >= SHARE_CAP) return trial;
+  const alreadyFree = new Set(trial.ids);
+  const choices = dedupeById(candidates).filter(q => !alreadyFree.has(q.id))
+    .slice(0, Math.min(SHARE_REWARD, SHARE_CAP - trial.ids.length));
+  if (!choices.length) return trial;
+  return { days: [...trial.days, day], ids: [...trial.ids, ...choices.map(q => q.id)] };
+}
+
+function readShareTrial() {
+  const value = readStored(SHARE_TRIAL_KEY);
+  const savedStrings = list => Array.isArray(list) ? [...new Set(list.filter(v => typeof v === 'string'))] : [];
+  return { days: savedStrings(value?.days).slice(-SHARE_CAP), ids: savedStrings(value?.ids).slice(0, SHARE_CAP) };
+}
+
 // ---------- 界面 ----------
 const byId = id => document.getElementById(id);
 const view = byId('view');
@@ -566,6 +631,212 @@ let bankQuestions = [];
 let subjectiveQuestions = [];
 let library = [];
 let toastTimer;
+
+const paidLaunchDate = document.querySelector('meta[name="xiaosimen-paid-launch-date"]')?.content || '';
+let paidAccess = false;
+let legacyCountdownTimer;
+let referralProfile = null;
+
+function hasFullAccess() { return paidAccess || legacyTrialDays() > 0; }
+
+function showReferralProfile() {
+  window.QuizReferrals?.mount(byId("referralPanel"), referralProfile, "xiaosimen");
+}
+
+async function refreshReferralProfile() {
+  if (!paidAccess || !window.QuizReferrals) return;
+  referralProfile = await window.QuizReferrals.load();
+  showReferralProfile();
+}
+let baseTrialIds = new Set();
+let shareTrial = readShareTrial();
+
+const unlockDialog = byId('unlockDialog');
+const redeemForm = byId('redeemForm');
+const redeemMessage = byId('redeemMessage');
+const inviteInput = byId('inviteCode');
+inviteInput.value = window.QuizReferrals?.incoming() || '';
+const visitorSource = new URL(location.href).searchParams.get('from') || 'direct';
+
+function isTrialQuestion(q) {
+  return baseTrialIds.has(q.id) || shareTrial.ids.includes(q.id);
+}
+
+function hasQuestionHistory(progress, q) {
+  const record = qProgress(progress, q.id);
+  return hasAnswered(record) || !!record?.revealed;
+}
+
+function availableQueue(progress) {
+  const fullAccess = hasFullAccess();
+  const queue = buildQueue(state.stage, banks, progress, fullAccess);
+  return fullAccess ? queue : queue.filter(isTrialQuestion);
+}
+
+function accountingRecommendation() {
+  return '<a class="cross-bank-link" data-cross-bank href="https://tinawin.cc.cd/?from=x4m">家长自己在考证？中级会计题库 →</a>';
+}
+
+view.addEventListener('click', event => {
+  if (event.target.closest('[data-cross-bank]')) trackVisit('cross_click');
+});
+
+function trackVisit(event) {
+  void fetch('/api/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ event, source: visitorSource }),
+    keepalive: true,
+  }).catch(() => {});
+}
+
+async function restoreAccess() {
+  try {
+    const response = await fetch('/api/access/status', { cache: 'no-store' });
+    if (response.ok) paidAccess = (await response.json()).authenticated === true;
+  } catch {
+    // A connection failure leaves the trial available.
+  }
+}
+
+async function loadPurchaseOptions() {
+  try {
+    const response = await fetch('/api/config', { cache: 'no-store' });
+    if (!response.ok) return;
+    const options = await response.json();
+    for (const [elementId, offer] of [['schoolOffer', options.xiaosimen], ['bundleOffer', options.bundle]]) {
+      const offerElement = byId(elementId);
+      const link = offerElement.querySelector('a');
+      const copy = offerElement.querySelector('button');
+      link.hidden = true;
+      copy.hidden = true;
+      if (/^https:\/\//i.test(offer?.link || '')) {
+        link.href = offer.link;
+        link.hidden = false;
+      }
+      if (offer?.text) {
+        copy.hidden = false;
+        copy.onclick = async () => {
+          try {
+            await navigator.clipboard.writeText(offer.text);
+            redeemMessage.textContent = '闲鱼口令已复制。';
+          } catch {
+            redeemMessage.textContent = '复制失败，请重试。';
+          }
+        };
+      }
+    }
+  } catch {
+    // Codes can still be submitted when the offer configuration is unavailable.
+  }
+}
+
+function openUnlock(message = '') {
+  byId('unlockReason').textContent = message || '开通后可练全部题目、自动复习错题并参加周日小测。';
+  redeemMessage.textContent = '';
+  if (!unlockDialog.open) unlockDialog.showModal();
+  void loadPurchaseOptions();
+  trackVisit('purchase_view');
+}
+
+redeemForm.addEventListener('submit', async event => {
+  event.preventDefault();
+  const submit = redeemForm.querySelector('button[type=submit]');
+  const input = byId('accessCode');
+  const code = input.value.trim();
+  if (!code) return;
+  submit.disabled = true;
+  redeemMessage.textContent = '正在兑换…';
+  try {
+    const response = await fetch('/api/access/redeem', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code, source: visitorSource, referralCode: inviteInput.value }),
+    });
+    const data = await response.json();
+    if (!response.ok || !data.ok) {
+      const messages = {
+        DEVICE_LIMIT: '这个兑换码在小四门已激活两个浏览器。',
+        INVALID_CODE: '兑换码无效，或不适用于小四门。',
+        INVALID_REFERRAL: '邀请码有误，请核对或留空后继续。',
+        UNAVAILABLE: '兑换服务暂时不可用，请稍后再试。',
+      };
+      redeemMessage.textContent = messages[data.reason] || '兑换失败，请稍后再试。';
+      return;
+    }
+    paidAccess = true;
+    input.value = '';
+    unlockDialog.close();
+    renderHome('homeTitle');
+    void refreshReferralProfile();
+    toast('已解锁小四门完整版。');
+  } catch {
+    redeemMessage.textContent = '兑换服务暂时不可用，请稍后再试。';
+  } finally {
+    submit.disabled = false;
+  }
+});
+
+function accessNoticeHTML(days) {
+  if (paidAccess) return '<section id="referralPanel" class="quiz-referral" hidden></section>';
+  if (days > 0) {
+    return `<section class="card mini-card access-notice legacy-trial-notice">
+      <div><h2 id="legacyTrialCountdown">完整版体验还剩 ${days} 天</h2><p class="muted">上线前的作答记录已保留。体验期间可练习全部题目、复习到期错题和订正。</p></div>
+      <button class="btn" type="button" id="openUnlock">兑换完整版</button>
+    </section>`;
+  }
+  const expired = legacyTrialStartedAt() !== null ? '<p class="muted">7 天完整版体验已结束，原答题记录已保留。</p>' : '';
+  return `<section class="card mini-card access-notice">
+    <div><h2>免费练习</h2>${expired}<p class="muted">每科每学期前 ${TRIAL_QUESTIONS_PER_TERM} 道客观题，每科 ${TRIAL_ESSAYS_PER_SUBJECT} 道主观题。</p></div>
+    <button class="btn" type="button" id="openUnlock">查看完整版 / 兑换</button>
+  </section>`;
+}
+
+function updateLegacyCountdown() {
+  clearTimeout(legacyCountdownTimer);
+  const countdown = byId('legacyTrialCountdown');
+  if (!countdown) return;
+  const now = Date.now();
+  const days = legacyTrialDays(now);
+  if (days === 0) { renderHome(); return; }
+  countdown.textContent = `完整版体验还剩 ${days} 天`;
+  const elapsed = Math.max(0, now - legacyTrialStartedAt());
+  legacyCountdownTimer = setTimeout(updateLegacyCountdown, DAY_MS - elapsed % DAY_MS);
+}
+
+async function shareDailyQuestion(button) {
+  const question = dailyQuestion();
+  if (!question) return;
+  const url = new URL(location.pathname, location.origin);
+  url.searchParams.set('from', 'daily-share');
+  const text = `小四门每日一题 · ${question.subjectLabel || SUBJECTS[question.subject]?.label || ''}\n${question.stem}\n${url.href}`;
+  button.disabled = true;
+  try {
+    if (navigator.share) await navigator.share({ title: '小四门每日一题', text });
+    else await navigator.clipboard.writeText(text);
+    trackVisit('daily_share');
+    if (!hasFullAccess()) {
+      const currentTrial = readShareTrial();
+      const candidates = buildQueue(state.stage, banks, loadProgress(), false).filter(q => !baseTrialIds.has(q.id));
+      const nextTrial = extendShareTrial(currentTrial, todayStr(), candidates);
+      if (nextTrial !== currentTrial && persist(() => {
+        localStorage.setItem(SHARE_TRIAL_KEY, JSON.stringify(nextTrial));
+        return true;
+      })) {
+        shareTrial = nextTrial;
+        renderHome('dailyShare');
+        toast(`已解锁 ${nextTrial.ids.length - currentTrial.ids.length} 道额外练习题。`);
+        return;
+      }
+    }
+    toast(navigator.share ? '分享操作已完成。' : '分享内容已复制。');
+  } catch (error) {
+    if (error?.name !== 'AbortError') toast('分享暂时不可用，请重试。');
+  } finally {
+    button.disabled = false;
+  }
+}
+
 
 function esc(s) {
   return String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -634,6 +905,7 @@ function keepPosition(qid) {
 }
 
 function checkinCardHTML(progress, stats) {
+  const fullAccess = hasFullAccess();
   const c = getCheckin(progress);
   const canMakeup = stats.isMakeupDay && stats.makeupAllowed;
   const needed = Math.max(0, stats.freshTarget - stats.freshDone);
@@ -648,7 +920,7 @@ function checkinCardHTML(progress, stats) {
   } else {
     action = `<button class="btn primary" data-mode="random20">去做今日新题 ${icon('arrow-right')}</button>`;
   }
-  let note = '先订正错题，再完成今日新题。';
+  let note = fullAccess ? '先订正错题，再完成今日新题。' : '完成今日新题即可打卡。';
   if (stats.alreadyDone) note = c.lastMakeupDate === todayStr() ? '今日已补上昨天的打卡。' : '明天继续完成新题。';
   else if (canMakeup) note = `昨天漏打，今天完成 ${stats.freshTarget} 道新题可补打。`;
   else if (stats.isMakeupDay) note = '本月补打次数已用完，今天重新累计。';
@@ -670,13 +942,14 @@ function checkinCardHTML(progress, stats) {
         <p class="muted">${esc(note)}</p>
       </div>
       ${action}
-      <div class="checkin-footer"><span>${icon('flame')} 打卡连续 <b>${activeStreak}</b> 天</span><span>今日积分 <b>+${c.pointsToday}</b></span></div>
-      <details class="badges">
+      ${stats.alreadyDone ? `<p class="checkin-cross">${accountingRecommendation()}</p>` : ''}
+      <div class="checkin-footer"><span>${icon('flame')} 打卡连续 <b>${activeStreak}</b> 天</span>${fullAccess ? `<span>今日积分 <b>+${c.pointsToday}</b></span>` : ''}</div>
+      ${fullAccess ? `<details class="badges">
         <summary>称号与徽章</summary>
         <p class="muted mobile-study-streak">已连续学习 ${streakDays(progress)} 天，按有作答的日期计算。</p>
         <p class="muted">${next ? `距「${next.name}」还差 ${next.points - c.totalPoints} 分。` : '已获得最高积分称号。'}</p>
         <ul class="badges-list">${badgeList.map(b => `<li>${c.badges.includes(b.name) ? '✓ ' : ''}${b.name}<span>${b.requirement}</span></li>`).join('')}</ul>
-      </details>
+      </details>` : ''}
     </section>`;
 }
 
@@ -714,7 +987,7 @@ function quickModesHTML(queue, progress) {
       <div class="quick-grid">
         ${options.map(entry => `<button class="quick-card tone-${entry.tone}" data-mode="${entry.mode}">
           <span class="tile-icon">${icon(entry.icon)}</span>
-          <span class="quick-name"><strong>${entry.name}</strong><small>${fmt.format(applyMode(entry.q, entry.mode, progress).length)} 道</small></span>
+          <span class="quick-name"><strong>${entry.name}</strong><small>${!hasFullAccess() && entry.mode === 'due' ? '完整版' : fmt.format(applyMode(entry.q, entry.mode, progress).length) + ' 道'}</small></span>
           ${icon('chevron-right', 'quick-arrow')}
         </button>`).join('')}
       </div>
@@ -794,7 +1067,8 @@ function dailyCardHTML(progress) {
       <div class="section-heading"><h2 id="dailyTitle">${icon('book-open')} 每日一题</h2><span class="muted">${todayStr().slice(5).replace('-', ' / ')}</span></div>
       ${q ? `<div>${subjectChip(q.subject, q.subjectLabel)}</div>
         <p class="daily-stem">${esc(q.stem)}</p>
-        <button class="btn" id="dailyBtn">${hasAnswered(qProgress(progress, q.id)) ? '重做今日一题' : '做今日一题'} ${icon('arrow-right')}</button>`
+        <button class="btn" id="dailyBtn">${hasAnswered(qProgress(progress, q.id)) ? '重做今日一题' : '做今日一题'} ${icon('arrow-right')}</button>
+        <button class="btn text-button" id="dailyShare" type="button">${!hasFullAccess() && !shareTrial.days.includes(todayStr()) && shareTrial.ids.length < SHARE_CAP ? '分享领额外练习题' : '分享这道题'}</button>`
         : '<p class="muted">每日一题暂未加载。</p>'}
     </section>`;
 }
@@ -816,14 +1090,19 @@ function renderHome(focus = '') {
   if (!banks) return;
   document.body.classList.remove('practice');
   const progress = loadProgress();
-  const queue = buildQueue(state.stage, banks, progress);
+  if (!paidAccess && paidLaunchDate) persist(() => startLegacyTrial(progress, paidLaunchDate));
+  const queue = availableQueue(progress);
+  const trialDays = paidAccess ? 0 : legacyTrialDays();
+  const accessNotice = accessNoticeHTML(trialDays);
   refreshStreak(progress);
   byId('headerSearch').hidden = false;
   view.innerHTML = `
+    ${trialDays ? accessNotice : ''}
     <div class="dashboard-top">
       ${studyHeroHTML(queue, progress)}
-      ${checkinCardHTML(progress, checkinStatus(library, progress))}
+      ${checkinCardHTML(progress, checkinStatus(library, progress, hasFullAccess()))}
     </div>
+    ${trialDays ? '' : accessNotice}
     ${quickModesHTML(queue, progress)}
     ${drillCardHTML(progress)}
     <div class="dashboard-lower">
@@ -841,7 +1120,8 @@ function renderHome(focus = '') {
       </div>
       <p class="muted" id="searchStatus" role="status"></p>
       <div id="searchOut" class="search-results"></div>
-    </section>`;
+    </section>
+    <section class="card cross-bank-card">${accountingRecommendation()}</section>`;
   byId('stageSelect').addEventListener('change', event => {
     state.stage = event.target.value;
     persist(() => {
@@ -858,11 +1138,14 @@ function renderHome(focus = '') {
     view.querySelector(`[data-drill="${state.drillSubject}"]`)?.focus();
   }));
   byId('dailyBtn')?.addEventListener('click', () => beginPractice([dailyQuestion()], 'daily'));
+  byId('dailyShare')?.addEventListener('click', event => { void shareDailyQuestion(event.currentTarget); });
+  byId('openUnlock')?.addEventListener('click', () => openUnlock());
   byId('checkinBtn')?.addEventListener('click', () => {
-    const res = persist(() => doCheckin(library, loadProgress()));
+    const fullAccess = hasFullAccess();
+    const res = persist(() => doCheckin(library, loadProgress(), fullAccess));
     if (!res) return;
     if (!res.ok) { toast('请先完成今日打卡任务。'); renderHome(); return; }
-    toast(`${res.isMakeup ? '补打成功' : '打卡成功'}，+${res.points} 分${res.newBadges.length ? ' · 获得「' + res.newBadges.join('、') + '」' : ''}`);
+    toast(`${res.isMakeup ? '补打成功' : '打卡成功'}，+${res.points} 分${fullAccess && res.newBadges.length ? ' · 获得「' + res.newBadges.join('、') + '」' : ''}`);
     renderHome();
   });
   byId('searchBox').addEventListener('input', event => { state.keyword = event.target.value; doSearch(); });
@@ -872,7 +1155,9 @@ function renderHome(focus = '') {
     if (id) beginPractice([library.find(q => q.id === id)], 'single');
   });
   doSearch();
+  showReferralProfile();
   if (focus) moveFocus(byId(focus), focus === 'homeTitle');
+  updateLegacyCountdown();
 }
 function doSearch() {
   const kw = state.keyword.trim().normalize('NFKC').toLowerCase();
@@ -882,16 +1167,22 @@ function doSearch() {
   const hits = [...bankQuestions, ...subjectiveQuestions].filter(q =>
     (!state.searchSubject || q.subject === state.searchSubject) &&
     [q.chapter, q.stem, q.material || '', q.explanation || ''].some(text => text.normalize('NFKC').toLowerCase().includes(kw)));
+  const progress = loadProgress();
   status.textContent = hits.length ? `找到 ${hits.length} 道${hits.length > 20 ? '，显示前 20 道' : ''}` : '没有找到相关题目。试试更短的关键词。';
   out.innerHTML = hits.slice(0, 20).map(q => `<article class="search-hit">
     <div>${subjectChip(q.subject)} ${isSubjective(q) ? `<span class="chip">${esc(q.meta)}</span> ` : ''}<span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
-    <button class="btn" data-qid="${q.id}">做这道 ${icon('arrow-right')}</button>
+    <button class="btn" data-qid="${q.id}">${hasFullAccess() || isTrialQuestion(q) ? '做这道' : hasQuestionHistory(progress, q) ? '回顾' : '查看完整版'} ${icon('arrow-right')}</button>
   </article>`).join('');
 }
 
 function startPractice(mode) {
+  const fullAccess = hasFullAccess();
+  if (!fullAccess && FULL_ONLY_MODES.has(mode)) {
+    openUnlock('这项练习属于完整版。');
+    return;
+  }
   const progress = loadProgress();
-  const clear = clearWrongList(library, progress);
+  const clear = fullAccess ? clearWrongList(library, progress) : [];
   const studyMode = ['all', 'random', 'random20', 'unfinished'].includes(mode);
   if (mode === 'clearWrong' || (studyMode && clear.length)) {
     if (!clear.length) { toast('今天的错题已经订正完了。'); return; }
@@ -911,13 +1202,18 @@ function startPractice(mode) {
   } else if (['wrong', 'due', 'favorite'].includes(mode)) {
     queue = applyMode(library, mode, progress);
   } else {
-    const base = buildQueue(state.stage, banks, progress);
-    const stats = mode === 'random20' ? checkinStatus(library, progress) : null;
+    const base = availableQueue(progress);
+    const stats = mode === 'random20' ? checkinStatus(library, progress, fullAccess) : null;
     const remaining = stats ? Math.max(0, stats.freshTarget - stats.freshDone) : undefined;
     if (remaining === 0) { renderHome(); toast('今日新题已完成。'); return; }
     queue = applyMode(base, mode, progress, remaining);
   }
   if (!queue.length) {
+    if (!fullAccess && ['unfinished', 'random20'].includes(mode)) {
+      trackVisit('trial_done');
+      openUnlock('当前学期的体验新题已练完，可以换学期或开通完整版。');
+      return;
+    }
     const empty = {
       wrong: '错题本是空的。', favorite: '还没有收藏题目。', due: '今天没有到期的错题。',
       random20: '本档新题已做完，可切换学期继续。', unfinished: '本档题目已全部作答。',
@@ -928,10 +1224,26 @@ function startPractice(mode) {
   beginPractice(queue, mode, mode === 'all' ? resumeIndex(queue, progress) : 0);
 }
 function beginPractice(queue, mode, index = 0) {
-  if (!queue[index]) return;
+  const selected = queue[index];
+  if (!selected) return;
+  if (!hasFullAccess()) {
+    if (FULL_ONLY_MODES.has(mode)) {
+      openUnlock('这项练习属于完整版。');
+      return;
+    }
+    if (mode !== 'daily' && mode !== 'wrong') {
+      const progress = loadProgress();
+      const includesHistory = mode === 'favorite' || mode === 'single';
+      queue = queue.filter(q => isTrialQuestion(q) || (includesHistory && hasQuestionHistory(progress, q)));
+    }
+    if (!queue.length) {
+      openUnlock('这些题目属于完整版。');
+      return;
+    }
+  }
   state.mode = mode;
   state.queue = queue;
-  state.idx = index;
+  state.idx = Math.max(0, queue.indexOf(selected));
   state.streakCorrect = 0;
   state.navOpen = false;
   state.clearPending = new Set(mode === 'clearWrong' ? queue.map(q => q.id) : []);
@@ -1085,6 +1397,10 @@ function sourceHTML(q) {
 }
 // 作答后的公共记账：积分提示、订正队列、本组小结。
 function afterAnswer(q, correct, res, extra = {}) {
+  if (state.mode === 'daily' && !state.session.has(q.id)) {
+    trackVisit('daily_answer');
+    if (correct) trackVisit('daily_correct');
+  }
   const clearing = state.mode === 'clearWrong';
   state.session.set(q.id, { correct, ...extra });
   state.streakCorrect = correct ? state.streakCorrect + 1 : 0;
@@ -1094,8 +1410,8 @@ function afterAnswer(q, correct, res, extra = {}) {
   } else if (clearing && state.clearPending.delete(q.id) && !state.clearPending.size) {
     toast('错题订正完成。');
   } else if (correct && state.streakCorrect % 5 === 0) {
-    toast(`连续答对 ${state.streakCorrect} 题${res.points ? ` · +${res.points} 分` : ''}`);
-  } else if (res.points > 0) {
+    toast(`连续答对 ${state.streakCorrect} 题${hasFullAccess() && res.points ? ` · +${res.points} 分` : ''}`);
+  } else if (hasFullAccess() && res.points > 0) {
     toast(`+${res.points} 分`);
   }
   refreshStreak();
@@ -1111,12 +1427,47 @@ function onReveal(q) {
   }
 }
 
+function renderSavedQuestion(q) {
+  state.keys = null;
+  const hasNext = state.idx + 1 < state.queue.length;
+  view.innerHTML = `
+    <div class="practice-shell tone-${esc(q.subject)}">
+      <div class="practice-top"><button class="btn text-button" id="savedHome">${icon('arrow-left')} 返回首页</button><span>已做题回顾</span></div>
+      <section class="card question-card" aria-labelledby="questionTitle">
+        <div class="question-meta">${subjectChip(q.subject, q.subjectLabel)}<span class="chapter-tag">${esc(q.chapter)}</span></div>
+        ${q.material ? `<div class="material">${materialHTML(q.material)}</div>` : ''}
+        <h1 class="stem-title" id="questionTitle" tabindex="-1">${esc(q.stem)}</h1>
+        ${q.image ? '<div id="qfig"></div>' : ''}
+        ${q.options?.length ? `<ol class="saved-options">${q.options.map(option => `<li>${esc(option.key)}. ${esc(option.text)}</li>`).join('')}</ol>` : ''}
+        <p><strong>参考答案</strong> ${esc(displayAnswer(q))}</p>
+        ${q.explanation ? `<div class="saved-explanation">${expParas(q.explanation)}</div>` : ''}
+        ${sourceHTML(q)}
+        <div class="dialog-actions">
+          ${hasNext ? '<button class="btn" id="savedNext">看下一题</button>' : ''}
+          <button class="btn" id="savedAccess">解锁错题复习</button>
+        </div>
+      </section>
+    </div>`;
+  byId('savedHome').addEventListener('click', () => renderHome('homeTitle'));
+  byId('savedNext')?.addEventListener('click', () => goToQuestion(state.idx + 1));
+  byId('savedAccess').addEventListener('click', () => openUnlock('自动复习与订正错题属于完整版。'));
+  if (q.image) renderFigure(q);
+  moveFocus(byId('questionTitle'), true);
+}
+
 function renderPractice() {
   const q = state.queue[state.idx];
   if (!q) { renderHome('homeTitle'); return; }
   document.body.classList.add('practice');
   byId('headerSearch').hidden = true;
   refreshStreak();
+  if (!hasFullAccess() && state.mode !== 'daily' &&
+      (state.mode === 'wrong' || FULL_ONLY_MODES.has(state.mode) || !isTrialQuestion(q))) {
+    if (hasQuestionHistory(loadProgress(), q)) return renderSavedQuestion(q);
+    renderHome('homeTitle');
+    openUnlock('这项练习属于完整版。');
+    return;
+  }
   if (q.type === 'essay') return renderEssay(q);
   if (q.type === 'blank') return renderBlank(q);
   renderChoice(q);
@@ -1386,6 +1737,7 @@ function renderSummary() {
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本组错题</button>` : ''}
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} 返回首页</button>
         </div>
+        <p class="checkin-cross">${accountingRecommendation()}</p>
       </section>
     </div>`;
   byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, 'retry'));
@@ -1486,9 +1838,13 @@ byId('headerSearch').addEventListener('click', event => {
 const figureDialog = byId('figureDialog');
 figureDialog.addEventListener('click', event => { if (event.target === figureDialog) figureDialog.close(); });
 figureDialog.addEventListener('close', () => byId('figureFull').removeAttribute('src'));
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) updateLegacyCountdown();
+});
 
 async function init() {
   try {
+    const accessReady = restoreAccess();
     const loadDaily = dailyQuestions().length ? null : loadScript('./data/daily-questions-xiaosimen.js?v=7').catch(console.warn);
     const subjectiveReady = Promise.allSettled(SUBJECT_ORDER.map(key => loadScript(`./data/subjective-${key}.js?v=${SUBJECTIVE_VERSION}`)));
     banks = await ensureBanks(SUBJECT_ORDER);
@@ -1497,7 +1853,11 @@ async function init() {
     bankQuestions = allQuestions(banks, SUBJECT_ORDER);
     subjectiveQuestions = await loadSubjective().catch(error => { console.warn(error); return []; });
     library = [...bankQuestions, ...subjectiveQuestions, ...dailyQuestions()];
+    baseTrialIds = trialQuestionIds(bankQuestions, subjectiveQuestions);
+    await accessReady;
     renderHome();
+    void refreshReferralProfile();
+    trackVisit('visit');
   } catch (error) {
     console.error(error);
     view.innerHTML = '<section class="card loading-card"><h1>题库暂时无法加载</h1><p class="muted">检查网络后再试一次。</p><button class="btn primary" id="retryBtn">重新加载</button></section>';
