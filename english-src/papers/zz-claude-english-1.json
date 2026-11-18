@@ -1,10 +1,10 @@
 {
   "id": "claude-2026-english-1",
   "claude": true,
-  "region": "Claude 模拟",
+  "region": "精编模拟",
   "year": 2026,
-  "title": "Claude 中考英语模拟卷（一）",
-  "source": "Claude（Opus 5.5）按中考考点原创出题，短文均为原创",
+  "title": "中考英语精编模拟卷（一）",
+  "source": "作者结合备考经验，按中考考点原创出题，短文均为原创",
   "note": "按全国中考常见题型原创，文章均为新写，可打印",
   "sections": [
     {

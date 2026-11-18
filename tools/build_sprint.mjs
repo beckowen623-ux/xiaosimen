@@ -38,7 +38,7 @@ const FUJIAN_PLACES = /福州|厦门|宁化|泉州|漳州|莆田|三明|南平|�
 function sourceTag(source) {
   const text = String(source || "");
   const year = text.match(/(20\d\d)/)?.[1];
-  if (!year) return "Claude 精选";
+  if (!year) return "考点精选";
   const place = text.match(PROVINCES)?.[0] || (FUJIAN_PLACES.test(text) ? "福建" : "");
   const kind = /模|期中|期末|适应性|最后一卷|联考|预测/.test(text) ? "模考" : /中考|学业水平/.test(text) ? "中考" : "考题";
   return `${/改编/.test(text) ? "改编自 " : ""}${year} ${place}${kind}`;
@@ -76,7 +76,7 @@ function toChoice([kp, stem, options, explanation]) {
   const ordered = options.map((text, i) => ({ text, correct: i === 0 }));
   const rotated = [...ordered.slice(4 - shift), ...ordered.slice(0, 4 - shift)];
   return {
-    type: "choice", tag: "Claude 新题 · 易错点", kp,
+    type: "choice", tag: "变式题 · 易错点", kp,
     stem, options: rotated.map((o, i) => ({ key: LETTERS[i], text: o.text })),
     answer: LETTERS[rotated.findIndex(o => o.correct)], explanation,
   };

@@ -1,4 +1,4 @@
-// 把 english-src/papers/*.json（Claude 逐题录入、核对答案并写好解析的英语真题）
+// 把 english-src/papers/*.json（逐题录入、核对答案并写好解析的英语真题）
 // 转成全国真题栏目用的题目文件 data/national/<id>.js，并合并进 data/national-catalog.js。
 // 用法：node tools/build_english.mjs
 // 注意：tools/import_national_exams.py 会重写目录，重跑它之后要再跑一次本脚本。
@@ -25,7 +25,7 @@ function build(paper) {
   const base = (n, section, extra = {}) => ({
     id: `national-${paper.id}-q${String(n).padStart(2, "0")}`,
     national: true, subject: paper.subject || "english", subjectLabel: paper.subjectLabel || "英语", paperId: paper.id, number: n,
-    ...(paper.claude ? { claude: true, meta: "Claude 模拟卷" } : {}),
+    ...(paper.claude ? { claude: true, meta: "精编模拟卷" } : {}),
     section, chapter: paper.title, grade: "九下", stage: "9-down",
     source: paper.numbering?.[n] ? `${paper.title} ${paper.numbering[n]}` : `${paper.title} 第 ${n} 题`, ...extra,
   });

@@ -45,7 +45,7 @@
       // 免费试做：英语每种题型只开放目录中首套含该题型卷子的第一组；作文不开放。其他科第一组或前 5 题。
       const previewIds = new Set();
       if (paper.claude) {
-        // Claude 模拟卷：免费看前 5 题（手机做、打印体验卷都只含这 5 题）。
+        // 精编模拟卷：免费看前 5 题（手机做、打印体验卷都只含这 5 题）。
         [...questions].sort((a, b) => a.number - b.number).slice(0, 5).forEach(q => previewIds.add(q.id));
       } else if (paper.subject === 'english') {
         const seen = new Map();

@@ -1,4 +1,4 @@
-// Claude 数学、物理模拟卷的配图（矢量图，手机和打印都清楚）。
+// 数学、物理精编模拟卷的配图（矢量图，手机和打印都清楚）。
 // 用法：node tools/figures_claude_2026.mjs  → assets/national/claude-2026-math-1/*.svg、claude-2026-physics-1/*.svg
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";

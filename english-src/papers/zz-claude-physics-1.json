@@ -3,10 +3,10 @@
   "claude": true,
   "subject": "physics",
   "subjectLabel": "物理",
-  "region": "Claude 模拟",
+  "region": "精编模拟",
   "year": 2026,
-  "title": "Claude 中考物理模拟卷（一）",
-  "source": "Claude（Opus 5.5）按中考物理考点原创出题，配图为原创绘制",
+  "title": "中考物理精编模拟卷（一）",
+  "source": "作者结合备考经验，按中考物理考点原创出题，配图为原创绘制",
   "note": "选择、填空、实验与计算，含 4 幅配图，可打印",
   "sections": [
     {

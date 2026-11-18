@@ -3,10 +3,10 @@
   "claude": true,
   "subject": "chinese",
   "subjectLabel": "语文",
-  "region": "Claude 模拟",
+  "region": "精编模拟",
   "year": 2026,
-  "title": "Claude 中考语文模拟卷（二）",
-  "source": "Claude（Opus 5.5）按中考考点出题；文言文选自刘向《新序》，议论文为原创",
+  "title": "中考语文精编模拟卷（二）",
+  "source": "作者结合备考经验，按中考考点出题；文言文选自刘向《新序》，议论文为原创",
   "note": "基础、默写、文言文、议论文阅读，可打印",
   "sections": [
     {

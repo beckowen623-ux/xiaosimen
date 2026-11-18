@@ -119,15 +119,15 @@
   };
   const sprintHint = key => SPRINT_HINTS[key] || "";
   const SPRINT_STORY = {
-    xiaosimen: "这套卷子，是我和 Claude（Anthropic 的 Opus 5.5 模型）的一次“与神对话”：它按课标和中考考点把每一册过了一遍，从中考真题里挑出最该做的题，又专门为易错点新出了冲刺题。我先让孩子做了一遍——哪儿没掌握，一套做完一目了然。真心好用，忍不住想分享给你。",
-    full: "这套卷子，是我和 Claude（Anthropic 的 Opus 5.5 模型）的一次“与神对话”：它按考试大纲的高频考点，从历年真题里挑出最该做的题，又新出了概念和判断冲刺题。我自己先刷了一遍——哪个考点不稳，一套做完清清楚楚。真心好用，忍不住想分享给你。",
+    xiaosimen: "这套卷子，是我陪孩子备考时一题一题攒出来的：对照课标和中考考点，把每一册过了一遍，从中考真题里挑出最该做的题，再针对易错点编写变式题。孩子先做了一遍——哪儿没掌握，一套做完一目了然。真心好用，忍不住想分享给你。",
+    full: "这套卷子，是我一路备考攒下来的心得：对照考试大纲的高频考点，从历年真题里挑出最该做的题，再针对易错点编写概念和判断变式题。我自己先刷了一遍——哪个考点不稳，一套做完清清楚楚。真心好用，忍不住想分享给你。",
   };
   let siteKey = "full";
-  const BYLINE = "出题：Claude · Opus 5.5 根据考点与历年真题精选、改编、新出 ｜ 作者亲测";
+  const BYLINE = "编写：爱丽克丝 · 结合备考经验紧贴大纲编写，难度不拔高、不降低 ｜ 上线前本人逐题自测";
   let lastShare = "";
   const EXTRA = {
-    xiaosimen: { text: "还会根据大家的留言需求，不定期加更 Claude 制作的主科应试抓考点模拟卷。", from: "x4m" },
-    full: { text: "还会根据大家的留言需求，不定期加更其他考试科目的 Claude 抓考点模拟卷。", from: "tinawin" },
+    xiaosimen: { text: "还会根据大家的留言需求，不定期加更主科抓考点的精编模拟卷。", from: "x4m" },
+    full: { text: "还会根据大家的留言需求，不定期加更其他考试科目的抓考点模拟卷。", from: "tinawin" },
   };
   function extraNode() {
     const extra = EXTRA[siteKey] || EXTRA.full;
@@ -249,11 +249,11 @@
   // ---- 上传新卷子（已购用户）----
   const UPLOAD_TEXT = {
     xiaosimen: {
-      body: "学校发的月考卷、期中期末卷、孩子做错没弄懂的题，拍照或传文件上来。Claude 会按考点整理：哪些是高频考点、错在哪、同类题怎么练。整理好的题会更新进冲刺卷，大家的孩子一起练。",
+      body: "学校发的月考卷、期中期末卷、孩子做错没弄懂的题，拍照或传文件上来。我会按考点整理：哪些是高频考点、错在哪、同类题怎么练。整理好的题会更新进冲刺卷，大家的孩子一起练。",
       placeholder: "比如：八年级下 生物 期中卷（选填）",
     },
     full: {
-      body: "刚考完、还记得几道原题？机构发的新押题卷？传上来，Claude 帮你按大纲考点对一遍，把高频考点更新进冲刺卷，大家一起提前练。",
+      body: "刚考完、还记得几道原题？机构发的新押题卷？传上来，我按大纲考点对一遍，把高频考点更新进冲刺卷，大家一起提前练。",
       placeholder: "比如：2026 中级会计实务 回忆题（选填）",
     },
   };
@@ -284,7 +284,7 @@
 
   function uploadBox(key, paid) {
     const box = node("div", "", "upload-box");
-    box.append(node("strong", "📮 把新卷子交给 Claude，帮你抓考点"));
+    box.append(node("strong", "📮 把新卷子发给我，帮你抓考点"));
     if (!paid) {
       const hint = node("p", "", "referral-message");
       box.append(node("p", "手上有新卷子？买了题库后就能在这里上传。被采用的，送冲刺卷永久解锁。", "upload-small"),
@@ -385,7 +385,7 @@
     const head = node("summary", "", "sprint-teaser-head");
     const open = button("打开", event => { event.preventDefault(); event.stopPropagation(); openAny(status); });
     open.classList.add("sprint-open");
-    head.append(node("strong", "📝 Claude 冲刺卷"), node("span", options.count || "", "referral-badge"), open);
+    head.append(node("strong", "📝 考点冲刺卷"), node("span", options.count || "", "referral-badge"), open);
     card.append(head, status, node("p", SPRINT_STORY[key] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"), extraNode(),
       button("📱 在线做 / 打印冲刺卷", () => openAny(status)));
     card.append(uploadBox(key, Boolean(options.paid)));
@@ -444,7 +444,7 @@
     const body = paper.sections.map(section => {
       const items = section.items.map(item => {
         n += 1;
-        const tag = item.tag ? `<span class="sprint-tag${/Claude/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
+        const tag = item.tag ? `<span class="sprint-tag${/变式/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
         const lead = (item.passage ? `<blockquote class="sprint-passage">${esc(item.passage).replace(/\n/g, "<br>")}</blockquote>` : "") +
           (item.image ? `<img class="sprint-fig" src="${esc(item.image)}" alt="题目配图">` : "");
         if (item.type === "choice") {
@@ -483,7 +483,7 @@
       const items = section.items.map(item => {
         n += 1;
         const s = st[n] || {};
-        const tag = item.tag ? `<span class="sprint-tag${/Claude/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
+        const tag = item.tag ? `<span class="sprint-tag${/变式/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
         const reveal = s.done ? `<div class="sp-explain">${item.type === "essay"
           ? `<b>得分点：</b>${item.points.map(p => `${esc(p.text)}（${p.score}分）`).join("；")}${item.sample ? `<br><b>参考答案：</b>${esc(item.sample)}` : ""}`
           : `<b>答案：${esc(Array.isArray(item.answer) ? item.answer.join("；") : item.answer)}</b> ${esc(item.explanation || "")}`}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</div>` : "";

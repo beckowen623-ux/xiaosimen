@@ -604,7 +604,7 @@ const MODE_LABEL = {
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
   essay: '主观题提分', blank: '填空速记', retry: '本组错题重练', national: '全国真题练习',
-  weekly: '本周一卷', paper: 'Claude 模拟卷', everWrong: '曾错题',
+  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -795,7 +795,7 @@ function wirePrintCard() {
 }
 
 function openUnlock(message = '') {
-  byId('unlockReason').textContent = message || '完整版：全科真题手机刷题、Claude 模拟卷整卷手机做和打印、本周一卷、小四门全部题目、错题自动复习。原卷永远免费看。';
+  byId('unlockReason').textContent = message || '完整版：全科真题手机刷题、精编模拟卷整卷手机做和打印、本周一卷、小四门全部题目、错题自动复习。原卷永远免费看。';
   redeemMessage.textContent = '';
   if (!unlockDialog.open) unlockDialog.showModal();
   void loadPurchaseOptions();
@@ -1154,14 +1154,14 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
-  ['2026-11-18', '新增 Claude 数学、物理模拟卷各 1 套，带原创配图，手机做、打印都清楚。免费规则改为：每个家庭送 1 次整卷打印 + 1 套手机整卷，任选一套。'],
-  ['2026-11-18', '首页改版：按“本周一卷 → 分科（英语、语文、数学、物理、化学）→ 小四门”排列，各科可以展开收起；新增 Claude 英语模拟卷 2 套、语文模拟卷 2 套，手机做、打印都行。'],
+  ['2026-11-18', '新增数学、物理精编模拟卷各 1 套，带原创配图，手机做、打印都清楚。免费规则改为：每个家庭送 1 次整卷打印 + 1 套手机整卷，任选一套。'],
+  ['2026-11-18', '首页改版：按“本周一卷 → 分科（英语、语文、数学、物理、化学）→ 小四门”排列，各科可以展开收起；新增英语、语文精编模拟卷各 2 套，手机做、打印都行。'],
   ['2026-11-18', '每日 20 题和打卡换成“本周一卷”：每周一换，打印出来纸上做完，回来点出错题号就能进错题本。错题本、曾错题、收藏覆盖全科；打印和找题覆盖全题库。'],
   ['2026-11-18', '改名“中考提分题库”；首页可按科目、册次一键打印练习卷，答案单独一页，没买也能先打印一张体验卷。'],
   ['2026-11-18', '新增全国中考英语真题 15 套（福建、广东等，逐题核对答案、配中文解析），原卷免费看；按中考题型刷，每种题型免费试一组。'],
-  ['2026-11-18', '新增江西 2026、苏州 2026 理化语等各科原卷；四科新增 Claude 易错题。'],
+  ['2026-11-18', '新增江西 2026、苏州 2026 理化语等各科原卷；四科新增 易错变式题。'],
   ['2026-11-18', '地理、生物会考复习章归到八年级下，选初三不再出现已经会考的地理生物。'],
-  ['2026-11-17', '新增 Claude 冲刺卷：在线做题即时判分、可打印、每题标注出处；邀请好友 1 位永久解锁，已购用户上传新卷子被采用也能解锁。'],
+  ['2026-11-17', '新增 考点冲刺卷：在线做题即时判分、可打印、每题标注出处；邀请好友 1 位永久解锁，已购用户上传新卷子被采用也能解锁。'],
   ['2026-11-17', '修复部分题目配图加载失败；找不到配图的题已删除，题数按实际显示。'],
   ['2026-11-16', '新增主观题提分（材料分析、论述、简答，按得分点自评）和填空速记。'],
   ['2026-11-15', '错题按 1、3、7 天自动安排复习，新增连续学习打卡。'],
@@ -1267,9 +1267,9 @@ function weeklyFor(list, subject = state.weeklySubject || 'english') {
 
 function homeIntroHTML() {
   return `<section class="card home-intro">
-    <p class="intro-kicker">AI 出题 · 全国真题 · 手机刷、打印都行</p>
+    <p class="intro-kicker">精编模拟卷 · 全国真题 · 手机刷、打印都行</p>
     <h1 id="homeTitle" tabindex="-1">中考提分题库</h1>
-    <p class="muted">Claude 按中考考点出模拟卷，全国各地真题整理成能刷的题；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
+    <p class="muted">紧贴课标和中考考点编写的精编模拟卷，加上全国各地真题整理成能刷的题，每套都由我亲自先做、把关后才上线；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
   </section>`;
 }
 function weeklyCardHTML(progress) {
@@ -1299,7 +1299,7 @@ function paperFromQuestions(title, questions, note = '') {
     if (!bySection.has(name)) { bySection.set(name, []); order.push(name); }
     const passage = q.materialHtml && q.materialHtml !== lastMaterial ? htmlToText(q.materialHtml) : (q.material && q.type !== 'essay' ? q.material : '');
     lastMaterial = q.materialHtml || lastMaterial;
-    const tag = q.claude ? 'Claude 新题' : (q.source || '').match(/20\d\d/) ? (q.source || '').slice(0, 24) : '';
+    const tag = q.claude ? '变式题' : (q.source || '').match(/20\d\d/) ? (q.source || '').slice(0, 24) : '';
     let item;
     if (q.type === 'single' || q.type === 'multiple') {
       item = { type: 'choice', multi: q.type === 'multiple', tag, stem: q.stem, options: q.options.map(o => ({ key: o.key, text: o.text })), answer: q.answer.join(''), explanation: q.explanation || '', source: q.source || '' };
@@ -1369,11 +1369,11 @@ function subjectSectionsHTML() {
       const real = nationalCatalog.filter(p => p.subject === key && !p.claude);
       const practicable = real.filter(p => p.data);
       const count = practicable.reduce((s, p) => s + (p.questionCount || 0), 0);
-      const meta = [claude.length ? `Claude 模拟卷 ${claude.length} 套` : '', real.length ? `真题 ${real.length} 套` : '', count ? `${count} 道可刷` : ''].filter(Boolean).join(' · ');
+      const meta = [claude.length ? `精编模拟卷 ${claude.length} 套` : '', real.length ? `真题 ${real.length} 套` : '', count ? `${count} 道可刷` : ''].filter(Boolean).join(' · ');
       return `<details class="card subject-section" data-subject-section="${key}" ${opened.has(key) ? 'open' : ''}>
         <summary><b>${emoji} ${label}</b><span>${meta || '即将上线'}</span></summary>
-        ${claude.length ? `<div class="paper-rows"><p class="row-title">Claude 模拟卷 <span class="sprint-tag hot">AI 新题</span></p>${claude.map(p => `<div class="paper-row">
-          <span>${esc(p.title.replace(/^Claude /, ''))}<small>${p.questionCount} 题</small></span>
+        ${claude.length ? `<div class="paper-rows"><p class="row-title">精编模拟卷 <span class="sprint-tag hot">变式题</span></p>${claude.map(p => `<div class="paper-row">
+          <span>${esc(p.title)}<small>${p.questionCount} 题</small></span>
           <button class="btn" type="button" data-claude-phone="${p.id}">${freeButtonLabel('phone', p.id, ['手机做', '免费手机做整卷', '试前 5 题'])}</button>
           <button class="btn" type="button" data-claude-print="${p.id}">${freeButtonLabel('print', p.id, ['打印', '免费打印整卷', '打印前 5 题'])}</button>
         </div>`).join('')}</div>` : ''}
@@ -1381,7 +1381,7 @@ function subjectSectionsHTML() {
           ${practicable.length ? `<div class="paper-row"><span>手机刷真题<small>${key === 'english' ? '按中考题型练，每题有中文解析' : '逐题判分'}</small></span><button class="btn" type="button" data-national-open="${key}" data-national-mode="short">去刷题 →</button></div>` : ''}
           ${real.length ? `<div class="paper-row"><span>看原卷 · 打印<small>免费 · ${[...new Set(real.map(p => p.region))].slice(0, 4).join('、')}${real.length > 4 ? ' 等' : ''}</small></span><button class="btn" type="button" data-national-open="${key}" data-national-mode="paper">看原卷 →</button></div>` : '<p class="muted">真题整理中。</p>'}
         </div>
-        ${!claude.length ? '<p class="muted row-note">Claude 模拟卷正在出题，会按留言需求陆续加上。</p>' : ''}
+        ${!claude.length ? '<p class="muted row-note">精编模拟卷正在编写，会按留言需求陆续加上。</p>' : ''}
       </details>`;
     }).join('')}
   </section>`;
@@ -1446,7 +1446,7 @@ function printCardHTML() {
     <div class="print-row">
       <select id="printKind" aria-label="打印什么">
         <optgroup label="本周一卷">${WEEKLY_SUBJECTS.map(([key, label]) => `<option value="weekly:${key}">本周一卷 · ${label}</option>`).join('')}</optgroup>
-        ${claude.length ? `<optgroup label="Claude 模拟卷">${claude.map(p => `<option value="claude:${p.id}">${esc(p.title.replace(/^Claude /, ''))}</option>`).join('')}</optgroup>` : ''}
+        ${claude.length ? `<optgroup label="精编模拟卷">${claude.map(p => `<option value="claude:${p.id}">${esc(p.title)}</option>`).join('')}</optgroup>` : ''}
         <optgroup label="小四门"><option value="x4m">小四门 · 按科目和册次</option></optgroup>
       </select>
       <span class="print-x4m" id="printX4m" hidden>
@@ -1486,9 +1486,11 @@ function originCardHTML() {
   return `<details class="card origin-card">
     <summary><b>为什么做这个题库</b><span>一个初中生家长的想法 ›</span></summary>
     <p>孩子上初中以后，家里的教辅越买越多，真正做完的没几本；网上的“押题卷”一份比一份难，做完只剩焦虑。我想要的其实很简单：<b>题目准、讲得清、做完知道错在哪。</b></p>
-    <p>所以我用 AI 做了这个题库：全国各地的中考真题整理成可以逐题刷的题；Claude 按中考考点出模拟卷，每道题都写解析；小四门按年级学期整理，背过的东西有地方练。</p>
+    <p>所以我做了这个题库：全国各地的中考真题整理成可以逐题刷的题；再结合自己一路考证、陪孩子备考的经验，对照课标和中考考点编写精编模拟卷——都是紧贴考点的变式题，不刻意拔高，也不随意降低难度，每道题都写解析；小四门按年级学期整理，背过的东西有地方练。</p>
+    <p><b>会用工具，但每题自己把关：</b>整理和编写时我会借助 AI 工具提高效率，但考什么、怎么考、哪道题该留，都由我自己判断。每套卷子上线前，我都从头到尾亲自做一遍，有错误、有歧义的题一律剔除。不押题、不保过，只帮孩子多练手、查漏补缺、稳步提分。</p>
+    <p>说句实在话：孩子自己不花时间，再多的书和题也只是摆设。我们能做的，是让他的每一分钟都花在值得做的题上。</p>
     <p><b>手机党、纸笔党都照顾到：</b>每张卷子都能打印，答案单独一页。纸上做完，回来在“本周一卷”里点出错题号，错题本照样记着，到时间提醒复习。</p>
-    <p><b>为什么收费：</b>AI 出题、整理都要花 token 费，服务器也要钱。各地原卷永远免费看、免费打印；手机刷真题、Claude 模拟卷整卷、本周一卷和错题复习属于完整版，19.9 一次买断。先免费试，孩子用得上再买。</p>
+    <p><b>为什么收费：</b>整理题目、编写解析要用到付费的 AI 工具，服务器也要钱。各地原卷永远免费看、免费打印；手机刷真题、精编模拟卷整卷、本周一卷和错题复习属于完整版，19.9 一次买断。先免费试，孩子用得上再买。</p>
     <p>有想要的科目、地区、题型，到作者主页留言，我会按大家的需要加题。</p>
   </details>`;
 }
@@ -1635,7 +1637,7 @@ async function doSearch() {
   const progress = loadProgress();
   status.textContent = hits.length ? `找到 ${hits.length} 道${hits.length > 20 ? '，显示前 20 道' : ''}` : '没有找到相关题目。试试更短的关键词。';
   out.innerHTML = hits.slice(0, 20).map(q => `<article class="search-hit">
-    <div>${subjectChip(q.subject, q.subjectLabel)} ${q.claude ? '<span class="chip">Claude 模拟卷</span> ' : isSubjective(q) && q.meta ? `<span class="chip">${esc(q.meta)}</span> ` : ''}<span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
+    <div>${subjectChip(q.subject, q.subjectLabel)} ${q.claude ? '<span class="chip">精编模拟卷</span> ' : isSubjective(q) && q.meta ? `<span class="chip">${esc(q.meta)}</span> ` : ''}<span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
     <button class="btn" data-qid="${q.id}">${hasFullAccess() || isTrialQuestion(q) ? '做这道' : hasQuestionHistory(progress, q) ? '回顾' : '查看完整版'} ${icon('arrow-right')}</button>
   </article>`).join('');
 }

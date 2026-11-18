@@ -211,16 +211,16 @@ async function sprintPapers(context) {
   return json({ ok: true, papers: SPRINT_PAPERS });
 }
 
-// 样题：每一套都给 5 道（尽量覆盖不同出处，再带上 Claude 新题），所有人都能看。
+// 样题：每一套都给 5 道（尽量覆盖不同出处，再带上 变式题），所有人都能看。
 function previewItems(paper) {
   const all = paper.sections.flatMap(section => section.items.filter(item => item.type === "choice" || item.type === "judge"));
-  const fresh = all.filter(item => /Claude/.test(item.tag || ""));
+  const fresh = all.filter(item => /变式/.test(item.tag || ""));
   const picked = [];
   const seen = new Set();
   const year = item => Number(String(item.tag || "").match(/20\d\d/)?.[0] || 0);
   for (const item of [...all].sort((a, b) => year(b) - year(a))) {
     if (picked.length >= 3) break;
-    if (/Claude/.test(item.tag || "") || seen.has(item.tag)) continue;
+    if (/变式/.test(item.tag || "") || seen.has(item.tag)) continue;
     seen.add(item.tag);
     picked.push(item);
   }

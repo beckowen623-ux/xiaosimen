@@ -73,9 +73,9 @@ for (const [type] of api.ENGLISH_TYPES) {
   if (type === '书面表达') continue;
   assert.equal(previewGroups.get(type)?.size, 1, `${type} 只能免费试一组`);
 }
-// Claude 模拟卷（英语、语文）：整卷可加载、每题有解析，免费只开放前 5 题。
+// 精编模拟卷（英语、语文）：整卷可加载、每题有解析，免费只开放前 5 题。
 const claudePapers = catalog.filter(p => p.claude);
-assert.ok(claudePapers.length >= 4, 'Claude 模拟卷应至少 4 套');
+assert.ok(claudePapers.length >= 4, '精编模拟卷应至少 4 套');
 for (const paper of claudePapers) {
   const list = await api.getQuestions(paper);
   assert.equal(list.length, paper.questionCount);
