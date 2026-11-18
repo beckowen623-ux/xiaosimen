@@ -1,0 +1,154 @@
+{
+  "id": "fj-2026-english",
+  "region": "福建",
+  "year": 2026,
+  "title": "2026 年福建中考英语",
+  "source": "2026年福建省初中学业水平考试英语试题及参考答案（福建省教育考试院）",
+  "note": "听力、看图写话需音频/图片，未收录。",
+  "sections": [
+    {
+      "type": "单项选择",
+      "items": [
+        {"n": 21, "stem": "Xiaomin and I like music. ________ often go to the concert together.", "options": ["He", "I", "We"], "answer": "C", "kp": "代词", "exp": "Xiaomin and I 合起来是“我们”，作主语用 We。"},
+        {"n": 22, "stem": "China Space Day is ________ April 24th.", "options": ["in", "on", "at"], "answer": "B", "kp": "介词", "exp": "具体某一天前用 on。"},
+        {"n": 23, "stem": "— ________ is the Pingtan Strait Bridge?\n— It is 4,976 meters long.", "options": ["How long", "How wide", "How far"], "answer": "A", "kp": "疑问词", "exp": "答语是长度（... meters long），问“多长”用 How long。"},
+        {"n": 24, "stem": "— They are chatting ________ about the coming football match.\n— Yes, the match is very popular among students.", "options": ["quickly", "politely", "excitedly"], "answer": "C", "kp": "副词辨析", "exp": "比赛很受欢迎，大家聊得很兴奋，excitedly。"},
+        {"n": 25, "stem": "Teng Fei is my best friend. I ________ him all the time.", "options": ["trust", "avoid", "change"], "answer": "A", "kp": "动词辨析", "exp": "最好的朋友，一直“信任”他，trust。"},
+        {"n": 26, "stem": "It was cold, ________ his words warmed me up.", "options": ["or", "so", "but"], "answer": "C", "kp": "连词", "exp": "天冷，“但是”他的话让我很温暖，前后转折，用 but。"},
+        {"n": 27, "stem": "I'm in the ________ club at school because I like growing flowers.", "options": ["acting", "dancing", "gardening"], "answer": "C", "kp": "名词辨析", "exp": "喜欢种花，所以参加园艺社，gardening。"},
+        {"n": 28, "stem": "Xiao Ya is ________ about life. She always looks on the bright side of things.", "options": ["hopeful", "curious", "nervous"], "answer": "A", "kp": "形容词辨析", "exp": "总看事情好的一面，说明她对生活充满希望，hopeful。"},
+        {"n": 29, "stem": "— Jack ________ some changes to his lifestyle recently.\n— So he is much healthier than before.", "options": ["makes", "has made", "will make"], "answer": "B", "kp": "时态", "exp": "recently 是现在完成时的标志，且改变的结果是现在更健康了，用 has made。"},
+        {"n": 30, "stem": "The project was hard ________. Through teamwork, we finished it soon.", "options": ["in time", "at first", "on purpose"], "answer": "B", "kp": "介词短语", "exp": "“起初”很难，后来通过团队合作很快完成了，at first。"},
+        {"n": 31, "stem": "________ students more breaks, many schools have spring and autumn holidays.", "options": ["Give", "Giving", "To give"], "answer": "C", "kp": "非谓语动词", "exp": "放春假、秋假是“为了”给学生更多休息，表目的用不定式 To give。"},
+        {"n": 32, "stem": "It's important to keep a good ________ between our schoolwork and play.", "options": ["habit", "balance", "direction"], "answer": "B", "kp": "名词辨析", "exp": "keep a balance between A and B 在 A 和 B 之间保持平衡。"},
+        {"n": 33, "stem": "AI courses ________ in primary and secondary education in the near future.", "options": ["include", "were included", "will be included"], "answer": "C", "kp": "被动语态", "exp": "课程是“被纳入”，in the near future 表将来，用一般将来时的被动语态 will be included。"},
+        {"n": 34, "stem": "— Tina always ________ her seat on the bus to someone who needs it.\n— She is really a kind girl.", "options": ["gives up", "takes away", "waits for"], "answer": "A", "kp": "动词短语", "exp": "give up one's seat to sb 给某人让座。"},
+        {"n": 35, "stem": "— Alex, could you tell me ________?\n— Sure. On the farm.", "options": ["who will take part in the study tour", "where we will make the study tour", "why the study tour is important"], "answer": "B", "kp": "宾语从句", "exp": "答语是地点 On the farm，问“在哪里”，用 where 引导的宾语从句。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "title": "把画画到街头的 Marta",
+      "passage": "Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a (36) time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody (37) her. In each class, Marta just hid herself in the corner and drew (38). Her art teacher soon noticed the girl was (39) art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study (40).\nWhen she studied more, Marta realized that she wanted to make a kind of art that wasn't only shown in galleries (画廊). She wanted to paint murals (壁画) in the (41) so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, \"My family and my neighbors have never (42) a gallery in all their lives.\"\nAfter graduation, Marta got a job as an art (43) and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She (44) with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to (45) their love for life.",
+      "items": [
+        {"n": 36, "options": ["short", "relaxing", "hard"], "answer": "C", "exp": "刚上小学时大家说英语、她只会西班牙语，日子很“艰难”，have a hard time。"},
+        {"n": 37, "options": ["heard", "understood", "asked"], "answer": "B", "exp": "语言不通，所以没人“听得懂”她，understood。"},
+        {"n": 38, "options": ["quietly", "clearly", "bravely"], "answer": "A", "exp": "她躲在角落里“安静地”画画，quietly。"},
+        {"n": 39, "options": ["surprised at", "talented in", "tired of"], "answer": "B", "exp": "老师发现她在美术方面“有天赋”，才鼓励她画画，talented in。"},
+        {"n": 40, "options": ["art", "language", "sport"], "answer": "A", "exp": "她一直在画画，18 岁上大学学的是艺术，art。"},
+        {"n": 41, "options": ["museum", "street", "office"], "answer": "B", "exp": "她想让壁画在户外被看到，画在“街头”，street。"},
+        {"n": 42, "options": ["found", "built", "visited"], "answer": "C", "exp": "家人邻居一辈子都没“参观过”画廊，visited。"},
+        {"n": 43, "options": ["teacher", "lover", "collector"], "answer": "A", "exp": "后文 encouraged her students，说明她当了美术“老师”，teacher。"},
+        {"n": 44, "options": ["played", "agreed", "worked"], "answer": "C", "exp": "和当地艺术家、历史学家、年轻人“一起工作”完成壁画，work with。"},
+        {"n": 45, "options": ["accept", "show", "expect"], "answer": "B", "exp": "人们拿起画笔来“表达”对生活的热爱，show their love for life。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "四则新闻短讯",
+          "passage": "Fisherman Catches Blue Lobster\nA fisherman has caught an unusual lobster (龙虾). It is totally blue! An expert said the chance of catching one was about one in two million. The lobster has gone to live in a local zoo. It is being well looked after there.\nSending Medicine By Drone\nIn November, drones (无人机) flew medicine between two hospitals for the first time. The journey took only 2 minutes. It usually takes 30 minutes by road or 15 minutes by railway. The drone company wanted to use this technology to save people's lives.\nMoney To Help Children Go To School\nThe World Bank is spending about £120 million in improving primary schools in Punjab. Seven million children don't go to school there. The project will pay for better teaching and buildings, as well as helping more disabled children go to school.\n100 Wonderful Animals\nThis book is about some of the world's most wonderful animals. There are lots of valuable paintings and maps showing where each of the animals comes from. You can also learn many new words. In all, you are certain to find new favorites among these animals.",
+          "items": [
+            {"n": 46, "stem": "Why is the lobster unusual?", "options": ["It is very large.", "It is quite long.", "It is totally blue.", "It is really heavy."], "answer": "C", "kp": "细节理解", "exp": "第一则：It is totally blue!"},
+            {"n": 47, "stem": "How long did the journey by drone take?", "options": ["2 minutes.", "15 minutes.", "17 minutes.", "30 minutes."], "answer": "A", "kp": "细节理解", "exp": "第二则：The journey took only 2 minutes. 30 分钟是走公路，15 分钟是坐火车。"},
+            {"n": 48, "stem": "Why is the money given to Punjab?", "options": ["To build more hospitals.", "To improve primary schools.", "To train disabled workers.", "To help 120 million children."], "answer": "B", "kp": "细节理解", "exp": "第三则：spending about £120 million in improving primary schools。1.2 亿是钱数，不是人数。"},
+            {"n": 49, "stem": "Which text is about a book?", "options": ["Fisherman Catches Blue Lobster", "Sending Medicine By Drone", "Money To Help Children Go To School", "100 Wonderful Animals"], "answer": "D", "kp": "细节理解", "exp": "第四则首句：This book is about some of the world's most wonderful animals."},
+            {"n": 50, "stem": "Where are the four texts probably from?", "options": ["A postcard.", "A diary.", "A newspaper.", "A dictionary."], "answer": "C", "kp": "文章出处", "exp": "四则都是带标题的短新闻，最可能来自报纸。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "陪我跑步的爸爸",
+          "passage": "In our city, a long-running race is held every year in June. Dad loved it very much. I loved Dad, so I ran. As a kid, I didn't just take part in this running race. I joined in all kinds of running races. Dad always ran along beside me to make sure I was safe.\nWhen I became a teenager, I wanted to stop running. But Dad encouraged me to go on. \"Mary, I'll register (为……报名) both of us,\" Dad would say. Before he went to bed, he would put my race number on my desk. Next to it, there would be a box of chocolates and a note: \"I would love to run with you.\" It was enough to get me out of bed the next morning to join him. Slowly, I started to like running. Dad always cheered me on in my high school and college running races.\nNow, as a mother of three children, I have come to realize that my father must have slowed down when he ran with me. I also know why he ran along beside a younger me, asking strange questions. He was trying to communicate with me because he didn't know what I was thinking.\nLast year, I joined in the city race alone, for Dad was too sick to run. Though he was not there to cheer me on, I knew he would always be with me, guiding me every step of the way.",
+          "items": [
+            {"n": 51, "stem": "Mary took part in running races as a kid because of ________.", "options": ["the rule of the city", "her love for her father", "the order of her father", "her dream about running"], "answer": "B", "kp": "细节理解", "exp": "第一段：Dad loved it very much. I loved Dad, so I ran."},
+            {"n": 52, "stem": "When did Mary want to stop running?", "options": ["When she became a teenager.", "When she entered college.", "When she became a mother.", "When she had to race alone."], "answer": "A", "kp": "细节理解", "exp": "第二段：When I became a teenager, I wanted to stop running."},
+            {"n": 53, "stem": "What did Dad do to encourage Mary to run?（原题为四幅图：①在书桌上放参赛号码 ②递给她一张父女合照 ③留一张写着 \"I would love to run with you.\" 的纸条 ④放一盒巧克力）", "options": ["①②③", "①②④", "①③④", "②③④"], "answer": "C", "kp": "细节理解", "exp": "第二段：爸爸在书桌上放了参赛号码①、一盒巧克力④和一张纸条③，文中没有提到照片②。"},
+            {"n": 54, "stem": "Why did Dad ask Mary strange questions when running with her?", "options": ["To show his humor.", "To control his speed.", "To communicate with her.", "To compete with her."], "answer": "C", "kp": "细节理解", "exp": "第三段：He was trying to communicate with me because he didn't know what I was thinking."},
+            {"n": 55, "stem": "Which of the following best describes Mary's father?", "options": ["Loving and caring.", "Serious and strict.", "Hardworking but boring.", "Warm-hearted but careless."], "answer": "A", "kp": "人物性格", "exp": "陪跑保护她、放慢速度、用巧克力和纸条鼓励她，都说明爸爸慈爱又细心。"}
+          ]
+        },
+        {
+          "label": "C",
+          "title": "废塑料的新生",
+          "passage": "Plastic production has been rising since the end of World War II. Plastic has greatly influenced modern life. It is widely used in clothing, electronic goods, cars and healthcare. In fact, plastic is not a single material. A study shows that 16,000 different chemicals are used in making plastics. When plastic ends up in nature, it can take hundreds of years to break down. It pollutes soil and water.\nPeople have realized the plastic pollution problem. Thanks to modern recycling technology, we see products made from recycled plastic — from T-shirts to bags to building materials. This is the magic of turning waste plastic into valuable products.\nScientists are developing more and more effective methods to recycle waste plastic. For example, researchers break down plastics into reusable chemicals by using heat, pressure and a kind of special water. Another technology creates a plastic mix to break down waste plastic into oil for new plastics. Scientists also use electric current (电流) to turn waste plastic into high quality graphene (石墨烯). The graphene helps to develop new cancer treatments.\nRecycling reduces the need to produce new plastic from oil. Besides, it helps to control environmental pollution. However, recycling plastic is not always easy. Different types of waste plastics must be separated and well cleaned.\nChina has been stressing the importance of recycling and has taken action to improve it. Many schools try to encourage students to recycle properly. For example, students may get an award, such as a small toy or a pencil, for putting empty bottles into smart recycling machines. Factories are encouraged to use recycled materials in their products. With each recycled bottle, China moves one step closer to a future where nothing is truly wasted — everything is just waiting for its next use.",
+          "items": [
+            {"n": 56, "stem": "What do we know about plastic from Paragraph 1?", "options": ["Plastic production started after World War II.", "Plastic is commonly used in modern life.", "There are many ways of producing plastic.", "Producing plastic takes a long time."], "answer": "B", "kp": "段落细节", "exp": "第一段：It is widely used in clothing, electronic goods, cars and healthcare. 二战后是“产量上升”，不是“开始生产”。"},
+            {"n": 57, "stem": "In which way can waste plastic be recycled?", "options": ["By mixing reusable chemicals into it.", "By inventing a plastic mix to break it down.", "By breaking down high quality graphene.", "By developing new cancer treatments."], "answer": "B", "kp": "细节理解", "exp": "第三段：Another technology creates a plastic mix to break down waste plastic into oil for new plastics."},
+            {"n": 58, "stem": "What does the underlined word \"it\" in Paragraph 4 refer to?", "options": ["Oil.", "New plastic.", "The need.", "Recycling."], "answer": "D", "kp": "代词指代", "exp": "Recycling reduces the need... Besides, it helps to control pollution. 两句的主语都是“回收”。"},
+            {"n": 59, "stem": "What does the last paragraph focus on?", "options": ["The importance of recycling.", "The awards for recycling.", "The efforts in recycling.", "The future of recycling."], "answer": "C", "kp": "段落大意", "exp": "最后一段讲中国学校、工厂为回收采取的各种行动，重点是“在回收上做出的努力”。"},
+            {"n": 60, "stem": "Which would be the best title for the text?", "options": ["Plastic Production over Time", "Waste Plastic: Serious Pollution", "Effective Methods of Using Plastic", "Recycling: New Life of Waste Plastic"], "answer": "D", "kp": "最佳标题", "exp": "全文从塑料污染讲到回收技术和回收行动，核心是“回收让废塑料获得新生”。"}
+          ]
+        },
+        {
+          "label": "D",
+          "title": "会“打蚊子”的中国设备",
+          "passage": "With the world becoming warmer because of climate change, mosquitoes are busy enlarging their living space. Now, a Chinese company has created a new device which can detect mosquitoes and then kill them. The device promises a future in which the peace and quiet of a summer evening is no longer broken by flying mosquitoes.\nThe small, light device uses AI to discover mosquitoes as small as 2 millimeters (毫米). Within 0.003 seconds, it fires a high-energy laser (激光) that disables a mosquito midflight — a course that can hardly be seen by humans — and can kill up to 30 mosquitoes every second.\nThe Chinese device is not alone in mosquito control. The Locus, which is made by a foreign company, uses computers to locate (定位) mosquitoes indoors. However, while the Locus focuses on location, the Chinese device goes a step further by killing mosquitoes.\nIt is not easy to improve the accuracy rate (准确率). The early models of the Chinese device failed to correctly discover mosquitoes within a short distance, as they were influenced by background noise. After years of hard work, careful research and countless tests, the company put AI and laser technology together, enabling a discovery rate of over 95 percent within six meters.\nAccording to the World Health Organization (WHO), there are over 3,500 kinds of mosquitoes in the world. About 200 kinds can spread diseases. Every year, mosquitoes kill more than 700,000 people. Millions of people face this risk every day. This new Chinese device provides a safe and effective way to fight mosquitoes and protect people's health.",
+          "items": [
+            {"n": 61, "stem": "What does the underlined word \"detect\" in Paragraph 1 most probably mean?", "options": ["Warn.", "Blow.", "Watch.", "Discover."], "answer": "D", "kp": "词义猜测", "exp": "第二段用 discover mosquitoes 换了一种说法，detect 就是“发现、探测”。"},
+            {"n": 62, "stem": "How does the writer prove the effectiveness of the device in Paragraph 2?", "options": ["By telling a story.", "By listing numbers.", "By making comparisons.", "By using experts' words."], "answer": "B", "kp": "写作手法", "exp": "第二段列了 2 毫米、0.003 秒、每秒 30 只等一串数字。"},
+            {"n": 63, "stem": "What is an advantage of the Chinese device over the Locus?", "options": ["Killing mosquitoes after location.", "Focusing on mosquitoes outdoors.", "Finding mosquitoes in a short time.", "Using AI to drive mosquitoes away."], "answer": "A", "kp": "细节理解", "exp": "第三段：Locus 只定位，中国设备更进一步，定位后还能消灭蚊子。"},
+            {"n": 64, "stem": "What does Paragraph 4 mainly talk about?", "options": ["How the device was tested.", "The influence of noise on accuracy.", "How AI was used in the device.", "The road to a high accuracy rate."], "answer": "D", "kp": "段落大意", "exp": "第四段讲早期型号不准，经过多年努力把准确率提到 95% 以上，是“提高准确率的历程”。"},
+            {"n": 65, "stem": "What can we learn from the last paragraph?", "options": ["Most mosquitoes are dangerous.", "The Chinese device is of great use.", "Mosquitoes around us have been controlled.", "The Chinese device is praised by the WHO."], "answer": "B", "kp": "推理判断", "exp": "最后一段先说蚊子危害大，再说这款设备安全有效、能保护健康，说明它很有用。3500 种里只有约 200 种传播疾病，A 错。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "七选五",
+      "title": "遇到使用白手杖的盲人",
+      "passage": "A white cane (手杖) is a tool that helps blind people walk safely on their own. It did not become widely used until the 1920s. In 1921, an Englishman painted his cane white so that drivers would see him easily. (66) Today, white canes continue to provide blind people with a safer way to live their lives.\nWhat can we do if we meet someone with a white cane? (67)\nThe first rule is to be respectful. Many white cane users can move around by themselves and may not need help. (68) If they accept your help, follow what they say carefully instead of guessing what they need. Usually, it is best to offer your arms for them to hold onto instead of pulling their arms.\n(69) The cane is an important tool for safety. Taking it away can cause confusion (混乱). Even if the cane is put down, don't move it without permission (许可). Its user needs to know exactly where it is to find it again.\nIt is wonderful that people are willing to help white cane users. (70) Take a moment to learn how to treat them with respect. We can create a world where they can walk safely and proudly.",
+      "choices": ["Here are some rules to follow.", "However, not everyone knows how to do so properly.", "So, always ask if they need help before giving them a hand.", "Another rule is never to touch a white cane while it is in use.", "His idea spread and led to similar products in other countries."],
+      "items": [
+        {"n": 66, "answer": "E", "exp": "前一句讲英国人把手杖涂白，后一句讲今天白手杖仍在使用，中间应是“这个做法传开、传到了别的国家”。"},
+        {"n": 67, "answer": "A", "exp": "前面提问“遇到拿白手杖的人怎么办”，后面分条讲规则，所以这里是“下面是一些要遵守的规则”。"},
+        {"n": 68, "answer": "C", "exp": "前一句说很多人不一定需要帮助，所以“帮忙之前一定先问一句”，So 表因果。"},
+        {"n": 69, "answer": "D", "exp": "本段讲不能拿走、挪动手杖，开头是第二条规则：使用中不要碰白手杖。"},
+        {"n": 70, "answer": "B", "exp": "前一句说人们愿意帮忙，后一句说花点时间学习怎样尊重地对待他们，中间是转折：“但不是每个人都知道正确的做法”。"}
+      ]
+    },
+    {
+      "type": "情景交际",
+      "items": [
+        {"n": 71, "stem": "A: Nice to see you!\nB: ________!", "answer": "Nice to see you, too!", "exp": "回应 Nice to see you! 用 Nice to see you, too!"},
+        {"n": 72, "stem": "A: Do you take exercise every day?\nB: ________.", "answer": "Yes, I do. / No, I don't.", "exp": "一般疑问句用 Yes/No 回答，助动词跟问句保持一致用 do。"},
+        {"n": 73, "stem": "A: ________ are there in your class?\nB: There are 45 students in my class.", "answer": "How many students", "exp": "答语是数量（45 students），问“多少”用 How many + 可数名词复数。"},
+        {"n": 74, "stem": "A: Where do you like to read, in the library or at home?\nB: ________.", "answer": "I like to read in the library. / I like to read at home.", "exp": "选择疑问句，从两个地点中选一个回答，不用 yes/no。"},
+        {"n": 75, "stem": "A: ________?\nB: They are preparing for a party.", "answer": "What are they doing?", "exp": "答语用现在进行时说正在做什么，问 What are they doing?"}
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "走进丽江",
+      "passage": "China has 56 ethnic groups (民族), and 52 can be found in Yunnan. One place to experience some of their culture is Lijiang. Lijiang (81) (begin) to make its mark during the Tang Dynasty, and is home to the Naxi and Yi peoples.\nThe Yi people are the second most common ethnic group in Lijiang today. They are famous (82) the ten-month calendar. In their calendar, every month has 36 days, and the year is 360 days long. (83) remaining five or six days are used for a festival.\nBesides, Lijiang has more than 20 other ethnic groups. Each has its own culture (84) language. While many live in Lijiang Old Town, others live outside the city, in the villages or in mountainous areas. So you may have to travel a long way to learn about their culture. (85) (lucky), many people from these ethnic groups are friendly. They are happy to share their customs and foods with (86) (visitor).\nThe Torch Festival (火把节) is very popular in Lijiang. Nearly everyone there (87) (celebrate) it every year. It can go on for several days, usually in July, which is the (88) (busy) month of the year. During this festival, all the streets are lit up with torches and fires. Many people like to wear traditional dress and they enjoy (89) (sing), dancing and playing musical instruments around the fire. All of (90) (they) have a wonderful time. This is the best time of the year to experience Lijiang's traditional culture.",
+      "items": [
+        {"n": 81, "hint": "begin", "answer": "began", "exp": "during the Tang Dynasty 是过去，用一般过去时 began。"},
+        {"n": 82, "answer": "for", "exp": "be famous for 因……而出名。"},
+        {"n": 83, "answer": "The", "exp": "特指一年里剩下的那五六天，用定冠词，句首大写 The。"},
+        {"n": 84, "answer": "and", "exp": "culture 和 language 并列，用 and。"},
+        {"n": 85, "hint": "lucky", "answer": "Luckily", "exp": "放在句首修饰整句，用副词 Luckily，首字母大写。"},
+        {"n": 86, "hint": "visitor", "answer": "visitors", "exp": "泛指游客，用复数 visitors。"},
+        {"n": 87, "hint": "celebrate", "answer": "celebrates", "exp": "everyone 作主语谓语用单数，every year 表经常，用一般现在时 celebrates。"},
+        {"n": 88, "hint": "busy", "answer": "busiest", "exp": "the ... month of the year 一年中最……的月份，用最高级 busiest。"},
+        {"n": 89, "hint": "sing", "answer": "singing", "exp": "enjoy doing sth，且与 dancing、playing 并列，用 singing。"},
+        {"n": 90, "hint": "they", "answer": "them", "exp": "介词 of 后用宾格 them，all of them 他们所有人。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 91,
+      "score": 15,
+      "prompt": "假定你是李华，你校英语俱乐部正在举办主题为“China In My Eyes”的作品征集活动。请你结合以下提示，用英语写一份倡议书，号召同学们积极参加。词数 80 左右。\n提示：Purpose and significance（意义）：better understand Chinese culture / improve English / ...；Requirements（要求）for works：positive and creative / a poster, a short video or ... / hand in your works before June 30th\n开头已给出：Dear schoolmates, The school English club is going to hold an activity — China In My Eyes.",
+      "points": [
+        ["写出活动目的和意义（了解中国文化、提高英语，可适当补充）", 5],
+        ["写全作品要求：积极有创意、形式（海报、短视频等）、6 月 30 日前提交", 6],
+        ["倡议书语气：号召大家参加，结尾有期待", 2],
+        ["语言通顺，衔接自然，书写规范", 2]
+      ],
+      "sample": "Dear schoolmates,\nThe school English club is going to hold an activity — China In My Eyes. We're calling on all of you to join in.\nThis activity aims to help us better understand Chinese culture. Sharing China's stories in English can not only increase our cultural confidence but also improve our English. It'll also help to make our school life more colorful.\nYour works should be positive and creative. You can design a poster, make a short video or write an article. Please hand in your works before June 30th.\nLooking forward to your wonderful works.\nLi Hua",
+      "exp": "倡议书三段式：发出号召 → 说清意义 → 列出要求并期待参与。范文为官方参考范文。"
+    }
+  ]
+}

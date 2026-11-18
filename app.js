@@ -1112,8 +1112,8 @@ function renderHome(focus = '') {
     ${trialDays ? '' : accessNotice}
     <section id="sprintTeaser"></section>
     <section class="card national-entry">
-      <div><h2>全国中考真题</h2><p class="muted">各地真题，按科目练，每次几分钟。</p></div>
-      <a class="btn primary" href="#national">选科目练习 →</a>
+      <div><h2>📘 中考英语真题 · 免费</h2><p class="muted">福建 2025、2026 整卷可在线做，按题型练、每题有解析；还有物理、化学和各科原卷。</p></div>
+      <a class="btn primary" href="#national">免费练 →</a>
     </section>
     ${quickModesHTML(queue, progress)}
     ${drillCardHTML(progress)}
@@ -1332,7 +1332,7 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
   const clearing = state.mode === 'clearWrong';
   const total = state.queue.length;
   const position = state.idx + 1;
-  const typeLabel = q.type === 'essay' ? q.meta : (TYPE_LABEL[q.type] || '选择题');
+  const typeLabel = q.section || (q.type === 'essay' ? q.meta : (TYPE_LABEL[q.type] || '选择题'));
   const studyMode = ['all', 'random', 'random20', 'unfinished', 'essay', 'blank'].includes(state.mode);
   return `
     <div class="practice-shell tone-${esc(q.subject)}">
@@ -1499,7 +1499,7 @@ function renderChoice(q) {
   let selected = [];
   let finished = false;
   view.innerHTML = practiceShellHTML(q, progress, {
-    title: `<h1 id="questionTitle" tabindex="-1">${q.national ? '原题练习 · 第 ' + q.number + ' 题' : esc(q.stem)}</h1>`,
+    title: `<h1 id="questionTitle" tabindex="-1"${q.national ? ' class="national-stem"' : ''}>${q.national && q.originalHtml ? '原题练习 · 第 ' + q.number + ' 题' : esc(q.stem)}</h1>`,
     body: `${q.materialHtml ? `<div class="national-reading">${q.materialHtml}</div>` : ''}${q.originalHtml ? `<div class="national-source">${q.originalHtml}</div>` : ''}
       ${q.type === 'multiple' ? `<p class="muted selection-hint">请选择 ${required}–${maximum} 项后提交。</p>` : ''}
       <div class="options" role="group" aria-label="${type}选项">
@@ -1509,6 +1509,7 @@ function renderChoice(q) {
       </div>`,
   });
   const finishUI = wireShell(q);
+  if (q.national) focusGap(q);
   const optionButtons = [...view.querySelectorAll('[data-choice]')];
   const submit = byId('submitBtn');
   state.keys.options = optionButtons;
@@ -1570,11 +1571,12 @@ function renderBlank(q) {
     : '')).join('');
   let finished = false;
   view.innerHTML = practiceShellHTML(q, progress, {
-    title: `<h1 id="questionTitle" class="blank-stem" tabindex="-1">${stemHTML}</h1>`,
-    body: `<p class="muted selection-hint">在横线处填写答案，回车跳到下一空；同义写法也能判对。</p>`,
+    title: `<h1 id="questionTitle" class="blank-stem${q.national ? ' national-blank' : ''}" tabindex="-1">${stemHTML}</h1>`,
+    body: `${q.materialHtml ? `<div class="national-reading">${q.materialHtml}</div>` : ''}<p class="muted selection-hint">在横线处填写答案，回车跳到下一空；同义写法也能判对。</p>`,
     submitDisabled: false, revealLabel: '看答案',
   });
   const finishUI = wireShell(q);
+  if (q.national) focusGap(q);
   const inputs = [...view.querySelectorAll('.blank-input')];
   const submit = byId('submitBtn');
   function showResult(correct, marks) {
@@ -1620,6 +1622,19 @@ function renderBlank(q) {
   inputs[0].focus({ preventScroll: true });
 }
 
+// 英语作文按单词数计，其他科按字数。
+function essayLength(q, text) {
+  const value = String(text || '').trim();
+  return q.subject === 'english' ? `${value ? value.split(/\s+/).length : 0} 词` : `${value.length} 字`;
+}
+// 完形、短文填空：把当前这一空标出来并滚到它的位置。
+function focusGap(q) {
+  const box = view.querySelector('.national-reading');
+  const gap = [...(box?.querySelectorAll('.gap') || [])].find(el => el.textContent.trim() === String(q.number));
+  if (!gap) return;
+  gap.classList.add('current');
+  box.scrollTop = Math.max(0, gap.offsetTop - box.offsetTop - box.clientHeight / 3);
+}
 function renderEssay(q) {
   const progress = loadProgress();
   const draftKey = 'xiaosimen-draft-' + q.id;
@@ -1628,22 +1643,23 @@ function renderEssay(q) {
   const tip = q.method || METHOD_TIPS[q.meta] || METHOD_TIPS['简答题'];
   let finished = false;
   view.innerHTML = practiceShellHTML(q, progress, {
-    title: `<h1 id="questionTitle" tabindex="-1">${esc(q.stem)}</h1>`,
-    body: `<div class="essay-box">
+    title: `<h1 id="questionTitle" tabindex="-1"${q.national ? ' class="national-stem"' : ''}>${esc(q.stem)}</h1>`,
+    body: `${q.materialHtml ? `<div class="national-reading">${q.materialHtml}</div>` : ''}<div class="essay-box">
         <details class="method-tip"><summary>${icon('lightbulb')} 答题思路</summary><p>${esc(tip)}</p></details>
         <label class="essay-label" for="essayInput">${icon('pen-line')} 我的答案</label>
         <textarea id="essayInput" rows="7" placeholder="分点作答，例如：&#10;① ……&#10;② ……&#10;也可以先写在本子上，写完直接点「对照得分点」。">${esc(draft)}</textarea>
-        <div class="essay-meta"><span id="essayCount">${draft.length} 字</span><span>满分 ${q.score} 分 · ${q.points.length} 个得分点</span></div>
+        <div class="essay-meta"><span id="essayCount">${essayLength(q, draft)}</span><span>满分 ${q.score} 分 · ${q.points.length} 个得分点</span></div>
       </div>
       <div id="scoring"></div>`,
     submitLabel: `${icon('list-checks')} 对照得分点`, submitDisabled: false, revealLabel: '直接看参考答案',
   });
   const finishUI = wireShell(q);
+  if (q.national) focusGap(q);
   const input = byId('essayInput');
   const submit = byId('submitBtn');
   const reveal = byId('revealBtn');
   input.addEventListener('input', () => {
-    byId('essayCount').textContent = `${input.value.trim().length} 字`;
+    byId('essayCount').textContent = essayLength(q, input.value);
     try { sessionStorage.setItem(draftKey, input.value); } catch { /* 忽略 */ }
   });
   input.addEventListener('keydown', event => {

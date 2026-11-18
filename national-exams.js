@@ -80,7 +80,7 @@
     const liveSubjects = subjects.filter(subject => available.some(paper => paper.subject === subject));
     return `<section class="card national-filters" aria-label="筛选真题">
       <div class="national-tabs" role="group" aria-label="练习方式">
-        <button class="btn ${state.mode === 'short' ? 'primary' : ''}" data-mode="short" type="button" aria-pressed="${state.mode === 'short'}">几分钟短练</button>
+        <button class="btn ${state.mode === 'short' ? 'primary' : ''}" data-mode="short" type="button" aria-pressed="${state.mode === 'short'}">${state.subject === 'english' ? '按题型练' : '几分钟短练'}</button>
         <button class="btn ${state.mode === 'paper' ? 'primary' : ''}" data-mode="paper" type="button" aria-pressed="${state.mode === 'paper'}">按原卷练</button>
       </div>
       <div class="national-subjects" role="group" aria-label="选择科目">
@@ -109,23 +109,74 @@
     </article>`;
   }
 
+  // 英语按中考题型练：单选一次 10 道；完形、阅读、七选五、短文填空一次一篇；情景交际 5 组；作文 1 篇。
+  const ENGLISH_TYPES = [
+    ['单项选择', '语法、词汇、交际', 10], ['完形填空', '一篇短文 10 空', 0], ['阅读理解', '一篇文章 5 题', 0],
+    ['七选五', '一篇短文 5 空', 0], ['短文填空', '用词的正确形式填空', 0], ['情景交际', '补全对话', 5], ['书面表达', '写一篇作文，对照得分点', 1],
+  ];
+  const englishPapers = () => catalog.filter(paper => paper.subject === 'english' && paper.data &&
+    (!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year));
+  function englishTypeCards() {
+    const papersHere = englishPapers();
+    const count = type => papersHere.reduce((sum, paper) => sum + (paper.sections?.[type] || 0), 0);
+    const cards = ENGLISH_TYPES.filter(([type]) => count(type)).map(([type, hint]) => `<article class="card national-paper-card national-type-card">
+      <h2>${escape(type)}</h2><p class="muted">${escape(hint)} · 共 ${count(type)} 题，来自 ${papersHere.filter(p => p.sections?.[type]).length} 套真题</p>
+      <div class="national-actions"><button class="btn primary" type="button" data-type="${escape(type)}">练一组</button></div></article>`).join('');
+    return cards ? `<p class="national-status muted">按中考题型练，每题都有 Claude 写的解析。想做整套卷子，切到「按原卷练」。</p><div class="national-paper-grid">${cards}</div>` : '';
+  }
+  async function startType(button) {
+    button.disabled = true;
+    const version = ++revision;
+    try {
+      const type = button.dataset.type;
+      const lists = await Promise.all(englishPapers().filter(paper => paper.sections?.[type]).map(getQuestions));
+      if (version !== revision || !opened) return;
+      const pool = lists.flat().filter(q => q.section === type);
+      const progress = app.progress();
+      const fresh = pool.filter(q => !progress.banks[q.id]?.done);
+      const source = fresh.length ? fresh : pool;
+      const size = (ENGLISH_TYPES.find(([name]) => name === type) || [])[2];
+      let chosen;
+      if (!size) {
+        const groupId = source[Math.floor(Math.random() * source.length)].groupId;
+        chosen = pool.filter(q => q.groupId === groupId);
+      } else {
+        chosen = [...source].sort(() => Math.random() - 0.5).slice(0, size);
+      }
+      app.practice(chosen);
+      window.scrollTo(0, 0);
+    } catch (error) { app.toast(error.message); }
+    finally { button.disabled = false; }
+  }
+
   function render() {
     state.paper = null;
     const filtered = catalog.filter(paper => paper.subject === state.subject &&
       (!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year));
     const practice = state.mode === 'short' ? filtered.filter(paper => paper.questionCount > 0) : filtered;
+    const typeCards = state.subject === 'english' && state.mode === 'short' ? englishTypeCards() : '';
+    if (typeCards) {
+      shell(`${drawFilters(catalog)}${typeCards}`);
+      wireFilters();
+      app.view.querySelectorAll('[data-type]').forEach(button => button.addEventListener('click', () => { void startType(button); }));
+      return;
+    }
     shell(`${drawFilters(catalog)}
       <p class="national-status muted" role="status">全部免费练，不用登录。做错的题自动进错题本，原卷能看、能打印。</p>
       <div class="national-paper-grid">${practice.length ? practice.map(paperCard).join('') :
         `<section class="card national-empty"><h2>${filtered.length ? '这科目前提供原卷与参考答案' : '当前筛选下暂无试卷'}</h2><p class="muted">${filtered.length ? '切换「按原卷练」即可查看和打印。' : '可以切换地区或年份再看看。'}</p>${filtered.length ? '<button type="button" class="btn primary" id="switchToPapers">查看原卷</button>' : ''}</section>`}</div>`);
+    wireFilters();
+    document.getElementById('switchToPapers')?.addEventListener('click', () => { state.mode = 'paper'; render(); });
+    app.view.querySelectorAll('[data-start]').forEach(button => button.addEventListener('click', () => { void start(button); }));
+    app.view.querySelectorAll('[data-read]').forEach(button => button.addEventListener('click', () => { void readPaper(button.dataset.read); }));
+  }
+
+  function wireFilters() {
     app.view.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => { state.mode = button.dataset.mode; render(); }));
     app.view.querySelectorAll('[data-subject]').forEach(button => button.addEventListener('click', () => { state.subject = button.dataset.subject; render(); }));
     for (const [id, key] of [['nationalRegion', 'region'], ['nationalYear', 'year']]) {
       document.getElementById(id).addEventListener('change', event => { state[key] = event.target.value; render(); });
     }
-    document.getElementById('switchToPapers')?.addEventListener('click', () => { state.mode = 'paper'; render(); });
-    app.view.querySelectorAll('[data-start]').forEach(button => button.addEventListener('click', () => { void start(button); }));
-    app.view.querySelectorAll('[data-read]').forEach(button => button.addEventListener('click', () => { void readPaper(button.dataset.read); }));
   }
 
   async function start(button) {

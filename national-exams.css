@@ -56,3 +56,12 @@
   body.national-printing .national-prepared { border: 0; padding: 0; }
   body.national-printing .national-source-question { break-inside: avoid; }
 }
+/* 英语：题干保留对话换行；阅读材料里的空号高亮；长文章限制高度可滚动 */
+.national-stem { white-space: pre-line; font-size: 1.08rem; line-height: 1.6; }
+.national-reading .gap { display: inline-block; min-width: 2.2em; padding: 0 4px; margin: 0 2px; border-bottom: 2px solid #17473d; text-align: center; color: #17473d; font-weight: 700; }
+.national-reading .reading-title { font-weight: 700; color: #17473d; }
+.national-reading { max-height: 55vh; overflow-y: auto; }
+.national-type-card h2 { margin: 0 0 4px; }
+.national-reading .gap.current { background: #ffe5aa; border-bottom-color: #b45309; color: #7c2d12; }
+.national-reading { position: relative; }
+.national-blank .blank-no { display: none; }

@@ -31,6 +31,10 @@
 
 运行 `python tools/import_national_exams.py <原始资料目录>` 可重新导入，需要 PyMuPDF、Pillow。来源摘要、实际年份、页码和跳过的公式题见 `tools/national-import-manifest.json`。题目和原卷按需加载。
 
+### 英语真题（Claude 录入）
+
+`english-src/papers/<id>.json` 是逐题录入、核对过官方答案并写好解析的英语整卷（听力、看图写话除外）。改完运行 `node tools/build_english.mjs`，会生成 `data/national/<id>.js` 并合并进真题目录。重跑 `tools/import_national_exams.py` 会覆盖目录，之后要再跑一次 `build_english.mjs`。英语在「全国中考真题」里按中考题型练（单选、完形、阅读、七选五、短文填空、情景交际、书面表达）。
+
 ## 考点速记
 
 `key-points.html` 从 `data/key-points-<科目>.js` 读取知识卡。册次参照人教版教材，内容参考教育部课标与福建原卷。带真题索引的卡片会标出年份和题号。每张卡独立于选择题练习，打开自测答案无需提交答题记录。

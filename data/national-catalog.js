@@ -1,6 +1,68 @@
 window.NATIONAL_CATALOG = {
   "papers": [
     {
+      "id": "fj-2026-english",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "region": "福建",
+      "year": 2026,
+      "title": "2026 年福建中考英语",
+      "questionCount": 66,
+      "pages": [
+        "./assets/national/fj-2026-english/p23.webp",
+        "./assets/national/fj-2026-english/p24.webp",
+        "./assets/national/fj-2026-english/p25.webp",
+        "./assets/national/fj-2026-english/p26.webp",
+        "./assets/national/fj-2026-english/p27.webp",
+        "./assets/national/fj-2026-english/p28.webp",
+        "./assets/national/fj-2026-english/p29.webp",
+        "./assets/national/fj-2026-english/p30.webp",
+        "./assets/national/fj-2026-english/p31.webp",
+        "./assets/national/fj-2026-english/p32.webp",
+        "./assets/national/fj-2026-english/p33.webp",
+        "./assets/national/fj-2026-english/p34.webp",
+        "./assets/national/fj-2026-english/p35.webp",
+        "./assets/national/fj-2026-english/p36-question.webp"
+      ],
+      "answerPages": [
+        "./assets/national/fj-2026-english/p36-answer.webp",
+        "./assets/national/fj-2026-english/p37.webp"
+      ],
+      "source": "2026年福建省初中学业水平考试英语试题及参考答案（福建省教育考试院）",
+      "description": "整卷 66 题（听力、看图写话需音频/图片，未收录）",
+      "data": "./data/national/fj-2026-english.js",
+      "sections": {
+        "单项选择": 15,
+        "完形填空": 10,
+        "阅读理解": 20,
+        "七选五": 5,
+        "情景交际": 5,
+        "短文填空": 10,
+        "书面表达": 1
+      }
+    },
+    {
+      "id": "fj-2025-english",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "region": "福建",
+      "year": 2025,
+      "title": "2025 年福建中考英语",
+      "source": "2025年福建省初中学业水平考试英语试题及参考答案",
+      "description": "整卷 66 题（听力、看图写话需音频/图片，未收录）",
+      "questionCount": 66,
+      "data": "./data/national/fj-2025-english.js",
+      "sections": {
+        "单项选择": 15,
+        "完形填空": 10,
+        "阅读理解": 20,
+        "七选五": 5,
+        "情景交际": 5,
+        "短文填空": 10,
+        "书面表达": 1
+      }
+    },
+    {
       "id": "fj-2026-chinese",
       "subject": "chinese",
       "subjectLabel": "语文",
@@ -49,37 +111,6 @@ window.NATIONAL_CATALOG = {
         "./assets/national/fj-2026-math/p20.webp",
         "./assets/national/fj-2026-math/p21.webp",
         "./assets/national/fj-2026-math/p22.webp"
-      ],
-      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
-      "id": "fj-2026-english",
-      "subject": "english",
-      "subjectLabel": "英语",
-      "region": "福建",
-      "year": 2026,
-      "title": "2026 年福建中考英语",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/fj-2026-english/p23.webp",
-        "./assets/national/fj-2026-english/p24.webp",
-        "./assets/national/fj-2026-english/p25.webp",
-        "./assets/national/fj-2026-english/p26.webp",
-        "./assets/national/fj-2026-english/p27.webp",
-        "./assets/national/fj-2026-english/p28.webp",
-        "./assets/national/fj-2026-english/p29.webp",
-        "./assets/national/fj-2026-english/p30.webp",
-        "./assets/national/fj-2026-english/p31.webp",
-        "./assets/national/fj-2026-english/p32.webp",
-        "./assets/national/fj-2026-english/p33.webp",
-        "./assets/national/fj-2026-english/p34.webp",
-        "./assets/national/fj-2026-english/p35.webp",
-        "./assets/national/fj-2026-english/p36-question.webp"
-      ],
-      "answerPages": [
-        "./assets/national/fj-2026-english/p36-answer.webp",
-        "./assets/national/fj-2026-english/p37.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
@@ -191,18 +222,6 @@ window.NATIONAL_CATALOG = {
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
-    },
-    {
-      "id": "hn-changsha-2024-english",
-      "subject": "english",
-      "subjectLabel": "英语",
-      "region": "湖南",
-      "year": 2024,
-      "title": "2024 年长沙市中考英语",
-      "source": "2024年湖南省长沙市中考英语真题（解析版）.docx",
-      "description": "阅读理解精选",
-      "questionCount": 9,
-      "data": "./data/national/hn-changsha-2024-english.js"
     },
     {
       "id": "hn-hunan-2024-physics",
