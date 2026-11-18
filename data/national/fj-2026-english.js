@@ -523,7 +523,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 36 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -559,7 +559,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 37 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -595,7 +595,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 38 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -631,7 +631,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 39 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -667,7 +667,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 40 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -703,7 +703,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 41 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -739,7 +739,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 42 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -775,7 +775,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 43 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -811,7 +811,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 44 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -847,7 +847,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 45 题",
-  "groupId": "fj-2026-english-cloze",
+  "groupId": "fj-2026-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">把画画到街头的 Marta</p><p>Marta was born in Los Angeles and grew up in a Spanish-speaking home. When she started primary school, she had a <b class=\"gap\">36</b> time. In the school, everyone spoke in English, while she could only speak Spanish. Therefore, nobody <b class=\"gap\">37</b> her. In each class, Marta just hid herself in the corner and drew <b class=\"gap\">38</b>. Her art teacher soon noticed the girl was <b class=\"gap\">39</b> art and encouraged her to draw. Marta kept drawing with the help of the teacher. At the age of 18, she went to the university to study <b class=\"gap\">40</b>.</p><p>When she studied more, Marta realized that she wanted to make a kind of art that wasn&#39;t only shown in galleries (画廊). She wanted to paint murals (壁画) in the <b class=\"gap\">41</b> so that they would be seen in the open air by people who hardly had a chance to go to galleries. And as she said, &quot;My family and my neighbors have never <b class=\"gap\">42</b> a gallery in all their lives.&quot;</p><p>After graduation, Marta got a job as an art <b class=\"gap\">43</b> and she encouraged her students to paint murals. Later, Marta started one of the largest murals in the world. She <b class=\"gap\">44</b> with local artists, historians and lots of young people to complete it. Influenced by her, many people fell in love with art and took up drawing to <b class=\"gap\">45</b> their love for life.</p>",
   "type": "single",
   "options": [
@@ -1683,7 +1683,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 66 题",
-  "groupId": "fj-2026-english-seven",
+  "groupId": "fj-2026-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">遇到使用白手杖的盲人</p><p>A white cane (手杖) is a tool that helps blind people walk safely on their own. It did not become widely used until the 1920s. In 1921, an Englishman painted his cane white so that drivers would see him easily. <b class=\"gap\">66</b> Today, white canes continue to provide blind people with a safer way to live their lives.</p><p>What can we do if we meet someone with a white cane? <b class=\"gap\">67</b></p><p>The first rule is to be respectful. Many white cane users can move around by themselves and may not need help. <b class=\"gap\">68</b> If they accept your help, follow what they say carefully instead of guessing what they need. Usually, it is best to offer your arms for them to hold onto instead of pulling their arms.</p><p><b class=\"gap\">69</b> The cane is an important tool for safety. Taking it away can cause confusion (混乱). Even if the cane is put down, don&#39;t move it without permission (许可). Its user needs to know exactly where it is to find it again.</p><p>It is wonderful that people are willing to help white cane users. <b class=\"gap\">70</b> Take a moment to learn how to treat them with respect. We can create a world where they can walk safely and proudly.</p>",
   "type": "single",
   "options": [
@@ -1727,7 +1727,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 67 题",
-  "groupId": "fj-2026-english-seven",
+  "groupId": "fj-2026-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">遇到使用白手杖的盲人</p><p>A white cane (手杖) is a tool that helps blind people walk safely on their own. It did not become widely used until the 1920s. In 1921, an Englishman painted his cane white so that drivers would see him easily. <b class=\"gap\">66</b> Today, white canes continue to provide blind people with a safer way to live their lives.</p><p>What can we do if we meet someone with a white cane? <b class=\"gap\">67</b></p><p>The first rule is to be respectful. Many white cane users can move around by themselves and may not need help. <b class=\"gap\">68</b> If they accept your help, follow what they say carefully instead of guessing what they need. Usually, it is best to offer your arms for them to hold onto instead of pulling their arms.</p><p><b class=\"gap\">69</b> The cane is an important tool for safety. Taking it away can cause confusion (混乱). Even if the cane is put down, don&#39;t move it without permission (许可). Its user needs to know exactly where it is to find it again.</p><p>It is wonderful that people are willing to help white cane users. <b class=\"gap\">70</b> Take a moment to learn how to treat them with respect. We can create a world where they can walk safely and proudly.</p>",
   "type": "single",
   "options": [
@@ -1771,7 +1771,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 68 题",
-  "groupId": "fj-2026-english-seven",
+  "groupId": "fj-2026-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">遇到使用白手杖的盲人</p><p>A white cane (手杖) is a tool that helps blind people walk safely on their own. It did not become widely used until the 1920s. In 1921, an Englishman painted his cane white so that drivers would see him easily. <b class=\"gap\">66</b> Today, white canes continue to provide blind people with a safer way to live their lives.</p><p>What can we do if we meet someone with a white cane? <b class=\"gap\">67</b></p><p>The first rule is to be respectful. Many white cane users can move around by themselves and may not need help. <b class=\"gap\">68</b> If they accept your help, follow what they say carefully instead of guessing what they need. Usually, it is best to offer your arms for them to hold onto instead of pulling their arms.</p><p><b class=\"gap\">69</b> The cane is an important tool for safety. Taking it away can cause confusion (混乱). Even if the cane is put down, don&#39;t move it without permission (许可). Its user needs to know exactly where it is to find it again.</p><p>It is wonderful that people are willing to help white cane users. <b class=\"gap\">70</b> Take a moment to learn how to treat them with respect. We can create a world where they can walk safely and proudly.</p>",
   "type": "single",
   "options": [
@@ -1815,7 +1815,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 69 题",
-  "groupId": "fj-2026-english-seven",
+  "groupId": "fj-2026-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">遇到使用白手杖的盲人</p><p>A white cane (手杖) is a tool that helps blind people walk safely on their own. It did not become widely used until the 1920s. In 1921, an Englishman painted his cane white so that drivers would see him easily. <b class=\"gap\">66</b> Today, white canes continue to provide blind people with a safer way to live their lives.</p><p>What can we do if we meet someone with a white cane? <b class=\"gap\">67</b></p><p>The first rule is to be respectful. Many white cane users can move around by themselves and may not need help. <b class=\"gap\">68</b> If they accept your help, follow what they say carefully instead of guessing what they need. Usually, it is best to offer your arms for them to hold onto instead of pulling their arms.</p><p><b class=\"gap\">69</b> The cane is an important tool for safety. Taking it away can cause confusion (混乱). Even if the cane is put down, don&#39;t move it without permission (许可). Its user needs to know exactly where it is to find it again.</p><p>It is wonderful that people are willing to help white cane users. <b class=\"gap\">70</b> Take a moment to learn how to treat them with respect. We can create a world where they can walk safely and proudly.</p>",
   "type": "single",
   "options": [
@@ -1859,7 +1859,7 @@ window.NATIONAL_PAPERS["fj-2026-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2026 年福建中考英语 第 70 题",
-  "groupId": "fj-2026-english-seven",
+  "groupId": "fj-2026-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">遇到使用白手杖的盲人</p><p>A white cane (手杖) is a tool that helps blind people walk safely on their own. It did not become widely used until the 1920s. In 1921, an Englishman painted his cane white so that drivers would see him easily. <b class=\"gap\">66</b> Today, white canes continue to provide blind people with a safer way to live their lives.</p><p>What can we do if we meet someone with a white cane? <b class=\"gap\">67</b></p><p>The first rule is to be respectful. Many white cane users can move around by themselves and may not need help. <b class=\"gap\">68</b> If they accept your help, follow what they say carefully instead of guessing what they need. Usually, it is best to offer your arms for them to hold onto instead of pulling their arms.</p><p><b class=\"gap\">69</b> The cane is an important tool for safety. Taking it away can cause confusion (混乱). Even if the cane is put down, don&#39;t move it without permission (许可). Its user needs to know exactly where it is to find it again.</p><p>It is wonderful that people are willing to help white cane users. <b class=\"gap\">70</b> Take a moment to learn how to treat them with respect. We can create a world where they can walk safely and proudly.</p>",
   "type": "single",
   "options": [

@@ -523,7 +523,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 36 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -559,7 +559,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 37 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -595,7 +595,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 38 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -631,7 +631,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 39 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -667,7 +667,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 40 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -703,7 +703,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 41 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -739,7 +739,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 42 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -775,7 +775,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 43 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -811,7 +811,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 44 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -847,7 +847,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 45 题",
-  "groupId": "fj-2025-english-cloze",
+  "groupId": "fj-2025-english-cloze-36",
   "materialHtml": "<p class=\"reading-title\">中国援非医疗队医生救治早产儿</p><p>Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to <b class=\"gap\">36</b> Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn&#39;t live long in a hospital <b class=\"gap\">37</b> necessary equipment (设备). &quot;But even with the smallest chance, my team and I had to try our best,&quot; said Wen.</p><p>To keep the baby <b class=\"gap\">38</b>, Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty&#39;s heart beat only 30 times a minute. Wen stayed close to Beauty to <b class=\"gap\">39</b> her for almost five hours. <b class=\"gap\">40</b>, Beauty was able to breathe by herself.</p><p>By the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family <b class=\"gap\">41</b> the great moment with laughter and tears. Beauty&#39;s mother held Wen&#39;s hands and said, &quot;I want my daughter to be a doctor like you.&quot;</p><p>During her stay in Africa, Wen helped thousands of <b class=\"gap\">42</b>. Wen traveled to faraway villages under a burning hot sun. <b class=\"gap\">43</b> she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their <b class=\"gap\">44</b> for her efforts.</p><p>Besides saving lives, Wen&#39;s team also <b class=\"gap\">45</b> local doctors and nurses every week to better their skills.</p>",
   "type": "single",
   "options": [
@@ -1683,7 +1683,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 66 题",
-  "groupId": "fj-2025-english-seven",
+  "groupId": "fj-2025-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">如何开始一个爱好</p><p>Hobbies lead to better health, more sleep, lower pressure and greater life satisfaction. Get joy from your hobby, and you&#39;ll be a better person. <b class=\"gap\">66</b> Here are some suggestions from experts.</p><p><b class=\"gap\">67</b></p><p>Hobbies can help you calm down. An expert suggests asking yourself how you want an activity to make you feel. Relaxed or socially connected?</p><p>Start small.</p><p><b class=\"gap\">68</b> Wait for a while to find out if it&#39;s right for you. You can always do more later. It&#39;s also smart not to do something more than you can. If you don&#39;t want to do that, just stop. <b class=\"gap\">69</b></p><p>Take a trip back in time.</p><p>Recall activities you loved when you were young, like singing or collecting things. It&#39;s a really helpful place to start, and it allows you to feel comfortable.</p><p>Also, consider going back to school. <b class=\"gap\">70</b> Or sign up for a lesson at a local community center and learn more about a potential (潜在的) hobby.</p><p>Always keep in mind that if a hobby makes you healthier and happier, everyone around you will benefit.</p>",
   "type": "single",
   "options": [
@@ -1727,7 +1727,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 67 题",
-  "groupId": "fj-2025-english-seven",
+  "groupId": "fj-2025-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">如何开始一个爱好</p><p>Hobbies lead to better health, more sleep, lower pressure and greater life satisfaction. Get joy from your hobby, and you&#39;ll be a better person. <b class=\"gap\">66</b> Here are some suggestions from experts.</p><p><b class=\"gap\">67</b></p><p>Hobbies can help you calm down. An expert suggests asking yourself how you want an activity to make you feel. Relaxed or socially connected?</p><p>Start small.</p><p><b class=\"gap\">68</b> Wait for a while to find out if it&#39;s right for you. You can always do more later. It&#39;s also smart not to do something more than you can. If you don&#39;t want to do that, just stop. <b class=\"gap\">69</b></p><p>Take a trip back in time.</p><p>Recall activities you loved when you were young, like singing or collecting things. It&#39;s a really helpful place to start, and it allows you to feel comfortable.</p><p>Also, consider going back to school. <b class=\"gap\">70</b> Or sign up for a lesson at a local community center and learn more about a potential (潜在的) hobby.</p><p>Always keep in mind that if a hobby makes you healthier and happier, everyone around you will benefit.</p>",
   "type": "single",
   "options": [
@@ -1771,7 +1771,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 68 题",
-  "groupId": "fj-2025-english-seven",
+  "groupId": "fj-2025-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">如何开始一个爱好</p><p>Hobbies lead to better health, more sleep, lower pressure and greater life satisfaction. Get joy from your hobby, and you&#39;ll be a better person. <b class=\"gap\">66</b> Here are some suggestions from experts.</p><p><b class=\"gap\">67</b></p><p>Hobbies can help you calm down. An expert suggests asking yourself how you want an activity to make you feel. Relaxed or socially connected?</p><p>Start small.</p><p><b class=\"gap\">68</b> Wait for a while to find out if it&#39;s right for you. You can always do more later. It&#39;s also smart not to do something more than you can. If you don&#39;t want to do that, just stop. <b class=\"gap\">69</b></p><p>Take a trip back in time.</p><p>Recall activities you loved when you were young, like singing or collecting things. It&#39;s a really helpful place to start, and it allows you to feel comfortable.</p><p>Also, consider going back to school. <b class=\"gap\">70</b> Or sign up for a lesson at a local community center and learn more about a potential (潜在的) hobby.</p><p>Always keep in mind that if a hobby makes you healthier and happier, everyone around you will benefit.</p>",
   "type": "single",
   "options": [
@@ -1815,7 +1815,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 69 题",
-  "groupId": "fj-2025-english-seven",
+  "groupId": "fj-2025-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">如何开始一个爱好</p><p>Hobbies lead to better health, more sleep, lower pressure and greater life satisfaction. Get joy from your hobby, and you&#39;ll be a better person. <b class=\"gap\">66</b> Here are some suggestions from experts.</p><p><b class=\"gap\">67</b></p><p>Hobbies can help you calm down. An expert suggests asking yourself how you want an activity to make you feel. Relaxed or socially connected?</p><p>Start small.</p><p><b class=\"gap\">68</b> Wait for a while to find out if it&#39;s right for you. You can always do more later. It&#39;s also smart not to do something more than you can. If you don&#39;t want to do that, just stop. <b class=\"gap\">69</b></p><p>Take a trip back in time.</p><p>Recall activities you loved when you were young, like singing or collecting things. It&#39;s a really helpful place to start, and it allows you to feel comfortable.</p><p>Also, consider going back to school. <b class=\"gap\">70</b> Or sign up for a lesson at a local community center and learn more about a potential (潜在的) hobby.</p><p>Always keep in mind that if a hobby makes you healthier and happier, everyone around you will benefit.</p>",
   "type": "single",
   "options": [
@@ -1859,7 +1859,7 @@ window.NATIONAL_PAPERS["fj-2025-english"] = [
   "grade": "九下",
   "stage": "9-down",
   "source": "2025 年福建中考英语 第 70 题",
-  "groupId": "fj-2025-english-seven",
+  "groupId": "fj-2025-english-pick-66",
   "materialHtml": "<p class=\"reading-title\">如何开始一个爱好</p><p>Hobbies lead to better health, more sleep, lower pressure and greater life satisfaction. Get joy from your hobby, and you&#39;ll be a better person. <b class=\"gap\">66</b> Here are some suggestions from experts.</p><p><b class=\"gap\">67</b></p><p>Hobbies can help you calm down. An expert suggests asking yourself how you want an activity to make you feel. Relaxed or socially connected?</p><p>Start small.</p><p><b class=\"gap\">68</b> Wait for a while to find out if it&#39;s right for you. You can always do more later. It&#39;s also smart not to do something more than you can. If you don&#39;t want to do that, just stop. <b class=\"gap\">69</b></p><p>Take a trip back in time.</p><p>Recall activities you loved when you were young, like singing or collecting things. It&#39;s a really helpful place to start, and it allows you to feel comfortable.</p><p>Also, consider going back to school. <b class=\"gap\">70</b> Or sign up for a lesson at a local community center and learn more about a potential (潜在的) hobby.</p><p>Always keep in mind that if a hobby makes you healthier and happier, everyone around you will benefit.</p>",
   "type": "single",
   "options": [

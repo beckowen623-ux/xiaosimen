@@ -37,13 +37,23 @@ function build(paper) {
     const t = section.type;
     if (t === "单项选择") {
       for (const item of section.items) out.push({ ...choice(item, t), stem: item.stem });
-    } else if (t === "完形填空" || t === "七选五") {
-      const groupId = `${paper.id}-${t === "完形填空" ? "cloze" : "seven"}`;
+    } else if (section.passage && (section.choices || section.items.every(item => item.options))) {
+      // 完形填空、语法选择（每空自带选项）；七选五、补全对话、配对阅读（共用一组选项）。
+      const groupId = `${paper.id}-${section.choices ? "pick" : "cloze"}-${section.items[0].n}`;
+      const materialHtml = passageHtml(section.passage, section.title);
+      const prompt = { "七选五": "选出最合适的一句", "补全对话": "选出最合适的一句", "配对阅读": "选出对应的例子" }[t];
+      for (const item of section.items) {
+        const options = section.choices || item.options;
+        out.push({ ...choice({ ...item, options }, t, { groupId, materialHtml }),
+          stem: prompt ? `第 ${item.n} 空：${prompt}` : `第 ${item.n} 空填哪个？` });
+      }
+    } else if (t === "回答问题") {
+      const groupId = `${paper.id}-answer-${section.items[0].n}`;
       const materialHtml = passageHtml(section.passage, section.title);
       for (const item of section.items) {
-        const options = t === "七选五" ? section.choices : item.options;
-        out.push({ ...choice({ ...item, options }, t, { groupId, materialHtml }),
-          stem: t === "七选五" ? `第 ${item.n} 空：选出最合适的一句` : `第 ${item.n} 空填哪个？` });
+        out.push({ ...base(item.n, t, { groupId, materialHtml }), type: "essay", meta: "回答问题", material: "", stem: item.stem,
+          points: [{ text: `参考：${item.answer}`, score: 2, keys: [] }], score: 2, sample: item.answer,
+          method: "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。", answer: [], explanation: item.exp });
       }
     } else if (t === "阅读理解") {
       for (const group of section.groups) {

@@ -1,0 +1,549 @@
+{
+  "id": "gd-2025-english",
+  "region": "广东",
+  "year": 2025,
+  "title": "2025 年广东中考英语",
+  "source": "2025年广东省初中学业水平考试英语试题及参考答案",
+  "note": "听力、需看图的第 54、76 题和需思维导图的作文未收录。",
+  "sections": [
+    {
+      "type": "补全对话",
+      "title": "没有手机的聚会",
+      "passage": "Ann: Hello, Ted. How did you feel about the dinner last night?\nTed: (26) The food was good, but there wasn't much communication among us.\nAnn: Yeah. Everyone fixed their eyes on the screen. (27)\nTed: Me too. People were closer back then.\nAnn: Exactly. (28)\nTed: Well, how about organizing a camp?\nAnn: Good idea. Maybe we can make it into a \"NINP\" camp.\nTed: NINP? (29)\nAnn: No Internet No Phones.\nTed: (30) So the camp must be cut off from the outside world.\nAnn: Right. Then we can have a great time chatting and playing outdoor games.",
+      "choices": [
+        "Oh, I see.",
+        "I didn't quite enjoy it.",
+        "What does that mean?",
+        "Were you using the phone?",
+        "Let's do something different next time.",
+        "I miss the days without mobile phones."
+      ],
+      "items": [
+        {
+          "n": 26,
+          "answer": "B",
+          "exp": "后文说饭菜不错但大家没怎么交流，说明他“不太喜欢”这顿饭。"
+        },
+        {
+          "n": 27,
+          "answer": "F",
+          "exp": "后一句 Me too. People were closer back then. “那时候”指没有手机的日子，所以是“我怀念没有手机的日子”。"
+        },
+        {
+          "n": 28,
+          "answer": "E",
+          "exp": "后一句 Ted 提议组织露营，前面应是“下次我们做点不一样的吧”。"
+        },
+        {
+          "n": 29,
+          "answer": "C",
+          "exp": "Ann 接着解释 NINP 的意思，所以 Ted 问“这是什么意思？”"
+        },
+        {
+          "n": 30,
+          "answer": "A",
+          "exp": "听完解释后表示明白：Oh, I see."
+        }
+      ]
+    },
+    {
+      "type": "语法选择",
+      "title": "妈妈带我走进厨房",
+      "passage": "Lily works as a main cook in a famous restaurant. It was her mom who guided her into the world of cooking.\nWhen she was a little girl, Lily spent a lot of time with Mom in the kitchen. She remembered that she would always sit there (31) watch Mom cooking. She was curious about (32) Mom was busy with. When she was older, she (33) to do easy tasks like beating eggs. Later on, while Mom was making dumplings, Lily would help cut vegetables (34) a small knife. She also learned how to make dumplings of (35) shapes. To a girl of her age, cooking was real magic.\nAs Lily grew up, she learned more about food and tried cooking (36) dishes than before. After finishing college, she decided (37) in a restaurant. With wild imagination, she came up with many new ideas and started to create (38) own dishes. So far, she (39) many dishes with special tastes. All these dishes are popular with customers.\nToday, the kitchen is still a place for Lily and Mom to have (40) fun together. Every time before a family dinner party, they will cooperate to plan a menu. Cooking has kept their mother-daughter relationship strong.",
+      "items": [
+        {
+          "n": 31,
+          "options": [
+            "or",
+            "and",
+            "but"
+          ],
+          "answer": "B",
+          "kp": "连词",
+          "exp": "sit there 和 watch 两个动作顺承并列，用 and。"
+        },
+        {
+          "n": 32,
+          "options": [
+            "what",
+            "that",
+            "whether"
+          ],
+          "answer": "A",
+          "kp": "宾语从句",
+          "exp": "介词 about 后的宾语从句缺 busy with 的宾语，用 what。"
+        },
+        {
+          "n": 33,
+          "options": [
+            "is allowed",
+            "was allowed",
+            "was allowing"
+          ],
+          "answer": "B",
+          "kp": "被动语态",
+          "exp": "她“被允许”做简单的事，讲过去的事用一般过去时被动 was allowed。"
+        },
+        {
+          "n": 34,
+          "options": [
+            "by",
+            "for",
+            "with"
+          ],
+          "answer": "C",
+          "kp": "介词",
+          "exp": "用工具（刀）做事，介词用 with。"
+        },
+        {
+          "n": 35,
+          "options": [
+            "different",
+            "difference",
+            "differently"
+          ],
+          "answer": "A",
+          "kp": "词性转换",
+          "exp": "修饰名词 shapes，用形容词 different。"
+        },
+        {
+          "n": 36,
+          "options": [
+            "difficult",
+            "more difficult",
+            "the most difficult"
+          ],
+          "answer": "B",
+          "kp": "比较级",
+          "exp": "有 than，用比较级 more difficult。"
+        },
+        {
+          "n": 37,
+          "options": [
+            "work",
+            "working",
+            "to work"
+          ],
+          "answer": "C",
+          "kp": "非谓语动词",
+          "exp": "decide to do sth 决定做某事。"
+        },
+        {
+          "n": 38,
+          "options": [
+            "her",
+            "hers",
+            "herself"
+          ],
+          "answer": "A",
+          "kp": "代词",
+          "exp": "修饰 own dishes，用形容词性物主代词 her，her own 她自己的。"
+        },
+        {
+          "n": 39,
+          "options": [
+            "invents",
+            "will invent",
+            "has invented"
+          ],
+          "answer": "C",
+          "kp": "时态",
+          "exp": "So far 到目前为止，用现在完成时 has invented。"
+        },
+        {
+          "n": 40,
+          "options": [
+            "/",
+            "a",
+            "the"
+          ],
+          "answer": "A",
+          "kp": "冠词",
+          "exp": "have fun 玩得开心，fun 是不可数名词，不用冠词。"
+        }
+      ]
+    },
+    {
+      "type": "完形填空",
+      "title": "北京胡同里最小的图书馆",
+      "passage": "In a narrow hutong in Beijing lies a small library. It is only seven square meters in size, but thousands of books are (41) in it. Unlike traditional libraries, this one doesn't require its readers to (42) the books. Instead, it encourages them to pass those books on to someone else when they've finished reading.\nThis library was (43) by Mr. Xu, a businessman, in 2010. The idea took shape when Xu recommended books online to students, but found it (44) for them to get the books from their school libraries. So, Xu bought and (45) nearly 1,000 books in the following year. The students who received the books were very thankful. Their thank-you letters got Xu to turn his book-gifting effort into a physical space.\nXu's library might be the smallest in the world, but in another sense, it's also the biggest because its books keep (46). Once, a reader took home an English book on Chinese history. A week later, he passed it on to a neighbor. (47), the book traveled all the way abroad and ended up in Germany. \"The (48) of the book is a wonder. Many wonders like this keep the culture of reading alive,\" Xu tells the newspaper.\nXu says he will continue this work although the library is now faced with the (49) of e-books. \"This is the most (50) thing I've done in my life,\" he says. \"I hope that the library can stay open forever.\"",
+      "items": [
+        {
+          "n": 41,
+          "options": [
+            "kept",
+            "written",
+            "printed",
+            "published"
+          ],
+          "answer": "A",
+          "exp": "图书馆里“存放”着几千本书，be kept in。"
+        },
+        {
+          "n": 42,
+          "options": [
+            "return",
+            "copy",
+            "lend",
+            "buy"
+          ],
+          "answer": "A",
+          "exp": "和传统图书馆不同，它不要求读者“归还”书，而是传给别人。"
+        },
+        {
+          "n": 43,
+          "options": [
+            "locked",
+            "started",
+            "hidden",
+            "guarded"
+          ],
+          "answer": "B",
+          "exp": "图书馆由徐先生在 2010 年“创办”，started。"
+        },
+        {
+          "n": 44,
+          "options": [
+            "hard",
+            "harmful",
+            "possible",
+            "interesting"
+          ],
+          "answer": "A",
+          "exp": "徐先生在网上给学生推荐书，却发现学生很“难”从学校图书馆借到这些书，所以才自己买书送人，hard。（有一份流传的答案表此题印成 C，与文意和另一份参考答案不符。）"
+        },
+        {
+          "n": 45,
+          "options": [
+            "dug up",
+            "picked up",
+            "gave away",
+            "threw away"
+          ],
+          "answer": "C",
+          "exp": "买了书再“送出去”，gave away；后文 The students who received the books 印证。"
+        },
+        {
+          "n": 46,
+          "options": [
+            "burning",
+            "moving",
+            "falling",
+            "shaking"
+          ],
+          "answer": "B",
+          "exp": "书一直在“流动”、被传来传去，所以说它最大，keep moving。"
+        },
+        {
+          "n": 47,
+          "options": [
+            "Clearly",
+            "Hopefully",
+            "Generally",
+            "Amazingly"
+          ],
+          "answer": "D",
+          "exp": "一本书一路传到了德国，令人“惊奇地”，Amazingly。"
+        },
+        {
+          "n": 48,
+          "options": [
+            "history",
+            "language",
+            "journey",
+            "background"
+          ],
+          "answer": "C",
+          "exp": "书从北京一路到德国，这段“旅程”是个奇迹，journey。"
+        },
+        {
+          "n": 49,
+          "options": [
+            "death",
+            "truth",
+            "mistake",
+            "challenge"
+          ],
+          "answer": "D",
+          "exp": "电子书给纸质图书馆带来“挑战”，be faced with the challenge of。"
+        },
+        {
+          "n": 50,
+          "options": [
+            "silly",
+            "scary",
+            "common",
+            "meaningful"
+          ],
+          "answer": "D",
+          "exp": "他希望图书馆永远开下去，说这是一生中做过的最“有意义”的事。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "自制薄荷油驱蚊活动",
+          "passage": "Are mosquitoes driving you crazy?\nThis summer, make some mint oil to drive them away!\nMosquitoes are awful. They seem to be everywhere and may bite you badly. This makes mint (薄荷) oil a perfect gift for your family and friends in summer. This weekend, you can try making mint oil FOR FREE.\nTime: 9:00 a.m. — 11:50 a.m. Saturday (July 5)\nPlace: Riverside Community Center\nPlease note:\n♥ We'll get all the tools and materials ready.\n♥ For 40 people only. First come, first served.\n♥ To book a place for the activity, please call Lucy at 345878 by 7:00 p.m. Friday.\nFor those who would like to practice it at home, here are the steps:\n♣ Cut up the mint. Put it into a bottle with olive (橄榄) oil.\n♣ Cover the bottle and place it in hot water.\n♣ When the water cools down, move the bottle to a warm area and leave it there for at least two hours.\n♣ Pour the mixture onto a thin piece of cotton cloth on top of a dark bottle. Let the oil go through the cloth into the bottle. Now you get your homemade mint oil.",
+          "items": [
+            {
+              "n": 51,
+              "stem": "When will this community event take place?",
+              "options": [
+                "This Friday afternoon.",
+                "Next Friday afternoon.",
+                "This Saturday morning.",
+                "Next Saturday morning."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "This weekend 和 Time: 9:00 a.m. — 11:50 a.m. Saturday，是本周六上午。"
+            },
+            {
+              "n": 52,
+              "stem": "How many people can take part in the activity?",
+              "options": [
+                "At least forty.",
+                "At least fifty.",
+                "At most forty.",
+                "At most fifty."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "For 40 people only. 只限 40 人，即最多 40 人。"
+            },
+            {
+              "n": 53,
+              "stem": "Why would people call Lucy before the event?",
+              "options": [
+                "To win a gift.",
+                "To book a place.",
+                "To get mint oil.",
+                "To buy some tools."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "To book a place for the activity, please call Lucy."
+            },
+            {
+              "n": 55,
+              "stem": "What is the main purpose of the passage?",
+              "options": [
+                "To introduce an activity.",
+                "To survey the users of a product.",
+                "To recommend a product.",
+                "To report the success of an activity."
+              ],
+              "answer": "A",
+              "kp": "写作目的",
+              "exp": "全文介绍一次免费制作薄荷油的社区活动：时间、地点、报名方式和步骤。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "2024 年全球森林损失",
+          "passage": "Everyone knows that forests help fight climate change. However, a recent scientific report shows that the world lost 300,000 square kilometers of forests in 2024. That's an area about the size of Italy.\nAccording to the report, for the first time ever, fires were the biggest cause of forest loss. ▲ This country has the largest area of rainforest in the world. Last year, it suffered from a long period of dry weather. Wildfires broke out and spread. As a result, about 25,000 square kilometers of the primary rainforest disappeared in the country. This meant fires caused 66% of its forest loss.\nThe second biggest cause of the world's forest loss was clearing land for farming. As people need more farmland, they keep cutting down forests every year. In 2024, the area of forest cleared for farming increased by 14% worldwide. The situation was more severe in developing countries. For example, Bolivia's forest loss doubled in 2024.\nWithout doubt, something must be done. Experts call on governments, businesses and people to work together before it is too late. It seems that China has set a good example. Thanks to cooperation at many levels, China had the biggest increase in forest area among all countries in 2024. That year alone, newly-planted trees in China covered an area of nearly 45,000 square kilometers, according to a news report. If more countries start to take action like China, the earth will become a greener planet.",
+          "items": [
+            {
+              "n": 56,
+              "stem": "The size of Italy is mentioned in Paragraph 1 to show ________.",
+              "options": [
+                "why we need forests",
+                "where a disaster spread",
+                "what climate change is",
+                "how terrible forest loss was"
+              ],
+              "answer": "D",
+              "kp": "写作意图",
+              "exp": "用“相当于意大利的面积”让人直观感受森林损失有多严重。"
+            },
+            {
+              "n": 57,
+              "stem": "Which of the following can be put in \"▲\" in Paragraph 2?",
+              "options": [
+                "Farming is a reason.",
+                "Take Brazil for example.",
+                "Wildfires were stopped.",
+                "Read the report carefully."
+              ],
+              "answer": "B",
+              "kp": "句子还原",
+              "exp": "空后 This country has the largest area of rainforest，需要先引出一个国家，巴西正是热带雨林面积最大的国家。"
+            },
+            {
+              "n": 58,
+              "stem": "What does the underlined word \"severe\" in Paragraph 3 mean?",
+              "options": [
+                "Serious.",
+                "Boring.",
+                "Balanced.",
+                "Positive."
+              ],
+              "answer": "A",
+              "kp": "词义猜测",
+              "exp": "后文举例玻利维亚森林损失翻倍，说明情况更“严重”，severe = serious。"
+            },
+            {
+              "n": 59,
+              "stem": "What was the reason for the growth of China's forest area in 2024?",
+              "options": [
+                "Enough land.",
+                "Nice weather.",
+                "Good teamwork.",
+                "Green technology."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "Thanks to cooperation at many levels，多层面的合作就是“团队协作”。"
+            },
+            {
+              "n": 60,
+              "stem": "What is the best title for the passage?",
+              "options": [
+                "Rainforest Became Larger",
+                "Farmland Area Grew Rapidly",
+                "Forest Fires Caused Pollution",
+                "Forest Loss Worried the World"
+              ],
+              "answer": "D",
+              "kp": "最佳标题",
+              "exp": "全文讲 2024 年全球森林损失的规模、原因和应对，D 最能概括。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "配对阅读",
+      "title": "向 AI 提问的五条指引",
+      "passage": "左栏是五则向 AI 提问的指引，从下面七个例子中为每则指引选出对应的例子（有两项多余）。\n(61) Don't use general questions when you ask AI for instructions. Instead, ask it to give you clear steps.\n(62) Make no mistakes in your questions, or you may not get correct answers.\n(63) AI can answer questions about facts. But don't try to ask it for other people's private information.\n(64) If you are not happy with a painting or a song AI creates, give it more instructions until you get what you like.\n(65) It's better to tell AI who you are. In this way, you'll get answers that meet your needs.",
+      "choices": [
+        "If you are wondering about the population of Canada, questions like \"What is the popular of Canada?\" will not get you the correct answer.",
+        "Instead of asking \"How do I cook a meal?\" you can say \"What are the steps to make a pancake with a pan?\"",
+        "If you tell AI \"Guess if I'm happy today,\" it will fail to do it because it has no ability to judge human feelings.",
+        "If you aren't satisfied with the picture AI draws, give more requirements like \"Please add a pink window and paint the walls yellow.\"",
+        "For a student who wants to improve his English reading, it is better to ask questions like \"How can I improve my English reading as a Grade 9 student?\"",
+        "If you ask \"Could you tell me the address of my desk-mate Mary?\" AI will refuse to give you the answer because it is designed to protect people's personal information.",
+        "A question like \"Will it be nice tomorrow for jogging outside?\" should be changed into \"What is the weather like tomorrow?\""
+      ],
+      "items": [
+        {
+          "n": 61,
+          "answer": "B",
+          "exp": "要清晰的步骤：把笼统的“怎么做饭”改成“用平底锅做煎饼有哪些步骤”。"
+        },
+        {
+          "n": 62,
+          "answer": "A",
+          "exp": "问题里不能有错：population 写成了 popular，就得不到正确答案。"
+        },
+        {
+          "n": 63,
+          "answer": "F",
+          "exp": "不要问别人的隐私：问同桌的住址，AI 会拒绝。"
+        },
+        {
+          "n": 64,
+          "answer": "D",
+          "exp": "对 AI 画的画不满意，就继续给要求：加粉色窗户、把墙涂黄。"
+        },
+        {
+          "n": 65,
+          "answer": "E",
+          "exp": "先说明你是谁：“作为九年级学生，怎样提高英语阅读？”"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "爱上广州的景观设计师",
+      "passage": "（选词填空，用所给词的正确形式，每词仅用一次，有两词多余）词库：along / although / beauty / because / deep / enjoy / example / explore / new / performance / something / under\nMike is a landscape architect (设计师) from Europe. He came to Guangzhou 16 years ago and has never left since then.\nMike says he likes Guangzhou very much (66) the city is full of life. He lives in a traditional neighborhood. Every day, he can see his neighbors playing chess in the park, dancing (67) the river or chatting in the market. Mike (68) seeing these moments. He thinks the (69) of a city lies in both its people and its environment. \"When people are connected to a place, it brings life to it,\" Mike says.\nRecently, Mike has formed a habit of cycling around to (70) the city at weekends. He says he loves to see old neighborhoods take on a (71) look. For him, city development is not about building (72) new, but about making use of what's already there in a creative way. His favorite (73) is a car repair shop near his home. As people get together there at night and give some (74) of Guangdong opera, the shop turns into a community theater. \"It wasn't designed to be one; it just became one,\" Mike tells a reporter. \"This influenced me (75). I came to realize that, as architects, we should design with people to keep a city alive.\"",
+      "items": [
+        {
+          "n": 66,
+          "answer": "because",
+          "exp": "后半句是喜欢广州的原因，用 because。"
+        },
+        {
+          "n": 67,
+          "answer": "along",
+          "exp": "沿着河边跳舞，dancing along the river。"
+        },
+        {
+          "n": 68,
+          "answer": "enjoys",
+          "exp": "enjoy doing sth；主语 Mike 第三人称单数、一般现在时，用 enjoys。"
+        },
+        {
+          "n": 69,
+          "answer": "beauty",
+          "exp": "the 后接名词，城市的“美”在于人和环境，beauty。"
+        },
+        {
+          "n": 70,
+          "answer": "explore",
+          "exp": "to 后接动词原形，骑车“探索”城市，explore。"
+        },
+        {
+          "n": 71,
+          "answer": "new",
+          "exp": "take on a new look 呈现新面貌，形容词 new 修饰 look。"
+        },
+        {
+          "n": 72,
+          "answer": "something",
+          "exp": "形容词修饰不定代词要后置，something new。"
+        },
+        {
+          "n": 73,
+          "answer": "example",
+          "exp": "他最喜欢的“例子”是家附近的修车铺。"
+        },
+        {
+          "n": 74,
+          "answer": "performances",
+          "exp": "some 后接可数名词复数，粤剧“表演” performances。"
+        },
+        {
+          "n": 75,
+          "answer": "deeply",
+          "exp": "修饰动词 influenced，用副词 deeply，深深地影响了我。"
+        }
+      ]
+    },
+    {
+      "type": "回答问题",
+      "title": "博物馆：线上看还是去现场？",
+      "passage": "Youth Weekly June 21, 2025\nIs it better to visit a museum virtually or in person?\nNow, many museums offer virtual (虚拟的) tours online to their visitors. Last week, we invited our readers to vote on whether they like to visit a museum virtually or in person. We received 3,386 votes in total. The result is shown by the pie chart (饼图).\nHere are some opinions from the readers:\nThe experience will be so different when you are there and see things close up by yourself. It is something that virtual visits can't provide. — Elvis007\nVirtual tours of a museum offer convenience to people like me. I am always busy with work. I don't have time to travel many miles to visit a museum. — Tony08\nLast year, the famous Mogao Cave 285 was closed to the public for some repairs. I had to pay a virtual visit to the cave. Thanks to the new technology, I had a fantastic experience. It seemed that the dancers in the wall painting were dancing right in front of me. — Lulu2025\nI think nothing can compare to visiting a physical museum. I've been to some museums that provide hands-on activities. Once, I touched a rope from an ancient warship. At that moment, I felt like a time traveler to the past. — Heidi36",
+      "items": [
+        {
+          "n": 77,
+          "stem": "Does Elvis007 prefer to visit a museum in person or virtually?",
+          "answer": "In person. / Elvis007 prefers to visit a museum in person.",
+          "exp": "Elvis007 说亲临现场近距离看的体验是线上参观给不了的。"
+        },
+        {
+          "n": 78,
+          "stem": "What does Tony08 think of virtual tours of a museum?",
+          "answer": "Convenient. / He thinks virtual tours of a museum are convenient (for people like him).",
+          "exp": "Tony08：Virtual tours of a museum offer convenience to people like me."
+        },
+        {
+          "n": 79,
+          "stem": "Why did Lulu2025 have to visit Mogao Cave 285 virtually last year?",
+          "answer": "Because it was closed to the public for some repairs.",
+          "exp": "Lulu2025：the famous Mogao Cave 285 was closed to the public for some repairs."
+        },
+        {
+          "n": 80,
+          "stem": "What did Heidi36 feel like when she touched the rope?",
+          "answer": "A time traveler to the past. / She felt like a time traveler to the past.",
+          "exp": "Heidi36：At that moment, I felt like a time traveler to the past."
+        }
+      ]
+    }
+  ]
+}
