@@ -660,7 +660,7 @@ inviteInput.value = window.QuizReferrals?.incoming() || '';
 const visitorSource = new URL(location.href).searchParams.get('from') || 'direct';
 
 function isTrialQuestion(q) {
-  if (q.national) return true; // 全国中考真题全部免费，用来拉新
+  if (q.national) return q.preview === true; // 原卷免费看；在线刷题属于完整版，每种题型可免费试一组
   return baseTrialIds.has(q.id) || shareTrial.ids.includes(q.id);
 }
 
@@ -1104,6 +1104,10 @@ function renderHome(focus = '') {
   refreshStreak(progress);
   byId('headerSearch').hidden = false;
   view.innerHTML = `
+    <section class="card national-entry">
+      <div><h2>📘 中考英语真题 · 原卷免费看</h2><p class="muted">福建 2025、2026 整卷，手机上按中考题型刷，每题有 Claude 解析；各科原卷免费看、免费打印。</p></div>
+      <a class="btn primary" href="#national">${hasFullAccess() ? '去刷题 →' : '免费看 / 试做 →'}</a>
+    </section>
     ${trialDays ? accessNotice : ''}
     <div class="dashboard-top">
       ${studyHeroHTML(queue, progress)}
@@ -1111,10 +1115,6 @@ function renderHome(focus = '') {
     </div>
     ${trialDays ? '' : accessNotice}
     <section id="sprintTeaser"></section>
-    <section class="card national-entry">
-      <div><h2>📘 中考英语真题 · 免费</h2><p class="muted">福建 2025、2026 整卷可在线做，按题型练、每题有解析；还有物理、化学和各科原卷。</p></div>
-      <a class="btn primary" href="#national">免费练 →</a>
-    </section>
     ${quickModesHTML(queue, progress)}
     ${drillCardHTML(progress)}
     <div class="dashboard-lower">
@@ -1895,6 +1895,7 @@ async function init() {
       practice: questions => beginPractice(questions, 'national'),
       progress: loadProgress,
       hasAccess: hasFullAccess,
+      unlock: message => openUnlock(message),
       hideSearch: () => { byId('headerSearch').hidden = true; },
       toast,
     });

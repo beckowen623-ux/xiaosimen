@@ -42,9 +42,21 @@
       await loadScript(paper.data + '?v=' + dataVersion);
       const questions = window.NATIONAL_PAPERS?.[paper.id];
       if (!Array.isArray(questions) || questions.length !== paper.questionCount) throw new Error('这份真题暂时无法加载。');
-      const previewIds = new Set(questions[0]?.materialHtml
-        ? questions.filter(q => q.groupId === questions[0].groupId).map(q => q.id)
-        : questions.slice(0, 5).map(q => q.id));
+      // 免费试做：英语每个题型的第一组（单选前 5 题、情景交际前 2 题，作文不开放）；其他科第一组或前 5 题。
+      const previewIds = new Set();
+      if (paper.subject === 'english') {
+        const seen = new Map();
+        for (const q of questions) {
+          const key = q.section || 'other';
+          const count = seen.get(key) || 0;
+          const first = questions.find(x => (x.section || 'other') === key);
+          const ok = key === '书面表达' ? false : q.groupId ? q.groupId === first.groupId : count < (key === '情景交际' ? 2 : 5);
+          if (ok) previewIds.add(q.id);
+          seen.set(key, count + 1);
+        }
+      } else {
+        (questions[0]?.materialHtml ? questions.filter(q => q.groupId === questions[0].groupId) : questions.slice(0, 5)).forEach(q => previewIds.add(q.id));
+      }
       questions.forEach(question => { question.preview = previewIds.has(question.id); });
       papers.set(paper.id, questions);
     }
@@ -121,8 +133,10 @@
     const count = type => papersHere.reduce((sum, paper) => sum + (paper.sections?.[type] || 0), 0);
     const cards = ENGLISH_TYPES.filter(([type]) => count(type)).map(([type, hint]) => `<article class="card national-paper-card national-type-card">
       <h2>${escape(type)}</h2><p class="muted">${escape(hint)} · 共 ${count(type)} 题，来自 ${papersHere.filter(p => p.sections?.[type]).length} 套真题</p>
-      <div class="national-actions"><button class="btn primary" type="button" data-type="${escape(type)}">练一组</button></div></article>`).join('');
-    return cards ? `<p class="national-status muted">按中考题型练，每题都有 Claude 写的解析。想做整套卷子，切到「按原卷练」。</p><div class="national-paper-grid">${cards}</div>` : '';
+      <div class="national-actions"><button class="btn primary" type="button" data-type="${escape(type)}">${app.hasAccess() ? '练一组' : type === '书面表达' ? '完整版可练' : '免费试一组'}</button></div></article>`).join('');
+    const note = app.hasAccess() ? '按中考题型练，每题都有 Claude 写的解析。想做整套卷子，切到「按原卷练」。'
+      : '原卷免费看（切到「按原卷练」）。在线刷题和 Claude 解析属于小四门完整版，19.9 一起解锁；每种题型先免费试一组。';
+    return cards ? `<p class="national-status muted">${note}</p><div class="national-paper-grid">${cards}</div>` : '';
   }
   async function startType(button) {
     button.disabled = true;
@@ -131,7 +145,9 @@
       const type = button.dataset.type;
       const lists = await Promise.all(englishPapers().filter(paper => paper.sections?.[type]).map(getQuestions));
       if (version !== revision || !opened) return;
-      const pool = lists.flat().filter(q => q.section === type);
+      const all = lists.flat().filter(q => q.section === type);
+      const pool = app.hasAccess() ? all : all.filter(q => q.preview);
+      if (!pool.length) { app.unlock?.(`「${type}」在线刷题属于完整版：小四门 19.9 一起解锁，原卷可以免费看。`); return; }
       const progress = app.progress();
       const fresh = pool.filter(q => !progress.banks[q.id]?.done);
       const source = fresh.length ? fresh : pool;
@@ -140,6 +156,10 @@
       if (!size) {
         const groupId = source[Math.floor(Math.random() * source.length)].groupId;
         chosen = pool.filter(q => q.groupId === groupId);
+        if (!app.hasAccess() && source === pool && pool.every(q => app.progress().banks[q.id]?.done)) {
+          app.unlock?.(`免费的「${type}」已经做完了。完整版可以刷全部真题，小四门 19.9 一起解锁。`);
+          return;
+        }
       } else {
         chosen = [...source].sort(() => Math.random() - 0.5).slice(0, size);
       }
@@ -162,7 +182,7 @@
       return;
     }
     shell(`${drawFilters(catalog)}
-      <p class="national-status muted" role="status">全部免费练，不用登录。做错的题自动进错题本，原卷能看、能打印。</p>
+      <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : '原卷免费看、免费打印。在线刷题和 Claude 解析属于小四门完整版（19.9 一起解锁），每份卷子可先免费试做一组。'}</p>
       <div class="national-paper-grid">${practice.length ? practice.map(paperCard).join('') :
         `<section class="card national-empty"><h2>${filtered.length ? '这科目前提供原卷与参考答案' : '当前筛选下暂无试卷'}</h2><p class="muted">${filtered.length ? '切换「按原卷练」即可查看和打印。' : '可以切换地区或年份再看看。'}</p>${filtered.length ? '<button type="button" class="btn primary" id="switchToPapers">查看原卷</button>' : ''}</section>`}</div>`);
     wireFilters();
@@ -186,7 +206,8 @@
       const paper = catalog.find(item => item.id === button.dataset.start);
       const questions = await getQuestions(paper);
       if (version !== revision || !opened) return;
-      const pool = questions; // 全部免费
+      const pool = app.hasAccess() ? questions : questions.filter(q => q.preview);
+      if (!pool.length) { app.unlock?.('在线刷题属于完整版，原卷可以免费看。'); return; }
       const progress = app.progress();
       const fresh = pool.filter(question => !progress.banks[question.id]?.done);
       const choices = fresh.length ? fresh : pool;
