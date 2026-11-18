@@ -107,3 +107,5 @@
 .sprint-teaser[open] > summary::after { content: "收起 ▴"; }
 .sprint-teaser .sprint-open { margin-left: auto; min-height: 34px; padding: 4px 14px; background: #17473d; color: #fff; border-color: #17473d; font-weight: 700; }
 .sprint-teaser:not([open]) { padding-top: 10px; padding-bottom: 10px; }
+.sprint-passage { margin: 6px 0 8px; padding: 8px 12px; border-left: 3px solid #c9d3dc; background: #f6f7f8; line-height: 1.7; white-space: normal; }
+@media print { .sprint-passage { background: none; } }

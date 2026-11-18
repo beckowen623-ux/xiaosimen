@@ -41,7 +41,7 @@ let code = read('national-exams.js').replace('window.NationalExams =',
 vm.runInContext(code, ctx);
 const api = ctx.window.__upgradeTest;
 const catalog = await api.getCatalog();
-const english = catalog.filter(p => p.subject === 'english' && p.data);
+const english = catalog.filter(p => p.subject === 'english' && p.data && !p.claude);
 assert.equal(english.length, 15);
 let total = 0;
 const previewGroups = new Map();
@@ -72,6 +72,15 @@ assert.equal(total, 847);
 for (const [type] of api.ENGLISH_TYPES) {
   if (type === '书面表达') continue;
   assert.equal(previewGroups.get(type)?.size, 1, `${type} 只能免费试一组`);
+}
+// Claude 模拟卷（英语、语文）：整卷可加载、每题有解析，免费只开放前 5 题。
+const claudePapers = catalog.filter(p => p.claude);
+assert.ok(claudePapers.length >= 4, 'Claude 模拟卷应至少 4 套');
+for (const paper of claudePapers) {
+  const list = await api.getQuestions(paper);
+  assert.equal(list.length, paper.questionCount);
+  assert.ok(list.every(q => q.stem && (q.explanation || q.type === 'essay') && q.claude), paper.id);
+  assert.equal(list.filter(q => q.preview).length, 5, `${paper.id} 免费题应为 5 道`);
 }
 assert.equal(read('referrals.js'), fs.readFileSync(path.join(root, '../quiz-bank-app/referrals.js'), 'utf8'));
 console.log('PASS: 2400 道旧题、原有主观题、185 道已发布英语题不变；847 道英语及目录匹配；每题型一组试用、作文付费。');

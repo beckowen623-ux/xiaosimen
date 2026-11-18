@@ -603,6 +603,7 @@ const MODE_LABEL = {
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
   essay: '主观题提分', blank: '填空速记', retry: '本组错题重练', national: '全国真题练习',
+  weekly: '本周一卷', paper: 'Claude 模拟卷', everWrong: '曾错题',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -794,7 +795,7 @@ function wirePrintCard() {
 }
 
 function openUnlock(message = '') {
-  byId('unlockReason').textContent = message || '开通后可练全部题目、自动复习错题并参加周日小测。';
+  byId('unlockReason').textContent = message || '完整版：全科真题手机刷题、Claude 模拟卷整卷手机做和打印、本周一卷、小四门全部题目、错题自动复习。原卷永远免费看。';
   redeemMessage.textContent = '';
   if (!unlockDialog.open) unlockDialog.showModal();
   void loadPurchaseOptions();
@@ -851,7 +852,7 @@ function accessNoticeHTML(days) {
   }
   const expired = legacyTrialStartedAt() !== null ? '<p class="muted">7 天完整版体验已结束，原答题记录已保留。</p>' : '';
   return `<section class="card mini-card access-notice">
-    <div><h2>免费练习</h2>${expired}<p class="muted">每科每学期前 ${TRIAL_QUESTIONS_PER_TERM} 道客观题，每科 ${TRIAL_ESSAYS_PER_SUBJECT} 道主观题。</p></div>
+    <div><h2>免费试用</h2>${expired}<p class="muted">免费：各地原卷看和打印、Claude 模拟卷和本周一卷前 5 题、英语每种题型一组、小四门每学期前 ${TRIAL_QUESTIONS_PER_TERM} 题。</p></div>
     <button class="btn" type="button" id="openUnlock">查看完整版 / 兑换</button>
   </section>`;
 }
@@ -1153,6 +1154,8 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-18', '首页改版：按“本周一卷 → 分科（英语、语文、数学、物理、化学）→ 小四门”排列，各科可以展开收起；新增 Claude 英语模拟卷 2 套、语文模拟卷 2 套，手机做、打印都行。'],
+  ['2026-11-18', '每日 20 题和打卡换成“本周一卷”：每周一换，打印出来纸上做完，回来点出错题号就能进错题本。错题本、曾错题、收藏覆盖全科；打印和找题覆盖全题库。'],
   ['2026-11-18', '改名“中考提分题库”；首页可按科目、册次一键打印练习卷，答案单独一页，没买也能先打印一张体验卷。'],
   ['2026-11-18', '新增全国中考英语真题 15 套（福建、广东等，逐题核对答案、配中文解析），原卷免费看；按中考题型刷，每种题型免费试一组。'],
   ['2026-11-18', '新增江西 2026、苏州 2026 理化语等各科原卷；四科新增 Claude 易错题。'],
@@ -1162,6 +1165,295 @@ const UPDATE_LOG = [
   ['2026-11-16', '新增主观题提分（材料分析、论述、简答，按得分点自评）和填空速记。'],
   ['2026-11-15', '错题按 1、3、7 天自动安排复习，新增连续学习打卡。'],
 ];
+
+// ---------- 首页 2.0：本周一卷、分科、小四门分组、全科错题、全科打印与搜索 ----------
+const MAIN_SUBJECTS = [
+  { key: 'english', label: '英语', icon: '📘' },
+  { key: 'chinese', label: '语文', icon: '📕' },
+  { key: 'math', label: '数学', icon: '📐' },
+  { key: 'physics', label: '物理', icon: '🔭' },
+  { key: 'chemistry', label: '化学', icon: '⚗️' },
+];
+const WEEKLY_SUBJECTS = [['english', '英语'], ['chinese', '语文'], ['x4m', '小四门']];
+const WEEKLY_SIZE = { english: 20, chinese: 15, x4m: 20 };
+const FREE_PREVIEW = 5;
+let nationalCatalog = null;
+const weeklyCache = new Map();
+
+function seededShuffle(list, seedText) {
+  let seed = 0;
+  for (const ch of String(seedText)) seed = (seed * 31 + ch.charCodeAt(0)) >>> 0;
+  const rand = () => { seed = (seed + 0x6D2B79F5) >>> 0; let t = seed; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const a = [...list];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+function weekRangeLabel(day = todayStr()) {
+  const monday = weekKeyOf(day);
+  const fmtDay = s => `${Number(s.slice(5, 7))}/${Number(s.slice(8, 10))}`;
+  return `${fmtDay(monday)}–${fmtDay(addDays(monday, 6))}`;
+}
+function htmlToText(html) {
+  return String(html || '')
+    .replace(/<b class="gap">(\d+)<\/b>/g, '($1)')
+    .replace(/<\/p>/g, '\n').replace(/<[^>]+>/g, '')
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&')
+    .replace(/\n{2,}/g, '\n').trim();
+}
+function isNationalId(id) { return String(id).startsWith('national-'); }
+function weeklySubjectLabel(key) {
+  if (key === 'x4m') return `小四门 · ${STAGE_MAP[state.stage]?.label || ''}`;
+  return (WEEKLY_SUBJECTS.find(([k]) => k === key) || [])[1] || '';
+}
+async function buildWeekly(subject) {
+  const week = weekKeyOf(todayStr());
+  const cacheKey = `${week}-${subject}-${subject === 'x4m' ? state.stage : ''}`;
+  if (weeklyCache.has(cacheKey)) return weeklyCache.get(cacheKey);
+  let pool = [];
+  if (subject === 'x4m') {
+    pool = buildQueue(state.stage, banks, loadProgress(), true).filter(q => (q.type === 'single' || q.type === 'multiple') && !q.image);
+  } else {
+    const all = await window.NationalExams.loadSubject(subject);
+    pool = all.filter(q => (q.type === 'single' && !q.groupId) || (subject === 'chinese' && q.type === 'blank'));
+  }
+  const list = seededShuffle(pool, `${week}|${subject}|${state.stage}`).slice(0, WEEKLY_SIZE[subject]);
+  weeklyCache.set(cacheKey, list);
+  return list;
+}
+function weeklyFor(list) { return hasFullAccess() ? list : list.slice(0, FREE_PREVIEW); }
+
+function homeIntroHTML() {
+  return `<section class="card home-intro">
+    <p class="intro-kicker">AI 出题 · 全国真题 · 手机刷、打印都行</p>
+    <h1 id="homeTitle" tabindex="-1">中考提分题库</h1>
+    <p class="muted">Claude 按中考考点出模拟卷，全国各地真题整理成能刷的题；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
+  </section>`;
+}
+function weeklyCardHTML(progress) {
+  const subject = state.weeklySubject || 'english';
+  const list = weeklyCache.get(`${weekKeyOf(todayStr())}-${subject}-${subject === 'x4m' ? state.stage : ''}`);
+  const done = list ? weeklyFor(list).filter(q => hasAnswered(qProgress(progress, q.id))).length : 0;
+  const total = list ? weeklyFor(list).length : (hasFullAccess() ? WEEKLY_SIZE[subject] : FREE_PREVIEW);
+  return `<section class="card weekly-card" aria-labelledby="weeklyTitle">
+    <div class="section-heading"><h2 id="weeklyTitle">🗓 本周一卷</h2><span class="muted">${weekRangeLabel()} · 每周一换</span></div>
+    <div class="weekly-chips" role="group" aria-label="选择科目">${WEEKLY_SUBJECTS.map(([key, label]) => `<button type="button" class="drill-chip" data-weekly-subject="${key}" aria-pressed="${subject === key}">${label}</button>`).join('')}</div>
+    <p class="weekly-meta"><b>${esc(weeklySubjectLabel(subject))}</b> · ${total} 题${list ? ` · 已做 ${done}` : ''}${hasFullAccess() ? '' : ' · 免费试前 5 题'}</p>
+    <div class="weekly-actions">
+      <button class="btn primary" type="button" data-weekly="phone">📱 手机上做</button>
+      <button class="btn" type="button" data-weekly="print">🖨 打印</button>
+      <button class="btn" type="button" data-weekly="mark">✍️ 纸上做完，登记错题</button>
+    </div>
+    <div id="weeklyMark"></div>
+    <p class="muted weekly-note">手机上做，自动判分、错题进错题本；打印出来在纸上做完，回来点出做错的题号，同样进错题本，按 1、3、7、14 天提醒复习。</p>
+  </section>`;
+}
+function paperFromQuestions(title, questions, note = '') {
+  const order = [];
+  const bySection = new Map();
+  let lastMaterial = '';
+  for (const q of questions) {
+    const name = q.section || TYPE_LABEL[q.type] || '练习';
+    if (!bySection.has(name)) { bySection.set(name, []); order.push(name); }
+    const passage = q.materialHtml && q.materialHtml !== lastMaterial ? htmlToText(q.materialHtml) : (q.material && q.type !== 'essay' ? q.material : '');
+    lastMaterial = q.materialHtml || lastMaterial;
+    const tag = q.claude ? 'Claude 新题' : (q.source || '').match(/20\d\d/) ? (q.source || '').slice(0, 24) : '';
+    let item;
+    if (q.type === 'single' || q.type === 'multiple') {
+      item = { type: 'choice', multi: q.type === 'multiple', tag, stem: q.stem, options: q.options.map(o => ({ key: o.key, text: o.text })), answer: q.answer.join(''), explanation: q.explanation || '', source: q.source || '' };
+    } else if (q.type === 'blank') {
+      item = { type: 'blank', stem: q.stem, answer: q.answer, explanation: q.explanation || '' };
+    } else {
+      item = { type: 'essay', kind: q.meta || q.section, tag, material: q.material || '', stem: q.stem, score: q.score, points: (q.points || []).map(p => ({ text: p.text, score: p.score })), sample: q.sample, explanation: q.explanation || '', source: q.source || '' };
+    }
+    if (passage) item.passage = passage;
+    bySection.get(name).push(item);
+  }
+  const nums = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
+  return { id: `print-${title}`, title, sections: order.map((name, i) => ({ title: `${nums[i] || i + 1}、${name}`, note, items: bySection.get(name) })), count: questions.length };
+}
+function printQuestions(title, questions) {
+  if (!questions.length) { toast('暂时没有可打印的题。'); return; }
+  if (!window.QuizReferrals?.showPapers) { toast('打印功能加载中，请稍后再试。'); return; }
+  window.QuizReferrals.showPapers([paperFromQuestions(title, questions)], { print: true });
+}
+async function runWeekly(action) {
+  const subject = state.weeklySubject || 'english';
+  try {
+    const list = weeklyFor(await buildWeekly(subject));
+    if (!list.length) { toast('这周的卷子还在准备中。'); return; }
+    const title = `本周一卷 · ${weeklySubjectLabel(subject)}（${weekRangeLabel()}）${hasFullAccess() ? '' : ' · 体验版前 5 题'}`;
+    if (action === 'phone') beginPractice(list, 'weekly');
+    else if (action === 'print') printQuestions(title, list);
+    else showWeeklyMark(list);
+    if (!hasFullAccess() && action !== 'mark') toast('免费可做本周一卷前 5 题，完整一卷属于完整版。');
+  } catch (error) { toast(error.message || '加载失败，请重试。'); }
+}
+function showWeeklyMark(list) {
+  const box = byId('weeklyMark');
+  if (!box) return;
+  const wrong = new Set();
+  box.innerHTML = `<div class="weekly-mark">
+    <p><b>点出做错的题号</b>（没点的算做对）</p>
+    <div class="weekly-grid">${list.map((q, i) => `<button type="button" class="weekly-num" data-i="${i}" aria-pressed="false">${i + 1}</button>`).join('')}</div>
+    <div class="weekly-actions"><button class="btn primary" type="button" id="weeklySave">登记</button><button class="btn" type="button" id="weeklyCancel">取消</button></div>
+  </div>`;
+  box.querySelectorAll('.weekly-num').forEach(button => button.addEventListener('click', () => {
+    const i = Number(button.dataset.i);
+    if (wrong.has(i)) wrong.delete(i); else wrong.add(i);
+    button.setAttribute('aria-pressed', String(wrong.has(i)));
+  }));
+  byId('weeklyCancel').addEventListener('click', () => { box.innerHTML = ''; });
+  byId('weeklySave').addEventListener('click', () => {
+    persist(() => list.forEach((q, i) => recordAnswer(q, wrong.has(i) ? [] : q.answer, !wrong.has(i), { mode: 'weekly' })));
+    toast(wrong.size ? `已登记：错 ${wrong.size} 题，已进错题本。` : '全对！已登记。');
+    renderHome();
+  });
+}
+
+function claudePapers(subject) { return (nationalCatalog || []).filter(p => p.claude && p.subject === subject); }
+function subjectSectionsHTML() {
+  if (!nationalCatalog) return '<section class="card" role="status">正在加载分科目录…</section>';
+  const opened = state.openSubjects || new Set(['english']);
+  return `<section class="subject-sections" aria-labelledby="subjectsTitle">
+    <div class="section-heading"><h2 id="subjectsTitle">分科练习</h2><span class="muted">点开科目看模拟卷和真题</span></div>
+    ${MAIN_SUBJECTS.map(({ key, label, icon: emoji }) => {
+      const claude = claudePapers(key);
+      const real = nationalCatalog.filter(p => p.subject === key && !p.claude);
+      const practicable = real.filter(p => p.data);
+      const count = practicable.reduce((s, p) => s + (p.questionCount || 0), 0);
+      const meta = [claude.length ? `Claude 模拟卷 ${claude.length} 套` : '', real.length ? `真题 ${real.length} 套` : '', count ? `${count} 道可刷` : ''].filter(Boolean).join(' · ');
+      return `<details class="card subject-section" data-subject-section="${key}" ${opened.has(key) ? 'open' : ''}>
+        <summary><b>${emoji} ${label}</b><span>${meta || '即将上线'}</span></summary>
+        ${claude.length ? `<div class="paper-rows"><p class="row-title">Claude 模拟卷 <span class="sprint-tag hot">AI 新题</span></p>${claude.map(p => `<div class="paper-row">
+          <span>${esc(p.title.replace(/^Claude /, ''))}<small>${p.questionCount} 题</small></span>
+          <button class="btn" type="button" data-claude-phone="${p.id}">${hasFullAccess() ? '手机做' : '免费试 5 题'}</button>
+          <button class="btn" type="button" data-claude-print="${p.id}">${hasFullAccess() ? '打印' : '打印体验版'}</button>
+        </div>`).join('')}</div>` : ''}
+        <div class="paper-rows"><p class="row-title">全国真题</p>
+          ${practicable.length ? `<div class="paper-row"><span>手机刷真题<small>${key === 'english' ? '按中考题型练，每题有中文解析' : '逐题判分'}</small></span><button class="btn" type="button" data-national-open="${key}" data-national-mode="short">去刷题 →</button></div>` : ''}
+          ${real.length ? `<div class="paper-row"><span>看原卷 · 打印<small>免费 · ${[...new Set(real.map(p => p.region))].slice(0, 4).join('、')}${real.length > 4 ? ' 等' : ''}</small></span><button class="btn" type="button" data-national-open="${key}" data-national-mode="paper">看原卷 →</button></div>` : '<p class="muted">真题整理中。</p>'}
+        </div>
+        ${!claude.length ? '<p class="muted row-note">Claude 模拟卷正在出题，会按留言需求陆续加上。</p>' : ''}
+      </details>`;
+    }).join('')}
+  </section>`;
+}
+function x4mGroupHTML(queue, progress) {
+  const idx = resumeIndex(queue, progress);
+  const x4mOriginals = (nationalCatalog || []).filter(p => SUBJECT_ORDER.includes(p.subject) || p.subject === 'daode' || p.subject === 'lishi');
+  const open = state.x4mOpen ?? Object.keys(progress.banks || {}).some(id => !isNationalId(id));
+  return `<details class="card x4m-group" id="x4mGroup" ${open ? 'open' : ''}>
+    <summary><b>🧭 小四门 · 道法 / 历史 / 地理 / 生物</b><span>按年级学期刷 · 主观题 · 冲刺卷</span></summary>
+    <div class="x4m-bar">
+      <div class="stage-field"><label for="stageSelect">年级学期</label>
+        <select id="stageSelect">${STAGES.map(s => `<option value="${s.stage}" ${s.stage === state.stage ? 'selected' : ''}>${s.label}</option>`).join('')}</select></div>
+      <p class="muted">${activeSubjectsForStage(state.stage).map(k => SUBJECTS[k].short).join(' · ')} · ${fmt.format(queue.length)} 道 · ${idx > 0 ? `上次练到第 ${idx + 1} 题` : esc(STAGE_HINT[state.stage] || '')}</p>
+      <div class="x4m-actions">
+        <button class="btn primary" type="button" data-mode="all">${idx > 0 ? '继续练习' : '按学期刷题'} ${icon('arrow-right')}</button>
+        <button class="btn" type="button" data-mode="random">${icon('shuffle')} 随机</button>
+        <button class="btn" type="button" data-mode="unfinished">只做未做题 · ${fmt.format(applyMode(queue, 'unfinished', progress).length)}</button>
+        <a class="btn" href="./key-points.html">${icon('book-open')} 考点速记</a>
+        ${x4mOriginals.length ? `<button class="btn" type="button" data-national-open="${x4mOriginals[0].subject}" data-national-mode="paper">中考原卷</button>` : ''}
+      </div>
+    </div>
+    <section id="sprintTeaser"></section>
+    ${drillCardHTML(progress)}
+    <div class="dashboard-lower">
+      ${subjectProgressHTML(progress)}
+      <div class="daily-column">${dailyCardHTML(progress)}${reviewCardsHTML(progress)}</div>
+    </div>
+  </details>`;
+}
+function nationalRecordCount(progress, mode) {
+  const today = todayStr();
+  return Object.entries(progress.banks || {}).filter(([id, r]) => isNationalId(id) && r && (
+    mode === 'wrong' ? r.wrong : mode === 'favorite' ? r.favorite : mode === 'everWrong' ? (r.wrong || (r.wrongCount || 0) > 0)
+      : mode === 'due' ? (r.srs && !r.mastered && r.srs.due && r.srs.due <= today) : false)).length;
+}
+function reviewHubHTML(progress) {
+  const options = [
+    { name: '错题本', mode: 'wrong', icon: 'notebook-pen', tone: 'lishi' },
+    { name: '到期复习', mode: 'due', icon: 'calendar-check', tone: 'dili' },
+    { name: '曾错题', mode: 'everWrong', icon: 'rotate-ccw', tone: 'shengwu' },
+    { name: '收藏题', mode: 'favorite', icon: 'bookmark', tone: 'daode' },
+  ];
+  return `<section class="quick-section" aria-labelledby="modesTitle">
+    <div class="section-heading"><h2 id="modesTitle">错题与收藏 · 全科</h2><span class="muted">英语、语文、模拟卷、本周一卷、小四门都记在这里</span></div>
+    <div class="quick-grid">
+      ${options.map(entry => {
+        const n = applyMode(library, entry.mode, progress).length + nationalRecordCount(progress, entry.mode);
+        return `<button class="quick-card tone-${entry.tone}" data-mode="${entry.mode}">
+        <span class="tile-icon">${icon(entry.icon)}</span>
+        <span class="quick-name"><strong>${entry.name}</strong><small>${!hasFullAccess() && entry.mode === 'due' ? '完整版' : fmt.format(n) + ' 道'}</small></span>
+        ${icon('chevron-right', 'quick-arrow')}
+      </button>`;
+      }).join('')}
+    </div>
+  </section>`;
+}
+function printCardHTML() {
+  const claude = (nationalCatalog || []).filter(p => p.claude);
+  return `<section class="card print-card">
+    <div><h2>🖨 打印练习卷</h2><p class="muted">答案单独一页，带“姓名 / 用时 / 得分”栏。各地真题原卷在上面分科里点“看原卷”，免费打印。</p></div>
+    <div class="print-row">
+      <select id="printKind" aria-label="打印什么">
+        <optgroup label="本周一卷">${WEEKLY_SUBJECTS.map(([key, label]) => `<option value="weekly:${key}">本周一卷 · ${label}</option>`).join('')}</optgroup>
+        ${claude.length ? `<optgroup label="Claude 模拟卷">${claude.map(p => `<option value="claude:${p.id}">${esc(p.title.replace(/^Claude /, ''))}</option>`).join('')}</optgroup>` : ''}
+        <optgroup label="小四门"><option value="x4m">小四门 · 按科目和册次</option></optgroup>
+      </select>
+      <span class="print-x4m" id="printX4m" hidden>
+        <select id="printSubject" aria-label="科目">${SUBJECT_ORDER.map(key => `<option value="${key}">${SUBJECTS[key].label}</option>`).join('')}</select>
+        <select id="printChapter" aria-label="册次"></select>
+      </span>
+      <button class="btn primary" type="button" id="printPaper">生成并打印</button>
+    </div>
+    ${hasFullAccess() ? '' : '<p class="muted">没买也能先打印体验版（前 5 题或免费题）。</p>'}
+  </section>`;
+}
+async function claudePaperAction(id, action) {
+  try {
+    const paper = (nationalCatalog || []).find(p => p.id === id);
+    const all = [...await window.NationalExams.loadPaper(id)].sort((a, b) => a.number - b.number);
+    const list = hasFullAccess() ? all : all.filter(q => q.preview);
+    if (action === 'phone') {
+      beginPractice(list, 'paper');
+      if (!hasFullAccess()) toast('免费试前 5 题；整卷手机做和打印属于完整版。');
+    } else {
+      printQuestions(`${paper.title}${hasFullAccess() ? '' : ' · 体验版前 5 题'}`, list);
+    }
+  } catch (error) { toast(error.message || '加载失败，请重试。'); }
+}
+async function printSelected() {
+  const kind = byId('printKind').value;
+  if (kind.startsWith('weekly:')) { state.weeklySubject = kind.slice(7); await runWeekly('print'); return; }
+  if (kind.startsWith('claude:')) { await claudePaperAction(kind.slice(7), 'print'); return; }
+  const paper = buildPrintPaper(byId('printSubject').value, Number(byId('printChapter').value));
+  if (!paper.count) { toast('这一册暂时没有可打印的题。'); return; }
+  window.QuizReferrals?.showPapers?.([paper], { print: true });
+  if (!hasFullAccess()) toast('这是体验卷，用免费题组成；解锁完整版可打印全部题目。');
+}
+function originCardHTML() {
+  return `<details class="card origin-card">
+    <summary><b>为什么做这个题库</b><span>一个初中生家长的想法 ›</span></summary>
+    <p>孩子上初中以后，家里的教辅越买越多，真正做完的没几本；网上的“押题卷”一份比一份难，做完只剩焦虑。我想要的其实很简单：<b>题目准、讲得清、做完知道错在哪。</b></p>
+    <p>所以我用 AI 做了这个题库：全国各地的中考真题整理成可以逐题刷的题；Claude 按中考考点出模拟卷，每道题都写解析；小四门按年级学期整理，背过的东西有地方练。</p>
+    <p><b>手机党、纸笔党都照顾到：</b>每张卷子都能打印，答案单独一页。纸上做完，回来在“本周一卷”里点出错题号，错题本照样记着，到时间提醒复习。</p>
+    <p><b>为什么收费：</b>AI 出题、整理都要花 token 费，服务器也要钱。各地原卷永远免费看、免费打印；手机刷真题、Claude 模拟卷整卷、本周一卷和错题复习属于完整版，19.9 一次买断。先免费试，孩子用得上再买。</p>
+    <p>有想要的科目、地区、题型，到作者主页留言，我会按大家的需要加题。</p>
+  </details>`;
+}
+async function withNationalExtras(mode, progress) {
+  const ids = Object.keys(progress.banks || {}).filter(isNationalId);
+  if (!ids.length || !window.NationalExams?.resolve) return [];
+  try { return applyMode(await window.NationalExams.resolve(ids), mode, progress); } catch { return []; }
+}
+let nationalSearchPool = null;
+async function ensureNationalSearch() {
+  if (nationalSearchPool || !window.NationalExams?.catalog) return;
+  const list = (await window.NationalExams.catalog()).filter(p => p.data);
+  const loaded = await Promise.all(list.map(p => window.NationalExams.loadPaper(p.id).catch(() => [])));
+  nationalSearchPool = loaded.flat();
+}
 
 function renderHome(focus = '') {
   if (!banks) return;
@@ -1175,57 +1467,48 @@ function renderHome(focus = '') {
   refreshStreak(progress);
   byId('headerSearch').hidden = false;
   view.innerHTML = `
-    <section class="card national-entry">
-      <div><h2>📘 中考英语真题 · 原卷免费看</h2><p class="muted">福建等地 15 套英语真题、847 道已整理题，按中考题型刷，配中文解析；已提供的各科原卷免费看、免费打印。</p></div>
-      <a class="btn primary" href="#national">${hasFullAccess() ? '去刷题 →' : '免费看 / 试做 →'}</a>
-    </section>
-    <section class="card print-card">
-      <div><h2>🖨 打印一张练习卷</h2><p class="muted">选科目和册次，生成 20 道选择题 + 填空和主观题，孩子在纸上做，答案单独一页。${hasFullAccess() ? '' : '没买也能先打印一张体验卷。'}</p></div>
-      <div class="print-row">
-        <select id="printSubject" aria-label="科目">${SUBJECT_ORDER.map(key => `<option value="${key}">${SUBJECTS[key].label}</option>`).join('')}</select>
-        <select id="printChapter" aria-label="册次"></select>
-        <button class="btn primary" type="button" id="printPaper">生成并打印</button>
-      </div>
-    </section>
-    <details class="card origin-card">
-      <summary><b>为什么做这个题库</b><span>能打印 · 一个家长的真心话 ›</span></summary>
-      <p>孩子背小四门总头疼，我也头疼：知识点又多又碎，看不出哪里是重点。我自己一边上班一边考证，最大的体会是：<b>方法错了，再努力也是白费。</b></p>
-      <p>所以我用 AI 把全国人教版地区的中考真题按年级、学期整理好，筛掉重复题和偏题，再让 Claude 按考点出了易错题和冲刺卷，先给自家孩子用。AI 不会替孩子提分，提分靠的还是一道一道地练；AI 只是帮我们把时间花在好题上，不刷故意制造焦虑的偏题怪题。</p>
-      <p><b>纸上做，题库记：</b>不想让孩子一直看手机，冲刺卷、各科原卷、按册次的练习卷都能一键打印，答案单独一页。做完把错题回到题库里订正一遍，错题本会一直记着，并按时提醒复习。错题很顽固，靠几天短时记忆做对了，换个问法照样错；考前把错题本翻一遍，比临时背一堆考点管用得多。</p>
-      <p>题库我会一直更新维护，有问题可以到我的主页留言，我都会回。</p>
-      <p><b>为什么收费：</b>AI 整理和出题要花 token 费，服务器也要钱，所以收 19.9，一杯奶茶钱。原卷永远免费看；在线刷题、错题复习、冲刺卷和打印卷是一题一题整理出来的，收一点钱维持更新。说实话也没赚到什么钱，能帮到孩子，就是最大的意义。先免费试，觉得孩子用得上再买。</p>
-    </details>
-    <details class="card origin-card update-card">
-      <summary><b>📝 更新日志</b><span>最近：${UPDATE_LOG[0][0]} · 点开看我们做了什么 ›</span></summary>
-      <ol class="update-list">${UPDATE_LOG.map(([date, text]) => `<li><time>${date}</time><span>${text}</span></li>`).join('')}</ol>
-    </details>
-    ${trialDays ? accessNotice : ''}
-    <div class="dashboard-top">
-      ${studyHeroHTML(queue, progress)}
-      ${checkinCardHTML(progress, checkinStatus(library, progress, hasFullAccess()))}
-    </div>
-    ${trialDays ? '' : accessNotice}
-    <section id="sprintTeaser"></section>
-    ${quickModesHTML(queue, progress)}
-    ${drillCardHTML(progress)}
-    <div class="dashboard-lower">
-      ${subjectProgressHTML(progress)}
-      <div class="daily-column">${dailyCardHTML(progress)}${reviewCardsHTML(progress)}</div>
-    </div>
+    ${homeIntroHTML()}
+    ${accessNotice}
+    ${weeklyCardHTML(progress)}
+    <div id="subjectSections">${subjectSectionsHTML()}</div>
+    ${x4mGroupHTML(queue, progress)}
+    ${reviewHubHTML(progress)}
+    ${printCardHTML()}
     <section class="card search-card" id="searchPanel" aria-labelledby="searchTitle">
-      <div class="section-heading"><h2 id="searchTitle">${icon('search')} 按章节或关键词找题</h2></div>
+      <div class="section-heading"><h2 id="searchTitle">${icon('search')} 全题库找题</h2><span class="muted">真题、模拟卷、小四门都能搜</span></div>
       <div class="search-fields">
-        <input type="search" id="searchBox" aria-label="题目关键词" placeholder="试试输入「宋代」或「等高线」" value="${esc(state.keyword)}">
+        <input type="search" id="searchBox" aria-label="题目关键词" placeholder="试试输入「宋代」「现在完成时」「默写」" value="${esc(state.keyword)}">
         <select id="searchSubject" aria-label="搜索科目">
           <option value="">全部科目</option>
+          ${MAIN_SUBJECTS.map(s => `<option value="${s.key}" ${state.searchSubject === s.key ? 'selected' : ''}>${s.label}</option>`).join('')}
           ${SUBJECT_ORDER.map(key => `<option value="${key}" ${state.searchSubject === key ? 'selected' : ''}>${SUBJECTS[key].label}</option>`).join('')}
         </select>
       </div>
       <p class="muted" id="searchStatus" role="status"></p>
       <div id="searchOut" class="search-results"></div>
     </section>
+    ${originCardHTML()}
+    <details class="card origin-card update-card">
+      <summary><b>📝 更新日志</b><span>最近：${UPDATE_LOG[0][0]} · 点开看我们做了什么 ›</span></summary>
+      <ol class="update-list">${UPDATE_LOG.map(([date, text]) => `<li><time>${date}</time><span>${text}</span></li>`).join('')}</ol>
+    </details>
     <section class="card cross-bank-card">${accountingRecommendation()}</section>`;
-  byId('stageSelect').addEventListener('change', event => {
+  wireHome();
+  if (focus) moveFocus(byId(focus), focus === 'homeTitle');
+  updateLegacyCountdown();
+}
+function wireSubjectSections() {
+  const box = byId('subjectSections');
+  if (!box) return;
+  box.querySelectorAll('[data-subject-section]').forEach(section => section.addEventListener('toggle', () => {
+    state.openSubjects = state.openSubjects || new Set(['english']);
+    if (section.open) state.openSubjects.add(section.dataset.subjectSection); else state.openSubjects.delete(section.dataset.subjectSection);
+  }));
+  box.querySelectorAll('[data-claude-phone]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePhone, 'phone'); }));
+  box.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
+}
+function wireHome() {
+  byId('stageSelect')?.addEventListener('change', event => {
     state.stage = event.target.value;
     persist(() => {
       const latest = loadProgress();
@@ -1234,52 +1517,80 @@ function renderHome(focus = '') {
     });
     renderHome('stageSelect');
   });
-  view.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => startPractice(btn.dataset.mode)));
+  byId('x4mGroup')?.addEventListener('toggle', event => { state.x4mOpen = event.currentTarget.open; });
+  view.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => { void startPractice(btn.dataset.mode); }));
   view.querySelectorAll('[data-drill]').forEach(btn => btn.addEventListener('click', () => {
     state.drillSubject = btn.dataset.drill;
     renderHome();
     view.querySelector(`[data-drill="${state.drillSubject}"]`)?.focus();
   }));
+  view.querySelectorAll('[data-weekly-subject]').forEach(btn => btn.addEventListener('click', async () => {
+    state.weeklySubject = btn.dataset.weeklySubject;
+    try { await buildWeekly(state.weeklySubject); } catch { /* 网络不好时仍可切换 */ }
+    renderHome();
+  }));
+  view.querySelectorAll('[data-weekly]').forEach(btn => btn.addEventListener('click', () => { void runWeekly(btn.dataset.weekly); }));
+  view.querySelectorAll('[data-national-open]').forEach(btn => btn.addEventListener('click', () => {
+    void window.NationalExams.open({ subject: btn.dataset.nationalOpen, mode: btn.dataset.nationalMode });
+  }));
+  wireSubjectSections();
   byId('dailyBtn')?.addEventListener('click', () => beginPractice([dailyQuestion()], 'daily'));
   byId('dailyShare')?.addEventListener('click', event => { void shareDailyQuestion(event.currentTarget); });
-  byId('openUnlock')?.addEventListener('click', () => openUnlock());
-  byId('checkinBtn')?.addEventListener('click', () => {
-    const fullAccess = hasFullAccess();
-    const res = persist(() => doCheckin(library, loadProgress(), fullAccess));
-    if (!res) return;
-    if (!res.ok) { toast('请先完成今日打卡任务。'); renderHome(); return; }
-    toast(`${res.isMakeup ? '补打成功' : '打卡成功'}，+${res.points} 分${fullAccess && res.newBadges.length ? ' · 获得「' + res.newBadges.join('、') + '」' : ''}`);
-    renderHome();
-  });
-  byId('searchBox').addEventListener('input', event => { state.keyword = event.target.value; doSearch(); });
-  byId('searchSubject').addEventListener('change', event => { state.searchSubject = event.target.value; doSearch(); });
+  view.querySelectorAll('#openUnlock').forEach(btn => btn.addEventListener('click', () => openUnlock()));
+  byId('searchBox').addEventListener('input', event => { state.keyword = event.target.value; void doSearch(); });
+  byId('searchSubject').addEventListener('change', event => { state.searchSubject = event.target.value; void doSearch(); });
   byId('searchOut').addEventListener('click', event => {
     const id = event.target.closest('button[data-qid]')?.dataset.qid;
-    if (id) beginPractice([library.find(q => q.id === id)], 'single');
+    const q = id && ([...library].find(item => item.id === id) || (nationalSearchPool || []).find(item => item.id === id));
+    if (q) beginPractice([q], 'single');
   });
-  doSearch();
-  wirePrintCard();
+  wirePrintKind();
+  void doSearch();
   showReferralProfile();
-  if (focus) moveFocus(byId(focus), focus === 'homeTitle');
-  updateLegacyCountdown();
+  if (!nationalCatalog && window.NationalExams?.catalog) {
+    window.NationalExams.catalog().then(list => {
+      nationalCatalog = list;
+      if (byId('subjectSections')) renderHome();
+    }).catch(() => {
+      const box = byId('subjectSections');
+      if (box) box.innerHTML = '<section class="card"><p class="muted">分科目录加载失败，刷新页面再试。</p></section>';
+    });
+  }
 }
-function doSearch() {
+function wirePrintKind() {
+  const kind = byId('printKind');
+  const x4m = byId('printX4m');
+  if (!kind) return;
+  const syncPrint = () => { x4m.hidden = kind.value !== 'x4m'; if (!x4m.hidden) fillPrintChapters(); };
+  kind.addEventListener('change', syncPrint);
+  byId('printSubject').addEventListener('change', fillPrintChapters);
+  byId('printPaper').addEventListener('click', () => { void printSelected(); });
+  syncPrint();
+}
+async function doSearch() {
   const kw = state.keyword.trim().normalize('NFKC').toLowerCase();
   const status = byId('searchStatus');
   const out = byId('searchOut');
   if (!kw) { status.textContent = ''; out.replaceChildren(); return; }
-  const hits = [...bankQuestions, ...subjectiveQuestions].filter(q =>
+  const wantsNational = !state.searchSubject || MAIN_SUBJECTS.some(s => s.key === state.searchSubject);
+  if (wantsNational && !nationalSearchPool) {
+    status.textContent = '正在加载全部真题和模拟卷…';
+    try { await ensureNationalSearch(); } catch { /* 只搜本地题 */ }
+    if (byId('searchStatus') !== status) return;
+  }
+  const textOf = q => [q.chapter, q.stem, q.material || '', q.materialHtml ? htmlToText(q.materialHtml) : '', q.explanation || ''];
+  const hits = [...bankQuestions, ...subjectiveQuestions, ...(nationalSearchPool || [])].filter(q =>
     (!state.searchSubject || q.subject === state.searchSubject) &&
-    [q.chapter, q.stem, q.material || '', q.explanation || ''].some(text => text.normalize('NFKC').toLowerCase().includes(kw)));
+    textOf(q).some(text => String(text).normalize('NFKC').toLowerCase().includes(kw)));
   const progress = loadProgress();
   status.textContent = hits.length ? `找到 ${hits.length} 道${hits.length > 20 ? '，显示前 20 道' : ''}` : '没有找到相关题目。试试更短的关键词。';
   out.innerHTML = hits.slice(0, 20).map(q => `<article class="search-hit">
-    <div>${subjectChip(q.subject)} ${isSubjective(q) ? `<span class="chip">${esc(q.meta)}</span> ` : ''}<span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
+    <div>${subjectChip(q.subject, q.subjectLabel)} ${q.claude ? '<span class="chip">Claude 模拟卷</span> ' : isSubjective(q) && q.meta ? `<span class="chip">${esc(q.meta)}</span> ` : ''}<span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
     <button class="btn" data-qid="${q.id}">${hasFullAccess() || isTrialQuestion(q) ? '做这道' : hasQuestionHistory(progress, q) ? '回顾' : '查看完整版'} ${icon('arrow-right')}</button>
   </article>`).join('');
 }
 
-function startPractice(mode) {
+async function startPractice(mode) {
   const fullAccess = hasFullAccess();
   if (!fullAccess && FULL_ONLY_MODES.has(mode)) {
     openUnlock('这项练习属于完整版。');
@@ -1303,8 +1614,8 @@ function startPractice(mode) {
   }
   if (mode === 'sunday') {
     queue = sundayMock(bankQuestions, progress);
-  } else if (['wrong', 'due', 'favorite'].includes(mode)) {
-    queue = applyMode(library, mode, progress);
+  } else if (['wrong', 'due', 'favorite', 'everWrong'].includes(mode)) {
+    queue = [...applyMode(library, mode, progress), ...await withNationalExtras(mode, progress)];
   } else {
     const base = availableQueue(progress);
     const stats = mode === 'random20' ? checkinStatus(library, progress, fullAccess) : null;
@@ -1320,7 +1631,7 @@ function startPractice(mode) {
     }
     const empty = {
       wrong: '错题本是空的。', favorite: '还没有收藏题目。', due: '今天没有到期的错题。',
-      random20: '本档新题已做完，可切换学期继续。', unfinished: '本档题目已全部作答。',
+      random20: '本档新题已做完，可切换学期继续。', unfinished: '本档题目已全部作答。', everWrong: '还没有做错过的题。',
     };
     toast(empty[mode] || '当前没有可练习的题目。');
     return;
@@ -1335,9 +1646,9 @@ function beginPractice(queue, mode, index = 0) {
       openUnlock('这项练习属于完整版。');
       return;
     }
-    if (mode !== 'daily' && mode !== 'wrong') {
+    if (!['daily', 'wrong', 'weekly', 'paper'].includes(mode)) {
       const progress = loadProgress();
-      const includesHistory = mode === 'favorite' || mode === 'single';
+      const includesHistory = ['favorite', 'single', 'everWrong', 'due'].includes(mode);
       queue = queue.filter(q => isTrialQuestion(q) || (includesHistory && hasQuestionHistory(progress, q)));
     }
     if (!queue.length) {

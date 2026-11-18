@@ -44,13 +44,16 @@
       if (!Array.isArray(questions) || questions.length !== paper.questionCount) throw new Error('这份真题暂时无法加载。');
       // 免费试做：英语每种题型只开放目录中首套含该题型卷子的第一组；作文不开放。其他科第一组或前 5 题。
       const previewIds = new Set();
-      if (paper.subject === 'english') {
+      if (paper.claude) {
+        // Claude 模拟卷：免费看前 5 题（手机做、打印体验卷都只含这 5 题）。
+        [...questions].sort((a, b) => a.number - b.number).slice(0, 5).forEach(q => previewIds.add(q.id));
+      } else if (paper.subject === 'english') {
         const seen = new Map();
         for (const q of questions) {
           const key = q.section || 'other';
           const count = seen.get(key) || 0;
           const first = questions.find(x => (x.section || 'other') === key);
-          const trialPaper = catalog.find(p => p.subject === 'english' && p.data && p.sections?.[key]);
+          const trialPaper = catalog.find(p => p.subject === 'english' && p.data && !p.claude && p.sections?.[key]);
           const ok = key !== '书面表达' && paper.id === trialPaper?.id &&
             (q.groupId ? q.groupId === first.groupId : count < (key === '情景交际' ? 2 : 5));
           if (ok) previewIds.add(q.id);
@@ -270,8 +273,10 @@
     } catch (error) { app.toast(error.message); render(); }
   }
 
-  async function open() {
+  async function open(options = {}) {
     if (!app) return;
+    if (options.subject) { state.subject = options.subject; state.region = ''; state.year = ''; }
+    if (options.mode) state.mode = options.mode;
     opened = true;
     const version = ++revision;
     if (location.hash !== '#national') history.pushState(null, '', '#national');
@@ -291,5 +296,25 @@
     if (location.hash === '#national') void open();
     else if (opened) { opened = false; revision++; app?.home(); }
   });
-  window.NationalExams = { attach: options => { app = options; }, open, leave };
+  // ---- 给首页、打印、错题本、搜索用的接口 ----
+  async function loadPaper(id) {
+    const list = await getCatalog();
+    const paper = list.find(item => item.id === id);
+    if (!paper?.data) return [];
+    return getQuestions(paper);
+  }
+  async function loadSubject(subject, filter = () => true) {
+    const list = (await getCatalog()).filter(paper => paper.subject === subject && paper.data && filter(paper));
+    return (await Promise.all(list.map(getQuestions))).flat();
+  }
+  async function resolve(ids) {
+    const wanted = [...new Set(ids)].filter(id => String(id).startsWith('national-'));
+    if (!wanted.length) return [];
+    const list = await getCatalog();
+    const needed = list.filter(paper => paper.data && wanted.some(id => id.startsWith(`national-${paper.id}-q`)));
+    const loaded = (await Promise.all(needed.map(paper => getQuestions(paper).catch(() => [])))).flat();
+    const set = new Set(wanted);
+    return loaded.filter(q => set.has(q.id));
+  }
+  window.NationalExams = { attach: options => { app = options; }, open, leave, catalog: getCatalog, loadPaper, loadSubject, resolve, labels };
 })();

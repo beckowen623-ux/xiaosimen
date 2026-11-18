@@ -24,7 +24,8 @@ function build(paper) {
   const out = [];
   const base = (n, section, extra = {}) => ({
     id: `national-${paper.id}-q${String(n).padStart(2, "0")}`,
-    national: true, subject: "english", subjectLabel: "英语", paperId: paper.id, number: n,
+    national: true, subject: paper.subject || "english", subjectLabel: paper.subjectLabel || "英语", paperId: paper.id, number: n,
+    ...(paper.claude ? { claude: true, meta: "Claude 模拟卷" } : {}),
     section, chapter: paper.title, grade: "九下", stage: "9-down",
     source: paper.numbering?.[n] ? `${paper.title} ${paper.numbering[n]}` : `${paper.title} 第 ${n} 题`, ...extra,
   });
@@ -70,6 +71,12 @@ function build(paper) {
           stem: `第 ${item.n} 空：____${item.hint ? `（${item.hint}）` : ""}`,
           blanks: [alts], answer: [alts[0]], explanation: item.exp, kp: item.kp || "" });
       }
+    } else if (t === "古诗文默写") {
+      for (const item of section.items) {
+        const alts = String(item.answer).split("/").map(s => s.trim()).filter(Boolean);
+        out.push({ ...base(item.n, t), type: "blank", stem: `第 ${item.n} 题：${item.stem}`,
+          blanks: [alts], answer: [alts[0]], explanation: item.exp, kp: item.kp || "" });
+      }
     } else if (t === "情景交际" || t === "句子运用") {
       for (const item of section.items) {
         out.push({ ...base(item.n, t), type: "essay", meta: t, material: "", stem: item.stem,
@@ -112,7 +119,8 @@ for (const file of readdirSync(srcDir).filter(f => f.endsWith(".json")).sort()) 
   const counts = {};
   for (const q of questions) counts[q.section] = (counts[q.section] || 0) + 1;
   const old = catalog.papers.find(p => p.id === paper.id) || {};
-  const entry = { ...old, id: paper.id, subject: "english", subjectLabel: "英语", region: paper.region, year: paper.year,
+  const entry = { ...old, id: paper.id, subject: paper.subject || "english", subjectLabel: paper.subjectLabel || "英语", region: paper.region, year: paper.year,
+    ...(paper.claude ? { claude: true } : {}),
     title: paper.title, source: paper.source, description: `整卷 ${questions.length} 题${paper.note ? "（" + paper.note.replace(/。$/, "") + "）" : ""}`,
     questionCount: questions.length, data: `./data/national/${paper.id}.js`, sections: counts };
   catalog.papers = [...catalog.papers.filter(p => p.id !== paper.id), entry];
