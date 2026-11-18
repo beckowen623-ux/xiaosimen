@@ -33,6 +33,7 @@ function build(paper) {
     ...base(item.n, section, extra), type: "single",
     options: item.options.map((text, i) => ({ key: LETTERS[i], text })),
     answer: [item.answer], explanation: item.exp, kp: item.kp || "",
+    ...(item.image ? { image: item.image } : {}),
   });
   for (const section of paper.sections) {
     const t = section.type;
@@ -71,11 +72,18 @@ function build(paper) {
           stem: `第 ${item.n} 空：____${item.hint ? `（${item.hint}）` : ""}`,
           blanks: [alts], answer: [alts[0]], explanation: item.exp, kp: item.kp || "" });
       }
-    } else if (t === "古诗文默写") {
+    } else if (t === "解答题") {
       for (const item of section.items) {
-        const alts = String(item.answer).split("/").map(s => s.trim()).filter(Boolean);
+        out.push({ ...base(item.n, t), type: "essay", meta: "解答题", material: "", stem: item.stem,
+          points: item.points.map(([text, score]) => ({ text, score, keys: [] })), score: item.points.reduce((s, [, v]) => s + v, 0),
+          sample: item.answer, method: item.method || "先写已知和所求，再列式计算，每一步写清依据，最后写结论。", answer: [], explanation: item.exp,
+          kp: item.kp || "", ...(item.image ? { image: item.image } : {}) });
+      }
+    } else if (t === "古诗文默写" || t === "填空题") {
+      for (const item of section.items) {
+        const alts = String(item.answer).split(/\s\/\s/).map(s => s.trim()).filter(Boolean); // 用“ / ”分隔多个答案，3/5 这样的分数不拆
         out.push({ ...base(item.n, t), type: "blank", stem: `第 ${item.n} 题：${item.stem}`,
-          blanks: [alts], answer: [alts[0]], explanation: item.exp, kp: item.kp || "" });
+          blanks: [alts], answer: [alts[0]], explanation: item.exp, kp: item.kp || "", ...(item.image ? { image: item.image } : {}) });
       }
     } else if (t === "情景交际" || t === "句子运用") {
       for (const item of section.items) {

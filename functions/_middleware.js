@@ -11,7 +11,8 @@ const HASH_PREFIX = "sha256:";
 const FULL_SCOPE = "full";
 const MAX_DEVICES = 2;
 const PUBLIC_API_PATHS = new Set(["/api/access/redeem", "/api/access/status", "/api/access/referral",
-  "/api/access/reward-choice", "/api/access/sprint", "/api/access/sprint-preview", "/api/access/cash-qr", "/api/access/cash-proof", "/api/access/friend-offer", "/api/access/upload", "/api/access/my-uploads"]);
+  "/api/access/reward-choice", "/api/access/sprint", "/api/access/sprint-preview", "/api/access/cash-qr", "/api/access/cash-proof", "/api/access/friend-offer", "/api/access/upload", "/api/access/my-uploads",
+  "/api/access/free-status", "/api/access/free-use"]);
 const MAX_REDEEM_FAILURES = 20;
 const FAILURE_WINDOW_MS = 15 * 60 * 1000;
 
@@ -28,6 +29,8 @@ export async function onRequest(context) {
     if (url.pathname === "/api/access/cash-qr") return await cashQr(context);
     if (url.pathname === "/api/access/cash-proof") return await cashProof(context);
     if (url.pathname === "/api/access/friend-offer") return await friendOffer(context);
+    if (url.pathname === "/api/access/free-status") return await freeStatus(context);
+    if (url.pathname === "/api/access/free-use") return await freeUse(context);
     if (url.pathname === "/api/access/upload" || url.pathname === "/api/access/my-uploads") {
       if (!context.env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
       const row = await accessSession(context);
@@ -39,6 +42,47 @@ export async function onRequest(context) {
     console.error("Access database request failed", SITE, error.message);
     return json({ ok: false, reason: "UNAVAILABLE", message: "Access service unavailable." }, 503);
   }
+}
+
+// ---- 免费整卷：每个网络打印 1 次整卷、手机做 1 套整卷；同一套可反复用 ----
+const FREE_KINDS = new Set(["print", "phone"]);
+async function networkHash(request) {
+  let ip = request.headers.get("CF-Connecting-IP") || "";
+  if (ip.includes(":")) ip = ip.split(":").slice(0, 4).join(":"); // IPv6 按 /64 网段算，避免换地址重复领
+  return ip ? await sha256("x4m-free-v1|" + ip) : "";
+}
+async function freeRows(env, net) {
+  const { results } = await env.DB.prepare(
+    "SELECT kind, paper_id, paper_title FROM free_paper_uses WHERE net_hash = ? AND site = ?",
+  ).bind(net, SITE).all();
+  const out = { print: null, phone: null };
+  for (const row of results || []) out[row.kind] = { paperId: row.paper_id, title: row.paper_title || "" };
+  return out;
+}
+async function freeStatus({ request, env }) {
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  if (!env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
+  const net = await networkHash(request);
+  if (!net) return json({ ok: true, free: { print: null, phone: null } });
+  return json({ ok: true, free: await freeRows(env, net) });
+}
+async function freeUse({ request, env }) {
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  if (!env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
+  const body = await request.json().catch(() => ({}));
+  const kind = String(body.kind || "");
+  const paperId = String(body.paperId || "").slice(0, 120);
+  const title = String(body.title || "").slice(0, 80);
+  if (!FREE_KINDS.has(kind) || !/^[\w.:-]{3,120}$/.test(paperId)) return json({ ok: false, reason: "INVALID" }, 400);
+  const net = await networkHash(request);
+  if (!net) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
+  await env.DB.prepare(
+    "INSERT OR IGNORE INTO free_paper_uses (net_hash, site, kind, paper_id, paper_title, created_at) VALUES (?, ?, ?, ?, ?, ?)",
+  ).bind(net, SITE, kind, paperId, title, new Date().toISOString()).run();
+  const free = await freeRows(env, net);
+  const used = free[kind];
+  if (used && used.paperId !== paperId) return json({ ok: false, reason: "USED", free }, 409);
+  return json({ ok: true, free });
 }
 
 async function redeem({ request, env }) {

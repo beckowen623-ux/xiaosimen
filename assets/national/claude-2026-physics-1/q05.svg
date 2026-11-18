@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 210" width="340" height="210" font-family="Times New Roman, serif" font-size="18" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="340" height="210" fill="#fff" stroke="none"/>
+
+<rect x="40" y="30" width="240" height="150"/>
+<line x1="150" y1="22" x2="150" y2="38" stroke-width="3"/><line x1="162" y1="26" x2="162" y2="34" stroke-width="5"/>
+<rect x="145" y="24" width="22" height="12" fill="#fff" stroke="none"/>
+<line x1="150" y1="20" x2="150" y2="40" stroke-width="2"/><line x1="160" y1="25" x2="160" y2="35" stroke-width="5"/>
+<text x="146" y="58" fill="#111" stroke="none" font-size="14">电源</text>
+<line x1="100" y1="180" x2="100" y2="180"/>
+<rect x="70" y="173" width="40" height="14" fill="#fff" stroke="none"/><circle cx="70" cy="180" r="3" fill="#111" stroke="none"/><line x1="70" y1="180" x2="104" y2="166"/><circle cx="110" cy="180" r="3" fill="#111" stroke="none"/><text x="82" y="205" fill="#111" stroke="none" font-size="15">S</text>
+<line x1="200" y1="30" x2="200" y2="180"/><circle cx="200" cy="30" r="3" fill="#111" stroke="none"/><circle cx="200" cy="180" r="3" fill="#111" stroke="none"/>
+<circle cx="200" cy="105" r="13" fill="#fff"/><line x1="191" y1="96" x2="209" y2="114"/><line x1="209" y1="96" x2="191" y2="114"/><text x="170" y="110" fill="#111" stroke="none" font-size="15">L₁</text>
+<circle cx="280" cy="105" r="13" fill="#fff"/><line x1="271" y1="96" x2="289" y2="114"/><line x1="289" y1="96" x2="271" y2="114"/><text x="292" y="110" fill="#111" stroke="none" font-size="15">L₂</text>
+</svg>

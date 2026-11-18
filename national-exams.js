@@ -120,7 +120,7 @@
       <div class="national-paper-meta"><span>${escape(paper.region)}</span><span>${paper.year}</span></div>
       <h2>${escape(paper.title)}</h2><p class="muted">${escape(description)}</p>
       <div class="national-actions">
-        ${questionCount ? `<button class="btn primary" type="button" data-start="${paper.id}">${state.mode === 'short' ? (paper.subject === 'english' ? '阅读 1 篇' : '练 5 题') : '按原题顺序练'}</button>` : ''}
+        ${questionCount ? `<button class="btn primary" type="button" data-start="${paper.id}">${state.mode === 'short' ? (paper.subject === 'english' ? '阅读 1 篇' : '练 5 题') : app.hasAccess() || app.paperOpen?.(paper) ? '按原题顺序练' : '手机做整卷（免费 1 套）'}</button>` : ''}
         <button class="btn ${questionCount ? '' : 'primary'}" type="button" data-read="${paper.id}">${images ? '查看原卷 / 答案' : '查看已整理题'}</button>
       </div>
     </article>`;
@@ -213,7 +213,13 @@
       const paper = catalog.find(item => item.id === button.dataset.start);
       const questions = await getQuestions(paper);
       if (version !== revision || !opened) return;
-      const pool = app.hasAccess() ? questions : questions.filter(q => q.preview);
+      let whole = app.hasAccess() || app.paperOpen?.(paper);
+      if (!whole && state.mode === 'paper' && app.claimPaper) {
+        const claim = await app.claimPaper(paper);
+        if (claim === 'cancel') return;
+        whole = claim === 'full';
+      }
+      const pool = whole ? questions : questions.filter(q => q.preview);
       if (!pool.length) { app.unlock?.('在线刷题属于完整版，原卷可以免费看。'); return; }
       const progress = app.progress();
       const fresh = pool.filter(question => !progress.banks[question.id]?.done);

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" width="360" height="260" font-family="Times New Roman, serif" font-size="18" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="360" height="260" fill="#fff" stroke="none"/>
+
+<line x1="50" y1="220" x2="340" y2="220"/><line x1="50" y1="220" x2="50" y2="20"/>
+<polyline points="45,26 50,16 55,26"/><polyline points="334,215 344,220 334,225"/>
+<line x1="46" y1="182.5" x2="50" y2="182.5"/><text x="18" y="188.5" fill="#111" stroke="none" font-size="14">5</text><line x1="46" y1="145" x2="50" y2="145"/><text x="18" y="151" fill="#111" stroke="none" font-size="14">10</text><line x1="46" y1="107.5" x2="50" y2="107.5"/><text x="18" y="113.5" fill="#111" stroke="none" font-size="14">15</text><line x1="46" y1="70" x2="50" y2="70"/><text x="18" y="76" fill="#111" stroke="none" font-size="14">20</text><line x1="46" y1="32.5" x2="50" y2="32.5"/><text x="18" y="38.5" fill="#111" stroke="none" font-size="14">25</text>
+<rect x="78" y="145" width="36" height="75" fill="#cfe3dc"/><text x="90" y="242" fill="#111" stroke="none" >A</text><text x="86" y="139" fill="#111" stroke="none" font-size="14">10</text><rect x="143" y="70" width="36" height="150" fill="#cfe3dc"/><text x="155" y="242" fill="#111" stroke="none" >B</text><text x="151" y="64" fill="#111" stroke="none" font-size="14">20</text><rect x="208" y="107.5" width="36" height="112.5" fill="#cfe3dc"/><text x="220" y="242" fill="#111" stroke="none" >C</text><text x="216" y="101.5" fill="#111" stroke="none" font-size="14">15</text><rect x="273" y="182.5" width="36" height="37.5" fill="#cfe3dc"/><text x="285" y="242" fill="#111" stroke="none" >D</text><text x="281" y="176.5" fill="#111" stroke="none" font-size="14">5</text>
+<text x="10" y="16" fill="#111" stroke="none" font-size="14">人数</text><text x="318" y="246" fill="#111" stroke="none" font-size="14">组别</text>
+</svg>

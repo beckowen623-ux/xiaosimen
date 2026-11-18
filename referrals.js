@@ -445,7 +445,8 @@
       const items = section.items.map(item => {
         n += 1;
         const tag = item.tag ? `<span class="sprint-tag${/Claude/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
-        const lead = item.passage ? `<blockquote class="sprint-passage">${esc(item.passage).replace(/\n/g, "<br>")}</blockquote>` : "";
+        const lead = (item.passage ? `<blockquote class="sprint-passage">${esc(item.passage).replace(/\n/g, "<br>")}</blockquote>` : "") +
+          (item.image ? `<img class="sprint-fig" src="${esc(item.image)}" alt="题目配图">` : "");
         if (item.type === "choice") {
           answers.push(`<li><b>${n}. ${esc(item.answer)}</b> ${esc(item.explanation)}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</li>`);
           return `<li class="sprint-q">${lead}<p>${n}. ${esc(item.stem)} ${item.multi ? '<span class="sprint-tag">多选</span>' : ""}${tag}</p><ol class="sprint-options">${item.options.map(o => `<li>${esc(o.key)}. ${esc(o.text)}</li>`).join("")}</ol></li>`;
@@ -510,7 +511,8 @@
         }
         const material = item.material ? `<blockquote>${esc(item.material)}</blockquote>` : "";
         const head = item.type === "essay" ? `${n}. ${esc(item.kind || "主观题")}（${item.score}分）${tag}${material}<br>${esc(item.stem)}` : `${n}. ${esc(item.stem)} ${item.multi ? '<span class="sprint-tag">多选</span>' : ""}${tag}`;
-        const lead = item.passage ? `<blockquote class="sprint-passage">${esc(item.passage).replace(/\n/g, "<br>")}</blockquote>` : "";
+        const lead = (item.passage ? `<blockquote class="sprint-passage">${esc(item.passage).replace(/\n/g, "<br>")}</blockquote>` : "") +
+          (item.image ? `<img class="sprint-fig" src="${esc(item.image)}" alt="题目配图">` : "");
         return `<li class="sprint-q">${lead}<p>${head} ${mark}</p>${control}${reveal}</li>`;
       }).join("");
       return `<section><h3>${esc(section.title)}</h3>${section.note ? `<p class="sprint-note">${esc(section.note)}</p>` : ""}<ol class="sprint-list">${items}</ol></section>`;

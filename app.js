@@ -382,8 +382,9 @@ async function loadSubjective() {
   return SUBJECT_ORDER.flatMap(key => expandSubjective(key, raw[key] || [], banks?.[key]?.chapters));
 }
 function normAnswer(text) {
-  return String(text || '').normalize('NFKC').toLowerCase()
-    .replace(/[\s，,。.、；;：:“”"'‘’《》<>（）()【】\[\]—\-_·…!！?？]/g, '');
+  return String(text || '').normalize('NFKC').replace(/−/g, '-').toLowerCase()
+    .replace(/-(?!\d)/g, '') // 负号（后面跟数字）保留，-6 和 6 不能算同一个答案
+    .replace(/[\s，,。.、；;：:“”"'‘’《》<>（）()【】\[\]—_·…!！?？]/g, '');
 }
 function blankMatches(input, alts) {
   const u = normAnswer(input);
@@ -750,8 +751,7 @@ function fillPrintChapters() {
   const preferred = [...chapterSelect.options].find(o => Number(o.value) === stageIndex + 1);
   if (preferred) chapterSelect.value = preferred.value;
 }
-function buildPrintPaper(subject, chapterId) {
-  const full = hasFullAccess();
+function buildPrintPaper(subject, chapterId, full = hasFullAccess()) {
   const progress = loadProgress();
   const allowed = q => full || isTrialQuestion(q);
   const pick = (list, n) => {
@@ -852,7 +852,7 @@ function accessNoticeHTML(days) {
   }
   const expired = legacyTrialStartedAt() !== null ? '<p class="muted">7 天完整版体验已结束，原答题记录已保留。</p>' : '';
   return `<section class="card mini-card access-notice">
-    <div><h2>免费试用</h2>${expired}<p class="muted">免费：各地原卷看和打印、Claude 模拟卷和本周一卷前 5 题、英语每种题型一组、小四门每学期前 ${TRIAL_QUESTIONS_PER_TERM} 题。</p></div>
+    <div><h2>免费试用</h2>${expired}<p class="muted">每个家庭送 <b>1 次整卷打印</b> + <b>1 套手机整卷</b>（模拟卷、本周一卷、真题卷任选）：${freeUses.print ? '打印已用' : '打印未用'} · ${freeUses.phone ? '手机整卷已用' : '手机整卷未用'}。各地原卷随时免费看、免费打印；其他卷子可试前 5 题。</p></div>
     <button class="btn" type="button" id="openUnlock">查看完整版 / 兑换</button>
   </section>`;
 }
@@ -1154,6 +1154,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-18', '新增 Claude 数学、物理模拟卷各 1 套，带原创配图，手机做、打印都清楚。免费规则改为：每个家庭送 1 次整卷打印 + 1 套手机整卷，任选一套。'],
   ['2026-11-18', '首页改版：按“本周一卷 → 分科（英语、语文、数学、物理、化学）→ 小四门”排列，各科可以展开收起；新增 Claude 英语模拟卷 2 套、语文模拟卷 2 套，手机做、打印都行。'],
   ['2026-11-18', '每日 20 题和打卡换成“本周一卷”：每周一换，打印出来纸上做完，回来点出错题号就能进错题本。错题本、曾错题、收藏覆盖全科；打印和找题覆盖全题库。'],
   ['2026-11-18', '改名“中考提分题库”；首页可按科目、册次一键打印练习卷，答案单独一页，没买也能先打印一张体验卷。'],
@@ -1178,6 +1179,42 @@ const WEEKLY_SUBJECTS = [['english', '英语'], ['chinese', '语文'], ['x4m', '
 const WEEKLY_SIZE = { english: 20, chinese: 15, x4m: 20 };
 const FREE_PREVIEW = 5;
 let nationalCatalog = null;
+let freeUses = { print: null, phone: null };
+const FREE_KIND_LABEL = { print: '整卷打印', phone: '手机做整卷' };
+async function refreshFreeUses() {
+  if (paidAccess) return;
+  try {
+    const response = await fetch('/api/access/free-status', { method: 'POST', cache: 'no-store' });
+    const data = await response.json();
+    if (response.ok && data.ok) freeUses = data.free || freeUses;
+  } catch { /* 离线时按未领取处理，领取时服务器会再校验 */ }
+}
+function freeOpen(kind, paperId) { return hasFullAccess() || freeUses[kind]?.paperId === paperId; }
+function freeButtonLabel(kind, paperId, labels) {
+  if (freeOpen(kind, paperId)) return labels[0];
+  return freeUses[kind] ? labels[2] : labels[1];
+}
+// 返回 'full'（可用整卷）、'preview'（只能试前 5 题）或 'cancel'（家长取消）
+async function claimFree(kind, paperId, title) {
+  if (freeOpen(kind, paperId)) return 'full';
+  if (freeUses[kind]) {
+    toast(`免费${FREE_KIND_LABEL[kind]}已用在《${freeUses[kind].title || '另一套卷子'}》上；这套先试前 5 题，完整版可用全部卷子。`);
+    return 'preview';
+  }
+  const again = kind === 'print' ? '打印' : '做';
+  if (!window.confirm(`每个家庭可以免费${FREE_KIND_LABEL[kind]} 1 次。\n确定用在《${title}》上吗？\n（这一套以后还能反复${again}）`)) return 'cancel';
+  try {
+    const response = await fetch('/api/access/free-use', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ kind, paperId, title }),
+    });
+    const data = await response.json();
+    if (data.free) freeUses = data.free;
+    if (response.ok && data.ok) { trackVisit(`free_${kind}`); return 'full'; }
+    if (data.reason === 'USED') { toast(`这个网络已经用过免费${FREE_KIND_LABEL[kind]}（《${freeUses[kind]?.title || '另一套卷子'}》）。`); return 'preview'; }
+    toast('领取失败，请稍后再试。');
+  } catch { toast('网络不好，领取失败，请稍后再试。'); }
+  return 'cancel';
+}
 const weeklyCache = new Map();
 
 function seededShuffle(list, seedText) {
@@ -1220,7 +1257,13 @@ async function buildWeekly(subject) {
   weeklyCache.set(cacheKey, list);
   return list;
 }
-function weeklyFor(list) { return hasFullAccess() ? list : list.slice(0, FREE_PREVIEW); }
+function weeklyId(subject = state.weeklySubject || 'english') {
+  return `weekly-${weekKeyOf(todayStr())}-${subject}${subject === 'x4m' ? '-' + state.stage : ''}`;
+}
+function weeklyFor(list, subject = state.weeklySubject || 'english') {
+  const id = weeklyId(subject);
+  return freeOpen('print', id) || freeOpen('phone', id) ? list : list.slice(0, FREE_PREVIEW);
+}
 
 function homeIntroHTML() {
   return `<section class="card home-intro">
@@ -1233,11 +1276,11 @@ function weeklyCardHTML(progress) {
   const subject = state.weeklySubject || 'english';
   const list = weeklyCache.get(`${weekKeyOf(todayStr())}-${subject}-${subject === 'x4m' ? state.stage : ''}`);
   const done = list ? weeklyFor(list).filter(q => hasAnswered(qProgress(progress, q.id))).length : 0;
-  const total = list ? weeklyFor(list).length : (hasFullAccess() ? WEEKLY_SIZE[subject] : FREE_PREVIEW);
+  const total = list ? list.length : WEEKLY_SIZE[subject];
   return `<section class="card weekly-card" aria-labelledby="weeklyTitle">
     <div class="section-heading"><h2 id="weeklyTitle">🗓 本周一卷</h2><span class="muted">${weekRangeLabel()} · 每周一换</span></div>
     <div class="weekly-chips" role="group" aria-label="选择科目">${WEEKLY_SUBJECTS.map(([key, label]) => `<button type="button" class="drill-chip" data-weekly-subject="${key}" aria-pressed="${subject === key}">${label}</button>`).join('')}</div>
-    <p class="weekly-meta"><b>${esc(weeklySubjectLabel(subject))}</b> · ${total} 题${list ? ` · 已做 ${done}` : ''}${hasFullAccess() ? '' : ' · 免费试前 5 题'}</p>
+    <p class="weekly-meta"><b>${esc(weeklySubjectLabel(subject))}</b> · ${total} 题${list ? ` · 已做 ${done}` : ''}</p>
     <div class="weekly-actions">
       <button class="btn primary" type="button" data-weekly="phone">📱 手机上做</button>
       <button class="btn" type="button" data-weekly="print">🖨 打印</button>
@@ -1266,6 +1309,7 @@ function paperFromQuestions(title, questions, note = '') {
       item = { type: 'essay', kind: q.meta || q.section, tag, material: q.material || '', stem: q.stem, score: q.score, points: (q.points || []).map(p => ({ text: p.text, score: p.score })), sample: q.sample, explanation: q.explanation || '', source: q.source || '' };
     }
     if (passage) item.passage = passage;
+    if (q.image) item.image = typeof q.image === 'string' ? q.image : `./data/figures/${encodeURIComponent(q.id)}.jpg`;
     bySection.get(name).push(item);
   }
   const nums = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
@@ -1279,13 +1323,17 @@ function printQuestions(title, questions) {
 async function runWeekly(action) {
   const subject = state.weeklySubject || 'english';
   try {
-    const list = weeklyFor(await buildWeekly(subject));
-    if (!list.length) { toast('这周的卷子还在准备中。'); return; }
-    const title = `本周一卷 · ${weeklySubjectLabel(subject)}（${weekRangeLabel()}）${hasFullAccess() ? '' : ' · 体验版前 5 题'}`;
+    const all = await buildWeekly(subject);
+    if (!all.length) { toast('这周的卷子还在准备中。'); return; }
+    const id = weeklyId(subject);
+    const baseTitle = `本周一卷 · ${weeklySubjectLabel(subject)}（${weekRangeLabel()}）`;
+    if (action === 'mark') { showWeeklyMark(weeklyFor(all, subject)); return; }
+    const kind = action === 'print' ? 'print' : 'phone';
+    const claim = await claimFree(kind, id, baseTitle);
+    if (claim === 'cancel') return;
+    const list = claim === 'full' ? all : all.slice(0, FREE_PREVIEW);
     if (action === 'phone') beginPractice(list, 'weekly');
-    else if (action === 'print') printQuestions(title, list);
-    else showWeeklyMark(list);
-    if (!hasFullAccess() && action !== 'mark') toast('免费可做本周一卷前 5 题，完整一卷属于完整版。');
+    else printQuestions(`${baseTitle}${claim === 'full' ? '' : ' · 体验版前 5 题'}`, list);
   } catch (error) { toast(error.message || '加载失败，请重试。'); }
 }
 function showWeeklyMark(list) {
@@ -1326,8 +1374,8 @@ function subjectSectionsHTML() {
         <summary><b>${emoji} ${label}</b><span>${meta || '即将上线'}</span></summary>
         ${claude.length ? `<div class="paper-rows"><p class="row-title">Claude 模拟卷 <span class="sprint-tag hot">AI 新题</span></p>${claude.map(p => `<div class="paper-row">
           <span>${esc(p.title.replace(/^Claude /, ''))}<small>${p.questionCount} 题</small></span>
-          <button class="btn" type="button" data-claude-phone="${p.id}">${hasFullAccess() ? '手机做' : '免费试 5 题'}</button>
-          <button class="btn" type="button" data-claude-print="${p.id}">${hasFullAccess() ? '打印' : '打印体验版'}</button>
+          <button class="btn" type="button" data-claude-phone="${p.id}">${freeButtonLabel('phone', p.id, ['手机做', '免费手机做整卷', '试前 5 题'])}</button>
+          <button class="btn" type="button" data-claude-print="${p.id}">${freeButtonLabel('print', p.id, ['打印', '免费打印整卷', '打印前 5 题'])}</button>
         </div>`).join('')}</div>` : ''}
         <div class="paper-rows"><p class="row-title">全国真题</p>
           ${practicable.length ? `<div class="paper-row"><span>手机刷真题<small>${key === 'english' ? '按中考题型练，每题有中文解析' : '逐题判分'}</small></span><button class="btn" type="button" data-national-open="${key}" data-national-mode="short">去刷题 →</button></div>` : ''}
@@ -1407,30 +1455,32 @@ function printCardHTML() {
       </span>
       <button class="btn primary" type="button" id="printPaper">生成并打印</button>
     </div>
-    ${hasFullAccess() ? '' : '<p class="muted">没买也能先打印体验版（前 5 题或免费题）。</p>'}
+    ${hasFullAccess() ? '' : `<p class="muted">${freeUses.print ? `免费整卷打印已用在《${esc(freeUses.print.title)}》上，这一套可以反复打印。` : '每个家庭可以免费打印 1 次整卷（任选一套），之后的卷子可打印前 5 题。'}</p>`}
   </section>`;
 }
 async function claudePaperAction(id, action) {
   try {
     const paper = (nationalCatalog || []).find(p => p.id === id);
     const all = [...await window.NationalExams.loadPaper(id)].sort((a, b) => a.number - b.number);
-    const list = hasFullAccess() ? all : all.filter(q => q.preview);
-    if (action === 'phone') {
-      beginPractice(list, 'paper');
-      if (!hasFullAccess()) toast('免费试前 5 题；整卷手机做和打印属于完整版。');
-    } else {
-      printQuestions(`${paper.title}${hasFullAccess() ? '' : ' · 体验版前 5 题'}`, list);
-    }
+    const claim = await claimFree(action === 'phone' ? 'phone' : 'print', id, paper.title);
+    if (claim === 'cancel') return;
+    const list = claim === 'full' ? all : all.filter(q => q.preview);
+    if (action === 'phone') beginPractice(list, 'paper');
+    else printQuestions(`${paper.title}${claim === 'full' ? '' : ' · 体验版前 5 题'}`, list);
   } catch (error) { toast(error.message || '加载失败，请重试。'); }
 }
 async function printSelected() {
   const kind = byId('printKind').value;
   if (kind.startsWith('weekly:')) { state.weeklySubject = kind.slice(7); await runWeekly('print'); return; }
   if (kind.startsWith('claude:')) { await claudePaperAction(kind.slice(7), 'print'); return; }
-  const paper = buildPrintPaper(byId('printSubject').value, Number(byId('printChapter').value));
+  const subject = byId('printSubject').value;
+  const chapterId = Number(byId('printChapter').value);
+  const title = `${SUBJECTS[subject].label} · ${printChapters(subject).find(c => c.id === chapterId)?.title || ''} 练习卷`;
+  const claim = await claimFree('print', `x4m-${subject}-${chapterId}`, title);
+  if (claim === 'cancel') return;
+  const paper = buildPrintPaper(subject, chapterId, claim === 'full');
   if (!paper.count) { toast('这一册暂时没有可打印的题。'); return; }
   window.QuizReferrals?.showPapers?.([paper], { print: true });
-  if (!hasFullAccess()) toast('这是体验卷，用免费题组成；解锁完整版可打印全部题目。');
 }
 function originCardHTML() {
   return `<details class="card origin-card">
@@ -1646,7 +1696,8 @@ function beginPractice(queue, mode, index = 0) {
       openUnlock('这项练习属于完整版。');
       return;
     }
-    if (!['daily', 'wrong', 'weekly', 'paper'].includes(mode)) {
+    const claimedPaper = queue.length && queue.every(q => q.paperId && freeOpen('phone', q.paperId));
+    if (!claimedPaper && !['daily', 'wrong', 'weekly', 'paper'].includes(mode)) {
       const progress = loadProgress();
       const includesHistory = ['favorite', 'single', 'everWrong', 'due'].includes(mode);
       queue = queue.filter(q => isTrialQuestion(q) || (includesHistory && hasQuestionHistory(progress, q)));
@@ -1670,7 +1721,7 @@ function beginPractice(queue, mode, index = 0) {
 function renderFigure(q) {
   if (!q.image) return;
   const wrap = byId('qfig');
-  const src = `./data/figures/${encodeURIComponent(q.id)}.jpg`;
+  const src = typeof q.image === 'string' ? q.image : `./data/figures/${encodeURIComponent(q.id)}.jpg`;
   const btn = document.createElement('button');
   btn.type = 'button';
   btn.className = 'figure-button';
@@ -2298,6 +2349,8 @@ async function init() {
       practice: questions => beginPractice(questions, 'national'),
       progress: loadProgress,
       hasAccess: hasFullAccess,
+      claimPaper: paper => claimFree('phone', paper.id, paper.title),
+      paperOpen: paper => freeOpen('phone', paper.id),
       unlock: message => openUnlock(message),
       hideSearch: () => { byId('headerSearch').hidden = true; },
       toast,
@@ -2305,6 +2358,7 @@ async function init() {
     if (location.hash === '#national') await window.NationalExams.open();
     else renderHome();
     void refreshReferralProfile();
+    void refreshFreeUses().then(() => { if (!paidAccess && byId('subjectSections')) renderHome(); });
     trackVisit('visit');
   } catch (error) {
     console.error(error);

@@ -109,3 +109,5 @@
 .sprint-teaser:not([open]) { padding-top: 10px; padding-bottom: 10px; }
 .sprint-passage { margin: 6px 0 8px; padding: 8px 12px; border-left: 3px solid #c9d3dc; background: #f6f7f8; line-height: 1.7; white-space: normal; }
 @media print { .sprint-passage { background: none; } }
+.sprint-fig { display: block; max-width: min(100%, 360px); margin: 6px 0 8px; }
+.sprint-q > p { white-space: pre-line; }
