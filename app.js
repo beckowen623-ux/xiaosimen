@@ -660,7 +660,7 @@ inviteInput.value = window.QuizReferrals?.incoming() || '';
 const visitorSource = new URL(location.href).searchParams.get('from') || 'direct';
 
 function isTrialQuestion(q) {
-  if (q.national) return q.preview === true;
+  if (q.national) return true; // 全国中考真题全部免费，用来拉新
   return baseTrialIds.has(q.id) || shareTrial.ids.includes(q.id);
 }
 

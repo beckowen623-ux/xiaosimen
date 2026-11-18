@@ -114,9 +114,8 @@
     const filtered = catalog.filter(paper => paper.subject === state.subject &&
       (!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year));
     const practice = state.mode === 'short' ? filtered.filter(paper => paper.questionCount > 0) : filtered;
-    const full = app.hasAccess();
     shell(`${drawFilters(catalog)}
-      <p class="national-status muted" role="status">${full ? '已解锁完整版练习。' : '可免费体验每份精选卷的前 5 题，英语按首篇阅读体验；已购可练全部整理题。'}</p>
+      <p class="national-status muted" role="status">全部免费练，不用登录。做错的题自动进错题本，原卷能看、能打印。</p>
       <div class="national-paper-grid">${practice.length ? practice.map(paperCard).join('') :
         `<section class="card national-empty"><h2>${filtered.length ? '这科目前提供原卷与参考答案' : '当前筛选下暂无试卷'}</h2><p class="muted">${filtered.length ? '切换「按原卷练」即可查看和打印。' : '可以切换地区或年份再看看。'}</p>${filtered.length ? '<button type="button" class="btn primary" id="switchToPapers">查看原卷</button>' : ''}</section>`}</div>`);
     app.view.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => { state.mode = button.dataset.mode; render(); }));
@@ -136,7 +135,7 @@
       const paper = catalog.find(item => item.id === button.dataset.start);
       const questions = await getQuestions(paper);
       if (version !== revision || !opened) return;
-      const pool = app.hasAccess() ? questions : questions.filter(q => q.preview);
+      const pool = questions; // 全部免费
       const progress = app.progress();
       const fresh = pool.filter(question => !progress.banks[question.id]?.done);
       const choices = fresh.length ? fresh : pool;
