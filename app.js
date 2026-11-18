@@ -1,4 +1,4 @@
-/* 初中提分题库 · 人教版 · 纯静态 + localStorage
+/* 中考提分题库 · 人教版 · 纯静态 + localStorage
  * 仿 beckowen623-ux/quiz-bank-app 的结构（懒加载 .js 题库、localStorage 进度、SRS 错题复习），
  * 题型：单选、多选、判断（自动判分）；填空（自动判分）；材料分析 / 论述 / 简答（对照得分点自评）。
  */
@@ -736,6 +736,63 @@ async function loadPurchaseOptions() {
 }
 
 window.addEventListener?.('quiz-sprint-buy', () => openUnlock());
+// ---------- 打印练习卷：按科目、册次组一张纸质卷（未解锁时用免费题组“体验卷”） ----------
+function printChapters(subject) {
+  return (banks?.[subject]?.chapters || []).map(c => ({ id: c.id, title: c.title }));
+}
+function fillPrintChapters() {
+  const subjectSelect = byId('printSubject');
+  const chapterSelect = byId('printChapter');
+  if (!subjectSelect || !chapterSelect) return;
+  const stageIndex = Math.max(0, STAGES.findIndex(s => s.stage === state.stage));
+  chapterSelect.innerHTML = printChapters(subjectSelect.value).map(c => `<option value="${c.id}">${esc(c.title.split(' · ')[0])}${/会考/.test(c.title) ? ' · ' + esc(c.title.split(' · ')[1] || '') : ''}</option>`).join('');
+  const preferred = [...chapterSelect.options].find(o => Number(o.value) === stageIndex + 1);
+  if (preferred) chapterSelect.value = preferred.value;
+}
+function buildPrintPaper(subject, chapterId) {
+  const full = hasFullAccess();
+  const progress = loadProgress();
+  const allowed = q => full || isTrialQuestion(q);
+  const pick = (list, n) => {
+    const fresh = list.filter(q => !hasAnswered(qProgress(progress, q.id)));
+    const rest = list.filter(q => hasAnswered(qProgress(progress, q.id)));
+    return [...shuffle(fresh), ...shuffle(rest)].slice(0, n).sort((a, b) => (a.number || 0) - (b.number || 0));
+  };
+  const inChapter = q => q.subject === subject && q.chapterId === chapterId && allowed(q);
+  const choices = pick(library.filter(q => inChapter(q) && (q.type === 'single' || q.type === 'multiple') && !q.image), 20);
+  const blanks = pick(library.filter(q => inChapter(q) && q.type === 'blank'), 4);
+  const essays = pick(library.filter(q => inChapter(q) && q.type === 'essay'), 2);
+  const tag = q => (q.source || '').match(/20\d\d/) ? (q.source || '').replace(/(第\d+题).*$/, '$1').slice(0, 24) : '';
+  const sections = [{ title: '一、选择题', note: '每题选出最合适的答案。', items: choices.map(q => ({
+    type: 'choice', multi: q.type === 'multiple', tag: tag(q), stem: q.stem,
+    options: q.options.map(o => ({ key: o.key, text: o.text })), answer: q.answer.join(''), explanation: q.explanation || '', source: q.source || '',
+  })) }];
+  if (blanks.length) sections.push({ title: '二、填空速记', items: blanks.map(q => ({ type: 'blank', stem: q.stem, answer: q.answer, explanation: q.explanation || '' })) });
+  if (essays.length) sections.push({ title: `${blanks.length ? '三' : '二'}、主观题`, note: '先写，再对照得分点。', items: essays.map(q => ({
+    type: 'essay', kind: q.meta, tag: tag(q), material: q.material, stem: q.stem, score: q.score,
+    points: q.points.map(p => ({ text: p.text, score: p.score })), sample: q.sample, explanation: q.explanation || '', source: q.source || '',
+  })) });
+  const chapter = printChapters(subject).find(c => c.id === chapterId);
+  return {
+    id: `print-${subject}-${chapterId}`, group: SUBJECTS[subject].label, subject: SUBJECTS[subject].label,
+    term: chapter?.title || '', title: `${SUBJECTS[subject].label} · ${chapter?.title || ''} 练习卷${full ? '' : '（体验卷）'}`,
+    sections, count: choices.length + blanks.length + essays.length,
+  };
+}
+function wirePrintCard() {
+  const subjectSelect = byId('printSubject');
+  if (!subjectSelect) return;
+  fillPrintChapters();
+  subjectSelect.addEventListener('change', fillPrintChapters);
+  byId('printPaper').addEventListener('click', () => {
+    const paper = buildPrintPaper(subjectSelect.value, Number(byId('printChapter').value));
+    if (!paper.count) { toast('这一册暂时没有可打印的题。'); return; }
+    if (!window.QuizReferrals?.showPapers) { toast('打印功能加载中，请稍后再试。'); return; }
+    window.QuizReferrals.showPapers([paper], { print: true });
+    if (!hasFullAccess()) toast('这是体验卷，用免费题组成；解锁完整版可打印全部题目。');
+  });
+}
+
 function openUnlock(message = '') {
   byId('unlockReason').textContent = message || '开通后可练全部题目、自动复习错题并参加周日小测。';
   redeemMessage.textContent = '';
@@ -761,8 +818,8 @@ redeemForm.addEventListener('submit', async event => {
     const data = await response.json();
     if (!response.ok || !data.ok) {
       const messages = {
-        DEVICE_LIMIT: '这个兑换码在初中提分题库已激活两个浏览器。',
-        INVALID_CODE: '兑换码无效，或不适用于初中提分题库。',
+        DEVICE_LIMIT: '这个兑换码在中考提分题库已激活两个浏览器。',
+        INVALID_CODE: '兑换码无效，或不适用于中考提分题库。',
         INVALID_REFERRAL: '邀请码有误，请核对或留空后继续。',
         REFERRAL_REQUIRED: '这是好友价兑换码，请填写邀请你的朋友的邀请码（ALIX- 开头，问朋友要）。',
         RATE_LIMITED: '尝试次数太多，请 15 分钟后再试。',
@@ -776,7 +833,7 @@ redeemForm.addEventListener('submit', async event => {
     unlockDialog.close();
     renderHome('homeTitle');
     void refreshReferralProfile();
-    toast('已解锁初中提分题库完整版。');
+    toast('已解锁中考提分题库完整版。');
   } catch {
     redeemMessage.textContent = '兑换服务暂时不可用，请稍后再试。';
   } finally {
@@ -816,10 +873,10 @@ async function shareDailyQuestion(button) {
   if (!question) return;
   const url = new URL(location.pathname, location.origin);
   url.searchParams.set('from', 'daily-share');
-  const text = `初中提分每日一题 · ${question.subjectLabel || SUBJECTS[question.subject]?.label || ''}\n${question.stem}\n${url.href}`;
+  const text = `中考提分每日一题 · ${question.subjectLabel || SUBJECTS[question.subject]?.label || ''}\n${question.stem}\n${url.href}`;
   button.disabled = true;
   try {
-    if (navigator.share) await navigator.share({ title: '初中提分每日一题', text });
+    if (navigator.share) await navigator.share({ title: '中考提分每日一题', text });
     else await navigator.clipboard.writeText(text);
     trackVisit('daily_share');
     if (!hasFullAccess()) {
@@ -1110,6 +1167,21 @@ function renderHome(focus = '') {
       <div><h2>📘 中考英语真题 · 原卷免费看</h2><p class="muted">福建等地 15 套英语真题、847 道已整理题，按中考题型刷，配中文解析；已提供的各科原卷免费看、免费打印。</p></div>
       <a class="btn primary" href="#national">${hasFullAccess() ? '去刷题 →' : '免费看 / 试做 →'}</a>
     </section>
+    <section class="card print-card">
+      <div><h2>🖨 打印一张练习卷</h2><p class="muted">选科目和册次，生成 20 道选择题 + 填空和主观题，孩子在纸上做，答案单独一页。${hasFullAccess() ? '' : '没买也能先打印一张体验卷。'}</p></div>
+      <div class="print-row">
+        <select id="printSubject" aria-label="科目">${SUBJECT_ORDER.map(key => `<option value="${key}">${SUBJECTS[key].label}</option>`).join('')}</select>
+        <select id="printChapter" aria-label="册次"></select>
+        <button class="btn primary" type="button" id="printPaper">生成并打印</button>
+      </div>
+    </section>
+    <details class="card origin-card">
+      <summary><b>为什么做这个题库</b><span>能打印 · 为什么收一杯奶茶钱 ›</span></summary>
+      <p>孩子背小四门总头疼，我也头疼：知识点又多又碎，看不出哪里是重点。所以我用 AI 把全国人教版地区的中考真题按年级、学期整理好，筛掉重复题和偏题，再让 Claude 按考点出了易错题和冲刺卷，先给自家孩子用。</p>
+      <p><b>不想让孩子一直看手机？</b>冲刺卷、各科原卷、按学期的练习卷都能一键打印，在纸上做，答案单独一页。</p>
+      <p><b>AI 不会替孩子提分，</b>提分靠的还是一道一道地练。AI 只是帮我们把时间花在好题上，不刷故意制造焦虑的偏题怪题。</p>
+      <p><b>为什么收费：</b>AI 整理和出题要花 token 费，服务器也要钱，所以收 19.9，一杯奶茶钱。原卷永远免费看；在线刷题、错题复习、冲刺卷和打印卷是一题一题整理出来的，收一点钱维持更新。先免费试，觉得孩子用得上再买。</p>
+    </details>
     ${trialDays ? accessNotice : ''}
     <div class="dashboard-top">
       ${studyHeroHTML(queue, progress)}
@@ -1169,6 +1241,7 @@ function renderHome(focus = '') {
     if (id) beginPractice([library.find(q => q.id === id)], 'single');
   });
   doSearch();
+  wirePrintCard();
   showReferralProfile();
   if (focus) moveFocus(byId(focus), focus === 'homeTitle');
   updateLegacyCountdown();
@@ -1834,7 +1907,7 @@ importInput.addEventListener('change', async () => {
     showImportMessage(`备份包含 ${count} 道作答记录。确认后将覆盖当前网址的本机进度。`, true);
   } catch {
     if (revision !== importRevision) return;
-    showImportMessage('无法读取此备份，请选择从初中提分题库下载的 JSON 文件。');
+    showImportMessage('无法读取此备份，请选择从中考提分题库下载的 JSON 文件。');
   }
 });
 byId('cancelImport').addEventListener('click', () => { importProgress = null; showImportMessage(); });

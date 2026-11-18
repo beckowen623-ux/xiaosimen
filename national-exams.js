@@ -139,7 +139,7 @@
       <h2>${escape(type)}</h2><p class="muted">${escape(hint)} · 共 ${count(type)} 题，来自 ${papersHere.filter(p => p.sections?.[type]).length} 套真题</p>
       <div class="national-actions"><button class="btn primary" type="button" data-type="${escape(type)}">${app.hasAccess() ? '练一组' : type === '书面表达' ? '完整版可练' : '免费试一组'}</button></div></article>`).join('');
     const note = app.hasAccess() ? '按中考题型练，每题都有中文解析。想做整套卷子，切到「按原卷练」。'
-      : '原卷免费看（切到「按原卷练」）。在线刷题和中文解析属于初中提分题库完整版，19.9 一起解锁；每种题型先免费试一组。';
+      : '原卷免费看（切到「按原卷练」）。在线刷题和中文解析属于中考提分题库完整版，19.9 一起解锁；每种题型先免费试一组。';
     return cards ? `<p class="national-status muted">${note}</p><div class="national-paper-grid">${cards}</div>` : '';
   }
   async function startType(button) {
@@ -186,7 +186,7 @@
       return;
     }
     shell(`${drawFilters(catalog)}
-      <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : '原卷免费看、免费打印。在线刷题和中文解析属于初中提分题库完整版（19.9 一起解锁），每种题型可先免费试做一组。'}</p>
+      <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : '原卷免费看、免费打印。在线刷题和中文解析属于中考提分题库完整版（19.9 一起解锁），每种题型可先免费试做一组。'}</p>
       <div class="national-paper-grid">${practice.length ? practice.map(paperCard).join('') :
         `<section class="card national-empty"><h2>${filtered.length ? '这科目前提供原卷与参考答案' : '当前筛选下暂无试卷'}</h2><p class="muted">${filtered.length ? '切换「按原卷练」即可查看和打印。' : '可以切换地区或年份再看看。'}</p>${filtered.length ? '<button type="button" class="btn primary" id="switchToPapers">查看原卷</button>' : ''}</section>`}</div>`);
     wireFilters();

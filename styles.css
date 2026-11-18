@@ -486,3 +486,17 @@ input[type=search]::placeholder { color: #67736c; }
 .brand > span { min-width: 0; }
 .brand small { max-width: 360px; white-space: normal; overflow-wrap: anywhere; }
 @media (max-width: 620px) { .topbar-inner { flex-wrap: wrap; } .brand { flex-basis: 100%; } .brand small { max-width: 100%; } }
+
+/* 题库由来（折叠） */
+.origin-card summary { display: flex; justify-content: space-between; align-items: center; gap: 10px; cursor: pointer; list-style: none; }
+.origin-card summary::-webkit-details-marker { display: none; }
+.origin-card summary span { color: var(--muted, #6b7280); font-size: 13px; }
+.origin-card[open] summary span { visibility: hidden; }
+.origin-card p { margin: 10px 0 0; line-height: 1.75; }
+
+/* 打印练习卷 */
+.print-card { display: grid; gap: 10px; }
+.print-card h2 { margin: 0 0 4px; }
+.print-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.print-row select { flex: 1 1 120px; min-height: 42px; padding: 6px 10px; border: 1px solid var(--line, #d6dfdb); border-radius: 10px; font: inherit; background: #fff; }
+.print-row .btn { flex: 1 1 100%; }

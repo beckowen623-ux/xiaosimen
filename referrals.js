@@ -2,7 +2,7 @@
   "use strict";
   const targets = {
     full: { label: "考证题库", url: "https://tinawin.cc.cd/" },
-    xiaosimen: { label: "初中提分题库", url: "https://x4m.cc.cd/" },
+    xiaosimen: { label: "中考提分题库", url: "https://x4m.cc.cd/" },
   };
   const discount = "朋友点你的专属链接，用好友价在闲鱼下单，省 5 元。";
   const OPEN_KEY = "quiz-referral-open";
@@ -551,7 +551,7 @@
     groups.forEach(g => groupSelect.append(new Option(g, g)));
     const paperSelect = node("select");
     paperSelect.setAttribute("aria-label", "哪一套");
-    let practice = true;
+    let practice = !mode.print;
     let showAnswers = false;
     const modeToggle = button("打印版", () => {
       practice = !practice;
@@ -566,8 +566,9 @@
       render();
     });
     const printButton = button("打印", () => window.print());
-    answerToggle.hidden = true;
-    printButton.hidden = true;
+    answerToggle.hidden = practice;
+    printButton.hidden = practice;
+    if (!practice) modeToggle.textContent = "在线做题";
     const close = () => { overlay.remove(); document.body.classList.remove("sprint-printing"); };
     bar.append(groupSelect, paperSelect, modeToggle, answerToggle, printButton, button("关闭", close));
     const sheet = node("article", "", "sprint-paper");
@@ -748,5 +749,5 @@
     panel.append(box);
   }
 
-  window.QuizReferrals = { incoming, load, mount, mountTeaser };
+  window.QuizReferrals = { incoming, load, mount, mountTeaser, showPapers: (papers, mode) => showSprint(papers, mode) };
 })();
