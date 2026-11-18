@@ -1,6 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="小四门刷题">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="中考提分题库">
   <rect width="512" height="512" rx="96" fill="#0f766e"/>
-  <text x="256" y="300" font-size="230" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="700">四</text>
-  <rect x="96" y="360" width="320" height="26" rx="13" fill="#ffffff" opacity="0.9"/>
-  <rect x="128" y="404" width="256" height="16" rx="8" fill="#ffffff" opacity="0.55"/>
+  <!-- 一本打开的书 -->
+  <path d="M256 150 C206 118 146 112 92 124 L92 378 C146 366 206 372 256 404 Z" fill="#ffffff"/>
+  <path d="M256 150 C306 118 366 112 420 124 L420 378 C366 366 306 372 256 404 Z" fill="#e6f4f1"/>
+  <path d="M256 150 L256 404" stroke="#0f766e" stroke-width="10" stroke-linecap="round"/>
+  <g stroke="#0f766e" stroke-width="12" stroke-linecap="round" opacity="0.55">
+    <path d="M130 186 C164 180 196 184 224 196"/>
+    <path d="M130 234 C164 228 196 232 224 244"/>
+    <path d="M130 282 C164 276 196 280 224 292"/>
+    <path d="M288 196 C316 184 348 180 382 186"/>
+    <path d="M288 244 C316 232 348 228 382 234"/>
+  </g>
+  <!-- 书签 -->
+  <path d="M340 112 L340 196 L362 178 L384 196 L384 112 Z" fill="#f2c94c"/>
 </svg>

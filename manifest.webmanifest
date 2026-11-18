@@ -1,7 +1,7 @@
 {
   "name": "中考提分题库",
   "short_name": "中考提分",
-  "description": "人教版初中小四门与英语真题练习、错题复习与每日打卡",
+  "description": "Claude 中考模拟卷、全国中考真题刷题与打印、本周一卷、小四门按学期练习",
   "lang": "zh-CN",
   "id": "./",
   "start_url": "./?from=app",
