@@ -2,3 +2,4 @@
 .deploy-preview/
 .wrangler/
 .dev.vars
+__pycache__/

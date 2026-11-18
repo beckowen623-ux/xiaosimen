@@ -1,0 +1,58 @@
+.national-entry { margin: 14px 0; padding: 18px; border: 1px solid #bcd7ce; background: #edf6f2; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.national-entry h2 { font-size: 19px; margin-bottom: 5px; }
+.national-entry .btn { flex: none; }
+.national-header { margin-bottom: 18px; }
+.national-header h1 { font-size: clamp(25px, 4vw, 34px); margin: 9px 0 5px; }
+.national-filters { padding: 16px; }
+.national-tabs, .national-subjects, .national-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.national-subjects { margin-top: 15px; }
+.national-subjects .btn { min-width: 58px; }
+.national-selects { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 16px; }
+.national-selects label { display: grid; grid-template-columns: auto minmax(100px, 1fr); align-items: center; gap: 8px; }
+.national-selects select { min-height: 42px; padding: 5px 10px; border: 1px solid var(--line); background: var(--paper); border-radius: 7px; font: inherit; color: var(--ink); }
+.national-status { margin: 13px 0; font-size: 13px; line-height: 1.65; }
+.national-paper-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.national-paper-card { padding: 18px; }
+.national-paper-card h2 { font-size: 19px; margin: 9px 0; line-height: 1.45; }
+.national-paper-meta { display: flex; gap: 8px; color: var(--green); font-size: 13px; }
+.national-paper-meta span { background: var(--green-soft); padding: 3px 8px; border-radius: 5px; }
+.national-actions { margin-top: 18px; }
+.national-empty { padding: 20px; grid-column: 1 / -1; }
+.national-empty .btn { margin-top: 15px; }
+.national-reader-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.national-reader-title { font-size: 22px; margin-bottom: 15px; }
+.national-original { max-width: 900px; margin: 0 auto 24px; }
+.national-original h2 { margin-bottom: 12px; }
+.national-original figure { margin: 0 0 14px; background: white; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.national-original img { display: block; width: 100%; height: auto; }
+.national-original figcaption { padding: 9px 12px; color: var(--muted); font-size: 12px; }
+.national-prepared { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.national-source-question { padding: 18px 0; border-bottom: 1px solid var(--line); line-height: 1.8; overflow-wrap: anywhere; }
+.national-source-question p, .national-source p, .national-reading p { margin: 6px 0; }
+.national-source img, .national-reading img, .national-source-question img { display: block; max-width: 100%; height: auto; max-height: 380px; margin: 12px auto; object-fit: contain; }
+.national-source { line-height: 1.8; overflow-wrap: anywhere; }
+.national-source table, .national-reading table, .national-source-question table { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 10px 0; }
+.national-source td, .national-reading td, .national-source-question td { padding: 7px; border: 1px solid #bccfc6; vertical-align: top; overflow-wrap: anywhere; }
+.national-reading { margin: 16px 0; padding: 14px; background: var(--green-soft); border-radius: 8px; line-height: 1.85; overflow-wrap: anywhere; }
+.national-answer { padding: 14px; background: #f0f6ee; margin-top: 14px; border-radius: 8px; }
+@media (max-width: 620px) {
+  .national-entry { align-items: flex-start; flex-direction: column; }
+  .national-entry .btn { width: 100%; }
+  .national-paper-grid { grid-template-columns: 1fr; }
+  .national-selects { gap: 9px; }
+  .national-selects label { flex: 1; grid-template-columns: auto minmax(0, 1fr); }
+  .national-selects select { width: 100%; min-width: 0; }
+}
+@media print {
+  body.national-printing { background: white; }
+  body.national-printing .topbar, body.national-printing .foot, body.national-printing .national-header,
+  body.national-printing .national-reader-bar, body.national-printing .national-reader-title,
+  body.national-printing .toast, body.national-printing dialog { display: none !important; }
+  body.national-printing .page { padding: 0; max-width: none; }
+  body.national-printing .national-original h2, body.national-printing figcaption { display: none; }
+  body.national-printing .national-original, body.national-printing figure { margin: 0; padding: 0; border: 0; border-radius: 0; }
+  body.national-printing figure { break-after: page; }
+  body.national-printing figure img { max-height: 270mm; width: auto; max-width: 100%; margin: 0 auto; }
+  body.national-printing .national-prepared { border: 0; padding: 0; }
+  body.national-printing .national-source-question { break-inside: avoid; }
+}

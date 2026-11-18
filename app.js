@@ -600,7 +600,7 @@ const MODE_LABEL = {
   all: '按学期练习', random: '随机练习', random20: '今日新题', unfinished: '只做未做题',
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
-  essay: '主观题提分', blank: '填空速记', retry: '本组错题重练',
+  essay: '主观题提分', blank: '填空速记', retry: '本组错题重练', national: '全国真题练习',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -660,6 +660,7 @@ inviteInput.value = window.QuizReferrals?.incoming() || '';
 const visitorSource = new URL(location.href).searchParams.get('from') || 'direct';
 
 function isTrialQuestion(q) {
+  if (q.national) return q.preview === true;
   return baseTrialIds.has(q.id) || shareTrial.ids.includes(q.id);
 }
 
@@ -880,7 +881,8 @@ function expParas(text) {
   return parts.length ? parts.map(p => `<p>${esc(p)}</p>`).join('') : '<p>暂无解析</p>';
 }
 function subjectChip(key, label) {
-  return `<span class="chip tone-${esc(key)}">${esc(label || SUBJECTS[key]?.label || '')}</span>`;
+  const nationalLabels = { english: '英语', physics: '物理', chemistry: '化学', math: '数学', chinese: '语文' };
+  return `<span class="chip tone-${esc(key)}">${esc(label || SUBJECTS[key]?.label || nationalLabels[key] || '')}</span>`;
 }
 function displayAnswer(q) {
   if (q.type === 'judge') return q.answer[0] === 'true' ? '正确' : '错误';
@@ -1092,6 +1094,7 @@ function reviewCardsHTML(progress) {
 }
 function renderHome(focus = '') {
   if (!banks) return;
+  window.NationalExams?.leave();
   document.body.classList.remove('practice');
   const progress = loadProgress();
   if (!paidAccess && paidLaunchDate) persist(() => startLegacyTrial(progress, paidLaunchDate));
@@ -1108,6 +1111,10 @@ function renderHome(focus = '') {
     </div>
     ${trialDays ? '' : accessNotice}
     <section id="sprintTeaser"></section>
+    <section class="card national-entry">
+      <div><h2>全国中考真题</h2><p class="muted">各地真题，按科目练，每次几分钟。</p></div>
+      <a class="btn primary" href="#national">选科目练习 →</a>
+    </section>
     ${quickModesHTML(queue, progress)}
     ${drillCardHTML(progress)}
     <div class="dashboard-lower">
@@ -1329,7 +1336,7 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
   const studyMode = ['all', 'random', 'random20', 'unfinished', 'essay', 'blank'].includes(state.mode);
   return `
     <div class="practice-shell tone-${esc(q.subject)}">
-      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} 返回首页</button><span>${esc(MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
+      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button><span>${esc(MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
       <section class="card question-card" aria-labelledby="questionTitle">
         <div class="question-progress">
           <div class="progress-label"><strong>${clearing ? '订正进度' : `第 ${position} <span>/ ${total} 题</span>`}</strong><span id="qProg">${questionStats(progress)}</span></div>
@@ -1356,11 +1363,16 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
     </div>`;
 }
 // 外壳里通用按钮的事件；返回结束作答后切换按钮状态的函数。
+function returnFromPractice() {
+  if (state.mode === 'national') { void window.NationalExams.open(); return; }
+  renderHome('homeTitle');
+}
+
 function wireShell(q) {
   const submit = byId('submitBtn');
   const reveal = byId('revealBtn');
   const next = byId('nextBtn');
-  byId('backBtn').addEventListener('click', () => renderHome('homeTitle'));
+  byId('backBtn').addEventListener('click', returnFromPractice);
   byId('favBtn').addEventListener('click', event => {
     const favorited = persist(() => toggleFavorite(q.id));
     if (favorited === undefined) return;
@@ -1453,7 +1465,7 @@ function renderSavedQuestion(q) {
         </div>
       </section>
     </div>`;
-  byId('savedHome').addEventListener('click', () => renderHome('homeTitle'));
+  byId('savedHome').addEventListener('click', returnFromPractice);
   byId('savedNext')?.addEventListener('click', () => goToQuestion(state.idx + 1));
   byId('savedAccess').addEventListener('click', () => openUnlock('自动复习与订正错题属于完整版。'));
   if (q.image) renderFigure(q);
@@ -1487,8 +1499,9 @@ function renderChoice(q) {
   let selected = [];
   let finished = false;
   view.innerHTML = practiceShellHTML(q, progress, {
-    title: `<h1 id="questionTitle" tabindex="-1">${esc(q.stem)}</h1>`,
-    body: `${q.type === 'multiple' ? `<p class="muted selection-hint">请选择 ${required}–${maximum} 项后提交。</p>` : ''}
+    title: `<h1 id="questionTitle" tabindex="-1">${q.national ? '原题练习 · 第 ' + q.number + ' 题' : esc(q.stem)}</h1>`,
+    body: `${q.materialHtml ? `<div class="national-reading">${q.materialHtml}</div>` : ''}${q.originalHtml ? `<div class="national-source">${q.originalHtml}</div>` : ''}
+      ${q.type === 'multiple' ? `<p class="muted selection-hint">请选择 ${required}–${maximum} 项后提交。</p>` : ''}
       <div class="options" role="group" aria-label="${type}选项">
         ${choices.map((o, i) => `<button class="opt" type="button" data-choice="${i}" aria-pressed="false">
           ${q.type === 'judge' ? `<span class="opt-key">${o.key === 'true' ? '✓' : '✗'}</span>` : `<span class="opt-key">${esc(o.key)}</span>`}<span class="opt-text">${esc(o.text)}</span><span class="opt-status"></span>
@@ -1721,7 +1734,7 @@ function renderSummary() {
   const essays = results.filter(([, r]) => r.total);
   const essayScore = essays.reduce((s, [, r]) => s + r.score, 0);
   const essayTotal = essays.reduce((s, [, r]) => s + r.total, 0);
-  const wrongQs = dedupeById(results.filter(([, r]) => !r.correct).map(([id]) => library.find(q => q.id === id)).filter(Boolean));
+  const wrongQs = dedupeById(results.filter(([, r]) => !r.correct).map(([id]) => state.queue.find(q => q.id === id) || library.find(q => q.id === id)).filter(Boolean));
   const acc = Math.round(right / results.length * 100);
   const cheer = acc >= 90 ? '太棒了，保持这个状态！' : acc >= 70 ? '不错，把错题再过一遍就更稳了。' : '别灰心，错题已进错题本，按时复习就能拿下。';
   view.innerHTML = `
@@ -1740,13 +1753,13 @@ function renderSummary() {
           <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
         <div class="summary-actions">
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本组错题</button>` : ''}
-          <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} 返回首页</button>
+          <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button>
         </div>
         <p class="checkin-cross">${accountingRecommendation()}</p>
       </section>
     </div>`;
-  byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, 'retry'));
-  byId('homeBtn').addEventListener('click', () => renderHome('homeTitle'));
+  byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, state.mode === 'national' ? 'national' : 'retry'));
+  byId('homeBtn').addEventListener('click', returnFromPractice);
   state.keys = null;
   moveFocus(byId('summaryTitle'), true);
 }
@@ -1860,7 +1873,17 @@ async function init() {
     library = [...bankQuestions, ...subjectiveQuestions, ...dailyQuestions()];
     baseTrialIds = trialQuestionIds(bankQuestions, subjectiveQuestions);
     await accessReady;
-    renderHome();
+    window.NationalExams.attach({
+      view,
+      home: () => renderHome('homeTitle'),
+      practice: questions => beginPractice(questions, 'national'),
+      progress: loadProgress,
+      hasAccess: hasFullAccess,
+      hideSearch: () => { byId('headerSearch').hidden = true; },
+      toast,
+    });
+    if (location.hash === '#national') await window.NationalExams.open();
+    else renderHome();
     void refreshReferralProfile();
     trackVisit('visit');
   } catch (error) {

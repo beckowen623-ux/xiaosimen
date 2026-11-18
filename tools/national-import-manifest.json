@@ -1,0 +1,445 @@
+{
+  "sources": [
+    {
+      "id": "fj-2026-chinese",
+      "file": "福建/福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "sha256": "fcc048ddaf9917ffc946746e2faeaf28ac41b38c744bfc2d9ec7b08dd5202f3b",
+      "questionPages": [
+        2,
+        8
+      ],
+      "answerPages": [
+        9,
+        10
+      ],
+      "kind": "original-scan",
+      "sharedBoundary": {
+        "page": 9,
+        "cutY": 1430,
+        "renderHeight": 1807
+      }
+    },
+    {
+      "id": "fj-2026-math",
+      "file": "福建/福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "sha256": "fcc048ddaf9917ffc946746e2faeaf28ac41b38c744bfc2d9ec7b08dd5202f3b",
+      "questionPages": [
+        11,
+        15
+      ],
+      "answerPages": [
+        16,
+        22
+      ],
+      "kind": "original-scan",
+      "sharedBoundary": {
+        "page": 16,
+        "cutY": 1060,
+        "renderHeight": 1807
+      }
+    },
+    {
+      "id": "fj-2026-english",
+      "file": "福建/福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "sha256": "fcc048ddaf9917ffc946746e2faeaf28ac41b38c744bfc2d9ec7b08dd5202f3b",
+      "questionPages": [
+        23,
+        35
+      ],
+      "answerPages": [
+        36,
+        37
+      ],
+      "kind": "original-scan",
+      "sharedBoundary": {
+        "page": 36,
+        "cutY": 710,
+        "renderHeight": 1807
+      }
+    },
+    {
+      "id": "fj-2026-physics",
+      "file": "福建/福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "sha256": "fcc048ddaf9917ffc946746e2faeaf28ac41b38c744bfc2d9ec7b08dd5202f3b",
+      "questionPages": [
+        38,
+        46
+      ],
+      "answerPages": [
+        47,
+        50
+      ],
+      "kind": "original-scan",
+      "sharedBoundary": {
+        "page": 47,
+        "cutY": 348,
+        "renderHeight": 1807
+      }
+    },
+    {
+      "id": "fj-2026-chemistry",
+      "file": "福建/福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "sha256": "fcc048ddaf9917ffc946746e2faeaf28ac41b38c744bfc2d9ec7b08dd5202f3b",
+      "questionPages": [
+        51,
+        57
+      ],
+      "answerPages": [
+        58,
+        59
+      ],
+      "kind": "original-scan",
+      "sharedBoundary": {
+        "page": 58,
+        "cutY": 940,
+        "renderHeight": 1807
+      }
+    },
+    {
+      "id": "fj-2026-lishi",
+      "file": "福建/福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "sha256": "fcc048ddaf9917ffc946746e2faeaf28ac41b38c744bfc2d9ec7b08dd5202f3b",
+      "questionPages": [
+        60,
+        69
+      ],
+      "answerPages": [
+        70,
+        70
+      ],
+      "kind": "original-scan",
+      "sharedBoundary": null
+    },
+    {
+      "id": "fj-2026-daode",
+      "file": "福建/福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "sha256": "fcc048ddaf9917ffc946746e2faeaf28ac41b38c744bfc2d9ec7b08dd5202f3b",
+      "questionPages": [
+        71,
+        79
+      ],
+      "answerPages": [
+        80,
+        82
+      ],
+      "kind": "original-scan",
+      "sharedBoundary": {
+        "page": 80,
+        "cutY": 1090,
+        "renderHeight": 1807
+      }
+    },
+    {
+      "id": "hn-changsha-2024-english",
+      "file": "湖南/湖南中考真题/2013年至2024年湖南中考真题及答案全科完整/初中英语 历年真题 （2013-2024）/2024年湖南省长沙市中考英语真题（解析版）.docx",
+      "sha256": "a340c43a446352f30dd1e839709ba570815af89dcd758a454d0f45819408d085",
+      "questions": 9,
+      "importedNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "skipped": [
+        {
+          "number": 10,
+          "reason": "answer, equation or table needs manual review"
+        }
+      ]
+    },
+    {
+      "id": "hn-hunan-2024-physics",
+      "file": "湖南/湖南中考真题/2013年至2024年湖南中考真题及答案全科完整/初中物理 历年真题 （2013-2024）/2024年湖南省中考物理真题（解析版）.docx",
+      "sha256": "84abb60f1606be67de64928706c1d6273419027994e466c32d72bcb65ce548ec",
+      "questions": 12,
+      "importedNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "skipped": [
+        {
+          "number": 13,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 14,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 15,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 16,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 17,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 18,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 19,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 20,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 21,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 22,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 23,
+          "reason": "not a complete objective question"
+        }
+      ]
+    },
+    {
+      "id": "hn-hunan-2024-chemistry",
+      "file": "湖南/湖南中考真题/2013年至2024年湖南中考真题及答案全科完整/初中化学 历年真题 （2013-2024）/2024年湖南省中考化学真题（解析版）.docx",
+      "sha256": "b7e34ec955e12a64f045a61b403a6fce50aa8c320ad4bacaf37d0d1824f365d1",
+      "questions": 12,
+      "importedNumbers": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "skipped": [
+        {
+          "number": 3,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 6,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 11,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 16,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 17,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 18,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 19,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 20,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 21,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 22,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 23,
+          "reason": "not a complete objective question"
+        }
+      ]
+    },
+    {
+      "id": "hn-changsha-2024-physics",
+      "file": "湖南/湖南中考真题/2013年至2024年湖南中考真题及答案全科完整/初中物理 历年真题 （2013-2024）/2024年湖南省长沙市中考物理真题（解析版）.docx",
+      "sha256": "4c5a49f8a253aeacf24404d88c0efd5e63c45192052919c3506b9c7d92ca190b",
+      "questions": 9,
+      "importedNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        12
+      ],
+      "skipped": [
+        {
+          "number": 6,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 10,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 11,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 13,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 14,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 15,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 16,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 17,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 18,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 19,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 20,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 21,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 22,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 23,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 24,
+          "reason": "not a complete objective question"
+        }
+      ]
+    },
+    {
+      "id": "hn-changsha-2024-chemistry",
+      "file": "湖南/湖南中考真题/2013年至2024年湖南中考真题及答案全科完整/初中化学 历年真题 （2013-2024）/2024年湖南省长沙市中考化学真题（解析版）.docx",
+      "sha256": "61ddc9dbbd745bb3942c28c06c9d7a1687ecea932dea1ed279f886f99dd3bd25",
+      "questions": 8,
+      "importedNumbers": [
+        1,
+        4,
+        5,
+        9,
+        10,
+        12,
+        13,
+        15
+      ],
+      "skipped": [
+        {
+          "number": 2,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 3,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 6,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 7,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 8,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 11,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 14,
+          "reason": "answer, equation or table needs manual review"
+        },
+        {
+          "number": 16,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 17,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 18,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 19,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 20,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 21,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 22,
+          "reason": "not a complete objective question"
+        },
+        {
+          "number": 23,
+          "reason": "not a complete objective question"
+        }
+      ]
+    }
+  ]
+}

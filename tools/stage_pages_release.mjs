@@ -35,6 +35,7 @@ if (existsSync(output)) {
 const pages = [
   "app.js", "styles.css", "referrals.js", "referrals.css",
   "key-points.html", "key-points.js", "key-points.css", "manifest.webmanifest", "_routes.json",
+  "national-exams.js", "national-exams.css",
 ];
 mkdirSync(output);
 writeFileSync(join(output, "index.html"), index.replace(dateMeta, `name="xiaosimen-paid-launch-date" content="${launchDate}"`));
@@ -53,6 +54,13 @@ for (const file of readdirSync(data, { withFileTypes: true })) {
 }
 // 题目配图（157 张 jpg，按题 id 命名）必须一起发布，否则线上显示“配图加载失败”。
 cpSync(join(project, "data", "figures"), join(publicData, "figures"), { recursive: true });
+cpSync(join(project, "data", "national"), join(publicData, "national"), { recursive: true });
+const nationalHash = createHash("sha256").update(readFileSync(join(publicData, "national-catalog.js")));
+for (const name of readdirSync(join(publicData, "national")).sort()) {
+  nationalHash.update(readFileSync(join(publicData, "national", name)));
+}
+const nationalScript = join(output, "national-exams.js");
+writeFileSync(nationalScript, readFileSync(nationalScript, "utf8").replace("__NATIONAL_VERSION__", nationalHash.digest("hex").slice(0, 12)));
 
 // 每次发布按文件内容生成版本号（?v=内容哈希），文件一改，访客浏览器就会拿新文件。
 for (const page of ["index.html", "key-points.html"]) {
