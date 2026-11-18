@@ -500,3 +500,7 @@ input[type=search]::placeholder { color: #67736c; }
 .print-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .print-row select { flex: 1 1 120px; min-height: 42px; padding: 6px 10px; border: 1px solid var(--line, #d6dfdb); border-radius: 10px; font: inherit; background: #fff; }
 .print-row .btn { flex: 1 1 100%; }
+.update-list { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 8px; }
+.update-list li { display: grid; grid-template-columns: 96px 1fr; gap: 8px; line-height: 1.6; font-size: 14px; }
+.update-list time { color: var(--muted, #6b7280); }
+@media (max-width: 560px) { .update-list li { grid-template-columns: 1fr; gap: 0; } }
