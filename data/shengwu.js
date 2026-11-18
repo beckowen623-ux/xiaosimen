@@ -1,13 +1,13 @@
 window.XIAOSIMEN_BANKS ||= {};
 window.XIAOSIMEN_BANKS["shengwu"] = {
-  title: "生物", examLabel: "初中小四门", total: 600,
+  title: "生物", examLabel: "初中小四门", total: 605,
   chapters: [
-    { id: 1, title: "七年级上册 · 生物和生物圈", count: 170 },
-    { id: 2, title: "七年级下册 · 人体生命活动", count: 113 },
-    { id: 3, title: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护", count: 83 },
+    { id: 1, title: "七年级上册 · 生物和生物圈", count: 171 },
+    { id: 2, title: "七年级下册 · 人体生命活动", count: 116 },
+    { id: 3, title: "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护", count: 84 },
     { id: 4, title: "八年级下册 · 生物圈中生命的延续和发展、健康地生活", count: 94 },
-    { id: 5, title: "九年级上册 · 生物总复习（七年级）", count: 79 },
-    { id: 6, title: "九年级下册 · 生物总复习（八年级）", count: 61 }
+    { id: 5, title: "会考总复习 · 七年级内容", count: 79 },
+    { id: 6, title: "会考总复习 · 八年级内容", count: 61 }
   ],
   questions: [
 
@@ -2658,7 +2658,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
 
 
     {
-      id: "shengwu-h05-q025", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q025", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 25, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2023年福建省初中学业水平考试·生物第1题",
@@ -2669,7 +2669,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：生物圈是最大的生态系统，武夷山、大金湖、福州市都只是生物圈的一部分。"
     },
     {
-      id: "shengwu-h05-q026", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q026", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 26, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2023年福建省初中学业水平考试·生物第4题",
@@ -2680,7 +2680,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：红细胞—运氧，白细胞—吞噬病菌，血小板—止血凝血。"
     },
     {
-      id: "shengwu-h05-q027", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q027", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 27, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2023-2024学年福建省师大平潭附中教研片中考考前最后一卷·生物第24题",
@@ -2691,7 +2691,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：生产者是能量和物质的源头，决定其他生物的数量；分解者促进物质循环，但不起决定作用。"
     },
     {
-      id: "shengwu-h05-q028", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q028", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 28, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024届福建省厦门市逸夫中学中考适应性考试·生物第16题",
@@ -2702,7 +2702,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：体循环后动脉血变静脉血，氧气减少、二氧化碳增多；肺循环后正好相反。"
     },
     {
-      id: "shengwu-h05-q029", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q029", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 29, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024届福建省厦门市逸夫中学中考适应性考试·生物第25题（原卷A项文字有讹误，已按解析订正为“生物圈”）",
@@ -2713,7 +2713,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：蚯蚓是分解者，不是消费者；细菌、真菌、蚯蚓等都是分解者。"
     },
     {
-      id: "shengwu-h05-q030", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q030", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 30, type: "judge", meta: "判断题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年福建省初中学业水平考试·生物第28题第(3)小题（原为非选择题填空，改为判断题）",
@@ -2724,7 +2724,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：蛋白质—胃开始消化、小肠彻底消化；淀粉—口腔开始，脂肪—小肠开始。"
     },
     {
-      id: "shengwu-h05-q031", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q031", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 31, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第1题",
@@ -2735,7 +2735,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：龟甲的作用是防止水分散失、适于陆生；不要把陆生动物的保水结构当成适于水生的结构。"
     },
     {
-      id: "shengwu-h05-q032", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q032", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 32, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第4题",
@@ -2746,7 +2746,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：洋葱表皮细胞近似长方体只是其中一种，不能推广到所有植物细胞。"
     },
     {
-      id: "shengwu-h05-q033", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q033", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 33, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第5题",
@@ -2757,7 +2757,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：自然保护区保护的不只是动物本身，还包括它赖以生存的环境，缺一半就不完整。"
     },
     {
-      id: "shengwu-h05-q034", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q034", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 34, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第8题",
@@ -2768,7 +2768,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：尿中有血细胞或蛋白质，病变部位是肾小球（过滤环节出了问题），不是重吸收的肾小管。"
     },
     {
-      id: "shengwu-h05-q035", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q035", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 35, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第10题",
@@ -2779,7 +2779,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：有味道、有刺激性的物质多在液泡的细胞液里；细胞核是遗传信息库，细胞膜管物质进出。"
     },
     {
-      id: "shengwu-h05-q036", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q036", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 36, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第12题",
@@ -2790,7 +2790,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：红细胞—运氧，白细胞—吞噬病菌，血小板—止血凝血，血浆—运输，四者功能不要张冠李戴。"
     },
     {
-      id: "shengwu-h05-q037", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q037", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 37, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第14题",
@@ -2801,7 +2801,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：子房—果实，子房壁—果皮，胚珠—种子，受精卵—胚，三者要一一对应。"
     },
     {
-      id: "shengwu-h05-q038", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q038", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 38, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第17题",
@@ -2812,7 +2812,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：骨—杠杆，关节—支点，骨骼肌—动力，别把关节当成动力。"
     },
     {
-      id: "shengwu-h05-q039", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q039", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 39, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第18题",
@@ -2823,7 +2823,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：同种生物之间不只有竞争，还有合作（如蜜蜂、蚂蚁分工）；非生物因素不只阳光、温度、水三样。"
     },
     {
-      id: "shengwu-h05-q040", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q040", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 40, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省各地中考生物四模试卷第25题",
@@ -2834,7 +2834,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：只要人为设置了不同条件、做对照，就属于实验法，不是单纯的观察法。"
     },
     {
-      id: "shengwu-h05-q041", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q041", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 41, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第2题（原卷D项“套袋处埋”按文意订正为“套袋处理”）",
@@ -2845,7 +2845,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：套袋是为了防止外来花粉，袋内没有传粉就结不出果实，不能反过来判断花的雌雄。"
     },
     {
-      id: "shengwu-h05-q042", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q042", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 42, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第8题（原为表格，改为文字叙述）",
@@ -2856,7 +2856,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：口腔上皮细胞临时装片要滴生理盐水（维持细胞形态），涂抹要轻而均匀；高倍镜下调清晰用细准焦螺旋。"
     },
     {
-      id: "shengwu-h05-q043", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q043", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 43, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第9题",
@@ -2867,7 +2867,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：输血原则是输同型血；O型是万能供血者只用于紧急情况，不是首选。"
     },
     {
-      id: "shengwu-h05-q044", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q044", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 44, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第11题",
@@ -2878,7 +2878,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：呼吸道起点是鼻不是口；气管软骨是C形不是O形；肺是气体交换的主要场所。"
     },
     {
-      id: "shengwu-h05-q045", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q045", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 45, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第12题",
@@ -2889,7 +2889,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：遗传看的是亲子代之间的相似，子代与子代之间长得像不能直接叫遗传。"
     },
     {
-      id: "shengwu-h05-q046", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q046", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 46, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第13题",
@@ -2900,7 +2900,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：高原缺氧，适应方式是红细胞增多、多运氧，不是白细胞或血小板增多。"
     },
     {
-      id: "shengwu-h05-q047", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q047", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 47, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第17题",
@@ -2911,7 +2911,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：动脉是管壁厚、弹性大；管壁薄、弹性小的是静脉，别记反了。"
     },
     {
-      id: "shengwu-h05-q048", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q048", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 48, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第18题",
@@ -2922,7 +2922,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：果汁、花青素这类有颜色的汁液都在液泡里；线粒体是呼吸作用场所，细胞核是遗传信息库。"
     },
     {
-      id: "shengwu-h05-q049", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q049", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 49, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第26题",
@@ -2933,7 +2933,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：盯住变量——只浇水、土没少、树变重，增重只能来自水；二氧化碳也是原料，但这个实验直接证明的是水。"
     },
     {
-      id: "shengwu-h05-q050", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q050", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 50, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第31题",
@@ -2944,7 +2944,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：植物没有系统，动物才有系统；番茄的结构层次到植物体就结束了。"
     },
     {
-      id: "shengwu-h05-q051", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q051", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 51, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025届福建省福州十八中学中考生物模拟预测题第34题",
@@ -2955,7 +2955,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：产生并传导兴奋是神经组织的功能；隆起是肌肉收缩造成的，不是上皮组织的作用。"
     },
     {
-      id: "shengwu-h05-q052", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q052", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 52, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年福建中考·生物第2题",
@@ -2966,7 +2966,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：细胞壁是植物细胞特有的结构之一；线粒体动植物细胞都有，不要选错。"
     },
     {
-      id: "shengwu-h05-q053", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q053", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 53, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年福建中考·生物第3题",
@@ -2977,7 +2977,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：表皮在最外面起保护作用，对应保护组织；不要和制造有机物的营养组织（叶肉）混淆。"
     },
     {
-      id: "shengwu-h05-q054", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q054", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 54, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -2989,7 +2989,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：有味道、有甜味的物质在液泡的细胞液里；细胞核管遗传，不管味道。"
     },
     {
-      id: "shengwu-h05-q055", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q055", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 55, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年福建中考·生物第7题",
@@ -3000,7 +3000,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：阴天移栽防的是蒸腾失水，不是为了光合作用；杂草争夺的是水和无机盐，不是植物体内的有机物。"
     },
     {
-      id: "shengwu-h05-q056", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q056", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 56, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3012,7 +3012,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：萌发最先长出来的是根（胚根），不是芽；胚芽发育成茎和叶，胚轴连接根和茎。"
     },
     {
-      id: "shengwu-h05-q057", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q057", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 57, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年福建中考·生物第10题",
@@ -3023,7 +3023,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：甲状腺激素是“促进”代谢，幼年缺少得呆小症、过多得甲亢；“抑制”说法反了。"
     },
     {
-      id: "shengwu-h05-q058", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q058", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 58, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年福建中考·生物第11题",
@@ -3034,7 +3034,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：均衡膳食要荤素搭配、种类齐全；光吃肉、油炸食品和甜食不均衡。"
     },
     {
-      id: "shengwu-h05-q059", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q059", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 59, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年福建中考·生物第12题",
@@ -3045,7 +3045,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：预防近视要做到“三要、四不要”，读写姿势要端正、用眼时间不要过长。"
     },
     {
-      id: "shengwu-h05-q060", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q060", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 60, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3057,7 +3057,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：骨骼肌能收缩牵拉骨；关节是支点，肌肉才是动力，模型里会“伸缩”的松紧带就是肌肉。"
     },
     {
-      id: "shengwu-h05-q061", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q061", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 61, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年福建中考·生物第15题",
@@ -3068,7 +3068,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：输卵管管受精，子宫管发育，卵巢管产生卵细胞；“提供营养”不是输卵管的功能。"
     },
     {
-      id: "shengwu-h05-q062", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q062", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 62, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年福建中考·生物第18题",
@@ -3079,7 +3079,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：形成尿液的是肾脏，贮存尿液的是膀胱；输尿管只负责输送。"
     },
     {
-      id: "shengwu-h05-q063", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q063", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 63, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年福建中考·生物第20题（原题为四幅植物图，改为文字选项，知识点、选项与答案未改）",
@@ -3090,7 +3090,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：蕨类看孢子囊：有真正的根茎叶、叶背有孢子囊、不开花；藻类无根茎叶，苔藓只有假根。"
     },
     {
-      id: "shengwu-h05-q064", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q064", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 64, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3102,7 +3102,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：呼吸作用消耗氧气、释放能量；光合作用产生氧气和淀粉，淀粉遇碘变蓝。"
     },
     {
-      id: "shengwu-h05-q065", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q065", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 65, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3114,7 +3114,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：动物细胞没有细胞壁、叶绿体和大液泡；细胞壁、叶绿体、液泡是植物细胞特有的结构。"
     },
     {
-      id: "shengwu-h05-q066", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q066", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 66, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年福建中考·生物第5题（原题含撕取、盖片、显微镜与视野图，题干补写各图内容与①为细准焦螺旋，知识点、选项与答案未改）",
@@ -3125,7 +3125,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：细准焦螺旋管“清晰”，粗准焦螺旋管“升降”；盖盖玻片要斜放缓下，防气泡。"
     },
     {
-      id: "shengwu-h05-q067", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q067", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 67, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年福建中考·生物第6题",
@@ -3136,7 +3136,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：表皮在最外层起保护作用，对应保护组织；结缔组织、神经组织是动物才有的组织。"
     },
     {
-      id: "shengwu-h05-q068", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q068", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 68, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3148,7 +3148,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：食物链从生产者开始、不含分解者；能量流动逐级递减，只有约10%~20%传到下一级。"
     },
     {
-      id: "shengwu-h05-q069", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q069", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 69, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3160,7 +3160,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：组织细胞消耗氧气和葡萄糖、产生二氧化碳和尿素；流经组织后，营养物质减少、废物增多。"
     },
     {
-      id: "shengwu-h05-q070", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q070", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 70, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3172,7 +3172,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：分类等级越小亲缘关系越近；同属不同种，DNA有差异；化石是最直接的进化证据。"
     },
     {
-      id: "shengwu-h05-q071", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q071", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 71, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3184,7 +3184,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：叶绿素含量高→光合作用强；气孔开放程度小→失水少、抗旱；看清柱状图的数据再判断。"
     },
     {
-      id: "shengwu-h05-q072", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q072", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 72, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2026年福建中考·生物第3题",
@@ -3195,7 +3195,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：血液、骨组织、软骨都属于结缔组织；不要以为血液是液体就不属于组织。"
     },
     {
-      id: "shengwu-h05-q073", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q073", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 73, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3207,7 +3207,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：分裂产生新细胞的是分生区；吸收水和无机盐的是成熟区（根毛区），不要混淆。"
     },
     {
-      id: "shengwu-h05-q074", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q074", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 74, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2026年福建中考·生物第6题",
@@ -3218,7 +3218,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：蕨类有根茎叶和输导组织、用孢子繁殖；没有输导组织、无真正的根的是苔藓植物。"
     },
     {
-      id: "shengwu-h05-q075", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q075", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 75, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建中考·生物第7题（原题为血常规检查报告单表格，改为文字叙述，知识点、选项与答案未改）",
@@ -3229,7 +3229,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：贫血看红细胞（或血红蛋白），白细胞看炎症，血小板看凝血；“↓”表示低于正常范围。"
     },
     {
-      id: "shengwu-h05-q076", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q076", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 76, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2026年福建中考·生物第8题",
@@ -3240,7 +3240,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：肾小球—过滤，肾小管—重吸收；尿液中出现葡萄糖，可能是肾小管病变或胰岛素不足。"
     },
     {
-      id: "shengwu-h05-q077", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q077", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 77, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2026年福建中考·生物第10题",
@@ -3251,7 +3251,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：均衡膳食要荤素搭配、清淡少油盐；老年人更要少吃油腻、腌制和油炸食品。"
     },
     {
-      id: "shengwu-h05-q078", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q078", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 78, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2026年福建中考·生物第13题",
@@ -3262,7 +3262,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：条件反射后天形成、需要大脑皮层参与；非条件反射生来就有，是本能。"
     },
     {
-      id: "shengwu-h05-q079", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q079", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 79, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3274,7 +3274,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：食物链箭头指向吃的一方；生态系统要有生物成分和非生物成分，缺一不可。"
     },
     {
-      id: "shengwu-h05-q080", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q080", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 80, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3286,7 +3286,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：呼吸作用消耗氧气、产生二氧化碳、释放能量；萌发的种子呼吸旺盛，温度高、木条熄灭、石灰水变浑浊。"
     },
     {
-      id: "shengwu-h05-q081", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q081", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 81, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2026年福建中考·生物第21题",
@@ -3297,7 +3297,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：选色素少的小鱼、湿纱布包鱼身、显微镜观察、观察后放回水中，这四点是实验的规范操作。"
     },
     {
-      id: "shengwu-h05-q082", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q082", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 82, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3309,7 +3309,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：动脉—主干到分支，静脉—分支汇集，毛细血管—红细胞单行通过、血流最慢。"
     },
     {
-      id: "shengwu-h05-q083", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q083", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 83, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2026年福建中考·生物第23题",
@@ -3320,7 +3320,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：增大表面积的结构有小肠绒毛、肺泡、肾小管等；消化液是化学消化，与面积无关。"
     },
     {
-      id: "shengwu-h05-q084", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q084", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 84, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3335,7 +3335,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
 
 
     {
-      id: "shengwu-h06-q004", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q004", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 4, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市初中学业水平考试·生物第10题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -3365,7 +3365,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
 
 
     {
-      id: "shengwu-h06-q024", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q024", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 24, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年福建省初中学业水平考试·生物第2题",
@@ -3376,7 +3376,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：酸奶—乳酸菌，面包、酿酒—酵母菌，制醋—醋酸菌。"
     },
     {
-      id: "shengwu-h06-q025", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q025", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 25, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023-2024学年福建省师大平潭附中教研片中考考前最后一卷·生物第6题",
@@ -3387,7 +3387,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：疫苗—抗原，体内产生的特殊蛋白质—抗体；接种疫苗获得的是特异性免疫。"
     },
     {
-      id: "shengwu-h06-q026", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q026", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 26, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024届福建省厦门市逸夫中学中考适应性考试·生物第31题",
@@ -3398,7 +3398,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：青霉—青霉素，酵母菌—酿酒做面包，两者都是真菌，作用不同。"
     },
     {
-      id: "shengwu-h06-q027", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q027", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 27, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024届福建省厦门市逸夫中学中考适应性考试·生物第37题第(4)小题（原为非选择题小问，改为单选题）",
@@ -3409,7 +3409,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：艾滋病只有性接触、血液、母婴三种传播途径，日常接触和空气都不传播。"
     },
     {
-      id: "shengwu-h06-q028", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q028", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 28, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第2题",
@@ -3420,7 +3420,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：洗手是切断传播途径，不是只防消化道传染病；隔离病人是控制传染源，别和切断传播途径混淆。"
     },
     {
-      id: "shengwu-h06-q029", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q029", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 29, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第6题",
@@ -3431,7 +3431,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：鸟类起源于古代爬行类，不是现代爬行动物；“现代”两个字就是错因。"
     },
     {
-      id: "shengwu-h06-q030", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q030", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 30, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第7题",
@@ -3442,7 +3442,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：居世界第一的是裸子植物，我国素有“裸子植物的故乡”之称；蕨类是第三，别记混了。"
     },
     {
-      id: "shengwu-h06-q031", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q031", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 31, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第9题",
@@ -3453,7 +3453,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：问“利用了什么多样性”，杂交育种用的是基因的多样性；抗病性状只是表现，根子在基因差异上。"
     },
     {
-      id: "shengwu-h06-q032", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q032", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 32, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第11题",
@@ -3464,7 +3464,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：变异是不定向、随机产生的，“主动产生有利变异”是错的；“用进废退、获得性遗传”是拉马克的观点。"
     },
     {
-      id: "shengwu-h06-q033", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q033", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 33, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第13题",
@@ -3475,7 +3475,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：病原体≠传染源；艾滋病只有性接触、血液、母婴三种传播途径，日常接触不传染，也没有疫苗可打。"
     },
     {
-      id: "shengwu-h06-q034", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q034", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 34, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第15题",
@@ -3486,7 +3486,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：分类依据是“怎么来的”（获得途径），不是行为的意义、现象或规律。"
     },
     {
-      id: "shengwu-h06-q035", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q035", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 35, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第16题",
@@ -3497,7 +3497,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：分类等级越小亲缘越近：属比科小、科比目小，别按大小反着选。"
     },
     {
-      id: "shengwu-h06-q036", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q036", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 36, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第19题",
@@ -3508,7 +3508,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：优生措施是禁近亲、婚前检查、遗传咨询、产前诊断；吃保健药改变不了遗传物质。"
     },
     {
-      id: "shengwu-h06-q037", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q037", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 37, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第21题",
@@ -3519,7 +3519,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：蝗虫是不完全变态（卵→若虫→成虫，无蛹期）；鸡卵里发育成雏鸡的是胚盘，不是卵黄。"
     },
     {
-      id: "shengwu-h06-q038", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q038", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 38, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第22题",
@@ -3530,7 +3530,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：一条染色体—一个DNA分子—许多基因，别把“许多基因”说成“许多DNA分子”。"
     },
     {
-      id: "shengwu-h06-q039", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q039", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 39, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第23题",
@@ -3541,7 +3541,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：银杉濒危的主因是自身很难繁殖，不是单纯的森林被伐或自然灾害。"
     },
     {
-      id: "shengwu-h06-q040", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q040", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 40, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省各地中考生物四模试卷第24题",
@@ -3552,7 +3552,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：高等—尝试少、学得快；低等—尝试多、学得慢，次数和能力是反向关系。"
     },
     {
-      id: "shengwu-h06-q041", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q041", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 41, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025届福建省各地中考生物四模试卷第28题（原为非选择题填空，改为单选题）",
@@ -3563,7 +3563,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：显性性状有两种基因组成（DD和Dd），只答一种会漏；隐性性状只有一种（dd）。"
     },
     {
-      id: "shengwu-h06-q042", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q042", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 42, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025届福建省各地中考生物四模试卷第29题（原为非选择题填空，改为单选题）",
@@ -3574,7 +3574,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：一树多种花/一树多种果都是嫁接；杂交是让不同品种交配产生新品种，过程完全不同。"
     },
     {
-      id: "shengwu-h06-q043", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q043", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 43, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第1题",
@@ -3585,7 +3585,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：一株多品种只能是嫁接；种子繁殖后代会发生变异，结不出指定的品种。"
     },
     {
-      id: "shengwu-h06-q044", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q044", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 44, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第5题",
@@ -3596,7 +3596,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：单位越大、共同特征越少；种是最小单位，共同特征最多。"
     },
     {
-      id: "shengwu-h06-q045", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q045", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 45, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第6题",
@@ -3607,7 +3607,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：“遗传物质改变”不等于“一定得遗传病”，“一定”这种绝对化表述要警惕。"
     },
     {
-      id: "shengwu-h06-q046", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q046", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 46, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第7题",
@@ -3618,7 +3618,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：生殖细胞染色体减半，受精卵恢复原数；注意“对”和“条”别混——12对就是24条。"
     },
     {
-      id: "shengwu-h06-q047", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q047", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 47, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第10题",
@@ -3629,7 +3629,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：病毒没有细胞结构，既不是原核生物也不是分解者；衣藻是藻类植物、能光合作用，是生产者。"
     },
     {
-      id: "shengwu-h06-q048", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q048", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 48, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第14题",
@@ -3640,7 +3640,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：葡萄酒—酵母菌，甜面酱—霉菌，老酸奶—乳酸菌；记住这三个经典搭配。"
     },
     {
-      id: "shengwu-h06-q049", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q049", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 49, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第16题",
@@ -3651,7 +3651,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：免疫功能是人体自身的功能；吃药、打针杀菌是药物作用，不算免疫功能。"
     },
     {
-      id: "shengwu-h06-q050", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q050", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 50, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第24题（原为表格，改为文字叙述）",
@@ -3662,7 +3662,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：爬行类看两点——卵生、皮上有鳞；胎生有毛是哺乳类，有羽毛能飞是鸟类。"
     },
     {
-      id: "shengwu-h06-q051", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q051", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 51, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第25题",
@@ -3673,7 +3673,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：针对病人本身（隔离、治疗）是控制传染源；针对空气、飞沫、手等是切断传播途径。"
     },
     {
-      id: "shengwu-h06-q052", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q052", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 52, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第29题（原为表格，改为文字叙述）",
@@ -3684,7 +3684,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：脊椎动物和无脊椎动物的分类依据就是体内有无脊柱；不要按水生陆生或体温去分。"
     },
     {
-      id: "shengwu-h06-q053", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q053", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 53, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第32题",
@@ -3695,7 +3695,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：消毒、通风、洗手都是切断传播途径；控制传染源是针对病人、病畜本身（隔离、治疗、扑杀）。"
     },
     {
-      id: "shengwu-h06-q054", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q054", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 54, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第33题",
@@ -3706,7 +3706,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：蚯蚓处理垃圾靠的是“吃”——取食腐烂有机物，不是靠运动或呼吸。"
     },
     {
-      id: "shengwu-h06-q055", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q055", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 55, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第35题",
@@ -3717,7 +3717,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：水螅体壁两层细胞；角质层是蛔虫等线形动物才有；蛔虫不分节，蚯蚓才由体节组成。"
     },
     {
-      id: "shengwu-h06-q056", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q056", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 56, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025届福建省福州十八中学中考生物模拟预测题第36题第(2)小题（原为非选择题填空，改为单选题）",
@@ -3728,7 +3728,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：气囊只能辅助呼吸、贮存空气，气体交换只在肺里进行；不要把气囊当成气体交换的场所。"
     },
     {
-      id: "shengwu-h06-q057", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q057", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 57, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025届福建省福州十八中学中考生物模拟预测题第37题第(1)小题（原为非选择题填空，改为单选题）",
@@ -3739,7 +3739,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：“没有细胞结构、不能独立生活、必须寄生”就是病毒的标志，一看到就选病毒。"
     },
     {
-      id: "shengwu-h06-q058", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q058", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 58, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024年福建中考·生物第6题",
@@ -3750,7 +3750,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：适于飞行看形态结构：前肢为翼、身体呈流线型、骨骼轻薄中空、胸肌发达；恒温、体内受精不是飞行专用的特点。"
     },
     {
-      id: "shengwu-h06-q059", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q059", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 59, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024年福建中考·生物第16题",
@@ -3761,7 +3761,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：性别由精子决定：含X精子受精生女孩，含Y精子受精生男孩；男孩的X只能来自母亲。"
     },
     {
-      id: "shengwu-h06-q060", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q060", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 60, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024年福建中考·生物第17题",
@@ -3772,7 +3772,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：调节情绪的积极方法有运动、倾诉、转移注意、自我安慰；沉迷手机、借酒消愁都是消极逃避。"
     },
     {
-      id: "shengwu-h06-q061", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q061", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 61, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024年福建中考·生物第21题",
@@ -3783,7 +3783,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：酸奶—乳酸菌，米酒、面包—酵母菌，食醋—醋酸杆菌，沼气—甲烷菌，一一对应不要混。"
     },
     {
-      id: "shengwu-h06-q062", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q062", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 62, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024年福建中考·生物第23题",
@@ -3794,7 +3794,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：疫苗只对特定的病原体起作用，一种疫苗不能预防多种传染病。"
     },
     {
-      id: "shengwu-h06-q063", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q063", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 63, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024年福建中考·生物第24题",
@@ -3805,7 +3805,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：病毒无细胞结构；酵母菌、曲霉、蘑菇都是真菌；细菌没有成形的细胞核和叶绿体。"
     },
     {
-      id: "shengwu-h06-q064", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q064", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 64, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024年福建中考·生物第25题",
@@ -3816,7 +3816,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：适应竹子要么是“吃得动”（咀嚼肌发达），要么是“省能量”（少动、多睡）；肠道短、菌群像杂食动物反而是不适应的表现。"
     },
     {
-      id: "shengwu-h06-q065", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q065", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 65, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年福建中考·生物第13题",
@@ -3827,7 +3827,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：遗传病由遗传物质改变引起；夜盲症—缺维生素A，侏儒症—缺生长激素，艾滋病—病毒传染病。"
     },
     {
-      id: "shengwu-h06-q066", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q066", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 66, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2026年福建中考·生物第5题",
@@ -3838,7 +3838,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：真菌有成形的细胞核、无叶绿体、靠孢子繁殖；大型真菌由菌丝组成，是多细胞生物。"
     },
     {
-      id: "shengwu-h06-q067", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q067", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       image: true,
       number: 67, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
@@ -3850,7 +3850,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：有效期=生产日期+36个月，算一算是否过期；非处方药不需要医生处方，可以自行购买。"
     },
     {
-      id: "shengwu-h06-q068", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q068", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 68, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2026年福建中考·生物第12题",
@@ -3861,7 +3861,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：健康的生活方式包括合理膳食、适量运动、按时作息、保护视力和听力。"
     },
     {
-      id: "shengwu-h06-q069", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q069", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 69, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2026年福建中考·生物第14题",
@@ -3872,7 +3872,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：外来物种入侵是生物多样性面临的威胁之一，绝不能随意放生；保护生物多样性要拒绝外来物种入侵。"
     },
     {
-      id: "shengwu-h06-q070", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q070", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 70, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2026年福建中考·生物第16题",
@@ -3883,7 +3883,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：扦插是“剪枝条、插土里、生根成新株”；种子繁殖是有性生殖，扦插、嫁接、组织培养都是无性生殖。"
     },
     {
-      id: "shengwu-h06-q071", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q071", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 71, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2026年福建中考·生物第18题",
@@ -3894,7 +3894,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：体细胞46条、生殖细胞23条；男孩的X来自母亲、Y来自父亲，女孩的X一条来自父亲、一条来自母亲。"
     },
     {
-      id: "shengwu-h06-q072", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q072", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       image: true,
       number: 72, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
@@ -3906,7 +3906,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：染色体>DNA>基因，是包含关系；基因是DNA上的片段，不是反过来包含DNA。"
     },
     {
-      id: "shengwu-h06-q073", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q073", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       image: true,
       number: 73, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
@@ -4951,7 +4951,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：脐带—连接胎儿与胎盘；胎盘—物质交换的场所。"
     },
     {
-      id: "shengwu-h06-q074", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q074", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 74, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第28题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -4962,7 +4962,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：有鳞片≠爬行动物；胎生哺乳才是哺乳动物的决定性特征。"
     },
     {
-      id: "shengwu-h06-q075", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q075", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 75, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第30题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -4973,7 +4973,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：子代全是某一性状—该性状为显性；相对性状必须是同一性状的不同表现。"
     },
     {
-      id: "shengwu-h06-q076", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q076", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 76, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第30题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -4984,7 +4984,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：测交子代全红—待测为显性纯合（AA）；子代红黄各半—待测为杂合（Aa）。"
     },
     {
-      id: "shengwu-h06-q077", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q077", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 77, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第30题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -4995,7 +4995,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：测交子代红黄1:1—待测为杂合（Aa）；子代全红—待测为显性纯合（AA）。"
     },
     {
-      id: "shengwu-h06-q078", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q078", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 78, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第30题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5006,7 +5006,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：转入外源基因—转基因技术；体细胞发育成新个体—克隆技术。"
     },
     {
-      id: "shengwu-h06-q079", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q079", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 79, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第32题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5017,7 +5017,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：性状=基因+环境；同一基因型在不同环境下性状可以不同。"
     },
     {
-      id: "shengwu-h06-q080", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q080", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 80, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第33题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5330,7 +5330,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：转基因—基因在不同生物间转移；克隆—复制出基因完全相同的个体；杂交育种—不同品种间杂交。"
     },
     {
-      id: "shengwu-h05-q085", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q085", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 85, type: "judge", meta: "判断题",
       grade: "九上", stage: "9-up",
       source: "2026年福建省初中学业水平考试·生物第26题第(1)小题",
@@ -5341,7 +5341,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：壳斗包在果实外面≠果皮；果皮来自子房壁。"
     },
     {
-      id: "shengwu-h05-q086", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q086", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 86, type: "judge", meta: "判断题",
       grade: "九上", stage: "9-up",
       source: "2026年福建省初中学业水平考试·生物第26题第(2)小题",
@@ -5352,7 +5352,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：子叶2片—双子叶，1片—单子叶；种子有果皮包被—被子植物，无果皮包被—裸子植物。"
     },
     {
-      id: "shengwu-h05-q087", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q087", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 87, type: "judge", meta: "判断题",
       grade: "九上", stage: "9-up",
       source: "2026年福建省初中学业水平考试·生物第26题第(3)小题",
@@ -5363,7 +5363,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：同属≠同种；检索表分出的条目是不同的种。"
     },
     {
-      id: "shengwu-h05-q088", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q088", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 88, type: "judge", meta: "判断题",
       grade: "九上", stage: "9-up",
       source: "2026年福建省初中学业水平考试·生物第26题第(4)小题",
@@ -5374,7 +5374,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：分类等级越低、共同特征越多，亲缘关系越近；检索表上同一分支的生物亲缘关系更近。"
     },
     {
-      id: "shengwu-h05-q089", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q089", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 89, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第27题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5385,7 +5385,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：消费者—动物；生产者—植物；分解者—细菌、真菌。"
     },
     {
-      id: "shengwu-h05-q090", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q090", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 90, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第27题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5396,7 +5396,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：生物因素—其他生物；非生物因素—阳光、空气、水、温度等。"
     },
     {
-      id: "shengwu-h05-q091", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q091", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 91, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第27题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5407,7 +5407,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：环境影响生物—环境变化导致生物受影响；生物影响环境—生物的活动改变环境。"
     },
     {
-      id: "shengwu-h05-q092", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q092", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 92, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第28题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5418,7 +5418,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：光合作用—吸收二氧化碳、释放氧气，维持碳氧平衡；呼吸作用则相反。"
     },
     {
-      id: "shengwu-h05-q093", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q093", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 93, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第29题第(1)a小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5429,7 +5429,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：浸泡—补水；光不是种子萌发的必要条件。"
     },
     {
-      id: "shengwu-h05-q094", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q094", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 94, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第29题第(2)b小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5440,7 +5440,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：产量高低看有机物积累量：光合制造多、呼吸消耗少，积累才多；补光延长的是光合作用时间。"
     },
     {
-      id: "shengwu-h05-q095", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q095", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 95, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第31题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5451,7 +5451,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：关节软骨在关节面上，不是关节的第三部分；关节头和关节窝组成关节面。"
     },
     {
-      id: "shengwu-h05-q096", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q096", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 96, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第31题第(4)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5462,7 +5462,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：感受器—视网膜（感光细胞）；晶状体是折射光线的透镜，不是感受器。"
     },
     {
-      id: "shengwu-h05-q097", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q097", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 97, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第32题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5473,7 +5473,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：观察指标要与探究问题一致：问花色，就记录花色。"
     },
     {
-      id: "shengwu-h05-q098", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q098", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 98, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第32题第(4)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5484,7 +5484,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：导管—运水和无机盐（自下而上）；筛管—运有机物。"
     },
     {
-      id: "shengwu-h05-q099", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q099", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 99, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5495,7 +5495,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：自变量—人为改变的量；因变量—随自变量变化而变化的量。"
     },
     {
-      id: "shengwu-h05-q100", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q100", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 100, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -5507,7 +5507,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：看图要找对光照强度曲线再比较萌发先后，不要凭印象猜。"
     },
     {
-      id: "shengwu-h05-q101", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q101", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 101, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -5519,7 +5519,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：变化趋势要看完整曲线，不是只看两端。"
     },
     {
-      id: "shengwu-h05-q102", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q102", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 102, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -5531,7 +5531,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：总有机物量高—生长好；100%光照下两种幼苗存活率均为0。"
     },
     {
-      id: "shengwu-h05-q103", chapterId: 5, chapter: "九年级上册 · 生物总复习（七年级）",
+      id: "shengwu-h05-q103", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 103, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -5543,7 +5543,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：萌发最优≠幼苗最优，要分阶段看图；100%光照下幼苗不能存活。"
     },
     {
-      id: "shengwu-h06-q081", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q081", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 81, type: "judge", meta: "判断题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第33题第(1)小题（原为非选择题填空，改为判断题；本题只取该小题后半空）",
@@ -5554,7 +5554,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：病毒无细胞结构、必须寄生；细菌有细胞结构（无成形细胞核）。"
     },
     {
-      id: "shengwu-h06-q082", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q082", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 82, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第33题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
@@ -5565,7 +5565,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       trap: "易错点：病原体—引起疾病的微生物；传染源—能散播病原体的人或动物。"
     },
     {
-      id: "shengwu-h06-q083", chapterId: 6, chapter: "九年级下册 · 生物总复习（八年级）",
+      id: "shengwu-h06-q083", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 83, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2026年福建省初中学业水平考试·生物第32题第(5)小题（原为非选择题填空，改为单选题，D选项“风干标本”为改编时补写的干扰项）",
@@ -6850,6 +6850,176 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       answer: ["true"],
       explanation: "临床实验中，1 组在 A 药相同剂量的基础上服用 B 药，治疗 1 周总有效率 97.83%，2 组只用 A 药不服用 B 药，总有效率 76.09%；两组其他条件相同，服用 B 药的 1 组总有效率明显更高，说明 B 药的辅助治疗是有效的。该实验中 1、2 组形成对照，唯一的变量是是否服用 B 药。",
       trap: "易错点：看对照实验先找变量；两组总有效率相差 20% 以上，B 药辅助治疗有效，不是无效。"
+    },
+    {
+      "id": "shengwu-h01-q195",
+      "chapterId": 1,
+      "chapter": "七年级上册 · 生物和生物圈",
+      "number": 195,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七上",
+      "stage": "7-up",
+      "source": "2026年甘肃武威中考·生物第1题",
+      "stem": "蝴蝶兰因其花形似蝴蝶飞舞而得名。蝴蝶和蝴蝶兰在细胞结构上的共同点是都具有",
+      "options": [
+        {
+          "key": "A",
+          "text": "细胞壁"
+        },
+        {
+          "key": "B",
+          "text": "细胞核"
+        },
+        {
+          "key": "C",
+          "text": "叶绿体"
+        },
+        {
+          "key": "D",
+          "text": "液泡"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "动物和植物细胞都具有细胞核；细胞壁、叶绿体、大液泡不是动物细胞的结构。"
+    },
+    {
+      "id": "shengwu-h03-q104",
+      "chapterId": 3,
+      "chapter": "八年级上册 · 生物圈中的其他生物、生物的多样性及其保护",
+      "number": 104,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八上",
+      "stage": "8-up",
+      "source": "2026年甘肃武威中考·生物第2题",
+      "stem": "下列各组动物中，均属于鱼的是",
+      "options": [
+        {
+          "key": "A",
+          "text": "鲤鱼、鲫鱼"
+        },
+        {
+          "key": "B",
+          "text": "鳄鱼、带鱼"
+        },
+        {
+          "key": "C",
+          "text": "鲫鱼、鲸鱼"
+        },
+        {
+          "key": "D",
+          "text": "草鱼、鱿鱼"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "鲤鱼和鲫鱼均为鱼类；鳄鱼属爬行动物、鲸属哺乳动物、鱿鱼属软体动物。"
+    },
+    {
+      "id": "shengwu-h02-q140",
+      "chapterId": 2,
+      "chapter": "七年级下册 · 人体生命活动",
+      "number": 140,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七下",
+      "stage": "7-down",
+      "source": "2026年甘肃武威中考·生物第3题",
+      "stem": "下列消化腺的分泌物中，不含消化酶的是",
+      "options": [
+        {
+          "key": "A",
+          "text": "唾液腺"
+        },
+        {
+          "key": "B",
+          "text": "胃腺"
+        },
+        {
+          "key": "C",
+          "text": "肝"
+        },
+        {
+          "key": "D",
+          "text": "胰"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "肝脏分泌胆汁，胆汁不含消化酶，但能乳化脂肪。"
+    },
+    {
+      "id": "shengwu-h02-q141",
+      "chapterId": 2,
+      "chapter": "七年级下册 · 人体生命活动",
+      "number": 141,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七下",
+      "stage": "7-down",
+      "source": "2026年甘肃武威中考·生物第4题",
+      "stem": "吐纳法通过有意识地调节呼吸来改善身体机能，“吐”即呼气，“纳”即吸气，核心在于“吐故纳新”。当你在吸气时，肋骨间肌肉和膈肌的状态是",
+      "options": [
+        {
+          "key": "A",
+          "text": "肋骨间肌肉收缩，膈肌舒张"
+        },
+        {
+          "key": "B",
+          "text": "肋骨间肌肉舒张，膈肌收缩"
+        },
+        {
+          "key": "C",
+          "text": "肋骨间肌肉和膈肌均舒张"
+        },
+        {
+          "key": "D",
+          "text": "肋骨间肌肉和膈肌均收缩"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "吸气时肋间肌和膈肌收缩，胸廓容积扩大，肺内气压下降，空气进入肺。"
+    },
+    {
+      "id": "shengwu-h02-q142",
+      "chapterId": 2,
+      "chapter": "七年级下册 · 人体生命活动",
+      "number": 142,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七下",
+      "stage": "7-down",
+      "source": "2026年甘肃武威中考·生物第5题",
+      "stem": "当你在阅读这道题目时，视觉的形成部位是",
+      "options": [
+        {
+          "key": "A",
+          "text": "角膜"
+        },
+        {
+          "key": "B",
+          "text": "视网膜"
+        },
+        {
+          "key": "C",
+          "text": "大脑皮层"
+        },
+        {
+          "key": "D",
+          "text": "小脑"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "物像形成于视网膜，视觉形成于大脑皮层的视觉中枢。"
     }
   ]
 };

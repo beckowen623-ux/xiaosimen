@@ -1,0 +1,503 @@
+{
+  "id": "gx-2025-english",
+  "region": "广西",
+  "year": 2025,
+  "title": "2025 年广西中考英语",
+  "source": "2025年广西中考英语试题及参考答案",
+  "note": "听力 1—30 题未收录；阅读 A 的公告图已逐字转成文字；修正原卷明显拼写错误 trip、tree、news、writing。",
+  "sections": [
+    {
+      "type": "补全对话",
+      "title": "模型汽车比赛",
+      "passage": "A: Good morning, Sara.\nB: (31)\nA: How was your model car competition?\nB: It was fantastic! I won first place.\nA: (32)\nB: Thank you.\nA: How long have you prepared for it?\nB: (33)\nA: You are so great! I want to learn how to make a model car. (34)\nB: Yes, of course. I am free tomorrow.\nA: See you tomorrow.\nB: (35)",
+      "choices": [
+        "See you!",
+        "Nice work!",
+        "Don’t worry.",
+        "Can you help me?",
+        "For about 2 months.",
+        "Good morning, Li Ming."
+      ],
+      "items": [
+        {
+          "n": 31,
+          "answer": "F",
+          "exp": "用 Good morning 回应早晨问候。"
+        },
+        {
+          "n": 32,
+          "answer": "B",
+          "exp": "对方赢得第一名，应称赞 Nice work。"
+        },
+        {
+          "n": 33,
+          "answer": "E",
+          "exp": "How long 问持续时间，用 For about 2 months 回答。"
+        },
+        {
+          "n": 34,
+          "answer": "D",
+          "exp": "想学习制作模型并得到肯定答复，应请求帮助。"
+        },
+        {
+          "n": 35,
+          "answer": "A",
+          "exp": "用 See you 回应道别。"
+        }
+      ]
+    },
+    {
+      "type": "完形填空",
+      "title": "救助雏鸟",
+      "passage": "One day, Mum and I found a nest (鸟巢) outside our house. The nest was about to fall, so Mum (36) it with an umbrella. We hoped it would be stable (稳固的) again. All of a sudden, the nest fell down. I (37) to catch it and found that inside the nest, there was a baby bird. One of the bird’s legs caught on a vine (藤). And the bird was trying to get away from it. Without a second thought, Mum and I decided to help the poor (38) . We used scissors to cut away the vine and the baby bird was (39) . After (40) all those things, we wondered whether the baby bird belonged to animals under protection. So we began to search for some (41) about the bird online. Half an hour later, we (42) found out that it really was. I called the animal protection team for (43) . As soon as they arrived, they took a careful look at the bird and found it was hurt. Then they treated the bird with some medicine. After that, they put the nest back, (44) it, and left. On the second day, I got up early to check on the bird. I saw the baby bird and its parents. The bird was in (45) condition (状态) again and was lively!",
+      "items": [
+        {
+          "n": 36,
+          "stem": "",
+          "options": [
+            "supported",
+            "covered",
+            "collected"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "鸟巢快掉落，用伞支撑它，supported 表示支撑。"
+        },
+        {
+          "n": 37,
+          "stem": "",
+          "options": [
+            "sat down",
+            "went away",
+            "rushed up"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "鸟巢掉下时赶紧冲上前去接，用 rushed up。"
+        },
+        {
+          "n": 38,
+          "stem": "",
+          "options": [
+            "bird",
+            "cat",
+            "butterfly"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "前文发现雏鸟，救助对象是 bird。"
+        },
+        {
+          "n": 39,
+          "stem": "",
+          "options": [
+            "brave",
+            "free",
+            "healthy"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "剪断藤蔓后雏鸟获得自由，用 free。"
+        },
+        {
+          "n": 40,
+          "stem": "",
+          "options": [
+            "doing",
+            "watching",
+            "preparing"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "做完救助工作后再查资料，doing 对应前述行动。"
+        },
+        {
+          "n": 41,
+          "stem": "",
+          "options": [
+            "music",
+            "work",
+            "information"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "上网查有关鸟的资料，用 information。"
+        },
+        {
+          "n": 42,
+          "stem": "",
+          "options": [
+            "quietly",
+            "finally",
+            "simply"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "半小时后终于查明，用 finally。"
+        },
+        {
+          "n": 43,
+          "stem": "",
+          "options": [
+            "help",
+            "truth",
+            "food"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "打电话给动物保护团队求助，for help。"
+        },
+        {
+          "n": 44,
+          "stem": "",
+          "options": [
+            "visited",
+            "fixed",
+            "washed"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "团队放回鸟巢并固定它，用 fixed。"
+        },
+        {
+          "n": 45,
+          "stem": "",
+          "options": [
+            "serious",
+            "poor",
+            "good"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "雏鸟又活泼起来，说明状态良好，用 good。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "校园公告",
+          "passage": "NOTICES Table Tennis Game: There will be the final table tennis game in the sports centre at 5:00 p.m. on May 30th! Please come and support your favourite player! — Table Tennis Club Fun Drawing: Do you know some local dishes? Explore the local food and let’s draw food maps together! Everyone is welcome! Date & Time: May 25th, 5:00 p.m.—6:00 p.m. Place: Art Hall. — Art Club Spelling Competition: Want to be the spelling king or queen of our school? The competition is a good chance to show your ability to spell English words. Please fill in the form in Room B401 before May 18th. — English Club School Sale: Join our school sale! Sell things and raise money to help animals in danger. Date & Time: May 10th, 5:00 p.m.—6:30 p.m. Place: School Playground. — Student Union",
+          "items": [
+            {
+              "n": 46,
+              "stem": "Where can students watch the final table tennis game?",
+              "options": [
+                "On the playground.",
+                "In Room B401.",
+                "In the sports centre."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "乒乓球决赛地点为 sports centre。"
+            },
+            {
+              "n": 47,
+              "stem": "What will students draw in the fun drawing?",
+              "options": [
+                "Road maps.",
+                "Food maps.",
+                "Shopping maps."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "Fun Drawing 公告邀请大家画 food maps。"
+            },
+            {
+              "n": 48,
+              "stem": "When can students fill in the form for the spelling competition?",
+              "options": [
+                "Before May 18th.",
+                "Before May 25th.",
+                "Before May 30th."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "拼写比赛要求在 May 18th 前填表。"
+            },
+            {
+              "n": 49,
+              "stem": "Which activity can help animals in danger?",
+              "options": [
+                "The fun drawing.",
+                "The table tennis game.",
+                "The school sale."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "School Sale 募款帮助濒危动物。"
+            },
+            {
+              "n": 50,
+              "stem": "How many notices are there on the noticeboard?",
+              "options": [
+                "Four.",
+                "Six.",
+                "Eight."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "公告栏共有四则通知。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "你属于这里",
+          "passage": "David, aged 14, wants everyone in his school to know they’re important members of the school. People are connected with each other. No one is an island. One day, David saw a sad boy on the playground. After talking with the boy, he knew that the boy felt lonely because he couldn’t fit in well in the school. David remembered seeing some other students who felt lonely, too. This made David come up with an idea. He wanted to give something special to everyone in the school to remind them that they were connected. David told his parents his idea. And they were very glad to support him. After discussing the idea with his teachers and classmates, he decided on buttons (微章). Together with his classmates, David printed the buttons with the sentence “You Belong Here!” Then they gave the buttons to each student in the school. David hoped that the buttons would help the students remember that they all belonged here. He also hoped the students could make friends actively. Now, almost all the students in the school are wearing the buttons. The students in the school spend more time with each other than before. Even the students who were lonely before are interacting (互动) a lot more with others. David is very happy because he knows that he has really made a difference! In David’s eyes, everyone should give more care and kindness to people around.",
+          "items": [
+            {
+              "n": 51,
+              "stem": "Who did David see on the playground?",
+              "options": [
+                "A sad boy.",
+                "A happy boy.",
+                "A humorous boy."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "第二段写 David 在操场遇到一位伤心男孩。"
+            },
+            {
+              "n": 52,
+              "stem": "What did David tell his parents?",
+              "options": [
+                "His advantage.",
+                "His hobby.",
+                "His idea."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "David 告诉父母自己想出的主意。"
+            },
+            {
+              "n": 53,
+              "stem": "Which sentence was printed on the buttons?",
+              "options": [
+                "You Belong Here!",
+                "You Can Make It!",
+                "You Are Smart!"
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "徽章上印着 You Belong Here!。"
+            },
+            {
+              "n": 54,
+              "stem": "How should we treat people around in David’s eyes?",
+              "options": [
+                "By giving more books and pens.",
+                "By giving more care and kindness.",
+                "By giving more attention and advice."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "最后一段指出应关心和善待身边的人。"
+            },
+            {
+              "n": 55,
+              "stem": "What is the passage mainly about?",
+              "options": [
+                "Sports news.",
+                "School life.",
+                "Travel plans."
+              ],
+              "answer": "B",
+              "kp": "主旨大意",
+              "exp": "全文围绕校园里帮助孤独同学展开，属于校园生活。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "自然与心理健康",
+          "passage": "Last weekend, I went camping after a long time of tiring work. The trip let me enjoy the clear lake and beautiful views in the woods. I felt the difference at once. I relaxed. I came home feeling rested and a little more cheerful. Going camping became a way to reduce the worry in my life. I not only got a nice weekend, but I was also experiencing the benefits (益处) of nature to my mental health (心理健康) — something that researchers and healthcare providers have long noticed. Research has found that as little as five minutes in nature can be helpful for people to reduce worry and feel happier. This means that we can get relaxed and feel better from stepping outside right away. If we are unable to put our whole body and mind into nature — for example, by taking a weekend camping trip — we can still find chances in our area. We can take a five-minute break in a small park near our house or take a moment to sit under a large tree. We’ll find them useful to refresh our mind. Our better feelings in later life can demonstrate the active influence of nature. Besides simply spending more time outdoors, consider how we can enjoy nature even if we have no time to get close to nature. Listen to recorded bird songs or rainstorms instead of music, bring green plants or put pictures of natural beauty into our home. Although bringing nature indoors is quite different from a real outdoor experience, we can still feel nature and experience improved feelings. Being in nature doesn’t ask anything of us. Slow down, go outside, and notice what’s around us. Listen, touch and smell, and we will really notice a benefit in our mental health.",
+          "items": [
+            {
+              "n": 56,
+              "stem": "What did the writer do last weekend?",
+              "options": [
+                "The writer went camping.",
+                "The writer went shopping",
+                "The writer went skating."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "首段明确说周末去露营。"
+            },
+            {
+              "n": 57,
+              "stem": "Why does the writer mention the research in Paragraph 2?",
+              "options": [
+                "To discuss the method of the health research.",
+                "To explain the influence of being outdoors.",
+                "To introduce the trip at the weekend."
+              ],
+              "answer": "B",
+              "kp": "写作意图",
+              "exp": "研究说明身处户外可以减轻忧虑、使人快乐。"
+            },
+            {
+              "n": 58,
+              "stem": "What does the underlined word “demonstrate” in Paragraph 3 probably mean?",
+              "options": [
+                "Improve.",
+                "Give.",
+                "Show."
+              ],
+              "answer": "C",
+              "kp": "词义猜测",
+              "exp": "好心情能展现自然的积极影响，demonstrate 意为 show。"
+            },
+            {
+              "n": 59,
+              "stem": "What can help people feel better according to the writer?",
+              "options": [
+                "Putting plants at home.",
+                "Listening to rock music.",
+                "Taking pictures of houses."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "第四段建议在家中摆放绿色植物。"
+            },
+            {
+              "n": 60,
+              "stem": "What is the writer’s main purpose in writing this passage?",
+              "options": [
+                "To describe personal worry about nature.",
+                "To share a story about nature with readers.",
+                "To encourage readers to get close to nature."
+              ],
+              "answer": "C",
+              "kp": "写作意图",
+              "exp": "末段呼吁走到户外，目的是鼓励亲近自然。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "回答问题",
+      "title": "竹材新技术",
+      "passage": "Have you ever wondered whether bamboo is a tree or a kind of grass? It is a kind of grass in the science of plant. Bamboo is really a wonder of nature. This fast-growing plant can be seen everywhere and is widely used. Bamboo has got many advantages, leading to its common uses for thousands of years. Bamboo is often used to produce daily products, such as chairs, beds and tables. What’s more, bamboo can be made into a kind of material for clothes. Bamboo can even be used as an excellent building material because it grows fast and it is strong. Bamboo is easy to decay (腐烂), so people have to add chemicals to make bamboo-based materials (竹基材料) stay for a long time. But these chemicals are bad for the environment. Chinese scientists have kept improving technologies to deal with this disadvantage. Here is a good example. In 2016, a Chinese research team in Nanjing began to work on new bamboo technologies. Later, the team succeeded in developing a new bamboo technology. The new technology is a heat treatment. This treatment moves decay-causing matters out of bamboo without adding chemicals that are harmful to the environment. At the same time, the structure (结构) of bamboo is well kept. As a result, new bamboo-based materials were produced and chosen as an excellent building material to build the scenic platforms (观景平台) of the Hong Kong-Zhuhai-Macau Bridge — the world’s largest sea-cross bridge. Since the new bamboo-based materials were used on the platforms, they have stood sunlight, seawater and even the natural disasters. Now, the scenic platforms still remain as strong as ever.",
+      "items": [
+        {
+          "n": 61,
+          "stem": "What is bamboo in the science of plant?",
+          "answer": "It is a kind of grass.",
+          "exp": "第一段说明竹属于草本。"
+        },
+        {
+          "n": 62,
+          "stem": "Why can bamboo be used as an excellent building material?",
+          "answer": "Because it grows fast and it is strong.",
+          "exp": "第二段说明竹生长快且坚固。"
+        },
+        {
+          "n": 63,
+          "stem": "When did the Chinese research team in Nanjing begin to work on new bamboo technologies?",
+          "answer": "In 2016.",
+          "exp": "第三段给出团队开始研究的时间 2016 年。"
+        },
+        {
+          "n": 64,
+          "stem": "What are the advantages of the new bamboo technology?（不超过15词）",
+          "answer": "It makes bamboo-based materials greener and stronger.",
+          "exp": "概括无需有害化学品和耐久性增强两个优势。"
+        },
+        {
+          "n": 65,
+          "stem": "Write an ending sentence for the passage.（不超过15词）",
+          "answer": "The uses of bamboo will keep growing with new technologies.",
+          "exp": "结尾总结科技将拓展竹材用途，答案开放且须符合全文。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "负责任地分享",
+      "passage": "词库：even / spread / easy / part / we / before / win / photo / and / bad\nMany people post things online. Online sharing is a (66) of our daily life now. Different kinds of apps and websites make communication (67) than before. We can share what has happened recently with others. We can also give personal opinions on what we see. The Internet connects us with friends, family, and (68) people in other countries. Sometimes, when we (69) prize in a singing competition or do well in a test, we may share the happy news. At times, when we take (70) of beautiful views, we might also post them to share. However, not everything shared online is kind. Some can be unfriendly. Those unkind words may have unpleasant influences. Maybe people post things without thinking. They just want to play a joke (71) make others laugh. But these are not good reasons. Good shares can make the online world warm and friendly, while (72) ones can bring trouble to others. So when we want to share something on the Internet, we should ask (73) whether the things we post are proper or not. Think twice (74) sharing. We should be responsible for what we share online. Never make up or (75) anything that is not true. In short, always respect others’ feelings. If we can’t do that, maybe we’re not ready to share online yet.",
+      "items": [
+        {
+          "n": 66,
+          "answer": "part",
+          "exp": "a part of 表示……的一部分。"
+        },
+        {
+          "n": 67,
+          "answer": "easier",
+          "exp": "than 提示用 easy 的比较级 easier。"
+        },
+        {
+          "n": 68,
+          "answer": "even",
+          "exp": "even 表示甚至其他国家的人。"
+        },
+        {
+          "n": 69,
+          "answer": "win",
+          "exp": "win a prize 表示获奖。"
+        },
+        {
+          "n": 70,
+          "answer": "photos",
+          "exp": "take photos 为固定搭配，photo 用复数。"
+        },
+        {
+          "n": 71,
+          "answer": "and",
+          "exp": "play a joke 和 make others laugh 并列，用 and。"
+        },
+        {
+          "n": 72,
+          "answer": "bad",
+          "exp": "与前面的 good shares 对照，用 bad。"
+        },
+        {
+          "n": 73,
+          "answer": "ourselves",
+          "exp": "ask 的对象和主语都是我们，用 ourselves。"
+        },
+        {
+          "n": 74,
+          "answer": "before",
+          "exp": "Think twice before doing 表示做事前先三思。"
+        },
+        {
+          "n": 75,
+          "answer": "spread",
+          "exp": "make up or spread 表示编造或传播。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 76,
+      "score": 15,
+      "prompt": "你校英语报正在举办“我爱校园”征文。以 My School Library 为题写约80词短文，介绍图书馆或图书室：1. 位置、环境、图书种类；2. 对你的帮助；3. 你想为它做的事。可适当增加细节，不出现真实姓名和校名。开头：My favourite place in my school is the library.",
+      "points": [
+        [
+          "介绍图书馆基本情况",
+          5
+        ],
+        [
+          "说明对自己的帮助",
+          4
+        ],
+        [
+          "写出愿为图书馆做的事",
+          4
+        ],
+        [
+          "语言连贯规范",
+          2
+        ]
+      ],
+      "sample": "My School Library My favourite place in my school is the library. It is on the third floor of Building 3. It is large and bright. There are many kinds of books in the library, such as novels and magazines. I often read my favourite books there. Those books can help me explore different fields and increase knowledge. To express my love for the library, I will be a volunteer to help organize the books and clean the library, I hope more and more students come to the library and enjoy the pleasure of reading.",
+      "exp": "按照基本情况、帮助、行动三层组织，介绍现状用一般现在时，计划用 will 或 be going to。"
+    }
+  ]
+}

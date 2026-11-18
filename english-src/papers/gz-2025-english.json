@@ -1,0 +1,488 @@
+{
+  "id": "gz-2025-english",
+  "region": "贵州",
+  "year": 2025,
+  "title": "2025 年贵州中考英语",
+  "source": "2025年贵州中考英语试题及参考答案",
+  "note": "其他市、州卷；听力1—30题未收；33、35题答案与介词用法冲突，暂不收；63—67题材料缺句，暂不收；图示选项已转写。",
+  "sections": [
+    {
+      "type": "语法选择",
+      "title": "各地生日习俗（共享词库）",
+      "passage": "How do you celebrate your birthday? With a cake, a party for your friends and family? In some countries, birthday celebrations are really unusual. In China, a birthday child usually eats very long noodles with eggs. People never cut up the noodles (31) they are a symbol of long life, and eggs mean good luck. In some parts of India, when a child has their first birthday, their parents cut off all their hair. The child wears colorful clothes (32) gives chocolate to their friends. In Korea, they celebrate day number 100 (33) the child is born. Families make sure a birthday child gets many rice cakes with honey. When (34) child gets 100 rice cakes, this means they will live a happy and long life. When children in Denmark wake up (35) their birthday, they find gifts all around their beds. That’s why some of the children are so excited that they cannot fall asleep the night before!",
+      "choices": [
+        "after",
+        "and",
+        "on",
+        "a",
+        "but",
+        "because"
+      ],
+      "items": [
+        {
+          "n": 31,
+          "answer": "F",
+          "kp": "连词",
+          "exp": "长面条象征长寿是前文不剪断它的原因，用 because。"
+        },
+        {
+          "n": 32,
+          "answer": "B",
+          "kp": "连词",
+          "exp": "wears 和 gives 两个并列动作，用 and。"
+        },
+        {
+          "n": 34,
+          "answer": "D",
+          "kp": "冠词",
+          "exp": "泛指一个孩子且 child 以辅音音素开头，用 a。"
+        }
+      ]
+    },
+    {
+      "type": "完形填空",
+      "title": "真正的力量来自自己",
+      "passage": "Lele loved ping-pong and dreamed of winning a big match. One day, he was (36) to join the school ping-pong team, but he was worried about the big competition. After school, he went to visit his grandpa. They talked and Grandpa gave Lele a (37) . It was a trophy that Grandpa had won in a ping-pong competition when he was at school. “Wow! Thank you, Grandpa!” Lele said (38) . He felt confident the trophy would bring him luck. The day of the competition arrived. Lele’s grandpa came to cheer. Lele was really (39) , so he put the trophy on a bench where he could see it. The competition began. He felt (40) and confident and did so well that he got into the final. Just as the final round was about to start, he couldn’t see the trophy. Lele (41) in fear. The match began, but Lele couldn’t focus his attention. Then he heard his grandpa (42) , “Come on, Lele! You can do it!” He said to himself, “I can do this with or without the trophy!” Suddenly he felt strong again. He looked at his opponent (对手) and served a ball … Finally, Lele won the match. Lele (43) the trophy under the bench. It was there all the time! Then he thought maybe he had only won the match because of Grandpa’s (44) trophy. He ran over and asked Grandpa. Grandpa laughed, “Lele, you won because you tried your best. It was (45) , but you did it! Now go and get your own trophy. You deserve (应得) it!” Finally, Lele had won his own ping-pong trophy!",
+      "items": [
+        {
+          "n": 36,
+          "stem": "",
+          "options": [
+            "forced",
+            "chosen",
+            "refused"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "被选进校队，用 be chosen。"
+        },
+        {
+          "n": 37,
+          "stem": "",
+          "options": [
+            "chance",
+            "lesson",
+            "present"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "爷爷送给他奖杯作礼物 present。"
+        },
+        {
+          "n": 38,
+          "stem": "",
+          "options": [
+            "excitedly",
+            "clearly",
+            "seriously"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "获得奖杯后觉得幸运，兴奋地感谢爷爷。"
+        },
+        {
+          "n": 39,
+          "stem": "",
+          "options": [
+            "angry",
+            "tired",
+            "nervous"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "比赛前担心结果，所以紧张 nervous。"
+        },
+        {
+          "n": 40,
+          "stem": "",
+          "options": [
+            "strong",
+            "surprised",
+            "worried"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "奖杯给他信心，感到 strong and confident。"
+        },
+        {
+          "n": 41,
+          "stem": "",
+          "options": [
+            "looked around",
+            "got off",
+            "gave up"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "奖杯看不到了，他害怕地四下寻找，用 looked around。"
+        },
+        {
+          "n": 42,
+          "stem": "",
+          "options": [
+            "arguing",
+            "shouting",
+            "explaining"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "加油鼓励是爷爷在 shouting。"
+        },
+        {
+          "n": 43,
+          "stem": "",
+          "options": [
+            "painted",
+            "made",
+            "found"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "比赛后在长椅下找到了奖杯，用 found。"
+        },
+        {
+          "n": 44,
+          "stem": "",
+          "options": [
+            "new",
+            "lucky",
+            "expensive"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "他以为是爷爷的幸运奖杯发挥作用，用 lucky。"
+        },
+        {
+          "n": 45,
+          "stem": "",
+          "options": [
+            "hard",
+            "correct",
+            "normal"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "赢得比赛虽然艰难 hard，但他靠努力做到了。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "社区活动广告",
+          "passage": "GREENWOOD COMMUNITY CENTER NOTICEBOARD — July Learn to make bread and cakes with Anne. Time: 2—4 p.m., 15th July. Place: Anne’s kitchen, Main Street. All ages welcome. £8 for ingredients. Dancercise! Have fun and burn calories to jazz and hip-hop music! At 6—8 p.m. every Tuesday. Place: Molly’s Studio, 32 Green Road. All ages welcome. Cost: £70/month, £20/class. Story time with Cathy. All your favorite children’s stories told by actress Cathy Wells! When? 3—5 p.m., 23rd July. Where? Greenwood Public Library. 6- to 9-year-olds and parents.",
+          "items": [
+            {
+              "n": 46,
+              "stem": "When can people learn to make bread and cakes?",
+              "options": [
+                "On July 6th.",
+                "On July 15th.",
+                "On July 23rd."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "制作面包蛋糕在7月15日。"
+            },
+            {
+              "n": 47,
+              "stem": "What is the cost of dancercise classes for a month?",
+              "options": [
+                "£70.",
+                "£20.",
+                "£8."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "舞蹈健身课每月70英镑。"
+            },
+            {
+              "n": 48,
+              "stem": "Who will tell children’s stories?",
+              "options": [
+                "Anne.",
+                "Molly.",
+                "Cathy."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "故事会由 Cathy Wells 主持。"
+            },
+            {
+              "n": 49,
+              "stem": "What are the three texts above?",
+              "options": [
+                "Reports.",
+                "Letters.",
+                "Advertisements."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "三则文字介绍活动并招募参加者，属于广告。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "为自然作出改变",
+          "passage": "Human actions are affecting the environment. We will lose more of the natural world if we don’t try to change things. Though it is difficult, we can make a difference. Each small change is important, and luckily more individuals (个人) and organizations are working on conservation (保 护) projects. Samson, an African fisherman, has become a voice for the ocean. He and the other fishermen realized they were catching fewer and fewer fish. They were overfishing. Working with the World Wide Fund for Nature (WWF), Samson learned they had to fish more carefully. He realized they shouldn’t catch so many young fish because if there are too few of them, there won’t be enough adult fish to reproduce. He believes protecting the ocean is everybody’s job. As he says, “Take your responsibilities and never think that you are alone.” In Florida, the Sea Turtle Conservancy (STC) noticed there were always plenty of single-use plastic items, like bottles and drinking straws (吸管), on the beaches. These items can hurt the ocean wildlife terribly. Straws are especially dangerous for turtles because they can get stuck in turtles’ noses and hurt them badly. So, the STC started the project “Where are the straws?” asking local restaurants to stop giving customers straws with their drinks. Now, restaurants will only give straws if customers ask for them, and they only give out paper straws. Those are just two examples of the many conservation efforts around the world today. They both show us that change is possible and that it can start with small actions. We are part of the problem. It’s time to be part of the solution",
+          "items": [
+            {
+              "n": 50,
+              "stem": "What does the underlined word “them” in paragraph 2 refer to?",
+              "options": [
+                "Young fish.",
+                "Oceans.",
+                "Fishermen."
+              ],
+              "answer": "A",
+              "kp": "代词指代",
+              "exp": "代词承接前文 young fish，幼鱼少就无法成长繁殖。"
+            },
+            {
+              "n": 51,
+              "stem": "What would happen through STC’s efforts?",
+              "options": [
+                "More and more tourists would relax on the beaches.",
+                "There would be fewer plastic straws on the beaches.",
+                "Customers would buy more drinks from restaurants."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "餐厅减少塑料吸管发放，会使海滩的塑料吸管减少。"
+            },
+            {
+              "n": 52,
+              "stem": "What is the structure of the text? (P=paragraph)",
+              "options": [
+                "P1 总述，P2、P3、P4 并列分述。",
+                "P1 总述，P2、P3 并列举例，P4 总结。",
+                "P1、P2、P3 并列，P4 总结。"
+              ],
+              "answer": "B",
+              "kp": "篇章结构",
+              "exp": "首段总述，第二、三段并列举例，第四段总结，对应总分总。"
+            },
+            {
+              "n": 53,
+              "stem": "Which can be the best title for the text?",
+              "options": [
+                "Playing a role in stopping plastic straws",
+                "Becoming a voice for saving young fish",
+                "Making a difference to the natural world"
+              ],
+              "answer": "C",
+              "kp": "最佳标题",
+              "exp": "文章用两个项目说明小行动可以改变自然环境。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "课堂外学科学",
+          "passage": "Chile is a long and beautiful country with the ocean to the west and mountains to the east. Some of the villages are a very long way from the cities, and some of the schools are very small. It’s difficult for small schools to teach science because they don’t have enough teachers or equipment (设备). This is where the Science Bus project can help. The bus brings special science teachers, new ideas, and equipment to schools in different parts of the country. Sometimes, the children go inside the bus for their science classes or clubs. Sometimes, the teachers bring the equipment inside the school building. The children do experiments. The materials used in the experiments are easy to find — for example, recycled plastic bottles — so that the class teacher can repeat the experiments with the class after the bus leaves. The goal of the Science Bus is to bring science to children all over Chile. Since 2012, the bus has visited many schools in Chile, and hundreds of teachers have learned how to make their science classes fun and exciting. In other parts of the world, children can take part in events called Bioblitzes. During a Bioblitz, scientists, families, students, teachers, and other people work together to collect as many different kinds of plants and animals as possible in a certain place, such as a park or a forest. Bioblitzes are a fun way to help scientists and to discover more about the plants and animals around us. Science is important for all of us because it helps us understand our world. We can learn about science inside or outside of the classroom.",
+          "items": [
+            {
+              "n": 54,
+              "stem": "Why do Chile’s small schools need the Science Bus?",
+              "options": [
+                "They don’t have enough school buildings or clubs.",
+                "They are short of science teachers and equipment.",
+                "They need special materials to repeat experiments."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "第二段明确说明缺科学教师和设备。"
+            },
+            {
+              "n": 55,
+              "stem": "What do people do during a Bioblitz?",
+              "options": [
+                "Recycle plastic bottles.",
+                "Visit different schools.",
+                "Collect plants and animals."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "Bioblitz 活动收集植物和动物。"
+            },
+            {
+              "n": 56,
+              "stem": "What do the Science Bus and Bioblitzes have in common?",
+              "options": [
+                "They make science learning interesting",
+                "They are popular with children in Chile.",
+                "They choose science courses for schools."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "两种活动都让学习科学有趣。"
+            },
+            {
+              "n": 57,
+              "stem": "What is the writer’s purpose in writing the text?",
+              "options": [
+                "To encourage us to learn science.",
+                "To advise us to get close to nature.",
+                "To introduce Chile’s schools to us."
+              ],
+              "answer": "A",
+              "kp": "写作意图",
+              "exp": "末段强调科学重要并可在课内外学习，意在鼓励学习科学。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "七选五",
+      "title": "积极面对生活（六选五）",
+      "passage": "Do you often have negative thoughts? Do you and your friends often complain (抱怨) about things? (58) .  Find the positive, however small. Bad things happen to all of us, but the most important thing is to focus on the positive. For example, next time you are caught in traffic, think how great it is that you can finish listening to your favorite music. If you don’t have much in your fridge, get creative and think of what you can invent with the ingredients (食材) you have. (59) .  Focus on now It’s easy to think too much about things that have already happened and to get worried about what will happen tomorrow. (60) . But remember, you can’t change the past, and no one can control the future, so the best thing is to focus on the present.  (61) . Being around negative people will make you feel negative, too. Spend time with people who will make you laugh and help you believe in yourself, not those that spend all day complaining. It’s hard to feel negative when you have positive people around you.  Be kind to others One of the best ways to make yourself feel good is to help others. (62) . Spending time helping other people can give you a better perspective (视角) on life and make you value what you have.",
+      "choices": [
+        "We all do this sometimes",
+        "Find positive friends and partners",
+        "Always remind yourself to work hard",
+        "It can be exciting to try something new",
+        "Find ways to volunteer in your community",
+        "The following can help you feel positive about life"
+      ],
+      "items": [
+        {
+          "n": 58,
+          "answer": "F",
+          "exp": "引出下文使生活更积极的几个方法。"
+        },
+        {
+          "n": 59,
+          "answer": "D",
+          "exp": "根据有限食材创造新食物，尝试新事物令人兴奋。"
+        },
+        {
+          "n": 60,
+          "answer": "A",
+          "exp": "承接前句的担忧，说明人人有时都会如此。"
+        },
+        {
+          "n": 61,
+          "answer": "B",
+          "exp": "本段建议与积极的人相处，小标题选寻找积极的朋友。"
+        },
+        {
+          "n": 62,
+          "answer": "E",
+          "exp": "志愿服务是帮助他人的具体方式。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "体重管理与中国画",
+      "passage": "句子翻译（68—72题每题填入两个词；73—82题为短文语法填空）：\n68. 有很多管理好体重的方法。(68) many ways to manage our weight.\n69. 第一，均衡饮食很重要。First, (69) to have a balanced diet.\n70. 第二，锻炼也有帮助。Second, doing exercise (70) too. It burns calories.\n71. 第三，别忘了阅读食品包装上的营养信息。Third, (71) to read the nutritional information on food packaging. Then we can make good food choices.\n72. 让我们管理好体重，保持健康。Let’s manage our weight (72) healthy!\nDo you know about Chinese painting? It is an important part of traditional Chinese culture. It (73) (have) a long history and fine traditions in the field of art in the world. (74) (draw) a Chinese painting, you need a writing brush, ink (墨), rice paper, and ink stone. Especially, rice paper (xuan paper) is the best tool for Chinese painting because it allows the writing brush, wet with Chinese ink and held in a well-trained hand to move (75) (free) on it. Three main subjects of Chinese painting are human figures (人物) landscapes, and birds and (76) (flower). For example, the painting of ladies, the painting of mountains, and the painting of insects and fish. Figure painting became highly (77) (develop) during the Tang dynasty. And landscape painting (78) (reach) its height during the Song dynasty. Two main techniques (技巧) can be found in Chinese painting. One (79) (be) gongbi often referred to as “fine-line” painting. This style of painting pays close attention to detail. Very often it (80) (use) to draw people or animals. The other is freehand style, referred to as “xieyi” It pays more attention to expressing an (81) (artist) feelings. Artists often use this technique in landscape paintings. Chinese paintings do not try to draw the out-looking of a subject, but (82) (it) nature or character. Every area of the painting is interesting to the eye.",
+      "items": [
+        {
+          "n": 68,
+          "answer": "There are",
+          "exp": "There are 表示有……，与复数 ways 一致。"
+        },
+        {
+          "n": 69,
+          "answer": "it's important",
+          "exp": "It’s important to do 表示做某事重要。"
+        },
+        {
+          "n": 70,
+          "answer": "is helpful",
+          "exp": "doing exercise 作主语视为单数，用 is helpful。"
+        },
+        {
+          "n": 71,
+          "answer": "don't forget",
+          "exp": "否定祈使句 don’t forget。"
+        },
+        {
+          "n": 72,
+          "answer": "to keep",
+          "exp": "不定式 to keep 表示保持健康的目的。"
+        },
+        {
+          "n": 73,
+          "answer": "has",
+          "exp": "It 后一般现在时用 has。"
+        },
+        {
+          "n": 74,
+          "answer": "To draw",
+          "exp": "句首不定式 To draw 表示作画目的。"
+        },
+        {
+          "n": 75,
+          "answer": "freely",
+          "exp": "修饰 move 用副词 freely。"
+        },
+        {
+          "n": 76,
+          "answer": "flowers",
+          "exp": "花与鸟并列，用 flowers。"
+        },
+        {
+          "n": 77,
+          "answer": "developed",
+          "exp": "highly developed 表示高度发展。"
+        },
+        {
+          "n": 78,
+          "answer": "reached",
+          "exp": "during the Song dynasty 提示一般过去时 reached。"
+        },
+        {
+          "n": 79,
+          "answer": "is",
+          "exp": "One 作主语用 is。"
+        },
+        {
+          "n": 80,
+          "answer": "is used",
+          "exp": "这种画法被用于……，用被动语态 is used。"
+        },
+        {
+          "n": 81,
+          "answer": "artist's",
+          "exp": "修饰 feelings 用名词所有格 artist’s。"
+        },
+        {
+          "n": 82,
+          "answer": "its",
+          "exp": "修饰 nature 用形容词性物主代词 its。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 83,
+      "score": 25,
+      "prompt": "老师 Lucy 鼓励大家记录课堂故事、班级活动、师生趣事等校园生活，共同编写 Our Stories。请以 A(n) ______ Story 为题写约80词短文：补全标题，写出发生的事情及感受。不得出现真实姓名和学校名。",
+      "points": [
+        [
+          "补全合适的标题",
+          3
+        ],
+        [
+          "叙述一件校园故事，过程具体",
+          10
+        ],
+        [
+          "表达个人感受",
+          6
+        ],
+        [
+          "结构和语言规范",
+          6
+        ]
+      ],
+      "sample": "An Unforgettable Story\nLast Friday, our class held an English story competition. I was nervous because it was my first time speaking in front of so many people. When I forgot a sentence, our English teacher smiled and encouraged me. My classmates clapped for me, too. I took a deep breath and continued my story. Although I did not win first prize, I felt proud of myself. This experience taught me that courage and support from others can help us overcome difficulties.",
+      "exp": "范文为编写示例，非官方范文。以一般过去时写校园经历，补全标题并清楚表达感受。"
+    }
+  ]
+}

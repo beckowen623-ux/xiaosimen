@@ -1,4 +1,4 @@
-/* 小四门刷题 · 福州人教版 · 纯静态 + localStorage
+/* 初中提分题库 · 人教版 · 纯静态 + localStorage
  * 仿 beckowen623-ux/quiz-bank-app 的结构（懒加载 .js 题库、localStorage 进度、SRS 错题复习），
  * 题型：单选、多选、判断（自动判分）；填空（自动判分）；材料分析 / 论述 / 简答（对照得分点自评）。
  */
@@ -167,7 +167,7 @@ function readProgressBackup(text) {
   if (backup?.app !== 'xiaosimen' || backup.version !== 1 || !validRecords || !validCheckin ||
       !strings(p.studyDays, date) || (p.stage !== undefined && !stage(p.stage)) ||
       (p.resumeByStage !== undefined && !map(p.resumeByStage, stage, value => value === null || id(value)))) {
-    throw new Error('无效的小四门进度备份');
+    throw new Error('无效的题库进度备份');
   }
   return p;
 }
@@ -317,11 +317,11 @@ function loadScript(src) {
   return loadedScripts.get(src);
 }
 async function ensureBanks(subjectKeys) {
-  await Promise.all(subjectKeys.map(key => loadScript(`./data/${key}.js?v=7`)));
+  await Promise.all(subjectKeys.map(key => loadScript(`./data/${key}.js?v=8`)));
   const banks = window.XIAOSIMEN_BANKS || {};
   const missing = subjectKeys.filter(key => !banks[key]?.questions?.length);
   if (missing.length) {
-    missing.forEach(key => loadedScripts.delete(`./data/${key}.js?v=7`));
+    missing.forEach(key => loadedScripts.delete(`./data/${key}.js?v=8`));
     throw new Error('题库内容不完整');
   }
   return banks;
@@ -759,8 +759,8 @@ redeemForm.addEventListener('submit', async event => {
     const data = await response.json();
     if (!response.ok || !data.ok) {
       const messages = {
-        DEVICE_LIMIT: '这个兑换码在小四门已激活两个浏览器。',
-        INVALID_CODE: '兑换码无效，或不适用于小四门。',
+        DEVICE_LIMIT: '这个兑换码在初中提分题库已激活两个浏览器。',
+        INVALID_CODE: '兑换码无效，或不适用于初中提分题库。',
         INVALID_REFERRAL: '邀请码有误，请核对或留空后继续。',
         REFERRAL_REQUIRED: '这是好友价兑换码，请填写邀请你的朋友的邀请码（ALIX- 开头，问朋友要）。',
         RATE_LIMITED: '尝试次数太多，请 15 分钟后再试。',
@@ -774,7 +774,7 @@ redeemForm.addEventListener('submit', async event => {
     unlockDialog.close();
     renderHome('homeTitle');
     void refreshReferralProfile();
-    toast('已解锁小四门完整版。');
+    toast('已解锁初中提分题库完整版。');
   } catch {
     redeemMessage.textContent = '兑换服务暂时不可用，请稍后再试。';
   } finally {
@@ -814,10 +814,10 @@ async function shareDailyQuestion(button) {
   if (!question) return;
   const url = new URL(location.pathname, location.origin);
   url.searchParams.set('from', 'daily-share');
-  const text = `小四门每日一题 · ${question.subjectLabel || SUBJECTS[question.subject]?.label || ''}\n${question.stem}\n${url.href}`;
+  const text = `初中提分每日一题 · ${question.subjectLabel || SUBJECTS[question.subject]?.label || ''}\n${question.stem}\n${url.href}`;
   button.disabled = true;
   try {
-    if (navigator.share) await navigator.share({ title: '小四门每日一题', text });
+    if (navigator.share) await navigator.share({ title: '初中提分每日一题', text });
     else await navigator.clipboard.writeText(text);
     trackVisit('daily_share');
     if (!hasFullAccess()) {
@@ -1105,7 +1105,7 @@ function renderHome(focus = '') {
   byId('headerSearch').hidden = false;
   view.innerHTML = `
     <section class="card national-entry">
-      <div><h2>📘 中考英语真题 · 原卷免费看</h2><p class="muted">福建 2025、2026 整卷，手机上按中考题型刷，每题有 Claude 解析；各科原卷免费看、免费打印。</p></div>
+      <div><h2>📘 中考英语真题 · 原卷免费看</h2><p class="muted">福建等地 15 套英语真题、847 道已整理题，按中考题型刷，配中文解析；已提供的各科原卷免费看、免费打印。</p></div>
       <a class="btn primary" href="#national">${hasFullAccess() ? '去刷题 →' : '免费看 / 试做 →'}</a>
     </section>
     ${trialDays ? accessNotice : ''}
@@ -1832,7 +1832,7 @@ importInput.addEventListener('change', async () => {
     showImportMessage(`备份包含 ${count} 道作答记录。确认后将覆盖当前网址的本机进度。`, true);
   } catch {
     if (revision !== importRevision) return;
-    showImportMessage('无法读取此备份，请选择从小四门刷题下载的 JSON 文件。');
+    showImportMessage('无法读取此备份，请选择从初中提分题库下载的 JSON 文件。');
   }
 });
 byId('cancelImport').addEventListener('click', () => { importProgress = null; showImportMessage(); });
@@ -1846,7 +1846,7 @@ byId('confirmImport').addEventListener('click', () => {
   toast('学习进度已导入。');
 });
 byId('resetBtn').addEventListener('click', () => {
-  if (!confirm('确定清空当前浏览器的小四门答题、收藏和打卡记录？')) return;
+  if (!confirm('确定清空当前浏览器的题库答题、收藏和打卡记录？')) return;
   const done = persist(() => {
     saveProgress({ banks: {}, studyDays: [], stage: state.stage });
     localStorage.removeItem(GROWTH_KEY);

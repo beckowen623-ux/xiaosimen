@@ -1,0 +1,527 @@
+{
+  "id": "sx-2026-english",
+  "region": "陕西",
+  "year": 2026,
+  "title": "2026 年陕西中考英语",
+  "source": "2026年陕西中考英语试题及参考答案",
+  "note": "听力1—20题未收；46—50题配套参考答案缺失，暂不收；天气图表已转文字。",
+  "sections": [
+    {
+      "type": "完形填空",
+      "title": "手套Greenberg",
+      "passage": "Michael Greenberg lived in a large, busy city. Every day he walked fast to work and hardly looked at other people in the street.\nOne (21) morning, Michael came out of his house later than usual. He had to (22), or he would be late for work. Around the corner, he ran into an old man and the (23) fell down. Michael stopped to help him. He noticed that the old man didn’t have warm clothes and his (24) were blue with cold! To warm the man’s hands Michael (25) his gloves and gave them to the old man. The old man was amazed and he (26) Michael. That evening, Michael had no gloves. His hands got very cold. And he noticed some other (27) and homeless people with no gloves, too. Michael wanted to (28) them, so he went to a store and bought some gloves.\nThe next morning, he saw a woman with two (29) in the street. They all had no gloves. Quickly, he opened his bag and took out some. The woman didn’t have (30) for gloves, so she said no. However, Michael still put the gloves on their hands. The gloves were very big for the children, but they were (31) with the gloves and expressed their thanks to him. That evening, Michael bought more gloves of different (32)—big for adults and smaller for children. The next day he gave them all away. After that, he always had gloves in his bag in winter. The homeless people soon knew Michael well. They called him “(33)” Greenberg.\nAnd so, for more than 25 years, Michael gave gloves to the poor people in the city. The name Gloves Greenberg became so (34) and more people took Michael’s example. A pair of gloves is a small thing, but it can make a (35) to the people in the city!",
+      "items": [
+        {
+          "n": 21,
+          "options": [
+            "winter",
+            "summer",
+            "spring",
+            "autumn"
+          ],
+          "answer": "A",
+          "exp": "寒冷且手冻青，故事发生在冬天。"
+        },
+        {
+          "n": 22,
+          "options": [
+            "wait",
+            "hurry",
+            "call",
+            "stand"
+          ],
+          "answer": "B",
+          "exp": "出门晚需赶紧，用 hurry。"
+        },
+        {
+          "n": 23,
+          "options": [
+            "man",
+            "woman",
+            "boy",
+            "girl"
+          ],
+          "answer": "A",
+          "exp": "撞到老人，摔倒的也是 man。"
+        },
+        {
+          "n": 24,
+          "options": [
+            "feet",
+            "legs",
+            "hands",
+            "ears"
+          ],
+          "answer": "C",
+          "exp": "给手套暖手，冻青的是 hands。"
+        },
+        {
+          "n": 25,
+          "options": [
+            "took off",
+            "threw away",
+            "put on",
+            "got back"
+          ],
+          "answer": "A",
+          "exp": "把自己的手套脱下给老人，took off。"
+        },
+        {
+          "n": 26,
+          "options": [
+            "reminded",
+            "refused",
+            "forgot",
+            "thanked"
+          ],
+          "answer": "D",
+          "exp": "得到帮助应表示感谢 thanked。"
+        },
+        {
+          "n": 27,
+          "options": [
+            "poor",
+            "strong",
+            "famous",
+            "young"
+          ],
+          "answer": "A",
+          "exp": "poor and homeless 表示贫穷无家可归的人。"
+        },
+        {
+          "n": 28,
+          "options": [
+            "believe",
+            "teach",
+            "remember",
+            "help"
+          ],
+          "answer": "D",
+          "exp": "买手套是想帮助 help 他们。"
+        },
+        {
+          "n": 29,
+          "options": [
+            "children",
+            "brothers",
+            "sisters",
+            "friends"
+          ],
+          "answer": "A",
+          "exp": "后文说手套对 children 太大，故这里为孩子。"
+        },
+        {
+          "n": 30,
+          "options": [
+            "space",
+            "time",
+            "money",
+            "luck"
+          ],
+          "answer": "C",
+          "exp": "女人以为要付钱而拒绝，money。"
+        },
+        {
+          "n": 31,
+          "options": [
+            "patient",
+            "happy",
+            "bored",
+            "careless"
+          ],
+          "answer": "B",
+          "exp": "得到手套并感谢，说明高兴 happy。"
+        },
+        {
+          "n": 32,
+          "options": [
+            "materials",
+            "colors",
+            "sizes",
+            "shapes"
+          ],
+          "answer": "C",
+          "exp": "成人大、儿童小，指不同尺码 sizes。"
+        },
+        {
+          "n": 33,
+          "options": [
+            "Shoes",
+            "Gloves",
+            "Glasses",
+            "Socks"
+          ],
+          "answer": "B",
+          "exp": "长期送手套，获得 Gloves Greenberg 称号。"
+        },
+        {
+          "n": 34,
+          "options": [
+            "long",
+            "strange",
+            "popular",
+            "unknown"
+          ],
+          "answer": "C",
+          "exp": "人们效仿，称号变得受欢迎 popular。"
+        },
+        {
+          "n": 35,
+          "options": [
+            "sudden change",
+            "new start",
+            "clear mark",
+            "big difference"
+          ],
+          "answer": "D",
+          "exp": "make a big difference 表示产生很大影响。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "春假天气计划",
+          "passage": "Li Ming’s parents work in a company that offers the spring break. The spring break is a one-week holiday. So Li Ming’s mom and dad are on vacation from work all week. They want to plan all kinds of fun things to do, like biking, hiking, fishing, swimming and badminton. They’re hoping for some warm, enjoyable weather without rain. However, they just cannot decide which day to do each activity. So they decided to check the weather forecast from a weather app on the mobile phone before making some final plans.\nTHE FIVE-DAY FORECAST\nMon.: a beauty with no clouds; high of 28°C.\nTue.: partly cloudy with a 70% chance of afternoon rainstorms; high of 27°C.\nWed.: rainy until afternoon; then clearing and cooler with a high of 21°C.\nThur.: partly sunny with a high of 16°C.\nFri.: partly cloudy with a high of 18°C.\nHiking: the activity of taking long walks in the mountains or countryside.",
+          "items": [
+            {
+              "n": 36,
+              "stem": "Where did Li Ming’s parents find the weather report according to the passage?",
+              "options": [
+                "In the newspaper.",
+                "On the mobile phone.",
+                "On the smartwatch.",
+                "On the computer."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "首段说明在手机天气应用查询。"
+            },
+            {
+              "n": 37,
+              "stem": "What’s the weather like on Monday?",
+              "options": [
+                "Sunny.",
+                "Rainy.",
+                "Cloudy.",
+                "Rainstormy."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "周一无云，天气晴朗。"
+            },
+            {
+              "n": 38,
+              "stem": "They will probably go hiking on ____.",
+              "options": [
+                "Monday and Tuesday",
+                "Wednesday and Thursday",
+                "Monday and Wednesday",
+                "Thursday and Friday"
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "周四、周五无雨且气温较凉，适宜徒步。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "怎样选择英语读物",
+          "passage": "Do you like reading? Do you often read English stories, poems, short stories or any other books? As we all know, reading plays a very important role in English learning. It will help build your vocabulary, develop your sense of the English language, and open your mind. However, not all books are proper for you. If you are a beginner who learns English, here are some general rules to choose a book. You should look for books for learners of English. To start with, look for beginning level books: Level 1 or Stage 1. Later, When your English becomes better, you can move on to a higher level. Ask your teacher where to find the books for your level. There may be some in the school or classroom library, You may also find books for learners in bookstores or public libraries. Then, choose a book that interests you. Your teacher and friends may have good ideas. The important thing is to choose a book that you want to read. At the end of this unit,there is a list of books. Before you choose a book, find out if it is proper for you. Follow these steps to preview (预览) it: • Read the title, back cover and first few pages. What is the book about? Is it interesting? Look at the first few pages again. How many words are new for you? ) No new words This book may be too easy for you. ) 1-5 new words on each page This book is the right level for you. ) 6 or more new words on each page This book may be too difficult for you. Note: You may choose from these books, or you may choose different books.",
+          "items": [
+            {
+              "n": 39,
+              "stem": "How many advantages of reading English books are mentioned in Paragraph 1?",
+              "options": [
+                "One.",
+                "Two.",
+                "Three.",
+                "Four."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "首段列出增加词汇、培养语感、开阔思维三个好处。"
+            },
+            {
+              "n": 40,
+              "stem": "Which paragraph or paragraphs tell(s) us the general rules to choose a book?",
+              "options": [
+                "Paragraph 2.",
+                "Paragraphs 2 and 3.",
+                "Paragraph 4.",
+                "Paragraph 4 and the note."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "第二段选适当级别，第三段选感兴趣的书。"
+            },
+            {
+              "n": 41,
+              "stem": "According to the passage, the book with ____ new words on each page is proper for Liu Han, an English beginner.",
+              "options": [
+                "without any new words",
+                "with 3 or 4 new words",
+                "with 6 new words",
+                "with more than 6 new words"
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "每页1—5个生词属于合适级别，3或4符合。"
+            },
+            {
+              "n": 42,
+              "stem": "Where is the passage probably taken from?",
+              "options": [
+                "A novel.",
+                "A poem collection.",
+                "A textbook.",
+                "A story book."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "文中 this unit 和学习指导提示来自教材。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "小象Natumi",
+          "passage": "This is a true story of a four-legged hero as well as animal friendship and care. Everything took place in Nairobi, Kenya—a country in East Africa.\nWhen she was just a few weeks old, a small elephant sadly lost her mother to poacher attack. Luckily, the little elephant was found by a farmer and taken to an elephant orphanage where she was named Natumi. There, at the David Sheldrick Wildlife Trust, Natumi was safe, but very scared and shy. Soon, however, new orphaned baby elephants began to arrive at the shelter. At first, Natumi hid behind her keeper’s legs, but it soon became clear that the other baby elephants needed someone to depend on. They were very young and many of them had injuries like wounds and scratches. To everyone’s surprise, shy little Natumi stepped up to the task. She began to act like a big sister to the seven other elephants, keeping them calm and playing with them in the surrounding bush. Guided by Natumi, the elephants had soon formed their own loving family. In the end, the new family of elephants was strong and healthy enough to return to the wild—but the workers at the shelter would never forget a little elephant named Natumi who made it possible.\nAn orphan is an animal or human child whose parents are both dead. An orphanage is a place, also called shelter, where orphans live and are cared for.",
+          "items": [
+            {
+              "n": 43,
+              "stem": "Which is the correct order of the story about Natumi? ①helped form a loving family ②began to look after others ③lost her mother ④returned to the wild ⑤was taken to the shelter ⑥met new orphaned baby elephants",
+              "options": [
+                "③④②⑤⑥①",
+                "③⑥②①⑤④",
+                "②⑥③①⑤④",
+                "③⑤⑥②①④"
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "失母、被送庇护所、遇到其他幼象、照顾它们、组成家庭、重返野外。"
+            },
+            {
+              "n": 44,
+              "stem": "____ are in the new family.",
+              "options": [
+                "Natumi and her keepers",
+                "Natumi and the seven other elephants",
+                "The workers and the seven other elephants",
+                "The workers and all the elephants"
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "新家庭由 Natumi 和七头其他小象组成。"
+            },
+            {
+              "n": 45,
+              "stem": "What does the underlined word “it” in the last sentence refer to?",
+              "options": [
+                "The baby elephants being safe at the shelter.",
+                "The seven elephants playing with Natumi.",
+                "The elephants in the story going back to the wild.",
+                "The workers at the shelter remembering a little elephant."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "it 指前句象群强壮健康后重返野外的结果。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "乘火车旅行",
+      "groupId": "sx-2026-english-fill-51",
+      "passage": "People like to go on a trip when they are on holiday. If you take one, how will you travel? Would you choose (51) go travelling by train, plane, ship, car, or even (52) foot? Perhaps, taking the train is (53) good way. During the train ride, you can enjoy the beautiful view out of the window or you can have a chat, play games, do some reading (54) so on. So every year, many people travel by train. But how much (55) you know about the train or railway? The passage below offers you some information.",
+      "items": [
+        {
+          "n": 51,
+          "answer": "to",
+          "exp": "choose to do 表示选择做。"
+        },
+        {
+          "n": 52,
+          "answer": "on",
+          "exp": "on foot 表示步行。"
+        },
+        {
+          "n": 53,
+          "answer": "a",
+          "exp": "a good way 表示一种好方式。"
+        },
+        {
+          "n": 54,
+          "answer": "and",
+          "exp": "and so on 表示等等。"
+        },
+        {
+          "n": 55,
+          "answer": "do/can/did",
+          "exp": "疑问句 know 前可用 do、can，过去语境 did 也为参考答案认可。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "铁路博物馆",
+      "groupId": "sx-2026-english-fill-56",
+      "passage": "词库：you / build / read / important / museum / achieve / difficult / nation / show / visit (n.)\nHave you ever traveled by train? Do you like the feeling of a railway journey? Do you want to see how historic items tell the story and legend of China’s railway development? If (56) answer is “Yes” to our questions, the Zhengyangmen Exhibition Hall of the China Railway (57) is a good place for you to visit. It stands to the southeast of Tian’anmen Square.\nOur hall was (58) from a century-old railway station. Over 100 years ago, it was the starting point of the Beijing-Fengtian Railway. Today, a century later, it has been turned into an exhibition hall of the museum. It (59) the world the great railway development of China. Here in this hall, you can learn how Mr. Zhan Tianyou (1861—1919)—our (60) railway pioneer—realized his railroad dream in those hard times. More (61), you will see how today’s railway engineers and scientists put Zhan Tianyou’s wisdom together with new ideas and technology to solve (62) problems of all times for high-speed railway.\nAfter the (63), many people have expressed that they had the feeling of travelling on the “train through time”. They say that exhibits as well as the way they’re organized “really bridge the time and space”, and that they “have (64) a century-old story of China’s railway progress”. Seeing is believing! We are here waiting for you to see the changes and (65) of China’s railway during a period of a century!",
+      "items": [
+        {
+          "n": 56,
+          "answer": "your",
+          "exp": "修饰 answer 用 your。"
+        },
+        {
+          "n": 57,
+          "answer": "Museum",
+          "exp": "专名 China Railway Museum 中 Museum 大写。"
+        },
+        {
+          "n": 58,
+          "answer": "built",
+          "exp": "被动语态 was built。"
+        },
+        {
+          "n": 59,
+          "answer": "shows",
+          "exp": "It 作主语用 shows。"
+        },
+        {
+          "n": 60,
+          "answer": "national/nation's",
+          "exp": "国家的铁路先驱，用 national 或 nation’s。"
+        },
+        {
+          "n": 61,
+          "answer": "importantly",
+          "exp": "More importantly 表示更重要的是。"
+        },
+        {
+          "n": 62,
+          "answer": "difficult",
+          "exp": "修饰 problems 用形容词 difficult。"
+        },
+        {
+          "n": 63,
+          "answer": "visit",
+          "exp": "After the visit，visit 作名词。"
+        },
+        {
+          "n": 64,
+          "answer": "read",
+          "exp": "have 后用 read 的过去分词 read。"
+        },
+        {
+          "n": 65,
+          "answer": "achievement/achievements",
+          "exp": "与 changes 并列，用名词 achievement 或 achievements。"
+        }
+      ]
+    },
+    {
+      "type": "回答问题",
+      "title": "我爱橙色帐篷",
+      "passage": "I Love Our Orange Tent\nI love our orange tent.\nWe plant it like a flower in the field.\nThe grass smells sweet inside it.\nAnd at night\nwhen we’re lying in it,\nI hear the owl crying.\n\nWhen the wind blows,\nmy tent flaps\nlike a flying bird.\nAnd the rain\npatter down on it\nwith tiny footsteps.\n\nI feel warm and safe\ninside my tent.\n\nBut when the sun shines,\nthat’s when I love it best!\n\nWhen I wake up\nand the sun is shining,\nit pours in like yellow honey.\nIt glows like gold.\nI love our orange tent.\n\nby Berlie Doherty",
+      "items": [
+        {
+          "n": 66,
+          "stem": "What kind of text is the material? It’s a(n) ____.",
+          "answer": "poem",
+          "exp": "分行、有节奏的文字形式是诗歌 poem。"
+        },
+        {
+          "n": 67,
+          "stem": "Who is the writer?",
+          "answer": "Berlie Doherty",
+          "exp": "诗末署名为 Berlie Doherty。"
+        },
+        {
+          "n": 68,
+          "stem": "Which word in the material means “摇摆；晃动”?",
+          "answer": "flaps / flap",
+          "exp": "风吹时帐篷晃动，原文 flaps。"
+        },
+        {
+          "n": 69,
+          "stem": "How do “I” in the material feel in the tent on rainy days?",
+          "answer": "warm and safe",
+          "exp": "诗中直接写 I feel warm and safe。"
+        },
+        {
+          "n": 70,
+          "stem": "What do you think “I” truly love?（不超过8词）",
+          "answer": "The beauty of nature and life.",
+          "exp": "结合草香、鸟声、风雨阳光，表达对自然和生活的喜爱。"
+        }
+      ]
+    },
+    {
+      "type": "情景交际",
+      "items": [
+        {
+          "n": 71,
+          "stem": "[A month before the Spring Festival, Peter visits Wang Tao.]\nPeter: Wow! So many things on your desk: scissors, glue, and red paper! (71)?\nWang: I’m making a handicraft for the Spring Festival as my art homework.\nPeter: Sounds interesting! What are you going to make?\nWang: I’m going to make a really big Chinese character “Fu” in paper-cut style. “Fu” means luck, you know.\nPeter: Your idea is really special. (72)?\nWang: Because I want my big “Fu” to stand at the door of my classroom to show good wishes.\nPeter: Wow! That’s meaningful. You’re so creative. Maybe my father can use your idea in his work.\nWang: In his work? (73)?\nPeter: He works at a big shopping center here. He says he wants some creative ideas to welcome customers during the Spring Festival.\nWang: Oh! I think we can help to make horses and lanterns besides “Fu” for your father. What do you think about my idea?\nPeter: (74). Thank you ever so much. I’m sure my father will like your idea.\nWang: You’re welcome. I’m happy that (75).\n补全第 71 空。",
+          "answer": "What are you making now",
+          "exp": "回答正在做手工，应问正在做什么。"
+        },
+        {
+          "n": 72,
+          "stem": "[A month before the Spring Festival, Peter visits Wang Tao.]\nPeter: Wow! So many things on your desk: scissors, glue, and red paper! (71)?\nWang: I’m making a handicraft for the Spring Festival as my art homework.\nPeter: Sounds interesting! What are you going to make?\nWang: I’m going to make a really big Chinese character “Fu” in paper-cut style. “Fu” means luck, you know.\nPeter: Your idea is really special. (72)?\nWang: Because I want my big “Fu” to stand at the door of my classroom to show good wishes.\nPeter: Wow! That’s meaningful. You’re so creative. Maybe my father can use your idea in his work.\nWang: In his work? (73)?\nPeter: He works at a big shopping center here. He says he wants some creative ideas to welcome customers during the Spring Festival.\nWang: Oh! I think we can help to make horses and lanterns besides “Fu” for your father. What do you think about my idea?\nPeter: (74). Thank you ever so much. I’m sure my father will like your idea.\nWang: You’re welcome. I’m happy that (75).\n补全第 72 空。",
+          "answer": "Why do you want to make it so big",
+          "exp": "Because 说明做大福字的原因，用 Why 提问。"
+        },
+        {
+          "n": 73,
+          "stem": "[A month before the Spring Festival, Peter visits Wang Tao.]\nPeter: Wow! So many things on your desk: scissors, glue, and red paper! (71)?\nWang: I’m making a handicraft for the Spring Festival as my art homework.\nPeter: Sounds interesting! What are you going to make?\nWang: I’m going to make a really big Chinese character “Fu” in paper-cut style. “Fu” means luck, you know.\nPeter: Your idea is really special. (72)?\nWang: Because I want my big “Fu” to stand at the door of my classroom to show good wishes.\nPeter: Wow! That’s meaningful. You’re so creative. Maybe my father can use your idea in his work.\nWang: In his work? (73)?\nPeter: He works at a big shopping center here. He says he wants some creative ideas to welcome customers during the Spring Festival.\nWang: Oh! I think we can help to make horses and lanterns besides “Fu” for your father. What do you think about my idea?\nPeter: (74). Thank you ever so much. I’m sure my father will like your idea.\nWang: You’re welcome. I’m happy that (75).\n补全第 73 空。",
+          "answer": "Where does he work",
+          "exp": "下句介绍工作地点，问 Where。"
+        },
+        {
+          "n": 74,
+          "stem": "[A month before the Spring Festival, Peter visits Wang Tao.]\nPeter: Wow! So many things on your desk: scissors, glue, and red paper! (71)?\nWang: I’m making a handicraft for the Spring Festival as my art homework.\nPeter: Sounds interesting! What are you going to make?\nWang: I’m going to make a really big Chinese character “Fu” in paper-cut style. “Fu” means luck, you know.\nPeter: Your idea is really special. (72)?\nWang: Because I want my big “Fu” to stand at the door of my classroom to show good wishes.\nPeter: Wow! That’s meaningful. You’re so creative. Maybe my father can use your idea in his work.\nWang: In his work? (73)?\nPeter: He works at a big shopping center here. He says he wants some creative ideas to welcome customers during the Spring Festival.\nWang: Oh! I think we can help to make horses and lanterns besides “Fu” for your father. What do you think about my idea?\nPeter: (74). Thank you ever so much. I’m sure my father will like your idea.\nWang: You’re welcome. I’m happy that (75).\n补全第 74 空。",
+          "answer": "That’s a good idea",
+          "exp": "征求意见后给予正面评价。"
+        },
+        {
+          "n": 75,
+          "stem": "[A month before the Spring Festival, Peter visits Wang Tao.]\nPeter: Wow! So many things on your desk: scissors, glue, and red paper! (71)?\nWang: I’m making a handicraft for the Spring Festival as my art homework.\nPeter: Sounds interesting! What are you going to make?\nWang: I’m going to make a really big Chinese character “Fu” in paper-cut style. “Fu” means luck, you know.\nPeter: Your idea is really special. (72)?\nWang: Because I want my big “Fu” to stand at the door of my classroom to show good wishes.\nPeter: Wow! That’s meaningful. You’re so creative. Maybe my father can use your idea in his work.\nWang: In his work? (73)?\nPeter: He works at a big shopping center here. He says he wants some creative ideas to welcome customers during the Spring Festival.\nWang: Oh! I think we can help to make horses and lanterns besides “Fu” for your father. What do you think about my idea?\nPeter: (74). Thank you ever so much. I’m sure my father will like your idea.\nWang: You’re welcome. I’m happy that (75).\n补全第 75 空。",
+          "answer": "I can help you and your father",
+          "exp": "高兴的原因可为帮到对方和父亲，答案开放。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 76,
+      "score": 15,
+      "prompt": "假如你是张林，在学校公告栏看到英国交换生 Jack 的交友启事，想与他成为朋友并帮助他了解陕西。请写不少于70词邮件：介绍自己（擅长事项、爱好等）；分享陕西的信息（如兵马俑、秦腔等）；表达交友意愿。不得出现真实个人信息。开头需补全称呼，正文开头：I’d like to be your friend. I’m Zhang Lin. 末尾补全落款。",
+      "points": [
+        [
+          "介绍自己",
+          4
+        ],
+        [
+          "提供陕西相关信息",
+          5
+        ],
+        [
+          "交友意愿与邮件格式",
+          4
+        ],
+        [
+          "语言规范",
+          2
+        ]
+      ],
+      "sample": "Dear Jack,\nI’d like to be your friend. I’m Zhang Lin. I am a middle school student in Shaanxi. I enjoy reading and playing basketball, and I am good at English. I would be happy to help you learn about our province. Shaanxi has a long history and many interesting places. The Terracotta Army is a great place to visit. You can also enjoy Qinqiang Opera and try delicious local food. I hope we can share our interests and learn from each other. Please write back soon.\nYours,\nZhang Lin",
+      "exp": "范文为编写示例，非官方范文。回应启事的自我介绍和陕西介绍两项要求，并补齐邮件称呼、落款。"
+    }
+  ]
+}

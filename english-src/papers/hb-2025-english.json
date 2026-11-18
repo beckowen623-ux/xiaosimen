@@ -1,0 +1,555 @@
+{
+  "id": "hb-2025-english",
+  "region": "河北",
+  "year": 2025,
+  "title": "2025 年河北中考英语",
+  "source": "2025年河北中考英语试题及参考答案",
+  "note": "听力 1—30 题未收录；公告和作文采访记录已转为文字。",
+  "sections": [
+    {
+      "type": "完形填空",
+      "title": "先弄清问题",
+      "passage": "Mr. Johnson was an excellent maths teacher. His students would never (31) their first class he gave them. He always wrote the numbers 2 and 4 on the blackboard in the first class to his (32) students, and asked them, “What is the answer?” Whenever he asked this question, some of his students said 6 was the (33) . Some others thought that 2 was more proper and some of them (34) 8 as the answer. Moreover, there were still others who were just (35) on their seats without a word. While the students were discussing what the answer was, Mr. Johnson always (36) their reply patiently. Finally, he sighed (叹气) and said, “Your (37) is useless because none of you focused your attention on the point: What (38) the question is asked about. Did I ask you to do anything about the two (39) ? Were they asked to be added, subtracted (减) or to do some other calculations (计算)? If you don’t know the question exactly, how can you give a (40) answer?” So let that be a lesson to all of us: It is important to know what the question is before we try to find out the key.",
+      "items": [
+        {
+          "n": 31,
+          "stem": "",
+          "options": [
+            "face",
+            "accept",
+            "forget",
+            "cancel"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "学生永远不会忘记第一节课，用 forget。"
+        },
+        {
+          "n": 32,
+          "stem": "",
+          "options": [
+            "new",
+            "wise",
+            "famous",
+            "honest"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "第一节课面向新学生，用 new。"
+        },
+        {
+          "n": 33,
+          "stem": "",
+          "options": [
+            "age",
+            "key",
+            "time",
+            "score"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "6 是他们认为的答案，key 指答案。"
+        },
+        {
+          "n": 34,
+          "stem": "",
+          "options": [
+            "caught",
+            "chose",
+            "covered",
+            "corrected"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "另外一些人选择 8，用 chose。"
+        },
+        {
+          "n": 35,
+          "stem": "",
+          "options": [
+            "jumping",
+            "landing",
+            "sitting",
+            "walking"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "坐在座位上不说话，用 sitting。"
+        },
+        {
+          "n": 36,
+          "stem": "",
+          "options": [
+            "learned from",
+            "dreamed of",
+            "believed in",
+            "waited for"
+          ],
+          "answer": "D",
+          "kp": "细节理解",
+          "exp": "老师耐心等待学生的回答，用 waited for。"
+        },
+        {
+          "n": 37,
+          "stem": "",
+          "options": [
+            "invention",
+            "translation",
+            "collection",
+            "discussion"
+          ],
+          "answer": "D",
+          "kp": "细节理解",
+          "exp": "学生只讨论答案却没弄清问题，因此 discussion 无用。"
+        },
+        {
+          "n": 38,
+          "stem": "",
+          "options": [
+            "usually",
+            "exactly",
+            "directly",
+            "suddenly"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "exactly 表示问题究竟问什么。"
+        },
+        {
+          "n": 39,
+          "stem": "",
+          "options": [
+            "numbers",
+            "lines",
+            "letters",
+            "shapes"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "黑板上写的是 2 和 4 两个数，用 numbers。"
+        },
+        {
+          "n": 40,
+          "stem": "",
+          "options": [
+            "quick",
+            "short",
+            "right",
+            "ready"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "不弄清题意就无法给出正确答案，用 right。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "美好事情罐",
+      "passage": "There is a special jug (罐) on our kitchen table. I put some small pieces of paper and a pen next (41) the jug. Anyone in my family is free to write down something good that has happened (42) (recent). With pieces of paper in it, the jug (43) (call) “Good Things Jug”. Many good things happen in a year. At (44) end of the year, we get together to empty the jug. We take (45) (turn) to read the “Good Things” aloud. Some of the things are (46) (interest), some are serious, and some just give hope. Over the past twelve (47) (month), there have been many difficult things in our family. Noticing the “Good Things” has helped us go through the hard time. Here (48) (be) a few things from the “Good Things Jug”: “Jim (49) I went camping with our parents. There we (50) (teach) my pet cat how to clap (拍) with his feet.” “With my parents’ care, I was well again after a serious illness. I’m so (51) (thank) to my parents for their love. It’s the best thing on earth!” “Dad got a better job today!” Our “Good Things Jug” is full (52) love, hope and happiness. The little messages remind (53) (we) that we can always expect good things to come, even during difficult times. Therefore, I encourage you (54) (create) your “Good Things Jug” today. I am sure it (55) (make) a big difference in your future life.",
+      "items": [
+        {
+          "n": 41,
+          "answer": "to",
+          "exp": "next to 为固定搭配，表示在旁边。"
+        },
+        {
+          "n": 42,
+          "answer": "recently",
+          "exp": "修饰 has happened 用副词 recently。"
+        },
+        {
+          "n": 43,
+          "answer": "is called",
+          "exp": "罐子被称为……，用一般现在时的被动语态 is called。"
+        },
+        {
+          "n": 44,
+          "answer": "the",
+          "exp": "at the end of 表示在……结束时。"
+        },
+        {
+          "n": 45,
+          "answer": "turns",
+          "exp": "take turns to do 表示轮流做。"
+        },
+        {
+          "n": 46,
+          "answer": "interesting",
+          "exp": "形容事物有趣用 interesting。"
+        },
+        {
+          "n": 47,
+          "answer": "months",
+          "exp": "twelve 后 month 用复数。"
+        },
+        {
+          "n": 48,
+          "answer": "are",
+          "exp": "Here are a few things，谓语与复数 things 一致。"
+        },
+        {
+          "n": 49,
+          "answer": "and",
+          "exp": "Jim 与 I 并列用 and。"
+        },
+        {
+          "n": 50,
+          "answer": "taught",
+          "exp": "回忆过去露营经历，teach 用过去式 taught。"
+        },
+        {
+          "n": 51,
+          "answer": "thankful",
+          "exp": "be thankful to 表示感激。"
+        },
+        {
+          "n": 52,
+          "answer": "of",
+          "exp": "be full of 表示充满。"
+        },
+        {
+          "n": 53,
+          "answer": "us",
+          "exp": "remind 后作宾语用 us。"
+        },
+        {
+          "n": 54,
+          "answer": "to create",
+          "exp": "encourage sb to do，填不定式 to create。"
+        },
+        {
+          "n": 55,
+          "answer": "will make",
+          "exp": "in your future life 提示将来时 will make。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "校园活动",
+          "passage": "Activity Day is coming. Different activities will be held. If you like doing kung fu, you can come to Ms. Liang in Room 201. If you love music, a concert is waiting for you. It will be held in Room 302. If you like films, you are lucky. Mr. Wang, a film director, will be invited to give a talk in Room 404. And you are welcome to the sports hall to see robots. Ms. Zhang will show you what robots can do. Next Tuesday some visitors from Tianjin will come to our school. We need six students to show them around our school and introduce the history of our school. If you want to be a guide, please go to Mr. Yang in Room 503 before Thursday afternoon.",
+          "items": [
+            {
+              "n": 56,
+              "stem": "Where will the concert be held?",
+              "options": [
+                "In Room 201.",
+                "In Room 302.",
+                "In Room 404.",
+                "In Room 503."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "音乐会在 302 室举行。"
+            },
+            {
+              "n": 57,
+              "stem": "What can students do in the sports hall?",
+              "options": [
+                "Watch a film.",
+                "Give a talk.",
+                "Do kung fu.",
+                "See robots."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "体育馆活动是看机器人。"
+            },
+            {
+              "n": 58,
+              "stem": "Who should you go to if you want to be a guide?",
+              "options": [
+                "Mr. Yang.",
+                "Mr. Wang.",
+                "Ms. Zhang.",
+                "Ms. Liang."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "想当导游应联系 Mr. Yang。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "为社区收集书籍",
+          "passage": "Tim, a 13-year-old boy, got his idea from a TV show. It was about saving books for the community library. Tim wanted to help children in their community to have more chances to read books. He started Saving Books Program. Its goal was to collect books for the local library. Tim went from door to door to get books from the people around. He ended up collecting 260 books. All the books went to the library. “I love to see where the books go, and how people are enjoying them,” Tim said. With the help of his sister, Tim made the program a success. They put up posters (海报) to spread the word: saving books for the local library. Now, Tim is in seventh grade. He has taken the program a step further. He helps in the library when he is free at weekends. His program has inspired (激励) other kids to do more service for their own community. Joe, the librarian, knows how much Tim cares about community service. “In third grade, Tim started Smile Mail. It’s a program in which kids send cheerful gifts to the old. It’s still going strong. He is warm-hearted,” Joe said. “I really like doing community service,” Tim said. “I’m proud of what I have done.”",
+          "items": [
+            {
+              "n": 59,
+              "stem": "What is the goal of Saving Books Program?",
+              "options": [
+                "To find out where books go.",
+                "To send books to the people around.",
+                "To teach people how to read books.",
+                "To collect books for the local library."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "项目目标是为当地的图书馆收集书籍。"
+            },
+            {
+              "n": 60,
+              "stem": "What has Saving Books Program inspired other kids to do?",
+              "options": [
+                "Become librarians.",
+                "Get better grades.",
+                "Write children’s books.",
+                "Do more community service."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "该项目激励其他孩子多参加社区服务。"
+            },
+            {
+              "n": 61,
+              "stem": "Why does Joe mention Smile Mail?",
+              "options": [
+                "To show kids’ love for gifts.",
+                "To give advice to the old.",
+                "To praise Tim for his kindness.",
+                "To explain the value of smile."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "Joe 举 Smile Mail 的例子，是赞扬 Tim 热心善良。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "雄安的清洁能源",
+          "passage": "Have you ever visited Xiong’an Business Service Center? Do you know anything special about it? On top of the center’s six buildings, there are about 28,400 solar panels (太阳能板).They match perfectly with the traditional Chinese design of the buildings. If they were put together, the solar panels would cover an area of 1.4 standard football fields. These panels now can produce 5% of the electricity that is needed for the center. Using local clean energy plays an important role in Xiong’an New Area’s progress. Solar panels which cover some buildings are used to provide electricity in the area. In the future, the solar panel project will produce more electricity. The electricity will first be used by companies in the area, and the rest will be shared. The solar panel project is good for the environment and economy (经济). It not only helps to reduce greenhouse gases (温室气体), but also lowers electricity costs for companies in the area. The project is expected to produce nearly 3.5 million kWh of electricity. This means that about 3,000 tons of greenhouse gases will be avoided every year. There are already a number of projects in the area. These projects use solar power and other clean energy. Two new projects will be started: an energy-saving lighting project and a green heating project. The purpose of the two new projects is to further cut pollution. Xiong’an New Area is on the way to becoming a green modern city.",
+          "items": [
+            {
+              "n": 62,
+              "stem": "What is on top of the center’s six buildings?",
+              "options": [
+                "Solar panels.",
+                "Football fields.",
+                "A modern business office.",
+                "A traditional Chinese garden."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "首段明确说明六座建筑顶部安装了太阳能板。"
+            },
+            {
+              "n": 63,
+              "stem": "What is paragraph 3 mainly about?",
+              "options": [
+                "The ways of saving electricity.",
+                "The advantages of the project.",
+                "The effects of greenhouse gases.",
+                "The costs of running companies."
+              ],
+              "answer": "B",
+              "kp": "主旨大意",
+              "exp": "第三段概述项目的环境和经济优势。"
+            },
+            {
+              "n": 64,
+              "stem": "What is the purpose of the two new projects?",
+              "options": [
+                "To cut pollution.",
+                "To plant more trees.",
+                "To use more energy.",
+                "To produce electricity."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "新节能照明与供暖项目的目的是进一步减少污染。"
+            },
+            {
+              "n": 65,
+              "stem": "Where is the text most probably from?",
+              "options": [
+                "A diary.",
+                "A newspaper.",
+                "A guidebook.",
+                "A storybook."
+              ],
+              "answer": "B",
+              "kp": "推理判断",
+              "exp": "报道雄安清洁能源项目及发展，最可能来自报纸。"
+            }
+          ]
+        },
+        {
+          "label": "D",
+          "title": "牡蛎园丁",
+          "passage": "Some people see oysters (牡蛎) as delicious food. But some raise oysters to clean up the polluted seawater. Amy, a 15-year-old girl, is one of them. She has won a master oyster gardener prize this year. She thinks oysters are really helpful. They are environmental stars. “I knew nothing about oyster gardening when I started in 2022. I learned all of this after I completed a free course about it. The course is about raising oysters in cages (笼子),” Amy says. There used to be lots of oysters in coastal waters. But their numbers have diminished. This is mainly because of some natural disasters. Oyster gardening is a way to help. “Anyone can join,” an oyster gardening researcher Liz Black says. “You don’t have to do a lot to take care of your oysters, but the influence they have on the environment is huge,” Amy says. During the oyster gardening season, Amy and her mom go to the beach. There Amy has nine cages. “Once a week I go out there,” she says. She pulls the cages from the water to check conditions of the oysters. This spring, Amy’s oysters will be big enough to be collected. Amy will go with Liz to pick them up. Oysters that are collected will then be “planted” on the reefs (珊瑚礁). So far, Amy has raised more than 1,500 oysters. She’s a great leader of oyster gardening and a great supporter, too.",
+          "items": [
+            {
+              "n": 66,
+              "stem": "What does Amy think of oysters?",
+              "options": [
+                "Huge.",
+                "Clean.",
+                "Helpful.",
+                "Delicious."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "首段说 Amy 认为牡蛎 really helpful。"
+            },
+            {
+              "n": 67,
+              "stem": "When did Amy get to know about raising oysters?",
+              "options": [
+                "After she joined a research team.",
+                "After she won a competition.",
+                "After she attended a free course.",
+                "After she cleaned up the seawater."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "她在参加免费课程后了解牡蛎养殖。"
+            },
+            {
+              "n": 68,
+              "stem": "What does the underlined word “diminished” in paragraph 3 probably mean?",
+              "options": [
+                "Grown.",
+                "Fallen.",
+                "Disappeared.",
+                "Remained."
+              ],
+              "answer": "B",
+              "kp": "词义猜测",
+              "exp": "过去有很多，如今受自然灾害影响数量减少，diminished 意为 fallen。"
+            },
+            {
+              "n": 69,
+              "stem": "Why does Amy pull the cages out of water weekly?",
+              "options": [
+                "To feed the oysters.",
+                "To mix the oysters.",
+                "To check the oysters.",
+                "To name the oysters."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "每周拉出笼子是检查牡蛎的情况。"
+            },
+            {
+              "n": 70,
+              "stem": "What is the best title for the text?",
+              "options": [
+                "A Cage Maker",
+                "A Master Prize",
+                "An Oyster Festival",
+                "An Oyster Gardener"
+              ],
+              "answer": "D",
+              "kp": "最佳标题",
+              "exp": "全文围绕 Amy 养牡蛎帮助环境，最佳标题为 An Oyster Gardener。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "回答问题",
+      "title": "志愿工作面试建议",
+      "passage": "We may have an interview for our volunteer work. And the following suggestions will help make the interview a success. We should do some research on the volunteer work. We can call the organization or visit its website to find out some information about it. It’s also important for us to think about what questions the interviewers may ask. It will help us to keep the interview going smoothly. When leaving for the interview, we must remember to take everything we need. And we’re supposed to be at the interview about 30 minutes early. It allows us to get ready for the interview. Before we go into the interview room, we can take a deep breath to relax ourselves. When we hear someone ask us to go inside, we can enter the room. We should greet the interviewers with a smile and stand until they ask us to sit down. In answering questions, we had better be confident to show our talent and skills. It’s important to look into the interviewers’ eyes even if we are very nervous and shy. If we can’t understand the interviewers’ questions, it’s OK to ask the interviewers to explain them further. Before the interview is over, the interviewers usually invite us to ask some questions. We can ask a question about the work or the interview. For example, “What kind of training do you offer to volunteers?” We are supposed to thank the interviewers before we leave. With these suggestions, we will have a good chance of getting volunteer work.",
+      "items": [
+        {
+          "n": 71,
+          "stem": "How can we do research on the volunteer work?",
+          "answer": "By calling the organization or visiting its website.",
+          "exp": "第二段给出打电话、访问网站两种调查方式。"
+        },
+        {
+          "n": 72,
+          "stem": "Why are we supposed to be at the interview early?",
+          "answer": "Because it allows us to get ready for the interview.",
+          "exp": "提前到场能为面试做好准备。"
+        },
+        {
+          "n": 73,
+          "stem": "What can we do to relax ourselves before we go into the interview room?",
+          "answer": "We can take a deep breath.",
+          "exp": "进入面试室前可用深呼吸放松自己。"
+        },
+        {
+          "n": 74,
+          "stem": "What should we do if we can’t understand the interviewers’ questions?",
+          "answer": "We should ask the interviewers to explain them further.",
+          "exp": "不理解时应请面试官进一步解释。"
+        },
+        {
+          "n": 75,
+          "stem": "What question do you want to ask the interviewers before the interview is over?（不同于文中的 What kind of training do you offer to volunteers?）",
+          "answer": "When can I get the result of the interview?",
+          "exp": "围绕工作或面试提问，避免照抄文中给出的培训问题。"
+        }
+      ]
+    },
+    {
+      "type": "情景交际",
+      "items": [
+        {
+          "n": 76,
+          "stem": "(Lin arrives at Bob’s home and knocks at the door.) Bob: Who is it? Lin: (76) Bob: (Opening the door) Hi, Lin! Come in, please. Lin: Are you feeling better today, Bob? Bob: (77) I’ll go to school this afternoon. Lin: OK! I’m here to tell you some good news. Bob: (78) Lin: Some famous actors will perform Beijing Opera in our school next Monday. Bob: (79) Lin: And they’ll teach us to perform. Bob: I can’t wait to attend it! Thank you for the news. Lin: (80) Goodbye. Bob: Bye!\n请补全第 76 空。",
+          "answer": "It’s me, Lin!",
+          "exp": "回答 Who is it 时用 It’s me 或 It’s Lin。"
+        },
+        {
+          "n": 77,
+          "stem": "(Lin arrives at Bob’s home and knocks at the door.) Bob: Who is it? Lin: (76) Bob: (Opening the door) Hi, Lin! Come in, please. Lin: Are you feeling better today, Bob? Bob: (77) I’ll go to school this afternoon. Lin: OK! I’m here to tell you some good news. Bob: (78) Lin: Some famous actors will perform Beijing Opera in our school next Monday. Bob: (79) Lin: And they’ll teach us to perform. Bob: I can’t wait to attend it! Thank you for the news. Lin: (80) Goodbye. Bob: Bye!\n请补全第 77 空。",
+          "answer": "Yes, much better.",
+          "exp": "上文询问身体是否好转，此处肯定回答。"
+        },
+        {
+          "n": 78,
+          "stem": "(Lin arrives at Bob’s home and knocks at the door.) Bob: Who is it? Lin: (76) Bob: (Opening the door) Hi, Lin! Come in, please. Lin: Are you feeling better today, Bob? Bob: (77) I’ll go to school this afternoon. Lin: OK! I’m here to tell you some good news. Bob: (78) Lin: Some famous actors will perform Beijing Opera in our school next Monday. Bob: (79) Lin: And they’ll teach us to perform. Bob: I can’t wait to attend it! Thank you for the news. Lin: (80) Goodbye. Bob: Bye!\n请补全第 78 空。",
+          "answer": "What’s the news?",
+          "exp": "上句说有好消息，此处问是什么。"
+        },
+        {
+          "n": 79,
+          "stem": "(Lin arrives at Bob’s home and knocks at the door.) Bob: Who is it? Lin: (76) Bob: (Opening the door) Hi, Lin! Come in, please. Lin: Are you feeling better today, Bob? Bob: (77) I’ll go to school this afternoon. Lin: OK! I’m here to tell you some good news. Bob: (78) Lin: Some famous actors will perform Beijing Opera in our school next Monday. Bob: (79) Lin: And they’ll teach us to perform. Bob: I can’t wait to attend it! Thank you for the news. Lin: (80) Goodbye. Bob: Bye!\n请补全第 79 空。",
+          "answer": "That’s great!",
+          "exp": "听到京剧演员来校，应表达高兴或惊喜。"
+        },
+        {
+          "n": 80,
+          "stem": "(Lin arrives at Bob’s home and knocks at the door.) Bob: Who is it? Lin: (76) Bob: (Opening the door) Hi, Lin! Come in, please. Lin: Are you feeling better today, Bob? Bob: (77) I’ll go to school this afternoon. Lin: OK! I’m here to tell you some good news. Bob: (78) Lin: Some famous actors will perform Beijing Opera in our school next Monday. Bob: (79) Lin: And they’ll teach us to perform. Bob: I can’t wait to attend it! Thank you for the news. Lin: (80) Goodbye. Bob: Bye!\n请补全第 80 空。",
+          "answer": "You’re welcome.",
+          "exp": "回应 Thank you 用 You’re welcome。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 81,
+      "score": 15,
+      "prompt": "假定你是校英文报记者冀方，外国学生 Alice 上周五在你校体验了一节体育课。请根据采访记录写约80词短文：What Alice did: learn about ping-pong; practice ping-pong; 再补充一项活动。Alice’s feelings: about the PE teacher; 再补充一方面感受。不得出现真实人名、校名、地名。开头：Alice, a student from abroad, had a PE class in our school last Friday.",
+      "points": [
+        [
+          "交代乒乓球学习和练习",
+          5
+        ],
+        [
+          "补充一项课堂活动",
+          3
+        ],
+        [
+          "教师及另一方面的感受",
+          5
+        ],
+        [
+          "叙事连贯，过去时准确",
+          2
+        ]
+      ],
+      "sample": "Alice, a student from abroad, had a PE class in our school last Friday. She learned many things about ping-pong, for example, the history and rules of the game. Alice tried her best to learn skills and she practiced ping-pong for nearly 20 minutes. And then she shared her school life. At last, she said the PE teacher is very patient and she expressed her thanks to the teacher. She also said the students are very lovely and friendly. “I’m so lucky to have the chance to take the PE class,” she said excitedly.",
+      "exp": "采访报道用第三人称、一般过去时；覆盖记录中要点并补全两处内容。"
+    }
+  ]
+}

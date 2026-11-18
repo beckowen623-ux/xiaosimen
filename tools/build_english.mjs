@@ -26,7 +26,7 @@ function build(paper) {
     id: `national-${paper.id}-q${String(n).padStart(2, "0")}`,
     national: true, subject: "english", subjectLabel: "英语", paperId: paper.id, number: n,
     section, chapter: paper.title, grade: "九下", stage: "9-down",
-    source: `${paper.title} 第 ${n} 题`, ...extra,
+    source: paper.numbering?.[n] ? `${paper.title} ${paper.numbering[n]}` : `${paper.title} 第 ${n} 题`, ...extra,
   });
   const choice = (item, section, extra) => ({
     ...base(item.n, section, extra), type: "single",
@@ -62,7 +62,7 @@ function build(paper) {
         for (const item of group.items) out.push({ ...choice(item, t, { groupId, materialHtml }), stem: item.stem });
       }
     } else if (t === "短文填空") {
-      const groupId = `${paper.id}-fill`;
+      const groupId = section.groupId || `${paper.id}-fill`;
       const materialHtml = passageHtml(section.passage, section.title);
       for (const item of section.items) {
         const alts = String(item.answer).split("/").map(s => s.trim()).filter(Boolean);
@@ -70,11 +70,11 @@ function build(paper) {
           stem: `第 ${item.n} 空：____${item.hint ? `（${item.hint}）` : ""}`,
           blanks: [alts], answer: [alts[0]], explanation: item.exp, kp: item.kp || "" });
       }
-    } else if (t === "情景交际") {
+    } else if (t === "情景交际" || t === "句子运用") {
       for (const item of section.items) {
-        out.push({ ...base(item.n, t), type: "essay", meta: "情景交际", material: "", stem: item.stem,
+        out.push({ ...base(item.n, t), type: "essay", meta: t, material: "", stem: item.stem,
           points: [{ text: `参考：${item.answer}`, score: 2, keys: [] }], score: 2,
-          sample: item.answer, method: "先看答语再补问句：答语给了什么信息（时间、距离、地点……），就用对应的疑问词提问。",
+          sample: item.answer, method: t === "句子运用" ? "先判断句子结构、时态和固定搭配，按题目限定的词数作答。" : "先看答语再补问句：答语给了什么信息（时间、距离、地点……），就用对应的疑问词提问。",
           answer: [], explanation: item.exp });
       }
     } else if (t === "书面表达") {

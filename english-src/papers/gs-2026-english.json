@@ -1,0 +1,829 @@
+{
+  "id": "gs-2026-english",
+  "region": "甘肃",
+  "year": 2026,
+  "title": "2026 年甘肃武威中考英语",
+  "source": "2026年甘肃中考英语试题及参考答案",
+  "note": "原卷为武威市卷；听力未收；各大题重新从1编号，站内顺序编号21—91，出处保留原大题、题号；标志、公告转文字。",
+  "sections": [
+    {
+      "type": "单项选择",
+      "items": [
+        {
+          "n": 21,
+          "stem": "For learning English, first you need to become ____ active learner.",
+          "options": [
+            "a",
+            "an",
+            "the",
+            "/"
+          ],
+          "answer": "B",
+          "kp": "冠词",
+          "exp": "active 以元音音素开头，用 an。"
+        },
+        {
+          "n": 22,
+          "stem": "Life will be easier if you ____ stronger.",
+          "options": [
+            "get",
+            "got",
+            "will get",
+            "were getting"
+          ],
+          "answer": "A",
+          "kp": "时态",
+          "exp": "主句将来时，if 条件从句用一般现在时。"
+        },
+        {
+          "n": 23,
+          "stem": "We celebrate International Workers’ Day in the ____ month of a year.",
+          "options": [
+            "sixth",
+            "fifth",
+            "third",
+            "ninth"
+          ],
+          "answer": "B",
+          "kp": "序数词",
+          "exp": "劳动节在五月，即第五个月 fifth。"
+        },
+        {
+          "n": 24,
+          "stem": "____ painting takes time, it teaches us to notice the beauty around us.",
+          "options": [
+            "Because",
+            "Although",
+            "Unless",
+            "If"
+          ],
+          "answer": "B",
+          "kp": "连词",
+          "exp": "虽然绘画费时，但教会发现美，用 Although。"
+        },
+        {
+          "n": 25,
+          "stem": "Every time I was upset, there ____ always my parents comforting me.",
+          "options": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "answer": "D",
+          "kp": "主谓一致",
+          "exp": "过去时，there be 与复数 parents 一致，用 were。"
+        },
+        {
+          "n": 26,
+          "stem": "China’s Shenzhou-23 manned spaceship was successfully launched ____ May 24, 2026.",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "during"
+          ],
+          "answer": "B",
+          "kp": "介词",
+          "exp": "具体日期前用 on。"
+        },
+        {
+          "n": 27,
+          "stem": "One of ____ solar energy power stations in the world, “Super Mirror Solar Power Station”, lies in Gansu.",
+          "options": [
+            "large",
+            "larger",
+            "largest",
+            "the largest"
+          ],
+          "answer": "D",
+          "kp": "最高级",
+          "exp": "one of the largest 表示最大的……之一。"
+        },
+        {
+          "n": 28,
+          "stem": "It’s a good ____ to write down your mistakes and look them over.",
+          "options": [
+            "habit",
+            "rule",
+            "team",
+            "place"
+          ],
+          "answer": "A",
+          "kp": "词义辨析",
+          "exp": "记错题和复习是一种好习惯 habit。"
+        },
+        {
+          "n": 29,
+          "stem": "My father ____ to work by car, but now he ____ riding a bike.",
+          "options": [
+            "is used; is used",
+            "was used; is used to",
+            "used to go; is used to",
+            "used to going; used to"
+          ],
+          "answer": "C",
+          "kp": "固定搭配",
+          "exp": "过去常做用 used to do，如今习惯做用 be used to doing。"
+        },
+        {
+          "n": 30,
+          "stem": "The scenery of Gansu in autumn is ____ amazing and beautiful.",
+          "options": [
+            "hardly",
+            "only",
+            "simply",
+            "nearly"
+          ],
+          "answer": "C",
+          "kp": "副词",
+          "exp": "simply 在此表示简直、实在，强调惊艳。"
+        },
+        {
+          "n": 31,
+          "stem": "In 2026 Spring Festival Gala, the performers ____ a wonderful show that perfectly mixed AI technology with traditional Chinese culture.",
+          "options": [
+            "put off",
+            "put out",
+            "put away",
+            "put on"
+          ],
+          "answer": "D",
+          "kp": "动词短语",
+          "exp": "put on a show 表示上演节目。"
+        },
+        {
+          "n": 32,
+          "stem": "—____ do you usually review your lessons?\n—By making mind maps and discussing difficult points with my classmates.",
+          "options": [
+            "Why",
+            "How",
+            "When",
+            "Where"
+          ],
+          "answer": "B",
+          "kp": "疑问词",
+          "exp": "答语介绍复习方法，用 How。"
+        },
+        {
+          "n": 33,
+          "stem": "—I don’t know what the future will be like.\n—____. Just take every step as it comes.",
+          "options": [
+            "You’re welcome",
+            "No way",
+            "It’s a pity",
+            "Take it easy"
+          ],
+          "answer": "D",
+          "kp": "情景交际",
+          "exp": "面对未来的担忧，用 Take it easy 安慰。"
+        },
+        {
+          "n": 34,
+          "stem": "—Why is Gansu called “The Hometown of Han Slips”?\n—Because nearly 70,000 Han Slips, ____ of all the Han Slips found in China, have been found in Gansu.",
+          "options": [
+            "little",
+            "most",
+            "some",
+            "few"
+          ],
+          "answer": "B",
+          "kp": "代词",
+          "exp": "nearly 70,000 强调已发现汉简中的大部分 most。"
+        },
+        {
+          "n": 35,
+          "stem": "—Look at the lead singer on the stage! Is that our music teacher, Mr. White?\n—It ____ be him. Mr. White is sitting right next to us in the front row.",
+          "options": [
+            "must",
+            "might",
+            "can’t",
+            "mustn’t"
+          ],
+          "answer": "C",
+          "kp": "情态动词",
+          "exp": "老师坐在身边，台上不可能是他，用 can’t。"
+        },
+        {
+          "n": 36,
+          "stem": "—The Yellow River is the second longest river in China. Do you know ____?\n—Yes, it’s 5,464 kilometers long.",
+          "options": [
+            "how long it is",
+            "how far it is",
+            "how big it is",
+            "how wide it is"
+          ],
+          "answer": "A",
+          "kp": "宾语从句",
+          "exp": "回答长度，用 how long，宾语从句陈述语序。"
+        },
+        {
+          "n": 37,
+          "stem": "—The concert begins at 3:35 p.m. and lasts for 90 minutes.\n—Got it. So it will end exactly at ____.",
+          "options": [
+            "4:40",
+            "4:55",
+            "5:00",
+            "5:05"
+          ],
+          "answer": "D",
+          "kp": "时间计算",
+          "exp": "3:35加90分钟为5:05。"
+        },
+        {
+          "n": 38,
+          "stem": "What does the notice tell us? You Are Wanted: Do you like sports? Do you want to play badminton? Everyone is welcome at our club, especially beginners.",
+          "options": [
+            "Anyone can take part in the club.",
+            "Only beginners can join the club.",
+            "The club opens to baseball lovers.",
+            "You need to pay for the club."
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "Everyone is welcome 表明任何人都可加入。"
+        },
+        {
+          "n": 39,
+          "stem": "—I have practised this English speech for three days, but I still make mistakes.\n—Don’t give up! ____. Practice makes perfect!",
+          "options": [
+            "An apple a day keeps the doctor away",
+            "Two heads are better than one",
+            "Rome wasn’t built in a day",
+            "Actions speak louder than words"
+          ],
+          "answer": "C",
+          "kp": "谚语",
+          "exp": "罗马不是一天建成的，劝人坚持练习。"
+        },
+        {
+          "n": 40,
+          "stem": "What does the sign mean?（原图：一支冒烟的香烟被圆圈斜杠划去。）",
+          "options": [
+            "People can smoke freely here.",
+            "Only a little smoking is allowed here.",
+            "Smoking is not allowed in this area.",
+            "You can smoke only in this area."
+          ],
+          "answer": "C",
+          "kp": "标志识别",
+          "exp": "香烟上的禁止标志表示禁烟。"
+        }
+      ]
+    },
+    {
+      "type": "完形填空",
+      "title": "少年合力救公交",
+      "passage": "It was an afternoon of December. Four junior students from the city of Linxia were taking a bus to school. Suddenly, something (41) happened. When the bus was near the Longwangmiao Station, it began to shake. The driver breathed painfully with his eyes almost closed. The bus was (42) and ran towards the opposite direction.\nSitting behind the driver, one of the students was the first to act. He rushed to move the driver’s (43) away, and pressed hard on the brake with both hands. At the same time, his two classmates turned the steering wheel to get the bus back to its way. Another student held the driver’s shoulder and tried to (44) him up. Nervous but calm, they worked together and finally stopped the bus safely by the roadside. (45), all the 18 passengers in the bus were safe. And (46) of them were even hurt.\nAfter that, they carefully helped the driver get off the bus. They used first-aid knowledge learned at school to (47) the driver and called 120. They didn’t hurry to school (48) the driver was sent to the hospital. The news spread widely and everyone took pride in them.\nTheir act of (49) is like a shining light that makes something amazing happen. People think highly of them for their courage in the face of (50). The four students put what they had learned into practice, and show a sense of responsibility of Chinese teenagers!",
+      "items": [
+        {
+          "n": 41,
+          "options": [
+            "interesting",
+            "unexpected",
+            "pleasant",
+            "surprising"
+          ],
+          "answer": "B",
+          "exp": "突然发生意想不到的事，用 unexpected。"
+        },
+        {
+          "n": 42,
+          "options": [
+            "out of control",
+            "out of power",
+            "out of order",
+            "out of work"
+          ],
+          "answer": "A",
+          "exp": "公交车失去控制 out of control。"
+        },
+        {
+          "n": 43,
+          "options": [
+            "arm",
+            "hand",
+            "leg",
+            "foot"
+          ],
+          "answer": "D",
+          "exp": "刹车踏板由脚控制，先挪开司机的 foot。"
+        },
+        {
+          "n": 44,
+          "options": [
+            "get",
+            "wake",
+            "pull",
+            "cheer"
+          ],
+          "answer": "B",
+          "exp": "试图唤醒司机，用 wake him up。"
+        },
+        {
+          "n": 45,
+          "options": [
+            "Unluckily",
+            "Sadly",
+            "Luckily",
+            "Disappointedly"
+          ],
+          "answer": "C",
+          "exp": "所有乘客安全，很幸运 Luckily。"
+        },
+        {
+          "n": 46,
+          "options": [
+            "none",
+            "all",
+            "many",
+            "half"
+          ],
+          "answer": "A",
+          "exp": "没有人受伤，用 none。"
+        },
+        {
+          "n": 47,
+          "options": [
+            "ask for",
+            "look for",
+            "care for",
+            "wait for"
+          ],
+          "answer": "C",
+          "exp": "利用急救知识照顾司机，用 care for。"
+        },
+        {
+          "n": 48,
+          "options": [
+            "until",
+            "before",
+            "after",
+            "when"
+          ],
+          "answer": "A",
+          "exp": "not ... until 表示直到送医后才赶去学校。"
+        },
+        {
+          "n": 49,
+          "options": [
+            "humor",
+            "friendliness",
+            "politeness",
+            "bravery"
+          ],
+          "answer": "D",
+          "exp": "bravery 与后文 courage 呼应。"
+        },
+        {
+          "n": 50,
+          "options": [
+            "chance",
+            "danger",
+            "failure",
+            "progress"
+          ],
+          "answer": "B",
+          "exp": "in the face of danger 表示面对危险。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "国际志愿项目（判断）",
+          "passage": "2026 International Volunteer Programs\nCosta Rica — Volunteer Program for Students in San Jose. Support community development. 4 hours volunteering per day. Cleaning, planting and caring. Duration: 1—3 weeks, during summer. In San Jose & Manuel. Volunteers aged 14 and 15.\nSerbia — Volunteer Program for Students in Belgrade. Top choice. Increase chances of education. Up to 5 hours volunteering per day. Teaching, caring and training. Duration: 1—2 weeks, during summer. In local communities. Volunteers aged 14 and 15.\nBelarus — Volunteer Program for Students in Minsk. Support community development. 3—5 hours volunteering per day. Visiting, caring and serving. Duration: 1 week, in July, in Minsk. Volunteers aged 14 and 15.",
+          "items": [
+            {
+              "n": 51,
+              "stem": "The volunteer program in Costa Rica runs for at most 3 weeks.",
+              "options": [
+                "True（A，正确）",
+                "False（B，错误）"
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "哥斯达黎加项目1—3周，最长三周。"
+            },
+            {
+              "n": 52,
+              "stem": "The program in Serbia focuses on supporting community development.",
+              "options": [
+                "True（A，正确）",
+                "False（B，错误）"
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "塞尔维亚项目重点是教育机会，不是社区发展。"
+            },
+            {
+              "n": 53,
+              "stem": "You can take part in the program in Belarus at any time during this summer.",
+              "options": [
+                "True（A，正确）",
+                "False（B，错误）"
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "白俄罗斯项目限定七月，并非整个夏天任意时间。"
+            },
+            {
+              "n": 54,
+              "stem": "All the three programs require volunteers to be between 14 and 15 years old.",
+              "options": [
+                "True（A，正确）",
+                "False（B，错误）"
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "三项均要求14或15岁。"
+            },
+            {
+              "n": 55,
+              "stem": "The program in Serbia is the most popular one.",
+              "options": [
+                "True（A，正确）",
+                "False（B，错误）"
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "塞尔维亚标有 Top choice，表示最受欢迎的选择。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "古壁画的守护者",
+          "passage": "Deep in the desert, a man has spent more than forty years solving the “illness” of ancient paintings.\nHis name is Fan Zaixuan. He is an expert at protecting and repairing wall paintings in the Dunhuang Academy. In fact, the “patients” are the ancient wall paintings. The wall paintings in Dunhuang Mogao Caves are beautiful. However, after thousands of years, their surfaces slowly come off and fall down, which makes people feel sad.\nFan Zaixuan works hard to repair these art works. For the peeling parts, he first adds special glue and smooths them slowly and carefully. It is more difficult to repair the broken areas. Workers must take away harmful salt that breaks the paintings. To solve this problem, Fan Zaixuan and his team have been working for eight years and finally found a practical way. They turned the harmful salt into water and developed new materials to take in the liquid. So far, the research team led by Fan Zaixuan has repaired more than 500 square meters of broken wall paintings in Mogao Caves. These ancient treasures shine again and keep their beauty after thousands of years.\nFan Zaixuan says his daily work is to protect ancient wall paintings and keep their natural looks. To his relief, over the past forty years, he has trained hundreds of young workers for cultural protection organizations across the country. Now, a new team of repairers has joined in the repair work of these valuable paintings.\nFan Zaixuan has spent all his time and energy on his work. He protects the ancient art silently and has become a part of these wonderful paintings through time.",
+          "items": [
+            {
+              "n": 56,
+              "stem": "How long did Fan Zaixuan’s team spend finding the method to repair broken wall areas?",
+              "options": [
+                "40 years.",
+                "8 years.",
+                "5 years.",
+                "10 years."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "第三段明确研究八年找到办法。"
+            },
+            {
+              "n": 57,
+              "stem": "What problem did the wall paintings face?",
+              "options": [
+                "The color of the paintings changed a lot.",
+                "The surface of the paintings turned dark.",
+                "The surface of the paintings come off.",
+                "People did harm to the wall paintings."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "第二段描述表面脱落。"
+            },
+            {
+              "n": 58,
+              "stem": "What does the underlined word “relief” probably mean?",
+              "options": [
+                "Joy.",
+                "Shock.",
+                "Disappointment.",
+                "Sadness."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "培养了许多年轻修复者让他欣慰，接近 joy。"
+            },
+            {
+              "n": 59,
+              "stem": "What can we learn from the passage?",
+              "options": [
+                "Fan’s team repaired less than 500 square meters of the wall paintings.",
+                "Fan repairs the wall paintings only by taking harmful salt away.",
+                "Young workers refuse to take part in wall painting repair work.",
+                "Harmful salt is one of the reasons for the broken wall paintings."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "有害盐会损坏壁画，第三段直接说明。"
+            },
+            {
+              "n": 60,
+              "stem": "What is the best title for the passage?",
+              "options": [
+                "Beautiful Wall Paintings in Dunhuang",
+                "Practical Ways to Protect Old Cultural Relics",
+                "Fan Zaixuan: A Protector of Ancient Paintings",
+                "The Long History of Dunhuang Ancient Art"
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "全文以樊再轩及其守护古画的工作为中心。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "毕业典礼通知",
+      "groupId": "gs-2026-english-fill-61",
+      "passage": "词库：finally / from / wear / hold / and / we / be / information / fantastic / first\nNOTICE\nBoys and girls,\nHow time flies! Three years has passed, and we are going to graduate (61) junior high school soon. To celebrate this important moment, our school (62) a grand graduation ceremony. Please pay attention to the following (63):\nDate: June 26, 2026. Time: 9:00—12:00. Place: The School Hall.\nPlease arrive at the hall by 8:45 a.m. (64) sit in your own seats. During the three-hour ceremony, the headmaster will make a speech to give us his best wishes (65). After that, students from different classes will give (66) performances, such as singing, dancing, and poetry reading. Then, students will give flowers to (67) hard-working teachers. (68), we will take group photos to keep the sweet memories.\nAfter the ceremony, there will (69) a farewell party in our own classrooms. Please don’t forget (70) your suit that day. We look forward to sharing this unforgettable day with you!\nStudents’ Union, June 18",
+      "items": [
+        {
+          "n": 61,
+          "answer": "from",
+          "exp": "graduate from 表示从……毕业。"
+        },
+        {
+          "n": 62,
+          "answer": "will hold",
+          "exp": "介绍未来典礼，用 will hold。"
+        },
+        {
+          "n": 63,
+          "answer": "information",
+          "exp": "following information 表示以下信息。"
+        },
+        {
+          "n": 64,
+          "answer": "and",
+          "exp": "arrive 和 sit 并列，用 and。"
+        },
+        {
+          "n": 65,
+          "answer": "first",
+          "exp": "校长首先发言，填 first。"
+        },
+        {
+          "n": 66,
+          "answer": "fantastic",
+          "exp": "形容精彩的节目用 fantastic。"
+        },
+        {
+          "n": 67,
+          "answer": "our",
+          "exp": "修饰 teachers 用 our。"
+        },
+        {
+          "n": 68,
+          "answer": "Finally",
+          "exp": "最后拍合影，Finally。"
+        },
+        {
+          "n": 69,
+          "answer": "be",
+          "exp": "there will be 为一般将来时存在句。"
+        },
+        {
+          "n": 70,
+          "answer": "to wear",
+          "exp": "forget to do 表示忘记要做某事。"
+        }
+      ]
+    },
+    {
+      "type": "补全对话",
+      "title": "健康第一",
+      "passage": "Liu Li and Huang Lei meet in the Olympic Park.\nA: Hey, Huang Lei! You look really energetic after running in the park.\nB: Thanks, Liu Li! I believe “Health First”. (71)\nA: That’s great! Our school always encourages us to stay active.\nB: Really? (72)\nA: I exercise on the smart sports field in the school and it gives me points for running and rope jumping.\nB: (73)\nA: So it is! Now, we have one P.E. class every day.\nB: We do the same! We are encouraged to exercise for at least two hours every day at school.\nA: (74) We also have strict rules for our school restaurant to serve meals with less sugar and salt.\nB: A good diet and regular exercise are surely the best ways to stay healthy.\nA: (75)\nB: Let’s get some water and keep it up!",
+      "choices": [
+        "What do you usually do for your health?",
+        "So do we!",
+        "I exercise every day.",
+        "How often do you usually exercise?",
+        "Do you have a balanced diet?",
+        "That sounds amazing and fun!",
+        "I totally agree with you."
+      ],
+      "items": [
+        {
+          "n": 71,
+          "answer": "C",
+          "exp": "说明重视健康的行动是每天锻炼。"
+        },
+        {
+          "n": 72,
+          "answer": "A",
+          "exp": "下一句介绍具体运动方式，问平时做什么。"
+        },
+        {
+          "n": 73,
+          "answer": "F",
+          "exp": "对智能运动场积分表示听起来有趣。"
+        },
+        {
+          "n": 74,
+          "answer": "B",
+          "exp": "表示我们学校也一样鼓励运动。"
+        },
+        {
+          "n": 75,
+          "answer": "G",
+          "exp": "对饮食和运动的观点表示完全赞同。"
+        }
+      ]
+    },
+    {
+      "type": "句子运用",
+      "items": [
+        {
+          "n": 76,
+          "stem": "Welcome to join the reading theatre, which will be held ____ (two) a day in the school hall.",
+          "answer": "twice",
+          "exp": "twice a day 表示一天两次。"
+        },
+        {
+          "n": 77,
+          "stem": "Books allow ____ (we) to experience different lives.",
+          "answer": "us",
+          "exp": "allow 后用宾格 us。"
+        },
+        {
+          "n": 78,
+          "stem": "Books are always ____ (fill) with fun and interesting facts.",
+          "answer": "filled",
+          "exp": "be filled with 表示充满。"
+        },
+        {
+          "n": 79,
+          "stem": "Reading provides us much knowledge that can be ____ (help) in daily life.",
+          "answer": "helpful",
+          "exp": "be 后用形容词 helpful。"
+        },
+        {
+          "n": 80,
+          "stem": "Reading is a good way that ____ (open) our eyes to the world.",
+          "answer": "opens",
+          "exp": "定语从句先行词 a good way 为单数，用 opens。"
+        },
+        {
+          "n": 81,
+          "stem": "Do you know that many popular ____ (movie) are based on books?",
+          "answer": "movies",
+          "exp": "many 后用名词复数 movies。"
+        },
+        {
+          "n": 82,
+          "stem": "If we want to learn more about the world, we should read ____ (often).",
+          "answer": "often",
+          "exp": "often 本身是副词，形式不变。"
+        },
+        {
+          "n": 83,
+          "stem": "Let’s understand and learn different ____ (write) styles by reading!",
+          "answer": "writing",
+          "exp": "writing styles 表示写作风格。"
+        },
+        {
+          "n": 84,
+          "stem": "Why not use a reading list to introduce what you’ve ____ (read) recently?",
+          "answer": "read",
+          "exp": "现在完成时用 read 的过去分词 read。"
+        },
+        {
+          "n": 85,
+          "stem": "Pick up a book and ____ (start) reading today!",
+          "answer": "start",
+          "exp": "and 并列两个祈使动词，用 start。"
+        }
+      ]
+    },
+    {
+      "type": "句子运用",
+      "items": [
+        {
+          "n": 86,
+          "stem": "世上没有比健康更好的财富，没有比内心快乐更大的快乐。Nothing is ____ than health; nothing is ____ than inner peace.（每空一词）",
+          "answer": "richer; happier / better; happier / wealthier; happier",
+          "exp": "than 提示比较级；财富可用 richer、better 或 wealthier，快乐用 happier。"
+        },
+        {
+          "n": 87,
+          "stem": "他为自己没有放弃而感到自豪。He was ____ ____ himself for not giving up.",
+          "answer": "proud; of",
+          "exp": "be proud of 表示为……自豪。"
+        },
+        {
+          "n": 88,
+          "stem": "不要怀疑自己的价值，也不要怀疑努力的意义。Never doubt your ____ or the ____ of hard work.",
+          "answer": "value; meaning",
+          "exp": "your value 为自身价值，the meaning of 为……的意义。"
+        },
+        {
+          "n": 89,
+          "stem": "你的学习成就取决于良好的学习方法和态度。Your learning achievements ____ ____ good learning methods and attitudes.",
+          "answer": "depend; on",
+          "exp": "depend on 表示取决于。"
+        },
+        {
+          "n": 90,
+          "stem": "造纸术不仅推动了中国文化的发展，还改变了世界文明的进程。The papermaking technique ____ ____ speeded up the development of Chinese culture, but also changed civilizations around the world.",
+          "answer": "not; only",
+          "exp": "not only ... but also ... 表示不仅……而且……。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 91,
+      "score": 10,
+      "prompt": "假设你是李华，6月5日世界环境日收到英国好友 Jack 的邮件。他询问你周围有哪些绿色变化，你的生活方式是否有改变。请以 Green Changes Around Me 为主题回信，约80词，可适当发挥，不出现真实人名、学校。开头：Dear Jack, I hope this email finds you well. 结尾：Yours, Li Hua",
+      "points": [
+        [
+          "介绍身边绿色变化",
+          3
+        ],
+        [
+          "说明自己的生活方式变化",
+          3
+        ],
+        [
+          "结构清晰、内容相关",
+          2
+        ],
+        [
+          "语言规范",
+          2
+        ]
+      ],
+      "sample": "Dear Jack,\nI hope this email finds you well. As is known to all, China has taken active action to protect our environment. I have found many warm green changes around me.\nMore and more trees and flowers are planted in our city. The sky is bluer and the air is fresher than before. Now, my classmates and I go to school by bike or on foot instead of taking cars. I also take part in environmental protection activities held in my school with classmates.\nSmall actions can bring big changes. I believe our world will become more and more beautiful if everyone keeps protecting the environment.\nYours,\nLi Hua",
+      "exp": "分别回答环境变化与个人行动两个问题，结尾表达希望；范文来自配套参考答案。"
+    }
+  ],
+  "numbering": {
+    "21": "Ⅱ.语法与情景对话 第1题",
+    "22": "Ⅱ.语法与情景对话 第2题",
+    "23": "Ⅱ.语法与情景对话 第3题",
+    "24": "Ⅱ.语法与情景对话 第4题",
+    "25": "Ⅱ.语法与情景对话 第5题",
+    "26": "Ⅱ.语法与情景对话 第6题",
+    "27": "Ⅱ.语法与情景对话 第7题",
+    "28": "Ⅱ.语法与情景对话 第8题",
+    "29": "Ⅱ.语法与情景对话 第9题",
+    "30": "Ⅱ.语法与情景对话 第10题",
+    "31": "Ⅱ.语法与情景对话 第11题",
+    "32": "Ⅱ.语法与情景对话 第12题",
+    "33": "Ⅱ.语法与情景对话 第13题",
+    "34": "Ⅱ.语法与情景对话 第14题",
+    "35": "Ⅱ.语法与情景对话 第15题",
+    "36": "Ⅱ.语法与情景对话 第16题",
+    "37": "Ⅱ.语法与情景对话 第17题",
+    "38": "Ⅱ.语法与情景对话 第18题",
+    "39": "Ⅱ.语法与情景对话 第19题",
+    "40": "Ⅱ.语法与情景对话 第20题",
+    "41": "Ⅲ.完形填空 第1题",
+    "42": "Ⅲ.完形填空 第2题",
+    "43": "Ⅲ.完形填空 第3题",
+    "44": "Ⅲ.完形填空 第4题",
+    "45": "Ⅲ.完形填空 第5题",
+    "46": "Ⅲ.完形填空 第6题",
+    "47": "Ⅲ.完形填空 第7题",
+    "48": "Ⅲ.完形填空 第8题",
+    "49": "Ⅲ.完形填空 第9题",
+    "50": "Ⅲ.完形填空 第10题",
+    "51": "Ⅳ.阅读理解 第1题",
+    "52": "Ⅳ.阅读理解 第2题",
+    "53": "Ⅳ.阅读理解 第3题",
+    "54": "Ⅳ.阅读理解 第4题",
+    "55": "Ⅳ.阅读理解 第5题",
+    "56": "Ⅳ.阅读理解 第6题",
+    "57": "Ⅳ.阅读理解 第7题",
+    "58": "Ⅳ.阅读理解 第8题",
+    "59": "Ⅳ.阅读理解 第9题",
+    "60": "Ⅳ.阅读理解 第10题",
+    "61": "Ⅴ.任务型完形填空 第1题",
+    "62": "Ⅴ.任务型完形填空 第2题",
+    "63": "Ⅴ.任务型完形填空 第3题",
+    "64": "Ⅴ.任务型完形填空 第4题",
+    "65": "Ⅴ.任务型完形填空 第5题",
+    "66": "Ⅴ.任务型完形填空 第6题",
+    "67": "Ⅴ.任务型完形填空 第7题",
+    "68": "Ⅴ.任务型完形填空 第8题",
+    "69": "Ⅴ.任务型完形填空 第9题",
+    "70": "Ⅴ.任务型完形填空 第10题",
+    "71": "Ⅵ.口语交际 第1题",
+    "72": "Ⅵ.口语交际 第2题",
+    "73": "Ⅵ.口语交际 第3题",
+    "74": "Ⅵ.口语交际 第4题",
+    "75": "Ⅵ.口语交际 第5题",
+    "76": "Ⅶ.词汇考查 第1题",
+    "77": "Ⅶ.词汇考查 第2题",
+    "78": "Ⅶ.词汇考查 第3题",
+    "79": "Ⅶ.词汇考查 第4题",
+    "80": "Ⅶ.词汇考查 第5题",
+    "81": "Ⅶ.词汇考查 第6题",
+    "82": "Ⅶ.词汇考查 第7题",
+    "83": "Ⅶ.词汇考查 第8题",
+    "84": "Ⅶ.词汇考查 第9题",
+    "85": "Ⅶ.词汇考查 第10题",
+    "86": "Ⅷ.完成句子 第1题",
+    "87": "Ⅷ.完成句子 第2题",
+    "88": "Ⅷ.完成句子 第3题",
+    "89": "Ⅷ.完成句子 第4题",
+    "90": "Ⅷ.完成句子 第5题",
+    "91": "Ⅸ.书面表达"
+  }
+}

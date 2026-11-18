@@ -1,0 +1,753 @@
+{
+  "id": "xj-2025-english",
+  "region": "新疆",
+  "year": 2025,
+  "title": "2025 年新疆中考英语",
+  "source": "2025年新疆中考英语试题及参考答案",
+  "note": "听力1—20题未收；36—40题为原卷T/F判断，以True/False选项呈现；结构图转成文字。",
+  "sections": [
+    {
+      "type": "完形填空",
+      "title": "一句Hello的温暖",
+      "passage": "Bill used to live in a big city. He was born there and made friends there. Life always seemed to be (21) for him. Last year, Bill’s family had to move to a small town. His life (22) all of a sudden. He felt lonely and (23) . On Bill’s (24) day to school in the town, the driver said a friendly “Hello!” to the lonely boy when he got on the bus. He just (25) with a nod in silence because of shyness. While Bill was looking for a (26) , everyone on the bus said “Hello!” (27) a gentle (温和的) voice to him. But nodding was Bill’s only reply. The next day Bill got on and (28) the driver said “Hello!” kindly to him. Bill still kept (29) . On the fifth day, Bill answered with a shy “Hello!” to everybody. He felt he was (30) of them. And he began to talk to them like old friends. That moment, it seemed that the new world opened (31) door to him. As days went by, Bill got used to the (32) there. He made (33) friends in the town. Everybody knew him as (34) as he knew them. Life was colorful like before. Smiles appeared on Bill’s face again. Sometimes (35) a simple “Hello!” can bring sunshine and warmth (温暖) into a lonely heart.",
+      "items": [
+        {
+          "n": 21,
+          "stem": "",
+          "options": [
+            "busy",
+            "happy",
+            "boring"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "前文在大城市有朋友，生活快乐 happy。"
+        },
+        {
+          "n": 22,
+          "stem": "",
+          "options": [
+            "changed",
+            "remained",
+            "exchanged"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "搬家使生活突然改变 changed。"
+        },
+        {
+          "n": 23,
+          "stem": "",
+          "options": [
+            "excited",
+            "sad",
+            "pleasant"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "孤独且难过，用 sad。"
+        },
+        {
+          "n": 24,
+          "stem": "",
+          "options": [
+            "last",
+            "best",
+            "first"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "刚到小镇学校的第一天 first day。"
+        },
+        {
+          "n": 25,
+          "stem": "",
+          "options": [
+            "joked",
+            "asked",
+            "replied"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "点头回应问候，replied 表示回答。"
+        },
+        {
+          "n": 26,
+          "stem": "",
+          "options": [
+            "window",
+            "bag",
+            "seat"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "上车寻找座位 seat。"
+        },
+        {
+          "n": 27,
+          "stem": "",
+          "options": [
+            "in",
+            "at",
+            "on"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "in a gentle voice 表示用温和的声音。"
+        },
+        {
+          "n": 28,
+          "stem": "",
+          "options": [
+            "suddenly",
+            "again",
+            "angrily"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "第二天司机再次问好，用 again。"
+        },
+        {
+          "n": 29,
+          "stem": "",
+          "options": [
+            "silent",
+            "noisy",
+            "hungry"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "仍不说话，kept silent。"
+        },
+        {
+          "n": 30,
+          "stem": "",
+          "options": [
+            "all",
+            "none",
+            "one"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "成为大家中的一员，用 one of。"
+        },
+        {
+          "n": 31,
+          "stem": "",
+          "options": [
+            "its",
+            "your",
+            "her"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "the new world 为物，用 its door。"
+        },
+        {
+          "n": 32,
+          "stem": "",
+          "options": [
+            "work",
+            "life",
+            "weather"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "适应小镇生活 life。"
+        },
+        {
+          "n": 33,
+          "stem": "",
+          "options": [
+            "worse",
+            "fewer",
+            "more"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "渐渐交到更多朋友，用 more。"
+        },
+        {
+          "n": 34,
+          "stem": "",
+          "options": [
+            "well",
+            "little",
+            "fast"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "as well as 表示了解程度同样充分。"
+        },
+        {
+          "n": 35,
+          "stem": "",
+          "options": [
+            "just",
+            "nearly",
+            "almost"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "有时仅仅一句问候就有温暖，用 just。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "母象的守护（判断）",
+          "passage": "An elephant and her baby were alone in the forest. They had to leave their family, for the little baby was too small to keep up with the other big elephants. Whenever the mother looked at the sweet, little baby elephant, she would say, “As long as you are small, I shall do anything to protect you and take care of you. When you are big, you will have to fight for yourself. You will have to be very careful if you want to reach your full size.” In the day, when she saw him pick up some leaves with his trunk (象鼻) and put them into his mouth, she was pleased. When they met other big animals, she would cry angrily and guard him. In the night, she stood close to him until morning, for she knew a lion might be near. As time went by, the baby elephant grew big enough to follow his mother and then they met the other big elephants. They returned to their family! At last, they came to a beautiful river. There they lived a happy life together.",
+          "items": [
+            {
+              "n": 36,
+              "stem": "The mother elephant and her baby were in the forest with their family.",
+              "options": [
+                "True（T，正确）",
+                "False（F，错误）"
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "开头说明母子与家族分开独自在森林里，因此错误。"
+            },
+            {
+              "n": 37,
+              "stem": "The mother elephant would try her best to protect her baby.",
+              "options": [
+                "True（T，正确）",
+                "False（F，错误）"
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "母象表示小象小时候会尽一切努力保护它。"
+            },
+            {
+              "n": 38,
+              "stem": "When the baby elephant is big, he has to fight for himself.",
+              "options": [
+                "True（T，正确）",
+                "False（F，错误）"
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "原文说明长大后必须自己奋斗。"
+            },
+            {
+              "n": 39,
+              "stem": "In the night, the mother elephant stood far from her baby.",
+              "options": [
+                "True（T，正确）",
+                "False（F，错误）"
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "夜里母象紧挨小象，而非远离，因此错误。"
+            },
+            {
+              "n": 40,
+              "stem": "The mother elephant and her baby returned to their family at last.",
+              "options": [
+                "True（T，正确）",
+                "False（F，错误）"
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "倒数第二段说明它们回到家族。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "中国科技进展",
+          "passage": "In 2024, China made great progress in science and technology. China’s ‘Dream’ Research Ship China’s new ship, Mengxiang, or ‘Dream’ went into service in Guangdong on November 17. It was the largest scientific research ship that China had ever made on its own by 2024. Mengxiang has special tools and can dig up to 11 kilometers under the ocean floor (海床). Air China’s First Flight (飞行) of C919 On September 10, Air China’s first C919 aircraft (飞 机) successfully completed its first flight. The flight took off from Beijing Capital International Airport and landed at Shanghai Hongqiao Airport. C919 aircraft can carry more passengers and cover a longer airline. One Rocket, Eight Satellites (卫星) On the morning of September 24, the Taiyuan Satellite Launch Center used the Jielong—3 rocket to successfully send eight satellites into space. The successful sea launch shows China’s strong abilities in space technology. China’s Shi Jian-19 Satellite Recovery (回收) On October 11, China successfully recovered its first reusable experimental Satellite, Shi Jian—19. It was launched on September 27 from the Jiuquan Satellite Launch Center. It marks an important technological development of China.",
+          "items": [
+            {
+              "n": 41,
+              "stem": "What can Mengxiang do using its special tools?",
+              "options": [
+                "Recover reusable satellites.",
+                "Carry more passengers and cover a longer airline.",
+                "Send satellites into space.",
+                "Dig up to 11 kilometers under the ocean floor."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "梦想号利用专用工具钻探至海床下11公里。"
+            },
+            {
+              "n": 42,
+              "stem": "When did Air China’s first C919 aircraft complete its first flight?",
+              "options": [
+                "On September 10.",
+                "On September 24.",
+                "On October 11.",
+                "On November 17."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "国航首架C919在9月10日完成首次飞行。"
+            },
+            {
+              "n": 43,
+              "stem": "How many satellites were sent into space on September 24 according to the text?",
+              "options": [
+                "Five.",
+                "Six.",
+                "Seven.",
+                "Eight."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "一箭发送八颗卫星。"
+            },
+            {
+              "n": 44,
+              "stem": "Where was Shi Jian-l9 launched on September 27?",
+              "options": [
+                "From Shanghai Hongqiao Airport.",
+                "From the Jiuquan Satellite Launch Center.",
+                "From Beijing Capital International Airport.",
+                "From the Taiyuan Satellite Launch Center."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "实践十九号从酒泉卫星发射中心发射。"
+            },
+            {
+              "n": 45,
+              "stem": "Where is the text probably from?",
+              "options": [
+                "A story book.",
+                "A novel.",
+                "A newspaper.",
+                "A diary."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "四则科技新闻最可能刊登在报纸。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "阅读的好处",
+          "passage": "It is believed that reading is not only good for our self-development but also quite easy to do. There are so many benefits (好处) to read books. Reading is a good way to deal with stress. In one study, reading was found to be effective (有 效的) in reducing stress. When you are reading books, you can keep the noisy world out and needn’t worry about the problems that bother you. This means that reading can help you feel relaxed. Reading protects brain health. If you read at least once a week, you probably have a better ability in understanding at an old age than those who do not. Because when you are reading, you actually keep thinking even imagining. And that is a good exercise for your mind. Reading is an excellent bedtime activity. On one hand, reading before bed can help you fall asleep in a shorter time. On the other hand, it is better for your eyes to hold a book while going to bed instead of your mobile phone. All in all, there is no doubt that reading is good for you. Why not pick up a book to read right now?",
+          "items": [
+            {
+              "n": 46,
+              "stem": "What does the underlined word “bother” in Paragraph 2 mean?",
+              "options": [
+                "Trouble.",
+                "Help.",
+                "Encourage.",
+                "Support."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "bother 指问题困扰人，与 trouble 同义。"
+            },
+            {
+              "n": 47,
+              "stem": "You could have a better ability in understanding when you’re old if you read at least ________.",
+              "options": [
+                "twice a year",
+                "once a year",
+                "twice a week",
+                "once a week"
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "第三段建议至少每周阅读一次。"
+            },
+            {
+              "n": 48,
+              "stem": "Which is the right structure of the text? (①=Paragraph 1, ②=Paragraph 2, ...)",
+              "options": [
+                "①→②→③④⑤（第三至五段并列）",
+                "①总述，②③④并列分述，⑤总结。",
+                "①分出两支，分别为②→③与④→⑤。",
+                "①总述，②③④⑤并列分述。"
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "首段总述，第二至四段分别举好处，末段总结。"
+            },
+            {
+              "n": 49,
+              "stem": "What is the text mainly about?",
+              "options": [
+                "A good way to deal with stress.",
+                "The advantages of self- development.",
+                "The benefits of reading books.",
+                "An excellent bedtime activity."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "全文说明阅读的好处。"
+            }
+          ]
+        },
+        {
+          "label": "D",
+          "title": "家人的故事给我启发",
+          "passage": "When I was a little girl, our families would always gather for big meals. Besides the delicious food, I also loved listening to the adults talking about their stories. Some stories are so unforgettable that I still remember them today. My aunt, Kathy, heard a disabled friend had won a marathon (马拉松) race. She felt motivated (被激励的) and decided to run. The next day, she ran 5 miles. Although it was not easy for a 54-year-old woman, she kept on running. Edward, my cousin, was a main role in a play for the first time. He experienced a 2-month hard time preparing for it. Hearing people’s applause (掌声)，he felt good. What’s more, he realized he could have more fun by trying something new. My father was deeply moved by a 3-year-old girl on a plane. He saw that the little girl offered all she had, a piece of chocolate, to save a man’s life. He said the girl’s kindness always made him smile. Wherever life will lead me, these stories always give me inspiration. I have learned that we should love life itself, love ourselves and love the people around us. It is the stories that make my life beautiful and meaningful.",
+          "items": [
+            {
+              "n": 50,
+              "stem": "What did the author’s families always do when she was a little girl?",
+              "options": [
+                "They cooked delicious food.",
+                "They gathered for big meals.",
+                "They listened to her stories.",
+                "They still remembered those stories."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "首段写家人常聚在一起吃饭。"
+            },
+            {
+              "n": 51,
+              "stem": "Why did the author’s aunt start to run?",
+              "options": [
+                "Because she ran 5 miles at the age of 54.",
+                "Because she thought it was easy for her.",
+                "Because she was motivated by a friend.",
+                "Because the author had won a marathon race."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "姑姑受到残疾朋友赢得马拉松比赛的激励。"
+            },
+            {
+              "n": 52,
+              "stem": "Which of the following statements is TRUE?",
+              "options": [
+                "Edward saved a man’s life on a plane.",
+                "The author’s father was moved by Edward.",
+                "The author’s father saved a 3-year-old girl’s life.",
+                "Edward felt good when he heard the applause."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "第三段说明 Edward 听见掌声很开心。"
+            },
+            {
+              "n": 53,
+              "stem": "What is the best title for the text?",
+              "options": [
+                "Kindness from Small Acts.",
+                "Believe in Yourself and Try Something New.",
+                "No Cooking, No Gathering.",
+                "Inspiration from Stories Shared in Family Gatherings."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "三则家庭聚会故事都给予作者启发，D最全面。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "七选五",
+      "title": "心中的花（五选五）",
+      "passage": "Flowers are beautiful living things and can be found all over the world—in gardens, parks and even your home. (54) They can only be felt in the deepest part of your heart. These flowers are planted by two kinds of people. When you meet the first kind of people, they plant “bad” seeds in your heart. (55) You think they only come into your life to bring you problems. However, when you overcome the problems with your courage, you get strength (力量) and experience. As you fight to win, beautiful flowers blossom (开花). That can make you a strong man. (56) They are people who bring you happiness. They may teach you something meaningful you have never done. They may give you an unbelievable deal of joy. As you slowly build a close relationship with them, the seeds will grow into beautiful flowers of love. (57) So, who plants the seeds in your heart? Who do you choose to meet? (58) And you must face that.",
+      "choices": [
+        "When you meet the second kind of people, they plant good seeds in your heart.",
+        "These people may be not friendly enough.",
+        "You have no choice but life does.",
+        "However, there are some other kinds of flowers that cannot be seen or touched.",
+        "And you will grow into a full man."
+      ],
+      "items": [
+        {
+          "n": 54,
+          "answer": "D",
+          "exp": "与看得见的花转折，引出只能在内心感受的花。"
+        },
+        {
+          "n": 55,
+          "answer": "B",
+          "exp": "坏种子对应不够友善、带来困难的人。"
+        },
+        {
+          "n": 56,
+          "answer": "A",
+          "exp": "与第一种人对照，转入第二种人种下好种子。"
+        },
+        {
+          "n": 57,
+          "answer": "E",
+          "exp": "爱的花使人成长为完整的人。"
+        },
+        {
+          "n": 58,
+          "answer": "C",
+          "exp": "最后谈相遇不是全由自己选择，生活有它的安排。"
+        }
+      ]
+    },
+    {
+      "type": "补全对话",
+      "title": "毕业前的回忆",
+      "passage": "(Paul and Bob are classmates. They are meeting on the street.) A: Hi, Bob. B: Hello, Paul. A: Where are you going? B: (59) Would you like to go with me? A: Sure, I’d love to. (60) B: I want to buy something for the graduation ceremony. A: I can’t believe we are leaving school soon. (61) B: Yes, I do. I really had a great time in the school swimming team. A: Yeah, you won the first prize last year and we are all proud of you. B: Thank you. (62) What’s your most unforgettable experience? A: (63) Our teacher and classmates helped me a lot and I will never forget it. B: They are always so nice and we are a big family forever. A: You are right. I’ll miss those days and people. B: (64)",
+      "choices": [
+        "What are you going to buy?",
+        "Do you have any special memories?",
+        "I am going to the supermarket.",
+        "Me too.",
+        "I hurt my knee a year ago.",
+        "How about you?"
+      ],
+      "items": [
+        {
+          "n": 59,
+          "answer": "C",
+          "exp": "Where 问目的地，回答去超市。"
+        },
+        {
+          "n": 60,
+          "answer": "A",
+          "exp": "下一句说要买毕业用品，因此问打算买什么。"
+        },
+        {
+          "n": 61,
+          "answer": "B",
+          "exp": "Yes, I do 回应一般疑问句，询问特别记忆。"
+        },
+        {
+          "n": 62,
+          "answer": "F",
+          "exp": "转而询问对方最难忘的经历，用 How about you。"
+        },
+        {
+          "n": 63,
+          "answer": "E",
+          "exp": "老师同学曾帮助他，与膝盖受伤相衔接。"
+        },
+        {
+          "n": 64,
+          "answer": "D",
+          "exp": "回应会想念大家，用 Me too。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "groupId": "xj-2025-english-fill-65",
+      "title": "射箭经历：缩写填空",
+      "passage": "It was a Saturday morning, my father and I walked in a park. When I saw some people shooting arrows (箭) on the square, I decided to have a try. A girl of my age was having her second try. She picked up an arrow and shot it. But it missed the target (靶子)! She tried a third time, and failed again. She just gave up and walked away. Then it was my turn to shoot. I fixed my eyes on the target. With all of my efforts, I shot the arrow. It missed! I shot three more arrows. I failed them all. I was upset and wanted to leave. My father encouraged me to take one more shot. I held my breath, stared at the target and shot the arrow. Again, I missed the target! But I got closer to it. I kept trying and finally I made it! “See, son. Nobody is born to do well in everything. Never give up, and you can do it,” said my father. From this experience, I realize that challenges in life are not as difficult as they seem to be. If we focus on them, learn from failure (失败), and keep trying, we can succeed in the end.\n缩写（每空一词）：One Saturday morning, my father and I took a (65) in a park. I saw some people shooting arrows and I wanted to (66) . A girl failed three times. Then it was (67) turn. I made every effort to shoot, but failed, too. I shot another three arrows. I failed them all. The time I was to give up, my father (68) me to go on. As my father said, nobody is born to be (69) at doing everything. Holding on leads to success. After trying some more times, I did make it! From this experience, I learn that if we face (70) bravely, learn from failure, and keep trying, we are sure to succeed.",
+      "items": [
+        {
+          "n": 65,
+          "answer": "walk",
+          "exp": "take a walk 表示散步。"
+        },
+        {
+          "n": 66,
+          "answer": "try",
+          "exp": "want to try 表示想尝试射箭。"
+        },
+        {
+          "n": 67,
+          "answer": "my",
+          "exp": "it was my turn 表示轮到我了。"
+        },
+        {
+          "n": 68,
+          "answer": "encouraged",
+          "exp": "叙述过去父亲的鼓励，用 encouraged。"
+        },
+        {
+          "n": 69,
+          "answer": "good",
+          "exp": "be good at 表示擅长。"
+        },
+        {
+          "n": 70,
+          "answer": "challenges/difficulties/problems/troubles/failure/failures",
+          "exp": "末段总结要勇敢面对挑战、困难或失败。"
+        }
+      ]
+    },
+    {
+      "type": "回答问题",
+      "title": "射箭经历：永不放弃",
+      "passage": "It was a Saturday morning, my father and I walked in a park. When I saw some people shooting arrows (箭) on the square, I decided to have a try. A girl of my age was having her second try. She picked up an arrow and shot it. But it missed the target (靶子)! She tried a third time, and failed again. She just gave up and walked away. Then it was my turn to shoot. I fixed my eyes on the target. With all of my efforts, I shot the arrow. It missed! I shot three more arrows. I failed them all. I was upset and wanted to leave. My father encouraged me to take one more shot. I held my breath, stared at the target and shot the arrow. Again, I missed the target! But I got closer to it. I kept trying and finally I made it! “See, son. Nobody is born to do well in everything. Never give up, and you can do it,” said my father. From this experience, I realize that challenges in life are not as difficult as they seem to be. If we focus on them, learn from failure (失败), and keep trying, we can succeed in the end.",
+      "items": [
+        {
+          "n": 71,
+          "stem": "Did the writer go to the park with his father on a Saturday morning?",
+          "answer": "Yes, he did.",
+          "exp": "首段明确是星期六早晨和父亲一起去公园。"
+        },
+        {
+          "n": 72,
+          "stem": "How many times did the girl shoot arrows?",
+          "answer": "Three times.",
+          "exp": "第二段说女孩第三次射箭失败后离开。"
+        },
+        {
+          "n": 73,
+          "stem": "What can you learn from the text?",
+          "answer": "If we face challenges bravely, learn from failure, and keep trying, we are sure to succeed.",
+          "exp": "开放题，围绕坚持尝试、从失败中学习概括启示。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "groupId": "xj-2025-english-fill-74",
+      "title": "商鞅立木取信",
+      "passage": "During the Warring States Period (战国时期) , many states made changes to become stronger. One of the most (74) (success) changes was created by Shang Yang in Qin. Shang Yang worked out a set of (75) (plan). At first, these plans were not easily (76) (accept) because people didn’t believe in him. To solve this problem, Shang Yang came (77) with an idea. He ordered his men to put a thin wooden pole (杆) at the south gate. Then he said anyone who took the pole to the north gate would (78) (receive) 10 gold pieces. The task was so easy (79) nobody believed it was true. They all thought Shang Yang was joking. After seeing that, Shang Yang said he would offer 50 gold pieces to anyone who did it. And (80) (final), a man wanted to have a try. He put the pole on his shoulder and walked to the north gate. (81) his surprise, Shang Yang paid him 50 gold pieces. The news spread across the capital. Soon, people were saying Shang Yang was a man of (82) (he) word. Then people (83) (follow) him without question. With his efforts, Qin (84) (become) the strongest of all the states.",
+      "items": [
+        {
+          "n": 74,
+          "answer": "successful",
+          "exp": "形容 changes 用 successful。"
+        },
+        {
+          "n": 75,
+          "answer": "plans",
+          "exp": "a set of 后用 plans。"
+        },
+        {
+          "n": 76,
+          "answer": "accepted/acceptable",
+          "exp": "be accepted 被接受，或 be acceptable 可接受。"
+        },
+        {
+          "n": 77,
+          "answer": "up",
+          "exp": "come up with 表示想出。"
+        },
+        {
+          "n": 78,
+          "answer": "receive",
+          "exp": "would 后用动词原形 receive。"
+        },
+        {
+          "n": 79,
+          "answer": "that/but/and",
+          "exp": "so ... that 表示如此容易以至于没人相信；but/and 也为参考答案认可的连接。"
+        },
+        {
+          "n": 80,
+          "answer": "finally",
+          "exp": "修饰整个句子用副词 finally。"
+        },
+        {
+          "n": 81,
+          "answer": "To",
+          "exp": "To his surprise 表示使他惊讶的是。"
+        },
+        {
+          "n": 82,
+          "answer": "his",
+          "exp": "a man of his word 表示言而有信的人。"
+        },
+        {
+          "n": 83,
+          "answer": "followed",
+          "exp": "过去叙事用 followed。"
+        },
+        {
+          "n": 84,
+          "answer": "became",
+          "exp": "叙述秦国过去成为最强，用 became。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "groupId": "xj-2025-english-fill-85",
+      "title": "沙漠里的玫瑰",
+      "passage": "词库：part / or / answer / dry / slow / get / stop / deep / rose / a / in\nCan roses really grow in the desert? The (85) is yes. Yutian in Xinjiang has perfect conditions to grow some special (86) . It has (87) long history of rose growing. In the past, roses were mainly made into rose jam (酱). But (88) recent years, they have played an important (89) in keeping the desert from growing. Roses’ roots (根) go down over three meters (90) and make the sand stay close around the plants. In just two (91) three years, a single rose can grow into a group. These rose groups can (92) down the wind’s speed. Growing roses in the desert has greatly changed the local people’s life. “Last year, my family (93) 63,000 yuan just from growing roses,” a farmer said. “It brings in income (收入) and helps to (94) the desert from growing. That’s something to be proud of,” he added. Today, Yutian’s rose industry has developed a lot. Over 30 rose products are now sold across China. The roses from this (95) land are now reaching far and wide markets.",
+      "items": [
+        {
+          "n": 85,
+          "answer": "answer",
+          "exp": "the answer is yes 表示答案是肯定的。"
+        },
+        {
+          "n": 86,
+          "answer": "roses",
+          "exp": "some 后用复数 roses。"
+        },
+        {
+          "n": 87,
+          "answer": "a",
+          "exp": "have a long history of 表示有悠久历史。"
+        },
+        {
+          "n": 88,
+          "answer": "in",
+          "exp": "in recent years 表示近些年。"
+        },
+        {
+          "n": 89,
+          "answer": "part",
+          "exp": "play an important part in 为固定搭配。"
+        },
+        {
+          "n": 90,
+          "answer": "deep",
+          "exp": "描述根深入地下三米，用 deep。"
+        },
+        {
+          "n": 91,
+          "answer": "or",
+          "exp": "two or three years 表示两三年。"
+        },
+        {
+          "n": 92,
+          "answer": "slow",
+          "exp": "slow down 表示降低风速。"
+        },
+        {
+          "n": 93,
+          "answer": "got",
+          "exp": "Last year 提示 get 的过去式 got。"
+        },
+        {
+          "n": 94,
+          "answer": "stop",
+          "exp": "stop ... from doing 表示阻止……。"
+        },
+        {
+          "n": 95,
+          "answer": "dry",
+          "exp": "dry land 表示干旱土地。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 96,
+      "score": 20,
+      "prompt": "假设你是李明，向 Colorful Summer Vacation 栏目投稿。以 Three Things to Do for Summer Vacation 为题，写80—120词短文，介绍暑假想做的三件事。可从自我提升、体重管理、研学旅行、娱乐交友等方面选取，也可适当发挥。不出现真实姓名、校名。",
+      "points": [
+        [
+          "明确三件暑假计划",
+          6
+        ],
+        [
+          "各计划说明具体做法",
+          8
+        ],
+        [
+          "结构清晰、过渡自然",
+          4
+        ],
+        [
+          "词数与语法规范",
+          2
+        ]
+      ],
+      "sample": "Three Things to Do for Summer Vacation With the temperature rising, a colorful vacation is around the corner. Three things come into my mind when I am making a list. On the top of the list is a self-improvement plan, which includes reading books, watching movies and writing diaries. Besides, I also plan to build my body to keep a good shape and stay lively. I’ll invite some classmates to go to the gym together and keep a daily record. The last thing is to relax with friends. It’s a nice chance to meet some friends who I haven’t seen for a long time because of my busy study. In a word, I can’t wait to enjoy the coming vacation.",
+      "exp": "按三件事分层表达，每件事给出具体行动，计划主要用一般将来时或 plan to。"
+    }
+  ]
+}

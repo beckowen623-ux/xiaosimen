@@ -1,7 +1,7 @@
 {
-  "name": "小四门刷题",
-  "short_name": "小四门刷题",
-  "description": "福州人教版初中小四门练习、错题复习与每日打卡",
+  "name": "初中提分题库",
+  "short_name": "初中提分",
+  "description": "人教版初中小四门与英语真题练习、错题复习与每日打卡",
   "lang": "zh-CN",
   "id": "./",
   "start_url": "./?from=app",

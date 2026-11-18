@@ -480,3 +480,9 @@ input[type=search]::placeholder { color: #67736c; }
 .saved-options { list-style: none; padding: 0; }
 .saved-options li { padding: 6px 0; }
 .saved-explanation { margin: 12px 0; }
+
+/* 长副标题允许在手机页头换行。 */
+.brand { flex-shrink: 1; min-width: 0; }
+.brand > span { min-width: 0; }
+.brand small { max-width: 360px; white-space: normal; overflow-wrap: anywhere; }
+@media (max-width: 620px) { .topbar-inner { flex-wrap: wrap; } .brand { flex-basis: 100%; } .brand small { max-width: 100%; } }

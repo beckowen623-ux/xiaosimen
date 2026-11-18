@@ -1,13 +1,13 @@
 window.XIAOSIMEN_BANKS ||= {};
 window.XIAOSIMEN_BANKS["dili"] = {
-  title: "地理", examLabel: "初中小四门", total: 600,
+  title: "地理", examLabel: "初中小四门", total: 621,
   chapters: [
-    { id: 1, title: "七年级上册 · 地球与地图", count: 102 },
-    { id: 2, title: "七年级下册 · 我们生活的大洲", count: 108 },
-    { id: 3, title: "八年级上册 · 从世界看中国", count: 91 },
-    { id: 4, title: "八年级下册 · 中国的地理差异", count: 107 },
-    { id: 5, title: "九年级上册 · 地理总复习（七年级）", count: 95 },
-    { id: 6, title: "九年级下册 · 地理总复习（八年级）", count: 97 }
+    { id: 1, title: "七年级上册 · 地球与地图", count: 105 },
+    { id: 2, title: "七年级下册 · 我们生活的大洲", count: 113 },
+    { id: 3, title: "八年级上册 · 从世界看中国", count: 96 },
+    { id: 4, title: "八年级下册 · 中国的地理差异", count: 115 },
+    { id: 5, title: "会考总复习 · 七年级内容", count: 95 },
+    { id: 6, title: "会考总复习 · 八年级内容", count: 97 }
   ],
   questions: [
 
@@ -2106,7 +2106,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
 
 
     {
-      id: "dili-h05-q011", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q011", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 11, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省内江市中考地理试题第3题",
@@ -2133,7 +2133,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
 
 
     {
-      id: "dili-h05-q028", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q028", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 28, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2021年四川省泸州市中考地理真题第13题",
@@ -2144,7 +2144,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：东西半球的分界线是20°W和160°E，西经150°—180°在西半球，不要用0°经线来分。"
     },
     {
-      id: "dili-h05-q029", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q029", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 29, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2021年四川省泸州市中考地理真题第14题",
@@ -2155,7 +2155,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：白令海峡是亚美分界线，苏伊士运河是亚非分界线，巴拿马运河是南北美洲分界线。"
     },
     {
-      id: "dili-h05-q030", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q030", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 30, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2021年四川省泸州市中考地理真题第15题",
@@ -2166,7 +2166,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：高纬度海峡航运受限的主因是结冰期长，不是水道浅或海盗。"
     },
     {
-      id: "dili-h05-q031", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q031", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 31, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2020年江苏省苏州市中考地理试题第16题",
@@ -2177,7 +2177,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：从西班牙出发先遇到的是大西洋，不要按大洋面积大小排序。"
     },
     {
-      id: "dili-h05-q032", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q032", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 32, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2020年江苏省苏州市中考地理试题第17题",
@@ -2188,7 +2188,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：直布罗陀海峡和英吉利海峡不要混淆，苏伊士运河和白令海峡不要混淆。"
     },
     {
-      id: "dili-h05-q033", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q033", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 33, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2020年海南省中考地理试题第18题",
@@ -2199,7 +2199,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：海陆变迁的证据要体现海洋变陆地或陆地变海洋，地中海缩小、喜马拉雅山有海洋生物化石都是典型证据。"
     },
     {
-      id: "dili-h05-q034", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q034", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 34, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2018年湖南省常德市中考地理试题第20题",
@@ -2210,7 +2210,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：非洲西岸对面就是南美洲东岸，中间隔的是大西洋，不要选成太平洋。"
     },
     {
-      id: "dili-h05-q035", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q035", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 35, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2018年湖南省常德市中考地理试题第21题",
@@ -2221,7 +2221,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：轮廓拼合是大陆漂移假说的经典证据，板块构造学说是在此基础上发展起来的。"
     },
     {
-      id: "dili-h05-q036", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q036", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 36, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2020年内蒙古兴安盟、呼伦贝尔中考地理真题第22题",
@@ -2232,7 +2232,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：地中海对应非洲板块与亚欧板块，红海对应印度洋板块与非洲板块，板块名称不要张冠李戴。"
     },
     {
-      id: "dili-h05-q037", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q037", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 37, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2020年湖南省株洲市中考地理试题第23题",
@@ -2243,7 +2243,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：张裂长大、挤压缩小，红海在扩大、地中海在缩小，两者正好相反。"
     },
     {
-      id: "dili-h05-q038", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q038", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 38, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2020年湖南省株洲市中考地理试题第24题",
@@ -2254,7 +2254,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：印度半岛虽然在亚洲，但它在印度洋板块上，不是欧亚板块。"
     },
     {
-      id: "dili-h05-q039", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q039", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 39, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年山东省青岛市中考地理试题第1题",
@@ -2265,7 +2265,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：按时间顺序排——先想象（盖天说）、再推断（亚里士多德）、再验证（麦哲伦）、最后确证（卫星照片）。"
     },
     {
-      id: "dili-h05-q040", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q040", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 40, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年山东省青岛市中考地理试题第2题（图中①—④所指物品改写为文字）",
@@ -2276,7 +2276,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：“天圆地方”找圆+方的组合——圆形方孔的半两钱、南方北圆的天坛；球形的地球仪、浑天仪体现的是“地球是球体”，不要选。"
     },
     {
-      id: "dili-h05-q041", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q041", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 41, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年山东省青岛市中考地理试题第3题",
@@ -2287,7 +2287,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：两个要点都要对——“两极稍扁、赤道略鼓”不能反，“不规则球体”不能写成“规则球体”。"
     },
     {
-      id: "dili-h05-q042", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q042", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 42, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2023年山东省青岛市中考地理试题第4题（山东省麦收时间6月7日—19日据原文解析写入题干）",
@@ -2298,7 +2298,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：6月在春分到夏至之间，北半球白昼越来越长、黑夜越来越短，夜间作业时间是变短不是变长。"
     },
     {
-      id: "dili-h05-q043", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q043", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 43, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2023年山东省青岛市中考地理试题第7题（徒步路线穿越的等高线形态改写为文字）",
@@ -2309,7 +2309,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：等高线向高处凸出是山谷，向低处凸出是山脊——凸的方向看的是海拔高低，不是看图的上下。"
     },
     {
-      id: "dili-h05-q044", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q044", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 44, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2023年山东省青岛市中考地理试题第8题（徒步起点与山顶海拔数据改写为文字）",
@@ -2347,7 +2347,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
 
 
     {
-      id: "dili-h06-q028", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q028", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 28, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "人教版八年级地理下册第五章综合测试卷1第15题",
@@ -2358,7 +2358,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：秦岭—淮河线是东西向的界线，以东/以西的说法不成立；以南1月均温在0℃以上。"
     },
     {
-      id: "dili-h06-q029", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q029", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 29, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "人教版八年级地理下册第五章综合测试卷1第16题",
@@ -2369,7 +2369,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：内外流区分界线看季风区界线，秦岭—淮河线是南北分界线，两条线不要混淆。"
     },
     {
-      id: "dili-h06-q030", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q030", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 30, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "人教版八年级地理下册第五章综合测试卷1第17题",
@@ -2380,7 +2380,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：淮南淮北分属南北两地，核心差异是气候（热量、水分），不是市场或土壤。"
     },
     {
-      id: "dili-h06-q031", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q031", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 31, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "人教版八年级地理下册第五章综合测试卷1第18题",
@@ -2391,7 +2391,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：屋顶坡度大小看降水多少，南方多雨屋顶尖、北方少雨屋顶平。"
     },
     {
-      id: "dili-h06-q032", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q032", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 32, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "人教版八年级地理下册第五章综合测试卷1第19题",
@@ -2402,7 +2402,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：熟制由北向南递增，南方是一年两熟至三熟，不要选成北方的一年一熟或两年三熟。"
     },
     {
-      id: "dili-h06-q033", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q033", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 33, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自人教版八年级地理下册第五章综合测试卷1第20题",
@@ -2413,7 +2413,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：黄河下游“地上河”、黄土高原“千沟万壑”是一对常考搭配，雪山连绵是青藏地区。"
     },
     {
-      id: "dili-h06-q034", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q034", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 34, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024年山东省青岛市中考地理试题第28题",
@@ -2424,7 +2424,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：雄安在河北中部——东边是渤海、西边是太行山，方向不要写反。"
     },
     {
-      id: "dili-h06-q035", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q035", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 35, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2024年山东省青岛市中考地理试题第29题",
@@ -2435,7 +2435,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：纪念抗日队伍的命名，落点是传承红色文化，不是安居乐业或乡愁记忆。"
     },
     {
-      id: "dili-h06-q036", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q036", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 36, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第1题",
@@ -2446,7 +2446,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：绿色消费的核心是节约资源、减少污染，对应的是“勤俭节约”，不是讲礼貌、讲诚信、讲毅力。"
     },
     {
-      id: "dili-h06-q037", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q037", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 37, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第2题",
@@ -2569,7 +2569,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：先排除③——养羊和防止水土流失没有直接关系，含③的选项都可以排除。"
     },
     {
-      id: "dili-h05-q045", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q045", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 45, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省成都市中考地理试题第1题（原题依托露营区分布示意图，图中露营区甲海拔645米、乙海拔570米的数据改写为文字，知识点、选项与答案未改）",
@@ -2580,7 +2580,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：相对高度用两地海拔相减，不是海拔本身；645-570=75米，不要算成海拔差的其他数。"
     },
     {
-      id: "dili-h05-q046", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q046", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 46, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省成都市中考地理试题第3题（原题依托露营区分布示意图，图中甲、乙位于山顶附近、丙位于山坡上、丁位于山谷附近的位置信息改写为文字，知识点、选项与答案未改）",
@@ -2591,7 +2591,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：山洪走山谷——等高线向高处凸出、中间低两边高的部位就是山谷，露营要避开山谷。"
     },
     {
-      id: "dili-h05-q047", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q047", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 47, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省成都市中考地理试题第4题（原题依托2024年北京天安门广场二分二至日升降旗时间图，图中四日的升旗、降旗时间改写为文字，知识点、选项与答案未改）",
@@ -2602,7 +2602,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：白昼时间要拿降旗时间减升旗时间算出来，不要只看升旗早晚；冬至日北半球昼最短是规律，也可直接判断。"
     },
     {
-      id: "dili-h05-q048", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q048", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 48, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省成都市中考地理试题第5题",
@@ -2613,7 +2613,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：春分到夏至，太阳直射点在北半球且向北移，北半球昼越来越长，不要选成昼短夜长。"
     },
     {
-      id: "dili-h05-q049", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q049", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 49, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省成都市中考地理试题第6题（原题依托我国南极科学考察站分布示意图，图中甲地位于南纬70°—80°之间、东经150°—180°之间，乙地纬度小于南纬66.5°、丙地纬度大于南纬80°、丁地经度位置等信息改写为文字，知识点、选项与答案未改）",
@@ -2624,7 +2624,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：用经纬度去套——南纬74°56′在70°—80°S之间，东经163°42′在150°—180°E之间，两项都要对上。"
     },
     {
-      id: "dili-h05-q050", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q050", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 50, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省成都市中考地理试题第7题",
@@ -2635,7 +2635,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：南极科考不是为了开采矿产，“绿色考察”的落点就是保护极地生态。"
     },
     {
-      id: "dili-h05-q051", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q051", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 51, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省成都市中考地理试题第8题（原题依托2025年3月13日我国春季柏科花粉始期预报地图，图中南方地区花粉始期早、北方地区花粉始期晚的信息改写为文字，知识点、选项与答案未改）",
@@ -2646,7 +2646,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：花粉始期跟着气温走——南方暖得早、花粉始期早，北方暖得晚、花粉始期晚，是南北差异，不是东西差异。"
     },
     {
-      id: "dili-h05-q052", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q052", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 52, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省成都市中考地理试题第9题",
@@ -2657,7 +2657,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：自南向北的变化，首先想到纬度位置——纬度越低太阳辐射越多、气温越高。"
     },
     {
-      id: "dili-h05-q053", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q053", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 53, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省成都市中考地理试题第10题",
@@ -2668,7 +2668,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：先排除②——过敏季增加户外运动只会加重症状，含②的选项都可以排除。"
     },
     {
-      id: "dili-h05-q054", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q054", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 54, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -2680,7 +2680,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：中午谁温度高谁升温快，夜晚谁温度低谁降温快；水和沙正好相反，不要记反。"
     },
     {
-      id: "dili-h05-q055", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q055", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 55, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省成都市中考地理试题第12题",
@@ -2691,7 +2691,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：海陆热力性质差异要分季节——夏季陆地暖、冬季陆地冷，“均比”这种绝对化的说法一定是错的。"
     },
     {
-      id: "dili-h05-q056", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q056", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 56, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省成都市中考地理试题第13题（原题依托巴西地形及大豆主产区示意图，图中巴西西北部为亚马孙平原、地势较低，东南部为巴西高原、地势较高的信息改写为文字，知识点、选项与答案未改）",
@@ -2702,7 +2702,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：巴西高原在东南部、亚马孙平原在西北部，地势是东南高、西北低，不要和“西高东低”搞混。"
     },
     {
-      id: "dili-h05-q057", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q057", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 57, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省成都市中考地理试题第14题",
@@ -2713,7 +2713,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：温带作物要的是温凉气候——巴西南部纬度高、海拔高，气候温凉才适合种大豆。"
     },
     {
-      id: "dili-h05-q058", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q058", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 58, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省成都市中考地理试题第15题",
@@ -2724,7 +2724,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：作物跨气候带种植，关键是品种改良——育种技术，不是化肥、灌溉这些辅助条件。"
     },
     {
-      id: "dili-h05-q059", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q059", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 59, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2023年山东省青岛市中考地理试题第12题",
@@ -2735,7 +2735,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：南极的暖季是11月至次年2月，和北半球的季节正好相反，不要按北半球的夏季去选。"
     },
     {
-      id: "dili-h05-q060", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q060", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 60, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2023年山东省青岛市中考地理试题第18题",
@@ -2747,7 +2747,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h05-q061", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q061", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 61, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2023年山东省青岛市中考地理试题第19题",
@@ -2759,7 +2759,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h05-q062", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q062", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 62, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2023年山东省青岛市中考地理试题第20题",
@@ -2771,7 +2771,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h05-q063", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q063", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 63, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2023年山东省青岛市中考地理试题第21题",
@@ -2783,7 +2783,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h05-q064", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q064", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 64, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年山东省青岛市中考地理试题第6题（原题依托等高线地形图，图中甲地海拔300—400米、乙地500—600米、丙地500—600米、丁地700—800米的数据改写为文字，知识点、选项与答案未改）",
@@ -2794,7 +2794,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：海拔“有可能相同”看的是海拔范围有没有重叠——乙和丙都是500—600米，范围重叠才有可能相同。"
     },
     {
-      id: "dili-h05-q065", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q065", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 65, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年山东省青岛市中考地理试题第30题（原题依托雄安新区位置及部分街道分布图，图中海岳大街、易宁大街、雁翎大街为东西向街道，崇文路、博远路、渥城路为南北向街道的信息改写为文字，知识点、选项与答案未改）",
@@ -2805,7 +2805,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：东西向的都叫“大街”，南北向的都叫“路”，方向和名称要一一对上，不要记反。"
     },
     {
-      id: "dili-h05-q066", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q066", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 66, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年安徽省初中（八年级）学业水平考试地理试题第1题",
@@ -2816,7 +2816,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：路灯开启时刻跟着日落时间走——夏季昼最长、日落最晚，开启时刻也就最晚。"
     },
     {
-      id: "dili-h05-q067", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q067", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 67, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年安徽省初中（八年级）学业水平考试地理试题第2题",
@@ -2827,7 +2827,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：信号灯是提高通行效率、方便出行、减轻污染，不是降低速度、减少运输总量；先排除①③。"
     },
     {
-      id: "dili-h05-q068", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q068", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 68, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第7题（原题依托澳大利亚气候类型分布图，图中①地位于澳大利亚北部、为热带草原气候且有季节性洪水泛滥的平原，②地为热带沙漠气候、③地为地中海气候、④地为温带海洋性气候的信息改写为文字，知识点、选项与答案未改）",
@@ -2838,7 +2838,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：磁性白蚁要同时满足两个条件——热带草原气候＋季节性洪水泛滥的平原，只满足一个的不行。"
     },
     {
-      id: "dili-h05-q069", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q069", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 69, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年安徽省初中（八年级）学业水平考试地理试题第8题",
@@ -2849,7 +2849,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：生物结构适应环境——白蚁丘高大厚实，是为了防季节性洪水，不是抗震、抗寒、防风。"
     },
     {
-      id: "dili-h05-q070", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q070", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 70, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第9题（原题依托世界不同纬度陆地面积占比图，图中K纬线位于90°S附近的信息改写为文字，知识点、选项与答案未改）",
@@ -2860,7 +2860,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：90°S就是南极点，所在的大陆只能是南极大陆；其他三大陆都在北半球或赤道附近。"
     },
     {
-      id: "dili-h05-q071", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q071", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 71, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第10题（原题依托世界不同纬度陆地面积占比图，图中K纬线位于90°S附近、P纬线位于50°N附近、Q纬线位于90°N附近、M纬线位于赤道附近的信息改写为文字，知识点、选项与答案未改）",
@@ -2871,7 +2871,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：赤道附近终年高温、年温差小；南极大陆平均海拔最高、90°N终年寒冷干燥，都是反向排除的抓手。"
     },
     {
-      id: "dili-h06-q038", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q038", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 38, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第22题",
@@ -2883,7 +2883,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q039", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q039", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 39, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第23题",
@@ -2895,7 +2895,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q040", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q040", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 40, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第24题",
@@ -2907,7 +2907,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q041", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q041", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 41, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第25题",
@@ -2919,7 +2919,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q042", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q042", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 42, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第26题",
@@ -2931,7 +2931,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q043", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q043", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 43, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第27题",
@@ -2943,7 +2943,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q044", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q044", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 44, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第28题",
@@ -2955,7 +2955,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q045", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q045", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 45, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第29题",
@@ -2967,7 +2967,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q046", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q046", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 46, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2023年山东省青岛市中考地理试题第30题",
@@ -2979,7 +2979,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q047", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q047", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 47, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年安徽省初中（八年级）学业水平考试地理试题第3题",
@@ -2990,7 +2990,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：产业发展最直接的社会效益是增加就业；“缓解拥堵、减少用地”都是反向的，产业发展反而会加剧拥堵、扩大用地。"
     },
     {
-      id: "dili-h06-q048", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q048", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 48, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年安徽省初中（八年级）学业水平考试地理试题第4题",
@@ -3001,7 +3001,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：答案要从题干里找依据——“全产业链协同发展”对应③，“尖端科技赋能”对应④；没提到的运输成本不能自己脑补。"
     },
     {
-      id: "dili-h06-q049", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q049", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 49, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第5题（原题依托黑龙江、河南两省位置及2020年两省人口和耕地面积数据图，图中黑龙江省耕地面积1700万公顷、人口3105万人，河南省耕地面积750万公顷、人口9107万人的数据改写为文字，知识点、选项与答案未改）",
@@ -3012,7 +3012,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：粮食输出量大不大，看的是人均耕地——地广人稀、人均耕地多，余粮才多；热量、降水都不是黑龙江的优势。"
     },
     {
-      id: "dili-h06-q050", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q050", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 50, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年安徽省初中（八年级）学业水平考试地理试题第6题",
@@ -3279,7 +3279,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：台湾岛小、地势起伏大、降水丰富→流程短、径流量大、流速快，三点要一起记。"
     },
     {
-      id: "dili-h05-q072", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q072", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 72, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省广安市中考地理试题第1题",
@@ -3290,7 +3290,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：麦哲伦航线经过大西洋、太平洋、印度洋，唯独没有经过北冰洋；注意船队最后是再次经过大西洋返回的。"
     },
     {
-      id: "dili-h05-q073", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q073", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 73, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省广安市中考地理试题第2题",
@@ -3301,7 +3301,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：先记赤道周长约4万千米，再用路程÷速度算时间，40000÷800=50。"
     },
     {
-      id: "dili-h05-q074", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q074", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 74, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省广安市中考地理试题第5题（原题依托世界地区图，图中甲为欧洲西部、乙为西亚、丙为撒哈拉以南非洲、丁为东南亚的信息改写为文字，知识点、选项与答案未改）",
@@ -3312,7 +3312,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：佛教发源于南亚，不是西亚；马六甲海峡沟通印度洋和太平洋，不是大西洋和太平洋。"
     },
     {
-      id: "dili-h05-q075", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q075", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 75, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省广安市中考地理试题第6题（原题依托世界地区图，图中丁为东南亚的信息改写为文字，知识点、选项与答案未改）",
@@ -3323,7 +3323,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：东南亚属于亚洲，亚洲是人口最多的大洲；发达国家集中在欧洲，跨经度最广是南极洲。"
     },
     {
-      id: "dili-h05-q076", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q076", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 76, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省广安市中考地理试题第7题",
@@ -3334,7 +3334,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：“寒极”是南极；南极以陆地为核心、北极以海洋为核心，不要颠倒；南极淡水资源丰富。"
     },
     {
-      id: "dili-h05-q077", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q077", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 77, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省广安市中考地理试题第8题",
@@ -3345,7 +3345,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：海冰消融→海平面上升、生物多样性减少；“增加”和“下降”那两项是反的。"
     },
     {
-      id: "dili-h05-q078", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q078", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 78, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省广安市中考地理试题第9题",
@@ -3356,7 +3356,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：澳大利亚在南半球、独占一块大陆、地广人稀；“仅”字表述过于绝对时要警惕。"
     },
     {
-      id: "dili-h05-q079", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q079", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 79, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省广安市中考地理试题第10题",
@@ -3367,7 +3367,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：根本原因是“远离大陆、长期孤立”，物种独立演化；气候、地形都是干扰项。"
     },
     {
-      id: "dili-h05-q080", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q080", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 80, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省广安市中考地理试题第11题",
@@ -3378,7 +3378,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：美国本土东临大西洋、西临太平洋，东西不要颠倒；地形分三大纵列带，西部是高大的山系，中部是广阔的平原，东部是低缓的山地。"
     },
     {
-      id: "dili-h05-q081", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q081", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 81, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省广安市中考地理试题第18题",
@@ -3389,7 +3389,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：11月是北半球秋季，太阳直射点在南半球，北京昼短夜长；玉米收获在秋季之前。"
     },
     {
-      id: "dili-h05-q082", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q082", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 82, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年广东省深圳市中考地理试题（荷兰风车与肯尼亚鲜花组）第1题",
@@ -3400,7 +3400,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：风车确实也能碾谷物、榨油，但“与海争地”用风车是为了抽水、排海水。"
     },
     {
-      id: "dili-h05-q083", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q083", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 83, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年广东省深圳市中考地理试题（荷兰风车与肯尼亚鲜花组）第2题",
@@ -3411,7 +3411,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：发展中国家比发达国家的优势抓“劳动力多、成本低”；科技、历史、市场距离都是荷兰的优势。"
     },
     {
-      id: "dili-h05-q084", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q084", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 84, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年广东省深圳市中考地理试题（荷兰风车与肯尼亚鲜花组）第3题（原题题干称“图中发展中国家”，据材料指肯尼亚，改写为肯尼亚，知识点、选项与答案未改）",
@@ -3422,7 +3422,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：鲜活易变质的货物、远距离运输→选最快的航空运输；海洋、铁路、公路都太慢。"
     },
     {
-      id: "dili-h05-q085", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q085", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 85, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
@@ -3434,7 +3434,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：北美洲北邻北冰洋，寒流来自北冰洋；中部大平原贯穿南北，寒流可以长驱南下。"
     },
     {
-      id: "dili-h05-q086", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q086", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 86, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年广东省深圳市中考地理试题（北美洲组）第2题（原题依托北美洲图，图中北美洲中部大平原贯穿南北、寒冷气流可长驱南下的信息改写为文字，知识点、选项与答案未改）",
@@ -3445,7 +3445,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：寒潮的危害是剧烈降温、大风、雨雪→断水断电；低温还能杀死害虫病菌，不是让它们滋生。"
     },
     {
-      id: "dili-h05-q087", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q087", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 87, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年广东省深圳市中考地理试题（北美洲组）第3题",
@@ -3456,7 +3456,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：泥石流要向垂直于流动方向的山坡上跑；地震不能跳楼；台风不要站在广告牌下。"
     },
     {
-      id: "dili-h05-q088", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q088", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 88, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年广东省深圳市中考地理试题（端午节粽子组）第1题",
@@ -3467,7 +3467,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：吃粽子+赛龙舟是端午节；贴春联、吃饺子是春节，吃汤圆是元宵节。"
     },
     {
-      id: "dili-h05-q089", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q089", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 89, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年广东省深圳市中考地理试题（端午节粽子组）第2题",
@@ -3478,7 +3478,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：深圳在南方沿海、渔业发达→海鲜馅；红豆、红枣、绿豆是北方农产品。"
     },
     {
-      id: "dili-h05-q090", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q090", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 90, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年广东省深圳市中考地理试题（端午节粽子组）第3题",
@@ -3489,7 +3489,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：粽子传播抓两点：种水稻的湿热气候 + 华人华侨集中、距离近→东南亚。"
     },
     {
-      id: "dili-h05-q091", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q091", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 91, type: "judge", meta: "判断题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省广安市中考地理试题第22题（非选择题改编为判断题，只改呈现形式，知识点与答案未改）",
@@ -3500,7 +3500,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：印度和巴西都是发展中国家，不要因为巴西经济规模大就误以为是发达国家。"
     },
     {
-      id: "dili-h05-q092", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q092", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 92, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省广安市中考地理试题第22题（非选择题改编为选择题，只改呈现形式，知识点与答案未改；原题为填空作答，四个选项按原题解析的正误表述编写）",
@@ -3511,7 +3511,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：恒河平原的有利条件抓“平原+热带季风雨热同期”；崎岖、高峻、寒冷干燥都是反的。"
     },
     {
-      id: "dili-h06-q051", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q051", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 51, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省广安市中考地理试题第23题（非选择题改编为选择题，只改呈现形式，知识点与答案未改）",
@@ -3522,7 +3522,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：广安在四川东部，靠近重庆，属于成渝城市群，不是长江中游城市群。"
     },
     {
-      id: "dili-h06-q052", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q052", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 52, type: "judge", meta: "判断题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省广安市中考地理试题第23题（非选择题改编为判断题，只改呈现形式，知识点与答案未改）",
@@ -3533,7 +3533,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：我国面积最大的淡水湖是鄱阳湖（江西），最大的咸水湖是青海湖，不要混淆。"
     },
     {
-      id: "dili-h06-q053", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q053", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 53, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省广安市中考地理试题第23题（非选择题改编为选择题，只改呈现形式，知识点与答案未改）",
@@ -3544,7 +3544,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：“鱼米之乡”对应长江中下游平原：水网密布、水稻+淡水鱼。"
     },
     {
-      id: "dili-h06-q054", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q054", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 54, type: "judge", meta: "判断题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省广安市中考地理试题第23题（非选择题改编为判断题，只改呈现形式，知识点与答案未改）",
@@ -3555,7 +3555,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：西气东输、南水北调、北煤南运、西电东送都是跨区域调配资源的大型工程，要一起记。"
     },
     {
-      id: "dili-h06-q055", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q055", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 55, type: "judge", meta: "判断题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省广安市中考地理试题第23题（非选择题改编为判断题，只改呈现形式，知识点与答案未改）",
@@ -3566,7 +3566,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "易错点：西电东送对输出地的积极意义首先是“资源优势变经济优势”。"
     },
     {
-      id: "dili-h06-q056", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q056", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 56, type: "judge", meta: "判断题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省广安市中考地理试题第26题（非选择题改编为判断题，只改呈现形式，知识点与答案未改）",
@@ -3890,7 +3890,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "台湾省人口最多的民族是汉族，约占台湾总人口的98%，主要是明清以来从福建、广东等地迁入的汉族后裔；土家族主要分布在湖南、湖北等地，壮族主要分布在广西，朝鲜族主要分布在东北地区。"
     },
     {
-      id: "dili-h05-q093", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q093", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 93, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年江苏省宿迁市中考地理试题第10题",
@@ -3900,7 +3900,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "冬奥会能够吸引各国参与，推动经济合作、文化交流和旅游发展；空间距离是地理上的客观存在，冬奥会的举办不会改变国家之间的空间距离；冬奥会的举办也不会从根本上改变气候环境；冬奥会的举办旨在推广冰雪运动，不会阻碍其发展。"
     },
     {
-      id: "dili-h05-q094", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q094", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 94, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年江苏省宿迁市中考地理试题第13题",
@@ -3910,7 +3910,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "中欧班列通过铁路运输、物流仓储、贸易服务等环节，直接或间接创造了大量就业机会，带动了沿线地区的就业增长；班列实现了中欧间商品的双向流通，并推动金融、保险等配套服务发展，促进了贸易互通；班列带动了沿线铁路升级、物流园区建设及企业投资，扩大了合作空间；班列并未限制文化交流与合作，反而是桥梁，贸易商、技术人员随班列流动，促进了文化互动。"
     },
     {
-      id: "dili-h05-q095", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q095", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 95, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年江苏省宿迁市中考地理试题第19题",
@@ -3920,7 +3920,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "汽车的设计和零部件来源于不同国家，体现了不同国家在经济上相互协作、相互依赖，反映出国际经济联系紧密；国际竞争是激烈的，并非减弱；题干体现的是经济联系，和国际局势紧张无关；这种情况说明国家之间是开放合作的，不是相对封闭。"
     },
     {
-      id: "dili-h05-q096", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q096", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 96, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年江苏省宿迁市中考地理试题第20题",
@@ -3930,7 +3930,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "美国对汽车公司滥施高关税，是贸易保护主义的表现；贸易保护主义阻碍了经济全球化进程，因为经济全球化倡导的是自由、公平的贸易，①正确；违反了世界贸易组织（WTO）规则，WTO致力于促进全球贸易的自由化、规范化，②正确；破坏了国家之间正常的经贸往来，不利于国家间的经济合作，④正确；而构建人类命运共同体需要各国加强合作、互利共赢，贸易保护主义与之相悖，③错误。"
     },
     {
-      id: "dili-h05-q097", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q097", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 97, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省达州市中考地理试题第8题",
@@ -3940,7 +3940,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "中欧班列往返于中国与欧洲之间，从欧洲回国的商品最有可能是法国葡萄酒；泰国香米来自东南亚，澳大利亚羊毛衫来自大洋洲，巴西咖啡来自南美洲，都不走中欧班列回国。"
     },
     {
-      id: "dili-h06-q057", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q057", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 57, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年江苏省宿迁市中考地理试题第25题（原题依托2021—2023年江苏省人口相关数据统计表，表中常住人口、出生率、死亡率、出生人口数据改写为文字，知识点、选项与答案未改）",
@@ -3950,7 +3950,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "常住人口从2021年的8505.40万增至2023年的8526.00万，逐年增加，A符合题意；出生率从5.65‰降至4.81‰，呈下降趋势，B错误；死亡率从6.77‰升至7.55‰，逐年上升，C错误；出生人口从48.06万降至41.00万，持续减少，D错误。"
     },
     {
-      id: "dili-h06-q058", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q058", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 58, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年江苏省宿迁市中考地理试题第26题（原题依托2021—2023年江苏省人口相关数据统计表，表中常住人口逐年增加、出生率下降、死亡率上升、自然增长率为负值的信息改写为文字，知识点、选项与答案未改）",
@@ -3960,7 +3960,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "自然增长率=出生率-死亡率，2021—2023年均为负值，A错误；环境优美和气候适宜并非短期内人口变化的主因，且表中未体现相关数据，B和C不符合题意；常住人口增加但自然增长率为负，说明人口增长主要依赖外地人口迁入，符合江苏省经济发达、吸引外来人口的特点，D符合题意。"
     },
     {
-      id: "dili-h06-q059", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q059", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 59, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第27题",
@@ -3970,7 +3970,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "11月至次年2月是冬季，降水少，不是洪水期，A错误；停航与种植树木无关，B错误；通济渠位于北方地区，冬季气温低，河水结冰，无法通航，C正确；隋朝初期经济未到萧条致停航程度，且停航是季节性的，D错误。"
     },
     {
-      id: "dili-h06-q060", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q060", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 60, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第28题",
@@ -3980,7 +3980,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "京杭大运河江苏段位于东部季风区，水量丰富，利于航运，①正确；江苏段地势平坦，水流平缓，不是湍急，②错误；江苏段沿线经济发达，运输需求大，③正确；京杭大运河历史悠久，江苏段作为其中一段，航运基础好，④正确。"
     },
     {
-      id: "dili-h06-q061", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q061", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 61, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第29题",
@@ -3990,7 +3990,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "“灯塔工厂”代表智能制造和数字化生产的最高水平，科技含量高符合其智能制造、数字化的本质特征；入围“灯塔工厂”需要重点考量效率的提升、成本的下降、对环境的友好性等指标，生产成本大与成本下降的考量指标矛盾，工人数量多不符合自动化、智能化生产对人力需求减少的特点，环境污染重与对环境的友好矛盾。"
     },
     {
-      id: "dili-h06-q062", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q062", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 62, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第30题",
@@ -4000,7 +4000,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "“灯塔工厂”代表智能制造和数字化生产的最高水平，主要聚焦于技术密集、需要高度自动化与数字化赋能的先进制造业领域；畜产品加工属于传统轻工业，技术门槛较低，自动化需求有限；房地产开发属于建筑业及服务业范畴，并非制造业；矿产资源采掘属于资源开发业，核心是开采环节，并非智能制造主导的先进制造领域；新能源新材料产业属于高新技术制造业，对数字化和智能化需求极高，是灯塔工厂的重点聚焦领域。"
     },
     {
-      id: "dili-h06-q063", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q063", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 63, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第33题",
@@ -4010,7 +4010,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "港珠澳大桥连接香港、珠海、澳门，位于珠江入海口处；长江入海口在上海附近，黄河入海口在山东，钱塘江入海口在浙江杭州湾，港珠澳大桥都不在这些地方。"
     },
     {
-      id: "dili-h06-q064", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q064", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 64, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第34题",
@@ -4020,7 +4020,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "港珠澳大桥和深中通道所在海域是重要航运通道，建海底隧道利于船舶通航，保障航运安全；海底隧道对鱼群通过影响小，不是主要目的；欣赏海底风光不是建隧道的功能需求；海底隧道施工难度大，不是降低难度。"
     },
     {
-      id: "dili-h06-q065", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q065", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 65, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第35题",
@@ -4030,7 +4030,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "粤港澳大湾区与周边地区是合作发展，不是资源掠夺；大湾区与周边地区经济联系紧密，不是完全独立；“区域均衡”表述不准确，是优势互补协同发展：粤港澳大湾区有资金、技术等优势，周边地区有资源、劳动力等优势，可优势互补、协同发展。"
     },
     {
-      id: "dili-h06-q066", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q066", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 66, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第38题",
@@ -4040,7 +4040,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "明清时期的故宫是皇帝居住和处理国家政务的场所，是全国最高权力机关所在地；中轴线是中国古代都城和宫殿建筑中体现皇权至上、等级秩序的核心布局，故宫位于中轴线上，直接彰显了其作为全国政治核心的地位；经济中心通常对应商业区、市集等，军事中心多为军营、要塞等，交通中心则是道路枢纽地带，都与故宫的功能和布局不符。"
     },
     {
-      id: "dili-h06-q067", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q067", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 67, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第39题",
@@ -4050,7 +4050,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "北京中轴线上分布众多历史文化古建筑群，体现了北京深厚的历史文化底蕴，是我国的文化中心；政治中心体现在它是全国的政治管理中心，国际交往中心体现在众多的外国使馆和国际组织，科技创新中心体现在众多的科研院所和高新技术产业，都不是“历史文化古建筑群”直接体现的。"
     },
     {
-      id: "dili-h06-q068", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q068", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 68, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年江苏省宿迁市中考地理试题第40题",
@@ -4060,7 +4060,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "“北京中轴线”申遗成功有利于北京文化遗产的保护和传承；申遗成功不会直接带动北京科技和工业发展，也不会缓解北京交通拥堵，更不会改变北京旧城格局和风貌——申遗恰恰要求保护旧城格局和风貌。"
     },
     {
-      id: "dili-h06-q069", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q069", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 69, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省达州市中考地理试题第1题（原题依托疆电入渝工程规划图，图中哈密、重庆位置信息已略去，改为直接设问“哈密位于重庆的哪个方向”，知识点与答案未改）",
@@ -4070,7 +4070,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "哈密位于新疆东部（约93.5°E，42.8°N），重庆位于西南地区（约106.5°E，29.5°N），与重庆相比，哈密纬度更高、经度更小，即位于重庆的西北方向。"
     },
     {
-      id: "dili-h06-q070", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q070", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 70, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省达州市中考地理试题第3题",
@@ -4080,7 +4080,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "疆电入渝工程把新疆丰富的能源优势转化为经济优势，能增加当地财政收入和就业机会；缓解能源短缺是受端重庆的好处，不是为新疆经济发展带来的好处；减少大气污染、带动青藏地区油气资源开发都不是该工程为新疆带来的主要好处。"
     },
     {
-      id: "dili-h06-q071", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q071", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 71, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省达州市中考地理试题第13题（原题依托四城市气温曲线图，改为直接设问“下列城市中冬季气温最低的是”，知识点与答案未改）",
@@ -4090,7 +4090,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "我国冬季气温南北差异大，纬度越高冬季气温越低；哈尔滨纬度最高，冬季气温最低；北京次之，武汉再次，广州纬度最低，冬季气温最高。"
     },
     {
-      id: "dili-h06-q072", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q072", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 72, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省达州市中考地理试题第14题（原题依托北京降水量柱状图，改为直接设问“北京降水量最多的月份是”；A选项在来源文本中截断，按补写干扰选项规则补为明显错误的“1月”，北京1月降水量最少，知识点与答案未改）",
@@ -4100,7 +4100,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "北京属于温带季风气候，降水集中在夏季，7、8月降水最多，7月为全年降水量最多的月份；1月、4月、10月降水都远少于7月。"
     },
     {
-      id: "dili-h06-q073", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q073", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 73, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省达州市中考地理试题第17题",
@@ -4110,7 +4110,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "西渝高铁途经秦巴山区，地形崎岖，山地较多，需要大量修建桥梁和隧道跨越山地、河谷，因此桥隧占比高；沿线没有广布的冻土，台风影响小，石油资源与桥隧占比无关。"
     },
     {
-      id: "dili-h06-q074", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q074", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 74, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省达州市中考地理试题第18题",
@@ -4477,7 +4477,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "江南水乡=地势低平+河网密布，记住这个搭配。"
     },
     {
-      id: "dili-h05-q098", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q098", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 98, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省乐山市中考地理试题第12题（原题依托北美地形分布示意图，图中北美地形分为西部科迪勒拉山系、中部中央大平原、东部山地的信息改写为文字，知识点、选项与答案未改）",
@@ -4488,7 +4488,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "山系是南北走向，挡住东西向扩散；大平原贯通南北，利于南北向扩散。"
     },
     {
-      id: "dili-h05-q099", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q099", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 99, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省乐山市中考地理试题第13题",
@@ -4499,7 +4499,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "生命安全第一，抢救财物不可取。"
     },
     {
-      id: "dili-h05-q100", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q100", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 100, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省乐山市中考地理试题第15题（原题依托两洋铁路分布示意图，改为直接设问，知识点、选项与答案未改）",
@@ -4510,7 +4510,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "横穿南美洲东部主要经过巴西高原，亚马孙平原在北部，不是最主要地形。"
     },
     {
-      id: "dili-h05-q101", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q101", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 101, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省乐山市中考地理试题第16题",
@@ -4521,7 +4521,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "抓住“通关费高”这个关键信息，绕开运河就是省钱。"
     },
     {
-      id: "dili-h05-q102", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q102", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 102, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省乐山市中考地理试题第17题",
@@ -4532,7 +4532,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "③是反向表述，两洋铁路恰恰是减少对单一市场、单一通道的依赖。"
     },
     {
-      id: "dili-h05-q103", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q103", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 103, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省内江市中考地理试题第20题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
@@ -4543,7 +4543,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "摩洛哥磷矿世界闻名，记住这个搭配。"
     },
     {
-      id: "dili-h05-q104", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q104", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 104, type: "judge", meta: "判断题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省内江市中考地理试题第20题第（2）小问（原题为简答题，改编为判断题，知识点与答案未改）",
@@ -4554,7 +4554,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "人口、城市分布不均、沿海多，是摩洛哥的特点。"
     },
     {
-      id: "dili-h05-q105", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q105", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 105, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省内江市中考地理试题第20题第（3）小问（原题为填空题，改编为单选题，知识点与答案未改）",
@@ -4565,7 +4565,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "光伏发电找晴天多、日照强的地方，就是降水少的南部。"
     },
     {
-      id: "dili-h05-q106", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q106", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 106, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省内江市中考地理试题第20题第（4）小问（原题为简答题，改编为单选题，知识点与答案未改）",
@@ -4576,7 +4576,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "降水少+蒸发旺盛→干旱、半干旱；不要只看降水量数字，要结合蒸发。"
     },
     {
-      id: "dili-h06-q075", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q075", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       image: true,
       number: 75, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
@@ -4588,7 +4588,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "青藏高原=高峻寒冷，抓住海拔4000米以上这个关键信息。"
     },
     {
-      id: "dili-h06-q076", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q076", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 76, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省乐山市中考地理试题第7题（原题依托长江上游梯级电站分布示意图，图中各电站所在河段信息已略去，改为直接设问，知识点、选项与答案未改）",
@@ -4599,7 +4599,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "三峡、葛洲坝在宜宾以下的川江河段，不在金沙江。"
     },
     {
-      id: "dili-h06-q077", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q077", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 77, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省乐山市中考地理试题第8题",
@@ -4610,7 +4610,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "水能看落差和流量，两河段对比时落差是决定性差异；不要选流量更大——下游川江流量其实更大。"
     },
     {
-      id: "dili-h06-q078", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q078", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 78, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省乐山市中考地理试题第9题",
@@ -4621,7 +4621,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "“关键因素”问的是跃升的决定力量，是科技不是地形。"
     },
     {
-      id: "dili-h06-q079", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q079", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 79, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省乐山市中考地理试题第10题",
@@ -4632,7 +4632,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "逐项对照材料，采煤与水电站无关，最容易排除。"
     },
     {
-      id: "dili-h06-q080", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q080", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       image: true,
       number: 80, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
@@ -4644,7 +4644,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "先判断实验变量是土质，再找土质疏松导致侵蚀的选项；降水多少是另一组实验的变量。"
     },
     {
-      id: "dili-h06-q081", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q081", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       image: true,
       number: 81, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
@@ -4656,7 +4656,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "水土保持抓两条——生物措施（植树种草）和工程措施（挡土坝），陡坡开荒和过度放牧都是反的。"
     },
     {
-      id: "dili-h06-q082", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q082", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 82, type: "judge", meta: "判断题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省内江市中考地理试题第19题第（3）小问（原题为填空题，改编为判断题，知识点与答案未改）",
@@ -5052,7 +5052,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "②是反向干扰项，竹产业要的是保林、用林，不是退林还耕。"
     },
     {
-      id: "dili-h05-q107", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q107", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 107, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省眉山市中考地理试题第3题",
@@ -5063,7 +5063,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "冬季的北半球一定是昼短夜长，春节在冬季，别选昼长夜短。"
     },
     {
-      id: "dili-h05-q108", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q108", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 108, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省眉山市中考地理试题第5题",
@@ -5074,7 +5074,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "北极航道只看海冰——夏季融化才能走，其他季节封冻。"
     },
     {
-      id: "dili-h05-q109", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q109", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 109, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省眉山市中考地理试题第6题（D选项原文缺失，补写明显错误的干扰项“全年可通航，不受季节限制”，知识点与答案未改）",
@@ -5085,7 +5085,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "“最大优势”看航程和费用；B、C、D三项恰恰都是北极航道的短板。"
     },
     {
-      id: "dili-h05-q110", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q110", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 110, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省眉山市中考地理试题第15题",
@@ -5096,7 +5096,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "七大洲里去掉没红树林的欧洲和南极洲，剩下5个。"
     },
     {
-      id: "dili-h05-q111", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q111", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 111, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省眉山市中考地理试题第16题",
@@ -5107,7 +5107,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "红树林是热带海岸的标志植被，直接选热带。"
     },
     {
-      id: "dili-h05-q112", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q112", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 112, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省眉山市中考地理试题第17题",
@@ -5118,7 +5118,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "①③都是反向表述，红树林是护岸、净水、育生物的，好处都往正向想。"
     },
     {
-      id: "dili-h05-q113", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q113", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 113, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2025年四川省宜宾市中考地理试题第3题",
@@ -5129,7 +5129,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "按季节对诗句：冬梅、春燕、夏荷、秋落叶，清明是春，选燕子。"
     },
     {
-      id: "dili-h06-q083", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q083", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 83, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第3题（原题依托2030年沙特阿拉伯世博会材料，题干补写“2030年世界博览会将在沙特阿拉伯举行，沙漠广布、太阳能资源丰富”的材料信息，D选项原文截断为“水”，按能源类别补全为“水能”，知识点与答案未改）",
@@ -5140,7 +5140,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "“清洁能源”先排除石油、煤，再看当地资源——沙漠多太阳、水少，就选太阳能。"
     },
     {
-      id: "dili-h06-q084", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q084", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 84, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第19题（原题依托DeepSeek公司材料，题干补写“位于浙江省杭州市”，知识点、选项与答案未改）",
@@ -5151,7 +5151,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "杭州在长三角，临近的只能是沪宁杭，别被“珠江三角洲也在南方”带偏。"
     },
     {
-      id: "dili-h06-q085", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q085", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 85, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省南充市中考地理试题第9题（D选项原文缺失，按①②③④组合规律补写为“②③④”，知识点与答案未改）",
@@ -5162,7 +5162,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "内陆城市招商靠政策、土地、劳动力，科技发达是沿海城市的优势，别选含④的组合。"
     },
     {
-      id: "dili-h06-q086", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q086", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 86, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省南充市中考地理试题第10题",
@@ -5173,7 +5173,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "题目问“描述错误的是”，制造业基地的积极影响里混进“资源开发”就是错的。"
     },
     {
-      id: "dili-h06-q087", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q087", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 87, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省宜宾市中考地理试题第14题",
@@ -5184,7 +5184,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "新兴产业看科技，别被“传统”“矿产”这些旧要素带偏。"
     },
     {
-      id: "dili-h06-q088", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q088", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 88, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省眉山市中考地理试题第18题",
@@ -5195,7 +5195,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       trap: "洪水逃生只看一个字——“高”，往高处跑；顺水跑、爬电杆都是错的。"
     },
     {
-      id: "dili-h06-q089", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q089", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 89, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "2025年四川省眉山市中考地理试题第20题",
@@ -5488,7 +5488,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "新疆地处我国西北地区，气候干旱，荒漠广布，面临的主要生态环境问题是土地荒漠化。"
     },
     {
-      id: "dili-h05-q114", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q114", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 114, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省眉山市中考地理试题第23题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5498,7 +5498,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "咸海所在地区地势东南高、西北低，地形以丘陵、平原为主。"
     },
     {
-      id: "dili-h05-q115", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q115", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 115, type: "multiple", meta: "多选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省眉山市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
@@ -5508,7 +5508,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "咸海深居亚欧大陆内部，远离海洋，气候干旱，降水少；气候变暖使气温上升、蒸发旺盛；人们生产生活从河湖中大量取水，入湖水量减少，湖面不断萎缩。"
     },
     {
-      id: "dili-h05-q116", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q116", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 116, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省眉山市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题为 5 项多选（4 项正确），改编为单选“不正确的是”（选项为其中 3 项正确 + 1 项错误）",
@@ -5518,7 +5518,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "咸海萎缩导致土壤盐碱化、土地沙漠化、生物多样性减少，对局地气候的调节作用逐渐减弱，中亚地区的降水量大幅减少，极端天气频发。"
     },
     {
-      id: "dili-h05-q117", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q117", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 117, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省南充市中考地理试题第12题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5528,7 +5528,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "热带雨林被破坏后，吸收二氧化碳的能力减弱，大气中二氧化碳增多，会导致全球气候变暖。"
     },
     {
-      id: "dili-h05-q118", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q118", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 118, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "改编自2025年四川省南充市中考地理试题第13题（非选择题改编为多选题，只改呈现形式，知识点与答案未改；原题答案“广阔……”截断，D项按常见固定表述补全为“广阔的市场”）；原题为 5 项多选（4 项正确），改编为单选“不属于”（选项为其中 3 项正确 + 1 项错误）",
@@ -5538,7 +5538,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "中国在合作中的突出优势是先进的科学技术、雄厚的资金、丰富的管理经验和广阔的市场；丰富的铁矿资源是几内亚方面的优势。"
     },
     {
-      id: "dili-h06-q090", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q090", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 90, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省成都市中考地理试题第28题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
@@ -5548,7 +5548,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "长江干流主要流经亚热带，无结冰期，全年可通航；长江中下游河段地势低平，河道开阔，水流速度慢，航运价值高。落差大、水流急是上中游水能丰富的原因，不利于航运。"
     },
     {
-      id: "dili-h06-q091", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q091", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 91, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省成都市中考地理试题第28题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
@@ -5558,7 +5558,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "长江流域东部发展大数据产业的资源优势有产业密集和技术先进、人力资源优势、城市密集。"
     },
     {
-      id: "dili-h06-q092", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q092", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 92, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省成都市中考地理试题第29题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5568,7 +5568,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "粤港澳大湾区地处我国大陆东南部，位于珠江的海口，濒临南海，由香港、澳门特别行政区及广东省部分城市组成。"
     },
     {
-      id: "dili-h06-q093", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q093", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 93, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省成都市中考地理试题第29题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题为 5 项多选（4 项正确），改编为单选“不属于”（选项为其中 3 项正确 + 1 项错误）",
@@ -5578,7 +5578,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "粤港澳大湾区发展人形机器人产业的有利条件是政策支持、科技力量雄厚、产业基础好、市场需求大。"
     },
     {
-      id: "dili-h06-q094", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q094", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 94, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省成都市中考地理试题第29题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5588,7 +5588,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "我国60岁及以上老年人口比重不断上升，养老需求增大，人形机器人可应用于养老领域；同时也可应用于工业生产等领域。"
     },
     {
-      id: "dili-h06-q095", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q095", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 95, type: "judge", meta: "判断题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省宜宾市中考地理试题第23题（非选择题改编为判断题，只改呈现形式，知识点与答案未改）",
@@ -5598,7 +5598,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "2010年我国60岁及以上人口占13.26%，2020年升至18.70%，比重上升，说明人口老龄化问题加重。"
     },
     {
-      id: "dili-h06-q096", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q096", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 96, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省成都市中考地理试题第30题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5608,7 +5608,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "哈尔滨属于温带季风气候，冬季寒冷漫长，降雪量大且积雪期长，适宜举办冬季运动会。"
     },
     {
-      id: "dili-h06-q097", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q097", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 97, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省成都市中考地理试题第30题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题为 5 项多选（4 项正确），改编为单选“不属于”（选项为其中 3 项正确 + 1 项错误）",
@@ -5618,7 +5618,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "东北三省可开发的冰雪经济项目有冰雪旅游、冰雪运动培训、冰雪赛事、冰雪艺术等。"
     },
     {
-      id: "dili-h06-q098", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q098", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 98, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5628,7 +5628,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "理塘县位于四川省西南部，地处我国青藏地区，平均海拔约4042米。"
     },
     {
-      id: "dili-h06-q099", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q099", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 99, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5638,7 +5638,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "理塘县人数最多的少数民族是藏族，该民族的传统服饰是藏袍。"
     },
     {
-      id: "dili-h06-q100", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q100", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 100, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5648,7 +5648,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "理塘县地处青藏地区，地形以山地和高原为主，地势起伏较大。"
     },
     {
-      id: "dili-h06-q101", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q101", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 101, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题 5 项，删去 1 项明显错误干扰项（全年高温），其余不变",
@@ -5658,7 +5658,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "理塘县海拔高，气温特征是全年低温，夏季温和，昼夜温差大。"
     },
     {
-      id: "dili-h06-q102", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q102", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 102, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5668,7 +5668,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "理塘县平均海拔约4042米，地势高导致气温低，影响其夏季气温的主要因素是地形因素。"
     },
     {
-      id: "dili-h06-q103", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q103", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 103, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第23题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -5678,7 +5678,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "甲山脉是秦岭，陕西省的行政中心是西安；秦岭—淮河一线是我国南方地区与北方地区的分界线。"
     },
     {
-      id: "dili-h06-q104", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q104", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 104, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）；原题 5 项，删去 1 项明显错误干扰项（有结冰期），其余不变",
@@ -5688,7 +5688,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "陕南地区河流流量大、含沙量低、无结冰期；陕北地区河流流量较小、含沙量高、有结冰期。"
     },
     {
-      id: "dili-h06-q105", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q105", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 105, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
@@ -5698,7 +5698,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "关中地区地形平坦，土壤肥沃，利于农耕；气候适宜，降水适中；河流提供水源，这些有利自然条件使其成为华夏文明的重要发祥地。"
     },
     {
-      id: "dili-h06-q106", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q106", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 106, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省泸州市中考地理试题第23题（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
@@ -5988,7 +5988,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "以棉花为原料的工业产品有棉布、棉纱、服装等；钢铁是以铁矿、煤炭等为原料的重工业产品，与棉花无关。"
     },
     {
-      id: "dili-h05-q119", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q119", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 119, type: "judge", meta: "判断题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年四川省成都市中考地理试题第11题（原题依托我国1949年至2021年人口增长及生育政策变化图，改编为判断题，知识点与答案未改）",
@@ -5998,7 +5998,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "比较我国1949—2021年人口增长曲线中1953—1964年、1964—1982年、2000—2010年、2010—2020年四段线段的斜率，1964—1982年段的线段斜率最大，故该时期我国人口增长速度最快。"
     },
     {
-      id: "dili-h05-q120", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q120", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 120, type: "single", meta: "单选题",
       grade: "九上", stage: "9-up",
       source: "2024年四川省成都市中考地理试题第12题",
@@ -6008,7 +6008,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "我国不断调整人口生育政策，是为了保持适度的人口增长速度，减少由于人口增长过快或过慢而产生的人口问题，①正确；也是为了使人口增长与经济发展和资源环境条件相适应，进而促进人口与社会经济均衡发展，④正确；提高老龄人口平均寿命要靠改善医疗条件，与生育政策无关，②错误；生育政策的调整主要为了解决人口出生率的问题，与人口地区分布关系不大，③错误。"
     },
     {
-      id: "dili-h05-q121", chapterId: 5, chapter: "九年级上册 · 地理总复习（七年级）",
+      id: "dili-h05-q121", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 121, type: "multiple", meta: "多选题",
       grade: "九上", stage: "9-up",
       source: "改编自2024年四川省成都市中考地理试题第30题第（3）小问（原题为简答题，改编为多选题，知识点与答案未改）",
@@ -6018,7 +6018,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "轮换放牧、围场休养利于牧草生长，合理调整各种用地规模，促进农场可持续发展；这种经营方式不是为了增加放牧数量。"
     },
     {
-      id: "dili-h06-q107", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q107", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 107, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省眉山市中考地理试题第24题第（1）小问（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
@@ -6028,7 +6028,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "湖南省发展有色冶金工业的有利条件：靠近煤矿、水电站，能源充足；钨、锡、铅锌等有色金属资源丰富，原料充足；铁路、高速公路等交通便利。"
     },
     {
-      id: "dili-h06-q108", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q108", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 108, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省眉山市中考地理试题第24题第（2）小问（非选择题改编为单选题（原题 5 个选项、4 项正确，删去 1 项正确表述后改编，只改呈现形式，知识点与答案未改））",
@@ -6038,7 +6038,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "发展有色冶金工业的社会经济意义：保障国家工业原料安全；保障国防安全；促进就业，有利于社会稳定；将当地的资源优势转变为经济优势，促进经济发展。（原题为 5 选 4 多选题，改编为单选题时删去正确表述“保障国防安全”，其余知识点与答案未改。）"
     },
     {
-      id: "dili-h06-q109", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q109", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 109, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省眉山市中考地理试题第24题第（3）小问（非选择题改编为单选题（原题 5 个选项、4 项正确，删去 1 项正确表述后改编，只改呈现形式，知识点与答案未改））",
@@ -6048,7 +6048,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "关闭规模较小、采矿活动不规范的矿山的重要意义：减少资源浪费和破坏；减少安全事故；减轻生态破坏；减少环境污染。（原题为 5 选 4 多选题，改编为单选题时删去正确表述“减少环境污染”，其余知识点与答案未改。）"
     },
     {
-      id: "dili-h06-q110", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q110", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 110, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省南充市中考地理试题第15题第（2）小问（非选择题改编为多选题，只改呈现形式，知识点与答案未改；原题答案区截断为“设置草方”，按常见固定表述补全为“设置草方格沙障”）",
@@ -6058,7 +6058,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "新疆地处我国西北地区，气候干旱，荒漠广布，面临的主要生态环境问题是土地荒漠化；为解决该问题可采取植树种草、退耕还林还草、设置草方格沙障等措施。"
     },
     {
-      id: "dili-h06-q111", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q111", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 111, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省南充市中考地理试题第15题第（3）小问（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
@@ -6068,7 +6068,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "铺设光伏发电板实现经济与生态双重效益，经济效益表现为提供就业机会、增加居民收入；生态效益表现为降低风速、减少风沙流动、减少地表水分蒸发。"
     },
     {
-      id: "dili-h06-q112", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q112", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 112, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第12题第（3）小问（非选择题改编为多选题，只改呈现形式，知识点与答案未改）",
@@ -6078,7 +6078,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "窑洞建在黄土深厚的山体南坡，是因为黄土深厚便于挖掘，稳固性强；山体南坡为向阳坡，光照充足，且位于冬季风的背风坡，不易受冷空气的影响，冬季温暖。"
     },
     {
-      id: "dili-h06-q113", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q113", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 113, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年安徽省初中（八年级）学业水平考试地理试题第13题第（3）小问（非选择题改编为单选题（原题 5 个选项、4 项正确，删去 1 项正确表述后改编，只改呈现形式，知识点与答案未改））",
@@ -6088,7 +6088,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "我国治理黄河流域水土流失采取的具体措施：生物措施有植树种草、退耕还林还草，恢复植被；工程措施有修建梯田、打坝淤地拦截泥沙，修建小浪底等水利枢纽调水调沙；管理措施有制定法规、调整农业结构、合理放牧，规范人类活动。（原题为 5 选 4 多选题，改编为单选题时删去正确表述“修建小浪底等水利枢纽，调水调沙”，其余知识点与答案未改。）"
     },
     {
-      id: "dili-h06-q114", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q114", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 114, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省宜宾市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -6099,7 +6099,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q115", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q115", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 115, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省宜宾市中考地理试题第22题（非选择题改编为单选题，只改呈现形式，知识点与答案未改）",
@@ -6110,7 +6110,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       verify: "unverified-answer-page"
     },
     {
-      id: "dili-h06-q116", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q116", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 116, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2025年四川省内江市中考地理试题第19题第（4）小问（原题为简答列举题，改编为多选题，知识点与答案未改）",
@@ -6120,7 +6120,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "长江三角洲地理位置优越，地处长江入海口，可以河海联运，交通便利，经济腹地广阔；长江三角洲人口稠密，劳动力资源丰富；经济发达，购买力强，消费市场广阔；拥有众多科研机构和高等院校，科技力量雄厚。"
     },
     {
-      id: "dili-h06-q117", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q117", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 117, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省成都市中考地理试题第26题第（3）小问（原题为简答题，改编为多选题，知识点与答案未改）",
@@ -6130,7 +6130,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "华北平原春旱的成因：冬小麦返青需水量大；春季降水少，升温快，蒸发旺盛。"
     },
     {
-      id: "dili-h06-q118", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q118", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 118, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省成都市中考地理试题第26题第（4）小问（原题为简答题，改编为多选题，知识点与答案未改）",
@@ -6140,7 +6140,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "太行山脉对京津冀地区发挥的生态环境效益有涵养水源、保持水土、防风沙、净化空气、调节气候等。"
     },
     {
-      id: "dili-h06-q119", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q119", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 119, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省成都市中考地理试题第27题第（1）小问（原题为填空题，改编为单选题，知识点与答案未改）",
@@ -6150,7 +6150,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "青海湖四周雪山连绵，冰川广布，夏季气温高，高山冰雪融水量大，湖水水量最大。"
     },
     {
-      id: "dili-h06-q120", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q120", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 120, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省成都市中考地理试题第27题第（2）小问（原题为简答题，改编为多选题，知识点与答案未改）",
@@ -6160,7 +6160,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "盐湖的开发利用方向有发展旅游业、提供建筑材料、提供工业原料等；柴达木盆地气候干旱，不适宜发展水稻种植。"
     },
     {
-      id: "dili-h06-q121", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q121", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 121, type: "multiple", meta: "多选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省成都市中考地理试题第27题第（4）小问（原题为简答题，改编为多选题，知识点与答案未改）",
@@ -6170,7 +6170,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "三江源地区冰川不断消退，湖泊沼泽不断萎缩，草场不断退化，黄河源头水源涵养能力下降，流量会减少；植被破坏、水土流失加剧，河流含沙量会增加。"
     },
     {
-      id: "dili-h06-q122", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q122", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 122, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省成都市中考地理试题第27题第（5）小问（原题为填空题，改编为单选题，知识点与答案未改；库内已有河谷农业青稞说明，本题直接设问谷地主要粮食作物，设问不同而保留）",
@@ -6180,7 +6180,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "雅鲁藏布江谷地是青藏高原上海拔较低、热量较好的河谷地带，发展河谷农业，主要的粮食作物有青稞和小麦等。"
     },
     {
-      id: "dili-h06-q123", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q123", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 123, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省成都市中考地理试题第28题第（2）小问（原题为简答题，改编为单选题（原题 5 个选项、4 项正确，删去 1 项正确表述后改编），知识点与答案未改；库内已有南方地区水稻题，本题问的是水田农业的优越自然条件，设问不同而保留）",
@@ -6190,7 +6190,7 @@ window.XIAOSIMEN_BANKS["dili"] = {
       explanation: "长江中下游平原发展水田农业的优越自然条件有地势平坦、雨热同期、灌溉水源充足、土壤肥沃。（原题为 5 选 4 多选题，改编为单选题时删去正确表述“雨热同期”，其余知识点与答案未改。）"
     },
     {
-      id: "dili-h06-q124", chapterId: 6, chapter: "九年级下册 · 地理总复习（八年级）",
+      id: "dili-h06-q124", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 124, type: "single", meta: "单选题",
       grade: "九下", stage: "9-down",
       source: "改编自2024年四川省成都市中考地理试题第29题第（2）小问（原题为填空题，改编为单选题，知识点与答案未改）",
@@ -6628,6 +6628,720 @@ window.XIAOSIMEN_BANKS["dili"] = {
       options: [{key:"A",text:"当地黏土丰富，夯土垒墙，原料来源丰富"}, {key:"B",text:"当地森林广布，建房的木材来源充足"}, {key:"C",text:"当地降水量大且集中，屋顶倾斜有利于排水"}, {key:"D",text:"当地气候干旱，屋顶平坦利于晾晒"}],
       answer: ["A","B","C"],
       explanation: "原卷答案：当地黏土丰富，夯土垒墙，原料来源丰富；当地森林广布，建房的木材来源充足；当地降水量大且集中，屋顶倾斜有利于排水；当地气候暖湿，适宜水稻种植，稻草来源丰富。本题保留前3项正确表述，删去的正确表述“当地气候暖湿，适宜水稻种植，稻草来源丰富”在此说明；当地气候暖湿、降水多，屋顶倾斜利排水，D 错误。"
+    },
+    {
+      "id": "dili-h01-q132",
+      "chapterId": 1,
+      "chapter": "七年级上册 · 地球与地图",
+      "number": 132,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七上",
+      "stage": "7-up",
+      "source": "2025年湖南中考·地理第1题",
+      "stem": "2025年4月30日13时，神舟十九号载人飞船返回舱在我国西北内陆成功着陆。纽约华人观看飞船返回直播时正值深夜，导致两地时间早晚差异的主要原因是",
+      "options": [
+        {
+          "key": "A",
+          "text": "作息不同"
+        },
+        {
+          "key": "B",
+          "text": "地形差异"
+        },
+        {
+          "key": "C",
+          "text": "地球公转"
+        },
+        {
+          "key": "D",
+          "text": "地球自转"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "地球自转使不同经度地区出现地方时差异。"
+    },
+    {
+      "id": "dili-h01-q133",
+      "chapterId": 1,
+      "chapter": "七年级上册 · 地球与地图",
+      "number": 133,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七上",
+      "stage": "7-up",
+      "source": "2025年湖南中考·地理第3题",
+      "stem": "全球海洋和陆地面积的比例约为",
+      "options": [
+        {
+          "key": "A",
+          "text": "三分海洋，七分陆地"
+        },
+        {
+          "key": "B",
+          "text": "七分海洋，三分陆地"
+        },
+        {
+          "key": "C",
+          "text": "四分海洋，六分陆地"
+        },
+        {
+          "key": "D",
+          "text": "六分海洋，四分陆地"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "地球表面约71%为海洋、29%为陆地，概括为七分海洋三分陆地。"
+    },
+    {
+      "id": "dili-h02-q134",
+      "chapterId": 2,
+      "chapter": "七年级下册 · 我们生活的大洲",
+      "number": 134,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七下",
+      "stage": "7-down",
+      "source": "2025年湖南中考·地理第5题",
+      "stem": "Q岛所在的南美洲",
+      "options": [
+        {
+          "key": "A",
+          "text": "北连大洋洲"
+        },
+        {
+          "key": "B",
+          "text": "南望北美洲"
+        },
+        {
+          "key": "C",
+          "text": "东临大西洋"
+        },
+        {
+          "key": "D",
+          "text": "西濒印度洋"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "南美洲东临大西洋、西临太平洋，北部与北美洲相连。"
+    },
+    {
+      "id": "dili-h02-q135",
+      "chapterId": 2,
+      "chapter": "七年级下册 · 我们生活的大洲",
+      "number": 135,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七下",
+      "stage": "7-down",
+      "source": "2025年湖南中考·地理第9题",
+      "stem": "玛瑙河是南极洲最长的季节性河流，上游地区曾发现鲸鱼牙齿化石。鲸鱼牙齿化石的发现说明",
+      "options": [
+        {
+          "key": "A",
+          "text": "该地可能曾是海洋"
+        },
+        {
+          "key": "B",
+          "text": "全球环境变化很小"
+        },
+        {
+          "key": "C",
+          "text": "南极洲多冰雪覆盖"
+        },
+        {
+          "key": "D",
+          "text": "玛瑙河流量变化大"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "鲸生活在海洋，陆地发现鲸鱼化石提示该地过去可能是海洋，体现海陆变迁。"
+    },
+    {
+      "id": "dili-h02-q136",
+      "chapterId": 2,
+      "chapter": "七年级下册 · 我们生活的大洲",
+      "number": 136,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七下",
+      "stage": "7-down",
+      "source": "2025年湖南中考·地理第10题",
+      "stem": "在南极洲开展科考工作时应",
+      "options": [
+        {
+          "key": "A",
+          "text": "开采地下矿产"
+        },
+        {
+          "key": "B",
+          "text": "就地填埋垃圾"
+        },
+        {
+          "key": "C",
+          "text": "保护当地环境"
+        },
+        {
+          "key": "D",
+          "text": "积极植树造林"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "南极生态脆弱，科学考察应保护环境，妥善处理垃圾，避免破坏。"
+    },
+    {
+      "id": "dili-h03-q119",
+      "chapterId": 3,
+      "chapter": "八年级上册 · 从世界看中国",
+      "number": 119,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八上",
+      "stage": "8-up",
+      "source": "2025年湖南中考·地理第13题",
+      "stem": "科技发展推动高速铁路时代到来，由此带来的直接影响是",
+      "options": [
+        {
+          "key": "A",
+          "text": "提高农业产量"
+        },
+        {
+          "key": "B",
+          "text": "扩大森林面积"
+        },
+        {
+          "key": "C",
+          "text": "缩短运输时间"
+        },
+        {
+          "key": "D",
+          "text": "节约耕地资源"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "高速铁路提高运输速度，直接缩短人员和货物运输时间。"
+    },
+    {
+      "id": "dili-h03-q120",
+      "chapterId": 3,
+      "chapter": "八年级上册 · 从世界看中国",
+      "number": 120,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八上",
+      "stage": "8-up",
+      "source": "2025年湖南中考·地理第15题",
+      "stem": "张奶奶在乌鲁木齐发现当地居民上午10点左右才上班，这是因为我国",
+      "options": [
+        {
+          "key": "A",
+          "text": "气候类型差异大"
+        },
+        {
+          "key": "B",
+          "text": "疆域东西跨度大"
+        },
+        {
+          "key": "C",
+          "text": "人口密度差异大"
+        },
+        {
+          "key": "D",
+          "text": "疆域南北跨度大"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "我国东西跨经度广，乌鲁木齐地方时较东部晚，作息相应推迟。"
+    },
+    {
+      "id": "dili-h03-q121",
+      "chapterId": 3,
+      "chapter": "八年级上册 · 从世界看中国",
+      "number": 121,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八上",
+      "stage": "8-up",
+      "source": "2025年湖南中考·地理第16题",
+      "stem": "银发旅游专列受到热烈欢迎，开行数量大幅增长，这反映出我国",
+      "options": [
+        {
+          "key": "A",
+          "text": "老年人口规模大"
+        },
+        {
+          "key": "B",
+          "text": "老年人消费需求低"
+        },
+        {
+          "key": "C",
+          "text": "旅游资源较单一"
+        },
+        {
+          "key": "D",
+          "text": "铁路运输货运量多"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "面向老年人的旅游专列需求旺盛，反映老年人口规模及其旅游需求较大。"
+    },
+    {
+      "id": "dili-h04-q135",
+      "chapterId": 4,
+      "chapter": "八年级下册 · 中国的地理差异",
+      "number": 135,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八下",
+      "stage": "8-down",
+      "source": "2025年湖南中考·地理第19题",
+      "stem": "河姆渡遗址发现的骨耜适合翻耕水田，是当时先进的农业生产工具。据此推测骨耜主要用于",
+      "options": [
+        {
+          "key": "A",
+          "text": "饲养牦牛"
+        },
+        {
+          "key": "B",
+          "text": "饲养骆驼"
+        },
+        {
+          "key": "C",
+          "text": "种植青稞"
+        },
+        {
+          "key": "D",
+          "text": "种植水稻"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "水田耕作主要用于种植水稻，骨耜是翻耕水田的工具。"
+    },
+    {
+      "id": "dili-h04-q136",
+      "chapterId": 4,
+      "chapter": "八年级下册 · 中国的地理差异",
+      "number": 136,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八下",
+      "stage": "8-down",
+      "source": "2025年湖南中考·地理第20题",
+      "stem": "三亚试车基地所在地理区域是",
+      "options": [
+        {
+          "key": "A",
+          "text": "北方地区"
+        },
+        {
+          "key": "B",
+          "text": "南方地区"
+        },
+        {
+          "key": "C",
+          "text": "西北地区"
+        },
+        {
+          "key": "D",
+          "text": "青藏地区"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "三亚位于海南岛，属于我国南方地区。"
+    },
+    {
+      "id": "dili-h03-q122",
+      "chapterId": 3,
+      "chapter": "八年级上册 · 从世界看中国",
+      "number": 122,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八上",
+      "stage": "8-up",
+      "source": "2025年湖南中考·地理第21题",
+      "stem": "各试车基地测试项目合理的是",
+      "options": [
+        {
+          "key": "A",
+          "text": "黑河——低温启动"
+        },
+        {
+          "key": "B",
+          "text": "三亚——冰面制动"
+        },
+        {
+          "key": "C",
+          "text": "吐鲁番——高湿防锈"
+        },
+        {
+          "key": "D",
+          "text": "格尔木——高温充电"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "黑河位于黑龙江北部，冬季寒冷，适合低温启动测试。"
+    },
+    {
+      "id": "dili-h04-q137",
+      "chapterId": 4,
+      "chapter": "八年级下册 · 中国的地理差异",
+      "number": 137,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八下",
+      "stage": "8-down",
+      "source": "2025年湖南中考·地理第24题",
+      "stem": "长江经济带注重科技创新和环境保护，G60科创走廊位于长江三角洲地区。G60科创走廊对长江经济带高质量发展的作用主要是",
+      "options": [
+        {
+          "key": "A",
+          "text": "科技引领"
+        },
+        {
+          "key": "B",
+          "text": "能源保障"
+        },
+        {
+          "key": "C",
+          "text": "粮食储备"
+        },
+        {
+          "key": "D",
+          "text": "矿产供应"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "科创走廊集聚创新资源，主要发挥科技引领和产业创新作用。"
+    },
+    {
+      "id": "dili-h04-q138",
+      "chapterId": 4,
+      "chapter": "八年级下册 · 中国的地理差异",
+      "number": 138,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八下",
+      "stage": "8-down",
+      "source": "2025年湖南中考·地理第25题",
+      "stem": "长江经济带可持续发展的合理措施有",
+      "options": [
+        {
+          "key": "A",
+          "text": "西部山区陡坡开垦"
+        },
+        {
+          "key": "B",
+          "text": "洞庭湖围湖造田"
+        },
+        {
+          "key": "C",
+          "text": "沿海地区过度捕捞"
+        },
+        {
+          "key": "D",
+          "text": "雅砻江兴修水利"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "合理水利建设有利于水资源和清洁能源利用；陡坡开垦、围湖造田和过度捕捞破坏生态。"
+    },
+    {
+      "id": "dili-h01-q134",
+      "chapterId": 1,
+      "chapter": "七年级上册 · 地球与地图",
+      "number": 134,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七上",
+      "stage": "7-up",
+      "source": "2026年甘肃武威中考·地理第1题",
+      "stem": "2026年5月21日是小满节气，此时",
+      "options": [
+        {
+          "key": "A",
+          "text": "武威市昼长夜短"
+        },
+        {
+          "key": "B",
+          "text": "全球昼夜等长"
+        },
+        {
+          "key": "C",
+          "text": "北半球正值秋季"
+        },
+        {
+          "key": "D",
+          "text": "南半球正值夏季"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "5月21日北半球处于春季末，太阳直射点在北半球，武威昼长夜短。"
+    },
+    {
+      "id": "dili-h03-q123",
+      "chapterId": 3,
+      "chapter": "八年级上册 · 从世界看中国",
+      "number": 123,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八上",
+      "stage": "8-up",
+      "source": "2026年甘肃武威中考·地理第2题",
+      "stem": "农谚“小满小满，江河渐满”，形象地描绘了雨水增多、江河水位上涨的现象。小满后长江流域水位上涨的主要原因是",
+      "options": [
+        {
+          "key": "A",
+          "text": "水土流失加剧，泥沙淤积导致河床抬升"
+        },
+        {
+          "key": "B",
+          "text": "夏季风的势力增强，降水增多"
+        },
+        {
+          "key": "C",
+          "text": "台风活动频繁，带来特大暴雨"
+        },
+        {
+          "key": "D",
+          "text": "积雪消融，导致水位上涨"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "小满后夏季风增强并带来水汽，使长江流域降水增多、水位上涨。"
+    },
+    {
+      "id": "dili-h02-q137",
+      "chapterId": 2,
+      "chapter": "七年级下册 · 我们生活的大洲",
+      "number": 137,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七下",
+      "stage": "7-down",
+      "source": "2026年甘肃武威中考·地理第3题",
+      "stem": "日本、新西兰两国多火山，其原因可能是",
+      "options": [
+        {
+          "key": "A",
+          "text": "均为多山地形"
+        },
+        {
+          "key": "B",
+          "text": "均位于板块内部"
+        },
+        {
+          "key": "C",
+          "text": "均为岛国"
+        },
+        {
+          "key": "D",
+          "text": "均位于板块交界处"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "日本与新西兰都处在板块交界地带，地壳活跃，多火山地震。"
+    },
+    {
+      "id": "dili-h02-q138",
+      "chapterId": 2,
+      "chapter": "七年级下册 · 我们生活的大洲",
+      "number": 138,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "七下",
+      "stage": "7-down",
+      "source": "2026年甘肃武威中考·地理第4题",
+      "stem": "季风气候雨热同期，温带海洋性气候终年温和湿润。日本和新西兰国土面积狭小，但日本稻米可以自给，新西兰则是世界主要的畜产品出口国，造成这种差异的自然因素主要是",
+      "options": [
+        {
+          "key": "A",
+          "text": "河流"
+        },
+        {
+          "key": "B",
+          "text": "地形"
+        },
+        {
+          "key": "C",
+          "text": "气候"
+        },
+        {
+          "key": "D",
+          "text": "科技"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "气候条件影响农业类型，日本适宜水稻种植，新西兰温和湿润适宜牧草生长和畜牧业。"
+    },
+    {
+      "id": "dili-h04-q139",
+      "chapterId": 4,
+      "chapter": "八年级下册 · 中国的地理差异",
+      "number": 139,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八下",
+      "stage": "8-down",
+      "source": "2026年甘肃武威中考·地理第5题",
+      "stem": "甘肃省武威市九墩滩光伏治沙园区位于腾格里沙漠边缘，年日照时数超过3000小时。九墩滩发展光伏产业的有利条件是",
+      "options": [
+        {
+          "key": "A",
+          "text": "晴天多，太阳辐射强"
+        },
+        {
+          "key": "B",
+          "text": "地形平坦，交通便利"
+        },
+        {
+          "key": "C",
+          "text": "降水丰富，水源充足"
+        },
+        {
+          "key": "D",
+          "text": "人口稠密，劳力充足"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "年日照时间长、太阳辐射强，为光伏发电提供丰富太阳能。"
+    },
+    {
+      "id": "dili-h04-q140",
+      "chapterId": 4,
+      "chapter": "八年级下册 · 中国的地理差异",
+      "number": 140,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八下",
+      "stage": "8-down",
+      "source": "2026年甘肃武威中考·地理第6题",
+      "stem": "甘肃省武威市九墩滩光伏治沙园区形成“板上发电、板下种植”的模式。该园区在光伏板下种植梭梭、四翅滨藜等沙生植物，其主要作用是",
+      "options": [
+        {
+          "key": "A",
+          "text": "增加土壤有机物"
+        },
+        {
+          "key": "B",
+          "text": "防风固沙"
+        },
+        {
+          "key": "C",
+          "text": "美化园区环境"
+        },
+        {
+          "key": "D",
+          "text": "增加光合作用"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "沙生植物根系固定沙土并减弱近地面风力，主要发挥防风固沙作用。"
+    },
+    {
+      "id": "dili-h04-q141",
+      "chapterId": 4,
+      "chapter": "八年级下册 · 中国的地理差异",
+      "number": 141,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八下",
+      "stage": "8-down",
+      "source": "2026年甘肃武威中考·地理第7题",
+      "stem": "宁夏平原是我国著名的灌溉农业区，贺兰山被称为宁夏平原的“守护神”。其主要原因是",
+      "options": [
+        {
+          "key": "A",
+          "text": "阻挡冬季风，不受寒潮侵袭"
+        },
+        {
+          "key": "B",
+          "text": "山地森林茂密，提供充足木材"
+        },
+        {
+          "key": "C",
+          "text": "阻挡风沙东移，减少荒漠化威胁"
+        },
+        {
+          "key": "D",
+          "text": "防止水土流失，减少河道淤积"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "贺兰山阻挡西北方向风沙东移，对宁夏平原起生态屏障作用；不能说完全不受寒潮。"
+    },
+    {
+      "id": "dili-h04-q142",
+      "chapterId": 4,
+      "chapter": "八年级下册 · 中国的地理差异",
+      "number": 142,
+      "type": "single",
+      "meta": "真题选择题",
+      "grade": "八下",
+      "stage": "8-down",
+      "source": "2026年甘肃武威中考·地理第8题",
+      "stem": "黄河宁夏平原段对当地经济发展的主要贡献是提供了",
+      "options": [
+        {
+          "key": "A",
+          "text": "丰富的水能资源"
+        },
+        {
+          "key": "B",
+          "text": "便利的航运条件"
+        },
+        {
+          "key": "C",
+          "text": "充足的灌溉水源"
+        },
+        {
+          "key": "D",
+          "text": "丰富的水产资源"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "宁夏平原干旱少雨，黄河为当地农业提供重要灌溉水源。"
     }
   ]
 };

@@ -1,0 +1,382 @@
+{
+  "id": "hn-2025-english",
+  "region": "湖南",
+  "year": 2025,
+  "title": "2025 年湖南中考英语",
+  "source": "2025年湖南中考英语试题及参考答案",
+  "note": "听力1—20题未收录；阅读B原卷多处语句损坏，24—27题暂不收；完形39题参考答案与语境冲突，暂不收；填空前两空按参考答案更正为46、47。",
+  "sections": [
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "校园活动",
+          "passage": "Young Cooks: Do you want to be independent in the kitchen? Ramona Kaiser will teach you how to cook tasty food safely. Time: 9:30 a.m.—10:30 a.m., July 15th—20th. Place: the cooking classroom in our school. Age: 12—14. Learn Fun Science Together! Interested in science? Do fun experiments with the teacher Jason Smith. Come to the lab and get prepared for your new life in high school! Time: 9:00 a.m.—11:00 a.m. on Fridays. Biking Club: Like biking in the open air? Join us in Biking Club. Safety suggestions and biking skills will be given by William White. Your health report is a MUST. Start and end at our school gate. Time: 8:30 a.m.—9:30 a.m. on weekends. For 9th graders (over 14).",
+          "items": [
+            {
+              "n": 21,
+              "stem": "Who will teach students to cook?",
+              "options": [
+                "Ramona Kaiser.",
+                "Jason Smith.",
+                "William White."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "Young Cooks 的授课者是 Ramona Kaiser。"
+            },
+            {
+              "n": 22,
+              "stem": "What is a must for students to join Biking Club?",
+              "options": [
+                "Biking skills.",
+                "A health report.",
+                "A safety guide."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "骑行俱乐部明确要求健康报告。"
+            },
+            {
+              "n": 23,
+              "stem": "Where can we read the text most probably?",
+              "options": [
+                "In a primary school.",
+                "In a middle school.",
+                "In a university."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "活动适合12—14岁及九年级学生，最可能出现在中学。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "昆虫的天然工具",
+          "passage": "What are insects (昆虫) like in your eyes? Have you ever noticed them? Insects are very interesting animals. They may be small, but they are smart and hard-working. Scientists have studied different kinds of insects very closely. According to their studies, even the smallest insects have tools to help do their work. Have you ever seen a little fly called a sawfly? It gets such a name because it has a saw (锯 子) that is used on plants to create a safe space for its eggs. After laying its eggs, the sawfly makes some glue. The glue fixes the eggs to where they are laid. Another insect that has its own natural tool is the poppy bee (蜂). The bees live in wood. Like people who make things out of wood, poppy bees use special tools to dig nests (巢穴) out of wood. They dig and clean out the nest to make it ready for use. When all is ready, poppy bees cut out pieces of leaves in the shape of a nest. They then join the pieces together and put them into the nest. Ants are also known for their clever use of natural tools. For example, they drop pieces of leaves into water so that they take in the water. Then the ants carry them back to their nests. There are more insects than any other living things in the world. Every insect is special. The more you notice them, the more they will surprise you.",
+          "items": [
+            {
+              "n": 28,
+              "stem": "How does the writer start the topic?",
+              "options": [
+                "By asking questions.",
+                "By listing numbers.",
+                "By making comparisons."
+              ],
+              "answer": "A",
+              "kp": "写作意图",
+              "exp": "开头连续提问，引出昆虫的话题。"
+            },
+            {
+              "n": 29,
+              "stem": "What can we know about poppy bees from paragraph 3?",
+              "options": [
+                "They clean their nests with big leaves.",
+                "They put pieces of leaves around nests.",
+                "They dig nests before cutting out leaves."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "先挖巢、清理，再裁叶片。"
+            },
+            {
+              "n": 30,
+              "stem": "Which of the following use leaves to take in water according to the text?",
+              "options": [
+                "Sawflies.",
+                "Poppy bees.",
+                "Ants."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "最后一段说明蚂蚁用叶片吸水。"
+            },
+            {
+              "n": 31,
+              "stem": "What can be the best title for the text?",
+              "options": [
+                "Insects and Tools",
+                "Animals and Eggs",
+                "Plants and Leaves"
+              ],
+              "answer": "A",
+              "kp": "最佳标题",
+              "exp": "文章介绍昆虫运用天然工具，标题应为 Insects and Tools。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "七选五",
+      "title": "让学校更美好（五选四）",
+      "passage": "Your school offers great chances to study, make friends and try new things. Each term, you have time to use these chances. Also, there is time to think of ways to make a difference to your school. (32) Learn more about your school. To learn what happens around your school, join teams to your school or clubs and take part in activities. (33) These people can give you a better understanding of your school. For example, if your school has a student newspaper, check it out or consider joining it. You will know more about what is happening at school through it. Find a need and take action. (34) Maybe you enjoy playing volleyball after class. Now think about ways to make this activity even better. You might wish your school to provide more volley balls for students to use. Once you have your idea, talk to your school to see if students could help. You could offer to hold a book sale to buy sports equipment (器材). (35) It may seem simple, but being friendly to others can help create a good environment. This includes saying thank you when a student helps you, cleaning up any mess you make, and saying hello to others in the hallways. A good attitude (态度) can spread.",
+      "choices": [
+        "Be friendly to others.",
+        "Here’s how to get started.",
+        "They help you meet more people.",
+        "Work hard and make yourself better.",
+        "Think about things you enjoy at school."
+      ],
+      "items": [
+        {
+          "n": 32,
+          "answer": "B",
+          "exp": "总起句介绍接下来给出的具体方法。"
+        },
+        {
+          "n": 33,
+          "answer": "C",
+          "exp": "参加团队活动会结识更多人，承接 These people。"
+        },
+        {
+          "n": 34,
+          "answer": "E",
+          "exp": "下一句用打排球举例，先想想在校喜欢做的事。"
+        },
+        {
+          "n": 35,
+          "answer": "A",
+          "exp": "本段说友好待人可营造良好环境，小标题选 Be friendly to others。"
+        }
+      ]
+    },
+    {
+      "type": "完形填空",
+      "title": "诚实地承担错误",
+      "passage": "Oh, no? How silly I was to practice basketball inside! Mom’s favorite (36) was in pieces! What should I do? At that time my dog Toby came in and jumped around me happily. That gave me a (n) (37) . “Mom, Toby broke your cup,” I told a lie when mom walked in. “Toby, you bad boy,” she said (38) . “Go outside. No treats for you.” Hearing this, I felt a little sick. Toby went outside to his dog house, looking sad. Since I couldn’t play inside, I had to (39) my basketball skills in the living room. Suddenly it began to rain heavily. Through the window I could see the rain fall down Toby’s nose. “Is he (40) ?” I wondered. “What have I done?” I asked myself. “How could I make Toby outside because of my (41) ?” I knew what to do next. “Sorry, Mom! I have something to tell you,” I quietly (42) with my head down. “To win this final match this Saturday, I played basketball inside and broke your cup.” “So it was (43) to punish Toby.” Mom touched my head. “Thank you for being (44) my boy, but as a punishment you cannot watch the basketball matches on TV this month.” I wanted to say it was not fair, but it was. I made a mistake. I had to (45) the punishment. I opened the door and Toby ran back in. He jumped up and gave me a big lick (舔) then I felt fine.",
+      "items": [
+        {
+          "n": 36,
+          "stem": "",
+          "options": [
+            "cup",
+            "bowl",
+            "spoon"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "后文说打碎了妈妈的 cup。"
+        },
+        {
+          "n": 37,
+          "stem": "",
+          "options": [
+            "fact",
+            "idea",
+            "trouble"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "狗进屋使作者想到嫁祸的主意 idea。"
+        },
+        {
+          "n": 38,
+          "stem": "",
+          "options": [
+            "proudly",
+            "angrily",
+            "worriedly"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "妈妈以为狗打碎杯子，生气地训斥它。"
+        },
+        {
+          "n": 40,
+          "stem": "",
+          "options": [
+            "sleeping",
+            "crying",
+            "running"
+          ],
+          "answer": "B",
+          "kp": "细节理解",
+          "exp": "雨水顺着狗鼻子流下，作者像看到狗在哭。"
+        },
+        {
+          "n": 41,
+          "stem": "",
+          "options": [
+            "lie",
+            "joke",
+            "advice"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "狗因作者的谎言 lie 被罚。"
+        },
+        {
+          "n": 42,
+          "stem": "",
+          "options": [
+            "refused",
+            "promised",
+            "explained"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "低头解释事情真相，用 explained。"
+        },
+        {
+          "n": 43,
+          "stem": "",
+          "options": [
+            "wrong",
+            "strange",
+            "difficult"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "狗没有打碎杯子，惩罚它是 wrong。"
+        },
+        {
+          "n": 44,
+          "stem": "",
+          "options": [
+            "honest",
+            "patient",
+            "polite"
+          ],
+          "answer": "A",
+          "kp": "细节理解",
+          "exp": "承认错误体现诚实 honest。"
+        },
+        {
+          "n": 45,
+          "stem": "",
+          "options": [
+            "change",
+            "forget",
+            "accept"
+          ],
+          "answer": "C",
+          "kp": "细节理解",
+          "exp": "犯错应接受处罚 accept。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "鸡叫城的史前生活",
+      "passage": "Long, long ago, there was a city called Jijiaocheng, so named because it was said to have been built at daybreak. (46) city was on the rich Liyang Plain (平原). Many waterways. (47) (provide) water for crop fields and the people living inside and outside of the city. The rulers of Jijiaocheng asked the people (48) (cut) down trees in the mountains. The wood was shipped by (49) (worker) to the city for tall buildings. Standing in them, the city’s rulers will be able to see (50) (they) people and crops between the waterways. In autumn, plenty of rice was brought to the city. This is not some bedtime story. It (51) (real) took place around 4,500 years ago. Thousands of years later, the once busy (52) rich Jijiaocheng, which is now in a town of Hunan, came to the notice of the modern world. With the help of archaeologists (考古学家) and historians, artists painted recreations of life in Jijiaocheng in a (53) (tradition) scroll (卷轴). The scroll was part of a huge project. A group of artists spent two years (54) it. It includes eight paintings, which are 140 meters long in total. It (55) (show) early human activities on the Liyang Plain and the prehistoric culture in Hunan.",
+      "items": [
+        {
+          "n": 46,
+          "answer": "The",
+          "exp": "再次提到前句的城市，用定冠词 The。"
+        },
+        {
+          "n": 47,
+          "answer": "provided",
+          "exp": "叙述史前的事情，provide 用过去式。"
+        },
+        {
+          "n": 48,
+          "answer": "to cut",
+          "exp": "ask sb to do，填 to cut。"
+        },
+        {
+          "n": 49,
+          "answer": "workers",
+          "exp": "worker 为可数名词，此处用复数。"
+        },
+        {
+          "n": 50,
+          "answer": "their",
+          "exp": "修饰 people 用形容词性物主代词 their。"
+        },
+        {
+          "n": 51,
+          "answer": "really",
+          "exp": "修饰 took place 用副词 really。"
+        },
+        {
+          "n": 52,
+          "answer": "and",
+          "exp": "busy 和 rich 并列，用 and。"
+        },
+        {
+          "n": 53,
+          "answer": "traditional",
+          "exp": "修饰 scroll 用形容词 traditional。"
+        },
+        {
+          "n": 54,
+          "answer": "on",
+          "exp": "spend time on sth 表示在某事上花时间。"
+        },
+        {
+          "n": 55,
+          "answer": "shows",
+          "exp": "介绍画卷内容用一般现在时，It 后用 shows。"
+        }
+      ]
+    },
+    {
+      "type": "回答问题",
+      "title": "终身学习汉语",
+      "passage": "My name is Jeff. I like learning foreign languages. When I retired (退休) in 2018, I could speak three foreign languages. At that time, my biggest wish was to learn a new one. Later, I watched a program about Chinese culture on TV. I was so interested in it that I made the decision to learn Chinese. I found a cultural center in the north of London by chance. It offered Chinese language courses fit for me. In March 2019, I began to learn. To attend the classes, I left my home at 5 a.m. every Saturday and drove 3 hours to the cultural center. But this didn’t stop me. After class, I practiced a lot. Through learning, I developed a love for Chinese poems and joined in activities like Chinese poetry readings. I increasingly dreamed of visiting China. My Chinese teacher Mr. Liu always mentioned “It’s better to travel ten thousand miles than to read ten thousand books”. He suggested that I should take part in a study tour in China So in August 2024, I visited Xi’an with my classmates of the cultural center. During the trip, as the student best at Chinese among us, I tried to act as an interpreter (口译员). I helped my classmates in many ways like asking the way and shopping in Chinese. This experience encouraged me to study further. The British often say “Learning is a lifelong pursuit (追求)”, which means “It is never too late to learn”. I will keep on learning Chinese, hoping to be a lifelong learner. I believe that learning Chinese will bring even more possibilities to my life.",
+      "items": [
+        {
+          "n": 56,
+          "stem": "When did Jeff begin to learn Chinese?",
+          "answer": "In March 2019.",
+          "exp": "第二段给出开始学汉语的时间。"
+        },
+        {
+          "n": 57,
+          "stem": "Who suggested a study tour in China?",
+          "answer": "His Chinese teacher Mr. Liu.",
+          "exp": "第三段说刘老师建议来中国游学。"
+        },
+        {
+          "n": 58,
+          "stem": "What do you think of Jeff?",
+          "answer": "He is hard-working and has a strong love for learning.",
+          "exp": "凌晨出发、坚持练习等细节体现勤奋与热爱学习。"
+        },
+        {
+          "n": 59,
+          "stem": "What new things will you try after reading Jeff’s story? Why?",
+          "answer": "I will try to learn a new language, because it can broaden my horizons and bring more possibilities to life.",
+          "exp": "开放题，写清新尝试以及相应理由即可。"
+        },
+        {
+          "n": 60,
+          "stem": "将这句话译成中文：It’s better to travel ten thousand miles than to read ten thousand books.",
+          "answer": "读万卷书不如行万里路。",
+          "exp": "比较结构 better ... than ...，对应谚语强调实践的重要。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 61,
+      "score": 15,
+      "prompt": "假期应该更多陪伴家人还是朋友？假如你是李华，请在学校英语论坛跟帖，1. 陈述观点并说明理由；2. 结合观点介绍假期计划。约80词，不出现真实姓名、校名。",
+      "points": [
+        [
+          "明确观点",
+          3
+        ],
+        [
+          "说明理由",
+          4
+        ],
+        [
+          "介绍对应的假期计划",
+          6
+        ],
+        [
+          "语言连贯规范",
+          2
+        ]
+      ],
+      "sample": "I would like to spend more time with my family during the holiday. My parents work hard and we do not have much time together on schooldays. Being with them makes me feel warm and happy. First, I plan to help with the housework, such as cooking dinner and cleaning our rooms. Then we will go for walks and share our stories after dinner. I also want to visit my grandparents with my parents. I believe these simple activities will bring us closer.",
+      "exp": "参考范文为编写示例，非官方范文。观点、理由、计划一致即可；计划可用 will 或 plan to。"
+    }
+  ]
+}

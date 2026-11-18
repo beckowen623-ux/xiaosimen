@@ -10,7 +10,7 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const SUBJECTS = [["daode", "道德与法治"], ["lishi", "历史"], ["dili", "地理"], ["shengwu", "生物"]];
 const TERMS = ["七年级上册", "七年级下册", "八年级上册", "八年级下册", "九年级上册", "九年级下册"];
 const BANK_COUNT = 15;
-// 九年级地理、生物是总复习：复用七、八年级的考点冲刺题。
+// 地理、生物第 5、6 册是会考总复习：复用七、八年级的考点冲刺题。
 const REVIEW_SOURCES = { 5: [[1, 3], [2, 2]], 6: [[3, 3], [4, 2]] };
 
 const sandbox = { window: {} };
@@ -115,9 +115,10 @@ for (const [subject, label] of SUBJECTS) {
     const sections = [{ title: "一、选择题", note: "每题只有一个正确答案。", items: [...bank, ...fresh] }];
     if (blanks.length) sections.push({ title: "二、填空速记", items: blanks });
     if (essays.length) sections.push({ title: blanks.length ? "三、主观题" : "二、主观题", note: "先自己写，再对照得分点给自己打分。", items: essays });
+    const review = ["dili", "shengwu"].includes(subject) && chapterId >= 5;
     papers.push({
-      id: `xiaosimen-${subject}-${chapterId}`, group: label, subject: label, term: TERMS[chapterId - 1],
-      title: `${label} · ${TERMS[chapterId - 1]} 冲刺卷`,
+      id: `xiaosimen-${subject}-${chapterId}`, group: label, subject: label, term: review ? `会考冲刺 ${chapterId - 4}` : TERMS[chapterId - 1],
+      title: review ? `${label} · 会考冲刺卷（${chapterId === 5 ? "七" : "八"}年级内容）` : `${label} · ${TERMS[chapterId - 1]} 冲刺卷`,
       counts: { choice: bank.length + fresh.length, fresh: fresh.length, blank: blanks.length, essay: essays.length },
       sections,
     });

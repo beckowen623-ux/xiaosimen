@@ -42,7 +42,7 @@
       await loadScript(paper.data + '?v=' + dataVersion);
       const questions = window.NATIONAL_PAPERS?.[paper.id];
       if (!Array.isArray(questions) || questions.length !== paper.questionCount) throw new Error('这份真题暂时无法加载。');
-      // 免费试做：英语每个题型的第一组（单选前 5 题、情景交际前 2 题，作文不开放）；其他科第一组或前 5 题。
+      // 免费试做：英语每种题型只开放目录中首套含该题型卷子的第一组；作文不开放。其他科第一组或前 5 题。
       const previewIds = new Set();
       if (paper.subject === 'english') {
         const seen = new Map();
@@ -50,7 +50,9 @@
           const key = q.section || 'other';
           const count = seen.get(key) || 0;
           const first = questions.find(x => (x.section || 'other') === key);
-          const ok = key === '书面表达' ? false : q.groupId ? q.groupId === first.groupId : count < (key === '情景交际' ? 2 : 5);
+          const trialPaper = catalog.find(p => p.subject === 'english' && p.data && p.sections?.[key]);
+          const ok = key !== '书面表达' && paper.id === trialPaper?.id &&
+            (q.groupId ? q.groupId === first.groupId : count < (key === '情景交际' ? 2 : 5));
           if (ok) previewIds.add(q.id);
           seen.set(key, count + 1);
         }
@@ -79,7 +81,7 @@
     app.hideSearch();
     app.view.innerHTML = `
       <div class="national-header">
-        <button type="button" class="btn text-button" data-national="home">← 返回小四门</button>
+        <button type="button" class="btn text-button" data-national="home">← 返回首页</button>
         <h1 id="nationalTitle" tabindex="-1">全国中考真题</h1>
         <p class="muted">选一科，练几题。也可以按地区、年份查看原卷。</p>
       </div>${content}`;
@@ -123,10 +125,10 @@
 
   // 英语按中考题型练：单选一次 10 道；完形、阅读、七选五、短文填空一次一篇；情景交际 5 组；作文 1 篇。
   const ENGLISH_TYPES = [
-    ['单项选择', '语法、词汇、交际', 10], ['语法选择', '一篇短文 10 空，考语法', 0], ['完形填空', '一篇短文 10 空', 0],
-    ['阅读理解', '一篇文章 4—5 题', 0], ['七选五', '一篇短文 5 空', 0], ['补全对话', '从选项里选句子补全对话', 0],
+    ['单项选择', '语法、词汇、交际', 10], ['语法选择', '按篇逐空练习语法', 0], ['完形填空', '按篇逐空练习', 0],
+    ['阅读理解', '一篇文章，整组练习', 0], ['七选五', '选句还原短文', 0], ['补全对话', '从选项里选句子补全对话', 0],
     ['配对阅读', '为每条描述选出对应项', 0], ['短文填空', '用词的正确形式填空', 0], ['情景交际', '自己写句子补全对话', 5],
-    ['回答问题', '读短文，用完整句子回答', 0], ['书面表达', '写一篇作文，对照得分点', 1],
+    ['句子运用', '句型转换、翻译和连词成句', 5], ['回答问题', '读短文，用完整句子回答', 0], ['书面表达', '写一篇作文，对照得分点', 1],
   ];
   const englishPapers = () => catalog.filter(paper => paper.subject === 'english' && paper.data &&
     (!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year));
@@ -136,8 +138,8 @@
     const cards = ENGLISH_TYPES.filter(([type]) => count(type)).map(([type, hint]) => `<article class="card national-paper-card national-type-card">
       <h2>${escape(type)}</h2><p class="muted">${escape(hint)} · 共 ${count(type)} 题，来自 ${papersHere.filter(p => p.sections?.[type]).length} 套真题</p>
       <div class="national-actions"><button class="btn primary" type="button" data-type="${escape(type)}">${app.hasAccess() ? '练一组' : type === '书面表达' ? '完整版可练' : '免费试一组'}</button></div></article>`).join('');
-    const note = app.hasAccess() ? '按中考题型练，每题都有 Claude 写的解析。想做整套卷子，切到「按原卷练」。'
-      : '原卷免费看（切到「按原卷练」）。在线刷题和 Claude 解析属于小四门完整版，19.9 一起解锁；每种题型先免费试一组。';
+    const note = app.hasAccess() ? '按中考题型练，每题都有中文解析。想做整套卷子，切到「按原卷练」。'
+      : '原卷免费看（切到「按原卷练」）。在线刷题和中文解析属于初中提分题库完整版，19.9 一起解锁；每种题型先免费试一组。';
     return cards ? `<p class="national-status muted">${note}</p><div class="national-paper-grid">${cards}</div>` : '';
   }
   async function startType(button) {
@@ -149,7 +151,7 @@
       if (version !== revision || !opened) return;
       const all = lists.flat().filter(q => q.section === type);
       const pool = app.hasAccess() ? all : all.filter(q => q.preview);
-      if (!pool.length) { app.unlock?.(`「${type}」在线刷题属于完整版：小四门 19.9 一起解锁，原卷可以免费看。`); return; }
+      if (!pool.length) { app.unlock?.(`「${type}」在线刷题属于完整版：题库 19.9 一起解锁，原卷可以免费看。`); return; }
       const progress = app.progress();
       const fresh = pool.filter(q => !progress.banks[q.id]?.done);
       const source = fresh.length ? fresh : pool;
@@ -159,7 +161,7 @@
         const groupId = source[Math.floor(Math.random() * source.length)].groupId;
         chosen = pool.filter(q => q.groupId === groupId);
         if (!app.hasAccess() && source === pool && pool.every(q => app.progress().banks[q.id]?.done)) {
-          app.unlock?.(`免费的「${type}」已经做完了。完整版可以刷全部真题，小四门 19.9 一起解锁。`);
+          app.unlock?.(`免费的「${type}」已经做完了。完整版可以刷全部真题，题库 19.9 一起解锁。`);
           return;
         }
       } else {
@@ -184,7 +186,7 @@
       return;
     }
     shell(`${drawFilters(catalog)}
-      <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : '原卷免费看、免费打印。在线刷题和 Claude 解析属于小四门完整版（19.9 一起解锁），每份卷子可先免费试做一组。'}</p>
+      <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : '原卷免费看、免费打印。在线刷题和中文解析属于初中提分题库完整版（19.9 一起解锁），每种题型可先免费试做一组。'}</p>
       <div class="national-paper-grid">${practice.length ? practice.map(paperCard).join('') :
         `<section class="card national-empty"><h2>${filtered.length ? '这科目前提供原卷与参考答案' : '当前筛选下暂无试卷'}</h2><p class="muted">${filtered.length ? '切换「按原卷练」即可查看和打印。' : '可以切换地区或年份再看看。'}</p>${filtered.length ? '<button type="button" class="btn primary" id="switchToPapers">查看原卷</button>' : ''}</section>`}</div>`);
     wireFilters();
