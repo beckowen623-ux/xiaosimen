@@ -539,6 +539,146 @@ window.NATIONAL_CATALOG = {
       "description": "客观题精选",
       "questionCount": 8,
       "data": "./data/national/hn-changsha-2024-chemistry.js"
+    },
+{
+      "id": "jx-2026-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "江西",
+      "year": 2026,
+      "title": "2026 年江西中考物理",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/jx-2026-physics/p01.webp",
+        "./assets/national/jx-2026-physics/p02.webp",
+        "./assets/national/jx-2026-physics/p03.webp",
+        "./assets/national/jx-2026-physics/p04.webp",
+        "./assets/national/jx-2026-physics/p05.webp"
+      ],
+      "answerPages": [
+        "./assets/national/jx-2026-physics/p01-answer.webp",
+        "./assets/national/jx-2026-physics/p02-answer.webp"
+      ],
+      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西物理试题卷.pdf",
+      "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "jx-2026-chemistry",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "江西",
+      "year": 2026,
+      "title": "2026 年江西中考化学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/jx-2026-chemistry/p01.webp",
+        "./assets/national/jx-2026-chemistry/p02.webp",
+        "./assets/national/jx-2026-chemistry/p03.webp",
+        "./assets/national/jx-2026-chemistry/p04.webp",
+        "./assets/national/jx-2026-chemistry/p05.webp"
+      ],
+      "answerPages": [
+        "./assets/national/jx-2026-chemistry/p01-answer.webp",
+        "./assets/national/jx-2026-chemistry/p02-answer.webp"
+      ],
+      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西化学试题卷.pdf",
+      "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "jx-2026-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "江西",
+      "year": 2026,
+      "title": "2026 年江西中考语文",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/jx-2026-chinese/p01.webp",
+        "./assets/national/jx-2026-chinese/p02.webp",
+        "./assets/national/jx-2026-chinese/p03.webp",
+        "./assets/national/jx-2026-chinese/p04.webp",
+        "./assets/national/jx-2026-chinese/p05.webp",
+        "./assets/national/jx-2026-chinese/p06.webp"
+      ],
+      "answerPages": [
+        "./assets/national/jx-2026-chinese/p01-answer.webp",
+        "./assets/national/jx-2026-chinese/p02-answer.webp"
+      ],
+      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西语文试试题卷.pdf",
+      "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "js-suzhou-2026-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "苏州",
+      "year": 2026,
+      "title": "2026 年苏州中考物理",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/js-suzhou-2026-physics/p01.webp",
+        "./assets/national/js-suzhou-2026-physics/p02.webp",
+        "./assets/national/js-suzhou-2026-physics/p03.webp",
+        "./assets/national/js-suzhou-2026-physics/p04.webp",
+        "./assets/national/js-suzhou-2026-physics/p05.webp",
+        "./assets/national/js-suzhou-2026-physics/p06.webp",
+        "./assets/national/js-suzhou-2026-physics/p07.webp",
+        "./assets/national/js-suzhou-2026-physics/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/js-suzhou-2026-physics/p09.webp",
+        "./assets/national/js-suzhou-2026-physics/p10.webp"
+      ],
+      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江苏/苏州（官方版试卷及答案无水印版）/2026年苏州物理中考试卷真题及答案解析无水印.pdf",
+      "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "js-suzhou-2026-chemistry",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "苏州",
+      "year": 2026,
+      "title": "2026 年苏州中考化学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/js-suzhou-2026-chemistry/p01.webp",
+        "./assets/national/js-suzhou-2026-chemistry/p02.webp",
+        "./assets/national/js-suzhou-2026-chemistry/p03.webp",
+        "./assets/national/js-suzhou-2026-chemistry/p04.webp",
+        "./assets/national/js-suzhou-2026-chemistry/p05.webp",
+        "./assets/national/js-suzhou-2026-chemistry/p06.webp",
+        "./assets/national/js-suzhou-2026-chemistry/p07.webp",
+        "./assets/national/js-suzhou-2026-chemistry/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/js-suzhou-2026-chemistry/p09.webp",
+        "./assets/national/js-suzhou-2026-chemistry/p10.webp"
+      ],
+      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江苏/苏州（官方版试卷及答案无水印版）/2026年苏州化学中考试卷真题及答案解析无水印.pdf",
+      "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "js-suzhou-2026-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "苏州",
+      "year": 2026,
+      "title": "2026 年苏州中考语文",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/js-suzhou-2026-chinese/p01.webp",
+        "./assets/national/js-suzhou-2026-chinese/p02.webp",
+        "./assets/national/js-suzhou-2026-chinese/p03.webp",
+        "./assets/national/js-suzhou-2026-chinese/p04.webp",
+        "./assets/national/js-suzhou-2026-chinese/p05.webp",
+        "./assets/national/js-suzhou-2026-chinese/p06.webp"
+      ],
+      "answerPages": [
+        "./assets/national/js-suzhou-2026-chinese/p07.webp",
+        "./assets/national/js-suzhou-2026-chinese/p08.webp"
+      ],
+      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江苏/苏州（官方版试卷及答案无水印版）/2026年苏州语文中考试卷真题及答案解析无水印.pdf",
+      "description": "完整原卷与参考答案"
     }
   ],
   "subjects": {

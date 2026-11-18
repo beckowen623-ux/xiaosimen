@@ -440,6 +440,96 @@
           "reason": "not a complete objective question"
         }
       ]
+    },
+    {
+      "id": "jx-2026-physics",
+      "file": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西物理试题卷.pdf",
+      "sha256": "a35d7a587d2854c6de251fc7d340c69639c1d71e143abf45332a3df0aa9d16b6",
+      "questionPages": [
+        1,
+        5
+      ],
+      "answerPages": [
+        1,
+        2
+      ],
+      "kind": "original-scan",
+      "answerFile": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西物理试题卷参考答案.pdf",
+      "answerSha256": "7f8669679f6f66f47628acac33767f76e286170f45ced0990369f4acfd8b9e5f"
+    },
+    {
+      "id": "jx-2026-chemistry",
+      "file": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西化学试题卷.pdf",
+      "sha256": "b8cc1fcc59ecd55ab95fcdf907acb28e8d7ad79562d0ea7151f716888aede2b4",
+      "questionPages": [
+        1,
+        5
+      ],
+      "answerPages": [
+        1,
+        2
+      ],
+      "kind": "original-scan",
+      "answerFile": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西化学试题参考答案.pdf",
+      "answerSha256": "fa4ca28dc62d00767437bcef3c958c898759941dbdddccdd3fb194480abbd8c1"
+    },
+    {
+      "id": "jx-2026-chinese",
+      "file": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西语文试试题卷.pdf",
+      "sha256": "4402ad836523f129be373a19c270cd163c275dad70ecae586a0aac62c1f1ca22",
+      "questionPages": [
+        1,
+        6
+      ],
+      "answerPages": [
+        1,
+        2
+      ],
+      "kind": "original-scan",
+      "answerFile": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西语文试题卷参考答案.pdf",
+      "answerSha256": "88e24be73d42ae26b61492342a9d37e0e5c1e7c328106c65ee1ea782efb9adfd"
+    },
+    {
+      "id": "js-suzhou-2026-physics",
+      "file": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江苏/苏州（官方版试卷及答案无水印版）/2026年苏州物理中考试卷真题及答案解析无水印.pdf",
+      "sha256": "465210f4d7138d38a2553d2f1630065bf557ff8f8fa75be51bf8e92ad914b502",
+      "questionPages": [
+        1,
+        8
+      ],
+      "answerPages": [
+        9,
+        10
+      ],
+      "kind": "original-scan"
+    },
+    {
+      "id": "js-suzhou-2026-chemistry",
+      "file": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江苏/苏州（官方版试卷及答案无水印版）/2026年苏州化学中考试卷真题及答案解析无水印.pdf",
+      "sha256": "b49702a6b48f91dbbce0a9a473500c4de0cb7956c1e345740a55bfe4b609eb1a",
+      "questionPages": [
+        1,
+        8
+      ],
+      "answerPages": [
+        9,
+        10
+      ],
+      "kind": "original-scan"
+    },
+    {
+      "id": "js-suzhou-2026-chinese",
+      "file": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江苏/苏州（官方版试卷及答案无水印版）/2026年苏州语文中考试卷真题及答案解析无水印.pdf",
+      "sha256": "dda0b5349f25c9bc951b8b16c3fafc2b79765184e53f5e015c8328c0617666dc",
+      "questionPages": [
+        1,
+        6
+      ],
+      "answerPages": [
+        7,
+        8
+      ],
+      "kind": "original-scan"
     }
   ]
 }
