@@ -354,7 +354,9 @@ function expandSubjective(subject, list, chapters = []) {
     const blank = typeof entry.b === 'string';
     const key = (blank ? 'k' : 'z') + entry.c;
     counters[key] = (counters[key] || 0) + 1;
-    const stage = STAGES[entry.c - 1] || STAGES[0];
+    // 地理、生物第 5、6 章是会考总复习，归在初二下学期（八年级会考），不算九年级。
+    const reviewChapter = (subject === 'dili' || subject === 'shengwu') && entry.c >= 5;
+    const stage = reviewChapter ? STAGE_MAP['8-down'] : (STAGES[entry.c - 1] || STAGES[0]);
     const base = {
       id: `${subject}-${key}-${String(counters[key]).padStart(2, '0')}`,
       subject, subjectLabel: SUBJECTS[subject].label,

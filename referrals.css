@@ -101,3 +101,9 @@
 .upload-wait { color: #6b7774; white-space: nowrap; }
 .upload-file { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; pointer-events: none; }
 .upload-box { position: relative; }
+.sprint-teaser > summary { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; cursor: pointer; list-style: none; }
+.sprint-teaser > summary::-webkit-details-marker { display: none; }
+.sprint-teaser > summary::after { content: "展开 ▾"; font-size: 13px; color: #8a5a00; }
+.sprint-teaser[open] > summary::after { content: "收起 ▴"; }
+.sprint-teaser .sprint-open { margin-left: auto; min-height: 34px; padding: 4px 14px; background: #17473d; color: #fff; border-color: #17473d; font-weight: 700; }
+.sprint-teaser:not([open]) { padding-top: 10px; padding-bottom: 10px; }

@@ -375,13 +375,19 @@
     siteKey = key;
     container.replaceChildren();
     if (options.showFriend) friendBanner(container);
-    const card = node("div", "", "sprint-teaser");
-    const head = node("div", "", "sprint-teaser-head");
-    head.append(node("strong", "📝 冲刺卷 · Claude 出题"), node("span", options.count || "", "referral-badge"));
+    // 默认折叠，只露一行：标题 + 数量 + “打开”按钮；展开后才看到说明、更新承诺和上传卷子。
+    const card = node("details", "", "sprint-teaser");
+    const TEASER_KEY = "sprint-teaser-open";
+    try { card.open = localStorage.getItem(TEASER_KEY) === "1"; } catch { /* 隐私模式 */ }
+    card.addEventListener("toggle", () => { try { localStorage.setItem(TEASER_KEY, card.open ? "1" : "0"); } catch { /* 隐私模式 */ } });
     const status = node("p", "", "referral-message");
     status.setAttribute("role", "status");
-    card.append(head, node("p", SPRINT_STORY[key] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"), extraNode(),
-      button("📱 在线做 / 打印冲刺卷", () => openAny(status)), status);
+    const head = node("summary", "", "sprint-teaser-head");
+    const open = button("打开", event => { event.preventDefault(); event.stopPropagation(); openAny(status); });
+    open.classList.add("sprint-open");
+    head.append(node("strong", "📝 Claude 冲刺卷"), node("span", options.count || "", "referral-badge"), open);
+    card.append(head, status, node("p", SPRINT_STORY[key] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"), extraNode(),
+      button("📱 在线做 / 打印冲刺卷", () => openAny(status)));
     card.append(uploadBox(key, Boolean(options.paid)));
     container.append(card);
   }

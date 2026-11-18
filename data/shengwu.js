@@ -2660,7 +2660,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q025", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 25, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2023年福建省初中学业水平考试·生物第1题",
       stem: "下列生态系统最大的是（ ）。",
       options: [{key:"A",text:"武夷山"}, {key:"B",text:"大金湖"}, {key:"C",text:"福州市"}, {key:"D",text:"生物圈"}],
@@ -2671,7 +2671,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q026", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 26, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2023年福建省初中学业水平考试·生物第4题",
       stem: "下列人体细胞具有运输氧气功能的是（ ）。",
       options: [{key:"A",text:"红细胞"}, {key:"B",text:"白细胞"}, {key:"C",text:"肌肉细胞"}, {key:"D",text:"神经细胞"}],
@@ -2682,7 +2682,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q027", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 27, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2023-2024学年福建省师大平潭附中教研片中考考前最后一卷·生物第24题",
       stem: "在一个生态系统中，对各种生物数量起决定作用的是（ ）。",
       options: [{key:"A",text:"生产者"}, {key:"B",text:"消费者"}, {key:"C",text:"分解者"}, {key:"D",text:"细菌、真菌"}],
@@ -2693,7 +2693,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q028", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 28, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024届福建省厦门市逸夫中学中考适应性考试·生物第16题",
       stem: "经体循环后，血液成分发生的变化是（ ）。",
       options: [{key:"A",text:"氧气增多，二氧化碳减少"}, {key:"B",text:"氧气减少，二氧化碳增多"}, {key:"C",text:"氧气和二氧化碳都增多"}, {key:"D",text:"氧气和二氧化碳都减少"}],
@@ -2704,7 +2704,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q029", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 29, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024届福建省厦门市逸夫中学中考适应性考试·生物第25题（原卷A项文字有讹误，已按解析订正为“生物圈”）",
       stem: "生态系统与我们人类关系密切，下列关于生态系统的叙述错误的是（ ）。",
       options: [{key:"A",text:"生物圈是最大的生态系统"}, {key:"B",text:"生态系统有一定的自我调节能力"}, {key:"C",text:"蚯蚓等各种动物和人是消费者"}, {key:"D",text:"生态系统中物质和能量伴随食物链流动"}],
@@ -2715,7 +2715,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q030", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 30, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2025年福建省初中学业水平考试·生物第28题第(3)小题（原为非选择题填空，改为判断题）",
       stem: "鱼肉中的蛋白质在小肠内被彻底消化为氨基酸。（ ）",
       options: [],
@@ -2726,7 +2726,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q031", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 31, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第1题",
       stem: "生物体的结构和功能相适应的实例很多．下列说法错误的是（ ）。",
       options: [{key:"A",text:"肺泡表面布满毛细血管，有利于气体交换"}, {key:"B",text:"乌龟背部有甲，适于水中生活"}, {key:"C",text:"小肠壁上有无数的小肠绒毛，有利于营养物质的吸收"}, {key:"D",text:"野兔神经系统发达，有利于迅速躲避天敌"}],
@@ -2737,7 +2737,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q032", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 32, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第4题",
       stem: "下列关于植物细胞形态的叙述，正确的是（ ）。",
       options: [{key:"A",text:"近似长方体"}, {key:"B",text:"近似长方形"}, {key:"C",text:"扁形"}, {key:"D",text:"不同的植物以及不同结构的细胞形态各不相同"}],
@@ -2748,7 +2748,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q033", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 33, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第5题",
       stem: "福建厦门珍稀海洋物种国家级自然保护区保护的对象是（ ）。",
       options: [{key:"A",text:"珍稀野生动物及其赖以生存的环境"}, {key:"B",text:"珍稀濒危动物"}, {key:"C",text:"所有生物"}, {key:"D",text:"珍稀野生动物所生存的环境"}],
@@ -2759,7 +2759,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q034", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 34, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第8题",
       stem: "小凡的小便发红，去医院检查发现，尿中有红细胞等，据此推断小凡病变的部位可能是（ ）。",
       options: [{key:"A",text:"肾小球"}, {key:"B",text:"膀胱"}, {key:"C",text:"肾小管"}, {key:"D",text:"输尿管"}],
@@ -2770,7 +2770,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q035", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 35, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第10题",
       stem: "切洋葱时常会引起流泪，原因是洋葱组织细胞中含有对眼睛有刺激的物质，这些物质主要存在于细胞的（ ）。",
       options: [{key:"A",text:"液泡"}, {key:"B",text:"细胞壁"}, {key:"C",text:"细胞膜"}, {key:"D",text:"细胞核"}],
@@ -2781,7 +2781,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q036", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 36, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第12题",
       stem: "你一定有过手指被划出小伤口的经历，但你会发现伤口即便不包扎血液也会慢慢凝固，这与下列哪种细胞的作用有关（ ）。",
       options: [{key:"A",text:"吞噬细胞"}, {key:"B",text:"血小板"}, {key:"C",text:"红细胞"}, {key:"D",text:"白细胞"}],
@@ -2792,7 +2792,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q037", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 37, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第14题",
       stem: "植物的果实是由花的哪个结构发育而来（ ）。",
       options: [{key:"A",text:"柱头"}, {key:"B",text:"子房"}, {key:"C",text:"子房壁"}, {key:"D",text:"胚珠"}],
@@ -2803,7 +2803,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q038", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 38, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第17题",
       stem: "关节在运动中所起的作用是（ ）。",
       options: [{key:"A",text:"动力"}, {key:"B",text:"支点"}, {key:"C",text:"控制"}, {key:"D",text:"杠杆"}],
@@ -2814,7 +2814,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q039", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 39, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第18题",
       stem: "下列有关生物与环境关系的叙述，正确的是（ ）。",
       options: [{key:"A",text:"生物的生活环境是指生物的生存空间"}, {key:"B",text:"影响生物生活和分布的非生物因素只有阳光、温度和水"}, {key:"C",text:"同种生物的个体之间只有竞争关系"}, {key:"D",text:"生物必须适应环境才能生存"}],
@@ -2825,7 +2825,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q040", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 40, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第25题",
       stem: "某兴趣小组的同学设置了35℃和10℃两种水温，探究“不同水温对金鱼呼吸的影响”．这种探究方法属于（ ）。",
       options: [{key:"A",text:"观察法"}, {key:"B",text:"分类法"}, {key:"C",text:"实验法"}, {key:"D",text:"调查法"}],
@@ -2836,7 +2836,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q041", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 41, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第2题（原卷D项“套袋处埋”按文意订正为“套袋处理”）",
       stem: "下列关于花和果实的叙述不正确的是（ ）。",
       options: [{key:"A",text:"一个西瓜含有多粒种子，说明一个子房中有多个胚珠"}, {key:"B",text:"玉米的种皮和果皮紧密结合在一起，一粒玉米就是一个果实"}, {key:"C",text:"通过对玉米实施人工辅助授粉，可以解决玉米果穗顶部缺粒现象"}, {key:"D",text:"将未成熟的花进行套袋处理，透气的袋内能结出果实说明花是雌花"}],
@@ -2847,7 +2847,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q042", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 42, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第8题（原为表格，改为文字叙述）",
       stem: "回忆一下你所做过的以下实验，其中相关操作正确的是（ ）。A．观察青霉：用解剖针挑取少许菌丝，放在载玻片上，直接用显微镜观察；B．观察酵母菌：转动转换器换成高倍物镜，再转动粗准焦螺旋使物像清晰；C．观察人口腔上皮细胞：将牙签附有碎屑的一端放在载玻片上的生理盐水中轻涂几下；D．观察小鱼尾鳍内血液的流动：用高倍物镜观察小鱼尾鳍血管内血液的流动情况。",
       options: [{key:"A",text:"观察青霉"}, {key:"B",text:"观察酵母菌"}, {key:"C",text:"观察人口腔上皮细胞"}, {key:"D",text:"观察小鱼尾鳍内血液的流动"}],
@@ -2858,7 +2858,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q043", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 43, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第9题",
       stem: "一名伤员被救出时，不幸被楼板压伤，失血过多，急需输血．经化验，她的血型是A型．下面最适合输给的血型是（ ）。",
       options: [{key:"A",text:"A型"}, {key:"B",text:"B型"}, {key:"C",text:"O型"}, {key:"D",text:"AB型"}],
@@ -2869,7 +2869,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q044", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 44, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第11题",
       stem: "下列关于呼吸系统的叙述中，正确的是（ ）。",
       options: [{key:"A",text:"口是呼吸道的起点"}, {key:"B",text:"呼吸道可以过滤全部有害物质"}, {key:"C",text:"气管壁有O形软骨支撑"}, {key:"D",text:"肺泡外缠绕着毛细血管，有利于气体交换"}],
@@ -2880,7 +2880,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q045", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 45, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第12题",
       stem: "下列现象与其生物所反映的特征匹配错误的是（ ）。",
       options: [{key:"A",text:"螳螂捕蝉，黄雀在后——生物从外界获取物质和能量"}, {key:"B",text:"同卵双生的孪生姐弟相貌相似——生物的遗传"}, {key:"C",text:"燕子低飞带雨来——生物对外界刺激作出反应"}, {key:"D",text:"千里之堤，溃于蚁穴——生物对环境的影响"}],
@@ -2891,7 +2891,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q046", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 46, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第13题",
       stem: "长期生活在西藏的人与生活在北京地区的人相比，体内血液中成分相对较多的是（ ）。",
       options: [{key:"A",text:"血细胞"}, {key:"B",text:"白细胞"}, {key:"C",text:"血小板"}, {key:"D",text:"红细胞"}],
@@ -2902,7 +2902,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q047", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 47, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第17题",
       stem: "下列关于人体血管的叙述中，不正确的是（ ）。",
       options: [{key:"A",text:"动脉的管壁薄，弹性小"}, {key:"B",text:"静脉将血液送回心脏"}, {key:"C",text:"毛细血管只允许红细胞单行通过"}, {key:"D",text:"动脉的血流速度最快"}],
@@ -2913,7 +2913,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q048", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 48, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第18题",
       stem: "吃桑葚时手指会被染成紫色，果盘内也有少量的紫色汁液，这些汁液来自于果实细胞的（ ）。",
       options: [{key:"A",text:"细胞膜"}, {key:"B",text:"线粒体"}, {key:"C",text:"液泡"}, {key:"D",text:"细胞核"}],
@@ -2924,7 +2924,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q049", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 49, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第26题",
       stem: "海尔蒙特在盆中栽柳树，并且只浇水，五年后柳树增重150千克，盆中土重量几乎没减少，海尔蒙特由此确定光合作用的原料之一是（ ）。",
       options: [{key:"A",text:"土壤中的无机盐"}, {key:"B",text:"氧气"}, {key:"C",text:"水"}, {key:"D",text:"二氧化碳"}],
@@ -2935,7 +2935,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q050", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 50, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第31题",
       stem: "下列关于一株番茄和一头牛的叙述中，错误的是（ ）。",
       options: [{key:"A",text:"细胞是它们的结构和功能的基本单位"}, {key:"B",text:"它们都是由受精卵发育而来"}, {key:"C",text:"番茄的果实和牛的心脏都属于器官"}, {key:"D",text:"它们的结构层次都是细胞→组织→器官→系统"}],
@@ -2946,7 +2946,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q051", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 51, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第34题",
       stem: "人们观看健美运动员的展示时，运动员身体某处多次产生的隆起是由于（ ）。",
       options: [{key:"A",text:"肌肉组织具有收缩功能"}, {key:"B",text:"肌肉组织具有产生及传导兴奋的功能"}, {key:"C",text:"上皮组织具有分泌功能"}, {key:"D",text:"上皮组织具有保护功能"}],
@@ -2957,7 +2957,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q052", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 52, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第2题",
       stem: "夏日炎炎，朵朵同学看着小鸟在树上吃果实，清风徐来，枝条摇曳。与莺相比，桃特有的细胞结构是（ ）。",
       options: [{key:"A",text:"细胞壁"}, {key:"B",text:"细胞膜"}, {key:"C",text:"细胞质"}, {key:"D",text:"细胞核"}],
@@ -2968,7 +2968,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q053", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 53, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第3题",
       stem: "竹叶表皮的组织是（ ）。",
       options: [{key:"A",text:"分生组织"}, {key:"B",text:"输导组织"}, {key:"C",text:"保护组织"}, {key:"D",text:"营养组织"}],
@@ -2980,7 +2980,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q054", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 54, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2024年福建中考·生物第4题（原题为细胞结构图示标号，改为文字选项，知识点、选项与答案未改）",
       stem: "右图是细胞结构示意图，图中①为细胞壁、②为细胞膜、③为细胞核、④为液泡。桃的甜味物质主要来自（ ）。",
       options: [{key:"A",text:"①细胞壁"}, {key:"B",text:"②细胞膜"}, {key:"C",text:"③细胞核"}, {key:"D",text:"④液泡"}],
@@ -2991,7 +2991,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q055", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 55, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第7题",
       stem: "在学校的劳动基地，同学们开展西瓜幼苗移栽和田间管理活动，下列叙述正确的是（ ）。",
       options: [{key:"A",text:"阴天移栽，有利于进行光合作用"}, {key:"B",text:"及时松土，促进根部的呼吸作用"}, {key:"C",text:"定期拔草，避免杂草争夺有机物"}, {key:"D",text:"过量施肥，有利于生根开花结果"}],
@@ -3003,7 +3003,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q056", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 56, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2024年福建中考·生物第8题（原题为黄豆种子结构图示标号，改为文字选项，知识点、选项与答案未改）",
       stem: "右图是黄豆种子结构示意图，图中①为胚芽、②为胚根、③为胚轴、④为子叶。种子萌发时首先突破种皮的是（ ）。",
       options: [{key:"A",text:"①胚芽"}, {key:"B",text:"②胚根"}, {key:"C",text:"③胚轴"}, {key:"D",text:"④子叶"}],
@@ -3014,7 +3014,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q057", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 57, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第10题",
       stem: "下列有关人体激素的叙述，错误的是（ ）。",
       options: [{key:"A",text:"性激素与第二性征相关"}, {key:"B",text:"甲状腺激素能够抑制代谢"}, {key:"C",text:"生长激素是垂体分泌的"}, {key:"D",text:"胰岛素能够调节血糖浓度"}],
@@ -3025,7 +3025,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q058", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 58, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第11题",
       stem: "下列营养较均衡的食谱是（ ）。",
       options: [{key:"A",text:"米饭、炒青菜、清蒸鲈鱼、苹果"}, {key:"B",text:"米饭、红烧肉、排骨汤、冰激凌"}, {key:"C",text:"牛排、奶油蛋糕、炸鸡腿、牛奶"}, {key:"D",text:"炸鸡、香辣鸡翅、炸薯条、可乐"}],
@@ -3036,7 +3036,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q059", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 59, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第12题",
       stem: "“眼睛是心灵的窗户”。下列行为有利于预防近视的是（ ）。",
       options: [{key:"A",text:"躺在床上看书"}, {key:"B",text:"趴在桌上写字"}, {key:"C",text:"长时间刷视频"}, {key:"D",text:"做好眼保健操"}],
@@ -3048,7 +3048,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q060", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 60, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2024年福建中考·生物第13题（原题为骨、关节、肌肉模型图，题干补写模型构成，知识点、选项与答案未改）",
       stem: "下图为兴趣小组制作的模拟人体骨、关节、肌肉三者之间关系的模型：两块木板模拟骨，由大螺丝连接（模拟关节），一条松紧带跨过连接处、两端用小螺丝固定在两块木板上。模型中模拟肌肉的是（ ）。",
       options: [{key:"A",text:"木板"}, {key:"B",text:"小螺丝"}, {key:"C",text:"大螺丝"}, {key:"D",text:"松紧带"}],
@@ -3059,7 +3059,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q061", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 61, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第15题",
       stem: "下列人的生殖器官与功能的对应关系，错误的是（ ）。",
       options: [{key:"A",text:"输卵管——提供营养"}, {key:"B",text:"阴道——分娩通道"}, {key:"C",text:"卵巢——产生卵细胞"}, {key:"D",text:"睾丸——产生精子"}],
@@ -3070,7 +3070,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q062", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 62, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第18题",
       stem: "人体泌尿系统中暂时贮存尿液的器官是（ ）。",
       options: [{key:"A",text:"肾脏"}, {key:"B",text:"输尿管"}, {key:"C",text:"膀胱"}, {key:"D",text:"尿道"}],
@@ -3081,7 +3081,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q063", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 63, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2024年福建中考·生物第20题（原题为四幅植物图，改为文字选项，知识点、选项与答案未改）",
       stem: "下列植物属于蕨类的是（ ）。",
       options: [{key:"A",text:"叶状体、无根茎叶分化的海带"}, {key:"B",text:"具假根的苔藓植物"}, {key:"C",text:"叶背面有孢子囊的蕨类植物"}, {key:"D",text:"开花的被子植物"}],
@@ -3093,7 +3093,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q064", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 64, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2024年福建中考·生物第22题（原题为四组实验装置图，改为文字叙述，知识点、选项与答案未改）",
       stem: "下列有关实验的分析，正确的是（ ）。四组实验分别为：①两瓶分别装萌发的种子和煮熟的种子，各插一支温度计；②两瓶分别装萌发的种子和煮熟的种子，将燃着的木条伸入瓶中；③金鱼藻放在水中、光照，试管收集产生的气体；④天竺葵暗处理后，叶片部分遮光、照光，脱色后滴加碘液。",
       options: [{key:"A",text:"①装有煮熟种子的装置中温度更高"}, {key:"B",text:"②说明植物的呼吸作用能产生氧气"}, {key:"C",text:"③收集的气体能使澄清石灰水变浑浊"}, {key:"D",text:"④滴加碘液后叶片的遮光部分不变蓝"}],
@@ -3105,7 +3105,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q065", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 65, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2025年福建中考·生物第1题（原题为动植物细胞模型图示标号，改为文字选项，知识点、选项与答案未改）",
       stem: "下图是小福制作的植物细胞和动物细胞模型：左侧为植物细胞模型，右侧为动物细胞模型，四条标注线同时指向两个模型，①细胞质、②细胞核、③液泡、④细胞壁。图中标注错误的是（ ）。",
       options: [{key:"A",text:"①"}, {key:"B",text:"②"}, {key:"C",text:"③"}, {key:"D",text:"④"}],
@@ -3116,7 +3116,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q066", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 66, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2025年福建中考·生物第5题（原题含撕取、盖片、显微镜与视野图，题干补写各图内容与①为细准焦螺旋，知识点、选项与答案未改）",
       stem: "小福制作了洋葱鳞片叶内表皮细胞临时装片并进行观察：甲为撕取内表皮，乙为盖盖玻片，丙为显微镜（①为细准焦螺旋），丁为观察到的洋葱内表皮细胞视野。下列叙述正确的是（ ）。",
       options: [{key:"A",text:"甲操作中撕取的内表皮越厚越好"}, {key:"B",text:"乙中的盖玻片应直接水平放下"}, {key:"C",text:"调节丙中的①可使物像更加清晰"}, {key:"D",text:"丁是酒精染色后观察到的视野"}],
@@ -3127,7 +3127,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q067", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 67, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2025年福建中考·生物第6题",
       stem: "小福制作了洋葱鳞片叶内表皮细胞临时装片并进行观察，丁为观察到的洋葱内表皮细胞视野。丁中的细胞所构成的组织是（ ）。",
       options: [{key:"A",text:"保护组织"}, {key:"B",text:"输导组织"}, {key:"C",text:"结缔组织"}, {key:"D",text:"神经组织"}],
@@ -3139,7 +3139,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q068", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 68, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2025年福建中考·生物第8题（原题为食物网图，改为文字写出两条食物链，知识点、选项与答案未改）",
       stem: "长江流域的食物网为：浮游藻类→虾→长江江豚，浮游藻类→虾→鲈鱼→长江江豚。下列关于该食物网的叙述，正确的是（ ）。",
       options: [{key:"A",text:"长江江豚属于分解者"}, {key:"B",text:"图中共有2条食物链"}, {key:"C",text:"浮游藻类与虾为竞争关系"}, {key:"D",text:"能量沿着食物链逐级增加"}],
@@ -3151,7 +3151,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q069", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 69, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2025年福建中考·生物第18题（原题为物质含量变化曲线图，改为文字叙述，知识点、选项与答案未改）",
       stem: "血液中的物质流经骨骼肌时会发生变化。下图表示某种物质从动脉端到静脉端的相对含量变化：进入骨骼肌毛细血管前含量不变，经过毛细血管后含量下降并保持在较低水平。符合该变化趋势的是（ ）。",
       options: [{key:"A",text:"氧气、尿素"}, {key:"B",text:"氧气、葡萄糖"}, {key:"C",text:"二氧化碳、尿素"}, {key:"D",text:"二氧化碳、葡萄糖"}],
@@ -3163,7 +3163,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q070", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 70, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2025年福建中考·生物第24题（原题为分类等级树状图，改为文字叙述，知识点、选项与答案未改）",
       stem: "恐狼已灭绝，科学家用其头骨化石提取了DNA，实现该物种的“复活”。恐狼等动物的分类等级关系如右图：哺乳纲→食肉目→熊科（熊属→黑熊）、犬科（犬属→恐狼、灰狼）、猫科（豹属→豹）。下列说法正确的是（ ）。",
       options: [{key:"A",text:"恐狼的DNA与灰狼的完全相同"}, {key:"B",text:"化石不能为恐狼的进化提供证据"}, {key:"C",text:"图中与恐狼亲缘关系最近的是灰狼"}, {key:"D",text:"图中所示最小的生物分类单位是科"}],
@@ -3175,7 +3175,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q071", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 71, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2025年福建中考·生物第25题（原题为叶绿素含量与气孔开放程度柱状图，数据改为文字叙述，知识点、选项与答案未改）",
       stem: "圆柏具有刺叶和鳞叶两种叶形，幼树以刺叶为主。随着树龄增长，树木长高，叶不易被遮挡，刺叶逐渐被鳞叶取代。两种叶形的叶绿素含量和气孔开放程度如下：刺叶叶绿素含量约0.8 mg·g⁻¹、气孔开放程度约72%，鳞叶叶绿素含量约0.47 mg·g⁻¹、气孔开放程度约53%。下列分析正确的是（ ）。①刺叶可减少叶片间相互遮挡，会降低光合作用 ②刺叶的叶绿素含量更高，有助于幼树生长发育 ③鳞叶的气孔开放程度小，具有较好的抗旱功能 ④树龄增长，鳞叶取代刺叶有利于适应弱光环境",
       options: [{key:"A",text:"①②"}, {key:"B",text:"②③"}, {key:"C",text:"①④"}, {key:"D",text:"③④"}],
@@ -3186,7 +3186,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q072", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 72, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第3题",
       stem: "“西塞山前白鹭飞，桃花流水鳜鱼肥”展现了自然界生机勃勃的景象。鳜鱼的血液属于（ ）。",
       options: [{key:"A",text:"上皮组织"}, {key:"B",text:"神经组织"}, {key:"C",text:"肌肉组织"}, {key:"D",text:"结缔组织"}],
@@ -3198,7 +3198,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q073", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 73, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·生物第4题（原题为根尖结构图示标号，改为文字选项，知识点、选项与答案未改）",
       stem: "右图是桃的根尖结构示意图，从根尖顶端向上依次为：④根冠、③分生区、②伸长区、①成熟区。根尖中能分裂产生新细胞的是（ ）。",
       options: [{key:"A",text:"①"}, {key:"B",text:"②"}, {key:"C",text:"③"}, {key:"D",text:"④"}],
@@ -3209,7 +3209,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q074", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 74, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第6题",
       stem: "福建省生物资源丰富，近年均有新物种被发现，如青鸾粉褶菌（大型真菌）、裂禾蕨（蕨类植物）等。下列关于裂禾蕨的叙述，正确的是（ ）。",
       options: [{key:"A",text:"无输导组织"}, {key:"B",text:"无真正的根"}, {key:"C",text:"能开花结果"}, {key:"D",text:"用孢子繁殖"}],
@@ -3220,7 +3220,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q075", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 75, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·生物第7题（原题为血常规检查报告单表格，改为文字叙述，知识点、选项与答案未改）",
       stem: "下表是小闽的奶奶血常规检查报告单部分内容：白细胞计数8.3（参考区间4.0~10.0，单位10⁹/L），红细胞计数3.0↓（参考区间3.5~5.0，单位10¹²/L），血小板计数264.0（参考区间100.0~300.0，单位10⁹/L），葡萄糖含量10.9↑（参考区间3.9~6.1，单位mmol/L）。医生初步诊断奶奶患贫血，所参考的检验项目是（ ）。",
       options: [{key:"A",text:"白细胞计数"}, {key:"B",text:"红细胞计数"}, {key:"C",text:"血小板计数"}, {key:"D",text:"葡萄糖含量"}],
@@ -3231,7 +3231,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q076", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 76, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第8题",
       stem: "下列结构中，对葡萄糖具有重吸收作用的是（ ）。",
       options: [{key:"A",text:"肾小球"}, {key:"B",text:"肾小囊"}, {key:"C",text:"肾小管"}, {key:"D",text:"输尿管"}],
@@ -3242,7 +3242,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q077", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 77, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第10题",
       stem: "关注健康，定期体检。从均衡膳食的角度，以下食谱中最适合奶奶的是（ ）。",
       options: [{key:"A",text:"炖猪蹄、红烧肉、白糖糕"}, {key:"B",text:"清蒸鱼、炒白菜、杂粮饭"}, {key:"C",text:"腌萝卜、烧茄子、酱黄瓜"}, {key:"D",text:"烤鸡腿、炸鸡翅、炸油饼"}],
@@ -3253,7 +3253,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q078", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 78, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第13题",
       stem: "下列反射与“看到酸梅分泌唾液”类型相同的是（ ）。",
       options: [{key:"A",text:"听到国歌敬礼"}, {key:"B",text:"婴儿吮吸母乳"}, {key:"C",text:"手被烫到缩回"}, {key:"D",text:"遇到强光眯眼"}],
@@ -3265,7 +3265,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q079", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 79, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·生物第15题（原题为生物关系图，改为文字写出两条食物链，知识点、选项与答案未改）",
       stem: "下图表示齐氏罗非鱼和部分生物间的关系：绿藻→水蚯蚓→齐氏罗非鱼，绿藻→齐氏罗非鱼。下列叙述正确的是（ ）。",
       options: [{key:"A",text:"图中存在2条食物链"}, {key:"B",text:"水蚯蚓取食齐氏罗非鱼"}, {key:"C",text:"绿藻与水蚯蚓是竞争关系"}, {key:"D",text:"以上生物可构成生态系统"}],
@@ -3277,7 +3277,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q080", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 80, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·生物第20题（原题为实验装置图，题干补写甲、乙两瓶所装种子，知识点、选项与答案未改）",
       stem: "下图为小闽自制的“探究种子呼吸作用”实验装置：甲瓶装萌发的种子，乙瓶装煮熟的种子，两瓶都装有电子温度计和装有澄清石灰水的注射器，实验中对装置保温处理。一天后，记录温度，抽拉注射器观察澄清石灰水的变化。再将燃烧的木条同时伸入瓶中，观察到甲中木条立即熄灭，乙中木条继续燃烧。下列叙述错误的是（ ）。",
       options: [{key:"A",text:"甲的温度比乙的温度低"}, {key:"B",text:"甲中澄清石灰水变浑浊"}, {key:"C",text:"该实验可证明种子萌发消耗氧气"}, {key:"D",text:"保温处理可减少装置的热量散失"}],
@@ -3288,7 +3288,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q081", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 81, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第21题",
       stem: "小闽进行“观察小鱼尾鳍内血液流动”实验。下列关于实验过程的叙述，正确的是（ ）。",
       options: [{key:"A",text:"选择尾鳍色素多的小鱼"}, {key:"B",text:"用干纱布包裹整只小鱼"}, {key:"C",text:"肉眼直接观察血液流动"}, {key:"D",text:"观察后将小鱼放回水中"}],
@@ -3300,7 +3300,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q082", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 82, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·生物第22题（原题为小鱼尾鳍血管示意图，题干补写①②③的血管特征与血流方向，知识点、选项与答案未改）",
       stem: "右图是小鱼尾鳍血管示意图，①②③表示三种血管，箭头表示血流方向：①为较粗的血管、血流方向指向尾鳍尖端，②为中间细密交织的血管网，③为较粗的血管、血流方向离开尾鳍尖端。下列叙述正确的是（ ）。",
       options: [{key:"A",text:"①表示的血管是静脉"}, {key:"B",text:"②中的血流速度最慢"}, {key:"C",text:"③中流动的是动脉血"}, {key:"D",text:"③中红细胞单行通过"}],
@@ -3311,7 +3311,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q083", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 83, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第23题",
       stem: "人体的有些功能是通过增大表面积实现的。下列叙述与之不符的是（ ）。",
       options: [{key:"A",text:"肾小管细长而且弯曲"}, {key:"B",text:"肺内有众多的肺泡"}, {key:"C",text:"消化道有多种消化液"}, {key:"D",text:"鼻腔毛细血管密集"}],
@@ -3323,7 +3323,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q084", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 84, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·生物第25题（原题为处理方式表与叶绿素含量柱状图，数据改为文字叙述，知识点、选项与答案未改）",
       stem: "为合理利用马铃薯加工过程产生的薯渣，科研人员利用M菌和T菌制备的菌剂处理马铃薯渣，制备新型肥料。研究不同处理组的肥料对蔬菜“上海青”生长情况的影响，实验处理方式及对“上海青”叶绿素含量的影响结果如下：对照组只用马铃薯渣，叶绿素含量约1.0 mg·g⁻¹；甲组用马铃薯渣、M菌剂，叶绿素含量约1.33 mg·g⁻¹；乙组用马铃薯渣、T菌剂，叶绿素含量约0.98 mg·g⁻¹；丙组用马铃薯渣、混合菌剂（M菌:T菌=1:1），叶绿素含量约1.42 mg·g⁻¹。下列叙述不合理的是（ ）。",
       options: [{key:"A",text:"为保证实验结果准确，实验组菌剂总量须相等"}, {key:"B",text:"与对照组相比，甲组和丙组叶绿素含量都增加"}, {key:"C",text:"综合分析，T菌对提高叶绿素含量不起作用"}, {key:"D",text:"用马铃薯渣制备新型肥料，最好接种两种菌"}],
@@ -3337,7 +3337,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q004", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 4, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2025年四川省泸州市初中学业水平考试·生物第10题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "转基因的细菌与酵母菌在结构上最大的区别是前者（ ）。",
       options: [{key:"A",text:"有成形的细胞核"}, {key:"B",text:"没有细胞壁"}, {key:"C",text:"没有成形的细胞核"}, {key:"D",text:"没有细胞质"}],
@@ -3367,7 +3367,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q024", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 24, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2023年福建省初中学业水平考试·生物第2题",
       stem: "制作酸奶利用的微生物是（ ）。",
       options: [{key:"A",text:"甲烷菌"}, {key:"B",text:"乳酸菌"}, {key:"C",text:"酵母菌"}, {key:"D",text:"根瘤菌"}],
@@ -3378,7 +3378,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q025", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 25, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2023-2024学年福建省师大平潭附中教研片中考考前最后一卷·生物第6题",
       stem: "新生儿注射乙肝疫苗后，体内产生的特殊蛋白质及所属的免疫类型分别是（ ）。",
       options: [{key:"A",text:"抗体，特异性免疫"}, {key:"B",text:"抗体，非特异性免疫"}, {key:"C",text:"抗原，特异性免疫"}, {key:"D",text:"抗原，非特异性免疫"}],
@@ -3389,7 +3389,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q026", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 26, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2024届福建省厦门市逸夫中学中考适应性考试·生物第31题",
       stem: "下列生物中，能产生抗生素的是（ ）。",
       options: [{key:"A",text:"青霉"}, {key:"B",text:"酵母菌"}, {key:"C",text:"病毒"}, {key:"D",text:"大肠杆菌"}],
@@ -3400,7 +3400,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q027", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 27, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2024届福建省厦门市逸夫中学中考适应性考试·生物第37题第(4)小题（原为非选择题小问，改为单选题）",
       stem: "艾滋病的传染途径不包括（ ）。",
       options: [{key:"A",text:"血液传播"}, {key:"B",text:"性传播"}, {key:"C",text:"空气传播"}, {key:"D",text:"母婴传播"}],
@@ -3411,7 +3411,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q028", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 28, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第2题",
       stem: "墨西哥、美国、日本等国家在本世纪初曾经暴发了甲型H1N1流感疫情，研究表明，该病是由甲型H1N1流感病毒引起的呼吸道传染病，下列说法错误的是（ ）。",
       options: [{key:"A",text:"侵入人体的甲型H1N1流感病毒可以称为抗原"}, {key:"B",text:"将患者进行医学隔离治疗，这一措施属于控制传染源"}, {key:"C",text:"接触公共物品后及时洗手，这一行为只能预防消化道传染病，而对预防流感这类呼吸道传染病是无效的"}, {key:"D",text:"甲型H1N1流感具有传染性、流行性和免疫性等特点"}],
@@ -3422,7 +3422,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q029", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 29, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第6题",
       stem: "学习了生命的起源和生物的进化后，某同学进行如下梳理归纳，你不认同的是（ ）。",
       options: [{key:"A",text:"现代类人猿和人类的共同祖先是森林古猿"}, {key:"B",text:"原始生命诞生于原始海洋"}, {key:"C",text:"生物通过遗传变异和自然选择不断进化"}, {key:"D",text:"郑氏孔子鸟化石证明了现代爬行动物经过长久年代可进化成鸟类"}],
@@ -3433,7 +3433,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q030", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 30, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第7题",
       stem: "下列对我国生物多样性的叙述中，不正确的是（ ）。",
       options: [{key:"A",text:"我国是生物种类最丰富的国家之一"}, {key:"B",text:"我国是裸子植物最丰富的国家"}, {key:"C",text:"鱼类、鸟类的种类都位于世界前列"}, {key:"D",text:"我国蕨类植物种类居世界第一位"}],
@@ -3444,7 +3444,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q031", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 31, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第9题",
       stem: "70年代末，美国从我国引进野生大豆与本地品种杂交，培育出抗萎黄病品种，这是利用了（ ）。",
       options: [{key:"A",text:"野生大豆的抗病性状"}, {key:"B",text:"科技交流的成果"}, {key:"C",text:"生态系统的多样性"}, {key:"D",text:"基因的多样性"}],
@@ -3455,7 +3455,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q032", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 32, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第11题",
       stem: "下列对达尔文自然选择学说的叙述中，不正确的是（ ）。",
       options: [{key:"A",text:"自然界中的绝大多数生物都有过度繁殖的倾向"}, {key:"B",text:"生物要为争夺有限的生存条件而进行斗争"}, {key:"C",text:"为了适应环境，生物会主动产生有利变异"}, {key:"D",text:"具有有利变异的个体容易生存下来并繁殖后代"}],
@@ -3466,7 +3466,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q033", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 33, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第13题",
       stem: "艾滋病是由HIV引起的威胁人类健康的传染病。下列有关说法正确的是（ ）。",
       options: [{key:"A",text:"HIV既是病原体又是传染源"}, {key:"B",text:"与艾滋病患者共同进餐易被感染"}, {key:"C",text:"目前可以通过计划免疫预防感染艾滋病"}, {key:"D",text:"HIV主要侵犯免疫系统而使患者免疫功能下降"}],
@@ -3477,7 +3477,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q034", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 34, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第15题",
       stem: "将动物行为分为先天性行为和学习行为的主要依据是（ ）。",
       options: [{key:"A",text:"行为发生的意义"}, {key:"B",text:"行为获得的途径"}, {key:"C",text:"行为发生的现象"}, {key:"D",text:"行为发生的规律"}],
@@ -3488,7 +3488,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q035", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 35, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第16题",
       stem: "下列动物当中，亲缘关系相对最近的是（ ）。",
       options: [{key:"A",text:"同属动物"}, {key:"B",text:"同科动物"}, {key:"C",text:"同目动物"}, {key:"D",text:"同纲动物"}],
@@ -3499,7 +3499,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q036", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 36, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第19题",
       stem: "遗传病会给家庭、社会造成极大不幸，下列措施中不能预防遗传病发生的是（ ）。",
       options: [{key:"A",text:"禁止近亲结婚"}, {key:"B",text:"婚前检查"}, {key:"C",text:"遗传咨询"}, {key:"D",text:"吃保健药"}],
@@ -3510,7 +3510,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q037", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 37, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第21题",
       stem: "下列关于动物生殖发育的叙述，正确的是（ ）。",
       options: [{key:"A",text:"青蛙将受精卵产入水中发育"}, {key:"B",text:"毛毛虫长大后变成美丽的蝴蝶要经过蛹期"}, {key:"C",text:"蝗虫是完全变态发育的昆虫"}, {key:"D",text:"鸡卵中的卵黄将发育成雏鸡"}],
@@ -3521,7 +3521,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q038", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 38, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第22题",
       stem: "下列关于DNA、基因和染色体关系的叙述，错误的是（ ）。",
       options: [{key:"A",text:"一条染色体上有许多DNA分子"}, {key:"B",text:"一条DNA分子上包含有许多基因"}, {key:"C",text:"基因是DNA上控制生物性状的片段"}, {key:"D",text:"成对的基因位于成对的染色体上"}],
@@ -3532,7 +3532,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q039", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 39, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第23题",
       stem: "银杉数量减少的主要原因是（ ）。",
       options: [{key:"A",text:"森林被伐，环境遭破坏"}, {key:"B",text:"很难繁殖"}, {key:"C",text:"过度开发"}, {key:"D",text:"自然灾害太多"}],
@@ -3543,7 +3543,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q040", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 40, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省各地中考生物四模试卷第24题",
       stem: "“尝试与错误”是常见的学习行为之一，对这种行为表述正确的是（ ）。",
       options: [{key:"A",text:"越低等的动物“尝试与错误”的次数越多、学习能力越强"}, {key:"B",text:"越低等的动物“尝试与错误”的次数越少、学习能力越强"}, {key:"C",text:"越高等的动物“尝试与错误”的次数越多、学习能力越弱"}, {key:"D",text:"越高等的动物“尝试与错误”的次数越少、学习能力越强"}],
@@ -3554,7 +3554,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q041", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 41, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2025届福建省各地中考生物四模试卷第28题（原为非选择题填空，改为单选题）",
       stem: "南瓜果实圆盘形由显性基因（D）控制，球形由隐性基因（d）控制。圆盘形南瓜的基因组成可能是（ ）。",
       options: [{key:"A",text:"DD"}, {key:"B",text:"Dd"}, {key:"C",text:"DD或Dd"}, {key:"D",text:"dd"}],
@@ -3565,7 +3565,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q042", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 42, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2025届福建省各地中考生物四模试卷第29题（原为非选择题填空，改为单选题）",
       stem: "将多个品种的三角梅经过人工处理，可形成五彩缤纷的一树多种“花”现象。这一现象采用的生物技术是（ ）。",
       options: [{key:"A",text:"嫁接"}, {key:"B",text:"杂交"}, {key:"C",text:"克隆"}, {key:"D",text:"组织培养"}],
@@ -3576,7 +3576,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q043", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 43, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第1题",
       stem: "一株苹果树上结出“国光”“红富士”等不同品种的果实，所采用的繁殖方法是（ ）。",
       options: [{key:"A",text:"种子繁殖"}, {key:"B",text:"压条"}, {key:"C",text:"嫁接"}, {key:"D",text:"扦插"}],
@@ -3587,7 +3587,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q044", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 44, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第5题",
       stem: "在下列生物分类等级中，具有相同特征最少的是（ ）。",
       options: [{key:"A",text:"门"}, {key:"B",text:"纲"}, {key:"C",text:"科"}, {key:"D",text:"种"}],
@@ -3598,7 +3598,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q045", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 45, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第6题",
       stem: "下列关于遗传病的说法，错误的是（ ）。",
       options: [{key:"A",text:"遗传病主要是由遗传物质异常引起的疾病"}, {key:"B",text:"遗传物质的改变一定会导致遗传病的产生"}, {key:"C",text:"近亲结婚会增加后代遗传病的发病率"}, {key:"D",text:"色盲属于遗传病"}],
@@ -3609,7 +3609,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q046", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 46, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第7题",
       stem: "水稻体细胞内含有12对染色体。当水稻传粉受精后，其受精卵内染色体数目为（ ）。",
       options: [{key:"A",text:"6条"}, {key:"B",text:"6对"}, {key:"C",text:"12条"}, {key:"D",text:"12对"}],
@@ -3620,7 +3620,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q047", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 47, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第10题",
       stem: "下列几种微生物有关的叙述中正确的是（ ）。①酵母菌 ②乳酸菌 ③结核杆菌 ④衣藻 ⑤肝炎病毒",
       options: [{key:"A",text:"从结构上看，①④是真核生物，②③⑤是原核生物"}, {key:"B",text:"从新陈代谢类型看，②是厌氧型，④是异养型"}, {key:"C",text:"从免疫的角度看，③⑤都是抗原"}, {key:"D",text:"从生态系统中的成分看，①②③⑤是分解者，④是生产者"}],
@@ -3631,7 +3631,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q048", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 48, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第14题",
       stem: "下列食品运用发酵技术的是（ ）。①葡萄酒 ②地瓜干 ③甜面酱 ④老酸奶 ⑤火腿肠 ⑥豆腐",
       options: [{key:"A",text:"①③④"}, {key:"B",text:"③④⑤"}, {key:"C",text:"①②⑥"}, {key:"D",text:"②④⑥"}],
@@ -3642,7 +3642,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q049", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 49, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第16题",
       stem: "免疫是机体的一种重要保护功能，下列不属于免疫功能的是（ ）。",
       options: [{key:"A",text:"泪腺中的溶菌酶可以消灭部分病菌"}, {key:"B",text:"吞噬细胞将伤口部位的一部分病菌消灭掉"}, {key:"C",text:"抗乙肝病毒的抗体清除体内的乙肝病毒"}, {key:"D",text:"青霉素可以杀灭肺炎双球菌"}],
@@ -3653,7 +3653,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q050", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 50, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第24题（原为表格，改为文字叙述）",
       stem: "古希腊著名学者亚里士多德曾对动物进行分类，下列分类中相当于现代动物类群中爬行类的是（ ）。",
       options: [{key:"A",text:"胎生四肢动物，有毛"}, {key:"B",text:"卵生四肢动物，皮上有鳞"}, {key:"C",text:"卵生二肢动物，有羽毛，能飞"}, {key:"D",text:"卵生无肢动物，有鳞，水栖，用鳃呼吸"}],
@@ -3664,7 +3664,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q051", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 51, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第25题",
       stem: "在流行性感冒流行期间，班上不少同学患病，为了防止其他同学被传染，老师把患病的学生送回家治疗。这种做法属于传染病预防措施中的（ ）。",
       options: [{key:"A",text:"控制传染源"}, {key:"B",text:"切断传播途径"}, {key:"C",text:"保护易感人群"}, {key:"D",text:"以上都不是"}],
@@ -3675,7 +3675,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q052", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 52, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第29题（原为表格，改为文字叙述）",
       stem: "下表是某同学对9种动物做出的简单分类，你认为他的分类依据是（ ）。类别一：蚯蚓、蝗虫、河蚌、蜘蛛；类别二：家鸽、海豚、家兔、蜥蜴、鲫鱼。",
       options: [{key:"A",text:"水生还是陆生"}, {key:"B",text:"体内有无脊柱"}, {key:"C",text:"体温是否恒定"}, {key:"D",text:"胎生还是卵生"}],
@@ -3686,7 +3686,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q053", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 53, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第32题",
       stem: "关于有关人体健康的描述，错误的是（ ）。",
       options: [{key:"A",text:"与艾滋病患者共同学习或握手，不会感染艾滋病"}, {key:"B",text:"对鸡舍进行消毒以预防禽流感，这一措施属于控制传染源"}, {key:"C",text:"骨髓干细胞移植可以治疗白血病，原因是干细胞可以分裂、分化形成各种血细胞"}, {key:"D",text:"为去除果蔬农药残留，可以清水浸泡或削去外皮"}],
@@ -3697,7 +3697,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q054", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 54, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第33题",
       stem: "悉尼奥运会期间，人们利用蚯蚓处理垃圾，这是利用了蚯蚓的哪种生理功能（ ）。",
       options: [{key:"A",text:"运动"}, {key:"B",text:"食性"}, {key:"C",text:"呼吸"}, {key:"D",text:"昼伏夜出"}],
@@ -3708,7 +3708,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q055", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 55, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025届福建省福州十八中学中考生物模拟预测题第35题",
       stem: "下列动物与其形态结构特点对应正确的是（ ）。",
       options: [{key:"A",text:"涡虫——两侧对称，背腹扁平"}, {key:"B",text:"水螅——辐射对称，体壁由三层细胞构成"}, {key:"C",text:"蚯蚓——身体呈圆筒形，体表有角质层"}, {key:"D",text:"蛔虫——身体细长呈圆柱形，由体节组成"}],
@@ -3719,7 +3719,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q056", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 56, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2025届福建省福州十八中学中考生物模拟预测题第36题第(2)小题（原为非选择题填空，改为单选题）",
       stem: "“叫天子”（云雀）进行气体交换的场所是（ ）。",
       options: [{key:"A",text:"肺"}, {key:"B",text:"气囊"}, {key:"C",text:"皮肤"}, {key:"D",text:"鳃"}],
@@ -3730,7 +3730,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q057", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 57, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2025届福建省福州十八中学中考生物模拟预测题第37题第(1)小题（原为非选择题填空，改为单选题）",
       stem: "引起甲流的微生物没有细胞结构，不能独立生活，寄生于呼吸道黏膜上皮细胞中，由此可以推断出此种生物是（ ）。",
       options: [{key:"A",text:"病毒"}, {key:"B",text:"细菌"}, {key:"C",text:"真菌"}, {key:"D",text:"衣藻"}],
@@ -3741,7 +3741,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q058", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 58, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第6题",
       stem: "夏日炎炎，朵朵同学看着小鸟在树上吃果实，清风徐来，枝条摇曳。莺适于飞行的特点是（ ）。",
       options: [{key:"A",text:"体温恒定"}, {key:"B",text:"前肢为翼"}, {key:"C",text:"体内受精"}, {key:"D",text:"产卵繁殖"}],
@@ -3752,7 +3752,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q059", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 59, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第16题",
       stem: "下列有关人的生殖与遗传的叙述，正确的是（ ）。",
       options: [{key:"A",text:"母亲的卵细胞类型决定孩子性别"}, {key:"B",text:"男孩的X染色体一定来自于母亲"}, {key:"C",text:"形成的生殖细胞染色体数目加倍"}, {key:"D",text:"女孩体细胞染色体组成是44+XY"}],
@@ -3763,7 +3763,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q060", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 60, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第17题",
       stem: "朵朵遇到挫折感到烦恼时，下列做法错误的是（ ）。",
       options: [{key:"A",text:"适当运动"}, {key:"B",text:"调节情绪"}, {key:"C",text:"沉迷手机"}, {key:"D",text:"转移注意"}],
@@ -3774,7 +3774,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q061", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 61, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第21题",
       stem: "微生物与人类生产、生活关系密切，下列对应关系正确的是（ ）。",
       options: [{key:"A",text:"乳酸菌——腌制腊肉"}, {key:"B",text:"大肠杆菌——生产沼气"}, {key:"C",text:"酵母菌——酿造米酒"}, {key:"D",text:"醋酸杆菌——制作酸奶"}],
@@ -3785,7 +3785,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q062", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 62, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第23题",
       stem: "下列有关疫苗的叙述，错误的是（ ）。",
       options: [{key:"A",text:"可通过注射或口服进入人体"}, {key:"B",text:"能刺激人体产生抗体"}, {key:"C",text:"乙肝疫苗能预防流行性感冒"}, {key:"D",text:"可以应用于计划免疫"}],
@@ -3796,7 +3796,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q063", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 63, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第24题",
       stem: "下列有关微生物的叙述，正确的是（ ）。",
       options: [{key:"A",text:"噬菌体是细菌病毒，有细胞结构"}, {key:"B",text:"酵母菌有液泡，是植物细胞"}, {key:"C",text:"细菌都有叶绿体，能合成有机物"}, {key:"D",text:"曲霉是真菌，利用孢子繁殖"}],
@@ -3807,7 +3807,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q064", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 64, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2024年福建中考·生物第25题",
       stem: "化石证据显示，200万年前大熊猫的食性从杂食进化成几乎以竹子为食。相比其他动物的食物，竹子坚硬难以咀嚼和消化，供能更少。科学家研究大熊猫时发现：①下颌结构及咀嚼肌发达 ②肠道远短于其他植食性动物 ③参与消化的肠道菌群与杂食性动物黑熊的更相似 ④日均移动距离小于500米 ⑤与其他动物相比，睡眠时间更长。以上支持大熊猫适于以竹子为食的事实是（ ）。",
       options: [{key:"A",text:"①②③"}, {key:"B",text:"①③④"}, {key:"C",text:"①④⑤"}, {key:"D",text:"②④⑤"}],
@@ -3818,7 +3818,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q065", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 65, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2025年福建中考·生物第13题",
       stem: "近日，我国科学家利用病毒开展遗传性耳聋的基因治疗研究，取得初步成效。下列与遗传性耳聋同属于遗传病的是（ ）。",
       options: [{key:"A",text:"白化病"}, {key:"B",text:"夜盲症"}, {key:"C",text:"侏儒症"}, {key:"D",text:"艾滋病"}],
@@ -3829,7 +3829,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q066", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 66, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第5题",
       stem: "福建省生物资源丰富，近年均有新物种被发现，如青鸾粉褶菌（大型真菌）、裂禾蕨（蕨类植物）等。下列关于青鸾粉褶菌的叙述，正确的是（ ）。",
       options: [{key:"A",text:"无细胞核"}, {key:"B",text:"有叶绿体"}, {key:"C",text:"由菌丝组成"}, {key:"D",text:"为单细胞生物"}],
@@ -3841,7 +3841,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h06-q067", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       image: true,
       number: 67, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·生物第9题（原题为药品说明书图，改为文字叙述，知识点、选项与答案未改）",
       stem: "小闽替奶奶整理家庭药箱。下图为某非处方药的说明书（节选）：用于咽炎、扁桃体炎；每袋10克；一次1袋，一日2~3次；2022年6月15日；36个月。下列叙述错误的是（ ）。",
       options: [{key:"A",text:"该药可治疗咽炎"}, {key:"B",text:"一次只服用1袋"}, {key:"C",text:"该药在有效期内"}, {key:"D",text:"该药可自行购买"}],
@@ -3852,7 +3852,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q068", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 68, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第12题",
       stem: "青少年日常生活中，有利于健康的行为是（ ）。",
       options: [{key:"A",text:"运动后立即喝冷饮"}, {key:"B",text:"长时间戴耳机听歌"}, {key:"C",text:"一边走路一边看书"}, {key:"D",text:"积极参加体育锻炼"}],
@@ -3863,7 +3863,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q069", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 69, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第14题",
       stem: "齐氏罗非鱼耐污染、适应低氧环境，具有极强的资源掠夺与空间占据能力，已被列入我国《重点管理外来入侵物种名录》。下列关于齐氏罗非鱼的叙述，不合理的是（ ）。",
       options: [{key:"A",text:"适应能力强"}, {key:"B",text:"影响本地鱼类"}, {key:"C",text:"威胁生态安全"}, {key:"D",text:"可随意放生"}],
@@ -3874,7 +3874,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q070", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 70, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第16题",
       stem: "生物通过生殖和遗传维持物种的延续。小闽将绿萝的枝条插入土中。不久，枝条长出根，最后长成新个体。这种繁殖方式属于（ ）。",
       options: [{key:"A",text:"嫁接"}, {key:"B",text:"扦插"}, {key:"C",text:"组织培养"}, {key:"D",text:"种子繁殖"}],
@@ -3885,7 +3885,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q071", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 71, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "2026年福建中考·生物第18题",
       stem: "生物通过生殖和遗传维持物种的延续。下列关于人体染色体的叙述，正确的是（ ）。",
       options: [{key:"A",text:"体细胞有23条染色体"}, {key:"B",text:"Y染色体只存在于精子中"}, {key:"C",text:"X染色体均来自母亲"}, {key:"D",text:"性别由性染色体组成决定"}],
@@ -3897,7 +3897,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h06-q072", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       image: true,
       number: 72, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·生物第19题（原题为四组包含关系图，改为文字选项，知识点、选项与答案未改）",
       stem: "下图能正确表示细胞核内染色体、DNA和基因关系的是（ ）。",
       options: [{key:"A",text:"基因包含DNA，DNA包含染色体"}, {key:"B",text:"基因包含染色体，染色体包含DNA"}, {key:"C",text:"染色体包含DNA，DNA包含基因"}, {key:"D",text:"染色体包含基因，基因包含DNA"}],
@@ -3909,7 +3909,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h06-q073", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       image: true,
       number: 73, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建中考·生物第24题（原题为古猿进化树状图，改为文字叙述，知识点、选项与答案未改）",
       stem: "右图为古猿进化部分历程示意图：古猿（树栖）分化为现代类人猿（树栖）和人类（地面生活）。下列叙述错误的是（ ）。",
       options: [{key:"A",text:"化石能为古猿的进化提供证据"}, {key:"B",text:"古猿为适应气候变化发生变异"}, {key:"C",text:"人类和现代类人猿由古猿进化而来"}, {key:"D",text:"古猿进化为人类是自然选择的结果"}],
@@ -4953,7 +4953,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q074", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 74, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第28题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "国家一级保护野生动物穿山甲体表覆盖角质鳞片、不具齿、胎生、哺乳，挖掘蚁穴、食蚁类。穿山甲属于脊椎动物中的（ ）。",
       options: [{key:"A",text:"鱼类"}, {key:"B",text:"两栖动物"}, {key:"C",text:"爬行动物"}, {key:"D",text:"哺乳动物"}],
@@ -4964,7 +4964,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q075", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 75, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第30题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "番茄果实的红色和黄色由一对基因（A、a）控制。将番茄植株进行杂交：甲组红色×黄色，子代均为红色；乙组黄色×黄色，子代均为黄色。番茄果实的红色和黄色是一对相对性状，其中显性性状是（ ）。",
       options: [{key:"A",text:"红色"}, {key:"B",text:"黄色"}, {key:"C",text:"红色和黄色都是"}, {key:"D",text:"无法判断"}],
@@ -4975,7 +4975,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q076", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 76, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第30题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "番茄果实的红色由显性基因（A）控制，黄色由隐性基因（a）控制。若要判断一株红果番茄的基因组成，可将其与黄果番茄杂交。若子代番茄均为红果，则待测番茄的基因组成是（ ）。",
       options: [{key:"A",text:"AA"}, {key:"B",text:"Aa"}, {key:"C",text:"aa"}, {key:"D",text:"A"}],
@@ -4986,7 +4986,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q077", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 77, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第30题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "番茄果实的红色由显性基因（A）控制，黄色由隐性基因（a）控制。若要判断一株红果番茄的基因组成，可将其与黄果番茄杂交。若子代番茄红果和黄果的比例接近1:1，则待测番茄的基因组成是（ ）。",
       options: [{key:"A",text:"AA"}, {key:"B",text:"Aa"}, {key:"C",text:"aa"}, {key:"D",text:"A"}],
@@ -4997,7 +4997,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q078", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 78, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第30题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "科学家从植物中提取出耐盐基因，将该基因转入番茄中，培育出的番茄能在含盐量高的土壤中存活。该过程用到的技术是（ ）。",
       options: [{key:"A",text:"克隆技术"}, {key:"B",text:"转基因技术"}, {key:"C",text:"杂交技术"}, {key:"D",text:"发酵技术"}],
@@ -5008,7 +5008,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q079", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 79, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第32题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "土壤条件会改变相同品种绣球的花色：白醋浇灌组花呈蓝色，食用碱浇灌组花呈粉红色，清水组两种花色皆有。这说明生物的性状是由基因组成与（ ）共同决定的。",
       options: [{key:"A",text:"温度"}, {key:"B",text:"环境"}, {key:"C",text:"水分"}, {key:"D",text:"光照"}],
@@ -5019,7 +5019,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q080", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 80, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第33题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "接种甲型肝炎疫苗无法预防霍乱，是因为该疫苗无法刺激人体产生识别霍乱弧菌的（ ）。",
       options: [{key:"A",text:"抗原"}, {key:"B",text:"抗体"}, {key:"C",text:"抗生素"}, {key:"D",text:"病原体"}],
@@ -5332,7 +5332,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q085", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 85, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建省初中学业水平考试·生物第26题第(1)小题",
       stem: "栗的果实外有壳斗包裹，种子有2片子叶。壳斗是栗的果皮。（ ）",
       options: [],
@@ -5343,7 +5343,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q086", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 86, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建省初中学业水平考试·生物第26题第(2)小题",
       stem: "栗的果实外有壳斗包裹，种子有2片子叶。栗是被子植物中的双子叶植物。（ ）",
       options: [],
@@ -5354,7 +5354,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q087", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 87, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建省初中学业水平考试·生物第26题第(3)小题",
       stem: "根据检索表，板栗、茅栗和锥栗同为一个种。（ ）",
       options: [],
@@ -5365,7 +5365,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q088", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 88, type: "judge", meta: "判断题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "2026年福建省初中学业水平考试·生物第26题第(4)小题",
       stem: "根据检索表，与锥栗相比，茅栗和板栗亲缘关系更近。（ ）",
       options: [],
@@ -5376,7 +5376,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q089", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 89, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第27题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "蜂虎又称“食蜂鸟”，是高效的昆虫捕食者，既捕食蜜蜂，也大量捕食其他昆虫。蜂虎捕食昆虫，获得生命活动所需的物质和能量，它属于生态系统生物部分中的（ ）。",
       options: [{key:"A",text:"生产者"}, {key:"B",text:"分解者"}, {key:"C",text:"消费者"}, {key:"D",text:"非生物部分"}],
@@ -5387,7 +5387,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q090", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 90, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第27题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "蜂虎既捕食蜜蜂，也大量捕食其他昆虫。栖息地丧失、环境污染正威胁着蜂虎的生存。资料中，影响蜂虎的生物因素有（ ）。",
       options: [{key:"A",text:"蜜蜂和其他昆虫"}, {key:"B",text:"栖息地丧失"}, {key:"C",text:"环境污染"}, {key:"D",text:"阳光和空气"}],
@@ -5398,7 +5398,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q091", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 91, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第27题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "蜂虎的栖息地丧失、环境污染正威胁着蜂虎的生存。划线部分体现了环境与生物的关系是（ ）。",
       options: [{key:"A",text:"生物影响环境"}, {key:"B",text:"环境影响生物"}, {key:"C",text:"生物适应环境"}, {key:"D",text:"环境适应生物"}],
@@ -5409,7 +5409,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q092", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 92, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第28题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "森林中的植物通过光合作用维持生物圈中的（ ）平衡。",
       options: [{key:"A",text:"碳氧"}, {key:"B",text:"水平衡"}, {key:"C",text:"氮"}, {key:"D",text:"生物种类"}],
@@ -5420,7 +5420,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q093", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 93, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第29题第(1)a小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "福建是番茄重要产区。为提高大棚番茄产量，科研人员进行大棚番茄栽培研究。培育幼苗时，播种前浸泡种子，为种子的萌发提供（ ）。",
       options: [{key:"A",text:"阳光"}, {key:"B",text:"土壤"}, {key:"C",text:"空气"}, {key:"D",text:"水"}],
@@ -5431,7 +5431,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q094", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 94, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第29题第(2)b小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "为探究光照时间对番茄生长和产量的影响，将A、B组均置于自然光照下，并在实验期间每天天黑后对B组进行4小时补光。测定结果：B组株高、茎粗、单株果数、单果质量均高于A组。从光合作用的角度分析，B组番茄产量更高的原因是（ ）。",
       options: [{key:"A",text:"B组光合作用时间更长，产生并积累的有机物更多"}, {key:"B",text:"B组呼吸作用更强，消耗的有机物更多"}, {key:"C",text:"B组蒸腾作用更强，散失的水分更多"}, {key:"D",text:"B组光合作用时间更短，产生的有机物更少"}],
@@ -5442,7 +5442,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q095", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 95, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第31题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "篮球运动需要人体各个系统协调共同完成。球员急停起跳完成投篮，是在神经系统的支配下，由肌肉牵拉着骨围绕关节完成的。关节由关节面、关节腔和（ ）组成。",
       options: [{key:"A",text:"关节头"}, {key:"B",text:"关节囊"}, {key:"C",text:"关节窝"}, {key:"D",text:"关节软骨"}],
@@ -5453,7 +5453,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q096", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 96, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第31题第(4)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "篮球运动需要人体各个系统协调共同完成。精彩的比赛让人目不暇接，人的视觉感受器是（ ）。",
       options: [{key:"A",text:"角膜"}, {key:"B",text:"瞳孔"}, {key:"C",text:"晶状体"}, {key:"D",text:"视网膜"}],
@@ -5464,7 +5464,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q097", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 97, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第32题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "小闽开展“绣球的栽培与观察”跨学科实践活动，为探究土壤条件对绣球花色的影响，采用白醋（A组）、清水（B组）、食用碱（C组）以定期浇灌的方式模拟不同土壤条件。待绣球开花时，须观察并记录的是（ ）。",
       options: [{key:"A",text:"绣球花香"}, {key:"B",text:"绣球花瓣数目"}, {key:"C",text:"绣球花色"}, {key:"D",text:"绣球植株高度"}],
@@ -5475,7 +5475,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q098", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 98, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第32题第(4)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "为了得到色彩丰富的绣球花，小闽尝试将花枝插在不同颜色的墨水中。墨水通过茎中的（ ）运输到花。",
       options: [{key:"A",text:"导管"}, {key:"B",text:"筛管"}, {key:"C",text:"形成层"}, {key:"D",text:"表皮"}],
@@ -5486,7 +5486,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h05-q099", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       number: 99, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(1)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "科研人员以杉木和木荷为对象，研究不同光照强度对其种子萌发及幼苗生长的影响。以自然光100%为对照组，设置自然光60%、40%、15%和5%的光照强度，进行探究。光照强度是本实验的（ ）。",
       options: [{key:"A",text:"因变量"}, {key:"B",text:"自变量"}, {key:"C",text:"对照组"}, {key:"D",text:"无关变量"}],
@@ -5498,7 +5498,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q100", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 100, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "科研人员以杉木和木荷为对象，研究不同光照强度对其种子萌发的影响。在15%的光照条件下，首先萌发的是（ ）种子。",
       options: [{key:"A",text:"木荷"}, {key:"B",text:"两种同时萌发"}, {key:"C",text:"杉木"}, {key:"D",text:"两种都不萌发"}],
@@ -5510,7 +5510,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q101", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 101, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(3)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "科研人员以杉木和木荷为对象，研究不同光照强度对其种子萌发的影响。随着光照强度的减弱，木荷种子萌发率的变化趋势是（ ）。",
       options: [{key:"A",text:"先增大后减小"}, {key:"B",text:"一直增大"}, {key:"C",text:"一直减小"}, {key:"D",text:"先减小后增大"}],
@@ -5522,7 +5522,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q102", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 102, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(4)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "科研人员以杉木和木荷为对象，研究不同光照强度对其幼苗生长的影响。两种幼苗在100%光照下存活率均为0，在其他4种光照强度下，生长更好的是（ ）幼苗。",
       options: [{key:"A",text:"杉木"}, {key:"B",text:"木荷"}, {key:"C",text:"两者一样好"}, {key:"D",text:"两者都不生长"}],
@@ -5534,7 +5534,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
       id: "shengwu-h05-q103", chapterId: 5, chapter: "会考总复习 · 七年级内容",
       image: true,
       number: 103, type: "single", meta: "单选题",
-      grade: "九上", stage: "9-up",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第34题第(5)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "我国南方常采用林木混种模式，采伐林木后需要补种。若需补种杉木，以上5种光照强度下，对其种子萌发及幼苗培育的最优操作是（ ）。",
       options: [{key:"A",text:"种子萌发时选择100%光照强度，幼苗培育时选择60%光照强度"}, {key:"B",text:"种子萌发时选择5%光照强度，幼苗培育时选择100%光照强度"}, {key:"C",text:"种子萌发和幼苗培育时都选择100%光照强度"}, {key:"D",text:"种子萌发时选择5%光照强度，幼苗培育时选择60%光照强度"}],
@@ -5545,7 +5545,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q081", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 81, type: "judge", meta: "判断题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第33题第(1)小题（原为非选择题填空，改为判断题；本题只取该小题后半空）",
       stem: "与霍乱弧菌相比，甲肝病毒没有细胞结构。甲肝病毒必须寄生在其他生物的活细胞内生活。（ ）",
       options: [],
@@ -5556,7 +5556,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q082", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 82, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第33题第(2)小题（原为非选择题填空，改为单选题，选项为改编时补写）",
       stem: "从传染病角度判断，甲肝病毒是引起甲型肝炎的（ ）。",
       options: [{key:"A",text:"传染源"}, {key:"B",text:"病原体"}, {key:"C",text:"传播途径"}, {key:"D",text:"易感人群"}],
@@ -5567,7 +5567,7 @@ window.XIAOSIMEN_BANKS["shengwu"] = {
     {
       id: "shengwu-h06-q083", chapterId: 6, chapter: "会考总复习 · 八年级内容",
       number: 83, type: "single", meta: "单选题",
-      grade: "九下", stage: "9-down",
+      grade: "八下", stage: "8-down",
       source: "改编自2026年福建省初中学业水平考试·生物第32题第(5)小题（原为非选择题填空，改为单选题，D选项“风干标本”为改编时补写的干扰项）",
       stem: "小闽尝试用三种方式保存绣球花：腊叶标本形态较完整、花色不鲜艳、造型平整；塑封标本形态较完整、花色较鲜艳、造型平整；永生干花形态完整、花色鲜艳、造型立体。三种保存方式中能最大程度保留花朵原型的是（ ）。",
       options: [{key:"A",text:"腊叶标本"}, {key:"B",text:"塑封标本"}, {key:"C",text:"永生干花"}, {key:"D",text:"风干标本"}],

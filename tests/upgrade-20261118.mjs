@@ -15,8 +15,9 @@ for (const subject of ['daode', 'lishi', 'dili', 'shengwu']) {
   const after = load(read(file)).XIAOSIMEN_BANKS[subject].questions;
   assert.ok(after.length >= before.length);
   for (let i = 0; i < before.length; i++) {
-    const { chapter: previousTitle, ...previous } = before[i];
-    const { chapter: currentTitle, ...current } = after[i];
+    // 章节名、年级、学期只是显示标签（地理生物会考复习章已从“九年级”改归八下），id 和题目内容必须不变。
+    const { chapter: previousTitle, grade: g1, stage: s1, ...previous } = before[i];
+    const { chapter: currentTitle, grade: g2, stage: s2, ...current } = after[i];
     assert.equal(JSON.stringify(current), JSON.stringify(previous), `${subject} 旧题被改动：${before[i].id}`);
   }
   assert.ok(read(`data/subjective-${subject}.js`).replace(/\r\n/g, '\n') === old(`data/subjective-${subject}.js`), `${subject} 原有主观题不变`);
