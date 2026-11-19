@@ -795,7 +795,7 @@ function wirePrintCard() {
 }
 
 function openUnlock(message = '') {
-  byId('unlockReason').textContent = message || '完整版：全科真题手机刷题、精编模拟卷整卷手机做和打印、本周一卷、小四门全部题目、错题自动复习。原卷永远免费看。';
+  byId('unlockReason').textContent = message || '先免费试：各地原卷随时免费看、免费打印；每个家庭再送 1 次整卷打印 + 1 套手机整卷。觉得孩子用得上再买。';
   redeemMessage.textContent = '';
   if (!unlockDialog.open) unlockDialog.showModal();
   void loadPurchaseOptions();
