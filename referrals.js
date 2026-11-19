@@ -81,7 +81,7 @@
     },
     full: {
       sub: "初级 / 中级会计 · 中级审计 · 软考 · 税务师",
-      points: ["章节考点精练 + 精编模拟卷 + 历年押题", "错题按 1、3、7 天自动复习，碎片时间就能刷", "作者自己一路考过来：中级审计 98 / 85"],
+      points: ["作者一年内 4 门考试，全部一次通过：", "法考　客观题 210 · 主观题 135", "初级会计　实务 97 · 经济法基础 89", "中级会计　财管 92 · 经济法 91 · 实务 90", "中级审计　相关基础知识 98 · 理论与实务 85", "精编模拟卷 + 章节精练 + 错题自动复习"],
       colors: ["#163a5c", "#246b8f"],
     },
   };
@@ -138,14 +138,19 @@
       message.textContent = "海报暂时无法生成，可以先用“复制邀请文案”。";
       return;
     }
-    const W = 1080, H = 1640;
+    const W = 1080;
     const canvas = document.createElement("canvas");
     canvas.width = W;
-    canvas.height = H;
     const context = canvas.getContext("2d");
     if (!context) { message.textContent = "海报暂时无法生成。"; return; }
     const style = POSTER[siteKey] || POSTER.full;
     const font = (size, weight) => `${weight} ${size}px "PingFang SC", "Microsoft YaHei", sans-serif`;
+    // 先量一遍卖点占多高，再定海报高度，卖点多的时候二维码不会被挤出画面
+    context.font = font(38, 500);
+    const pointLines = style.points.reduce((sum, point) => sum + wrapText(context, point, W - 220).length, 0);
+    const pointsBottom = 420 + pointLines * 54 + style.points.length * 26;
+    const H = Math.max(1640, Math.max(pointsBottom + 10, 700) + 150 + 50 + 460 + 200);
+    canvas.height = H;
     const text = (value, x, y, size, weight, color, align = "left") => {
       context.fillStyle = color;
       context.font = font(size, weight);
