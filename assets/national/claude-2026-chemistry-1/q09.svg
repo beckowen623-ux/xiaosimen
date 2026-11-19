@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" width="340" height="260" font-family="Times New Roman, serif" font-size="15" fill="none" stroke="#111" stroke-width="2">
+<rect width="340" height="260" fill="#fff" stroke="none"/>
+<line x1="50" y1="220" x2="320" y2="220" stroke-width="1.5"/><line x1="50" y1="220" x2="50" y2="10" stroke-width="1.5"/>
+<path d="M50.0 188.0 L120.0 124.0 L190.0 60.0 L260.0 -36.0"/><path d="M50.0 156.0 L120.0 124.0 L190.0 92.0 L260.0 66.4" stroke-dasharray="7 4"/>
+<line x1="50" y1="124.0" x2="120.0" y2="124.0" stroke-dasharray="3 4" stroke-width="1"/><line x1="120.0" y1="124.0" x2="120.0" y2="220" stroke-dasharray="3 4" stroke-width="1"/><text x="22" y="129" fill="#111" stroke="none">30</text><line x1="50" y1="60.0" x2="190.0" y2="60.0" stroke-dasharray="3 4" stroke-width="1"/><line x1="190.0" y1="60.0" x2="190.0" y2="220" stroke-dasharray="3 4" stroke-width="1"/><text x="22" y="65" fill="#111" stroke="none">50</text><line x1="50" y1="92.0" x2="190.0" y2="92.0" stroke-dasharray="3 4" stroke-width="1"/><line x1="190.0" y1="92.0" x2="190.0" y2="220" stroke-dasharray="3 4" stroke-width="1"/><text x="22" y="97" fill="#111" stroke="none">40</text>
+<text x="112" y="240" fill="#111" stroke="none">t₁</text><text x="182" y="240" fill="#111" stroke="none">t₂</text>
+<text x="36" y="238" fill="#111" stroke="none">0</text><text x="282" y="240" fill="#111" stroke="none">温度/℃</text><text x="8" y="16" fill="#111" stroke="none">溶解度/g</text>
+<text x="238" y="-36.0" fill="#111" stroke="none">甲</text><text x="254" y="86.4" fill="#111" stroke="none">乙</text>
+</svg>
