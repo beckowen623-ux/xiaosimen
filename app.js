@@ -738,6 +738,10 @@ async function loadPurchaseOptions() {
 }
 
 window.addEventListener?.('quiz-sprint-buy', () => openUnlock());
+byId('copySeller')?.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText('王者荣耀速度飞车'); redeemMessage.textContent = '已复制，打开闲鱼搜索框粘贴，切换到“用户”就能找到。'; }
+  catch { redeemMessage.textContent = '复制失败，请手动输入用户名搜索。'; }
+});
 // ---------- 打印练习卷：按科目、册次组一张纸质卷（未解锁时用免费题组“体验卷”） ----------
 function printChapters(subject) {
   return (banks?.[subject]?.chapters || []).map(c => ({ id: c.id, title: c.title }));
