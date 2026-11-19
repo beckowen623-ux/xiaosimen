@@ -51,20 +51,41 @@ async function networkHash(request) {
   if (ip.includes(":")) ip = ip.split(":").slice(0, 4).join(":"); // IPv6 按 /64 网段算，避免换地址重复领
   return ip ? await sha256("x4m-free-v1|" + ip) : "";
 }
-async function freeRows(env, net) {
-  const { results } = await env.DB.prepare(
-    "SELECT kind, paper_id, paper_title FROM free_paper_uses WHERE net_hash = ? AND site = ?",
-  ).bind(net, SITE).all();
+function deviceKey(body) {
+  const id = String(body?.deviceId || "");
+  return /^[A-Za-z0-9_-]{16,64}$/.test(id) ? id : "";
+}
+async function deviceHash(body) {
+  const id = deviceKey(body);
+  return id ? await sha256("x4m-device-v1|" + id) : "";
+}
+// 网络和设备两份记录合在一起看：任一处用过，就算用过（先领的那一套为准）。
+async function freeRows(env, net, dev) {
   const out = { print: null, phone: null };
-  for (const row of results || []) out[row.kind] = { paperId: row.paper_id, title: row.paper_title || "" };
+  const take = rows => {
+    for (const row of rows || []) if (!out[row.kind]) out[row.kind] = { paperId: row.paper_id, title: row.paper_title || "" };
+  };
+  if (dev) {
+    const { results } = await env.DB.prepare(
+      "SELECT kind, paper_id, paper_title FROM free_paper_devices WHERE device_hash = ? AND site = ? ORDER BY created_at",
+    ).bind(dev, SITE).all();
+    take(results);
+  }
+  if (net) {
+    const { results } = await env.DB.prepare(
+      "SELECT kind, paper_id, paper_title FROM free_paper_uses WHERE net_hash = ? AND site = ? ORDER BY created_at",
+    ).bind(net, SITE).all();
+    take(results);
+  }
   return out;
 }
 async function freeStatus({ request, env }) {
   if (request.method !== "POST") return json({ ok: false }, 405);
   if (!env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
+  const body = await request.json().catch(() => ({}));
   const net = await networkHash(request);
-  if (!net) return json({ ok: true, free: { print: null, phone: null } });
-  return json({ ok: true, free: await freeRows(env, net) });
+  const dev = await deviceHash(body);
+  return json({ ok: true, free: await freeRows(env, net, dev) });
 }
 async function freeUse({ request, env }) {
   if (request.method !== "POST") return json({ ok: false }, 405);
@@ -75,13 +96,23 @@ async function freeUse({ request, env }) {
   const title = String(body.title || "").slice(0, 80);
   if (!FREE_KINDS.has(kind) || !/^[\w.:-]{3,120}$/.test(paperId)) return json({ ok: false, reason: "INVALID" }, 400);
   const net = await networkHash(request);
-  if (!net) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
-  await env.DB.prepare(
-    "INSERT OR IGNORE INTO free_paper_uses (net_hash, site, kind, paper_id, paper_title, created_at) VALUES (?, ?, ?, ?, ?, ?)",
-  ).bind(net, SITE, kind, paperId, title, new Date().toISOString()).run();
-  const free = await freeRows(env, net);
-  const used = free[kind];
-  if (used && used.paperId !== paperId) return json({ ok: false, reason: "USED", free }, 409);
+  const dev = await deviceHash(body);
+  if (!net && !dev) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
+  const before = await freeRows(env, net, dev);
+  if (before[kind] && before[kind].paperId !== paperId) return json({ ok: false, reason: "USED", free: before }, 409);
+  const now = new Date().toISOString();
+  if (net) {
+    await env.DB.prepare(
+      "INSERT OR IGNORE INTO free_paper_uses (net_hash, site, kind, paper_id, paper_title, created_at) VALUES (?, ?, ?, ?, ?, ?)",
+    ).bind(net, SITE, kind, paperId, title, now).run();
+  }
+  if (dev) {
+    await env.DB.prepare(
+      "INSERT OR IGNORE INTO free_paper_devices (device_hash, site, kind, paper_id, paper_title, created_at) VALUES (?, ?, ?, ?, ?, ?)",
+    ).bind(dev, SITE, kind, paperId, title, now).run();
+  }
+  const free = await freeRows(env, net, dev);
+  if (free[kind] && free[kind].paperId !== paperId) return json({ ok: false, reason: "USED", free }, 409);
   return json({ ok: true, free });
 }
 

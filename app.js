@@ -1154,6 +1154,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-19', '新增数学、物理精编模拟卷（二）：题量和难度对标中考，含圆的综合、二次函数压轴、动态电路和浮力综合；新增河南、陕西、新疆、上海、湖南等 11 套 2026 年中考原卷（数学、物理、化学、道法、历史），免费看、免费打印。'],
   ['2026-11-18', '新增数学、物理精编模拟卷各 1 套，带原创配图，手机做、打印都清楚。免费规则改为：每个家庭送 1 次整卷打印 + 1 套手机整卷，任选一套。'],
   ['2026-11-18', '首页改版：按“本周一卷 → 分科（英语、语文、数学、物理、化学）→ 小四门”排列，各科可以展开收起；新增英语、语文精编模拟卷各 2 套，手机做、打印都行。'],
   ['2026-11-18', '每日 20 题和打卡换成“本周一卷”：每周一换，打印出来纸上做完，回来点出错题号就能进错题本。错题本、曾错题、收藏覆盖全科；打印和找题覆盖全题库。'],
@@ -1181,10 +1182,45 @@ const FREE_PREVIEW = 5;
 let nationalCatalog = null;
 let freeUses = { print: null, phone: null };
 const FREE_KIND_LABEL = { print: '整卷打印', phone: '手机做整卷' };
+const DEVICE_KEY = 'x4m-device';
+let deviceIdCache = '';
+function idbDevice(value) {
+  return new Promise(resolve => {
+    try {
+      const open = indexedDB.open('x4m-store', 1);
+      open.onupgradeneeded = () => open.result.createObjectStore('kv');
+      open.onerror = () => resolve('');
+      open.onsuccess = () => {
+        try {
+          const tx = open.result.transaction('kv', 'readwrite');
+          const store = tx.objectStore('kv');
+          if (value) { store.put(value, DEVICE_KEY); tx.oncomplete = () => resolve(value); }
+          else { const get = store.get(DEVICE_KEY); get.onsuccess = () => resolve(get.result || ''); get.onerror = () => resolve(''); }
+        } catch { resolve(''); }
+      };
+    } catch { resolve(''); }
+  });
+}
+async function deviceId() {
+  if (deviceIdCache) return deviceIdCache;
+  const valid = v => /^[A-Za-z0-9_-]{16,64}$/.test(v || '') ? v : '';
+  let id = '';
+  try { id = valid(localStorage.getItem(DEVICE_KEY)); } catch { /* 隐私模式 */ }
+  if (!id) id = valid((document.cookie.match(/(?:^|;\s*)x4m_dev=([^;]+)/) || [])[1]);
+  if (!id) id = valid(await idbDevice(''));
+  if (!id) id = Array.from(crypto.getRandomValues(new Uint8Array(18)), b => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'[b % 64]).join('');
+  try { localStorage.setItem(DEVICE_KEY, id); } catch { /* 隐私模式 */ }
+  document.cookie = `x4m_dev=${id}; Path=/; Max-Age=${60 * 60 * 24 * 730}; SameSite=Lax; Secure`;
+  void idbDevice(id);
+  deviceIdCache = id;
+  return id;
+}
 async function refreshFreeUses() {
   if (paidAccess) return;
   try {
-    const response = await fetch('/api/access/free-status', { method: 'POST', cache: 'no-store' });
+    const response = await fetch('/api/access/free-status', {
+      method: 'POST', cache: 'no-store', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ deviceId: await deviceId() }),
+    });
     const data = await response.json();
     if (response.ok && data.ok) freeUses = data.free || freeUses;
   } catch { /* 离线时按未领取处理，领取时服务器会再校验 */ }
@@ -1205,12 +1241,12 @@ async function claimFree(kind, paperId, title) {
   if (!window.confirm(`每个家庭可以免费${FREE_KIND_LABEL[kind]} 1 次。\n确定用在《${title}》上吗？\n（这一套以后还能反复${again}）`)) return 'cancel';
   try {
     const response = await fetch('/api/access/free-use', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ kind, paperId, title }),
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ kind, paperId, title, deviceId: await deviceId() }),
     });
     const data = await response.json();
     if (data.free) freeUses = data.free;
     if (response.ok && data.ok) { trackVisit(`free_${kind}`); return 'full'; }
-    if (data.reason === 'USED') { toast(`这个网络已经用过免费${FREE_KIND_LABEL[kind]}（《${freeUses[kind]?.title || '另一套卷子'}》）。`); return 'preview'; }
+    if (data.reason === 'USED') { toast(`这台手机或这个网络已经用过免费${FREE_KIND_LABEL[kind]}（《${freeUses[kind]?.title || '另一套卷子'}》）。`); return 'preview'; }
     toast('领取失败，请稍后再试。');
   } catch { toast('网络不好，领取失败，请稍后再试。'); }
   return 'cancel';

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 270" width="320" height="270" font-family="Times New Roman, serif" font-size="18" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="270" fill="#fff" stroke="none"/>
+
+<line x1="15" y1="220" x2="305" y2="220" stroke-width="1.5"/><line x1="100" y1="260" x2="100" y2="12" stroke-width="1.5"/>
+<polyline points="299,215 309,220 299,225" stroke-width="1.5"/><polyline points="95,18 100,8 105,18" stroke-width="1.5"/>
+<text x="298" y="242" fill="#111" stroke="none" font-size="16">x</text><text x="108" y="20" fill="#111" stroke="none" font-size="16">y</text><text x="82" y="238" fill="#111" stroke="none" font-size="15">O</text>
+<path d="M52.0 245.2 L54.2 238.0 L56.4 231.0 L58.6 224.2 L60.8 217.6 L63.0 211.2 L65.2 204.9 L67.4 198.8 L69.6 192.9 L71.8 187.2 L74.0 181.7 L76.2 176.3 L78.4 171.1 L80.6 166.2 L82.8 161.3 L85.0 156.7 L87.2 152.3 L89.4 148.0 L91.6 143.9 L93.8 140.0 L96.0 136.3 L98.2 132.8 L100.4 129.4 L102.6 126.2 L104.8 123.2 L107.0 120.4 L109.2 117.8 L111.4 115.3 L113.6 113.1 L115.8 111.0 L118.0 109.1 L120.2 107.4 L122.4 105.8 L124.6 104.4 L126.8 103.3 L129.0 102.3 L131.2 101.5 L133.4 100.8 L135.6 100.4 L137.8 100.1 L140.0 100.0 L142.2 100.1 L144.4 100.4 L146.6 100.8 L148.8 101.5 L151.0 102.3 L153.2 103.3 L155.4 104.4 L157.6 105.8 L159.8 107.4 L162.0 109.1 L164.2 111.0 L166.4 113.1 L168.6 115.3 L170.8 117.8 L173.0 120.4 L175.2 123.2 L177.4 126.2 L179.6 129.4 L181.8 132.8 L184.0 136.3 L186.2 140.0 L188.4 143.9 L190.6 148.0 L192.8 152.3 L195.0 156.7 L197.2 161.3 L199.4 166.2 L201.6 171.1 L203.8 176.3 L206.0 181.7 L208.2 187.2 L210.4 192.9 L212.6 198.8 L214.8 204.9 L217.0 211.2 L219.2 217.6 L221.4 224.2 L223.6 231.0 L225.8 238.0 L228.0 245.2"/>
+<polygon points="100,130 220,220 160,107.5" stroke-dasharray="6 5" stroke-width="1.5"/>
+<text x="50" y="240" fill="#111" stroke="none" font-size="16">A</text><text x="222" y="240" fill="#111" stroke="none" font-size="16">B</text><text x="80" y="128" fill="#111" stroke="none" font-size="16">C</text><text x="164" y="100" fill="#111" stroke="none" font-size="16">P</text>
+</svg>

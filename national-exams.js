@@ -115,7 +115,7 @@
     const images = paper.pages?.length;
     const description = questionCount
       ? `${paper.description} · ${questionCount} 道已整理题`
-      : `完整试题 ${images} 页 · 答案 ${paper.answerPages.length} 页`;
+      : paper.answerPages?.length ? `完整试题 ${images} 页 · 答案 ${paper.answerPages.length} 页` : paper.description || `完整试题 ${images} 页`;
     return `<article class="card national-paper-card">
       <div class="national-paper-meta"><span>${escape(paper.region)}</span><span>${paper.year}</span></div>
       <h2>${escape(paper.title)}</h2><p class="muted">${escape(description)}</p>
@@ -255,10 +255,11 @@
       const questions = paper.data ? await getQuestions(paper) : [];
       if (version !== revision || !opened) return;
       const draw = () => {
-        shell(`<div class="national-reader-bar"><button type="button" class="btn" id="nationalBack">← 返回列表</button><button type="button" class="btn" id="nationalAnswers">${state.showAnswers ? '收起答案' : '显示答案'}</button><button type="button" class="btn" id="nationalPrint">打印</button></div>
+        shell(`<div class="national-reader-bar"><button type="button" class="btn" id="nationalBack">← 返回列表</button>${paper.pages?.length && !paper.answerPages?.length ? '' : `<button type="button" class="btn" id="nationalAnswers">${state.showAnswers ? '收起答案' : '显示答案'}</button>`}<button type="button" class="btn" id="nationalPrint">打印</button></div>
           <h2 class="national-reader-title">${escape(paper.title)}</h2><div class="national-reader" id="nationalPrintArea">${readerContent(paper, questions)}</div>`);
         document.getElementById('nationalBack').onclick = () => { revision++; render(); };
-        document.getElementById('nationalAnswers').onclick = () => { state.showAnswers = !state.showAnswers; draw(); };
+        const answersButton = document.getElementById('nationalAnswers');
+        if (answersButton) answersButton.onclick = () => { state.showAnswers = !state.showAnswers; draw(); };
         document.getElementById('nationalPrint').onclick = async event => {
           const button = event.currentTarget;
           button.disabled = true;

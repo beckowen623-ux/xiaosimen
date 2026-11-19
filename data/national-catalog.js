@@ -374,80 +374,54 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
-      "id": "fj-2026-daode",
-      "subject": "daode",
-      "subjectLabel": "道德与法治",
+      "id": "fj-2026-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考道德与法治",
+      "title": "2026 年福建中考语文",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-daode/p71.webp",
-        "./assets/national/fj-2026-daode/p72.webp",
-        "./assets/national/fj-2026-daode/p73.webp",
-        "./assets/national/fj-2026-daode/p74.webp",
-        "./assets/national/fj-2026-daode/p75.webp",
-        "./assets/national/fj-2026-daode/p76.webp",
-        "./assets/national/fj-2026-daode/p77.webp",
-        "./assets/national/fj-2026-daode/p78.webp",
-        "./assets/national/fj-2026-daode/p79.webp",
-        "./assets/national/fj-2026-daode/p80-question.webp"
+        "./assets/national/fj-2026-chinese/p02.webp",
+        "./assets/national/fj-2026-chinese/p03.webp",
+        "./assets/national/fj-2026-chinese/p04.webp",
+        "./assets/national/fj-2026-chinese/p05.webp",
+        "./assets/national/fj-2026-chinese/p06.webp",
+        "./assets/national/fj-2026-chinese/p07.webp",
+        "./assets/national/fj-2026-chinese/p08.webp",
+        "./assets/national/fj-2026-chinese/p09-question.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-daode/p80-answer.webp",
-        "./assets/national/fj-2026-daode/p81.webp",
-        "./assets/national/fj-2026-daode/p82.webp"
+        "./assets/national/fj-2026-chinese/p09-answer.webp",
+        "./assets/national/fj-2026-chinese/p10.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-lishi",
-      "subject": "lishi",
-      "subjectLabel": "历史",
+      "id": "fj-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考历史",
+      "title": "2026 年福建中考数学",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-lishi/p60.webp",
-        "./assets/national/fj-2026-lishi/p61.webp",
-        "./assets/national/fj-2026-lishi/p62.webp",
-        "./assets/national/fj-2026-lishi/p63.webp",
-        "./assets/national/fj-2026-lishi/p64.webp",
-        "./assets/national/fj-2026-lishi/p65.webp",
-        "./assets/national/fj-2026-lishi/p66.webp",
-        "./assets/national/fj-2026-lishi/p67.webp",
-        "./assets/national/fj-2026-lishi/p68.webp",
-        "./assets/national/fj-2026-lishi/p69.webp"
+        "./assets/national/fj-2026-math/p11.webp",
+        "./assets/national/fj-2026-math/p12.webp",
+        "./assets/national/fj-2026-math/p13.webp",
+        "./assets/national/fj-2026-math/p14.webp",
+        "./assets/national/fj-2026-math/p15.webp",
+        "./assets/national/fj-2026-math/p16-question.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-lishi/p70.webp"
-      ],
-      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
-      "id": "fj-2026-chemistry",
-      "subject": "chemistry",
-      "subjectLabel": "化学",
-      "region": "福建",
-      "year": 2026,
-      "title": "2026 年福建中考化学",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/fj-2026-chemistry/p51.webp",
-        "./assets/national/fj-2026-chemistry/p52.webp",
-        "./assets/national/fj-2026-chemistry/p53.webp",
-        "./assets/national/fj-2026-chemistry/p54.webp",
-        "./assets/national/fj-2026-chemistry/p55.webp",
-        "./assets/national/fj-2026-chemistry/p56.webp",
-        "./assets/national/fj-2026-chemistry/p57.webp",
-        "./assets/national/fj-2026-chemistry/p58-question.webp"
-      ],
-      "answerPages": [
-        "./assets/national/fj-2026-chemistry/p58-answer.webp",
-        "./assets/national/fj-2026-chemistry/p59.webp"
+        "./assets/national/fj-2026-math/p16-answer.webp",
+        "./assets/national/fj-2026-math/p17.webp",
+        "./assets/national/fj-2026-math/p18.webp",
+        "./assets/national/fj-2026-math/p19.webp",
+        "./assets/national/fj-2026-math/p20.webp",
+        "./assets/national/fj-2026-math/p21.webp",
+        "./assets/national/fj-2026-math/p22.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
@@ -482,54 +456,80 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-math",
-      "subject": "math",
-      "subjectLabel": "数学",
+      "id": "fj-2026-chemistry",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考数学",
+      "title": "2026 年福建中考化学",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-math/p11.webp",
-        "./assets/national/fj-2026-math/p12.webp",
-        "./assets/national/fj-2026-math/p13.webp",
-        "./assets/national/fj-2026-math/p14.webp",
-        "./assets/national/fj-2026-math/p15.webp",
-        "./assets/national/fj-2026-math/p16-question.webp"
+        "./assets/national/fj-2026-chemistry/p51.webp",
+        "./assets/national/fj-2026-chemistry/p52.webp",
+        "./assets/national/fj-2026-chemistry/p53.webp",
+        "./assets/national/fj-2026-chemistry/p54.webp",
+        "./assets/national/fj-2026-chemistry/p55.webp",
+        "./assets/national/fj-2026-chemistry/p56.webp",
+        "./assets/national/fj-2026-chemistry/p57.webp",
+        "./assets/national/fj-2026-chemistry/p58-question.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-math/p16-answer.webp",
-        "./assets/national/fj-2026-math/p17.webp",
-        "./assets/national/fj-2026-math/p18.webp",
-        "./assets/national/fj-2026-math/p19.webp",
-        "./assets/national/fj-2026-math/p20.webp",
-        "./assets/national/fj-2026-math/p21.webp",
-        "./assets/national/fj-2026-math/p22.webp"
+        "./assets/national/fj-2026-chemistry/p58-answer.webp",
+        "./assets/national/fj-2026-chemistry/p59.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-chinese",
-      "subject": "chinese",
-      "subjectLabel": "语文",
+      "id": "fj-2026-lishi",
+      "subject": "lishi",
+      "subjectLabel": "历史",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考语文",
+      "title": "2026 年福建中考历史",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-chinese/p02.webp",
-        "./assets/national/fj-2026-chinese/p03.webp",
-        "./assets/national/fj-2026-chinese/p04.webp",
-        "./assets/national/fj-2026-chinese/p05.webp",
-        "./assets/national/fj-2026-chinese/p06.webp",
-        "./assets/national/fj-2026-chinese/p07.webp",
-        "./assets/national/fj-2026-chinese/p08.webp",
-        "./assets/national/fj-2026-chinese/p09-question.webp"
+        "./assets/national/fj-2026-lishi/p60.webp",
+        "./assets/national/fj-2026-lishi/p61.webp",
+        "./assets/national/fj-2026-lishi/p62.webp",
+        "./assets/national/fj-2026-lishi/p63.webp",
+        "./assets/national/fj-2026-lishi/p64.webp",
+        "./assets/national/fj-2026-lishi/p65.webp",
+        "./assets/national/fj-2026-lishi/p66.webp",
+        "./assets/national/fj-2026-lishi/p67.webp",
+        "./assets/national/fj-2026-lishi/p68.webp",
+        "./assets/national/fj-2026-lishi/p69.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-chinese/p09-answer.webp",
-        "./assets/national/fj-2026-chinese/p10.webp"
+        "./assets/national/fj-2026-lishi/p70.webp"
+      ],
+      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "fj-2026-daode",
+      "subject": "daode",
+      "subjectLabel": "道德与法治",
+      "region": "福建",
+      "year": 2026,
+      "title": "2026 年福建中考道德与法治",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/fj-2026-daode/p71.webp",
+        "./assets/national/fj-2026-daode/p72.webp",
+        "./assets/national/fj-2026-daode/p73.webp",
+        "./assets/national/fj-2026-daode/p74.webp",
+        "./assets/national/fj-2026-daode/p75.webp",
+        "./assets/national/fj-2026-daode/p76.webp",
+        "./assets/national/fj-2026-daode/p77.webp",
+        "./assets/national/fj-2026-daode/p78.webp",
+        "./assets/national/fj-2026-daode/p79.webp",
+        "./assets/national/fj-2026-daode/p80-question.webp"
+      ],
+      "answerPages": [
+        "./assets/national/fj-2026-daode/p80-answer.webp",
+        "./assets/national/fj-2026-daode/p81.webp",
+        "./assets/national/fj-2026-daode/p82.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
@@ -675,6 +675,240 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷与参考答案"
     },
     {
+      "id": "hen-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "河南",
+      "year": 2026,
+      "title": "2026 年河南中考数学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/hen-2026-math/p01.webp",
+        "./assets/national/hen-2026-math/p02.webp",
+        "./assets/national/hen-2026-math/p03.webp",
+        "./assets/national/hen-2026-math/p04.webp",
+        "./assets/national/hen-2026-math/p05.webp",
+        "./assets/national/hen-2026-math/p06.webp",
+        "./assets/national/hen-2026-math/p07.webp",
+        "./assets/national/hen-2026-math/p08.webp",
+        "./assets/national/hen-2026-math/p09.webp",
+        "./assets/national/hen-2026-math/p10.webp",
+        "./assets/national/hen-2026-math/p11.webp",
+        "./assets/national/hen-2026-math/p12.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年河南中考数学试卷真题及答案完整版.pdf",
+      "description": "完整原卷 12 页，参考答案在卷末"
+    },
+    {
+      "id": "sn-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "陕西",
+      "year": 2026,
+      "title": "2026 年陕西中考数学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/sn-2026-math/p01.webp",
+        "./assets/national/sn-2026-math/p02.webp",
+        "./assets/national/sn-2026-math/p03.webp",
+        "./assets/national/sn-2026-math/p04.webp",
+        "./assets/national/sn-2026-math/p05.webp",
+        "./assets/national/sn-2026-math/p06.webp",
+        "./assets/national/sn-2026-math/p07.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年陕西中考数学试卷真题打印版高清.pdf",
+      "description": "完整原卷 7 页（不含答案）"
+    },
+    {
+      "id": "xj-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "新疆",
+      "year": 2026,
+      "title": "2026 年新疆中考数学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/xj-2026-math/p01.webp",
+        "./assets/national/xj-2026-math/p02.webp",
+        "./assets/national/xj-2026-math/p03.webp",
+        "./assets/national/xj-2026-math/p04.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年新疆中考数学试卷真题及答案高清完整版.pdf",
+      "description": "完整原卷 4 页，参考答案在卷末"
+    },
+    {
+      "id": "sh-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "上海",
+      "year": 2026,
+      "title": "2026 年上海中考数学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/sh-2026-math/p01.webp",
+        "./assets/national/sh-2026-math/p02.webp",
+        "./assets/national/sh-2026-math/p03.webp",
+        "./assets/national/sh-2026-math/p04.webp",
+        "./assets/national/sh-2026-math/p05.webp",
+        "./assets/national/sh-2026-math/p06.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年上海中考数学试卷真题及答案.pdf",
+      "description": "完整原卷 6 页，参考答案在卷末"
+    },
+    {
+      "id": "hun-2026-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "湖南",
+      "year": 2026,
+      "title": "2026 年湖南中考物理",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/hun-2026-physics/p01.webp",
+        "./assets/national/hun-2026-physics/p02.webp",
+        "./assets/national/hun-2026-physics/p03.webp",
+        "./assets/national/hun-2026-physics/p04.webp",
+        "./assets/national/hun-2026-physics/p05.webp",
+        "./assets/national/hun-2026-physics/p06.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年湖南中考物理试卷及真题答案完整版无水印版.pdf",
+      "description": "完整原卷 6 页，参考答案在卷末"
+    },
+    {
+      "id": "sn-2026-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "陕西",
+      "year": 2026,
+      "title": "2026 年陕西中考物理",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/sn-2026-physics/p01.webp",
+        "./assets/national/sn-2026-physics/p02.webp",
+        "./assets/national/sn-2026-physics/p03.webp",
+        "./assets/national/sn-2026-physics/p04.webp",
+        "./assets/national/sn-2026-physics/p05.webp",
+        "./assets/national/sn-2026-physics/p06.webp",
+        "./assets/national/sn-2026-physics/p07.webp",
+        "./assets/national/sn-2026-physics/p08.webp",
+        "./assets/national/sn-2026-physics/p09.webp",
+        "./assets/national/sn-2026-physics/p10.webp",
+        "./assets/national/sn-2026-physics/p11.webp",
+        "./assets/national/sn-2026-physics/p12.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年陕西中考物理真题试卷及答案.pdf",
+      "description": "完整原卷 12 页，参考答案在卷末"
+    },
+    {
+      "id": "hen-2026-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "河南",
+      "year": 2026,
+      "title": "2026 年河南中考物理",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/hen-2026-physics/p01.webp",
+        "./assets/national/hen-2026-physics/p02.webp",
+        "./assets/national/hen-2026-physics/p03.webp",
+        "./assets/national/hen-2026-physics/p04.webp",
+        "./assets/national/hen-2026-physics/p05.webp",
+        "./assets/national/hen-2026-physics/p06.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年河南中考物理试卷真题及答案.pdf",
+      "description": "完整原卷 6 页，参考答案在卷末"
+    },
+    {
+      "id": "xj-2026-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "新疆",
+      "year": 2026,
+      "title": "2026 年新疆中考物理·化学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/xj-2026-physics/p01.webp",
+        "./assets/national/xj-2026-physics/p02.webp",
+        "./assets/national/xj-2026-physics/p03.webp",
+        "./assets/national/xj-2026-physics/p04.webp",
+        "./assets/national/xj-2026-physics/p05.webp",
+        "./assets/national/xj-2026-physics/p06.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年新疆中考物理试卷及答案高清完整版.pdf",
+      "description": "完整原卷 6 页，参考答案在卷末"
+    },
+    {
+      "id": "hun-2026-chemistry",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "湖南",
+      "year": 2026,
+      "title": "2026 年湖南中考化学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/hun-2026-chemistry/p01.webp",
+        "./assets/national/hun-2026-chemistry/p02.webp",
+        "./assets/national/hun-2026-chemistry/p03.webp",
+        "./assets/national/hun-2026-chemistry/p04.webp",
+        "./assets/national/hun-2026-chemistry/p05.webp",
+        "./assets/national/hun-2026-chemistry/p06.webp",
+        "./assets/national/hun-2026-chemistry/p07.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年湖南中考化学试卷真题完整版高清（统考）.pdf",
+      "description": "完整原卷 7 页（不含答案）"
+    },
+    {
+      "id": "hun-2026-daode",
+      "subject": "daode",
+      "subjectLabel": "道德与法治",
+      "region": "湖南",
+      "year": 2026,
+      "title": "2026 年湖南中考道德与法治",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/hun-2026-daode/p01.webp",
+        "./assets/national/hun-2026-daode/p02.webp",
+        "./assets/national/hun-2026-daode/p03.webp",
+        "./assets/national/hun-2026-daode/p04.webp",
+        "./assets/national/hun-2026-daode/p05.webp",
+        "./assets/national/hun-2026-daode/p06.webp",
+        "./assets/national/hun-2026-daode/p07.webp",
+        "./assets/national/hun-2026-daode/p08.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年湖南中考道法试卷及答案完整高清版（统考，答案在最后）.pdf",
+      "description": "完整原卷 8 页，参考答案在卷末"
+    },
+    {
+      "id": "hun-2026-lishi",
+      "subject": "lishi",
+      "subjectLabel": "历史",
+      "region": "湖南",
+      "year": 2026,
+      "title": "2026 年湖南中考历史",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/hun-2026-lishi/p01.webp",
+        "./assets/national/hun-2026-lishi/p02.webp",
+        "./assets/national/hun-2026-lishi/p03.webp",
+        "./assets/national/hun-2026-lishi/p04.webp",
+        "./assets/national/hun-2026-lishi/p05.webp",
+        "./assets/national/hun-2026-lishi/p06.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年湖南中考历史试卷真题及答案完整版.pdf",
+      "description": "完整原卷 6 页，参考答案在卷末"
+    },
+    {
       "id": "claude-2026-chinese-1",
       "subject": "chinese",
       "subjectLabel": "语文",
@@ -731,6 +965,24 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "claude-2026-math-2",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "精编模拟",
+      "year": 2026,
+      "claude": true,
+      "title": "中考数学精编模拟卷（二）· 中考难度",
+      "source": "作者结合备考经验，按中考数学考点编写，题量和难度对标中考，配图为原创绘制",
+      "description": "整卷 25 题（25 题，题量和难度对标中考，含圆的综合与二次函数压轴，可打印）",
+      "questionCount": 25,
+      "data": "./data/national/claude-2026-math-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 9
+      }
+    },
+    {
       "id": "claude-2026-physics-1",
       "subject": "physics",
       "subjectLabel": "物理",
@@ -746,6 +998,24 @@ window.NATIONAL_CATALOG = {
         "单项选择": 10,
         "填空题": 5,
         "解答题": 4
+      }
+    },
+    {
+      "id": "claude-2026-physics-2",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "精编模拟",
+      "year": 2026,
+      "claude": true,
+      "title": "中考物理精编模拟卷（二）· 中考难度",
+      "source": "作者结合备考经验，按中考物理考点编写，题量和难度对标中考，配图为原创绘制",
+      "description": "整卷 28 题（28 题，题量和难度对标中考，含动态电路、滑轮组、浮力综合，可打印）",
+      "questionCount": 28,
+      "data": "./data/national/claude-2026-physics-2.js",
+      "sections": {
+        "单项选择": 14,
+        "填空题": 6,
+        "解答题": 8
       }
     },
     {

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 200" width="290" height="200" font-family="Times New Roman, serif" font-size="18" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="290" height="200" fill="#fff" stroke="none"/>
+
+<line x1="15" y1="170" x2="275" y2="170" stroke-width="1.5"/>
+<polygon points="80,50 30,170 190,170"/><polygon points="140,50 90,170 250,170"/>
+<text x="74" y="42" fill="#111" stroke="none" font-size="18">A</text><text x="134" y="42" fill="#111" stroke="none" font-size="18">D</text><text x="22" y="192" fill="#111" stroke="none" font-size="18">B</text><text x="84" y="192" fill="#111" stroke="none" font-size="18">E</text><text x="184" y="192" fill="#111" stroke="none" font-size="18">C</text><text x="246" y="192" fill="#111" stroke="none" font-size="18">F</text>
+</svg>

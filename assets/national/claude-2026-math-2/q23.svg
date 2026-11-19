@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220" width="340" height="220" font-family="Times New Roman, serif" font-size="18" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="340" height="220" fill="#fff" stroke="none"/>
+
+<line x1="15" y1="190" x2="325" y2="190" stroke-width="1.5"/><line x1="300" y1="190" x2="300" y2="34" stroke-width="3"/>
+<line x1="30" y1="190" x2="300" y2="34" stroke-width="1.5"/><line x1="210" y1="190" x2="300" y2="34" stroke-width="1.5"/>
+<path d="M70 190 A 40 40 0 0 0 64.6 170" stroke-width="1.5"/><text x="76" y="182" fill="#111" stroke="none" font-size="14">30°</text>
+<path d="M240 190 A 30 30 0 0 0 225 164" stroke-width="1.5"/><text x="244" y="182" fill="#111" stroke="none" font-size="14">60°</text>
+<text x="24" y="210" fill="#111" stroke="none" font-size="18">A</text><text x="204" y="210" fill="#111" stroke="none" font-size="18">B</text><text x="304" y="210" fill="#111" stroke="none" font-size="18">D</text><text x="306" y="34" fill="#111" stroke="none" font-size="18">C</text>
+</svg>
