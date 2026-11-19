@@ -1,0 +1,781 @@
+{
+  "id": "claude-2026-english-3",
+  "claude": true,
+  "region": "精编模拟",
+  "year": 2026,
+  "title": "中考英语精编模拟卷（三）· 中考难度",
+  "source": "作者结合备考经验，按中考英语考点编写，题量和难度对标中考，短文均为原创",
+  "note": "61 题，题量对标中考（不含听力），阅读侧重推理判断，语法不超纲，可打印",
+  "sections": [
+    {
+      "type": "单项选择",
+      "items": [
+        {
+          "n": 1,
+          "stem": "—What a(n) ____ experience it was to watch the sunrise on Mount Tai! —Yes. I'll never forget it.",
+          "options": [
+            "usual",
+            "unforgettable",
+            "boring",
+            "terrible"
+          ],
+          "answer": "B",
+          "kp": "形容词辨析",
+          "exp": "答语“永远不会忘记”，说明是一次难忘的经历。"
+        },
+        {
+          "n": 2,
+          "stem": "The number of students who ____ to school has increased a lot since the new bike lanes were built.",
+          "options": [
+            "ride",
+            "rides",
+            "is riding",
+            "has ridden"
+          ],
+          "answer": "A",
+          "kp": "定语从句中的主谓一致",
+          "exp": "who 指代先行词 students（复数），从句谓语用复数 ride；主句主语 the number of... 用单数 has。"
+        },
+        {
+          "n": 3,
+          "stem": "—Have you seen my keys? —I'm not sure, but they ____ be in your bag. You often put them there.",
+          "options": [
+            "must",
+            "might",
+            "can't",
+            "needn't"
+          ],
+          "answer": "B",
+          "kp": "情态动词表推测",
+          "exp": "“不确定”说明把握不大，用 might。"
+        },
+        {
+          "n": 4,
+          "stem": "By the end of last term, we ____ more than twenty English novels.",
+          "options": [
+            "read",
+            "have read",
+            "had read",
+            "were reading"
+          ],
+          "answer": "C",
+          "kp": "过去完成时",
+          "exp": "by the end of + 过去时间，表示“到过去某时为止已经完成”，用过去完成时。"
+        },
+        {
+          "n": 5,
+          "stem": "Not only the teachers but also the headmaster ____ going to the art show next Friday.",
+          "options": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "answer": "A",
+          "kp": "主谓一致（就近原则）",
+          "exp": "not only...but also... 连接主语时，谓语与靠近的 the headmaster 一致，用单数；next Friday 表将来，be going to 用现在时 is。"
+        },
+        {
+          "n": 6,
+          "stem": "The question is too difficult. Who can tell me ____?",
+          "options": [
+            "how can we solve it",
+            "how we can solve it",
+            "how to solving it",
+            "what can we solve it"
+          ],
+          "answer": "B",
+          "kp": "宾语从句",
+          "exp": "宾语从句用陈述语序；C 应为 how to solve it。"
+        },
+        {
+          "n": 7,
+          "stem": "I'd rather stay at home ____ go shopping on such a rainy day.",
+          "options": [
+            "than",
+            "but",
+            "or",
+            "to"
+          ],
+          "answer": "A",
+          "kp": "would rather...than...",
+          "exp": "would rather do sth. than do sth. 宁愿……而不愿……。"
+        },
+        {
+          "n": 8,
+          "stem": "Tom didn't go to bed ____ he finished all his homework last night.",
+          "options": [
+            "until",
+            "unless",
+            "since",
+            "while"
+          ],
+          "answer": "A",
+          "kp": "not...until",
+          "exp": "not...until... 直到……才……，主句用否定形式。"
+        },
+        {
+          "n": 9,
+          "stem": "—Excuse me, is this the bookstore ____ you bought the dictionary? —Yes, it is.",
+          "options": [
+            "which",
+            "that",
+            "where",
+            "when"
+          ],
+          "answer": "C",
+          "kp": "定语从句关系词",
+          "exp": "先行词 bookstore 在从句中作地点状语（在书店买），用 where。"
+        },
+        {
+          "n": 10,
+          "stem": "The little girl was so ____ at the ____ news that she couldn't say a word.",
+          "options": [
+            "surprising; surprised",
+            "surprised; surprising",
+            "surprised; surprised",
+            "surprising; surprising"
+          ],
+          "answer": "B",
+          "kp": "-ed 与 -ing 形容词",
+          "exp": "人感到惊讶用 surprised；令人惊讶的消息用 surprising。"
+        },
+        {
+          "n": 11,
+          "stem": "You'd better ____ the plastic bottles into the right bin. They can be recycled.",
+          "options": [
+            "throw",
+            "to throw",
+            "throwing",
+            "threw"
+          ],
+          "answer": "A",
+          "kp": "had better do",
+          "exp": "had better 后接动词原形。"
+        },
+        {
+          "n": 12,
+          "stem": "—Do you mind if I open the window? —____. It's a bit hot in here.",
+          "options": [
+            "Yes, please",
+            "Of course not",
+            "I'm afraid so",
+            "Yes, I do"
+          ],
+          "answer": "B",
+          "kp": "情景交际",
+          "exp": "Do you mind...? 表示同意时用否定回答：Of course not / Not at all。"
+        },
+        {
+          "n": 13,
+          "stem": "So far, more than 300 trees ____ in our school by the students.",
+          "options": [
+            "planted",
+            "were planted",
+            "have planted",
+            "have been planted"
+          ],
+          "answer": "D",
+          "kp": "现在完成时的被动语态",
+          "exp": "so far 用现在完成时；树被种植，用被动语态 have been planted。"
+        },
+        {
+          "n": 14,
+          "stem": "I'll never forget ____ the Great Wall with my grandparents last summer. It was amazing!",
+          "options": [
+            "visit",
+            "to visit",
+            "visiting",
+            "visited"
+          ],
+          "answer": "C",
+          "kp": "forget doing 与 forget to do",
+          "exp": "forget doing sth. 忘记做过某事（事情已经发生）；forget to do sth. 忘记要去做某事。last summer 说明已经去过。"
+        },
+        {
+          "n": 15,
+          "stem": "—I failed the test again. I don't think I'm good at math. —____ Keep working hard and you will make it.",
+          "options": [
+            "Don't give up!",
+            "That's all right.",
+            "Never mind.",
+            "Good idea!"
+          ],
+          "answer": "A",
+          "kp": "情景交际",
+          "exp": "对方想放弃，鼓励他“别放弃”，与后文 keep working hard 呼应。"
+        }
+      ]
+    },
+    {
+      "type": "完形填空",
+      "title": "The Smallest Volunteer",
+      "passage": "Every Saturday morning, the community library opened a reading corner for children. Ten-year-old Mia was the (16) volunteer there. At first, the older volunteers doubted (17) she could really help. \"She's still a child herself,\" one of them said.\nMia didn't argue. She simply arrived early, (18) the picture books by color, and made a small sign that said, \"Ask me for a story!\" Little kids, who felt (19) with grown-ups, came to her one after another.\nOne Saturday, a shy boy named Leo sat alone in the corner. He didn't speak a word, (20) shook his head when anyone came near. Mia didn't push him. (21) , she sat down at a distance and began reading aloud a funny story about a dog that (22) to sing. After a few pages, Leo moved a little closer. By the end of the story, he was (23) next to her and laughing.\nFrom then on, Leo came every week. His mother later told the library manager that Leo had been very (24) since his family moved to the city, and the reading corner was the first place where he felt at home.\nThe older volunteers stopped doubting Mia. \"We thought helping meant doing big things,\" one of them said, \"but Mia (25) us that patience matters more.\" The manager even asked Mia to (26) new volunteers how to talk with young children.\nMia was (27) , but she said, \"I just remember how I felt when I was small. Everyone needs someone who is (28) to wait for them.\" Her words were later written on the wall of the reading corner, (29) every visitor of what kindness really (30) .",
+      "items": [
+        {
+          "n": 16,
+          "stem": "",
+          "options": [
+            "oldest",
+            "youngest",
+            "busiest",
+            "earliest"
+          ],
+          "answer": "B",
+          "kp": "上下文理解",
+          "exp": "10 岁、被说“自己还是个孩子”，是年龄最小的志愿者。"
+        },
+        {
+          "n": 17,
+          "stem": "",
+          "options": [
+            "that",
+            "whether",
+            "what",
+            "which"
+          ],
+          "answer": "B",
+          "kp": "宾语从句引导词",
+          "exp": "doubt 后接 whether/if 表示“怀疑是否”。"
+        },
+        {
+          "n": 18,
+          "stem": "",
+          "options": [
+            "sold",
+            "tore",
+            "sorted",
+            "hid"
+          ],
+          "answer": "C",
+          "kp": "动词辨析",
+          "exp": "按颜色把绘本整理分类，sort。"
+        },
+        {
+          "n": 19,
+          "stem": "",
+          "options": [
+            "nervous",
+            "relaxed",
+            "excited",
+            "proud"
+          ],
+          "answer": "A",
+          "kp": "情感理解",
+          "exp": "小孩子面对大人会紧张，所以来找同龄的 Mia。"
+        },
+        {
+          "n": 20,
+          "stem": "",
+          "options": [
+            "or",
+            "and",
+            "so",
+            "because"
+          ],
+          "answer": "B",
+          "kp": "连词",
+          "exp": "不说话并且有人靠近就摇头，并列关系。"
+        },
+        {
+          "n": 21,
+          "stem": "",
+          "options": [
+            "Instead",
+            "Besides",
+            "However",
+            "Otherwise"
+          ],
+          "answer": "A",
+          "kp": "副词辨析",
+          "exp": "没有强迫他，而是坐远一点读故事，instead“相反，而是”。"
+        },
+        {
+          "n": 22,
+          "stem": "",
+          "options": [
+            "refused",
+            "forgot",
+            "learned",
+            "stopped"
+          ],
+          "answer": "C",
+          "kp": "上下文理解",
+          "exp": "有趣的故事：一只学唱歌的狗。"
+        },
+        {
+          "n": 23,
+          "stem": "",
+          "options": [
+            "crying",
+            "sitting",
+            "sleeping",
+            "fighting"
+          ],
+          "answer": "B",
+          "kp": "上下文理解",
+          "exp": "从靠近一点到坐在她旁边笑，sitting。"
+        },
+        {
+          "n": 24,
+          "stem": "",
+          "options": [
+            "lonely",
+            "lucky",
+            "careful",
+            "healthy"
+          ],
+          "answer": "A",
+          "kp": "上下文理解",
+          "exp": "搬到城市后很孤单，阅读角是第一个让他有归属感的地方。"
+        },
+        {
+          "n": 25,
+          "stem": "",
+          "options": [
+            "promised",
+            "showed",
+            "asked",
+            "ordered"
+          ],
+          "answer": "B",
+          "kp": "动词辨析",
+          "exp": "Mia 用行动向我们表明耐心更重要，show sb. that...。"
+        },
+        {
+          "n": 26,
+          "stem": "",
+          "options": [
+            "teach",
+            "warn",
+            "pay",
+            "allow"
+          ],
+          "answer": "A",
+          "kp": "动词辨析",
+          "exp": "让 Mia 教新志愿者如何与小孩交流，teach sb. how to do。"
+        },
+        {
+          "n": 27,
+          "stem": "",
+          "options": [
+            "angry",
+            "shy",
+            "rude",
+            "bored"
+          ],
+          "answer": "B",
+          "kp": "情感理解",
+          "exp": "被委以重任，小女孩有些害羞，但还是说出了自己的想法。"
+        },
+        {
+          "n": 28,
+          "stem": "",
+          "options": [
+            "afraid",
+            "willing",
+            "sorry",
+            "sure"
+          ],
+          "answer": "B",
+          "kp": "形容词辨析",
+          "exp": "每个人都需要一个愿意等待他的人，be willing to do。"
+        },
+        {
+          "n": 29,
+          "stem": "",
+          "options": [
+            "reminding",
+            "reminded",
+            "to remind",
+            "remind"
+          ],
+          "answer": "A",
+          "kp": "非谓语动词作伴随状语",
+          "exp": "这句话写在墙上，提醒每位来访者，主动关系，用现在分词 reminding 作伴随结果。"
+        },
+        {
+          "n": 30,
+          "stem": "",
+          "options": [
+            "costs",
+            "means",
+            "needs",
+            "takes"
+          ],
+          "answer": "B",
+          "kp": "动词辨析",
+          "exp": "what kindness really means 善良真正意味着什么。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "groups": [
+        {
+          "label": "A",
+          "title": "City Library Summer Programs",
+          "passage": "City Library Summer Programs (July 10 – August 20)\nStory Time (ages 4–7): Every Tuesday, 10:00–10:45 a.m. Parents must stay with their children. Free.\nCoding Club (ages 11–15): Every Wednesday and Friday, 3:00–5:00 p.m. Bring your own laptop. ¥120 for the whole summer. Only 20 places.\nBook Talk (ages 12 and up): Every Saturday, 9:30–11:00 a.m. Read the book of the week and share your ideas. Free. Members get the book for free; others pay ¥15.\nNature Drawing (all ages): Sunday, July 21 and August 18, 8:00–10:00 a.m., in the library garden. Bring your own paper and colored pencils. Free.\nSign up: at the front desk or on the library's mini program. Places in Coding Club are given to those who sign up first. Library members can sign up three days earlier than others.",
+          "items": [
+            {
+              "n": 31,
+              "stem": "Which program is suitable for a 6-year-old child?",
+              "options": [
+                "Story Time.",
+                "Coding Club.",
+                "Book Talk.",
+                "None of them."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "Story Time 面向 4—7 岁，Nature Drawing 也面向所有年龄，但选项中只有 Story Time。"
+            },
+            {
+              "n": 32,
+              "stem": "Lily, a 13-year-old non-member, joins Book Talk for 4 weeks. How much should she pay for the books?",
+              "options": [
+                "Nothing.",
+                "¥15.",
+                "¥60.",
+                "¥120."
+              ],
+              "answer": "C",
+              "kp": "数字计算",
+              "exp": "非会员每本书 ¥15，每周一本，4 周共 15×4＝60 元。"
+            },
+            {
+              "n": 33,
+              "stem": "How many times will Nature Drawing be held this summer?",
+              "options": [
+                "Once.",
+                "Twice.",
+                "Every Sunday.",
+                "Six times."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "只在 7 月 21 日和 8 月 18 日两个周日举行。"
+            },
+            {
+              "n": 34,
+              "stem": "Why should students who want to join Coding Club sign up as early as possible?",
+              "options": [
+                "Because it is free.",
+                "Because places are limited.",
+                "Because it starts in the morning.",
+                "Because members must pay more."
+              ],
+              "answer": "B",
+              "kp": "推理判断",
+              "exp": "只有 20 个名额，先报先得。"
+            },
+            {
+              "n": 35,
+              "stem": "What is the advantage of being a library member?",
+              "options": [
+                "Members can join every program for free.",
+                "Members can sign up earlier and get Book Talk books free.",
+                "Members don't need to bring laptops.",
+                "Members can stay longer in Story Time."
+              ],
+              "answer": "B",
+              "kp": "信息整合",
+              "exp": "会员提前三天报名，且读书会的书免费。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "The Bridge of Paper",
+          "passage": "When our science teacher announced the paper bridge competition, most of my classmates groaned. Each team would get only fifty sheets of newspaper and one roll of tape. The bridge had to cross a 40-centimeter gap and hold as many books as possible.\nMy team—Tom, Ana and I—started with a simple idea: roll the paper into thick tubes. Tubes are much stronger than flat sheets, our teacher had told us. But our first bridge fell apart under just two books. Tom wanted to give up and simply copy the design of the strongest team.\n\"Copying might win us a few points,\" Ana said, \"but we won't learn why it works.\" So we tested every part separately. We discovered that the tubes were fine; the weak point was where they joined. The tape was holding them together, but only on one side.\nWe redesigned the joints by wrapping the tape all the way around and adding small triangles of paper at each corner. Triangles, we learned, keep their shape under pressure much better than squares.\nOn the day of the competition, our bridge held twenty-three books. We came second. The winning team's bridge held twenty-five, but when the teacher asked each team to explain their design, we were the only ones who could say exactly why every part was there.\nI still have a photo of that bridge. Whenever I meet a problem that seems too hard, I remember: find the weak point first, then fix it.",
+          "items": [
+            {
+              "n": 36,
+              "stem": "Why did most students groan when they heard about the competition?",
+              "options": [
+                "They didn't like their science teacher.",
+                "The materials they could use were very limited.",
+                "The competition would take a whole term.",
+                "They had to work alone."
+              ],
+              "answer": "B",
+              "kp": "推理判断",
+              "exp": "只有 50 张报纸和一卷胶带，材料很有限，所以抱怨。"
+            },
+            {
+              "n": 37,
+              "stem": "What was the real problem with the team's first bridge?",
+              "options": [
+                "The paper tubes were too thin.",
+                "The bridge was too short.",
+                "The joints were not strong enough.",
+                "They used too much tape."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "管子没问题，薄弱点在连接处，胶带只粘了一面。"
+            },
+            {
+              "n": 38,
+              "stem": "Why did Ana disagree with Tom's idea?",
+              "options": [
+                "She thought copying was not allowed.",
+                "She wanted to understand how the design worked.",
+                "She believed their first bridge was the best.",
+                "She didn't want to work with the strongest team."
+              ],
+              "answer": "B",
+              "kp": "推理判断",
+              "exp": "Ana 说照抄学不到为什么能成功。"
+            },
+            {
+              "n": 39,
+              "stem": "Which word can best describe the team's way of solving the problem?",
+              "options": [
+                "Careless.",
+                "Step-by-step.",
+                "Lucky.",
+                "Hopeless."
+              ],
+              "answer": "B",
+              "kp": "推理判断",
+              "exp": "他们逐个部分测试，找到薄弱点再改进，是一步一步的方法。"
+            },
+            {
+              "n": 40,
+              "stem": "What is the main lesson the writer learned?",
+              "options": [
+                "Winning is the most important thing.",
+                "Find the weak point of a problem before fixing it.",
+                "Paper is stronger than people think.",
+                "Teamwork is not necessary in competitions."
+              ],
+              "answer": "B",
+              "kp": "主旨大意",
+              "exp": "最后一段：遇到难题，先找到薄弱点，再去解决。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "Why We Forget",
+          "passage": "Have you ever studied hard for a test, only to forget most of it a week later? You are not alone. More than a hundred years ago, a German scientist named Hermann Ebbinghaus tested his own memory by learning lists of nonsense words. He found that people forget new information very quickly—much of it within the first day—and then more slowly after that. This pattern is now called the \"forgetting curve\".\nThe good news is that the curve can be changed. Each time we review information, we forget it more slowly than before. So instead of studying something once for five hours, it is better to study it for one hour and then review it after one day, three days and one week. Scientists call this \"spaced repetition\".\nAnother useful method is \"active recall\". Rather than reading your notes again and again, close the book and try to write down what you remember. It feels harder, but the effort helps the brain build stronger connections. Many students find that testing themselves with practice questions works better than simply highlighting texts.\nFinally, sleep plays an important part. While we sleep, the brain sorts the day's information and stores the important parts. Students who stay up all night before an exam often remember less, not more.\nForgetting is not a sign of failure. It is how the brain decides what is worth keeping. Our job is to tell it, again and again, what matters.",
+          "items": [
+            {
+              "n": 41,
+              "stem": "What did Ebbinghaus find about forgetting?",
+              "options": [
+                "People forget things at the same speed every day.",
+                "People forget most quickly soon after learning.",
+                "Nonsense words are easy to remember.",
+                "Only old people forget things quickly."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "新信息在第一天忘得最快，之后变慢。"
+            },
+            {
+              "n": 42,
+              "stem": "According to the passage, which study plan follows \"spaced repetition\"?",
+              "options": [
+                "Study for five hours the night before the test.",
+                "Read the notes once and never look at them again.",
+                "Study for an hour, then review after one day, three days and one week.",
+                "Review everything every ten minutes."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "第二段给出的例子。"
+            },
+            {
+              "n": 43,
+              "stem": "What does \"active recall\" mean in Paragraph 3?",
+              "options": [
+                "Reading notes many times.",
+                "Highlighting important sentences.",
+                "Trying to remember information without looking at notes.",
+                "Asking teachers to explain again."
+              ],
+              "answer": "C",
+              "kp": "词义猜测",
+              "exp": "合上书，写下你记得的内容，即主动回忆。"
+            },
+            {
+              "n": 44,
+              "stem": "Why does the writer mention students who stay up all night?",
+              "options": [
+                "To show that sleep helps memory.",
+                "To encourage students to work harder.",
+                "To explain how exams are designed.",
+                "To prove that forgetting is a failure."
+              ],
+              "answer": "A",
+              "kp": "写作意图",
+              "exp": "通宵的学生记得更少，用来说明睡眠对记忆的重要作用。"
+            },
+            {
+              "n": 45,
+              "stem": "What is the writer's attitude towards forgetting?",
+              "options": [
+                "Worried.",
+                "Positive.",
+                "Uninterested.",
+                "Angry."
+              ],
+              "answer": "B",
+              "kp": "观点态度",
+              "exp": "最后一段：遗忘不是失败的标志，是大脑在筛选，态度积极。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "七选五",
+      "title": "Making Good Use of Your Phone",
+      "passage": "For many teenagers, a phone is both a helpful tool and a big distraction. (46) Here are some ideas.\nSet clear goals before you pick it up. Ask yourself: am I checking a word, or am I just bored? (47)\nTurn off unnecessary notifications. Every message that pops up pulls your attention away from your work. (48)\nUse your phone to learn. There are many apps that help you practice English, review mistakes or listen to good books. (49)\nKeep it out of your bedroom at night. (50) If you use your phone as an alarm clock, a cheap real alarm clock can do the same job.",
+      "choices": [
+        "Most of them can wait until you finish.",
+        "So how can we make it work for us, not against us?",
+        "Light from the screen can make it harder to fall asleep.",
+        "Used wisely, a phone can be a pocket teacher.",
+        "If it is the latter, put it away.",
+        "Phones were invented more than fifty years ago.",
+        "You should never use a phone at school."
+      ],
+      "items": [
+        {
+          "n": 46,
+          "answer": "B",
+          "kp": "段落衔接",
+          "exp": "下一句 Here are some ideas，空处应提出问题：怎样让手机为我们所用。"
+        },
+        {
+          "n": 47,
+          "answer": "E",
+          "kp": "上下文理解",
+          "exp": "前文问是查单词还是无聊；如果是后者（无聊），就放下手机。"
+        },
+        {
+          "n": 48,
+          "answer": "A",
+          "kp": "上下文理解",
+          "exp": "大多数消息都可以等你做完事再看。"
+        },
+        {
+          "n": 49,
+          "answer": "D",
+          "kp": "上下文理解",
+          "exp": "用得好，手机可以是“口袋里的老师”，总结本段。"
+        },
+        {
+          "n": 50,
+          "answer": "C",
+          "kp": "上下文理解",
+          "exp": "晚上不放卧室的原因：屏幕光线影响入睡。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "title": "A Village School's New Library",
+      "passage": "Last year, our school started a project to help a village school in the mountains. The school had a library, but it was (51) (real) just a small room with a few old books.\nWe decided to collect books for the children there. Within two months, students and teachers (52) (donate) more than 2,000 books. Some parents even (53) (offer) to drive the books there for free.\nIn May, I went to the village with my classmates. The road was narrow and (54) (danger), so the trip took us almost six hours. When we finally arrived, the children were waiting for us at the gate, (55) (hold) colorful flowers they had picked.\nWe spent the whole afternoon (56) (put) the books on the new shelves and reading stories with the children. One girl told me that she wanted to become a writer and write books for (57) (child) like her.\nBefore we left, the headmaster thanked us and said the library would be open (58) the villagers on weekends as well. I realized that (59) small action can make a big difference. Now our school plans to make the trip every year, and I hope I (60) (choose) again.",
+      "items": [
+        {
+          "n": 51,
+          "answer": "really",
+          "hint": "real",
+          "kp": "副词",
+          "exp": "修饰整个句子“实际上只是一间小屋”，用副词 really。"
+        },
+        {
+          "n": 52,
+          "answer": "had donated / donated",
+          "hint": "donate",
+          "kp": "时态",
+          "exp": "within two months 叙述过去的事情，用一般过去时 donated；强调“到那时已经捐了”也可用 had donated。"
+        },
+        {
+          "n": 53,
+          "answer": "offered",
+          "hint": "offer",
+          "kp": "一般过去时",
+          "exp": "叙述过去，用一般过去时。"
+        },
+        {
+          "n": 54,
+          "answer": "dangerous",
+          "hint": "danger",
+          "kp": "形容词",
+          "exp": "与 narrow 并列作表语，用形容词。"
+        },
+        {
+          "n": 55,
+          "answer": "holding",
+          "hint": "hold",
+          "kp": "现在分词作伴随状语",
+          "exp": "孩子们拿着花在门口等，主动、伴随，用 holding。"
+        },
+        {
+          "n": 56,
+          "answer": "putting",
+          "hint": "put",
+          "kp": "固定搭配",
+          "exp": "spend time (in) doing sth.。"
+        },
+        {
+          "n": 57,
+          "answer": "children",
+          "hint": "child",
+          "kp": "名词复数",
+          "exp": "为像她一样的孩子们写书，用复数 children。"
+        },
+        {
+          "n": 58,
+          "answer": "to",
+          "kp": "介词",
+          "exp": "be open to sb. 对某人开放。"
+        },
+        {
+          "n": 59,
+          "answer": "a",
+          "kp": "冠词",
+          "exp": "a small action 一个小小的行动，泛指。"
+        },
+        {
+          "n": 60,
+          "answer": "will be chosen",
+          "hint": "choose",
+          "kp": "一般将来时的被动语态",
+          "exp": "希望自己“将被选中”，被动且表将来。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 61,
+      "score": 15,
+      "prompt": "你校英语报正在开展以“The Most Useful Learning Method I Have Found”为题的征文活动。请写一篇短文，内容包括：1. 介绍你发现的一个学习方法（如整理错题、制订计划、互相讲解等）；2. 说明你是怎样使用它的；3. 它给你带来的变化；4. 给同学的一条建议。要求：90—110 词，开头已给出，不计入总词数；文中不得出现真实姓名和校名。\nThe Most Useful Learning Method I Have Found\nEveryone has their own way of learning. For me, ______",
+      "points": [
+        [
+          "介绍学习方法，表述清楚",
+          3
+        ],
+        [
+          "写清具体使用过程",
+          4
+        ],
+        [
+          "写出带来的变化",
+          3
+        ],
+        [
+          "给出合理建议，语言准确、衔接自然",
+          5
+        ]
+      ],
+      "sample": "The Most Useful Learning Method I Have Found\nEveryone has their own way of learning. For me, the most useful method is keeping a mistake notebook.\nIn the past, I often made the same mistakes in math and English. Last term, I started writing down every mistake I made in tests and homework. Next to each one, I wrote the correct answer and the reason why I was wrong. Every weekend, I went over the notebook and tried to do those questions again without looking at the answers.\nThis method has made a big difference. I now make fewer careless mistakes, and my grades have improved a lot.\nMy advice is: don't be afraid of mistakes. They show you exactly what you need to learn.",
+      "exp": "四个要点逐条写全；用 In the past / Last term / Every weekend 等时间词串起过程；结尾给建议点题。"
+    }
+  ]
+}
