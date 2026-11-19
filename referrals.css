@@ -111,3 +111,8 @@
 @media print { .sprint-passage { background: none; } }
 .sprint-fig { display: block; max-width: min(100%, 360px); margin: 6px 0 8px; }
 .sprint-q > p { white-space: pre-line; }
+.poster-overlay { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: #000a; }
+.poster-card { width: min(100%, 420px); max-height: 100%; overflow: auto; padding: 12px; border-radius: 14px; background: #fff; text-align: center; }
+.poster-img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.poster-tip { margin: 10px 0 8px; font-size: 14px; color: #33413d; }
+.poster-actions { display: flex; gap: 8px; justify-content: center; }

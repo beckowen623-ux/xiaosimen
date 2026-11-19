@@ -72,46 +72,129 @@
     return control;
   }
 
-  function saveCard(code, site, address, message) {
-    const canvas = document.createElement("canvas");
-    canvas.width = 900;
-    canvas.height = 480;
-    const context = canvas.getContext("2d");
-    if (!context) {
-      message.textContent = "分享图暂时无法生成。";
+  // ---- 转发海报：卖点 + 邀请价 + 带邀请码的二维码；手机上弹出图片，长按保存或转发 ----
+  const POSTER = {
+    xiaosimen: {
+      sub: "精编模拟卷 + 全国中考真题 · 能打印",
+      points: ["英语、语文、数学、物理精编模拟卷，题量难度对标中考", "全国各地中考原卷，免费看、免费打印", "打印出来纸上做，回来点错题号，错题本照样记"],
+      colors: ["#0f5b4b", "#1f8a70"],
+    },
+    full: {
+      sub: "初级 / 中级会计 · 中级审计 · 软考 · 税务师",
+      points: ["章节考点精练 + 精编模拟卷 + 历年押题", "错题按 1、3、7 天自动复习，碎片时间就能刷", "作者自己一路考过来：中级审计 98 / 85"],
+      colors: ["#163a5c", "#246b8f"],
+    },
+  };
+  let qrLoading = null;
+  function loadQr() {
+    if (window.qrcode) return Promise.resolve(window.qrcode);
+    if (!qrLoading) {
+      qrLoading = new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = "./qrcode.js";
+        script.onload = () => window.qrcode ? resolve(window.qrcode) : reject(new Error("qr"));
+        script.onerror = () => { qrLoading = null; reject(new Error("qr")); };
+        document.head.appendChild(script);
+      });
+    }
+    return qrLoading;
+  }
+  function wrapText(context, value, maxWidth) {
+    const lines = [];
+    let line = "";
+    for (const ch of value) {
+      if (context.measureText(line + ch).width > maxWidth && line) { lines.push(line); line = ch; }
+      else line += ch;
+    }
+    if (line) lines.push(line);
+    return lines;
+  }
+  function showPoster(dataUrl, code) {
+    const overlay = node("div", "", "poster-overlay");
+    const card = node("div", "", "poster-card");
+    const img = node("img", "", "poster-img");
+    img.src = dataUrl;
+    img.alt = "转发海报";
+    const tip = node("p", "长按图片，可以保存到相册或直接转发给朋友、家长群。", "poster-tip");
+    const bar = node("div", "", "poster-actions");
+    const download = node("a", "下载海报", "referral-action");
+    download.href = dataUrl;
+    download.download = "转发海报-" + code + ".png";
+    bar.append(download, button("关闭", () => overlay.remove()));
+    card.append(img, tip, bar);
+    overlay.append(card);
+    overlay.addEventListener("click", event => { if (event.target === overlay) overlay.remove(); });
+    document.body.appendChild(overlay);
+  }
+  async function saveCard(code, site, address, message) {
+    message.textContent = "正在生成海报…";
+    let qr;
+    try {
+      const make = await loadQr();
+      qr = make(0, "M");
+      qr.addData(address.href);
+      qr.make();
+    } catch {
+      message.textContent = "海报暂时无法生成，可以先用“复制邀请文案”。";
       return;
     }
-    context.fillStyle = "#edf5ef";
-    context.fillRect(0, 0, 900, 480);
-    context.fillStyle = "#17473d";
-    context.fillRect(0, 0, 900, 12);
-    const text = (value, x, y, size, weight, color) => {
+    const W = 1080, H = 1640;
+    const canvas = document.createElement("canvas");
+    canvas.width = W;
+    canvas.height = H;
+    const context = canvas.getContext("2d");
+    if (!context) { message.textContent = "海报暂时无法生成。"; return; }
+    const style = POSTER[siteKey] || POSTER.full;
+    const font = (size, weight) => `${weight} ${size}px "PingFang SC", "Microsoft YaHei", sans-serif`;
+    const text = (value, x, y, size, weight, color, align = "left") => {
       context.fillStyle = color;
-      context.font = `${weight} ${size}px "Microsoft YaHei", "PingFang SC", sans-serif`;
+      context.font = font(size, weight);
+      context.textAlign = align;
       context.fillText(value, x, y);
     };
-    text("爱丽克丝的小站", 56, 80, 28, 600, "#246456");
-    text("一起练习 · " + site.label, 56, 150, 43, 700, "#163b33");
-    text(code, 56, 255, 76, 750, "#17473d");
-    text("好友专享价 14.9 元 · 立省 5 元", 56, 320, 33, 700, "#24574b");
-    text("打开下面的网址，或兑换时填上方邀请码", 56, 371, 28, 500, "#24574b");
-    text(address.host, 56, 433, 25, 500, "#24574b");
-    canvas.toBlob(blob => {
-      if (!blob) {
-        message.textContent = "分享图暂时无法生成。";
-        return;
+    const bg = context.createLinearGradient(0, 0, 0, H);
+    bg.addColorStop(0, style.colors[0]);
+    bg.addColorStop(1, style.colors[1]);
+    context.fillStyle = bg;
+    context.fillRect(0, 0, W, H);
+    text("爱丽克丝的小站 · 朋友推荐", 80, 120, 34, 500, "#d7efe7");
+    text(site.label, 80, 240, 96, 800, "#ffffff");
+    text(style.sub, 80, 316, 40, 600, "#ffe5aa");
+    let y = 420;
+    context.font = font(38, 500);
+    for (const point of style.points) {
+      const lines = wrapText(context, point, W - 220);
+      text("✓", 80, y, 38, 700, "#ffe5aa");
+      lines.forEach((line, i) => text(line, 130, y + i * 54, 38, 500, "#ffffff"));
+      y += lines.length * 54 + 26;
+    }
+    // 价格条
+    const priceY = Math.max(y + 10, 700);
+    context.fillStyle = "#ffe5aa";
+    context.beginPath();
+    context.roundRect ? context.roundRect(80, priceY, W - 160, 150, 24) : context.rect(80, priceY, W - 160, 150);
+    context.fill();
+    text("扫码用邀请价  ¥14.9", W / 2, priceY + 78, 56, 800, "#3a2a05", "center");
+    text("原价 ¥19.9 · 立省 5 元 · 可以先免费试用", W / 2, priceY + 126, 32, 600, "#5a4413", "center");
+    // 二维码
+    const size = 460, qrX = (W - size) / 2, qrY = priceY + 200;
+    context.fillStyle = "#ffffff";
+    context.fillRect(qrX - 30, qrY - 30, size + 60, size + 60);
+    const count = qr.getModuleCount();
+    const cell = size / count;
+    context.fillStyle = "#111111";
+    for (let r = 0; r < count; r += 1) {
+      for (let c = 0; c < count; c += 1) {
+        if (qr.isDark(r, c)) context.fillRect(qrX + c * cell, qrY + r * cell, Math.ceil(cell), Math.ceil(cell));
       }
-      const url = URL.createObjectURL(blob);
-      const download = document.createElement("a");
-      download.href = url;
-      download.download = "邀请卡-" + code + ".png";
-      document.body.appendChild(download);
-      download.click();
-      download.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-    }, "image/png");
+    }
+    text("长按识别二维码", W / 2, qrY + size + 100, 40, 700, "#ffffff", "center");
+    text(`邀请码 ${code}`, W / 2, qrY + size + 156, 34, 500, "#d7efe7", "center");
+    let dataUrl;
+    try { dataUrl = canvas.toDataURL("image/png"); } catch { message.textContent = "海报暂时无法生成。"; return; }
+    message.textContent = "";
+    showPoster(dataUrl, code);
   }
-
 
   const SPRINT_HINTS = {
     xiaosimen: "（道法、历史、地理、生物每科每册一套，可打印）",
@@ -718,7 +801,7 @@
 
     const steps = node("ol", "", "referral-steps");
     steps.append(
-      node("li", "点“复制邀请文案”，把你的专属链接发给想买题库的朋友。"),
+      node("li", "点“生成转发海报”，长按保存后转发到朋友圈、家长群；或者点“复制邀请文案”直接发给朋友。海报上的二维码带着你的邀请码。"),
       node("li", "朋友点开链接，页面上就有好友价 14.9 元的购买入口，省 5 元。"),
       node("li", "朋友买到兑换码、解锁题库后，自动算你邀请成功，不用你做任何事。"),
       node("li", `邀请成功 1 位：马上解锁冲刺卷${sprintHint(key)}，以后每月的更新也永久免费。`),
@@ -729,7 +812,7 @@
     box.append(steps, node("strong", profile.code, "referral-code"));
     const actions = node("div", "", "referral-actions");
     actions.append(button("复制邀请文案", () => copyText(share, message)),
-      button("保存分享图", () => saveCard(profile.code, site, url, message)));
+      button("生成转发海报", () => { void saveCard(profile.code, site, url, message); }));
     box.append(actions);
 
     const big = bigReward(panel, profile, key, target, message);
