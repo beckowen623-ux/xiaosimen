@@ -395,54 +395,80 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
-      "id": "fj-2026-chinese",
-      "subject": "chinese",
-      "subjectLabel": "语文",
+      "id": "fj-2026-daode",
+      "subject": "daode",
+      "subjectLabel": "道德与法治",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考语文",
+      "title": "2026 年福建中考道德与法治",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-chinese/p02.webp",
-        "./assets/national/fj-2026-chinese/p03.webp",
-        "./assets/national/fj-2026-chinese/p04.webp",
-        "./assets/national/fj-2026-chinese/p05.webp",
-        "./assets/national/fj-2026-chinese/p06.webp",
-        "./assets/national/fj-2026-chinese/p07.webp",
-        "./assets/national/fj-2026-chinese/p08.webp",
-        "./assets/national/fj-2026-chinese/p09-question.webp"
+        "./assets/national/fj-2026-daode/p71.webp",
+        "./assets/national/fj-2026-daode/p72.webp",
+        "./assets/national/fj-2026-daode/p73.webp",
+        "./assets/national/fj-2026-daode/p74.webp",
+        "./assets/national/fj-2026-daode/p75.webp",
+        "./assets/national/fj-2026-daode/p76.webp",
+        "./assets/national/fj-2026-daode/p77.webp",
+        "./assets/national/fj-2026-daode/p78.webp",
+        "./assets/national/fj-2026-daode/p79.webp",
+        "./assets/national/fj-2026-daode/p80-question.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-chinese/p09-answer.webp",
-        "./assets/national/fj-2026-chinese/p10.webp"
+        "./assets/national/fj-2026-daode/p80-answer.webp",
+        "./assets/national/fj-2026-daode/p81.webp",
+        "./assets/national/fj-2026-daode/p82.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-math",
-      "subject": "math",
-      "subjectLabel": "数学",
+      "id": "fj-2026-lishi",
+      "subject": "lishi",
+      "subjectLabel": "历史",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考数学",
+      "title": "2026 年福建中考历史",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-math/p11.webp",
-        "./assets/national/fj-2026-math/p12.webp",
-        "./assets/national/fj-2026-math/p13.webp",
-        "./assets/national/fj-2026-math/p14.webp",
-        "./assets/national/fj-2026-math/p15.webp",
-        "./assets/national/fj-2026-math/p16-question.webp"
+        "./assets/national/fj-2026-lishi/p60.webp",
+        "./assets/national/fj-2026-lishi/p61.webp",
+        "./assets/national/fj-2026-lishi/p62.webp",
+        "./assets/national/fj-2026-lishi/p63.webp",
+        "./assets/national/fj-2026-lishi/p64.webp",
+        "./assets/national/fj-2026-lishi/p65.webp",
+        "./assets/national/fj-2026-lishi/p66.webp",
+        "./assets/national/fj-2026-lishi/p67.webp",
+        "./assets/national/fj-2026-lishi/p68.webp",
+        "./assets/national/fj-2026-lishi/p69.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-math/p16-answer.webp",
-        "./assets/national/fj-2026-math/p17.webp",
-        "./assets/national/fj-2026-math/p18.webp",
-        "./assets/national/fj-2026-math/p19.webp",
-        "./assets/national/fj-2026-math/p20.webp",
-        "./assets/national/fj-2026-math/p21.webp",
-        "./assets/national/fj-2026-math/p22.webp"
+        "./assets/national/fj-2026-lishi/p70.webp"
+      ],
+      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "fj-2026-chemistry",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "福建",
+      "year": 2026,
+      "title": "2026 年福建中考化学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/fj-2026-chemistry/p51.webp",
+        "./assets/national/fj-2026-chemistry/p52.webp",
+        "./assets/national/fj-2026-chemistry/p53.webp",
+        "./assets/national/fj-2026-chemistry/p54.webp",
+        "./assets/national/fj-2026-chemistry/p55.webp",
+        "./assets/national/fj-2026-chemistry/p56.webp",
+        "./assets/national/fj-2026-chemistry/p57.webp",
+        "./assets/national/fj-2026-chemistry/p58-question.webp"
+      ],
+      "answerPages": [
+        "./assets/national/fj-2026-chemistry/p58-answer.webp",
+        "./assets/national/fj-2026-chemistry/p59.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
@@ -477,80 +503,54 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-chemistry",
-      "subject": "chemistry",
-      "subjectLabel": "化学",
+      "id": "fj-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考化学",
+      "title": "2026 年福建中考数学",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-chemistry/p51.webp",
-        "./assets/national/fj-2026-chemistry/p52.webp",
-        "./assets/national/fj-2026-chemistry/p53.webp",
-        "./assets/national/fj-2026-chemistry/p54.webp",
-        "./assets/national/fj-2026-chemistry/p55.webp",
-        "./assets/national/fj-2026-chemistry/p56.webp",
-        "./assets/national/fj-2026-chemistry/p57.webp",
-        "./assets/national/fj-2026-chemistry/p58-question.webp"
+        "./assets/national/fj-2026-math/p11.webp",
+        "./assets/national/fj-2026-math/p12.webp",
+        "./assets/national/fj-2026-math/p13.webp",
+        "./assets/national/fj-2026-math/p14.webp",
+        "./assets/national/fj-2026-math/p15.webp",
+        "./assets/national/fj-2026-math/p16-question.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-chemistry/p58-answer.webp",
-        "./assets/national/fj-2026-chemistry/p59.webp"
+        "./assets/national/fj-2026-math/p16-answer.webp",
+        "./assets/national/fj-2026-math/p17.webp",
+        "./assets/national/fj-2026-math/p18.webp",
+        "./assets/national/fj-2026-math/p19.webp",
+        "./assets/national/fj-2026-math/p20.webp",
+        "./assets/national/fj-2026-math/p21.webp",
+        "./assets/national/fj-2026-math/p22.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-lishi",
-      "subject": "lishi",
-      "subjectLabel": "历史",
+      "id": "fj-2026-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考历史",
+      "title": "2026 年福建中考语文",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-lishi/p60.webp",
-        "./assets/national/fj-2026-lishi/p61.webp",
-        "./assets/national/fj-2026-lishi/p62.webp",
-        "./assets/national/fj-2026-lishi/p63.webp",
-        "./assets/national/fj-2026-lishi/p64.webp",
-        "./assets/national/fj-2026-lishi/p65.webp",
-        "./assets/national/fj-2026-lishi/p66.webp",
-        "./assets/national/fj-2026-lishi/p67.webp",
-        "./assets/national/fj-2026-lishi/p68.webp",
-        "./assets/national/fj-2026-lishi/p69.webp"
+        "./assets/national/fj-2026-chinese/p02.webp",
+        "./assets/national/fj-2026-chinese/p03.webp",
+        "./assets/national/fj-2026-chinese/p04.webp",
+        "./assets/national/fj-2026-chinese/p05.webp",
+        "./assets/national/fj-2026-chinese/p06.webp",
+        "./assets/national/fj-2026-chinese/p07.webp",
+        "./assets/national/fj-2026-chinese/p08.webp",
+        "./assets/national/fj-2026-chinese/p09-question.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-lishi/p70.webp"
-      ],
-      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
-      "id": "fj-2026-daode",
-      "subject": "daode",
-      "subjectLabel": "道德与法治",
-      "region": "福建",
-      "year": 2026,
-      "title": "2026 年福建中考道德与法治",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/fj-2026-daode/p71.webp",
-        "./assets/national/fj-2026-daode/p72.webp",
-        "./assets/national/fj-2026-daode/p73.webp",
-        "./assets/national/fj-2026-daode/p74.webp",
-        "./assets/national/fj-2026-daode/p75.webp",
-        "./assets/national/fj-2026-daode/p76.webp",
-        "./assets/national/fj-2026-daode/p77.webp",
-        "./assets/national/fj-2026-daode/p78.webp",
-        "./assets/national/fj-2026-daode/p79.webp",
-        "./assets/national/fj-2026-daode/p80-question.webp"
-      ],
-      "answerPages": [
-        "./assets/national/fj-2026-daode/p80-answer.webp",
-        "./assets/national/fj-2026-daode/p81.webp",
-        "./assets/national/fj-2026-daode/p82.webp"
+        "./assets/national/fj-2026-chinese/p09-answer.webp",
+        "./assets/national/fj-2026-chinese/p10.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
@@ -983,6 +983,26 @@ window.NATIONAL_CATALOG = {
         "古诗文默写": 8,
         "阅读理解": 7,
         "回答问题": 4
+      }
+    },
+    {
+      "id": "claude-2026-chinese-3",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "精编模拟",
+      "year": 2026,
+      "claude": true,
+      "title": "中考语文精编模拟卷（三）· 中考难度",
+      "source": "作者结合备考经验，按中考语文考点编写；古诗选自陆游，文言文选自《韩非子》，现代文为原创",
+      "description": "整卷 32 题（32 题，结构对标中考：积累运用、默写、古诗鉴赏、课外文言、记叙文、说明文、作文，可打印）",
+      "questionCount": 32,
+      "data": "./data/national/claude-2026-chinese-3.js",
+      "sections": {
+        "单项选择": 6,
+        "古诗文默写": 8,
+        "阅读理解": 10,
+        "回答问题": 7,
+        "解答题": 1
       }
     },
     {
