@@ -687,7 +687,17 @@ view.addEventListener('click', event => {
   if (event.target.closest('[data-cross-bank]')) trackVisit('cross_click');
 });
 
+// 自己人不计数：用 ?me=1 打开一次，这台设备以后的访问都不统计（?me=0 取消）
+const NO_TRACK = (() => {
+  try {
+    const flag = new URLSearchParams(location.search).get("me");
+    if (flag === "1") localStorage.setItem("no-track", "1");
+    if (flag === "0") localStorage.removeItem("no-track");
+    return localStorage.getItem("no-track") === "1";
+  } catch { return false; }
+})();
 function trackVisit(event) {
+  if (NO_TRACK) return;
   void fetch('/api/track', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

@@ -4,6 +4,8 @@ export const TRACK_EVENTS = new Set([
   "purchase_view",
   "trial_done",
   "cross_click",
+  "free_print",
+  "free_phone",
   "daily_answer",
   "daily_correct",
   "daily_share",
