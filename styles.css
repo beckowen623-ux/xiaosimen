@@ -576,3 +576,5 @@ input[type=search]::placeholder { color: #67736c; }
 .video-dialog { padding: 10px; width: min(420px, calc(100vw - 32px)); }
 .video-dialog form { text-align: right; }
 .video-dialog video { display: block; width: 100%; aspect-ratio: 9 / 16; max-height: calc(100vh - 120px); border-radius: 12px; background: #000; }
+
+.promise-line { margin: 8px 0 10px; padding: 6px 10px; border-radius: 8px; background: #fff4d6; color: #5a3d00; font-weight: 700; line-height: 1.55; }

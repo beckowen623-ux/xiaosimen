@@ -2,6 +2,11 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-20 · Claude Code · 考证演示视频加早鸟自测；首页核心表达（main）
+- `promo-video/`：`capture-kaozheng.cjs` 支持 `BASE` 环境变量和 playwright-core + 本机 Edge；新增早鸟自测三张截图（首页入口、选卷、出分）；`Kaozheng.tsx` 改为 35 秒：早鸟自测 → 新利润表专题 → 结尾“有能力 / 有方法 / 有诚意”。成片放在 quiz-bank-app 和 tina-home。
+- 首页介绍卡加一句核心表达：有能力、有决心、有诚意，用科学的刷题方法帮孩子把考点真正掌握，中考稳稳提分。
+- 验证：`node tests/validate.mjs` 通过。
+
 ## 2026-11-20 · Claude Code · 分支 `claude/brand-video-faq`（2026-11-20 站长确认后合并 main 上线）
 - 改名「爱丽克丝中考题库」：标题、页头、manifest、兑换提示、考点页、推荐卡片。存储 key 和兑换码范围不变。
 - 新增「爱」圆形徽标 `assets/icons/elx-badge.svg`（站点图标 + 页头）。点徽标去作者主页 elx.cc.cd，点文字仍回题库首页。
