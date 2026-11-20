@@ -2,6 +2,9 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-20 · Claude Code · 考证演示视频随自测卷题型调整重渲染（main）
+- `Kaozheng.tsx` 字幕改为“题型题量和真实考试一致”“60% 算基础过关”；`capture-kaozheng.cjs` 出分截图改为隔题答对（适配 55 题）。
+
 ## 2026-11-20 · Claude Code · 考证演示视频加早鸟自测；首页核心表达（main）
 - `promo-video/`：`capture-kaozheng.cjs` 支持 `BASE` 环境变量和 playwright-core + 本机 Edge；新增早鸟自测三张截图（首页入口、选卷、出分）；`Kaozheng.tsx` 改为 35 秒：早鸟自测 → 新利润表专题 → 结尾“有能力 / 有方法 / 有诚意”。成片放在 quiz-bank-app 和 tina-home。
 - 首页介绍卡加一句核心表达：有能力、有决心、有诚意，用科学的刷题方法帮孩子把考点真正掌握，中考稳稳提分。

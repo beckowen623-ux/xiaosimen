@@ -72,10 +72,9 @@ const boxes = {};
   await p.click('[data-chapter="1"]');
   await p.waitForTimeout(800);
   await p.evaluate(() => {
-    const right = new Set([1, 2, 3, 5, 7, 11, 12, 14, 16, 21, 22, 23, 26, 27, 29, 31, 33]);
     bank.questions.filter((q) => q.chapterId === 1).forEach((q, i) => {
       const wrong = q.options.map((o) => o.key).filter((k) => !q.answer.includes(k));
-      state.transientSelection = right.has(i + 1) ? [...q.answer] : q.type === 'multiple' ? [...q.answer.slice(0, 1), wrong[0]] : [wrong[0]];
+      state.transientSelection = i % 2 === 0 ? [...q.answer] : q.type === 'multiple' ? [...q.answer.slice(0, 1), wrong[0]] : [wrong[0]];
       submitQuestion(q.id);
     });
     window.scrollTo(0, 0);

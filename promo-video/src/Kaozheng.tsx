@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {AbsoluteFill, Audio, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import boxes from '../public/kz/boxes.json';
 import {Background, Box, Caption, FONT, Phone, fade} from './kit';
@@ -10,8 +10,8 @@ export const KAOZHENG_FRAMES = 1050;
 
 // 时间轴：0—110 开场；110—430 早鸟自测；430—840 新考点 + 做一道；840 起结尾
 const captions = [
-  {from: 110, to: 250, step: '限时免费', title: '早鸟自测水平卷', sub: '初级两科、中级三科 · 每科 100 分'},
-  {from: 250, to: 330, step: '限时免费', title: '坑点到位，难度对标考试', sub: '60 分算基础过关 · 选一科，一次做完'},
+  {from: 110, to: 250, step: '限时免费', title: '早鸟自测水平卷', sub: '初级两科、中级三科 · 题型题量和真实考试一致'},
+  {from: 250, to: 330, step: '限时免费', title: '坑点到位，难度对标考试', sub: '60% 算基础过关 · 选一科，一次做完'},
   {from: 330, to: 430, step: '做完就出分', title: '没到 60 分？别慌', sub: '每题写清坑在哪 · 错题按 1、3、7 天自动复习'},
   {from: 430, to: 540, step: '2027 新考点', title: '利润表改成五类列报', sub: '初级、中级都要考 · 首页置顶，33 题免费做完'},
   {from: 540, to: 630, step: '2027 新考点', title: '按准则原文逐条整理', sub: '财会〔2026〕11 号 + 答记者问，随大纲更新'},
@@ -30,7 +30,7 @@ const Hook: React.FC = () => {
         2027 会计考试<br />你现在能考<span style={{color: '#be123c'}}>几分</span>？
       </div>
       <div style={{fontWeight: 500, fontSize: 46, color: '#46554e', marginTop: 48, opacity: b, transform: `translateY(${(1 - b) * 30}px)`}}>
-        初级、中级早鸟自测<br />坑点到位，60 分算过关
+        初级、中级早鸟自测<br />题型和真实考试一样
       </div>
     </AbsoluteFill>
   );
