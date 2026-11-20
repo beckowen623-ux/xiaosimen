@@ -1,0 +1,650 @@
+{
+  "id": "earlybird-8down-english",
+  "earlybird": true,
+  "stage": "8-down",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "早鸟自测",
+  "year": 2027,
+  "title": "八下早鸟卷 · 英语",
+  "source": "考查范围：七年级至八年级下册，以八下为主（情态动词 should/could、过去进行时、现在完成时、so...that、unless、as soon as、动词短语、志愿服务、家务、健康、名著故事等），按期末考试题型编写（不含听力），难度略高，百分制",
+  "note": "51 题，不含听力，百分制，考到八年级下册",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 1,
+      "items": [
+        {
+          "n": 1,
+          "stem": "—I have a bad cold and I feel terrible.\n—You ______ drink more water and go to bed early.",
+          "options": [
+            "should",
+            "mustn't",
+            "needn't",
+            "can't"
+          ],
+          "answer": "A",
+          "kp": "情态动词",
+          "exp": "给建议用 should。"
+        },
+        {
+          "n": 2,
+          "stem": "—What were you doing when the rainstorm came yesterday?\n—I ______ my homework at home.",
+          "options": [
+            "do",
+            "did",
+            "was doing",
+            "am doing"
+          ],
+          "answer": "C",
+          "kp": "过去进行时",
+          "exp": "问过去某一时刻正在做什么，用过去进行时 was doing。"
+        },
+        {
+          "n": 3,
+          "stem": "—Have you ever ______ to the Great Wall?\n—Yes, I have. I went there last summer.",
+          "options": [
+            "gone",
+            "been",
+            "go",
+            "went"
+          ],
+          "answer": "B",
+          "kp": "现在完成时",
+          "exp": "have been to 去过某地（已回来）；have gone to 去了某地（还没回来）。坑点：have gone to 不用于问“你去过吗”。"
+        },
+        {
+          "n": 4,
+          "stem": "My uncle ______ this car for five years. He bought it in 2021.",
+          "options": [
+            "has bought",
+            "has had",
+            "bought",
+            "had"
+          ],
+          "answer": "B",
+          "kp": "现在完成时",
+          "exp": "for five years 表一段时间，要用延续性动词，buy 是短暂性动词，改为 have had。"
+        },
+        {
+          "n": 5,
+          "stem": "—Could you please take out the rubbish?\n—______. I'm doing my homework now, but I'll do it later.",
+          "options": [
+            "Yes, sure",
+            "Sorry, I can't right now",
+            "No, I couldn't",
+            "Yes, I could"
+          ],
+          "answer": "B",
+          "kp": "交际用语",
+          "exp": "后面说正在写作业、等会儿做，是礼貌地推迟，用 Sorry, I can't right now。回答 Could you please...? 一般不用 could。"
+        },
+        {
+          "n": 6,
+          "stem": "The box is ______ heavy ______ the little boy can't carry it.",
+          "options": [
+            "too; to",
+            "so; that",
+            "such; that",
+            "enough; to"
+          ],
+          "answer": "B",
+          "kp": "so...that",
+          "exp": "so＋形容词＋that 从句，“如此……以至于……”。too...to 后接动词原形，不接句子。"
+        },
+        {
+          "n": 7,
+          "stem": "You won't pass the exam ______ you work hard.",
+          "options": [
+            "if",
+            "unless",
+            "because",
+            "so"
+          ],
+          "answer": "B",
+          "kp": "条件状语从句",
+          "exp": "unless＝if not，除非你努力，否则考不过。"
+        },
+        {
+          "n": 8,
+          "stem": "I'll call you ______ I get to Beijing.",
+          "options": [
+            "as soon as",
+            "until",
+            "although",
+            "before long"
+          ],
+          "answer": "A",
+          "kp": "时间状语从句",
+          "exp": "as soon as 一……就……，从句用一般现在时表将来。"
+        },
+        {
+          "n": 9,
+          "stem": "Our school needs volunteers to help ______ the old people's home. Many students signed up.",
+          "options": [
+            "out at",
+            "up with",
+            "off at",
+            "away from"
+          ],
+          "answer": "A",
+          "kp": "动词短语",
+          "exp": "help out 帮忙，help out at the old people's home 到养老院帮忙。"
+        },
+        {
+          "n": 10,
+          "stem": "—Have you finished reading Treasure Island ______?\n—Not ______. I'll finish it this weekend.",
+          "options": [
+            "already; already",
+            "yet; yet",
+            "already; yet",
+            "yet; already"
+          ],
+          "answer": "B",
+          "kp": "现在完成时",
+          "exp": "现在完成时的疑问句和否定句用 yet；肯定句用 already。"
+        }
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "A Small Act of Kindness",
+      "passage": "Last winter, I was walking home from school when it began to snow heavily. I (11) along the street quickly because I didn't bring an umbrella.\nSuddenly, I saw an old man sitting on the side of the road. His bag was on the ground and some oranges were rolling (12) the street. He looked very tired and couldn't stand up. Many people walked past him, but no one (13).\nI hesitated for a moment. My mother always told me not to talk to strangers. But I thought, \"What if he is (14)?\" So I went over and asked, \"Are you OK, sir? Can I help you?\"\nHe smiled and said, \"Thank you, young man. I fell (15) and hurt my leg.\" I picked up his oranges and helped him stand up. Then I (16) his son with his phone. While we were (17) for his son, I held my coat over his head to keep the snow off.\nTwenty minutes later, his son arrived. He thanked me again and again and wanted to give me some money, but I (18) it. When I got home, I was wet and cold, (19) I felt warm inside.\nSince then, I (20) that a small act of kindness can make a big difference.",
+      "items": [
+        {
+          "n": 11,
+          "options": [
+            "was walking",
+            "walk",
+            "walks",
+            "have walked"
+          ],
+          "answer": "A",
+          "kp": "过去进行时",
+          "exp": "过去某段时间正在进行的动作，用过去进行时。"
+        },
+        {
+          "n": 12,
+          "options": [
+            "across",
+            "through",
+            "over",
+            "into"
+          ],
+          "answer": "A",
+          "kp": "介词辨析",
+          "exp": "橘子在路面上滚过，across 表示在物体表面横穿。"
+        },
+        {
+          "n": 13,
+          "options": [
+            "stopped",
+            "laughed",
+            "shouted",
+            "cried"
+          ],
+          "answer": "A",
+          "kp": "上下文",
+          "exp": "很多人走过，却没有一个人停下来。"
+        },
+        {
+          "n": 14,
+          "options": [
+            "hurt",
+            "rich",
+            "hungry",
+            "happy"
+          ],
+          "answer": "A",
+          "kp": "上下文",
+          "exp": "老人站不起来，作者担心他受伤了。"
+        },
+        {
+          "n": 15,
+          "options": [
+            "down",
+            "up",
+            "off",
+            "out"
+          ],
+          "answer": "A",
+          "kp": "动词短语",
+          "exp": "fall down 摔倒。"
+        },
+        {
+          "n": 16,
+          "options": [
+            "called",
+            "visited",
+            "found",
+            "met"
+          ],
+          "answer": "A",
+          "kp": "上下文",
+          "exp": "用他的手机给他儿子打电话。"
+        },
+        {
+          "n": 17,
+          "options": [
+            "waiting",
+            "looking",
+            "asking",
+            "paying"
+          ],
+          "answer": "A",
+          "kp": "动词短语",
+          "exp": "wait for 等待。"
+        },
+        {
+          "n": 18,
+          "options": [
+            "refused",
+            "took",
+            "lost",
+            "spent"
+          ],
+          "answer": "A",
+          "kp": "上下文",
+          "exp": "but 转折，对方要给钱，“我”拒绝了。"
+        },
+        {
+          "n": 19,
+          "options": [
+            "but",
+            "so",
+            "and",
+            "or"
+          ],
+          "answer": "A",
+          "kp": "连词",
+          "exp": "身上又湿又冷，但心里很温暖，前后转折。"
+        },
+        {
+          "n": 20,
+          "options": [
+            "have learned",
+            "learn",
+            "will learn",
+            "am learning"
+          ],
+          "answer": "A",
+          "kp": "现在完成时",
+          "exp": "Since then 从那以后，表示从过去持续到现在，用现在完成时 have learned。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Volunteers Wanted",
+          "passage": "Sunshine Library\nWe need volunteers to read stories to children on Saturday mornings (9:00–11:00). You must be 14 or older and love children. Call Ms. Lin at 8655-2109.\nGreen Park\nHelp us clean up the park and plant trees! Every Sunday afternoon, 2:00–4:00. Gloves and tools are provided. Anyone over 12 is welcome. E-mail: greenpark@cleanup.org\nHappy Home (Old People's Home)\nCome and chat with the old people, play chess with them or sing songs for them. Weekdays 4:00–6:00 pm. Students must come with a teacher or a parent. Call Mr. Zhou at 8633-7561.",
+          "items": [
+            {
+              "n": 21,
+              "stem": "Who can volunteer at Sunshine Library?",
+              "options": [
+                "A 12-year-old boy.",
+                "A 13-year-old girl.",
+                "A 15-year-old girl who loves children.",
+                "Anyone who can read."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "You must be 14 or older and love children。"
+            },
+            {
+              "n": 22,
+              "stem": "What will volunteers do at Green Park?",
+              "options": [
+                "Read stories.",
+                "Clean up the park and plant trees.",
+                "Play chess.",
+                "Sing songs."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "Help us clean up the park and plant trees。"
+            },
+            {
+              "n": 23,
+              "stem": "When can you volunteer at Happy Home?",
+              "options": [
+                "On Saturday morning.",
+                "On Sunday afternoon.",
+                "On Monday afternoon.",
+                "On Sunday morning."
+              ],
+              "answer": "C",
+              "kp": "推理判断",
+              "exp": "Weekdays 4:00–6:00 pm，周一下午属于工作日。"
+            },
+            {
+              "n": 24,
+              "stem": "If you want to work at Green Park, how can you contact them?",
+              "options": [
+                "By calling Ms. Lin.",
+                "By sending an e-mail.",
+                "By calling Mr. Zhou.",
+                "By visiting the library."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "Green Park 只留了邮箱。"
+            },
+            {
+              "n": 25,
+              "stem": "Which is TRUE according to the notices?",
+              "options": [
+                "Volunteers at Green Park need to bring their own tools.",
+                "Students can go to Happy Home alone.",
+                "Volunteers at Happy Home can play chess with the old people.",
+                "Sunshine Library needs volunteers on Sunday."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "Happy Home 可以陪老人下棋。公园提供工具；学生必须有老师或家长陪同；图书馆是周六。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Should Teenagers Do Chores?",
+          "passage": "Many parents think their children should only study and don't need to do chores at home. But is that true?\nA study by a university in the US followed a group of people for more than 20 years. It found that children who did chores from a young age were more likely to be successful when they grew up. They were better at working with others and more independent.\nDoing chores can teach children many skills. When they do the dishes or clean their rooms, they learn to take responsibility. When they cook meals, they learn how to plan and solve problems. Also, doing chores together can make family members closer.\nOf course, doing chores shouldn't take up too much time. Experts suggest that teenagers spend about 20 to 30 minutes a day on chores. That's not too much, and it's good for both their study and their life.\nSo, next time your mom asks you to help out at home, don't say \"I'm too busy.\" Pick up a broom and get started!",
+          "items": [
+            {
+              "n": 26,
+              "stem": "What did the study find?",
+              "options": [
+                "Children who did chores were less successful.",
+                "Children who did chores were more likely to be successful later.",
+                "Chores take too much time from study.",
+                "Parents should do all the chores."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "children who did chores from a young age were more likely to be successful when they grew up。"
+            },
+            {
+              "n": 27,
+              "stem": "What can children learn by cooking meals?",
+              "options": [
+                "How to plan and solve problems.",
+                "How to make money.",
+                "How to play with friends.",
+                "How to study harder."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "When they cook meals, they learn how to plan and solve problems。"
+            },
+            {
+              "n": 28,
+              "stem": "How long do experts suggest teenagers spend on chores every day?",
+              "options": [
+                "5 to 10 minutes.",
+                "20 to 30 minutes.",
+                "About 1 hour.",
+                "About 2 hours."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "about 20 to 30 minutes a day on chores。"
+            },
+            {
+              "n": 29,
+              "stem": "What does the underlined word \"independent\" probably mean?",
+              "options": [
+                "依赖的",
+                "独立的",
+                "懒惰的",
+                "害羞的"
+              ],
+              "answer": "B",
+              "kp": "词义猜测",
+              "exp": "做家务的孩子更善于与人合作、更 independent，结合语境应为“独立的”。"
+            },
+            {
+              "n": 30,
+              "stem": "What is the writer's opinion?",
+              "options": [
+                "Teenagers should only study.",
+                "Teenagers should do some chores at home.",
+                "Chores are a waste of time.",
+                "Only girls should do chores."
+              ],
+              "answer": "B",
+              "kp": "观点态度",
+              "exp": "作者列举做家务的好处，结尾鼓励“拿起扫帚开始吧”，认为青少年应该做些家务。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "The Highest Mountain in the World",
+          "passage": "Qomolangma (Mount Everest) is the highest mountain in the world. It is 8,848.86 meters high. It lies on the border between China and Nepal.\nClimbing Qomolangma is very dangerous. The weather near the top is extremely cold, and there is not enough oxygen in the air. Strong winds and snowstorms can come at any time. Many climbers have to give up halfway.\nIn 1960, three Chinese climbers reached the top of Qomolangma from the north side for the first time in history. In 1975, Phan Duo became the first woman to reach the top from the north side. In 2020, a Chinese team climbed to the top again and measured its new height.\nWhy do so many people try to climb it? For many climbers, the spirit of climbing is about challenging themselves and never giving up, no matter how difficult the situation is.",
+          "items": [
+            {
+              "n": 31,
+              "stem": "How high is Qomolangma?",
+              "options": [
+                "8,488.86 meters.",
+                "8,848.86 meters.",
+                "8,884.68 meters.",
+                "8,848.68 meters."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "It is 8,848.86 meters high。注意数字不要看错。"
+            },
+            {
+              "n": 32,
+              "stem": "Which is NOT a danger of climbing Qomolangma?",
+              "options": [
+                "Extremely cold weather.",
+                "Not enough oxygen.",
+                "Strong winds and snowstorms.",
+                "Too many tourists on the top."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "文中提到严寒、缺氧、强风和暴风雪，没有提到山顶游客太多。"
+            },
+            {
+              "n": 33,
+              "stem": "When did Chinese climbers first reach the top from the north side?",
+              "options": [
+                "In 1960.",
+                "In 1975.",
+                "In 2005.",
+                "In 2020."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "In 1960, three Chinese climbers reached the top ... from the north side for the first time。"
+            },
+            {
+              "n": 34,
+              "stem": "What did the Chinese team do in 2020?",
+              "options": [
+                "They found a new mountain.",
+                "They measured the new height of Qomolangma.",
+                "They built a hotel on the top.",
+                "They gave up halfway."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "In 2020, a Chinese team climbed to the top again and measured its new height。"
+            },
+            {
+              "n": 35,
+              "stem": "What is the spirit of climbing according to the passage?",
+              "options": [
+                "Becoming famous.",
+                "Making money.",
+                "Challenging yourself and never giving up.",
+                "Enjoying the view."
+              ],
+              "answer": "C",
+              "kp": "推理判断",
+              "exp": "最后一段：the spirit of climbing is about challenging themselves and never giving up。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "七选五",
+      "score": 2,
+      "title": "How to Deal with Stress",
+      "passage": "Many students feel stressed because of exams, homework or problems with friends. A little stress is OK, but too much stress is bad for your health. Here are some ways to deal with it.\nTalk to someone. (36) They may give you good advice, or just listen to you. You'll feel much better after sharing your feelings.\nGet enough sleep. (37) Try to go to bed at the same time every night and don't use your phone before sleeping.\nExercise. (38) Even a 20-minute walk can help you relax.\nPlan your time well. (39) Make a list of things you need to do and finish them one by one.\nThink positively. Instead of saying \"I can't do it\", say \"I'll try my best\". (40)",
+      "choices": [
+        "You can talk to your parents, teachers or friends.",
+        "Teenagers need about 9 hours of sleep every night.",
+        "Doing sports can make you happier and healthier.",
+        "Don't leave everything until the last minute.",
+        "A positive attitude can help you face difficulties.",
+        "Stress is always a good thing for students.",
+        "Playing computer games all night is the best way to relax."
+      ],
+      "items": [
+        {
+          "n": 36,
+          "answer": "A",
+          "kp": "七选五",
+          "exp": "找人倾诉，可以和父母、老师或朋友谈谈，后句 They 指代这些人。"
+        },
+        {
+          "n": 37,
+          "answer": "B",
+          "kp": "七选五",
+          "exp": "保证充足睡眠，青少年每晚约需 9 小时。"
+        },
+        {
+          "n": 38,
+          "answer": "C",
+          "kp": "七选五",
+          "exp": "运动能让人更快乐、更健康，后句举散步的例子。"
+        },
+        {
+          "n": 39,
+          "answer": "D",
+          "kp": "七选五",
+          "exp": "合理安排时间，不要把事情拖到最后。"
+        },
+        {
+          "n": 40,
+          "answer": "E",
+          "kp": "七选五",
+          "exp": "积极思考，积极的态度帮助你面对困难。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Favourite Book",
+      "passage": "I have read many books, but my favourite one is Robinson Crusoe. I (41) (read) it three times so far.\nThe book tells the story of a man (42) ______ lived alone on an island for many years after his ship sank. At first, he was very (43) (worry). He had no food and no house. But he didn't give up. He made tools, built a house and (44) (grow) his own food. He even taught (45) (he) to make bread and pots.\nOne day, he saved a man from some cannibals and named him Friday. Friday became his servant and (46) (good) friend. After 28 years on the island, Robinson finally (47) (save) by a passing ship.\nThis book taught me an important lesson: we should never lose hope, no matter how (48) (difficulty) life is. I think everyone should read it. If you (49) (have) time, you can borrow it from me. I'm sure you (50) (enjoy) it.",
+      "items": [
+        {
+          "n": 41,
+          "answer": "have read",
+          "hint": "read",
+          "kp": "现在完成时",
+          "exp": "so far 到目前为止，用现在完成时。"
+        },
+        {
+          "n": 42,
+          "answer": "who / that",
+          "kp": "定语从句",
+          "exp": "先行词 a man 是人，关系代词用 who 或 that。"
+        },
+        {
+          "n": 43,
+          "answer": "worried",
+          "hint": "worry",
+          "kp": "词性转换",
+          "exp": "be 后接形容词，描述人的感受用 worried。"
+        },
+        {
+          "n": 44,
+          "answer": "grew",
+          "hint": "grow",
+          "kp": "一般过去时",
+          "exp": "与 made、built 并列，用过去式 grew。"
+        },
+        {
+          "n": 45,
+          "answer": "himself",
+          "hint": "he",
+          "kp": "反身代词",
+          "exp": "teach oneself 自学，主语是 he，用 himself。"
+        },
+        {
+          "n": 46,
+          "answer": "best",
+          "hint": "good",
+          "kp": "比较级和最高级",
+          "exp": "成为他最好的朋友：his best friend。"
+        },
+        {
+          "n": 47,
+          "answer": "was saved",
+          "hint": "save",
+          "kp": "被动语态",
+          "exp": "鲁滨逊是“被”救，用一般过去时的被动语态 was saved。"
+        },
+        {
+          "n": 48,
+          "answer": "difficult",
+          "hint": "difficulty",
+          "kp": "词性转换",
+          "exp": "how＋形容词，no matter how difficult 无论多么艰难。"
+        },
+        {
+          "n": 49,
+          "answer": "have",
+          "hint": "have",
+          "kp": "条件状语从句",
+          "exp": "if 从句用一般现在时表将来，主语 you，用 have。"
+        },
+        {
+          "n": 50,
+          "answer": "will enjoy",
+          "hint": "enjoy",
+          "kp": "一般将来时",
+          "exp": "I'm sure 后表示对将来的推测，用 will enjoy。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 51,
+      "score": 20,
+      "prompt": "你校英语报开展“Helping Others, Helping Myself”主题征文活动。请写一篇短文，讲述你参加过的一次志愿服务或帮助他人的经历，内容包括：1. 时间、地点和你做了什么；2. 过程中遇到的困难或印象最深的事；3. 你的收获和感受。要求：80 词左右，开头已给出，不计入总词数；文中不得出现真实姓名和校名。\nHelping Others, Helping Myself\nLast month, I ______",
+      "points": [
+        [
+          "写清时间、地点和做了什么",
+          5
+        ],
+        [
+          "写出困难或印象最深的事",
+          5
+        ],
+        [
+          "写出收获和感受",
+          4
+        ],
+        [
+          "语言准确（一般过去时、现在完成时），衔接自然，书写规范",
+          6
+        ]
+      ],
+      "sample": "Helping Others, Helping Myself\nLast month, I volunteered at an old people's home with my classmates. We cleaned the rooms, read newspapers to the old people and sang songs for them.\nAt first, I was a little nervous because I didn't know what to say. Then an old lady told me about her life when she was young. She was so happy that she held my hand and smiled all the time. I was moved.\nSince then, I have visited the home twice a month. I've learned that helping others makes me happy, too. I hope more students can join us.",
+      "exp": "讲经历用一般过去时，谈收获可用现在完成时（I have learned...、Since then, I have...）。可用 At first、Then、so...that、Since then 等让文章连贯。"
+    }
+  ]
+}

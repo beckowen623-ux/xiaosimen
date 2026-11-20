@@ -1,0 +1,1013 @@
+// 由 tools/build_english.mjs 生成，源文件 english-src/papers/zz-earlybird-8down-dili.json，请勿手改。
+window.NATIONAL_PAPERS = window.NATIONAL_PAPERS || {};
+window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
+ {
+  "id": "national-earlybird-8down-dili-q01",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 1,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 1 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "1 月 0 ℃ 等温线"
+   },
+   {
+    "key": "B",
+    "text": "800 毫米年等降水量线"
+   },
+   {
+    "key": "C",
+    "text": "暖温带与亚热带的分界线"
+   },
+   {
+    "key": "D",
+    "text": "季风区与非季风区的分界线"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "季风区与非季风区的分界线是大兴安岭—阴山—贺兰山—巴颜喀拉山—冈底斯山一线。",
+  "kp": "秦岭—淮河",
+  "stem": "秦岭—淮河一线是我国重要的地理分界线。下列不是以它为界的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q02",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 2,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 2 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "北方地区"
+   },
+   {
+    "key": "B",
+    "text": "南方地区"
+   },
+   {
+    "key": "C",
+    "text": "西北地区"
+   },
+   {
+    "key": "D",
+    "text": "青藏地区"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "青藏地区海拔高、气温低，主要自然特征是“高、寒”；西北地区是“干旱”。",
+  "kp": "我国四大地理区域",
+  "stem": "我国四大地理区域中，以“高寒”为主要自然特征的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q03",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 3,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 3 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "北方耕地以水田为主，南方以旱地为主"
+   },
+   {
+    "key": "B",
+    "text": "北方主要粮食作物是小麦，南方是水稻"
+   },
+   {
+    "key": "C",
+    "text": "北方传统民居屋顶坡度大，南方屋顶平缓"
+   },
+   {
+    "key": "D",
+    "text": "北方河流冬季不结冰，南方河流有结冰期"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "北方以旱地为主、种小麦，南方以水田为主、种水稻；南方降水多，屋顶坡度大；北方河流冬季结冰。",
+  "kp": "南北方的差异",
+  "stem": "下列关于北方地区和南方地区的差异，说法正确的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q04",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 4,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 4 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "土壤肥沃（黑土广布），地形平坦，雨热同期"
+   },
+   {
+    "key": "B",
+    "text": "全年高温多雨"
+   },
+   {
+    "key": "C",
+    "text": "人口稠密，劳动力丰富"
+   },
+   {
+    "key": "D",
+    "text": "冬季温暖，可以种植两季水稻"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "东北平原黑土肥沃，地形平坦，夏季温暖湿润、雨热同期，人均耕地多，机械化水平高，是重要的商品粮基地。",
+  "kp": "东北地区",
+  "stem": "东北三省冬季漫长严寒，但却是我国重要的商品粮基地。主要原因是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q05",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 5,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 5 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "黄土土质疏松"
+   },
+   {
+    "key": "B",
+    "text": "夏季多暴雨"
+   },
+   {
+    "key": "C",
+    "text": "地表缺少植被保护"
+   },
+   {
+    "key": "D",
+    "text": "过度放牧"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "过度放牧属于人为原因。",
+  "kp": "黄土高原",
+  "stem": "黄土高原是世界上水土流失最严重的地区之一。造成水土流失的自然原因不包括（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q06",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 6,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 6 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "大规模开垦荒地"
+   },
+   {
+    "key": "B",
+    "text": "植树种草，保护和恢复植被"
+   },
+   {
+    "key": "C",
+    "text": "修建大量工厂"
+   },
+   {
+    "key": "D",
+    "text": "增加人口"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "保护和恢复植被是治理黄土高原水土流失的关键。",
+  "kp": "黄土高原",
+  "stem": "治理黄土高原水土流失的关键措施是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q07",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 7,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 7 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "政治中心、文化中心、国际交往中心、科技创新中心"
+   },
+   {
+    "key": "B",
+    "text": "最大的工业城市"
+   },
+   {
+    "key": "C",
+    "text": "最大的港口城市"
+   },
+   {
+    "key": "D",
+    "text": "金融中心和航运中心"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "北京的城市职能是全国政治中心、文化中心、国际交往中心、科技创新中心。",
+  "kp": "北方地区",
+  "stem": "北京是我国的首都，是全国的（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q08",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 8,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 8 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "南京"
+   },
+   {
+    "key": "B",
+    "text": "杭州"
+   },
+   {
+    "key": "C",
+    "text": "上海"
+   },
+   {
+    "key": "D",
+    "text": "苏州"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "上海是长江三角洲地区的核心城市，被称为长三角的“龙头”。",
+  "kp": "南方地区",
+  "stem": "长江三角洲地区经济发达，其中被称为“龙头”的城市是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q09",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 9,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 9 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "地理位置优越，有优良港湾"
+   },
+   {
+    "key": "B",
+    "text": "以祖国内地为依托"
+   },
+   {
+    "key": "C",
+    "text": "自然资源十分丰富"
+   },
+   {
+    "key": "D",
+    "text": "国际交往便利"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "香港、澳门地域狭小、自然资源贫乏，经济发展依托祖国内地。",
+  "kp": "南方地区",
+  "stem": "香港、澳门经济发展的有利条件不包括（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q10",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 10,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 10 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "平原"
+   },
+   {
+    "key": "B",
+    "text": "山地"
+   },
+   {
+    "key": "C",
+    "text": "高原"
+   },
+   {
+    "key": "D",
+    "text": "盆地"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "台湾岛山地约占三分之二，东部多山，西部多平原，城市和人口集中在西部。",
+  "kp": "南方地区",
+  "stem": "台湾岛的地形以（ ）为主，东部多山，西部多平原。",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q11",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 11,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 11 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "荒漠—草原—荒漠草原"
+   },
+   {
+    "key": "B",
+    "text": "草原—荒漠草原—荒漠"
+   },
+   {
+    "key": "C",
+    "text": "森林—草原—荒漠"
+   },
+   {
+    "key": "D",
+    "text": "荒漠草原—草原—荒漠"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "西北地区距海越来越远，降水由东向西递减，景观依次为草原—荒漠草原—荒漠。",
+  "kp": "西北地区",
+  "stem": "西北地区自然景观由东向西依次为（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q12",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 12,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 12 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "降水多"
+   },
+   {
+    "key": "B",
+    "text": "光照充足，昼夜温差大，有利于糖分积累"
+   },
+   {
+    "key": "C",
+    "text": "土壤是黑土"
+   },
+   {
+    "key": "D",
+    "text": "气温低"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "新疆晴天多、光照足，白天光合作用强；昼夜温差大，夜间呼吸作用弱，有利于糖分积累。",
+  "kp": "西北地区",
+  "stem": "新疆的瓜果特别甜，主要原因是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q13",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 13,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 13 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "山麓地带和河流沿岸"
+   },
+   {
+    "key": "B",
+    "text": "沙漠中心"
+   },
+   {
+    "key": "C",
+    "text": "高山顶部"
+   },
+   {
+    "key": "D",
+    "text": "盆地中央"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "新疆的绿洲依靠高山冰雪融水灌溉，主要分布在山麓地带和河流沿岸。",
+  "kp": "西北地区",
+  "stem": "新疆绿洲主要分布在（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q14",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 14,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 14 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "三江源地区"
+   },
+   {
+    "key": "B",
+    "text": "黄土高原"
+   },
+   {
+    "key": "C",
+    "text": "四川盆地"
+   },
+   {
+    "key": "D",
+    "text": "塔里木盆地"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "三江源地区是长江、黄河、澜沧江的发源地，被誉为“中华水塔”。",
+  "kp": "青藏地区",
+  "stem": "青藏地区的河流多发源于此，被称为“中华水塔”的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q15",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 15,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 15 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "纬度位置"
+   },
+   {
+    "key": "B",
+    "text": "海陆位置"
+   },
+   {
+    "key": "C",
+    "text": "地势高"
+   },
+   {
+    "key": "D",
+    "text": "受冬季风影响"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "青藏地区平均海拔 4000 米以上，海拔高，气温低。",
+  "kp": "影响气候的因素",
+  "stem": "青藏地区虽然纬度较低，但气候寒冷，主要原因是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q16",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 16,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 16 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "雅鲁藏布江谷地和湟水谷地"
+   },
+   {
+    "key": "B",
+    "text": "柴达木盆地中心"
+   },
+   {
+    "key": "C",
+    "text": "青藏高原北部的高山"
+   },
+   {
+    "key": "D",
+    "text": "羌塘高原"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "河谷地带海拔较低，气温较高，水源充足，是青藏地区主要的农业区，主要种植青稞、小麦等。",
+  "kp": "青藏地区",
+  "stem": "青藏地区农业主要分布在（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q17",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 17,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 17 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "多年冻土"
+   },
+   {
+    "key": "B",
+    "text": "沙漠"
+   },
+   {
+    "key": "C",
+    "text": "高温"
+   },
+   {
+    "key": "D",
+    "text": "台风"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "青藏铁路要穿越多年冻土区，修建以桥代路、通风管道等措施是为了防止冻土融化导致路基不稳。",
+  "kp": "青藏地区",
+  "stem": "青藏铁路建设中修建了大量桥梁和通风管道，主要是为了解决（ ）问题。",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q18",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 18,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 18 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "西北地区（新疆塔里木盆地等）"
+   },
+   {
+    "key": "B",
+    "text": "东北地区"
+   },
+   {
+    "key": "C",
+    "text": "南方地区"
+   },
+   {
+    "key": "D",
+    "text": "青藏地区"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "西气东输把新疆塔里木盆地等地的天然气输送到东部地区，实现资源的跨区域调配。",
+  "kp": "西北地区",
+  "stem": "西气东输工程是把（ ）的天然气输送到东部地区。",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q19",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 19,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 19 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "开垦山坡增加耕地"
+   },
+   {
+    "key": "B",
+    "text": "珍惜和合理利用每一寸土地，切实保护耕地"
+   },
+   {
+    "key": "C",
+    "text": "大量占用耕地建工厂"
+   },
+   {
+    "key": "D",
+    "text": "填湖造田"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "“十分珍惜、合理利用土地和切实保护耕地”是我国的基本国策。开垦山坡、填湖造田会破坏生态。",
+  "kp": "我国四大地理区域",
+  "stem": "我国人口众多，耕地有限。下列做法中最合理的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q20",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 20,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 20 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "我国已经是发达国家"
+   },
+   {
+    "key": "B",
+    "text": "我国仍然是发展中国家，发展不平衡不充分的问题仍然存在"
+   },
+   {
+    "key": "C",
+    "text": "我国人均收入世界第一"
+   },
+   {
+    "key": "D",
+    "text": "我国已不需要继续发展"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "我国经济总量居世界前列，但人均水平不高，仍是世界上最大的发展中国家。",
+  "kp": "中国在世界中",
+  "stem": "我国已成为世界第二大经济体。下列说法正确的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q21",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 21,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 21 题",
+  "type": "essay",
+  "material": "",
+  "stem": "【南北差异】\n材料：小明的爸爸是黑龙江人，妈妈是广东人。每年春节，一家人回爸爸老家，看到的是冰天雪地、白雪皑皑；去妈妈老家，则是花开满园、温暖如春。爸爸老家吃面食多，种小麦、玉米、大豆；妈妈老家吃米饭多，种水稻，一年能种两到三季。\n（1）造成两地冬季景观差异的主要原因是什么？\n（2）两地农作物熟制不同的主要原因是什么？\n（3）两地饮食习惯不同，体现了什么地理现象？",
+  "points": [
+   {
+    "text": "（1）纬度位置不同，黑龙江纬度高，广东纬度低",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）热量条件不同（积温、生长期长短不同）",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（3）自然环境影响人们的生产和生活，因地制宜（南稻北麦，南米北面）",
+    "score": 4,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）纬度位置不同。黑龙江纬度高，冬季获得的太阳光热少，又受冬季风影响强烈，气候寒冷；广东纬度低，冬季温暖。\n（2）热量条件不同。广东纬度低，热量充足，生长期长，可以一年两到三熟；黑龙江热量不足，一年一熟。\n（3）体现了自然环境（气候）对农业生产和人们生活的影响：北方种小麦，以面食为主；南方种水稻，以米饭为主，即“南米北面”。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "南北方的差异",
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q22",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 22,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 22 题",
+  "type": "essay",
+  "material": "",
+  "stem": "【西北地区】\n材料：西北地区深居内陆，距海遥远，气候干旱。新疆的坎儿井是当地人民利用地下水灌溉的一种水利工程，能减少水分蒸发。近年来，新疆大力发展棉花种植，成为我国最大的商品棉生产基地。\n（1）西北地区干旱的主要原因是什么？\n（2）坎儿井的水主要来自哪里？为什么要修在地下？\n（3）新疆发展棉花种植的有利自然条件有哪些？（答两点）",
+  "points": [
+   {
+    "text": "（1）深居内陆，距海遥远，海洋水汽难以到达；高山阻挡",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）高山冰雪融水；减少蒸发",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（3）光照充足、昼夜温差大、有灌溉水源等（任两点）",
+    "score": 4,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）西北地区深居内陆，距离海洋遥远，又有山地阻挡，来自海洋的湿润气流难以到达，所以降水少、气候干旱。\n（2）坎儿井的水主要来自高山冰雪融水。新疆气候干旱，夏季炎热，修在地下可以减少水分蒸发，还能防止风沙掩埋。\n（3）光照充足，热量较丰富；昼夜温差大，利于棉花纤维生长；有高山冰雪融水灌溉；地广人稀，土地资源丰富。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "西北地区",
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q23",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 23,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 23 题",
+  "type": "essay",
+  "material": "",
+  "stem": "【青藏地区】\n材料：青藏地区是“世界屋脊”，冰川广布，是许多大江大河的发源地。牦牛和藏羊是高原上的主要牲畜。青稞是当地的主要粮食作物，藏族人民的传统食物是糌粑、酥油茶。近年来，青藏地区大力发展太阳能和旅游业。\n（1）青藏地区太阳能资源丰富的原因是什么？\n（2）牦牛能适应高原环境的特征有哪些？（答一点）\n（3）三江源地区被誉为“中华水塔”，为保护三江源，你有什么建议？\n（4）青藏地区发展旅游业的有利条件有哪些？",
+  "points": [
+   {
+    "text": "（1）海拔高，空气稀薄，大气透明度好，晴天多，太阳辐射强",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）体毛长、耐寒、耐缺氧、善于在高原行走等",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）建立自然保护区，禁止过度放牧，退牧还草，保护冰川和湿地等",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（4）独特的自然风光（雪山、冰川、湖泊）和浓郁的民族文化（宗教、民俗）",
+    "score": 4,
+    "keys": []
+   }
+  ],
+  "score": 13,
+  "sample": "（1）青藏地区海拔高，空气稀薄，大气对太阳辐射的削弱作用小，晴天多，日照时间长，所以太阳能资源丰富。\n（2）牦牛体毛长而厚，能抵御严寒；心肺发达，适应高原缺氧环境；被称为“高原之舟”，善于在高原上行走、驮运。\n（3）建立和完善自然保护区、国家公园；控制放牧数量，退牧还草；保护冰川、湿地；加强生态保护宣传，发展生态旅游。\n（4）有独特的高原自然风光，如雪山、冰川、高原湖泊；有浓郁的藏族民族风情和宗教文化，如布达拉宫；交通条件改善（青藏铁路）。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "青藏地区",
+  "unit": "八下·中国的地理区域"
+ },
+ {
+  "id": "national-earlybird-8down-dili-q24",
+  "national": true,
+  "subject": "dili",
+  "subjectLabel": "地理",
+  "paperId": "earlybird-8down-dili",
+  "number": 24,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八下早鸟卷 · 地理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下早鸟卷 · 地理 第 24 题",
+  "type": "essay",
+  "material": "",
+  "stem": "【区域发展】\n材料一：长江三角洲地区包括上海市、江苏省、浙江省、安徽省，是我国经济最发达的地区之一，城市密集，交通便利，工业发达。\n材料二：粤港澳大湾区包括香港、澳门两个特别行政区和广东省九个城市，正在建设成为世界级城市群。港珠澳大桥于 2018 年建成通车。\n（1）长江三角洲地区经济发达的条件有哪些？（答两点）\n（2）港珠澳大桥建成通车有什么意义？\n（3）香港、澳门与祖国内地在经济上有什么联系？",
+  "points": [
+   {
+    "text": "（1）位于长江入海口，交通便利；地形平坦，水源充足；科技发达，人才多；以上海为龙头等（任两点）",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）缩短了香港、珠海、澳门之间的交通时间，加强三地联系，促进粤港澳大湾区经济发展",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（3）内地为港澳提供水、农副产品、劳动力和市场；港澳为内地提供资金、技术和管理经验，“前店后厂”",
+    "score": 5,
+    "keys": []
+   }
+  ],
+  "score": 13,
+  "sample": "（1）位于长江入海口和东部沿海，水陆交通便利；地形平坦，水源充足，农业基础好；城市密集，科技发达，人才众多；以上海为龙头，带动作用强。\n（2）大大缩短了香港、珠海、澳门之间的通行时间，加强了三地的联系，促进人员、物资往来，推动粤港澳大湾区经济一体化发展。\n（3）内地为香港、澳门提供淡水、副食品、劳动力和广阔的市场；香港、澳门为内地提供资金、先进技术和管理经验。早期形成了“前店后厂”的合作模式，二者相互促进、共同发展。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "南方地区",
+  "unit": "八下·中国的地理区域"
+ }
+];

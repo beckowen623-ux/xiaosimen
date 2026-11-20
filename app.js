@@ -604,7 +604,7 @@ const MODE_LABEL = {
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
   essay: '主观题提分', blank: '填空速记', retry: '本组错题重练', national: '全国真题练习',
-  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '中考早鸟自测', chapter: '按章节练',
+  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '早鸟自测', chapter: '按章节练',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -1169,6 +1169,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-20', '新增八下早鸟自测卷：语文、数学、英语、物理、道法、历史、地理、生物各一套。至此七上到九下六个学期的早鸟自测卷全部上线，首页选学期即可，限时免费。'],
   ['2026-11-20', '新增八上早鸟自测卷：语文、数学、英语、物理、道法、历史、地理、生物各一套，考到八年级上册，按期末考试题型编写，难度略高，限时免费。'],
   ['2026-11-20', '新增七下早鸟自测卷：语文、数学、英语、道法、历史、地理、生物各一套，考到七年级下册，按期末考试题型编写，难度略高，限时免费。'],
   ['2026-11-20', '新增七上早鸟自测卷：语文、数学、英语、道法、历史、地理、生物各一套，只考七年级上册的内容，按期末考试题型编写，难度略高，限时免费。首页学期选“七上”即可看到。'],
@@ -1572,7 +1573,7 @@ function earlybirdCardHTML() {
   return `<section class="card earlybird-card" id="earlybird" aria-labelledby="earlybirdTitle">
     <span class="earlybird-badge">⏰ 限时免费 · 早鸟自测</span>
     <h2 id="earlybirdTitle">${esc(STAGE_SHORT[state.stage])} 早鸟自测卷：看看孩子现在的真实水平</h2>
-    <p>${state.stage === '9-down' ? '中考全范围，九科各一套' : '只考到这个学期为止学过的内容，各科一套'}，按中考题型和题干长度出题，难度比中考略高一点。客观题自动判分，主观题对照得分点自评，做完出百分制总分，每道题都有解析。</p>
+    <p>${state.stage === '9-down' ? '中考全范围，九科各一套' : '只考到这个学期为止学过的内容，各科一套'}，${isNinth() ? '按中考题型和题干长度出题，难度比中考略高一点' : '按期末考试题型和题干长度出题，难度比期末考试略高一点'}。客观题自动判分，主观题对照得分点自评，做完出百分制总分，每道题都有解析。</p>
     <p class="earlybird-tip">分数不是目的：找到会的、找到漏的，后面的复习就有方向了。</p>
     <div class="earlybird-grid">${papers.map(p => `<button class="btn" type="button" data-earlybird="${p.id}"><b>${esc(EARLYBIRD_LABEL[p.subject] || p.subjectLabel)}</b><small>${done[p.id] != null ? `上次 ${done[p.id]} 分` : `${p.questionCount} 题`}</small></button>`).join('')}</div>
   </section>`;
@@ -1599,6 +1600,10 @@ function earlybirdVerdict(score, paper) {
     if (score >= 50) return ['已经有基础了！', '初中的题比小学多绕了几个弯，丢分很正常。先把错题解析看懂，弄明白“坑”在哪里。'];
     return ['别着急，这是初一的内容！', '这些题本来就是初一才学的，现在做不出来很正常。看懂解析就是收获，开学后再做一遍，你会发现自己进步很大。'];
   }
+  const exam = /^9/.test(paper?.stage || '9-down') ? '中考' : '期末考试';
+  return earlybirdVerdictZk(score).map(t => t.replace(/中考/g, exam));
+}
+function earlybirdVerdictZk(score) {
   if (score >= 85) return ['太厉害了！', '这套卷特意拔高过难度，能拿到这个分数，说明基础非常扎实。把错的几道题弄懂，保持节奏就好。'];
   if (score >= 75) return ['很不错！', '这套卷比中考略难，这个分数放到中考里是稳稳的好成绩。错题已经进了错题本，按 1、3、7、14 天复习，还能再往上走。'];
   if (score >= 60) return ['基础已经有了！', '这套卷故意加了难度和“坑”，丢分的地方恰好就是提分空间。先把错题解析看懂，再按学期把对应的知识点补一补。'];
