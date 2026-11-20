@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-20 · Claude Code · 演示视频重做＋七上早鸟卷数学（main）
+- 演示视频改为 39 秒：先测（按学期早鸟卷）→ 按章节补 → 小升初衔接 → 每周一卷打印登记 → 错题复习 → 学情分析，结尾加核心表达。`capture-zhongkao.cjs` 改为读本地预览（BASE，默认 8777）并给学情分析写演示用做题记录；BGM 36 秒改循环。index.html、app.js 按钮、主页 videoSec 改为 39。
+- 新增 `zz-earlybird-7up-math.json`（stage 7-up，23 题）；`units.mjs` 数学补七上各章（有理数的运算、整式的加减、一元一次方程、几何图形初步）。
+
 ## 2026-11-20 · Claude Code · 小升初衔接栏目（main）
 - 新增 13 套 `english-src/papers/zz-xsc-*.json`（`earlybird: true`、`stage: "xsc"`、`unit`、`order`）：数学按七上 6 章各一套（单选 10×3＋填空 6×3＋解答 52），英语 Starter Units 1–3、Units 1–2、3–4、5–7 各一套（单选 15×2、完形 10×1.5、阅读 10×2.5、短文填空 10×1.5、书面表达 15），语文积累运用与古诗词、文言文、现代文阅读与写作各一套。均 100 分，build 校验通过。
 - `units.mjs`：`paper.unit` 存在时整套归入该章；build 给小升初题打 meta“小升初衔接”、grade“小升初”。数学章节名与精编卷一致（如“七上·有理数”），按章节练里会合并。
