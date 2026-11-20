@@ -1,0 +1,651 @@
+{
+  "id": "earlybird-9up-english",
+  "earlybird": true,
+  "stage": "9-up",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "早鸟自测",
+  "year": 2027,
+  "title": "九上早鸟卷 · 英语",
+  "source": "考查范围：七年级至九年级上册，按中考英语题型编写（不含听力），难度略高，百分制",
+  "note": "51 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 1,
+      "items": [
+        {
+          "n": 1,
+          "stem": "—Is this your English book? —No, it isn't. ____ is on my desk.",
+          "options": [
+            "My",
+            "Mine",
+            "Me",
+            "I"
+          ],
+          "answer": "B",
+          "kp": "名词性物主代词",
+          "exp": "空处作主语，指“我的（书）”，用名词性物主代词 Mine。"
+        },
+        {
+          "n": 2,
+          "stem": "There ____ a basketball match and two football matches in our school tomorrow.",
+          "options": [
+            "is going to be",
+            "are going to be",
+            "will have",
+            "has"
+          ],
+          "answer": "A",
+          "kp": "there be 句型（就近原则）",
+          "exp": "there be 结构遵循就近原则，紧跟的是 a basketball match，用单数；将来时用 there is going to be。坑点：there be 不能和 have 连用。"
+        },
+        {
+          "n": 3,
+          "stem": "The teacher asked us ____ in the library.",
+          "options": [
+            "not talk",
+            "not to talk",
+            "don't talk",
+            "to not talking"
+          ],
+          "answer": "B",
+          "kp": "ask sb. not to do",
+          "exp": "ask sb. (not) to do sth. 要求某人（不要）做某事，否定词放在 to 前。"
+        },
+        {
+          "n": 4,
+          "stem": "—I wonder ____ the Science Museum. —It's next to the post office.",
+          "options": [
+            "where is",
+            "where it is",
+            "how I can get to",
+            "when it opens"
+          ],
+          "answer": "B",
+          "kp": "宾语从句",
+          "exp": "答语说的是位置，问“在哪里”；宾语从句用陈述语序 where it is。"
+        },
+        {
+          "n": 5,
+          "stem": "Chinese ____ by more and more people in the world now.",
+          "options": [
+            "speaks",
+            "is spoken",
+            "was spoken",
+            "spoke"
+          ],
+          "answer": "B",
+          "kp": "一般现在时的被动语态",
+          "exp": "汉语“被说”，时间 now，用一般现在时的被动语态 is spoken。"
+        },
+        {
+          "n": 6,
+          "stem": "He has been a member of the school band ____ two years.",
+          "options": [
+            "since",
+            "for",
+            "ago",
+            "before"
+          ],
+          "answer": "B",
+          "kp": "现在完成时的时间状语",
+          "exp": "two years 是一段时间，用 for；since 后接时间点或 two years ago。"
+        },
+        {
+          "n": 7,
+          "stem": "I prefer friends ____ are honest and helpful.",
+          "options": [
+            "which",
+            "who",
+            "whom",
+            "whose"
+          ],
+          "answer": "B",
+          "kp": "定语从句",
+          "exp": "先行词 friends 指人，在从句中作主语，用 who（或 that）。"
+        },
+        {
+          "n": 8,
+          "stem": "You ____ hand in your homework today. Tomorrow is OK.",
+          "options": [
+            "mustn't",
+            "can't",
+            "needn't",
+            "shouldn't"
+          ],
+          "answer": "C",
+          "kp": "情态动词",
+          "exp": "后句“明天也可以”，说明“今天不必交”，用 needn't。坑点：mustn't 表示“禁止”。"
+        },
+        {
+          "n": 9,
+          "stem": "The more you practice, ____ you will speak English.",
+          "options": [
+            "the more fluent",
+            "more fluently",
+            "the more fluently",
+            "the most fluently"
+          ],
+          "answer": "C",
+          "kp": "the＋比较级, the＋比较级",
+          "exp": "“越……就越……”用 the＋比较级, the＋比较级；修饰动词 speak 用副词 fluently。"
+        },
+        {
+          "n": 10,
+          "stem": "—Would you mind turning down the music? My baby is sleeping. —____",
+          "options": [
+            "Yes, I would.",
+            "Sorry. I'll do it right away.",
+            "That's all right.",
+            "Never mind."
+          ],
+          "answer": "B",
+          "kp": "情景交际",
+          "exp": "对方请求关小音乐，礼貌回应是道歉并马上照做。坑点：回答 Would you mind...? 时，Yes 表示“介意”，不礼貌。"
+        }
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "The Lost Wallet",
+      "passage": "Last Friday, on my way home from school, I found a black wallet lying on the ground near the bus stop. I (11) it up and looked inside. There was some money, a bank card and an ID card with an old man's photo.\nMy first thought was to take it to the police station, but it was already six o'clock and the station was far away. I didn't want my parents to (12) about me. So I decided to take it home first.\nAt home, I told my mom what had happened. She was (13) and said, \"You did the right thing. Let's find the owner (14).\" We looked at the ID card again and found an address on it. It was only two streets away from our home!\nAfter dinner, Mom and I walked there. We knocked on the door, and an old man opened it. When he saw the wallet, his eyes (15) up. \"I've been looking for it all afternoon!\" he said. \"I don't care much about the money, but my (16) bank card is in it. I need it to get my pension tomorrow.\"\nHe wanted to give me some money to (17) me, but I said no. \"I just did what I should do,\" I said. He smiled and gave me a book about Chinese history (18). He said it was a present from his son, who was a history teacher.\nOn the way back, Mom held my hand and said, \"Do you know (19) you got tonight? Not a book, but the happiness of helping others.\" I nodded. That night, I fell asleep (20) a smile on my face.",
+      "items": [
+        {
+          "n": 11,
+          "options": [
+            "picked",
+            "gave",
+            "put",
+            "looked"
+          ],
+          "answer": "A",
+          "kp": "动词短语",
+          "exp": "pick up 捡起。"
+        },
+        {
+          "n": 12,
+          "options": [
+            "know",
+            "worry",
+            "think",
+            "hear"
+          ],
+          "answer": "B",
+          "kp": "动词辨析",
+          "exp": "已经六点、警察局很远，不想让父母担心 worry about me。"
+        },
+        {
+          "n": 13,
+          "options": [
+            "angry",
+            "pleased",
+            "worried",
+            "bored"
+          ],
+          "answer": "B",
+          "kp": "情感词",
+          "exp": "妈妈说“你做得对”，说明她很高兴。"
+        },
+        {
+          "n": 14,
+          "options": [
+            "tomorrow",
+            "ourselves",
+            "later",
+            "first"
+          ],
+          "answer": "B",
+          "kp": "反身代词",
+          "exp": "后文母子二人亲自送钱包上门，find the owner ourselves 我们自己找失主。"
+        },
+        {
+          "n": 15,
+          "options": [
+            "came",
+            "lit",
+            "looked",
+            "gave"
+          ],
+          "answer": "B",
+          "kp": "固定搭配",
+          "exp": "one's eyes lit up 眼睛一亮，表示惊喜。"
+        },
+        {
+          "n": 16,
+          "options": [
+            "new",
+            "important",
+            "broken",
+            "cheap"
+          ],
+          "answer": "B",
+          "kp": "上下文理解",
+          "exp": "后文“明天要用它取养老金”，说明银行卡很重要。"
+        },
+        {
+          "n": 17,
+          "options": [
+            "thank",
+            "help",
+            "visit",
+            "teach"
+          ],
+          "answer": "A",
+          "kp": "上下文理解",
+          "exp": "老人想给钱感谢“我”。"
+        },
+        {
+          "n": 18,
+          "options": [
+            "anyway",
+            "instead",
+            "too",
+            "either"
+          ],
+          "answer": "B",
+          "kp": "副词辨析",
+          "exp": "“我”不要钱，他“转而”送了一本书，用 instead。"
+        },
+        {
+          "n": 19,
+          "options": [
+            "how",
+            "what",
+            "why",
+            "where"
+          ],
+          "answer": "B",
+          "kp": "宾语从句引导词",
+          "exp": "you got 缺宾语，用 what：你今晚得到了什么。"
+        },
+        {
+          "n": 20,
+          "options": [
+            "with",
+            "for",
+            "at",
+            "of"
+          ],
+          "answer": "A",
+          "kp": "介词 with 的复合结构",
+          "exp": "with a smile on my face 脸上带着微笑。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Sunshine Middle School Club Week",
+          "passage": "Sunshine Middle School Club Week (October 14–18)\nDrama Club — Mon. & Wed. 4:30–6:00 pm, Room 302. Act in short plays in English. Show will be held on December 20.\nChess Club — Tue. & Thu. 4:30–5:30 pm, Library. Learn to think ahead! Beginners are welcome.\nGarden Club — Fri. 3:30–5:00 pm, School garden. Grow vegetables and flowers. Please wear old clothes.\nVolunteer Club — Sat. 9:00–11:00 am. Help at the community center and the old people's home. Students must be in Grade 8 or above.\nHow to join: Fill in the form at the school office before October 13. Each student can join no more than two clubs.",
+          "items": [
+            {
+              "n": 21,
+              "stem": "Which club meets on weekends?",
+              "options": [
+                "Drama Club.",
+                "Chess Club.",
+                "Garden Club.",
+                "Volunteer Club."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "Volunteer Club 在周六（Sat.）活动。"
+            },
+            {
+              "n": 22,
+              "stem": "Lucy is in Grade 7. She is free only on Friday afternoons and Saturday mornings. Which club can she join?",
+              "options": [
+                "Drama Club.",
+                "Chess Club.",
+                "Garden Club.",
+                "Volunteer Club."
+              ],
+              "answer": "C",
+              "kp": "信息匹配",
+              "exp": "周五下午只有 Garden Club；周六的 Volunteer Club 要求八年级及以上，Lucy 是七年级，不符合。"
+            },
+            {
+              "n": 23,
+              "stem": "How long does the Drama Club meet every week?",
+              "options": [
+                "1.5 hours.",
+                "2 hours.",
+                "3 hours.",
+                "4 hours."
+              ],
+              "answer": "C",
+              "kp": "数字计算",
+              "exp": "每周一、三各 1.5 小时，共 3 小时。坑点：只算一次是 1.5 小时。"
+            },
+            {
+              "n": 24,
+              "stem": "Which of the following is TRUE?",
+              "options": [
+                "Students can join three clubs at most.",
+                "The Chess Club is only for good players.",
+                "Students should sign up before October 13.",
+                "The drama show will be held in October."
+              ],
+              "answer": "C",
+              "kp": "正误判断",
+              "exp": "报名截止 October 13；最多两个社团；国际象棋欢迎初学者；话剧演出在 12 月 20 日。"
+            },
+            {
+              "n": 25,
+              "stem": "Where can you probably read this passage?",
+              "options": [
+                "In a storybook.",
+                "On a school notice board.",
+                "In a newspaper about sports.",
+                "In a science magazine."
+              ],
+              "answer": "B",
+              "kp": "文章出处",
+              "exp": "学校社团招募通知，常见于学校公告栏。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Grandpa's Garden",
+          "passage": "When I was twelve, my parents sent me to stay with Grandpa in the countryside for the summer. I was not happy about it. There was no Wi-Fi at Grandpa's house, and I couldn't play online games with my friends.\nOn the first morning, Grandpa woke me up at six. \"Come on,\" he said. \"The garden needs us.\" I followed him outside, still half asleep. His garden was full of tomatoes, beans and cucumbers. He gave me a small basket and asked me to pick the ripe tomatoes.\n\"How do I know which ones are ripe?\" I asked.\n\"Look carefully, and touch them gently,\" he said. \"A ripe tomato is red all over and a little soft.\"\nAt first, I picked some green ones by mistake. Grandpa didn't laugh at me. He just said, \"Leave them on the plant. They need more time. Everything has its own time.\"\nDay after day, I worked with Grandpa in the garden. I learned to water the plants in the early morning or late afternoon, when the sun was not too strong. I learned to pull out the weeds before they grew big. I even planted some beans myself and watched them come up a little every day.\nAt the end of the summer, I picked a big basket of beans from my own plants. I was so proud. When I went back to the city, my mom was surprised to see me get up early and put away my phone during dinner.\nNow, whenever I want something to happen quickly, I remember Grandpa's words: everything has its own time.",
+          "items": [
+            {
+              "n": 26,
+              "stem": "Why was the writer unhappy at first?",
+              "options": [
+                "Because Grandpa was strict.",
+                "Because there was no Wi-Fi at Grandpa's house.",
+                "Because he had to get up early every day.",
+                "Because he didn't like vegetables."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "第一段：There was no Wi-Fi at Grandpa's house, and I couldn't play online games。早起是后来的事。"
+            },
+            {
+              "n": 27,
+              "stem": "According to Grandpa, a ripe tomato is ____.",
+              "options": [
+                "green and hard",
+                "red all over and a little soft",
+                "big and green",
+                "red and very hard"
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "A ripe tomato is red all over and a little soft."
+            },
+            {
+              "n": 28,
+              "stem": "When is the best time to water the plants according to the passage?",
+              "options": [
+                "At noon.",
+                "In the early morning or late afternoon.",
+                "At midnight.",
+                "Any time of the day."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "water the plants in the early morning or late afternoon, when the sun was not too strong。"
+            },
+            {
+              "n": 29,
+              "stem": "What changes did the writer's mom notice after the summer?",
+              "options": [
+                "He got up late and played games.",
+                "He got up early and put away his phone during dinner.",
+                "He wanted to live in the countryside.",
+                "He became a good cook."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "倒数第二段：get up early and put away my phone during dinner。"
+            },
+            {
+              "n": 30,
+              "stem": "What is the main idea of the passage?",
+              "options": [
+                "Growing vegetables is easy.",
+                "Children should not use phones.",
+                "The writer learned patience from working with Grandpa.",
+                "Life in the countryside is boring."
+              ],
+              "answer": "C",
+              "kp": "主旨大意",
+              "exp": "通过在菜园劳动，作者懂得了“万物各有其时”，学会了耐心。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "Why Do We Yawn?",
+          "passage": "Everyone yawns. Babies yawn even before they are born, and many animals, such as dogs, cats and fish, yawn too. But why do we yawn? Scientists have studied this question for a long time, and they still do not have a final answer.\nFor many years, people believed that we yawn because our bodies need more oxygen. When we are tired or bored, we breathe more slowly, so a big yawn might bring more air into our lungs. However, experiments have shown that people do not yawn more when there is less oxygen in the air. So this idea may not be right.\nA newer idea is that yawning helps to cool down the brain. When we yawn, we take in a lot of cool air, and the blood flow in our heads changes. Some studies found that people yawn more often when the air temperature is around 20°C than when it is very hot or very cold. A cooler brain may help us stay alert.\nYawning is also \"catching\". If you see someone yawn, you will probably yawn too. Even reading about yawning can make you yawn! Some scientists think this is connected with empathy — the ability to understand other people's feelings. Studies show that people are more likely to catch a yawn from family members and close friends than from strangers.\nSo the next time you yawn in class, it may not mean you are bored. Your brain might just be trying to keep you awake!",
+          "items": [
+            {
+              "n": 31,
+              "stem": "What does the first paragraph tell us?",
+              "options": [
+                "Only humans yawn.",
+                "Scientists have found the final answer to why we yawn.",
+                "Both humans and animals yawn.",
+                "Babies never yawn."
+              ],
+              "answer": "C",
+              "kp": "段落大意",
+              "exp": "第一段：人、动物都会打哈欠，科学家还没有最终答案。"
+            },
+            {
+              "n": 32,
+              "stem": "Why may the \"more oxygen\" idea not be right?",
+              "options": [
+                "Because people breathe faster when they are tired.",
+                "Because people don't yawn more when there is less oxygen.",
+                "Because animals don't need oxygen.",
+                "Because yawning is catching."
+              ],
+              "answer": "B",
+              "kp": "因果推断",
+              "exp": "实验表明空气中氧气少时，人并不会更多地打哈欠。"
+            },
+            {
+              "n": 33,
+              "stem": "According to the newer idea, yawning may help us ____.",
+              "options": [
+                "get more oxygen",
+                "cool down the brain and stay alert",
+                "fall asleep quickly",
+                "understand others' feelings"
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "第三段：yawning helps to cool down the brain... A cooler brain may help us stay alert。"
+            },
+            {
+              "n": 34,
+              "stem": "What does the underlined word \"empathy\" mean?",
+              "options": [
+                "The ability to sleep well.",
+                "The ability to understand other people's feelings.",
+                "The ability to breathe deeply.",
+                "The ability to stay awake."
+              ],
+              "answer": "B",
+              "kp": "词义猜测",
+              "exp": "破折号后直接解释：the ability to understand other people's feelings（共情）。"
+            },
+            {
+              "n": 35,
+              "stem": "What can we infer from the passage?",
+              "options": [
+                "Yawning in class always means you are bored.",
+                "You may catch a yawn more easily from your mom than from a stranger.",
+                "Yawning happens most when it is very hot.",
+                "Reading cannot make people yawn."
+              ],
+              "answer": "B",
+              "kp": "推理判断",
+              "exp": "第四段：人们更容易被家人和好朋友“传染”打哈欠。A 与最后一段相反；C 与 20°C 左右最常打哈欠的说法不符；D 与 Even reading about yawning can make you yawn 相反。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "七选五",
+      "score": 2,
+      "title": "How to Be a Good Listener",
+      "passage": "Listening is an important skill, but many people are not good at it. (36) Here are some ways to become a better listener.\nLook at the speaker. When someone is talking to you, put down your phone and look at him or her. (37)\nDon't interrupt. Sometimes we can't wait to say what we think. However, cutting in may make the speaker feel that his or her ideas are not important. (38)\nAsk questions. Good listeners ask questions to make sure they understand. For example, you can say, \"Do you mean...?\" (39)\nShow that you care. A nod, a smile or a simple \"I see\" can tell the speaker that you are listening. (40) With practice, you will find that people enjoy talking with you more and more.",
+      "choices": [
+        "This shows that you are interested in what he or she is saying.",
+        "Wait until the speaker finishes, and then share your ideas.",
+        "They often think about what to say next instead of listening.",
+        "This also shows that you have been paying attention.",
+        "Listening is easier than speaking.",
+        "Small actions like these can make a big difference.",
+        "You should always agree with the speaker."
+      ],
+      "items": [
+        {
+          "n": 36,
+          "answer": "C",
+          "kp": "段落衔接",
+          "exp": "前句说很多人不擅长倾听，空处解释原因：他们常在想下一句说什么，而不是听。"
+        },
+        {
+          "n": 37,
+          "answer": "A",
+          "kp": "上下文逻辑",
+          "exp": "看着说话的人，表明你对他说的内容感兴趣。"
+        },
+        {
+          "n": 38,
+          "answer": "B",
+          "kp": "上下文逻辑",
+          "exp": "本段讲“不要打断”，给出建议：等对方说完再说自己的想法。"
+        },
+        {
+          "n": 39,
+          "answer": "D",
+          "kp": "上下文逻辑",
+          "exp": "提问也说明你一直在认真听。also 呼应前文。"
+        },
+        {
+          "n": 40,
+          "answer": "F",
+          "kp": "上下文逻辑",
+          "exp": "点头、微笑这些小动作能起到很大作用。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "A Special Birthday",
+      "passage": "Last Sunday was my mother's birthday. My sister and I wanted to give her a surprise, so we decided (41) (cook) dinner for her.\nWe got up early and went to the market. We bought some fish, vegetables and (42) (tomato). When we got home, Mom (43) (go) out to visit Grandma. That gave us enough time.\nMy sister is good at cooking, but I am not. She taught me how to cut vegetables (44) (careful). It was hard at first, and I almost cut my finger. \"Take it easy,\" she said. \"You'll get used to it.\"\nBy five o'clock, the dinner was ready. We also made a card with \"Happy birthday, Mom! We love you!\" (45) (write) on it.\nWhen Mom came back, she was (46) (surprise) to see the table full of dishes. She tasted the fish and said it was the (47) (delicious) fish she had ever eaten. I knew she was just being kind, but I was still very happy.\nAfter dinner, Mom hugged us and said, \"This is the best birthday gift that I have ever (48) (receive).\" From then on, I (49) (decide) to help with the housework more often. I think it's important for us (50) (show) love to our parents through actions.",
+      "items": [
+        {
+          "n": 41,
+          "answer": "to cook",
+          "hint": "cook",
+          "kp": "decide to do",
+          "exp": "decide to do sth. 决定做某事。"
+        },
+        {
+          "n": 42,
+          "answer": "tomatoes",
+          "hint": "tomato",
+          "kp": "名词复数",
+          "exp": "tomato 的复数加 -es。"
+        },
+        {
+          "n": 43,
+          "answer": "had gone",
+          "hint": "go",
+          "kp": "过去完成时",
+          "exp": "“我们到家时”妈妈已经出去了，“出去”发生在过去的过去，用过去完成时 had gone。"
+        },
+        {
+          "n": 44,
+          "answer": "carefully",
+          "hint": "careful",
+          "kp": "副词",
+          "exp": "修饰动词 cut 用副词 carefully。"
+        },
+        {
+          "n": 45,
+          "answer": "written",
+          "hint": "write",
+          "kp": "with＋宾语＋过去分词",
+          "exp": "文字是“被写”在卡片上的，with＋宾语＋过去分词 written。"
+        },
+        {
+          "n": 46,
+          "answer": "surprised",
+          "hint": "surprise",
+          "kp": "形容词",
+          "exp": "be surprised to do sth. 人感到惊讶用 -ed 形容词。"
+        },
+        {
+          "n": 47,
+          "answer": "most delicious",
+          "hint": "delicious",
+          "kp": "最高级",
+          "exp": "the＋最高级＋名词＋that 从句（ever），delicious 是多音节词，用 most delicious。"
+        },
+        {
+          "n": 48,
+          "answer": "received",
+          "hint": "receive",
+          "kp": "现在完成时",
+          "exp": "have ever 后用过去分词 received。"
+        },
+        {
+          "n": 49,
+          "answer": "decided",
+          "hint": "decide",
+          "kp": "一般过去时",
+          "exp": "From then on 叙述过去的决定，用一般过去时。"
+        },
+        {
+          "n": 50,
+          "answer": "to show",
+          "hint": "show",
+          "kp": "It is important for sb. to do sth.",
+          "exp": "固定句型 it's important for sb. to do sth.。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 51,
+      "score": 20,
+      "prompt": "进入九年级，你一定有了新的变化和目标。你校英语报以“A New Me in Grade 9”为题征文。请写一篇短文，内容包括：1. 你在九年级的一个变化（学习、习惯或性格方面）；2. 发生这个变化的原因；3. 你为新学年定下的一个目标及打算怎样实现。要求：90—110 词，开头已给出，不计入总词数；文中不得出现真实姓名和校名。\nA New Me in Grade 9\nTime flies. Now I'm in Grade 9. ______",
+      "points": [
+        [
+          "写清一个具体的变化",
+          4
+        ],
+        [
+          "说明变化的原因",
+          4
+        ],
+        [
+          "写出目标及实现方法",
+          6
+        ],
+        [
+          "语言准确，句式丰富，衔接自然，书写规范",
+          6
+        ]
+      ],
+      "sample": "A New Me in Grade 9\nTime flies. Now I'm in Grade 9. The biggest change in me is that I have learned to plan my time.\nIn the past, I often stayed up late because I wasted too much time on my phone. Last summer, I realized that Grade 9 would be very busy, so I decided to change. Now I make a list of things to do every evening and put my phone away until I finish my homework.\nMy goal for this year is to improve my math. I'm going to review my mistakes every weekend and ask my teacher for help when I have problems.\nI believe that if I keep trying, I will become a better me.",
+      "exp": "评分先看三个要点是否齐全，再看语言。可用句型：I have learned to...、so I decided to...、if I keep trying, I will...。"
+    }
+  ]
+}

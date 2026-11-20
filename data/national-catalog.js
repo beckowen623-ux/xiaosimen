@@ -1,6 +1,28 @@
 window.NATIONAL_CATALOG = {
   "papers": [
     {
+      "id": "earlybird-9up-english",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "9-up",
+      "title": "九上早鸟卷 · 英语",
+      "source": "考查范围：七年级至九年级上册，按中考英语题型编写（不含听力），难度略高，百分制",
+      "description": "整卷 51 题（51 题，不含听力，百分制）",
+      "questionCount": 51,
+      "data": "./data/national/earlybird-9up-english.js",
+      "sections": {
+        "单项选择": 10,
+        "完形填空": 10,
+        "阅读理解": 15,
+        "七选五": 5,
+        "短文填空": 10,
+        "书面表达": 1
+      }
+    },
+    {
       "id": "earlybird-2027-english",
       "subject": "english",
       "subjectLabel": "英语",
@@ -435,6 +457,63 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "earlybird-9up-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "9-up",
+      "title": "九上早鸟卷 · 语文",
+      "source": "考查范围：七年级至九年级上册，按中考语文题型编写，难度略高，百分制",
+      "description": "整卷 26 题（百分制，含古诗、课外文言、记叙文、议论文、名著（水浒传）和作文）",
+      "questionCount": 26,
+      "data": "./data/national/earlybird-9up-chinese.js",
+      "sections": {
+        "单项选择": 4,
+        "古诗文默写": 6,
+        "阅读理解": 6,
+        "回答问题": 8,
+        "解答题": 2
+      }
+    },
+    {
+      "id": "earlybird-9up-daode",
+      "subject": "daode",
+      "subjectLabel": "道德与法治",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "9-up",
+      "title": "九上早鸟卷 · 道德与法治",
+      "source": "考查范围：七年级至九年级上册，按中考题型编写，难度略高，百分制",
+      "description": "整卷 24 题（24 题，百分制，考到九年级上册）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-9up-daode.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 4
+      }
+    },
+    {
+      "id": "earlybird-9up-lishi",
+      "subject": "lishi",
+      "subjectLabel": "历史",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "9-up",
+      "title": "九上早鸟卷 · 历史",
+      "source": "考查范围：中国历史（七、八年级）和世界古代史、近代史（至第一次工业革命与马克思主义诞生），按中考题型编写，难度略高，百分制",
+      "description": "整卷 24 题（24 题，百分制，考到九年级上册）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-9up-lishi.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 4
+      }
+    },
+    {
       "id": "earlybird-9up-math",
       "subject": "math",
       "subjectLabel": "数学",
@@ -622,54 +701,80 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
-      "id": "fj-2026-chinese",
-      "subject": "chinese",
-      "subjectLabel": "语文",
+      "id": "fj-2026-daode",
+      "subject": "daode",
+      "subjectLabel": "道德与法治",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考语文",
+      "title": "2026 年福建中考道德与法治",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-chinese/p02.webp",
-        "./assets/national/fj-2026-chinese/p03.webp",
-        "./assets/national/fj-2026-chinese/p04.webp",
-        "./assets/national/fj-2026-chinese/p05.webp",
-        "./assets/national/fj-2026-chinese/p06.webp",
-        "./assets/national/fj-2026-chinese/p07.webp",
-        "./assets/national/fj-2026-chinese/p08.webp",
-        "./assets/national/fj-2026-chinese/p09-question.webp"
+        "./assets/national/fj-2026-daode/p71.webp",
+        "./assets/national/fj-2026-daode/p72.webp",
+        "./assets/national/fj-2026-daode/p73.webp",
+        "./assets/national/fj-2026-daode/p74.webp",
+        "./assets/national/fj-2026-daode/p75.webp",
+        "./assets/national/fj-2026-daode/p76.webp",
+        "./assets/national/fj-2026-daode/p77.webp",
+        "./assets/national/fj-2026-daode/p78.webp",
+        "./assets/national/fj-2026-daode/p79.webp",
+        "./assets/national/fj-2026-daode/p80-question.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-chinese/p09-answer.webp",
-        "./assets/national/fj-2026-chinese/p10.webp"
+        "./assets/national/fj-2026-daode/p80-answer.webp",
+        "./assets/national/fj-2026-daode/p81.webp",
+        "./assets/national/fj-2026-daode/p82.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-math",
-      "subject": "math",
-      "subjectLabel": "数学",
+      "id": "fj-2026-lishi",
+      "subject": "lishi",
+      "subjectLabel": "历史",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考数学",
+      "title": "2026 年福建中考历史",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-math/p11.webp",
-        "./assets/national/fj-2026-math/p12.webp",
-        "./assets/national/fj-2026-math/p13.webp",
-        "./assets/national/fj-2026-math/p14.webp",
-        "./assets/national/fj-2026-math/p15.webp",
-        "./assets/national/fj-2026-math/p16-question.webp"
+        "./assets/national/fj-2026-lishi/p60.webp",
+        "./assets/national/fj-2026-lishi/p61.webp",
+        "./assets/national/fj-2026-lishi/p62.webp",
+        "./assets/national/fj-2026-lishi/p63.webp",
+        "./assets/national/fj-2026-lishi/p64.webp",
+        "./assets/national/fj-2026-lishi/p65.webp",
+        "./assets/national/fj-2026-lishi/p66.webp",
+        "./assets/national/fj-2026-lishi/p67.webp",
+        "./assets/national/fj-2026-lishi/p68.webp",
+        "./assets/national/fj-2026-lishi/p69.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-math/p16-answer.webp",
-        "./assets/national/fj-2026-math/p17.webp",
-        "./assets/national/fj-2026-math/p18.webp",
-        "./assets/national/fj-2026-math/p19.webp",
-        "./assets/national/fj-2026-math/p20.webp",
-        "./assets/national/fj-2026-math/p21.webp",
-        "./assets/national/fj-2026-math/p22.webp"
+        "./assets/national/fj-2026-lishi/p70.webp"
+      ],
+      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "fj-2026-chemistry",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "福建",
+      "year": 2026,
+      "title": "2026 年福建中考化学",
+      "questionCount": 0,
+      "pages": [
+        "./assets/national/fj-2026-chemistry/p51.webp",
+        "./assets/national/fj-2026-chemistry/p52.webp",
+        "./assets/national/fj-2026-chemistry/p53.webp",
+        "./assets/national/fj-2026-chemistry/p54.webp",
+        "./assets/national/fj-2026-chemistry/p55.webp",
+        "./assets/national/fj-2026-chemistry/p56.webp",
+        "./assets/national/fj-2026-chemistry/p57.webp",
+        "./assets/national/fj-2026-chemistry/p58-question.webp"
+      ],
+      "answerPages": [
+        "./assets/national/fj-2026-chemistry/p58-answer.webp",
+        "./assets/national/fj-2026-chemistry/p59.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
@@ -704,80 +809,54 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-chemistry",
-      "subject": "chemistry",
-      "subjectLabel": "化学",
+      "id": "fj-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考化学",
+      "title": "2026 年福建中考数学",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-chemistry/p51.webp",
-        "./assets/national/fj-2026-chemistry/p52.webp",
-        "./assets/national/fj-2026-chemistry/p53.webp",
-        "./assets/national/fj-2026-chemistry/p54.webp",
-        "./assets/national/fj-2026-chemistry/p55.webp",
-        "./assets/national/fj-2026-chemistry/p56.webp",
-        "./assets/national/fj-2026-chemistry/p57.webp",
-        "./assets/national/fj-2026-chemistry/p58-question.webp"
+        "./assets/national/fj-2026-math/p11.webp",
+        "./assets/national/fj-2026-math/p12.webp",
+        "./assets/national/fj-2026-math/p13.webp",
+        "./assets/national/fj-2026-math/p14.webp",
+        "./assets/national/fj-2026-math/p15.webp",
+        "./assets/national/fj-2026-math/p16-question.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-chemistry/p58-answer.webp",
-        "./assets/national/fj-2026-chemistry/p59.webp"
+        "./assets/national/fj-2026-math/p16-answer.webp",
+        "./assets/national/fj-2026-math/p17.webp",
+        "./assets/national/fj-2026-math/p18.webp",
+        "./assets/national/fj-2026-math/p19.webp",
+        "./assets/national/fj-2026-math/p20.webp",
+        "./assets/national/fj-2026-math/p21.webp",
+        "./assets/national/fj-2026-math/p22.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-lishi",
-      "subject": "lishi",
-      "subjectLabel": "历史",
+      "id": "fj-2026-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
       "region": "福建",
       "year": 2026,
-      "title": "2026 年福建中考历史",
+      "title": "2026 年福建中考语文",
       "questionCount": 0,
       "pages": [
-        "./assets/national/fj-2026-lishi/p60.webp",
-        "./assets/national/fj-2026-lishi/p61.webp",
-        "./assets/national/fj-2026-lishi/p62.webp",
-        "./assets/national/fj-2026-lishi/p63.webp",
-        "./assets/national/fj-2026-lishi/p64.webp",
-        "./assets/national/fj-2026-lishi/p65.webp",
-        "./assets/national/fj-2026-lishi/p66.webp",
-        "./assets/national/fj-2026-lishi/p67.webp",
-        "./assets/national/fj-2026-lishi/p68.webp",
-        "./assets/national/fj-2026-lishi/p69.webp"
+        "./assets/national/fj-2026-chinese/p02.webp",
+        "./assets/national/fj-2026-chinese/p03.webp",
+        "./assets/national/fj-2026-chinese/p04.webp",
+        "./assets/national/fj-2026-chinese/p05.webp",
+        "./assets/national/fj-2026-chinese/p06.webp",
+        "./assets/national/fj-2026-chinese/p07.webp",
+        "./assets/national/fj-2026-chinese/p08.webp",
+        "./assets/national/fj-2026-chinese/p09-question.webp"
       ],
       "answerPages": [
-        "./assets/national/fj-2026-lishi/p70.webp"
-      ],
-      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
-      "id": "fj-2026-daode",
-      "subject": "daode",
-      "subjectLabel": "道德与法治",
-      "region": "福建",
-      "year": 2026,
-      "title": "2026 年福建中考道德与法治",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/fj-2026-daode/p71.webp",
-        "./assets/national/fj-2026-daode/p72.webp",
-        "./assets/national/fj-2026-daode/p73.webp",
-        "./assets/national/fj-2026-daode/p74.webp",
-        "./assets/national/fj-2026-daode/p75.webp",
-        "./assets/national/fj-2026-daode/p76.webp",
-        "./assets/national/fj-2026-daode/p77.webp",
-        "./assets/national/fj-2026-daode/p78.webp",
-        "./assets/national/fj-2026-daode/p79.webp",
-        "./assets/national/fj-2026-daode/p80-question.webp"
-      ],
-      "answerPages": [
-        "./assets/national/fj-2026-daode/p80-answer.webp",
-        "./assets/national/fj-2026-daode/p81.webp",
-        "./assets/national/fj-2026-daode/p82.webp"
+        "./assets/national/fj-2026-chinese/p09-answer.webp",
+        "./assets/national/fj-2026-chinese/p10.webp"
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
