@@ -45,6 +45,98 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "xsc-english-1",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·Starter Units 1–3",
+      "order": 1,
+      "title": "小升初衔接 · 英语 Starter Units 1–3",
+      "source": "七年级上册 Starter Units 1–3（Hello! / Keep Tidy! / Welcome!）：问候与介绍、物品与颜色、方位、农场动物与数量。按初一单元测试题型编写（不含听力），百分制",
+      "description": "整卷 46 题（46 题，不含听力，百分制）",
+      "questionCount": 46,
+      "data": "./data/national/xsc-english-1.js",
+      "sections": {
+        "单项选择": 15,
+        "完形填空": 10,
+        "阅读理解": 10,
+        "短文填空": 10,
+        "书面表达": 1
+      }
+    },
+    {
+      "id": "xsc-english-2",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·Units 1–2 You and Me / We're Family!",
+      "order": 2,
+      "title": "小升初衔接 · 英语 Units 1–2",
+      "source": "七年级上册 Unit 1 You and Me、Unit 2 We're Family!：个人信息、介绍家人、名词所有格、this/that/these/those、have/has、一般现在时。按初一单元测试题型编写（不含听力），百分制",
+      "description": "整卷 46 题（46 题，不含听力，百分制）",
+      "questionCount": 46,
+      "data": "./data/national/xsc-english-2.js",
+      "sections": {
+        "单项选择": 15,
+        "完形填空": 10,
+        "阅读理解": 10,
+        "短文填空": 10,
+        "书面表达": 1
+      }
+    },
+    {
+      "id": "xsc-english-3",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·Units 3–4 My School / My Favourite Subject",
+      "order": 3,
+      "title": "小升初衔接 · 英语 Units 3–4",
+      "source": "七年级上册 Unit 3 My School、Unit 4 My Favourite Subject：学校设施、方位介词、there be、学科与课程表、why/because、时间介词。按初一单元测试题型编写（不含听力），百分制",
+      "description": "整卷 46 题（46 题，不含听力，百分制）",
+      "questionCount": 46,
+      "data": "./data/national/xsc-english-3.js",
+      "sections": {
+        "单项选择": 15,
+        "完形填空": 10,
+        "阅读理解": 10,
+        "短文填空": 10,
+        "书面表达": 1
+      }
+    },
+    {
+      "id": "xsc-english-4",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·Units 5–7 Fun Clubs / A Day in the Life / Happy Birthday!",
+      "order": 4,
+      "title": "小升初衔接 · 英语 Units 5–7",
+      "source": "七年级上册 Unit 5 Fun Clubs、Unit 6 A Day in the Life、Unit 7 Happy Birthday!：can 表能力、社团、日常作息与时间、频度副词、日期与序数词、how much。按初一单元测试题型编写（不含听力），百分制",
+      "description": "整卷 46 题（46 题，不含听力，百分制）",
+      "questionCount": 46,
+      "data": "./data/national/xsc-english-4.js",
+      "sections": {
+        "单项选择": 15,
+        "完形填空": 10,
+        "阅读理解": 10,
+        "短文填空": 10,
+        "书面表达": 1
+      }
+    },
+    {
       "id": "fj-2026-english",
       "subject": "english",
       "subjectLabel": "英语",
@@ -697,6 +789,197 @@ window.NATIONAL_CATALOG = {
       "data": "./data/national/earlybird-2027-shengwu.js",
       "sections": {
         "单项选择": 20,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "xsc-chinese-1",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·积累运用与古诗词",
+      "order": 1,
+      "title": "小升初衔接 · 语文 积累运用与古诗词",
+      "source": "七年级上册：字音字形、成语、病句、修辞、标点、文学常识，古代诗歌默写与鉴赏，名著《朝花夕拾》《西游记》，语言运用。按初一考试题型编写，百分制",
+      "description": "整卷 27 题（27 题，百分制，七上积累运用与古诗词）",
+      "questionCount": 27,
+      "data": "./data/national/xsc-chinese-1.js",
+      "sections": {
+        "单项选择": 8,
+        "古诗文默写": 10,
+        "阅读理解": 4,
+        "回答问题": 2,
+        "解答题": 3
+      }
+    },
+    {
+      "id": "xsc-chinese-2",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·文言文",
+      "order": 2,
+      "title": "小升初衔接 · 语文 文言文",
+      "source": "七年级上册文言文：《世说新语》二则（咏雪、陈太丘与友期行）、《论语》十二章、《诫子书》，课外文言比较阅读。按初一考试题型编写，百分制",
+      "description": "整卷 21 题（21 题，百分制，七上文言文）",
+      "questionCount": 21,
+      "data": "./data/national/xsc-chinese-2.js",
+      "sections": {
+        "古诗文默写": 6,
+        "阅读理解": 9,
+        "回答问题": 6
+      }
+    },
+    {
+      "id": "xsc-chinese-3",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·现代文阅读与写作",
+      "order": 3,
+      "title": "小升初衔接 · 语文 现代文阅读与写作",
+      "source": "七年级上册现代文：记叙文（亲情、线索、细节描写、人物形象、标题含义）、写景散文（景物特点、修辞赏析、情感），命题作文。按初一考试题型编写，百分制",
+      "description": "整卷 12 题（12 题，百分制，记叙文＋散文＋作文）",
+      "questionCount": 12,
+      "data": "./data/national/xsc-chinese-3.js",
+      "sections": {
+        "阅读理解": 4,
+        "回答问题": 7,
+        "解答题": 1
+      }
+    },
+    {
+      "id": "xsc-math-1",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·有理数",
+      "order": 1,
+      "title": "小升初衔接 · 数学 第一章 有理数",
+      "source": "七年级上册第一章：正数和负数、有理数、数轴、相反数、绝对值、有理数大小比较。按初一单元测试题型编写，百分制",
+      "description": "整卷 22 题（22 题，百分制，初一第一章）",
+      "questionCount": 22,
+      "data": "./data/national/xsc-math-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 6
+      }
+    },
+    {
+      "id": "xsc-math-2",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·有理数的运算",
+      "order": 2,
+      "title": "小升初衔接 · 数学 第二章 有理数的运算",
+      "source": "七年级上册第二章：有理数的加减、乘除、乘方，科学记数法，近似数，混合运算。按初一单元测试题型编写，百分制",
+      "description": "整卷 21 题（21 题，百分制，初一第二章）",
+      "questionCount": 21,
+      "data": "./data/national/xsc-math-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "xsc-math-3",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·代数式",
+      "order": 3,
+      "title": "小升初衔接 · 数学 第三章 代数式",
+      "source": "七年级上册第三章：用字母表示数、列代数式、代数式的值、简单规律探究。按初一单元测试题型编写，百分制",
+      "description": "整卷 21 题（21 题，百分制，初一第三章）",
+      "questionCount": 21,
+      "data": "./data/national/xsc-math-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "xsc-math-4",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·整式的加减",
+      "order": 4,
+      "title": "小升初衔接 · 数学 第四章 整式的加减",
+      "source": "七年级上册第四章：单项式、多项式、同类项、合并同类项、去括号、整式的加减与化简求值。按初一单元测试题型编写，百分制",
+      "description": "整卷 21 题（21 题，百分制，初一第四章）",
+      "questionCount": 21,
+      "data": "./data/national/xsc-math-4.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "xsc-math-5",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·一元一次方程",
+      "order": 5,
+      "title": "小升初衔接 · 数学 第五章 一元一次方程",
+      "source": "七年级上册第五章：方程及等式的性质、解一元一次方程（移项、去括号、去分母）、实际问题与一元一次方程。按初一单元测试题型编写，百分制",
+      "description": "整卷 21 题（21 题，百分制，初一第五章）",
+      "questionCount": 21,
+      "data": "./data/national/xsc-math-5.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "xsc-math-6",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "小升初衔接",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "xsc",
+      "unit": "七上·几何图形初步",
+      "order": 6,
+      "title": "小升初衔接 · 数学 第六章 几何图形初步",
+      "source": "七年级上册第六章：立体图形与平面图形、直线射线线段、角的度量与比较、余角补角、方位角。按初一单元测试题型编写，百分制",
+      "description": "整卷 21 题（21 题，百分制，初一第六章）",
+      "questionCount": 21,
+      "data": "./data/national/xsc-math-6.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
         "解答题": 5
       }
     },

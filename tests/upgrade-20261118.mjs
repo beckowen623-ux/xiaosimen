@@ -41,7 +41,7 @@ let code = read('national-exams.js').replace('window.NationalExams =',
 vm.runInContext(code, ctx);
 const api = ctx.window.__upgradeTest;
 const catalog = await api.getCatalog();
-const english = catalog.filter(p => p.subject === 'english' && p.data && !p.claude);
+const english = catalog.filter(p => p.subject === 'english' && p.data && !p.claude && !p.earlybird);
 assert.equal(english.length, 15);
 let total = 0;
 const previewGroups = new Map();

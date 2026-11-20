@@ -1,0 +1,809 @@
+// 由 tools/build_english.mjs 生成，源文件 english-src/papers/zz-xsc-math-5.json，请勿手改。
+window.NATIONAL_PAPERS = window.NATIONAL_PAPERS || {};
+window.NATIONAL_PAPERS["xsc-math-5"] = [
+ {
+  "id": "national-xsc-math-5-q01",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 1,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 1 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "x＋2y＝3"
+   },
+   {
+    "key": "B",
+    "text": "x²－1＝0"
+   },
+   {
+    "key": "C",
+    "text": "1/x＝2"
+   },
+   {
+    "key": "D",
+    "text": "3x－1＝2x"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "一元一次方程：只含一个未知数，未知数的次数是 1，等号两边都是整式。A 有两个未知数；B 是二次；C 分母含未知数，不是整式。",
+  "kp": "一元一次方程的概念",
+  "stem": "下列方程中，是一元一次方程的是（ ）",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q02",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 2,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 2 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "1"
+   },
+   {
+    "key": "B",
+    "text": "－1"
+   },
+   {
+    "key": "C",
+    "text": "2"
+   },
+   {
+    "key": "D",
+    "text": "5"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "把 x＝2 代入：6－2a＝4，a＝1。",
+  "kp": "方程的解",
+  "stem": "若 x＝2 是关于 x 的方程 3x－2a＝4 的解，则 a 的值是（ ）",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q03",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 3,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 3 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "若 ac＝bc，则 a＝b"
+   },
+   {
+    "key": "B",
+    "text": "若 a/c＝b/c，则 a＝b"
+   },
+   {
+    "key": "C",
+    "text": "若 a＝b，则 a/c＝b/c"
+   },
+   {
+    "key": "D",
+    "text": "若 x/2＝0，则 x＝2"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "A 当 c＝0 时不成立；C 当 c＝0 时没有意义；D 两边乘 2 得 x＝0。B 中 c 在分母上，c 一定不为 0，两边同乘 c 得 a＝b，正确。",
+  "kp": "等式的性质",
+  "stem": "根据等式的性质，下列变形一定正确的是（ ）",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q04",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 4,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 4 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "3(x－1)－2(2x＋1)＝6"
+   },
+   {
+    "key": "B",
+    "text": "3x－1－4x＋1＝6"
+   },
+   {
+    "key": "C",
+    "text": "3(x－1)－2(2x＋1)＝1"
+   },
+   {
+    "key": "D",
+    "text": "3(x－1)＋2(2x＋1)＝6"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "两边同乘 6：3(x－1)－2(2x＋1)＝6。B 去分母后没加括号，C 右边的 1 忘了乘 6，D 符号错了。",
+  "kp": "解一元一次方程",
+  "stem": "解方程 (x－1)/2－(2x＋1)/3＝1 时，去分母正确的是（ ）",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q05",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 5,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 5 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "1"
+   },
+   {
+    "key": "B",
+    "text": "－1"
+   },
+   {
+    "key": "C",
+    "text": "5"
+   },
+   {
+    "key": "D",
+    "text": "2"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "x－1＝0 的解是 x＝1，代入 2x＋a＝3 得 2＋a＝3，a＝1。",
+  "kp": "方程的解",
+  "stem": "若关于 x 的方程 2x＋a＝3 与方程 x－1＝0 的解相同，则 a 的值是（ ）",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q06",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 6,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 6 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "300×0.8＝(1＋20%)x"
+   },
+   {
+    "key": "B",
+    "text": "300×0.8＝20%x"
+   },
+   {
+    "key": "C",
+    "text": "300×0.8－x＝20%×300"
+   },
+   {
+    "key": "D",
+    "text": "300－x＝20%x"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "售价＝进价×(1＋利润率)：300×0.8＝(1＋20%)x。利润率是相对进价算的，C 用标价算利润是错的。",
+  "kp": "实际问题与一元一次方程",
+  "stem": "商场里一件衣服标价 300 元，促销期间按八折出售，此时仍可获利 20%。设这件衣服的进价为 x 元，根据题意列出的方程是（ ）",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q07",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 7,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 7 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "3.6"
+   },
+   {
+    "key": "B",
+    "text": "6"
+   },
+   {
+    "key": "C",
+    "text": "18"
+   },
+   {
+    "key": "D",
+    "text": "3"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "乙每小时走 4＋2＝6 千米。设 x 小时后相遇：(4＋6)x＝36，x＝3.6。坑点：把乙的速度看成 2 千米。公园的位置是干扰信息。",
+  "kp": "实际问题与一元一次方程",
+  "stem": "甲、乙两人同时从相距 36 千米的 A、B 两地出发，相向而行。两地之间的公路旁有一座公园，离 A 地 15 千米。甲每小时走 4 千米，乙每小时比甲多走 2 千米。两人出发后（ ）小时相遇。",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q08",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 8,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 8 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "2×1200x＝2000(22－x)"
+   },
+   {
+    "key": "B",
+    "text": "1200x＝2×2000(22－x)"
+   },
+   {
+    "key": "C",
+    "text": "1200x＝2000(22－x)"
+   },
+   {
+    "key": "D",
+    "text": "2×2000x＝1200(22－x)"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "螺母数量是螺钉的 2 倍：螺母数＝2×螺钉数，即 2000(22－x)＝2×1200x。坑点：把 2 乘在螺母那一边（B）。",
+  "kp": "实际问题与一元一次方程",
+  "stem": "某车间有 22 名工人，每人每天可以生产 1200 个螺钉或 2000 个螺母。1 个螺钉需要配 2 个螺母，为使每天生产的螺钉和螺母刚好配套，设安排 x 名工人生产螺钉，则下面所列方程正确的是（ ）",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q09",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 9,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 9 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "±1"
+   },
+   {
+    "key": "B",
+    "text": "1"
+   },
+   {
+    "key": "C",
+    "text": "－1"
+   },
+   {
+    "key": "D",
+    "text": "0"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "未知数的次数为 1：|m|＝1，m＝±1；又因为系数 m－1≠0，m≠1，所以 m＝－1。",
+  "kp": "一元一次方程的概念",
+  "stem": "若关于 x 的方程 (m－1)x^|m|＋3＝0 是一元一次方程，则 m 的值是（ ）",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q10",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 10,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "单项选择",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 10 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "125 元"
+   },
+   {
+    "key": "B",
+    "text": "100 元"
+   },
+   {
+    "key": "C",
+    "text": "150 元"
+   },
+   {
+    "key": "D",
+    "text": "120 元"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "设进价为 x 元：1.4x×0.8－x＝15，0.12x＝15，x＝125。",
+  "kp": "实际问题与一元一次方程",
+  "stem": "某商品按进价提高 40% 后标价，再打八折出售，结果每件仍获利 15 元，则这种商品的进价是（ ）",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q11",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 11,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "填空题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 11 题",
+  "type": "blank",
+  "stem": "第 11 题：方程 3x－7＝2x＋1 的解是 x＝________。",
+  "blanks": [
+   [
+    "8"
+   ]
+  ],
+  "answer": [
+   "8"
+  ],
+  "explanation": "移项：3x－2x＝1＋7，x＝8。",
+  "kp": "解一元一次方程",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q12",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 12,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "填空题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 12 题",
+  "type": "blank",
+  "stem": "第 12 题：当 x＝________ 时，代数式 2x－1 与 4－x 的值互为相反数。",
+  "blanks": [
+   [
+    "-3"
+   ]
+  ],
+  "answer": [
+   "-3"
+  ],
+  "explanation": "互为相反数的两个数和为 0：2x－1＋4－x＝0，x＝－3。",
+  "kp": "解一元一次方程",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q13",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 13,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "填空题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 13 题",
+  "type": "blank",
+  "stem": "第 13 题：方程 (2x－1)/3＝(x＋2)/4－1 的解是 x＝________。",
+  "blanks": [
+   [
+    "-2/5",
+    "-0.4"
+   ]
+  ],
+  "answer": [
+   "-2/5"
+  ],
+  "explanation": "两边同乘 12：4(2x－1)＝3(x＋2)－12，8x－4＝3x－6，5x＝－2，x＝－2/5。坑点：右边的 1 也要乘 12。",
+  "kp": "解一元一次方程",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q14",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 14,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "填空题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 14 题",
+  "type": "blank",
+  "stem": "第 14 题：一个数的 3 倍比它的一半大 10，这个数是 ________。",
+  "blanks": [
+   [
+    "4"
+   ]
+  ],
+  "answer": [
+   "4"
+  ],
+  "explanation": "设这个数为 x：3x－x/2＝10，5x/2＝10，x＝4。",
+  "kp": "实际问题与一元一次方程",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q15",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 15,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "填空题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 15 题",
+  "type": "blank",
+  "stem": "第 15 题：一项工程，甲单独做 10 天完成，乙单独做 15 天完成。两人合作，________ 天可以完成。",
+  "blanks": [
+   [
+    "6"
+   ]
+  ],
+  "answer": [
+   "6"
+  ],
+  "explanation": "设 x 天完成：(1/10＋1/15)x＝1，x/6＝1，x＝6。",
+  "kp": "实际问题与一元一次方程",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q16",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 16,
+  "earlybird": true,
+  "meta": "小升初衔接",
+  "section": "填空题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 16 题",
+  "type": "blank",
+  "stem": "第 16 题：今年爷爷 68 岁，孙子 12 岁，________ 年前爷爷的年龄是孙子的 8 倍。",
+  "blanks": [
+   [
+    "4"
+   ]
+  ],
+  "answer": [
+   "4"
+  ],
+  "explanation": "设 x 年前：68－x＝8(12－x)，68－x＝96－8x，7x＝28，x＝4。验算：64＝8×8。",
+  "kp": "实际问题与一元一次方程",
+  "paperScore": 3,
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q17",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 17,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 17 题",
+  "type": "essay",
+  "material": "",
+  "stem": "解方程：\n（1）4x－3＝2(x－1)＋5；\n（2）5(x＋2)－2(3x－1)＝7；\n（3）(x＋1)/2－1＝(2－3x)/3；\n（4）(0.1x－0.2)/0.02－(x＋1)/0.5＝3。",
+  "points": [
+   {
+    "text": "（1）x＝3",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）x＝5",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）x＝7/9",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（4）x＝5",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）4x－3＝2x－2＋5，4x－2x＝3＋3，2x＝6，x＝3。\n（2）5x＋10－6x＋2＝7，－x＝－5，x＝5。\n（3）两边同乘 6：3(x＋1)－6＝2(2－3x)，3x＋3－6＝4－6x，9x＝7，x＝7/9。坑点：左边的 1 也要乘 6。\n（4）先把分母化成整数（分子分母同乘 50 或 2，这不是去分母，方程右边不变）：(5x－10)－(2x＋2)＝3，3x－12＝3，x＝5。坑点：化分母为整数时把右边的 3 也乘了。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "解一元一次方程",
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q18",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 18,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 18 题",
+  "type": "essay",
+  "material": "",
+  "stem": "某书店推出会员卡：办卡费每年 20 元，持卡购书一律打八折；不办卡则按原价购书。\n（1）一年内购书原价为多少元时，办卡与不办卡花费一样多？\n（2）小华预计一年内购书原价为 150 元，办卡划算吗？能省多少元？",
+  "points": [
+   {
+    "text": "（1）设原价 x 元：20＋0.8x＝x，x＝100",
+    "score": 5,
+    "keys": []
+   },
+   {
+    "text": "（2）办卡花 20＋120＝140 元，比 150 元省 10 元，办卡划算",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "（1）设一年内购书原价为 x 元，20＋0.8x＝x，0.2x＝20，x＝100。答：原价 100 元时花费一样多。\n（2）办卡：20＋150×0.8＝140（元）；不办卡：150 元。办卡划算，省 10 元。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "实际问题与一元一次方程",
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q19",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 19,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 19 题",
+  "type": "essay",
+  "material": "",
+  "stem": "A、B 两地之间的铁路长 480 千米，沿途有 5 个车站，停靠时间忽略不计。一列慢车从 A 地出发，每小时行驶 60 千米；一列快车从 B 地出发，每小时行驶 90 千米。\n（1）两车同时出发，相向而行，经过多少小时相遇？\n（2）慢车先开出 1 小时，快车再出发，两车相向而行，快车开出多少小时后两车相遇？\n（3）两车同时出发，同向而行（快车在后面追慢车），经过多少小时快车追上慢车？",
+  "points": [
+   {
+    "text": "（1）(60＋90)x＝480，x＝3.2 小时",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）60＋(60＋90)x＝480，x＝2.8 小时",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）(90－60)x＝480，x＝16 小时",
+    "score": 4,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "（1）设 x 小时后相遇：(60＋90)x＝480，x＝3.2。\n（2）慢车先行 60 千米，设快车开出 x 小时后相遇：60＋150x＝480，x＝2.8。坑点：问的是“快车开出多少小时”，不要加上慢车先开的 1 小时。\n（3）快车追慢车，开始时相距 480 千米，每小时追近 90－60＝30 千米：30x＝480，x＝16。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "实际问题与一元一次方程",
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q20",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 20,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 20 题",
+  "type": "essay",
+  "material": "",
+  "stem": "学校组织植树活动，甲队有 27 人，乙队有 19 人。现在另调 20 人去支援，使甲队人数是乙队人数的 2 倍。应调往甲、乙两队各多少人？（要求列方程解答）",
+  "points": [
+   {
+    "text": "设调往甲队 x 人，则调往乙队 (20－x) 人",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "列方程：27＋x＝2[19＋(20－x)]",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "解得 x＝17，20－x＝3",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "答：调往甲队 17 人，乙队 3 人（检验 44＝2×22）",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "设调往甲队 x 人，则调往乙队 (20－x) 人。\n27＋x＝2(19＋20－x)，27＋x＝78－2x，3x＝51，x＝17，20－17＝3。\n检验：甲队 27＋17＝44 人，乙队 19＋3＝22 人，44＝2×22，符合。\n答：应调往甲队 17 人，乙队 3 人。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "实际问题与一元一次方程",
+  "unit": "七上·一元一次方程"
+ },
+ {
+  "id": "national-xsc-math-5-q21",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "xsc-math-5",
+  "number": 21,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "小升初衔接 · 数学 第五章 一元一次方程",
+  "grade": "小升初",
+  "stage": "xsc",
+  "source": "小升初衔接 · 数学 第五章 一元一次方程 第 21 题",
+  "type": "essay",
+  "material": "",
+  "stem": "某市自来水收费标准如下：每户每月用水不超过 15 吨的部分，水价为每吨 3 元；超过 15 吨的部分，水价为每吨 5 元。另外，不论用水多少，每吨都要加收污水处理费 1 元。\n（1）某户某月用水 12 吨，应交水费多少元？（含污水处理费，下同）\n（2）某户某月用水 x 吨（x＞15），用含 x 的式子表示该户这个月应交的水费；\n（3）小李家某月交水费 102 元，他家这个月用水多少吨？",
+  "points": [
+   {
+    "text": "（1）12×(3＋1)＝48 元",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）15×3＋5(x－15)＋x＝(6x－30) 元",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（3）用水 15 吨最多交 60 元，102＞60，所以用水超过 15 吨；6x－30＝102，x＝22 吨",
+    "score": 5,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）12×3＋12×1＝48（元）。\n（2）15×3＋5(x－15)＋1×x＝45＋5x－75＋x＝6x－30（元）。坑点：污水处理费按全部用水量 x 吨收，不是只收超出部分。\n（3）用水 15 吨时，水费为 15×(3＋1)＝60（元）＜102 元，所以用水超过 15 吨。6x－30＝102，x＝22。答：用水 22 吨。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "实际问题与一元一次方程",
+  "unit": "七上·一元一次方程"
+ }
+];

@@ -601,3 +601,6 @@ input[type=search]::placeholder { color: #67736c; }
 .analysis-row p { margin: 3px 0; line-height: 1.6; }
 .analysis-weak { color: #b45309; }
 .analysis-strong { color: #15803d; }
+
+.xsc-card summary { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; cursor: pointer; }
+.xsc-card > p { margin: 8px 0; line-height: 1.6; }

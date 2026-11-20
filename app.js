@@ -1169,6 +1169,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-20', '新增“小升初衔接”：语文、数学、英语按七年级上册章节出卷，数学 6 章（有理数到几何图形初步）、英语 4 套（Starter Units 到 Unit 7）、语文 3 套（积累运用与古诗词、文言文、现代文阅读与写作），每套 100 分，题型按初中考试编写、每题有解析，限时免费。首页顶部“小升初衔接”卡片进入。'],
   ['2026-11-20', '新增“按章节练”和“学情分析”：精编卷、早鸟卷的每道题都标了教材章节，可以按章节专项练、直接搜“浮力”“二次函数”这类难点章节；学情分析按科目和章节统计正确率，找出最需要补的章节并给出复习建议。'],
   ['2026-11-20', '新增九上早鸟自测卷：语文、数学、英语、物理、化学、道法、历史各一套，只考到九年级上册学过的内容，限时免费。'],
   ['2026-11-20', '新增中考早鸟自测卷：九下（中考全范围）语文、数学、英语、物理、化学、道法、历史、地理、生物各一套，限时免费，不占免费名额，做完出百分制总分、每题有解析；首页可按学期切换，其他学期的早鸟卷陆续上线。'],
@@ -1538,6 +1539,24 @@ function analysisCardHTML() {
   </section>`;
 }
 
+// ---- 小升初衔接：语数英按七年级上册章节，每章一套，限时免费 ----
+const XSC_SUBJECTS = [['math', '数学'], ['chinese', '语文'], ['english', '英语']];
+function xscPapers(subject) {
+  return (nationalCatalog || []).filter(p => p.earlybird && p.stage === 'xsc' && (!subject || p.subject === subject)).sort((a, b) => (a.order || 0) - (b.order || 0));
+}
+function xscCardHTML() {
+  if (!nationalCatalog || !xscPapers().length) return '';
+  const subject = state.xscSubject || 'math';
+  const done = loadEarlybirdScores();
+  const papers = xscPapers(subject);
+  return `<details class="card xsc-card" id="xsc" ${state.xscOpen ? 'open' : ''}>
+    <summary><b>🎒 小升初衔接 · 按七年级上册章节</b><span>限时免费 · 六年级暑假、初一开学前用</span></summary>
+    <p class="muted">语文、数学、英语按初一上册的章节，每章一套练习，题型和题干按初中考试标准出，难度贴近初一期中期末。每题有解析，做完出分。</p>
+    <div class="weekly-chips" role="group" aria-label="选择科目">${XSC_SUBJECTS.map(([k, l]) => `<button type="button" class="drill-chip" data-xsc-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('')}</div>
+    ${papers.length ? `<div class="unit-list">${papers.map(p => `<button type="button" class="btn unit-btn" data-earlybird="${p.id}"><b>${esc(p.unit || p.title)}</b><small>${done[p.id] != null ? `上次 ${done[p.id]} 分` : `${p.questionCount} 题 · 100 分`}</small></button>`).join('')}</div>` : '<p class="muted">这一科的衔接练习正在编写，很快上线。</p>'}
+  </details>`;
+}
+
 function earlybirdPapers() {
   return (nationalCatalog || []).filter(p => p.earlybird && (p.stage || '9-down') === state.stage).sort((a, b) => EARLYBIRD_ORDER.indexOf(a.subject) - EARLYBIRD_ORDER.indexOf(b.subject));
 }
@@ -1570,7 +1589,13 @@ async function startEarlybird(id) {
   } catch (error) { toast(error.message || '加载失败，请重试。'); }
 }
 // 给家长和孩子信心：分数段对应的鼓励语（卷子比中考略难，说明里要讲清楚）
-function earlybirdVerdict(score) {
+function earlybirdVerdict(score, paper) {
+  if (paper?.stage === 'xsc') {
+    if (score >= 85) return ['太棒了！', '这一章的内容你已经提前掌握得很好了，上初一会轻松很多。可以接着做下一章。'];
+    if (score >= 70) return ['很不错！', '初一的新知识你已经学进去了一大半，把错题的解析看懂，再做一遍会更稳。'];
+    if (score >= 50) return ['已经有基础了！', '初中的题比小学多绕了几个弯，丢分很正常。先把错题解析看懂，弄明白“坑”在哪里。'];
+    return ['别着急，这是初一的内容！', '这些题本来就是初一才学的，现在做不出来很正常。看懂解析就是收获，开学后再做一遍，你会发现自己进步很大。'];
+  }
   if (score >= 85) return ['太厉害了！', '这套卷特意拔高过难度，能拿到这个分数，说明基础非常扎实。把错的几道题弄懂，保持节奏就好。'];
   if (score >= 75) return ['很不错！', '这套卷比中考略难，这个分数放到中考里是稳稳的好成绩。错题已经进了错题本，按 1、3、7、14 天复习，还能再往上走。'];
   if (score >= 60) return ['基础已经有了！', '这套卷故意加了难度和“坑”，丢分的地方恰好就是提分空间。先把错题解析看懂，再按学期把对应的知识点补一补。'];
@@ -1593,7 +1618,7 @@ function subjectSectionsHTML() {
     <div class="section-heading"><h2 id="subjectsTitle">分科练习</h2><span class="muted">点开科目看模拟卷和真题</span></div>
     ${MAIN_SUBJECTS.map(({ key, label, icon: emoji }) => {
       const claude = claudePapers(key);
-      const real = nationalCatalog.filter(p => p.subject === key && !p.claude);
+      const real = nationalCatalog.filter(p => p.subject === key && !p.claude && !p.earlybird);
       const practicable = real.filter(p => p.data);
       const count = practicable.reduce((s, p) => s + (p.questionCount || 0), 0);
       const meta = [claude.length ? `精编模拟卷 ${claude.length} 套` : '', real.length ? `真题 ${real.length} 套` : '', count ? `${count} 道可刷` : ''].filter(Boolean).join(' · ');
@@ -1747,6 +1772,7 @@ function renderHome(focus = '') {
   byId('headerSearch').hidden = false;
   view.innerHTML = `
     ${homeIntroHTML()}
+    ${xscCardHTML()}
     ${stageBarHTML()}
     ${earlybirdCardHTML()}
     ${unitCardHTML()}
@@ -1791,6 +1817,8 @@ function wireSubjectSections() {
   box.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
 }
 function wireHome() {
+  view.querySelectorAll('[data-xsc-subject]').forEach(b => b.addEventListener('click', () => { state.xscSubject = b.dataset.xscSubject; state.xscOpen = true; renderHome(); byId('xsc')?.scrollIntoView({ block: 'start' }); }));
+  byId('xsc')?.addEventListener('toggle', event => { state.xscOpen = event.currentTarget.open; });
   view.querySelectorAll('[data-unit-subject]').forEach(b => b.addEventListener('click', async () => {
     state.unitSubject = b.dataset.unitSubject;
     renderHome();
@@ -1845,7 +1873,8 @@ function wireHome() {
       nationalCatalog = list;
       if (byId('subjectSections')) renderHome();
       // 主页、视频里的直达链接：x4m.cc.cd/?go=earlybird
-      if (new URLSearchParams(location.search).get('go') === 'earlybird' && !state.earlybirdJumped) { state.earlybirdJumped = true; byId('earlybird')?.scrollIntoView({ behavior: 'smooth' }); }
+      const go = new URLSearchParams(location.search).get('go');
+      if ((go === 'earlybird' || go === 'xsc') && !state.earlybirdJumped) { state.earlybirdJumped = true; if (go === 'xsc') { state.xscOpen = true; renderHome(); } byId(go === 'xsc' ? 'xsc' : 'earlybird')?.scrollIntoView({ behavior: 'smooth' }); }
     }).catch(() => {
       const box = byId('subjectSections');
       if (box) box.innerHTML = '<section class="card"><p class="muted">分科目录加载失败，刷新页面再试。</p></section>';
@@ -2035,7 +2064,7 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
   const studyMode = ['all', 'random', 'random20', 'unfinished', 'essay', 'blank'].includes(state.mode);
   return `
     <div class="practice-shell tone-${esc(q.subject)}">
-      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button><span>${esc(MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
+      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button><span>${esc(state.mode === 'earlybird' && String(state.earlybirdPaper || '').startsWith('xsc-') ? '小升初衔接' : MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
       <section class="card question-card" aria-labelledby="questionTitle">
         <div class="question-progress">
           <div class="progress-label"><strong>${clearing ? '订正进度' : `第 ${position} <span>/ ${total} 题</span>`}</strong><span id="qProg">${questionStats(progress)}</span></div>
@@ -2453,20 +2482,22 @@ function renderSummary() {
   const acc = Math.round(right / results.length * 100);
   if (state.mode === 'earlybird') {
     const score = earlybirdScore(results);
-    const [head, body] = earlybirdVerdict(score);
+    const paperForVerdict = (nationalCatalog || []).find(p => p.id === state.earlybirdPaper);
+    const [head, body] = earlybirdVerdict(score, paperForVerdict);
     const paperId = state.earlybirdPaper;
-    const paper = earlybirdPapers().find(p => p.id === paperId);
+    const paper = (nationalCatalog || []).find(p => p.id === paperId);
     const finished = paper && results.length >= paper.questionCount;
     if (finished && paperId) {
       const first = loadEarlybirdScores()[paperId] == null;
       saveEarlybirdScore(paperId, score);
-      if (first) { trackVisit('earlybird_done'); if (score >= 75) trackVisit('earlybird_75'); }
+      const isXsc = paper?.stage === 'xsc';
+      if (first) { trackVisit(isXsc ? 'xsc_done' : 'earlybird_done'); if (score >= 75) trackVisit(isXsc ? 'xsc_75' : 'earlybird_75'); }
     }
     view.innerHTML = `
     <div class="practice-shell">
       <section class="card summary-card earlybird-summary" aria-labelledby="summaryTitle">
         <span class="summary-icon">${icon('trophy')}</span>
-        <p class="summary-kicker">${esc(paper?.title || '中考早鸟自测')}</p>
+        <p class="summary-kicker">${esc(paper?.title || '早鸟自测')}</p>
         <h1 id="summaryTitle" tabindex="-1">${esc(head)}</h1>
         <div class="summary-stats">
           <div><b>${score}<small>/100</small></b><span>${finished ? '总分' : `已做 ${results.length} 题的得分`}</span></div>
@@ -2478,12 +2509,12 @@ function renderSummary() {
           <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
         <div class="summary-actions">
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本卷错题</button>` : ''}
-          <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} 返回首页，测下一科</button>
+          <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${paper?.stage === 'xsc' ? '返回，做下一章' : '返回首页，测下一科'}</button>
         </div>
       </section>
     </div>`;
     byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, 'retry'));
-    byId('homeBtn').addEventListener('click', () => { renderHome('homeTitle'); byId('earlybird')?.scrollIntoView(); });
+    byId('homeBtn').addEventListener('click', () => { const xsc = paper?.stage === 'xsc'; if (xsc) { state.xscOpen = true; state.xscSubject = paper.subject; } renderHome('homeTitle'); byId(xsc ? 'xsc' : 'earlybird')?.scrollIntoView(); });
     state.keys = null;
     moveFocus(byId('summaryTitle'), true);
     return;

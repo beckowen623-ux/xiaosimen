@@ -1,0 +1,112 @@
+{
+  "id": "xsc-english-2",
+  "earlybird": true,
+  "stage": "xsc",
+  "unit": "七上·Units 1–2 You and Me / We're Family!",
+  "order": 2,
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "小升初衔接",
+  "year": 2027,
+  "title": "小升初衔接 · 英语 Units 1–2",
+  "source": "七年级上册 Unit 1 You and Me、Unit 2 We're Family!：个人信息、介绍家人、名词所有格、this/that/these/those、have/has、一般现在时。按初一单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "—______ are you from?\n—I'm from Canada. I live in Toronto with my parents.", "options": ["What", "Where", "How", "Who"], "answer": "B", "kp": "特殊疑问句", "exp": "答语说来自哪里，用 where 提问。"},
+        {"n": 2, "stem": "My cousin ______ two pet dogs, and they are very cute.", "options": ["have", "has", "is", "are"], "answer": "B", "kp": "have/has", "exp": "主语 My cousin 是第三人称单数，“有”用 has。"},
+        {"n": 3, "stem": "—Who is the woman in the photo?\n—She's my mother's sister. She's my ______.", "options": ["aunt", "uncle", "cousin", "grandma"], "answer": "A", "kp": "家庭成员", "exp": "妈妈的姐妹是阿姨 aunt。uncle 是叔叔舅舅，是男性。"},
+        {"n": 4, "stem": "—Is this ______ ruler?\n—No, it isn't. It's ______.", "options": ["Tom; Lucy's", "Tom's; Lucy's", "Tom's; Lucy", "Tom; Lucy"], "answer": "B", "kp": "名词所有格", "exp": "“Tom 的尺子”用 Tom's ruler；“是 Lucy 的”后面省略了 ruler，也要用所有格 Lucy's。"},
+        {"n": 5, "stem": "—What's your telephone number, Sam?\n—______", "options": ["It's 135-6782-4490.", "I'm Sam.", "It's on the desk.", "It's a new phone."], "answer": "A", "kp": "交际用语", "exp": "问电话号码，回答号码。"},
+        {"n": 6, "stem": "Look at ______ photo of my family. ______ are my parents, and the little boy is my brother.", "options": ["this; These", "these; This", "this; This", "these; These"], "answer": "A", "kp": "指示代词", "exp": "photo 是单数，用 this；my parents 是复数，用 These。"},
+        {"n": 7, "stem": "—Does your brother like sports?\n—______. He often plays basketball after school.", "options": ["Yes, he does", "No, he doesn't", "Yes, he is", "No, he isn't"], "answer": "A", "kp": "一般现在时", "exp": "Does...? 用 does/doesn't 回答；后面说他常打篮球，是肯定回答。"},
+        {"n": 8, "stem": "Mr. Green is ______ English teacher. He comes from England.", "options": ["a", "an", "the", "/"], "answer": "B", "kp": "冠词", "exp": "English 以元音音素开头，用 an。"},
+        {"n": 9, "stem": "—How old is your grandpa?\n—He is ______ this year.", "options": ["sixty-five", "sixty-fives", "the sixty-five", "sixty-fifth"], "answer": "A", "kp": "数词", "exp": "表示年龄用基数词 sixty-five。"},
+        {"n": 10, "stem": "Jack and Mike are ______. They have the same parents.", "options": ["cousins", "brothers", "friends", "classmates"], "answer": "B", "kp": "家庭成员", "exp": "有同样的父母，是兄弟 brothers。"},
+        {"n": 11, "stem": "My parents ______ teachers. My father teaches maths and my mother teaches ______.", "options": ["is; English", "are; English", "are; an English", "is; the English"], "answer": "B", "kp": "be 动词", "exp": "My parents 是复数，用 are；学科名前不加冠词，teaches English。"},
+        {"n": 12, "stem": "—What's your favourite ______?\n—Blue. I like the colour of the sky.", "options": ["food", "colour", "animal", "sport"], "answer": "B", "kp": "词汇", "exp": "答语 Blue 是颜色。"},
+        {"n": 13, "stem": "Linda Smith is my pen pal. Her ______ is Smith.", "options": ["first name", "family name", "English name", "given name"], "answer": "B", "kp": "英文姓名", "exp": "英文名字名在前、姓在后，Smith 是姓 family name。"},
+        {"n": 14, "stem": "—Who are ______ in the picture?\n—They're my grandparents.", "options": ["this", "that", "these", "it"], "answer": "C", "kp": "指示代词", "exp": "答语 They're，说明问的是复数，用 these。"},
+        {"n": 15, "stem": "—This is my friend, Ben.\n—______", "options": ["Hello, Ben! Nice to meet you.", "Yes, he is.", "Thank you.", "I'm fine."], "answer": "A", "kp": "交际用语", "exp": "朋友介绍新朋友，打招呼说 Nice to meet you。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "My Family Photo",
+      "passage": "Hi, I'm Zhang Lin. Here is a (16) of my family. The man in the middle is my father. He (17) a doctor in a hospital. He works very hard. The woman next to him is my mother. She is a teacher. She (18) Chinese at a middle school.\nThe two old people are my grandparents. They are my father's (19). They live (20) us. My grandpa likes growing flowers, and my grandma likes cooking.\nThe girl in the red dress is my cousin, Amy. She is my aunt's (21). She is only five, (22) she can sing many English songs.\nThe boy with glasses is (23). I'm a student in Grade 7. I have (24) pet cat. Its name is Mimi. Can you see it? It's under my grandma's chair.\nI (25) my family very much.",
+      "items": [
+        {"n": 16, "options": ["photo", "book", "map", "card"], "answer": "A", "kp": "上下文", "exp": "后文一直在说照片中谁在哪里（in the middle、next to him），所以是一张全家福 photo。"},
+        {"n": 17, "options": ["is", "are", "am", "be"], "answer": "A", "kp": "be 动词", "exp": "主语 He，用 is。"},
+        {"n": 18, "options": ["teaches", "learns", "likes", "reads"], "answer": "A", "kp": "上下文", "exp": "她是老师，在中学教语文：teaches Chinese。"},
+        {"n": 19, "options": ["parents", "brothers", "children", "friends"], "answer": "A", "kp": "家庭成员", "exp": "祖父母是爸爸的父母 parents。"},
+        {"n": 20, "options": ["for", "with", "in", "on"], "answer": "B", "kp": "介词", "exp": "live with sb. 和某人住在一起。"},
+        {"n": 21, "options": ["son", "daughter", "sister", "mother"], "answer": "B", "kp": "家庭成员", "exp": "表妹是女孩，是阿姨的女儿 daughter。"},
+        {"n": 22, "options": ["and", "or", "but", "so"], "answer": "C", "kp": "连词", "exp": "她才五岁，“但是”会唱很多英文歌，前后转折，用 but。"},
+        {"n": 23, "options": ["I", "me", "my", "mine"], "answer": "B", "kp": "人称代词", "exp": "be 动词后作表语，口语中常用宾格 me：The boy with glasses is me。"},
+        {"n": 24, "options": ["a", "an", "the", "two"], "answer": "A", "kp": "冠词", "exp": "后面说 Its name is Mimi，只有一只猫；pet 以辅音音素开头，用 a。"},
+        {"n": 25, "options": ["love", "help", "look", "meet"], "answer": "A", "kp": "上下文", "exp": "结尾表达对家人的感情：I love my family very much。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Looking for Pen Pals",
+          "passage": "Name: Tom Brown\nAge: 12\nFrom: Australia\nFamily: parents and a little sister\nLikes: swimming and Chinese food\nI want a pen pal in China. He or she should like sports.\nName: Maria Garcia\nAge: 13\nFrom: Spain\nFamily: parents and two brothers\nLikes: music and drawing\nTelephone: 555-0198\nName: Ken Sato\nAge: 11\nFrom: Japan\nFamily: lives with his parents and grandparents\nLikes: reading and playing chess",
+          "items": [
+            {"n": 26, "stem": "Where is Tom from?", "options": ["China.", "Australia.", "Spain.", "Japan."], "answer": "B", "kp": "细节理解", "exp": "Tom 的 From 一栏是 Australia。他想在中国找笔友，不是来自中国。"},
+            {"n": 27, "stem": "How many brothers does Maria have?", "options": ["One.", "Two.", "Three.", "None."], "answer": "B", "kp": "细节理解", "exp": "Maria 的家庭：parents and two brothers。"},
+            {"n": 28, "stem": "Who is the youngest of the three?", "options": ["Tom.", "Maria.", "Ken.", "They are the same age."], "answer": "C", "kp": "推理判断", "exp": "三人年龄：Tom 12 岁，Maria 13 岁，Ken 11 岁，Ken 最小。要把三张卡片的 Age 一栏都找出来比较。"},
+            {"n": 29, "stem": "If you like playing chess, who can be your good friend?", "options": ["Tom.", "Maria.", "Ken.", "Tom and Maria."], "answer": "C", "kp": "细节理解", "exp": "Ken 喜欢 reading and playing chess。"},
+            {"n": 30, "stem": "What can we know about Tom?", "options": ["He likes Chinese food.", "He has two brothers.", "He comes from Japan.", "He likes drawing."], "answer": "A", "kp": "细节理解", "exp": "Tom 的 Likes 一栏：swimming and Chinese food。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Names in Different Countries",
+          "passage": "In China, people put their family name first. For example, in the name Wang Ming, Wang is the family name and Ming is the given name.\nBut in English-speaking countries like the US and the UK, people put their first name first and their family name last. In the name Jim Green, Jim is the first name and Green is the family name. So when you meet Jim's father, you should call him Mr. Green, not Mr. Jim.\nIn many English-speaking families, children get the same family name as their father. Some people also have a middle name. For example, in the name John Paul Smith, Paul is the middle name. People usually don't use their middle names in daily life.\nSome Chinese students choose an English name when they start to learn English. But you don't have to — your Chinese name is great, too!",
+          "items": [
+            {"n": 31, "stem": "In the name \"Wang Ming\", which is the family name?", "options": ["Wang.", "Ming.", "Wang Ming.", "Mr. Ming."], "answer": "A", "kp": "细节理解", "exp": "中国人姓在前，Wang 是姓。"},
+            {"n": 32, "stem": "How should you call Jim Green's father?", "options": ["Mr. Jim.", "Mr. Green.", "Jim.", "Mr. Jim Green."], "answer": "B", "kp": "细节理解", "exp": "称呼用 Mr.＋姓，Jim 的父亲也姓 Green，叫 Mr. Green。"},
+            {"n": 33, "stem": "In the name \"Mary Ann Brown\", \"Ann\" is the ______.", "options": ["first name", "middle name", "family name", "nickname"], "answer": "B", "kp": "推理判断", "exp": "按文中 John Paul Smith 的例子，中间的名字是 middle name。"},
+            {"n": 34, "stem": "Which of the following is TRUE?", "options": ["People often use their middle names every day.", "In many English-speaking families, children get their father's family name.", "Chinese people put their given name first.", "Every Chinese student must have an English name."], "answer": "B", "kp": "细节理解", "exp": "原文 children get the same family name as their father。中间名日常不常用；中国人姓在前；起英文名不是必须的。"},
+            {"n": 35, "stem": "What does the writer say to Chinese students?", "options": ["You must choose an English name.", "An English name is not a must. Your Chinese name is great, too.", "You should use a middle name.", "You should put your family name last."], "answer": "B", "kp": "推理判断", "exp": "最后一段：you don't have to — your Chinese name is great, too!"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "A Letter to Tina",
+      "passage": "Dear Tina,\nThank you for your e-mail. Now let me tell you about my family.\nThere are five people in my family: my parents, my two (36) (sister) and me. My father (37) (have) a small shop near our home. My mother is a nurse. She works in a hospital and she is very busy.\nMy sisters (38) (be) twins. They are eight years old. (39) (they) names are Lily and Lucy. They look the same, so people often call Lily \"Lucy\". It's very (40) (fun)!\nMy grandparents don't live with us, but we often visit (41) (they) on weekends. My grandma makes (42) (dumpling) for us. I love them!\nWhat about your family? Do you have any (43) b______ or sisters? Please write and tell me about (44) (you) family. Here (45) (be) a photo of my family.\nYours,\nLi Hua",
+      "items": [
+        {"n": 36, "answer": "sisters", "hint": "sister", "kp": "名词复数", "exp": "two 后面用复数 sisters。"},
+        {"n": 37, "answer": "has", "hint": "have", "kp": "have/has", "exp": "主语 My father 是第三人称单数，用 has。"},
+        {"n": 38, "answer": "are", "hint": "be", "kp": "be 动词", "exp": "主语 My sisters 是复数，用 are。"},
+        {"n": 39, "answer": "Their", "hint": "they", "kp": "物主代词", "exp": "名词 names 前用形容词性物主代词 their，句首大写。"},
+        {"n": 40, "answer": "funny", "hint": "fun", "kp": "词性转换", "exp": "It's very ＿＿，very 修饰形容词。“好笑的”用 funny。"},
+        {"n": 41, "answer": "them", "hint": "they", "kp": "人称代词", "exp": "动词 visit 后面用宾格 them。"},
+        {"n": 42, "answer": "dumplings", "hint": "dumpling", "kp": "名词复数", "exp": "后面 I love them 说明是复数，dumplings。"},
+        {"n": 43, "answer": "brothers", "hint": "首字母 b", "kp": "词汇", "exp": "和 sisters 并列，用 brothers（兄弟）；any 后接复数。"},
+        {"n": 44, "answer": "your", "hint": "you", "kp": "物主代词", "exp": "名词 family 前用形容词性物主代词 your。"},
+        {"n": 45, "answer": "is", "hint": "be", "kp": "be 动词", "exp": "Here is ＋单数名词（a photo）。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "你的英国笔友 Tina 想了解你的家庭。请根据以下提示，给她写一封电子邮件：1. 你家有几口人，分别是谁；2. 选两位家人，介绍他们的职业或爱好；3. 你最喜欢和家人一起做什么。要求：60 词左右，开头和结尾已给出，不计入总词数；文中不得出现真实姓名和校名。\nDear Tina,\n______\nYours,\nLi Hua",
+      "points": [["写清家里有几口人、分别是谁", 4], ["介绍两位家人的职业或爱好", 4], ["写出和家人一起做的事", 3], ["语言正确（第三人称单数、物主代词、名词复数），书写规范", 4]],
+      "sample": "Dear Tina,\nThank you for your e-mail. There are four people in my family: my father, my mother, my little brother and me.\nMy father is a doctor. He works in a hospital and he is very busy. My mother is an English teacher. She likes reading and she has many books. My brother is six. He likes playing with his toy cars.\nOn weekends, we often go to the park together. Sometimes we visit my grandparents. I love my family.\nYours,\nLi Hua",
+      "exp": "要点写全后检查：主语是 he/she 时动词加 -s（works、likes、has）；名词前用 my/his/her；人数用 There are... people in my family。"
+    }
+  ]
+}

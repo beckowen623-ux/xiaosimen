@@ -1,0 +1,112 @@
+{
+  "id": "xsc-english-1",
+  "earlybird": true,
+  "stage": "xsc",
+  "unit": "七上·Starter Units 1–3",
+  "order": 1,
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "小升初衔接",
+  "year": 2027,
+  "title": "小升初衔接 · 英语 Starter Units 1–3",
+  "source": "七年级上册 Starter Units 1–3（Hello! / Keep Tidy! / Welcome!）：问候与介绍、物品与颜色、方位、农场动物与数量。按初一单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "—Good morning, Ms. Wang!\n—______", "options": ["Good morning, Tom!", "Good afternoon!", "Fine, thank you.", "Nice to meet you, too."], "answer": "A", "kp": "交际用语", "exp": "别人说 Good morning，就回答 Good morning。"},
+        {"n": 2, "stem": "—What's your name?\n—______", "options": ["I'm fine.", "My name is Peter Brown.", "I'm twelve.", "This is Peter."], "answer": "B", "kp": "交际用语", "exp": "问名字，回答 My name is... 或 I'm...。D 是介绍别人用的。"},
+        {"n": 3, "stem": "—Hi, I'm Helen. Nice to meet you.\n—______", "options": ["Nice to meet you, too.", "How are you?", "Thank you.", "Good morning."], "answer": "A", "kp": "交际用语", "exp": "初次见面，对方说 Nice to meet you，回答 Nice to meet you, too。"},
+        {"n": 4, "stem": "There ______ a ruler and two pens on the desk.", "options": ["is", "are", "am", "be"], "answer": "A", "kp": "there be 句型", "exp": "there be 句型遵循“就近原则”：be 动词和离它最近的名词 a ruler 保持一致，用 is。坑点：看到后面有 two pens 就选 are。"},
+        {"n": 5, "stem": "—______ is my schoolbag, Mum?\n—It's under the chair.", "options": ["What", "Where", "How", "Who"], "answer": "B", "kp": "特殊疑问句", "exp": "答语是位置（under the chair），用 where 提问。"},
+        {"n": 6, "stem": "—How many ______ can you see on the farm?\n—Twelve.", "options": ["sheep", "horse", "goose", "cow"], "answer": "A", "kp": "名词复数", "exp": "how many 后接可数名词复数。sheep 单复数同形；horse、goose、cow 都是单数形式，复数应是 horses、geese、cows。"},
+        {"n": 7, "stem": "—What colour is your new jacket?\n—______", "options": ["It's a jacket.", "It's blue.", "Yes, it is.", "It's on the bed."], "answer": "B", "kp": "特殊疑问句", "exp": "问颜色，回答颜色。"},
+        {"n": 8, "stem": "I have ______ eraser and ______ ruler in my pencil box.", "options": ["a; an", "an; a", "an; an", "a; a"], "answer": "B", "kp": "冠词", "exp": "eraser 以元音音素开头，用 an；ruler 以辅音音素开头，用 a。"},
+        {"n": 9, "stem": "—Is this your pen, Lily?\n—No, ______. It's Mike's.", "options": ["it is", "it isn't", "this isn't", "I am not"], "answer": "B", "kp": "一般疑问句", "exp": "Is this...? 的回答用 it 代替 this，否定回答 No, it isn't。"},
+        {"n": 10, "stem": "Look! Your keys are ______ the floor. Please pick them up.", "options": ["in", "on", "at", "of"], "answer": "B", "kp": "介词", "exp": "在地板上用 on the floor。"},
+        {"n": 11, "stem": "—How do you spell \"desk\"?\n—______", "options": ["Yes, D-E-S-K.", "It's D-E-S-K.", "I can spell it.", "It's a desk."], "answer": "B", "kp": "交际用语", "exp": "问怎么拼写，回答 It's D-E-S-K。特殊疑问句不能用 Yes 回答。"},
+        {"n": 12, "stem": "My brother and I ______ twelve years old.", "options": ["is", "am", "are", "be"], "answer": "C", "kp": "be 动词", "exp": "主语 My brother and I 是两个人，复数，用 are。坑点：只看离得最近的 I 选 am。"},
+        {"n": 13, "stem": "—Are these your books?\n—Yes, ______.", "options": ["they are", "these are", "it is", "they aren't"], "answer": "A", "kp": "一般疑问句", "exp": "these 在回答中用 they 代替，肯定回答 Yes, they are。"},
+        {"n": 14, "stem": "There are many animals on Grandpa's farm, like hens, ducks and ______.", "options": ["carrots", "potatoes", "pigs", "apples"], "answer": "C", "kp": "词汇", "exp": "前面说的是 animals（动物），只有 pigs 是动物，其他都是植物。"},
+        {"n": 15, "stem": "—Thank you for your help.\n—______", "options": ["You're welcome.", "That's right.", "OK.", "No, thanks."], "answer": "A", "kp": "交际用语", "exp": "别人道谢，回答 You're welcome（不客气）。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "My Room",
+      "passage": "Hello! My name is Lucy Green. I am twelve (16) old. I am a new student at Sunshine Middle School.\nThis is my bedroom. It is small (17) tidy. My bed is near the window. The bed is (18) — it's my favourite colour. On my desk, there (19) a clock, some books and a pencil box. My pencil box is red and white. I have three pens and an (20) in it.\nWhere is my schoolbag? Oh, I can't see it on the chair. It is (21) the chair, on the floor. My mum often says, \"Lucy, keep (22) room tidy!\" So I put my things in the right (23) every day.\nDo you like my room? I (24) it very much. Please come and (25) it!",
+      "items": [
+        {"n": 16, "options": ["year", "years", "age", "ages"], "answer": "B", "kp": "固定表达", "exp": "“……岁”用 ...years old，twelve 后用复数 years。"},
+        {"n": 17, "options": ["but", "and", "or", "so"], "answer": "B", "kp": "连词", "exp": "small 和 tidy 是并列描述房间的，用 and。"},
+        {"n": 18, "options": ["pink", "old", "clean", "small"], "answer": "A", "kp": "上下文", "exp": "后面说 it's my favourite colour，空格处要填颜色。"},
+        {"n": 19, "options": ["is", "are", "am", "be"], "answer": "A", "kp": "there be 句型", "exp": "就近原则，离 be 最近的是 a clock，用 is。"},
+        {"n": 20, "options": ["ruler", "eraser", "pencil", "book"], "answer": "B", "kp": "冠词", "exp": "空前是 an，后面的词要以元音音素开头，只有 eraser 符合。"},
+        {"n": 21, "options": ["on", "in", "under", "at"], "answer": "C", "kp": "介词", "exp": "前面说椅子上看不到，后面说 on the floor，所以书包在椅子下面。"},
+        {"n": 22, "options": ["my", "your", "his", "her"], "answer": "B", "kp": "代词", "exp": "妈妈对 Lucy 说话，“保持你的房间整洁”，用 your。"},
+        {"n": 23, "options": ["places", "colours", "names", "rooms"], "answer": "A", "kp": "上下文", "exp": "把东西放在正确的位置：in the right places。"},
+        {"n": 24, "options": ["like", "have", "keep", "see"], "answer": "A", "kp": "上下文", "exp": "前面问 Do you like my room?，这里回答“我非常喜欢它”。"},
+        {"n": 25, "options": ["look", "see", "watch", "read"], "answer": "B", "kp": "动词辨析", "exp": "come and see 来看看。look 是不及物动词，后面要加 at 才能接宾语。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Lost and Found",
+          "passage": "LOST\nI lost my schoolbag in the school library on Monday afternoon. It's blue and black. In it, there are two English books, a red pencil box and a set of keys. My name is on the books. Please call Jim at 286-5537.\nFOUND\nIs this your watch? It's white. I found it on the playground this morning. Please come to Room 205 to get it. — Mary\nFOUND\nI found a green ID card in Classroom 7. The name on it is Alan Smith. Alan, please come to the teachers' office to get it. — Ms. Li",
+          "items": [
+            {"n": 26, "stem": "What colour is Jim's schoolbag?", "options": ["Red.", "White.", "Blue and black.", "Green."], "answer": "C", "kp": "细节理解", "exp": "原文 It's blue and black。红色是铅笔盒的颜色，别看错。"},
+            {"n": 27, "stem": "Where did Jim lose his schoolbag?", "options": ["In the library.", "On the playground.", "In Room 205.", "In Classroom 7."], "answer": "A", "kp": "细节理解", "exp": "I lost my schoolbag in the school library。"},
+            {"n": 28, "stem": "What is NOT in Jim's schoolbag?", "options": ["English books.", "A pencil box.", "Keys.", "A watch."], "answer": "D", "kp": "细节理解", "exp": "书包里有英语书、铅笔盒和钥匙，手表是 Mary 捡到的。"},
+            {"n": 29, "stem": "If the white watch is yours, you should ______.", "options": ["call Jim", "go to Room 205", "go to Classroom 7", "go to the teachers' office"], "answer": "B", "kp": "细节理解", "exp": "Mary 的启事：Please come to Room 205 to get it。"},
+            {"n": 30, "stem": "Who is Alan Smith?", "options": ["He lost his ID card.", "He found a watch.", "He is a teacher.", "He lost his schoolbag."], "answer": "A", "kp": "推理判断", "exp": "Ms. Li 捡到一张写着 Alan Smith 名字的学生卡，说明 Alan 丢了学生卡。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Uncle Wang's Farm",
+          "passage": "Welcome to Uncle Wang's farm! It is a big farm near the river. There are many animals on it.\nLook! Those are cows. There are five of them. They are black and white. Uncle Wang gets milk from them every morning. Over there you can see some sheep. How many sheep are there? Let me count — twelve! The ducks and geese are near the river. There are twenty ducks but only six geese.\nUncle Wang has a dog, too. Its name is Lucky. Lucky helps Uncle Wang look after the sheep.\nThere are also many plants on the farm, like carrots, potatoes and apple trees. In autumn, Uncle Wang's family picks apples and sells them in town.\nMy friends and I often come here on weekends. We love this farm!",
+          "items": [
+            {"n": 31, "stem": "Where is the farm?", "options": ["Near a river.", "In the town.", "Behind a school.", "On a hill."], "answer": "A", "kp": "细节理解", "exp": "It is a big farm near the river。"},
+            {"n": 32, "stem": "How many cows are there on the farm?", "options": ["Five.", "Six.", "Twelve.", "Twenty."], "answer": "A", "kp": "细节理解", "exp": "There are five of them。六只是鹅，十二只是羊，二十只是鸭子。"},
+            {"n": 33, "stem": "Which of the following is TRUE?", "options": ["There are more geese than ducks.", "Lucky is Uncle Wang's cat.", "Uncle Wang gets milk from the cows.", "There are no plants on the farm."], "answer": "C", "kp": "细节理解", "exp": "Uncle Wang gets milk from them every morning。鸭子 20 只，鹅 6 只，鸭子更多；Lucky 是狗；农场里有很多植物。"},
+            {"n": 34, "stem": "What does the underlined phrase \"look after\" mean in Chinese?", "options": ["照顾", "寻找", "看见", "等待"], "answer": "A", "kp": "词义猜测", "exp": "狗帮王叔叔“照看”羊群，look after 意思是照顾、照看。"},
+            {"n": 35, "stem": "What does Uncle Wang's family do in autumn?", "options": ["They plant carrots.", "They pick and sell apples.", "They buy some sheep.", "They swim in the river."], "answer": "B", "kp": "细节理解", "exp": "In autumn, Uncle Wang's family picks apples and sells them in town。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My New School",
+      "passage": "Hello, everyone! My name (36) (be) Tony Smith. I'm twelve years old. I am in Class 5, Grade 7. My English teacher is Ms. Brown. She is very nice to (37) (we).\nIn my schoolbag, there are three (38) (book), two pencil (39) (box) and a ruler. My ruler is (40) y______ — the colour of a banana.\nI like my new school. It is big and (41) (beauty). There (42) (be) many trees and flowers in it.\nMy best friend is Bob. (43) (he) schoolbag is black. We often play football (44) ______ the playground after school. Every morning, we say \"(45) G______ morning!\" to our teachers.",
+      "items": [
+        {"n": 36, "answer": "is", "hint": "be", "kp": "be 动词", "exp": "主语 My name 是单数，用 is。"},
+        {"n": 37, "answer": "us", "hint": "we", "kp": "人称代词", "exp": "介词 to 后面用宾格 us。"},
+        {"n": 38, "answer": "books", "hint": "book", "kp": "名词复数", "exp": "three 后面接复数 books。"},
+        {"n": 39, "answer": "boxes", "hint": "box", "kp": "名词复数", "exp": "以 x 结尾的名词，复数加 -es：boxes。"},
+        {"n": 40, "answer": "yellow", "hint": "首字母 y", "kp": "词汇", "exp": "香蕉的颜色是黄色 yellow。"},
+        {"n": 41, "answer": "beautiful", "hint": "beauty", "kp": "词性转换", "exp": "and 连接两个形容词，big 和 beautiful。beauty 是名词，要变成形容词 beautiful。"},
+        {"n": 42, "answer": "are", "hint": "be", "kp": "there be 句型", "exp": "离 be 最近的是 many trees，复数，用 are。"},
+        {"n": 43, "answer": "His", "hint": "he", "kp": "物主代词", "exp": "名词 schoolbag 前用形容词性物主代词 his，句首首字母大写。"},
+        {"n": 44, "answer": "on", "kp": "介词", "exp": "在操场上用 on the playground。"},
+        {"n": 45, "answer": "Good", "hint": "首字母 G", "kp": "交际用语", "exp": "早上好：Good morning。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "新学期开始了，你的英语老师让每位同学写一篇短文介绍自己，贴在班级英语角。请根据以下提示写一篇短文：1. 你的姓名、年龄和班级；2. 你房间（或书包）里的物品，它们是什么颜色、放在哪里；3. 你的一位好朋友。要求：50 词左右，开头已给出，不计入总词数；文中不得出现真实姓名和校名。\nHello, everyone!",
+      "points": [["写清姓名、年龄、班级", 4], ["写出至少两件物品的颜色和位置", 4], ["介绍一位朋友", 3], ["语言正确（be 动词、名词复数、there be），书写规范", 4]],
+      "sample": "Hello, everyone! My name is Li Ming. I'm twelve years old. I'm in Class 3, Grade 7.\nThis is my room. It's small but tidy. There is a desk near the window. My books are on the desk. My schoolbag is blue. It's under the desk. There are two pens and an eraser in my pencil box.\nMy good friend is Wang Lin. He is twelve, too. We are in the same class. We often play football after school.\nThank you!",
+      "exp": "先把三个要点写全，再检查语言：be 动词和主语一致（I am / He is / They are），there be 用就近原则，名词复数加 -s 或 -es，物品位置用 on / in / under / near。"
+    }
+  ]
+}

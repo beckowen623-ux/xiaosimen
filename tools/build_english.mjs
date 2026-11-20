@@ -27,8 +27,8 @@ function build(paper) {
     id: `national-${paper.id}-q${String(n).padStart(2, "0")}`,
     national: true, subject: paper.subject || "english", subjectLabel: paper.subjectLabel || "英语", paperId: paper.id, number: n,
     ...(paper.claude ? { claude: true, meta: "精编模拟卷" } : {}),
-    ...(paper.earlybird ? { earlybird: true, meta: "早鸟自测" } : {}),
-    section, chapter: paper.title, grade: "九下", stage: "9-down",
+    ...(paper.earlybird ? { earlybird: true, meta: paper.stage === "xsc" ? "小升初衔接" : "早鸟自测" } : {}),
+    section, chapter: paper.title, grade: paper.stage === "xsc" ? "小升初" : "九下", stage: paper.stage === "xsc" ? "xsc" : "9-down",
     source: paper.numbering?.[n] ? `${paper.title} ${paper.numbering[n]}` : `${paper.title} 第 ${n} 题`, ...extra,
   });
   const choice = (item, section, extra) => ({
@@ -57,7 +57,7 @@ function build(paper) {
       const materialHtml = passageHtml(section.passage, section.title);
       for (const item of section.items) {
         const pts = item.points ? item.points.map(([text, score]) => ({ text, score, keys: [] })) : [{ text: `参考：${item.answer}`, score: 2, keys: [] }];
-        out.push({ ...base(item.n, t, { groupId, materialHtml }), type: "essay", meta: paper.earlybird ? "早鸟自测" : "回答问题", material: "", stem: item.stem,
+        out.push({ ...base(item.n, t, { groupId, materialHtml }), type: "essay", meta: paper.earlybird ? (paper.stage === "xsc" ? "小升初衔接" : "早鸟自测") : "回答问题", material: "", stem: item.stem,
           points: pts, score: pts.reduce((s, p) => s + p.score, 0), sample: item.answer,
           method: "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。", answer: [], explanation: item.exp });
       }
@@ -155,6 +155,7 @@ for (const file of readdirSync(srcDir).filter(f => f.endsWith(".json")).sort()) 
   const entry = { ...old, id: paper.id, subject: paper.subject || "english", subjectLabel: paper.subjectLabel || "英语", region: paper.region, year: paper.year,
     ...(paper.claude ? { claude: true } : {}),
     ...(paper.earlybird ? { earlybird: true, stage: paper.stage || "9-down" } : {}),
+    ...(paper.unit ? { unit: paper.unit, order: paper.order || 0 } : {}),
     title: paper.title, source: paper.source, description: `整卷 ${questions.length} 题${paper.note ? "（" + paper.note.replace(/。$/, "") + "）" : ""}`,
     questionCount: questions.length, data: `./data/national/${paper.id}.js`, sections: counts };
   catalog.papers = [...catalog.papers.filter(p => p.id !== paper.id), entry];

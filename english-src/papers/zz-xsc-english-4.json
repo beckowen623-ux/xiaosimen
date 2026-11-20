@@ -1,0 +1,112 @@
+{
+  "id": "xsc-english-4",
+  "earlybird": true,
+  "stage": "xsc",
+  "unit": "七上·Units 5–7 Fun Clubs / A Day in the Life / Happy Birthday!",
+  "order": 4,
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "小升初衔接",
+  "year": 2027,
+  "title": "小升初衔接 · 英语 Units 5–7",
+  "source": "七年级上册 Unit 5 Fun Clubs、Unit 6 A Day in the Life、Unit 7 Happy Birthday!：can 表能力、社团、日常作息与时间、频度副词、日期与序数词、how much。按初一单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "—Can you play the guitar?\n—______. That's why I want to join the music club.", "options": ["Yes, I can", "No, I can't", "Yes, I do", "No, I don't"], "answer": "A", "kp": "情态动词 can", "exp": "Can you...? 用 can/can't 回答；会弹吉他所以想加入音乐社，是肯定回答。"},
+        {"n": 2, "stem": "My brother can play ______ chess, and my sister can play ______ piano.", "options": ["/; the", "the; /", "the; the", "/; /"], "answer": "A", "kp": "冠词", "exp": "下棋、打球类前不加冠词：play chess；演奏乐器前加 the：play the piano。"},
+        {"n": 3, "stem": "—______ do you usually get up on school days?\n—At six thirty.", "options": ["What time", "How", "Where", "How many"], "answer": "A", "kp": "特殊疑问句", "exp": "答语是时间点，用 what time 提问。"},
+        {"n": 4, "stem": "Tony ______ his homework at 7:00 every evening.", "options": ["do", "does", "doing", "to do"], "answer": "B", "kp": "一般现在时", "exp": "every evening 表示经常性动作，用一般现在时；主语 Tony 是第三人称单数，用 does。"},
+        {"n": 5, "stem": "—When is your birthday?\n—It's ______ October 10th.", "options": ["in", "on", "at", "of"], "answer": "B", "kp": "时间介词", "exp": "具体某一天用 on；只说月份才用 in（in October）。坑点：看到 October 就选 in。"},
+        {"n": 6, "stem": "December is the ______ month of the year.", "options": ["twelve", "twelfth", "twelveth", "eleventh"], "answer": "B", "kp": "序数词", "exp": "十二月是第十二个月，序数词 twelfth（ve 变 f 加 th）。"},
+        {"n": 7, "stem": "—How old is your sister?\n—She is ______. Today is her ______ birthday.", "options": ["ten; ten", "tenth; ten", "ten; tenth", "tenth; tenth"], "answer": "C", "kp": "序数词", "exp": "年龄用基数词 ten；“第十个生日”用序数词 tenth。"},
+        {"n": 8, "stem": "Sam ______ goes to bed late. He always goes to bed at nine.", "options": ["always", "usually", "never", "often"], "answer": "C", "kp": "频度副词", "exp": "他总是九点睡，说明从不晚睡：never goes to bed late。"},
+        {"n": 9, "stem": "—Do you want to join the swimming club?\n—Yes, but I can't ______. Can the coach teach me?", "options": ["swim", "swims", "swimming", "to swim"], "answer": "A", "kp": "情态动词 can", "exp": "can/can't 后接动词原形。"},
+        {"n": 10, "stem": "—______ is the birthday cake?\n—It's 98 yuan.", "options": ["How many", "How much", "How old", "How long"], "answer": "B", "kp": "特殊疑问句", "exp": "问价格用 how much。"},
+        {"n": 11, "stem": "Jenny often helps her mother ______ the housework on weekends.", "options": ["with", "for", "at", "in"], "answer": "A", "kp": "固定搭配", "exp": "help sb. with sth. 在某方面帮助某人。"},
+        {"n": 12, "stem": "—Let's have a party for Mary's birthday.\n—______", "options": ["Good idea!", "Happy birthday!", "You're welcome.", "Thank you."], "answer": "A", "kp": "交际用语", "exp": "对别人的建议表示赞同：Good idea!"},
+        {"n": 13, "stem": "I usually ______ breakfast at 7:00 and then go to school.", "options": ["have", "has", "having", "to have"], "answer": "A", "kp": "一般现在时", "exp": "主语 I，一般现在时用动词原形 have。"},
+        {"n": 14, "stem": "—Happy birthday to you, Lily!\n—______", "options": ["The same to you.", "Thank you!", "You too.", "That's OK."], "answer": "B", "kp": "交际用语", "exp": "别人祝你生日快乐，回答 Thank you。生日不能回“你也是”。"},
+        {"n": 15, "stem": "Students can learn ______ at the art club on Monday afternoons.", "options": ["to draw", "drawing", "draws", "drew"], "answer": "A", "kp": "动词形式", "exp": "learn to do sth. 学做某事。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "A Day in My Life",
+      "passage": "Hi, I'm Liu Yang. I'm a middle school student. I usually get up (16) 6:30. After I brush my teeth and wash my face, I have breakfast with my parents. Then I go to school (17) bike.\nClasses start at 8:00. At noon, I have lunch at school. In the afternoon, I have two classes. After school, I go to the chess club. I (18) to play chess well, so I go there twice a week.\nI get home at about 5:30. Then I (19) my homework. My mother often says, \"Do your homework (20), and then you can watch TV.\" So I always finish my homework before dinner. After dinner, I sometimes (21) for a walk with my parents. I go to bed at 9:30. I think it's (22) for me to go to bed early.\nTomorrow is my (23)! I'm going to be 13. My parents want to have a party for me. I (24) to invite all my friends. I'm so (25)!",
+      "items": [
+        {"n": 16, "options": ["at", "on", "in", "for"], "answer": "A", "kp": "时间介词", "exp": "具体时刻前用 at。"},
+        {"n": 17, "options": ["on", "by", "in", "with"], "answer": "B", "kp": "介词", "exp": "by bike 骑自行车，by 后直接加交通工具。"},
+        {"n": 18, "options": ["want", "forget", "stop", "hate"], "answer": "A", "kp": "上下文", "exp": "想把象棋下好，所以一周去两次：want to do sth.。"},
+        {"n": 19, "options": ["do", "make", "play", "watch"], "answer": "A", "kp": "固定搭配", "exp": "做作业：do my homework。"},
+        {"n": 20, "options": ["first", "last", "late", "never"], "answer": "A", "kp": "上下文", "exp": "先写作业，然后才能看电视：first...and then...。"},
+        {"n": 21, "options": ["go", "take", "make", "have"], "answer": "A", "kp": "固定搭配", "exp": "go for a walk 去散步。take a walk、have a walk 后面不加 for。"},
+        {"n": 22, "options": ["good", "bad", "late", "hard"], "answer": "A", "kp": "上下文", "exp": "早睡对我有好处：it's good for me。"},
+        {"n": 23, "options": ["birthday", "party", "club", "class"], "answer": "A", "kp": "上下文", "exp": "后文说要满 13 岁了，父母要给我办派对，所以明天是生日。"},
+        {"n": 24, "options": ["plan", "forget", "stop", "hate"], "answer": "A", "kp": "上下文", "exp": "打算邀请所有朋友：plan to do sth.。"},
+        {"n": 25, "options": ["excited", "bored", "sad", "tired"], "answer": "A", "kp": "上下文", "exp": "要过生日、开派对，心情很激动 excited。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Join Our Clubs!",
+          "passage": "Art Club\nCan you draw? Come and learn to draw with Ms. Wu.\nTime: Monday 4:00–5:00 pm   Place: Room 108\nSwimming Club\nDo you like swimming? You don't need to swim well. Our coach can teach you!\nTime: Wednesday and Friday 4:30–5:30 pm   Place: School swimming pool\nPlease bring your swimsuit.\nEnglish Club\nDo you want to speak English well? Play games and sing English songs with Mr. Black from Canada.\nTime: Thursday 4:00–5:00 pm   Place: Room 302\nCall Miss Zhang at 6588-3721 to join. Each student can join two clubs at most.",
+          "items": [
+            {"n": 26, "stem": "Who teaches the Art Club?", "options": ["Miss Zhang.", "Ms. Wu.", "Mr. Black.", "The coach."], "answer": "B", "kp": "细节理解", "exp": "learn to draw with Ms. Wu。Miss Zhang 是报名联系人。"},
+            {"n": 27, "stem": "How many times does the Swimming Club meet a week?", "options": ["Once.", "Twice.", "Three times.", "Four times."], "answer": "B", "kp": "细节理解", "exp": "Wednesday and Friday，一周两次。"},
+            {"n": 28, "stem": "What should you bring to the Swimming Club?", "options": ["A swimsuit.", "A book.", "Some paper.", "A guitar."], "answer": "A", "kp": "细节理解", "exp": "Please bring your swimsuit。"},
+            {"n": 29, "stem": "Which of the following is TRUE?", "options": ["You must swim well to join the Swimming Club.", "Mr. Black comes from Canada.", "The English Club is in Room 108.", "Each student can join three clubs."], "answer": "B", "kp": "细节理解", "exp": "Mr. Black from Canada。游泳不需要会游；英语社在 302；最多参加两个社团。"},
+            {"n": 30, "stem": "Wang Tao is only free on Thursday afternoon. Which club can he join?", "options": ["The Art Club.", "The Swimming Club.", "The English Club.", "None of them."], "answer": "C", "kp": "推理判断", "exp": "只有英语社在周四活动。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Birthday Food Around the World",
+          "passage": "People in different countries eat different food on their birthdays.\nIn China, many people eat long noodles on their birthdays. The long noodles mean a long life. Some people also eat eggs for good luck.\nIn the UK and the US, people often have birthday cakes with candles on them. The number of candles is the person's age. The person makes a wish and then blows out all the candles in one go. People say that if you can do it, your wish will come true.\nIn Russia, many people eat birthday pies with words on them. In Mexico, children often break a pinata (彩罐) full of sweets at their birthday parties.\nDifferent food, but the same wish — a happy birthday!",
+          "items": [
+            {"n": 31, "stem": "What do long noodles mean in China?", "options": ["Good luck.", "A long life.", "Many friends.", "Good grades."], "answer": "B", "kp": "细节理解", "exp": "The long noodles mean a long life。鸡蛋才表示好运。"},
+            {"n": 32, "stem": "How many candles are there on the birthday cake of a 13-year-old boy in the UK?", "options": ["One.", "Three.", "Ten.", "Thirteen."], "answer": "D", "kp": "推理判断", "exp": "蜡烛数等于年龄，13 岁就是 13 根。"},
+            {"n": 33, "stem": "What do many people in Russia eat on their birthdays?", "options": ["Long noodles.", "Cakes with candles.", "Pies with words on them.", "Sweets."], "answer": "C", "kp": "细节理解", "exp": "In Russia, many people eat birthday pies with words on them。"},
+            {"n": 34, "stem": "What do children in Mexico often do at their birthday parties?", "options": ["Eat eggs.", "Break a pinata full of sweets.", "Make birthday pies.", "Blow out the candles twice."], "answer": "B", "kp": "细节理解", "exp": "children often break a pinata full of sweets。"},
+            {"n": 35, "stem": "What is the passage mainly about?", "options": ["How to make a birthday cake.", "Birthday food in different countries.", "Why people like birthday parties.", "How to make a wish."], "answer": "B", "kp": "主旨大意", "exp": "全文介绍中国、英美、俄罗斯、墨西哥过生日吃什么。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "A Birthday Invitation",
+      "passage": "Dear Linda,\nMy (36) (twelve) birthday is on Saturday, June 12th. I want (37) (have) a party at my home, and I'd like you to come.\nThe party starts (38) ______ 3:00 in the afternoon. My mother can make a big cake for us. We can eat cake, sing songs and play (39) (game). My friend Tom (40) (play) the guitar very well, so he can play for us. I know you are good at (41) (dance). Can you dance for us?\nMy home is (42) n______ to the park, so it's easy to find. Many of my (43) (classmate) are coming, too. Please call me before Friday. (44) (I) phone number is 8876-5432.\n(45) S______ you then!\nYours,\nAnna",
+      "items": [
+        {"n": 36, "answer": "twelfth", "hint": "twelve", "kp": "序数词", "exp": "“第十二个生日”用序数词 twelfth。"},
+        {"n": 37, "answer": "to have", "hint": "have", "kp": "want to do", "exp": "want to do sth. 想要做某事。"},
+        {"n": 38, "answer": "at", "kp": "时间介词", "exp": "具体时刻前用 at。"},
+        {"n": 39, "answer": "games", "hint": "game", "kp": "名词复数", "exp": "play games 玩游戏，用复数。"},
+        {"n": 40, "answer": "plays", "hint": "play", "kp": "一般现在时", "exp": "主语 Tom 是第三人称单数，一般现在时用 plays。"},
+        {"n": 41, "answer": "dancing", "hint": "dance", "kp": "be good at doing", "exp": "be good at 后接动名词，dance 去 e 加 -ing。"},
+        {"n": 42, "answer": "next", "hint": "首字母 n", "kp": "方位介词", "exp": "next to 在……旁边。"},
+        {"n": 43, "answer": "classmates", "hint": "classmate", "kp": "名词复数", "exp": "many of 后接复数名词。"},
+        {"n": 44, "answer": "My", "hint": "I", "kp": "物主代词", "exp": "名词 phone number 前用 my，句首大写。"},
+        {"n": 45, "answer": "See", "hint": "首字母 S", "kp": "交际用语", "exp": "到时见：See you then!"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "你校英语角正在开展“A Day in My Life”分享活动。请根据以下提示写一篇短文：1. 你上学日的作息安排（至少写出四个时间点）；2. 你参加或想参加的一个社团，以及原因；3. 你觉得自己的作息好不好，还想怎样改进。要求：60 词左右，开头已给出，不计入总词数；文中不得出现真实姓名和校名。\nA Day in My Life",
+      "points": [["写出至少四个时间点的作息", 5], ["写出参加的社团和原因", 3], ["对作息的评价和改进打算", 3], ["语言正确（一般现在时、时间介词、频度副词、can），书写规范", 4]],
+      "sample": "A Day in My Life\nI usually get up at 6:30 on school days. I have breakfast at 7:00 and then go to school by bike. Classes start at 8:00. After school, I go to the English Club on Thursday. I want to join it because I want to speak English well. I get home at 5:30 and do my homework first. I go to bed at 9:30.\nI think my day is healthy, but I don't exercise much. I want to run for 20 minutes every evening.",
+      "exp": "时间点前用 at，星期几前用 on；一般现在时第一人称用动词原形；表示经常用 usually、often、always；能力用 can＋动词原形。"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "xsc-english-3",
+  "earlybird": true,
+  "stage": "xsc",
+  "unit": "七上·Units 3–4 My School / My Favourite Subject",
+  "order": 3,
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "小升初衔接",
+  "year": 2027,
+  "title": "小升初衔接 · 英语 Units 3–4",
+  "source": "七年级上册 Unit 3 My School、Unit 4 My Favourite Subject：学校设施、方位介词、there be、学科与课程表、why/because、时间介词。按初一单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "There ______ a library and two science labs in our new school.", "options": ["is", "are", "has", "have"], "answer": "A", "kp": "there be 句型", "exp": "就近原则：离 be 最近的是 a library，用 is。表示“某地有某物”用 there be，不用 has/have。"},
+        {"n": 2, "stem": "—Excuse me, where's the art room?\n—It's ______ the music room, on the second floor.", "options": ["next to", "between", "on", "at"], "answer": "A", "kp": "方位介词", "exp": "next to 在……旁边。between 要说 between A and B，这里只有一个地点。"},
+        {"n": 3, "stem": "—______ is your favourite subject?\n—Science. I like doing experiments.", "options": ["What", "Why", "Who", "When"], "answer": "A", "kp": "特殊疑问句", "exp": "问最喜欢的科目是什么，用 what。"},
+        {"n": 4, "stem": "—______ do you like maths?\n—Because it's interesting and useful.", "options": ["What", "Why", "How", "Where"], "answer": "B", "kp": "特殊疑问句", "exp": "答语用 because 说原因，用 why 提问。"},
+        {"n": 5, "stem": "We have PE ______ Tuesday and Thursday.", "options": ["in", "on", "at", "for"], "answer": "B", "kp": "时间介词", "exp": "在星期几用 on。"},
+        {"n": 6, "stem": "—Who is your music teacher?\n—______", "options": ["Mr. Hu.", "He is tall.", "Music is fun.", "In the music room."], "answer": "A", "kp": "特殊疑问句", "exp": "问“是谁”，回答人名。B 描述外貌，回答的是 What is he like?"},
+        {"n": 7, "stem": "History is ______ subject, but some students think it's ______.", "options": ["an interesting; difficult", "a interesting; difficult", "an interesting; difficultly", "interesting; difficult"], "answer": "A", "kp": "冠词", "exp": "interesting 以元音音素开头，用 an；be 后接形容词 difficult。subject 是可数名词单数，前面要有冠词。"},
+        {"n": 8, "stem": "—When is your English class?\n—It's ______ 8:00 ______ Monday morning.", "options": ["at; on", "at; in", "on; at", "in; on"], "answer": "A", "kp": "时间介词", "exp": "具体时刻用 at；具体某一天的早上（Monday morning）用 on。坑点：in the morning 是泛指，前面有 Monday 就要用 on。"},
+        {"n": 9, "stem": "My little sister likes ______ very much. She draws pictures every day.", "options": ["art", "maths", "history", "geography"], "answer": "A", "kp": "词汇", "exp": "每天画画，喜欢美术 art。"},
+        {"n": 10, "stem": "—Do you have a computer lesson today?\n—No, we ______. It's on Friday.", "options": ["don't", "aren't", "haven't", "doesn't"], "answer": "A", "kp": "一般现在时", "exp": "Do you...? 用 do/don't 回答，主语 we，用 don't。"},
+        {"n": 11, "stem": "Our school is big and beautiful. There are many tall trees ______ the playground.", "options": ["around", "on", "between", "of"], "answer": "A", "kp": "方位介词", "exp": "树长在操场四周，用 around。"},
+        {"n": 12, "stem": "Monday is the ______ day of the school week in China.", "options": ["one", "first", "two", "second"], "answer": "B", "kp": "数词", "exp": "表示顺序用序数词，the first day 第一天。"},
+        {"n": 13, "stem": "I like Chinese very much, ______ I don't like maths.", "options": ["and", "or", "but", "so"], "answer": "C", "kp": "连词", "exp": "喜欢语文，“但是”不喜欢数学，前后转折，用 but。"},
+        {"n": 14, "stem": "—Thank you for showing me around your school.\n—______", "options": ["It doesn't matter.", "My pleasure.", "That's right.", "OK."], "answer": "B", "kp": "交际用语", "exp": "别人感谢你的帮助，回答 My pleasure（不客气，我很乐意）。It doesn't matter 是回答道歉的。"},
+        {"n": 15, "stem": "—How do you like your new school?\n—______", "options": ["It's great! The teachers are very friendly.", "I go there by bus.", "It's on Green Street.", "Yes, I do."], "answer": "A", "kp": "交际用语", "exp": "How do you like...? 问“觉得……怎么样”，要回答看法。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "My New School",
+      "passage": "My name is David. I'm a new student (16) No. 5 Middle School. Let me tell you about my school.\nThere are (17) buildings in our school: a classroom building, a library building and a science building. The classroom building is (18) the playground, so we can go out to play quickly after class. In the library, there are many (19). I often read there after class.\nOur school day starts at 8:00. We have four classes in the morning and (20) in the afternoon. That's seven classes a day.\nMy (21) subject is science. It's interesting because I can do many experiments in the lab. I don't like history (22) I think it's difficult. Our science teacher is Ms. Lee. She is very (23) to us, and she always helps us.\nOn Friday afternoon, we have a club day. I'm in the (24) club because I like singing.\nI love my new school, and I'm (25) every day.",
+      "items": [
+        {"n": 16, "options": ["at", "on", "for", "with"], "answer": "A", "kp": "介词", "exp": "在某所学校用 at：a student at No. 5 Middle School。"},
+        {"n": 17, "options": ["two", "three", "four", "five"], "answer": "B", "kp": "上下文", "exp": "冒号后列出了教学楼、图书馆楼、科学楼，共三栋。"},
+        {"n": 18, "options": ["next to", "far from", "under", "in"], "answer": "A", "kp": "上下文", "exp": "下课能很快出去玩，说明教学楼在操场旁边。"},
+        {"n": 19, "options": ["books", "computers", "balls", "desks"], "answer": "A", "kp": "上下文", "exp": "后一句说常去那里读书，图书馆里有很多书。"},
+        {"n": 20, "options": ["two", "three", "four", "five"], "answer": "B", "kp": "上下文", "exp": "后一句说一天共七节课，上午四节，下午就是三节。"},
+        {"n": 21, "options": ["favourite", "best", "boring", "last"], "answer": "A", "kp": "词汇", "exp": "后面说科学很有趣，是最喜欢的科目：my favourite subject。"},
+        {"n": 22, "options": ["so", "because", "but", "and"], "answer": "B", "kp": "连词", "exp": "不喜欢历史的原因是觉得难，用 because。"},
+        {"n": 23, "options": ["nice", "bad", "busy", "boring"], "answer": "A", "kp": "上下文", "exp": "后面说她总是帮助我们，对我们很好：be nice to sb.。"},
+        {"n": 24, "options": ["music", "art", "chess", "swimming"], "answer": "A", "kp": "上下文", "exp": "因为喜欢唱歌，参加的是音乐社团。"},
+        {"n": 25, "options": ["sad", "tired", "happy", "angry"], "answer": "C", "kp": "上下文", "exp": "喜欢新学校，每天都很开心。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Class 1, Grade 7 Timetable",
+          "passage": "Class Time\nMorning: 1st 8:00–8:45 / 2nd 8:55–9:40 / 3rd 10:00–10:45 / 4th 10:55–11:40\nAfternoon: 5th 2:00–2:45 / 6th 2:55–3:40\nMonday: Chinese, Maths, English, History | PE, Art\nTuesday: Maths, English, Science, Chinese | Music, Geography\nWednesday: English, Chinese, Maths, Biology | Computer, Class Meeting\nNote: Lunch time is from 11:50 to 1:30. Please don't run in the hallways.",
+          "items": [
+            {"n": 26, "stem": "What is the first class on Monday?", "options": ["Maths.", "Chinese.", "English.", "PE."], "answer": "B", "kp": "细节理解", "exp": "Monday 一行第一个是 Chinese。"},
+            {"n": 27, "stem": "When is the music class?", "options": ["On Monday morning.", "On Tuesday morning.", "On Tuesday afternoon.", "On Wednesday afternoon."], "answer": "C", "kp": "细节理解", "exp": "竖线后面是下午的课，Music 在 Tuesday 的竖线后面，是周二下午。"},
+            {"n": 28, "stem": "How many maths classes do they have from Monday to Wednesday?", "options": ["One.", "Two.", "Three.", "Four."], "answer": "C", "kp": "细节理解", "exp": "周一、周二、周三各有一节数学，共三节。"},
+            {"n": 29, "stem": "How long is each class?", "options": ["40 minutes.", "45 minutes.", "50 minutes.", "55 minutes."], "answer": "B", "kp": "推理判断", "exp": "8:00–8:45，每节课 45 分钟。"},
+            {"n": 30, "stem": "What time does the Geography class start on Tuesday?", "options": ["At 2:00.", "At 2:55.", "At 10:55.", "At 1:30."], "answer": "B", "kp": "推理判断", "exp": "Geography 是周二下午第二节，即第 6 节，2:55 开始。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Our Favourite Subjects",
+          "passage": "Li Mei: My favourite subject is geography. I like to learn about different countries and places. My dream is to travel around the world one day.\nBob: I like PE best. It's relaxing, and I can play basketball with my friends. But I don't like maths because it's too difficult for me.\nZhou Kai: Science is my favourite. The experiments are really fun. Our science teacher, Mr. Wu, always says to us, \"Ask why. Don't be afraid of making mistakes.\"\nEmma: I love music. I can play the violin. I have music lessons on Tuesday and Friday, and I practise for half an hour every evening.",
+          "items": [
+            {"n": 31, "stem": "Why does Li Mei like geography?", "options": ["Because it's relaxing.", "Because she likes to learn about different places.", "Because her teacher is nice.", "Because it's easy."], "answer": "B", "kp": "细节理解", "exp": "I like to learn about different countries and places。"},
+            {"n": 32, "stem": "What does Bob think of maths?", "options": ["It's fun.", "It's relaxing.", "It's difficult.", "It's useful."], "answer": "C", "kp": "细节理解", "exp": "it's too difficult for me。relaxing 是他对体育的评价。"},
+            {"n": 33, "stem": "Who likes doing experiments?", "options": ["Li Mei.", "Bob.", "Zhou Kai.", "Emma."], "answer": "C", "kp": "细节理解", "exp": "Zhou Kai 说 The experiments are really fun。"},
+            {"n": 34, "stem": "How many music lessons does Emma have a week?", "options": ["One.", "Two.", "Five.", "Seven."], "answer": "B", "kp": "细节理解", "exp": "on Tuesday and Friday，一周两次。每晚练琴半小时是她自己练习，不是上课。"},
+            {"n": 35, "stem": "What does Mr. Wu want his students to do?", "options": ["Travel around the world.", "Play basketball after class.", "Ask questions and not be afraid of mistakes.", "Practise the violin every day."], "answer": "C", "kp": "推理判断", "exp": "Ask why. Don't be afraid of making mistakes."}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Favourite Day",
+      "passage": "Hi, I'm Mike. My favourite day is Friday. (36) W______? Because we have PE and art on Friday. They're my favourite (37) (subject).\nAt 8:00 we have maths. It isn't easy, (38) ______ our maths teacher, Mr. Smith, makes it interesting. Then we have English. I like English because it's (39) (use). After that, we have PE (40) ______ 10:00. We play basketball and run.\nAfter lunch, we have art. I like (41) (draw) pictures. Our art teacher is Ms. Wang. She is (42) (real) nice. Our school (43) (finish) at 3:40 on Friday. After school, I play games with (44) (I) friends. On the weekend, I don't have any (45) (class). I'm very happy!",
+      "items": [
+        {"n": 36, "answer": "Why", "hint": "首字母 W", "kp": "特殊疑问句", "exp": "后面用 Because 回答，所以这里问 Why。"},
+        {"n": 37, "answer": "subjects", "hint": "subject", "kp": "名词复数", "exp": "They're 后接复数 subjects。"},
+        {"n": 38, "answer": "but", "kp": "连词", "exp": "数学不简单，“但是”老师讲得很有趣，前后转折，用 but。"},
+        {"n": 39, "answer": "useful", "hint": "use", "kp": "词性转换", "exp": "be 后接形容词，use 的形容词是 useful。"},
+        {"n": 40, "answer": "at", "kp": "时间介词", "exp": "具体时刻前用 at。"},
+        {"n": 41, "answer": "drawing / to draw", "hint": "draw", "kp": "like doing", "exp": "like doing sth. 或 like to do sth. 都可以。"},
+        {"n": 42, "answer": "really", "hint": "real", "kp": "词性转换", "exp": "修饰形容词 nice 用副词 really。"},
+        {"n": 43, "answer": "finishes", "hint": "finish", "kp": "一般现在时", "exp": "主语 Our school 是第三人称单数，finish 以 sh 结尾，加 -es。"},
+        {"n": 44, "answer": "my", "hint": "I", "kp": "物主代词", "exp": "名词 friends 前用形容词性物主代词 my。"},
+        {"n": 45, "answer": "classes", "hint": "class", "kp": "名词复数", "exp": "any 用在否定句中，后接可数名词复数；class 以 s 结尾，加 -es。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "你校英语报正在征集“My School Life”主题短文。请根据以下提示写一篇短文：1. 简单介绍你的学校（至少两处地方及其位置）；2. 你最喜欢的科目及原因；3. 你最喜欢星期几，为什么。要求：60 词左右，开头已给出，不计入总词数；文中不得出现真实姓名和校名。\nMy School Life",
+      "points": [["介绍学校的两处地方及位置", 4], ["写出最喜欢的科目和原因", 4], ["写出最喜欢的一天及原因", 3], ["语言正确（there be、方位介词、because、时间介词），书写规范", 4]],
+      "sample": "My School Life\nMy school is big and beautiful. There is a big playground in front of the classroom building. The library is next to the dining hall. I often read books there after class.\nMy favourite subject is English because it's interesting and useful. I can talk with people from other countries in English.\nMy favourite day is Wednesday. Why? Because we have English and music on Wednesday. I love my school life!",
+      "exp": "要点写全后检查：there is/are 用就近原则；位置用 next to、in front of、behind、across from；说原因用 because；星期几前用 on。"
+    }
+  ]
+}

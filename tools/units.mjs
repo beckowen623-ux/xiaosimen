@@ -123,6 +123,7 @@ function chineseByTitle(paper, title) {
 }
 
 export function unitOf(paper, section, group, item) {
+  if (paper.unit) return paper.unit; // 小升初衔接等按章出的练习，整套属于同一章
   const subject = paper.subject || "english";
   const kp = String(item?.kp || "").trim();
   const t = section.type;
