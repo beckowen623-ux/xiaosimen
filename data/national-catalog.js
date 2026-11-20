@@ -1,6 +1,28 @@
 window.NATIONAL_CATALOG = {
   "papers": [
     {
+      "id": "earlybird-2027-english",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "9-down",
+      "title": "九下 · 中考全范围早鸟卷 · 英语",
+      "source": "按中考英语题型、题量编写（不含听力），难度略高于中考，百分制",
+      "description": "整卷 51 题（51 题，不含听力，百分制，难度略高于中考）",
+      "questionCount": 51,
+      "data": "./data/national/earlybird-2027-english.js",
+      "sections": {
+        "单项选择": 10,
+        "完形填空": 10,
+        "阅读理解": 15,
+        "七选五": 5,
+        "短文填空": 10,
+        "书面表达": 1
+      }
+    },
+    {
       "id": "fj-2026-english",
       "subject": "english",
       "subjectLabel": "英语",
@@ -434,6 +456,60 @@ window.NATIONAL_CATALOG = {
       "stage": "9-down"
     },
     {
+      "id": "earlybird-2027-daode",
+      "subject": "daode",
+      "subjectLabel": "道德与法治",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "9-down",
+      "title": "九下 · 中考全范围早鸟卷 · 道德与法治",
+      "source": "按中考道德与法治题型、题量编写，难度略高于中考，百分制",
+      "description": "整卷 24 题（24 题，百分制，难度略高于中考）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-2027-daode.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 4
+      }
+    },
+    {
+      "id": "earlybird-2027-dili",
+      "subject": "dili",
+      "subjectLabel": "地理",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "9-down",
+      "title": "九下 · 中考全范围早鸟卷 · 地理",
+      "source": "按中考（学业水平考试）地理题型、题量编写，难度略高于考试，百分制",
+      "description": "整卷 24 题（24 题，百分制，难度略高于考试）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-2027-dili.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 4
+      }
+    },
+    {
+      "id": "earlybird-2027-lishi",
+      "subject": "lishi",
+      "subjectLabel": "历史",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "9-down",
+      "title": "九下 · 中考全范围早鸟卷 · 历史",
+      "source": "按中考历史题型、题量编写，难度略高于中考，百分制",
+      "description": "整卷 24 题（24 题，百分制，难度略高于中考）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-2027-lishi.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 4
+      }
+    },
+    {
       "id": "earlybird-2027-math",
       "subject": "math",
       "subjectLabel": "数学",
@@ -470,6 +546,24 @@ window.NATIONAL_CATALOG = {
         "解答题": 6
       },
       "stage": "9-down"
+    },
+    {
+      "id": "earlybird-2027-shengwu",
+      "subject": "shengwu",
+      "subjectLabel": "生物",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "9-down",
+      "title": "九下 · 中考全范围早鸟卷 · 生物",
+      "source": "按中考（学业水平考试）生物题型、题量编写，难度略高于考试，百分制",
+      "description": "整卷 25 题（25 题，百分制，难度略高于考试）",
+      "questionCount": 25,
+      "data": "./data/national/earlybird-2027-shengwu.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 5
+      }
     },
     {
       "id": "fj-2026-daode",
