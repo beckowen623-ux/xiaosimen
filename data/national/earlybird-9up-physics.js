@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "分子间的引力只在距离很小时起作用，镜子破碎处的分子间距离远大于分子直径，作用力几乎为零。坑点：分子间同时存在引力和斥力，A 错。",
   "kp": "分子动理论",
   "stem": "“破镜不能重圆”，主要原因是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-9up-physics-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "搓手是克服摩擦做功，机械能转化为内能；其余三项都是热传递。",
   "kp": "改变内能的方式",
   "stem": "下列事例中，通过做功改变物体内能的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-9up-physics-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "水的比热容大，吸收或放出相同热量时温度变化小，所以沿海地区昼夜温差小。",
   "kp": "比热容",
   "stem": "沿海地区昼夜温差比内陆地区小，主要原因是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-9up-physics-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "做功冲程内能转化为机械能；压缩冲程机械能转化为内能。坑点：这两个冲程的能量转化方向正好相反。",
   "kp": "热机",
   "stem": "四冲程汽油机工作时，将内能转化为机械能的冲程是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-9up-physics-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "丝绸摩擦过的玻璃棒带正电（缺少电子）。接触时验电器上的电子转移到玻璃棒，箔片带正电，同种电荷相互排斥而张开。",
   "kp": "电荷与验电器",
   "stem": "用丝绸摩擦过的玻璃棒接触不带电的验电器金属球，验电器的金属箔片张开。下列说法正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·电流和电路"
  },
  {
   "id": "national-earlybird-9up-physics-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "要求两个条件同时满足灯才亮，两个开关应串联。并联则只要满足一个条件灯就会亮。",
   "kp": "电路设计",
   "stem": "楼道里的灯只在夜间且有人发出声音时才亮。“光控开关”在天黑时自动闭合，“声控开关”在有声音时自动闭合。符合要求的电路是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·电流和电路"
  },
  {
   "id": "national-earlybird-9up-physics-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "电流表与被测用电器串联，电流从正接线柱流入、负接线柱流出；电流表电阻很小，直接接在电源两极会造成短路。",
   "kp": "电流表的使用",
   "stem": "关于电流表的使用，下列说法正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·电流和电路"
  },
  {
   "id": "national-earlybird-9up-physics-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "并联电路各支路两端电压相等。L₁ 更亮，说明通过 L₁ 的电流更大，L₁ 的电阻更小。",
   "kp": "并联电路的电压规律",
   "stem": "将两个规格不同的小灯泡 L₁、L₂ 并联在电源两端，闭合开关后 L₁ 比 L₂ 亮。下列说法正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·电压与电阻"
  },
  {
   "id": "national-earlybird-9up-physics-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "电阻是导体本身的性质，由材料、长度、横截面积和温度决定。R＝U/I 只是计算电阻的方法。",
   "kp": "电阻",
   "stem": "由欧姆定律 I＝U/R 变形可得 R＝U/I。关于这个式子，下列说法正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·电压与电阻"
  },
  {
   "id": "national-earlybird-9up-physics-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "explanation": "两灯都不亮，说明电路断路。电压表接在 L₁ 两端示数接近电源电压，说明电压表与电源两极之间是通的，断点在 L₁ 处。",
   "kp": "电路故障判断",
   "stem": "两只小灯泡 L₁、L₂ 串联，闭合开关后两灯都不亮。用电压表测 L₁ 两端电压，示数接近电源电压；测 L₂ 两端电压，示数为零。故障可能是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-earlybird-9up-physics-q11",
@@ -439,7 +449,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   ],
   "explanation": "Q＝mq＝2 kg×4.6×10⁷ J/kg＝9.2×10⁷ J。",
   "kp": "热值",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-9up-physics-q12",
@@ -467,7 +478,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   ],
   "explanation": "1 800 r/min＝30 r/s；每个工作循环飞轮转 2 圈、做功 1 次，所以每秒做功 15 次。坑点：误以为每转一圈做功一次。",
   "kp": "热机的工作循环",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-9up-physics-q13",
@@ -495,7 +507,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   ],
   "explanation": "R＝U/I＝20 Ω；电阻与电压无关，电压为 0 时电阻仍为 20 Ω。",
   "kp": "电阻的性质",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "九年级·电压与电阻"
  },
  {
   "id": "national-earlybird-9up-physics-q14",
@@ -523,7 +536,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   ],
   "explanation": "I＝6 V÷30 Ω＝0.2 A，U₁＝IR₁＝2 V。",
   "kp": "串联分压",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-earlybird-9up-physics-q15",
@@ -551,7 +565,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   ],
   "explanation": "R＝R₁R₂/(R₁＋R₂)＝150÷25＝6 Ω。并联总电阻比任何一个分电阻都小。",
   "kp": "并联电阻",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-earlybird-9up-physics-q16",
@@ -579,7 +594,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   ],
   "explanation": "V排＝200 cm³＝2×10⁻⁴ m³，F浮＝ρ水gV排＝2 N。浮力与铁块本身的密度无关。",
   "kp": "阿基米德原理",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·浮力"
  },
  {
   "id": "national-earlybird-9up-physics-q17",
@@ -607,7 +623,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   ],
   "explanation": "W＝Fs＝100 N×5 m＝500 J。重力方向竖直向下，箱子在竖直方向没有移动距离，重力不做功。",
   "kp": "功",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·功和机械能"
  },
  {
   "id": "national-earlybird-9up-physics-q18",
@@ -635,7 +652,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   ],
   "explanation": "F₁L₁＝F₂L₂，F₁＝600 N÷3＝200 N。",
   "kp": "杠杆平衡条件",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·简单机械"
  },
  {
   "id": "national-earlybird-9up-physics-q19",
@@ -680,7 +698,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "sample": "（1）质量（初温也宜相同）；吸收的热量。\n（2）加热相同时间时升高的温度；水（加热相同时间，水升温少）。\n（3）加热 4 min，水升高 16 ℃，油升高 32 ℃，两者吸热相同、质量相同：c油＝c水×16/32＝2.1×10³ J/(kg·℃)。\n（4）水的比热容大，升高相同温度时能吸收更多热量，冷却效果好。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "比较不同物质的吸热能力"
+  "kp": "比较不同物质的吸热能力",
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-9up-physics-q20",
@@ -720,7 +739,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "sample": "（1）不可以。原来接在 A 点的是电压表的正接线柱，改接到 C 点后，电流从电压表负接线柱流入，正负接线柱接反，指针会反向偏转。\n（2）串联电路两端的总电压等于各部分电路两端电压之和（U_AC＝U_AB＋U_BC）。\n（3）换用不同规格的小灯泡（或改变电源电压）多做几次实验，避免偶然性，使结论具有普遍性。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "串联电路的电压规律"
+  "kp": "串联电路的电压规律",
+  "unit": "九年级·电压与电阻"
  },
  {
   "id": "national-earlybird-9up-physics-q21",
@@ -765,7 +785,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "sample": "（1）定值电阻的阻值（导体的电阻）；改变定值电阻两端的电压，以便多次测量。\n（2）在电阻一定时，通过导体的电流与导体两端的电压成正比。\n（3）不能。小灯泡灯丝的电阻随温度升高而变化，无法控制电阻不变。\n（4）要使定值电阻两端电压为 0.5 V，电流为 0.05 A，变阻器需分得 2.5 V，阻值为 50 Ω；若变阻器最大阻值小于 50 Ω，就调不到 0.5 V。即滑动变阻器的最大阻值太小。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "探究电流与电压的关系"
+  "kp": "探究电流与电压的关系",
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-earlybird-9up-physics-q22",
@@ -805,7 +826,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "sample": "（1）Q吸＝cmΔt＝4.2×10³×2×(100－20) J＝6.72×10⁵ J。\n（2）Q放＝Vq＝0.042×4.0×10⁷ J＝1.68×10⁶ J。\n（3）η＝Q吸/Q放＝6.72×10⁵÷1.68×10⁶×100%＝40%。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "热量与热效率"
+  "kp": "热量与热效率",
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-9up-physics-q23",
@@ -845,7 +867,8 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "sample": "（1）W有＝Gh＝1000 N×1.5 m＝1500 J；W总＝Fs＝400 N×5 m＝2000 J。\n（2）η＝W有/W总＝75%。\n（3）额外功是克服摩擦做的功：W额＝2000 J－1500 J＝500 J，f＝W额/s＝500 J÷5 m＝100 N。坑点：物体匀速运动，但摩擦力不等于拉力 400 N，因为斜面上还有重力沿斜面的分力。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "斜面的机械效率"
+  "kp": "斜面的机械效率",
+  "unit": "八下·简单机械"
  },
  {
   "id": "national-earlybird-9up-physics-q24",
@@ -885,6 +908,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "sample": "（1）R₂＝0 时只有 R₁ 接入电路，U＝IR₁＝0.6 A×10 Ω＝6 V。\n（2）R₂＝20 Ω 时，I＝U/(R₁＋R₂)＝6 V÷30 Ω＝0.2 A，电压表示数 U₁＝IR₁＝2 V。\n（3）电压表示数不能超过 3 V，即 IR₁≤3 V，I≤0.3 A（此时电流表也安全）；R总＝U/I≥6 V÷0.3 A＝20 Ω，R₂≥20 Ω－10 Ω＝10 Ω。坑点：只看电流表 0.6 A 会算出 R₂≥0，忽略了电压表量程才是限制条件。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "欧姆定律综合计算"
+  "kp": "欧姆定律综合计算",
+  "unit": "九年级·欧姆定律"
  }
 ];

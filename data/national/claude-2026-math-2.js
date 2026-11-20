@@ -39,7 +39,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "√5≈2.236，所以 －√5≈－2.236＜－2＜0＜1/3。",
   "kp": "实数大小比较",
-  "stem": "下列实数中，最小的是（ ）"
+  "stem": "下列实数中，最小的是（ ）",
+  "unit": "七下·实数"
  },
  {
   "id": "national-claude-2026-math-2-q02",
@@ -79,7 +80,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "等边三角形、正五边形只是轴对称图形；一般平行四边形只是中心对称图形；圆两者都是。",
   "kp": "轴对称与中心对称",
-  "stem": "下列图形中，既是轴对称图形又是中心对称图形的是（ ）"
+  "stem": "下列图形中，既是轴对称图形又是中心对称图形的是（ ）",
+  "unit": "轴对称与旋转（八上·九上）"
  },
  {
   "id": "national-claude-2026-math-2-q03",
@@ -119,7 +121,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "1 万亿＝10¹²，5.6 万亿＝5.6×10¹²。",
   "kp": "科学记数法",
-  "stem": "某省 2025 年地区生产总值约为 5.6 万亿元，5.6 万亿用科学记数法表示为（ ）"
+  "stem": "某省 2025 年地区生产总值约为 5.6 万亿元，5.6 万亿用科学记数法表示为（ ）",
+  "unit": "七上·有理数"
  },
  {
   "id": "national-claude-2026-math-2-q04",
@@ -159,7 +162,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "(－2)³＝－8，(a²)³＝a⁶，b³，结果为 －8a⁶b³。",
   "kp": "积的乘方",
-  "stem": "计算 (－2a²b)³ 的结果是（ ）"
+  "stem": "计算 (－2a²b)³ 的结果是（ ）",
+  "unit": "八上·整式的乘法与因式分解"
  },
  {
   "id": "national-claude-2026-math-2-q05",
@@ -199,7 +203,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "Δ＝(－2)²－4m＞0，即 4－4m＞0，m＜1。",
   "kp": "根的判别式",
-  "stem": "若关于 x 的一元二次方程 x²－2x＋m＝0 有两个不相等的实数根，则 m 的取值范围是（ ）"
+  "stem": "若关于 x 的一元二次方程 x²－2x＋m＝0 有两个不相等的实数根，则 m 的取值范围是（ ）",
+  "unit": "九上·一元二次方程"
  },
  {
   "id": "national-claude-2026-math-2-q06",
@@ -239,7 +244,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "(2＋4＋x＋6＋8)÷5＝5，x＝5。方差＝[(2－5)²＋(4－5)²＋0＋(6－5)²＋(8－5)²]÷5＝20÷5＝4。",
   "kp": "平均数与方差",
-  "stem": "一组数据 2，4，x，6，8 的平均数是 5，则这组数据的方差是（ ）"
+  "stem": "一组数据 2，4，x，6，8 的平均数是 5，则这组数据的方差是（ ）",
+  "unit": "八下·数据的分析"
  },
  {
   "id": "national-claude-2026-math-2-q07",
@@ -279,7 +285,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "S侧＝πrl＝π×3×5＝15π。",
   "kp": "圆锥的侧面积",
-  "stem": "一个圆锥的底面半径为 3，母线长为 5，则它的侧面积为（ ）"
+  "stem": "一个圆锥的底面半径为 3，母线长为 5，则它的侧面积为（ ）",
+  "unit": "九上·圆"
  },
  {
   "id": "national-claude-2026-math-2-q08",
@@ -320,7 +327,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "explanation": "菱形对角线互相垂直平分，OA＝3，OB＝4，AB＝5。在 Rt△AOB 中，E 是斜边 AB 的中点，OE＝AB/2＝2.5。",
   "kp": "菱形的性质与直角三角形斜边中线",
   "image": "./assets/national/claude-2026-math-2/q08.svg",
-  "stem": "如图，菱形 ABCD 的对角线 AC、BD 相交于点 O，AC＝6，BD＝8，E 是 AB 的中点，则 OE 的长为（ ）"
+  "stem": "如图，菱形 ABCD 的对角线 AC、BD 相交于点 O，AC＝6，BD＝8，E 是 AB 的中点，则 OE 的长为（ ）",
+  "unit": "八下·平行四边形"
  },
  {
   "id": "national-claude-2026-math-2-q09",
@@ -361,7 +369,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "explanation": "开口向下 a＜0；对称轴 －b/(2a)＝1，b＝－2a＞0，②正确；图象与 y 轴交于正半轴（由对称性另一交点为 (3，0)，c＝－3a＞0），所以 abc＜0，①错误；x＝－1 时 y＝a－b＋c＝0，③正确；开口向下，对称轴右侧 y 随 x 增大而减小，④正确。共 3 个。",
   "kp": "二次函数图象与系数的关系",
   "image": "./assets/national/claude-2026-math-2/q09.svg",
-  "stem": "如图，二次函数 y＝ax²＋bx＋c 的图象开口向下，对称轴为直线 x＝1，且经过点 (－1，0)。给出下列结论：① abc＞0；② 2a＋b＝0；③ a－b＋c＝0；④ 当 x＞1 时，y 随 x 的增大而减小。其中正确的有（ ）"
+  "stem": "如图，二次函数 y＝ax²＋bx＋c 的图象开口向下，对称轴为直线 x＝1，且经过点 (－1，0)。给出下列结论：① abc＞0；② 2a＋b＝0；③ a－b＋c＝0；④ 当 x＞1 时，y 随 x 的增大而减小。其中正确的有（ ）",
+  "unit": "九上·二次函数"
  },
  {
   "id": "national-claude-2026-math-2-q10",
@@ -401,7 +410,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "前 n 个奇数之和等于 n²。1 到 99 共有 (99＋1)÷2＝50 个奇数，和为 50²＝2500。",
   "kp": "规律探究",
-  "stem": "观察下列等式：1＝1²，1＋3＝2²，1＋3＋5＝3²，……按此规律，1＋3＋5＋…＋99 的值为（ ）"
+  "stem": "观察下列等式：1＝1²，1＋3＝2²，1＋3＋5＝3²，……按此规律，1＋3＋5＋…＋99 的值为（ ）",
+  "unit": "七上·整式与规律"
  },
  {
   "id": "national-claude-2026-math-2-q11",
@@ -429,7 +439,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
    "2(x+2)(x-2)"
   ],
   "explanation": "先提公因式 2，再用平方差公式：2(x²－4)＝2(x＋2)(x－2)。",
-  "kp": "提公因式与公式法"
+  "kp": "提公因式与公式法",
+  "unit": "八上·整式的乘法与因式分解"
  },
  {
   "id": "national-claude-2026-math-2-q12",
@@ -457,7 +468,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
    "x=3"
   ],
   "explanation": "两边乘 (x－1) 得 2＝x－1，x＝3。检验：x－1≠0，x＝3 是原方程的解。",
-  "kp": "分式方程"
+  "kp": "分式方程",
+  "unit": "八上·分式"
  },
  {
   "id": "national-claude-2026-math-2-q13",
@@ -484,7 +496,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
    "1/3"
   ],
   "explanation": "共 6 种取法：(－1，0)、(－1，1)、(－1，2)、(0，1)、(0，2)、(1，2)，积为负数的有 (－1，1)、(－1，2) 两种，P＝2/6＝1/3。",
-  "kp": "列举法求概率"
+  "kp": "列举法求概率",
+  "unit": "九上·概率初步"
  },
  {
   "id": "national-claude-2026-math-2-q14",
@@ -512,7 +525,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "由垂径定理，CE＝CD/2＝4。连接 OC，在 Rt△OCE 中，OC＝√(3²＋4²)＝5。",
   "kp": "垂径定理",
-  "image": "./assets/national/claude-2026-math-2/q14.svg"
+  "image": "./assets/national/claude-2026-math-2/q14.svg",
+  "unit": "九上·圆"
  },
  {
   "id": "national-claude-2026-math-2-q15",
@@ -539,7 +553,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
    "2"
   ],
   "explanation": "把 x＝1 代入 y＝x＋1 得 m＝2，A(1，2)，所以 k＝1×2＝2。",
-  "kp": "一次函数与反比例函数"
+  "kp": "一次函数与反比例函数",
+  "unit": "九下·反比例函数"
  },
  {
   "id": "national-claude-2026-math-2-q16",
@@ -568,7 +583,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   ],
   "explanation": "四边形 CDPE 是矩形，所以 DE＝CP。当 CP⊥AB 时 CP 最短，CP＝AC·BC/AB＝3×4÷5＝12/5，所以 DE 的最小值为 12/5。",
   "kp": "矩形的性质与垂线段最短",
-  "image": "./assets/national/claude-2026-math-2/q16.svg"
+  "image": "./assets/national/claude-2026-math-2/q16.svg",
+  "unit": "八下·平行四边形"
  },
  {
   "id": "national-claude-2026-math-2-q17",
@@ -609,7 +625,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "注意绝对值：1－√3＜0，去绝对值要变号。",
-  "kp": "实数运算与特殊角三角函数"
+  "kp": "实数运算与特殊角三角函数",
+  "unit": "九下·锐角三角函数"
  },
  {
   "id": "national-claude-2026-math-2-q18",
@@ -650,7 +667,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "同大取大。",
-  "kp": "一元一次不等式组"
+  "kp": "一元一次不等式组",
+  "unit": "七下·不等式与不等式组"
  },
  {
   "id": "national-claude-2026-math-2-q19",
@@ -691,7 +709,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "x²－1 要先因式分解成 (x＋1)(x－1) 再约分。",
-  "kp": "分式化简求值"
+  "kp": "分式化简求值",
+  "unit": "八上·分式"
  },
  {
   "id": "national-claude-2026-math-2-q20",
@@ -733,7 +752,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "answer": [],
   "explanation": "关键是由 BE＝CF 推出 BC＝EF，凑齐三边。",
   "kp": "全等三角形",
-  "image": "./assets/national/claude-2026-math-2/q20.svg"
+  "image": "./assets/national/claude-2026-math-2/q20.svg",
+  "unit": "八上·三角形与全等"
  },
  {
   "id": "national-claude-2026-math-2-q21",
@@ -779,7 +799,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "画树状图时注意不能重复选同一个人。",
-  "kp": "统计与概率"
+  "kp": "统计与概率",
+  "unit": "统计与概率（综合）"
  },
  {
   "id": "national-claude-2026-math-2-q22",
@@ -820,7 +841,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "第（2）问求“最多”，取不等式解集中的最大整数。",
-  "kp": "方程组、不等式组与一次函数的应用"
+  "kp": "方程组、不等式组与一次函数的应用",
+  "unit": "八下·一次函数"
  },
  {
   "id": "national-claude-2026-math-2-q23",
@@ -862,7 +884,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "answer": [],
   "explanation": "也可以先证 △ABC 是等腰三角形（∠ACB＝30°＝∠A），得 BC＝AB＝20，再求 CD＝BC·sin60°＝10√3。",
   "kp": "解直角三角形的应用",
-  "image": "./assets/national/claude-2026-math-2/q23.svg"
+  "image": "./assets/national/claude-2026-math-2/q23.svg",
+  "unit": "九下·锐角三角函数"
  },
  {
   "id": "national-claude-2026-math-2-q24",
@@ -909,7 +932,8 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "answer": [],
   "explanation": "见切点，连半径，得垂直；30° 所对的直角边等于斜边的一半。",
   "kp": "切线的性质与圆周角",
-  "image": "./assets/national/claude-2026-math-2/q24.svg"
+  "image": "./assets/national/claude-2026-math-2/q24.svg",
+  "unit": "九上·圆"
  },
  {
   "id": "national-claude-2026-math-2-q25",
@@ -961,6 +985,7 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "answer": [],
   "explanation": "“铅垂高 × 水平宽 ÷ 2”是求这类三角形面积最值的通法。",
   "kp": "二次函数综合（面积最值）",
-  "image": "./assets/national/claude-2026-math-2/q25.svg"
+  "image": "./assets/national/claude-2026-math-2/q25.svg",
+  "unit": "九上·二次函数"
  }
 ];

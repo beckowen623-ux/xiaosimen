@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "the Great Wall 是固定说法；amazing 以元音音素开头，用 an。",
   "kp": "冠词",
   "stem": "—Have you ever been to ____ Great Wall? —Yes. It's ____ amazing place.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-earlybird-2027-english-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "neither...nor... 连接主语时，谓语与靠近的主语 my brother 一致，且时间是 yesterday，用 was。坑点：看到 parents 就用复数。",
   "kp": "主谓一致（就近原则）",
   "stem": "Neither my parents nor my brother ____ at home when I came back yesterday.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-earlybird-2027-english-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "表示“读了几遍”用基数词 two times（也可说 twice）。“a second time”表示“再一次”，与 have read it 后接次数不符。",
   "kp": "数词",
   "stem": "The book is so interesting that I have read it ____ times.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-earlybird-2027-english-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "宾语从句用陈述语序；答语 Next Monday 是将来，用一般将来时。",
   "kp": "宾语从句",
   "stem": "—Could you tell me ____? —Next Monday.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-earlybird-2027-english-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "since＋过去时间点，主句用现在完成时。",
   "kp": "现在完成时",
   "stem": "My grandfather ____ in this small town since he retired ten years ago.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·时态与语态"
  },
  {
   "id": "national-earlybird-2027-english-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "肯定推测“一定”用 must；can't 表示否定推测“不可能”。",
   "kp": "情态动词表推测",
   "stem": "You ____ be tired after such a long trip. Sit down and have a rest.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-earlybird-2027-english-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "桥是“被建造”，时间 next year，用一般将来时的被动语态。",
   "kp": "被动语态",
   "stem": "The new bridge ____ next year. It will make traveling much easier.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·时态与语态"
  },
  {
   "id": "national-earlybird-2027-english-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "先行词 village 在从句中作地点状语（lived in the village），用 where。坑点：live 是不及物动词，不能直接用 which/that。",
   "kp": "定语从句",
   "stem": "This is the village ____ I lived when I was a child.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-earlybird-2027-english-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "对方灰心，后文 Practice makes perfect，应鼓励“别放弃”。",
   "kp": "情景交际",
   "stem": "—I failed the math test again. I'm not good at it at all. —____ Practice makes perfect.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "补全对话与交际"
  },
  {
   "id": "national-earlybird-2027-english-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "rain 在这里是不可数名词，用 such＋形容词＋不可数名词。坑点：rain 不可数，不能加 a。",
   "kp": "so/such 的用法",
   "stem": "It was ____ heavy rain that the sports meeting had to be put off.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-earlybird-2027-english-q11",
@@ -452,7 +462,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "下文总在快的部分出错，说明这首曲子一直困扰着“我”。",
   "kp": "上下文理解",
   "stem": "第 11 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q12",
@@ -495,7 +506,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "重重地敲琴键、大喊“永远弹不好”，说明心烦意乱。",
   "kp": "情感词",
   "stem": "第 12 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q13",
@@ -538,7 +550,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "but she listened to me every day 构成转折：她从没学过钢琴，却每天听“我”弹。",
   "kp": "逻辑推理",
   "stem": "第 13 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q14",
@@ -581,7 +594,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "下文说“我”只注意到错误，从没注意到进步，奶奶指出的是“比上周弹得更好”。坑点：faster 不能体现“进步”。",
   "kp": "比较级与语境",
   "stem": "第 14 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q15",
@@ -624,7 +638,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "与上一句 only noticed my mistakes 对应：从没注意到自己的进步。",
   "kp": "上下文复现",
   "stem": "第 15 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q16",
@@ -667,7 +682,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "不一次弹整首，“而是”一小节一小节地慢慢弹，用 Instead。",
   "kp": "连词",
   "stem": "第 16 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q17",
@@ -710,7 +726,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "能“不出错地”连弹三遍才进入下一节。",
   "kp": "介词",
   "stem": "第 17 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q18",
@@ -753,7 +770,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "虽然枯燥，但很有效（work 表示“起作用”），与下文比赛中手指“知道往哪走”呼应。",
   "kp": "上下文理解",
   "stem": "第 18 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q19",
@@ -796,7 +814,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "my fingers knew where to go：手指知道该往哪里去，与开头 fingers seemed to get lost 呼应。",
   "kp": "疑问词＋不定式",
   "stem": "第 19 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q20",
@@ -839,7 +858,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "结尾点题：你没注意到的进步，依然是进步。",
   "kp": "主旨呼应",
   "stem": "第 20 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-2027-english-q21",
@@ -882,7 +902,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "First Aid Basics：Each student gets a free first-aid kit。",
   "kp": "细节理解",
   "stem": "Which course offers something free to every student?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q22",
@@ -925,7 +946,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "周日上午只有 Cooking for Teens（10:00–12:00），且 13–17 岁，16 岁符合。Robot Club 在周日下午且只到 15 岁。",
   "kp": "信息匹配",
   "stem": "Tom is 16 and is free only on Sunday mornings. Which course can he take?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q23",
@@ -968,7 +990,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "第二门（较便宜的一门）打八折：摄影 120×80%＝96，机器人 200，共 296 元。坑点：打折的是较便宜的那门，不是较贵的。",
   "kp": "数字计算",
   "stem": "Lily, 14, signs up for Photography and Robot Club. How much should she pay in all?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q24",
@@ -1011,7 +1034,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "The best photos will be shown in our hall in June。报名截止是 February 25；摄影课 10 岁以上即可；机器人社 No experience needed。",
   "kp": "推理判断",
   "stem": "What can we learn from the passage?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q25",
@@ -1054,7 +1078,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "列出课程时间、费用和报名方式，是海报或广告。",
   "kp": "文章出处",
   "stem": "Where is the passage most probably from?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q26",
@@ -1097,7 +1122,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "第一段：自行车坏在上学路上，走了 40 分钟，第一次迟到，于是决定学修车。",
   "kp": "细节理解",
   "stem": "Why did Chen Hao decide to learn to fix bikes?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q27",
@@ -1140,7 +1166,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "He wrote down every mistake in a notebook and checked it before each repair.",
   "kp": "细节理解",
   "stem": "What did Chen Hao do to avoid making the same mistakes?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q28",
@@ -1183,7 +1210,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "asks each person to do one small thing in return: help another person in the town。清理公园只是例子之一。",
   "kp": "细节理解",
   "stem": "What does Chen Hao ask people to do in return?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q29",
@@ -1226,7 +1254,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "把善意比作骑车：只要大家不断“往前推”（传递下去），善意就会一直传下去。",
   "kp": "句意理解",
   "stem": "What does the underlined sentence \"Kindness travels like a bike — it keeps moving if you keep pushing\" mean?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q30",
@@ -1269,7 +1298,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "犯错不放弃（determined），免费修车并鼓励人们互相帮助（caring）。",
   "kp": "人物性格",
   "stem": "Which of the following best describes Chen Hao?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q31",
@@ -1312,7 +1342,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "第一段：we forget new information very quickly at first, and then more slowly。",
   "kp": "细节理解",
   "stem": "According to Ebbinghaus, how do people forget new information?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q32",
@@ -1355,7 +1386,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "间隔重复是隔 1 天、3 天、一周依次复习。",
   "kp": "推理判断",
   "stem": "Which plan follows the idea of spaced repetition?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q33",
@@ -1398,7 +1430,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "第三段：重复读感觉很容易，但信息只在短期记忆里，“我会了”的感觉会误导人。",
   "kp": "因果推断",
   "stem": "Why can reading the same page again and again in one evening be misleading?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q34",
@@ -1441,7 +1474,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "与 spacing（分散复习）相对，指考前短时间内突击塞进大量内容（临时抱佛脚）。",
   "kp": "词义猜测",
   "stem": "What does the word \"cramming\" in the last paragraph probably mean?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q35",
@@ -1484,7 +1518,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "最后一段：间隔重复不是魔法，适合记忆事实、单词和公式；理解难点还需思考、提问和练习。",
   "kp": "作者态度",
   "stem": "What is the writer's attitude towards spaced repetition?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-2027-english-q36",
@@ -1539,7 +1574,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "下一句 Here are some tips，空处应提出问题：怎样制订能坚持下去的计划。",
   "kp": "段落衔接",
   "stem": "第 36 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-2027-english-q37",
@@ -1594,7 +1630,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "先从能做到的开始，“以后随时可以再加”。",
   "kp": "上下文逻辑",
   "stem": "第 37 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-2027-english-q38",
@@ -1649,7 +1686,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "上一句说“复习第三章”太笼统，用 Instead 给出具体小任务的写法。",
   "kp": "上下文逻辑",
   "stem": "第 38 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-2027-english-q39",
@@ -1704,7 +1742,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "本段主题是“留出空闲时间”，生活中有意外，所以不要把每一分钟都排满。",
   "kp": "段落主旨",
   "stem": "第 39 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-2027-english-q40",
@@ -1759,7 +1798,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "explanation": "每周检查完成情况，问自己哪些有效、哪些无效，下文接着说可能哪些科目需要更多时间。",
   "kp": "上下文逻辑",
   "stem": "第 40 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-2027-english-q41",
@@ -1789,7 +1829,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "used to be 描述过去，句子叙述过去的情况，用 raised。",
   "kp": "一般过去时",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q42",
@@ -1819,7 +1860,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "修饰形容词 nervous 用副词 terribly。",
   "kp": "副词",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q43",
@@ -1849,7 +1891,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "后有 than，用比较级 more。",
   "kp": "比较级",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q44",
@@ -1879,7 +1922,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "give sb. suggestions，suggestion 可数，每天都给建议用复数。",
   "kp": "名词复数",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q45",
@@ -1909,7 +1953,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "the first to do 第一个做某事的人。",
   "kp": "序数词",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q46",
@@ -1940,7 +1985,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "see sb. doing 表示看到某人正在做某事；see sb. do 也可接受。",
   "kp": "see sb. doing / do",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q47",
@@ -1970,7 +2016,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "修饰动词 came out 用副词 easily。",
   "kp": "副词",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q48",
@@ -2000,7 +2047,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "one of the＋最高级＋复数名词。",
   "kp": "最高级",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q49",
@@ -2030,7 +2078,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "介词 without 后用动名词 trying。",
   "kp": "介词后接动名词",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q50",
@@ -2060,7 +2109,8 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   ],
   "explanation": "do one's best，主语是 I，用 my。",
   "kp": "物主代词",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-2027-english-q51",
@@ -2105,6 +2155,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "sample": "How I Deal with Stress\nIn Grade 9, almost everyone feels stressed sometimes. Last month, I did badly in a math test, and I worried that I would never catch up.\nTo deal with it, I first talked with my parents. They listened patiently and told me one test couldn't decide everything. Then I made a simple plan. Every evening, I spent twenty minutes going over my mistakes instead of doing piles of new exercises. I also went jogging three times a week, which helped me relax.\nTwo weeks later, I felt much calmer, and my next test result was better.\nMy advice is: don't keep stress to yourself. Talk to someone and take one small step at a time.",
   "method": "先列提纲：要点逐条写全 → 用 First / Then / After that / Finally 串起来 → 结尾写感受。注意时态和人称。",
   "answer": [],
-  "explanation": "评分时先看要点是否齐全，再看语言。高分句型：instead of doing、which 引导的非限制性定语从句、... helped me do sth.。"
+  "explanation": "评分时先看要点是否齐全，再看语言。高分句型：instead of doing、which 引导的非限制性定语从句、... helped me do sth.。",
+  "unit": "书面表达"
  }
 ];

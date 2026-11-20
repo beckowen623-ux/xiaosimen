@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "北京人会使用天然火；元谋人是我国境内已知最早的人类；山顶洞人会人工取火、磨制骨针。题干中的遗址（约 3 万年前、骨针）即山顶洞人遗址。",
   "kp": "远古人类",
   "stem": "考古学家在北京周口店龙骨山发现了距今约 3 万年的远古人类遗址，出土了骨针和穿孔的装饰品。下列关于我国远古人类的说法，正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国古代史（七年级）"
  },
  {
   "id": "national-earlybird-2027-lishi-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "奖励耕战、建立县制、承认土地私有是秦国商鞅变法的内容。",
   "kp": "商鞅变法",
   "stem": "战国时期，某国实行变法：承认土地私有，允许自由买卖；奖励耕战，按军功授爵；建立县制，由国君直接派官吏治理。这次变法是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国古代史（七年级）"
  },
  {
   "id": "national-earlybird-2027-lishi-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "推恩令是汉武帝为解决王国问题颁布的。",
   "kp": "秦朝巩固统一的措施",
   "stem": "秦始皇统一六国后，为巩固统一采取了一系列措施。下列不属于秦始皇措施的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国古代史（七年级）"
  },
  {
   "id": "national-earlybird-2027-lishi-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "尊崇儒术是为了统一思想，加强中央集权，巩固大一统。坑点：设立太学只是手段之一，不是根本目的。",
   "kp": "汉武帝大一统",
   "stem": "汉武帝在思想上“罢黜百家，尊崇儒术”，在中央设立太学。这些措施的主要目的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国古代史（七年级）"
  },
  {
   "id": "national-earlybird-2027-lishi-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "大运河以洛阳为中心，北达涿郡，南至余杭，加强了南北交通。",
   "kp": "隋朝大运河",
   "stem": "隋朝大运河是古代世界最长的运河，它（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国古代史（七年级）"
  },
  {
   "id": "national-earlybird-2027-lishi-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "唐太宗时扩充国学规模；武则天开创殿试和武举；唐玄宗时，诗赋成为进士科的主要考试内容。",
   "kp": "科举制的完善",
   "stem": "唐朝科举制度进一步完善。其中，唐玄宗时，诗赋成为（ ）的主要考试内容。",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国古代史（七年级）"
  },
  {
   "id": "national-earlybird-2027-lishi-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "北宋前期四川出现的“交子”是世界上最早的纸币；会子是南宋纸币。",
   "kp": "宋代商业",
   "stem": "北宋前期，四川地区出现了世界上最早的纸币。它是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国古代史（七年级）"
  },
  {
   "id": "national-earlybird-2027-lishi-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "雍正帝设立军机处，标志着君主专制达到顶峰。明太祖时废除丞相，坑点在 A。",
   "kp": "清朝君主专制的强化",
   "stem": "清朝雍正帝时设立的某机构，“军国大计，罔不总揽”，大臣只能跪受笔录皇帝旨意。该机构的设立标志着（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国古代史（七年级）"
  },
  {
   "id": "national-earlybird-2027-lishi-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "《南京条约》开放的“五口”是广州、厦门、福州、宁波、上海，不包括南京。坑点：条约名称与开放口岸混淆。",
   "kp": "《南京条约》",
   "stem": "1842 年，中英签订《南京条约》。下列内容不属于该条约的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国近代史（八上）"
  },
  {
   "id": "national-earlybird-2027-lishi-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "洋务运动没有使中国走上富强道路，目的是维护清朝统治，学习的是西方先进技术（器物层面），不是政治制度。",
   "kp": "洋务运动",
   "stem": "关于洋务运动，下列评价正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国近代史（八上）"
  },
  {
   "id": "national-earlybird-2027-lishi-q11",
@@ -450,7 +460,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "辛亥革命推翻了清朝统治，结束了两千多年的君主专制制度，但没有改变中国半殖民地半封建社会性质。五四运动才是新民主主义革命的开端。",
   "kp": "辛亥革命",
   "stem": "孙中山领导的辛亥革命具有重大历史意义。下列说法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国近代史（八上）"
  },
  {
   "id": "national-earlybird-2027-lishi-q12",
@@ -491,7 +502,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "五四运动后，新文化运动发展为宣传马克思主义的思想运动。",
   "kp": "新文化运动",
   "stem": "新文化运动前期，陈独秀等人提倡民主和科学，反对专制和迷信；提倡新道德，反对旧道德；提倡新文学，反对旧文学。五四运动后，新文化运动的主流是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国近代史（八上）"
  },
  {
   "id": "national-earlybird-2027-lishi-q13",
@@ -532,7 +544,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "中共一大在上海召开，最后一天转移到浙江嘉兴南湖的游船上举行。",
   "kp": "中国共产党的诞生",
   "stem": "1921 年 7 月，中国共产党第一次全国代表大会召开，会议最后一天转移到（ ）的一条游船上举行。",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国近代史（八上）"
  },
  {
   "id": "national-earlybird-2027-lishi-q14",
@@ -573,7 +586,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "遵义会议是党的历史上一个生死攸关的转折点。",
   "kp": "遵义会议",
   "stem": "1935 年召开的某次会议，事实上确立了毛泽东在党中央和红军的领导地位，在极其危急的情况下挽救了党和红军。这次会议是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国近代史（八上）"
  },
  {
   "id": "national-earlybird-2027-lishi-q15",
@@ -614,7 +628,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "九一八事变是中国局部抗战的开始；七七事变（卢沟桥事变）是全民族抗战的开始，发生在北平附近。",
   "kp": "抗日战争",
   "stem": "1931 年九一八事变和 1937 年七七事变在中国抗日战争史上具有重要地位。下列说法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国近代史（八上）"
  },
  {
   "id": "national-earlybird-2027-lishi-q16",
@@ -655,7 +670,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "三大改造基本完成，标志着社会主义基本制度在我国确立，我国进入社会主义初级阶段。",
   "kp": "三大改造",
   "stem": "1956 年底，我国对农业、手工业和资本主义工商业的社会主义改造基本完成。这标志着（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国现代史（八下）"
  },
  {
   "id": "national-earlybird-2027-lishi-q17",
@@ -696,7 +712,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "小岗村的做法发展为家庭联产承包责任制，调动了农民的生产积极性。坑点：土地改革是新中国成立初期废除封建土地所有制。",
   "kp": "农村改革",
   "stem": "1978 年，安徽凤阳县小岗村 18 户农民按下红手印，率先实行“包产到户”。这一做法后来发展为（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "中国现代史（八下）"
  },
  {
   "id": "national-earlybird-2027-lishi-q18",
@@ -737,7 +754,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "《汉谟拉比法典》刻在石柱上，是迄今已知世界上第一部比较完备的成文法典。",
   "kp": "古代两河流域",
   "stem": "某博物馆展出了一块刻有 282 条法律条文的石柱，石柱上部刻有国王从太阳神手中接过权杖的浮雕。它是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "世界古代史（九上）"
  },
  {
   "id": "national-earlybird-2027-lishi-q19",
@@ -778,7 +796,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "麦哲伦船队完成了人类第一次环球航行，证明了地球是一个圆体；哥伦布到达美洲；达·伽马到达印度；迪亚士到达好望角。",
   "kp": "新航路开辟",
   "stem": "新航路开辟中，第一次完成环球航行、证明地球是圆的航海家（船队）是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "世界近代史（九上·九下）"
  },
  {
   "id": "national-earlybird-2027-lishi-q20",
@@ -819,7 +838,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "explanation": "第二次工业革命使人类进入电气时代；第一次工业革命（以瓦特改良蒸汽机为标志）使人类进入蒸汽时代。",
   "kp": "第二次工业革命",
   "stem": "19 世纪 70 年代以后，电力得到广泛应用，内燃机的发明推动了汽车、飞机等交通工具的出现。人类由此进入（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "世界近代史（九上·九下）"
  },
  {
   "id": "national-earlybird-2027-lishi-q21",
@@ -859,7 +879,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "sample": "（1）选官注重家世门第，“上品无寒门，下品无势族”，官职被世家大族垄断，出身寒微的人才难以得到任用。\n（2）科举制改变了以门第选官的做法，把读书、考试和做官紧密结合起来；扩大了官员的来源，有利于选拔有才能的人；加强了中央集权；促进了文化教育的发展。（任答两点）\n（3）选拔人才应当公平、公正，唯才是举；制度要顺应时代发展不断改革和完善。",
   "method": "演变类题目：先概括每一阶段的特点，再看变化方向（由出身到才能），最后谈启示。",
   "answer": [],
-  "kp": "古代选官制度"
+  "kp": "古代选官制度",
+  "unit": "中国古代史（七年级）"
  },
  {
   "id": "national-earlybird-2027-lishi-q22",
@@ -899,7 +920,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "sample": "（1）材料一（洋务运动）属于器物（技术）层面；材料二（戊戌变法）、材料三（辛亥革命）属于制度层面；材料四（新文化运动）属于思想文化层面。\n（2）近代中国人学习西方经历了从器物到制度再到思想文化的逐步深入过程；这些探索都没有从根本上改变中国半殖民地半封建社会的性质，说明资产阶级领导的道路在中国走不通。\n（3）要有不断探索、勇于创新的精神；要立足中国国情，选择适合中国的发展道路；学习外国要取其精华、为我所用。（言之有理即可）",
   "method": "注意材料二、三都属于“制度层面”，但一个是改良（君主立宪），一个是革命（民主共和）。",
   "answer": [],
-  "kp": "近代化的探索"
+  "kp": "近代化的探索",
+  "unit": "中国近代史（八上）"
  },
  {
   "id": "national-earlybird-2027-lishi-q23",
@@ -939,7 +961,8 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "sample": "（1）是新中国成立以来党的历史上具有深远意义的伟大转折，开启了改革开放和社会主义现代化建设的新时期。\n（2）深圳、珠海、汕头在广东省，厦门在福建省（任写一个）。经济特区是对外开放的窗口，吸引了外资，引进了先进技术和管理经验，带动了经济发展。\n（3）反映了改革开放以来我国经济快速发展，综合国力显著增强。原因：实行改革开放；坚持以经济建设为中心；坚持走中国特色社会主义道路；人民群众的辛勤劳动等。",
   "method": "数据类材料先说“变化”（增长了），再说“原因”，原因从政策和道路两方面答。",
   "answer": [],
-  "kp": "改革开放"
+  "kp": "改革开放",
+  "unit": "中国现代史（八下）"
  },
  {
   "id": "national-earlybird-2027-lishi-q24",
@@ -984,6 +1007,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "sample": "（1）英国；瓦特改良的蒸汽机。\n（2）积极影响：大机器生产代替工场手工业，极大地提高了社会生产力，推动了城市化进程。消极影响：工人劳动时间长、条件恶劣；环境污染严重；贫富差距扩大。\n（3）电气时代。\n（4）科学技术是第一生产力，国家要重视科技创新和人才培养；要抓住科技革命的机遇；在发展科技和经济的同时，也要重视环境保护和社会公平，实现可持续发展。（言之有理即可）",
   "method": "影响类题目要分积极、消极两方面；启示要联系当今现实。",
   "answer": [],
-  "kp": "两次工业革命"
+  "kp": "两次工业革命",
+  "unit": "世界近代史（九上·九下）"
  }
 ];

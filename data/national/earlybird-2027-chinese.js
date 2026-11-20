@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "B“迫不急待”应为“迫不及待”；C“惬”读 qiè；D“炽”读 chì。",
   "kp": "字音字形",
   "stem": "下列词语中，加点字的读音和字形全部正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "积累与运用"
  },
  {
   "id": "national-earlybird-2027-chinese-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "A“鞠躬尽瘁，死而后已”多用于形容为事业献出生命，用于在世的教师不妥；C“津津乐道”指很有兴趣地谈论，不能用于“听”；D“不刊之论”指不能改动的言论，句子搭配不当，“对它不刊之论”成分残缺。B“垂涎三尺”形容非常想吃，使用恰当。",
   "kp": "成语运用",
   "stem": "下列句子中，加点成语使用恰当的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "积累与运用"
  },
  {
   "id": "national-earlybird-2027-chinese-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "A 滥用介词，缺主语；B 两面对一面，“能否”与“取得好成绩”不对应；C 否定不当，“防止……不再发生”意思相反；D 正确。",
   "kp": "病句辨析",
   "stem": "下列句子没有语病的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "积累与运用"
  },
  {
   "id": "national-earlybird-2027-chinese-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "“三打白骨精”后，唐僧误会孙悟空滥杀无辜，写下贬书将他赶走，D 表述错误。",
   "kp": "名著与文学常识",
   "stem": "下列关于文学常识和名著的表述，有误的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-earlybird-2027-chinese-q05",
@@ -191,7 +195,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   ],
   "explanation": "注意“畏”“遮”的写法。",
   "kp": "古诗文默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-2027-chinese-q06",
@@ -219,7 +224,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   ],
   "explanation": "常用来比喻在困境中出现转机。",
   "kp": "古诗文默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-2027-chinese-q07",
@@ -247,7 +253,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   ],
   "explanation": "“罔”是迷惑而无所得的意思，易写成“惘”。",
   "kp": "理解性默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-2027-chinese-q08",
@@ -275,7 +282,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   ],
   "explanation": "注意“病”“春”。",
   "kp": "理解性默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-2027-chinese-q09",
@@ -303,7 +311,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   ],
   "explanation": "与后句形成对照，体现政治抱负。",
   "kp": "理解性默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-2027-chinese-q10",
@@ -331,7 +340,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   ],
   "explanation": "注意“难”字。",
   "kp": "古诗文默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-2027-chinese-q11",
@@ -374,7 +384,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "“未解”是不懂得、不会的意思，指孩子年纪小还不会耕田织布，并非懒惰；下一句“也傍桑阴学种瓜”正写出他们模仿大人劳动。",
   "kp": "古诗理解",
   "stem": "下列对这首诗的理解，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "古诗词鉴赏"
  },
  {
   "id": "national-earlybird-2027-chinese-q12",
@@ -417,7 +428,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "“浸”在这里是“渐渐”的意思，“浸大”即渐渐变大。坑点：用现代汉语的常用义去理解文言词。",
   "kp": "文言实词",
   "stem": "下列对文中加点词的解释，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "文言文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q13",
@@ -460,7 +472,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "“以睹余物，皆丘山也”是夸张手法，形容纪昌目力练到了极高的境界，并不是眼睛出了毛病。",
   "kp": "内容理解",
   "stem": "下列对文章内容的理解，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "文言文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q14",
@@ -503,7 +516,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "文中明确写“他初中没读完，那些题他大概一道也看不懂”，父亲画试卷是在用自己的方式关心“我”，并不是看懂了要辅导。",
   "kp": "内容理解",
   "stem": "下列对文章内容的理解，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q15",
@@ -546,7 +560,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "句中的“伸”“压”“转”都是动作；“粗糙的手”暗示父亲辛苦劳作。父亲没有说教，而是用一个调灯的动作来帮助“我”，表现出他细心而深沉的爱。",
   "kp": "描写方法",
   "stem": "文中画线句“一只粗糙的手伸过来，把台灯的灯杆往下压了压，又把灯头转了个角度”主要运用的描写方法和作用，理解最恰当的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q16",
@@ -589,7 +604,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "explanation": "第五段是补充论证，指出下笨功夫要讲方法、带着思考，使论证更全面、严密，并不是否定前文。",
   "kp": "议论文阅读",
   "stem": "下列对文章的理解和分析，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "议论文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q17",
@@ -626,7 +642,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "描绘了初夏时节，农家男女白天耕田、夜里搓麻，各自忙碌，连孩子也在桑树荫下学着种瓜的田园劳动画面。表达了诗人对农村劳动生活的赞美，以及对天真可爱、热爱劳动的农家孩子的喜爱之情。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "先描述画面，再概括情感。"
+  "explanation": "先描述画面，再概括情感。",
+  "unit": "古诗词鉴赏"
  },
  {
   "id": "national-earlybird-2027-chinese-q18",
@@ -668,7 +685,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "要练到看小的东西像看大的东西一样，看细微的东西像看明显的东西一样，然后再来告诉我。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "关键词：微（细微）、著（显著、明显）。"
+  "explanation": "关键词：微（细微）、著（显著、明显）。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q19",
@@ -710,7 +728,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "原因：飞卫教导有方，要求他先练“不瞬”，再练“视小如大”，循序渐进地打好基本功；纪昌勤学苦练，两年练“不瞬”、三年练眼力，持之以恒。启示：学习不能急于求成，要先把基础打扎实，并且要有恒心，比如练好计算、弄懂错题，才能在难题面前游刃有余。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "原因从“师”和“徒”两方面概括，启示要联系自己。"
+  "explanation": "原因从“师”和“徒”两方面概括，启示要联系自己。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q20",
@@ -757,7 +776,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "委屈、抵触（和父亲闹别扭）→ 烦躁、灰心 → 豁然开朗，心结解开，不再害怕试卷 → 欣慰、感动（被父亲肯定）。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "抓住文中“闹别扭”“越想越烦”“第一次觉得那张试卷没那么可怕了”等关键语句。"
+  "explanation": "抓住文中“闹别扭”“越想越烦”“第一次觉得那张试卷没那么可怕了”等关键语句。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q21",
@@ -799,7 +819,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "字面上说开车过弯时要把灯光打低，看清眼前一段路；深层含义是：学习遇到困难时，不要总想着一下子解决全部问题，要静下心来把大目标拆成小步骤，先把眼前的每一步做好。父亲用自己开车的经验，含蓄地开导“我”，也表现了他不善言辞却深沉的父爱。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "这类题答“字面意思＋深层含义（联系主题）＋人物情感”。"
+  "explanation": "这类题答“字面意思＋深层含义（联系主题）＋人物情感”。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q22",
@@ -841,7 +862,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "①台灯是贯穿全文的线索，从父亲买灯、调灯到“我”用灯学习，串起了情节；②台灯象征父亲默默的关爱，寄托了“我”对父亲的感激；③“把灯打低、照亮眼前”暗含学习要一步一步来的道理，深化了文章主旨，也能引起读者的阅读兴趣。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "标题作用一般从线索、情感（象征）、主旨、吸引读者等角度回答。"
+  "explanation": "标题作用一般从线索、情感（象征）、主旨、吸引读者等角度回答。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q23",
@@ -883,7 +905,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "文章开头由人们对“笨功夫”的不屑引出中心论点：真正走得远的人，往往都是肯下笨功夫的人；接着从笨功夫是打基础、找漏洞、磨性子的功夫三个方面展开论证；然后补充说明下笨功夫要讲方法；最后总结全文，重申论点。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "提出问题→分析问题（分论点）→补充→总结。"
+  "explanation": "提出问题→分析问题（分论点）→补充→总结。",
+  "unit": "议论文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q24",
@@ -920,7 +943,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "示例：我英语阅读总是丢分，后来坚持把每篇错题的原文定位句抄下来，分析错因，一个月后发现自己总在推理题上犯同样的错误，有针对性地练习后，阅读正确率明显提高。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "事例要与“找漏洞”对应，写出“发现问题—解决—效果”。"
+  "explanation": "事例要与“找漏洞”对应，写出“发现问题—解决—效果”。",
+  "unit": "议论文阅读"
  },
  {
   "id": "national-earlybird-2027-chinese-q25",
@@ -955,7 +979,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "示例：祥子省吃俭用三年买了第一辆车，却在兵荒马乱中被大兵连人带车抓走，车没了。这说明在黑暗的旧社会，一个底层劳动者无论多么要强，都难以靠个人奋斗改变命运；而祥子孤身一人、只想着靠自己拉车翻身，也决定了他抵挡不住社会的一次次打击，最终走向堕落。",
   "method": "先概述情节（人物、事件、结果），再分析原因：社会原因＋个人原因。",
   "answer": [],
-  "kp": "名著阅读"
+  "kp": "名著阅读",
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-earlybird-2027-chinese-q26",
@@ -1000,6 +1025,7 @@ window.NATIONAL_PAPERS["earlybird-2027-chinese"] = [
   "sample": "审题提示：“原来”表示之前并没有意识到、后来才发现；“也可以”说明之前觉得自己不行。文章要写出“以为不行→尝试与困难→做到了→感悟”的变化过程，重点写转折处的细节（动作、心理、他人的一句话等）。结尾点明：自信来自一次次的尝试和坚持。避免只写结果、空喊口号。",
   "method": "按“开头点题（曾经的不自信）→ 经过（困难、转折，写细节）→ 结果 → 感悟（扣住‘原来，我也可以’）”的结构写，600 字以上。",
   "answer": [],
-  "kp": "作文"
+  "kp": "作文",
+  "unit": "作文"
  }
 ];

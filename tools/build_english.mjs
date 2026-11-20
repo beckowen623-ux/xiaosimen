@@ -6,6 +6,7 @@ import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
+import { unitOf } from "./units.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const srcDir = join(root, "english-src", "papers");
@@ -105,6 +106,20 @@ function build(paper) {
     }
     // 早鸟自测卷：客观题按 section.score 计分（主观题的分值在 points 里）
     if (section.score) for (const q of out.slice(sectionStart)) if (q.type !== "essay") q.paperScore = section.score;
+  }
+  // 精编卷、早鸟卷：每道题标章节（数理化等按教材章节，语文英语按考点模块）
+  if (paper.claude || paper.earlybird) {
+    const units = new Map();
+    for (const section of paper.sections) {
+      if (section.type === "书面表达") { units.set(section.n, unitOf(paper, section, null, { kp: "书面表达", n: section.n })); continue; }
+      for (const item of section.items || []) units.set(item.n, unitOf(paper, section, null, item));
+      for (const group of section.groups || []) for (const item of group.items) units.set(item.n, unitOf(paper, section, group, item));
+    }
+    for (const q of out) {
+      const unit = units.get(q.number);
+      if (!unit) throw new Error(`${paper.id} 第 ${q.number} 题没有章节`);
+      q.unit = unit;
+    }
   }
   if (paper.earlybird) {
     const full = out.reduce((s, q) => s + (q.type === "essay" ? q.score : q.paperScore || 0), 0);

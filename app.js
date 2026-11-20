@@ -604,7 +604,7 @@ const MODE_LABEL = {
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
   essay: '主观题提分', blank: '填空速记', retry: '本组错题重练', national: '全国真题练习',
-  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '中考早鸟自测',
+  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '中考早鸟自测', chapter: '按章节练',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -664,6 +664,7 @@ inviteInput.value = window.QuizReferrals?.incoming() || '';
 const visitorSource = new URL(location.href).searchParams.get('from') || 'direct';
 
 function isTrialQuestion(q) {
+  if (q.earlybird) return true; // 早鸟自测卷限时免费
   if (q.national) return q.preview === true; // 原卷免费看；在线刷题属于完整版，每种题型可免费试一组
   return baseTrialIds.has(q.id) || shareTrial.ids.includes(q.id);
 }
@@ -1168,6 +1169,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-20', '新增“按章节练”和“学情分析”：精编卷、早鸟卷的每道题都标了教材章节，可以按章节专项练、直接搜“浮力”“二次函数”这类难点章节；学情分析按科目和章节统计正确率，找出最需要补的章节并给出复习建议。'],
   ['2026-11-20', '新增九上早鸟自测卷：语文、数学、英语、物理、化学、道法、历史各一套，只考到九年级上册学过的内容，限时免费。'],
   ['2026-11-20', '新增中考早鸟自测卷：九下（中考全范围）语文、数学、英语、物理、化学、道法、历史、地理、生物各一套，限时免费，不占免费名额，做完出百分制总分、每题有解析；首页可按学期切换，其他学期的早鸟卷陆续上线。'],
   ['2026-11-19', '新增语文精编模拟卷（三）：32 题，结构对标中考（积累运用、默写、课外古诗、课外文言、记叙文、说明文、作文）。'],
@@ -1326,7 +1328,7 @@ function homeIntroHTML() {
     <h1 id="homeTitle" tabindex="-1">爱丽克丝中考题库</h1>
     <p class="muted">紧贴课标和中考考点编写的精编模拟卷，加上全国各地真题整理成能刷的题，每套都由我亲自先做、把关后才上线；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
     <p class="promise-line">有能力、有决心、有诚意：用科学的刷题方法帮孩子把考点真正掌握，中考稳稳提分。</p>
-    <button class="btn demo-btn" type="button" data-demo-video>▶ 30 秒看怎么用</button>
+    <button class="btn demo-btn" type="button" data-demo-video>▶ 33 秒看怎么用</button>
   </section>`;
 }
 function weeklyCardHTML(progress) {
@@ -1442,6 +1444,99 @@ function weeklySubjectNow() {
   return !isNinth() && chosen !== 'x4m' ? 'x4m' : chosen;
 }
 function weeklySubjectsNow() { return isNinth() ? WEEKLY_SUBJECTS : WEEKLY_SUBJECTS.filter(([key]) => key === 'x4m'); }
+
+// ---- 按章节练：精编卷、早鸟卷每道题都标了教材章节（语文、英语按考点模块），见 tools/units.mjs ----
+const UNIT_SUBJECTS = [['math', '数学'], ['physics', '物理'], ['chemistry', '化学'], ['chinese', '语文'], ['english', '英语'], ['daode', '道法'], ['lishi', '历史'], ['dili', '地理'], ['shengwu', '生物']];
+const UNIT_RANK = ['七上', '七下', '八上', '八下', '九上', '九年级', '九下', '轴对称', '统计', '第一单元', '第二单元', '第三单元', '第四单元', '第五单元', '第六单元', '第七单元', '第八单元', '第九单元', '第十、', '第十二', '中国古代', '中国近代', '中国现代', '世界古代', '世界近代', '中外', '积累', '古诗文默写', '古诗词', '文言', '记叙', '说明', '议论', '名著', '作文', '语法·词法', '语法·时态', '语法·句子', '补全', '完形', '阅读理解', '短文', '书面'];
+const unitRank = u => { const i = UNIT_RANK.findIndex(prefix => u.startsWith(prefix)); return i < 0 ? 99 : i; };
+let unitPool = null;
+async function ensureUnitPool() {
+  if (unitPool) return unitPool;
+  const list = (await window.NationalExams.catalog()).filter(p => p.data && (p.claude || p.earlybird));
+  const loaded = await Promise.all(list.map(p => window.NationalExams.loadPaper(p.id).catch(() => [])));
+  unitPool = loaded.flat().filter(q => q.unit);
+  return unitPool;
+}
+function unitCardHTML() {
+  const subject = state.unitSubject || '';
+  const chips = UNIT_SUBJECTS.map(([k, l]) => `<button type="button" class="drill-chip" data-unit-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('');
+  let body = '<p class="muted">先选科目，再选章节专项练。也可以在下面“全题库找题”里直接搜章节名，比如“浮力”“二次函数”“文言文”。</p>';
+  if (subject && !unitPool) body = '<p class="muted" role="status">正在整理章节…</p>';
+  if (subject && unitPool) {
+    const qs = unitPool.filter(q => q.subject === subject);
+    const units = [...new Set(qs.map(q => q.unit))].sort((a, b) => unitRank(a) - unitRank(b) || a.localeCompare(b, 'zh'));
+    body = units.length ? `<div class="unit-list">${units.map(u => {
+      const inUnit = qs.filter(q => q.unit === u);
+      const free = inUnit.filter(isTrialQuestion).length;
+      return `<button type="button" class="btn unit-btn" data-unit="${esc(u)}"><b>${esc(u)}</b><small>${inUnit.length} 题${hasFullAccess() ? '' : ` · 免费可做 ${free} 题`}</small></button>`;
+    }).join('')}</div>` : '<p class="muted">这个科目还没有分章节的题。</p>';
+  }
+  return `<section class="card unit-card" id="unitCard" aria-labelledby="unitTitle">
+    <div class="section-heading"><h2 id="unitTitle">📚 按章节练</h2><span class="muted">精编卷 · 早鸟卷 · 按教材章节</span></div>
+    <div class="weekly-chips" role="group" aria-label="选择科目">${chips}</div>${body}
+  </section>`;
+}
+async function startUnit(unit) {
+  const qs = (unitPool || []).filter(q => q.subject === state.unitSubject && q.unit === unit).sort((a, b) => String(a.paperId).localeCompare(String(b.paperId)) || a.number - b.number);
+  const list = hasFullAccess() ? qs : qs.filter(isTrialQuestion);
+  if (!list.length) { openUnlock('这一章的精编卷题目属于完整版；早鸟自测卷的题可以免费做。'); return; }
+  if (list.length < qs.length) toast(`免费可做 ${list.length} 题，完整版可做本章全部 ${qs.length} 题。`);
+  beginPractice(list, 'chapter');
+}
+
+// ---- 学情分析（规则版）：按科目、章节统计做过的题，找薄弱章节，给复习建议。数据只在本机 ----
+async function buildAnalysis() {
+  const out = byId('analysisOut');
+  if (out) out.innerHTML = '<p class="muted" role="status">正在分析做题记录…</p>';
+  await ensureUnitPool().catch(() => {});
+  const progress = loadProgress();
+  const pool = [...library.filter(q => q.subject && q.chapter && !q.national), ...(unitPool || [])];
+  const stats = {};
+  for (const q of pool) {
+    const r = qProgress(progress, q.id);
+    if (!hasAnswered(r)) continue;
+    const unit = q.unit || q.chapter;
+    const subj = (stats[q.subject] ||= { n: 0, right: 0, units: {} });
+    const u = (subj.units[unit] ||= { n: 0, right: 0, wrong: 0 });
+    subj.n++; u.n++;
+    if (r.correct) { subj.right++; u.right++; }
+    if ((r.wrongCount || 0) > 0) u.wrong++;
+  }
+  const today = todayStr();
+  const due = Object.values(progress.banks || {}).filter(r => r?.srs?.due && r.srs.due <= today && !r.mastered).length;
+  const days = studyDates(progress).filter(d => d >= todayStr(-6)).length;
+  const subjects = Object.entries(stats).sort((a, b) => b[1].n - a[1].n);
+  if (!subjects.length) {
+    state.analysisHTML = '<p class="muted">还没有做题记录。先做一套早鸟自测卷或本周一卷，再来生成学情分析。</p>';
+  } else {
+    const label = k => EARLYBIRD_LABEL[k] || SUBJECTS[k]?.short || k;
+    const rows = subjects.map(([k, s]) => {
+      const rate = Math.round(s.right / s.n * 100);
+      const units = Object.entries(s.units).filter(([, u]) => u.n >= 3).map(([name, u]) => [name, Math.round(u.right / u.n * 100), u.n]);
+      const weak = units.filter(([, r]) => r < 80).sort((a, b) => a[1] - b[1]).slice(0, 3);
+      const strong = units.filter(([, r]) => r >= 80).sort((a, b) => b[1] - a[1]).slice(0, 2);
+      const tip = rate >= 85 ? '掌握得很扎实，保持做整卷的手感，错题按时复习即可。'
+        : rate >= 70 ? '整体不错，把下面的薄弱章节专项练一遍，提分最快。'
+        : rate >= 50 ? '基础已经有了，先把薄弱章节的解析看懂，再用“按章节练”每天练 10 题。'
+        : '先别急着刷新题：把做错的题解析逐题看懂，从最薄弱的一章开始，一章一章补。';
+      return `<div class="analysis-row"><p><b>${esc(label(k))}</b> · 做了 ${s.n} 题 · 正确率 ${rate}%</p>
+        ${weak.length ? `<p class="analysis-weak">需要加强：${weak.map(([n, r, c]) => `${esc(n)}（${r}%，${c} 题）`).join('；')}</p>` : ''}
+        ${strong.length ? `<p class="analysis-strong">掌握较好：${strong.map(([n, r]) => `${esc(n)}（${r}%）`).join('；')}</p>` : ''}
+        <p class="muted">${tip}</p></div>`;
+    }).join('');
+    state.analysisHTML = `<p>近 7 天学习 <b>${days}</b> 天 · 待复习错题 <b>${due}</b> 道${due ? '（先清掉到期的错题，效果最好）' : ''}</p>${rows}
+      <p class="muted">说明：只统计在本机做过的题；某一章做题少于 3 道时不评价。建议每周看一次。</p>`;
+  }
+  const box = byId('analysisOut');
+  if (box) box.innerHTML = state.analysisHTML;
+}
+function analysisCardHTML() {
+  return `<section class="card analysis-card" id="analysisCard" aria-labelledby="analysisTitle">
+    <div class="section-heading"><h2 id="analysisTitle">📊 学情分析</h2><span class="muted">按科目、章节自动统计</span></div>
+    <div id="analysisOut">${state.analysisHTML || '<p class="muted">根据孩子做过的题，按科目和章节统计正确率，找出最需要补的章节，并给出复习建议。数据只保存在这台设备上。</p>'}</div>
+    <button class="btn primary" type="button" id="analysisBtn">${state.analysisHTML ? '重新分析' : '生成学情分析'}</button>
+  </section>`;
+}
 
 function earlybirdPapers() {
   return (nationalCatalog || []).filter(p => p.earlybird && (p.stage || '9-down') === state.stage).sort((a, b) => EARLYBIRD_ORDER.indexOf(a.subject) - EARLYBIRD_ORDER.indexOf(b.subject));
@@ -1654,6 +1749,8 @@ function renderHome(focus = '') {
     ${homeIntroHTML()}
     ${stageBarHTML()}
     ${earlybirdCardHTML()}
+    ${unitCardHTML()}
+    ${analysisCardHTML()}
     ${accessNotice}
     ${weeklyCardHTML(progress)}
     <div id="subjectSections">${subjectSectionsHTML()}</div>
@@ -1694,6 +1791,14 @@ function wireSubjectSections() {
   box.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
 }
 function wireHome() {
+  view.querySelectorAll('[data-unit-subject]').forEach(b => b.addEventListener('click', async () => {
+    state.unitSubject = b.dataset.unitSubject;
+    renderHome();
+    if (!unitPool) { await ensureUnitPool().catch(() => {}); renderHome(); }
+    byId('unitCard')?.scrollIntoView({ block: 'start' });
+  }));
+  view.querySelectorAll('[data-unit]').forEach(b => b.addEventListener('click', () => { void startUnit(b.dataset.unit); }));
+  byId('analysisBtn')?.addEventListener('click', () => { void buildAnalysis(); });
   view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); renderHome(); requestAnimationFrame(() => byId('stageBarTitle')?.scrollIntoView({ block: 'start' })); }));
   view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void startEarlybird(b.dataset.earlybird); }));
   byId('stageSelect')?.addEventListener('change', event => {
@@ -1768,14 +1873,14 @@ async function doSearch() {
     try { await ensureNationalSearch(); } catch { /* 只搜本地题 */ }
     if (byId('searchStatus') !== status) return;
   }
-  const textOf = q => [q.chapter, q.stem, q.material || '', q.materialHtml ? htmlToText(q.materialHtml) : '', q.explanation || ''];
+  const textOf = q => [q.unit || '', q.chapter, q.stem, q.material || '', q.materialHtml ? htmlToText(q.materialHtml) : '', q.explanation || ''];
   const hits = [...bankQuestions, ...subjectiveQuestions, ...(nationalSearchPool || [])].filter(q =>
     (!state.searchSubject || q.subject === state.searchSubject) &&
     textOf(q).some(text => String(text).normalize('NFKC').toLowerCase().includes(kw)));
   const progress = loadProgress();
   status.textContent = hits.length ? `找到 ${hits.length} 道${hits.length > 20 ? '，显示前 20 道' : ''}` : '没有找到相关题目。试试更短的关键词。';
   out.innerHTML = hits.slice(0, 20).map(q => `<article class="search-hit">
-    <div>${subjectChip(q.subject, q.subjectLabel)} ${q.claude ? '<span class="chip">精编模拟卷</span> ' : isSubjective(q) && q.meta ? `<span class="chip">${esc(q.meta)}</span> ` : ''}<span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
+    <div>${subjectChip(q.subject, q.subjectLabel)} ${q.claude ? '<span class="chip">精编模拟卷</span> ' : isSubjective(q) && q.meta ? `<span class="chip">${esc(q.meta)}</span> ` : ''}${q.unit ? `<span class="chip">${esc(q.unit)}</span> ` : ''}<span class="muted">${esc(q.chapter)}</span><p>${esc(q.stem)}</p></div>
     <button class="btn" data-qid="${q.id}">${hasFullAccess() || isTrialQuestion(q) ? '做这道' : hasQuestionHistory(progress, q) ? '回顾' : '查看完整版'} ${icon('arrow-right')}</button>
   </article>`).join('');
 }
@@ -2549,7 +2654,7 @@ async function init() {
 }
 init();
 
-// 首页“30 秒看怎么用”：点了才加载视频，不拖慢首页
+// 首页“看怎么用”：点了才加载视频，不拖慢首页
 document.addEventListener('click', event => {
   if (!event.target.closest('[data-demo-video]')) return;
   const dialog = byId('demoDialog');

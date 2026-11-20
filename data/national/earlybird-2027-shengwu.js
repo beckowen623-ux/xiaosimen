@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "含羞草受到触碰（刺激）后叶片合拢，是对外界刺激作出的反应（应激性）。",
   "kp": "生物的特征",
   "stem": "用手轻轻触碰含羞草的叶片，叶片会合拢。这说明生物具有的特征是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "显微镜成倒像，物像偏向哪个方向，玻片就向哪个方向移动，物像才会移到中央。",
   "kp": "显微镜的使用",
   "stem": "用显微镜观察时，发现物像位于视野的左下方。要将物像移到视野中央，应将玻片标本向（ ）移动。",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "叶绿体主要存在于植物绿色部分的细胞中，洋葱鳞片叶内表皮细胞不见光、没有叶绿体。坑点：细胞壁、液泡、叶绿体并不是每个植物细胞都同时具有。",
   "kp": "植物细胞的结构",
   "stem": "制作洋葱鳞片叶内表皮细胞临时装片并观察，发现细胞中没有叶绿体。这说明（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "染色体先复制加倍，再平均分成完全相同的两份，分别进入两个新细胞，新细胞与原细胞染色体数目相同。",
   "kp": "细胞分裂",
   "stem": "细胞分裂过程中，染色体的变化是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "植物体：细胞→组织→器官→植物体；人体多了“系统”这一层次。",
   "kp": "生物体的结构层次",
   "stem": "与人体的结构层次相比，绿色开花植物体的结构层次中没有（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "暗处理是为了把叶片中原有的淀粉运走耗尽，排除原有淀粉对实验结果的干扰。",
   "kp": "绿叶在光下制造有机物",
   "stem": "在“绿叶在光下制造有机物”的实验中，把天竺葵放在黑暗处一昼夜的目的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "呼吸作用在所有活细胞中进行，白天和夜晚都在进行；它吸收氧气，释放二氧化碳。",
   "kp": "呼吸作用",
   "stem": "关于绿色植物的呼吸作用，下列说法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "气孔是植物蒸腾失水的“门户”，也是气体交换的“窗口”。",
   "kp": "蒸腾作用",
   "stem": "植物体内的水分主要以水蒸气的形式通过叶片散失到大气中，水分散失的“门户”是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "种子萌发的外界条件是适宜的温度、一定的水分和充足的空气；完整而有活力的胚属于自身条件。光照和土壤不是必需的。",
   "kp": "种子萌发的条件",
   "stem": "种子萌发需要的外界条件是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "蛋白质在胃中开始消化；胆汁不含消化酶，只能乳化脂肪；小肠是消化和吸收的主要场所。",
   "kp": "食物的消化",
   "stem": "下列关于人体消化的叙述，正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七下·人体生理"
  },
  {
   "id": "national-earlybird-2027-shengwu-q11",
@@ -450,7 +460,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "体循环中，血液流经组织细胞处的毛细血管，氧气进入组织细胞，动脉血变成静脉血；肺循环中静脉血变成动脉血。",
   "kp": "血液循环",
   "stem": "血液流经下列哪一循环途径后，由动脉血变成静脉血？（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七下·人体生理"
  },
  {
   "id": "national-earlybird-2027-shengwu-q12",
@@ -491,7 +502,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "胰岛素分泌不足，血糖浓度过高，超过肾小管的重吸收能力，尿中出现葡萄糖（糖尿病）。肾小球病变一般导致尿中出现蛋白质或血细胞。",
   "kp": "尿的形成与激素调节",
   "stem": "某人的尿液中经常出现葡萄糖，最可能的原因是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七下·人体生理"
  },
  {
   "id": "national-earlybird-2027-shengwu-q13",
@@ -532,7 +544,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "缩手反射的神经中枢在脊髓，是生来就有的简单反射；缩手发生在感觉到烫之前，因为痛觉要传到大脑皮层，路径更长。",
   "kp": "反射与反射弧",
   "stem": "手不小心碰到很烫的物体，会立即缩回。下列关于缩手反射的说法，正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七下·人体生理"
  },
  {
   "id": "national-earlybird-2027-shengwu-q14",
@@ -573,7 +586,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "幼年生长激素分泌不足导致侏儒症（身材矮小、智力正常）；幼年甲状腺激素分泌不足导致呆小症（身材矮小、智力低下）。",
   "kp": "激素调节",
   "stem": "某人身材矮小，但智力正常。他在幼年时可能缺乏的激素是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七下·人体生理"
  },
  {
   "id": "national-earlybird-2027-shengwu-q15",
@@ -614,7 +628,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "骨骼肌只能收缩牵拉骨，不能推开骨；一块骨骼肌的两端肌腱附着在不同的骨上；一个动作至少需要两组肌肉相互配合。",
   "kp": "运动的完成",
   "stem": "关于人体的运动，下列说法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八上·动物运动与微生物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q16",
@@ -655,7 +670,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "细菌没有成形的细胞核；酵母菌是真菌，有成形的细胞核；很多细菌对人类有益（如乳酸菌）。",
   "kp": "微生物",
   "stem": "下列关于细菌、真菌和病毒的叙述，正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八上·动物运动与微生物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q17",
@@ -696,7 +712,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "生殖细胞中染色体减半为 23 条；精子含 X 或 Y 染色体；性别取决于与卵细胞结合的精子类型，生男生女机会均等。",
   "kp": "人的性别遗传",
   "stem": "人的体细胞中有 23 对染色体。下列说法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·遗传进化与健康"
  },
  {
   "id": "national-earlybird-2027-shengwu-q18",
@@ -737,7 +754,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "单眼皮孩子基因型为 aa，父母各提供一个 a，父母都是 Aa。Aa×Aa 的后代 AA∶Aa∶aa＝1∶2∶1，双眼皮占 3/4。",
   "kp": "基因的显隐性",
   "stem": "双眼皮（A）对单眼皮（a）为显性。一对双眼皮的夫妇生了一个单眼皮的孩子，他们再生一个孩子，是双眼皮的概率是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·遗传进化与健康"
  },
  {
   "id": "national-earlybird-2027-shengwu-q19",
@@ -778,7 +796,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "变异是不定向的，抗药性变异原本就存在；农药起选择作用，具有抗药性的个体生存下来并繁殖后代。",
   "kp": "自然选择",
   "stem": "长期使用同一种农药，害虫的抗药性越来越强。用达尔文的自然选择学说解释，正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·遗传进化与健康"
  },
  {
   "id": "national-earlybird-2027-shengwu-q20",
@@ -819,7 +838,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "explanation": "接种疫苗使人体产生抗体，提高免疫力，属于保护易感人群。坑点：戴口罩、勤洗手才是切断传播途径。",
   "kp": "传染病的预防",
   "stem": "接种流感疫苗可以预防流感。从预防传染病的措施看，接种疫苗属于（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·遗传进化与健康"
  },
  {
   "id": "national-earlybird-2027-shengwu-q21",
@@ -864,7 +884,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "sample": "（1）对照；光。\n（2）使叶片中的叶绿素溶解到酒精中，叶片褪成黄白色，便于观察颜色变化；酒精易燃，直接加热容易引起燃烧，所以要隔水加热。\n（3）蓝；淀粉。\n（4）光是绿色植物进行光合作用制造有机物的条件，淀粉是光合作用的产物。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "光合作用实验"
+  "kp": "光合作用实验",
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q22",
@@ -909,7 +930,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "sample": "（1）口腔；小肠。\n（2）葡萄糖由小肠吸收进入血液，经下腔静脉首先到达右心房。需要经过肺：右心房→右心室→肺动脉→肺部毛细血管→肺静脉→左心房→左心室→主动脉→腿部动脉→腿部肌肉细胞。\n（3）线粒体；氧气。\n（4）运动时肌肉细胞呼吸作用加强，需要更多的氧气、产生更多的二氧化碳，呼吸加深加快能吸入更多氧气、排出更多二氧化碳。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "消化、循环与呼吸"
+  "kp": "消化、循环与呼吸",
+  "unit": "七下·人体生理"
  },
  {
   "id": "national-earlybird-2027-shengwu-q23",
@@ -954,7 +976,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "sample": "（1）第一组；显性（父母都有耳垂，子女中出现了无耳垂，说明无耳垂是隐性性状）。\n（2）dd；Dd。\n（3）母亲无耳垂（dd），子女中有无耳垂的（dd），父亲必然含有 d，基因组成为 Dd；Dd×dd，后代 Dd∶dd＝1∶1，无耳垂概率为 1/2。\n（4）Dd×Dd，后代无耳垂概率为 1/4；生女孩的概率为 1/2，所以无耳垂女孩的概率为 1/4×1/2＝1/8。坑点：“无耳垂女孩”要同时考虑性别，不能只答 1/4。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "基因的遗传"
+  "kp": "基因的遗传",
+  "unit": "八下·遗传进化与健康"
  },
  {
   "id": "national-earlybird-2027-shengwu-q24",
@@ -999,7 +1022,8 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "sample": "（1）水草和浮游植物；分解者。\n（2）浮游植物（或水草）→小虾→小鱼→鹭（或蛇）。\n（3）鹭和蛇等营养级最高的生物；有毒物质难以分解、不易排出，会沿着食物链逐级积累，营养级越高，积累越多。\n（4）自动调节；生态系统中生物的种类和数量有限，如果外界干扰超过了一定限度，生态系统就会遭到破坏。",
   "method": "食物链只包含生产者和消费者，从生产者开始，箭头指向捕食者。",
   "answer": [],
-  "kp": "生态系统"
+  "kp": "生态系统",
+  "unit": "七上·生物与细胞、绿色植物"
  },
  {
   "id": "national-earlybird-2027-shengwu-q25",
@@ -1044,6 +1068,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "sample": "（1）病原体；传染源。\n（2）②；③④。\n（3）抗体；特异性。\n（4）需要。流感病毒容易发生变异，每年流行的病毒株可能不同，而抗体只对特定的病原体起作用；此外，体内抗体的数量会随时间逐渐减少。",
   "method": "传染源（病人、带病者）、传播途径（空气、飞沫、水、食物等）、易感人群（容易感染的人）要分清。",
   "answer": [],
-  "kp": "传染病与免疫"
+  "kp": "传染病与免疫",
+  "unit": "八下·遗传进化与健康"
  }
 ];

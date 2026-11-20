@@ -39,7 +39,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "A 项“畸”读 jī；C 项“恪”读 kè；D 项“犷”读 guǎng。",
   "kp": "字音",
-  "stem": "下列加点字注音全部正确的一项是（ ）"
+  "stem": "下列加点字注音全部正确的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-1-q02",
@@ -79,7 +80,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "A 应为“迫不及待”；C 应为“再接再厉”；D 应为“走投无路”。",
   "kp": "字形",
-  "stem": "下列词语书写全部正确的一项是（ ）"
+  "stem": "下列词语书写全部正确的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-1-q03",
@@ -119,7 +121,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "A“首当其冲”指最先受到攻击或遭遇灾难，误用为“冲在最前”；C“栩栩如生”形容艺术形象逼真，不用于书法；D“差强人意”意为大体上还能使人满意，与语境矛盾。",
   "kp": "成语运用",
-  "stem": "下列句子中加点成语使用恰当的一项是（ ）"
+  "stem": "下列句子中加点成语使用恰当的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-1-q04",
@@ -159,7 +162,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "A 缺主语，删“通过”或“使”；B 两面对一面，删“能否”；D 否定不当，删“不”。",
   "kp": "病句辨析",
-  "stem": "下列句子没有语病的一项是（ ）"
+  "stem": "下列句子没有语病的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-1-q05",
@@ -199,7 +203,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "A 是陈述句，句末用句号；C“梨花”后不用顿号；D 直接引语缺引号。",
   "kp": "标点符号",
-  "stem": "下列句子标点符号使用正确的一项是（ ）"
+  "stem": "下列句子标点符号使用正确的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-1-q06",
@@ -239,7 +244,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "《西游记》的作者是明代吴承恩；罗贯中著有《三国演义》。",
   "kp": "文学常识",
-  "stem": "下列文学常识表述有误的一项是（ ）"
+  "stem": "下列文学常识表述有误的一项是（ ）",
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-claude-2026-chinese-1-q07",
@@ -279,7 +285,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "B 祥子三起三落，最终堕落；C 藤野先生是鲁迅在日本仙台学医时的老师；D《红星照耀中国》的作者是美国记者埃德加·斯诺。",
   "kp": "名著阅读",
-  "stem": "下列关于名著内容的表述，正确的一项是（ ）"
+  "stem": "下列关于名著内容的表述，正确的一项是（ ）",
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-claude-2026-chinese-1-q08",
@@ -319,7 +326,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "《昆虫记》的作者是法国昆虫学家法布尔。",
   "kp": "名著阅读",
-  "stem": "下列关于名著的表述，有误的一项是（ ）"
+  "stem": "下列关于名著的表述，有误的一项是（ ）",
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-claude-2026-chinese-1-q09",
@@ -346,7 +354,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    "思而不学则殆"
   ],
   "explanation": "注意“殆”字的写法。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-1-q10",
@@ -373,7 +382,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    "先天下之忧而忧"
   ],
   "explanation": "体现作者以天下为己任的抱负。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-1-q11",
@@ -400,7 +410,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    "一览众山小"
   ],
   "explanation": "抒发不怕困难、敢于攀登绝顶的雄心。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-1-q12",
@@ -427,7 +438,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    "长河落日圆"
   ],
   "explanation": "描绘塞外雄奇壮阔的景象。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-1-q13",
@@ -454,7 +466,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    "江春入旧年"
   ],
   "explanation": "蕴含新事物孕育于旧事物之中的哲理。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-1-q14",
@@ -481,7 +494,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    "乱花渐欲迷人眼"
   ],
   "explanation": "写早春西湖花草的景象。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-1-q15",
@@ -508,7 +522,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    "病树前头万木春"
   ],
   "explanation": "表现新事物必将取代旧事物的哲理。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-1-q16",
@@ -535,7 +550,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    "燕然未勒归无计"
   ],
   "explanation": "“勒”字易写错，表达戍边将士功业未成、有家难回的矛盾心情。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-1-q17",
@@ -577,7 +593,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "“宁”在这里是“难道”的意思，“宁可以急相弃邪”是反问句。",
   "kp": "文言实词",
-  "stem": "下列加点词的解释，有误的一项是（ ）"
+  "stem": "下列加点词的解释，有误的一项是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q18",
@@ -619,7 +636,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "“难之”是对此感到为难，即不同意让那人搭船。",
   "kp": "句意理解",
-  "stem": "对“歆辄难之”理解正确的一项是（ ）"
+  "stem": "对“歆辄难之”理解正确的一项是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q19",
@@ -661,7 +679,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "华歆说“本所以疑，正为此耳”，当初犹豫正是担心遇到贼追这样的危急情况。",
   "kp": "内容理解",
-  "stem": "华歆起初不同意那个人搭船，是因为（ ）"
+  "stem": "华歆起初不同意那个人搭船，是因为（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q20",
@@ -703,7 +722,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "华歆慎重承诺、信守到底；王朗轻率答应、危急时想抛弃，世人以此判定华歆更优。",
   "kp": "主旨理解",
-  "stem": "下列对文章内容的理解，正确的一项是（ ）"
+  "stem": "下列对文章内容的理解，正确的一项是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q21",
@@ -745,7 +765,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "环境描写渲染了“我”的孤独与害怕，与下文“看见灯，心落了地”形成对比，为下文作铺垫。",
   "kp": "环境描写的作用",
-  "stem": "第二段写“路两边是黑乎乎的麦地……我总觉得有什么东西跟在后面”，作用是（ ）"
+  "stem": "第二段写“路两边是黑乎乎的麦地……我总觉得有什么东西跟在后面”，作用是（ ）",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q22",
@@ -787,7 +808,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "把灯比作不肯闭上的眼睛，暗含奶奶默默的守候。",
   "kp": "修辞手法",
-  "stem": "“它挂在院门口，像一只不肯闭上的眼睛”一句运用的修辞手法及表达效果，理解正确的一项是（ ）"
+  "stem": "“它挂在院门口，像一只不肯闭上的眼睛”一句运用的修辞手法及表达效果，理解正确的一项是（ ）",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q23",
@@ -829,7 +851,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   ],
   "explanation": "结尾写新灯是为了反衬旧灯和奶奶的爱在“我”心中的分量，并不是说旧灯没有意义。",
   "kp": "内容理解",
-  "stem": "下列对文章的理解，不正确的一项是（ ）"
+  "stem": "下列对文章的理解，不正确的一项是（ ）",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q24",
@@ -861,7 +884,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   "sample": "既然已经接受了他的请托，难道可以因为情况危急就抛弃他吗？",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "关键词：既（已经）、纳（接受）、自托（请托、托付）、宁（难道）、急（危急）。"
+  "explanation": "关键词：既（已经）、纳（接受）、自托（请托、托付）、宁（难道）、急（危急）。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q25",
@@ -893,7 +917,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   "sample": "华歆更优秀。华歆事先考虑周全，不轻易答应；一旦答应就负责到底，危急时也不抛弃别人。王朗起初轻率答应，危急时却想舍弃别人，言而无信。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "先下结论，再对比两人“前后态度”的不同。"
+  "explanation": "先下结论，再对比两人“前后态度”的不同。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q26",
@@ -925,7 +950,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   "sample": "表面上说灯光能为“我”指明回家的路；深层含义是奶奶用灯守候“我”，让“我”知道家里有人在等，家人的爱是“我”的依靠。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "答句子含义：先答字面意思，再答深层意思。"
+  "explanation": "答句子含义：先答字面意思，再答深层意思。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-1-q27",
@@ -957,6 +983,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   "sample": "①“那盏灯”是贯穿全文的线索，串起了“我”放学回家、奶奶留灯、如今回乡等情节；②灯象征奶奶对“我”的关爱和守候，含蓄地表达了“我”对奶奶的怀念，点明主旨。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "标题作用常从“线索、象征、主旨、吸引读者”等角度回答。"
+  "explanation": "标题作用常从“线索、象征、主旨、吸引读者”等角度回答。",
+  "unit": "记叙文阅读"
  }
 ];

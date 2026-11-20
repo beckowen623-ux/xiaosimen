@@ -39,7 +39,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "粮食酿酒生成了酒精等新物质，属于化学变化；其余只是状态或形状改变。",
   "kp": "物理变化与化学变化",
-  "stem": "下列变化中，属于化学变化的是（ ）"
+  "stem": "下列变化中，属于化学变化的是（ ）",
+  "unit": "第一单元·走进化学世界"
  },
  {
   "id": "national-claude-2026-chemistry-1-q02",
@@ -79,7 +80,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "B 易引起火灾；C 应把浓硫酸沿器壁慢慢注入水中并不断搅拌；D 不能用手接触药品。",
   "kp": "基本实验操作",
-  "stem": "下列实验操作正确的是（ ）"
+  "stem": "下列实验操作正确的是（ ）",
+  "unit": "第一单元·走进化学世界"
  },
  {
   "id": "national-claude-2026-chemistry-1-q03",
@@ -119,7 +121,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "氧化物由两种元素组成且其中一种是氧元素。KMnO₄ 含三种元素；O₂ 是单质；空气是混合物。",
   "kp": "物质的分类",
-  "stem": "下列物质中，属于氧化物的是（ ）"
+  "stem": "下列物质中，属于氧化物的是（ ）",
+  "unit": "第四单元·自然界的水"
  },
  {
   "id": "national-claude-2026-chemistry-1-q04",
@@ -159,7 +162,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "Fe²⁺ 是亚铁离子；O₂ 表示氧气或一个氧分子；氧化铝的化学式是 Al₂O₃。",
   "kp": "化学用语",
-  "stem": "下列化学用语与含义相符的是（ ）"
+  "stem": "下列化学用语与含义相符的是（ ）",
+  "unit": "第四单元·自然界的水"
  },
  {
   "id": "national-claude-2026-chemistry-1-q05",
@@ -199,7 +203,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "相对原子质量的单位是“1”，通常省略不写，不是“g”。",
   "kp": "元素周期表",
-  "stem": "硒元素在元素周期表中的信息为：原子序数 34，元素符号 Se，相对原子质量 78.96。下列说法错误的是（ ）"
+  "stem": "硒元素在元素周期表中的信息为：原子序数 34，元素符号 Se，相对原子质量 78.96。下列说法错误的是（ ）",
+  "unit": "第三单元·物质构成的奥秘"
  },
  {
   "id": "national-claude-2026-chemistry-1-q06",
@@ -239,7 +244,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "一个乙醇分子由 9 个原子构成，不能说乙醇由 9 个原子构成；C∶H＝(12×2)∶(1×6)＝24∶6＝4∶1；乙醇含三种元素，不是氧化物；碳元素质量分数最大。",
   "kp": "化学式的意义与计算",
-  "stem": "乙醇（C₂H₅OH）是常用的燃料和消毒剂。下列关于乙醇的说法正确的是（ ）"
+  "stem": "乙醇（C₂H₅OH）是常用的燃料和消毒剂。下列关于乙醇的说法正确的是（ ）",
+  "unit": "第四单元·自然界的水"
  },
  {
   "id": "national-claude-2026-chemistry-1-q07",
@@ -279,7 +285,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "盖上锅盖使油与空气隔绝。着火点是物质的固有属性，一般不能降低。",
   "kp": "燃烧与灭火",
-  "stem": "炒菜时油锅着火，用锅盖盖灭，其灭火原理是（ ）"
+  "stem": "炒菜时油锅着火，用锅盖盖灭，其灭火原理是（ ）",
+  "unit": "第七单元·燃料及其利用"
  },
  {
   "id": "national-claude-2026-chemistry-1-q08",
@@ -319,7 +326,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "X 能与稀硫酸反应、Y 不能，说明 X＞H＞Y；Y 能置换出 Z，说明 Y＞Z。所以 X＞Y＞Z。",
   "kp": "金属活动性顺序",
-  "stem": "把金属 X、Y 分别放入稀硫酸中，X 表面产生气泡，Y 表面无明显现象；把 Y 放入 Z 的硝酸盐溶液中，Y 表面有 Z 析出。则 X、Y、Z 的金属活动性由强到弱的顺序是（ ）"
+  "stem": "把金属 X、Y 分别放入稀硫酸中，X 表面产生气泡，Y 表面无明显现象；把 Y 放入 Z 的硝酸盐溶液中，Y 表面有 Z 析出。则 X、Y、Z 的金属活动性由强到弱的顺序是（ ）",
+  "unit": "第八单元·金属和金属材料"
  },
  {
   "id": "national-claude-2026-chemistry-1-q09",
@@ -360,7 +368,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "explanation": "A 没有说明两种饱和溶液的质量，无法比较溶质质量；B t₂℃时甲的溶解度为 50 g，100 g 水恰好溶解 50 g 甲，得到 150 g 饱和溶液；C 比较溶解度必须指明温度；D 甲的溶解度随温度降低而减小，降温会析出晶体，溶质质量分数减小。",
   "kp": "溶解度曲线",
   "image": "./assets/national/claude-2026-chemistry-1/q09.svg",
-  "stem": "甲、乙两种固体物质（均不含结晶水）的溶解度曲线如图所示。下列说法正确的是（ ）"
+  "stem": "甲、乙两种固体物质（均不含结晶水）的溶解度曲线如图所示。下列说法正确的是（ ）",
+  "unit": "第九单元·溶液"
  },
  {
   "id": "national-claude-2026-chemistry-1-q10",
@@ -400,7 +409,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "酚酞遇酸性、中性溶液都不变色，无法区分；石蕊遇盐酸变红，锌粒、碳酸钠遇盐酸产生气泡。",
   "kp": "物质的鉴别",
-  "stem": "下列试剂中，不能用来鉴别稀盐酸和氯化钠溶液的是（ ）"
+  "stem": "下列试剂中，不能用来鉴别稀盐酸和氯化钠溶液的是（ ）",
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-claude-2026-chemistry-1-q11",
@@ -440,7 +450,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "A 二氧化碳中少量一氧化碳无法点燃；B Na₂CO₃＋2HCl＝2NaCl＋H₂O＋CO₂↑，不引入新杂质；C 氧化钙会与水反应，把主要物质除掉了；D 稀硫酸与铁反应，除去的是主要物质。",
   "kp": "除杂",
-  "stem": "除去下列物质中的少量杂质（括号内为杂质），所用方法正确的是（ ）"
+  "stem": "除去下列物质中的少量杂质（括号内为杂质），所用方法正确的是（ ）",
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-claude-2026-chemistry-1-q12",
@@ -480,7 +491,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   ],
   "explanation": "碳酸钠先与盐酸反应产生 CO₂（若先生成 CaCO₃ 沉淀，也会被盐酸溶解），盐酸耗尽后才与氯化钙反应生成白色沉淀。pH 从小于 7 逐渐增大，碳酸钠过量后大于 7；最后溶质为 NaCl 和过量的 Na₂CO₃。",
   "kp": "复分解反应的先后顺序",
-  "stem": "向一定量的稀盐酸和氯化钙的混合溶液中，逐滴加入碳酸钠溶液至过量。下列说法正确的是（ ）"
+  "stem": "向一定量的稀盐酸和氯化钙的混合溶液中，逐滴加入碳酸钠溶液至过量。下列说法正确的是（ ）",
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-claude-2026-chemistry-1-q13",
@@ -508,7 +520,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    "铝"
   ],
   "explanation": "地壳中含量前四位：氧、硅、铝、铁，含量最多的金属元素是铝。",
-  "kp": "元素的分布"
+  "kp": "元素的分布",
+  "unit": "第三单元·物质构成的奥秘"
  },
  {
   "id": "national-claude-2026-chemistry-1-q14",
@@ -536,7 +549,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    "煮沸"
   ],
   "explanation": "生活中用煮沸，实验室用蒸馏降低水的硬度。",
-  "kp": "硬水与软水"
+  "kp": "硬水与软水",
+  "unit": "第四单元·自然界的水"
  },
  {
   "id": "national-claude-2026-chemistry-1-q15",
@@ -564,7 +578,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    "CH4"
   ],
   "explanation": "天然气的主要成分是甲烷 CH₄。",
-  "kp": "化石燃料"
+  "kp": "化石燃料",
+  "unit": "第七单元·燃料及其利用"
  },
  {
   "id": "national-claude-2026-chemistry-1-q16",
@@ -591,7 +606,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    "3"
   ],
   "explanation": "溶质质量＝溶液质量×溶质质量分数＝50 g×6%＝3 g。",
-  "kp": "溶液配制"
+  "kp": "溶液配制",
+  "unit": "第九单元·溶液"
  },
  {
   "id": "national-claude-2026-chemistry-1-q17",
@@ -632,7 +648,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "汽油除油污是溶解，洗洁精除油污是乳化，二者要分清。",
-  "kp": "化学与生活"
+  "kp": "化学与生活",
+  "unit": "第十二单元·化学与生活"
  },
  {
   "id": "national-claude-2026-chemistry-1-q18",
@@ -673,7 +690,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "注意配平、反应条件和气体、沉淀符号；铁发生置换反应生成的是硫酸亚铁。",
-  "kp": "化学方程式"
+  "kp": "化学方程式",
+  "unit": "第五单元·化学方程式"
  },
  {
   "id": "national-claude-2026-chemistry-1-q19",
@@ -719,7 +737,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "突破口：大理石的主要成分是 CaCO₃；B 是生石灰 CaO；D 是氢氧化钙；E 是碳酸钠，生成的碱是 NaOH。",
-  "kp": "物质推断"
+  "kp": "物质推断",
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-claude-2026-chemistry-1-q20",
@@ -765,7 +784,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "不用稀硫酸（生成微溶的硫酸钙覆盖在大理石表面，阻止反应继续），不用浓盐酸（易挥发，使 CO₂ 不纯）；验满要放在瓶口，不能伸入瓶内。",
-  "kp": "二氧化碳的实验室制取"
+  "kp": "二氧化碳的实验室制取",
+  "unit": "第六单元·碳和碳的氧化物"
  },
  {
   "id": "national-claude-2026-chemistry-1-q21",
@@ -811,7 +831,8 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "这是中考高频探究题。关键：碳酸钠溶液本身显碱性，必须先用足量的中性盐溶液（CaCl₂、BaCl₂）除尽碳酸根，再检验 OH⁻。",
-  "kp": "氢氧化钠变质的探究"
+  "kp": "氢氧化钠变质的探究",
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-claude-2026-chemistry-1-q22",
@@ -852,6 +873,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "先用质量守恒求出气体质量，再代入方程式列比例；计算题要写“设、写、找、列、求、答”。",
-  "kp": "化学方程式的计算"
+  "kp": "化学方程式的计算",
+  "unit": "第五单元·化学方程式"
  }
 ];

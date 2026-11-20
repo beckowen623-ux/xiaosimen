@@ -39,7 +39,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   ],
   "explanation": "只有符号不同的两个数互为相反数，−3 的相反数是 3。",
   "kp": "相反数",
-  "stem": "−3 的相反数是（ ）"
+  "stem": "−3 的相反数是（ ）",
+  "unit": "七上·有理数"
  },
  {
   "id": "national-claude-2026-math-1-q02",
@@ -79,7 +80,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   ],
   "explanation": "A 同底数幂相乘指数相加，应为 a⁵；B 幂的乘方指数相乘，(a²)³＝a⁶，正确；C 应为 a⁴；D 不是同类项，不能合并。",
   "kp": "幂的运算",
-  "stem": "下列运算正确的是（ ）"
+  "stem": "下列运算正确的是（ ）",
+  "unit": "八上·整式的乘法与因式分解"
  },
  {
   "id": "national-claude-2026-math-1-q03",
@@ -119,7 +121,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   ],
   "explanation": "科学记数法 a×10ⁿ 中 1≤|a|<10，8450000＝8.45×10⁶。",
   "kp": "科学记数法",
-  "stem": "某市常住人口约 8450000 人，将 8450000 用科学记数法表示为（ ）"
+  "stem": "某市常住人口约 8450000 人，将 8450000 用科学记数法表示为（ ）",
+  "unit": "七上·有理数"
  },
  {
   "id": "national-claude-2026-math-1-q04",
@@ -160,7 +163,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "explanation": "∠1 与 ∠2 都在直线 c 的右侧、夹在 a、b 之间，是同旁内角。两直线平行，同旁内角互补：∠2＝180°－65°＝115°。",
   "kp": "平行线的性质",
   "image": "./assets/national/claude-2026-math-1/q04.svg",
-  "stem": "如图，直线 a∥b，直线 c 与 a、b 分别相交。若 ∠1＝65°，则 ∠2 的度数为（ ）"
+  "stem": "如图，直线 a∥b，直线 c 与 a、b 分别相交。若 ∠1＝65°，则 ∠2 的度数为（ ）",
+  "unit": "七下·相交线与平行线"
  },
  {
   "id": "national-claude-2026-math-1-q05",
@@ -200,7 +204,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   ],
   "explanation": "由 x－1＜2 得 x＜3；由 2x≥－4 得 x≥－2。取公共部分：－2≤x＜3。",
   "kp": "一元一次不等式组",
-  "stem": "不等式组 x－1＜2，2x≥－4 的解集是（ ）"
+  "stem": "不等式组 x－1＜2，2x≥－4 的解集是（ ）",
+  "unit": "七下·不等式与不等式组"
  },
  {
   "id": "national-claude-2026-math-1-q06",
@@ -240,7 +245,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   ],
   "explanation": "因式分解：(x－1)(x－3)＝0，所以 x₁＝1，x₂＝3。",
   "kp": "一元二次方程",
-  "stem": "一元二次方程 x²－4x＋3＝0 的根是（ ）"
+  "stem": "一元二次方程 x²－4x＋3＝0 的根是（ ）",
+  "unit": "九上·一元二次方程"
  },
  {
   "id": "national-claude-2026-math-1-q07",
@@ -280,7 +286,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   ],
   "explanation": "数据已从小到大排列，共 6 个，中位数是第 3、4 个数的平均数：(5＋6)÷2＝5.5。",
   "kp": "中位数",
-  "stem": "一组数据 3，5，5，6，7，8 的中位数是（ ）"
+  "stem": "一组数据 3，5，5，6，7，8 的中位数是（ ）",
+  "unit": "八下·数据的分析"
  },
  {
   "id": "national-claude-2026-math-1-q08",
@@ -321,7 +328,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "explanation": "DE∥BC，所以 △ADE∽△ABC，AD∶AB＝DE∶BC。AB＝2＋3＝5，即 2∶5＝4∶BC，BC＝10。",
   "kp": "相似三角形",
   "image": "./assets/national/claude-2026-math-1/q08.svg",
-  "stem": "如图，在 △ABC 中，DE∥BC，AD＝2，DB＝3，DE＝4，则 BC 的长为（ ）"
+  "stem": "如图，在 △ABC 中，DE∥BC，AD＝2，DB＝3，DE＝4，则 BC 的长为（ ）",
+  "unit": "九下·相似"
  },
  {
   "id": "national-claude-2026-math-1-q09",
@@ -361,7 +369,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   ],
   "explanation": "k＝－2＜0，b＝4＞0，图象经过第一、二、四象限，不经过第三象限。",
   "kp": "一次函数的图象",
-  "stem": "一次函数 y＝－2x＋4 的图象不经过（ ）"
+  "stem": "一次函数 y＝－2x＋4 的图象不经过（ ）",
+  "unit": "八下·一次函数"
  },
  {
   "id": "national-claude-2026-math-1-q10",
@@ -402,7 +411,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "explanation": "直径所对的圆周角是直角，∠ACB＝90°，所以 ∠BAC＝90°－35°＝55°。",
   "kp": "圆周角",
   "image": "./assets/national/claude-2026-math-1/q10.svg",
-  "stem": "如图，AB 是 ⊙O 的直径，点 C 在 ⊙O 上。若 ∠ABC＝35°，则 ∠BAC 的度数为（ ）"
+  "stem": "如图，AB 是 ⊙O 的直径，点 C 在 ⊙O 上。若 ∠ABC＝35°，则 ∠BAC 的度数为（ ）",
+  "unit": "九上·圆"
  },
  {
   "id": "national-claude-2026-math-1-q11",
@@ -432,7 +442,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    "(x+3)(x-3)"
   ],
   "explanation": "平方差公式：a²－b²＝(a＋b)(a－b)。",
-  "kp": "因式分解"
+  "kp": "因式分解",
+  "unit": "八上·整式的乘法与因式分解"
  },
  {
   "id": "national-claude-2026-math-1-q12",
@@ -460,7 +471,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    "x≥2"
   ],
   "explanation": "被开方数非负：x－2≥0，即 x≥2。",
-  "kp": "二次根式有意义的条件"
+  "kp": "二次根式有意义的条件",
+  "unit": "八下·二次根式"
  },
  {
   "id": "national-claude-2026-math-1-q13",
@@ -488,7 +500,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    "3/5"
   ],
   "explanation": "共 5 个球，红球 3 个，P＝3/5。",
-  "kp": "概率"
+  "kp": "概率",
+  "unit": "九上·概率初步"
  },
  {
   "id": "national-claude-2026-math-1-q14",
@@ -516,7 +529,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    "120"
   ],
   "explanation": "内角和＝(6－2)×180°＝720°，每个内角＝720°÷6＝120°。",
-  "kp": "多边形内角和"
+  "kp": "多边形内角和",
+  "unit": "八上·三角形与全等"
  },
  {
   "id": "national-claude-2026-math-1-q15",
@@ -545,7 +559,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   ],
   "explanation": "AB＝√(6²＋8²)＝10。sin A＝∠A 的对边÷斜边＝BC÷AB＝8÷10＝4/5。",
   "kp": "锐角三角函数",
-  "image": "./assets/national/claude-2026-math-1/q15.svg"
+  "image": "./assets/national/claude-2026-math-1/q15.svg",
+  "unit": "九下·锐角三角函数"
  },
  {
   "id": "national-claude-2026-math-1-q16",
@@ -573,7 +588,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    "-6"
   ],
   "explanation": "把 (2，－3) 代入：k＝xy＝2×(－3)＝－6。",
-  "kp": "反比例函数"
+  "kp": "反比例函数",
+  "unit": "九下·反比例函数"
  },
  {
   "id": "national-claude-2026-math-1-q17",
@@ -614,7 +630,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "零指数幂等于 1（底数不为 0）；负整数指数幂 a⁻ⁿ＝1/aⁿ。",
-  "kp": "实数运算"
+  "kp": "实数运算",
+  "unit": "七下·实数"
  },
  {
   "id": "national-claude-2026-math-1-q18",
@@ -655,7 +672,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "先用完全平方公式和单项式乘多项式展开，再合并同类项。",
-  "kp": "整式化简求值"
+  "kp": "整式化简求值",
+  "unit": "七上·整式与规律"
  },
  {
   "id": "national-claude-2026-math-1-q19",
@@ -696,7 +714,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "y 的系数互为相反数，用加减消元法最快。",
-  "kp": "二元一次方程组"
+  "kp": "二元一次方程组",
+  "unit": "七下·二元一次方程组"
  },
  {
   "id": "national-claude-2026-math-1-q20",
@@ -738,7 +757,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "answer": [],
   "explanation": "先从图中读出各组人数，再求比例，最后用样本百分比乘总人数估计总体。",
   "kp": "条形统计图与用样本估计总体",
-  "image": "./assets/national/claude-2026-math-1/q20.svg"
+  "image": "./assets/national/claude-2026-math-1/q20.svg",
+  "unit": "统计与概率（综合）"
  },
  {
   "id": "national-claude-2026-math-1-q21",
@@ -780,7 +800,8 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "answer": [],
   "explanation": "平行四边形对边相等、对角相等，再找出夹角两边对应相等。",
   "kp": "平行四边形的性质与全等三角形",
-  "image": "./assets/national/claude-2026-math-1/q21.svg"
+  "image": "./assets/national/claude-2026-math-1/q21.svg",
+  "unit": "八下·平行四边形"
  },
  {
   "id": "national-claude-2026-math-1-q22",
@@ -822,6 +843,7 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "answer": [],
   "explanation": "顶点用配方法或公式 x＝－b/(2a)；y＜0 对应图象在 x 轴下方的部分。",
   "kp": "二次函数的图象与性质",
-  "image": "./assets/national/claude-2026-math-1/q22.svg"
+  "image": "./assets/national/claude-2026-math-1/q22.svg",
+  "unit": "九上·二次函数"
  }
 ];

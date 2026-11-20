@@ -39,7 +39,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "太阳能可以源源不断地获得，属于可再生能源；煤、石油、天然气属于不可再生能源。",
   "kp": "能源分类",
-  "stem": "下列能源中，属于可再生能源的是（ ）"
+  "stem": "下列能源中，属于可再生能源的是（ ）",
+  "unit": "九年级·信息与能源"
  },
  {
   "id": "national-claude-2026-physics-2-q02",
@@ -79,7 +80,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "电磁波可以在真空中传播，卫星通信利用电磁波。",
   "kp": "信息的传递",
-  "stem": "北斗卫星导航系统与地面之间传递信息，利用的是（ ）"
+  "stem": "北斗卫星导航系统与地面之间传递信息，利用的是（ ）",
+  "unit": "九年级·信息与能源"
  },
  {
   "id": "national-claude-2026-physics-2-q03",
@@ -119,7 +121,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "空气中的水蒸气遇冷变成小水珠，是液化现象。",
   "kp": "物态变化",
-  "stem": "清晨草叶上的露珠，它的形成属于（ ）"
+  "stem": "清晨草叶上的露珠，它的形成属于（ ）",
+  "unit": "八上·物态变化"
  },
  {
   "id": "national-claude-2026-physics-2-q04",
@@ -159,7 +162,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "更换灯泡、维修电器前要先断开电源。",
   "kp": "安全用电",
-  "stem": "下列做法中，符合安全用电原则的是（ ）"
+  "stem": "下列做法中，符合安全用电原则的是（ ）",
+  "unit": "九年级·生活用电"
  },
  {
   "id": "national-claude-2026-physics-2-q05",
@@ -199,7 +203,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "平面镜成像，像与物大小相等；像与物到镜面的距离相等，人走近，像也走近。“看起来变大”是视角变大。",
   "kp": "平面镜成像",
-  "stem": "小明走近平面镜时，他在镜中的像（ ）"
+  "stem": "小明走近平面镜时，他在镜中的像（ ）",
+  "unit": "八上·光现象"
  },
  {
   "id": "national-claude-2026-physics-2-q06",
@@ -239,7 +244,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "用力捏闸是通过增大压力来增大摩擦；其余都是减小摩擦。",
   "kp": "摩擦力",
-  "stem": "下列实例中，属于增大摩擦的是（ ）"
+  "stem": "下列实例中，属于增大摩擦的是（ ）",
+  "unit": "八下·运动和力"
  },
  {
   "id": "national-claude-2026-physics-2-q07",
@@ -279,7 +285,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "镊子动力臂小于阻力臂，费力但省距离；其余是省力杠杆。",
   "kp": "杠杆的分类",
-  "stem": "下列工具在正常使用时，属于费力杠杆的是（ ）"
+  "stem": "下列工具在正常使用时，属于费力杠杆的是（ ）",
+  "unit": "八下·简单机械"
  },
  {
   "id": "national-claude-2026-physics-2-q08",
@@ -319,7 +326,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "做功冲程中燃气推动活塞做功，内能转化为机械能；压缩冲程是机械能转化为内能。",
   "kp": "热机",
-  "stem": "四冲程汽油机工作时，将内能转化为机械能的冲程是（ ）"
+  "stem": "四冲程汽油机工作时，将内能转化为机械能的冲程是（ ）",
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-claude-2026-physics-2-q09",
@@ -359,7 +367,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "u＝2f＝20 cm，所以 f＝10 cm。u＝15 cm 时 f＜u＜2f，成倒立、放大的实像。",
   "kp": "凸透镜成像规律",
-  "stem": "把蜡烛放在凸透镜前 20 cm 处，光屏上成倒立、等大的实像。若把蜡烛移到距透镜 15 cm 处，调整光屏后，光屏上成（ ）"
+  "stem": "把蜡烛放在凸透镜前 20 cm 处，光屏上成倒立、等大的实像。若把蜡烛移到距透镜 15 cm 处，调整光屏后，光屏上成（ ）",
+  "unit": "八上·透镜及其应用"
  },
  {
   "id": "national-claude-2026-physics-2-q10",
@@ -399,7 +408,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "F浮＝5 N－3 N＝2 N；V＝V排＝F浮/(ρ水g)＝2×10⁻⁴ m³；ρ＝G/(gV)＝5÷(10×2×10⁻⁴)＝2.5×10³ kg/m³。",
   "kp": "称重法测浮力与密度",
-  "stem": "用弹簧测力计测得某物体重 5 N，将它浸没在水中时，测力计的示数为 3 N。则该物体的密度为（ ）（g 取 10 N/kg，ρ水＝1.0×10³ kg/m³）"
+  "stem": "用弹簧测力计测得某物体重 5 N，将它浸没在水中时，测力计的示数为 3 N。则该物体的密度为（ ）（g 取 10 N/kg，ρ水＝1.0×10³ kg/m³）",
+  "unit": "八下·浮力"
  },
  {
   "id": "national-claude-2026-physics-2-q11",
@@ -440,7 +450,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "explanation": "R₁、R₂ 串联，电压表测 R₁ 两端电压。R₂ 变大，总电阻变大，电流 I＝U/R总 变小；R₁ 两端电压 U₁＝IR₁ 也变小。",
   "kp": "动态电路分析",
   "image": "./assets/national/claude-2026-physics-2/q11.svg",
-  "stem": "如图所示，电源电压不变，R₁ 为定值电阻，闭合开关后，将滑动变阻器 R₂ 的滑片 P 向右移动（R₂ 接入电路的阻值变大），下列说法正确的是（ ）"
+  "stem": "如图所示，电源电压不变，R₁ 为定值电阻，闭合开关后，将滑动变阻器 R₂ 的滑片 P 向右移动（R₂ 接入电路的阻值变大），下列说法正确的是（ ）",
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-claude-2026-physics-2-q12",
@@ -480,7 +491,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "R＝U额²/P额＝36÷3＝12 Ω；P实＝U实²/R＝9÷12＝0.75 W。电压减半，功率变为原来的四分之一。",
   "kp": "实际功率",
-  "stem": "一只标有“6 V 3 W”的小灯泡，若接在 3 V 的电源上（不考虑温度对电阻的影响），它的实际功率是（ ）"
+  "stem": "一只标有“6 V 3 W”的小灯泡，若接在 3 V 的电源上（不考虑温度对电阻的影响），它的实际功率是（ ）",
+  "unit": "九年级·电功率"
  },
  {
   "id": "national-claude-2026-physics-2-q13",
@@ -520,7 +532,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "压力等于砖的重力，不变；竖放时受力面积变小，压强变大。",
   "kp": "压力与压强",
-  "stem": "同一块长方体砖，先平放、后竖放在水平地面上，砖对地面的（ ）"
+  "stem": "同一块长方体砖，先平放、后竖放在水平地面上，砖对地面的（ ）",
+  "unit": "八下·压强"
  },
  {
   "id": "national-claude-2026-physics-2-q14",
@@ -560,7 +573,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   ],
   "explanation": "并联电压相等，P＝U²/R，功率与电阻成反比，P₁∶P₂＝R₂∶R₁＝2∶1。",
   "kp": "并联电路的功率",
-  "stem": "电阻 R₁、R₂ 并联接在同一电源上，已知 R₁∶R₂＝1∶2，则它们消耗的电功率之比 P₁∶P₂ 为（ ）"
+  "stem": "电阻 R₁、R₂ 并联接在同一电源上，已知 R₁∶R₂＝1∶2，则它们消耗的电功率之比 P₁∶P₂ 为（ ）",
+  "unit": "九年级·电功率"
  },
  {
   "id": "national-claude-2026-physics-2-q15",
@@ -587,7 +601,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    "音调"
   ],
   "explanation": "高音、低音指音调，与发声体振动的频率有关。",
-  "kp": "声音的特性"
+  "kp": "声音的特性",
+  "unit": "八上·声现象"
  },
  {
   "id": "national-claude-2026-physics-2-q16",
@@ -616,7 +631,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    "8×10⁵"
   ],
   "explanation": "Q＝Vq＝0.02 m³×4×10⁷ J/m³＝8×10⁵ J。",
-  "kp": "热值"
+  "kp": "热值",
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-claude-2026-physics-2-q17",
@@ -645,7 +661,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    "4×10⁴"
   ],
   "explanation": "P＝Fv＝2000 N×20 m/s＝4×10⁴ W。",
-  "kp": "功率"
+  "kp": "功率",
+  "unit": "八下·功和机械能"
  },
  {
   "id": "national-claude-2026-physics-2-q18",
@@ -672,7 +689,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    "110"
   ],
   "explanation": "1378.5－1268.5＝110（kW·h），最后一位是小数。",
-  "kp": "电能表"
+  "kp": "电能表",
+  "unit": "九年级·电功率"
  },
  {
   "id": "national-claude-2026-physics-2-q19",
@@ -700,7 +718,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    "80%"
   ],
   "explanation": "η＝G/(nF)＝600÷(3×250)＝80%。",
-  "kp": "滑轮组的机械效率"
+  "kp": "滑轮组的机械效率",
+  "unit": "八下·简单机械"
  },
  {
   "id": "national-claude-2026-physics-2-q20",
@@ -727,7 +746,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    "50"
   ],
   "explanation": "W＝Gh＝mgh＝0.5×10×10＝50 J。",
-  "kp": "功的计算"
+  "kp": "功的计算",
+  "unit": "八下·功和机械能"
  },
  {
   "id": "national-claude-2026-physics-2-q21",
@@ -763,7 +783,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "简答题要先点出物态变化名称，再说明吸热还是放热。",
-  "kp": "物态变化与吸放热"
+  "kp": "物态变化与吸放热",
+  "unit": "八上·物态变化"
  },
  {
   "id": "national-claude-2026-physics-2-q22",
@@ -809,7 +830,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "沸腾时吸热但温度不变。",
-  "kp": "水的沸腾"
+  "kp": "水的沸腾",
+  "unit": "八上·物态变化"
  },
  {
   "id": "national-claude-2026-physics-2-q23",
@@ -850,7 +872,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "“剩余法”是测液体密度最常考的方法。",
-  "kp": "测量液体密度"
+  "kp": "测量液体密度",
+  "unit": "八上·质量与密度"
  },
  {
   "id": "national-claude-2026-physics-2-q24",
@@ -896,7 +919,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "串联分压：电阻越大分得的电压越多。",
-  "kp": "探究电流与电阻的关系"
+  "kp": "探究电流与电阻的关系",
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-claude-2026-physics-2-q25",
@@ -942,7 +966,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "定值电阻多次测量是为了减小误差；小灯泡多次测量是为了找规律。",
-  "kp": "伏安法测电阻"
+  "kp": "伏安法测电阻",
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-claude-2026-physics-2-q26",
@@ -988,7 +1013,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "匀速直线运动时牵引力与阻力是一对平衡力。",
-  "kp": "力学综合计算"
+  "kp": "力学综合计算",
+  "unit": "八下·功和机械能"
  },
  {
   "id": "national-claude-2026-physics-2-q27",
@@ -1030,7 +1056,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "answer": [],
   "explanation": "并联电路中各支路互不影响，干路电流等于各支路电流之和。",
   "kp": "并联电路综合计算",
-  "image": "./assets/national/claude-2026-physics-2/q27.svg"
+  "image": "./assets/national/claude-2026-physics-2/q27.svg",
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-claude-2026-physics-2-q28",
@@ -1076,6 +1103,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "漂浮时 ρ物/ρ水＝V排/V，可以直接得出木块密度是水的 3/5。",
-  "kp": "浮力与压强综合"
+  "kp": "浮力与压强综合",
+  "unit": "八下·浮力"
  }
 ];

@@ -39,7 +39,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   ],
   "explanation": "中学生质量约 50 kg；教室门高约 2 m；人体正常体温约 37 ℃；人步行速度约 1.1 m/s。",
   "kp": "估测",
-  "stem": "下列估测最接近实际的是（ ）"
+  "stem": "下列估测最接近实际的是（ ）",
+  "unit": "八上·机械运动（含估测）"
  },
  {
   "id": "national-claude-2026-physics-1-q02",
@@ -79,7 +80,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   ],
   "explanation": "敲鼓的力越大，鼓面振幅越大，响度越大。",
   "kp": "声音的特性",
-  "stem": "用大小不同的力敲同一面鼓，主要改变的是声音的（ ）"
+  "stem": "用大小不同的力敲同一面鼓，主要改变的是声音的（ ）",
+  "unit": "八上·声现象"
  },
  {
   "id": "national-claude-2026-physics-1-q03",
@@ -119,7 +121,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   ],
   "explanation": "小孔成像和影子是光沿直线传播；倒影是光的反射；筷子“折断”是光从水斜射入空气时发生折射。",
   "kp": "光现象",
-  "stem": "下列现象中，由光的折射形成的是（ ）"
+  "stem": "下列现象中，由光的折射形成的是（ ）",
+  "unit": "八上·光现象"
  },
  {
   "id": "national-claude-2026-physics-1-q04",
@@ -159,7 +162,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   ],
   "explanation": "室内温度较高的水蒸气遇到冰冷的玻璃，直接变成固态的小冰晶，属于凝华。",
   "kp": "物态变化",
-  "stem": "寒冷的冬天，教室窗玻璃内侧出现美丽的“冰花”，这是（ ）"
+  "stem": "寒冷的冬天，教室窗玻璃内侧出现美丽的“冰花”，这是（ ）",
+  "unit": "八上·物态变化"
  },
  {
   "id": "national-claude-2026-physics-1-q05",
@@ -200,7 +204,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   "explanation": "电流从电源出来后分成两路，分别经过 L₁ 和 L₂ 再汇合，两灯并联；开关在干路上，控制两盏灯。",
   "kp": "串联和并联",
   "image": "./assets/national/claude-2026-physics-1/q05.svg",
-  "stem": "如图所示电路，闭合开关 S 后，下列说法正确的是（ ）"
+  "stem": "如图所示电路，闭合开关 S 后，下列说法正确的是（ ）",
+  "unit": "九年级·电流和电路"
  },
  {
   "id": "national-claude-2026-physics-1-q06",
@@ -240,7 +245,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   ],
   "explanation": "刹车时脚随车停止运动，上身由于惯性保持原来的运动状态，所以向前倾。",
   "kp": "惯性",
-  "stem": "行驶的公交车紧急刹车时，站着的乘客会向前倾倒，这是因为（ ）"
+  "stem": "行驶的公交车紧急刹车时，站着的乘客会向前倾倒，这是因为（ ）",
+  "unit": "八下·运动和力"
  },
  {
   "id": "national-claude-2026-physics-1-q07",
@@ -280,7 +286,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   ],
   "explanation": "压力一定时，增大受力面积可以减小压强，背着更舒服。",
   "kp": "压强",
-  "stem": "书包带做得比较宽，是为了（ ）"
+  "stem": "书包带做得比较宽，是为了（ ）",
+  "unit": "八下·压强"
  },
  {
   "id": "national-claude-2026-physics-1-q08",
@@ -320,7 +327,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   ],
   "explanation": "漂浮时浮力等于重力，木块重力不变，所以两次浮力一样大（盐水中排开的体积更小）。",
   "kp": "物体的浮沉条件",
-  "stem": "同一个木块先后漂浮在水面和盐水面上，它受到的浮力（ ）"
+  "stem": "同一个木块先后漂浮在水面和盐水面上，它受到的浮力（ ）",
+  "unit": "八下·浮力"
  },
  {
   "id": "national-claude-2026-physics-1-q09",
@@ -361,7 +369,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   "explanation": "动滑轮由两段绳子承担物重，不计滑轮重和摩擦时 F＝G/2＝50 N。",
   "kp": "动滑轮",
   "image": "./assets/national/claude-2026-physics-1/q09.svg",
-  "stem": "如图所示，用动滑轮将重 100 N 的物体竖直匀速提起，不计滑轮重、绳重和摩擦，拉力 F 的大小为（ ）"
+  "stem": "如图所示，用动滑轮将重 100 N 的物体竖直匀速提起，不计滑轮重、绳重和摩擦，拉力 F 的大小为（ ）",
+  "unit": "八下·简单机械"
  },
  {
   "id": "national-claude-2026-physics-1-q10",
@@ -401,7 +410,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   ],
   "explanation": "闭合电路的一部分导体在磁场中做切割磁感线运动产生电流，即电磁感应，这是发电机的原理；电动机的原理是磁场对通电导体有力的作用。",
   "kp": "电与磁",
-  "stem": "发电机的工作原理是（ ）"
+  "stem": "发电机的工作原理是（ ）",
+  "unit": "九年级·电与磁"
  },
  {
   "id": "national-claude-2026-physics-1-q11",
@@ -428,7 +438,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    "20"
   ],
   "explanation": "v＝s/t＝144 km÷2 h＝72 km/h＝20 m/s（1 m/s＝3.6 km/h）。",
-  "kp": "速度的计算"
+  "kp": "速度的计算",
+  "unit": "八上·机械运动（含估测）"
  },
  {
   "id": "national-claude-2026-physics-1-q12",
@@ -457,7 +468,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    "8.4×10⁴"
   ],
   "explanation": "Q＝cmΔt＝4.2×10³×2×10 J＝8.4×10⁴ J。",
-  "kp": "比热容"
+  "kp": "比热容",
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-claude-2026-physics-1-q13",
@@ -484,7 +496,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    "0.3"
   ],
   "explanation": "I＝U/R＝3 V÷10 Ω＝0.3 A。",
-  "kp": "欧姆定律"
+  "kp": "欧姆定律",
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-claude-2026-physics-1-q14",
@@ -513,7 +526,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   ],
   "explanation": "木块左端对准 1.00 cm，右端对准 3.50 cm，长度＝3.50 cm－1.00 cm＝2.50 cm。刻度尺分度值 1 mm，要估读到分度值的下一位。",
   "kp": "长度的测量",
-  "image": "./assets/national/claude-2026-physics-1/q14.svg"
+  "image": "./assets/national/claude-2026-physics-1/q14.svg",
+  "unit": "八上·机械运动（含估测）"
  },
  {
   "id": "national-claude-2026-physics-1-q15",
@@ -540,7 +554,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    "220"
   ],
   "explanation": "我国家庭电路电压为 220 V。",
-  "kp": "家庭电路"
+  "kp": "家庭电路",
+  "unit": "九年级·生活用电"
  },
  {
   "id": "national-claude-2026-physics-1-q16",
@@ -576,7 +591,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "u＞2f 时成倒立缩小实像（照相机）；f＜u＜2f 时成倒立放大实像（投影仪），物近像远像变大，所以光屏要远离透镜。",
-  "kp": "凸透镜成像规律"
+  "kp": "凸透镜成像规律",
+  "unit": "八上·透镜及其应用"
  },
  {
   "id": "national-claude-2026-physics-1-q17",
@@ -612,7 +628,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "双脚站立的受力面积是两只脚的面积之和，计算前把 cm² 换算成 m²。",
-  "kp": "压力和压强"
+  "kp": "压力和压强",
+  "unit": "八下·压强"
  },
  {
   "id": "national-claude-2026-physics-1-q18",
@@ -654,7 +671,8 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   "answer": [],
   "explanation": "串联电路电流处处相等，总电阻等于各电阻之和。",
   "kp": "串联电路与电功率",
-  "image": "./assets/national/claude-2026-physics-1/q19.svg"
+  "image": "./assets/national/claude-2026-physics-1/q19.svg",
+  "unit": "九年级·电功率"
  },
  {
   "id": "national-claude-2026-physics-1-q19",
@@ -695,6 +713,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "时间要换算成秒；效率等于有用的热量除以消耗的电能。",
-  "kp": "电热综合计算"
+  "kp": "电热综合计算",
+  "unit": "九年级·电功率"
  }
 ];

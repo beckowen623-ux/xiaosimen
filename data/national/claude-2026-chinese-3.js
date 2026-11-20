@@ -39,7 +39,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "B“纤”读 xiān；C“黠”读 xiá；D“惬”读 qiè。",
   "kp": "字音",
-  "stem": "下列加点字注音全部正确的一项是（ ）"
+  "stem": "下列加点字注音全部正确的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-3-q02",
@@ -79,7 +80,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "B 应为“相得益彰”；C 应为“川流不息”；D 应为“直截了当”。",
   "kp": "字形",
-  "stem": "下列词语书写全部正确的一项是（ ）"
+  "stem": "下列词语书写全部正确的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-3-q03",
@@ -119,7 +121,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "B“蓬荜生辉”是谦辞，用于宾客来访或别人赠送字画等，使用对象不当；C“七手八脚”形容人多手杂，不能用于一个人；D“差强人意”指大体上还能使人满意，与“被淘汰”矛盾。",
   "kp": "成语运用",
-  "stem": "下列句子中加点成语使用恰当的一项是（ ）"
+  "stem": "下列句子中加点成语使用恰当的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-3-q04",
@@ -159,7 +162,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "A 缺主语；B 否定不当，删“不”；D 搭配不当，“水平”应与“提高”搭配。",
   "kp": "病句辨析",
-  "stem": "下列句子没有语病的一项是（ ）"
+  "stem": "下列句子没有语病的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-3-q05",
@@ -199,7 +203,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "“飞流直下三千尺”是夸张；“疑是银河落九天”才是比喻兼夸张。",
   "kp": "修辞手法",
-  "stem": "下列句子所用修辞手法判断有误的一项是（ ）"
+  "stem": "下列句子所用修辞手法判断有误的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-3-q06",
@@ -239,7 +244,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "大闹天宫的是孙悟空。",
   "kp": "名著阅读",
-  "stem": "下列关于名著内容的表述，有误的一项是（ ）"
+  "stem": "下列关于名著内容的表述，有误的一项是（ ）",
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-claude-2026-chinese-3-q07",
@@ -266,7 +272,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    "天涯若比邻"
   ],
   "explanation": "表达真挚友情不受距离阻隔。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-3-q08",
@@ -293,7 +300,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    "芳草萋萋鹦鹉洲"
   ],
   "explanation": "“萋萋”“鹦鹉”易写错。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-3-q09",
@@ -320,7 +328,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    "波撼岳阳城"
   ],
   "explanation": "“撼”字写法注意提手旁。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-3-q10",
@@ -347,7 +356,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    "蜡炬成灰泪始干"
   ],
   "explanation": "现常用来赞美无私奉献的精神。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-3-q11",
@@ -374,7 +384,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    "不以己悲"
   ],
   "explanation": "表现古仁人豁达的胸襟。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-3-q12",
@@ -401,7 +412,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    "在乎山水之间也"
   ],
   "explanation": "注意“乎”字。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-3-q13",
@@ -428,7 +440,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    "奉命于危难之间"
   ],
   "explanation": "回忆临危受命的经历。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-3-q14",
@@ -455,7 +468,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    "择其善者而从之"
   ],
   "explanation": "强调虚心向他人学习。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-3-q15",
@@ -497,7 +511,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "诗人并不否定书本知识，而是强调书本知识要通过亲身实践才能真正理解，D 理解偏颇。",
   "kp": "古诗理解",
-  "stem": "下列对这首诗的理解，不正确的一项是（ ）"
+  "stem": "下列对这首诗的理解，不正确的一项是（ ）",
+  "unit": "古诗词鉴赏"
  },
  {
   "id": "national-claude-2026-chinese-3-q17",
@@ -539,7 +554,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "“特”在这里是“只是、不过”的意思。",
   "kp": "文言实词",
-  "stem": "下列加点词的解释，有误的一项是（ ）"
+  "stem": "下列加点词的解释，有误的一项是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q18",
@@ -581,7 +597,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "“顾反”即“回来”，“反”通“返”，“彘”是猪。",
   "kp": "句意理解",
-  "stem": "对“顾反为女杀彘”理解正确的一项是（ ）"
+  "stem": "对“顾反为女杀彘”理解正确的一项是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q19",
@@ -623,7 +640,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "曾子说“今子欺之，是教子欺也”，强调父母言传身教、说到做到。",
   "kp": "内容理解",
-  "stem": "曾子坚持要杀猪的原因是（ ）"
+  "stem": "曾子坚持要杀猪的原因是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q20",
@@ -665,7 +683,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "故事通过曾子杀猪兑现承诺，说明教育孩子要言而有信、以身作则。",
   "kp": "主旨理解",
-  "stem": "下列对本文主旨的概括，最恰当的一项是（ ）"
+  "stem": "下列对本文主旨的概括，最恰当的一项是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q23",
@@ -707,7 +726,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "文中写他前前后后修了快一个小时，只收五块钱，说明他认真负责、为人厚道，并非为了多收钱。",
   "kp": "内容理解",
-  "stem": "下列对文章内容的理解，不正确的一项是（ ）"
+  "stem": "下列对文章内容的理解，不正确的一项是（ ）",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q24",
@@ -749,7 +769,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "通过“刮”的动作细节，表现陈师傅认真细致、一丝不苟。",
   "kp": "描写方法",
-  "stem": "文中“刮得仔细极了，连缝隙里的一丁点儿也不放过”一句运用的描写方法及作用，理解正确的一项是（ ）"
+  "stem": "文中“刮得仔细极了，连缝隙里的一丁点儿也不放过”一句运用的描写方法及作用，理解正确的一项是（ ）",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q25",
@@ -791,7 +812,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "原文：那些错题从来没真正弄懂过，就像没刮干净的旧胶。",
   "kp": "句子含义",
-  "stem": "文中“没刮干净的旧胶”比喻的是（ ）"
+  "stem": "文中“没刮干净的旧胶”比喻的是（ ）",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q29",
@@ -833,7 +855,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "第三段：定期翻看、重做错题，相当于在快要忘记时“加固”记忆。A 说反了；C 与最后一段“不是抄得越多越好”矛盾；D 与第四段“很多错误其实是同一类”矛盾。",
   "kp": "内容理解",
-  "stem": "下列对文章内容的理解，正确的一项是（ ）"
+  "stem": "下列对文章内容的理解，正确的一项是（ ）",
+  "unit": "说明文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q30",
@@ -875,7 +898,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   ],
   "explanation": "把错题集比作“漏洞地图”，是打比方，生动形象地说明错题本能帮我们找到薄弱点。",
   "kp": "说明方法",
-  "stem": "文中“给自己画了一张‘漏洞地图’”运用的说明方法是（ ）"
+  "stem": "文中“给自己画了一张‘漏洞地图’”运用的说明方法是（ ）",
+  "unit": "说明文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q16",
@@ -907,7 +931,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "sample": "说明从书本上得来的知识终究是浅显的，要真正透彻地理解，必须亲身实践。示例：学习物理时，书上讲的浮力知识我背得很熟，但亲手做了浮力实验后，才真正明白浮力大小和排开液体体积的关系。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "先答道理，再结合具体事例。"
+  "explanation": "先答道理，再结合具体事例。",
+  "unit": "古诗词鉴赏"
  },
  {
   "id": "national-claude-2026-chinese-3-q21",
@@ -939,7 +964,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "sample": "现在你欺骗他，这是在教孩子欺骗别人啊。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "关键词：子（你，指妻子）、欺（欺骗）、是（这）。"
+  "explanation": "关键词：子（你，指妻子）、欺（欺骗）、是（这）。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q22",
@@ -971,7 +997,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "sample": "家长要言而有信、以身作则。孩子会模仿父母的言行，父母说到就要做到，才能让孩子学会诚实守信。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "结合曾子的话“婴儿……待父母而学者也”作答。"
+  "explanation": "结合曾子的话“婴儿……待父母而学者也”作答。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q26",
@@ -1003,7 +1030,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "sample": "陈师傅做事认真细致、不急不躁（坚持先刮干净旧胶、打磨、晾干后再粘）；踏实专注、二十年如一日地守着修鞋摊；收费低，为人朴实厚道。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "从修鞋细节、收费、坚守二十年等方面概括。"
+  "explanation": "从修鞋细节、收费、坚守二十年等方面概括。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q27",
@@ -1035,7 +1063,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "sample": "表面上说修鞋要先把旧胶刮干净，胶才粘得牢；深层含义是学习也要打好基础、弄懂错题，不能只求一下子提高分数，否则再努力也没有效果。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "从字面意思和对“我”学习的启发两层回答。"
+  "explanation": "从字面意思和对“我”学习的启发两层回答。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q28",
@@ -1067,7 +1096,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "sample": "以景结情，营造宁静温暖的氛围；与开头陈师傅在老槐树下坐了二十年相照应，突出他二十年如一日踏实做事的形象；含蓄表达了“我”对陈师傅的敬意和感激，深化“打好底子”的主旨，引人回味。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "结尾作用常从“内容（照应、点题、深化主旨）”和“结构（以景结情、余味）”两方面答。"
+  "explanation": "结尾作用常从“内容（照应、点题、深化主旨）”和“结构（以景结情、余味）”两方面答。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q31",
@@ -1099,7 +1129,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "sample": "从三个方面说明：能帮我们找到真正的漏洞；能对抗遗忘；能帮我们发现错误的规律。最后一段补充说明错题本要用对方法（抓住真正不会的题、写清错因、按时重做），使说明更全面、严密，也回答了开头“又该怎样用”的问题，照应开头。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "抓住“首先、其次、再次”概括；“当然”一段是补充说明，体现说明文语言的准确严密。"
+  "explanation": "抓住“首先、其次、再次”概括；“当然”一段是补充说明，体现说明文语言的准确严密。",
+  "unit": "说明文阅读"
  },
  {
   "id": "national-claude-2026-chinese-3-q32",
@@ -1145,6 +1176,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
   "explanation": "这道作文按得分点自评，参考写作思路，不要求和示例一样。",
-  "kp": "命题作文"
+  "kp": "命题作文",
+  "unit": "作文"
  }
 ];

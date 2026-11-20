@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "A 不是同类二次根式，不能合并；C √8÷√2＝√4＝2；D √((－3)²)＝|－3|＝3。",
   "kp": "二次根式的运算",
   "stem": "下列计算正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八下·二次根式"
  },
  {
   "id": "national-earlybird-9up-math-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "等边三角形、正五边形只是轴对称图形；平行四边形（非矩形、菱形）只是中心对称图形；矩形两者都是。",
   "kp": "轴对称与中心对称",
   "stem": "下列图形中，既是轴对称图形又是中心对称图形的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "轴对称与旋转（八上·九上）"
  },
  {
   "id": "national-earlybird-9up-math-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "x²－6x＝1，两边加 9：(x－3)²＝10。坑点：两边都要加一次项系数一半的平方。",
   "kp": "配方法",
   "stem": "用配方法解方程 x²－6x－1＝0，配方后得到的方程是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·一元二次方程"
  },
  {
   "id": "national-earlybird-9up-math-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "x₁＋x₂＝3，x₁x₂＝－4，x₁²＋x₂²＝(x₁＋x₂)²－2x₁x₂＝9＋8＝17。",
   "kp": "根与系数的关系",
   "stem": "若 x₁、x₂ 是方程 x²－3x－4＝0 的两个根，则 x₁²＋x₂² 的值为（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·一元二次方程"
  },
  {
   "id": "national-earlybird-9up-math-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "“左加右减，上加下减”：向左平移 1 个单位 x 变为 x＋1，向下平移 3 个单位整体减 3。",
   "kp": "抛物线的平移",
   "stem": "将抛物线 y＝2x² 先向左平移 1 个单位，再向下平移 3 个单位，得到的抛物线是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·二次函数"
  },
  {
   "id": "national-earlybird-9up-math-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "顶点 (2，5) 在区间内，最大值为 5；x＝0 时 y＝1，x＝3 时 y＝4，最小值为 1。坑点：最小值要比较两个端点，不能只算一个。",
   "kp": "二次函数在区间上的最值",
   "stem": "二次函数 y＝－(x－2)²＋5，当 0≤x≤3 时，y 的最大值与最小值分别是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·二次函数"
  },
  {
   "id": "national-earlybird-9up-math-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "过 O 作 OC⊥AB，则 AC＝4，r＝√(3²＋4²)＝5。",
   "kp": "垂径定理",
   "stem": "在 ⊙O 中，弦 AB 的长为 8，圆心 O 到 AB 的距离为 3，则 ⊙O 的半径为（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·圆"
  },
  {
   "id": "national-earlybird-9up-math-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "圆周角等于它所对弧的度数的一半，为 50°。坑点：若题目给的是“弦所对的圆周角”，才有 50° 或 130° 两种情况。",
   "kp": "圆周角定理",
   "stem": "如果一个圆周角所对的弧是 100°，那么这个圆周角的度数为（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·圆"
  },
  {
   "id": "national-earlybird-9up-math-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "两次降价是在前一次的基础上再降：200(1－x)(1－x)＝128。",
   "kp": "一元二次方程的应用",
   "stem": "某商品原价 200 元，连续两次降价后售价为 128 元。设平均每次降价的百分率为 x，下列方程正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·一元二次方程"
  },
  {
   "id": "national-earlybird-9up-math-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "explanation": "有放回地摸两次，共 3×3＝9 种等可能结果，两次都是红球有 2×2＝4 种，P＝4/9。坑点：若不放回，概率为 1/3。",
   "kp": "概率",
   "stem": "一个不透明的盒子里有 2 个红球和 1 个白球（除颜色外都相同）。先摸出一个球，记下颜色后放回，摇匀后再摸出一个球。两次都摸到红球的概率是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·概率初步"
  },
  {
   "id": "national-earlybird-9up-math-q11",
@@ -437,7 +447,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   ],
   "explanation": "Δ＝4－4m＝0，m＝1。",
   "kp": "根的判别式",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·一元二次方程"
  },
  {
   "id": "national-earlybird-9up-math-q12",
@@ -468,7 +479,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   ],
   "explanation": "关于原点对称，横、纵坐标都互为相反数。",
   "kp": "中心对称的坐标",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "轴对称与旋转（八上·九上）"
  },
  {
   "id": "national-earlybird-9up-math-q13",
@@ -496,7 +508,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   ],
   "explanation": "令 y＝0，x₁＝1，x₂＝3，距离为 2。",
   "kp": "二次函数与一元二次方程",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·二次函数"
  },
  {
   "id": "national-earlybird-9up-math-q14",
@@ -524,7 +537,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   ],
   "explanation": "S侧＝πrl＝π×3×5＝15π cm²。",
   "kp": "圆锥的侧面积",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·圆"
  },
  {
   "id": "national-earlybird-9up-math-q15",
@@ -552,7 +566,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   ],
   "explanation": "正六边形由 6 个边长为 2 的等边三角形组成，边心距是等边三角形的高，为 √3。",
   "kp": "正多边形与圆",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·圆"
  },
  {
   "id": "national-earlybird-9up-math-q16",
@@ -580,7 +595,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   ],
   "explanation": "x＝0 和 x＝2 时 y 相等，对称轴为 x＝1。x＝4 与 x＝－2 对称。由 y＝(x＋1)(x－3) 可得 x＝4 时 y＝5×1＝5。",
   "kp": "二次函数的对称性",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·二次函数"
  },
  {
   "id": "national-earlybird-9up-math-q17",
@@ -615,7 +631,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "sample": "（1）x²－4x＝－1，(x－2)²＝3，x₁＝2＋√3，x₂＝2－√3。\n（2）3x(x－2)＋2(x－2)＝0，(x－2)(3x＋2)＝0，x₁＝2，x₂＝－2/3。坑点：第（2）题不能两边同时除以 (x－2)，否则会丢根。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "解一元二次方程"
+  "kp": "解一元二次方程",
+  "unit": "九上·一元二次方程"
  },
  {
   "id": "national-earlybird-9up-math-q18",
@@ -655,7 +672,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "sample": "原式＝[(x²－4－5)/(x－2)]·[2(x－2)/(x－3)]＝[(x＋3)(x－3)/(x－2)]·[2(x－2)/(x－3)]＝2(x＋3)。解 x²－2x－3＝0 得 x₁＝3，x₂＝－1。x＝3 时 x－3＝0，原式无意义，舍去；x＝－1 时，原式＝2×2＝4。坑点：代值前要检查分母和除式不为 0。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "分式化简求值"
+  "kp": "分式化简求值",
+  "unit": "八上·分式"
  },
  {
   "id": "national-earlybird-9up-math-q19",
@@ -695,7 +713,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "sample": "（1）关于原点对称，A₁(－1，－1)，B₁(－4，－1)，C₁(－3，－3)。\n（2）以 A 为旋转中心：AB 向右 3 个单位，逆时针旋转 90° 后变为向上 3 个单位，B₂(1，4)；AC 为向右 2、向上 2，旋转后变为向左 2、向上 2，C₂(－1，3)。\n（3）路径长＝90π×3÷180＝3π/2。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "旋转与弧长"
+  "kp": "旋转与弧长",
+  "unit": "轴对称与旋转（八上·九上）"
  },
  {
   "id": "national-earlybird-9up-math-q20",
@@ -735,7 +754,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "sample": "（1）众数为 4 小时；第 20、21 个数据都是 4，中位数为 4 小时；平均数＝(2×4＋3×10＋4×14＋5×8＋6×4)÷40＝158÷40＝3.95（小时）。\n（2）600×(8＋4)/40＝180（人）。\n（3）从 2 男 2 女中选 2 人，共 6 种等可能结果，其中 1 男 1 女有 4 种，P＝4/6＝2/3。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "统计与概率"
+  "kp": "统计与概率",
+  "unit": "统计与概率（综合）"
  },
  {
   "id": "national-earlybird-9up-math-q21",
@@ -775,7 +795,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "sample": "（1）设与墙垂直的一边为 x m，则与墙平行的一边为 (35＋1－2x)＝(36－2x) m。x(36－2x)＝150，x²－18x＋75＝0，解得 x₁＝3，x₂＝15。x＝3 时长为 30 m＞18 m，舍去；x＝15 时长为 6 m，符合。所以鸡场的长为 6 m，宽为 15 m。\n（2）x(36－2x)＝180，x²－18x＋90＝0，Δ＝324－360＜0，方程无实数根，面积不能达到 180 m²。坑点：门的部分不用篱笆，所以长＝35＋1－2x；结果要检验是否超过墙长。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "一元二次方程的应用"
+  "kp": "一元二次方程的应用",
+  "unit": "九上·一元二次方程"
  },
  {
   "id": "national-earlybird-9up-math-q22",
@@ -810,7 +831,8 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "sample": "（1）连接 OD。∵ OA＝OD，∴ ∠OAD＝∠ODA。∵ AD 平分 ∠BAC，∴ ∠OAD＝∠DAE，∴ ∠ODA＝∠DAE，∴ OD∥AE。∵ DE⊥AE，∴ OD⊥DE，又 OD 是半径，∴ DE 是 ⊙O 的切线。\n（2）过点 O 作 OF⊥AC 于 F，由垂径定理 AF＝AC÷2＝3，OF＝√(5²－3²)＝4。∵ ∠OFE＝∠E＝∠ODE＝90°，∴ 四边形 OFED 是矩形，DE＝OF＝4。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "切线的判定与垂径定理"
+  "kp": "切线的判定与垂径定理",
+  "unit": "九上·圆"
  },
  {
   "id": "national-earlybird-9up-math-q23",
@@ -850,6 +872,7 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "sample": "（1）y＝(x＋1)(x－3)＝x²－2x－3。\n（2）对称轴 x＝1，A、B 关于对称轴对称，PA＝PB，PA＋PC＝PB＋PC≥BC，当 P 在 BC 上时最小。C(0，－3)，直线 BC：y＝x－3，x＝1 时 y＝－2，P(1，－2)。\n（3）AB＝4，S＝½×4×|y_M|＝8，|y_M|＝4。y_M＝4 时 x²－2x－3＝4，x＝1±2√2；y_M＝－4 时 x²－2x－3＝－4，x＝1。所以 M(1＋2√2，4)、(1－2√2，4) 或 (1，－4)。坑点：纵坐标有正负两种情况，顶点 (1，－4) 恰好满足，别漏。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "二次函数综合"
+  "kp": "二次函数综合",
+  "unit": "九上·二次函数"
  }
 ];

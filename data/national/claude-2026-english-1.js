@@ -39,7 +39,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "空处作主语，指“我的笔记本”，用名词性物主代词 mine。",
   "kp": "名词性物主代词",
-  "stem": "—Is this your notebook? —No, it isn't. ____ is on my desk."
+  "stem": "—Is this your notebook? —No, it isn't. ____ is on my desk.",
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-claude-2026-english-1-q02",
@@ -79,7 +80,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "two years 是一段时间，现在完成时中用 for 接时间段；since 后接时间点。",
   "kp": "现在完成时",
-  "stem": "My cousin has been a volunteer at the city library ____ two years."
+  "stem": "My cousin has been a volunteer at the city library ____ two years.",
+  "unit": "语法·时态与语态"
  },
  {
   "id": "national-claude-2026-english-1-q03",
@@ -119,7 +121,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "答语是频率 three times a week，用 how often 提问。",
   "kp": "特殊疑问句",
-  "stem": "—____ do you practise playing the piano? —Three times a week."
+  "stem": "—____ do you practise playing the piano? —Three times a week.",
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-claude-2026-english-1-q04",
@@ -159,7 +162,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "bridge 与 build 是被动关系，last year 表示过去，用 was built。",
   "kp": "一般过去时的被动语态",
-  "stem": "The new bridge ____ last year, and now it takes us only ten minutes to cross the river."
+  "stem": "The new bridge ____ last year, and now it takes us only ten minutes to cross the river.",
+  "unit": "语法·时态与语态"
  },
  {
   "id": "national-claude-2026-english-1-q05",
@@ -199,7 +203,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "in our class 表示范围，用最高级；kind 的最高级是 kindest。",
   "kp": "形容词最高级",
-  "stem": "Lucy is ____ girl in our class. She always helps others with a smile."
+  "stem": "Lucy is ____ girl in our class. She always helps others with a smile.",
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-claude-2026-english-1-q06",
@@ -239,7 +244,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "后句说明天也可以，说明今天“不必”交，用 needn't。",
   "kp": "情态动词",
-  "stem": "You ____ hand in your homework today. Tomorrow is also OK."
+  "stem": "You ____ hand in your homework today. Tomorrow is also OK.",
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-claude-2026-english-1-q07",
@@ -279,7 +285,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "根据句意“不知道春游什么时候开始”，用 when 引导宾语从句，并用陈述语序。",
   "kp": "宾语从句",
-  "stem": "I don't know ____ the school trip will start. Let's ask Mr. Green."
+  "stem": "I don't know ____ the school trip will start. Let's ask Mr. Green.",
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-claude-2026-english-1-q08",
@@ -319,7 +326,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "if 引导的条件状语从句遵循“主将从现”，用一般现在时 rains。",
   "kp": "条件状语从句",
-  "stem": "If it ____ tomorrow, we will have the sports meeting in the gym."
+  "stem": "If it ____ tomorrow, we will have the sports meeting in the gym.",
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-claude-2026-english-1-q09",
@@ -359,7 +367,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "fall asleep 意为“睡着”。",
   "kp": "固定搭配",
-  "stem": "The film was so boring that many people fell ____ before it ended."
+  "stem": "The film was so boring that many people fell ____ before it ended.",
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-claude-2026-english-1-q10",
@@ -399,7 +408,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "mind 后接动词 -ing 形式：mind doing sth.。",
   "kp": "非谓语动词",
-  "stem": "—Would you mind ____ the window? It's a little cold. —Of course not."
+  "stem": "—Would you mind ____ the window? It's a little cold. —Of course not.",
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-claude-2026-english-1-q11",
@@ -439,7 +449,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "deal with the problem 意为“处理问题”。",
   "kp": "动词短语",
-  "stem": "We should try our best to ____ the problem of plastic waste."
+  "stem": "We should try our best to ____ the problem of plastic waste.",
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-claude-2026-english-1-q12",
@@ -479,7 +490,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "先行词 the boy 指人，在从句中作主语，用 who。",
   "kp": "定语从句",
-  "stem": "The boy ____ is wearing a blue cap is my brother."
+  "stem": "The boy ____ is wearing a blue cap is my brother.",
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-claude-2026-english-1-q13",
@@ -519,7 +531,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "对方明天参加比赛，应祝好运。",
   "kp": "情景交际",
-  "stem": "—I'm going to take part in the speech contest tomorrow. —____"
+  "stem": "—I'm going to take part in the speech contest tomorrow. —____",
+  "unit": "补全对话与交际"
  },
  {
   "id": "national-claude-2026-english-1-q14",
@@ -559,7 +572,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "when 引导的时间状语表示“我到家时”，奶奶正在做某事，用过去进行时。",
   "kp": "过去进行时",
-  "stem": "My grandma ____ in the garden when I got home yesterday."
+  "stem": "My grandma ____ in the garden when I got home yesterday.",
+  "unit": "语法·时态与语态"
  },
  {
   "id": "national-claude-2026-english-1-q15",
@@ -599,7 +613,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "宾语从句用陈述语序；D 时态不对。",
   "kp": "宾语从句语序",
-  "stem": "—Could you tell me ____? —Sure. Go along this street and you'll find it on your left."
+  "stem": "—Could you tell me ____? —Sure. Go along this street and you'll find it on your left.",
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-claude-2026-english-1-q16",
@@ -641,7 +656,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "旧车“脏”且铃不响，与后文清洗修理呼应。",
   "kp": "形容词辨析",
-  "stem": "第 16 空填哪个？"
+  "stem": "第 16 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q17",
@@ -683,7 +699,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "同学都有新车，自己只有旧车，感到有点难过。",
   "kp": "情感理解",
-  "stem": "第 17 空填哪个？"
+  "stem": "第 17 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q18",
@@ -725,7 +742,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "后文“修链条、刷漆”，说明父亲提议一起修。",
   "kp": "上下文理解",
-  "stem": "第 18 空填哪个？"
+  "stem": "第 18 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q19",
@@ -767,7 +785,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "paint the bike bright blue 把车漆成亮蓝色。",
   "kp": "动词辨析",
-  "stem": "第 19 空填哪个？"
+  "stem": "第 19 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q20",
@@ -809,7 +828,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "look like new 看起来像新的一样。",
   "kp": "固定搭配",
-  "stem": "第 20 空填哪个？"
+  "stem": "第 20 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q21",
@@ -851,7 +871,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "to one's surprise 令某人惊讶的是。",
   "kp": "固定搭配",
-  "stem": "第 21 空填哪个？"
+  "stem": "第 21 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q22",
@@ -893,7 +914,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "被朋友夸奖，开心地讲述修车的故事。",
   "kp": "副词辨析",
-  "stem": "第 22 空填哪个？"
+  "stem": "第 22 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q23",
@@ -935,7 +957,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "remind sb. that... 提醒某人……",
   "kp": "动词搭配",
-  "stem": "第 23 空填哪个？"
+  "stem": "第 23 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q24",
@@ -977,7 +1000,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "put your heart into it 用心投入。",
   "kp": "上下文理解",
-  "stem": "第 24 空填哪个？"
+  "stem": "第 24 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q25",
@@ -1019,7 +1043,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "和父亲一起度过的时光是最好的“礼物”。",
   "kp": "主旨理解",
-  "stem": "第 25 空填哪个？"
+  "stem": "第 25 空填哪个？",
+  "unit": "完形填空"
  },
  {
   "id": "national-claude-2026-english-1-q26",
@@ -1061,7 +1086,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "摄影课在周六上课。",
   "kp": "细节理解",
-  "stem": "Which course is held at the weekend?"
+  "stem": "Which course is held at the weekend?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q27",
@@ -1103,7 +1129,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "急救课对 16 岁以下学生免费。",
   "kp": "细节理解",
-  "stem": "How much does a 15-year-old student pay for First Aid Basics?"
+  "stem": "How much does a 15-year-old student pay for First Aid Basics?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q28",
@@ -1145,7 +1172,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "原文：You will get a certificate after the course.",
   "kp": "细节理解",
-  "stem": "What can students get after the First Aid course?"
+  "stem": "What can students get after the First Aid course?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q29",
@@ -1187,7 +1215,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "介绍课程、价格和报名方式，属于广告。",
   "kp": "推理判断",
-  "stem": "Where can we probably read this text?"
+  "stem": "Where can we probably read this text?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q30",
@@ -1229,7 +1258,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "她买旧车装满书，开到各村让孩子借书。",
   "kp": "细节理解",
-  "stem": "Why did Ms. Wang buy an old van?"
+  "stem": "Why did Ms. Wang buy an old van?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q31",
@@ -1271,7 +1301,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "They can borrow two books each time.",
   "kp": "细节理解",
-  "stem": "How many books can a child borrow each time?"
+  "stem": "How many books can a child borrow each time?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q32",
@@ -1313,7 +1344,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "她邀请家长参加故事晚会，和孩子一起朗读。",
   "kp": "细节理解",
-  "stem": "How did Ms. Wang change the parents' minds?"
+  "stem": "How did Ms. Wang change the parents' minds?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q33",
@@ -1355,7 +1387,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "比喻：书让孩子了解更广阔的世界。",
   "kp": "句意理解",
-  "stem": "What does Ms. Wang mean by \"Books open a window to the world\"?"
+  "stem": "What does Ms. Wang mean by \"Books open a window to the world\"?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q34",
@@ -1397,7 +1430,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "原文 One idea is that yawning helps to cool down the brain。",
   "kp": "细节理解",
-  "stem": "What is the first idea about why we yawn?"
+  "stem": "What is the first idea about why we yawn?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q35",
@@ -1439,7 +1473,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "就像风扇给电脑降温，把大脑比作电脑。",
   "kp": "推理判断",
-  "stem": "The writer compares the brain to ____."
+  "stem": "The writer compares the brain to ____.",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q36",
@@ -1481,7 +1516,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "看到别人打哈欠自己也会打，说明“会传染”。",
   "kp": "词义猜测",
-  "stem": "What does the word \"catching\" in Paragraph 3 mean?"
+  "stem": "What does the word \"catching\" in Paragraph 3 mean?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q37",
@@ -1523,7 +1559,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "文章介绍了打哈欠的原因和有趣事实。",
   "kp": "主旨大意",
-  "stem": "What is the best title for the passage?"
+  "stem": "What is the best title for the passage?",
+  "unit": "阅读理解"
  },
  {
   "id": "national-claude-2026-english-1-q38",
@@ -1577,7 +1614,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "下文分点给出建议，此处引出建议。",
   "kp": "段落衔接",
-  "stem": "第 38 空：选出最合适的一句"
+  "stem": "第 38 空：选出最合适的一句",
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-claude-2026-english-1-q39",
@@ -1631,7 +1669,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "把任务都写下来，就能清楚知道要做什么。",
   "kp": "上下文理解",
-  "stem": "第 39 空：选出最合适的一句"
+  "stem": "第 39 空：选出最合适的一句",
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-claude-2026-english-1-q40",
@@ -1685,7 +1724,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "头脑清醒的时候，对很多学生来说是早上。",
   "kp": "上下文理解",
-  "stem": "第 40 空：选出最合适的一句"
+  "stem": "第 40 空：选出最合适的一句",
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-claude-2026-english-1-q41",
@@ -1739,7 +1779,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "短暂休息，比如散步十分钟，能让人感觉好些。",
   "kp": "上下文理解",
-  "stem": "第 41 空：选出最合适的一句"
+  "stem": "第 41 空：选出最合适的一句",
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-claude-2026-english-1-q42",
@@ -1793,7 +1834,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   ],
   "explanation": "没完成的事不必自责，移到第二天的计划里。",
   "kp": "上下文理解",
-  "stem": "第 42 空：选出最合适的一句"
+  "stem": "第 42 空：选出最合适的一句",
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-claude-2026-english-1-q43",
@@ -1822,7 +1864,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "library"
   ],
   "explanation": "the 后用名词单数，图书馆后面。",
-  "kp": "名词"
+  "kp": "名词",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q44",
@@ -1851,7 +1894,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "planted"
   ],
   "explanation": "叙述去年春天的事，用一般过去时。",
-  "kp": "一般过去时"
+  "kp": "一般过去时",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q45",
@@ -1881,7 +1925,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "more quickly"
   ],
   "explanation": "修饰动词 grew，且有 than，用副词比较级 more quickly（faster 也可）。",
-  "kp": "副词比较级"
+  "kp": "副词比较级",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q46",
@@ -1910,7 +1955,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "to take"
   ],
   "explanation": "how to do sth. 怎样做某事。",
-  "kp": "疑问词＋不定式"
+  "kp": "疑问词＋不定式",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q47",
@@ -1939,7 +1985,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "pulled"
   ],
   "explanation": "与 watered 并列，用一般过去时。",
-  "kp": "并列谓语"
+  "kp": "并列谓语",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q48",
@@ -1968,7 +2015,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "tomatoes"
   ],
   "explanation": "lots of 后接可数名词复数，tomato 的复数加 -es。",
-  "kp": "名词复数"
+  "kp": "名词复数",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q49",
@@ -1997,7 +2045,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "most delicious"
   ],
   "explanation": "the ... I had ever eaten 用最高级。",
-  "kp": "形容词最高级"
+  "kp": "形容词最高级",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q50",
@@ -2026,7 +2075,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "off"
   ],
   "explanation": "hard work pays off 努力会有回报。",
-  "kp": "固定搭配"
+  "kp": "固定搭配",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q51",
@@ -2055,7 +2105,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "others"
   ],
   "explanation": "work with others 与他人合作。",
-  "kp": "代词"
+  "kp": "代词",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q52",
@@ -2084,7 +2135,8 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    "growing"
   ],
   "explanation": "look forward to doing sth.，to 是介词。",
-  "kp": "固定搭配"
+  "kp": "固定搭配",
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-claude-2026-english-1-q53",
@@ -2129,6 +2181,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "sample": "A Lesson I Learned\nLast term, I failed a math test because I didn't review carefully. I felt so upset that I didn't want to talk to anyone. My mother noticed it and said, \"One test can't decide everything. Find out your mistakes and try again.\"\nSo I wrote down every mistake in a notebook and practised similar problems every day. In the final exam, I got a much better grade.\nFrom this experience, I learned that failure is not the end. It shows us where we need to improve. Now whenever I meet difficulties, I don't give up easily. Instead, I look for the reasons and keep trying.",
   "method": "先列提纲：要点逐条写全 → 用 First / Then / After that / Finally 串起来 → 结尾写感受。注意时态和人称。",
   "answer": [],
-  "explanation": "先叙事，再写收获，最后写影响；多用 because、so、from this experience 等连接词。"
+  "explanation": "先叙事，再写收获，最后写影响；多用 because、so、from this experience 等连接词。",
+  "unit": "书面表达"
  }
 ];

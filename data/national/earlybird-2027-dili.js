@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "地球公转（地轴倾斜）产生了昼夜长短的变化和四季更替；地球自转产生昼夜交替。",
   "kp": "地球运动",
   "stem": "北京的小明发现，夏至日前后白天最长，冬至日前后白天最短。产生这一现象的主要原因是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·地球和地图"
  },
  {
   "id": "national-earlybird-2027-dili-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "10 千米＝1 000 000 厘米，比例尺＝2∶1 000 000＝1∶500 000。坑点：单位换算。",
   "kp": "比例尺",
   "stem": "在一幅地图上，量得甲、乙两地的图上距离为 2 厘米，实地距离为 10 千米。该图的比例尺是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·地球和地图"
  },
  {
   "id": "national-earlybird-2027-dili-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "等高线密集，坡陡；稀疏，坡缓。等高线疏密与海拔高低无直接关系。",
   "kp": "等高线地形图",
   "stem": "在等高线地形图上，等高线密集的地方表示（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·地球和地图"
  },
  {
   "id": "national-earlybird-2027-dili-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "20°N 在北半球；0°～30° 为低纬度；东西半球以 20°W 和 160°E 为界，120°E 在东半球。坑点：东西半球不是以 0° 和 180° 划分。",
   "kp": "经纬度与半球划分",
   "stem": "某地的经纬度为（20°N，120°E），该地位于（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·地球和地图"
  },
  {
   "id": "national-earlybird-2027-dili-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "天气是短时间的大气状况，变化快；气候是多年的平均状况，比较稳定。“四季如春”描述的是气候。",
   "kp": "天气与气候",
   "stem": "下列词语中，描述气候的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·天气气候与居民"
  },
  {
   "id": "national-earlybird-2027-dili-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "热带雨林气候全年高温多雨；B 是热带草原气候；C 是地中海气候；D 是温带海洋性气候。",
   "kp": "世界气候类型",
   "stem": "亚马孙平原和刚果盆地都分布着大面积的热带雨林，这里的气候特征是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·天气气候与居民"
  },
  {
   "id": "national-earlybird-2027-dili-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "人口自然增长率＝出生率－死亡率＝9‰－11‰＝－2‰，人口出现负增长。",
   "kp": "人口自然增长率",
   "stem": "某国 2025 年人口出生率为 9‰，死亡率为 11‰，该国人口自然增长率为（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·天气气候与居民"
  },
  {
   "id": "national-earlybird-2027-dili-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "地势中部高、四周低，河流多发源于中部高原山地，呈放射状流向四周的海洋。",
   "kp": "亚洲的河流",
   "stem": "亚洲地势中部高、四周低，因此河流的分布特点是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七下·认识世界区域"
  },
  {
   "id": "national-earlybird-2027-dili-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "板块交界处地壳活跃，多火山、地震。日本位于亚欧板块和太平洋板块交界地带。",
   "kp": "板块构造",
   "stem": "日本多火山、地震，主要原因是它（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七上·天气气候与居民"
  },
  {
   "id": "national-earlybird-2027-dili-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "中东的石油主要分布在波斯湾及其沿岸地区，主要输往西欧、美国、日本等。",
   "kp": "中东的石油",
   "stem": "中东地区石油资源丰富，主要分布在（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "七下·认识世界区域"
  },
  {
   "id": "national-earlybird-2027-dili-q11",
@@ -450,7 +460,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "一二级阶梯界线为昆仑山—祁连山—横断山；二三级阶梯界线为大兴安岭—太行山—巫山—雪峰山。",
   "kp": "中国地势",
   "stem": "我国地势西高东低，呈阶梯状分布。第二级阶梯与第三级阶梯的分界线是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八上·中国的自然与人文"
  },
  {
   "id": "national-earlybird-2027-dili-q12",
@@ -491,7 +502,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "季风区与非季风区大致以大兴安岭—阴山—贺兰山—巴颜喀拉山—冈底斯山一线为界。坑点：该线与 400 毫米等降水量线大致相近但不相同。",
   "kp": "季风区与非季风区",
   "stem": "我国季风区与非季风区的分界线大致是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八上·中国的自然与人文"
  },
  {
   "id": "national-earlybird-2027-dili-q13",
@@ -532,7 +544,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "秦岭—淮河是湿润区与半湿润区的分界线；半湿润区与半干旱区大致以 400 毫米等降水量线为界。",
   "kp": "秦岭—淮河",
   "stem": "关于秦岭—淮河一线，下列说法不正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
  },
  {
   "id": "national-earlybird-2027-dili-q14",
@@ -573,7 +586,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "长江发源于唐古拉山脉主峰各拉丹冬峰，注入东海；宜昌、湖口分别为上中游、中下游分界点。河口镇是黄河上中游的分界点；“地上河”在黄河下游。",
   "kp": "长江",
   "stem": "长江是我国第一长河。关于长江，下列说法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八上·中国的自然与人文"
  },
  {
   "id": "national-earlybird-2027-dili-q15",
@@ -614,7 +628,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "跨流域调水（如南水北调）解决空间分布不均；修建水库解决时间分配不均。",
   "kp": "水资源",
   "stem": "为解决我国水资源空间分布不均的问题，可以采取的主要措施是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八上·中国的自然与人文"
  },
  {
   "id": "national-earlybird-2027-dili-q16",
@@ -655,7 +670,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "大宗、笨重货物长距离运输宜选铁路（或铁路加水运）；鲜活、短途选公路；贵重、急需、量小选航空；管道适合运输液体和气体。",
   "kp": "交通运输方式的选择",
   "stem": "从山西向上海长距离运输大量煤炭，比较合适的主要运输方式是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八上·中国的自然与人文"
  },
  {
   "id": "national-earlybird-2027-dili-q17",
@@ -696,7 +712,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "北方降水少，以旱地为主，主要种植小麦等；南方降水多，以水田为主，主要种植水稻。",
   "kp": "南北方的差异",
   "stem": "我国北方地区和南方地区的耕地类型主要是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
  },
  {
   "id": "national-earlybird-2027-dili-q18",
@@ -737,7 +754,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "西北地区深居内陆、距海远，降水稀少，主要特征是干旱；青藏地区的主要特征是高寒。",
   "kp": "我国四大地理区域",
   "stem": "西北地区自然环境的主要特征是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
  },
  {
   "id": "national-earlybird-2027-dili-q19",
@@ -778,7 +796,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "青藏地区海拔高，气温低，“高”是其最突出的特点，“寒”由“高”导致。",
   "kp": "影响气候的因素",
   "stem": "青藏地区虽然纬度较低，但气候寒冷，主要原因是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
  },
  {
   "id": "national-earlybird-2027-dili-q20",
@@ -819,7 +838,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "explanation": "开垦坡地会加剧水土流失。治理措施应是退耕还林还草、打坝淤地、修梯田、植树种草等。",
   "kp": "黄土高原",
   "stem": "黄土高原水土流失严重。下列关于其原因和治理措施的说法，不正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·中国的地理区域"
  },
  {
   "id": "national-earlybird-2027-dili-q21",
@@ -859,7 +879,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "sample": "（1）4 厘米×50 000＝200 000 厘米＝2 千米；B 在 A 的正北方；相对高度＝650－200＝450 米。\n（2）等高线向海拔高处凸出，是山谷。山谷地势低洼，降雨时雨水容易汇集，可能发生山洪，所以不宜扎营。\n（3）气温下降 450÷100×0.6＝2.7 ℃，山顶气温约为 20－2.7＝17.3 ℃。",
   "method": "等高线判断口诀：“凸高为谷，凸低为脊”。",
   "answer": [],
-  "kp": "地图与等高线"
+  "kp": "地图与等高线",
+  "unit": "七上·地球和地图"
  },
  {
   "id": "national-earlybird-2027-dili-q22",
@@ -904,7 +925,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "sample": "（1）亚洲与大洋洲之间，太平洋与印度洋之间。\n（2）中南半岛地势北高南低，所以河流大多自北向南流。河流下游和河口三角洲地势平坦、土壤肥沃、水源充足、交通便利，有利于农业和城市发展，因此人口和城市密集。\n（3）以热带雨林气候和热带季风气候为主，全年高温，降水丰富，雨热同期，适合水稻和橡胶生长。\n（4）位于亚欧板块、印度洋板块和太平洋板块的交界处，地壳活跃，多火山、地震。",
   "method": "区域地理按“位置—地形—气候—河流—人文”的顺序分析。",
   "answer": [],
-  "kp": "东南亚"
+  "kp": "东南亚",
+  "unit": "七下·认识世界区域"
  },
  {
   "id": "national-earlybird-2027-dili-q23",
@@ -944,7 +966,8 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "sample": "（1）黄河上游流经第一、二级阶梯交界处，地势落差大，河流水量较丰富，所以水能资源丰富。\n（2）黄河中游流经黄土高原，带走大量泥沙；下游地势平坦，水流缓慢，泥沙大量沉积，河床不断抬高，形成“地上河”。根本措施是加强中游黄土高原的水土保持。\n（3）黄河下游河段由较低纬度流向较高纬度，冬末春初，上游（南）河段先解冻，下游（北）河段气温低仍然封冻，上游的冰块和河水被阻挡，堵塞河道，水位上涨，形成凌汛。",
   "method": "凌汛产生条件：①有结冰期；②河流由低纬流向高纬。",
   "answer": [],
-  "kp": "黄河"
+  "kp": "黄河",
+  "unit": "八上·中国的自然与人文"
  },
  {
   "id": "national-earlybird-2027-dili-q24",
@@ -984,6 +1007,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "sample": "（1）平原面积广阔，地形平坦；黑土广布，土壤肥沃；夏季温暖多雨，雨热同期；河流众多，水源较充足。（任答三点）\n（2）东北地区纬度较高，冬季寒冷漫长，冬小麦难以越冬，所以只能春季播种、秋季收获，种植春小麦。\n（3）实行合理轮作和休耕；推广秸秆还田、增施有机肥；采用免耕、少耕等保护性耕作；在坡耕地退耕还林还草，防治水土流失。（任答两条）",
   "method": "农业区位条件从地形、气候、土壤、水源四方面分析。",
   "answer": [],
-  "kp": "东北地区"
+  "kp": "东北地区",
+  "unit": "八下·中国的地理区域"
  }
 ];

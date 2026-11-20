@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "粮食酿酒生成了新物质酒精，是化学变化；其余只是状态或形状改变。",
   "kp": "物理变化与化学变化",
   "stem": "下列变化中，属于化学变化的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第一单元·走进化学世界"
  },
  {
   "id": "national-earlybird-2027-chemistry-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "A 易引起失火；B 应把浓硫酸沿器壁慢慢注入水中并搅拌；D 会污染待测液，应用玻璃棒蘸取滴在试纸上。",
   "kp": "实验基本操作",
   "stem": "下列实验操作正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第一单元·走进化学世界"
  },
  {
   "id": "national-earlybird-2027-chemistry-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "冰和水都是 H₂O，只是状态不同，冰水混合物是纯净物。坑点：名字里有“混合物”不代表就是混合物。",
   "kp": "物质的分类",
   "stem": "下列物质属于纯净物的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第四单元·自然界的水"
  },
  {
   "id": "national-earlybird-2027-chemistry-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "花香分子不断运动扩散到墙外。温度升高时分子间隔变大，分子本身的体积不变，D 错。",
   "kp": "分子的性质",
   "stem": "“墙内开花墙外香”，用分子的观点解释，主要原因是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第三单元·物质构成的奥秘"
  },
  {
   "id": "national-earlybird-2027-chemistry-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "“硒”是石字旁，属于非金属元素；原子序数＝质子数＝核外电子数＝34；相对原子质量的单位是“1”，不是“g”。",
   "kp": "元素周期表",
   "stem": "硒是人体必需的微量元素。元素周期表中硒的信息为：原子序数 34，元素符号 Se，相对原子质量 78.96。下列说法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第三单元·物质构成的奥秘"
  },
  {
   "id": "national-earlybird-2027-chemistry-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "Na 为 ＋1，O 为 －2，设 Cl 为 x：＋1＋x－2＝0，x＝＋1。",
   "kp": "化合价",
   "stem": "“84”消毒液的有效成分是次氯酸钠（NaClO），其中氯元素的化合价为（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第四单元·自然界的水"
  },
  {
   "id": "national-earlybird-2027-chemistry-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "A 应说“一个维生素 C 分子由……构成”；B 3∶4∶3 是原子个数比，质量比为 72∶8∶96＝9∶1∶12；C 12×6＋1×8＋16×6＝176，正确；D 氧元素质量分数最大。",
   "kp": "化学式的意义与计算",
   "stem": "维生素 C 的化学式为 C₆H₈O₆。下列关于维生素 C 的说法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第四单元·自然界的水"
  },
  {
   "id": "national-earlybird-2027-chemistry-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "燃烧需要同时与氧气接触且温度达到着火点；盖锅盖是隔绝氧气；电器着火用水浇易触电；用水灭火是降低温度到着火点以下，着火点是物质的属性，一般不能改变。",
   "kp": "燃烧与灭火",
   "stem": "下列关于燃烧和灭火的说法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第七单元·燃料及其利用"
  },
  {
   "id": "national-earlybird-2027-chemistry-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "X 能与盐酸反应，Y 不能，X＞H＞Y；Y 能置换出银，Y＞Ag。故 X＞Y＞Ag。",
   "kp": "金属活动性顺序",
   "stem": "把金属 X、Y 分别放入稀盐酸中，X 表面产生气泡，Y 无明显现象；把 Y 放入硝酸银溶液中，Y 表面有银白色固体析出。X、Y、Ag 三种金属的活动性由强到弱的顺序是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第八单元·金属和金属材料"
  },
  {
   "id": "national-earlybird-2027-chemistry-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "pH＝1 的溶液中含大量 H⁺。B 中 OH⁻ 与 H⁺ 反应生成水；D 中 CO₃²⁻ 与 H⁺ 反应生成 CO₂；C 能共存，但 CuSO₄ 溶液呈蓝色。坑点：题目有“无色”和“酸性”两个隐含条件。",
   "kp": "离子共存",
   "stem": "下列各组物质在 pH＝1 的溶液中能大量共存，且得到无色溶液的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-earlybird-2027-chemistry-q11",
@@ -450,7 +460,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "A 二氧化碳中少量 CO 无法点燃，且会引入氧气；B Na₂CO₃＋2HCl＝2NaCl＋H₂O＋CO₂↑，不引入新杂质；C CaO 会与水反应，把要保留的物质除掉了；D 稀硫酸除掉的是铁。",
   "kp": "物质的除杂",
   "stem": "下列除去杂质（括号内为杂质）的方法正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-earlybird-2027-chemistry-q12",
@@ -491,7 +502,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "explanation": "碳酸钠先与盐酸反应产生 CO₂；即使先生成 CaCO₃，也会被盐酸溶解，所以盐酸反应完后才出现沉淀。pH 由小于 7 逐渐升到 7，氯化钙反应完后碳酸钠过量，pH 大于 7。",
   "kp": "复分解反应的先后顺序",
   "stem": "向一定量的稀盐酸和氯化钙的混合溶液中，逐滴加入碳酸钠溶液至过量。下列对该过程的描述正确的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-earlybird-2027-chemistry-q13",
@@ -536,7 +548,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "sample": "（1）糖类。\n（2）活性炭（吸附性）；煮沸。\n（3）合成材料。\n（4）硫酸铵是铵态氮肥，与显碱性的草木灰混用会反应放出氨气，使氮元素损失，降低肥效。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "化学与生活"
+  "kp": "化学与生活",
+  "unit": "第十二单元·化学与生活"
  },
  {
   "id": "national-earlybird-2027-chemistry-q14",
@@ -581,7 +594,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "sample": "（1）2CO＋2NO 催化剂 2CO₂＋N₂。\n（2）原子（碳、氮、氧原子的种类和数目都不变）。\n（3）N₂。\n（4）m(CO)∶m(NO)＝(2×28)∶(2×30)＝56∶60＝14∶15。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "化学方程式与微观示意"
+  "kp": "化学方程式与微观示意",
+  "unit": "第五单元·化学方程式"
  },
  {
   "id": "national-earlybird-2027-chemistry-q15",
@@ -631,7 +645,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "sample": "（1）氯化钠。\n（2）60 ℃ 时 100 g 水最多溶解 110 g 硝酸钾，50 g 水最多溶解 55 g，所得溶液质量＝50 g＋55 g＝105 g。坑点：加入的 60 g 没有全部溶解。\n（3）硝酸钾溶解度受温度影响大，用降温结晶（冷却热饱和溶液）。\n（4）20 ℃ 时氯化钠大，40 ℃ 时硝酸钾大，相等的温度在 20 ℃～40 ℃ 之间。\n（5）63.9 g÷(100 g＋63.9 g)×100%≈39.0%。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "溶解度"
+  "kp": "溶解度",
+  "unit": "第九单元·溶液"
  },
  {
   "id": "national-earlybird-2027-chemistry-q16",
@@ -681,7 +696,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "sample": "（1）过滤；漏斗。\n（2）Fe＋CuSO₄＝FeSO₄＋Cu。\n（3）铁和铜（铁粉过量）。\n（4）除去固体 A 中过量的铁：Fe＋H₂SO₄＝FeSO₄＋H₂↑。\n（5）向固体中滴加稀硫酸，直到不再产生气泡为止。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "工艺流程"
+  "kp": "工艺流程",
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-earlybird-2027-chemistry-q17",
@@ -726,7 +742,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "sample": "（1）2KMnO₄ △ K₂MnO₄＋MnO₂＋O₂↑；A；棉花（防止固体粉末进入导管）。\n（2）先把导管移出水面，再熄灭酒精灯，防止水槽中的水倒吸入热的试管使其炸裂。\n（3）分液漏斗可以控制液体滴加速度，从而控制反应速率。\n（4）澄清石灰水；CO₂＋Ca(OH)₂＝CaCO₃↓＋H₂O。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "气体的制取与检验"
+  "kp": "气体的制取与检验",
+  "unit": "第六单元·碳和碳的氧化物"
  },
  {
   "id": "national-earlybird-2027-chemistry-q18",
@@ -776,7 +793,8 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "sample": "（1）CaO（加水无明显放热）。\n（2）Ca(OH)₂。步骤①已证明没有 CaO，滤液能使酚酞变红，说明溶液显碱性，只能是样品中原有的 Ca(OH)₂ 溶解所致。\n（3）CaCO₃。\n（4）CaO＋H₂O＝Ca(OH)₂；Ca(OH)₂＋CO₂＝CaCO₃↓＋H₂O。\n（5）不正确。氢氧化钙微溶于水，加入的水较少时，不溶物也可能是没有溶解完的氢氧化钙，要通过加稀盐酸产生气泡来证明碳酸钙。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "物质成分的探究"
+  "kp": "物质成分的探究",
+  "unit": "第十、十一单元·酸碱盐"
  },
  {
   "id": "national-earlybird-2027-chemistry-q19",
@@ -816,6 +834,7 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "sample": "设样品中 Na₂CO₃ 质量为 x，CaCl₂ 质量为 y，生成 NaCl 质量为 z。\nNa₂CO₃＋CaCl₂＝CaCO₃↓＋2NaCl\n106　　111　　100　　117\nx　　　y　　　10 g　　z\nx＝10.6 g，y＝11.1 g，z＝11.7 g。\n（1）碳酸钠的质量分数＝10.6÷12×100%≈88.3%。\n（2）氯化钙溶液中溶质质量分数＝11.1÷100×100%＝11.1%。\n（3）滤液中 NaCl＝(12－10.6)＋11.7＝13.1（g）；滤液质量＝12＋50＋100－10＝152（g）；NaCl 质量分数＝13.1÷152×100%≈8.6%。坑点：样品中原有的 1.4 g 氯化钠不能漏；滤液质量要减去沉淀。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "化学方程式的计算"
+  "kp": "化学方程式的计算",
+  "unit": "第五单元·化学方程式"
  }
 ];

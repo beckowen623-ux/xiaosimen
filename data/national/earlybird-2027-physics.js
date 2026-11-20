@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "正常步行约 1.1 m/s；教室门高约 2 m；人体正常体温约 37 ℃；一个鸡蛋约 50 g，B 正确。",
   "kp": "常见物理量的估测",
   "stem": "下列估测的数据中，最接近实际的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八上·机械运动（含估测）"
  },
  {
   "id": "national-earlybird-2027-physics-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "声音不能在真空中传播，A、C 错；禁止鸣笛是在声源处减弱噪声，D 错；不同人发声的音色不同，B 正确。",
   "kp": "声现象",
   "stem": "下列关于声现象的说法中，正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八上·声现象"
  },
  {
   "id": "national-earlybird-2027-physics-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "小孔成像和树荫下的光斑都是光的直线传播；倒影是光的反射；彩虹是光的色散，属于折射。",
   "kp": "光现象",
   "stem": "下列现象中，由光的折射形成的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八上·光现象"
  },
  {
   "id": "national-earlybird-2027-physics-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "室内温暖的水蒸气遇到冰冷的镜片放热液化成小水滴。坑点：“雾”是液态小水滴，不是冰晶，不是凝华。",
   "kp": "物态变化",
   "stem": "寒冷的冬天，戴眼镜的人从室外走进温暖的室内，镜片上会蒙上一层“雾”。这是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八上·物态变化"
  },
  {
   "id": "national-earlybird-2027-physics-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "惯性只与质量有关，与速度无关；安全带是减小惯性带来的危害，不能减小惯性；惯性是物体的属性，不能说“受到惯性作用”。",
   "kp": "惯性",
   "stem": "关于惯性，下列说法中正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八下·运动和力"
  },
  {
   "id": "national-earlybird-2027-physics-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "瓶子装满水，倒置前后水的深度都等于瓶高，由 p＝ρgh 可知水对底部的压强不变；瓶对桌面的压力等于总重力不变，倒立时受力面积变小，压强变大。坑点：如果瓶子没有装满，倒置后水深变大，结论就不同了。",
   "kp": "液体压强与固体压强",
   "stem": "将一个装满水并拧紧瓶盖的矿泉水瓶，先正立放在水平桌面上，再倒立放置。与正立时相比，倒立时（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八下·压强"
  },
  {
   "id": "national-earlybird-2027-physics-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "沉底时 F甲＜G；悬浮和漂浮时浮力都等于重力，F乙＝F丙＝G。坑点：漂浮时排开液体体积小，但液体密度大，浮力仍等于重力。",
   "kp": "物体的浮沉条件",
   "stem": "把同一个鸡蛋先后放入甲、乙、丙三杯液体中：在甲杯清水中沉底，在乙杯盐水中悬浮，在丙杯更浓的盐水中漂浮。鸡蛋所受浮力 F甲、F乙、F丙 的大小关系是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八下·浮力"
  },
  {
   "id": "national-earlybird-2027-physics-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "开关应接在火线上；空气开关跳闸可能是短路，也可能是用电器总功率过大；湿手容易触电。使用测电笔时手要接触笔尾金属体，才能构成通路使氖管发光。",
   "kp": "安全用电",
   "stem": "关于家庭电路和安全用电，下列做法正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·生活用电"
  },
  {
   "id": "national-earlybird-2027-physics-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "电动机原理是通电导体在磁场中受力运动，扬声器也是这个原理。发电机和动圈式话筒是电磁感应；电磁继电器利用电流的磁效应。",
   "kp": "电与磁",
   "stem": "下列设备中，工作原理与电动机相同的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·电与磁"
  },
  {
   "id": "national-earlybird-2027-physics-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "explanation": "R₂ 变大，总电阻变大，电流变小；R₁ 两端电压 U₁＝IR₁ 变小，R₂ 两端电压 U₂＝U－U₁ 变大。电压表与电流表示数之比等于 R₂，变大，D 错。",
   "kp": "动态电路分析",
   "stem": "电源电压保持不变的电路中，定值电阻 R₁ 与滑动变阻器 R₂ 串联，电压表测 R₂ 两端的电压。闭合开关后，将滑片向右移动，使 R₂ 接入电路的阻值变大。下列判断正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九年级·欧姆定律"
  },
  {
   "id": "national-earlybird-2027-physics-q11",
@@ -437,7 +447,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   ],
   "explanation": "像到镜面的距离等于人到镜面的距离 2 m，像到人的距离为 4 m。",
   "kp": "平面镜成像",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八上·光现象"
  },
  {
   "id": "national-earlybird-2027-physics-q12",
@@ -465,7 +476,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   ],
   "explanation": "s＝vt＝72 km/h×(1/6) h＝12 km。",
   "kp": "速度",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八上·机械运动（含估测）"
  },
  {
   "id": "national-earlybird-2027-physics-q13",
@@ -495,7 +507,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   ],
   "explanation": "F＝G＝500 N，S＝2×200 cm²＝0.04 m²，p＝F/S＝12500 Pa。坑点：双脚站立要算两只鞋的面积，单位要换成 m²。",
   "kp": "压强",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·压强"
  },
  {
   "id": "national-earlybird-2027-physics-q14",
@@ -524,7 +537,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   ],
   "explanation": "W有＝Gh＝800 J；动滑轮 s＝2h＝4 m，W总＝Fs＝1000 J；η＝80%。",
   "kp": "机械效率",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "八下·简单机械"
  },
  {
   "id": "national-earlybird-2027-physics-q15",
@@ -554,7 +568,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   ],
   "explanation": "Q＝cmΔt＝4.2×10³×2×50 J＝4.2×10⁵ J。",
   "kp": "比热容",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-2027-physics-q16",
@@ -582,7 +597,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   ],
   "explanation": "R＝U²/P＝36÷3＝12 Ω。",
   "kp": "电功率",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "九年级·电功率"
  },
  {
   "id": "national-earlybird-2027-physics-q17",
@@ -610,7 +626,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   ],
   "explanation": "R₁＝12 Ω，额定电流 0.5 A；R₂＝6 Ω，额定电流 1 A。串联电流只能取较小的 0.5 A，U＝0.5×(12＋6)＝9 V。坑点：直接把额定电压相加得 12 V，“6 V 3 W”的灯会烧坏。",
   "kp": "串联电路与额定值",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "九年级·电功率"
  },
  {
   "id": "national-earlybird-2027-physics-q18",
@@ -638,7 +655,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   ],
   "explanation": "t＝W/P＝1 kW·h÷0.04 kW＝25 h。",
   "kp": "电能",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "九年级·电功率"
  },
  {
   "id": "national-earlybird-2027-physics-q19",
@@ -683,7 +701,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "sample": "（1）使像能成在光屏的中央，便于观察。\n（2）物距 25 cm＞2f，成倒立、缩小的实像，照相机是这一原理。\n（3）物距 5 cm＜f，成正立、放大的虚像，虚像不能用光屏承接；应在光屏一侧透过凸透镜看蜡烛。\n（4）通过光心的光线方向不变，蜡烛变短，像向上移动；可以把凸透镜向下调（或把光屏向上调、把蜡烛向上调）。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "凸透镜成像规律"
+  "kp": "凸透镜成像规律",
+  "unit": "八上·透镜及其应用"
  },
  {
   "id": "national-earlybird-2027-physics-q20",
@@ -723,7 +742,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "sample": "（1）匀速直线；木块在水平方向受到的拉力和滑动摩擦力是一对平衡力，大小相等（二力平衡）。\n（2）①②：接触面粗糙程度相同时，压力越大，滑动摩擦力越大。①③：压力相同时，接触面越粗糙，滑动摩擦力越大。\n（3）把弹簧测力计一端固定，木块挂在测力计上，拉动木块下面的长木板。木块相对地面静止，受力平衡，长木板不需要匀速拉动，测力计示数稳定，便于读数。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "探究滑动摩擦力"
+  "kp": "探究滑动摩擦力",
+  "unit": "八下·运动和力"
  },
  {
   "id": "national-earlybird-2027-physics-q21",
@@ -768,7 +788,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "sample": "（1）断开；阻值最大。\n（2）调小。串联电路中变阻器阻值变小，分得的电压变小，小灯泡两端电压增大到 2.5 V。\n（3）P额＝U额I额＝2.5 V×0.30 A＝0.75 W；R滑＝(4.5 V－2.5 V)÷0.30 A≈6.7 Ω。\n（4）不合理。灯丝电阻随温度升高而增大，不同电压下的电阻本来就不同，求平均值没有意义。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "测量小灯泡的电功率"
+  "kp": "测量小灯泡的电功率",
+  "unit": "九年级·电功率"
  },
  {
   "id": "national-earlybird-2027-physics-q22",
@@ -808,7 +829,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "sample": "（1）Q吸＝cmΔt＝4.2×10³ J/(kg·℃)×40 kg×(65－15) ℃＝8.4×10⁶ J。\n（2）Q放＝Vq＝0.3 m³×4.0×10⁷ J/m³＝1.2×10⁷ J。\n（3）η＝Q吸/Q放×100%＝8.4×10⁶÷1.2×10⁷×100%＝70%。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "热量与热效率"
+  "kp": "热量与热效率",
+  "unit": "九年级·内能与热机"
  },
  {
   "id": "national-earlybird-2027-physics-q23",
@@ -853,7 +875,8 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "sample": "（1）W有＝Gh＝900 N×3 m＝2700 J；s＝3h＝9 m，W总＝Fs＝400 N×9 m＝3600 J。\n（2）η＝W有/W总＝75%；P＝W总/t＝3600 J÷30 s＝120 W。\n（3）不计绳重和摩擦，F＝(G＋G动)/3，G动＝3×400 N－900 N＝300 N。\n（4）F′＝(1200 N＋300 N)÷3＝500 N。坑点：同一滑轮组提升不同重物时，机械效率会变化，不能用 75% 去算新拉力。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "滑轮组综合计算"
+  "kp": "滑轮组综合计算",
+  "unit": "八下·简单机械"
  },
  {
   "id": "national-earlybird-2027-physics-q24",
@@ -898,6 +921,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "sample": "（1）R₁＝U²/P加＝(220 V)²÷1100 W＝44 Ω；保温挡 R总＝U²/P保＝(220 V)²÷100 W＝484 Ω，R₂＝484 Ω－44 Ω＝440 Ω。\n（2）W＝P加t＝1100 W×900 s＝9.9×10⁵ J（＝0.275 kW·h）。\n（3）W实＝150÷3000 kW·h＝0.05 kW·h＝1.8×10⁵ J，P实＝W实/t＝1.8×10⁵ J÷180 s＝1000 W。\n（4）U实＝√(P实R₁)＝√(1000 W×44 Ω)≈210 V。坑点：实际电压低于 220 V 时，实际功率小于额定功率。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "电热综合计算"
+  "kp": "电热综合计算",
+  "unit": "九年级·电功率"
  }
 ];

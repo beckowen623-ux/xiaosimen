@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "A“瀚”读 hàn；C“剖”读 pōu；D“镌”读 juān，“秽”读 huì，“省”读 xǐng。",
   "kp": "字音",
   "stem": "下列词语中，加点字的读音全都正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "积累与运用"
  },
  {
   "id": "national-earlybird-9up-chinese-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "“不忍卒读”指不忍心读完，多形容文章内容悲惨动人，与“情节跌宕起伏、吸引人”的语境不符。",
   "kp": "成语运用",
   "stem": "下列句子中，加点成语使用不恰当的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "积累与运用"
  },
  {
   "id": "national-earlybird-9up-chinese-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "A 语序不当，应先“继承”后“发扬”；B 缺主语；C 否定不当；D 正确。",
   "kp": "病句辨析",
   "stem": "下列句子没有语病的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "积累与运用"
  },
  {
   "id": "national-earlybird-9up-chinese-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "“三打祝家庄”是宋江率领梁山好汉攻打祝家庄，最终靠孙立等人里应外合才攻破，并非武松一人之功。",
   "kp": "名著（水浒传）",
   "stem": "下列关于《水浒传》的表述，有误的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-earlybird-9up-chinese-q05",
@@ -191,7 +195,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   ],
   "explanation": "表达诗人对理想的执着追求和乐观自信。",
   "kp": "古诗文默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-9up-chinese-q06",
@@ -219,7 +224,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   ],
   "explanation": "写时序交替中蕴含新事物孕育于旧事物之中的哲理。",
   "kp": "古诗文默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-9up-chinese-q07",
@@ -247,7 +253,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   ],
   "explanation": "“燕然未勒”指边患未平、功业未成。",
   "kp": "理解性默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-9up-chinese-q08",
@@ -275,7 +282,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   ],
   "explanation": "注意“乎”字。",
   "kp": "理解性默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-9up-chinese-q09",
@@ -303,7 +311,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   ],
   "explanation": "“馨”是散布很远的香气，比喻品德高尚。",
   "kp": "理解性默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-9up-chinese-q10",
@@ -331,7 +340,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   ],
   "explanation": "“婵娟”指月亮。",
   "kp": "理解性默写",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "古诗文默写"
  },
  {
   "id": "national-earlybird-9up-chinese-q11",
@@ -374,7 +384,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "吕尚垂钓、伊尹梦日边后都得到重用，诗人用这两个典故表达对自己仍能被重用的希望，并非彻底绝望。",
   "kp": "古诗理解",
   "stem": "下列对这首诗的理解，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "古诗词鉴赏"
  },
  {
   "id": "national-earlybird-9up-chinese-q12",
@@ -417,7 +428,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "“病”在这里是“疲倦、劳累”的意思，“今日病矣”即“今天累坏了”。坑点：古今异义。",
   "kp": "文言实词",
   "stem": "下列对文中加点词的解释，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "文言文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q13",
@@ -460,7 +472,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "文章强调“非徒无益，而又害之”，违背规律的“帮助”只会坏事，D 与文意相反。",
   "kp": "内容理解",
   "stem": "下列对文章的理解，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "文言文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q14",
@@ -503,7 +516,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "文中周老师说小雨“第一天也只有 130 个”，她进步快是因为每天记录并找原因，而不是起点高。",
   "kp": "内容理解",
   "stem": "下列对文章内容的理解，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q15",
@@ -546,7 +560,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "“断”指每一次失误，“一次一次‘断’出来”是说进步来自正视失误、找原因、改正，而不是一味追求结果。",
   "kp": "句子含义",
   "stem": "对文中“原来进步不是一下子跳出来的，是一次一次‘断’出来的”一句理解最恰当的是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q16",
@@ -589,7 +604,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "explanation": "第五段明确指出“慢”不等于拖拉、不等于不思进取，是补充论证，使论证更严密。C 的理解与原文相反。",
   "kp": "议论文阅读",
   "stem": "下列对文章的理解和分析，不正确的一项是（ ）",
-  "paperScore": 2.5
+  "paperScore": 2.5,
+  "unit": "议论文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q17",
@@ -631,7 +647,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "由“停杯投箸不能食，拔剑四顾心茫然”的苦闷、茫然，到借吕尚、伊尹的典故产生希望，再到“多歧路，今安在”的迷惘，最后以“长风破浪会有时，直挂云帆济沧海”表现出乐观自信、积极进取的情怀。情感跌宕起伏，最终归于昂扬。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "抓住动作、典故和结尾的变化。"
+  "explanation": "抓住动作、典故和结尾的变化。",
+  "unit": "古诗词鉴赏"
  },
  {
   "id": "national-earlybird-9up-chinese-q18",
@@ -673,7 +690,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "这样做不但没有好处，反而害了它。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "关键词：徒（只、仅仅）。"
+  "explanation": "关键词：徒（只、仅仅）。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q19",
@@ -710,7 +728,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "两种错误做法：一是“以为无益而舍之”，认为没有用就放弃不管，像不给禾苗锄草的人；二是“助之长”，违背规律强行拔高，像揠苗的人。启示：学习要遵循规律、循序渐进，既要坚持付出，又不能急于求成、拔苗助长。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "抓住“不耘苗者”与“揠苗者”两种人。"
+  "explanation": "抓住“不耘苗者”与“揠苗者”两种人。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q20",
@@ -747,7 +766,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "①严格细致：要求每人记录每次练习的个数和断的次数，徒手摇绳时一个一个地纠正动作。②善于引导、教育有方：看到“我”偷偷练习不批评，只画一个问号；“我”灰心时，翻本子对比，引导“我”自己发现问题；提醒“我”别只盯成绩，要看断的次数。③关心学生、有耐心。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "人物形象题：概括性格＋结合具体情节。"
+  "explanation": "人物形象题：概括性格＋结合具体情节。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q21",
@@ -784,7 +804,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "第一次出现，是周老师对“我”急于求成的无声提醒，为后文“我”的醒悟和转变埋下伏笔；结尾再次提到问号，与前文呼应，表明“我”把这份提醒铭记于心，并把从跳绳中得到的道理用到学习中，深化了“进步来自正视问题、一步步改正”的主旨。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "反复出现的细节一般从“情节（伏笔、线索）”“结构（呼应）”“主旨”三方面答。"
+  "explanation": "反复出现的细节一般从“情节（伏笔、线索）”“结构（呼应）”“主旨”三方面答。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q22",
@@ -821,7 +842,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "含意：“第一百零一次”不是一个确切的数字，而是指在一次次失误后，仍然坚持再试一次、不断改正的过程。作用：标题新颖，设置悬念，吸引读者阅读；暗示了文章主旨——进步来自一次次坚持和改正。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "标题含意＋作用（吸引读者、点明主旨、线索等）。"
+  "explanation": "标题含意＋作用（吸引读者、点明主旨、线索等）。",
+  "unit": "记叙文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q23",
@@ -853,7 +875,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "第二段：慢下来，才能打牢根基；第三段：慢下来，才能看清问题；第四段：慢下来，能让我们保持耐心。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "分论点一般在段首。"
+  "explanation": "分论点一般在段首。",
+  "unit": "议论文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q24",
@@ -885,7 +908,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "两篇文章都告诉我们，成长和进步不能急于求成：记叙文中“我”从只追求个数到记录失误、分析原因，最终进步；议论文提出慢下来才能打牢根基、看清问题、保持耐心。二者都强调要正视问题、循序渐进。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "比较阅读题：找共同主题，再分别结合两文内容。"
+  "explanation": "比较阅读题：找共同主题，再分别结合两文内容。",
+  "unit": "议论文阅读"
  },
  {
   "id": "national-earlybird-9up-chinese-q25",
@@ -920,7 +944,8 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "示例：鲁智深，绰号“花和尚”。“拳打镇关西”中，他听说金氏父女被郑屠欺压，三拳打死郑屠，表现出他疾恶如仇、见义勇为、粗中有细（打死人后假说对方诈死，从容离开）的性格。“花和尚”源于他身上刺有花绣、出家为僧却不守清规，正与他豪放不羁、不拘小节的性格相合。",
   "method": "名著人物题：人物＋情节概述＋性格分析＋联系题目要求（绰号）。",
   "answer": [],
-  "kp": "名著阅读"
+  "kp": "名著阅读",
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-earlybird-9up-chinese-q26",
@@ -965,6 +990,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "sample": "审题提示：重点在“没有放弃”，要写出“想放弃”的心理和“为什么没有放弃”的转折（他人的鼓励、自己的反思、某个细节的触动等），结尾写出坚持带来的收获和感悟。避免只写结果、记流水账。可借鉴本卷记叙文的写法：用一个反复出现的物件（小本子、问号）串起全文。",
   "method": "按“困境—想放弃—转折（详写）—坚持—收获感悟”的结构写，600 字以上。",
   "answer": [],
-  "kp": "作文"
+  "kp": "作文",
+  "unit": "作文"
  }
 ];

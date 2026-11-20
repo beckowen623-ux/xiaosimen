@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "空处作主语，指“我的（书）”，用名词性物主代词 Mine。",
   "kp": "名词性物主代词",
   "stem": "—Is this your English book? —No, it isn't. ____ is on my desk.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-earlybird-9up-english-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "there be 结构遵循就近原则，紧跟的是 a basketball match，用单数；将来时用 there is going to be。坑点：there be 不能和 have 连用。",
   "kp": "there be 句型（就近原则）",
   "stem": "There ____ a basketball match and two football matches in our school tomorrow.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-earlybird-9up-english-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "ask sb. (not) to do sth. 要求某人（不要）做某事，否定词放在 to 前。",
   "kp": "ask sb. not to do",
   "stem": "The teacher asked us ____ in the library.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-earlybird-9up-english-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "答语说的是位置，问“在哪里”；宾语从句用陈述语序 where it is。",
   "kp": "宾语从句",
   "stem": "—I wonder ____ the Science Museum. —It's next to the post office.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-earlybird-9up-english-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "汉语“被说”，时间 now，用一般现在时的被动语态 is spoken。",
   "kp": "一般现在时的被动语态",
   "stem": "Chinese ____ by more and more people in the world now.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·时态与语态"
  },
  {
   "id": "national-earlybird-9up-english-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "two years 是一段时间，用 for；since 后接时间点或 two years ago。",
   "kp": "现在完成时的时间状语",
   "stem": "He has been a member of the school band ____ two years.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·时态与语态"
  },
  {
   "id": "national-earlybird-9up-english-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "先行词 friends 指人，在从句中作主语，用 who（或 that）。",
   "kp": "定语从句",
   "stem": "I prefer friends ____ are honest and helpful.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-earlybird-9up-english-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "后句“明天也可以”，说明“今天不必交”，用 needn't。坑点：mustn't 表示“禁止”。",
   "kp": "情态动词",
   "stem": "You ____ hand in your homework today. Tomorrow is OK.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·词法与固定搭配"
  },
  {
   "id": "national-earlybird-9up-english-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "“越……就越……”用 the＋比较级, the＋比较级；修饰动词 speak 用副词 fluently。",
   "kp": "the＋比较级, the＋比较级",
   "stem": "The more you practice, ____ you will speak English.",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "语法·句子与非谓语"
  },
  {
   "id": "national-earlybird-9up-english-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "对方请求关小音乐，礼貌回应是道歉并马上照做。坑点：回答 Would you mind...? 时，Yes 表示“介意”，不礼貌。",
   "kp": "情景交际",
   "stem": "—Would you mind turning down the music? My baby is sleeping. —____",
-  "paperScore": 1
+  "paperScore": 1,
+  "unit": "补全对话与交际"
  },
  {
   "id": "national-earlybird-9up-english-q11",
@@ -452,7 +462,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "pick up 捡起。",
   "kp": "动词短语",
   "stem": "第 11 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q12",
@@ -495,7 +506,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "已经六点、警察局很远，不想让父母担心 worry about me。",
   "kp": "动词辨析",
   "stem": "第 12 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q13",
@@ -538,7 +550,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "妈妈说“你做得对”，说明她很高兴。",
   "kp": "情感词",
   "stem": "第 13 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q14",
@@ -581,7 +594,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "后文母子二人亲自送钱包上门，find the owner ourselves 我们自己找失主。",
   "kp": "反身代词",
   "stem": "第 14 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q15",
@@ -624,7 +638,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "one's eyes lit up 眼睛一亮，表示惊喜。",
   "kp": "固定搭配",
   "stem": "第 15 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q16",
@@ -667,7 +682,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "后文“明天要用它取养老金”，说明银行卡很重要。",
   "kp": "上下文理解",
   "stem": "第 16 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q17",
@@ -710,7 +726,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "老人想给钱感谢“我”。",
   "kp": "上下文理解",
   "stem": "第 17 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q18",
@@ -753,7 +770,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "“我”不要钱，他“转而”送了一本书，用 instead。",
   "kp": "副词辨析",
   "stem": "第 18 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q19",
@@ -796,7 +814,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "you got 缺宾语，用 what：你今晚得到了什么。",
   "kp": "宾语从句引导词",
   "stem": "第 19 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q20",
@@ -839,7 +858,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "with a smile on my face 脸上带着微笑。",
   "kp": "介词 with 的复合结构",
   "stem": "第 20 空填哪个？",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "完形填空"
  },
  {
   "id": "national-earlybird-9up-english-q21",
@@ -882,7 +902,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "Volunteer Club 在周六（Sat.）活动。",
   "kp": "细节理解",
   "stem": "Which club meets on weekends?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q22",
@@ -925,7 +946,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "周五下午只有 Garden Club；周六的 Volunteer Club 要求八年级及以上，Lucy 是七年级，不符合。",
   "kp": "信息匹配",
   "stem": "Lucy is in Grade 7. She is free only on Friday afternoons and Saturday mornings. Which club can she join?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q23",
@@ -968,7 +990,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "每周一、三各 1.5 小时，共 3 小时。坑点：只算一次是 1.5 小时。",
   "kp": "数字计算",
   "stem": "How long does the Drama Club meet every week?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q24",
@@ -1011,7 +1034,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "报名截止 October 13；最多两个社团；国际象棋欢迎初学者；话剧演出在 12 月 20 日。",
   "kp": "正误判断",
   "stem": "Which of the following is TRUE?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q25",
@@ -1054,7 +1078,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "学校社团招募通知，常见于学校公告栏。",
   "kp": "文章出处",
   "stem": "Where can you probably read this passage?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q26",
@@ -1097,7 +1122,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "第一段：There was no Wi-Fi at Grandpa's house, and I couldn't play online games。早起是后来的事。",
   "kp": "细节理解",
   "stem": "Why was the writer unhappy at first?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q27",
@@ -1140,7 +1166,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "A ripe tomato is red all over and a little soft.",
   "kp": "细节理解",
   "stem": "According to Grandpa, a ripe tomato is ____.",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q28",
@@ -1183,7 +1210,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "water the plants in the early morning or late afternoon, when the sun was not too strong。",
   "kp": "细节理解",
   "stem": "When is the best time to water the plants according to the passage?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q29",
@@ -1226,7 +1254,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "倒数第二段：get up early and put away my phone during dinner。",
   "kp": "细节理解",
   "stem": "What changes did the writer's mom notice after the summer?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q30",
@@ -1269,7 +1298,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "通过在菜园劳动，作者懂得了“万物各有其时”，学会了耐心。",
   "kp": "主旨大意",
   "stem": "What is the main idea of the passage?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q31",
@@ -1312,7 +1342,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "第一段：人、动物都会打哈欠，科学家还没有最终答案。",
   "kp": "段落大意",
   "stem": "What does the first paragraph tell us?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q32",
@@ -1355,7 +1386,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "实验表明空气中氧气少时，人并不会更多地打哈欠。",
   "kp": "因果推断",
   "stem": "Why may the \"more oxygen\" idea not be right?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q33",
@@ -1398,7 +1430,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "第三段：yawning helps to cool down the brain... A cooler brain may help us stay alert。",
   "kp": "细节理解",
   "stem": "According to the newer idea, yawning may help us ____.",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q34",
@@ -1441,7 +1474,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "破折号后直接解释：the ability to understand other people's feelings（共情）。",
   "kp": "词义猜测",
   "stem": "What does the underlined word \"empathy\" mean?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q35",
@@ -1484,7 +1518,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "第四段：人们更容易被家人和好朋友“传染”打哈欠。A 与最后一段相反；C 与 20°C 左右最常打哈欠的说法不符；D 与 Even reading about yawning can make you yawn 相反。",
   "kp": "推理判断",
   "stem": "What can we infer from the passage?",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解"
  },
  {
   "id": "national-earlybird-9up-english-q36",
@@ -1539,7 +1574,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "前句说很多人不擅长倾听，空处解释原因：他们常在想下一句说什么，而不是听。",
   "kp": "段落衔接",
   "stem": "第 36 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-9up-english-q37",
@@ -1594,7 +1630,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "看着说话的人，表明你对他说的内容感兴趣。",
   "kp": "上下文逻辑",
   "stem": "第 37 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-9up-english-q38",
@@ -1649,7 +1686,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "本段讲“不要打断”，给出建议：等对方说完再说自己的想法。",
   "kp": "上下文逻辑",
   "stem": "第 38 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-9up-english-q39",
@@ -1704,7 +1742,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "提问也说明你一直在认真听。also 呼应前文。",
   "kp": "上下文逻辑",
   "stem": "第 39 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-9up-english-q40",
@@ -1759,7 +1798,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "explanation": "点头、微笑这些小动作能起到很大作用。",
   "kp": "上下文逻辑",
   "stem": "第 40 空：选出最合适的一句",
-  "paperScore": 2
+  "paperScore": 2,
+  "unit": "阅读理解（七选五）"
  },
  {
   "id": "national-earlybird-9up-english-q41",
@@ -1789,7 +1829,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "decide to do sth. 决定做某事。",
   "kp": "decide to do",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q42",
@@ -1819,7 +1860,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "tomato 的复数加 -es。",
   "kp": "名词复数",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q43",
@@ -1849,7 +1891,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "“我们到家时”妈妈已经出去了，“出去”发生在过去的过去，用过去完成时 had gone。",
   "kp": "过去完成时",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q44",
@@ -1879,7 +1922,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "修饰动词 cut 用副词 carefully。",
   "kp": "副词",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q45",
@@ -1909,7 +1953,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "文字是“被写”在卡片上的，with＋宾语＋过去分词 written。",
   "kp": "with＋宾语＋过去分词",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q46",
@@ -1939,7 +1984,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "be surprised to do sth. 人感到惊讶用 -ed 形容词。",
   "kp": "形容词",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q47",
@@ -1969,7 +2015,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "the＋最高级＋名词＋that 从句（ever），delicious 是多音节词，用 most delicious。",
   "kp": "最高级",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q48",
@@ -1999,7 +2046,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "have ever 后用过去分词 received。",
   "kp": "现在完成时",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q49",
@@ -2029,7 +2077,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "From then on 叙述过去的决定，用一般过去时。",
   "kp": "一般过去时",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q50",
@@ -2059,7 +2108,8 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   ],
   "explanation": "固定句型 it's important for sb. to do sth.。",
   "kp": "It is important for sb. to do sth.",
-  "paperScore": 1.5
+  "paperScore": 1.5,
+  "unit": "短文填空与语法填空"
  },
  {
   "id": "national-earlybird-9up-english-q51",
@@ -2104,6 +2154,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "sample": "A New Me in Grade 9\nTime flies. Now I'm in Grade 9. The biggest change in me is that I have learned to plan my time.\nIn the past, I often stayed up late because I wasted too much time on my phone. Last summer, I realized that Grade 9 would be very busy, so I decided to change. Now I make a list of things to do every evening and put my phone away until I finish my homework.\nMy goal for this year is to improve my math. I'm going to review my mistakes every weekend and ask my teacher for help when I have problems.\nI believe that if I keep trying, I will become a better me.",
   "method": "先列提纲：要点逐条写全 → 用 First / Then / After that / Finally 串起来 → 结尾写感受。注意时态和人称。",
   "answer": [],
-  "explanation": "评分先看三个要点是否齐全，再看语言。可用句型：I have learned to...、so I decided to...、if I keep trying, I will...。"
+  "explanation": "评分先看三个要点是否齐全，再看语言。可用句型：I have learned to...、so I decided to...、if I keep trying, I will...。",
+  "unit": "书面表达"
  }
 ];

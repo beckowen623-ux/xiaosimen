@@ -40,7 +40,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "A 同底数幂相乘指数相加，应为 a⁵；B 积的乘方，(－2)³＝－8，(a²)³＝a⁶，正确；C 完全平方公式漏了 2ab；D 同底数幂相除指数相减，应为 a⁴。",
   "kp": "整式运算",
   "stem": "下列运算正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八上·整式的乘法与因式分解"
  },
  {
   "id": "national-earlybird-2027-math-q02",
@@ -81,7 +82,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "1 008.6 万＝10 086 000＝1.0086×10⁷。注意“万”要先换算成个位单位，a 必须满足 1≤|a|＜10。",
   "kp": "科学记数法",
   "stem": "据统计，2026 年某市常住人口约为 1 008.6 万人。将数据“1 008.6 万”用科学记数法表示为（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "七上·有理数"
  },
  {
   "id": "national-earlybird-2027-math-q03",
@@ -122,7 +124,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "Δ＝4－4(k－1)＞0，得 k＜2；又因为是一元二次方程，二次项系数 k－1≠0，所以 k≠1。坑点：只算判别式会误选 A。",
   "kp": "根的判别式",
   "stem": "若关于 x 的一元二次方程 (k－1)x²＋2x＋1＝0 有两个不相等的实数根，则 k 的取值范围是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·一元二次方程"
  },
  {
   "id": "national-earlybird-2027-math-q04",
@@ -163,7 +166,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "由平均数得 3＋5＋5＋6＋x＝25，x＝6。数据排序为 3，5，5，6，6，中位数是 5；方差＝[(3－5)²＋0＋0＋1＋1]÷5＝1.2。",
   "kp": "数据的分析",
   "stem": "一组数据 3，5，5，6，x 的平均数是 5，则这组数据的中位数和方差分别是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八下·数据的分析"
  },
  {
   "id": "national-earlybird-2027-math-q05",
@@ -204,7 +208,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "解得 a＜x＜2。要恰好有 2 个整数解，只能是 1 和 0，所以 －1≤a＜0。端点检验：a＝－1 时解集为 －1＜x＜2，整数解为 0，1，符合；a＝0 时整数解只有 1，不符合。",
   "kp": "不等式组的整数解",
   "stem": "关于 x 的不等式组 2x－1＜3，x－a＞0 有且只有 2 个整数解，则 a 的取值范围是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "七下·不等式与不等式组"
  },
  {
   "id": "national-earlybird-2027-math-q06",
@@ -245,7 +250,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "k＜0 时，图象在第二、四象限。A、B 在第二象限，y 为正，且在该象限内 y 随 x 增大而增大，所以 y₁＜y₂；C 在第四象限，y₃＜0。故 y₃＜y₁＜y₂。坑点：“y 随 x 增大而增大”只在每个象限内成立，不能跨象限比较。",
   "kp": "反比例函数的性质",
   "stem": "点 A(－2，y₁)，B(－1，y₂)，C(3，y₃) 都在反比例函数 y＝k/x（k＜0）的图象上，则 y₁，y₂，y₃ 的大小关系是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
  },
  {
   "id": "national-earlybird-2027-math-q07",
@@ -286,7 +292,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "展开图扇形的弧长等于底面周长：nπ×6÷180＝2π×2，n＝120。",
   "kp": "圆锥的侧面展开图",
   "stem": "一个圆锥的母线长为 6，底面半径为 2，则它的侧面展开图的圆心角是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·圆"
  },
  {
   "id": "national-earlybird-2027-math-q08",
@@ -327,7 +334,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "对称轴 x＝(－1＋3)÷2＝1，即 －b/(2a)＝1，所以 2a＋b＝0，B 正确。a＜0，b＝－2a＞0，c＝－3a＞0，abc＜0，A 错；x＝1 是最高点，a＋b＋c＞0，C 错；开口向下，x＞1 时 y 随 x 增大而减小，D 错。",
   "kp": "二次函数图象与系数的关系",
   "stem": "二次函数 y＝ax²＋bx＋c（a≠0）的图象开口向下，且经过点 (－1，0) 和 (3，0)。下列结论正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·二次函数"
  },
  {
   "id": "national-earlybird-2027-math-q09",
@@ -368,7 +376,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "对角线互相垂直平分，边长＝√(3²＋4²)＝5；面积＝6×8÷2＝24；高＝24÷5＝4.8。坑点：5 是边长，2.4 是面积公式少乘 2 的结果。",
   "kp": "菱形的性质",
   "stem": "菱形 ABCD 的两条对角线 AC＝6，BD＝8，则菱形的高为（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八下·平行四边形"
  },
  {
   "id": "national-earlybird-2027-math-q10",
@@ -409,7 +418,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "explanation": "P 在 AB 上（0≤t≤2）时，S＝½×AD×AP＝½×2×t＝t，是上升线段；P 在 BC 上（2≤t≤4）时，P 到 AD 的距离始终为 2，S＝½×2×2＝2，是水平线段。",
   "kp": "动点问题的函数图象",
   "stem": "正方形 ABCD 的边长为 2，动点 P 从点 A 出发，沿 A→B→C 的路线以每秒 1 个单位长度的速度运动，到达点 C 时停止。设运动时间为 t 秒，△APD 的面积为 S。下列对 S 与 t 之间函数图象的描述正确的是（ ）",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八下·一次函数"
  },
  {
   "id": "national-earlybird-2027-math-q11",
@@ -440,7 +450,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   ],
   "explanation": "先提公因式 2x，再用平方差公式：2x(x²－4)＝2x(x＋2)(x－2)。坑点：只写 2x(x²－4) 没有分解彻底。",
   "kp": "因式分解",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八上·整式的乘法与因式分解"
  },
  {
   "id": "national-earlybird-2027-math-q12",
@@ -469,7 +480,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   ],
   "explanation": "被开方数 x－3≥0，分母 x－4≠0，所以 x≥3 且 x≠4。",
   "kp": "二次根式与分式有意义的条件",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八下·二次根式"
  },
  {
   "id": "national-earlybird-2027-math-q13",
@@ -497,7 +509,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   ],
   "explanation": "设白球有 x 个，3÷(3＋x)＝1/4，x＝9。",
   "kp": "概率",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·概率初步"
  },
  {
   "id": "national-earlybird-2027-math-q14",
@@ -525,7 +538,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   ],
   "explanation": "a²＋b²＝(a＋b)²－2ab＝25－6＝19。",
   "kp": "完全平方公式的变形",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "八上·整式的乘法与因式分解"
  },
  {
   "id": "national-earlybird-2027-math-q15",
@@ -554,7 +568,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   ],
   "explanation": "相切时半径等于点 C 到 AB 的距离。AB＝5，由面积 ½×3×4＝½×5×h，得 h＝12/5＝2.4。",
   "kp": "切线与等面积法",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "九上·圆"
  },
  {
   "id": "national-earlybird-2027-math-q16",
@@ -582,7 +597,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   ],
   "explanation": "第 n 个数是 1＋2＋…＋n＝n(n＋1)/2，第 20 个数＝20×21÷2＝210。",
   "kp": "数字规律",
-  "paperScore": 3
+  "paperScore": 3,
+  "unit": "七上·整式与规律"
  },
  {
   "id": "national-earlybird-2027-math-q17",
@@ -622,7 +638,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "sample": "原式＝2√3－2＋1－4×(√3/2)＋2＝2√3－2＋1－2√3＋2＝1。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "实数运算"
+  "kp": "实数运算",
+  "unit": "七下·实数"
  },
  {
   "id": "national-earlybird-2027-math-q18",
@@ -662,7 +679,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "sample": "去分母得 x(x＋1)－2＝x²－1，即 x²＋x－2＝x²－1，解得 x＝1。检验：当 x＝1 时，(x＋1)(x－1)＝0，x＝1 是增根，所以原方程无解。坑点：解分式方程一定要检验。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "分式方程"
+  "kp": "分式方程",
+  "unit": "八上·分式"
  },
  {
   "id": "national-earlybird-2027-math-q19",
@@ -707,7 +725,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "sample": "（1）A、C、D 三组共 8＋16＋6＝30 人，占 1－40%＝60%，总人数＝30÷60%＝50（人），m＝50×40%＝20。\n（2）50 个数据从小到大排列，第 25、26 个都在 B 组（A 组占第 1～8 个，B 组占第 9～28 个），所以中位数落在 B 组。\n（3）800×(16＋6)/50＝352（人）。\n（4）D 组 4 名男生（男₁～男₄）、2 名女生（女₁、女₂），从 6 人中选 2 人共 15 种等可能结果，其中 1 男 1 女有 4×2＝8 种，P＝8/15。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "统计与概率"
+  "kp": "统计与概率",
+  "unit": "统计与概率（综合）"
  },
  {
   "id": "national-earlybird-2027-math-q20",
@@ -747,7 +766,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "sample": "（1）y＝200－10(x－30)＝－10x＋500。\n（2）(x－20)(－10x＋500)＝2000，整理得 x²－70x＋1200＝0，解得 x₁＝30，x₂＝40。售价不得高于 20×1.6＝32 元，x＝40 舍去，所以售价应定为每千克 30 元。\n（3）W＝(x－20)(－10x＋500)＝－10x²＋700x－10000＝－10(x－35)²＋2250。因为 30≤x≤32，在这个范围内 W 随 x 增大而增大，所以 x＝32 时 W 最大＝12×180＝2160（元）。坑点：顶点 x＝35 不在取值范围内，不能直接取 2250。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "二次函数的实际应用"
+  "kp": "二次函数的实际应用",
+  "unit": "九上·二次函数"
  },
  {
   "id": "national-earlybird-2027-math-q21",
@@ -787,7 +807,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "sample": "（1）过 A 作地面的垂线，垂足为 E，AE＝60 m。在 Rt△AED 中，∠ADE＝60°（俯角等于对应的仰角），ED＝AE÷tan60°＝60÷√3＝20√3（m），即水平距离为 20√3 m。\n（2）过 C 作 CF⊥AE 于 F，CF＝ED＝20√3 m，在 Rt△AFC 中，AF＝CF·tan30°＝20√3×(√3/3)＝20（m），CD＝FE＝60－20＝40（m）。\n（3）t＝20√3÷5＝4√3（s），约 6.9 s。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "解直角三角形的应用"
+  "kp": "解直角三角形的应用",
+  "unit": "九下·锐角三角函数"
  },
  {
   "id": "national-earlybird-2027-math-q22",
@@ -827,7 +848,8 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "sample": "（1）连接 OC。∵ PC 是切线，∴ OC⊥PC，∠OCB＋∠PCB＝90°。∵ AB 是直径，∴ ∠ACB＝90°，∠A＋∠ABC＝90°。∵ OC＝OB，∴ ∠OCB＝∠OBC，∴ ∠PCB＝∠A。\n（2）∵ ∠PCB＝∠A，∠P＝∠P，∴ △PCB∽△PAC，PC/PA＝PB/PC，PA＝PC²÷PB＝16÷2＝8，AB＝PA－PB＝6，半径为 3。又 BC/AC＝PC/PA＝4/8＝1/2，在 Rt△ABC 中，tan A＝BC/AC＝1/2。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "切线的性质与相似三角形"
+  "kp": "切线的性质与相似三角形",
+  "unit": "九上·圆"
  },
  {
   "id": "national-earlybird-2027-math-q23",
@@ -867,6 +889,7 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "sample": "（1）y＝－(x＋1)(x－3)＝－x²＋2x＋3，顶点 D(1，4)。\n（2）C(0，3)。过 D 作 DE⊥x 轴于 E(1，0)，S△BCD＝S梯形OCDE＋S△DEB－S△OBC＝(3＋4)×1÷2＋2×4÷2－3×3÷2＝3.5＋4－4.5＝3。\n（3）设 P(1，p)。PB²＝4＋p²，PC²＝1＋(p－3)²，BC²＝18。由 PB²＋PC²＝BC² 得 4＋p²＋1＋p²－6p＋9＝18，即 p²－3p－2＝0，p＝(3±√17)/2。所以存在，P(1，(3＋√17)/2) 或 P(1，(3－√17)/2)。坑点：要用“以 BC 为斜边”这一条件，直角顶点在 P，两个解都要写。",
   "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
   "answer": [],
-  "kp": "二次函数综合"
+  "kp": "二次函数综合",
+  "unit": "九上·二次函数"
  }
 ];

@@ -39,7 +39,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "B“绽”读 zhàn；C“秩”读 zhì；D“栖”读 qī。",
   "kp": "字音",
-  "stem": "下列加点字注音全部正确的一项是（ ）"
+  "stem": "下列加点字注音全部正确的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-2-q02",
@@ -79,7 +80,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "A 应为“一筹莫展”；C 应为“墨守成规”；D 应为“谈笑风生”。",
   "kp": "字形",
-  "stem": "下列词语书写全部正确的一项是（ ）"
+  "stem": "下列词语书写全部正确的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-2-q03",
@@ -119,7 +121,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "B“妙笔生花”形容文章写得好，不能形容演讲；C“炙手可热”比喻权势大、气焰盛，含贬义；D“七手八脚”形容人多手杂，与“一个人”矛盾。",
   "kp": "成语运用",
-  "stem": "下列句子中加点成语使用恰当的一项是（ ）"
+  "stem": "下列句子中加点成语使用恰当的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-2-q04",
@@ -159,7 +162,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "A 否定不当，删“不”；B 搭配不当，“话语”不能“浮现”；D 语序不当，应为“继承和发扬”。",
   "kp": "病句辨析",
-  "stem": "下列句子没有语病的一项是（ ）"
+  "stem": "下列句子没有语病的一项是（ ）",
+  "unit": "积累与运用"
  },
  {
   "id": "national-claude-2026-chinese-2-q05",
@@ -199,7 +203,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "A“弱冠”指男子二十岁；C《醉翁亭记》作者是欧阳修；D“家父”是对人称自己的父亲，称别人父亲用“令尊”。",
   "kp": "文学文化常识",
-  "stem": "下列有关文学文化常识的表述，正确的一项是（ ）"
+  "stem": "下列有关文学文化常识的表述，正确的一项是（ ）",
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-claude-2026-chinese-2-q06",
@@ -239,7 +244,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "B 倒拔垂杨柳的是鲁智深；C《简·爱》的作者是英国作家夏洛蒂·勃朗特；D《傅雷家书》主要是傅雷写给儿子傅聪等人的家信。",
   "kp": "名著阅读",
-  "stem": "下列关于名著的表述，正确的一项是（ ）"
+  "stem": "下列关于名著的表述，正确的一项是（ ）",
+  "unit": "名著与文学常识"
  },
  {
   "id": "national-claude-2026-chinese-2-q07",
@@ -266,7 +272,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    "采菊东篱下"
   ],
   "explanation": "表现诗人悠闲自得的心境。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-2-q08",
@@ -293,7 +300,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    "千里共婵娟"
   ],
   "explanation": "“婵娟”指月亮，表达对亲人的美好祝愿。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-2-q09",
@@ -320,7 +328,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    "化作春泥更护花"
   ],
   "explanation": "表达诗人虽辞官仍关心国家的情怀。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-2-q10",
@@ -347,7 +356,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    "柳暗花明又一村"
   ],
   "explanation": "蕴含困境中往往孕育着希望的哲理。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-2-q11",
@@ -374,7 +384,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    "长风破浪会有时"
   ],
   "explanation": "表达诗人坚定的信念和远大的理想。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-2-q12",
@@ -401,7 +412,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    "留取丹心照汗青"
   ],
   "explanation": "表现以身殉国的崇高气节。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-2-q13",
@@ -428,7 +440,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    "自缘身在最高层"
   ],
   "explanation": "“缘”字易写错，意为“因为”。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-2-q14",
@@ -455,7 +468,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    "好之者不如乐之者"
   ],
   "explanation": "说明学习兴趣的重要性。",
-  "kp": "古诗文默写"
+  "kp": "古诗文默写",
+  "unit": "古诗文默写"
  },
  {
   "id": "national-claude-2026-chinese-2-q15",
@@ -497,7 +511,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "“去”在这里是“离开”的意思，“去母而死”即离开母亲而死去。",
   "kp": "文言实词",
-  "stem": "下列加点词的解释，有误的一项是（ ）"
+  "stem": "下列加点词的解释，有误的一项是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q16",
@@ -539,7 +554,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "原文“恐他人又见，杀而埋之矣”。",
   "kp": "内容理解",
-  "stem": "孙叔敖杀死两头蛇并把它埋起来，原因是（ ）"
+  "stem": "孙叔敖杀死两头蛇并把它埋起来，原因是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q17",
@@ -581,7 +597,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "母亲说“吾闻有阴德者，天报以福，汝不死也”。",
   "kp": "内容理解",
-  "stem": "母亲认为孙叔敖不会死，理由是（ ）"
+  "stem": "母亲认为孙叔敖不会死，理由是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q18",
@@ -623,7 +640,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "孙叔敖以为自己会死，仍想着不让别人再受害，体现为他人着想的品德。",
   "kp": "主旨理解",
-  "stem": "下列对文章主旨的理解，最恰当的一项是（ ）"
+  "stem": "下列对文章主旨的理解，最恰当的一项是（ ）",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q19",
@@ -665,7 +683,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "第一段末句提出中心论点，下文从“打牢根基”“看清方向”两方面论证。",
   "kp": "论点",
-  "stem": "本文的中心论点是（ ）"
+  "stem": "本文的中心论点是（ ）",
+  "unit": "议论文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q20",
@@ -707,7 +726,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "用建高楼挖地基比喻学习要打牢基础，生动形象地论证了“慢是为了打牢根基”。",
   "kp": "论证方法",
-  "stem": "第二段“建高楼要先挖深地基”运用的论证方法是（ ）"
+  "stem": "第二段“建高楼要先挖深地基”运用的论证方法是（ ）",
+  "unit": "议论文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q21",
@@ -749,7 +769,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   ],
   "explanation": "说明“慢”不是拖拉懒散，补充限定，使论证更全面严密。",
   "kp": "论证的严密性",
-  "stem": "第四段在文中的作用是（ ）"
+  "stem": "第四段在文中的作用是（ ）",
+  "unit": "议论文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q22",
@@ -781,7 +802,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   "sample": "我担心别人又看见它，已经把它杀死并埋起来了。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "关键词：恐（担心）、又（再）、之（代两头蛇）、矣（了）。"
+  "explanation": "关键词：恐（担心）、又（再）、之（代两头蛇）、矣（了）。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q23",
@@ -813,7 +835,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   "sample": "与他从小为他人着想、勇于担当的品质有关。他以为自己会死，仍不忘埋掉蛇以免别人受害，这种心怀他人、敢于担当的品德正是做好官、为百姓办事的基础。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "先概括品质，再结合文中事例分析。"
+  "explanation": "先概括品质，再结合文中事例分析。",
+  "unit": "文言文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q24",
@@ -845,7 +868,8 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   "sample": "示例：袁隆平在杂交水稻研究中，用多年时间反复观察、试验，选准了方向，最终培育出高产水稻。正是前期不急于求成、认真摸索，才有了后来的成功。（言之成理即可）",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "论据要真实、典型，并能扣住“看清方向”的分论点。"
+  "explanation": "论据要真实、典型，并能扣住“看清方向”的分论点。",
+  "unit": "议论文阅读"
  },
  {
   "id": "national-claude-2026-chinese-2-q25",
@@ -877,6 +901,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   "sample": "示例：以前我做数学题只追求速度，错题看一眼答案就过去，结果同类题一错再错。后来我把每道错题的原理弄懂、整理到错题本里，虽然做题速度慢了，成绩却稳步提高。这让我明白，学习踏实一点、慢一点，基础打牢了，才能走得更远。",
   "method": "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。",
   "answer": [],
-  "explanation": "联系自身经历，观点明确、表达通顺即可。"
+  "explanation": "联系自身经历，观点明确、表达通顺即可。",
+  "unit": "议论文阅读"
  }
 ];
