@@ -14,4 +14,6 @@ npx remotion render src/index.ts Zhongkao out/zhongkao.mp4 --codec h264 --crf 26
 cp out/zhongkao.mp4 ../assets/video/zhongkao-demo.mp4
 ```
 
-改台词：`src/Zhongkao.tsx` 里的 `captions`、`Hook`、`Cta`。预览：`npx remotion studio src/index.ts`。
+考证题库视频：在 quiz-bank-app 发布文件目录起 `127.0.0.1:8788`，运行 `node capture-kaozheng.cjs public/kz`，再 `npx remotion render src/index.ts Kaozheng out/kaozheng.mp4 --codec h264 --crf 26`，成片复制到 quiz-bank-app 的 `assets/video/kaozheng-demo.mp4` 和 tina-home 的 `public/assets/videos/`。
+
+改台词：`src/Zhongkao.tsx`、`src/Kaozheng.tsx` 里的 `captions`、`Hook`、`Cta`。预览：`npx remotion studio src/index.ts`。

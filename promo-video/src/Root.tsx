@@ -1,7 +1,11 @@
 import React from 'react';
 import {Composition} from 'remotion';
 import {Zhongkao, ZHONGKAO_FRAMES} from './Zhongkao';
+import {Kaozheng, KAOZHENG_FRAMES} from './Kaozheng';
 
 export const Root: React.FC = () => (
-  <Composition id="Zhongkao" component={Zhongkao} durationInFrames={ZHONGKAO_FRAMES} fps={30} width={1080} height={1920} />
+  <>
+    <Composition id="Zhongkao" component={Zhongkao} durationInFrames={ZHONGKAO_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="Kaozheng" component={Kaozheng} durationInFrames={KAOZHENG_FRAMES} fps={30} width={1080} height={1920} />
+  </>
 );
