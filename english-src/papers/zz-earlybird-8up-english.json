@@ -1,0 +1,650 @@
+{
+  "id": "earlybird-8up-english",
+  "earlybird": true,
+  "stage": "8-up",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "早鸟自测",
+  "year": 2027,
+  "title": "八上早鸟卷 · 英语",
+  "source": "考查范围：七年级至八年级上册，以八上为主（一般过去时、频度副词、形容词比较级与最高级、一般将来时、条件状语从句、邀请与建议等），按期末考试题型编写（不含听力），难度略高，百分制",
+  "note": "51 题，不含听力，百分制，考到八年级上册",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 1,
+      "items": [
+        {
+          "n": 1,
+          "stem": "—Where ______ you go on vacation last summer?\n—I went to Hainan with my parents.",
+          "options": [
+            "do",
+            "did",
+            "are",
+            "will"
+          ],
+          "answer": "B",
+          "kp": "一般过去时",
+          "exp": "last summer 是过去时间，用助动词 did。"
+        },
+        {
+          "n": 2,
+          "stem": "My sister is ______ than me, but I'm ______ in our family.",
+          "options": [
+            "taller; the tallest",
+            "tall; taller",
+            "tallest; tall",
+            "more tall; the most tall"
+          ],
+          "answer": "A",
+          "kp": "比较级和最高级",
+          "exp": "than 前用比较级 taller；在家里三者以上比较用最高级 the tallest。"
+        },
+        {
+          "n": 3,
+          "stem": "—How often do you go to the movies?\n—______. I'm too busy with my homework.",
+          "options": [
+            "Hardly ever",
+            "Every day",
+            "Twice a day",
+            "Always"
+          ],
+          "answer": "A",
+          "kp": "频度副词",
+          "exp": "作业太忙，所以几乎不去看电影：hardly ever。"
+        },
+        {
+          "n": 4,
+          "stem": "—What are you going to be when you grow up?\n—I'm going to be a doctor. I want ______ sick people.",
+          "options": [
+            "help",
+            "to help",
+            "helping",
+            "helped"
+          ],
+          "answer": "B",
+          "kp": "动词不定式",
+          "exp": "want to do sth. 想要做某事。"
+        },
+        {
+          "n": 5,
+          "stem": "If it ______ tomorrow, we will have the sports meeting in the gym.",
+          "options": [
+            "rain",
+            "rains",
+            "will rain",
+            "rained"
+          ],
+          "answer": "B",
+          "kp": "条件状语从句",
+          "exp": "if 引导条件状语从句，主将从现：主句用将来时，从句用一般现在时，it 是第三人称单数，用 rains。"
+        },
+        {
+          "n": 6,
+          "stem": "There ______ more trees and fewer cars in our city in ten years.",
+          "options": [
+            "is",
+            "will be",
+            "are going to have",
+            "has"
+          ],
+          "answer": "B",
+          "kp": "一般将来时",
+          "exp": "in ten years 表将来，there be 的将来时是 there will be。"
+        },
+        {
+          "n": 7,
+          "stem": "—Can you come to my party on Saturday?\n—______. I have to prepare for a math test.",
+          "options": [
+            "Sure, I'd love to",
+            "I'm sorry, I can't",
+            "Yes, I can",
+            "That sounds great"
+          ],
+          "answer": "B",
+          "kp": "交际用语",
+          "exp": "后面说要准备数学考试，所以是拒绝邀请：I'm sorry, I can't。"
+        },
+        {
+          "n": 8,
+          "stem": "To make a banana milk shake, first ______ three bananas, then put them into the blender.",
+          "options": [
+            "cut up",
+            "cut them up",
+            "cut up them",
+            "cuts up"
+          ],
+          "answer": "A",
+          "kp": "动词短语",
+          "exp": "cut up 后接名词时，名词可放中间或后面：cut up three bananas。代词才必须放中间。C 代词放后面是错的。"
+        },
+        {
+          "n": 9,
+          "stem": "This is ______ interesting movie I have ever seen.",
+          "options": [
+            "more",
+            "most",
+            "the most",
+            "much"
+          ],
+          "answer": "C",
+          "kp": "比较级和最高级",
+          "exp": "多音节形容词的最高级用 the most＋原级。"
+        },
+        {
+          "n": 10,
+          "stem": "—Thank you for inviting me to your birthday party.\n—______. I'm glad you can come.",
+          "options": [
+            "You're welcome",
+            "Never mind",
+            "That's all right, I can't",
+            "Good idea"
+          ],
+          "answer": "A",
+          "kp": "交际用语",
+          "exp": "回应感谢用 You're welcome。"
+        }
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "A Special Vacation",
+      "passage": "Last summer, I didn't go to the beach or the mountains. Instead, I (11) two weeks in a small village with my aunt. She is a volunteer teacher there.\nThe village was far from the city. There (12) no shopping malls or movie theaters. At first, I felt a little (13). But soon I found many interesting things to do.\nEvery morning, I helped my aunt teach English to the children. They were shy at first, but they were very (14) to learn. I taught them English songs, and they taught me (15) to catch fish in the river. In the afternoon, we played games together. The children were happier than (16) I knew in the city, though they had much less.\nOne day, a girl named Xiaohua gave me a picture. In the picture, I was standing in front of the classroom, (17) an English song with the children. I was so moved that I didn't know what (18).\nThis vacation was (19) than any other vacation I had before. It taught me that happiness doesn't come from (20) we have. It comes from what we give.",
+      "items": [
+        {
+          "n": 11,
+          "options": [
+            "spent",
+            "cost",
+            "took",
+            "paid"
+          ],
+          "answer": "A",
+          "kp": "动词辨析",
+          "exp": "人作主语，花费时间用 spend…in/doing，过去式 spent。cost 主语是物，take 用 it takes sb. time to do。"
+        },
+        {
+          "n": 12,
+          "options": [
+            "were",
+            "was",
+            "are",
+            "is"
+          ],
+          "answer": "A",
+          "kp": "there be 句型",
+          "exp": "讲过去的事用过去时；no shopping malls or movie theaters 是复数，用 were。"
+        },
+        {
+          "n": 13,
+          "options": [
+            "bored",
+            "excited",
+            "proud",
+            "surprised"
+          ],
+          "answer": "A",
+          "kp": "上下文",
+          "exp": "村里没有商场和电影院，起初觉得有点无聊；后文 But soon I found many interesting things 形成转折。"
+        },
+        {
+          "n": 14,
+          "options": [
+            "eager",
+            "afraid",
+            "lazy",
+            "tired"
+          ],
+          "answer": "A",
+          "kp": "上下文",
+          "exp": "but 转折：起初害羞，但非常渴望学习，be eager to do sth.。"
+        },
+        {
+          "n": 15,
+          "options": [
+            "how",
+            "what",
+            "where",
+            "why"
+          ],
+          "answer": "A",
+          "kp": "疑问词＋不定式",
+          "exp": "教我怎样在河里抓鱼：how to catch fish。"
+        },
+        {
+          "n": 16,
+          "options": [
+            "the children",
+            "the teachers",
+            "the parents",
+            "the doctors"
+          ],
+          "answer": "A",
+          "kp": "上下文",
+          "exp": "和城里认识的孩子比较。"
+        },
+        {
+          "n": 17,
+          "options": [
+            "singing",
+            "sang",
+            "sings",
+            "to sing"
+          ],
+          "answer": "A",
+          "kp": "非谓语动词",
+          "exp": "现在分词短语作伴随状语，表示“正在和孩子们唱歌”。"
+        },
+        {
+          "n": 18,
+          "options": [
+            "to say",
+            "saying",
+            "said",
+            "says"
+          ],
+          "answer": "A",
+          "kp": "疑问词＋不定式",
+          "exp": "didn't know what to say 不知道说什么好。"
+        },
+        {
+          "n": 19,
+          "options": [
+            "more meaningful",
+            "most meaningful",
+            "meaningful",
+            "the most meaningful"
+          ],
+          "answer": "A",
+          "kp": "比较级和最高级",
+          "exp": "than 前用比较级 more meaningful。"
+        },
+        {
+          "n": 20,
+          "options": [
+            "what",
+            "that",
+            "which",
+            "how"
+          ],
+          "answer": "A",
+          "kp": "宾语从句",
+          "exp": "与后句 It comes from what we give 对应：幸福不来自我们拥有的东西。what 引导宾语从句并作 have 的宾语。"
+        }
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Movie Theaters in Our Town",
+          "passage": "Sun Cinema\nTicket: ¥45   Seats: 400   Distance from the school: 2 km\nIt has the biggest screens and the most comfortable seats in town. Popcorn is free on Tuesdays.\nStar Cinema\nTicket: ¥30   Seats: 200   Distance from the school: 500 m\nIt's the closest to our school. Students can get 20% off with a student card.\nCity Cinema\nTicket: ¥25   Seats: 150   Distance from the school: 5 km\nIt's the cheapest, but it's the farthest. It often shows old movies.",
+          "items": [
+            {
+              "n": 21,
+              "stem": "Which cinema is the biggest?",
+              "options": [
+                "Sun Cinema.",
+                "Star Cinema.",
+                "City Cinema.",
+                "We don't know."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "Sun Cinema 座位 400 个，最多；文中也说它屏幕最大。"
+            },
+            {
+              "n": 22,
+              "stem": "How much does a student pay for a ticket at Star Cinema with a student card?",
+              "options": [
+                "¥30.",
+                "¥24.",
+                "¥20.",
+                "¥6."
+              ],
+              "answer": "B",
+              "kp": "推理判断",
+              "exp": "20% off 是打八折：30×80%＝24 元。坑点：把“打八折”理解成“减 20 元”。"
+            },
+            {
+              "n": 23,
+              "stem": "If you want free popcorn, when should you go to Sun Cinema?",
+              "options": [
+                "On Monday.",
+                "On Tuesday.",
+                "On Friday.",
+                "On Sunday."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "Popcorn is free on Tuesdays。"
+            },
+            {
+              "n": 24,
+              "stem": "Which of the following is TRUE?",
+              "options": [
+                "City Cinema is the closest to the school.",
+                "Sun Cinema is the cheapest.",
+                "Star Cinema is closer to the school than City Cinema.",
+                "City Cinema shows the newest movies."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "Star Cinema 离学校 500 米，City Cinema 5 千米。City 最远、最便宜、常放老电影；Sun 最贵。"
+            },
+            {
+              "n": 25,
+              "stem": "Tom has only ¥28 and he doesn't have a student card. Which cinema can he go to?",
+              "options": [
+                "Sun Cinema.",
+                "Star Cinema.",
+                "City Cinema.",
+                "None of them."
+              ],
+              "answer": "C",
+              "kp": "推理判断",
+              "exp": "没有学生卡，Star 要 30 元，Sun 要 45 元，只有 City（25 元）买得起。"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Will Robots Be Our Friends?",
+          "passage": "Today, robots can do many things. They can work in factories, clean houses and even help doctors in hospitals. What will robots be like in the future?\nSome scientists believe that in 50 years, robots will be in every home. They will cook meals, look after old people and help children with their homework. People will have more free time.\nBut other scientists don't agree. They say robots can only do simple and repeated work. \"It will be difficult for a robot to understand a joke or to feel sad when a friend is ill,\" says Professor White. \"Robots won't be able to think like humans.\"\nThere are also some worries. If robots do more and more jobs, some people may lose their jobs. So we need to learn new skills that robots can't do, such as creative thinking and working with others.\nWhat do you think? Will robots be our friends one day?",
+          "items": [
+            {
+              "n": 26,
+              "stem": "What can robots do today according to the passage?",
+              "options": [
+                "Tell jokes.",
+                "Work in factories and clean houses.",
+                "Feel sad for their friends.",
+                "Think like humans."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "第一段：They can work in factories, clean houses and even help doctors。"
+            },
+            {
+              "n": 27,
+              "stem": "What do some scientists believe about robots in 50 years?",
+              "options": [
+                "Robots will be in every home.",
+                "Robots will disappear.",
+                "Robots will be cheaper than cars.",
+                "Robots will become teachers in schools."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "in 50 years, robots will be in every home。"
+            },
+            {
+              "n": 28,
+              "stem": "What does Professor White think?",
+              "options": [
+                "Robots will be smarter than humans.",
+                "Robots can't think like humans.",
+                "Robots will take all jobs.",
+                "Robots can understand jokes."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "Robots won't be able to think like humans。"
+            },
+            {
+              "n": 29,
+              "stem": "What does the writer suggest we do?",
+              "options": [
+                "Stop making robots.",
+                "Buy a robot for every family.",
+                "Learn new skills that robots can't do.",
+                "Let robots do our homework."
+              ],
+              "answer": "C",
+              "kp": "推理判断",
+              "exp": "we need to learn new skills that robots can't do。"
+            },
+            {
+              "n": 30,
+              "stem": "What is the writer's attitude towards robots?",
+              "options": [
+                "Completely against them.",
+                "Very excited only.",
+                "Objective, showing different opinions.",
+                "Not interested at all."
+              ],
+              "answer": "C",
+              "kp": "写作态度",
+              "exp": "作者列出了支持和反对两种观点，也提到担忧，结尾提问让读者思考，态度客观。"
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "title": "How to Make Fruit Salad",
+          "passage": "Fruit salad is easy to make and good for your health. Here's how to make it for four people.\nYou need: two apples, two bananas, one orange, a cup of grapes, two spoons of honey and some yogurt.\nFirst, wash all the fruit carefully. Next, peel the bananas and the orange. Then cut up the apples, bananas and orange into small pieces. Don't cut the grapes — they are small enough. After that, put all the fruit into a big bowl. Add two spoons of honey and some yogurt. Finally, mix them up and put the bowl in the fridge for about twenty minutes.\nNow your fruit salad is ready. It tastes sweet and cool, especially on hot summer days. You can also add other fruit you like, such as strawberries or mangoes.",
+          "items": [
+            {
+              "n": 31,
+              "stem": "How many kinds of fruit do you need according to the list?",
+              "options": [
+                "Three.",
+                "Four.",
+                "Five.",
+                "Six."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "苹果、香蕉、橙子、葡萄共 4 种水果。蜂蜜和酸奶不是水果。"
+            },
+            {
+              "n": 32,
+              "stem": "Which fruit doesn't need to be cut?",
+              "options": [
+                "Apples.",
+                "Bananas.",
+                "Oranges.",
+                "Grapes."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "Don't cut the grapes — they are small enough。"
+            },
+            {
+              "n": 33,
+              "stem": "What do you do right after putting all the fruit into a bowl?",
+              "options": [
+                "Wash the fruit.",
+                "Peel the bananas.",
+                "Add honey and yogurt.",
+                "Put it in the fridge."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "After that, put all the fruit into a big bowl. Add two spoons of honey and some yogurt。"
+            },
+            {
+              "n": 34,
+              "stem": "How long should you keep the salad in the fridge?",
+              "options": [
+                "About 10 minutes.",
+                "About 20 minutes.",
+                "About 2 hours.",
+                "One night."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "for about twenty minutes。"
+            },
+            {
+              "n": 35,
+              "stem": "This passage is probably from ______.",
+              "options": [
+                "a story book",
+                "a cookbook",
+                "a science magazine",
+                "a travel guide"
+              ],
+              "answer": "B",
+              "kp": "文章出处",
+              "exp": "介绍食材和做法步骤，可能出自菜谱。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "七选五",
+      "score": 2,
+      "title": "How to Be a Good Friend",
+      "passage": "Everyone needs friends. But how can we be a good friend? Here are some suggestions.\nBe honest. (36) If your friend does something wrong, tell him or her kindly.\nBe there when your friends need you. (37) When your friend is sad, listen to him or her and say something warm.\nRespect differences. Your friends may have different hobbies or ideas from yours. (38) Try to learn from each other.\n(39) Everyone makes mistakes. If your friend says sorry, accept it and move on.\nKeep in touch. Even if you don't study in the same school, you can call or write to each other. (40)",
+      "choices": [
+        "Good friends always tell each other the truth.",
+        "Help them when they are in trouble.",
+        "That doesn't mean you can't be good friends.",
+        "Learn to forgive.",
+        "A short message can make your friend feel cared for.",
+        "Friends should always have the same hobbies.",
+        "Never talk to your friends about problems."
+      ],
+      "items": [
+        {
+          "n": 36,
+          "answer": "A",
+          "kp": "七选五",
+          "exp": "本段讲诚实，好朋友彼此说实话。"
+        },
+        {
+          "n": 37,
+          "answer": "B",
+          "kp": "七选五",
+          "exp": "朋友需要时陪在身边，有困难时帮助他们。"
+        },
+        {
+          "n": 38,
+          "answer": "C",
+          "kp": "七选五",
+          "exp": "兴趣想法不同，并不意味着不能成为好朋友。"
+        },
+        {
+          "n": 39,
+          "answer": "D",
+          "kp": "七选五",
+          "exp": "段落小标题，后文讲人都会犯错，要学会原谅。"
+        },
+        {
+          "n": 40,
+          "answer": "E",
+          "kp": "七选五",
+          "exp": "保持联系，一条短信就能让朋友感到被关心。"
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Plan for Next Year",
+      "passage": "Next year, I'm going to be in Grade 9. I want to make some changes (41) (make) myself better.\nFirst, I'm going to study (42) (hard) than before. My math is not very good, so I'm going to practice it every day. I think if I (43) (work) hard, I will get better grades.\nSecond, I'm going to exercise more. Last term, I (44) (hard) ever exercised, and I often felt tired. Now I plan (45) (run) for half an hour every morning.\nThird, I'm going to read more books. Reading is one of the (46) (good) ways to learn about the world. I'm going to read at least two books (47) ______ month.\nFinally, I want to help my parents with (48) (house) chores. They work very hard, and I want to make (49) (they) happy.\nI know it won't be easy to keep all these promises, but I'll try my (50) (good).",
+      "items": [
+        {
+          "n": 41,
+          "answer": "to make",
+          "hint": "make",
+          "kp": "动词不定式",
+          "exp": "不定式表目的：为了让自己变得更好。"
+        },
+        {
+          "n": 42,
+          "answer": "harder",
+          "hint": "hard",
+          "kp": "比较级和最高级",
+          "exp": "than 前用比较级 harder。"
+        },
+        {
+          "n": 43,
+          "answer": "work",
+          "hint": "work",
+          "kp": "条件状语从句",
+          "exp": "if 从句用一般现在时表将来，主语 I，用 work。"
+        },
+        {
+          "n": 44,
+          "answer": "hardly",
+          "hint": "hard",
+          "kp": "频度副词",
+          "exp": "hardly ever 几乎从不，后面说常常感到累，说明几乎不锻炼。"
+        },
+        {
+          "n": 45,
+          "answer": "to run",
+          "hint": "run",
+          "kp": "动词不定式",
+          "exp": "plan to do sth. 计划做某事。"
+        },
+        {
+          "n": 46,
+          "answer": "best",
+          "hint": "good",
+          "kp": "比较级和最高级",
+          "exp": "one of the＋最高级＋复数名词，good 的最高级是 best。"
+        },
+        {
+          "n": 47,
+          "answer": "a / every / each",
+          "kp": "冠词",
+          "exp": "每月至少读两本书：two books a month（也可用 every month、each month）。"
+        },
+        {
+          "n": 48,
+          "answer": "household",
+          "hint": "house",
+          "kp": "构词法",
+          "exp": "修饰名词 chores 用形容词 household（家庭的），household chores 家务活。"
+        },
+        {
+          "n": 49,
+          "answer": "them",
+          "hint": "they",
+          "kp": "人称代词",
+          "exp": "make sb. happy，动词后用宾格 them。"
+        },
+        {
+          "n": 50,
+          "answer": "best",
+          "hint": "good",
+          "kp": "固定搭配",
+          "exp": "try one's best 尽某人最大努力。"
+        }
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 51,
+      "score": 20,
+      "prompt": "你校英语报正在开展“My Future”主题征文。请写一篇短文，内容包括：1. 你长大后想从事什么职业，为什么；2. 为了实现这个梦想，你打算怎么做（至少两条）；3. 你认为十年后的自己会是什么样子。要求：80 词左右，开头已给出，不计入总词数；文中不得出现真实姓名和校名。\nMy Future\nEveryone has a dream. ______",
+      "points": [
+        [
+          "写出想从事的职业及原因",
+          5
+        ],
+        [
+          "写出至少两条实现梦想的打算（be going to）",
+          5
+        ],
+        [
+          "想象十年后的自己（will）",
+          4
+        ],
+        [
+          "语言准确，时态正确，衔接自然，书写规范",
+          6
+        ]
+      ],
+      "sample": "My Future\nEveryone has a dream. My dream is to be a doctor because I want to help sick people. When my grandpa was ill last year, the doctors took good care of him. I was moved by them.\nTo make my dream come true, I'm going to study harder, especially biology and chemistry. I'm also going to exercise every day to keep healthy, because doctors need to be strong. Besides, I'm going to read more books about medicine.\nIn ten years, I think I will be a medical student at a good university. I will work hard and help more people. I believe my dream will come true one day.",
+      "exp": "注意时态：打算用 be going to，预测十年后用 will，讲过去的经历用一般过去时。可用 because、To make my dream come true、Besides、I believe 等。"
+    }
+  ]
+}

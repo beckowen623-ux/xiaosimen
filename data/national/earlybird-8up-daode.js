@@ -1,0 +1,1008 @@
+// 由 tools/build_english.mjs 生成，源文件 english-src/papers/zz-earlybird-8up-daode.json，请勿手改。
+window.NATIONAL_PAPERS = window.NATIONAL_PAPERS || {};
+window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
+ {
+  "id": "national-earlybird-8up-daode-q01",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 1,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 1 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "中学生应该以学习为主，不该参加社会活动"
+   },
+   {
+    "key": "B",
+    "text": "亲社会行为有利于个人成长和社会进步"
+   },
+   {
+    "key": "C",
+    "text": "只有成年人才能参与社会生活"
+   },
+   {
+    "key": "D",
+    "text": "参加社会活动会影响学习成绩"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "关心社会、乐于助人的亲社会行为，有利于养成良好品德，也促进社会和谐。",
+  "kp": "亲社会行为",
+  "stem": "中学生小林利用周末到社区做志愿者，帮助老人学习使用智能手机。这说明（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q02",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 2,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 2 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "网络有百利而无一害"
+   },
+   {
+    "key": "B",
+    "text": "网络是一把“双刃剑”，要合理利用"
+   },
+   {
+    "key": "C",
+    "text": "网络是虚拟的，在网上可以随便说话"
+   },
+   {
+    "key": "D",
+    "text": "青少年应该远离网络"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "网络丰富了生活，但也有信息泄露、沉迷等问题；网络不是法外之地，言行要遵守法律道德。",
+  "kp": "网络生活与诚信",
+  "stem": "关于网络对生活的影响，下列说法正确的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q03",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 3,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 3 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "①②③"
+   },
+   {
+    "key": "B",
+    "text": "①③④"
+   },
+   {
+    "key": "C",
+    "text": "②③④"
+   },
+   {
+    "key": "D",
+    "text": "①②④"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "面对网络信息要理性辨别，不随意转发未经核实的消息，②错误。",
+  "kp": "网络生活与诚信",
+  "stem": "有人在网上发布“某地发生重大食品安全事故”的不实消息，引起群众恐慌。对此，我们应当（ ）\n①不信谣、不传谣　②立即转发提醒朋友　③关注官方权威信息　④提高辨别信息真伪的能力",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q04",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 4,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 4 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "社会秩序需要规则来维护"
+   },
+   {
+    "key": "B",
+    "text": "规则限制了人们的自由，应该减少"
+   },
+   {
+    "key": "C",
+    "text": "只有法律才是规则"
+   },
+   {
+    "key": "D",
+    "text": "规则对青少年没有约束力"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "规则是维护社会秩序的重要保障。规则既约束人，又保障自由；道德、纪律、法律都是规则。",
+  "kp": "社会规则与社会秩序",
+  "stem": "“没有规矩，不成方圆。”这句话说明（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q05",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 5,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 5 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "在公交车上不给老人让座"
+   },
+   {
+    "key": "B",
+    "text": "偷窃同学的手机"
+   },
+   {
+    "key": "C",
+    "text": "故意损坏公共设施"
+   },
+   {
+    "key": "D",
+    "text": "醉酒驾驶汽车"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "不让座是不文明、不道德的行为，但不违法；B、C、D 都违反了法律。",
+  "kp": "违法与犯罪",
+  "stem": "下列行为中，属于违反道德但不违法的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q06",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 6,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 6 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "民事违法行为"
+   },
+   {
+    "key": "B",
+    "text": "行政违法行为"
+   },
+   {
+    "key": "C",
+    "text": "刑事违法行为（犯罪）"
+   },
+   {
+    "key": "D",
+    "text": "一般违法行为"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "犯罪具有严重的社会危害性、刑事违法性和应受刑罚处罚性，是危害最严重的违法行为。",
+  "kp": "违法行为的类别",
+  "stem": "违法行为按照违反的法律不同和危害程度不同，分为民事违法行为、行政违法行为和刑事违法行为。其中，危害最严重的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q07",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 7,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 7 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "要防微杜渐，从小事做起，避免沾染不良习气"
+   },
+   {
+    "key": "B",
+    "text": "未成年人犯罪不会受到处罚"
+   },
+   {
+    "key": "C",
+    "text": "打游戏一定会导致犯罪"
+   },
+   {
+    "key": "D",
+    "text": "逃学只是小事，没关系"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "一般违法与犯罪之间没有不可逾越的鸿沟，要防微杜渐，杜绝不良行为。",
+  "kp": "违法与犯罪",
+  "stem": "15 岁的小明因为经常逃学、在网吧打游戏，后来发展到小偷小摸，最终走上了犯罪道路。这启示我们（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q08",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 8,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 8 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "和别人说话时东张西望"
+   },
+   {
+    "key": "B",
+    "text": "到别人家做客时先敲门"
+   },
+   {
+    "key": "C",
+    "text": "公共场所大声喧哗"
+   },
+   {
+    "key": "D",
+    "text": "随意打断别人说话"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "尊重他人，讲究礼仪：进门先敲门是有礼貌的表现。",
+  "kp": "中华传统美德",
+  "stem": "“以礼待人”是中华民族的传统美德。下列做法符合“以礼待人”的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q09",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 9,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 9 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "答应同学的事，因为忘了就算了"
+   },
+   {
+    "key": "B",
+    "text": "考试时偷看同学的答案"
+   },
+   {
+    "key": "C",
+    "text": "向同学借书，按时归还"
+   },
+   {
+    "key": "D",
+    "text": "网购时故意给商家差评以获得赔偿"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "诚信要求信守诺言、言行一致，借书按时归还是诚信的表现。",
+  "kp": "中华传统美德",
+  "stem": "“言必信，行必果。”下列做法中，符合诚信要求的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q10",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 10,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 10 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "拿走现金，扔掉钱包"
+   },
+   {
+    "key": "B",
+    "text": "交给警察或想办法联系失主"
+   },
+   {
+    "key": "C",
+    "text": "放回原处，不管它"
+   },
+   {
+    "key": "D",
+    "text": "等失主来找时索要报酬"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "拾金不昧，把钱包交给警察或联系失主，是诚实守信、尊重他人财产的表现。",
+  "kp": "中华传统美德",
+  "stem": "小华在路上捡到一个钱包，里面有现金和证件。小华最恰当的做法是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q11",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 11,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 11 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "国家的事只是政府的事"
+   },
+   {
+    "key": "B",
+    "text": "每个人都要承担社会责任"
+   },
+   {
+    "key": "C",
+    "text": "责任只属于成年人"
+   },
+   {
+    "key": "D",
+    "text": "承担责任一定会获得回报"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "社会的发展需要每个人承担责任，青少年也要做负责任的公民。",
+  "kp": "责任与角色",
+  "stem": "“天下兴亡，匹夫有责。”这句话强调的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q12",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 12,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 12 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "承担责任只有付出，没有回报"
+   },
+   {
+    "key": "B",
+    "text": "我们应该只承担对自己有利的责任"
+   },
+   {
+    "key": "C",
+    "text": "承担责任可能付出时间、精力，但也会获得成长和他人的尊重"
+   },
+   {
+    "key": "D",
+    "text": "为了逃避代价可以放弃责任"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "承担责任既有代价也有回报，要不言代价与回报，主动承担责任。",
+  "kp": "责任与角色",
+  "stem": "承担责任往往需要付出代价。下列对此理解正确的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q13",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 13,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 13 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "可以获得报酬"
+   },
+   {
+    "key": "B",
+    "text": "服务社会，奉献社会，在服务中提升自我"
+   },
+   {
+    "key": "C",
+    "text": "可以不上课"
+   },
+   {
+    "key": "D",
+    "text": "只对社区有利，对个人没有意义"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "参加志愿服务，既能服务社会，又能培养社会责任感，实现人生价值。",
+  "kp": "亲社会行为",
+  "stem": "某社区开展“垃圾分类我先行”志愿服务，许多中学生积极参加。参加志愿服务的意义是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q14",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 14,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 14 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "国家主权、安全和发展利益"
+   },
+   {
+    "key": "B",
+    "text": "个人的经济收入"
+   },
+   {
+    "key": "C",
+    "text": "某企业的利润"
+   },
+   {
+    "key": "D",
+    "text": "地方的旅游收入"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "国家核心利益包括国家主权、安全、领土完整、国家统一等，关系国家生存和发展。",
+  "kp": "国家利益",
+  "stem": "国家利益是一个国家生存和发展的各种需求的总和。下列属于国家核心利益的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q15",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 15,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 15 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "在网上发布军事基地的照片和位置"
+   },
+   {
+    "key": "B",
+    "text": "积极学习国家安全知识"
+   },
+   {
+    "key": "C",
+    "text": "发现可疑情况拨打 12339 举报"
+   },
+   {
+    "key": "D",
+    "text": "不参与非法组织"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "随意拍摄、发布军事设施的照片和位置，可能泄露国家秘密，危害国家安全。12339 是国家安全机关举报电话。",
+  "kp": "国家安全",
+  "stem": "每年 4 月 15 日是“全民国家安全教育日”。下列行为中，可能危害国家安全的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q16",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 16,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 16 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "国家利益和个人利益总是对立的"
+   },
+   {
+    "key": "B",
+    "text": "国家利益是人民利益在国际关系中的集中体现，维护国家利益就是维护个人利益"
+   },
+   {
+    "key": "C",
+    "text": "只要个人利益得到保障，国家利益无所谓"
+   },
+   {
+    "key": "D",
+    "text": "国家利益与普通人无关"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "国家利益与人民利益本质上一致，维护国家利益就是维护每个人的根本利益。",
+  "kp": "国家利益",
+  "stem": "下列关于国家利益与个人利益关系的说法，正确的是（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q17",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 17,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 17 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "正确，学生只需要学习"
+   },
+   {
+    "key": "B",
+    "text": "错误，青少年要关心社会，积极参与社会生活"
+   },
+   {
+    "key": "C",
+    "text": "正确，社会的事是大人的事"
+   },
+   {
+    "key": "D",
+    "text": "错误，学生不需要学习"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "人是社会的一员，个人与社会密不可分，青少年要关心社会、了解社会、服务社会。",
+  "kp": "亲社会行为",
+  "stem": "在学习中，有同学说“我只要学好自己的功课，社会的事与我无关”。这种观点（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q18",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 18,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 18 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "每个人的收入都一样"
+   },
+   {
+    "key": "B",
+    "text": "任何人都不能有超越法律的特权"
+   },
+   {
+    "key": "C",
+    "text": "每个人的职业都一样"
+   },
+   {
+    "key": "D",
+    "text": "只有成年人受法律约束"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "法律面前人人平等，任何组织和个人都必须遵守法律，不得有超越法律的特权。",
+  "kp": "社会规则与社会秩序",
+  "stem": "“法律面前人人平等”意味着（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q19",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 19,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 19 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "拼命反抗，与歹徒搏斗到底"
+   },
+   {
+    "key": "B",
+    "text": "冷静应对，保护好自身安全，记住歹徒特征，事后及时报警"
+   },
+   {
+    "key": "C",
+    "text": "主动帮歹徒逃跑"
+   },
+   {
+    "key": "D",
+    "text": "大声斥责歹徒，激怒对方"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "未成年人面对违法犯罪要善于斗争，见义智为，在保护自己安全的前提下运用智慧与违法犯罪作斗争。",
+  "kp": "违法与犯罪",
+  "stem": "面对歹徒抢劫，13 岁的小强应该（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q20",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 20,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 20 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "我国积极维护国家利益，履行国际责任"
+   },
+   {
+    "key": "B",
+    "text": "我国干涉别国内政"
+   },
+   {
+    "key": "C",
+    "text": "我国推行霸权主义"
+   },
+   {
+    "key": "D",
+    "text": "护航只对外国有利"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "护航既保护我国船只和海上通道安全，维护国家利益，也体现了负责任大国的担当。",
+  "kp": "国家利益",
+  "stem": "中国人民解放军海军护航编队在亚丁湾执行护航任务，保护过往船只安全。这体现了（ ）",
+  "paperScore": 2.5,
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q21",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 21,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 21 题",
+  "type": "essay",
+  "material": "",
+  "stem": "【网络生活】\n材料一：初二学生小李沉迷网络游戏，每天玩到深夜，学习成绩直线下降，还和父母发生了激烈冲突。\n材料二：某网友在网上编造“某商场发生火灾”的虚假信息，引发群众恐慌，被公安机关依法处以行政拘留。\n材料三：某中学开展“文明上网，从我做起”主题班会，同学们利用网络查资料、学习知识，还在网上为家乡农产品做宣传。\n（1）材料一中，小李的行为有什么危害？请给他提两条建议。\n（2）材料二说明了什么？\n（3）结合材料三，谈谈我们应该怎样合理利用网络。",
+  "points": [
+   {
+    "text": "（1）影响学习和身体健康、影响家庭关系；合理安排上网时间、培养其他兴趣、自觉抵制诱惑等",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）网络不是法外之地，在网上发布虚假信息要承担法律责任",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（3）学会“网上冲浪”，利用网络学习和服务社会；理性参与网络生活，遵守网络规则；增强辨别能力等",
+    "score": 4,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）危害：沉迷网络游戏会影响学习和身心健康，导致与父母关系紧张，甚至可能走上违法道路。建议：合理安排上网时间，学会自我控制；培养健康的兴趣爱好；主动和父母沟通，接受他们的监督。\n（2）网络不是法外之地，网络空间也要遵守法律和道德，编造、传播虚假信息扰乱社会秩序，要承担相应的法律责任。\n（3）要善于利用网络学习知识、获取信息、服务社会；遵守网络规则，文明上网，不发布、不传播不良信息；提高媒介素养，增强辨别是非的能力；合理安排上网时间，防止沉迷。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "网络生活与诚信",
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q22",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 22,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 22 题",
+  "type": "essay",
+  "material": "",
+  "stem": "【遵守规则】\n情景一：某路口，几个行人看到没有车，就闯红灯过马路。\n情景二：某同学在图书馆里大声打电话，管理员提醒后，他却说“我又没违法”。\n情景三：小明在网上看到“某品牌手机 1 元秒杀”的链接，点进去输入了银行卡号和密码，结果被骗走了 2000 元。\n（1）情景一、二中的行为有什么危害？\n（2）你如何评价情景二中同学说的“我又没违法”？\n（3）情景三给了我们什么启示？",
+  "points": [
+   {
+    "text": "（1）破坏社会秩序，危害自身和他人安全，影响他人",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）错误；规则不只有法律，还有道德、纪律等，要自觉遵守各种社会规则",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（3）增强自我保护意识，不轻信网络信息，保护个人隐私和财产安全；被骗后及时报警",
+    "score": 4,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）闯红灯违反交通规则，容易引发交通事故，危害自己和他人的生命安全；在图书馆大声打电话，违反公共秩序和道德，影响他人学习，破坏良好的公共环境。\n（2）这种说法是错误的。社会规则包括道德、纪律、法律等，不违法不代表就可以为所欲为。我们要自觉遵守道德和公共秩序，尊重他人。\n（3）要增强自我保护意识，不贪小便宜，不轻信网上的“超低价”信息；不随意泄露银行卡号、密码等个人信息；遇到诈骗及时报警，依法维护自己的合法权益。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "社会规则与社会秩序",
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q23",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 23,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 23 题",
+  "type": "essay",
+  "material": "",
+  "stem": "【勇担社会责任】\n材料：快递小哥李师傅每天骑电动车送 100 多个快递，风雨无阻。一天，他在送件途中发现一户居民家里冒出浓烟，立即拨打 119，并和邻居一起疏散群众，避免了一场悲剧。被问到为什么这样做时，他说：“看到了就不能不管。”\n（1）李师傅在生活中扮演着哪些角色？承担着哪些责任？（答两个角色及对应责任）\n（2）李师傅的做法体现了哪些优秀品质？\n（3）作为中学生，我们应该如何做一个负责任的人？",
+  "points": [
+   {
+    "text": "（1）快递员——认真送快递；公民——救助他人、维护公共安全；家庭成员等（任两个）",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）爱岗敬业、乐于助人、有责任心、见义勇为（见义智为）",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（3）对自己负责、认真学习；关心他人；积极参加社会公益活动；遵守规则；不言代价与回报等",
+    "score": 5,
+    "keys": []
+   }
+  ],
+  "score": 13,
+  "sample": "（1）作为快递员，要认真负责、及时准确地送达快递；作为公民，要关心他人和社会，在危急时刻救助他人；作为家庭成员，要关爱家人、承担家庭责任。\n（2）爱岗敬业、尽职尽责；乐于助人、见义智为（及时报警、组织疏散）；具有强烈的社会责任感。\n（3）对自己负责，努力学习，提高能力；关爱他人，乐于助人；积极参加志愿服务等公益活动；遵守社会规则；做到不言代价与回报，主动承担责任；面对危险时见义智为，保护好自己。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "责任与角色",
+  "unit": "八上·社会生活与规则"
+ },
+ {
+  "id": "national-earlybird-8up-daode-q24",
+  "national": true,
+  "subject": "daode",
+  "subjectLabel": "道德与法治",
+  "paperId": "earlybird-8up-daode",
+  "number": 24,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八上早鸟卷 · 道德与法治",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八上早鸟卷 · 道德与法治 第 24 题",
+  "type": "essay",
+  "material": "",
+  "stem": "【维护国家利益】\n材料一：某高校学生在网上结识一名“网友”，对方以兼职为名，让他拍摄附近军港的舰船照片，并支付报酬。国家安全机关及时发现并进行了处理。\n材料二：从“嫦娥”探月到“天宫”空间站，从“蛟龙”深潜到“奋斗者”号万米海试，我国科技自立自强取得了重大成就。\n（1）材料一中，该学生的行为可能造成什么危害？这启示我们应该怎样做？\n（2）材料二中，科技自立自强对维护国家利益有什么意义？\n（3）作为青少年，我们可以为维护国家利益做些什么？（至少两条）",
+  "points": [
+   {
+    "text": "（1）泄露国家秘密，危害国家安全；增强国家安全意识，不贪小利，发现可疑情况及时举报",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）增强国家综合国力，维护国家安全和发展利益",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（3）树立国家利益至上的观念；学习国家安全知识，保守国家秘密；努力学习，增强本领；发现危害国家安全的行为及时举报等",
+    "score": 5,
+    "keys": []
+   }
+  ],
+  "score": 13,
+  "sample": "（1）危害：可能泄露军事秘密，危害国家安全。启示：要增强国家安全意识，不为小利所诱惑；不随意拍摄、发布涉密场所的信息；发现可疑情况及时拨打 12339 向国家安全机关举报。\n（2）科技自立自强能增强我国的综合国力和国际竞争力，保障国家安全，维护国家的发展利益，在国际竞争中掌握主动权。\n（3）树立国家利益至上的观念，自觉维护国家利益；学习国家安全法律知识，保守国家秘密；努力学习科学文化知识，立志报效祖国；发现危害国家安全的行为及时举报。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "国家安全",
+  "unit": "八上·社会生活与规则"
+ }
+];

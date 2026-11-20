@@ -45,6 +45,28 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "earlybird-8up-english",
+      "subject": "english",
+      "subjectLabel": "英语",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "8-up",
+      "title": "八上早鸟卷 · 英语",
+      "source": "考查范围：七年级至八年级上册，以八上为主（一般过去时、频度副词、形容词比较级与最高级、一般将来时、条件状语从句、邀请与建议等），按期末考试题型编写（不含听力），难度略高，百分制",
+      "description": "整卷 51 题（51 题，不含听力，百分制，考到八年级上册）",
+      "questionCount": 51,
+      "data": "./data/national/earlybird-8up-english.js",
+      "sections": {
+        "单项选择": 10,
+        "完形填空": 10,
+        "阅读理解": 15,
+        "七选五": 5,
+        "短文填空": 10,
+        "书面表达": 1
+      }
+    },
+    {
       "id": "earlybird-9up-english",
       "subject": "english",
       "subjectLabel": "英语",
@@ -793,6 +815,137 @@ window.NATIONAL_CATALOG = {
       "description": "整卷 25 题（25 题，百分制，考到七年级上册）",
       "questionCount": 25,
       "data": "./data/national/earlybird-7up-shengwu.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "earlybird-8up-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "8-up",
+      "title": "八上早鸟卷 · 语文",
+      "source": "考查范围：七年级至八年级上册，以八上为主（积累运用、古诗文默写、课外古诗、课外文言、记叙文、说明文、名著《红星照耀中国》《昆虫记》、作文），按期末考试题型编写，难度略高，百分制",
+      "description": "整卷 26 题（26 题，百分制，考到八年级上册）",
+      "questionCount": 26,
+      "data": "./data/national/earlybird-8up-chinese.js",
+      "sections": {
+        "单项选择": 4,
+        "古诗文默写": 6,
+        "阅读理解": 6,
+        "回答问题": 8,
+        "解答题": 2
+      }
+    },
+    {
+      "id": "earlybird-8up-daode",
+      "subject": "daode",
+      "subjectLabel": "道德与法治",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "8-up",
+      "title": "八上早鸟卷 · 道德与法治",
+      "source": "考查范围：七年级至八年级上册，以八上为主（走进社会生活、遵守社会规则、勇担社会责任、维护国家利益），按期末考试题型编写，难度略高，百分制",
+      "description": "整卷 24 题（24 题，百分制，考到八年级上册）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-8up-daode.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 4
+      }
+    },
+    {
+      "id": "earlybird-8up-dili",
+      "subject": "dili",
+      "subjectLabel": "地理",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "8-up",
+      "title": "八上早鸟卷 · 地理",
+      "source": "考查范围：七年级至八年级上册，以八上为主（中国的疆域、人口、民族，地形、气候、河流，自然资源，农业、工业、交通运输），按期末考试题型编写，难度略高，百分制",
+      "description": "整卷 24 题（24 题，百分制，考到八年级上册）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-8up-dili.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 4
+      }
+    },
+    {
+      "id": "earlybird-8up-lishi",
+      "subject": "lishi",
+      "subjectLabel": "历史",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "8-up",
+      "title": "八上早鸟卷 · 历史",
+      "source": "考查范围：七年级至八年级上册，以八上中国近代史为主（鸦片战争至新中国成立前），按期末考试题型编写，难度略高，百分制",
+      "description": "整卷 24 题（24 题，百分制，考到八年级上册）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-8up-lishi.js",
+      "sections": {
+        "单项选择": 20,
+        "解答题": 4
+      }
+    },
+    {
+      "id": "earlybird-8up-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "8-up",
+      "title": "八上早鸟卷 · 数学",
+      "source": "考查范围：七年级至八年级上册，以八上为主（三角形、全等三角形、轴对称、整式的乘法与因式分解、分式），按期末考试题型编写，难度略高，百分制",
+      "description": "整卷 23 题（23 题，百分制，考到八年级上册）",
+      "questionCount": 23,
+      "data": "./data/national/earlybird-8up-math.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 7
+      }
+    },
+    {
+      "id": "earlybird-8up-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "8-up",
+      "title": "八上早鸟卷 · 物理",
+      "source": "考查范围：八年级上册（机械运动、声现象、物态变化、光现象、透镜及其应用、质量与密度），按期末考试题型编写，难度略高，百分制",
+      "description": "整卷 24 题（24 题，百分制，考到八年级上册）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-8up-physics.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 8,
+        "解答题": 6
+      }
+    },
+    {
+      "id": "earlybird-8up-shengwu",
+      "subject": "shengwu",
+      "subjectLabel": "生物",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "stage": "8-up",
+      "title": "八上早鸟卷 · 生物",
+      "source": "考查范围：七年级至八年级上册，以八上为主（动物的主要类群、动物的运动和行为、动物在生物圈中的作用、细菌和真菌、病毒、生物多样性及其保护），按期末考试题型编写，难度略高，百分制",
+      "description": "整卷 25 题（25 题，百分制，考到八年级上册）",
+      "questionCount": 25,
+      "data": "./data/national/earlybird-8up-shengwu.js",
       "sections": {
         "单项选择": 20,
         "解答题": 5
