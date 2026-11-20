@@ -42,6 +42,108 @@
     try { const t = el("textarea"); t.value = text; document.body.append(t); t.select(); const ok = document.execCommand("copy"); t.remove(); return ok; } catch { return false; }
   }
 
+  // 3. 带二维码的分享海报：朋友圈正文里的链接点不开，发朋友圈要用图片，朋友扫码打开同样计数
+  function loadQr() {
+    if (window.qrcode) return Promise.resolve(window.qrcode);
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = "./qrcode.js";
+      script.onload = () => (window.qrcode ? resolve(window.qrcode) : reject(new Error("qr")));
+      script.onerror = reject;
+      document.head.append(script);
+    });
+  }
+
+  function wrap(ctx, text, width) {
+    const lines = [];
+    let line = "";
+    for (const ch of text) {
+      if (ctx.measureText(line + ch).width > width && line) { lines.push(line); line = ch; } else line += ch;
+    }
+    if (line) lines.push(line);
+    return lines;
+  }
+
+  async function makePoster(box, link, status) {
+    status.textContent = "正在生成海报……";
+    let qr;
+    try {
+      const make = await loadQr();
+      qr = make(0, "M");
+      qr.addData(link);
+      qr.make();
+    } catch {
+      status.textContent = "海报暂时生成不了，可以先复制文案发到群里。";
+      return;
+    }
+    const title = box.dataset.posterTitle || "爱丽克丝的题库";
+    const sub = box.dataset.posterSub || "扫码免费试做";
+    const points = (box.dataset.posterPoints || "").split("|").map((s) => s.trim()).filter(Boolean);
+    const colors = (box.dataset.posterColors || "#0f766e,#134e4a").split(",");
+    const W = 1080;
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    if (!ctx) { status.textContent = "海报暂时生成不了。"; return; }
+    const font = (size, weight) => `${weight} ${size}px "PingFang SC", "Microsoft YaHei", sans-serif`;
+    ctx.font = font(38, 500);
+    const wrapped = points.map((p) => wrap(ctx, p, W - 230));
+    const pointsH = wrapped.reduce((s, l) => s + l.length * 54 + 24, 0);
+    ctx.font = font(84, 800);
+    const titleLines = wrap(ctx, title, W - 160).slice(0, 2);
+    const subY = 230 + titleLines.length * 96 - 10;
+    const pointsTop = Math.max(420, subY + 90);
+    const qrTop = pointsTop + pointsH + 30;
+    const H = qrTop + 520 + 170;
+    canvas.width = W;
+    canvas.height = H;
+    const bg = ctx.createLinearGradient(0, 0, 0, H);
+    bg.addColorStop(0, colors[0]);
+    bg.addColorStop(1, colors[1] || colors[0]);
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, W, H);
+    const text = (v, x, y, size, weight, color, align = "left") => { ctx.fillStyle = color; ctx.font = font(size, weight); ctx.textAlign = align; ctx.fillText(v, x, y); };
+    text("爱丽克丝的小站 · 朋友推荐", 80, 120, 34, 500, "#e2f3ee");
+    titleLines.forEach((l, i) => text(l, 80, 230 + i * 96, 84, 800, "#ffffff"));
+    text(sub, 80, subY, 40, 600, "#ffe5aa");
+    let y = pointsTop;
+    wrapped.forEach((lines) => {
+      text("✓", 80, y, 38, 700, "#ffe5aa");
+      lines.forEach((l, i) => text(l, 135, y + i * 54, 38, 500, "#ffffff"));
+      y += lines.length * 54 + 24;
+    });
+    const size = 440;
+    const left = (W - size) / 2;
+    const top = qrTop;
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(left - 30, top - 30, size + 60, size + 60);
+    const count = qr.getModuleCount();
+    const cell = size / count;
+    ctx.fillStyle = "#111111";
+    for (let r = 0; r < count; r += 1) for (let c = 0; c < count; c += 1) if (qr.isDark(r, c)) ctx.fillRect(left + c * cell, top + r * cell, Math.ceil(cell), Math.ceil(cell));
+    text("长按识别二维码，免费试做", W / 2, top + size + 90, 40, 700, "#ffffff", "center");
+    text(new URL(link).host, W / 2, top + size + 145, 30, 500, "#cfe7e0", "center");
+    const url = canvas.toDataURL("image/png");
+    const overlay = el("div", "share-poster-overlay");
+    const card = el("div", "share-poster-card");
+    const img = el("img");
+    img.src = url;
+    img.alt = "分享海报";
+    const tip = el("p", "", "长按图片保存到相册，再发朋友圈或群里；电脑上可以点“下载海报”。");
+    const actions = el("div", "share-poster-actions");
+    const download = el("a", "share-offer-btn primary", "下载海报");
+    download.href = url;
+    download.download = "share-poster.png";
+    const close = el("button", "share-offer-btn", "关闭");
+    close.type = "button";
+    close.addEventListener("click", () => overlay.remove());
+    actions.append(download, close);
+    card.append(tip, img, actions);
+    overlay.append(card);
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.remove(); });
+    document.body.append(overlay);
+    status.textContent = "海报已生成，长按保存后发朋友圈；朋友扫码打开同样算数。";
+  }
+
   function shareLink(id) {
     const url = new URL(location.origin + "/");
     url.searchParams.set("from", "share");
@@ -74,7 +176,12 @@
     const copyBtn = el("button", "share-offer-btn primary", "复制分享文案");
     copyBtn.type = "button";
     const status = el("p", "share-offer-status");
-    copyBtn.addEventListener("click", async () => { status.textContent = (await copyText(text)) ? "已复制，去朋友圈或群里粘贴发送吧。" : "复制失败，请长按上面的文字手动复制。"; });
+    copyBtn.addEventListener("click", async () => { status.textContent = (await copyText(text)) ? "已复制，去群里粘贴发送吧。发朋友圈建议用下面的二维码海报。" : "复制失败，请长按上面的文字手动复制。"; });
+    const posterBtn = el("button", "share-offer-btn primary", "生成二维码海报（发朋友圈用）");
+    posterBtn.type = "button";
+    posterBtn.addEventListener("click", () => makePoster(box, link, status));
+    const btnRow = el("div", "share-offer-row");
+    btnRow.append(copyBtn, posterBtn);
 
     const bar = el("div", "share-offer-bar");
     const fill = el("i");
@@ -85,7 +192,7 @@
     refresh.type = "button";
     refresh.addEventListener("click", async () => { refresh.disabled = true; const d = await loadMine(true); refresh.disabled = false; if (d.ok) { box.dataset.shareMounted = ""; render(box, d, price, message); box.dataset.shareMounted = "1"; } });
 
-    const parts = [head, intro, pre, copyBtn, status, bar, progress];
+    const parts = [head, intro, pre, btnRow, status, bar, progress];
     if (data.unlocked) {
       const codeBox = el("div", "share-offer-code");
       codeBox.append(el("span", "", "分享验证码"), el("b", "", data.verifyCode));
@@ -96,7 +203,7 @@
     } else {
       parts.push(refresh);
     }
-    parts.push(el("p", "share-offer-tip", "自己点开不算；同一个 Wi-Fi 下的多位朋友只算 1 位。朋友圈不要设成“仅自己可见”，否则朋友看不到链接。"));
+    parts.push(el("p", "share-offer-tip", "发群里用文案（链接能直接点开），发朋友圈用二维码海报（朋友圈里的文字链接点不开）。自己点开不算；同一个 Wi-Fi 下的多位朋友只算 1 位；朋友圈不要设成“仅自己可见”。"));
     box.replaceChildren(...parts);
   }
 
@@ -111,6 +218,7 @@
 .share-offer-btn{justify-self:start;padding:8px 14px;border-radius:8px;border:1px solid #d97706;background:#fff;color:#92400e;font:inherit;font-weight:700;cursor:pointer}.share-offer-btn.primary{background:#d97706;color:#fff}
 .share-offer-bar{height:8px;border-radius:99px;background:#fde68a;overflow:hidden}.share-offer-bar i{display:block;height:100%;background:#d97706}
 .share-offer-progress{font-weight:700}.share-offer-code{display:flex;gap:12px;align-items:center;padding:10px;border-radius:8px;background:#fff}.share-offer-code b{font-size:1.4rem;letter-spacing:4px;color:#b45309}
+.share-offer-row{display:flex;flex-wrap:wrap;gap:8px}.share-poster-overlay{position:fixed;inset:0;z-index:9999;background:#000a;display:grid;place-items:center;padding:16px}.share-poster-card{max-width:420px;width:100%;max-height:92vh;overflow:auto;background:#fff;border-radius:12px;padding:12px;display:grid;gap:10px;color:#333;font-size:.9rem}.share-poster-card img{width:100%;border-radius:8px}.share-poster-actions{display:flex;gap:10px;justify-content:center}
 .share-offer-tip{color:#78350f;font-size:.82rem!important}.share-offer-status{color:#15803d;font-size:.85rem!important}`;
   document.head.append(style);
 
