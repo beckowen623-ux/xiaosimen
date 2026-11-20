@@ -1,6 +1,6 @@
-# 小四门刷题
+# 爱丽克丝中考题库（原“中考提分题库”，最早叫“小四门刷题”）
 
-福州 · 人教版 · 初中小四门（道德与法治、历史、地理、生物）碎片化刷题应用。
+人教版 · 中考精编模拟卷、全国中考真题、本周一卷和初中小四门（道德与法治、历史、地理、生物）刷题应用。线上地址 https://x4m.cc.cd/ 。
 
 前端使用静态文件，学习进度保存在浏览器。Cloudflare Pages Functions 通过共用的 D1 数据库处理小四门和双题库套餐兑换。
 
@@ -136,7 +136,7 @@ data/figures/
 tests/validate.mjs
 ```
 
-没有 `functions/`、`admin.html`、付费锁、兑换码、计算器。
+付费锁和兑换码由 `functions/`（Cloudflare Pages Functions + 共用 D1）处理，见上文「免费练习与兑换」。没有 `admin.html`、计算器。
 
 ## 自检
 

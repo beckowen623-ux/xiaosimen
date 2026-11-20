@@ -833,8 +833,8 @@ redeemForm.addEventListener('submit', async event => {
     const data = await response.json();
     if (!response.ok || !data.ok) {
       const messages = {
-        DEVICE_LIMIT: '这个兑换码在中考提分题库已激活两个浏览器。',
-        INVALID_CODE: '兑换码无效，或不适用于中考提分题库。',
+        DEVICE_LIMIT: '这个兑换码在本题库已激活两个浏览器。',
+        INVALID_CODE: '兑换码无效，或不适用于爱丽克丝中考题库。',
         INVALID_REFERRAL: '邀请码有误，请核对或留空后继续。',
         REFERRAL_REQUIRED: '这是好友价兑换码，请填写邀请你的朋友的邀请码（ALIX- 开头，问朋友要）。',
         RATE_LIMITED: '尝试次数太多，请 15 分钟后再试。',
@@ -848,7 +848,7 @@ redeemForm.addEventListener('submit', async event => {
     unlockDialog.close();
     renderHome('homeTitle');
     void refreshReferralProfile();
-    toast('已解锁中考提分题库完整版。');
+    toast('已解锁爱丽克丝中考题库完整版。');
   } catch {
     redeemMessage.textContent = '兑换服务暂时不可用，请稍后再试。';
   } finally {
@@ -1168,6 +1168,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-20', '改名“爱丽克丝中考题库”，左上角的「爱」徽标可以回到作者主页；购买窗口写清原价和好友价的区别，并加了买之前的常见问题。'],
   ['2026-11-19', '新增语文精编模拟卷（三）：32 题，结构对标中考（积累运用、默写、课外古诗、课外文言、记叙文、说明文、作文）。'],
   ['2026-11-19', '新增英语精编模拟卷（三）：61 题，题量对标中考（不含听力），阅读侧重推理判断，语法不超纲。'],
   ['2026-11-19', '新增化学精编模拟卷（一）：22 题，题量和难度对标中考，含溶解度曲线、复分解反应先后、除杂、氢氧化钠变质探究和方程式计算，手机做、打印都行。'],
@@ -1321,7 +1322,7 @@ function weeklyFor(list, subject = state.weeklySubject || 'english') {
 function homeIntroHTML() {
   return `<section class="card home-intro">
     <p class="intro-kicker">精编模拟卷 · 全国真题 · 手机刷、打印都行</p>
-    <h1 id="homeTitle" tabindex="-1">中考提分题库</h1>
+    <h1 id="homeTitle" tabindex="-1">爱丽克丝中考题库</h1>
     <p class="muted">紧贴课标和中考考点编写的精编模拟卷，加上全国各地真题整理成能刷的题，每套都由我亲自先做、把关后才上线；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
   </section>`;
 }
@@ -2341,7 +2342,7 @@ importInput.addEventListener('change', async () => {
     showImportMessage(`备份包含 ${count} 道作答记录。确认后将覆盖当前网址的本机进度。`, true);
   } catch {
     if (revision !== importRevision) return;
-    showImportMessage('无法读取此备份，请选择从中考提分题库下载的 JSON 文件。');
+    showImportMessage('无法读取此备份，请选择从本题库（原中考提分题库）下载的 JSON 文件。');
   }
 });
 byId('cancelImport').addEventListener('click', () => { importProgress = null; showImportMessage(); });

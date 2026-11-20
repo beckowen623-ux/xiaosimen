@@ -553,3 +553,20 @@ input[type=search]::placeholder { color: #67736c; }
 .x4m-bar .stage-field label { color: var(--ink); font-weight: 700; font-size: 14px; }
 .x4m-bar .stage-field select { min-height: 40px; padding: 6px 12px; border-radius: 10px; border: 1px solid var(--line); background: #fff; color: var(--ink); }
 .seller-fallback { margin: 6px 0 10px; font-size: 13px; color: var(--muted); }
+
+/* 爱丽克丝品牌徽标：点徽标回作者主页，点文字回题库首页 */
+.brand-wrap { display: flex; align-items: center; gap: 11px; min-width: 0; flex-shrink: 1; }
+.author-badge { flex: 0 0 auto; display: block; border-radius: 50%; }
+.author-badge img { display: block; }
+.author-badge:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+@media (max-width: 520px) { .brand-wrap { gap: 7px; } .author-badge img { width: 36px; height: 36px; } }
+
+/* 购买窗口：原价 / 好友价 条件 + 常见问题 */
+.price-rules { margin: 12px 0; padding: 10px 12px; border-radius: 10px; background: var(--gold); color: var(--gold-ink); border: 1px solid #e3cf7f; font-size: 14px; line-height: 1.6; }
+.price-rules p { margin: 0; }
+.price-rules p + p { margin-top: 4px; }
+.buy-faq { margin: 0 0 12px; font-size: 14px; }
+.buy-faq summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
+.buy-faq dl { margin: 4px 0 0; }
+.buy-faq dt { font-weight: 600; margin-top: 8px; }
+.buy-faq dd { margin: 2px 0 0; color: var(--muted); line-height: 1.6; }

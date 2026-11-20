@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f5ef">
   <meta name="xiaosimen-paid-launch-date" content="">
-  <meta name="description" content="中考提分题库：紧贴中考考点编写、作者逐题自测的英语、语文、数学、物理精编模拟卷，全国各地中考真题手机刷题，原卷免费看和打印；每周一卷可打印，纸上做完登记错题；小四门按年级学期练习。">
-  <title>中考提分题库 · 人教版</title>
-  <link rel="icon" type="image/svg+xml" href="./assets/icons/icon.svg">
+  <meta name="description" content="爱丽克丝中考题库：紧贴中考考点编写、作者逐题自测的英语、语文、数学、物理精编模拟卷，全国各地中考真题手机刷题，原卷免费看和打印；每周一卷可打印，纸上做完登记错题；小四门按年级学期练习。">
+  <title>爱丽克丝中考题库 · 人教版</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/elx-badge.svg">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./styles.css?v=13">
   <script src="./data/daily-questions-xiaosimen.js?v=7" defer></script>
@@ -22,10 +22,12 @@
   <div id="app">
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="brand" href="./" id="homeLink">
-          <img src="./assets/icons/icon.svg" width="42" height="42" alt="">
-          <span><b>中考提分题库</b><small>精编模拟卷 · 全国真题 · 可打印</small></span>
-        </a>
+        <div class="brand-wrap">
+          <a class="author-badge" href="https://elx.cc.cd/?from=xiaosimen" title="爱丽克丝的主页"><img src="./assets/icons/elx-badge.svg" width="42" height="42" alt="爱丽克丝的主页"></a>
+          <a class="brand" href="./" id="homeLink">
+            <span><b>爱丽克丝中考题库</b><small>精编模拟卷 · 全国真题 · 可打印</small></span>
+          </a>
+        </div>
         <div class="topbar-tools">
           <a href="./key-points.html" id="headerKeyPoints">考点</a>
           <a href="#searchPanel" id="headerSearch" hidden>找题</a>
@@ -64,26 +66,38 @@
   </dialog>
   <dialog class="dialog" id="unlockDialog" aria-labelledby="unlockTitle">
     <div class="dialog-head">
-      <h2 id="unlockTitle">中考提分题库</h2>
+      <h2 id="unlockTitle">爱丽克丝中考题库</h2>
       <form method="dialog"><button class="btn text-button" aria-label="关闭兑换窗口">关闭</button></form>
     </div>
     <p class="muted" id="unlockReason"></p>
     <div class="access-offers">
       <section id="schoolOffer">
-        <h3>中考提分题库完整版 ¥19.9</h3>
+        <h3>中考题库完整版 ¥19.9</h3>
         <p class="muted offer-note">全科真题手机刷题、精编模拟卷整卷手机做和打印、本周一卷、小四门全部题目、错题自动复习。</p>
         <a class="btn" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买</a>
         <button class="btn" type="button" hidden>复制闲鱼口令</button>
       </section>
       <section id="bundleOffer">
         <h3>双题库套餐 ¥29.8</h3>
-        <p class="muted offer-note">中考提分题库 + <b>考证题库</b>（初级会计、中级会计、中级审计、软考系统集成、税务师，网址 tinawin.cc.cd）。家里大人在考证可以一起买，单买考证题库也是 19.9。</p>
+        <p class="muted offer-note">中考题库 + <b>爱丽克丝考证题库</b>（初级会计、中级会计、中级审计、软考系统集成、税务师，网址 tinawin.cc.cd）。家里大人在考证可以一起买，单买考证题库也是 19.9。</p>
         <a class="btn" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买套餐</a>
         <button class="btn" type="button" hidden>复制套餐口令</button>
       </section>
     </div>
     <p class="seller-fallback">闲鱼链接打不开？打开闲鱼 App，搜索用户 <b>王者荣耀速度飞车</b> <button class="btn text-button" type="button" id="copySeller">复制用户名</button></p>
-    <p class="muted">兑换后每个适用题库可激活两个浏览器。套餐码可在两个题库分别兑换。</p>
+    <div class="price-rules">
+      <p><b>原价 19.9</b>：直接在闲鱼拍，拿到兑换码填在下面就行，<b>不用填邀请码</b>。</p>
+      <p><b>好友价 14.9</b>：只限点朋友的专属邀请链接进来的新用户；兑换时要填朋友的邀请码。没有邀请链接就按原价买。</p>
+    </div>
+    <details class="buy-faq">
+      <summary>买之前常见问题</summary>
+      <dl>
+        <dt>怎么买？</dt><dd>点上面「去闲鱼购买」或复制口令，在闲鱼下单，卖家发你兑换码，回到这里输入兑换。</dd>
+        <dt>能用几台设备？</dt><dd>每个兑换码在本题库可以激活两个浏览器（比如孩子手机 + 家长电脑）。套餐码在两个题库各自兑换，各两个浏览器。</dd>
+        <dt>换手机、清了浏览器怎么办？</dt><dd>在新浏览器再输一次兑换码即可；两个名额都用满了，到闲鱼联系我重置。学习进度可在「进度管理」下载备份再导入。</dd>
+        <dt>以后新加的卷子要另外付钱吗？</dt><dd>不用。完整版一次买断，之后新增的精编卷、真题和功能都包含在内。</dd>
+      </dl>
+    </details>
     <form class="redeem-form" id="redeemForm">
       <label for="accessCode">已有兑换码</label>
       <div class="dialog-actions">

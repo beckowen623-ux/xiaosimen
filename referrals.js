@@ -1,8 +1,8 @@
 (() => {
   "use strict";
   const targets = {
-    full: { label: "考证题库", url: "https://tinawin.cc.cd/" },
-    xiaosimen: { label: "中考提分题库", url: "https://x4m.cc.cd/" },
+    full: { label: "爱丽克丝考证题库", url: "https://tinawin.cc.cd/" },
+    xiaosimen: { label: "爱丽克丝中考题库", url: "https://x4m.cc.cd/" },
   };
   const discount = "朋友点你的专属链接，用好友价在闲鱼下单，省 5 元。";
   const OPEN_KEY = "quiz-referral-open";

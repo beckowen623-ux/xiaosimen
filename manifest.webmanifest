@@ -1,6 +1,6 @@
 {
-  "name": "中考提分题库",
-  "short_name": "中考提分",
+  "name": "爱丽克丝中考题库",
+  "short_name": "爱丽克丝中考",
   "description": "中考精编模拟卷、全国中考真题刷题与打印、本周一卷、小四门按学期练习",
   "lang": "zh-CN",
   "id": "./",
@@ -10,6 +10,6 @@
   "theme_color": "#f6f5ef",
   "background_color": "#f6f5ef",
   "icons": [
-    { "src": "./assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+    { "src": "./assets/icons/elx-badge.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
 }
