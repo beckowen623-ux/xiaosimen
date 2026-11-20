@@ -1,0 +1,131 @@
+{
+  "id": "earlybird-7down-english",
+  "earlybird": true,
+  "stage": "7-down",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "早鸟自测",
+  "year": 2027,
+  "title": "七下早鸟卷 · 英语",
+  "source": "考查范围：七年级上下册，以七下为主（动物、规则、运动健康、饮食、现在进行时、天气、一般过去时、故事），按期末考试题型编写（不含听力），难度略高，百分制",
+  "note": "51 题，不含听力，百分制，考到七年级下册",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 1,
+      "items": [
+        {"n": 1, "stem": "—Look! The children ______ kites in the park.\n—How happy they are!", "options": ["fly", "flies", "are flying", "flew"], "answer": "C", "kp": "现在进行时", "exp": "Look! 提示动作正在发生，用现在进行时 are flying。"},
+        {"n": 2, "stem": "—______ was the weather like in Harbin yesterday?\n—It was snowy and very cold.", "options": ["What", "How", "Which", "Where"], "answer": "A", "kp": "特殊疑问句", "exp": "What's the weather like? 是固定问法，相当于 How is the weather?。注意有 like 时用 what。"},
+        {"n": 3, "stem": "In our school, we ______ wear school uniforms on Mondays, but we ______ wear them on Fridays. We can wear our own clothes.", "options": ["must; mustn't", "must; don't have to", "can; must", "mustn't; can"], "answer": "B", "kp": "情态动词", "exp": "周一必须穿校服 must；周五“不必”穿，用 don't have to。mustn't 是“禁止”，与后句“可以穿自己的衣服”不符。"},
+        {"n": 4, "stem": "Don't ______ in the hallways. You may hurt yourself or others.", "options": ["run", "running", "to run", "runs"], "answer": "A", "kp": "祈使句", "exp": "否定祈使句：Don't＋动词原形。"},
+        {"n": 5, "stem": "To keep healthy, you should eat more ______ and less ______.", "options": ["vegetable; meats", "vegetables; junk food", "vegetables; junk foods", "vegetable; junk food"], "answer": "B", "kp": "可数名词与不可数名词", "exp": "vegetable 是可数名词，more 后用复数；junk food 是不可数名词，less 修饰不可数名词。"},
+        {"n": 6, "stem": "—What did you do last weekend?\n—I ______ my grandparents and ______ them clean the house.", "options": ["visit; help", "visited; helped", "visited; help", "visiting; helping"], "answer": "B", "kp": "一般过去时", "exp": "last weekend 是过去时间，两个并列动词都用过去式。"},
+        {"n": 7, "stem": "There ______ a football match on TV yesterday evening, but my father ______ busy and didn't watch it.", "options": ["is; is", "was; was", "were; was", "was; were"], "answer": "B", "kp": "一般过去时", "exp": "yesterday evening 用过去时；a football match 单数用 was；my father 单数用 was。"},
+        {"n": 8, "stem": "—How often do you exercise?\n—______. I run every morning.", "options": ["For an hour", "Every day", "Two hours ago", "At six"], "answer": "B", "kp": "频度", "exp": "How often 问频率，回答 Every day。For an hour 回答 How long。"},
+        {"n": 9, "stem": "Pandas are in great danger. We must do something ______ them.", "options": ["save", "to save", "saving", "saves"], "answer": "B", "kp": "动词不定式", "exp": "do something to do sth. 做些事情来……，不定式表目的。"},
+        {"n": 10, "stem": "—I'm sorry I broke your cup.\n—______. It's an old one.", "options": ["That's right", "Never mind", "You're welcome", "Good idea"], "answer": "B", "kp": "交际用语", "exp": "回应道歉用 Never mind（没关系）。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "A Day to Remember",
+      "passage": "Last Saturday was a special day for me. My class went to a farm outside the city. We (11) there by bus early in the morning.\nThe weather was (12). The sun was shining and there were no clouds in the sky. When we got to the farm, a farmer showed us (13) the farm. We saw many cows, sheep and chickens. Then the farmer (14) us how to milk a cow. It looked easy, but when I tried, the cow didn't move and no milk came out! Everyone (15).\nAfter lunch, we went to pick strawberries. The strawberries were big and red. We picked a lot and the farmer let us (16) some for free. They were so (17)! At about three o'clock, it suddenly began to (18). We ran into a big house and waited there. Luckily, the rain (19) after twenty minutes.\nWe got back to school at five. I was tired (20) very happy. I learned a lot about farm life. It was a day to remember!",
+      "items": [
+        {"n": 11, "options": ["went", "go", "goes", "going"], "answer": "A", "kp": "一般过去时", "exp": "讲上周六的事，用过去式 went。"},
+        {"n": 12, "options": ["sunny", "rainy", "windy", "snowy"], "answer": "A", "kp": "上下文", "exp": "后句说阳光明媚、没有云，天气晴朗。"},
+        {"n": 13, "options": ["around", "for", "with", "at"], "answer": "A", "kp": "固定搭配", "exp": "show sb. around 带某人参观。"},
+        {"n": 14, "options": ["taught", "asked", "told", "said"], "answer": "A", "kp": "上下文", "exp": "teach sb. how to do sth. 教某人怎样做某事。"},
+        {"n": 15, "options": ["laughed", "cried", "slept", "left"], "answer": "A", "kp": "上下文", "exp": "挤不出奶的样子很滑稽，大家都笑了。"},
+        {"n": 16, "options": ["take", "to take", "taking", "took"], "answer": "A", "kp": "固定搭配", "exp": "let sb. do sth.，let 后接动词原形。"},
+        {"n": 17, "options": ["delicious", "terrible", "expensive", "dirty"], "answer": "A", "kp": "上下文", "exp": "又大又红的草莓吃起来很美味。"},
+        {"n": 18, "options": ["rain", "snow", "shine", "blow"], "answer": "A", "kp": "上下文", "exp": "后文说 the rain，所以是下雨。"},
+        {"n": 19, "options": ["stopped", "started", "came", "fell"], "answer": "A", "kp": "上下文", "exp": "Luckily 幸运的是，雨二十分钟后停了。"},
+        {"n": 20, "options": ["but", "and", "so", "or"], "answer": "A", "kp": "连词", "exp": "累但很开心，前后转折，用 but。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Rules at Sunshine Swimming Pool",
+          "passage": "Welcome to Sunshine Swimming Pool!\nOpening hours: Tuesday–Sunday 9:00 am–8:00 pm (closed on Mondays)\nTickets: Adults ¥40, Students ¥25 (please show your student card), Children under 6 free\nRules:\n1. Take a shower before you swim.\n2. Wear a swimming cap in the pool.\n3. Don't run or jump into the pool.\n4. Don't eat or drink in the pool area.\n5. Children under 12 must swim with an adult.\n6. Leave the pool when you hear thunder.\nCall 6233-0875 if you have any questions.",
+          "items": [
+            {"n": 21, "stem": "When can't people swim at the pool?", "options": ["On Monday.", "On Tuesday.", "On Saturday.", "On Sunday."], "answer": "A", "kp": "细节理解", "exp": "closed on Mondays。"},
+            {"n": 22, "stem": "Mr. Wang, his 13-year-old son and his 5-year-old daughter go swimming together. How much do they need to pay? (The son shows his student card.)", "options": ["¥40.", "¥65.", "¥90.", "¥105."], "answer": "B", "kp": "推理判断", "exp": "成人 40 元，学生 25 元，6 岁以下儿童免费：40＋25＝65 元。"},
+            {"n": 23, "stem": "What should you do before swimming?", "options": ["Eat something.", "Take a shower.", "Run around the pool.", "Call the pool."], "answer": "B", "kp": "细节理解", "exp": "规则 1：Take a shower before you swim。"},
+            {"n": 24, "stem": "Which of the following is NOT allowed?", "options": ["Wearing a swimming cap.", "Swimming with an adult.", "Drinking juice in the pool area.", "Leaving the pool when it thunders."], "answer": "C", "kp": "细节理解", "exp": "规则 4：泳池区域禁止吃喝。"},
+            {"n": 25, "stem": "Who can swim without an adult?", "options": ["A 7-year-old girl.", "A 10-year-old boy.", "An 11-year-old girl.", "A 14-year-old boy."], "answer": "D", "kp": "推理判断", "exp": "12 岁以下必须有成人陪同，只有 14 岁的男孩可以单独游泳。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "The Clever Crow",
+          "passage": "Once upon a time, there was a crow. One hot summer day, she flew for a long time looking for water. She was very thirsty.\nAt last, she saw a bottle under a tree. There was some water in it, but the water was at the bottom, and the neck of the bottle was too narrow. The crow put her beak into the bottle, but she couldn't reach the water.\nThe crow didn't give up. She looked around and saw some small stones on the ground. She had an idea! She picked up a stone and dropped it into the bottle. Then she dropped another one, and another. Slowly, the water came up higher and higher.\nFinally, the water was high enough. The crow drank the water happily and then flew away.\nThe story tells us that we should use our heads when we have problems. Where there is a will, there is a way.",
+          "items": [
+            {"n": 26, "stem": "Why did the crow look for water?", "options": ["She was hungry.", "She was thirsty.", "She wanted to wash.", "She wanted to swim."], "answer": "B", "kp": "细节理解", "exp": "She was very thirsty。"},
+            {"n": 27, "stem": "Why couldn't the crow drink the water at first?", "options": ["The bottle was empty.", "The water was dirty.", "The water was too low and the bottle neck was narrow.", "Another bird was drinking it."], "answer": "C", "kp": "细节理解", "exp": "水在瓶底，瓶颈太窄，喙够不到。"},
+            {"n": 28, "stem": "What did the crow drop into the bottle?", "options": ["Leaves.", "Small stones.", "Sticks.", "Sand."], "answer": "B", "kp": "细节理解", "exp": "She picked up a stone and dropped it into the bottle。"},
+            {"n": 29, "stem": "What does the underlined word \"narrow\" probably mean?", "options": ["宽的", "窄的", "高的", "脏的"], "answer": "B", "kp": "词义猜测", "exp": "瓶颈 narrow，乌鸦的喙伸进去够不着水，可推断是“窄的”。"},
+            {"n": 30, "stem": "What can we learn from the story?", "options": ["Crows like summer.", "We should think hard to solve problems.", "Water is not important.", "We should never drink from bottles."], "answer": "B", "kp": "推理判断", "exp": "use our heads when we have problems，遇到问题要动脑筋。"}
+          ]
+        },
+        {
+          "label": "C",
+          "title": "Eat Well, Keep Fit",
+          "passage": "Many students know that eating well and exercising are important, but not all of them do it.\nLast month, Green Middle School asked 500 students about their habits. The results showed that only 30% of them ate breakfast every day. About half of the students drank sweet drinks more than three times a week. And 40% of them exercised for less than half an hour a day.\nDr. Li, a doctor at the city hospital, gives students some advice. \"First, never skip breakfast. It gives you energy for the morning. Second, drink more water instead of sweet drinks. Third, try to exercise for at least one hour every day. You can walk to school, play ball games or ride a bike.\"\nDr. Li also says, \"Don't eat too much at night, and go to bed early. Good sleep helps you study better.\"",
+          "items": [
+            {"n": 31, "stem": "How many students in the survey ate breakfast every day?", "options": ["30.", "150.", "200.", "250."], "answer": "B", "kp": "推理判断", "exp": "500 名学生中 30% 每天吃早餐：500×30%＝150 人。"},
+            {"n": 32, "stem": "What does Dr. Li say about breakfast?", "options": ["It's not important.", "It gives you energy for the morning.", "You can eat it at noon.", "Sweet drinks are good for breakfast."], "answer": "B", "kp": "细节理解", "exp": "It gives you energy for the morning。"},
+            {"n": 33, "stem": "How long should students exercise every day according to Dr. Li?", "options": ["Less than half an hour.", "Half an hour.", "At least one hour.", "Three hours."], "answer": "C", "kp": "细节理解", "exp": "at least one hour every day。"},
+            {"n": 34, "stem": "Which is NOT Dr. Li's advice?", "options": ["Drink more water.", "Go to bed early.", "Ride a bike or walk to school.", "Eat a big dinner late at night."], "answer": "D", "kp": "细节理解", "exp": "Don't eat too much at night。"},
+            {"n": 35, "stem": "What is the passage mainly about?", "options": ["A doctor's daily life.", "Students' habits and advice for a healthy life.", "How to make breakfast.", "The best sweet drinks."], "answer": "B", "kp": "主旨大意", "exp": "先讲学生习惯调查结果，再给出健康生活建议。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "七选五",
+      "score": 2,
+      "title": "How to Keep a Pet Dog",
+      "passage": "Dogs are friendly and clever. Many people like to keep dogs as pets. If you want to keep a dog, here are some tips for you.\nGive your dog the right food. (36) Some food for people, like chocolate, is bad for dogs.\nTake your dog out for a walk every day. Dogs need exercise, just like people. (37)\nKeep your dog clean. Wash it once or twice a month. (38)\nTake it to see a vet. (39) If your dog doesn't want to eat or play, take it to see a vet at once.\nLove your dog. Play with it and talk to it. (40) Then it will be your best friend.",
+      "choices": ["Dog food is better than the food you eat.", "A short walk after meals is good for them.", "Brush its hair often to keep it tidy.", "A vet is a doctor for animals.", "Dogs can feel your love.", "Dogs are afraid of cats.", "You can buy a dog in a shop."],
+      "items": [
+        {"n": 36, "answer": "A", "kp": "七选五", "exp": "本段讲给狗吃合适的食物，狗粮比人的食物更好，后句举巧克力的例子。"},
+        {"n": 37, "answer": "B", "kp": "七选五", "exp": "本段讲每天遛狗、需要运动，B 补充饭后散步有好处。"},
+        {"n": 38, "answer": "C", "kp": "七选五", "exp": "本段讲保持清洁，洗澡、梳毛。"},
+        {"n": 39, "answer": "D", "kp": "七选五", "exp": "空格后再次出现 vet，D 解释 vet 是动物医生。"},
+        {"n": 40, "answer": "E", "kp": "七选五", "exp": "爱护狗、陪它玩，狗能感受到你的爱。"}
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Weekend",
+      "passage": "Dear Tom,\nThanks for your e-mail. I had a busy but (41) (interest) weekend.\nOn Saturday morning, I (42) (get) up early and went to the park with my father. We (43) (run) for half an hour. Then we had breakfast in a small restaurant. I had two (44) (egg) and a glass of milk.\nIn the afternoon, it was (45) (rain), so I stayed at home. I read a book about animals. Did you know that elephants can live (46) ______ about seventy years? I also learned that (47) (wolf) usually live and hunt in groups.\nOn Sunday, my aunt and her son came to visit us. My cousin is only five, but he can draw very (48) (good). We played games together. In the evening, my mother made dumplings for (49) (we). They were delicious!\nWhat (50) (do) you do last weekend? Please write back soon.\nYours,\nLi Ming",
+      "items": [
+        {"n": 41, "answer": "interesting", "hint": "interest", "kp": "词性转换", "exp": "but 连接两个形容词，修饰 weekend 用 interesting。"},
+        {"n": 42, "answer": "got", "hint": "get", "kp": "一般过去时", "exp": "讲周末发生的事，用过去式 got。"},
+        {"n": 43, "answer": "ran", "hint": "run", "kp": "一般过去时", "exp": "run 的过去式是不规则的 ran。"},
+        {"n": 44, "answer": "eggs", "hint": "egg", "kp": "名词复数", "exp": "two 后接复数 eggs。"},
+        {"n": 45, "answer": "rainy", "hint": "rain", "kp": "词性转换", "exp": "it was＋形容词描述天气，rainy。"},
+        {"n": 46, "answer": "for", "kp": "介词", "exp": "表示一段时间，live for about seventy years。"},
+        {"n": 47, "answer": "wolves", "hint": "wolf", "kp": "名词复数", "exp": "以 f 结尾的名词，变 f 为 v 加 -es：wolves。"},
+        {"n": 48, "answer": "well", "hint": "good", "kp": "词性转换", "exp": "修饰动词 draw 用副词 well。"},
+        {"n": 49, "answer": "us", "hint": "we", "kp": "人称代词", "exp": "介词 for 后用宾格 us。"},
+        {"n": 50, "answer": "did", "hint": "do", "kp": "一般过去时", "exp": "last weekend，一般过去时疑问句用助动词 did。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 51,
+      "score": 20,
+      "prompt": "健康的生活习惯对我们很重要。你校英语报以“Healthy Habits, Happy Life”为题征文。请写一篇短文，内容包括：1. 你现在有哪些健康的生活习惯（饮食、运动、作息等，至少两个方面）；2. 你过去有一个不好的习惯，后来是怎样改掉的；3. 给同学们提一条建议。要求：80 词左右，开头已给出，不计入总词数；文中不得出现真实姓名和校名。\nHealthy Habits, Happy Life\nI think it's important to keep healthy. ______",
+      "points": [["写出至少两个方面的健康习惯", 5], ["写出过去的坏习惯及改掉的过程（用一般过去时）", 5], ["给同学提一条建议", 4], ["语言准确，时态正确，衔接自然，书写规范", 6]],
+      "sample": "Healthy Habits, Happy Life\nI think it's important to keep healthy. Now I have some good habits. I eat breakfast every day, and I eat lots of vegetables and fruit. I exercise for an hour after school. I usually play basketball or ride my bike. I go to bed at about ten o'clock.\nBut last year, I often drank sweet drinks and played computer games late at night. I was often tired in class. My mother told me it was bad for my health, so I made a plan. I drank water instead and put my phone away at nine.\nI hope everyone can have healthy habits. Let's exercise more and eat well!",
+      "exp": "注意时态：现在的习惯用一般现在时，过去的习惯和改变过程用一般过去时。可用句型：I usually...、I used to... / Last year, I often...、so I decided to...、I hope...。"
+    }
+  ]
+}
