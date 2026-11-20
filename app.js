@@ -1168,7 +1168,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
-  ['2026-11-20', '改名“爱丽克丝中考题库”，左上角的「爱」徽标可以回到作者主页；购买窗口写清原价和好友价的区别，并加了买之前的常见问题。'],
+  ['2026-11-20', '改名“爱丽克丝中考题库”，左上角的「爱」徽标可以回到作者主页；购买窗口写清原价和好友价的区别，并加了买之前的常见问题；首页新增「30 秒看怎么用」演示视频。'],
   ['2026-11-19', '新增语文精编模拟卷（三）：32 题，结构对标中考（积累运用、默写、课外古诗、课外文言、记叙文、说明文、作文）。'],
   ['2026-11-19', '新增英语精编模拟卷（三）：61 题，题量对标中考（不含听力），阅读侧重推理判断，语法不超纲。'],
   ['2026-11-19', '新增化学精编模拟卷（一）：22 题，题量和难度对标中考，含溶解度曲线、复分解反应先后、除杂、氢氧化钠变质探究和方程式计算，手机做、打印都行。'],
@@ -1324,6 +1324,7 @@ function homeIntroHTML() {
     <p class="intro-kicker">精编模拟卷 · 全国真题 · 手机刷、打印都行</p>
     <h1 id="homeTitle" tabindex="-1">爱丽克丝中考题库</h1>
     <p class="muted">紧贴课标和中考考点编写的精编模拟卷，加上全国各地真题整理成能刷的题，每套都由我亲自先做、把关后才上线；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
+    <button class="btn demo-btn" type="button" data-demo-video>▶ 30 秒看怎么用</button>
   </section>`;
 }
 function weeklyCardHTML(progress) {
@@ -2427,3 +2428,15 @@ async function init() {
   }
 }
 init();
+
+// 首页“30 秒看怎么用”：点了才加载视频，不拖慢首页
+document.addEventListener('click', event => {
+  if (!event.target.closest('[data-demo-video]')) return;
+  const dialog = byId('demoDialog');
+  const video = byId('demoVideo');
+  if (!video.src) video.src = video.dataset.src;
+  dialog.showModal();
+  video.play().catch(() => {});
+  trackVisit('demo_video');
+});
+byId('demoDialog').addEventListener('close', () => byId('demoVideo').pause());
