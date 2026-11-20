@@ -33,7 +33,7 @@ if (existsSync(output)) {
 }
 
 const pages = [
-  "app.js", "styles.css", "referrals.js", "referrals.css", "qrcode.js",
+  "app.js", "styles.css", "referrals.js", "share-offer.js", "referrals.css", "qrcode.js",
   "key-points.html", "key-points.js", "key-points.css", "manifest.webmanifest", "_routes.json",
   "national-exams.js", "national-exams.css",
 ];

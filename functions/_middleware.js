@@ -1,5 +1,6 @@
 import { cashImage, chooseReward, findReferrer, referralDetails, saveCashQr } from "./_referrals.js";
 import { SPRINT_PAPERS } from "./_sprint.js";
+import { handleShare } from "./_share.js";
 import { handleUpload, listMyUploads } from "./_uploads.js";
 
 const COOKIE_NAME = "xiaosimen_access";
@@ -18,6 +19,7 @@ const FAILURE_WINDOW_MS = 15 * 60 * 1000;
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
+  if (url.pathname.startsWith("/api/share/")) return handleShare(context, SITE);
   if (!PUBLIC_API_PATHS.has(url.pathname)) return context.next();
 
   try {
