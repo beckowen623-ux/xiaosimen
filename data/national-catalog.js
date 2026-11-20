@@ -395,6 +395,83 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "earlybird-2027-chemistry",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "title": "九下 · 中考全范围早鸟卷 · 化学",
+      "source": "按中考化学题型、题量编写，难度略高于中考，百分制",
+      "description": "整卷 19 题（19 题，百分制，难度略高于中考）",
+      "questionCount": 19,
+      "data": "./data/national/earlybird-2027-chemistry.js",
+      "sections": {
+        "单项选择": 12,
+        "解答题": 7
+      },
+      "stage": "9-down"
+    },
+    {
+      "id": "earlybird-2027-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "title": "九下 · 中考全范围早鸟卷 · 语文",
+      "source": "按中考语文题型、题量编写，难度略高于中考，百分制",
+      "description": "整卷 26 题（百分制，含课外古诗、课外文言、记叙文、议论文、名著和作文，难度略高于中考）",
+      "questionCount": 26,
+      "data": "./data/national/earlybird-2027-chinese.js",
+      "sections": {
+        "单项选择": 4,
+        "古诗文默写": 6,
+        "阅读理解": 6,
+        "回答问题": 8,
+        "解答题": 2
+      },
+      "stage": "9-down"
+    },
+    {
+      "id": "earlybird-2027-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "title": "九下 · 中考全范围早鸟卷 · 数学",
+      "source": "按中考数学题型、题量编写，难度略高于中考，百分制",
+      "description": "整卷 23 题（23 题，百分制，难度略高于中考）",
+      "questionCount": 23,
+      "data": "./data/national/earlybird-2027-math.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 7
+      },
+      "stage": "9-down"
+    },
+    {
+      "id": "earlybird-2027-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "早鸟自测",
+      "year": 2027,
+      "earlybird": true,
+      "title": "九下 · 中考全范围早鸟卷 · 物理",
+      "source": "按中考物理题型、题量编写，难度略高于中考，百分制",
+      "description": "整卷 24 题（24 题，百分制，难度略高于中考）",
+      "questionCount": 24,
+      "data": "./data/national/earlybird-2027-physics.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 8,
+        "解答题": 6
+      },
+      "stage": "9-down"
+    },
+    {
       "id": "fj-2026-daode",
       "subject": "daode",
       "subjectLabel": "道德与法治",

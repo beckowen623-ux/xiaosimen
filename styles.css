@@ -578,3 +578,17 @@ input[type=search]::placeholder { color: #67736c; }
 .video-dialog video { display: block; width: 100%; aspect-ratio: 9 / 16; max-height: calc(100vh - 120px); border-radius: 12px; background: #000; }
 
 .promise-line { margin: 8px 0 10px; padding: 6px 10px; border-radius: 8px; background: #fff4d6; color: #5a3d00; font-weight: 700; line-height: 1.55; }
+
+/* 中考早鸟自测卷 */
+.earlybird-card { border: 2px solid #f59e0b; background: linear-gradient(135deg, #fff7ed, #fffbeb); }
+.earlybird-badge { display: inline-block; padding: 2px 10px; border-radius: 999px; background: #ea580c; color: #fff; font-size: .8rem; font-weight: 700; }
+.earlybird-card h2 { margin: 8px 0 6px; }
+.earlybird-card p { margin: 4px 0; line-height: 1.6; }
+.earlybird-tip { color: #9a3412; font-weight: 700; }
+.earlybird-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; margin-top: 10px; }
+.earlybird-grid .btn { display: grid; gap: 2px; justify-items: center; padding: 10px 6px; }
+.earlybird-grid small { color: #78716c; font-size: .75rem; font-weight: 400; }
+.earlybird-verdict { margin: 12px 0; padding: 10px 12px; border-radius: 10px; background: #fef3c7; color: #78350f; line-height: 1.7; }
+.stage-bar h2 { margin: 0 0 8px; font-size: 1.05rem; }
+.stage-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 6px; }
+.subject-later p { line-height: 1.7; }

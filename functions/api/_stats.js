@@ -11,6 +11,8 @@ export const TRACK_EVENTS = new Set([
   "daily_share",
   "daily_answer_junior",
   "daily_correct_junior",
+  "earlybird_done",
+  "earlybird_75",
 ]);
 
 export function normalizeSource(value) {

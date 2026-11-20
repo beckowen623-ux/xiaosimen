@@ -1,8 +1,8 @@
 (() => {
   "use strict";
   const targets = {
-    full: { label: "爱丽克丝考证题库", url: "https://tinawin.cc.cd/" },
-    xiaosimen: { label: "爱丽克丝中考题库", url: "https://x4m.cc.cd/" },
+    full: { label: "考证题库", url: "https://tinawin.cc.cd/" },
+    xiaosimen: { label: "中考提分题库", url: "https://x4m.cc.cd/" },
   };
   const discount = "朋友点你的专属链接，用好友价在闲鱼下单，省 5 元。";
   const OPEN_KEY = "quiz-referral-open";
@@ -149,7 +149,7 @@
     context.font = font(38, 500);
     const pointLines = style.points.reduce((sum, point) => sum + wrapText(context, point, W - 220).length, 0);
     const pointsBottom = 420 + pointLines * 54 + style.points.length * 26;
-    const H = Math.max(1640, Math.max(pointsBottom + 10, 700) + 150 + 50 + 460 + 200);
+    const H = Math.max(1690, Math.max(pointsBottom + 10, 700) + 150 + 50 + 460 + 250);
     canvas.height = H;
     const text = (value, x, y, size, weight, color, align = "left") => {
       context.fillStyle = color;
@@ -195,6 +195,7 @@
     }
     text("长按识别二维码", W / 2, qrY + size + 100, 40, 700, "#ffffff", "center");
     text(`邀请码 ${code}`, W / 2, qrY + size + 156, 34, 500, "#d7efe7", "center");
+    text("打不开或很慢？换个网络或多试几次就好", W / 2, qrY + size + 206, 28, 500, "#d7efe7", "center");
     let dataUrl;
     try { dataUrl = canvas.toDataURL("image/png"); } catch { message.textContent = "海报暂时无法生成。"; return; }
     message.textContent = "";
@@ -785,7 +786,7 @@
     const url = new URL(site.url);
     url.searchParams.set("from", "referral");
     url.searchParams.set("invite", profile.code);
-    const share = lastShare = `我在用的${site.label}，推荐给你。\n点我的专属链接，可以先免费试，再用好友价 14.9 元买（省 5 元）：\n${url.href}\n如果兑换时提示填邀请码，填 ${profile.code}`;
+    const share = lastShare = `我在用的${site.label}，推荐给你。\n点我的专属链接，可以先免费试，再用好友价 14.9 元买（省 5 元）：\n${url.href}\n（打不开或很慢的话，换个网络或多试几次就好）\n如果兑换时提示填邀请码，填 ${profile.code}`;
     const message = node("p", "", "referral-message");
     message.setAttribute("role", "status");
     const left = Math.max(0, profile.required - profile.invited);

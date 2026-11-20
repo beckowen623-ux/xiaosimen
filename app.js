@@ -604,7 +604,7 @@ const MODE_LABEL = {
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
   essay: '主观题提分', blank: '填空速记', retry: '本组错题重练', national: '全国真题练习',
-  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题',
+  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '中考早鸟自测',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -1310,10 +1310,10 @@ async function buildWeekly(subject) {
   weeklyCache.set(cacheKey, list);
   return list;
 }
-function weeklyId(subject = state.weeklySubject || 'english') {
+function weeklyId(subject = weeklySubjectNow()) {
   return `weekly-${weekKeyOf(todayStr())}-${subject}${subject === 'x4m' ? '-' + state.stage : ''}`;
 }
-function weeklyFor(list, subject = state.weeklySubject || 'english') {
+function weeklyFor(list, subject = weeklySubjectNow()) {
   const id = weeklyId(subject);
   return freeOpen('print', id) || freeOpen('phone', id) ? list : list.slice(0, FREE_PREVIEW);
 }
@@ -1328,13 +1328,13 @@ function homeIntroHTML() {
   </section>`;
 }
 function weeklyCardHTML(progress) {
-  const subject = state.weeklySubject || 'english';
+  const subject = weeklySubjectNow();
   const list = weeklyCache.get(`${weekKeyOf(todayStr())}-${subject}-${subject === 'x4m' ? state.stage : ''}`);
   const done = list ? weeklyFor(list).filter(q => hasAnswered(qProgress(progress, q.id))).length : 0;
   const total = list ? list.length : WEEKLY_SIZE[subject];
   return `<section class="card weekly-card" aria-labelledby="weeklyTitle">
     <div class="section-heading"><h2 id="weeklyTitle">🗓 本周一卷</h2><span class="muted">${weekRangeLabel()} · 每周一换</span></div>
-    <div class="weekly-chips" role="group" aria-label="选择科目">${WEEKLY_SUBJECTS.map(([key, label]) => `<button type="button" class="drill-chip" data-weekly-subject="${key}" aria-pressed="${subject === key}">${label}</button>`).join('')}</div>
+    <div class="weekly-chips" role="group" aria-label="选择科目">${weeklySubjectsNow().map(([key, label]) => `<button type="button" class="drill-chip" data-weekly-subject="${key}" aria-pressed="${subject === key}">${label}</button>`).join('')}</div>
     <p class="weekly-meta"><b>${esc(weeklySubjectLabel(subject))}</b> · ${total} 题${list ? ` · 已做 ${done}` : ''}</p>
     <div class="weekly-actions">
       <button class="btn primary" type="button" data-weekly="phone">📱 手机上做</button>
@@ -1376,7 +1376,7 @@ function printQuestions(title, questions) {
   window.QuizReferrals.showPapers([paperFromQuestions(title, questions)], { print: true });
 }
 async function runWeekly(action) {
-  const subject = state.weeklySubject || 'english';
+  const subject = weeklySubjectNow();
   try {
     const all = await buildWeekly(subject);
     if (!all.length) { toast('这周的卷子还在准备中。'); return; }
@@ -1413,10 +1413,85 @@ function showWeeklyMark(list) {
   });
 }
 
+// ---- 中考早鸟自测卷：全学科各一套，百分制，限时免费（不占免费整卷名额） ----
+const EARLYBIRD_ORDER = ['chinese', 'math', 'english', 'physics', 'chemistry', 'daode', 'lishi', 'dili', 'shengwu'];
+const EARLYBIRD_LABEL = { chinese: '语文', math: '数学', english: '英语', physics: '物理', chemistry: '化学', daode: '道法', lishi: '历史', dili: '地理', shengwu: '生物' };
+// 首页按学期组织：所有板块跟着这里选的学期走（state.stage 与小四门共用）
+const isNinth = (stage = state.stage) => stage === '9-up' || stage === '9-down';
+const STAGE_SHORT = { '7-up': '七上', '7-down': '七下', '8-up': '八上', '8-down': '八下', '9-up': '九上', '9-down': '九下 · 中考冲刺' };
+function stageBarHTML() {
+  return `<section class="card stage-bar" aria-labelledby="stageBarTitle">
+    <h2 id="stageBarTitle">孩子现在在哪个学期？</h2>
+    <div class="stage-chips" role="group" aria-label="选择学期">${STAGES.map(st => `<button type="button" class="drill-chip" data-stage-pick="${st.stage}" aria-pressed="${st.stage === state.stage}">${STAGE_SHORT[st.stage]}</button>`).join('')}</div>
+    <p class="muted">下面的早鸟自测卷、本周一卷、小四门都按这个学期来；初三再加上中考精编卷和全国真题。</p>
+  </section>`;
+}
+function setStage(stage) {
+  if (!STAGES.some(st => st.stage === stage)) return;
+  state.stage = stage;
+  persist(() => {
+    const latest = loadProgress();
+    latest.stage = state.stage;
+    saveProgress(latest);
+  });
+}
+function weeklySubjectNow() {
+  const chosen = state.weeklySubject || (isNinth() ? 'english' : 'x4m');
+  return !isNinth() && chosen !== 'x4m' ? 'x4m' : chosen;
+}
+function weeklySubjectsNow() { return isNinth() ? WEEKLY_SUBJECTS : WEEKLY_SUBJECTS.filter(([key]) => key === 'x4m'); }
+
+function earlybirdPapers() {
+  return (nationalCatalog || []).filter(p => p.earlybird && (p.stage || '9-down') === state.stage).sort((a, b) => EARLYBIRD_ORDER.indexOf(a.subject) - EARLYBIRD_ORDER.indexOf(b.subject));
+}
+function earlybirdCardHTML() {
+  if (!nationalCatalog) return '';
+  const papers = earlybirdPapers();
+  const done = loadEarlybirdScores();
+  if (!papers.length) return `<section class="card earlybird-card" id="earlybird"><span class="earlybird-badge">⏰ 限时免费 · 早鸟自测</span>
+    <h2>${esc(STAGE_SHORT[state.stage])} 早鸟自测卷</h2><p>这个学期的早鸟卷正在编写，很快上线。可以先切到其他学期看看。</p></section>`;
+  return `<section class="card earlybird-card" id="earlybird" aria-labelledby="earlybirdTitle">
+    <span class="earlybird-badge">⏰ 限时免费 · 早鸟自测</span>
+    <h2 id="earlybirdTitle">${esc(STAGE_SHORT[state.stage])} 早鸟自测卷：看看孩子现在的真实水平</h2>
+    <p>${state.stage === '9-down' ? '中考全范围，九科各一套' : '只考到这个学期为止学过的内容，各科一套'}，按中考题型和题干长度出题，难度比中考略高一点。客观题自动判分，主观题对照得分点自评，做完出百分制总分，每道题都有解析。</p>
+    <p class="earlybird-tip">分数不是目的：找到会的、找到漏的，后面的复习就有方向了。</p>
+    <div class="earlybird-grid">${papers.map(p => `<button class="btn" type="button" data-earlybird="${p.id}"><b>${esc(EARLYBIRD_LABEL[p.subject] || p.subjectLabel)}</b><small>${done[p.id] != null ? `上次 ${done[p.id]} 分` : `${p.questionCount} 题`}</small></button>`).join('')}</div>
+  </section>`;
+}
+function loadEarlybirdScores() {
+  try { return JSON.parse(localStorage.getItem('earlybird-scores') || '{}') || {}; } catch { return {}; }
+}
+function saveEarlybirdScore(paperId, score) {
+  try { const all = loadEarlybirdScores(); all[paperId] = score; localStorage.setItem('earlybird-scores', JSON.stringify(all)); } catch {}
+}
+async function startEarlybird(id) {
+  try {
+    const all = [...await window.NationalExams.loadPaper(id)].sort((a, b) => a.number - b.number);
+    if (!all.length) throw new Error('这套卷暂时加载不了，请稍后再试。');
+    state.earlybirdPaper = id;
+    beginPractice(all, 'earlybird');
+  } catch (error) { toast(error.message || '加载失败，请重试。'); }
+}
+// 给家长和孩子信心：分数段对应的鼓励语（卷子比中考略难，说明里要讲清楚）
+function earlybirdVerdict(score) {
+  if (score >= 85) return ['太厉害了！', '这套卷特意拔高过难度，能拿到这个分数，说明基础非常扎实。把错的几道题弄懂，保持节奏就好。'];
+  if (score >= 75) return ['很不错！', '这套卷比中考略难，这个分数放到中考里是稳稳的好成绩。错题已经进了错题本，按 1、3、7、14 天复习，还能再往上走。'];
+  if (score >= 60) return ['基础已经有了！', '这套卷故意加了难度和“坑”，丢分的地方恰好就是提分空间。先把错题解析看懂，再按学期把对应的知识点补一补。'];
+  return ['别灰心，现在发现问题正是时候！', '这套卷比中考难，本来就是用来找漏洞的。离中考还有时间，从错题开始，一个知识点一个知识点地补，分数会一步步涨上来。'];
+}
+function earlybirdScore(results) {
+  return Math.round(results.reduce((sum, [id, r]) => {
+    const q = state.queue.find(item => item.id === id) || library.find(item => item.id === id);
+    if (r.total) return sum + (r.score || 0);
+    return sum + (r.correct && q?.paperScore ? q.paperScore : 0);
+  }, 0) * 10) / 10;
+}
+
 function claudePapers(subject) { return (nationalCatalog || []).filter(p => p.claude && p.subject === subject); }
 function subjectSectionsHTML() {
   if (!nationalCatalog) return '<section class="card" role="status">正在加载分科目录…</section>';
-  const opened = state.openSubjects || new Set(['english']);
+  if (!isNinth()) return `<section class="card subject-later"><h2>中考精编卷和全国真题</h2><p class="muted">语数英物化的中考精编卷、全国各地真题是按中考全范围出的，初三（九上、九下）再刷更合适。现在先把本学期的早鸟卷和小四门练扎实；想提前看看，可以把上面的学期切到“九上”或“九下”。</p></section>`;
+  const opened = state.openSubjects || new Set();
   return `<section class="subject-sections" aria-labelledby="subjectsTitle">
     <div class="section-heading"><h2 id="subjectsTitle">分科练习</h2><span class="muted">点开科目看模拟卷和真题</span></div>
     ${MAIN_SUBJECTS.map(({ key, label, icon: emoji }) => {
@@ -1500,7 +1575,7 @@ function printCardHTML() {
     <div><h2>🖨 打印练习卷</h2><p class="muted">答案单独一页，带“姓名 / 用时 / 得分”栏。各地真题原卷在上面分科里点“看原卷”，免费打印。</p></div>
     <div class="print-row">
       <select id="printKind" aria-label="打印什么">
-        <optgroup label="本周一卷">${WEEKLY_SUBJECTS.map(([key, label]) => `<option value="weekly:${key}">本周一卷 · ${label}</option>`).join('')}</optgroup>
+        <optgroup label="本周一卷">${weeklySubjectsNow().map(([key, label]) => `<option value="weekly:${key}">本周一卷 · ${label}</option>`).join('')}</optgroup>
         ${claude.length ? `<optgroup label="精编模拟卷">${claude.map(p => `<option value="claude:${p.id}">${esc(p.title)}</option>`).join('')}</optgroup>` : ''}
         <optgroup label="小四门"><option value="x4m">小四门 · 按科目和册次</option></optgroup>
       </select>
@@ -1575,6 +1650,8 @@ function renderHome(focus = '') {
   byId('headerSearch').hidden = false;
   view.innerHTML = `
     ${homeIntroHTML()}
+    ${stageBarHTML()}
+    ${earlybirdCardHTML()}
     ${accessNotice}
     ${weeklyCardHTML(progress)}
     <div id="subjectSections">${subjectSectionsHTML()}</div>
@@ -1608,13 +1685,15 @@ function wireSubjectSections() {
   const box = byId('subjectSections');
   if (!box) return;
   box.querySelectorAll('[data-subject-section]').forEach(section => section.addEventListener('toggle', () => {
-    state.openSubjects = state.openSubjects || new Set(['english']);
+    state.openSubjects = state.openSubjects || new Set();
     if (section.open) state.openSubjects.add(section.dataset.subjectSection); else state.openSubjects.delete(section.dataset.subjectSection);
   }));
   box.querySelectorAll('[data-claude-phone]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePhone, 'phone'); }));
   box.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
 }
 function wireHome() {
+  view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); renderHome(); requestAnimationFrame(() => byId('stageBarTitle')?.scrollIntoView({ block: 'start' })); }));
+  view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void startEarlybird(b.dataset.earlybird); }));
   byId('stageSelect')?.addEventListener('change', event => {
     state.stage = event.target.value;
     persist(() => {
@@ -1658,6 +1737,8 @@ function wireHome() {
     window.NationalExams.catalog().then(list => {
       nationalCatalog = list;
       if (byId('subjectSections')) renderHome();
+      // 主页、视频里的直达链接：x4m.cc.cd/?go=earlybird
+      if (new URLSearchParams(location.search).get('go') === 'earlybird' && !state.earlybirdJumped) { state.earlybirdJumped = true; byId('earlybird')?.scrollIntoView({ behavior: 'smooth' }); }
     }).catch(() => {
       const box = byId('subjectSections');
       if (box) box.innerHTML = '<section class="card"><p class="muted">分科目录加载失败，刷新页面再试。</p></section>';
@@ -1754,7 +1835,7 @@ function beginPractice(queue, mode, index = 0) {
       return;
     }
     const claimedPaper = queue.length && queue.every(q => q.paperId && freeOpen('phone', q.paperId));
-    if (!claimedPaper && !['daily', 'wrong', 'weekly', 'paper'].includes(mode)) {
+    if (!claimedPaper && !['daily', 'wrong', 'weekly', 'paper', 'earlybird'].includes(mode)) {
       const progress = loadProgress();
       const includesHistory = ['favorite', 'single', 'everWrong', 'due'].includes(mode);
       queue = queue.filter(q => isTrialQuestion(q) || (includesHistory && hasQuestionHistory(progress, q)));
@@ -2263,6 +2344,43 @@ function renderSummary() {
   const essayTotal = essays.reduce((s, [, r]) => s + r.total, 0);
   const wrongQs = dedupeById(results.filter(([, r]) => !r.correct).map(([id]) => state.queue.find(q => q.id === id) || library.find(q => q.id === id)).filter(Boolean));
   const acc = Math.round(right / results.length * 100);
+  if (state.mode === 'earlybird') {
+    const score = earlybirdScore(results);
+    const [head, body] = earlybirdVerdict(score);
+    const paperId = state.earlybirdPaper;
+    const paper = earlybirdPapers().find(p => p.id === paperId);
+    const finished = paper && results.length >= paper.questionCount;
+    if (finished && paperId) {
+      const first = loadEarlybirdScores()[paperId] == null;
+      saveEarlybirdScore(paperId, score);
+      if (first) { trackVisit('earlybird_done'); if (score >= 75) trackVisit('earlybird_75'); }
+    }
+    view.innerHTML = `
+    <div class="practice-shell">
+      <section class="card summary-card earlybird-summary" aria-labelledby="summaryTitle">
+        <span class="summary-icon">${icon('trophy')}</span>
+        <p class="summary-kicker">${esc(paper?.title || '中考早鸟自测')}</p>
+        <h1 id="summaryTitle" tabindex="-1">${esc(head)}</h1>
+        <div class="summary-stats">
+          <div><b>${score}<small>/100</small></b><span>${finished ? '总分' : `已做 ${results.length} 题的得分`}</span></div>
+          <div><b>${right}</b><span>客观题答对</span></div>
+          ${essayTotal ? `<div><b>${essayScore}<small>/${essayTotal}</small></b><span>主观题自评</span></div>` : ''}
+        </div>
+        <p class="earlybird-verdict">${esc(body)}</p>
+        ${wrongQs.length ? `<div class="summary-wrong"><p class="ref-title">需要再看的题（${wrongQs.length}）</p>
+          <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
+        <div class="summary-actions">
+          ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本卷错题</button>` : ''}
+          <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} 返回首页，测下一科</button>
+        </div>
+      </section>
+    </div>`;
+    byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, 'retry'));
+    byId('homeBtn').addEventListener('click', () => { renderHome('homeTitle'); byId('earlybird')?.scrollIntoView(); });
+    state.keys = null;
+    moveFocus(byId('summaryTitle'), true);
+    return;
+  }
   const cheer = acc >= 90 ? '太棒了，保持这个状态！' : acc >= 70 ? '不错，把错题再过一遍就更稳了。' : '别灰心，错题已进错题本，按时复习就能拿下。';
   view.innerHTML = `
     <div class="practice-shell">

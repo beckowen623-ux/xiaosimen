@@ -1,0 +1,903 @@
+// 由 tools/build_english.mjs 生成，源文件 english-src/papers/zz-earlybird-physics.json，请勿手改。
+window.NATIONAL_PAPERS = window.NATIONAL_PAPERS || {};
+window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
+ {
+  "id": "national-earlybird-2027-physics-q01",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 1,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 1 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "中学生正常步行的速度约为 5 m/s"
+   },
+   {
+    "key": "B",
+    "text": "一个鸡蛋的质量约为 50 g"
+   },
+   {
+    "key": "C",
+    "text": "教室门的高度约为 4 m"
+   },
+   {
+    "key": "D",
+    "text": "人体正常体温约为 39 ℃"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "正常步行约 1.1 m/s；教室门高约 2 m；人体正常体温约 37 ℃；一个鸡蛋约 50 g，B 正确。",
+  "kp": "常见物理量的估测",
+  "stem": "下列估测的数据中，最接近实际的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q02",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 2,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 2 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "声音在真空中传播得最快"
+   },
+   {
+    "key": "B",
+    "text": "“闻其声而知其人”主要是根据声音的音色来判断的"
+   },
+   {
+    "key": "C",
+    "text": "宇航员在太空中可以利用超声波直接交谈"
+   },
+   {
+    "key": "D",
+    "text": "城市道路旁“禁止鸣笛”是在传播过程中减弱噪声"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "声音不能在真空中传播，A、C 错；禁止鸣笛是在声源处减弱噪声，D 错；不同人发声的音色不同，B 正确。",
+  "kp": "声现象",
+  "stem": "下列关于声现象的说法中，正确的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q03",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 3,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 3 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "小孔成像"
+   },
+   {
+    "key": "B",
+    "text": "平静湖面上的倒影"
+   },
+   {
+    "key": "C",
+    "text": "雨后天空出现的彩虹"
+   },
+   {
+    "key": "D",
+    "text": "树荫下的圆形光斑"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "小孔成像和树荫下的光斑都是光的直线传播；倒影是光的反射；彩虹是光的色散，属于折射。",
+  "kp": "光现象",
+  "stem": "下列现象中，由光的折射形成的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q04",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 4,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 4 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "汽化现象"
+   },
+   {
+    "key": "B",
+    "text": "液化现象"
+   },
+   {
+    "key": "C",
+    "text": "凝华现象"
+   },
+   {
+    "key": "D",
+    "text": "升华现象"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "室内温暖的水蒸气遇到冰冷的镜片放热液化成小水滴。坑点：“雾”是液态小水滴，不是冰晶，不是凝华。",
+  "kp": "物态变化",
+  "stem": "寒冷的冬天，戴眼镜的人从室外走进温暖的室内，镜片上会蒙上一层“雾”。这是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q05",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 5,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 5 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "汽车行驶的速度越大，惯性越大"
+   },
+   {
+    "key": "B",
+    "text": "驾驶员系安全带是为了减小惯性"
+   },
+   {
+    "key": "C",
+    "text": "一切物体在任何情况下都有惯性"
+   },
+   {
+    "key": "D",
+    "text": "紧急刹车时乘客向前倾，是因为受到惯性的作用"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "惯性只与质量有关，与速度无关；安全带是减小惯性带来的危害，不能减小惯性；惯性是物体的属性，不能说“受到惯性作用”。",
+  "kp": "惯性",
+  "stem": "关于惯性，下列说法中正确的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q06",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 6,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 6 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "水对瓶盖的压强与正立时水对瓶底的压强相等，瓶对桌面的压强变大"
+   },
+   {
+    "key": "B",
+    "text": "水对容器底部的压强变大，瓶对桌面的压强不变"
+   },
+   {
+    "key": "C",
+    "text": "水对容器底部的压强变小，瓶对桌面的压强变大"
+   },
+   {
+    "key": "D",
+    "text": "水对容器底部的压强和瓶对桌面的压强都不变"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "瓶子装满水，倒置前后水的深度都等于瓶高，由 p＝ρgh 可知水对底部的压强不变；瓶对桌面的压力等于总重力不变，倒立时受力面积变小，压强变大。坑点：如果瓶子没有装满，倒置后水深变大，结论就不同了。",
+  "kp": "液体压强与固体压强",
+  "stem": "将一个装满水并拧紧瓶盖的矿泉水瓶，先正立放在水平桌面上，再倒立放置。与正立时相比，倒立时（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q07",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 7,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 7 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "F甲＜F乙＜F丙"
+   },
+   {
+    "key": "B",
+    "text": "F甲＜F乙＝F丙"
+   },
+   {
+    "key": "C",
+    "text": "F甲＝F乙＝F丙"
+   },
+   {
+    "key": "D",
+    "text": "F甲＝F乙＜F丙"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "沉底时 F甲＜G；悬浮和漂浮时浮力都等于重力，F乙＝F丙＝G。坑点：漂浮时排开液体体积小，但液体密度大，浮力仍等于重力。",
+  "kp": "物体的浮沉条件",
+  "stem": "把同一个鸡蛋先后放入甲、乙、丙三杯液体中：在甲杯清水中沉底，在乙杯盐水中悬浮，在丙杯更浓的盐水中漂浮。鸡蛋所受浮力 F甲、F乙、F丙 的大小关系是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q08",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 8,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 8 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "控制电灯的开关接在零线上"
+   },
+   {
+    "key": "B",
+    "text": "使用测电笔时，手要接触笔尾的金属体"
+   },
+   {
+    "key": "C",
+    "text": "空气开关跳闸，一定是电路发生了短路"
+   },
+   {
+    "key": "D",
+    "text": "用湿手拔用电器的插头"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "开关应接在火线上；空气开关跳闸可能是短路，也可能是用电器总功率过大；湿手容易触电。使用测电笔时手要接触笔尾金属体，才能构成通路使氖管发光。",
+  "kp": "安全用电",
+  "stem": "关于家庭电路和安全用电，下列做法正确的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q09",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 9,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 9 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "发电机"
+   },
+   {
+    "key": "B",
+    "text": "动圈式话筒"
+   },
+   {
+    "key": "C",
+    "text": "扬声器"
+   },
+   {
+    "key": "D",
+    "text": "电磁继电器"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "电动机原理是通电导体在磁场中受力运动，扬声器也是这个原理。发电机和动圈式话筒是电磁感应；电磁继电器利用电流的磁效应。",
+  "kp": "电与磁",
+  "stem": "下列设备中，工作原理与电动机相同的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q10",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 10,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 10 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "电流表示数变大，电压表示数变小"
+   },
+   {
+    "key": "B",
+    "text": "电流表示数变小，电压表示数变大"
+   },
+   {
+    "key": "C",
+    "text": "电流表和电压表示数都变小"
+   },
+   {
+    "key": "D",
+    "text": "电压表与电流表示数的比值不变"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "R₂ 变大，总电阻变大，电流变小；R₁ 两端电压 U₁＝IR₁ 变小，R₂ 两端电压 U₂＝U－U₁ 变大。电压表与电流表示数之比等于 R₂，变大，D 错。",
+  "kp": "动态电路分析",
+  "stem": "电源电压保持不变的电路中，定值电阻 R₁ 与滑动变阻器 R₂ 串联，电压表测 R₂ 两端的电压。闭合开关后，将滑片向右移动，使 R₂ 接入电路的阻值变大。下列判断正确的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-physics-q11",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 11,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 11 题",
+  "type": "blank",
+  "stem": "第 11 题：小明站在竖直放置的平面镜前 2 m 处，他在镜中的像到小明的距离为________m。",
+  "blanks": [
+   [
+    "4"
+   ]
+  ],
+  "answer": [
+   "4"
+  ],
+  "explanation": "像到镜面的距离等于人到镜面的距离 2 m，像到人的距离为 4 m。",
+  "kp": "平面镜成像",
+  "paperScore": 2.5
+ },
+ {
+  "id": "national-earlybird-2027-physics-q12",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 12,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 12 题",
+  "type": "blank",
+  "stem": "第 12 题：一辆汽车以 72 km/h 的速度匀速行驶了 10 min，通过的路程为________km。",
+  "blanks": [
+   [
+    "12"
+   ]
+  ],
+  "answer": [
+   "12"
+  ],
+  "explanation": "s＝vt＝72 km/h×(1/6) h＝12 km。",
+  "kp": "速度",
+  "paperScore": 2.5
+ },
+ {
+  "id": "national-earlybird-2027-physics-q13",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 13,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 13 题",
+  "type": "blank",
+  "stem": "第 13 题：一名质量为 50 kg 的中学生双脚站立在水平地面上，每只鞋底与地面的接触面积为 200 cm²，他对地面的压强为________Pa。（g 取 10 N/kg）",
+  "blanks": [
+   [
+    "12500",
+    "1.25×10⁴",
+    "12 500"
+   ]
+  ],
+  "answer": [
+   "12500"
+  ],
+  "explanation": "F＝G＝500 N，S＝2×200 cm²＝0.04 m²，p＝F/S＝12500 Pa。坑点：双脚站立要算两只鞋的面积，单位要换成 m²。",
+  "kp": "压强",
+  "paperScore": 2.5
+ },
+ {
+  "id": "national-earlybird-2027-physics-q14",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 14,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 14 题",
+  "type": "blank",
+  "stem": "第 14 题：用一个动滑轮将重 400 N 的物体匀速提升 2 m，绳子自由端的拉力为 250 N，则该动滑轮的机械效率为________%。",
+  "blanks": [
+   [
+    "80",
+    "80%"
+   ]
+  ],
+  "answer": [
+   "80"
+  ],
+  "explanation": "W有＝Gh＝800 J；动滑轮 s＝2h＝4 m，W总＝Fs＝1000 J；η＝80%。",
+  "kp": "机械效率",
+  "paperScore": 2.5
+ },
+ {
+  "id": "national-earlybird-2027-physics-q15",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 15,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 15 题",
+  "type": "blank",
+  "stem": "第 15 题：质量为 2 kg 的水，温度从 20 ℃ 升高到 70 ℃，吸收的热量为________J。[c水＝4.2×10³ J/(kg·℃)]",
+  "blanks": [
+   [
+    "4.2×10⁵",
+    "420000",
+    "420 000"
+   ]
+  ],
+  "answer": [
+   "4.2×10⁵"
+  ],
+  "explanation": "Q＝cmΔt＝4.2×10³×2×50 J＝4.2×10⁵ J。",
+  "kp": "比热容",
+  "paperScore": 2.5
+ },
+ {
+  "id": "national-earlybird-2027-physics-q16",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 16,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 16 题",
+  "type": "blank",
+  "stem": "第 16 题：标有“6 V　3 W”字样的小灯泡正常发光时的电阻为________Ω。",
+  "blanks": [
+   [
+    "12"
+   ]
+  ],
+  "answer": [
+   "12"
+  ],
+  "explanation": "R＝U²/P＝36÷3＝12 Ω。",
+  "kp": "电功率",
+  "paperScore": 2.5
+ },
+ {
+  "id": "national-earlybird-2027-physics-q17",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 17,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 17 题",
+  "type": "blank",
+  "stem": "第 17 题：将标有“6 V　3 W”和“6 V　6 W”的两盏小灯泡串联接在电源上，要使其中一盏灯正常发光，且另一盏灯两端电压不超过其额定电压，电源电压最大为________V。（不考虑灯丝电阻变化）",
+  "blanks": [
+   [
+    "9"
+   ]
+  ],
+  "answer": [
+   "9"
+  ],
+  "explanation": "R₁＝12 Ω，额定电流 0.5 A；R₂＝6 Ω，额定电流 1 A。串联电流只能取较小的 0.5 A，U＝0.5×(12＋6)＝9 V。坑点：直接把额定电压相加得 12 V，“6 V 3 W”的灯会烧坏。",
+  "kp": "串联电路与额定值",
+  "paperScore": 2.5
+ },
+ {
+  "id": "national-earlybird-2027-physics-q18",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 18,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 18 题",
+  "type": "blank",
+  "stem": "第 18 题：1 kW·h 的电能可以供一盏“220 V　40 W”的灯泡正常工作________h。",
+  "blanks": [
+   [
+    "25"
+   ]
+  ],
+  "answer": [
+   "25"
+  ],
+  "explanation": "t＝W/P＝1 kW·h÷0.04 kW＝25 h。",
+  "kp": "电能",
+  "paperScore": 2.5
+ },
+ {
+  "id": "national-earlybird-2027-physics-q19",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 19,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 19 题",
+  "type": "essay",
+  "material": "",
+  "stem": "（实验题）小华用焦距为 10 cm 的凸透镜探究“凸透镜成像的规律”，将蜡烛、凸透镜、光屏依次放在光具座上。\n（1）实验前，要调整烛焰、凸透镜和光屏的中心大致在同一高度，目的是什么？\n（2）把蜡烛放在距凸透镜 25 cm 处，移动光屏，在光屏上得到一个清晰的倒立、________（选填“放大”“等大”或“缩小”）的实像，生活中的________就是利用这一原理工作的。\n（3）把蜡烛移到距凸透镜 5 cm 处，无论怎样移动光屏都得不到像，原因是什么？此时应如何观察像？\n（4）实验一段时间后，蜡烛变短，光屏上的像会向哪个方向移动？若要使像回到光屏中央，可以如何调整凸透镜？",
+  "points": [
+   {
+    "text": "（1）使像成在光屏的中央",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）缩小；照相机",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（3）物距小于焦距成正立放大的虚像，虚像不能用光屏承接；应从光屏一侧透过凸透镜观察",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（4）像向上移动；将凸透镜向下调",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "（1）使像能成在光屏的中央，便于观察。\n（2）物距 25 cm＞2f，成倒立、缩小的实像，照相机是这一原理。\n（3）物距 5 cm＜f，成正立、放大的虚像，虚像不能用光屏承接；应在光屏一侧透过凸透镜看蜡烛。\n（4）通过光心的光线方向不变，蜡烛变短，像向上移动；可以把凸透镜向下调（或把光屏向上调、把蜡烛向上调）。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "凸透镜成像规律"
+ },
+ {
+  "id": "national-earlybird-2027-physics-q20",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 20,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 20 题",
+  "type": "essay",
+  "material": "",
+  "stem": "（实验题）在“探究影响滑动摩擦力大小的因素”实验中，小军用弹簧测力计沿水平方向拉动木块，记录的数据如下：\n①木块放在长木板上：弹簧测力计示数 1.2 N；\n②在木块上加一个砝码，放在长木板上：示数 1.8 N；\n③木块放在铺有毛巾的长木板上：示数 2.0 N。\n（1）实验中应使木块做________运动，此时滑动摩擦力的大小等于弹簧测力计的示数，依据是什么？\n（2）比较①②可以得出什么结论？比较①③呢？\n（3）实验中小军发现很难保持木块匀速运动，示数不稳定。请提出一种改进方法，并说明这种方法的好处。",
+  "points": [
+   {
+    "text": "（1）匀速直线；二力平衡",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）接触面粗糙程度相同时，压力越大，滑动摩擦力越大；压力相同时，接触面越粗糙，滑动摩擦力越大",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（3）固定弹簧测力计，拉动木块下方的长木板；木板不必匀速，测力计示数稳定、便于读数",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "（1）匀速直线；木块在水平方向受到的拉力和滑动摩擦力是一对平衡力，大小相等（二力平衡）。\n（2）①②：接触面粗糙程度相同时，压力越大，滑动摩擦力越大。①③：压力相同时，接触面越粗糙，滑动摩擦力越大。\n（3）把弹簧测力计一端固定，木块挂在测力计上，拉动木块下面的长木板。木块相对地面静止，受力平衡，长木板不需要匀速拉动，测力计示数稳定，便于读数。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "探究滑动摩擦力"
+ },
+ {
+  "id": "national-earlybird-2027-physics-q21",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 21,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 21 题",
+  "type": "essay",
+  "material": "",
+  "stem": "（实验题）小丽测量额定电压为 2.5 V 的小灯泡的电功率，电源电压恒为 4.5 V，实验记录如下：\n电压 U/V：1.5　2.0　2.5　3.0\n电流 I/A：0.22　0.26　0.30　0.32\n（1）连接电路时开关应________；闭合开关前，滑动变阻器的滑片应移到________处。\n（2）某次实验时电压表示数为 2.0 V，要测量小灯泡的额定功率，应将滑动变阻器接入电路的阻值调大还是调小？为什么？\n（3）小灯泡的额定功率是多少？小灯泡正常发光时，滑动变阻器接入电路的阻值约为多少？\n（4）小丽算出四次的灯丝电阻并不相同，她想求平均值作为小灯泡的电阻，这样做合理吗？为什么？",
+  "points": [
+   {
+    "text": "（1）断开；阻值最大",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）调小：减小变阻器分得的电压，使灯泡两端电压升到 2.5 V",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（3）P额＝2.5 V×0.30 A＝0.75 W；R滑＝(4.5－2.5)÷0.30≈6.7 Ω",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（4）不合理：灯丝电阻随温度变化",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 9,
+  "sample": "（1）断开；阻值最大。\n（2）调小。串联电路中变阻器阻值变小，分得的电压变小，小灯泡两端电压增大到 2.5 V。\n（3）P额＝U额I额＝2.5 V×0.30 A＝0.75 W；R滑＝(4.5 V－2.5 V)÷0.30 A≈6.7 Ω。\n（4）不合理。灯丝电阻随温度升高而增大，不同电压下的电阻本来就不同，求平均值没有意义。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "测量小灯泡的电功率"
+ },
+ {
+  "id": "national-earlybird-2027-physics-q22",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 22,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 22 题",
+  "type": "essay",
+  "material": "",
+  "stem": "（计算题）小明家用天然气热水器把质量为 40 kg、初温为 15 ℃ 的水加热到 65 ℃，消耗天然气 0.3 m³。[c水＝4.2×10³ J/(kg·℃)，q天然气＝4.0×10⁷ J/m³] 求：\n（1）水吸收的热量；\n（2）天然气完全燃烧放出的热量；\n（3）该热水器的加热效率。",
+  "points": [
+   {
+    "text": "（1）Q吸＝cmΔt＝8.4×10⁶ J",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）Q放＝Vq＝1.2×10⁷ J",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（3）η＝Q吸/Q放＝70%",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 7,
+  "sample": "（1）Q吸＝cmΔt＝4.2×10³ J/(kg·℃)×40 kg×(65－15) ℃＝8.4×10⁶ J。\n（2）Q放＝Vq＝0.3 m³×4.0×10⁷ J/m³＝1.2×10⁷ J。\n（3）η＝Q吸/Q放×100%＝8.4×10⁶÷1.2×10⁷×100%＝70%。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "热量与热效率"
+ },
+ {
+  "id": "national-earlybird-2027-physics-q23",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 23,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 23 题",
+  "type": "essay",
+  "material": "",
+  "stem": "（计算题）建筑工地上，工人用由一个定滑轮和一个动滑轮组成的滑轮组（承担物重的绳子有 3 段）提升建材。某次将重 900 N 的建材在 30 s 内匀速提升 3 m，工人对绳子自由端的拉力为 400 N。不计绳重和摩擦，求：\n（1）工人做的有用功和总功；\n（2）滑轮组的机械效率和工人拉力的功率；\n（3）动滑轮的重力；\n（4）若用该滑轮组匀速提升重 1 200 N 的建材，工人的拉力是多少？",
+  "points": [
+   {
+    "text": "（1）W有＝2700 J，W总＝400 N×9 m＝3600 J",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）η＝75%，P＝120 W",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（3）G动＝3F－G＝300 N",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（4）F′＝(1200 N＋300 N)÷3＝500 N",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "（1）W有＝Gh＝900 N×3 m＝2700 J；s＝3h＝9 m，W总＝Fs＝400 N×9 m＝3600 J。\n（2）η＝W有/W总＝75%；P＝W总/t＝3600 J÷30 s＝120 W。\n（3）不计绳重和摩擦，F＝(G＋G动)/3，G动＝3×400 N－900 N＝300 N。\n（4）F′＝(1200 N＋300 N)÷3＝500 N。坑点：同一滑轮组提升不同重物时，机械效率会变化，不能用 75% 去算新拉力。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "滑轮组综合计算"
+ },
+ {
+  "id": "national-earlybird-2027-physics-q24",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "earlybird-2027-physics",
+  "number": 24,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 物理",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 物理 第 24 题",
+  "type": "essay",
+  "material": "",
+  "stem": "（计算题）某电饭锅有“加热”和“保温”两个挡位，工作电压为 220 V。其简化电路为：发热电阻 R₁ 与 R₂ 串联，开关 S₁ 与 R₂ 并联。开关 S₁ 闭合时只有 R₁ 工作，为加热挡，功率为 1 100 W；S₁ 断开时 R₁、R₂ 串联，为保温挡，功率为 100 W。\n（1）求 R₁ 和 R₂ 的阻值；\n（2）用加热挡工作 15 min，消耗多少电能？\n（3）小明关闭家中其他用电器，只让电饭锅在加热挡工作 3 min，发现标有“3 000 r/(kW·h)”的电能表转盘转了 150 转。求电饭锅加热挡的实际功率；\n（4）根据（3）的结果，估算当时家庭电路的实际电压。（不考虑电阻随温度的变化，结果保留整数）",
+  "points": [
+   {
+    "text": "（1）R₁＝U²/P加＝44 Ω，R总＝484 Ω，R₂＝440 Ω",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）W＝Pt＝9.9×10⁵ J（0.275 kW·h）",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（3）W＝150÷3000 kW·h＝0.05 kW·h，P实＝1000 W",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（4）U实＝√(P实R₁)≈210 V",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "（1）R₁＝U²/P加＝(220 V)²÷1100 W＝44 Ω；保温挡 R总＝U²/P保＝(220 V)²÷100 W＝484 Ω，R₂＝484 Ω－44 Ω＝440 Ω。\n（2）W＝P加t＝1100 W×900 s＝9.9×10⁵ J（＝0.275 kW·h）。\n（3）W实＝150÷3000 kW·h＝0.05 kW·h＝1.8×10⁵ J，P实＝W实/t＝1.8×10⁵ J÷180 s＝1000 W。\n（4）U实＝√(P实R₁)＝√(1000 W×44 Ω)≈210 V。坑点：实际电压低于 220 V 时，实际功率小于额定功率。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "电热综合计算"
+ }
+];

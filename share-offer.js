@@ -93,7 +93,7 @@
     const subY = 230 + titleLines.length * 96 - 10;
     const pointsTop = Math.max(420, subY + 90);
     const qrTop = pointsTop + pointsH + 30;
-    const H = qrTop + 520 + 170;
+    const H = qrTop + 520 + 220;
     canvas.width = W;
     canvas.height = H;
     const bg = ctx.createLinearGradient(0, 0, 0, H);
@@ -122,6 +122,7 @@
     for (let r = 0; r < count; r += 1) for (let c = 0; c < count; c += 1) if (qr.isDark(r, c)) ctx.fillRect(left + c * cell, top + r * cell, Math.ceil(cell), Math.ceil(cell));
     text("长按识别二维码，免费试做", W / 2, top + size + 90, 40, 700, "#ffffff", "center");
     text(new URL(link).host, W / 2, top + size + 145, 30, 500, "#cfe7e0", "center");
+    text("打不开或很慢？换个网络或多试几次就好", W / 2, top + size + 195, 28, 500, "#cfe7e0", "center");
     const url = canvas.toDataURL("image/png");
     const overlay = el("div", "share-poster-overlay");
     const card = el("div", "share-poster-card");
@@ -168,7 +169,7 @@
 
   function render(box, data, price, message) {
     const link = shareLink(data.id);
-    const text = message ? message + "\n" + link : link;
+    const text = (message ? message + "\n" + link : link) + "\n（打不开或很慢的话，换个网络或多试几次就好）";
     const head = el("div", "share-offer-head");
     head.append(el("strong", "", "分享得 ¥5 优惠"), el("b", "", "¥" + price));
     const intro = el("p", "", `把下面这段话（带你的专属链接）发到朋友圈、学习群或家长群。有 ${data.required} 位不同的朋友点开链接，就会解锁分享验证码；在闲鱼把验证码发给作者，按 ¥${price} 购买。`);

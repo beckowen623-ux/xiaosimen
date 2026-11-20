@@ -26,6 +26,7 @@ function build(paper) {
     id: `national-${paper.id}-q${String(n).padStart(2, "0")}`,
     national: true, subject: paper.subject || "english", subjectLabel: paper.subjectLabel || "英语", paperId: paper.id, number: n,
     ...(paper.claude ? { claude: true, meta: "精编模拟卷" } : {}),
+    ...(paper.earlybird ? { earlybird: true, meta: "早鸟自测" } : {}),
     section, chapter: paper.title, grade: "九下", stage: "9-down",
     source: paper.numbering?.[n] ? `${paper.title} ${paper.numbering[n]}` : `${paper.title} 第 ${n} 题`, ...extra,
   });
@@ -37,6 +38,7 @@ function build(paper) {
   });
   for (const section of paper.sections) {
     const t = section.type;
+    const sectionStart = out.length;
     if (t === "单项选择") {
       for (const item of section.items) out.push({ ...choice(item, t), stem: item.stem });
     } else if (section.passage && (section.choices || section.items.every(item => item.options))) {
@@ -53,8 +55,9 @@ function build(paper) {
       const groupId = `${paper.id}-answer-${section.items[0].n}`;
       const materialHtml = passageHtml(section.passage, section.title);
       for (const item of section.items) {
-        out.push({ ...base(item.n, t, { groupId, materialHtml }), type: "essay", meta: "回答问题", material: "", stem: item.stem,
-          points: [{ text: `参考：${item.answer}`, score: 2, keys: [] }], score: 2, sample: item.answer,
+        const pts = item.points ? item.points.map(([text, score]) => ({ text, score, keys: [] })) : [{ text: `参考：${item.answer}`, score: 2, keys: [] }];
+        out.push({ ...base(item.n, t, { groupId, materialHtml }), type: "essay", meta: paper.earlybird ? "早鸟自测" : "回答问题", material: "", stem: item.stem,
+          points: pts, score: pts.reduce((s, p) => s + p.score, 0), sample: item.answer,
           method: "先在原文里找到对应的句子，再用完整、语法正确的句子作答，首字母大写、句末加标点。", answer: [], explanation: item.exp });
       }
     } else if (t === "阅读理解") {
@@ -100,6 +103,13 @@ function build(paper) {
     } else {
       throw new Error(`${paper.id}: 未知题型 ${t}`);
     }
+    // 早鸟自测卷：客观题按 section.score 计分（主观题的分值在 points 里）
+    if (section.score) for (const q of out.slice(sectionStart)) if (q.type !== "essay") q.paperScore = section.score;
+  }
+  if (paper.earlybird) {
+    const full = out.reduce((s, q) => s + (q.type === "essay" ? q.score : q.paperScore || 0), 0);
+    if (Math.abs(full - 100) > 1e-9) throw new Error(`${paper.id}: 早鸟卷总分应为 100，实际 ${full}`);
+    if (out.some(q => q.type !== "essay" && !q.paperScore)) throw new Error(`${paper.id}: 有客观题没有分值`);
   }
   const ids = new Set();
   for (const q of out) {
@@ -129,6 +139,7 @@ for (const file of readdirSync(srcDir).filter(f => f.endsWith(".json")).sort()) 
   const old = catalog.papers.find(p => p.id === paper.id) || {};
   const entry = { ...old, id: paper.id, subject: paper.subject || "english", subjectLabel: paper.subjectLabel || "英语", region: paper.region, year: paper.year,
     ...(paper.claude ? { claude: true } : {}),
+    ...(paper.earlybird ? { earlybird: true, stage: paper.stage || "9-down" } : {}),
     title: paper.title, source: paper.source, description: `整卷 ${questions.length} 题${paper.note ? "（" + paper.note.replace(/。$/, "") + "）" : ""}`,
     questionCount: questions.length, data: `./data/national/${paper.id}.js`, sections: counts };
   catalog.papers = [...catalog.papers.filter(p => p.id !== paper.id), entry];

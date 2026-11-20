@@ -1,0 +1,872 @@
+// 由 tools/build_english.mjs 生成，源文件 english-src/papers/zz-earlybird-math.json，请勿手改。
+window.NATIONAL_PAPERS = window.NATIONAL_PAPERS || {};
+window.NATIONAL_PAPERS["earlybird-2027-math"] = [
+ {
+  "id": "national-earlybird-2027-math-q01",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 1,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 1 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "a²·a³＝a⁶"
+   },
+   {
+    "key": "B",
+    "text": "(－2a²)³＝－8a⁶"
+   },
+   {
+    "key": "C",
+    "text": "(a＋b)²＝a²＋b²"
+   },
+   {
+    "key": "D",
+    "text": "a⁶÷a²＝a³"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "A 同底数幂相乘指数相加，应为 a⁵；B 积的乘方，(－2)³＝－8，(a²)³＝a⁶，正确；C 完全平方公式漏了 2ab；D 同底数幂相除指数相减，应为 a⁴。",
+  "kp": "整式运算",
+  "stem": "下列运算正确的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q02",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 2,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 2 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "1.0086×10⁷"
+   },
+   {
+    "key": "B",
+    "text": "1.0086×10⁶"
+   },
+   {
+    "key": "C",
+    "text": "10.086×10⁶"
+   },
+   {
+    "key": "D",
+    "text": "1.0086×10³"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "1 008.6 万＝10 086 000＝1.0086×10⁷。注意“万”要先换算成个位单位，a 必须满足 1≤|a|＜10。",
+  "kp": "科学记数法",
+  "stem": "据统计，2026 年某市常住人口约为 1 008.6 万人。将数据“1 008.6 万”用科学记数法表示为（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q03",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 3,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 3 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "k＜2"
+   },
+   {
+    "key": "B",
+    "text": "k＜2 且 k≠1"
+   },
+   {
+    "key": "C",
+    "text": "k≤2 且 k≠1"
+   },
+   {
+    "key": "D",
+    "text": "k＞2"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "Δ＝4－4(k－1)＞0，得 k＜2；又因为是一元二次方程，二次项系数 k－1≠0，所以 k≠1。坑点：只算判别式会误选 A。",
+  "kp": "根的判别式",
+  "stem": "若关于 x 的一元二次方程 (k－1)x²＋2x＋1＝0 有两个不相等的实数根，则 k 的取值范围是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q04",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 4,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 4 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "5 和 1.2"
+   },
+   {
+    "key": "B",
+    "text": "5.5 和 1.2"
+   },
+   {
+    "key": "C",
+    "text": "5 和 6"
+   },
+   {
+    "key": "D",
+    "text": "6 和 1.2"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "由平均数得 3＋5＋5＋6＋x＝25，x＝6。数据排序为 3，5，5，6，6，中位数是 5；方差＝[(3－5)²＋0＋0＋1＋1]÷5＝1.2。",
+  "kp": "数据的分析",
+  "stem": "一组数据 3，5，5，6，x 的平均数是 5，则这组数据的中位数和方差分别是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q05",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 5,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 5 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "－1≤a＜0"
+   },
+   {
+    "key": "B",
+    "text": "－1＜a≤0"
+   },
+   {
+    "key": "C",
+    "text": "－2≤a＜－1"
+   },
+   {
+    "key": "D",
+    "text": "a＜0"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "解得 a＜x＜2。要恰好有 2 个整数解，只能是 1 和 0，所以 －1≤a＜0。端点检验：a＝－1 时解集为 －1＜x＜2，整数解为 0，1，符合；a＝0 时整数解只有 1，不符合。",
+  "kp": "不等式组的整数解",
+  "stem": "关于 x 的不等式组 2x－1＜3，x－a＞0 有且只有 2 个整数解，则 a 的取值范围是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q06",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 6,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 6 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "y₃＜y₁＜y₂"
+   },
+   {
+    "key": "B",
+    "text": "y₁＜y₂＜y₃"
+   },
+   {
+    "key": "C",
+    "text": "y₂＜y₁＜y₃"
+   },
+   {
+    "key": "D",
+    "text": "y₃＜y₂＜y₁"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "k＜0 时，图象在第二、四象限。A、B 在第二象限，y 为正，且在该象限内 y 随 x 增大而增大，所以 y₁＜y₂；C 在第四象限，y₃＜0。故 y₃＜y₁＜y₂。坑点：“y 随 x 增大而增大”只在每个象限内成立，不能跨象限比较。",
+  "kp": "反比例函数的性质",
+  "stem": "点 A(－2，y₁)，B(－1，y₂)，C(3，y₃) 都在反比例函数 y＝k/x（k＜0）的图象上，则 y₁，y₂，y₃ 的大小关系是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q07",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 7,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 7 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "60°"
+   },
+   {
+    "key": "B",
+    "text": "90°"
+   },
+   {
+    "key": "C",
+    "text": "120°"
+   },
+   {
+    "key": "D",
+    "text": "150°"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "展开图扇形的弧长等于底面周长：nπ×6÷180＝2π×2，n＝120。",
+  "kp": "圆锥的侧面展开图",
+  "stem": "一个圆锥的母线长为 6，底面半径为 2，则它的侧面展开图的圆心角是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q08",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 8,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 8 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "abc＞0"
+   },
+   {
+    "key": "B",
+    "text": "2a＋b＝0"
+   },
+   {
+    "key": "C",
+    "text": "a＋b＋c＜0"
+   },
+   {
+    "key": "D",
+    "text": "当 x＞1 时，y 随 x 的增大而增大"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "对称轴 x＝(－1＋3)÷2＝1，即 －b/(2a)＝1，所以 2a＋b＝0，B 正确。a＜0，b＝－2a＞0，c＝－3a＞0，abc＜0，A 错；x＝1 是最高点，a＋b＋c＞0，C 错；开口向下，x＞1 时 y 随 x 增大而减小，D 错。",
+  "kp": "二次函数图象与系数的关系",
+  "stem": "二次函数 y＝ax²＋bx＋c（a≠0）的图象开口向下，且经过点 (－1，0) 和 (3，0)。下列结论正确的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q09",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 9,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 9 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "4.8"
+   },
+   {
+    "key": "B",
+    "text": "5"
+   },
+   {
+    "key": "C",
+    "text": "2.4"
+   },
+   {
+    "key": "D",
+    "text": "9.6"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "对角线互相垂直平分，边长＝√(3²＋4²)＝5；面积＝6×8÷2＝24；高＝24÷5＝4.8。坑点：5 是边长，2.4 是面积公式少乘 2 的结果。",
+  "kp": "菱形的性质",
+  "stem": "菱形 ABCD 的两条对角线 AC＝6，BD＝8，则菱形的高为（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q10",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 10,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "单项选择",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 10 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "从原点出发的上升线段到点 (2，2)，再接一段到点 (4，2) 的水平线段"
+   },
+   {
+    "key": "B",
+    "text": "从原点出发的上升线段到点 (2，2)，再接一段下降到点 (4，0) 的线段"
+   },
+   {
+    "key": "C",
+    "text": "从原点出发的抛物线到点 (2，2)，再接一段水平线段"
+   },
+   {
+    "key": "D",
+    "text": "一条从原点到点 (4，2) 的线段"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "P 在 AB 上（0≤t≤2）时，S＝½×AD×AP＝½×2×t＝t，是上升线段；P 在 BC 上（2≤t≤4）时，P 到 AD 的距离始终为 2，S＝½×2×2＝2，是水平线段。",
+  "kp": "动点问题的函数图象",
+  "stem": "正方形 ABCD 的边长为 2，动点 P 从点 A 出发，沿 A→B→C 的路线以每秒 1 个单位长度的速度运动，到达点 C 时停止。设运动时间为 t 秒，△APD 的面积为 S。下列对 S 与 t 之间函数图象的描述正确的是（ ）",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q11",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 11,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 11 题",
+  "type": "blank",
+  "stem": "第 11 题：分解因式：2x³－8x＝________。",
+  "blanks": [
+   [
+    "2x(x＋2)(x－2)",
+    "2x(x-2)(x+2)",
+    "2x(x+2)(x-2)",
+    "2x(x－2)(x＋2)"
+   ]
+  ],
+  "answer": [
+   "2x(x＋2)(x－2)"
+  ],
+  "explanation": "先提公因式 2x，再用平方差公式：2x(x²－4)＝2x(x＋2)(x－2)。坑点：只写 2x(x²－4) 没有分解彻底。",
+  "kp": "因式分解",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q12",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 12,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 12 题",
+  "type": "blank",
+  "stem": "第 12 题：若代数式 √(x－3)＋1/(x－4) 有意义，则 x 的取值范围是________。",
+  "blanks": [
+   [
+    "x≥3 且 x≠4",
+    "x≥3且x≠4"
+   ]
+  ],
+  "answer": [
+   "x≥3 且 x≠4"
+  ],
+  "explanation": "被开方数 x－3≥0，分母 x－4≠0，所以 x≥3 且 x≠4。",
+  "kp": "二次根式与分式有意义的条件",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q13",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 13,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 13 题",
+  "type": "blank",
+  "stem": "第 13 题：一个不透明的袋子里装有 3 个红球和若干个白球，这些球除颜色外都相同。若从中随机摸出一个球是红球的概率为 1/4，则袋中白球有________个。",
+  "blanks": [
+   [
+    "9"
+   ]
+  ],
+  "answer": [
+   "9"
+  ],
+  "explanation": "设白球有 x 个，3÷(3＋x)＝1/4，x＝9。",
+  "kp": "概率",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q14",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 14,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 14 题",
+  "type": "blank",
+  "stem": "第 14 题：已知 a＋b＝5，ab＝3，则 a²＋b² 的值为________。",
+  "blanks": [
+   [
+    "19"
+   ]
+  ],
+  "answer": [
+   "19"
+  ],
+  "explanation": "a²＋b²＝(a＋b)²－2ab＝25－6＝19。",
+  "kp": "完全平方公式的变形",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q15",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 15,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 15 题",
+  "type": "blank",
+  "stem": "第 15 题：在 Rt△ABC 中，∠C＝90°，AC＝3，BC＝4。以点 C 为圆心作圆，若该圆与斜边 AB 所在直线相切，则圆的半径为________。",
+  "blanks": [
+   [
+    "2.4",
+    "12/5"
+   ]
+  ],
+  "answer": [
+   "2.4"
+  ],
+  "explanation": "相切时半径等于点 C 到 AB 的距离。AB＝5，由面积 ½×3×4＝½×5×h，得 h＝12/5＝2.4。",
+  "kp": "切线与等面积法",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q16",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 16,
+  "earlybird": true,
+  "meta": "早鸟自测",
+  "section": "填空题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 16 题",
+  "type": "blank",
+  "stem": "第 16 题：观察下列一组数：1，3，6，10，15，……，按此规律，第 20 个数是________。",
+  "blanks": [
+   [
+    "210"
+   ]
+  ],
+  "answer": [
+   "210"
+  ],
+  "explanation": "第 n 个数是 1＋2＋…＋n＝n(n＋1)/2，第 20 个数＝20×21÷2＝210。",
+  "kp": "数字规律",
+  "paperScore": 3
+ },
+ {
+  "id": "national-earlybird-2027-math-q17",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 17,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 17 题",
+  "type": "essay",
+  "material": "",
+  "stem": "计算：√12－|－2|＋(π－3)⁰－4cos30°＋(1/2)⁻¹。",
+  "points": [
+   {
+    "text": "√12＝2√3，|－2|＝2，(π－3)⁰＝1",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "4cos30°＝2√3，(1/2)⁻¹＝2",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "结果正确：1",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 6,
+  "sample": "原式＝2√3－2＋1－4×(√3/2)＋2＝2√3－2＋1－2√3＋2＝1。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "实数运算"
+ },
+ {
+  "id": "national-earlybird-2027-math-q18",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 18,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 18 题",
+  "type": "essay",
+  "material": "",
+  "stem": "解分式方程：x/(x－1)－2/(x²－1)＝1。",
+  "points": [
+   {
+    "text": "两边同乘 (x＋1)(x－1) 去分母：x(x＋1)－2＝x²－1",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "解得 x＝1",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "检验：x＝1 时分母为 0，是增根，原方程无解",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 6,
+  "sample": "去分母得 x(x＋1)－2＝x²－1，即 x²＋x－2＝x²－1，解得 x＝1。检验：当 x＝1 时，(x＋1)(x－1)＝0，x＝1 是增根，所以原方程无解。坑点：解分式方程一定要检验。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "分式方程"
+ },
+ {
+  "id": "national-earlybird-2027-math-q19",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 19,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 19 题",
+  "type": "essay",
+  "material": "",
+  "stem": "为落实劳动教育，某校九年级开展了“我的家务劳动时间”调查。从全年级 800 名学生中随机抽取部分学生，统计他们平均每周的家务劳动时间 t（单位：小时），分为四组：A 组：0≤t＜1；B 组：1≤t＜2；C 组：2≤t＜3；D 组：t≥3。整理后得到如下统计表（部分数据缺失）：\n组别：A　B　C　D\n人数：8　m　16　6\n已知 B 组人数占被调查总人数的 40%。\n（1）求被调查的总人数和 m 的值；\n（2）被调查学生每周家务劳动时间的中位数落在哪一组？\n（3）估计该校九年级每周家务劳动时间不少于 2 小时的学生人数；\n（4）D 组的 6 名学生中有 2 名女生，学校要从 D 组中随机选 2 人在班会上做经验分享，用列表法或画树状图法求恰好选中 1 名男生和 1 名女生的概率。",
+  "points": [
+   {
+    "text": "（1）A、C、D 共 30 人，占 60%，总人数 50，m＝20",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）第 25、26 个数据都在 B 组",
+    "score": 1,
+    "keys": []
+   },
+   {
+    "text": "（3）800×(16＋6)÷50＝352（人）",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（4）共 15 种等可能结果，1 男 1 女有 8 种，P＝8/15",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 7,
+  "sample": "（1）A、C、D 三组共 8＋16＋6＝30 人，占 1－40%＝60%，总人数＝30÷60%＝50（人），m＝50×40%＝20。\n（2）50 个数据从小到大排列，第 25、26 个都在 B 组（A 组占第 1～8 个，B 组占第 9～28 个），所以中位数落在 B 组。\n（3）800×(16＋6)/50＝352（人）。\n（4）D 组 4 名男生（男₁～男₄）、2 名女生（女₁、女₂），从 6 人中选 2 人共 15 种等可能结果，其中 1 男 1 女有 4×2＝8 种，P＝8/15。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "统计与概率"
+ },
+ {
+  "id": "national-earlybird-2027-math-q20",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 20,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 20 题",
+  "type": "essay",
+  "material": "",
+  "stem": "某超市销售一种当季水果，进价为每千克 20 元。市场调查发现：当售价为每千克 30 元时，平均每天可售出 200 千克；售价每提高 1 元，平均每天少售出 10 千克。物价部门规定，该水果的售价不得高于进价的 1.6 倍。设售价为每千克 x 元（x≥30），平均每天的销售量为 y 千克。\n（1）求 y 与 x 之间的函数关系式；\n（2）超市要使这种水果每天的销售利润为 2 000 元，售价应定为每千克多少元？\n（3）售价定为多少时，每天的销售利润最大？最大利润是多少元？",
+  "points": [
+   {
+    "text": "（1）y＝200－10(x－30)＝－10x＋500",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）解 (x－20)(－10x＋500)＝2000 得 x＝30 或 40，40 超过 32 舍去，售价 30 元",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（3）W＝－10(x－35)²＋2250，在 30≤x≤32 内递增，x＝32 时最大 2160 元",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 7,
+  "sample": "（1）y＝200－10(x－30)＝－10x＋500。\n（2）(x－20)(－10x＋500)＝2000，整理得 x²－70x＋1200＝0，解得 x₁＝30，x₂＝40。售价不得高于 20×1.6＝32 元，x＝40 舍去，所以售价应定为每千克 30 元。\n（3）W＝(x－20)(－10x＋500)＝－10x²＋700x－10000＝－10(x－35)²＋2250。因为 30≤x≤32，在这个范围内 W 随 x 增大而增大，所以 x＝32 时 W 最大＝12×180＝2160（元）。坑点：顶点 x＝35 不在取值范围内，不能直接取 2250。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "二次函数的实际应用"
+ },
+ {
+  "id": "national-earlybird-2027-math-q21",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 21,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 21 题",
+  "type": "essay",
+  "material": "",
+  "stem": "某校数学小组用无人机测量一栋教学楼 CD 的高度。无人机悬停在点 A 处，A 点距地面的高度为 60 m。在 A 处测得楼顶 C 的俯角为 30°，楼底 D 的俯角为 60°（点 A、C、D 在同一竖直平面内，楼 CD 垂直于地面）。\n（1）求无人机与教学楼之间的水平距离；\n（2）求教学楼 CD 的高度；\n（3）若无人机保持高度不变，以 5 m/s 的速度沿水平方向向教学楼飞行，经过多少秒恰好飞到楼顶 C 的正上方？（结果保留根号）",
+  "points": [
+   {
+    "text": "（1）由俯角 60° 得水平距离＝60÷tan60°＝20√3 m",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）A、C 的高度差＝20√3×tan30°＝20 m，CD＝60－20＝40 m",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）t＝20√3÷5＝4√3 s",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "（1）过 A 作地面的垂线，垂足为 E，AE＝60 m。在 Rt△AED 中，∠ADE＝60°（俯角等于对应的仰角），ED＝AE÷tan60°＝60÷√3＝20√3（m），即水平距离为 20√3 m。\n（2）过 C 作 CF⊥AE 于 F，CF＝ED＝20√3 m，在 Rt△AFC 中，AF＝CF·tan30°＝20√3×(√3/3)＝20（m），CD＝FE＝60－20＝40（m）。\n（3）t＝20√3÷5＝4√3（s），约 6.9 s。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "解直角三角形的应用"
+ },
+ {
+  "id": "national-earlybird-2027-math-q22",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 22,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 22 题",
+  "type": "essay",
+  "material": "",
+  "stem": "AB 是 ⊙O 的直径，点 C 在 ⊙O 上，过点 C 作 ⊙O 的切线，交 AB 的延长线于点 P，连接 AC、BC。\n（1）求证：∠PCB＝∠A；\n（2）若 PB＝2，PC＝4，求 ⊙O 的半径和 tan A 的值。",
+  "points": [
+   {
+    "text": "（1）连接 OC，由切线得 ∠OCP＝90°，结合直径所对圆周角 90° 证得 ∠PCB＝∠A",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）由 △PCB∽△PAC 得 PC²＝PB·PA，PA＝8，半径为 3",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "由相似得 BC/AC＝PC/PA＝1/2，tan A＝1/2",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 9,
+  "sample": "（1）连接 OC。∵ PC 是切线，∴ OC⊥PC，∠OCB＋∠PCB＝90°。∵ AB 是直径，∴ ∠ACB＝90°，∠A＋∠ABC＝90°。∵ OC＝OB，∴ ∠OCB＝∠OBC，∴ ∠PCB＝∠A。\n（2）∵ ∠PCB＝∠A，∠P＝∠P，∴ △PCB∽△PAC，PC/PA＝PB/PC，PA＝PC²÷PB＝16÷2＝8，AB＝PA－PB＝6，半径为 3。又 BC/AC＝PC/PA＝4/8＝1/2，在 Rt△ABC 中，tan A＝BC/AC＝1/2。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "切线的性质与相似三角形"
+ },
+ {
+  "id": "national-earlybird-2027-math-q23",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "earlybird-2027-math",
+  "number": 23,
+  "earlybird": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下 · 中考全范围早鸟卷 · 数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下 · 中考全范围早鸟卷 · 数学 第 23 题",
+  "type": "essay",
+  "material": "",
+  "stem": "抛物线 y＝－x²＋bx＋c 与 x 轴交于 A(－1，0)、B(3，0) 两点，与 y 轴交于点 C，顶点为 D。\n（1）求抛物线的解析式和顶点 D 的坐标；\n（2）求 △BCD 的面积；\n（3）在抛物线的对称轴上是否存在点 P，使 △PBC 是以 BC 为斜边的直角三角形？若存在，求出点 P 的坐标；若不存在，说明理由。",
+  "points": [
+   {
+    "text": "（1）y＝－x²＋2x＋3，D(1，4)",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）用割补法或坐标求得面积为 3",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）设 P(1，p)，由 PB²＋PC²＝BC² 得 p²－3p－2＝0，P 有两个",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 9,
+  "sample": "（1）y＝－(x＋1)(x－3)＝－x²＋2x＋3，顶点 D(1，4)。\n（2）C(0，3)。过 D 作 DE⊥x 轴于 E(1，0)，S△BCD＝S梯形OCDE＋S△DEB－S△OBC＝(3＋4)×1÷2＋2×4÷2－3×3÷2＝3.5＋4－4.5＝3。\n（3）设 P(1，p)。PB²＝4＋p²，PC²＝1＋(p－3)²，BC²＝18。由 PB²＋PC²＝BC² 得 4＋p²＋1＋p²－6p＋9＝18，即 p²－3p－2＝0，p＝(3±√17)/2。所以存在，P(1，(3＋√17)/2) 或 P(1，(3－√17)/2)。坑点：要用“以 BC 为斜边”这一条件，直角顶点在 P，两个解都要写。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "二次函数综合"
+ }
+];

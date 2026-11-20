@@ -133,7 +133,7 @@
     ['配对阅读', '为每条描述选出对应项', 0], ['短文填空', '用词的正确形式填空', 0], ['情景交际', '自己写句子补全对话', 5],
     ['句子运用', '句型转换、翻译和连词成句', 5], ['回答问题', '读短文，用完整句子回答', 0], ['书面表达', '写一篇作文，对照得分点', 1],
   ];
-  const englishPapers = () => catalog.filter(paper => paper.subject === 'english' && paper.data &&
+  const englishPapers = () => catalog.filter(paper => !paper.earlybird && paper.subject === 'english' && paper.data &&
     (!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year));
   function englishTypeCards() {
     const papersHere = englishPapers();
@@ -178,17 +178,17 @@
 
   function render() {
     state.paper = null;
-    const filtered = catalog.filter(paper => paper.subject === state.subject &&
+    const filtered = catalog.filter(paper => !paper.earlybird && paper.subject === state.subject &&
       (!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year));
     const practice = state.mode === 'short' ? filtered.filter(paper => paper.questionCount > 0) : filtered;
     const typeCards = state.subject === 'english' && state.mode === 'short' ? englishTypeCards() : '';
     if (typeCards) {
-      shell(`${drawFilters(catalog)}${typeCards}`);
+      shell(`${drawFilters(catalog.filter(paper => !paper.earlybird))}${typeCards}`);
       wireFilters();
       app.view.querySelectorAll('[data-type]').forEach(button => button.addEventListener('click', () => { void startType(button); }));
       return;
     }
-    shell(`${drawFilters(catalog)}
+    shell(`${drawFilters(catalog.filter(paper => !paper.earlybird))}
       <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : '原卷免费看、免费打印。在线刷题和中文解析属于中考题库完整版（19.9 一起解锁），每种题型可先免费试做一组。'}</p>
       <div class="national-paper-grid">${practice.length ? practice.map(paperCard).join('') :
         `<section class="card national-empty"><h2>${filtered.length ? '这科目前提供原卷与参考答案' : '当前筛选下暂无试卷'}</h2><p class="muted">${filtered.length ? '切换「按原卷练」即可查看和打印。' : '可以切换地区或年份再看看。'}</p>${filtered.length ? '<button type="button" class="btn primary" id="switchToPapers">查看原卷</button>' : ''}</section>`}</div>`);
@@ -311,7 +311,7 @@
     return getQuestions(paper);
   }
   async function loadSubject(subject, filter = () => true) {
-    const list = (await getCatalog()).filter(paper => paper.subject === subject && paper.data && filter(paper));
+    const list = (await getCatalog()).filter(paper => !paper.earlybird && paper.subject === subject && paper.data && filter(paper));
     return (await Promise.all(list.map(getQuestions))).flat();
   }
   async function resolve(ids) {
