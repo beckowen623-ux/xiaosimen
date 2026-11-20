@@ -377,7 +377,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "kp": "板块构造",
   "stem": "日本多火山、地震，主要原因是它（ ）",
   "paperScore": 2.5,
-  "unit": "七上·天气气候与居民"
+  "unit": "七上·陆地和海洋"
  },
  {
   "id": "national-earlybird-2027-dili-q10",

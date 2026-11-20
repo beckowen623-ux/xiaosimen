@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-20 · Claude Code · 七上早鸟卷全科（main）
+- 新增 `zz-earlybird-7up-{chinese,english,daode,lishi,dili,shengwu}.json`（数学上一批已加）。语文结构同九上卷（课外古诗、课外文言、原创记叙文和散文、名著、作文），英语同九上卷（51 题），小四门 20 选择＋材料题。
+- `units.mjs`：道法七上、历史七年级、地理七上、生物七上补知识点；地理新增“七上·陆地和海洋”（板块构造移入）。
+
 ## 2026-11-20 · Claude Code · 演示视频重做＋七上早鸟卷数学（main）
 - 演示视频改为 39 秒：先测（按学期早鸟卷）→ 按章节补 → 小升初衔接 → 每周一卷打印登记 → 错题复习 → 学情分析，结尾加核心表达。`capture-zhongkao.cjs` 改为读本地预览（BASE，默认 8777）并给学情分析写演示用做题记录；BGM 36 秒改循环。index.html、app.js 按钮、主页 videoSec 改为 39。
 - 新增 `zz-earlybird-7up-math.json`（stage 7-up，23 题）；`units.mjs` 数学补七上各章（有理数的运算、整式的加减、一元一次方程、几何图形初步）。
