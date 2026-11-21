@@ -2,6 +2,17 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 新增九上英语同步章节卷 4 套；全量检查已上线卷子（main）
+- 站长要求“检查和增加卷子”。九上同步章节卷原来只有数学、物理、化学，英语缺；新增 `english-src/papers/zz-sync-english-9up-1..4.json`（`node tools/build_english.mjs` 生成 `data/national/sync-english-9up-*.js` 和目录）：
+  1. 学习方法与节日：by doing、how to do、宾语从句（that / if / whether，陈述语序，时态呼应、客观真理）、感叹句、the more ..., the more ...；
+  2. 礼貌问询与成长变化：特殊疑问词宾语从句、whether ... or not、used to do / be used to doing、no longer、too ... to；
+  3. 发明与规则：被动语态（一般现在、一般过去、情态动词被动，现在完成时被动拓展）、be used for、be allowed to、must / mustn't / needn't；
+  4. 推测与音乐电影：must / might / could / can't 表推测、定语从句（who / that / which，最高级先行词用 that，whose 拓展）、prefer doing to doing。
+  - 每套 46 题：单选 15×2、完形 10×1.5、阅读 2 篇 10×2.5、短文填空 10×1.5、书面表达 15，满分 100，不含听力；每题标考点、写坑点解析，书面表达有评分点和范文。人教版九年级新教材 2026 秋启用，单元标题未核实，所以按九上核心语法和话题编，不写具体单元名。
+- 全量检查（`data/national` 157 套 + 目录）：选择题答案字母都在选项内、无重复选项、无空解析、填空答案齐全、同步卷 / 早鸟卷满分 100，“解析写选 X 和答案不符”2 处均是“误选 X”的坑点说明，非错误；跨卷相同题干只是“Which of the following is TRUE?”这类通用问法。发现两处数据小问题，暂不改：①构建脚本给同步卷、早鸟卷每道题写的 `grade` / `stage` 固定为“九下 / 9-down”（页面和学情分析都不读题目上的这两个字段，用的是目录里的 stage）；②湖南 5 套原卷数据文件用 `window.NATIONAL_PAPERS = {` 重置全局对象（浏览器里每套单独加载、取完即存进 Map，暂未见影响）。
+- 主页“同步章节卷共 67 套”改为 71 套。
+- 验证：`node tests/validate.mjs` 通过；新卷答案分布均衡，总分 100；本地 playwright：九上同步卷出现“英语”4 套，手机做完形填空显示正常。
+
 ## 2026-11-21 · Claude Code · 第二次打开秒开（Service Worker）；首屏不等权限接口；预加载真题目录（main）
 - 站长反馈“所有网页加载太慢”。
 - 新增 `sw.js`（Service Worker，中考 / 考证两站同一份，改一边要复制到另一边并 `cmp`）：网页本身先走网络、3 秒没回来或断网用上次存的版本；带内容哈希 `?v=`（8 位以上十六进制）的脚本、样式、题库直接用本机缓存、同一文件只留最新版本；其他静态文件先用缓存再后台更新；`/api/`、`/admin`、视频、`/cdn-cgi/` 不经过它。`index.html` 在 `load` 后注册（只在 https）。`_headers` 给 `/sw.js` 加 `no-cache`；要停用时把 `ENABLED` 改成 `false` 发布，访客下次打开自动注销并清缓存。

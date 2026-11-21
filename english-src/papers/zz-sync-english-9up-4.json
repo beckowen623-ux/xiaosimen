@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-9up-4",
+  "sync": true,
+  "stage": "9-up",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "九上英语同步章节卷 · 推测与音乐电影",
+  "label": "推测与判断 · 音乐与电影（情态动词表推测、定语从句）",
+  "unit": "九上·推测与判断 / 音乐与电影",
+  "order": 4,
+  "source": "九年级上学期“推测与判断”“音乐与电影喜好”话题：must / might / could / can't 表推测、定语从句（who / that / which 引导，先行词是最高级时用 that，whose 拓展）、prefer doing to doing、can't stand。作者结合备考经验，按九年级单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "—Whose basketball is this?\n—It ______ be Tom's. He's the only one who plays basketball in our class.", "options": ["must", "can't", "might", "needn't"], "answer": "A", "kp": "情态动词表推测", "exp": "“班里只有他打篮球”是很有把握的依据，肯定推测用 must（一定）。"},
+        {"n": 2, "stem": "—Is that man over there Mr. Smith?\n—He ______ be Mr. Smith. Mr. Smith is in Beijing now.", "options": ["must", "may", "can't", "might"], "answer": "C", "kp": "情态动词表推测", "exp": "史密斯先生现在在北京，那人“不可能”是他，否定推测用 can't。坑点：否定推测不用 mustn't。"},
+        {"n": 3, "stem": "I like music ______ I can dance to.", "options": ["who", "what", "whose", "that"], "answer": "D", "kp": "定语从句", "exp": "先行词 music 是物，在从句中作 dance to 的宾语，用 that（或 which）。what 不能引导定语从句。"},
+        {"n": 4, "stem": "The girl ______ is singing on the stage is my cousin.", "options": ["who", "which", "whom", "what"], "answer": "A", "kp": "定语从句", "exp": "先行词 the girl 是人，在从句中作主语，用 who（或 that）。whom 只作宾语。"},
+        {"n": 5, "stem": "—Where is Linda?\n—I'm not sure. She ______ be in the library.", "options": ["must", "can't", "might", "has to"], "answer": "C", "kp": "情态动词表推测", "exp": "I'm not sure 说明没把握，用 might（可能）。"},
+        {"n": 6, "stem": "I prefer movies ______ make me laugh.", "options": ["who", "which", "what", "whom"], "answer": "B", "kp": "定语从句", "exp": "先行词 movies 是物，在从句中作主语，用 which（或 that）。"},
+        {"n": 7, "stem": "Do you know the boy ______ is talking with our teacher?", "options": ["which", "what", "whose", "who"], "answer": "D", "kp": "定语从句", "exp": "先行词 the boy 是人，从句缺主语，用 who。"},
+        {"n": 8, "stem": "—Somebody is knocking at the door. Who ______ it be?\n—It might be the delivery man.", "options": ["must", "could", "need", "should"], "answer": "B", "kp": "情态动词表推测", "exp": "疑问句里表推测用 could（或 can）：Who could it be? 会是谁呢？must 一般不用于疑问句表推测。"},
+        {"n": 9, "stem": "He prefers ______ at home to ______ out on rainy days.", "options": ["stay; go", "to stay; going", "stays; goes", "staying; going"], "answer": "D", "kp": "固定搭配", "exp": "prefer doing A to doing B 比起做 B 更喜欢做 A，to 是介词，前后都用动名词。"},
+        {"n": 10, "stem": "The music next door is too loud. I can't ______ it any more.", "options": ["stand", "sit", "take off", "turn"], "answer": "A", "kp": "动词辨析", "exp": "can't stand 无法忍受。"},
+        {"n": 11, "stem": "This is the most interesting film ______ I have ever seen.", "options": ["which", "who", "that", "what"], "answer": "C", "kp": "定语从句", "exp": "先行词被最高级 the most interesting 修饰时，关系代词只用 that，不用 which。"},
+        {"n": 12, "stem": "—I can't find my keys anywhere.\n—They ______ be in your bag. I saw you put them there this morning.", "options": ["can't", "mustn't", "needn't", "must"], "answer": "D", "kp": "情态动词表推测", "exp": "亲眼看见放进包里了，很有把握，用 must。"},
+        {"n": 13, "stem": "Mr. Wang is a teacher ______ makes his classes lively and interesting.", "options": ["which", "who", "whose", "what"], "answer": "B", "kp": "定语从句", "exp": "先行词 a teacher 是人，从句缺主语，用 who。"},
+        {"n": 14, "stem": "—I like the singer ______ songs are full of hope.\n—Me too.", "options": ["who", "that", "whose", "which"], "answer": "C", "kp": "定语从句", "exp": "“歌手的歌”，关系词在从句中作定语修饰 songs，用 whose（……的）。"},
+        {"n": 15, "stem": "Look! The man is running so fast. He ______ be late for something.", "options": ["can't", "might", "needn't", "mustn't"], "answer": "B", "kp": "情态动词表推测", "exp": "看到跑得很快，猜测“可能要迟到了”，用 might。can't 是“不可能”，与句意不符。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "The \"Thief\" in Our Kitchen",
+      "passage": "Last week, something strange happened in our house. Every night, we heard noises (16) the kitchen.\n\"It must be a thief!\" my little sister said. She was so (17) that she couldn't sleep.\n\"It can't be a thief,\" said Dad. \"All the doors and windows are (18). Nobody could get in.\"\n\"It (19) be the wind,\" Mom said. But the noise didn't sound like the wind at all.\nOn the third night, Dad and I decided to find out the (20). We hid behind the kitchen door and (21) quietly. At about midnight, the noise started again. Dad turned on the (22). We couldn't believe our eyes. It was our cat, Mimi! She was trying to open the cupboard (23) her food was kept in.\nWe all laughed. \"So this is our (24) thief!\" said Dad with a smile. From then on, Mom always (25) the cupboard at night.",
+      "items": [
+        {"n": 16, "options": ["from", "to", "for", "with"], "answer": "A", "kp": "介词", "exp": "声音来自厨房：noises from the kitchen。"},
+        {"n": 17, "options": ["happy", "scared", "bored", "tired"], "answer": "B", "kp": "上下文", "exp": "以为家里进了小偷，吓得睡不着。"},
+        {"n": 18, "options": ["open", "broken", "locked", "clean"], "answer": "C", "kp": "上下文", "exp": "门窗都锁着，所以没人能进来，爸爸才说“不可能是小偷”。"},
+        {"n": 19, "options": ["must", "can't", "needn't", "might"], "answer": "D", "kp": "情态动词表推测", "exp": "妈妈只是猜测“可能是风”，没把握，用 might；后文 But ... didn't sound like the wind 说明这个猜测不太对。"},
+        {"n": 20, "options": ["time", "place", "truth", "name"], "answer": "C", "kp": "上下文", "exp": "find out the truth 查明真相。"},
+        {"n": 21, "options": ["shouted", "waited", "sang", "danced"], "answer": "B", "kp": "上下文", "exp": "躲在门后安静地等，到半夜声音又响了。"},
+        {"n": 22, "options": ["TV", "radio", "light", "computer"], "answer": "C", "kp": "上下文", "exp": "开灯后才看清是猫：turn on the light。"},
+        {"n": 23, "options": ["who", "which", "whose", "where"], "answer": "B", "kp": "定语从句", "exp": "从句 her food was kept in ___ 中 in 后面缺宾语，先行词 the cupboard 是物，用 which。坑点：句末已经有 in，不能再用 where。"},
+        {"n": 24, "options": ["little", "tall", "angry", "famous"], "answer": "A", "kp": "上下文", "exp": "“小偷”原来是家里的小猫，爸爸笑着说“我们的小小偷”。"},
+        {"n": 25, "options": ["opened", "locked", "broke", "painted"], "answer": "B", "kp": "上下文", "exp": "为了不让猫再去偷吃，妈妈晚上把柜子锁上。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Weekend Fun at City Culture Center",
+          "passage": "Movie: Journey to the Stars (Saturday 2:00 p.m. & 7:00 p.m.)\nA science fiction film about a group of students who travel into space. Ticket: ¥40.\nConcert: Music Without Borders (Saturday 7:30 p.m.)\nMusicians from five countries play folk music. Ticket: ¥80; ¥50 for students with a student card.\nChinese Opera Show (Sunday 3:00 p.m.)\nLearn about Peking Opera masks and watch a short show. Free for children under 14.\nCall 6688-1234 for tickets. All shows are in the main hall.",
+          "items": [
+            {"n": 26, "stem": "What is Journey to the Stars about?", "options": ["A singer's life.", "Students who travel into space.", "Peking Opera.", "Folk music."], "answer": "B", "kp": "细节理解", "exp": "a group of students who travel into space。"},
+            {"n": 27, "stem": "How much does a student with a student card pay for the concert?", "options": ["¥40.", "¥80.", "¥50.", "Nothing."], "answer": "C", "kp": "细节理解", "exp": "¥50 for students with a student card。"},
+            {"n": 28, "stem": "Which show can a 12-year-old child see for free?", "options": ["The Chinese Opera Show.", "The concert.", "The movie at 2:00 p.m.", "The movie at 7:00 p.m."], "answer": "A", "kp": "细节理解", "exp": "京剧表演 Free for children under 14。"},
+            {"n": 29, "stem": "If you are busy all day on Saturday, which show can you go to?", "options": ["The movie.", "The concert.", "Both the movie and the concert.", "The Chinese Opera Show."], "answer": "D", "kp": "推理判断", "exp": "电影和音乐会都在周六，只有京剧表演在周日。"},
+            {"n": 30, "stem": "Lucy wants to see the movie and then the concert on Saturday. Which movie time should she choose?", "options": ["2:00 p.m.", "7:00 p.m.", "7:30 p.m.", "3:00 p.m."], "answer": "A", "kp": "推理判断", "exp": "音乐会 7:30 开始，7:00 的电影来不及看完，只能选下午 2:00 那场。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Why Do We Love Sad Songs?",
+          "passage": "Most people like music that makes them happy. But scientists have found something interesting: many people also enjoy listening to sad songs.\nWhy? One reason might be that sad songs help people understand their own feelings. When you feel down, a sad song can make you feel that someone else understands you. You are not alone.\nAnother reason could be that sad music brings back old memories. A song that you heard many years ago can take you back to a special time in your life, such as your first day at a new school.\nHowever, scientists also say that listening to too many sad songs is not a good idea if you have been feeling low for a long time. In that case, you'd better talk to a friend, take a walk or listen to music that makes you feel more energetic.\nSo next time you put on a sad song, think about how it makes you feel. Music is a powerful thing.",
+          "items": [
+            {"n": 31, "stem": "What have scientists found?", "options": ["Nobody likes sad songs.", "Many people enjoy sad songs too.", "Sad songs are bad for everyone.", "Happy songs are always better."], "answer": "B", "kp": "细节理解", "exp": "many people also enjoy listening to sad songs。"},
+            {"n": 32, "stem": "How can sad songs help people?", "options": ["They help people understand their own feelings.", "They make people sleep better.", "They make people forget everything.", "They help people study."], "answer": "A", "kp": "细节理解", "exp": "sad songs help people understand their own feelings。"},
+            {"n": 33, "stem": "What does \"feeling low\" in Paragraph 4 mean?", "options": ["Feeling short.", "Feeling sad.", "Feeling excited.", "Feeling hungry."], "answer": "B", "kp": "词义猜测", "exp": "和前文 feel down 同义，指情绪低落。"},
+            {"n": 34, "stem": "What should you do if you have been feeling low for a long time?", "options": ["Listen to more sad songs.", "Stay alone at home.", "Talk to a friend or take a walk.", "Stop listening to music forever."], "answer": "C", "kp": "细节理解", "exp": "you'd better talk to a friend, take a walk or listen to music that makes you feel more energetic。"},
+            {"n": 35, "stem": "What is the passage mainly about?", "options": ["Why many people enjoy sad songs.", "How to write a song.", "The history of music.", "Why happy songs are the best."], "answer": "A", "kp": "主旨大意", "exp": "全文围绕“人们为什么爱听伤感歌曲”展开，并提醒情绪低落太久时要换个方式。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Favorite Band",
+      "passage": "I'm a big fan of a band (36) ______ is called The Sunshine Kids. The band has four members. (37) ______ of them are high school students. Their songs are full of energy and hope.\nI first heard their music last summer. I was feeling (38) (stress) about my exams, and a friend sent me one of their songs. It was the song (39) ______ helped me feel better. Since then, I (40) (listen) to their music every day.\nLast month, they gave a concert in our city. I wanted to go, but the tickets were (41) (sell) out very quickly. I felt so sad. \"You (42) ______ be joking!\" I said when my friend told me she had got two tickets. She wasn't joking. We went to the concert together, and it was the (43) (good) night of my life.\nI think music is (44) (real) magic. It can bring people together and make them (45) (feel) happy.",
+      "items": [
+        {"n": 36, "answer": "that / which", "kp": "定语从句", "exp": "先行词 a band 是物，在从句中作主语，用 that 或 which。"},
+        {"n": 37, "answer": "All", "kp": "代词", "exp": "四个成员“全都”是高中生，三者及以上用 all。句首大写。"},
+        {"n": 38, "answer": "stressed", "hint": "stress", "kp": "词性转换", "exp": "feel 后接形容词，人感到有压力用 stressed。"},
+        {"n": 39, "answer": "that", "kp": "定语从句", "exp": "先行词 the song 是物，从句缺主语，用 that（which 也可）；这里也可看作强调句 It was ... that ...，都填 that。"},
+        {"n": 40, "answer": "have listened", "hint": "listen", "kp": "现在完成时", "exp": "Since then 从那时起到现在，用现在完成时。"},
+        {"n": 41, "answer": "sold", "hint": "sell", "kp": "被动语态", "exp": "be sold out 票被卖光。"},
+        {"n": 42, "answer": "must", "kp": "情态动词表推测", "exp": "You must be joking! 你一定是在开玩笑吧！表示很有把握的推测。"},
+        {"n": 43, "answer": "best", "hint": "good", "kp": "最高级", "exp": "the＋最高级＋of ...，good 的最高级是 best。"},
+        {"n": 44, "answer": "really", "hint": "real", "kp": "词性转换", "exp": "修饰整个句子（音乐“真的”是魔法）用副词 really。"},
+        {"n": 45, "answer": "feel", "hint": "feel", "kp": "动词用法", "exp": "make sb. do sth. 让某人做某事，用动词原形 feel。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "你校英语广播站正在征集“My Favorite Music or Movie”稿件。请介绍一首你最喜欢的歌曲、一类音乐或一部电影：1. 它是什么；2. 你为什么喜欢（至少两点）；3. 它对你有什么影响。要求：80 词左右，尽量用上定语从句，文中不得出现真实姓名和校名。",
+      "points": [["介绍喜欢的歌曲 / 音乐 / 电影", 3], ["写出至少两个喜欢的理由", 5], ["写出它对自己的影响", 3], ["语言正确（定语从句、prefer 等），书写规范", 4]],
+      "sample": "My Favorite Movie\nMy favorite movie is a cartoon called Coco. It is about a boy who loves music and goes on a journey to find his family's story.\nI like it for two reasons. First, the music in it is beautiful. I prefer songs that can touch my heart, and the songs in this movie always do. Second, it tells us that family is the most important thing that we have.\nAfter watching it, I began to spend more time talking with my grandparents. I also learned that we should never give up our dreams. It is really a movie which is worth watching.",
+      "exp": "写完检查：定语从句里先行词是人用 who，是物用 that / which，被最高级修饰只用 that；prefer A to B 里 to 是介词；理由用 First / Second 分条。"
+    }
+  ]
+}

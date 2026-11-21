@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-9up-2",
+  "sync": true,
+  "stage": "9-up",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "九上英语同步章节卷 · 礼貌问询与成长变化",
+  "label": "礼貌问询 · 成长变化（特殊疑问词宾语从句、used to）",
+  "unit": "九上·礼貌问询 / 成长变化",
+  "order": 2,
+  "source": "九年级上学期“礼貌问询（问路、请求）”“成长与变化”话题：特殊疑问词引导的宾语从句（Could you tell me where ...?）、whether ... or not、used to do / be used to doing / no longer、too ... to、It's polite to do、现在完成时与 for。作者结合备考经验，按九年级单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "Excuse me, could you tell me ______?", "options": ["where is the post office", "where the post office is", "where was the post office", "where the post office was"], "answer": "B", "kp": "宾语从句", "exp": "宾语从句用陈述语序。Could you ...? 是委婉语气，不是过去时，从句按实际情况用一般现在时 is。"},
+        {"n": 2, "stem": "Mary ______ short hair, but now she has long hair.", "options": ["used to have", "is used to having", "used to having", "uses to have"], "answer": "A", "kp": "used to", "exp": "used to do 过去常常、过去是（现在不是了）。be used to doing 是“习惯于”，意思不对。"},
+        {"n": 3, "stem": "My grandpa is used to ______ up early every morning.", "options": ["get", "got", "getting", "gets"], "answer": "C", "kp": "used to", "exp": "be used to doing sth. 习惯于做某事，to 是介词，后接动名词。坑点：和 used to do 混淆。"},
+        {"n": 4, "stem": "—I wonder ______ the bookstore opens.\n—At 9 a.m.", "options": ["where", "what", "how", "when"], "answer": "D", "kp": "宾语从句", "exp": "答语是时间，问“什么时候开门”，用 when。"},
+        {"n": 5, "stem": "Could you please tell me ______ to the Science Museum?", "options": ["how can I get", "how I can get", "how could I get", "how do I get"], "answer": "B", "kp": "宾语从句", "exp": "宾语从句陈述语序：how＋主语＋情态动词＋动词。"},
+        {"n": 6, "stem": "I didn't use to like vegetables, ______?", "options": ["did I", "didn't I", "used I", "was I"], "answer": "A", "kp": "反义疑问句", "exp": "前面用 didn't use to 是否定，后面用肯定的 did I。"},
+        {"n": 7, "stem": "—Excuse me, is there a bank near here?\n—Yes. Go ______ this street and turn left at the second crossing.", "options": ["along", "across", "through", "over"], "answer": "A", "kp": "介词", "exp": "go along the street 沿着街走。across 是横过，through 是穿过（内部）。"},
+        {"n": 8, "stem": "He is too shy ______ in front of the whole class.", "options": ["speak", "speaking", "to speak", "spoke"], "answer": "C", "kp": "too ... to", "exp": "too＋形容词＋to do 太……而不能……。"},
+        {"n": 9, "stem": "The little boy used to be afraid of the dark, but now he is ______ afraid of it.", "options": ["no more", "no longer", "not longer", "any more"], "answer": "B", "kp": "副词", "exp": "no longer 不再（指时间上不再）。not ... any longer 也可以，但 not longer、any more 单独用都不对。"},
+        {"n": 10, "stem": "It's polite ______ \"Excuse me\" before you ask a stranger for help.", "options": ["say", "to say", "saying", "said"], "answer": "B", "kp": "动词不定式", "exp": "It's＋形容词＋to do sth.，it 是形式主语。"},
+        {"n": 11, "stem": "Can you tell me ______ you got to know your best friend?", "options": ["that", "if", "how", "what"], "answer": "C", "kp": "宾语从句", "exp": "从句不缺成分，问“怎样认识的”，用 how。"},
+        {"n": 12, "stem": "Jenny has changed a lot. She used to be quiet, but now she is very ______.", "options": ["shy", "quiet", "outgoing", "silent"], "answer": "C", "kp": "词汇", "exp": "but 表转折，与 quiet 相反：outgoing 外向的。"},
+        {"n": 13, "stem": "Mr. Li ______ in this town for ten years. He knows every street here.", "options": ["has lived", "lived", "lives", "will live"], "answer": "A", "kp": "现在完成时", "exp": "for ten years 表示从过去持续到现在，用现在完成时。"},
+        {"n": 14, "stem": "I don't know ______ I should go to the party or not.", "options": ["if", "whether", "that", "what"], "answer": "B", "kp": "宾语从句", "exp": "和 or not 直接连用时一般用 whether，不用 if。"},
+        {"n": 15, "stem": "—Thank you for showing me the way.\n—______.", "options": ["That's right", "All right", "It doesn't matter", "My pleasure"], "answer": "D", "kp": "情景交际", "exp": "回应感谢用 My pleasure / You're welcome。It doesn't matter 是回应道歉。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "The Day I Got Lost",
+      "passage": "I used to be very shy. In primary school, I didn't (16) talk to anyone in class. When teachers asked me questions, my face turned red and I couldn't say a (17).\nThings changed when I moved to a new school in Grade 7. On the first day, I got lost and couldn't find my classroom. I had to ask a girl (18) Room 302 was. She not only told me the way, but also (19) me there. Her name was Lucy, and we soon became good friends.\nLucy was outgoing and (20) to everyone. With her help, I began to join in activities. I joined the school (21) club, and later I even gave a speech in front of the whole school. I was very (22), but I did it!\nNow I am no (23) the shy girl I used to be. I'm used to (24) with new people. I'm thankful that I got lost that day, (25) it helped me meet Lucy and change myself.",
+      "items": [
+        {"n": 16, "options": ["want", "have to", "need to", "dare to"], "answer": "D", "kp": "上下文", "exp": "因为害羞，不敢和别人说话：didn't dare to do。"},
+        {"n": 17, "options": ["sentence", "story", "word", "thing"], "answer": "C", "kp": "上下文", "exp": "couldn't say a word 一个字也说不出。"},
+        {"n": 18, "options": ["what", "where", "when", "how"], "answer": "B", "kp": "宾语从句", "exp": "问 302 教室“在哪里”，用 where。"},
+        {"n": 19, "options": ["took", "sent", "brought", "carried"], "answer": "A", "kp": "动词辨析", "exp": "take sb. there 带某人去那里。bring 是带来，carry 是搬运。"},
+        {"n": 20, "options": ["angry", "strict", "friendly", "rude"], "answer": "C", "kp": "上下文", "exp": "Lucy 外向、乐于助人，对每个人都友好：be friendly to sb.。"},
+        {"n": 21, "options": ["art", "drama", "chess", "computer"], "answer": "B", "kp": "上下文", "exp": "后文在全校面前演讲，说明参加的是锻炼表达的戏剧社。"},
+        {"n": 22, "options": ["nervous", "relaxed", "bored", "sleepy"], "answer": "A", "kp": "上下文", "exp": "第一次在全校面前讲话，很紧张，but I did it 说明克服了紧张。"},
+        {"n": 23, "options": ["more", "longer", "later", "other"], "answer": "B", "kp": "固定搭配", "exp": "no longer 不再。"},
+        {"n": 24, "options": ["talk", "talked", "talking", "talks"], "answer": "C", "kp": "used to", "exp": "be used to doing 习惯于做某事。"},
+        {"n": 25, "options": ["because", "but", "or", "unless"], "answer": "A", "kp": "连词", "exp": "感谢那天迷路，原因是因此认识了 Lucy。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Welcome to Sunshine Town",
+          "passage": "Sunshine Library: On Green Street, next to the post office. Open 9:00 a.m.–8:00 p.m. every day. You can borrow up to 5 books for two weeks.\nScience Museum: On Park Road, across from the City Park. Open 9:30 a.m.–5:00 p.m., closed on Mondays. Tickets: ¥30 for adults, ¥15 for students.\nHappy Mall: At the corner of Center Street and Park Road. Open 10:00 a.m.–10:00 p.m. There is a cinema on the top floor.\nGetting around: Bus No. 6 goes from the train station to the Science Museum. It runs every 15 minutes.",
+          "items": [
+            {"n": 26, "stem": "Where is Sunshine Library?", "options": ["Across from the City Park.", "Next to the post office.", "On Park Road.", "On the top floor of the mall."], "answer": "B", "kp": "细节理解", "exp": "On Green Street, next to the post office。"},
+            {"n": 27, "stem": "When can you NOT visit the Science Museum?", "options": ["On Monday.", "On Saturday morning.", "On Sunday afternoon.", "On Friday at 3 p.m."], "answer": "A", "kp": "细节理解", "exp": "closed on Mondays 周一闭馆。"},
+            {"n": 28, "stem": "A father and his 13-year-old son (a student) visit the Science Museum. How much should they pay?", "options": ["¥30.", "¥15.", "¥60.", "¥45."], "answer": "D", "kp": "推理判断", "exp": "成人 30 元＋学生 15 元＝45 元。"},
+            {"n": 29, "stem": "Which bus can take you from the train station to the Science Museum?", "options": ["Bus No. 15.", "Bus No. 5.", "Bus No. 6.", "Bus No. 10."], "answer": "C", "kp": "细节理解", "exp": "Bus No. 6 goes from the train station to the Science Museum。15 是发车间隔（分钟），不是车号。"},
+            {"n": 30, "stem": "If you want to see a film, where should you go?", "options": ["Happy Mall.", "Sunshine Library.", "The Science Museum.", "The City Park."], "answer": "A", "kp": "细节理解", "exp": "There is a cinema on the top floor（商场顶楼有电影院）。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Then and Now",
+          "passage": "Fifty years ago, my grandmother lived in a small village. There was no running water, so she used to carry water from the river every morning. There were no buses, either. To get to school, she had to walk for an hour along a mountain road.\nLife is very different now. My grandmother lives in a modern apartment in the city. She has a smartphone and uses it to make video calls with me. At first she didn't know how to use it. \"I'm too old to learn these new things,\" she said. But I taught her step by step, and she practiced every day. Now she can even pay for vegetables with her phone!\nLast month, we went back to her village. A new road goes all the way to the village, and there is a bus every hour. The old school has become a beautiful library. Grandmother looked around and said, \"I used to dream about a life like this. Now it has come true.\"",
+          "items": [
+            {"n": 31, "stem": "How did the grandmother get water fifty years ago?", "options": ["She bought it in a shop.", "She carried it from the river.", "She got it from a well.", "Her father brought it home."], "answer": "B", "kp": "细节理解", "exp": "she used to carry water from the river every morning。"},
+            {"n": 32, "stem": "Why didn't the grandmother want to learn to use the smartphone at first?", "options": ["Because she thought she was too old.", "Because it was too expensive.", "Because she had no time.", "Because she didn't like phones."], "answer": "A", "kp": "细节理解", "exp": "\"I'm too old to learn these new things,\" she said。"},
+            {"n": 33, "stem": "What can the grandmother do with her phone now?", "options": ["She can only make phone calls.", "She teaches others to use phones.", "She drives a bus with it.", "She makes video calls and pays for things."], "answer": "D", "kp": "细节理解", "exp": "第二段：用手机和作者视频通话，现在还能用手机买菜付钱。"},
+            {"n": 34, "stem": "What has the old school become?", "options": ["A bus station.", "A shop.", "A library.", "An apartment."], "answer": "C", "kp": "细节理解", "exp": "The old school has become a beautiful library。"},
+            {"n": 35, "stem": "What does the writer mainly want to tell us?", "options": ["Life in the village is boring.", "Old people can't learn new things.", "Great changes have taken place in people's lives.", "Smartphones are bad for old people."], "answer": "C", "kp": "主旨大意", "exp": "全文对比奶奶五十年前和现在的生活，以及村子的新变化。B 与奶奶学会用手机矛盾。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "Welcome to Our School",
+      "passage": "Dear Kevin,\nWelcome to our school! I know you (36) (use) to live in a big city, so a small town may be new to you. Don't worry. I'm sure you'll get used to (37) (live) here soon.\nHere is some information you may need. If you want to know (38) ______ the library is, just go along the main road and you will find it (39) ______ the left. It's on the second floor of the new building. The dining hall is (40) (close) to the playground than the library.\nOur teachers are all very kind. If you have any problems, you can ask them (41) ______ help. Don't be afraid of (42) (make) mistakes.\nBy the way, could you tell me (43) ______ you like playing basketball? Our team needs new players! We practice (44) (two) a week, on Tuesday and Friday afternoons.\nI'm looking forward to (45) (meet) you.\nYours,\nLi Hua",
+      "items": [
+        {"n": 36, "answer": "used", "hint": "use", "kp": "used to", "exp": "used to do 过去常常，“你以前住在大城市”。"},
+        {"n": 37, "answer": "living", "hint": "live", "kp": "used to", "exp": "get used to doing 习惯于做某事。"},
+        {"n": 38, "answer": "where", "kp": "宾语从句", "exp": "想知道图书馆“在哪里”，用 where 引导宾语从句。"},
+        {"n": 39, "answer": "on", "kp": "介词", "exp": "on the left 在左边。"},
+        {"n": 40, "answer": "closer", "hint": "close", "kp": "比较级", "exp": "后面有 than，用比较级 closer。"},
+        {"n": 41, "answer": "for", "kp": "固定搭配", "exp": "ask sb. for help 向某人求助。"},
+        {"n": 42, "answer": "making", "hint": "make", "kp": "非谓语动词", "exp": "be afraid of doing sth.，介词后接动名词。"},
+        {"n": 43, "answer": "if / whether", "kp": "宾语从句", "exp": "问“是否喜欢打篮球”，用 if 或 whether。"},
+        {"n": 44, "answer": "twice", "hint": "two", "kp": "数词", "exp": "一周两次 twice a week。"},
+        {"n": 45, "answer": "meeting", "hint": "meet", "kp": "非谓语动词", "exp": "look forward to doing sth.，to 是介词。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "学校英语报开设“Changes in My Life”栏目。请以此为题写一篇短文：1. 过去的你是什么样（外貌、性格、爱好等）；2. 现在有哪些变化；3. 变化的原因或你的感受。要求：80 词左右，文中不得出现真实姓名和校名。",
+      "points": [["写出过去的情况", 3], ["写出现在的变化（至少两方面）", 5], ["写出变化的原因或感受", 3], ["语言正确（used to、时态），书写规范", 4]],
+      "sample": "Changes in My Life\nI have changed a lot in the past three years.\nI used to be short and thin, but now I'm much taller and stronger, because I play basketball every day. I used to be shy and I didn't dare to talk in class. Now I'm more outgoing. I often answer questions and I even joined the English club. I used to spend a lot of time playing computer games. Now I'm used to reading books before bed.\nI think these changes came from my teachers' help and my own hard work. I'm happy that I have become a better me.",
+      "exp": "写完检查：used to＋动词原形（过去是），be used to＋doing（习惯于），两个不要混；过去用一般过去时，现在用一般现在时，前后对比要清楚。"
+    }
+  ]
+}

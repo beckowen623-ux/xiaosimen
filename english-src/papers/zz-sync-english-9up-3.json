@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-9up-3",
+  "sync": true,
+  "stage": "9-up",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "九上英语同步章节卷 · 发明与规则",
+  "label": "发明创造 · 规则与要求（被动语态、be allowed to）",
+  "unit": "九上·发明创造 / 规则与要求",
+  "order": 3,
+  "source": "九年级上学期“发明创造”“规则与要求”话题：被动语态（一般现在时、一般过去时、含情态动词的被动 should be allowed to、现在完成时被动拓展）、be used for / be used to do、be allowed to do、must / mustn't / needn't、be strict with、agree with。作者结合备考经验，按九年级单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "Paper ______ by the Chinese about 2,000 years ago.", "options": ["was invented", "invents", "is invented", "invented"], "answer": "A", "kp": "被动语态", "exp": "纸“被发明”，用被动；about 2,000 years ago 是过去，用一般过去时被动 was invented。"},
+        {"n": 2, "stem": "English ______ in many countries around the world.", "options": ["speaks", "is speaking", "is spoken", "spoke"], "answer": "C", "kp": "被动语态", "exp": "英语“被说”，陈述现在的事实用一般现在时被动 is spoken。"},
+        {"n": 3, "stem": "I think teenagers should ______ to make their own decisions.", "options": ["be allowed", "allow", "allowed", "allowing"], "answer": "A", "kp": "被动语态", "exp": "含情态动词的被动：should be done。青少年“被允许”做决定。"},
+        {"n": 4, "stem": "—What is this machine ______?\n—It's used for cleaning floors.", "options": ["used to", "used for", "use for", "using"], "answer": "B", "kp": "被动语态", "exp": "be used for doing 被用来做……，问句和答语对应。"},
+        {"n": 5, "stem": "The bridge ______ last year. It's very beautiful.", "options": ["builds", "is built", "built", "was built"], "answer": "D", "kp": "被动语态", "exp": "桥“被建造”，last year 用一般过去时被动 was built。"},
+        {"n": 6, "stem": "Students ______ use their phones in class. It's against the school rules.", "options": ["must", "can", "need", "mustn't"], "answer": "D", "kp": "情态动词", "exp": "违反校规，表示“禁止”用 mustn't。"},
+        {"n": 7, "stem": "—Must I finish the work today?\n—No, you ______. You can finish it tomorrow.", "options": ["mustn't", "can't", "needn't", "shouldn't"], "answer": "C", "kp": "情态动词", "exp": "Must ...? 的否定回答用 needn't 或 don't have to（不必）。mustn't 是“禁止”。"},
+        {"n": 8, "stem": "Many trees ______ on the hill every spring.", "options": ["plant", "are planted", "planted", "planting"], "answer": "B", "kp": "被动语态", "exp": "树“被种”，every spring 表经常性，用一般现在时被动 are planted。"},
+        {"n": 9, "stem": "According to an old Chinese story, tea ______ first ______ by Shen Nong.", "options": ["was; discovered", "is; discovered", "was; discover", "were; discovered"], "answer": "A", "kp": "被动语态", "exp": "茶“被发现”，过去的事用 was＋过去分词；tea 不可数，用 was。"},
+        {"n": 10, "stem": "I'm not allowed ______ out late on school nights.", "options": ["stay", "staying", "stayed", "to stay"], "answer": "D", "kp": "动词不定式", "exp": "be allowed to do sth. 被允许做某事。"},
+        {"n": 11, "stem": "My parents are strict ______ me, but I know they care about me.", "options": ["at", "with", "in", "for"], "answer": "B", "kp": "固定搭配", "exp": "be strict with sb. 对某人要求严格；be strict in sth. 对某事严格。"},
+        {"n": 12, "stem": "The telephone ______ by Bell in 1876.", "options": ["invented", "is invented", "was invented", "invents"], "answer": "C", "kp": "被动语态", "exp": "in 1876 是过去，电话“被发明”，用 was invented。坑点：看到 by Bell 就要想到被动。"},
+        {"n": 13, "stem": "—I think students should be allowed to choose their own clothes for school trips.\n—I ______ you. They will feel more comfortable.", "options": ["agree with", "agree to", "disagree with", "am strict with"], "answer": "A", "kp": "动词短语", "exp": "后一句支持对方观点，agree with sb. 同意某人。agree to 后接建议、计划，不接人。"},
+        {"n": 14, "stem": "The book is so popular that it ______ into more than 20 languages.", "options": ["has translated", "has been translated", "translates", "is translating"], "answer": "B", "kp": "被动语态", "exp": "书“被翻译”，强调到现在的结果，用现在完成时被动 has been translated。A、C、D 都是主动。"},
+        {"n": 15, "stem": "—Could you tell me ______ potato chips were invented?\n—By accident, I think.", "options": ["when", "where", "how", "why"], "answer": "C", "kp": "宾语从句", "exp": "答语 By accident（偶然地）说明的是方式，用 how。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "An Invention by Accident",
+      "passage": "Do you know that the popsicle (冰棍) was invented by an 11-year-old boy?\nOne winter evening in 1905, Frank Epperson was making a drink with water and soda powder. He used a wooden stick to (16) it. Then he went to bed but (17) to bring the drink inside. That night it was very (18). The next morning, Frank found that the drink had frozen with the stick (19) in it. He pulled it out and tasted it. It was delicious!\nFrank (20) his friends try his \"frozen drink\". They all loved it. Many years (21), he decided to sell it. He called it the \"Epsicle\", but his children (22) called it \"Pop's 'sicle\" (\"Pop\" means \"Dad\"). Soon the name was (23) to \"popsicle\".\nToday, millions of popsicles are (24) every year. Frank's story shows that great inventions sometimes happen (25) accident.",
+      "items": [
+        {"n": 16, "options": ["cut", "wash", "break", "mix"], "answer": "D", "kp": "上下文", "exp": "做饮料时用木棍“搅拌”：mix。"},
+        {"n": 17, "options": ["remembered", "forgot", "tried", "decided"], "answer": "B", "kp": "上下文", "exp": "饮料留在了屋外过夜才会结冰，说明忘了拿进屋：forgot to do。"},
+        {"n": 18, "options": ["hot", "warm", "cold", "wet"], "answer": "C", "kp": "上下文", "exp": "冬天的晚上很冷，饮料才冻住。"},
+        {"n": 19, "options": ["never", "hardly", "still", "already"], "answer": "C", "kp": "上下文", "exp": "木棍“仍然”插在里面，所以能拿着棍子拔出来。"},
+        {"n": 20, "options": ["made", "asked", "told", "wanted"], "answer": "A", "kp": "动词用法", "exp": "make sb. do sth. 让某人做某事，后接动词原形 try。asked / told / wanted 后都要接 to do。"},
+        {"n": 21, "options": ["ago", "before", "later", "since"], "answer": "C", "kp": "上下文", "exp": "多年以后才决定卖：many years later。"},
+        {"n": 22, "options": ["never", "always", "hardly", "seldom"], "answer": "B", "kp": "上下文", "exp": "后文这个叫法流传开，变成了 popsicle，说明孩子们总这么叫。"},
+        {"n": 23, "options": ["changed", "added", "turned", "given"], "answer": "A", "kp": "被动语态", "exp": "名字“被改成”popsicle：be changed to。"},
+        {"n": 24, "options": ["invented", "thrown", "built", "eaten"], "answer": "D", "kp": "被动语态", "exp": "每年有几百万根冰棍“被吃掉”，are eaten。"},
+        {"n": 25, "options": ["on", "by", "in", "with"], "answer": "B", "kp": "固定搭配", "exp": "by accident 偶然地，呼应题目和全文。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Rules for the School Library",
+          "passage": "1. The library is open from 7:30 a.m. to 5:30 p.m., Monday to Friday. It is closed on weekends.\n2. Students are allowed to borrow three books at a time. Books must be returned within two weeks.\n3. If you return a book late, you have to pay 0.5 yuan a day.\n4. Eating and drinking are not allowed in the library. You can drink water in the hallway.\n5. Please keep quiet. Phones must be turned off or set to silent.\n6. If you lose or damage a book, you must buy a new one or pay for it.",
+          "items": [
+            {"n": 26, "stem": "When can students use the library?", "options": ["On Saturday morning.", "On Wednesday at 4:00 p.m.", "On Sunday afternoon.", "On Friday at 6:00 p.m."], "answer": "B", "kp": "细节理解", "exp": "周一到周五 7:30–17:30 开放，周末关闭。周五 18:00 已经闭馆。"},
+            {"n": 27, "stem": "How many books can a student borrow at a time?", "options": ["Two.", "Five.", "Three.", "Four."], "answer": "C", "kp": "细节理解", "exp": "borrow three books at a time。"},
+            {"n": 28, "stem": "Tom returned a book five days late. How much should he pay?", "options": ["0.5 yuan.", "2.5 yuan.", "5 yuan.", "1 yuan."], "answer": "B", "kp": "推理判断", "exp": "每天 0.5 元，5 天：0.5×5＝2.5（元）。"},
+            {"n": 29, "stem": "Which of the following is allowed in the library?", "options": ["Eating snacks.", "Talking loudly on the phone.", "Reading quietly.", "Drinking juice."], "answer": "C", "kp": "推理判断", "exp": "禁止吃喝、要保持安静，只有安静看书是允许的。"},
+            {"n": 30, "stem": "What should you do if you damage a book?", "options": ["Pay for it or buy a new one.", "Hide it.", "Return it two weeks later.", "Give it to a friend."], "answer": "A", "kp": "细节理解", "exp": "第 6 条：you must buy a new one or pay for it。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Should Teenagers Be Allowed to Have Part-time Jobs?",
+          "passage": "Linda, 16: I think so. I work in a bookstore on Saturdays. I've learned how to talk with customers, and I'm saving money for college. The job has made me more confident.\nMr. Brown, a teacher: I don't agree. Teenagers have lots of homework. If they work after school, they'll be too tired to study. School should come first.\nDavid, 15: I'm not allowed to work during the school term, but my parents let me help at my uncle's restaurant in the summer holiday. I think that's a good idea, because it doesn't take time away from my studies.\nMrs. Smith, a mother: It depends. A part-time job can teach kids the value of money. But parents should make sure the job is safe and that their child doesn't work too many hours.",
+          "items": [
+            {"n": 31, "stem": "Where does Linda work?", "options": ["In a restaurant.", "In a bookstore.", "In a school.", "In a hospital."], "answer": "B", "kp": "细节理解", "exp": "I work in a bookstore on Saturdays。"},
+            {"n": 32, "stem": "What has Linda learned from her job?", "options": ["How to talk with customers.", "How to cook.", "How to teach.", "How to drive."], "answer": "A", "kp": "细节理解", "exp": "I've learned how to talk with customers。"},
+            {"n": 33, "stem": "Why does Mr. Brown disagree?", "options": ["Because jobs are dangerous.", "Because teenagers can't earn much money.", "Because working may make students too tired to study.", "Because there are no jobs for teenagers."], "answer": "C", "kp": "细节理解", "exp": "If they work after school, they'll be too tired to study。"},
+            {"n": 34, "stem": "When does David work?", "options": ["On Saturdays.", "After school every day.", "During the summer holiday.", "Never."], "answer": "C", "kp": "细节理解", "exp": "上学期间不允许，暑假在叔叔的餐馆帮忙。"},
+            {"n": 35, "stem": "Who thinks \"it depends\"?", "options": ["Linda.", "Mr. Brown.", "David.", "Mrs. Smith."], "answer": "D", "kp": "细节理解", "exp": "Mrs. Smith 说 It depends，既说了好处也提了条件。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "The Discovery of Tea",
+      "passage": "Tea is one of the most popular drinks in the world. But do you know how it (36) (discover)? According to an old Chinese story, tea was first drunk by Shen Nong thousands of years ago.\nOne day, Shen Nong was boiling drinking water over an open fire. Some leaves from a tea plant (37) (fall) into the water. They stayed there for some time and produced a nice smell. Shen Nong was (38) (interest) in it, so he tasted the drink. He found it (39) (taste) and fresh.\nLater, tea was brought (40) ______ other countries, such as Korea and Japan. In the 17th century it was taken to Europe. Today, tea (41) (enjoy) by people all over the world.\nTea is not only a drink, but (42) ______ a part of Chinese culture. Many tea houses (43) (build) in China, where people can chat and relax. Tea art is also (44) (wide) taught in schools.\nIf you have the chance, why not try (45) (make) a cup of tea yourself?",
+      "items": [
+        {"n": 36, "answer": "was discovered", "hint": "discover", "kp": "被动语态", "exp": "茶“被发现”，讲的是古代的事，用一般过去时被动。宾语从句陈述语序：how it was discovered。"},
+        {"n": 37, "answer": "fell", "hint": "fall", "kp": "一般过去时", "exp": "叶子落进水里，主动，过去时 fell（fall 的不规则变化）。"},
+        {"n": 38, "answer": "interested", "hint": "interest", "kp": "词性转换", "exp": "be interested in 对……感兴趣，人的感受用 -ed。"},
+        {"n": 39, "answer": "tasty", "hint": "taste", "kp": "词性转换", "exp": "find it＋形容词，和 fresh 并列，用形容词 tasty 好喝的。"},
+        {"n": 40, "answer": "to", "kp": "介词", "exp": "be brought to some place 被带到某地。"},
+        {"n": 41, "answer": "is enjoyed", "hint": "enjoy", "kp": "被动语态", "exp": "茶“被享用”，Today 说现在的情况，用一般现在时被动。"},
+        {"n": 42, "answer": "also", "kp": "固定搭配", "exp": "not only ..., but also ... 不仅……而且……。"},
+        {"n": 43, "answer": "have been built / are built", "hint": "build", "kp": "被动语态", "exp": "茶馆“被建造”，用被动。have been built 强调已经建了很多；are built 说明常有新建，两种都可以。"},
+        {"n": 44, "answer": "widely", "hint": "wide", "kp": "词性转换", "exp": "修饰动词 taught 用副词 widely 广泛地。"},
+        {"n": 45, "answer": "making / to make", "hint": "make", "kp": "非谓语动词", "exp": "try doing 尝试做；try to do 努力去做。这里两种都说得通。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "学校正在讨论“Should students be allowed to bring mobile phones to school?”。请写一篇短文发表你的看法：1. 你的观点；2. 至少两条理由；3. 如果允许（或不允许），你有什么建议。要求：80 词左右，文中不得出现真实姓名和校名。",
+      "points": [["观点明确", 3], ["写出至少两条理由", 5], ["提出合理建议", 3], ["语言正确（be allowed to、被动语态、情态动词），书写规范", 4]],
+      "sample": "In my opinion, students shouldn't be allowed to bring mobile phones to school.\nFirst, phones are easily used for playing games and chatting. If students use them in class, they can't pay attention to their teachers. Second, staring at the screen for a long time is bad for our eyes. Third, some students may compare their phones with others, which is not good.\nHowever, some students need to call their parents after school. So I think phones should be handed in to the teacher in the morning and given back after school. In this way, students can study better and still keep in touch with their parents.",
+      "exp": "写完检查：被动语态 be＋过去分词（be allowed / be used / be handed in）；情态动词后的被动 should be done；理由用 First / Second / Third 分条，观点前后一致。"
+    }
+  ]
+}
