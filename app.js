@@ -1602,6 +1602,7 @@ async function buildAnalysis() {
         : rate >= 50 ? '基础已经有了，先把薄弱章节的解析看懂，再用“按章节练”每天练 10 题。'
         : '先别急着刷新题：把做错的题解析逐题看懂，从最薄弱的一章开始，一章一章补。';
       return `<div class="analysis-row"><p><b>${esc(label(k))}</b> · 做了 ${s.n} 题 · 正确率 ${rate}%</p>
+        ${meter(rate, 100, `${label(k)}正确率 ${rate}%`, `analysis-meter ${rate >= 85 ? 'is-good' : rate >= 60 ? 'is-mid' : 'is-low'}`)}
         ${weak.length ? `<p class="analysis-weak">需要加强：${weak.map(([n, r, c]) => (unitPool || []).some(q => q.subject === k && q.unit === n)
           ? `<button type="button" class="analysis-go" data-go-subject="${esc(k)}" data-go-unit="${esc(n)}">${esc(n)}（${r}%，${c} 题）去补 →</button>`
           : `${esc(n)}（${r}%，${c} 题）`).join('；')}</p>` : ''}
@@ -1613,6 +1614,8 @@ async function buildAnalysis() {
   }
   const box = byId('analysisOut');
   if (box) box.innerHTML = state.analysisHTML;
+  const btn = byId('analysisBtn');
+  if (btn) btn.textContent = '重新分析';
   wireAnalysis();
 }
 function wireAnalysis() {
@@ -2317,8 +2320,14 @@ function renderFigure(q) {
   });
   wrap.replaceChildren(btn);
 }
+const REVIEW_MODES = new Set(['wrong', 'due', 'everWrong', 'favorite', 'retry']);
 function questionStats(progress) {
   if (state.mode === 'clearWrong') return `已订正 ${state.clearTotal - state.clearPending.size} / ${state.clearTotal} 道`;
+  // 错题本、到期复习、曾错题、收藏、重练错题：队列里全是以前做错 / 做过的题，按历史算会一进来就显示“正确率 0%”，改成只算这一次
+  if (REVIEW_MODES.has(state.mode)) {
+    const done = [...state.session.values()];
+    return done.length ? `这次已做 ${done.length} 道 · 做对 ${done.filter(r => r.correct).length} 道` : '';
+  }
   const attempted = state.queue.map(q => qProgress(progress, q.id)).filter(hasAnswered);
   if (!attempted.length) return '';
   return `本组已做 ${attempted.length} 道 · 正确率 ${Math.round(attempted.filter(r => r.correct).length / attempted.length * 100)}%`;
