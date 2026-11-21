@@ -2078,7 +2078,8 @@ function jumpToGoTarget() {
   if (!['earlybird', 'xsc', 'sync'].includes(go)) return;
   state.earlybirdJumped = true;
   if (go === 'xsc' && !state.xscOpen) { state.xscOpen = true; renderHome(); }
-  byId(go)?.scrollIntoView({ behavior: 'smooth' });
+  // 不用 smooth：滚动动画进行中首页会再画一次（免费额度状态回来），动画会被打断，停在顶部
+  byId(go)?.scrollIntoView({ block: 'start' });
 }
 // 轻首页：小四门题库（几 MB）还没下完时，先把学期、早鸟卷、同步卷画出来，家长不用干等
 function renderLiteHome() {
