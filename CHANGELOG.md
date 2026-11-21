@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 同步章节卷：八下物理 5 章（main）
+- 新增 `zz-sync-physics-8down-1..5.json`：力与运动和力、压强、浮力、功和机械能、简单机械。同步章节卷共 35 套（数学 24、物理 11）。
+- 验证：build 通过、`node tests/validate.mjs` 通过。
+
 ## 2026-11-21 · Claude Code · 同步章节卷：八上物理 6 章（main）
 - 新增 `zz-sync-physics-8up-1..6.json`：机械运动、声现象、物态变化、光现象、透镜及其应用、质量与密度（unit 与精编卷物理章节名一致，按章节练里合并）。同步章节卷卡片在八上出现“数学／物理”切换。
 - 验证：build 通过、`node tests/validate.mjs` 通过。

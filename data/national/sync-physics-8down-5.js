@@ -1,0 +1,832 @@
+// 由 tools/build_english.mjs 生成，源文件 english-src/papers/zz-sync-physics-8down-5.json，请勿手改。
+window.NATIONAL_PAPERS = window.NATIONAL_PAPERS || {};
+window.NATIONAL_PAPERS["sync-physics-8down-5"] = [
+ {
+  "id": "national-sync-physics-8down-5-q01",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 1,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 1 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "羊角锤"
+   },
+   {
+    "key": "B",
+    "text": "镊子"
+   },
+   {
+    "key": "C",
+    "text": "钢丝钳"
+   },
+   {
+    "key": "D",
+    "text": "开瓶器"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "镊子的动力臂小于阻力臂，是费力杠杆，但省距离。其他三个都是省力杠杆。",
+  "kp": "杠杆的分类",
+  "stem": "下列工具在正常使用时，属于费力杠杆的是（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q02",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 2,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 2 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "省力"
+   },
+   {
+    "key": "B",
+    "text": "省距离"
+   },
+   {
+    "key": "C",
+    "text": "省功"
+   },
+   {
+    "key": "D",
+    "text": "改变力的方向"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "定滑轮实质是等臂杠杆，不省力也不省距离，但能改变力的方向。任何机械都不省功。",
+  "kp": "动滑轮",
+  "stem": "使用定滑轮的好处是（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q03",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 3,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 3 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "机械效率越高，做功越快"
+   },
+   {
+    "key": "B",
+    "text": "机械效率越高，做的有用功越多"
+   },
+   {
+    "key": "C",
+    "text": "使用任何机械都不能省功"
+   },
+   {
+    "key": "D",
+    "text": "机械效率可以达到 100%"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "机械效率是有用功占总功的比例，与做功快慢、做功多少无关；有额外功，机械效率总小于 100%。",
+  "kp": "机械效率",
+  "stem": "关于机械效率，下列说法正确的是（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q04",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 4,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 4 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "50 N"
+   },
+   {
+    "key": "B",
+    "text": "100 N"
+   },
+   {
+    "key": "C",
+    "text": "200 N"
+   },
+   {
+    "key": "D",
+    "text": "25 N"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "动滑轮由两段绳子承担物重，F＝G/2＝50 N，但要多移动一倍的距离。",
+  "kp": "动滑轮",
+  "stem": "用一个动滑轮匀速提起重 100 N 的物体（不计绳重、摩擦和滑轮重），拉力为（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q05",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 5,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 5 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "300 N"
+   },
+   {
+    "key": "B",
+    "text": "100 N"
+   },
+   {
+    "key": "C",
+    "text": "900 N"
+   },
+   {
+    "key": "D",
+    "text": "150 N"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "F₁L₁＝F₂L₂，F₁＝300÷3＝100 N。",
+  "kp": "杠杆平衡条件",
+  "stem": "杠杆平衡时，动力臂是阻力臂的 3 倍，阻力为 300 N，则动力为（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q06",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 6,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 6 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "增加物体提升的高度"
+   },
+   {
+    "key": "B",
+    "text": "增加动滑轮的个数"
+   },
+   {
+    "key": "C",
+    "text": "加快提升物体的速度"
+   },
+   {
+    "key": "D",
+    "text": "增加被提升物体的重力"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "额外功基本不变时，增大物重能增大有用功的比例。提升高度、速度不影响效率；增加动滑轮会增大额外功，效率降低。",
+  "kp": "滑轮组的机械效率",
+  "stem": "用同一个滑轮组提升重物时，下列方法能提高机械效率的是（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q07",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 7,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 7 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "40%"
+   },
+   {
+    "key": "B",
+    "text": "75%"
+   },
+   {
+    "key": "C",
+    "text": "80%"
+   },
+   {
+    "key": "D",
+    "text": "90%"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "W有＝Gh＝1200 J，W总＝Fs＝1500 J，η＝1200÷1500＝80%。",
+  "kp": "滑轮组的机械效率",
+  "stem": "用一个滑轮组把重 600 N 的物体匀速提升 2 m，拉力为 250 N，绳子自由端移动了 6 m，滑轮组的机械效率为（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q08",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 8,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 8 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "使用斜面可以省力"
+   },
+   {
+    "key": "B",
+    "text": "斜面越长越费力"
+   },
+   {
+    "key": "C",
+    "text": "使用斜面可以省功"
+   },
+   {
+    "key": "D",
+    "text": "盘山公路修得弯弯曲曲是为了省距离"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "斜面是省力机械，高度一定时斜面越长越省力；盘山公路是增大斜面长度来省力，费了距离；任何机械都不省功。",
+  "kp": "斜面的机械效率",
+  "stem": "关于斜面，下列说法正确的是（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q09",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 9,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 9 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "把支点向石头靠近"
+   },
+   {
+    "key": "B",
+    "text": "把支点远离石头"
+   },
+   {
+    "key": "C",
+    "text": "让用力方向与硬棒不垂直"
+   },
+   {
+    "key": "D",
+    "text": "手握在硬棒中间用力"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "支点靠近石头，阻力臂变短，动力臂变长，更省力。",
+  "kp": "杠杆平衡条件",
+  "stem": "用一根硬棒撬动大石头，若想更省力，应该（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q10",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 10,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 10 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "1 m"
+   },
+   {
+    "key": "B",
+    "text": "2 m"
+   },
+   {
+    "key": "C",
+    "text": "3 m"
+   },
+   {
+    "key": "D",
+    "text": "4 m"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "s＝nh＝3×1＝3 m。",
+  "kp": "动滑轮",
+  "stem": "用滑轮组提升重物，承担物重的绳子有 3 段，物体上升 1 m 时，绳子自由端移动的距离为（ ）",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q11",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 11,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 11 题",
+  "type": "blank",
+  "stem": "第 11 题：杠杆的平衡条件是________（用字母表示）。",
+  "blanks": [
+   [
+    "F1L1=F2L2",
+    "F₁L₁=F₂L₂",
+    "动力×动力臂=阻力×阻力臂"
+   ]
+  ],
+  "answer": [
+   "F1L1=F2L2"
+  ],
+  "explanation": "动力×动力臂＝阻力×阻力臂。",
+  "kp": "杠杆平衡条件",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q12",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 12,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 12 题",
+  "type": "blank",
+  "stem": "第 12 题：一根杠杆的动力臂为 0.6 m，阻力臂为 0.2 m，阻力为 90 N，杠杆平衡时动力为________N。",
+  "blanks": [
+   [
+    "30"
+   ]
+  ],
+  "answer": [
+   "30"
+  ],
+  "explanation": "F₁＝90×0.2÷0.6＝30 N。",
+  "kp": "杠杆平衡条件",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q13",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 13,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 13 题",
+  "type": "blank",
+  "stem": "第 13 题：用一个动滑轮把重 200 N 的物体提升 3 m，绳子自由端移动________m。",
+  "blanks": [
+   [
+    "6"
+   ]
+  ],
+  "answer": [
+   "6"
+  ],
+  "explanation": "动滑轮 n＝2，s＝2h＝6 m。",
+  "kp": "动滑轮",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q14",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 14,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 14 题",
+  "type": "blank",
+  "stem": "第 14 题：某机械做的有用功为 800 J，总功为 1000 J，它的机械效率为________。",
+  "blanks": [
+   [
+    "80%",
+    "0.8"
+   ]
+  ],
+  "answer": [
+   "80%"
+  ],
+  "explanation": "η＝800÷1000＝80%。",
+  "kp": "机械效率",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q15",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 15,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 15 题",
+  "type": "blank",
+  "stem": "第 15 题：用 125 N 的拉力沿长 5 m、高 1 m 的斜面，把重 400 N 的物体从底端匀速拉到顶端，斜面的机械效率为________。",
+  "blanks": [
+   [
+    "64%",
+    "0.64"
+   ]
+  ],
+  "answer": [
+   "64%"
+  ],
+  "explanation": "W有＝Gh＝400 J，W总＝Fs＝625 J，η＝400÷625＝64%。",
+  "kp": "斜面的机械效率",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q16",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 16,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 16 题",
+  "type": "blank",
+  "stem": "第 16 题：使用简单机械时，省力必然________距离（填“省”或“费”）。",
+  "blanks": [
+   [
+    "费"
+   ]
+  ],
+  "answer": [
+   "费"
+  ],
+  "explanation": "省力的机械必然费距离，省距离的机械必然费力，任何机械都不省功。",
+  "kp": "杠杆的分类",
+  "paperScore": 3,
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q17",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 17,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 17 题",
+  "type": "essay",
+  "material": "",
+  "stem": "（1）用筷子夹菜、用羊角锤拔钉子，分别属于哪类杠杆？各有什么特点？\n（2）剪铁皮的剪刀为什么把手长、刀口短？",
+  "points": [
+   {
+    "text": "（1）筷子是费力杠杆，费力但省距离",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "羊角锤是省力杠杆，省力但费距离",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）把手长、刀口短，动力臂大于阻力臂，是省力杠杆",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "铁皮硬，需要较大的力，省力杠杆可以用较小的力剪断",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "（1）筷子的动力臂小于阻力臂，是费力杠杆，费力但手移动很小的距离，筷子尖就能移动较大的距离，省距离；羊角锤拔钉子时动力臂大于阻力臂，是省力杠杆，省力但费距离。\n（2）剪铁皮需要很大的力，把手长、刀口短使动力臂远大于阻力臂，是省力杠杆，用较小的力就能剪断铁皮。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "杠杆的分类",
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q18",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 18,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 18 题",
+  "type": "essay",
+  "material": "",
+  "stem": "在“探究杠杆的平衡条件”实验中：\n（1）实验前，杠杆左端下沉，应把平衡螺母向哪边调节？\n（2）为什么要让杠杆在水平位置平衡？\n（3）实验数据：①动力 2 N，动力臂 0.1 m，阻力 1 N，阻力臂 0.2 m；②动力 1 N，动力臂 0.3 m，阻力 3 N，阻力臂 0.1 m；③动力 3 N，动力臂 0.2 m，阻力 2 N，阻力臂 0.3 m。由此得出什么结论？\n（4）只做一次实验就得出结论，行不行？为什么？",
+  "points": [
+   {
+    "text": "（1）向右调节平衡螺母",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）便于直接从杠杆上读出力臂（同时消除杠杆自重的影响）",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）动力×动力臂＝阻力×阻力臂（F₁L₁＝F₂L₂）",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（4）不行，一次实验具有偶然性，多次实验才能得出普遍规律",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "（1）左端下沉说明左边重，平衡螺母应向右（较高的一端）调节。\n（2）杠杆在水平位置平衡时，钩码的拉力竖直向下，与杠杆垂直，力臂就等于支点到悬挂点的距离，可以直接从杠杆上读出；同时使杠杆重心在支点上，消除自重影响。\n（3）三组数据都满足 2×0.1＝1×0.2，1×0.3＝3×0.1，3×0.2＝2×0.3，所以杠杆平衡条件是 F₁L₁＝F₂L₂。\n（4）不行，一次实验的结果有偶然性，要改变力和力臂多做几次，得出的结论才具有普遍性。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "杠杆平衡条件",
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q19",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 19,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 19 题",
+  "type": "essay",
+  "material": "",
+  "stem": "一根长 1.2 m 的扁担（自重不计），前端挂重 300 N 的货物，后端挂重 200 N 的货物，挑担人要使扁担在水平位置平衡。\n（1）肩膀应放在距扁担前端多远处？\n（2）肩膀受到的压力是多少？",
+  "points": [
+   {
+    "text": "（1）设肩膀到前端距离为 x，300 N·x＝200 N·(1.2 m－x)",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "x＝0.48 m",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）肩膀受到的压力等于两边货物的总重 500 N",
+    "score": 4,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "（1）肩膀是支点。设肩膀到前端的距离为 x，到后端的距离为 1.2－x。由杠杆平衡条件：300x＝200(1.2－x)，500x＝240，x＝0.48 m。\n（2）扁担受两边货物向下的拉力和肩膀向上的支持力平衡，支持力为 300＋200＝500（N），所以肩膀受到的压力为 500 N。\n规律：支点靠近重的一端。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "杠杆平衡条件",
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q20",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 20,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 20 题",
+  "type": "essay",
+  "material": "",
+  "stem": "用一个由一个定滑轮和一个动滑轮组成的滑轮组（承担物重的绳子有 3 段）匀速提升重 480 N 的物体，物体在 10 s 内上升了 2 m，绳子自由端的拉力为 200 N（不计绳重和摩擦）。\n（1）拉力做的有用功是多少？\n（2）拉力的功率是多少？\n（3）滑轮组的机械效率是多少？\n（4）动滑轮重多少？\n（5）若用这个滑轮组匀速提升重 780 N 的物体，拉力为多大？",
+  "points": [
+   {
+    "text": "（1）W有＝Gh＝480 N×2 m＝960 J",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）s＝3h＝6 m，W总＝Fs＝1200 J，P＝1200 J÷10 s＝120 W",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）η＝960÷1200＝80%",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（4）G动＝3F－G＝3×200 N－480 N＝120 N",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（5）F′＝(780 N＋120 N)÷3＝300 N",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）W有＝Gh＝480×2＝960（J）。\n（2）s＝nh＝3×2＝6（m），W总＝Fs＝200×6＝1200（J），P＝W总/t＝1200÷10＝120（W）。\n（3）η＝W有/W总＝960÷1200＝80%。\n（4）不计绳重和摩擦，F＝(G＋G动)/n，G动＝3×200－480＝120（N）。\n（5）F′＝(780＋120)÷3＝300（N）。此时效率 η′＝780÷900≈86.7%，比原来高，说明增大物重可以提高机械效率。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "滑轮组综合计算",
+  "unit": "八下·简单机械"
+ },
+ {
+  "id": "national-sync-physics-8down-5-q21",
+  "national": true,
+  "subject": "physics",
+  "subjectLabel": "物理",
+  "paperId": "sync-physics-8down-5",
+  "number": 21,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "八下物理同步章节卷 · 简单机械",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "八下物理同步章节卷 · 简单机械 第 21 题",
+  "type": "essay",
+  "material": "",
+  "stem": "工人用 400 N 的拉力，沿长 4 m、高 1.5 m 的斜面，把重 800 N 的货物从底端匀速拉到顶端，用时 20 s。\n（1）工人做的有用功是多少？\n（2）工人做的总功和功率各是多少？\n（3）斜面的机械效率是多少？\n（4）货物受到的摩擦力是多少？",
+  "points": [
+   {
+    "text": "（1）W有＝Gh＝800 N×1.5 m＝1200 J",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）W总＝Fs＝400 N×4 m＝1600 J，P＝1600 J÷20 s＝80 W",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）η＝1200÷1600＝75%",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（4）W额＝400 J，f＝W额/s＝400 J÷4 m＝100 N",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）W有＝Gh＝800×1.5＝1200（J）。\n（2）W总＝Fs＝400×4＝1600（J），P＝1600÷20＝80（W）。\n（3）η＝1200÷1600＝75%。\n（4）额外功是克服摩擦做的功：W额＝1600－1200＝400（J），f＝W额/s＝400÷4＝100（N）。\n坑点：以为摩擦力等于拉力 400 N。斜面上匀速拉动时，拉力不等于摩擦力，要用额外功来求。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "斜面的机械效率",
+  "unit": "八下·简单机械"
+ }
+];

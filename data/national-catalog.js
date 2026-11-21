@@ -1901,6 +1901,116 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-physics-8down-1",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·运动和力",
+      "order": 1,
+      "label": "力、运动和力",
+      "title": "八下物理同步章节卷 · 力、运动和力",
+      "source": "考查范围：人教版八年级下册“力”“运动和力”两章（力的作用效果与三要素、弹力和弹簧测力计、重力、牛顿第一定律与惯性、二力平衡、摩擦力），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8down-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-8down-2",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·压强",
+      "order": 2,
+      "label": "压强",
+      "title": "八下物理同步章节卷 · 压强",
+      "source": "考查范围：人教版八年级下册“压强”一章（压力和压强、增大和减小压强、液体压强及计算、连通器、大气压强与托里拆利实验、流体压强与流速的关系），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8down-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-8down-3",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·浮力",
+      "order": 3,
+      "label": "浮力",
+      "title": "八下物理同步章节卷 · 浮力",
+      "source": "考查范围：人教版八年级下册“浮力”一章（浮力的产生、称重法、阿基米德原理、物体的浮沉条件及应用、轮船潜水艇密度计、浮力与密度综合计算），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8down-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-8down-4",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·功和机械能",
+      "order": 4,
+      "label": "功和机械能",
+      "title": "八下物理同步章节卷 · 功和机械能",
+      "source": "考查范围：人教版八年级下册“功和机械能”一章（做功的两个必要因素、功和功率的计算、P＝Fv、动能和势能、机械能及其转化），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8down-4.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-8down-5",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·简单机械",
+      "order": 5,
+      "label": "简单机械",
+      "title": "八下物理同步章节卷 · 简单机械",
+      "source": "考查范围：人教版八年级下册“简单机械”一章（杠杆及平衡条件、杠杆的分类、定滑轮动滑轮与滑轮组、斜面、机械效率及计算），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8down-5.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "sync-physics-8up-1",
       "subject": "physics",
       "subjectLabel": "物理",
