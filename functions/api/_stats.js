@@ -15,6 +15,8 @@ export const TRACK_EVENTS = new Set([
   "earlybird_75",
   "xsc_done",
   "xsc_75",
+  "earlybird_print",
+  "xsc_print",
 ]);
 
 export function normalizeSource(value) {

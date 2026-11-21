@@ -78,7 +78,9 @@ function build(paper) {
       }
     } else if (t === "解答题") {
       for (const item of section.items) {
-        out.push({ ...base(item.n, t), type: "essay", meta: "解答题", material: "", stem: item.stem,
+        // 语文卷的名著、作文、语言运用题按真卷叫法分大题（打印时分别成题，不叫“解答题”）
+        const label = (paper.subject === "chinese" && { 名著阅读: "名著阅读", 作文: "写作", 语言运用: "语言运用" }[String(item.stem).match(/^（([^）]+)）/)?.[1]]) || t;
+        out.push({ ...base(item.n, label), type: "essay", meta: label, material: "", stem: item.stem,
           points: item.points.map(([text, score]) => ({ text, score, keys: [] })), score: item.points.reduce((s, [, v]) => s + v, 0),
           sample: item.answer, method: item.method || "先写已知和所求，再列式计算，每一步写清依据，最后写结论。", answer: [], explanation: item.exp,
           kp: item.kp || "", ...(item.image ? { image: item.image } : {}) });

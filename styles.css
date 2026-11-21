@@ -604,3 +604,11 @@ input[type=search]::placeholder { color: #67736c; }
 
 .xsc-card summary { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; cursor: pointer; }
 .xsc-card > p { margin: 8px 0; line-height: 1.6; }
+
+/* 早鸟卷、小升初卷：做法切换、纸上登记 */
+.eb-modes { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 2px; }
+.eb-modes-label { align-self: center; color: #78716c; font-size: .85rem; }
+.eb-mode-tip { margin: 4px 0 0; font-size: .85rem; }
+.eb-score { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 8px 0; font-size: .9rem; }
+.eb-score input { width: 96px; min-height: 40px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 10px; font-size: 1rem; }
+.eb-mark-box:empty { display: none; }

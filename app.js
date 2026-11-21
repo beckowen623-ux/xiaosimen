@@ -1169,6 +1169,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '早鸟自测卷、小升初衔接卷可以打印整套了：题目和答案页分开，每大题标好分值，限时免费，不占免费打印次数。孩子在纸上做完，回来填总分、点出错题号，错题同样进错题本按 1、3、7、14 天提醒复习，学情分析也会算进去。'],
   ['2026-11-20', '新增八下早鸟自测卷：语文、数学、英语、物理、道法、历史、地理、生物各一套。至此七上到九下六个学期的早鸟自测卷全部上线，首页选学期即可，限时免费。'],
   ['2026-11-20', '新增八上早鸟自测卷：语文、数学、英语、物理、道法、历史、地理、生物各一套，考到八年级上册，按期末考试题型编写，难度略高，限时免费。'],
   ['2026-11-20', '新增七下早鸟自测卷：语文、数学、英语、道法、历史、地理、生物各一套，考到七年级下册，按期末考试题型编写，难度略高，限时免费。'],
@@ -1355,29 +1356,49 @@ function weeklyCardHTML(progress) {
   </section>`;
 }
 function paperFromQuestions(title, questions, note = '') {
-  const order = [];
-  const bySection = new Map();
+  // 整套卷（同一 paperId）按题号顺序分大题，同名大题不合并，保证卷面题号和原卷一致；混合组卷仍按题型归类。
+  const wholePaper = questions.length > 1 && questions.every(q => q.paperId && q.paperId === questions[0].paperId);
+  const sections = [];
+  const printedBodies = new Map(); // 同一篇阅读材料只印一次，后面的题注明“见前文”
   let lastMaterial = '';
   for (const q of questions) {
     const name = q.section || TYPE_LABEL[q.type] || '练习';
-    if (!bySection.has(name)) { bySection.set(name, []); order.push(name); }
-    const passage = q.materialHtml && q.materialHtml !== lastMaterial ? htmlToText(q.materialHtml) : (q.material && q.type !== 'essay' ? q.material : '');
+    let section = wholePaper ? (sections.at(-1)?.name === name ? sections.at(-1) : null) : sections.find(s => s.name === name);
+    if (!section) { section = { name, items: [], qs: [] }; sections.push(section); }
+    let passage = '';
+    if (q.materialHtml && q.materialHtml !== lastMaterial) {
+      const body = q.materialHtml.replace(/<p class="reading-title">[\s\S]*?<\/p>/, '');
+      const head = (q.materialHtml.match(/<p class="reading-title">([\s\S]*?)<\/p>/)?.[1] || '').split(' · ').pop().trim().replace(/（[^（）]*）$/, '');
+      if (printedBodies.has(body)) passage = `（阅读材料见前文${printedBodies.get(body) ? `《${printedBodies.get(body)}》` : ''}）`;
+      else { passage = htmlToText(q.materialHtml); printedBodies.set(body, htmlToText(head)); }
+    } else if (q.material && q.type !== 'essay') passage = q.material;
     lastMaterial = q.materialHtml || lastMaterial;
     const tag = q.claude ? '变式题' : (q.source || '').match(/20\d\d/) ? (q.source || '').slice(0, 24) : '';
     let item;
     if (q.type === 'single' || q.type === 'multiple') {
       item = { type: 'choice', multi: q.type === 'multiple', tag, stem: q.stem, options: q.options.map(o => ({ key: o.key, text: o.text })), answer: q.answer.join(''), explanation: q.explanation || '', source: q.source || '' };
     } else if (q.type === 'blank') {
-      item = { type: 'blank', stem: q.stem, answer: q.answer, explanation: q.explanation || '' };
+      // 打印时题号由卷面自动编，去掉题干里重复的“第 n 题：”（“第 n 空”对应短文里的空号，保留）
+      item = { type: 'blank', stem: String(q.stem || '').replace(/^第 \d+ 题：/, ''), answer: q.answer, explanation: q.explanation || '' };
     } else {
-      item = { type: 'essay', kind: q.meta || q.section, tag, material: q.material || '', stem: q.stem, score: q.score, points: (q.points || []).map(p => ({ text: p.text, score: p.score })), sample: q.sample, explanation: q.explanation || '', source: q.source || '' };
+      const kind = q.earlybird ? q.section : (q.meta || q.section);
+      item = { type: 'essay', kind, tag, material: q.material || '', stem: q.stem, score: q.score, points: (q.points || []).map(p => ({ text: p.text, score: p.score })), sample: q.sample, explanation: q.explanation || '', source: q.source || '' };
     }
     if (passage) item.passage = passage;
     if (q.image) item.image = typeof q.image === 'string' ? q.image : `./data/figures/${encodeURIComponent(q.id)}.jpg`;
-    bySection.get(name).push(item);
+    section.items.push(item);
+    section.qs.push(q);
   }
-  const nums = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
-  return { id: `print-${title}`, title, sections: order.map((name, i) => ({ title: `${nums[i] || i + 1}、${name}`, note, items: bySection.get(name) })), count: questions.length };
+  const nums = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'];
+  // 早鸟卷、小升初卷按真实试卷写明每大题分值
+  const scoreNote = qs => {
+    if (!qs.every(q => q.earlybird)) return note;
+    const objective = qs.filter(q => q.type !== 'essay');
+    const total = Math.round(qs.reduce((s, q) => s + (q.type === 'essay' ? q.score || 0 : q.paperScore || 0), 0) * 10) / 10;
+    const each = objective.length === qs.length && new Set(objective.map(q => q.paperScore)).size === 1 ? objective[0].paperScore : 0;
+    return each ? `每题 ${each} 分，共 ${total} 分` : `共 ${total} 分`;
+  };
+  return { id: `print-${title}`, title, sections: sections.map((s, i) => ({ title: `${nums[i] || i + 1}、${s.name}`, note: scoreNote(s.qs), items: s.items })), count: questions.length };
 }
 function printQuestions(title, questions) {
   if (!questions.length) { toast('暂时没有可打印的题。'); return; }
@@ -1557,10 +1578,80 @@ function xscCardHTML() {
     <summary><b>🎒 小升初衔接 · 按七年级上册章节</b><span>限时免费 · 六年级暑假、初一开学前用</span></summary>
     <p class="muted">语文、数学、英语按初一上册的章节，每章一套练习，题型和题干按初中考试标准出，难度贴近初一期中期末。每题有解析，做完出分。</p>
     <div class="weekly-chips" role="group" aria-label="选择科目">${XSC_SUBJECTS.map(([k, l]) => `<button type="button" class="drill-chip" data-xsc-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('')}</div>
+    ${ebModesHTML()}
     ${papers.length ? `<div class="unit-list">${papers.map(p => `<button type="button" class="btn unit-btn" data-earlybird="${p.id}"><b>${esc(p.unit || p.title)}</b><small>${done[p.id] != null ? `上次 ${done[p.id]} 分` : `${p.questionCount} 题 · 100 分`}</small></button>`).join('')}</div>` : '<p class="muted">这一科的衔接练习正在编写，很快上线。</p>'}
+    <div class="eb-mark-box" id="xscMark"></div>
   </details>`;
 }
 
+// 早鸟卷、小升初卷三种做法：手机上做 / 打印整卷 / 纸上做完回来登记（家长多数让孩子在纸上做）
+const EB_MODES = [['phone', '📱 手机上做'], ['print', '🖨 打印整卷'], ['mark', '✍️ 纸上做完，登记']];
+const EB_MODE_TIP = {
+  phone: '先选做法，再点科目。手机上做：客观题自动判分，主观题对照得分点自评。',
+  print: '点科目生成整套卷：题目和答案页分开，每大题标好分值。限时免费，不占免费打印次数。',
+  mark: '纸上做完后点科目：填上对照答案页算出的总分，再点出做错的题号。错题进错题本按时复习，学情分析也会算进去。',
+};
+function ebModesHTML() {
+  const mode = state.ebMode || 'phone';
+  return `<div class="eb-modes" role="group" aria-label="选择做法"><span class="eb-modes-label">怎么做：</span>${EB_MODES.map(([k, l]) => `<button type="button" class="drill-chip" data-eb-mode="${k}" aria-pressed="${mode === k}">${l}</button>`).join('')}</div>
+    <p class="muted eb-mode-tip">${EB_MODE_TIP[mode]}</p>`;
+}
+function setEbMode(mode) {
+  state.ebMode = EB_MODE_TIP[mode] ? mode : 'phone';
+  document.querySelectorAll('[data-eb-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.ebMode === state.ebMode)));
+  document.querySelectorAll('.eb-mode-tip').forEach(p => { p.textContent = EB_MODE_TIP[state.ebMode]; });
+  document.querySelectorAll('.eb-mark-box').forEach(box => { box.innerHTML = ''; });
+}
+async function earlybirdAction(id, boxId) {
+  const mode = state.ebMode || 'phone';
+  if (mode === 'phone') { await startEarlybird(id); return; }
+  try {
+    const all = [...await window.NationalExams.loadPaper(id)].sort((a, b) => a.number - b.number);
+    if (!all.length) throw new Error('这套卷暂时加载不了，请稍后再试。');
+    const paper = (nationalCatalog || []).find(p => p.id === id) || { id, title: '早鸟自测卷' };
+    if (mode === 'print') {
+      printQuestions(`${paper.title}（满分 100 分）`, all);
+      trackVisit(paper.stage === 'xsc' ? 'xsc_print' : 'earlybird_print');
+    } else showEarlybirdMark(paper, all, boxId);
+  } catch (error) { toast(error.message || '加载失败，请重试。'); }
+}
+function showEarlybirdMark(paper, list, boxId) {
+  const box = byId(boxId);
+  if (!box) return;
+  const wrong = new Set();
+  const full = q => (q.type === 'essay' ? q.score || 0 : q.paperScore || 0);
+  box.innerHTML = `<div class="weekly-mark">
+    <p><b>${esc(paper.title)}</b> · 纸上做完，登记成绩</p>
+    <label class="eb-score">总分（对照答案页算出来的，可以不填）<input type="number" id="${boxId}Score" min="0" max="100" step="0.5" inputmode="decimal" placeholder="0～100"></label>
+    <p class="muted">再点出做错、或主观题没拿满分的题号（没点的算做对）：</p>
+    <div class="weekly-grid">${list.map((q, i) => `<button type="button" class="weekly-num" data-i="${i}" aria-pressed="false" aria-label="第 ${q.number} 题">${q.number}</button>`).join('')}</div>
+    <div class="weekly-actions"><button class="btn primary" type="button" data-eb-save>登记</button><button class="btn" type="button" data-eb-cancel>取消</button></div>
+  </div>`;
+  box.querySelectorAll('.weekly-num').forEach(button => button.addEventListener('click', () => {
+    const i = Number(button.dataset.i);
+    if (wrong.has(i)) wrong.delete(i); else wrong.add(i);
+    button.setAttribute('aria-pressed', String(wrong.has(i)));
+  }));
+  box.querySelector('[data-eb-cancel]').addEventListener('click', () => { box.innerHTML = ''; });
+  box.querySelector('[data-eb-save]').addEventListener('click', () => {
+    const typed = parseFloat(byId(`${boxId}Score`)?.value);
+    const estimated = !(typed >= 0 && typed <= 100);
+    const score = estimated ? Math.round(list.reduce((s, q, i) => s + (wrong.has(i) ? 0 : full(q)), 0) * 10) / 10 : typed;
+    const saved = persist(() => { list.forEach((q, i) => recordAnswer(q, wrong.has(i) ? [] : (q.answer || []), !wrong.has(i), { mode: 'earlybird' })); return true; });
+    if (!saved) return;
+    const first = loadEarlybirdScores()[paper.id] == null;
+    saveEarlybirdScore(paper.id, score);
+    const isXsc = paper.stage === 'xsc';
+    if (first) { trackVisit(isXsc ? 'xsc_done' : 'earlybird_done'); if (score >= 75) trackVisit(isXsc ? 'xsc_75' : 'earlybird_75'); }
+    const [head, body] = earlybirdVerdict(score, paper);
+    box.innerHTML = `<div class="weekly-mark"><p><b>${score} 分${estimated ? '（按错题号估算）' : ''} · ${esc(head)}</b></p>
+      <p class="earlybird-verdict">${esc(body)}</p>
+      <p class="muted">${wrong.size ? `错的 ${wrong.size} 题已进错题本，明天开始按 1、3、7、14 天提醒复习；学情分析也已算进去。` : '全对，已登记！'}</p></div>`;
+    const small = document.querySelector(`[data-earlybird="${paper.id}"] small`);
+    if (small) small.textContent = `上次 ${score} 分`;
+  });
+  box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
 function earlybirdPapers() {
   return (nationalCatalog || []).filter(p => p.earlybird && (p.stage || '9-down') === state.stage).sort((a, b) => EARLYBIRD_ORDER.indexOf(a.subject) - EARLYBIRD_ORDER.indexOf(b.subject));
 }
@@ -1575,7 +1666,9 @@ function earlybirdCardHTML() {
     <h2 id="earlybirdTitle">${esc(STAGE_SHORT[state.stage])} 早鸟自测卷：看看孩子现在的真实水平</h2>
     <p>${state.stage === '9-down' ? '中考全范围，九科各一套' : '只考到这个学期为止学过的内容，各科一套'}，${isNinth() ? '按中考题型和题干长度出题，难度比中考略高一点' : '按期末考试题型和题干长度出题，难度比期末考试略高一点'}。客观题自动判分，主观题对照得分点自评，做完出百分制总分，每道题都有解析。</p>
     <p class="earlybird-tip">分数不是目的：找到会的、找到漏的，后面的复习就有方向了。</p>
+    ${ebModesHTML()}
     <div class="earlybird-grid">${papers.map(p => `<button class="btn" type="button" data-earlybird="${p.id}"><b>${esc(EARLYBIRD_LABEL[p.subject] || p.subjectLabel)}</b><small>${done[p.id] != null ? `上次 ${done[p.id]} 分` : `${p.questionCount} 题`}</small></button>`).join('')}</div>
+    <div class="eb-mark-box" id="ebMark"></div>
   </section>`;
 }
 function loadEarlybirdScores() {
@@ -1836,7 +1929,8 @@ function wireHome() {
   view.querySelectorAll('[data-unit]').forEach(b => b.addEventListener('click', () => { void startUnit(b.dataset.unit); }));
   byId('analysisBtn')?.addEventListener('click', () => { void buildAnalysis(); });
   view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); renderHome(); requestAnimationFrame(() => byId('stageBarTitle')?.scrollIntoView({ block: 'start' })); }));
-  view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void startEarlybird(b.dataset.earlybird); }));
+  view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void earlybirdAction(b.dataset.earlybird, b.closest('#xsc') ? 'xscMark' : 'ebMark'); }));
+  view.querySelectorAll('[data-eb-mode]').forEach(b => b.addEventListener('click', () => setEbMode(b.dataset.ebMode)));
   byId('stageSelect')?.addEventListener('change', event => {
     state.stage = event.target.value;
     persist(() => {
