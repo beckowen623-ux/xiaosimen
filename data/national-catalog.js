@@ -1373,6 +1373,72 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-chemistry-9up-1",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "第一单元·走进化学世界",
+      "order": 1,
+      "label": "走进化学世界",
+      "title": "九上化学同步章节卷 · 走进化学世界",
+      "source": "考查范围：人教版九年级上册“走进化学世界”单元（物理变化和化学变化、物理性质和化学性质、蜡烛燃烧与呼出气体的探究、常用仪器与基本实验操作），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9up-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-chemistry-9up-2",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "第二单元·空气和氧气",
+      "order": 2,
+      "label": "空气和氧气",
+      "title": "九上化学同步章节卷 · 空气和氧气",
+      "source": "考查范围：人教版九年级上册“空气和氧气”单元（空气的成分与测定氧气含量、纯净物与混合物、空气污染与保护、氧气的性质、氧气的实验室制取、催化剂、化合反应与分解反应），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9up-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-chemistry-9up-3",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "第三单元·物质构成的奥秘",
+      "order": 3,
+      "label": "物质构成的奥秘",
+      "title": "九上化学同步章节卷 · 物质构成的奥秘",
+      "source": "考查范围：人教版九年级上册“物质构成的奥秘”单元（分子和原子、原子结构、相对原子质量、离子、元素与元素符号、元素周期表），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9up-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "sync-math-7down-1",
       "subject": "math",
       "subjectLabel": "数学",
