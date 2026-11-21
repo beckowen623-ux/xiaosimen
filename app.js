@@ -2700,7 +2700,8 @@ function renderChoice(q) {
 function renderBlank(q) {
   const progress = loadProgress();
   // 题干里的空用 4 个及以上下划线表示（全国卷、同步卷、小升初卷用 8 个），连续的下划线只算一个空
-  const parts = q.stem.split(/_{4,}/);
+  // 试卷题干开头的“第 11 题：”是给打印用的，手机上已经有“第 11 / 21 题”，去掉不重复
+  const parts = (q.national ? q.stem.replace(/^第\s*\d+\s*题[：:]\s*/, '') : q.stem).split(/_{4,}/);
   const width = (alts = ['']) => Math.min(14, Math.max(4, ...alts.map(a => a.length + 2)));
   const stemHTML = parts.map((part, i) => esc(part) + (i < parts.length - 1
     ? `<span class="blank-slot"><span class="blank-no" aria-hidden="true">${i + 1}</span><input class="blank-input" data-blank="${i}" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="${i < parts.length - 2 ? 'next' : 'done'}" aria-label="第 ${i + 1} 空" style="--w:${width(q.blanks[i])}em"></span>`
