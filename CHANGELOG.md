@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 同步章节卷：八下数学 5 章（main）
+- 新增 `zz-sync-math-8down-1..5.json`：二次根式、勾股定理、平行四边形、一次函数、数据的分析。同步章节卷数学共 18 套（七下待补）。
+- 验证：build 通过、`node tests/validate.mjs` 通过。
+
 ## 2026-11-21 · Claude Code · 同步章节卷：九下数学 3 章（main）
 - 新增 `zz-sync-math-9down-1..3.json`：反比例函数、相似、锐角三角函数（投影与视图需要三视图配图，暂不出）。同步章节卷数学共 13 套。
 - 验证：build 通过、`node tests/validate.mjs` 通过。

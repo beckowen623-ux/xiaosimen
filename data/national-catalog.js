@@ -1373,6 +1373,116 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-math-8down-1",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·二次根式",
+      "order": 1,
+      "label": "二次根式",
+      "title": "八下数学同步章节卷 · 二次根式",
+      "source": "考查范围：人教版八年级下册“二次根式”一章（有意义的条件、√(a²)＝|a|、乘除、化简、加减与混合运算、整体代入），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-8down-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-8down-2",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·勾股定理",
+      "order": 2,
+      "label": "勾股定理",
+      "title": "八下数学同步章节卷 · 勾股定理",
+      "source": "考查范围：人教版八年级下册“勾股定理”一章（勾股定理、逆定理、勾股数、实际问题、折叠与最短路径），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-8down-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-8down-3",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·平行四边形",
+      "order": 3,
+      "label": "平行四边形",
+      "title": "八下数学同步章节卷 · 平行四边形",
+      "source": "考查范围：人教版八年级下册“平行四边形”一章（平行四边形、矩形、菱形、正方形的性质与判定，三角形中位线，直角三角形斜边中线，动点问题），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-8down-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-8down-4",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·一次函数",
+      "order": 4,
+      "label": "一次函数",
+      "title": "八下数学同步章节卷 · 一次函数",
+      "source": "考查范围：人教版八年级下册“一次函数”一章（函数概念、正比例函数、一次函数的图象与性质、平移、待定系数法、与方程不等式的关系、方案选择与行程问题），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-8down-4.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-8down-5",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-down",
+      "unit": "八下·数据的分析",
+      "order": 5,
+      "label": "数据的分析",
+      "title": "八下数学同步章节卷 · 数据的分析",
+      "source": "考查范围：人教版八年级下册“数据的分析”一章（平均数与加权平均数、中位数、众数、方差及其意义、用样本估计总体），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-8down-5.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "sync-math-8up-1",
       "subject": "math",
       "subjectLabel": "数学",
