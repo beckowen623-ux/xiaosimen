@@ -1174,6 +1174,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '新增“🎁 题库可以免费拿”说明：按 14.9 买下，再邀 3 位朋友用好友价买，返现 15 元，等于白用还多 1 毛；也可以不要返现，换考证题库完整版。'],
   ['2026-11-21', '首页整理得更清爽：介绍缩短，小升初衔接只在七上显示，同步章节卷每章一行，打印练习卷、全题库找题收成可展开的一行（顶部“找题”会自动展开），首页从十几张大卡片精简了约四分之一的长度。'],
   ['2026-11-21', '整卷加计时：手机上做整套早鸟卷、同步章节卷、精编模拟卷、小升初卷时，可以点“开始计时”按考试时长倒计时（同步卷 90 分钟，早鸟卷、精编卷按科目），能暂停，超时变红，做完在总结里显示一共用了多久。只做前 5 题体验时不计时。'],
   ['2026-11-21', '首页打开更快：网络慢的时候，先显示学期、早鸟自测卷和同步章节卷，可以直接开始做；按章节练、错题本、小四门等内容随后加载出来。'],
@@ -1722,6 +1723,19 @@ function syncPapers(stage = state.stage) {
   return (nationalCatalog || []).filter(p => p.sync && p.stage === stage).sort((a, b) => (a.order || 0) - (b.order || 0));
 }
 // 同步章节卷每套做了多少：题目 id 是 national-<paperId>-qNN
+// “题库可以免费拿”：14.9 买 → 邀 3 位朋友也买 → 返现 15 元（规则见 functions/_referrals.js，套餐不参加）
+function freeWayHTML() {
+  if (paidAccess) return '';
+  return `<details class="card fold-row free-way" data-free-way ${state.freeWayOpen ? 'open' : ''}>
+      <summary><b>🎁 题库可以免费拿</b><span>14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元，等于白用，还多 1 毛 ›</span></summary>
+      <ol>
+        <li><b>先按 14.9 买：</b>点“完整版 19.9”，选分享价，把专属链接发到家长群，3 位朋友点开就能按 14.9 买；点朋友邀请链接进来的，直接买好友价 14.9。</li>
+        <li><b>买完你也有邀请链接：</b>解锁后首页会出现你的专属邀请链接和二维码海报。朋友点你的链接，按好友价 14.9 买，比原价省 5 元，他也划算。</li>
+        <li><b>邀满 3 位，返现 15 元：</b>作者确认后 24 小时内打到你的微信或支付宝，题库等于免费用。不要返现的，也可以换考证题库完整版。邀到第 1 位就先解锁冲刺卷。</li>
+      </ol>
+      <p class="free-note">朋友用你的邀请码兑换题库才算邀请成功；双题库套餐不参加邀请奖励。</p>
+    </details>`;
+}
 function syncPaperProgress(paperId, progress) {
   const prefix = `national-${paperId}-q`;
   let done = 0, right = 0;
@@ -2018,6 +2032,7 @@ function renderHome(focus = '') {
     ${unitCardHTML()}
     ${analysisCardHTML()}
     ${accessNotice}
+    ${freeWayHTML()}
     ${weeklyCardHTML(progress)}
     <div id="subjectSections">${subjectSectionsHTML()}</div>
     ${x4mGroupHTML(queue, progress)}
@@ -3122,3 +3137,9 @@ document.addEventListener('click', event => {
   trackVisit('demo_video');
 });
 byId('demoDialog').addEventListener('close', () => byId('demoVideo').pause());
+// “免费拿”展开：记住状态，每天记一次
+document.addEventListener('toggle', event => {
+  if (!event.target.matches?.('[data-free-way]')) return;
+  if (event.target.closest('#view')) state.freeWayOpen = event.target.open;
+  if (event.target.open && !sessionStorage.getItem('fw')) { try { sessionStorage.setItem('fw', '1'); } catch {} trackVisit('free_way_open_x4m'); }
+}, true);

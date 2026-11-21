@@ -19,6 +19,7 @@ export const TRACK_EVENTS = new Set([
   "eb_rx",
   "x4m_timer_start",
   "x4m_timer_done",
+  "free_way_open_x4m",
   "xsc_print",
 ]);
 

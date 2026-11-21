@@ -670,3 +670,15 @@ input[type=search]::placeholder { color: #67736c; }
 .referral-fold { margin-top: 10px; }
 .referral-fold > summary { color: var(--muted); font-size: 14px; cursor: pointer; }
 .referral-fold[open] > summary { margin-bottom: 6px; }
+
+/* 题库可以免费拿 */
+.free-way { border: 1px solid var(--gold); background: #fffaf0; border-radius: 12px; padding: 12px 14px; }
+.free-way > summary { display: grid; gap: 3px; cursor: pointer; list-style: none; }
+.free-way > summary::-webkit-details-marker { display: none; }
+.free-way > summary b { color: var(--gold-ink); font-size: 16px; }
+.free-way > summary span { color: var(--ink); font-size: 14px; line-height: 1.5; text-align: left; }
+.free-way ol { margin: 8px 0 0; padding-left: 1.3em; display: grid; gap: 6px; font-size: 14px; line-height: 1.6; }
+.free-way ol b { color: var(--gold-ink); }
+.free-note { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+#unlockDialog .free-way { margin: 10px 0; }
+#view .free-way { margin-bottom: 14px; }
