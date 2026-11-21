@@ -5,15 +5,16 @@ import {Background, Badge, Box, Caption, FONT, Phone, fade} from './kit';
 
 const GREEN = '#145843';
 const B = boxes as unknown as Record<string, Record<string, Box>>;
-export const ZHONGKAO_FRAMES = 1170;
+export const ZHONGKAO_FRAMES = 1290;
 
 const captions = [
-  {from: 105, to: 255, step: '第 1 步', title: '先测：按学期\n早鸟自测卷', sub: '七上到九下，各科一套，做完出百分制总分'},
-  {from: 255, to: 390, step: '第 2 步', title: '哪里弱，按章节补', sub: '每道题标了教材章节，能直接搜“浮力”“二次函数”'},
-  {from: 390, to: 510, step: '小升初', title: '语数英按七上章节\n提前衔接', sub: '六年级暑假就能用，限时免费'},
-  {from: 510, to: 660, step: '第 3 步', title: '每周一卷，打印纸上做', sub: '做完点出错的题号，10 秒登记进错题本'},
-  {from: 660, to: 810, step: '第 4 步', title: '错题自动排进复习', sub: '第 1、3、7、14 天提醒，重做到会为止（完整版）'},
-  {from: 810, to: 960, step: '第 5 步', title: '学情分析\n找出最该补的章节', sub: '按科目、章节统计正确率，给出复习建议'},
+  {from: 105, to: 255, step: '第 1 步', title: '先测：按学期\n早鸟自测卷', sub: '各科一套，手机做或打印整卷，做完出百分制总分'},
+  {from: 255, to: 375, step: '第 2 步', title: '同步章节卷\n一章一套补弱项', sub: '跟着课本章节出题，对标期中期末，带坑点解析'},
+  {from: 375, to: 510, step: '第 3 步', title: '哪里弱，按章节专项练', sub: '每道题标了教材章节，能直接搜“浮力”“二次函数”'},
+  {from: 510, to: 630, step: '小升初', title: '语数英按七上章节\n提前衔接', sub: '六年级暑假就能用，限时免费'},
+  {from: 630, to: 780, step: '第 4 步', title: '每周一卷，打印纸上做', sub: '做完点出错的题号，10 秒登记进错题本'},
+  {from: 780, to: 930, step: '第 5 步', title: '错题自动排进复习', sub: '第 1、3、7、14 天提醒，重做到会为止（完整版）'},
+  {from: 930, to: 1080, step: '第 6 步', title: '学情分析\n找出最该补的章节', sub: '按科目、章节统计正确率，给出复习建议'},
 ];
 
 const Hook: React.FC = () => {
@@ -37,8 +38,8 @@ const Hook: React.FC = () => {
 const Cta: React.FC = () => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const s0 = 960;
-  const lines = ['早鸟自测卷 · 小升初衔接 限时免费', '各地中考原卷 免费看 · 免费打印', '完整版 19.9 一次买断'];
+  const s0 = 1080;
+  const lines = ['早鸟自测卷 · 小升初衔接 限时免费', '同步章节卷 一章一套 · 前 5 题免费试', '各地中考原卷 免费看 · 免费打印', '完整版 19.9 一次买断'];
   const logo = spring({frame: f - s0, fps, config: {damping: 13}});
   return (
     <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center', paddingTop: 170, opacity: fade(f, s0, s0 + 10)}}>
@@ -50,7 +51,7 @@ const Cta: React.FC = () => {
         {lines.map((t, i) => {
           const p = spring({frame: f - s0 - 18 - i * 12, fps, config: {damping: 15}});
           return (
-            <div key={t} style={{background: '#fffefa', border: '3px solid #dedfd6', borderRadius: 28, padding: '24px 40px', fontSize: 44, fontWeight: 900, color: i === 2 ? GREEN : '#1c2924', opacity: p, transform: `translateX(${(1 - p) * 80}px)`}}>
+            <div key={t} style={{background: '#fffefa', border: '3px solid #dedfd6', borderRadius: 28, padding: '24px 40px', fontSize: 44, fontWeight: 900, color: i === lines.length - 1 ? GREEN : '#1c2924', opacity: p, transform: `translateX(${(1 - p) * 80}px)`}}>
               ✅ {t}
             </div>
           );
@@ -66,43 +67,47 @@ const Cta: React.FC = () => {
 export const Zhongkao: React.FC = () => {
   const f = useCurrentFrame();
   const cap = captions.find(c => f >= c.from && f < c.to);
-  const phoneOut = 1 - fade(f, 950, 965);
+  const phoneOut = 1 - fade(f, 1070, 1085);
   return (
     <AbsoluteFill>
       <Background color={GREEN} />
-      <Audio loop src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1140, 1170], [0, 0.8, 0.8, 0], {extrapolateRight: 'clamp'})} />
+      <Audio loop src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1260, 1290], [0, 0.8, 0.8, 0], {extrapolateRight: 'clamp'})} />
       {f < 110 ? <Hook /> : null}
       {cap ? <Caption key={cap.from} start={cap.from} step={cap.step} title={cap.title} sub={cap.sub} color={GREEN} /> : null}
-      {f >= 100 && f < 970 ? (
+      {f >= 100 && f < 1090 ? (
         <div style={{opacity: phoneOut}}>
           <Phone
             enterAt={100}
             shots={[
               {src: 'zk/01-stage.png', from: 100},
-              {src: 'zk/02-unit.png', from: 255},
-              {src: 'zk/03-xsc.png', from: 390},
-              {src: 'zk/04-weekly.png', from: 510},
-              {src: 'zk/05-print.png', from: 570},
-              {src: 'zk/06-marked.png', from: 610},
-              {src: 'zk/08-review-hub.png', from: 660},
-              {src: 'zk/09-answered.png', from: 735},
-              {src: 'zk/10-analysis.png', from: 810},
+              {src: 'zk/01b-grid.png', from: 176},
+              {src: 'zk/11-sync.png', from: 255},
+              {src: 'zk/02-unit.png', from: 375},
+              {src: 'zk/03-xsc.png', from: 510},
+              {src: 'zk/04-weekly.png', from: 630},
+              {src: 'zk/05-print.png', from: 690},
+              {src: 'zk/06-marked.png', from: 730},
+              {src: 'zk/08-review-hub.png', from: 780},
+              {src: 'zk/09-answered.png', from: 855},
+              {src: 'zk/10-analysis.png', from: 930},
             ]}
             highlight={[
-              {shot: 'zk/01-stage.png', box: B['01-stage'].chips, from: 125, to: 185},
-              {shot: 'zk/01-stage.png', box: B['01-stage'].grid, from: 190, to: 255},
-              {shot: 'zk/02-unit.png', box: B['02-unit'].list, from: 275, to: 390},
-              {shot: 'zk/03-xsc.png', box: B['03-xsc'].list, from: 410, to: 510},
-              {shot: 'zk/04-weekly.png', box: B['04-weekly'].print, from: 525, to: 570},
-              {shot: 'zk/06-marked.png', box: B['06-marked'].grid, from: 615, to: 660},
-              {shot: 'zk/08-review-hub.png', box: B['08-review-hub'].wrong, from: 680, to: 735},
-              {shot: 'zk/09-answered.png', box: B['09-answered'].fb, from: 750, to: 810},
-              {shot: 'zk/10-analysis.png', box: B['10-analysis'].out, from: 830, to: 950},
+              {shot: 'zk/01-stage.png', box: B['01-stage'].chips, from: 125, to: 175},
+              {shot: 'zk/01b-grid.png', box: B['01b-grid'].modes, from: 180, to: 215},
+              {shot: 'zk/01b-grid.png', box: B['01b-grid'].grid, from: 218, to: 255},
+              {shot: 'zk/11-sync.png', box: B['11-sync'].rows, from: 270, to: 375},
+              {shot: 'zk/02-unit.png', box: B['02-unit'].list, from: 395, to: 510},
+              {shot: 'zk/03-xsc.png', box: B['03-xsc'].list, from: 530, to: 630},
+              {shot: 'zk/04-weekly.png', box: B['04-weekly'].print, from: 645, to: 690},
+              {shot: 'zk/06-marked.png', box: B['06-marked'].grid, from: 735, to: 780},
+              {shot: 'zk/08-review-hub.png', box: B['08-review-hub'].wrong, from: 800, to: 855},
+              {shot: 'zk/09-answered.png', box: B['09-answered'].fb, from: 870, to: 930},
+              {shot: 'zk/10-analysis.png', box: B['10-analysis'].out, from: 950, to: 1070},
             ]}
           />
         </div>
       ) : null}
-      {f >= 955 ? <Cta /> : null}
+      {f >= 1075 ? <Cta /> : null}
     </AbsoluteFill>
   );
 };

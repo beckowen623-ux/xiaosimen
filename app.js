@@ -1356,7 +1356,7 @@ function homeIntroHTML() {
     <p class="muted">紧贴课标和中考考点编写的精编模拟卷，加上全国各地真题整理成能刷的题，每套都由我亲自先做、把关后才上线；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
     <p class="promise-line">有能力、有决心、有诚意：用科学的刷题方法帮孩子把考点真正掌握，中考稳稳提分。</p>
     ${contentStatsHTML()}
-    <button class="btn demo-btn" type="button" data-demo-video>▶ 39 秒看怎么用</button>
+    <button class="btn demo-btn" type="button" data-demo-video>▶ 43 秒看怎么用</button>
   </section>`;
 }
 function weeklyCardHTML(progress) {

@@ -44,7 +44,12 @@ function seed() {
   // 1 学期 + 早鸟卷
   await p.click('[data-stage-pick="9-up"]'); await p.waitForTimeout(500);
   await top(p, '.stage-bar', 40);
-  await shot(p, '01-stage', [['chips', '.stage-chips'], ['grid', '.earlybird-grid']]);
+  await shot(p, '01-stage', [['chips', '.stage-chips'], ['grid', '.earlybird-grid'], ['modes', '#earlybird .eb-modes']]);
+  await top(p, '#earlybird .eb-modes', 160);
+  await shot(p, '01b-grid', [['grid', '.earlybird-grid'], ['modes', '#earlybird .eb-modes']]);
+  // 1.5 同步章节卷（九上数学）
+  await top(p, '#sync', 40);
+  await shot(p, '11-sync', [['rows', '#sync .paper-rows'], ['head', '#syncTitle']]);
   // 2 按章节练（物理）
   await p.click('[data-unit-subject="physics"]'); await p.waitForTimeout(2500);
   await top(p, '#unitCard', 40);
