@@ -1,6 +1,8 @@
-// 分享得 5 元（两个题库共用，文件内容保持一致）。
+// 分享价 14.9（两个题库共用，文件内容保持一致）。
 // 页面里放一个 <div data-share-offer data-price="14.9" data-message="分享文案"></div>，这里会自动挂上组件。
 // 访客带着 ?s=<id> 打开网站时，自动上报一次“打开”，服务器按网络、设备去重并排除分享者本人。
+// 分享价和好友价都是 14.9，二选一、不叠加：点朋友邀请链接进来的访客已经能买好友价，这里只提示，不生成分享验证码。
+// 组件在关着的 <dialog> 里时先不挂，等弹窗打开再挂，免得每个访客一进首页就在服务器上建一条分享记录。
 (() => {
   const DEVICE_KEY = "share-device";
   const ID_RE = /^[A-Z2-9]{8}$/;
@@ -25,6 +27,19 @@
       post("/api/share/open", { s }).then(() => { try { localStorage.setItem("share-opened-" + s, "1"); } catch {} });
     }
   } catch {}
+
+  // 点朋友邀请链接（?invite=ALIX-xxxxxxxx）进来的访客：和 referrals.js 用同一个本机记录（60 天内有效）
+  function invitedCode() {
+    try { const c = window.QuizReferrals?.incoming?.(); if (c) return c; } catch {}
+    const valid = (v) => (/^ALIX-[A-Z0-9]{8}$/.test(v) ? v : "");
+    try {
+      const fromLink = valid((new URLSearchParams(location.search).get("invite") || "").trim().toUpperCase());
+      if (fromLink) return fromLink;
+      const saved = JSON.parse(localStorage.getItem("quiz-invite") || "null");
+      if (saved && Date.now() - saved.at < 60 * 864e5) return valid(saved.code);
+    } catch {}
+    return "";
+  }
 
   // 2. 分享者自己的进度
   let cache = null;
@@ -152,10 +167,23 @@
     return url.href;
   }
 
+  function friendNotice(box, code, price) {
+    box.classList.add("share-offer");
+    const head = el("div", "share-offer-head");
+    head.append(el("strong", "", "你可以直接买好友价"), el("b", "", "¥" + price));
+    box.replaceChildren(head,
+      el("p", "", `你是点朋友的专属邀请链接进来的，可以直接在闲鱼买好友价 ¥${price}（比原价省 5 元），兑换时邀请码 ${code} 会自动带上。`),
+      el("p", "share-offer-tip", `分享价和好友价都是 ¥${price}，只能二选一、不叠加，所以不用再分享。`));
+  }
+
   async function mount(box) {
     if (box.dataset.shareMounted) return;
+    const dialog = box.closest("dialog");
+    if (dialog && !dialog.open) return;
     box.dataset.shareMounted = "1";
     const price = box.dataset.price || "14.9";
+    const invite = invitedCode();
+    if (invite) { friendNotice(box, invite, price); return; }
     const message = box.dataset.message || "";
     box.classList.add("share-offer");
     box.replaceChildren(el("p", "share-offer-loading", "正在生成你的专属分享链接……"));
@@ -171,8 +199,8 @@
     const link = shareLink(data.id);
     const text = (message ? message + "\n" + link : link) + "\n（打不开或很慢的话，换个网络或多试几次就好）";
     const head = el("div", "share-offer-head");
-    head.append(el("strong", "", "分享得 ¥5 优惠"), el("b", "", "¥" + price));
-    const intro = el("p", "", `把下面这段话（带你的专属链接）发到朋友圈、学习群或家长群。有 ${data.required} 位不同的朋友点开链接，就会解锁分享验证码；在闲鱼把验证码发给作者，按 ¥${price} 购买。`);
+    head.append(el("strong", "", "分享价（比原价省 5 元）"), el("b", "", "¥" + price));
+    const intro = el("p", "", `把下面这段话（带你的专属链接）发到朋友圈、学习群或家长群。有 ${data.required} 位不同的朋友点开链接，就会解锁分享验证码；在闲鱼把验证码发给作者，按 ¥${price} 购买。分享价和好友价不叠加，最低就是 ¥${price}。`);
     const pre = el("div", "share-offer-text", text);
     const copyBtn = el("button", "share-offer-btn primary", "复制分享文案");
     copyBtn.type = "button";
@@ -225,7 +253,10 @@
 
   const start = () => {
     scan(document);
-    new MutationObserver((list) => list.forEach((m) => m.addedNodes.forEach((n) => { if (n.nodeType === 1) { if (n.matches?.("[data-share-offer]")) mount(n); scan(n); } }))).observe(document.body, { childList: true, subtree: true });
+    new MutationObserver((list) => list.forEach((m) => {
+      if (m.type === "attributes") { if (m.target.open) scan(m.target); return; }
+      m.addedNodes.forEach((n) => { if (n.nodeType === 1) { if (n.matches?.("[data-share-offer]")) mount(n); scan(n); } });
+    })).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["open"] });
   };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
   window.ShareOffer = { refresh: () => loadMine(true) };

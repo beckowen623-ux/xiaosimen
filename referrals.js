@@ -448,8 +448,8 @@
       // 没取到商品入口时，仍提示邀请码已记住。
     }
     const banner = node("div", "", "friend-banner");
-    banner.append(node("strong", "🎁 朋友邀请你：好友专享价 14.9 元，省 5 元"),
-      node("p", `先免费试用；觉得好再去闲鱼买好友价。买到兑换码后回到这里兑换，邀请码 ${code} 已自动带上。`));
+    banner.append(node("strong", "🎁 朋友邀请你：好友专享价 14.9 元（比原价省 5 元）"),
+      node("p", `先免费试用；觉得好再去闲鱼买好友价。买到兑换码后回到这里兑换，邀请码 ${code} 已自动带上。好友价和分享价不叠加，最低就是 14.9 元。`));
     const actions = node("div", "", "referral-actions");
     const status = node("p", "", "referral-message");
     const buy = link("去闲鱼买好友价", offer.link);
