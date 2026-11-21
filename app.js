@@ -753,6 +753,12 @@ async function loadPurchaseOptions() {
 }
 
 window.addEventListener?.('quiz-sprint-buy', () => openUnlock());
+// 买过的人回来兑换：兑换框在弹窗最底下，顶部给一个直达按钮
+byId('redeemJump')?.addEventListener('click', () => {
+  const input = byId('accessCode');
+  input?.scrollIntoView({ block: 'center' });
+  input?.focus({ preventScroll: true });
+});
 byId('copySeller')?.addEventListener('click', async () => {
   try { await navigator.clipboard.writeText('王者荣耀速度飞车'); redeemMessage.textContent = '已复制，打开闲鱼搜索框粘贴，切换到“用户”就能找到。'; }
   catch { redeemMessage.textContent = '复制失败，请手动输入用户名搜索。'; }

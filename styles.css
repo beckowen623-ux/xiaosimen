@@ -691,3 +691,6 @@ input[type=search]::placeholder { color: #67736c; }
 .analysis-meter.is-good::-moz-progress-bar { background: #2e9d5b; }
 .analysis-meter.is-mid::-moz-progress-bar { background: #d99a1e; }
 .analysis-meter.is-low::-moz-progress-bar { background: #d9466b; }
+
+/* 购买弹窗顶部：直达兑换框 */
+.redeem-jump { display: block; margin: 0 auto 8px; padding: 4px 8px; font-size: 14px; font-weight: 700; color: var(--green, #1f6b4f); }
