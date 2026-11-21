@@ -2,6 +2,13 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 同步章节卷：八下英语 4 套（main）
+- 新增 `zz-sync-english-8down-1..4.json`。人教版 2024 新教材八下单元名已核对：Time to Relax、Stay Healthy、Growing Up、The Wonders of Nature、Nature's Temper、Crossing Cultures、A Good Read、Making a Difference。各单元具体语法分布没查到可靠来源，所以 source 只写话题和八下常考语法（不定式、used to、过去进行时、现在完成时等），不写“某单元学某语法”。
+- 阅读材料里的数据（珠峰 8,848.86 米、长江约 6,300 千米且为世界第三长河、撒哈拉约 900 万平方千米、维多利亚瀑布高约 108 米宽约 1,700 米、鲁滨孙在岛上 28 年等）都是公开常识。
+- 答案字母打散后 8down-4 阅读出现 CDCDCD，手工交换 28、29、35 三题；逐题核对答案文本不变。
+- 更新记录里的 Nature’s Temper 用弯撇号，避免再出现字符串引号问题。同步章节卷共 67 套（英语 12）。
+- 验证：build、`node tests/validate.mjs`（含语法检查）通过。
+
 ## 2026-11-21 · Claude Code · 中考演示视频压缩（main）
 - `assets/video/zhongkao-demo.mp4` 重新编码（H.264 CRF 30、faststart），11.3 MB → 3.5 MB，时长不变（43 秒），画面文字清晰。手机流量下打开更快。
 - `promo-video/src/Kaozheng.tsx`、`capture-kaozheng.cjs` 已加备考计划片段（考证视频 39 秒）。

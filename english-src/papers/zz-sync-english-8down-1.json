@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-8down-1",
+  "sync": true,
+  "stage": "8-down",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "八下英语同步章节卷 · Units 1–2",
+  "label": "Units 1–2 Time to Relax · Stay Healthy",
+  "unit": "八下·Units 1–2 Time to Relax / Stay Healthy",
+  "order": 1,
+  "source": "人教版八年级下册 Unit 1 Time to Relax、Unit 2 Stay Healthy 话题：业余爱好与放松方式、压力与作息、常见身体不适及建议。语言点：动词不定式（decide / remember / try / too ... to / a way to do / It's ... to do）、make / let / help sb. do、should / had better 提建议、看病交际用语。按八年级单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "My father decided ______ fishing to relax this weekend.", "options": ["go", "to go", "going", "goes"], "answer": "B", "kp": "动词不定式", "exp": "decide to do sth. 决定做某事。"},
+        {"n": 2, "stem": "It's important for us ______ a balance between study and rest.", "options": ["to keep", "keep", "keeping", "kept"], "answer": "A", "kp": "动词不定式", "exp": "It's＋形容词＋for sb.＋to do sth.，it 是形式主语，真正的主语是不定式。"},
+        {"n": 3, "stem": "—What's the matter with you?\n—I have a ______. I ate too much junk food last night.", "options": ["sore back", "cold", "stomachache", "broken arm"], "answer": "C", "kp": "词汇", "exp": "吃了太多垃圾食品，胃疼 stomachache。"},
+        {"n": 4, "stem": "You look tired. You ______ go to bed early tonight.", "options": ["shouldn't", "should", "mustn't", "can't"], "answer": "B", "kp": "情态动词", "exp": "提建议用 should（应该）。看起来很累，应该早点睡。"},
+        {"n": 5, "stem": "I don't know ______ to do after the exams. Do you have any ideas?", "options": ["how", "when", "where", "what"], "answer": "D", "kp": "疑问词＋不定式", "exp": "do 后面缺宾语，用 what to do（做什么）。how to do 后面不能再缺宾语。"},
+        {"n": 6, "stem": "Listening to music helps me ______ after a long day.", "options": ["relaxed", "relaxing", "relax", "to relaxing"], "answer": "C", "kp": "动词形式", "exp": "help sb. (to) do sth.，后接动词原形或带 to 的不定式。"},
+        {"n": 7, "stem": "—I hurt my knee when I was playing football.\n—You'd better ______ some ice on it.", "options": ["put", "to put", "puts", "putting"], "answer": "A", "kp": "情态动词", "exp": "had better＋动词原形，“最好做某事”。"},
+        {"n": 8, "stem": "If you feel stressed, why not ______ a walk in the park?", "options": ["took", "taking", "to take", "take"], "answer": "D", "kp": "动词形式", "exp": "Why not do sth.? 提建议，后接动词原形。"},
+        {"n": 9, "stem": "He was too tired ______ anything after the long trip.", "options": ["doing", "do", "to do", "did"], "answer": "C", "kp": "动词不定式", "exp": "too＋形容词＋to do sth.，“太……而不能……”。"},
+        {"n": 10, "stem": "Eating too many sweets is bad for your ______.", "options": ["eyes", "teeth", "ears", "hair"], "answer": "B", "kp": "词汇", "exp": "吃太多糖对牙齿不好。"},
+        {"n": 11, "stem": "Remember ______ the windows when you leave. It's going to rain.", "options": ["to close", "closing", "close", "closed"], "answer": "A", "kp": "动词不定式", "exp": "remember to do sth. 记得要去做某事（还没做）；remember doing sth. 记得做过某事。"},
+        {"n": 12, "stem": "—I've got a headache.\n—______ You should lie down and have a rest.", "options": ["That's great.", "You're welcome.", "Never mind.", "I'm sorry to hear that."], "answer": "D", "kp": "交际用语", "exp": "听到别人不舒服，先表示同情：I'm sorry to hear that。"},
+        {"n": 13, "stem": "Having a hobby is a good way ______ stress.", "options": ["reduce", "to reduce", "reduced", "reducing"], "answer": "B", "kp": "动词不定式", "exp": "a way to do sth. 做某事的方法，不定式作定语。"},
+        {"n": 14, "stem": "The doctor told him ______ up smoking.", "options": ["gave", "give", "giving", "to give"], "answer": "D", "kp": "动词不定式", "exp": "tell sb. to do sth. 告诉某人做某事；give up 放弃。"},
+        {"n": 15, "stem": "Doing yoga always makes me ______ calm and relaxed.", "options": ["feel", "feeling", "to feel", "felt"], "answer": "A", "kp": "动词形式", "exp": "make sb. do sth. 使某人做某事，用动词原形（省略 to 的不定式）。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "Li Ming Learns to Relax",
+      "passage": "Last term, Li Ming felt very stressed. He had too much homework, and he (16) studied until midnight. He often got headaches and couldn't (17) well at night.\nOne day, his mother noticed that he looked (18). She said, \"You need time to relax. Why not try (19) new?\" Li Ming decided to join the school running club.\nAt first, running was hard for him. After only ten minutes, he was out of (20). But he didn't give up. He ran three times a week with his teammates. Slowly, he could run (21) and longer.\nTwo months later, Li Ming found that he was much healthier. He didn't get headaches any (22), and he slept well. Even his grades went up, (23) his mind was clearer.\nNow Li Ming often tells his friends, \"Studying all the time is not the (24) way to learn. Relaxing is (25) important as studying.\"",
+      "items": [
+        {"n": 16, "options": ["never", "seldom", "hardly", "often"], "answer": "D", "kp": "上下文", "exp": "作业太多，经常学到半夜。"},
+        {"n": 17, "options": ["eat", "sleep", "run", "play"], "answer": "B", "kp": "上下文", "exp": "at night 晚上睡不好。"},
+        {"n": 18, "options": ["happy", "excited", "tired", "relaxed"], "answer": "C", "kp": "上下文", "exp": "压力大、睡不好，看起来很累。"},
+        {"n": 19, "options": ["something", "nothing", "everything", "anything"], "answer": "A", "kp": "不定代词", "exp": "表示建议的问句用 something；形容词 new 放在不定代词后面。"},
+        {"n": 20, "options": ["time", "place", "money", "breath"], "answer": "D", "kp": "固定搭配", "exp": "be out of breath 上气不接下气。"},
+        {"n": 21, "options": ["faster", "worse", "slower", "less"], "answer": "A", "kp": "上下文", "exp": "坚持锻炼，跑得越来越快、越来越久。"},
+        {"n": 22, "options": ["longer", "less", "more", "later"], "answer": "C", "kp": "固定搭配", "exp": "not ... any more 不再。"},
+        {"n": 23, "options": ["because", "so", "although", "but"], "answer": "A", "kp": "连词", "exp": "成绩提高的原因是头脑更清醒了，用 because。"},
+        {"n": 24, "options": ["worst", "cheapest", "best", "oldest"], "answer": "C", "kp": "上下文", "exp": "一直学习不是最好的学习方法。"},
+        {"n": 25, "options": ["so", "as", "very", "more"], "answer": "B", "kp": "as ... as", "exp": "as＋原级＋as，放松和学习一样重要。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Relax This Weekend! — Sunshine Community Centre",
+          "passage": "Yoga for Beginners: Saturday 8:00–9:00 a.m., Room 101, ¥30 a class. Please bring your own mat.\nCooking Class (Dumplings): Saturday 2:00–4:00 p.m., Kitchen, ¥50 (food included). For ages 12 and up.\nBoard Games Afternoon: Sunday 1:30–4:30 p.m., Room 203. Free.\nNature Walk: Sunday 7:00–10:00 a.m., meet at the front gate. Free. Wear comfortable shoes and bring water.\nCall 6688-1234 to sign up. Places are limited.",
+          "items": [
+            {"n": 26, "stem": "Which activity is on Saturday morning?", "options": ["Board Games Afternoon.", "Cooking Class.", "Yoga for Beginners.", "Nature Walk."], "answer": "C", "kp": "细节理解", "exp": "Yoga: Saturday 8:00–9:00 a.m.。Nature Walk 在周日早上。"},
+            {"n": 27, "stem": "How much is the cooking class?", "options": ["¥30.", "Free.", "¥80.", "¥50."], "answer": "D", "kp": "细节理解", "exp": "Cooking Class ... ¥50 (food included)。"},
+            {"n": 28, "stem": "What should people bring to the yoga class?", "options": ["Water.", "Food.", "Their own mats.", "Comfortable shoes."], "answer": "C", "kp": "细节理解", "exp": "Please bring your own mat。带水、穿舒服的鞋是徒步的要求。"},
+            {"n": 29, "stem": "Which two activities are free?", "options": ["Yoga and cooking.", "Board games and the nature walk.", "Yoga and the nature walk.", "Cooking and board games."], "answer": "B", "kp": "细节理解", "exp": "Board Games 和 Nature Walk 后面都写着 Free。"},
+            {"n": 30, "stem": "Who CAN'T take the cooking class?", "options": ["A 10-year-old boy.", "A 12-year-old girl.", "A 15-year-old boy.", "A 40-year-old mother."], "answer": "A", "kp": "推理判断", "exp": "For ages 12 and up，10 岁不行。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Sleep Well, Stay Healthy",
+          "passage": "How much sleep do you get every night? Doctors say teenagers aged 13 to 18 need 8 to 10 hours of sleep. But many students sleep less than that because of homework, phones and computer games.\nLack of sleep is bad for your health. When you don't sleep enough, you may feel tired and find it hard to pay attention in class. You may also get ill more easily, because your body needs sleep to fight illness.\nHere is some advice. First, go to bed and get up at the same time every day, even on weekends. Second, put away your phone at least half an hour before bed. The light from the screen can keep your brain awake. Third, exercise during the day, but not right before bed. Finally, don't drink tea or coffee in the evening.\nGood sleep helps you study better and stay healthy. Tonight, why not go to bed a little earlier?",
+          "items": [
+            {"n": 31, "stem": "How many hours of sleep do teenagers need?", "options": ["6 to 8 hours.", "10 to 12 hours.", "8 to 10 hours.", "About 5 hours."], "answer": "C", "kp": "细节理解", "exp": "teenagers aged 13 to 18 need 8 to 10 hours of sleep。"},
+            {"n": 32, "stem": "Why may people get ill more easily if they don't sleep enough?", "options": ["Because they eat less.", "Because the body needs sleep to fight illness.", "Because they exercise too much.", "Because they drink too much coffee."], "answer": "B", "kp": "细节理解", "exp": "because your body needs sleep to fight illness。"},
+            {"n": 33, "stem": "Why should you put away your phone before bed?", "options": ["Because you need to do homework.", "Because phones are expensive.", "Because your parents don't like it.", "Because the light from the screen can keep your brain awake."], "answer": "D", "kp": "细节理解", "exp": "The light from the screen can keep your brain awake。"},
+            {"n": 34, "stem": "Which of the following is NOT suggested in the passage?", "options": ["Exercising right before bed.", "Exercising during the day.", "Not drinking coffee in the evening.", "Getting up at the same time every day."], "answer": "A", "kp": "推理判断", "exp": "原文是 exercise during the day, but not right before bed，睡前不要运动。"},
+            {"n": 35, "stem": "What is the passage mainly about?", "options": ["How to do homework faster.", "Why sleep is important and how to sleep well.", "How to use phones.", "Why teenagers like games."], "answer": "B", "kp": "主旨大意", "exp": "先讲睡眠不足的害处，再给出睡好觉的建议。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "A Letter to Tom",
+      "passage": "Dear Tom,\nI'm sorry to hear that you often feel (36) (tire) these days. Here is some advice. First, you shouldn't (37) (stay) up late. Try (38) (go) to bed before 10:30. Second, eat (39) (health) food, like fruit and vegetables, instead of junk food. Third, exercise (40) ______ least three times a week. You can play basketball with us after school. It's a great way (41) (relax). Also, don't spend too much time (42) (play) computer games. If you feel (43) (stress), talk to your parents or friends. Remember (44) (drink) enough water every day.\nI hope you'll feel (45) (good) soon.\nYours,\nLi Hua",
+      "items": [
+        {"n": 36, "answer": "tired", "hint": "tire", "kp": "词性转换", "exp": "feel 是系动词，后接形容词；人感到累用 tired。"},
+        {"n": 37, "answer": "stay", "hint": "stay", "kp": "情态动词", "exp": "shouldn't＋动词原形；stay up late 熬夜。"},
+        {"n": 38, "answer": "to go / going", "hint": "go", "kp": "动词不定式", "exp": "try to do 尽力去做；try doing 尝试做。这里两种都说得通。"},
+        {"n": 39, "answer": "healthy", "hint": "health", "kp": "词性转换", "exp": "修饰名词 food 用形容词 healthy。"},
+        {"n": 40, "answer": "at", "kp": "固定搭配", "exp": "at least 至少。"},
+        {"n": 41, "answer": "to relax", "hint": "relax", "kp": "动词不定式", "exp": "a way to do sth.。"},
+        {"n": 42, "answer": "playing", "hint": "play", "kp": "动词形式", "exp": "spend time (in) doing sth. 花时间做某事。"},
+        {"n": 43, "answer": "stressed", "hint": "stress", "kp": "词性转换", "exp": "人感到有压力用 stressed；stressful 形容事情让人有压力。"},
+        {"n": 44, "answer": "to drink", "hint": "drink", "kp": "动词不定式", "exp": "remember to do sth. 记得要做某事。"},
+        {"n": 45, "answer": "better", "hint": "good", "kp": "比较级", "exp": "feel better 感觉好些了，用比较级。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "你的英国笔友 Peter 来信说，最近学习压力很大，晚上睡不好，白天上课没精神。请给他回一封信：1. 对他的情况表示关心；2. 从作息、运动、放松方式等方面提出至少三条建议；3. 鼓励他。要求：80 词左右，开头和结尾已给出，不计入总词数；文中不得出现真实姓名和校名。\nDear Peter,\n……\nYours,\nLi Hua",
+      "points": [["表示关心", 2], ["提出至少三条具体建议", 6], ["鼓励对方", 3], ["语言正确（should / had better / why not / try to do 等提建议的句型，动词不定式），书写规范", 4]],
+      "sample": "Dear Peter,\nI'm sorry to hear that you feel stressed and can't sleep well. Here is some advice for you.\nFirst, you should go to bed and get up at the same time every day. You'd better put away your phone half an hour before bed. Second, try to exercise every day. Running or playing basketball is a good way to relax. Third, why not take up a hobby, like drawing or listening to music? It can help you forget your worries for a while. If you still feel stressed, talk to your parents or teachers.\nDon't worry too much. I'm sure you'll feel better soon!\nYours,\nLi Hua",
+      "exp": "写完检查：提建议的句型轮换着用（should / You'd better / Why not ...? / It's a good idea to ...），不要每句都是 You should；should、had better 后接动词原形；“放松的好方法”是 a good way to relax。"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-8down-4",
+  "sync": true,
+  "stage": "8-down",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "八下英语同步章节卷 · Units 7–8",
+  "label": "Units 7–8 A Good Read · Making a Difference",
+  "unit": "八下·Units 7–8 A Good Read / Making a Difference",
+  "order": 4,
+  "source": "人教版八年级下册 Unit 7 A Good Read、Unit 8 Making a Difference 话题：读书与名著、阅读方法，志愿服务、帮助他人。语言点：现在完成时（already / yet / ever / never、for / since、have been to / have gone to、非延续性动词）、动词短语（give out / clean up / keep on / give up）。按八年级单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "—Have you ever read Little Women?\n—Yes, I ______ it twice.", "options": ["read", "have read", "am reading", "will read"], "answer": "B", "kp": "现在完成时", "exp": "Have you ever ...? 问经历，用现在完成时回答：I have read it twice。"},
+        {"n": 2, "stem": "I have ______ finished the book. Can I borrow another one?", "options": ["yet", "ever", "still", "already"], "answer": "D", "kp": "现在完成时", "exp": "already 用于肯定句，表示“已经”；yet 用于否定句和疑问句。"},
+        {"n": 3, "stem": "—Has your brother returned the book to the library ______?\n—No, not yet.", "options": ["already", "ever", "yet", "just"], "answer": "C", "kp": "现在完成时", "exp": "疑问句句末用 yet；答语 not yet 也是提示。"},
+        {"n": 4, "stem": "My uncle has worked as a volunteer ______ five years.", "options": ["since", "for", "in", "at"], "answer": "B", "kp": "现在完成时", "exp": "for＋一段时间；since＋过去的时间点。"},
+        {"n": 5, "stem": "We have known each other ______ we were in primary school.", "options": ["for", "after", "when", "since"], "answer": "D", "kp": "现在完成时", "exp": "since＋从句（一般过去时），表示“自从……以来”。"},
+        {"n": 6, "stem": "The volunteers ______ food to the old people in the community last Sunday.", "options": ["gave up", "gave out", "put off", "turned down"], "answer": "B", "kp": "动词短语", "exp": "give out 分发；give up 放弃；put off 推迟；turn down 拒绝 / 调低。"},
+        {"n": 7, "stem": "Let's ______ the park this weekend. There's rubbish everywhere.", "options": ["clean up", "give up", "put up", "look up"], "answer": "A", "kp": "动词短语", "exp": "clean up 打扫干净。"},
+        {"n": 8, "stem": "—Where is Tom?\n—He ______ to the library. He'll be back soon.", "options": ["has been", "went", "goes", "has gone"], "answer": "D", "kp": "现在完成时", "exp": "has gone to 去了某地（人还没回来）；has been to 去过某地（已经回来）。"},
+        {"n": 9, "stem": "I ______ to Hangzhou twice. It's a beautiful city.", "options": ["have been", "have gone", "go", "am going"], "answer": "A", "kp": "现在完成时", "exp": "twice 表示经历，“去过”用 have been to。"},
+        {"n": 10, "stem": "Treasure Island is a book ______ a boy and some pirates.", "options": ["of", "for", "about", "with"], "answer": "C", "kp": "介词", "exp": "a book about ... 关于……的书。"},
+        {"n": 11, "stem": "—I've decided to give some of my books to a village school.\n—______", "options": ["It doesn't matter.", "Never mind.", "Help yourself.", "What a great idea!"], "answer": "D", "kp": "交际用语", "exp": "对别人的好主意表示赞扬。"},
+        {"n": 12, "stem": "We should ______ our time on useful things, like reading good books.", "options": ["take", "spend", "pay", "cost"], "answer": "B", "kp": "词汇", "exp": "人＋spend＋时间 / 钱＋on sth. / (in) doing sth.；take 的主语一般是 it；cost 的主语是物。"},
+        {"n": 13, "stem": "Volunteering is a good way to ______ a difference in your community.", "options": ["make", "take", "have", "do"], "answer": "A", "kp": "固定搭配", "exp": "make a difference 产生影响、有作用。"},
+        {"n": 14, "stem": "—How long have you ______ this book?\n—For two weeks. You can read it after me.", "options": ["borrowed", "bought", "kept", "lent"], "answer": "C", "kp": "现在完成时", "exp": "和表示一段时间的 how long / for 连用，要用延续性动词：borrow→keep，buy→have。坑点：borrowed 是瞬间动作，不能和一段时间连用。"},
+        {"n": 15, "stem": "Helping others always makes me feel ______.", "options": ["badly", "well", "good", "goodly"], "answer": "C", "kp": "形容词", "exp": "feel 是系动词，后接形容词 good（感觉愉快）。feel well 指身体好。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "Books for the Mountains",
+      "passage": "Sixteen-year-old Lin Tao loves reading. Last year, he visited a village school in the mountains with his father. He was surprised to find that the school library had (16) a few old books. The children there (17) new books very much.\nWhen he got home, Lin Tao decided to (18). He wrote a message to his classmates and friends: \"Do you have books you have (19) read? Please give them to the children in the mountains!\"\nAt first, only a few people answered. But Lin Tao didn't give (20). He put up posters in his community and (21) about his plan on the school radio. Soon, books came in from everywhere. In just three months, he has (22) more than 2,000 books!\nLast month, Lin Tao and some volunteers took the books to the village school. The children were so (23) that they started reading at once. One girl said, \"Now I can read a new story every day!\"\nLin Tao says, \"Everyone can make a difference. Even (24) things can change someone's life. I'm going to (25) this work.\"",
+      "items": [
+        {"n": 16, "options": ["many", "plenty", "lots", "only"], "answer": "D", "kp": "上下文", "exp": "他很惊讶：图书馆只有几本旧书。"},
+        {"n": 17, "options": ["hated", "sold", "wanted", "lost"], "answer": "C", "kp": "上下文", "exp": "孩子们很想要新书。"},
+        {"n": 18, "options": ["help", "leave", "forget", "sleep"], "answer": "A", "kp": "上下文", "exp": "回家后决定帮忙，后文是募书的行动。"},
+        {"n": 19, "options": ["yet", "never", "ever", "already"], "answer": "D", "kp": "现在完成时", "exp": "已经读过的书：books you have already read。"},
+        {"n": 20, "options": ["in", "up", "out", "away"], "answer": "B", "kp": "动词短语", "exp": "give up 放弃。"},
+        {"n": 21, "options": ["talked", "argued", "worried", "laughed"], "answer": "A", "kp": "上下文", "exp": "在学校广播里讲了他的计划：talk about。"},
+        {"n": 22, "options": ["lent", "spent", "collected", "lost"], "answer": "C", "kp": "上下文", "exp": "三个月收集了两千多本书。"},
+        {"n": 23, "options": ["excited", "bored", "worried", "angry"], "answer": "A", "kp": "上下文", "exp": "孩子们太激动了，马上读起来。"},
+        {"n": 24, "options": ["big", "expensive", "small", "strange"], "answer": "C", "kp": "上下文", "exp": "即使小事也能改变别人的生活。"},
+        {"n": 25, "options": ["give up", "keep on", "put off", "turn down"], "answer": "B", "kp": "动词短语", "exp": "keep on 继续做下去。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Books of the Month — City Library",
+          "passage": "Little Women by Louisa May Alcott: The story of four sisters growing up during the American Civil War. Ages 12+.\nTreasure Island by Robert Louis Stevenson: A young boy, Jim Hawkins, goes on an exciting adventure to find hidden treasure. Ages 10+.\nJourney to the West by Wu Cheng'en: The Monkey King and his friends travel to the west to get Buddhist books. Ages 9+.\nRobinson Crusoe by Daniel Defoe: A man lives alone on an island for 28 years. Ages 10+.\nYou can borrow up to 3 books at a time and keep them for 3 weeks. If you return a book late, you have to pay ¥0.2 a day for each book.",
+          "items": [
+            {"n": 26, "stem": "Which book is about four sisters?", "options": ["Treasure Island.", "Journey to the West.", "Little Women.", "Robinson Crusoe."], "answer": "C", "kp": "细节理解", "exp": "Little Women: The story of four sisters ...。"},
+            {"n": 27, "stem": "Who wrote Treasure Island?", "options": ["Wu Cheng'en.", "Louisa May Alcott.", "Daniel Defoe.", "Robert Louis Stevenson."], "answer": "D", "kp": "细节理解", "exp": "Treasure Island by Robert Louis Stevenson。"},
+            {"n": 28, "stem": "How long did Robinson Crusoe live alone on the island?", "options": ["3 weeks.", "28 years.", "10 years.", "12 years."], "answer": "B", "kp": "细节理解", "exp": "A man lives alone on an island for 28 years。"},
+            {"n": 29, "stem": "Which book is good for a 9-year-old child?", "options": ["Journey to the West.", "Treasure Island.", "Robinson Crusoe.", "Little Women."], "answer": "A", "kp": "推理判断", "exp": "只有《西游记》标的是 Ages 9+，其他都是 10 岁或 12 岁以上。"},
+            {"n": 30, "stem": "Mike returns two books five days late. How much should he pay?", "options": ["¥1.", "¥0.4.", "¥2.", "¥10."], "answer": "C", "kp": "推理判断", "exp": "每本每天 0.2 元：0.2×2×5＝2（元）。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Why Not Read More?",
+          "passage": "Some people say, \"I don't have time to read.\" But reading even 20 minutes a day can make a big difference.\nFirst, reading helps you learn new words. When you meet a new word in a story, you can often guess its meaning from the sentences around it. Over time, you'll have a bigger vocabulary.\nSecond, reading lets you travel without leaving home. You can go to the bottom of the sea, or live in a different time. You can also see the world through other people's eyes. This helps you understand others better.\nThird, reading can help you relax. When you are lost in a good book, you forget your worries for a while.\nSo how can you read more? Always carry a book with you. Read on the bus or before bed instead of looking at your phone. Join a book club and talk about books with friends. Once you find a book you love, you'll want to read more.",
+          "items": [
+            {"n": 31, "stem": "How long does the writer suggest reading every day?", "options": ["Half a day.", "At least 2 hours.", "Only on weekends.", "Even 20 minutes."], "answer": "D", "kp": "细节理解", "exp": "reading even 20 minutes a day can make a big difference。"},
+            {"n": 32, "stem": "How can you guess the meaning of a new word in a story?", "options": ["From the sentences around it.", "By asking your parents.", "By looking at your phone.", "By reading it aloud."], "answer": "A", "kp": "细节理解", "exp": "you can often guess its meaning from the sentences around it。"},
+            {"n": 33, "stem": "What does \"travel without leaving home\" mean?", "options": ["Travelling by plane.", "Reading about places and times in books.", "Staying at home all day.", "Watching TV at home."], "answer": "B", "kp": "推理判断", "exp": "后文解释：可以去海底、生活在不同的时代，指通过读书“去”不同的地方。"},
+            {"n": 34, "stem": "Which is NOT a suggestion from the writer?", "options": ["Read only when you are on holiday.", "Join a book club.", "Read on the bus.", "Carry a book with you."], "answer": "A", "kp": "细节理解", "exp": "作者建议随身带书、坐车时读、参加读书会，没说只在假期读。"},
+            {"n": 35, "stem": "What is the writer's purpose in writing the passage?", "options": ["To sell books.", "To tell a story.", "To encourage people to read more.", "To introduce a library."], "answer": "C", "kp": "主旨大意", "exp": "先讲读书的三个好处，再教怎样多读书，目的是鼓励多读书。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Volunteer Work",
+      "passage": "My name is Chen Jie. I (36) (be) a volunteer at our community library since last year. Every Saturday, I help (37) (put) books back on the shelves and read stories to small children.\nSo far, I (38) (read) more than 50 stories to them. The children love the stories and always listen (39) (careful). One boy, Leo, was very shy at first. But now he (40) (become) much more outgoing and often asks me questions.\nBeing a volunteer is not always easy. Sometimes I'm tired after a week of study. But I've never (41) (think) of giving up, because the children's smiles make me (42) (feel) happy.\nI have learned a lot from this work. I've learned how (43) (communicate) with children, and I've become more patient. I believe (44) (every) can make a difference. If you have free time, why not (45) (join) us?",
+      "items": [
+        {"n": 36, "answer": "have been / 've been", "hint": "be", "kp": "现在完成时", "exp": "since last year，用现在完成时 have been。"},
+        {"n": 37, "answer": "put / to put", "hint": "put", "kp": "动词形式", "exp": "help (to) do sth.；put 的原形和过去式同形，这里用原形。"},
+        {"n": 38, "answer": "have read / 've read", "hint": "read", "kp": "现在完成时", "exp": "So far 到目前为止，用现在完成时。"},
+        {"n": 39, "answer": "carefully", "hint": "careful", "kp": "词性转换", "exp": "修饰动词 listen 用副词 carefully。"},
+        {"n": 40, "answer": "has become / 's become", "hint": "become", "kp": "现在完成时", "exp": "从过去到现在的变化，用现在完成时；主语 he 用 has，become 的过去分词还是 become。"},
+        {"n": 41, "answer": "thought", "hint": "think", "kp": "现在完成时", "exp": "have never＋过去分词，think 的过去分词是 thought。"},
+        {"n": 42, "answer": "feel", "hint": "feel", "kp": "动词形式", "exp": "make sb. do sth.，用动词原形。"},
+        {"n": 43, "answer": "to communicate", "hint": "communicate", "kp": "动词不定式", "exp": "疑问词＋不定式：how to do sth.。"},
+        {"n": 44, "answer": "everyone / everybody", "hint": "every", "kp": "不定代词", "exp": "每个人都能有所作为。"},
+        {"n": 45, "answer": "join", "hint": "join", "kp": "动词形式", "exp": "Why not do sth.? 后接动词原形。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "学校正在评选“志愿之星”。请以“Making a Difference”为题写一篇短文，介绍你参加过（或打算参加）的一次志愿活动：1. 时间、地点、做了什么；2. 遇到了什么困难，怎样解决的；3. 你的收获和感想。要求：80 词左右，题目已给出，不计入总词数；文中不得出现真实姓名和校名。\nMaking a Difference",
+      "points": [["交代时间、地点和做的事", 4], ["写出困难及解决办法", 4], ["写出收获和感想", 3], ["语言正确（现在完成时、一般过去时、动词短语），书写规范", 4]],
+      "sample": "Making a Difference\nI have been a volunteer at an old people's home since last summer. I go there every Sunday afternoon. I clean up the rooms, read newspapers to the old people and chat with them.\nAt first, it was hard for me, because some of them couldn't hear well and I was too shy to talk. My teacher told me to speak slowly and to smile more. Slowly, they began to like me. Grandpa Wang has even taught me to play Chinese chess!\nI have learned a lot from this work. I've become more patient and outgoing. I think everyone can make a difference, even with small things.",
+      "exp": "写完检查：从过去持续到现在的事用现在完成时（have been ... since / for）；讲当时发生的事用一般过去时；动词短语 clean up、give out、cheer up 用对搭配。"
+    }
+  ]
+}

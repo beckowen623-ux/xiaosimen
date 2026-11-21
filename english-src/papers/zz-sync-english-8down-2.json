@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-8down-2",
+  "sync": true,
+  "stage": "8-down",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "八下英语同步章节卷 · Units 3–4",
+  "label": "Units 3–4 Growing Up · The Wonders of Nature",
+  "unit": "八下·Units 3–4 Growing Up / The Wonders of Nature",
+  "order": 2,
+  "source": "人教版八年级下册 Unit 3 Growing Up、Unit 4 The Wonders of Nature 话题：成长的变化与责任、与父母沟通、自然奇观及其数据。语言点：used to do、enough to do、because / because of、比较级和最高级、大数字和分数、长宽高的表达（... metres long / high / wide）。按八年级单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "I ______ be afraid of the dark, but now I'm not.", "options": ["used to", "use to", "was used to", "am used to"], "answer": "A", "kp": "used to", "exp": "used to do sth. 过去常常 / 过去是……（现在不再）。be used to doing 是“习惯于”。"},
+        {"n": 2, "stem": "As we grow up, we should learn to take ______ for our own actions.", "options": ["advice", "notice", "responsibility", "care"], "answer": "C", "kp": "词汇", "exp": "take responsibility for 对……负责。"},
+        {"n": 3, "stem": "Mount Qomolangma is ______ mountain in the world.", "options": ["higher", "the highest", "highest", "the higher"], "answer": "B", "kp": "最高级", "exp": "in the world 范围内比较，用最高级，前面加 the。"},
+        {"n": 4, "stem": "The Yangtze River is about 6,300 kilometres ______.", "options": ["long", "wide", "high", "deep"], "answer": "A", "kp": "数字表达", "exp": "河流的长度：... kilometres long。"},
+        {"n": 5, "stem": "The population of China is much ______ than that of Japan.", "options": ["more", "many", "much", "larger"], "answer": "D", "kp": "比较级", "exp": "人口多少用 large / small，比较级用 larger。坑点：不说 more population。"},
+        {"n": 6, "stem": "—How ______ is the Great Wall?\n—It's more than 20,000 kilometres long.", "options": ["long", "high", "wide", "far"], "answer": "A", "kp": "数字表达", "exp": "答语是长度，用 how long 提问。"},
+        {"n": 7, "stem": "______ of the students in our class are 14 years old.", "options": ["Two third", "Two thirds", "Second three", "Two three"], "answer": "B", "kp": "数字表达", "exp": "分数：分子用基数词，分母用序数词，分子大于 1 时分母加 -s：two thirds。"},
+        {"n": 8, "stem": "When I was a child, I ______ to the park with my grandpa every weekend.", "options": ["used to going", "was used to go", "use to go", "used to go"], "answer": "D", "kp": "used to", "exp": "used to＋动词原形，表示过去的习惯。"},
+        {"n": 9, "stem": "______ people visit the Great Wall every year.", "options": ["Thousand of", "Thousands of", "Thousands", "Thousand"], "answer": "B", "kp": "数字表达", "exp": "表示不确切的“成千上万”用 thousands of；前面有具体数字时用 thousand，如 five thousand。"},
+        {"n": 10, "stem": "—Which is ______, the moon or the earth?\n—The earth.", "options": ["bigger", "biggest", "the biggest", "big"], "answer": "A", "kp": "比较级", "exp": "两者比较用比较级 bigger（双写 g）。"},
+        {"n": 11, "stem": "The river is 30 metres ______, so we can't swim across it.", "options": ["width", "widen", "widely", "wide"], "answer": "D", "kp": "数字表达", "exp": "数字＋单位＋形容词：30 metres wide。"},
+        {"n": 12, "stem": "I'm old enough ______ care of myself.", "options": ["take", "taking", "to take", "took"], "answer": "C", "kp": "动词不定式", "exp": "形容词＋enough＋to do，“足够……可以做……”。"},
+        {"n": 13, "stem": "It's dangerous to climb the mountain ______ the bad weather.", "options": ["because", "because of", "so", "but"], "answer": "B", "kp": "介词", "exp": "后面是名词短语 the bad weather，用介词短语 because of；because 后接句子。"},
+        {"n": 14, "stem": "My parents and I don't always agree, but we try ______ each other.", "options": ["understand", "understanding", "understood", "to understand"], "answer": "D", "kp": "动词不定式", "exp": "try to do sth. 努力做某事。"},
+        {"n": 15, "stem": "—Mom, can I go camping with my friends this weekend?\n—______, but call me when you get there.", "options": ["Never mind", "No way", "Sure", "You're welcome"], "answer": "C", "kp": "交际用语", "exp": "后面 but call me ... 说明同意了，用 Sure。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "A Month with Grandma",
+      "passage": "When I was in Grade 6, I (16) on my parents for almost everything. Mom cleaned my room, and Dad (17) me to school every day. I thought it was normal.\nLast summer, my parents had to work in another city for a month, so I stayed with my grandma. Grandma was not very (18), so I had to look after both of us. At first, I didn't know how to (19). I burned the rice twice! But I learned quickly. I also learned to wash clothes and to (20) at the market.\nOne evening, Grandma fell ill. I was very (21), but I didn't panic. I called the doctor and gave her the medicine. The next day, she felt much (22). She held my hand and said, \"You've really grown up.\"\nWhen my parents came back, they were (23) to see the changes in me. I found that growing up doesn't just mean getting taller. It means taking (24) for yourself and others. Now I do my own chores and help my parents (25) I can.",
+      "items": [
+        {"n": 16, "options": ["agreed", "played", "depended", "waited"], "answer": "C", "kp": "动词短语", "exp": "depend on 依赖；后文说妈妈打扫、爸爸接送，说明什么都依赖父母。"},
+        {"n": 17, "options": ["called", "drove", "taught", "asked"], "answer": "B", "kp": "上下文", "exp": "爸爸每天开车送我上学：drive sb. to school。"},
+        {"n": 18, "options": ["strict", "busy", "kind", "healthy"], "answer": "D", "kp": "上下文", "exp": "奶奶身体不太好，所以我得照顾我们俩。"},
+        {"n": 19, "options": ["cook", "sing", "draw", "swim"], "answer": "A", "kp": "上下文", "exp": "后一句“米饭烧糊了两次”，说明不会做饭。"},
+        {"n": 20, "options": ["sleep", "fight", "shop", "hide"], "answer": "C", "kp": "上下文", "exp": "在市场上买东西：shop at the market。"},
+        {"n": 21, "options": ["worried", "bored", "excited", "happy"], "answer": "A", "kp": "上下文", "exp": "奶奶病了，很担心，但没有慌。"},
+        {"n": 22, "options": ["worse", "weaker", "better", "sadder"], "answer": "C", "kp": "比较级", "exp": "请了医生、吃了药，第二天好多了。"},
+        {"n": 23, "options": ["angry", "surprised", "bored", "afraid"], "answer": "B", "kp": "上下文", "exp": "父母看到我的变化很惊讶。"},
+        {"n": 24, "options": ["photos", "notes", "turns", "responsibility"], "answer": "D", "kp": "固定搭配", "exp": "take responsibility for 对……负责。"},
+        {"n": 25, "options": ["whatever", "whoever", "however", "whenever"], "answer": "D", "kp": "连词", "exp": "只要能帮就帮：whenever I can。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Natural Wonders",
+          "passage": "Mount Qomolangma: On the border of China and Nepal. Height: 8,848.86 metres. The highest mountain in the world.\nThe Yangtze River: In China. Length: about 6,300 kilometres. The longest river in China and the third longest in the world.\nThe Sahara: In North Africa. Area: about 9 million square kilometres. The largest hot desert in the world.\nThe Great Barrier Reef: Off the coast of Australia. Length: about 2,300 kilometres. The largest coral reef system in the world.\nVictoria Falls: Between Zambia and Zimbabwe. Height: about 108 metres. Width: about 1,700 metres.",
+          "items": [
+            {"n": 26, "stem": "How high is Mount Qomolangma?", "options": ["8,848.86 metres.", "6,300 metres.", "2,300 metres.", "1,700 metres."], "answer": "A", "kp": "细节理解", "exp": "Height: 8,848.86 metres。"},
+            {"n": 27, "stem": "Which is the longest river in China?", "options": ["The Yellow River.", "The Yangtze River.", "The Nile.", "The Pearl River."], "answer": "B", "kp": "细节理解", "exp": "The longest river in China and the third longest in the world。"},
+            {"n": 28, "stem": "Where is the Great Barrier Reef?", "options": ["In North Africa.", "In China.", "Between Zambia and Zimbabwe.", "Off the coast of Australia."], "answer": "D", "kp": "细节理解", "exp": "Off the coast of Australia。"},
+            {"n": 29, "stem": "Which of the following is TRUE?", "options": ["The Sahara is in South America.", "The Yangtze River is the longest river in the world.", "Victoria Falls is much wider than it is high.", "The Great Barrier Reef is about 6,300 kilometres long."], "answer": "C", "kp": "推理判断", "exp": "宽约 1,700 米，高约 108 米，宽远大于高。长江是世界第三长河。"},
+            {"n": 30, "stem": "Mount Qomolangma is about ______ times as high as Victoria Falls.", "options": ["8", "80", "8,000", "800"], "answer": "B", "kp": "推理判断", "exp": "8,848.86÷108≈82，大约 80 倍。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Ask Ms. Wang",
+          "passage": "Dear Ms. Wang,\nI'm 14 years old. I think I'm old enough to make my own decisions, but my parents don't agree. They want me to come home before 6 p.m., and they always ask me who I'm going out with. Last week, I wanted to go to a concert with my friends, but they said no. I feel angry, and we often argue. What should I do?\nUnhappy Daniel\n\nDear Daniel,\nIt's normal to want more freedom at your age. But try to see things from your parents' side. They worry about you because they love you. Here are some ideas. First, talk to them calmly instead of arguing. Tell them how you feel and listen to their reasons. Second, show them that you are responsible. For example, finish your homework on time and help with the housework. Third, make a deal: if you always come home on time and tell them where you are, maybe they will give you more freedom step by step.\nMs. Wang",
+          "items": [
+            {"n": 31, "stem": "How old is Daniel?", "options": ["12.", "13.", "14.", "16."], "answer": "C", "kp": "细节理解", "exp": "I'm 14 years old。"},
+            {"n": 32, "stem": "What did Daniel want to do last week?", "options": ["Stay at home.", "Go to a concert with his friends.", "Do housework.", "Visit his grandparents."], "answer": "B", "kp": "细节理解", "exp": "I wanted to go to a concert with my friends。"},
+            {"n": 33, "stem": "Why do Daniel's parents worry about him according to Ms. Wang?", "options": ["Because they love him.", "Because he is lazy.", "Because he is ill.", "Because he has bad grades."], "answer": "A", "kp": "细节理解", "exp": "They worry about you because they love you。"},
+            {"n": 34, "stem": "What is Ms. Wang's first piece of advice?", "options": ["Go out without telling parents.", "Stop talking to his parents.", "Do whatever his friends do.", "Talk to his parents calmly instead of arguing."], "answer": "D", "kp": "细节理解", "exp": "First, talk to them calmly instead of arguing。"},
+            {"n": 35, "stem": "What does Ms. Wang mainly want Daniel to do?", "options": ["Communicate with his parents and show he is responsible.", "Leave home.", "Never go to concerts.", "Ask his teacher for help."], "answer": "A", "kp": "主旨大意", "exp": "三条建议：好好沟通、表现出责任心、和父母约定，慢慢就会得到更多自由。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "Amazing Nature in China",
+      "passage": "China has many natural wonders. Mount Qomolangma is the (36) (high) mountain in the world. It is 8,848.86 metres high. Many climbers try (37) (climb) it every year, but it is very (38) (danger). The air at the top is much (39) (thin) than at sea level, and the weather can change quickly.\nThe Yangtze River is (40) (long) river in China. It is (41) ______ 6,300 kilometres long. (42) (million) of people live along the river, and the Three Gorges are really (43) (amaze).\nNature is wonderful, so we should (44) (protection) it. If we don't take care of nature, it will be (45) (hard) for us to live on the earth.",
+      "items": [
+        {"n": 36, "answer": "highest", "hint": "high", "kp": "最高级", "exp": "前面有 the，in the world 范围内用最高级。"},
+        {"n": 37, "answer": "to climb", "hint": "climb", "kp": "动词不定式", "exp": "try to do sth. 努力做某事。"},
+        {"n": 38, "answer": "dangerous", "hint": "danger", "kp": "词性转换", "exp": "be 后接形容词，danger→dangerous。"},
+        {"n": 39, "answer": "thinner", "hint": "thin", "kp": "比较级", "exp": "有 than，用比较级；thin 双写 n 加 -er。"},
+        {"n": 40, "answer": "the longest", "hint": "long", "kp": "最高级", "exp": "在中国所有河流中最长，用最高级，要加 the。"},
+        {"n": 41, "answer": "about / around / nearly", "kp": "数字表达", "exp": "“大约”6,300 千米。"},
+        {"n": 42, "answer": "Millions", "hint": "million", "kp": "数字表达", "exp": "millions of 数以百万计的，句首大写。"},
+        {"n": 43, "answer": "amazing", "hint": "amaze", "kp": "词性转换", "exp": "形容事物令人惊叹用 amazing。"},
+        {"n": 44, "answer": "protect", "hint": "protection", "kp": "词性转换", "exp": "should 后接动词原形，protection→protect。"},
+        {"n": 45, "answer": "harder", "hint": "hard", "kp": "比较级", "exp": "如果不爱护自然，生存会“更难”，用比较级。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "学校英语报以“I Am Growing Up”为题征文。请写一篇短文：1. 你过去是什么样的（至少两点，用 used to）；2. 你现在有哪些变化；3. 是什么（或谁）让你成长的，你有什么感想。要求：80 词左右，题目已给出，不计入总词数；文中不得出现真实姓名和校名。\nI Am Growing Up",
+      "points": [["写出过去的样子（至少两点）", 4], ["写出现在的变化", 4], ["写出成长的原因和感想", 3], ["语言正确（used to do、比较级、一般现在时与一般过去时对比），书写规范", 4]],
+      "sample": "I Am Growing Up\nI have changed a lot in the past two years.\nI used to be very shy. I didn't use to talk much in class, and I was afraid of making mistakes. I also used to depend on my parents for everything. My mom even packed my schoolbag for me.\nNow I'm more outgoing. I often answer questions in class and I'm a member of the English club. I wash my own clothes and cook simple meals on weekends.\nMy English teacher helped me a lot. She always encouraged me to try. I think growing up means learning to be brave and taking responsibility for myself.",
+      "exp": "写完检查：过去用 used to＋动词原形，否定 didn't use to；描写现在用一般现在时；可以用比较级（more outgoing、braver）把过去和现在对比起来。"
+    }
+  ]
+}
