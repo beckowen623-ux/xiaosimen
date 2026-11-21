@@ -2,6 +2,11 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 同步章节卷：七下数学 6 章＋几何配图工具（main）
+- 新增 `zz-sync-math-7down-1..6.json`：相交线与平行线、实数、平面直角坐标系、二元一次方程组、不等式与不等式组、数据的收集整理与描述。同步章节卷数学共 24 套（七上由小升初衔接卷承担）。
+- 新增 `tools/figure_svg.py`：按坐标生成与精编卷同风格的 SVG 几何图；七下第一章 9、19、20、21 题配图放在 `assets/national/sync-math-7down-1/`。
+- 验证：build 通过、`node tests/validate.mjs` 通过；本地预览配图显示正常。
+
 ## 2026-11-21 · Claude Code · 同步章节卷：八下数学 5 章（main）
 - 新增 `zz-sync-math-8down-1..5.json`：二次根式、勾股定理、平行四边形、一次函数、数据的分析。同步章节卷数学共 18 套（七下待补）。
 - 验证：build 通过、`node tests/validate.mjs` 通过。

@@ -1373,6 +1373,138 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-math-7down-1",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "7-down",
+      "unit": "七下·相交线与平行线",
+      "order": 1,
+      "label": "相交线与平行线",
+      "title": "七下数学同步章节卷 · 相交线与平行线",
+      "source": "考查范围：人教版七年级下册“相交线与平行线”一章（对顶角、垂线、同位角内错角同旁内角、平行线的判定与性质、命题、平移、拐点模型），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-7down-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-7down-2",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "7-down",
+      "unit": "七下·实数",
+      "order": 2,
+      "label": "实数",
+      "title": "七下数学同步章节卷 · 实数",
+      "source": "考查范围：人教版七年级下册“实数”一章（平方根、算术平方根、立方根、无理数与实数、估算与比较大小、实数运算），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-7down-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-7down-3",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "7-down",
+      "unit": "七下·平面直角坐标系",
+      "order": 3,
+      "label": "平面直角坐标系",
+      "title": "七下数学同步章节卷 · 平面直角坐标系",
+      "source": "考查范围：人教版七年级下册“平面直角坐标系”一章（点的坐标与象限、坐标轴上的点、点到坐标轴的距离、与坐标轴平行的线段、用坐标表示位置和平移、坐标规律），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-7down-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-7down-4",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "7-down",
+      "unit": "七下·二元一次方程组",
+      "order": 4,
+      "label": "二元一次方程组",
+      "title": "七下数学同步章节卷 · 二元一次方程组",
+      "source": "考查范围：人教版七年级下册“二元一次方程组”一章（概念、代入消元与加减消元、含参数问题、整体代入与换元、实际问题），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-7down-4.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-7down-5",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "7-down",
+      "unit": "七下·不等式与不等式组",
+      "order": 5,
+      "label": "不等式与不等式组",
+      "title": "七下数学同步章节卷 · 不等式与不等式组",
+      "source": "考查范围：人教版七年级下册“不等式与不等式组”一章（不等式的性质、一元一次不等式、一元一次不等式组、整数解与含参问题、实际问题与方案设计），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-7down-5.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-7down-6",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "7-down",
+      "unit": "七下·数据的收集整理与描述",
+      "order": 6,
+      "label": "数据的收集、整理与描述",
+      "title": "七下数学同步章节卷 · 数据的收集、整理与描述",
+      "source": "考查范围：人教版七年级下册“数据的收集、整理与描述”一章（全面调查与抽样调查、总体个体样本、扇形统计图与圆心角、频数与频率、频数分布表和直方图、用样本估计总体），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-7down-6.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "sync-math-8down-1",
       "subject": "math",
       "subjectLabel": "数学",
