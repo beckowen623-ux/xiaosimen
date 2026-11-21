@@ -889,10 +889,10 @@ async function shareDailyQuestion(button) {
   if (!question) return;
   const url = new URL(location.pathname, location.origin);
   url.searchParams.set('from', 'daily-share');
-  const text = `中考提分每日一题 · ${question.subjectLabel || SUBJECTS[question.subject]?.label || ''}\n${question.stem}\n${url.href}`;
+  const text = `爱丽克丝中考题库 · 每日一题 · ${question.subjectLabel || SUBJECTS[question.subject]?.label || ''}\n${question.stem}\n${url.href}`;
   button.disabled = true;
   try {
-    if (navigator.share) await navigator.share({ title: '中考提分每日一题', text });
+    if (navigator.share) await navigator.share({ title: '爱丽克丝中考题库 · 每日一题', text });
     else await navigator.clipboard.writeText(text);
     trackVisit('daily_share');
     if (!hasFullAccess()) {
