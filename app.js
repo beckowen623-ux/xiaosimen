@@ -3138,8 +3138,10 @@ async function init() {
     // 目录（早鸟卷、同步卷都靠它）和小四门题库同时下载，不再等题库下完才开始下目录
     const catalogReady = window.NationalExams?.catalog ? window.NationalExams.catalog().then(list => { nationalCatalog = list; }).catch(() => {}) : Promise.resolve();
     const loadDaily = dailyQuestions().length ? null : loadScript('./data/daily-questions-xiaosimen.js?v=7').catch(console.warn);
-    const subjectiveReady = Promise.allSettled(SUBJECT_ORDER.map(key => loadScript(`./data/subjective-${key}.js?v=${SUBJECTIVE_VERSION}`)));
-    const banksReady = ensureBanks(SUBJECT_ORDER);
+    // 小四门题库约 600KB，等目录（约 20KB）下完、轻首页（学期、早鸟卷、同步卷、小升初）画出来以后再下，
+    // 手机网络慢时不和目录抢带宽，首屏能早几秒出来
+    const subjectiveReady = catalogReady.then(() => Promise.allSettled(SUBJECT_ORDER.map(key => loadScript(`./data/subjective-${key}.js?v=${SUBJECTIVE_VERSION}`))));
+    const banksReady = catalogReady.then(() => ensureBanks(SUBJECT_ORDER));
     void Promise.all([catalogReady, accessReady]).then(() => { if (!banks && nationalCatalog) renderLiteHome(); }).catch(() => {});
     banks = await banksReady;
     await catalogReady;
