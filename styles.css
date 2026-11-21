@@ -642,3 +642,11 @@ input[type=search]::placeholder { color: #67736c; }
 .sync-plan p { margin: 0; }
 .sync-plan-edit summary { margin-top: 4px; color: var(--green); font-size: 13px; cursor: pointer; }
 .sync-plan-edit input { margin-top: 6px; min-height: 36px; padding: 0 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); font: inherit; }
+/* 整卷计时 */
+.exam-timer { position: sticky; top: 8px; z-index: 4; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 10px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); font-weight: 700; font-variant-numeric: tabular-nums; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.exam-timer.running { border-color: var(--green); background: var(--green-soft); color: var(--green); }
+.exam-timer.over { border-color: var(--bad); color: var(--bad); }
+.exam-timer.done { border-color: var(--good); color: var(--good); font-weight: 600; }
+.exam-timer-actions { display: flex; gap: 6px; align-items: center; }
+.exam-timer .btn { min-height: 34px; padding: 0 12px; font-size: 14px; }
+.exam-timer-result { margin: 8px 0 0; padding: 8px 12px; border-radius: 10px; background: var(--green-soft); color: var(--green); font-weight: 600; }

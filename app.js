@@ -721,6 +721,9 @@ async function loadPurchaseOptions() {
     const response = await fetch('/api/config', { cache: 'no-store' });
     if (!response.ok) return;
     const options = await response.json();
+    if (options.examMinutes && typeof options.examMinutes === 'object') {
+      for (const [key, value] of Object.entries(options.examMinutes)) if (key in X4M_MINUTES_DEFAULT && Number.isInteger(value) && value >= 10 && value <= 300) x4mMinutes[key] = value;
+    }
     for (const [elementId, offer] of [['schoolOffer', options.xiaosimen], ['bundleOffer', options.bundle]]) {
       const offerElement = byId(elementId);
       const link = offerElement.querySelector('a');
@@ -1169,6 +1172,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '整卷加计时：手机上做整套早鸟卷、同步章节卷、精编模拟卷、小升初卷时，可以点“开始计时”按考试时长倒计时（同步卷 90 分钟，早鸟卷、精编卷按科目），能暂停，超时变红，做完在总结里显示一共用了多久。只做前 5 题体验时不计时。'],
   ['2026-11-21', '首页打开更快：网络慢的时候，先显示学期、早鸟自测卷和同步章节卷，可以直接开始做；按章节练、错题本、小四门等内容随后加载出来。'],
   ['2026-11-21', '早鸟自测卷做完后直接告诉你补哪几章：按错题所在章节排序，列出错得最多的 3 章，点一下就进那一章的同步章节卷（数学、物理、化学）。'],
   ['2026-11-21', '同步章节卷显示进度：每套写明已做几题、对几题，卡片上方提示“已经做过几套，下一套做哪一章”；还按期末（九下按中考）日期算好每周做几套，期末前 2 周留给错题复习，日期可以按当地改。'],
@@ -2329,6 +2333,96 @@ function renderAnswerSheet(page = Math.floor(state.idx / 40), previous = null) {
   byId('navNext')?.addEventListener('click', () => renderAnswerSheet(page + 1, 'navNext'));
   if (previous) (grid.querySelector(`#${previous}:enabled`) || grid.querySelector('button'))?.focus();
 }
+// ---- 整卷计时：手机上做整套早鸟卷、同步章节卷、精编卷、小升初卷时按考试时长倒计时 ----
+// 时长在后台“整卷计时”里改（site_config.exam_minutes 的 x4m 部分），没设就用这里的默认值。
+const X4M_MINUTES_DEFAULT = { sync: 90, eb_chinese: 120, eb_math: 120, eb_english: 100, eb_physics: 90, eb_chemistry: 60, eb_other: 60, paper_chinese: 150, paper_math: 120, paper_english: 120, paper_physics: 90, paper_chemistry: 60 };
+let x4mMinutes = { ...X4M_MINUTES_DEFAULT };
+const X4M_TIMER_KEY = 'x4m-exam-timer-v1';
+const TIMED_MODES = new Set(['earlybird', 'sync', 'paper']);
+function timedPaper() {
+  if (!TIMED_MODES.has(state.mode) || !state.queue.length) return null;
+  const id = state.queue[0]?.paperId;
+  if (!id || !state.queue.every(q => q.paperId === id)) return null;
+  const paper = (nationalCatalog || []).find(p => p.id === id);
+  // 只给整套卷计时；前 5 题体验、只练一部分题时不计时
+  return paper && state.queue.length >= paper.questionCount ? paper : null;
+}
+function paperMinutes(paper) {
+  if (paper.sync || paper.stage === 'xsc') return x4mMinutes.sync;
+  const main = ['chinese', 'math', 'english', 'physics', 'chemistry'].includes(paper.subject) ? paper.subject : '';
+  const zhongkao = paper.claude || (paper.earlybird && (paper.stage || '9-down') === '9-down');
+  if (!main) return x4mMinutes.eb_other;
+  return zhongkao ? x4mMinutes['paper_' + main] : x4mMinutes['eb_' + main];
+}
+function loadX4mTimers() {
+  try { return JSON.parse(localStorage.getItem(X4M_TIMER_KEY) || '{}') || {}; } catch { return {}; }
+}
+function saveX4mTimer(id, value) {
+  const all = loadX4mTimers();
+  if (value) all[id] = value; else delete all[id];
+  try { localStorage.setItem(X4M_TIMER_KEY, JSON.stringify(all)); } catch { /* 隐私模式：本页内仍计时 */ }
+}
+function x4mElapsed(t) { return (t.elapsed || 0) + (t.runningSince ? Date.now() - t.runningSince : 0); }
+function clockText(ms) {
+  const total = Math.max(0, Math.floor(ms / 1000));
+  const h = Math.floor(total / 3600), m = Math.floor((total % 3600) / 60), s = total % 60;
+  return `${h ? h + ':' : ''}${String(m).padStart(h ? 2 : 1, '0')}:${String(s).padStart(2, '0')}`;
+}
+function x4mTimerText(t, limitMs) {
+  const used = x4mElapsed(t);
+  if (t.doneAt) return `✅ 用时 ${clockText(used)}（考试时长 ${Math.round(limitMs / 60000)} 分钟）${used > limitMs ? `，超时 ${clockText(used - limitMs)}` : '，没超时'}`;
+  const left = limitMs - used;
+  const head = t.runningSince ? '⏱' : '⏸ 已暂停 ·';
+  return left >= 0 ? `${head} 还剩 ${clockText(left)}` : `${head} 已超时 ${clockText(-left)}`;
+}
+function examTimerHTML() {
+  const paper = timedPaper();
+  if (!paper) return '';
+  const minutes = paperMinutes(paper);
+  const limitMs = minutes * 60000;
+  const t = loadX4mTimers()[paper.id];
+  if (!t) return `<div class="exam-timer idle"><span>⏱ 想按考试来练？${minutes} 分钟</span><button class="btn" type="button" data-timer="start">开始计时</button></div>`;
+  const cls = t.doneAt ? 'done' : x4mElapsed(t) > limitMs ? 'over' : t.runningSince ? 'running' : 'paused';
+  return `<div class="exam-timer ${cls}" data-limit="${limitMs}" data-paper="${esc(paper.id)}">
+    <span id="examTimerText" role="timer">${esc(x4mTimerText(t, limitMs))}</span>
+    <span class="exam-timer-actions">${t.doneAt ? '' : t.runningSince ? '<button class="btn" type="button" data-timer="pause">暂停</button>' : '<button class="btn primary" type="button" data-timer="resume">继续</button>'}<button class="btn text-button" type="button" data-timer="reset">重新计时</button></span>
+  </div>`;
+}
+function wireExamTimer() {
+  view.querySelectorAll('[data-timer]').forEach(b => b.addEventListener('click', () => {
+    const paper = timedPaper();
+    if (!paper) return;
+    const t = loadX4mTimers()[paper.id];
+    const act = b.dataset.timer;
+    if (act === 'start' || act === 'resume') { saveX4mTimer(paper.id, { elapsed: t ? x4mElapsed(t) : 0, runningSince: Date.now() }); if (act === 'start') trackVisit('x4m_timer_start'); }
+    if (act === 'pause' && t) saveX4mTimer(paper.id, { elapsed: x4mElapsed(t), runningSince: 0 });
+    if (act === 'reset' && window.confirm('重新计时会清掉这套卷的用时（做题记录不受影响），确定吗？')) saveX4mTimer(paper.id, null);
+    const box = b.closest('.exam-timer');
+    if (box) box.outerHTML = examTimerHTML();
+    wireExamTimer();
+  }));
+}
+// 做完一套（出总结）时停表，总结里显示用时
+function stopExamTimer() {
+  const paper = timedPaper();
+  if (!paper) return '';
+  const t = loadX4mTimers()[paper.id];
+  if (!t) return '';
+  let done = t;
+  if (!t.doneAt) { done = { elapsed: x4mElapsed(t), runningSince: 0, doneAt: Date.now() }; saveX4mTimer(paper.id, done); trackVisit('x4m_timer_done'); }
+  const limitMs = paperMinutes(paper) * 60000;
+  return `<p class="exam-timer-result">${esc(x4mTimerText(done, limitMs))}</p>`;
+}
+if (typeof setInterval === 'function') setInterval(() => {
+  const el = document.getElementById('examTimerText');
+  const box = el?.closest('.exam-timer');
+  if (!box) return;
+  const t = loadX4mTimers()[box.dataset.paper];
+  if (!t || t.doneAt || !t.runningSince) return;
+  const limitMs = Number(box.dataset.limit || 0);
+  el.textContent = x4mTimerText(t, limitMs);
+  if (x4mElapsed(t) > limitMs && !box.classList.contains('over')) { box.classList.remove('running'); box.classList.add('over'); }
+}, 1000);
 // 练习页外壳：进度、科目/题型、材料、题干、配图、作答区、结果区、操作按钮、答题卡。
 function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提交答案', submitDisabled = true, revealLabel = '查看解析' }) {
   const rec = qProgress(progress, q.id);
@@ -2340,6 +2434,7 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
   return `
     <div class="practice-shell tone-${esc(q.subject)}">
       <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button><span>${esc(state.mode === 'earlybird' && String(state.earlybirdPaper || '').startsWith('xsc-') ? '小升初衔接' : MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
+      ${examTimerHTML()}
       <section class="card question-card" aria-labelledby="questionTitle">
         <div class="question-progress">
           <div class="progress-label"><strong>${clearing ? '订正进度' : `第 ${position} <span>/ ${total} 题</span>`}</strong><span id="qProg">${questionStats(progress)}</span></div>
@@ -2488,9 +2583,10 @@ function renderPractice() {
     openUnlock('这项练习属于完整版。');
     return;
   }
-  if (q.type === 'essay') return renderEssay(q);
-  if (q.type === 'blank') return renderBlank(q);
-  renderChoice(q);
+  if (q.type === 'essay') renderEssay(q);
+  else if (q.type === 'blank') renderBlank(q);
+  else renderChoice(q);
+  wireExamTimer();
 }
 
 function renderChoice(q) {
@@ -2776,6 +2872,7 @@ function syncPrescriptions(wrongQs, subject, stage) {
 }
 function renderSummary() {
   document.body.classList.add('practice');
+  const timerLine = stopExamTimer();
   const results = [...state.session.entries()];
   const right = results.filter(([, r]) => r.correct).length;
   const essays = results.filter(([, r]) => r.total);
@@ -2809,6 +2906,7 @@ function renderSummary() {
           ${essayTotal ? `<div><b>${essayScore}<small>/${essayTotal}</small></b><span>主观题自评</span></div>` : ''}
         </div>
         <p class="earlybird-verdict">${esc(body)}</p>
+        ${timerLine}
         ${wrongQs.length ? `<div class="summary-wrong"><p class="ref-title">需要再看的题（${wrongQs.length}）</p>
           <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
         <div class="summary-actions">
@@ -2843,6 +2941,7 @@ function renderSummary() {
           <div><b>${acc}%</b><span>正确率</span></div>
           ${essayTotal ? `<div><b>${essayScore}<small>/${essayTotal}</small></b><span>主观题得分</span></div>` : ''}
         </div>
+        ${timerLine}
         ${wrongQs.length ? `<div class="summary-wrong"><p class="ref-title">需要再看的题（${wrongQs.length}）</p>
           <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
         ${trialUpsellHTML()}
