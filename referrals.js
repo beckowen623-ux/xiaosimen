@@ -786,7 +786,7 @@
     const url = new URL(site.url);
     url.searchParams.set("from", "referral");
     url.searchParams.set("invite", profile.code);
-    const share = lastShare = `我在用的${site.label}，推荐给你。\n点我的专属链接，可以先免费试，再用好友价 14.9 元买（省 5 元）：\n${url.href}\n（打不开或很慢的话，换个网络或多试几次就好）\n如果兑换时提示填邀请码，填 ${profile.code}`;
+    const share = lastShare = `我在用的${site.label}，推荐给你。\n点我的专属链接，可以先免费试，再用好友价 14.9 元买（省 5 元）：\n${url.href}\n你买完也会有自己的邀请链接，邀满 3 位朋友返现 15 元，等于免费用。\n（打不开或很慢的话，换个网络或多试几次就好）\n如果兑换时提示填邀请码，填 ${profile.code}`;
     const message = node("p", "", "referral-message");
     message.setAttribute("role", "status");
     const left = Math.max(0, profile.required - profile.invited);
@@ -794,7 +794,7 @@
       ? `已经有 ${profile.invited} 位朋友用你的邀请码买了题库，两档奖励都拿到了。`
       : profile.invited > 0
         ? `已经有 ${profile.invited} 位朋友用你的邀请码买了题库，冲刺卷已解锁；再邀 ${left} 位，可领大奖。`
-        : "还没有朋友用你的邀请码。邀请 1 位就能解锁冲刺卷。";
+        : "还没有朋友用你的邀请码。邀 1 位解锁冲刺卷；邀满 3 位返现 15 元，题库等于免费。";
 
     const box = node("details", "", "referral-box");
     try { box.open = localStorage.getItem(OPEN_KEY) === "1"; } catch { /* 隐私模式 */ }
@@ -802,7 +802,7 @@
     const done = Math.min(profile.invited, profile.required);
     const summary = node("summary", "", "referral-summary");
     summary.append(node("span", "🎁 邀请好友", "referral-title"),
-      node("span", profile.sprint ? `冲刺卷已解锁 · 已邀 ${done}/${profile.required}` : `朋友省 5 元 · 已邀 ${done}/${profile.required}`, "referral-badge"));
+      node("span", done >= profile.required ? `已邀 ${done}/${profile.required} · 奖励已到` : `邀满 ${profile.required} 位返现 15 元 · 已邀 ${done}/${profile.required}`, "referral-badge"));
     box.append(summary);
 
     const steps = node("ol", "", "referral-steps");
