@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-8up-4",
+  "sync": true,
+  "stage": "8-up",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "八上英语同步章节卷 · Units 7–8",
+  "label": "Units 7–8 When Tomorrow Comes · Let's Communicate!",
+  "unit": "八上·Units 7–8 When Tomorrow Comes / Let's Communicate!",
+  "order": 4,
+  "source": "人教版八年级上册 Unit 7 When Tomorrow Comes、Unit 8 Let's Communicate!：一般将来时 will（预测未来）、more / less / fewer、零条件句和 if 引导的真实条件句（主将从现）、沟通方式与肢体语言。按八年级单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "Do you think people ______ live on the moon in 100 years?", "options": ["are", "were", "will", "did"], "answer": "C", "kp": "一般将来时", "exp": "in 100 years 表将来，用 will＋动词原形。"},
+        {"n": 2, "stem": "I hope there will be ______ pollution and ______ trees in the future.", "options": ["less; fewer", "fewer; more", "more; less", "less; more"], "answer": "D", "kp": "more / less / fewer", "exp": "pollution 不可数，“更少”用 less；trees 可数，“更多”用 more。"},
+        {"n": 3, "stem": "—Will people still use paper money in 50 years?\n—No, they ______.", "options": ["won't", "aren't", "will", "don't"], "answer": "A", "kp": "一般将来时", "exp": "Will ...? 的否定回答用 won't。"},
+        {"n": 4, "stem": "If it ______ tomorrow, we will have the sports meeting in the gym.", "options": ["is raining", "will rain", "rained", "rains"], "answer": "D", "kp": "条件句", "exp": "if 引导的条件句“主将从现”：主句用 will，if 从句用一般现在时表将来。"},
+        {"n": 5, "stem": "If you heat ice, it ______. This is a scientific fact.", "options": ["melted", "melts", "is melting", "melt"], "answer": "B", "kp": "条件句", "exp": "表示客观规律的零条件句，主从句都用一般现在时；主语 it 用 melts。"},
+        {"n": 6, "stem": "I think there will be ______ cars on the road in the future, so the air will be cleaner.", "options": ["less", "much", "fewer", "more"], "answer": "C", "kp": "more / less / fewer", "exp": "空气更干净，说明车更少；cars 可数，用 fewer。"},
+        {"n": 7, "stem": "In the future, robots will help people ______ housework.", "options": ["doing", "did", "does", "do"], "answer": "D", "kp": "动词形式", "exp": "help sb. (to) do sth.，后接动词原形。"},
+        {"n": 8, "stem": "If you ______ to the party, you'll have a great time.", "options": ["will go", "go", "went", "going"], "answer": "B", "kp": "条件句", "exp": "主将从现：主句 you'll，if 从句用一般现在时 go。"},
+        {"n": 9, "stem": "—I'm afraid I can't pass the exam.\n—Don't worry. If you work hard, you ______.", "options": ["will", "do", "are", "did"], "answer": "A", "kp": "条件句", "exp": "主句表将来结果，省略为 you will (pass)。"},
+        {"n": 10, "stem": "—Sorry, I didn't catch that. Could you say it ______?\n—Sure.", "options": ["later", "again", "ago", "before"], "answer": "B", "kp": "交际用语", "exp": "没听清，请对方再说一遍：say it again。"},
+        {"n": 11, "stem": "Body language is ______ important ______ spoken language.", "options": ["as; than", "so; that", "more; as", "as; as"], "answer": "D", "kp": "as ... as", "exp": "as＋原级＋as，“和……一样重要”。"},
+        {"n": 12, "stem": "If we ______ talk to each other, we can't solve the problem.", "options": ["won't", "don't", "aren't", "didn't"], "answer": "B", "kp": "条件句", "exp": "if 从句用一般现在时，否定用 don't＋动词原形。"},
+        {"n": 13, "stem": "Please ______ me a message when you get home.", "options": ["sent", "sending", "send", "to send"], "answer": "C", "kp": "祈使句", "exp": "Please＋动词原形，祈使句。"},
+        {"n": 14, "stem": "In the future, maybe students ______ go to school. They will study at home online.", "options": ["won't", "aren't", "will", "don't"], "answer": "A", "kp": "一般将来时", "exp": "后一句说在家学习，所以是“不会去学校”：won't＋动词原形。"},
+        {"n": 15, "stem": "—I think computers will take the place of teachers one day.\n—______ Teachers can do many things that computers can't.", "options": ["I don't think so.", "I agree.", "That's right.", "Me too."], "answer": "A", "kp": "交际用语", "exp": "后面给出反对理由，所以表示不同意：I don't think so。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "Talk It Out",
+      "passage": "Last month, my best friend Amy and I had a fight. She didn't come to my birthday party, and she didn't tell me (16). I was very angry. For a week, we didn't (17) to each other.\nMy mom noticed that I was unhappy. She said, \"If you don't talk to Amy, you will (18) know the reason. Why don't you ask her?\" I thought about it. Maybe Mom was (19).\nThe next day, I sent Amy a message: \"Can we talk after school?\" She agreed. When we (20), she told me what happened. That day, her grandma was ill and she went to the hospital with her parents. Her phone had no (21), so she couldn't call me. She was really (22) about it.\nI felt bad. I didn't ask her before I got angry. We (23) each other and laughed. Now we're good friends again.\nI learned an important lesson: good communication can (24) many problems. If you have a problem with a friend, talk to him or her (25). Don't just guess!",
+      "items": [
+        {"n": 16, "options": ["how", "where", "what", "why"], "answer": "D", "kp": "上下文", "exp": "没来生日会，也没说为什么。下文妈妈说“不谈就永远不知道原因”。"},
+        {"n": 17, "options": ["agree", "listen", "speak", "belong"], "answer": "C", "kp": "上下文", "exp": "吵架后一周都不说话：speak to each other。"},
+        {"n": 18, "options": ["always", "never", "often", "still"], "answer": "B", "kp": "上下文", "exp": "如果不和她谈，就永远不会知道原因。"},
+        {"n": 19, "options": ["right", "busy", "angry", "wrong"], "answer": "A", "kp": "上下文", "exp": "想了想，也许妈妈是对的，第二天就去约 Amy 谈。"},
+        {"n": 20, "options": ["left", "cried", "fought", "met"], "answer": "D", "kp": "上下文", "exp": "约好放学后谈，见面时她讲了原委。"},
+        {"n": 21, "options": ["power", "money", "water", "time"], "answer": "A", "kp": "上下文", "exp": "手机没电了，所以没法打电话：had no power。"},
+        {"n": 22, "options": ["happy", "sorry", "excited", "proud"], "answer": "B", "kp": "上下文", "exp": "错过朋友的生日会，她很抱歉。"},
+        {"n": 23, "options": ["hit", "forgot", "hugged", "left"], "answer": "C", "kp": "上下文", "exp": "误会解开，两人拥抱、笑了起来。"},
+        {"n": 24, "options": ["cause", "solve", "make", "bring"], "answer": "B", "kp": "动词短语", "exp": "良好的沟通能解决很多问题：solve problems。"},
+        {"n": 25, "options": ["honestly", "loudly", "sadly", "angrily"], "answer": "A", "kp": "上下文", "exp": "有问题要坦诚地谈，不要瞎猜。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Life in 2050 — Science Fair",
+          "passage": "Date: Saturday, November 15 – Sunday, November 16\nTime: 9:00 a.m. – 5:00 p.m.\nPlace: City Science Museum, 3rd floor\nTickets: Adults ¥40, Students ¥20, Children under 6 free\nWhat will you see?\n· Robot Teachers: talk with a robot that can answer questions in 20 languages.\n· Flying Cars: sit in a flying car model and \"fly\" over the city with VR glasses.\n· Smart Homes: see how a home will turn off the lights and cook dinner by itself.\n· Space Farm: learn how people will grow vegetables on the moon.\nNote: The flying car show is not for children under 8.",
+          "items": [
+            {"n": 26, "stem": "How long does the science fair last?", "options": ["One day.", "Three days.", "Two days.", "One week."], "answer": "C", "kp": "细节理解", "exp": "11 月 15 日周六到 16 日周日，共两天。"},
+            {"n": 27, "stem": "How much will a mother and her 13-year-old son pay for the tickets?", "options": ["¥60.", "¥80.", "¥40.", "¥20."], "answer": "A", "kp": "推理判断", "exp": "成人 40 元＋学生 20 元＝60 元。"},
+            {"n": 28, "stem": "What can visitors do at \"Robot Teachers\"?", "options": ["Grow vegetables.", "Fly over the city.", "Talk with a robot.", "Cook dinner."], "answer": "C", "kp": "细节理解", "exp": "talk with a robot that can answer questions in 20 languages。"},
+            {"n": 29, "stem": "Who can't take part in the flying car show?", "options": ["A 9-year-old boy.", "A 15-year-old girl.", "A 40-year-old man.", "A 7-year-old girl."], "answer": "D", "kp": "推理判断", "exp": "The flying car show is not for children under 8，7 岁不行。"},
+            {"n": 30, "stem": "What will people learn at \"Space Farm\"?", "options": ["How to build a rocket.", "How to grow vegetables on the moon.", "How to drive a flying car.", "How to make a robot."], "answer": "B", "kp": "细节理解", "exp": "learn how people will grow vegetables on the moon。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Body Language Around the World",
+          "passage": "We don't only communicate with words. We also use body language. But be careful — the same body language can mean different things in different countries.\nIn most countries, nodding your head means \"yes\". But in Bulgaria, nodding often means \"no\"!\nMaking a circle with your thumb and first finger means \"OK\" in the US. In Japan, it can mean \"money\". In France, it can mean \"zero\".\nIn China, people often give and receive things with both hands. This shows respect, especially to older people.\nHow close do people stand when they talk? In some countries, people stand very close to each other. In others, people need more space, and they may feel uncomfortable if you stand too close.\nSo if you travel to another country, learn about its body language first. It will help you communicate better and make friends more easily.",
+          "items": [
+            {"n": 31, "stem": "What does nodding often mean in Bulgaria?", "options": ["Yes.", "Hello.", "Goodbye.", "No."], "answer": "D", "kp": "细节理解", "exp": "in Bulgaria, nodding often means \"no\"。"},
+            {"n": 32, "stem": "What can the \"OK\" sign mean in Japan?", "options": ["Zero.", "Money.", "Good.", "Stop."], "answer": "B", "kp": "细节理解", "exp": "In Japan, it can mean \"money\"。zero 是在法国的意思。"},
+            {"n": 33, "stem": "Why do Chinese people often give things with both hands?", "options": ["Because the things are heavy.", "Because it is faster.", "Because it shows respect.", "Because it means \"no\"."], "answer": "C", "kp": "细节理解", "exp": "This shows respect, especially to older people。"},
+            {"n": 34, "stem": "What does the writer suggest you do before you travel to another country?", "options": ["Learn about its body language.", "Learn its language only.", "Make lots of friends.", "Stand close to people."], "answer": "A", "kp": "推理判断", "exp": "最后一段：learn about its body language first。"},
+            {"n": 35, "stem": "What is the passage mainly about?", "options": ["How to travel around the world.", "Body language can mean different things in different countries.", "Why people nod their heads.", "How to make friends in China."], "answer": "B", "kp": "主旨大意", "exp": "第一段末句点题：the same body language can mean different things in different countries。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Life in 20 Years",
+      "passage": "What (36) ______ my life be like in 20 years? I think I (37) (be) a doctor in a big hospital. I (38) (not live) with my parents, but I will visit them every weekend.\nThere (39) (be) robots in every home. Robots will do most of the (40) (house), so people will have more free time. People will have (41) (few) traffic problems because many cars will fly.\nIf I (42) (have) a long holiday, I will travel to many (43) (difference) countries. If I study hard now, my dream (44) (come) true. I believe the future will be (45) (good) than today.",
+      "items": [
+        {"n": 36, "answer": "will", "kp": "一般将来时", "exp": "in 20 years 表将来，What will ... be like? 问将来会是什么样。"},
+        {"n": 37, "answer": "will be / 'll be", "hint": "be", "kp": "一般将来时", "exp": "预测将来用 will＋动词原形。"},
+        {"n": 38, "answer": "won't live / will not live", "hint": "not live", "kp": "一般将来时", "exp": "将来时否定：won't＋动词原形。"},
+        {"n": 39, "answer": "will be", "hint": "be", "kp": "一般将来时", "exp": "There be 的将来时是 there will be。"},
+        {"n": 40, "answer": "housework", "hint": "house", "kp": "词性转换", "exp": "do housework 做家务，不可数。"},
+        {"n": 41, "answer": "fewer", "hint": "few", "kp": "more / less / fewer", "exp": "problems 可数，“更少”用 fewer。"},
+        {"n": 42, "answer": "have", "hint": "have", "kp": "条件句", "exp": "主将从现：if 从句用一般现在时，主语 I 用 have。"},
+        {"n": 43, "answer": "different", "hint": "difference", "kp": "词性转换", "exp": "修饰名词 countries 用形容词 different。"},
+        {"n": 44, "answer": "will come", "hint": "come", "kp": "条件句", "exp": "主将从现：主句用 will＋动词原形；come true 实现。"},
+        {"n": 45, "answer": "better", "hint": "good", "kp": "比较级", "exp": "有 than，用比较级 better。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "学校英语报以“The World in 2050”为题征文。请写一篇短文：1. 从学习、交通、家庭生活中选两个方面，预测 2050 年会是什么样；2. 你认为那时人与人之间怎样沟通（例如还会不会见面聊天）；3. 为了让未来更好，你现在打算做什么（用 if 句子说明）。要求：80 词左右，题目已给出，不计入总词数；文中不得出现真实姓名和校名。\nThe World in 2050",
+      "points": [["两个方面的预测", 5], ["对沟通方式的看法", 3], ["现在打算做什么（含 if 句）", 3], ["语言正确（will、more / less / fewer、主将从现），书写规范", 4]],
+      "sample": "The World in 2050\nWhat will the world be like in 2050? I think it will be very different.\nStudents won't carry heavy schoolbags. They will study with smart computers, and robots will answer their questions. There will be fewer cars on the roads, and people will take flying buses to work. The air will be cleaner.\nPeople will talk online more often, but I think they will still meet and talk face to face, because nothing is as warm as a real smile.\nIf everyone saves energy and plants more trees now, the future will be better. So I will start from myself today.",
+      "exp": "写完检查：预测将来用 will＋动词原形，否定用 won't；可数名词“更少”用 fewer，不可数用 less；if 从句用一般现在时，主句用 will（主将从现）。"
+    }
+  ]
+}

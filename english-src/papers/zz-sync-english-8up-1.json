@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-8up-1",
+  "sync": true,
+  "stage": "8-up",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "八上英语同步章节卷 · Units 1–2",
+  "label": "Units 1–2 Happy Holiday · Home Sweet Home",
+  "unit": "八上·Units 1–2 Happy Holiday / Home Sweet Home",
+  "order": 1,
+  "source": "人教版八年级上册 Unit 1 Happy Holiday、Unit 2 Home Sweet Home：一般过去时、不定代词（something / anything / nobody / everyone）、-ed 与 -ing 形容词、家务劳动、礼貌请求（Could you please ...?）、家与家乡。按八年级单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "—Did you buy ______ for your parents in Hainan?\n—Yes, I bought them some coconut candy.", "options": ["anything", "something", "nothing", "everything"], "answer": "A", "kp": "不定代词", "exp": "一般疑问句中用 anything。坑点：表示请求、建议的问句（Would you like ...?）才用 something。"},
+        {"n": 2, "stem": "There is ______ wrong with my bike. Could you help me fix it?", "options": ["anything", "something", "nothing", "everything"], "answer": "B", "kp": "不定代词", "exp": "肯定句中用 something；后面请人帮忙修，说明有问题，不是 nothing。形容词放在不定代词后面。"},
+        {"n": 3, "stem": "I knocked at the door, but ______ answered. Everyone was out.", "options": ["nobody", "somebody", "anybody", "everybody"], "answer": "A", "kp": "不定代词", "exp": "大家都出去了，所以没人应门：nobody。"},
+        {"n": 4, "stem": "—How ______ your trip to Guilin?\n—Wonderful! The mountains and rivers were so beautiful.", "options": ["is", "did", "was", "were"], "answer": "C", "kp": "一般过去时", "exp": "问过去的旅行，主语 your trip 是单数，用 was。"},
+        {"n": 5, "stem": "I was so ______ about the trip that I couldn't sleep the night before.", "options": ["exciting", "excited", "bored", "boring"], "answer": "B", "kp": "形容词", "exp": "-ed 形容词描述人的感受，-ing 形容词描述事物的特点。人感到兴奋用 excited。"},
+        {"n": 6, "stem": "—Did you take any photos there?\n—______ I left my camera at home.", "options": ["Yes, I did.", "Yes, I took.", "No, I don't.", "No, I didn't."], "answer": "D", "kp": "一般过去时", "exp": "Did ...? 用 did / didn't 回答；相机落在家里，所以没拍。"},
+        {"n": 7, "stem": "Could you please ______ the rubbish? It smells bad.", "options": ["put on", "turn on", "take out", "look after"], "answer": "C", "kp": "动词短语", "exp": "take out the rubbish 倒垃圾。"},
+        {"n": 8, "stem": "—Could you please clean your room, Tony?\n—______ I'll do it right now.", "options": ["Yes, I could.", "Sure.", "Sorry, I can't.", "No, I couldn't."], "answer": "B", "kp": "交际用语", "exp": "Could you please ...? 是礼貌请求，同意用 Sure / Certainly / No problem。坑点：不用 Yes, I could 回答。"},
+        {"n": 9, "stem": "My parents often ask me ______ my own clothes.", "options": ["to wash", "wash", "washing", "washed"], "answer": "A", "kp": "动词形式", "exp": "ask sb. to do sth. 要求某人做某事。"},
+        {"n": 10, "stem": "My brother and I share the housework ______ our parents.", "options": ["for", "to", "at", "with"], "answer": "D", "kp": "固定搭配", "exp": "share sth. with sb. 和某人分担 / 分享某物。"},
+        {"n": 11, "stem": "Home is where your family is. There is no place ______ home.", "options": ["like", "than", "as", "for"], "answer": "A", "kp": "介词", "exp": "There is no place like home. 没有地方比得上家。like 是介词“像”。"},
+        {"n": 12, "stem": "—I hate doing chores.\n—But doing chores helps you learn to ______ yourself.", "options": ["look for", "look at", "look after", "look like"], "answer": "C", "kp": "动词短语", "exp": "look after oneself 照顾自己。"},
+        {"n": 13, "stem": "—What did you think of the movie?\n—It was so ______ that I fell asleep.", "options": ["bored", "boring", "exciting", "interesting"], "answer": "B", "kp": "形容词", "exp": "电影本身无聊，用 boring；看得睡着了，不是 exciting。"},
+        {"n": 14, "stem": "We had ______ great time at the beach last weekend.", "options": ["/", "an", "the", "a"], "answer": "D", "kp": "冠词", "exp": "have a great / good time 玩得开心，固定搭配用 a。"},
+        {"n": 15, "stem": "Every Spring Festival, my family goes back to my hometown. We ______ the house and put up couplets before the festival.", "options": ["cleaned", "cleans", "are cleaning", "clean"], "answer": "D", "kp": "一般现在时", "exp": "Every Spring Festival 表示每年的习惯，用一般现在时；主语 we，用 clean。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "A Holiday at Home",
+      "passage": "Last summer holiday, my parents were busy, so we didn't go (16). At first I was unhappy. All my friends went to interesting places, but I just stayed at home.\nOne day, my mom said, \"Why don't you learn to do (17) chores this holiday?\" I didn't like the idea, but I said yes. First, I learned to cook. My first meal was terrible — the soup was too (18) and the eggs were black! But my parents ate it all and said, \"Not bad for the first time.\" I felt (19).\nThen I learned to do the laundry and (20) the floor. It was not easy, and I was tired every evening. But slowly I got better at it. By the end of the holiday, I (21) cook three dishes.\nI also found something interesting. When I helped at home, my parents had more (22) to rest. In the evenings, we often went for walks together and talked a lot. I felt much (23) to my parents.\nThis holiday was not exciting, but it was (24). I learned that home is not only a place to live. It is also a place where everyone (25) about each other and helps each other.",
+      "items": [
+        {"n": 16, "options": ["everywhere", "somewhere", "nowhere", "anywhere"], "answer": "D", "kp": "不定代词", "exp": "否定句中用 anywhere；didn't 已经表示否定，不能再用 nowhere。"},
+        {"n": 17, "options": ["much", "some", "few", "any"], "answer": "B", "kp": "上下文", "exp": "Why don't you ...? 是建议，用 some；chores 可数，不能用 much。"},
+        {"n": 18, "options": ["fresh", "healthy", "delicious", "salty"], "answer": "D", "kp": "上下文", "exp": "第一顿饭很糟糕：汤太咸了。其他三项都是好的评价。"},
+        {"n": 19, "options": ["happy", "bored", "afraid", "angry"], "answer": "A", "kp": "上下文", "exp": "父母吃光了还夸“第一次不错”，我很开心。"},
+        {"n": 20, "options": ["eat", "sweep", "break", "paint"], "answer": "B", "kp": "上下文", "exp": "家务：洗衣服、扫地 sweep the floor。"},
+        {"n": 21, "options": ["must", "couldn't", "should", "could"], "answer": "D", "kp": "情态动词", "exp": "慢慢做得越来越好，假期结束时能做三个菜了：could 表示过去的能力。"},
+        {"n": 22, "options": ["money", "time", "work", "food"], "answer": "B", "kp": "上下文", "exp": "我帮忙做家务，父母就有更多时间休息。"},
+        {"n": 23, "options": ["older", "busier", "closer", "further"], "answer": "C", "kp": "上下文", "exp": "一起散步聊天，和父母更亲近：feel closer to sb.。"},
+        {"n": 24, "options": ["meaningful", "boring", "terrible", "dangerous"], "answer": "A", "kp": "上下文", "exp": "but 转折：不刺激，但很有意义。"},
+        {"n": 25, "options": ["hates", "leaves", "cares", "fights"], "answer": "C", "kp": "动词短语", "exp": "care about each other 互相关心，与 helps each other 并列。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Summer Holiday Tours",
+          "passage": "Lijiang Tour: 5 days, ¥3,200 per person. Visit the Old Town and Jade Dragon Snow Mountain. Children under 12: half price.\nQingdao Beach Fun: 4 days, ¥2,500 per person. Swim in the sea, eat seafood and visit the Ocean Park.\nXi'an History Trip: 3 days, ¥1,800 per person. See the Terracotta Warriors and ride a bike on the old city wall.\nCall 8765-4321 to book. Book before June 30 and get a free travel bag.",
+          "items": [
+            {"n": 26, "stem": "Which tour is the longest?", "options": ["The Lijiang tour.", "The Xi'an tour.", "The Qingdao tour.", "They are the same."], "answer": "A", "kp": "细节理解", "exp": "丽江 5 天，青岛 4 天，西安 3 天。"},
+            {"n": 27, "stem": "How much does a 10-year-old child pay for the Lijiang tour?", "options": ["¥3,200.", "¥900.", "¥1,250.", "¥1,600."], "answer": "D", "kp": "推理判断", "exp": "12 岁以下半价：3200÷2＝1600（元）。"},
+            {"n": 28, "stem": "Where can people ride a bike on the old city wall?", "options": ["In Lijiang.", "In Xi'an.", "In Hainan.", "In Qingdao."], "answer": "B", "kp": "细节理解", "exp": "Xi'an History Trip ... ride a bike on the old city wall。"},
+            {"n": 29, "stem": "Mr. Wang and his wife want to go swimming in the sea. How much should they pay?", "options": ["¥5,000.", "¥2,500.", "¥6,400.", "¥3,600."], "answer": "A", "kp": "推理判断", "exp": "去海边是青岛线，每人 2500 元，两人 5000 元。"},
+            {"n": 30, "stem": "What can people get if they book before June 30?", "options": ["Half price.", "A free meal.", "A free travel bag.", "A free ticket to the Ocean Park."], "answer": "C", "kp": "细节理解", "exp": "Book before June 30 and get a free travel bag。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Should Kids Do Chores at Home?",
+          "passage": "Mrs. Green (mother): I think kids should help at home. Doing chores teaches them to look after themselves. My son is 13. He makes his bed, takes out the rubbish and feeds our cat every day.\nMr. Liu (father): My daughter is in Grade 8. She has lots of homework and gets home at 6 p.m. I don't want her to do chores on weekdays, but on weekends she helps me cook.\nJack (student): I didn't like doing chores at first. But last month my mom was ill in bed for a week, and I did all the shopping and cleaning. I found it was not so hard. Now I think everyone in the family should share the housework.\nMs. Chen (teacher): Kids who do chores often learn to be independent. But parents should give them chores that are right for their age.",
+          "items": [
+            {"n": 31, "stem": "What does Mrs. Green's son do every day?", "options": ["He washes the car.", "He cooks dinner.", "He does the shopping.", "He feeds the cat."], "answer": "D", "kp": "细节理解", "exp": "He makes his bed, takes out the rubbish and feeds our cat every day。"},
+            {"n": 32, "stem": "When does Mr. Liu's daughter help with the cooking?", "options": ["Every day.", "On weekdays.", "On weekends.", "After 6 p.m."], "answer": "C", "kp": "细节理解", "exp": "on weekends she helps me cook。"},
+            {"n": 33, "stem": "Why did Jack do all the shopping and cleaning last month?", "options": ["Because he liked doing chores.", "Because his mother was ill.", "Because his father asked him to.", "Because he had a holiday."], "answer": "B", "kp": "细节理解", "exp": "my mom was ill in bed for a week。"},
+            {"n": 34, "stem": "Who doesn't want the child to do chores on weekdays?", "options": ["Mrs. Green.", "Jack.", "Ms. Chen.", "Mr. Liu."], "answer": "D", "kp": "细节理解", "exp": "Mr. Liu: I don't want her to do chores on weekdays。"},
+            {"n": 35, "stem": "What does Ms. Chen think?", "options": ["Kids shouldn't do any chores.", "Parents should give kids chores that are right for their age.", "Only girls should do chores.", "Kids should do all the housework."], "answer": "B", "kp": "推理判断", "exp": "parents should give them chores that are right for their age。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "Spring Festival in My Hometown",
+      "passage": "This Spring Festival, my family (36) (drive) back to my grandparents' village. The trip (37) (take) us about six hours. When we got there, (38) (every) in the family was busy. Grandpa was putting up couplets on the door, and Grandma was making dumplings. I helped her (39) (make) dumplings, but mine looked (40) (fun).\nOn the eve of the Spring Festival, we had a big dinner together. There were many (41) (dish) on the table. After dinner, we watched the Spring Festival Gala and (42) (talk) until midnight.\nI didn't have (43) (some) homework to do, so I played with my cousins every day. I really (44) (enjoy) myself. There is no place like home. I can't wait (45) (go) back next year!",
+      "items": [
+        {"n": 36, "answer": "drove", "hint": "drive", "kp": "一般过去时", "exp": "This Spring Festival 已经过去，drive 的过去式 drove。"},
+        {"n": 37, "answer": "took", "hint": "take", "kp": "一般过去时", "exp": "It / The trip took sb. ... 花费某人多长时间；take 的过去式 took。"},
+        {"n": 38, "answer": "everyone / everybody", "hint": "every", "kp": "不定代词", "exp": "家里每个人都很忙；不定代词作主语，谓语用单数 was。"},
+        {"n": 39, "answer": "make / to make", "hint": "make", "kp": "动词形式", "exp": "help sb. (to) do sth.。"},
+        {"n": 40, "answer": "funny", "hint": "fun", "kp": "词性转换", "exp": "look 是系动词，后接形容词；fun 的形容词“好笑的”是 funny，双写 n 加 -y。"},
+        {"n": 41, "answer": "dishes", "hint": "dish", "kp": "名词复数", "exp": "many 后接复数；dish 以 sh 结尾，加 -es。"},
+        {"n": 42, "answer": "talked", "hint": "talk", "kp": "一般过去时", "exp": "and 连接两个过去的动作，与 watched 一致。"},
+        {"n": 43, "answer": "any", "hint": "some", "kp": "不定代词", "exp": "否定句中 some 改为 any。"},
+        {"n": 44, "answer": "enjoyed", "hint": "enjoy", "kp": "一般过去时", "exp": "enjoy oneself 玩得开心，讲过去的事用 enjoyed。"},
+        {"n": 45, "answer": "to go", "hint": "go", "kp": "动词形式", "exp": "can't wait to do sth. 迫不及待地做某事。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "请以“My Last Holiday”为题，写一篇短文介绍你上一个假期：1. 你去了哪里（或待在家里），和谁一起；2. 你做了哪些事（至少三件，可以包括帮家里做的家务）；3. 你的感受和收获。要求：80 词左右，题目已给出，不计入总词数；文中不得出现真实姓名和校名。\nMy Last Holiday",
+      "points": [["交代去处和同伴", 3], ["写出至少三件事", 5], ["写出感受和收获", 3], ["语言正确（一般过去时、不定代词、-ed / -ing 形容词），书写规范", 4]],
+      "sample": "My Last Holiday\nLast winter holiday, I didn't go anywhere far. I stayed in my hometown with my family, but I still had a great time.\nFirst, I helped my parents clean the house before the Spring Festival. I swept the floor and cleaned the windows. Then I learned to make dumplings with my grandma. They didn't look nice, but they tasted delicious. I also read three books and went skating with my cousins.\nIt was not an exciting trip, but I felt very relaxed. I learned that doing something for my family makes me happy.",
+      "exp": "写完检查：叙述假期全文用一般过去时（go→went、swim→swam、make→made、feel→felt）；“没去任何地方”是 didn't go anywhere；人感到……用 -ed 形容词（excited、relaxed），事物让人……用 -ing 形容词（exciting、relaxing）。"
+    }
+  ]
+}

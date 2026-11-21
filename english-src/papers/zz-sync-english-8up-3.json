@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-8up-3",
+  "sync": true,
+  "stage": "8-up",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "八上英语同步章节卷 · Units 5–6",
+  "label": "Units 5–6 What a Delicious Meal! · Plan for Yourself",
+  "unit": "八上·Units 5–6 What a Delicious Meal! / Plan for Yourself",
+  "order": 3,
+  "source": "人教版八年级上册 Unit 5 What a Delicious Meal!、Unit 6 Plan for Yourself：感叹句（What / How）、食谱中的祈使句和顺序词、可数与不可数名词及量词、be going to 表计划和打算、want to be / hope to do、制订计划。按八年级单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "______ delicious the noodles are! Can I have some more?", "options": ["What", "How", "What a", "How a"], "answer": "B", "kp": "感叹句", "exp": "感叹句中心是形容词 delicious，后面没有名词，用 How＋形容词＋主语＋谓语。"},
+        {"n": 2, "stem": "______ great meal it is! Thank you, Grandma.", "options": ["How a", "What", "How", "What a"], "answer": "D", "kp": "感叹句", "exp": "中心是名词 meal（可数单数），用 What a＋形容词＋名词。"},
+        {"n": 3, "stem": "—How ______ milk do we need for the cake?\n—Two cups.", "options": ["many", "often", "much", "long"], "answer": "C", "kp": "可数与不可数名词", "exp": "milk 不可数，问量用 how much。"},
+        {"n": 4, "stem": "First, cut up three tomatoes. ______, put them into the pot.", "options": ["Next", "At first", "Before", "Last"], "answer": "A", "kp": "顺序词", "exp": "描述步骤：First → Next / Then → After that → Finally。"},
+        {"n": 5, "stem": "Don't forget ______ a little salt to the soup.", "options": ["add", "to add", "adding", "added"], "answer": "B", "kp": "动词形式", "exp": "forget to do sth. 忘记要做某事（还没做）；forget doing sth. 忘记做过某事。"},
+        {"n": 6, "stem": "We need two ______ to make the pancakes.", "options": ["cups of flour", "cups of flours", "cup of flour", "cup of flours"], "answer": "A", "kp": "可数与不可数名词", "exp": "不可数名词表示数量用“数词＋量词＋of＋名词”，量词变复数，flour 不变。"},
+        {"n": 7, "stem": "—What are you going to be when you grow up?\n—I'm going to be ______ engineer.", "options": ["a", "the", "an", "/"], "answer": "C", "kp": "冠词", "exp": "engineer 以元音音素开头，用 an。"},
+        {"n": 8, "stem": "My cousin ______ study medicine in Beijing next year.", "options": ["go to", "are going to", "going to", "is going to"], "answer": "D", "kp": "be going to", "exp": "next year 表将来计划，用 be going to＋动词原形；主语单数用 is。"},
+        {"n": 9, "stem": "—Are you going to take part in the cooking competition?\n—______ I'm practising every day.", "options": ["Yes, I do.", "No, I'm not.", "Yes, I am.", "Yes, I'm going."], "answer": "C", "kp": "be going to", "exp": "Are you going to ...? 用 Yes, I am / No, I'm not 回答；每天在练，肯定回答。"},
+        {"n": 10, "stem": "I hope ______ my grandparents more often this year.", "options": ["visit", "to visit", "visiting", "visits"], "answer": "B", "kp": "动词形式", "exp": "hope to do sth. 希望做某事。"},
+        {"n": 11, "stem": "Bake the cake in the oven ______ 40 minutes.", "options": ["in", "at", "on", "for"], "answer": "D", "kp": "介词", "exp": "for＋一段时间，表示持续多久。"},
+        {"n": 12, "stem": "—How are you going to ______ your dream?\n—By practising hard every day.", "options": ["achieve", "forget", "lose", "break"], "answer": "A", "kp": "词汇", "exp": "achieve one's dream 实现梦想。"},
+        {"n": 13, "stem": "Learning to cook is not easy, but don't give ______!", "options": ["in", "up", "away", "out"], "answer": "B", "kp": "动词短语", "exp": "give up 放弃。"},
+        {"n": 14, "stem": "A plan is useless if you don't ______ it.", "options": ["put on", "look for", "take off", "stick to"], "answer": "D", "kp": "动词短语", "exp": "stick to a plan 坚持计划。"},
+        {"n": 15, "stem": "—I'm going to learn to play the guitar this year.\n—______", "options": ["Sounds great. Good luck!", "I'm afraid not.", "You're welcome.", "Never mind."], "answer": "A", "kp": "交际用语", "exp": "听到别人的计划，表示赞同并祝好运。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "A Soup for Mom",
+      "passage": "Last Sunday was Mother's Day. I decided to cook a meal for my mom. I was going to make her favourite dish — fish soup. But I didn't know (16) to make it, so I asked my grandma for help.\nFirst, Grandma told me to buy a fresh fish and some other (17), like tofu and green onions. Then she showed me what to do. I washed the green onions and (18) the tofu into small pieces. Next, I put some oil in the pot and cooked the fish for two minutes on each (19). After that, I added some hot water and the tofu. Finally, I added a little (20) and the green onions.\nWhen Mom came home, she saw the soup on the table. She was very (21). \"What a delicious soup!\" she said. I was so proud (22) myself.\nCooking that meal made me think about my plans. My mom cooks for us (23) day, and she never complains. This year, I'm going to (24) more at home. I'm also going to learn to cook three new dishes. I want to show my love through (25), not just words.",
+      "items": [
+        {"n": 16, "options": ["what", "where", "how", "when"], "answer": "C", "kp": "上下文", "exp": "不知道怎么做：how to make it。"},
+        {"n": 17, "options": ["ingredients", "plates", "tools", "drinks"], "answer": "A", "kp": "词汇", "exp": "豆腐、葱都是做菜的原料 ingredients。"},
+        {"n": 18, "options": ["ate", "cut", "fried", "boiled"], "answer": "B", "kp": "上下文", "exp": "把豆腐切成小块：cut ... into small pieces。cut 的过去式还是 cut。"},
+        {"n": 19, "options": ["side", "day", "time", "way"], "answer": "A", "kp": "上下文", "exp": "鱼每面煎两分钟：on each side。"},
+        {"n": 20, "options": ["sugar", "flour", "water", "salt"], "answer": "D", "kp": "上下文", "exp": "最后加少许盐调味。前面已经加过水。"},
+        {"n": 21, "options": ["angry", "surprised", "worried", "bored"], "answer": "B", "kp": "上下文", "exp": "回家看到桌上的汤，又惊又喜。"},
+        {"n": 22, "options": ["with", "for", "of", "at"], "answer": "C", "kp": "固定搭配", "exp": "be proud of 为……感到自豪。"},
+        {"n": 23, "options": ["some", "one", "next", "every"], "answer": "D", "kp": "上下文", "exp": "妈妈每天为我们做饭，从不抱怨。"},
+        {"n": 24, "options": ["help", "sleep", "play", "complain"], "answer": "A", "kp": "上下文", "exp": "今年打算多帮家里做事。"},
+        {"n": 25, "options": ["money", "gifts", "letters", "actions"], "answer": "D", "kp": "上下文", "exp": "用行动表达爱，而不只是说说：actions, not just words。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Rainbow Fruit Salad (for 4 people)",
+          "passage": "You need: 2 bananas, 1 apple, 1 cup of strawberries, 1 cup of grapes, 2 spoons of honey, 1 cup of yogurt\nSteps:\n1. Wash all the fruit.\n2. Cut up the apple. Cut the strawberries in half.\n3. Put the fruit into a big bowl.\n4. Mix the yogurt and the honey together.\n5. Pour the yogurt over the fruit and mix well.\n6. Put the salad in the fridge for 20 minutes.\n7. Cut up the bananas and add them just before you eat.\nTip: Don't cut the bananas too early, or they will turn brown.",
+          "items": [
+            {"n": 26, "stem": "How many people is this fruit salad for?", "options": ["Two.", "Three.", "Four.", "Six."], "answer": "C", "kp": "细节理解", "exp": "标题写着 for 4 people。"},
+            {"n": 27, "stem": "How much honey do we need?", "options": ["Two spoons.", "One cup.", "Two cups.", "One spoon."], "answer": "A", "kp": "细节理解", "exp": "2 spoons of honey。"},
+            {"n": 28, "stem": "What should we do right after we wash the fruit?", "options": ["Mix the yogurt and honey.", "Put the salad in the fridge.", "Cut up the apple and the strawberries.", "Cut up the bananas."], "answer": "C", "kp": "细节理解", "exp": "第 2 步：切苹果、把草莓对半切。香蕉要等吃之前才切。"},
+            {"n": 29, "stem": "How long should we keep the salad in the fridge?", "options": ["10 minutes.", "20 minutes.", "One night.", "2 hours."], "answer": "B", "kp": "细节理解", "exp": "Put the salad in the fridge for 20 minutes。"},
+            {"n": 30, "stem": "Why should we add the bananas last?", "options": ["Because they are the sweetest.", "Because they are not healthy.", "Because they are the biggest.", "Because they may turn brown."], "answer": "D", "kp": "推理判断", "exp": "Tip：香蕉切早了会变黑。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "How to Make a Plan That Works",
+          "passage": "Many people make plans at the beginning of a new year, but by February most of them give up. How can you make a plan that really works? Here are some tips.\nMake it clear. \"I'm going to exercise more\" is not clear. \"I'm going to run for 20 minutes three times a week\" is much better.\nStart small. Don't plan to read 50 books this year if you only read two last year. Start with one book a month.\nWrite it down. Put your plan on your desk or on the wall of your bedroom, so you can see it every day.\nTell a friend. When your friend knows your plan, he or she can check on you and cheer you on.\nDon't be too hard on yourself. If you miss one day, it's OK. Just start again the next day.",
+          "items": [
+            {"n": 31, "stem": "When do most people give up their New Year plans?", "options": ["By February.", "At the end of the year.", "In summer.", "On New Year's Day."], "answer": "A", "kp": "细节理解", "exp": "by February most of them give up。"},
+            {"n": 32, "stem": "Which plan is the clearest?", "options": ["I'm going to study harder.", "I'm going to exercise more.", "I'm going to be healthier.", "I'm going to run for 20 minutes three times a week."], "answer": "D", "kp": "推理判断", "exp": "清楚的计划要写明做什么、做多久、多久一次。"},
+            {"n": 33, "stem": "Why should you write your plan down and put it on your desk?", "options": ["To show it to your teacher.", "To make your room beautiful.", "To see it every day.", "To forget it."], "answer": "C", "kp": "细节理解", "exp": "so you can see it every day。"},
+            {"n": 34, "stem": "What can a friend do for you?", "options": ["Make the plan for you.", "Check on you and cheer you on.", "Read books for you.", "Do your homework."], "answer": "B", "kp": "细节理解", "exp": "he or she can check on you and cheer you on。"},
+            {"n": 35, "stem": "What does the writer mean by \"Don't be too hard on yourself\"?", "options": ["Make your plan very difficult.", "Don't make any plans.", "Give up if you miss a day.", "It's OK to miss a day, just start again."], "answer": "D", "kp": "推理判断", "exp": "后文：If you miss one day, it's OK. Just start again the next day。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "A Birthday Dinner",
+      "passage": "Next Saturday is my mom's birthday. My dad and I (36) ______ going to cook a special dinner for her.\nWe are going to make a cake first. We need six (37) (egg), some milk and some butter. First, we're going to (38) (mix) them together. Then we'll bake the cake for half an hour. I'm also going to make birthday (39) (noodle) because they mean a long life in China. Dad is going to (40) (buy) some flowers on his way home.\n(41) ______ happy Mom will be! I hope she (42) (like) our dinner.\nI also have a plan for (43) (I). This year, I'm going to learn (44) (cook) more dishes. (45) (final), I want to cook a whole meal by myself.",
+      "items": [
+        {"n": 36, "answer": "are", "kp": "be going to", "exp": "主语 My dad and I 是复数，be going to 用 are。"},
+        {"n": 37, "answer": "eggs", "hint": "egg", "kp": "名词复数", "exp": "six 后接可数名词复数。"},
+        {"n": 38, "answer": "mix", "hint": "mix", "kp": "be going to", "exp": "be going to 后接动词原形。"},
+        {"n": 39, "answer": "noodles", "hint": "noodle", "kp": "名词复数", "exp": "面条一般用复数 noodles。"},
+        {"n": 40, "answer": "buy", "hint": "buy", "kp": "be going to", "exp": "be going to 后接动词原形。"},
+        {"n": 41, "answer": "How", "kp": "感叹句", "exp": "中心词是形容词 happy，后面没有名词，用 How。"},
+        {"n": 42, "answer": "likes / will like", "hint": "like", "kp": "动词形式", "exp": "hope 后的宾语从句，主语 she，用 likes 或 will like。"},
+        {"n": 43, "answer": "myself", "hint": "I", "kp": "反身代词", "exp": "为我自己定的计划：a plan for myself。"},
+        {"n": 44, "answer": "to cook", "hint": "cook", "kp": "动词形式", "exp": "learn to do sth. 学做某事。"},
+        {"n": 45, "answer": "Finally", "hint": "final", "kp": "词性转换", "exp": "修饰全句用副词 finally，句首大写。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "新学期开始了，请以“My Plan for This Year”为题写一篇短文：1. 你今年在学习上的一个计划，打算怎么做；2. 你在生活或健康方面的一个计划（例如学做一道菜、坚持锻炼），打算怎么做；3. 你会怎样坚持你的计划。要求：80 词左右，题目已给出，不计入总词数；文中不得出现真实姓名和校名。\nMy Plan for This Year",
+      "points": [["学习计划及做法", 4], ["生活或健康计划及做法", 4], ["怎样坚持", 3], ["语言正确（be going to、want to / hope to、顺序词），书写规范", 4]],
+      "sample": "My Plan for This Year\nA new year is here, and I have some plans for myself.\nFirst, I'm going to improve my English. I'm going to read an English story every week and write down new words in a notebook. I hope to speak English better by the end of the year.\nSecond, I'm going to learn to cook. My mom is going to teach me how to make tomato and egg soup. I want to cook dinner for my family on weekends.\nTo stick to my plans, I'm going to write them down and put them on my desk. If I miss a day, I won't give up. I'll just start again.",
+      "exp": "写完检查：be going to 的 be 要随主语变（I am / he is / we are），后面接动词原形；计划要具体，写清做什么、多久一次；用 first、second、finally 把计划串起来。"
+    }
+  ]
+}
