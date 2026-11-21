@@ -2143,6 +2143,116 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-physics-9up-1",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九年级·内能与热机",
+      "order": 1,
+      "label": "内能与热机",
+      "title": "九上物理同步章节卷 · 内能与热机",
+      "source": "考查范围：人教版九年级“内能”“内能的利用”两章（分子热运动、内能及改变方式、比热容与热量计算、热机四冲程、热值、热机效率、能量守恒），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-9up-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-9up-2",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九年级·电流和电路",
+      "order": 2,
+      "label": "电流和电路",
+      "title": "九上物理同步章节卷 · 电流和电路",
+      "source": "考查范围：人教版九年级“电流和电路”一章（两种电荷与验电器、导体和绝缘体、电流及方向、电路的组成与三种状态、串联和并联、电流表的使用、串并联电路的电流规律、电路设计与故障），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-9up-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-9up-3",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九年级·电压与电阻",
+      "order": 3,
+      "label": "电压 电阻",
+      "title": "九上物理同步章节卷 · 电压 电阻",
+      "source": "考查范围：人教版九年级“电压 电阻”一章（电压与电压表、串并联电路的电压规律、电阻及影响因素、滑动变阻器的原理与接法、用电压表判断故障），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-9up-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-9up-4",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九年级·欧姆定律",
+      "order": 4,
+      "label": "欧姆定律",
+      "title": "九上物理同步章节卷 · 欧姆定律",
+      "source": "考查范围：人教版九年级“欧姆定律”一章（电流与电压、电阻的关系，欧姆定律及计算，串联分压与并联分流，伏安法测电阻，动态电路与电表安全范围），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-9up-4.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-9up-5",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九年级·电功率",
+      "order": 5,
+      "label": "电功率",
+      "title": "九上物理同步章节卷 · 电功率",
+      "source": "考查范围：人教版九年级“电功率”一章（电能与电能表、电功率、额定功率与实际功率、测量小灯泡的电功率、焦耳定律、多挡位电热器），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-9up-5.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "xsc-chinese-1",
       "subject": "chinese",
       "subjectLabel": "语文",
