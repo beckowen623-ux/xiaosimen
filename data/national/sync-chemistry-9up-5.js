@@ -1,0 +1,828 @@
+// 由 tools/build_english.mjs 生成，源文件 english-src/papers/zz-sync-chemistry-9up-5.json，请勿手改。
+window.NATIONAL_PAPERS = window.NATIONAL_PAPERS || {};
+window.NATIONAL_PAPERS["sync-chemistry-9up-5"] = [
+ {
+  "id": "national-sync-chemistry-9up-5-q01",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 1,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 1 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "原子的种类和数目"
+   },
+   {
+    "key": "B",
+    "text": "物质的种类"
+   },
+   {
+    "key": "C",
+    "text": "分子的种类"
+   },
+   {
+    "key": "D",
+    "text": "分子的数目"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "化学反应的实质是分子分成原子、原子重新组合，原子的种类、数目、质量都不变；分子和物质的种类一定改变，分子数目可能改变。",
+  "kp": "质量守恒定律",
+  "stem": "化学反应前后，肯定不变的是（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q02",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 2,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 2 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "10 g 水结成冰后质量仍为 10 g"
+   },
+   {
+    "key": "B",
+    "text": "铁丝燃烧后，生成物的质量比铁丝的质量大"
+   },
+   {
+    "key": "C",
+    "text": "50 mL 水和 50 mL 酒精混合后，总体积小于 100 mL"
+   },
+   {
+    "key": "D",
+    "text": "湿衣服晾干后质量变小"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "质量守恒定律只适用于化学变化。A、C、D 都是物理变化。",
+  "kp": "质量守恒定律",
+  "stem": "下列现象能用质量守恒定律解释的是（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q03",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 3,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 3 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "一定含有碳、氢、氧三种元素"
+   },
+   {
+    "key": "B",
+    "text": "只含碳、氢两种元素"
+   },
+   {
+    "key": "C",
+    "text": "一定含有碳、氢元素，可能含有氧元素"
+   },
+   {
+    "key": "D",
+    "text": "一定含有碳、氧元素"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "生成物中的碳、氢一定来自该物质；氧可能来自氧气，所以不能确定该物质是否含氧。要确定需要定量计算。",
+  "kp": "质量守恒定律",
+  "stem": "某物质在氧气中完全燃烧，只生成二氧化碳和水，则该物质中（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q04",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 4,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 4 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "氢气和氧气在点燃条件下反应生成水"
+   },
+   {
+    "key": "B",
+    "text": "2 g 氢气与 1 g 氧气反应，生成 2 g 水"
+   },
+   {
+    "key": "C",
+    "text": "每 2 个氢分子与 1 个氧分子反应，生成 2 个水分子"
+   },
+   {
+    "key": "D",
+    "text": "每 4 份质量的氢气与 32 份质量的氧气反应，生成 36 份质量的水"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "化学计量数之比是分子个数比，不是质量比。质量比是 4∶32∶36。",
+  "kp": "化学方程式",
+  "stem": "关于化学方程式 2H₂＋O₂ ═点燃═ 2H₂O 的意义，下列说法错误的是（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q05",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 5,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 5 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "25 g"
+   },
+   {
+    "key": "B",
+    "text": "30 g"
+   },
+   {
+    "key": "C",
+    "text": "15 g"
+   },
+   {
+    "key": "D",
+    "text": "5 g"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "20＋10＝5＋m(D)，m(D)＝25 g。",
+  "kp": "质量守恒定律",
+  "stem": "在反应 A＋B＝C＋D 中，20 g A 与 10 g B 恰好完全反应，生成 5 g C，则生成 D 的质量为（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q06",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 6,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 6 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "1"
+   },
+   {
+    "key": "B",
+    "text": "2"
+   },
+   {
+    "key": "C",
+    "text": "3"
+   },
+   {
+    "key": "D",
+    "text": "4"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "Fe₂O₃＋3CO ═高温═ 2Fe＋3CO₂。一个 CO 夺取一个 O 变成 CO₂，Fe₂O₃ 有 3 个 O，需要 3 个 CO。",
+  "kp": "化学方程式",
+  "stem": "配平化学方程式 □Fe₂O₃＋□CO ═高温═ □Fe＋□CO₂，CO 前面的化学计量数为（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q07",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 7,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 7 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "2KMnO₄ ═△═ K₂MnO₄＋MnO₂＋O₂↑"
+   },
+   {
+    "key": "B",
+    "text": "Mg＋O₂ ═点燃═ MgO₂"
+   },
+   {
+    "key": "C",
+    "text": "4Fe＋3O₂ ═点燃═ 2Fe₂O₃"
+   },
+   {
+    "key": "D",
+    "text": "H₂O₂ ═MnO₂═ H₂↑＋O₂↑"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "B 应为 2Mg＋O₂ ═点燃═ 2MgO；C 铁燃烧生成 Fe₃O₄；D 应为 2H₂O₂ ═MnO₂═ 2H₂O＋O₂↑。",
+  "kp": "化学方程式",
+  "stem": "下列化学方程式书写正确的是（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q08",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 8,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 8 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "C₂H₆"
+   },
+   {
+    "key": "B",
+    "text": "C₂H₄"
+   },
+   {
+    "key": "C",
+    "text": "CH₄"
+   },
+   {
+    "key": "D",
+    "text": "C₂H₆O"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "反应后 C 2 个、H 6 个、O 7 个；反应前 O₂ 中有 O 6 个，所以 X 中含 2 个 C、6 个 H、1 个 O，即 C₂H₆O（乙醇）。",
+  "kp": "质量守恒定律",
+  "stem": "某化合物 X 燃烧的化学方程式为 X＋3O₂ ═点燃═ 2CO₂＋3H₂O，则 X 的化学式为（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q09",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 9,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 9 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "这个反应不遵守质量守恒定律"
+   },
+   {
+    "key": "B",
+    "text": "镁的质量变大了"
+   },
+   {
+    "key": "C",
+    "text": "生成物中增加了参加反应的氧气的质量"
+   },
+   {
+    "key": "D",
+    "text": "称量时有误差"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "生成的氧化镁的质量等于参加反应的镁和氧气的质量之和，所以比镁条重。",
+  "kp": "质量守恒定律",
+  "stem": "镁条在空气中燃烧后，生成物的质量比原来镁条的质量大，这是因为（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q10",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 10,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 10 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "36 g"
+   },
+   {
+    "key": "B",
+    "text": "16 g"
+   },
+   {
+    "key": "C",
+    "text": "9 g"
+   },
+   {
+    "key": "D",
+    "text": "18 g"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "2H₂＋O₂ ═点燃═ 2H₂O，质量比 4∶32∶36＝1∶8∶9。2 g 氢气恰好与 16 g 氧气反应，生成 18 g 水。",
+  "kp": "化学方程式的计算",
+  "stem": "2 g 氢气与 16 g 氧气充分反应，生成水的质量为（H—1，O—16）（ ）",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q11",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 11,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 11 题",
+  "type": "blank",
+  "stem": "第 11 题：质量守恒定律：参加化学反应的各物质的质量总和，等于反应后生成的各物质的质量________。",
+  "blanks": [
+   [
+    "总和"
+   ]
+  ],
+  "answer": [
+   "总和"
+  ],
+  "explanation": "注意“参加反应”：没有参加反应的（剩余的）物质不计算在内。",
+  "kp": "质量守恒定律",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q12",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 12,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 12 题",
+  "type": "blank",
+  "stem": "第 12 题：在 C＋O₂ ═点燃═ CO₂ 中，参加反应的碳与氧气的质量比为________（C—12，O—16）。",
+  "blanks": [
+   [
+    "3:8",
+    "3∶8",
+    "12:32"
+   ]
+  ],
+  "answer": [
+   "3:8"
+  ],
+  "explanation": "12∶32＝3∶8。",
+  "kp": "化学方程式",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q13",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 13,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 13 题",
+  "type": "blank",
+  "stem": "第 13 题：在 4P＋5O₂ ═点燃═ 2P₂O₅ 中，P、O₂、P₂O₅ 的质量比为________（P—31，O—16）。",
+  "blanks": [
+   [
+    "31:40:71",
+    "124:160:284",
+    "31∶40∶71"
+   ]
+  ],
+  "answer": [
+   "31:40:71"
+  ],
+  "explanation": "(4×31)∶(5×32)∶(2×142)＝124∶160∶284＝31∶40∶71。",
+  "kp": "化学方程式",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q14",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 14,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 14 题",
+  "type": "blank",
+  "stem": "第 14 题：某反应的化学方程式为 2X＋O₂ ═点燃═ 2CO₂，则 X 的化学式为________。",
+  "blanks": [
+   [
+    "CO"
+   ]
+  ],
+  "answer": [
+   "CO"
+  ],
+  "explanation": "反应后 2 个 C、4 个 O；反应前 O₂ 有 2 个 O，2X 中有 2 个 C、2 个 O，X 为 CO。",
+  "kp": "质量守恒定律",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q15",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 15,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 15 题",
+  "type": "blank",
+  "stem": "第 15 题：书写化学方程式要遵守两个原则：一是以客观事实为基础，二是要遵守________。",
+  "blanks": [
+   [
+    "质量守恒定律"
+   ]
+  ],
+  "answer": [
+   "质量守恒定律"
+  ],
+  "explanation": "所以化学方程式要配平，使两边各原子个数相等。",
+  "kp": "化学方程式",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q16",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 16,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 16 题",
+  "type": "blank",
+  "stem": "第 16 题：加热 a g 氯酸钾和 b g 二氧化锰的混合物，至氯酸钾完全分解，得到 c g 剩余固体，则生成氧气的质量为________g。",
+  "blanks": [
+   [
+    "a+b-c",
+    "(a+b-c)"
+   ]
+  ],
+  "answer": [
+   "a+b-c"
+  ],
+  "explanation": "反应前固体总质量 (a＋b) g，减少的质量就是生成的氧气的质量。二氧化锰是催化剂，质量不变，也在剩余固体中。",
+  "kp": "质量守恒定律",
+  "paperScore": 3,
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q17",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 17,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 17 题",
+  "type": "essay",
+  "material": "",
+  "stem": "（1）从微观角度解释化学反应为什么遵守质量守恒定律；\n（2）蜡烛燃烧后质量变小，这是否违背质量守恒定律？为什么？",
+  "points": [
+   {
+    "text": "（1）化学反应中原子的种类、数目、质量都不变，所以反应前后物质的质量总和相等",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）不违背",
+    "score": 1,
+    "keys": []
+   },
+   {
+    "text": "蜡烛燃烧生成的二氧化碳和水蒸气逸散到空气中，参加反应的蜡烛和氧气的质量总和等于生成物的质量总和",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "（1）化学反应的过程是参加反应的各物质的原子重新组合生成新物质的过程。反应前后原子的种类没有改变，数目没有增减，原子的质量也没有改变，所以反应前后各物质的质量总和相等。\n（2）不违背。蜡烛燃烧时与氧气反应，生成的二氧化碳和水蒸气散到了空气中，没有称量到，所以剩下的蜡烛质量变小。参加反应的蜡烛和氧气的质量总和，等于生成的二氧化碳和水的质量总和。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "质量守恒定律",
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q18",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 18,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 18 题",
+  "type": "essay",
+  "material": "",
+  "stem": "验证质量守恒定律的两个实验：\n实验一：在锥形瓶中点燃红磷，瓶口塞紧橡胶塞并套一个小气球，反应前后称量，天平平衡；\n实验二：把盛有碳酸钠粉末的小试管放入装有稀盐酸的烧杯中，倾斜使二者混合（烧杯敞口），反应后天平不平衡。\n（1）实验一中小气球的作用是什么？\n（2）实验二中天平不平衡的原因是什么？这个反应遵守质量守恒定律吗？\n（3）从这两个实验能得出什么启示？",
+  "points": [
+   {
+    "text": "（1）防止红磷燃烧放热使瓶内气体膨胀冲开橡胶塞，并保持装置密闭",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）反应生成的二氧化碳气体逸散到空气中",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "遵守质量守恒定律",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（3）有气体参加或生成的反应，验证质量守恒定律时要在密闭容器中进行",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "（1）红磷燃烧放热，瓶内气体受热膨胀，小气球能缓冲气压，防止橡胶塞被冲开，使装置保持密闭。\n（2）碳酸钠与盐酸反应生成二氧化碳气体，从敞口的烧杯中逸出，所以反应后称得的质量变小。这个反应仍然遵守质量守恒定律，只是逸出的气体没有被称量。\n（3）凡是有气体参加或有气体生成的反应，用来验证质量守恒定律时，必须在密闭容器中进行。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "质量守恒定律",
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q19",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 19,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 19 题",
+  "type": "essay",
+  "material": "",
+  "stem": "写出下列反应的化学方程式：\n（1）铁丝在氧气中燃烧；\n（2）过氧化氢在二氧化锰催化下分解；\n（3）电解水；\n（4）红磷在空气中燃烧。",
+  "points": [
+   {
+    "text": "（1）3Fe＋2O₂ ═点燃═ Fe₃O₄",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）2H₂O₂ ═MnO₂═ 2H₂O＋O₂↑",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）2H₂O ═通电═ 2H₂↑＋O₂↑",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（4）4P＋5O₂ ═点燃═ 2P₂O₅",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "（1）3Fe＋2O₂ ═点燃═ Fe₃O₄\n（2）2H₂O₂ ═MnO₂═ 2H₂O＋O₂↑\n（3）2H₂O ═通电═ 2H₂↑＋O₂↑\n（4）4P＋5O₂ ═点燃═ 2P₂O₅\n书写步骤：写对化学式→配平→注明条件→标气体、沉淀符号（反应物中有气体时，生成物气体不标↑）。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "化学方程式",
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q20",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 20,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 20 题",
+  "type": "essay",
+  "material": "",
+  "stem": "加热分解 31.6 g 高锰酸钾，完全反应后可以得到多少克氧气？（K—39，Mn—55，O—16）",
+  "points": [
+   {
+    "text": "正确写出化学方程式 2KMnO₄ ═△═ K₂MnO₄＋MnO₂＋O₂↑",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "找出相关物质的质量关系：316 与 32",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "列比例式 316/32＝31.6 g/x",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "x＝3.2 g，答",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "解：设生成氧气的质量为 x。\n2KMnO₄ ═△═ K₂MnO₄＋MnO₂＋O₂↑\n316　　　　　　　　　　　　32\n31.6 g　　　　　　　　　　 x\n316/32＝31.6 g/x，x＝3.2 g\n答：可以得到 3.2 g 氧气。\n格式要点：设未知数（不带单位）、写方程式、标相对分子质量和已知量、列比例、求解、作答。KMnO₄ 的相对分子质量是 158，前面有化学计量数 2，要乘以 2。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "化学方程式的计算",
+  "unit": "第五单元·化学方程式"
+ },
+ {
+  "id": "national-sync-chemistry-9up-5-q21",
+  "national": true,
+  "subject": "chemistry",
+  "subjectLabel": "化学",
+  "paperId": "sync-chemistry-9up-5",
+  "number": 21,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九上化学同步章节卷 · 化学方程式",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九上化学同步章节卷 · 化学方程式 第 21 题",
+  "type": "essay",
+  "material": "",
+  "stem": "实验室用 68 g 过氧化氢溶液和 2 g 二氧化锰制取氧气，完全反应后称得剩余物质的总质量为 68.4 g。（H—1，O—16）\n（1）生成氧气的质量是多少？\n（2）参加反应的过氧化氢的质量是多少？\n（3）该过氧化氢溶液中过氧化氢的质量分数是多少？",
+  "points": [
+   {
+    "text": "（1）m(O₂)＝68 g＋2 g－68.4 g＝1.6 g",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）2H₂O₂ ═MnO₂═ 2H₂O＋O₂↑，68/32＝x/1.6 g",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "x＝3.4 g",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）3.4 g÷68 g×100%＝5%",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）根据质量守恒定律，生成氧气的质量＝68＋2－68.4＝1.6（g）。\n（2）设参加反应的过氧化氢的质量为 x。\n2H₂O₂ ═MnO₂═ 2H₂O＋O₂↑\n68　　　　　　　　 32\nx　　　　　　　　 1.6 g\n68/32＝x/1.6 g，x＝3.4 g。\n（3）过氧化氢的质量分数＝3.4÷68×100%＝5%。\n坑点：把溶液质量 68 g 直接代入化学方程式（应代入纯净物的质量）。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "化学方程式的计算",
+  "unit": "第五单元·化学方程式"
+ }
+];

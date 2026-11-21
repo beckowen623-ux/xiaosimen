@@ -1439,6 +1439,94 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-chemistry-9up-4",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "第四单元·自然界的水",
+      "order": 4,
+      "label": "自然界的水",
+      "title": "九上化学同步章节卷 · 自然界的水",
+      "source": "考查范围：人教版九年级上册“自然界的水”单元（水资源保护、水的净化与过滤、硬水和软水、电解水与水的组成、单质化合物氧化物、化学式与化合价、相对分子质量及计算），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9up-4.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-chemistry-9up-5",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "第五单元·化学方程式",
+      "order": 5,
+      "label": "质量守恒与化学方程式",
+      "title": "九上化学同步章节卷 · 化学方程式",
+      "source": "考查范围：人教版九年级上册“化学方程式”（化学反应的定量关系）单元（质量守恒定律及验证、微观解释、化学方程式的意义与书写配平、根据化学方程式的计算），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9up-5.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-chemistry-9up-6",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "第六单元·碳和碳的氧化物",
+      "order": 6,
+      "label": "碳和碳的氧化物",
+      "title": "九上化学同步章节卷 · 碳和碳的氧化物",
+      "source": "考查范围：人教版九年级上册“碳和碳的氧化物”单元（金刚石石墨 C₆₀、碳的化学性质与木炭还原氧化铜、二氧化碳的实验室制取、二氧化碳和一氧化碳的性质与用途、温室效应与低碳），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9up-6.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-chemistry-9up-7",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "第七单元·燃料及其利用",
+      "order": 7,
+      "label": "燃料及其利用",
+      "title": "九上化学同步章节卷 · 燃料及其利用",
+      "source": "考查范围：人教版九年级上册“燃料及其利用”（能源的合理利用与开发）单元（燃烧的条件与灭火原理、易燃易爆物的安全常识、化石燃料、甲烷、燃料燃烧对环境的影响、新能源），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9up-7.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "sync-math-7down-1",
       "subject": "math",
       "subjectLabel": "数学",

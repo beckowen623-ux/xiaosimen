@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 同步章节卷：九上化学第四至七单元（main）
+- 新增 `zz-sync-chemistry-9up-4..7.json`：自然界的水、质量守恒与化学方程式、碳和碳的氧化物、燃料及其利用。九上化学 7 个单元齐全，同步章节卷共 49 套（数学 24、物理 18、化学 7）。
+- 验证：build 通过、`node tests/validate.mjs` 通过。
+
 ## 2026-11-21 · Claude Code · 同步章节卷：九上化学第一至三单元（main）
 - 新增 `zz-sync-chemistry-9up-1..3.json`：走进化学世界、空气和氧气、物质构成的奥秘（unit 与精编卷化学单元名一致）。同步章节卷共 45 套。
 - 验证：build 通过、`node tests/validate.mjs` 通过。
