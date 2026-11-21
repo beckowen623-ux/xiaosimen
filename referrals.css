@@ -26,6 +26,13 @@
 .referral-big .referral-action { min-width: 150px; justify-content: center; }
 .sprint-overlay, .sprint-overlay * { box-sizing: border-box; }
 .sprint-overlay { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; background: #f4f6f5; color: #1b2422; }
+.print-help { position: fixed; left: 12px; right: 12px; bottom: 16px; z-index: 2147483000; max-width: 520px; margin: 0 auto; padding: 14px 16px; border-radius: 12px; background: #fff; color: #17473d; box-shadow: 0 10px 32px rgba(0, 0, 0, .28); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.print-help strong { flex-basis: 100%; font-size: 16px; color: #17473d; }
+.print-help p { flex-basis: 100%; margin: 0; font-size: 14px; line-height: 1.6; color: #33524a; }
+.print-help .print-help-link { flex-basis: 100%; min-height: 38px; padding: 4px 8px; font: inherit; font-size: 13px; color: #17473d; background: #f3f8f5; border: 1px solid #b9d2c1; border-radius: 8px; }
+.print-help .referral-action { min-height: 38px; padding: 4px 14px; border-radius: 8px; border: 1px solid #b9d2c1; background: #17473d; color: #fff; font: inherit; }
+.print-help .referral-action + .referral-action { background: #fff; color: #17473d; }
+.print-help .referral-message:empty { display: none; }
 .sprint-bar { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 12px; background: #17473d; }
 .sprint-bar select, .sprint-bar .referral-action { min-height: 38px; font: inherit; border-radius: 8px; border: 1px solid #b9d2c1; padding: 4px 8px; background: #fff; color: #17473d; }
 .sprint-paper { flex: 1; overflow-y: auto; width: 100%; max-width: 820px; margin: 0 auto; padding: 18px 18px 60px; background: #fff; line-height: 1.75; font-size: 16px; }
@@ -48,7 +55,7 @@
 @media print {
   body.sprint-printing > :not(.sprint-overlay) { display: none !important; }
   body.sprint-printing .sprint-overlay { position: static; background: #fff; }
-  .sprint-bar { display: none !important; }
+  .sprint-bar, .print-help { display: none !important; }
   .sprint-paper { overflow: visible; max-width: none; padding: 0; font-size: 13pt; }
   .sprint-answers { break-before: page; }
 }

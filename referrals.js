@@ -72,6 +72,42 @@
     return control;
   }
 
+  // ---- 打印：微信、抖音、QQ、小红书等 App 里的浏览器会直接忽略打印命令，按了“没反应” ----
+  // App 里直接告诉家长怎么换到浏览器打开；普通浏览器 1.5 秒内没弹出打印窗口，也给同样的提示。
+  const IN_APP_BROWSER = /MicroMessenger|WeChat|QQ\/|MQQBrowser.*QBWebViewType|Weibo|DingTalk|AlipayClient|aweme|BytedanceWebview|NewsArticle|XiaoHongShu|discover\(|Kwai|baiduboxapp|Lark|wxwork/i;
+  function printHelp(target, inApp) {
+    document.querySelector(".print-help")?.remove();
+    const box = node("div", "", "print-help");
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-label", "打印说明");
+    box.append(node("strong", inApp ? "这个 App 里没法直接打印" : "没有弹出打印窗口？"),
+      node("p", inApp
+        ? "微信、抖音、QQ 等 App 里打开的网页不能打印。点右上角「···」选「在浏览器打开」，再点一次“打印”；或者复制下面的链接，用手机浏览器或电脑打开后打印。"
+        : "有的手机自带浏览器不支持打印。换用 Chrome、Edge、Safari 等浏览器，或者复制下面的链接到电脑上打开后打印。"));
+    const field = node("input", "", "print-help-link");
+    field.readOnly = true;
+    field.value = target;
+    field.setAttribute("aria-label", "打印链接");
+    field.addEventListener("focus", () => field.select());
+    const status = node("p", "", "referral-message");
+    status.setAttribute("role", "status");
+    box.append(field, button("复制链接", () => copyText(target, status)), button("知道了", () => box.remove()), status);
+    document.body.append(box);
+  }
+  function safePrint(target) {
+    const link = target || location.href;
+    if (IN_APP_BROWSER.test(navigator.userAgent || "")) { printHelp(link, true); return false; }
+    let opened = false;
+    const mark = () => { opened = true; };
+    window.addEventListener("beforeprint", mark, { once: true });
+    try { window.print(); } catch { opened = false; }
+    setTimeout(() => {
+      window.removeEventListener("beforeprint", mark);
+      if (!opened) printHelp(link, false);
+    }, 1500);
+    return true;
+  }
+
   // ---- 转发海报：卖点 + 邀请价 + 带邀请码的二维码；手机上弹出图片，长按保存或转发 ----
   const POSTER = {
     xiaosimen: {
@@ -658,11 +694,14 @@
       answerToggle.textContent = showAnswers ? "隐藏答案" : "显示答案";
       render();
     });
-    const printButton = button("打印", () => window.print());
+    const printButton = button("打印", () => safePrint(mode.printLink));
     answerToggle.hidden = practice;
     printButton.hidden = practice;
     if (!practice) modeToggle.textContent = "在线做题";
     const close = () => { overlay.remove(); document.body.classList.remove("sprint-printing"); };
+    // 只有一套卷时（早鸟卷、小升初卷、同步卷打印）两个下拉框没有可选的，显示出来是两个空框
+    groupSelect.hidden = groups.length < 2;
+    paperSelect.hidden = papers.length < 2;
     bar.append(groupSelect, paperSelect, modeToggle, answerToggle, printButton, button("关闭", close));
     const sheet = node("article", "", "sprint-paper");
     const scoreBar = node("div", "", "sp-score");
@@ -842,5 +881,5 @@
     panel.append(box);
   }
 
-  window.QuizReferrals = { incoming, load, mount, mountTeaser, showPapers: (papers, mode) => showSprint(papers, mode) };
+  window.QuizReferrals = { incoming, load, mount, mountTeaser, showPapers: (papers, mode) => showSprint(papers, mode), print: safePrint };
 })();

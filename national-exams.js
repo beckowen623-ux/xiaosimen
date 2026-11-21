@@ -281,7 +281,9 @@
             await Promise.all(images.map(img => img.decode()));
             if (state.paper?.id !== id || !opened) return;
             document.body.classList.add('national-printing');
-            window.print();
+            // 微信等 App 里打印没反应：共享脚本会提示换浏览器打开
+            if (window.QuizReferrals?.print) window.QuizReferrals.print(location.origin + '/#national');
+            else window.print();
           } catch { app.toast('原卷图片尚未加载完成，请稍后重试。'); }
           finally { button.disabled = false; button.textContent = '打印'; }
         };

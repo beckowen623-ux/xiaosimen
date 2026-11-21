@@ -1455,10 +1455,10 @@ function paperFromQuestions(title, questions, note = '') {
   };
   return { id: `print-${title}`, title, sections: sections.map((s, i) => ({ title: `${nums[i] || i + 1}、${s.name}`, note: scoreNote(s.qs), items: s.items })), count: questions.length };
 }
-function printQuestions(title, questions) {
+function printQuestions(title, questions, printLink = '') {
   if (!questions.length) { toast('暂时没有可打印的题。'); return; }
   if (!window.QuizReferrals?.showPapers) { toast('打印功能加载中，请稍后再试。'); return; }
-  window.QuizReferrals.showPapers([paperFromQuestions(title, questions)], { print: true });
+  window.QuizReferrals.showPapers([paperFromQuestions(title, questions)], { print: true, printLink });
 }
 async function runWeekly(action) {
   const subject = weeklySubjectNow();
@@ -1670,7 +1670,7 @@ function xscCardHTML() {
 const EB_MODES = [['phone', '📱 手机上做'], ['print', '🖨 打印整卷'], ['mark', '✍️ 纸上做完，登记']];
 const EB_MODE_TIP = {
   phone: '手机上做：客观题自动判分，主观题对照得分点自评。',
-  print: '点科目生成整套卷：题目和答案页分开，每大题标好分值。限时免费，不占免费打印次数。',
+  print: '已选打印：点下面要打印的那一套，打开后点顶部“打印”。题目和答案页分开，每大题标好分值。限时免费，不占免费打印次数。微信里打印不了的话，按提示换浏览器打开。',
   mark: '纸上做完后点科目：填上对照答案页算出的总分，再点出做错的题号。错题进错题本按时复习，学情分析也会算进去。',
 };
 function ebModesHTML() {
@@ -1692,7 +1692,8 @@ async function earlybirdAction(id, boxId) {
     if (!all.length) throw new Error('这套卷暂时加载不了，请稍后再试。');
     const paper = (nationalCatalog || []).find(p => p.id === id) || { id, title: '早鸟自测卷' };
     if (mode === 'print') {
-      printQuestions(`${paper.title}（满分 100 分）`, all);
+      // 打印直达链接：微信里打印不了时复制到浏览器，打开就是这一套的打印版
+      printQuestions(`${paper.title}（满分 100 分）`, all, `${location.origin}/?print=${encodeURIComponent(id)}`);
       trackVisit(paper.stage === 'xsc' ? 'xsc_print' : 'earlybird_print');
     } else showEarlybirdMark(paper, all, boxId);
   } catch (error) { toast(error.message || '加载失败，请重试。'); }
@@ -2113,6 +2114,17 @@ function wireTopCards() {
 }
 // 主页、视频里的直达链接：x4m.cc.cd/?go=earlybird / xsc / sync，只跳一次
 function jumpToGoTarget() {
+  if (!state.printJumped && nationalCatalog) {
+    // ?print=卷子 id：从微信复制到浏览器的打印链接，打开直接是这套卷的打印版（只限早鸟卷、小升初卷）
+    const printId = new URLSearchParams(location.search).get('print');
+    state.printJumped = true;
+    if (printId && nationalCatalog.some(p => p.id === printId && p.earlybird)) {
+      state.earlybirdJumped = true;
+      setEbMode('print');
+      void earlybirdAction(printId, 'ebMark');
+      return;
+    }
+  }
   if (state.earlybirdJumped || !nationalCatalog) return;
   const go = new URLSearchParams(location.search).get('go');
   if (!['earlybird', 'xsc', 'sync'].includes(go)) return;
