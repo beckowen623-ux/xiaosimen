@@ -47,6 +47,19 @@ function seed() {
   await shot(p, '01-stage', [['chips', '.stage-chips'], ['grid', '.earlybird-grid'], ['modes', '#earlybird .eb-modes']]);
   await top(p, '#earlybird .eb-modes', 160);
   await shot(p, '01b-grid', [['grid', '.earlybird-grid'], ['modes', '#earlybird .eb-modes']]);
+  // 1.2 早鸟卷做完：按错题章节推荐同步卷（模拟一次作答：二次函数错得多，圆、一元二次方程错几道）
+  await p.evaluate(async () => {
+    const id = 'earlybird-9up-math';
+    const qs = [...await window.NationalExams.loadPaper(id)].sort((a, b) => a.number - b.number);
+    state.earlybirdPaper = id; beginPractice(qs, 'earlybird');
+    state.session = new Map(qs.map((q, i) => [q.id, {correct: !(q.unit === '九上·二次函数' || (q.unit === '九上·圆' && i % 2 === 0) || (q.unit === '九上·一元二次方程' && i % 3 === 0))}]));
+    renderSummary();
+  });
+  await p.waitForTimeout(600);
+  await top(p, '.eb-rx', 300);
+  await shot(p, '12-rx', [['rx', '.eb-rx']]);
+  await p.goto(HOME, {waitUntil: 'networkidle'}); await p.waitForTimeout(900);
+  await p.click('[data-stage-pick="9-up"]'); await p.waitForTimeout(500);
   // 1.5 同步章节卷（九上数学）
   await top(p, '#sync', 40);
   await shot(p, '11-sync', [['rows', '#sync .paper-rows'], ['head', '#syncTitle']]);

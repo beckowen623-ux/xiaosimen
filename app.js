@@ -1366,7 +1366,7 @@ function homeIntroHTML() {
     <p class="muted">七上到九下按学期组织：早鸟自测卷先测出弱项，同步章节卷跟着课本一章一套补弱项，初三再刷紧贴中考考点的精编模拟卷和全国各地真题。每套都由我亲自先做、把关后才上线；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
     <p class="promise-line">有能力、有决心、有诚意：用科学的刷题方法帮孩子把考点真正掌握，中考稳稳提分。</p>
     ${contentStatsHTML()}
-    <button class="btn demo-btn" type="button" data-demo-video>▶ 43 秒看怎么用</button>
+    <button class="btn demo-btn" type="button" data-demo-video>▶ 46 秒看怎么用</button>
   </section>`;
 }
 function weeklyCardHTML(progress) {
