@@ -1901,6 +1901,138 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-physics-8up-1",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-up",
+      "unit": "八上·机械运动（含估测）",
+      "order": 1,
+      "label": "机械运动",
+      "title": "八上物理同步章节卷 · 机械运动",
+      "source": "考查范围：人教版八年级上册“机械运动”一章（长度和时间的测量、误差、参照物、速度及计算、平均速度的测量、过桥过隧道问题），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8up-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-8up-2",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-up",
+      "unit": "八上·声现象",
+      "order": 2,
+      "label": "声现象",
+      "title": "八上物理同步章节卷 · 声现象",
+      "source": "考查范围：人教版八年级上册“声现象”一章（声音的产生与传播、回声测距、音调响度音色、超声与次声、声的利用、噪声的危害和控制），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8up-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-8up-3",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-up",
+      "unit": "八上·物态变化",
+      "order": 3,
+      "label": "物态变化",
+      "title": "八上物理同步章节卷 · 物态变化",
+      "source": "考查范围：人教版八年级上册“物态变化”一章（温度与温度计、熔化和凝固、晶体与非晶体、汽化和液化、沸腾实验、升华和凝华、生活中的物态变化），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8up-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-8up-4",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-up",
+      "unit": "八上·光现象",
+      "order": 4,
+      "label": "光现象",
+      "title": "八上物理同步章节卷 · 光现象",
+      "source": "考查范围：人教版八年级上册“光现象”一章（光的直线传播、光速、光的反射与反射定律、镜面反射与漫反射、平面镜成像、光的折射、光的色散、看不见的光），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8up-4.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-8up-5",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-up",
+      "unit": "八上·透镜及其应用",
+      "order": 5,
+      "label": "透镜及其应用",
+      "title": "八上物理同步章节卷 · 透镜及其应用",
+      "source": "考查范围：人教版八年级上册“透镜及其应用”一章（凸透镜和凹透镜、焦点和焦距、凸透镜成像规律及实验、照相机投影仪放大镜、眼睛和眼镜、显微镜和望远镜），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8up-5.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-8up-6",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "8-up",
+      "unit": "八上·质量与密度",
+      "order": 6,
+      "label": "质量与密度",
+      "title": "八上物理同步章节卷 · 质量与密度",
+      "source": "考查范围：人教版八年级上册“质量与密度”一章（质量及其测量、天平的使用、密度及计算、测量物质的密度、密度与社会生活、空心问题和装瓶问题），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-8up-6.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "xsc-chinese-1",
       "subject": "chinese",
       "subjectLabel": "语文",
