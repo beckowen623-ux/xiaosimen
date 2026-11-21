@@ -10,7 +10,7 @@
     {
       "type": "单项选择",
       "items": [
-        {"n": 1, "stem": "There is ____ \"u\" in the word \"useful\", and it is ____ useful word.", "options": ["a; a", "an; an", "a; an", "an; a"], "answer": "D", "kp": "冠词", "exp": "字母 u 读音以元音开头，用 an；useful 以辅音 /j/ 开头，用 a。"},
+        {"n": 1, "stem": "There is ____ \"f\" in the word \"useful\", and it is ____ useful word.", "options": ["a; a", "an; an", "a; an", "an; a"], "answer": "D", "kp": "冠词", "exp": "字母 f 读作 /ef/，以元音音素开头，用 an；useful 读 /ˈjuːsfl/，以辅音音素 /j/ 开头，用 a。坑点：看读音不看字母——u 开头的 useful 用 a，字母 f、h（/eɪtʃ/）、hour 却用 an。"},
         {"n": 2, "stem": "Mr. Brown is strict ____ his students, but he is very kind to them.", "options": ["with", "at", "for", "to"], "answer": "A", "kp": "固定搭配", "exp": "be strict with sb. 对某人严格。"},
         {"n": 3, "stem": "—Whose dictionary is this? —It ____ be Tom's. His name is on it.", "options": ["can't", "might", "needn't", "must"], "answer": "D", "kp": "情态动词表推测", "exp": "名字写在上面，有把握的肯定推测用 must。"},
         {"n": 4, "stem": "Neither my parents nor my sister ____ at home this weekend.", "options": ["am", "is", "are", "be"], "answer": "B", "kp": "主谓一致", "exp": "neither...nor... 连接主语时，谓语就近与 my sister 一致，用 is。"},

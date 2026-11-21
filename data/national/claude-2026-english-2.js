@@ -37,9 +37,9 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "answer": [
    "D"
   ],
-  "explanation": "字母 u 读音以元音开头，用 an；useful 以辅音 /j/ 开头，用 a。",
+  "explanation": "字母 f 读作 /ef/，以元音音素开头，用 an；useful 读 /ˈjuːsfl/，以辅音音素 /j/ 开头，用 a。坑点：看读音不看字母——u 开头的 useful 用 a，字母 f、h（/eɪtʃ/）、hour 却用 an。",
   "kp": "冠词",
-  "stem": "There is ____ \"u\" in the word \"useful\", and it is ____ useful word.",
+  "stem": "There is ____ \"f\" in the word \"useful\", and it is ____ useful word.",
   "unit": "语法·词法与固定搭配"
  },
  {
