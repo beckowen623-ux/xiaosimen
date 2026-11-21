@@ -15,15 +15,26 @@
   let revision = 0;
   let opened = false;
 
-  function loadScript(url) {
-    if (pending.has(url)) return pending.get(url);
-    const promise = new Promise((resolve, reject) => {
+  // 网络偶尔断一下时自动再试两次（隔 1 秒、3 秒），还不行再提示
+  function loadScriptOnce(url) {
+    return new Promise((resolve, reject) => {
       const script = document.createElement('script');
       script.src = url;
       script.onload = resolve;
-      script.onerror = () => { script.remove(); pending.delete(url); reject(new Error('资料加载失败，请检查网络后重试。')); };
+      script.onerror = () => { script.remove(); reject(new Error('资料加载失败，请检查网络后重试。')); };
       document.head.appendChild(script);
     });
+  }
+  function loadScript(url) {
+    if (pending.has(url)) return pending.get(url);
+    const promise = (async () => {
+      for (let attempt = 0; ; attempt++) {
+        try { return await loadScriptOnce(url); } catch (error) {
+          if (attempt >= 2) { pending.delete(url); throw error; }
+          await new Promise(r => setTimeout(r, attempt ? 3000 : 1000));
+        }
+      }
+    })();
     pending.set(url, promise);
     return promise;
   }

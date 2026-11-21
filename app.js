@@ -298,20 +298,27 @@ function streakDays(progress = loadProgress()) {
 }
 
 // ---------- 题库加载（懒加载 .js，全局变量合并） ----------
+// 手机网络偶尔断一下，单个文件失败就整页打不开；失败后隔 1 秒、3 秒自动再试两次
 const loadedScripts = new Map();
+function loadScriptOnce(src) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = resolve;
+    script.onerror = () => { script.remove(); reject(new Error('无法加载题库 ' + src)); };
+    document.head.appendChild(script);
+  });
+}
 function loadScript(src) {
   if (!loadedScripts.has(src)) {
-    const request = new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = src;
-      script.onload = resolve;
-      script.onerror = () => {
-        script.remove();
-        loadedScripts.delete(src);
-        reject(new Error('无法加载题库 ' + src));
-      };
-      document.head.appendChild(script);
-    });
+    const request = (async () => {
+      for (let attempt = 0; ; attempt++) {
+        try { return await loadScriptOnce(src); } catch (error) {
+          if (attempt >= 2) { loadedScripts.delete(src); throw error; }
+          await new Promise(r => setTimeout(r, attempt ? 3000 : 1000));
+        }
+      }
+    })();
     loadedScripts.set(src, request);
   }
   return loadedScripts.get(src);
@@ -2039,6 +2046,7 @@ function renderHome(focus = '') {
     ${state.stage === '7-up' ? xscCardHTML() : ''}
     ${earlybirdCardHTML()}
     ${syncCardHTML()}
+    ${state.stage === '7-up' ? '' : xscCardHTML()}
     ${unitCardHTML()}
     ${analysisCardHTML()}
     ${accessNotice}
@@ -2109,7 +2117,7 @@ function jumpToGoTarget() {
   const go = new URLSearchParams(location.search).get('go');
   if (!['earlybird', 'xsc', 'sync'].includes(go)) return;
   state.earlybirdJumped = true;
-  if (go === 'xsc' && (!state.xscOpen || state.stage !== '7-up')) { state.xscOpen = true; setStage('7-up'); renderHome(); }
+  if (go === 'xsc' && !state.xscOpen) { state.xscOpen = true; renderHome(); }
   // 不用 smooth：滚动动画进行中首页会再画一次（免费额度状态回来），动画会被打断，停在顶部
   byId(go)?.scrollIntoView({ block: 'start' });
 }
@@ -2123,8 +2131,16 @@ function renderLiteHome() {
     ${state.stage === '7-up' ? xscCardHTML() : ''}
     ${earlybirdCardHTML()}
     ${syncCardHTML()}
-    <section class="card loading-card" id="liteLoading" role="status"><p class="muted">按章节练、错题本、小四门等内容还在加载，网络慢的话要多等几秒……</p></section>`;
+    ${state.stage === '7-up' ? '' : xscCardHTML()}
+    <section class="card loading-card" id="liteLoading" role="status">${state.banksFailed
+      ? '<p class="muted">按章节练、错题本、小四门等内容没加载下来（网络不稳）。上面的早鸟卷、同步章节卷、小升初衔接照常能用。</p><button class="btn" type="button" id="liteRetry">重新加载</button>'
+      : '<p class="muted">按章节练、错题本、小四门等内容还在加载，网络慢的话要多等几秒……</p>'}</section>`;
   wireTopCards();
+  byId('liteRetry')?.addEventListener('click', event => {
+    event.currentTarget.disabled = true;
+    event.currentTarget.textContent = '正在加载…';
+    void init();
+  });
   jumpToGoTarget();
 }
 function wireHome() {
@@ -3104,6 +3120,7 @@ document.addEventListener('visibilitychange', () => {
 });
 
 async function init() {
+  state.banksFailed = false;
   try {
     const accessReady = restoreAccess();
     // 目录（早鸟卷、同步卷都靠它）和小四门题库同时下载，不再等题库下完才开始下目录
@@ -3141,6 +3158,10 @@ async function init() {
     trackVisit('visit');
   } catch (error) {
     console.error(error);
+    state.banksFailed = true;
+    // 已经从轻首页点进做卷的，不打断；回首页时轻首页会显示“重新加载”
+    if (document.body.classList.contains('practice')) return;
+    if (byId('liteLoading')) { renderLiteHome(); return; }
     view.innerHTML = '<section class="card loading-card"><h1>题库暂时无法加载</h1><p class="muted">检查网络后再试一次。</p><button class="btn primary" id="retryBtn">重新加载</button></section>';
     byId('retryBtn').addEventListener('click', async event => {
       event.currentTarget.disabled = true;
@@ -3156,7 +3177,7 @@ document.addEventListener('click', event => {
   if (!event.target.closest('[data-demo-video]')) return;
   const dialog = byId('demoDialog');
   const video = byId('demoVideo');
-  if (!video.src) video.src = video.dataset.src;
+  if (!video.src) { video.poster = video.dataset.poster || ''; video.src = video.dataset.src; }
   dialog.showModal();
   video.play().catch(() => {});
   trackVisit('demo_video');

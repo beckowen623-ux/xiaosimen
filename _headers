@@ -1,0 +1,37 @@
+# 静态文件：缓存过期后先用本机旧文件打开、后台再更新，手机网络慢时不用每次干等。
+# 网址带 ?v=内容哈希 的文件（app.js、styles.css 等）一改版本号就变，访客会拿到新文件。
+/data/*
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/assets/*
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/app.js
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/styles.css
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/referrals.js
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/referrals.css
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/share-offer.js
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/national-exams.js
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/national-exams.css
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/key-points.js
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/key-points.css
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+/qrcode.js
+  Cache-Control: public, max-age=14400, stale-while-revalidate=604800
