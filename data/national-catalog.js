@@ -2643,6 +2643,28 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-physics-9down-3",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "九年级·信息与能源",
+      "order": 3,
+      "label": "信息的传递 · 能源与可持续发展",
+      "title": "九下物理同步章节卷 · 信息与能源",
+      "source": "考查范围：人教版九年级“信息的传递”“能源与可持续发展”两章（电话、电磁波的产生与传播、c＝λf、广播电视和移动通信、卫星通信与光纤通信、能源分类、核裂变与核聚变、太阳能、能量转化与转移的方向性、可持续发展），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-9down-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "sync-physics-9up-1",
       "subject": "physics",
       "subjectLabel": "物理",
