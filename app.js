@@ -1174,6 +1174,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '同步章节卷整套做完，总结页直接显示百分制得分，并有“下一章”按钮，一章接一章往下做。'],
   ['2026-11-21', '新增“🎁 题库可以免费拿”说明：按 14.9 买下，再邀 3 位朋友用好友价买，返现 15 元，等于白用还多 1 毛；也可以不要返现，换考证题库完整版。'],
   ['2026-11-21', '首页整理得更清爽：介绍缩短，小升初衔接只在七上显示，同步章节卷每章一行，打印练习卷、全题库找题收成可展开的一行（顶部“找题”会自动展开），首页从十几张大卡片精简了约四分之一的长度。'],
   ['2026-11-21', '整卷加计时：手机上做整套早鸟卷、同步章节卷、精编模拟卷、小升初卷时，可以点“开始计时”按考试时长倒计时（同步卷 90 分钟，早鸟卷、精编卷按科目），能暂停，超时变红，做完在总结里显示一共用了多久。只做前 5 题体验时不计时。'],
@@ -1375,7 +1376,7 @@ function homeIntroHTML() {
     <p class="muted">早鸟卷先测出弱项 → 同步章节卷一章一套补上 → 初三刷中考精编卷和真题。每套我都亲自先做一遍才上线。</p>
     <p class="promise-line">有能力、有决心、有诚意：用科学的刷题方法帮孩子把考点真正掌握，中考稳稳提分。</p>
     ${contentStatsHTML()}
-    <button class="btn demo-btn" type="button" data-demo-video>▶ 46 秒看怎么用</button>
+    <button class="btn demo-btn" type="button" data-demo-video>▶ 50 秒看怎么用</button>
   </section>`;
 }
 function weeklyCardHTML(progress) {
@@ -2949,6 +2950,11 @@ function renderSummary() {
     return;
   }
   const cheer = acc >= 90 ? '太棒了，保持这个状态！' : acc >= 70 ? '不错，把错题再过一遍就更稳了。' : '别灰心，错题已进错题本，按时复习就能拿下。';
+  // 整套同步卷做完：按卷面算百分制得分，并给出“下一章”按钮
+  const syncDone = state.mode === 'sync' ? timedPaper() : null;
+  const syncScore = syncDone ? earlybirdScore(results) : null;
+  const syncList = syncDone ? syncPapers(syncDone.stage).filter(p => p.subject === syncDone.subject) : [];
+  const nextSync = syncDone ? syncList[syncList.findIndex(p => p.id === syncDone.id) + 1] : null;
   view.innerHTML = `
     <div class="practice-shell">
       <section class="card summary-card" aria-labelledby="summaryTitle">
@@ -2956,7 +2962,7 @@ function renderSummary() {
         <p class="summary-kicker">${esc(MODE_LABEL[state.mode] || '练习')} · 本组完成</p>
         <h1 id="summaryTitle" tabindex="-1">${cheer}</h1>
         <div class="summary-stats">
-          <div><b>${results.length}</b><span>本组作答</span></div>
+          ${syncDone ? `<div><b>${syncScore}<small>/100</small></b><span>本卷得分${essayTotal ? '（含主观题自评）' : ''}</span></div>` : `<div><b>${results.length}</b><span>本组作答</span></div>`}
           <div><b>${right}</b><span>答对 / 过关</span></div>
           <div><b>${acc}%</b><span>正确率</span></div>
           ${essayTotal ? `<div><b>${essayScore}<small>/${essayTotal}</small></b><span>主观题得分</span></div>` : ''}
@@ -2969,11 +2975,13 @@ function renderSummary() {
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本组错题</button>` : ''}
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button>
         </div>
+        ${nextSync ? `<button class="btn next-sync" type="button" id="nextSyncBtn">下一章：${esc(nextSync.label || nextSync.title)} →</button>` : ''}
         <p class="checkin-cross">${accountingRecommendation()}</p>
       </section>
     </div>`;
   byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, state.mode === 'national' ? 'national' : 'retry'));
   byId('homeBtn').addEventListener('click', returnFromPractice);
+  byId('nextSyncBtn')?.addEventListener('click', () => { void claudePaperAction(nextSync.id, 'phone'); });
   byId('upsellBtn')?.addEventListener('click', () => openUnlock());
   state.keys = null;
   moveFocus(byId('summaryTitle'), true);

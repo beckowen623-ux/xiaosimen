@@ -6,7 +6,7 @@ import {Img} from 'remotion';
 
 const TEAL = '#0f766e';
 const B = boxes as unknown as Record<string, Record<string, Box>>;
-export const KAOZHENG_FRAMES = 1170;
+export const KAOZHENG_FRAMES = 1275;
 
 // 时间轴：0—110 开场；110—430 早鸟自测；430—550 备考计划；550—960 新考点 + 做一道；960 起结尾
 const captions = [
@@ -38,10 +38,41 @@ const Hook: React.FC = () => {
   );
 };
 
+
+// “题库可以免费拿”：结尾前 3.5 秒
+const FreeWay: React.FC<{start: number; color: string}> = ({start, color}) => {
+  const f = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const steps = [
+    ['① 先按 14.9 买', '分享价或好友价，都比原价省 5 元'],
+    ['② 邀 3 位朋友也来买', '朋友点你的链接，用好友价 14.9 买'],
+    ['③ 返现 15 元', '等于白用，还多 1 毛'],
+  ];
+  const op = fade(f, start, start + 10) * (1 - fade(f, start + 95, start + 105));
+  const head = spring({frame: f - start, fps, config: {damping: 13}});
+  return (
+    <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center', paddingTop: 250, opacity: op}}>
+      <div style={{fontWeight: 900, fontSize: 100, color: '#b45309', transform: `scale(${0.85 + head * 0.15})`}}>🎁 题库可以免费拿</div>
+      <div style={{marginTop: 70, display: 'flex', flexDirection: 'column', gap: 30, width: 900}}>
+        {steps.map(([a, b], i) => {
+          const p = spring({frame: f - start - 12 - i * 14, fps, config: {damping: 15}});
+          return (
+            <div key={a} style={{background: '#fffefa', border: '4px solid #f2e5af', borderRadius: 30, padding: '28px 40px', opacity: p, transform: `translateX(${(1 - p) * 90}px)`}}>
+              <div style={{fontSize: 56, fontWeight: 900, color: i === 2 ? '#b45309' : '#1c2924'}}>{a}</div>
+              <div style={{fontSize: 38, color: '#46554e', marginTop: 8}}>{b}</div>
+            </div>
+          );
+        })}
+      </div>
+      <div style={{marginTop: 60, fontSize: 42, fontWeight: 900, color, opacity: fade(f, start + 55, start + 70)}}>买完，题库里就有你的专属邀请链接</div>
+    </AbsoluteFill>
+  );
+};
+
 const Cta: React.FC = () => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const s0 = 960;
+  const s0 = 1065;
   const lines = ['有能力：作者在职一年 4 门考试全部一次过', '有方法：自动排计划 → 章节精练 → 模拟卷 → 错题复习', '有诚意：早鸟自测限时免费 · 先试再买'];
   const logo = spring({frame: f - s0, fps, config: {damping: 13}});
   return (
@@ -72,7 +103,7 @@ export const Kaozheng: React.FC = () => {
   return (
     <AbsoluteFill>
       <Background color={TEAL} />
-      <Audio src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1140, 1170], [0, 0.8, 0.8, 0], {extrapolateRight: 'clamp'})} />
+      <Audio src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1245, 1275], [0, 0.8, 0.8, 0], {extrapolateRight: 'clamp'})} />
       {f < 112 ? <Hook /> : null}
       {cap ? <Caption key={cap.from} start={cap.from} step={cap.step} title={cap.title} sub={cap.sub} color={TEAL} /> : null}
       {f >= 104 && f < 970 ? (
@@ -107,7 +138,8 @@ export const Kaozheng: React.FC = () => {
           />
         </div>
       ) : null}
-      {f >= 955 ? <Cta /> : null}
+      {f >= 955 && f < 1070 ? <FreeWay start={960} color={TEAL} /> : null}
+      {f >= 1060 ? <Cta /> : null}
     </AbsoluteFill>
   );
 };

@@ -5,7 +5,7 @@ import {Background, Badge, Box, Caption, FONT, Phone, fade} from './kit';
 
 const GREEN = '#145843';
 const B = boxes as unknown as Record<string, Record<string, Box>>;
-export const ZHONGKAO_FRAMES = 1390;
+export const ZHONGKAO_FRAMES = 1495;
 
 const captions = [
   {from: 105, to: 255, step: '第 1 步', title: '先测：按学期\n早鸟自测卷', sub: '各科一套，手机做或打印整卷，做完出百分制总分'},
@@ -36,10 +36,41 @@ const Hook: React.FC = () => {
   );
 };
 
+
+// “题库可以免费拿”：结尾前 3.5 秒
+const FreeWay: React.FC<{start: number; color: string}> = ({start, color}) => {
+  const f = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const steps = [
+    ['① 先按 14.9 买', '分享价或好友价，都比原价省 5 元'],
+    ['② 邀 3 位朋友也来买', '朋友点你的链接，用好友价 14.9 买'],
+    ['③ 返现 15 元', '等于白用，还多 1 毛'],
+  ];
+  const op = fade(f, start, start + 10) * (1 - fade(f, start + 95, start + 105));
+  const head = spring({frame: f - start, fps, config: {damping: 13}});
+  return (
+    <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center', paddingTop: 250, opacity: op}}>
+      <div style={{fontWeight: 900, fontSize: 100, color: '#b45309', transform: `scale(${0.85 + head * 0.15})`}}>🎁 题库可以免费拿</div>
+      <div style={{marginTop: 70, display: 'flex', flexDirection: 'column', gap: 30, width: 900}}>
+        {steps.map(([a, b], i) => {
+          const p = spring({frame: f - start - 12 - i * 14, fps, config: {damping: 15}});
+          return (
+            <div key={a} style={{background: '#fffefa', border: '4px solid #f2e5af', borderRadius: 30, padding: '28px 40px', opacity: p, transform: `translateX(${(1 - p) * 90}px)`}}>
+              <div style={{fontSize: 56, fontWeight: 900, color: i === 2 ? '#b45309' : '#1c2924'}}>{a}</div>
+              <div style={{fontSize: 38, color: '#46554e', marginTop: 8}}>{b}</div>
+            </div>
+          );
+        })}
+      </div>
+      <div style={{marginTop: 60, fontSize: 42, fontWeight: 900, color, opacity: fade(f, start + 55, start + 70)}}>买完，题库里就有你的专属邀请链接</div>
+    </AbsoluteFill>
+  );
+};
+
 const Cta: React.FC = () => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const s0 = 1180;
+  const s0 = 1285;
   const lines = ['早鸟自测卷 · 小升初衔接 限时免费', '同步章节卷 一章一套 · 前 5 题免费试', '各地中考原卷 免费看 · 免费打印', '完整版 19.9 一次买断'];
   const logo = spring({frame: f - s0, fps, config: {damping: 13}});
   return (
@@ -72,7 +103,7 @@ export const Zhongkao: React.FC = () => {
   return (
     <AbsoluteFill>
       <Background color={GREEN} />
-      <Audio loop src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1360, 1390], [0, 0.8, 0.8, 0], {extrapolateRight: 'clamp'})} />
+      <Audio loop src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1465, 1495], [0, 0.8, 0.8, 0], {extrapolateRight: 'clamp'})} />
       {f < 110 ? <Hook /> : null}
       {cap ? <Caption key={cap.from} start={cap.from} step={cap.step} title={cap.title} sub={cap.sub} color={GREEN} /> : null}
       {f >= 100 && f < 1190 ? (
@@ -110,7 +141,8 @@ export const Zhongkao: React.FC = () => {
           />
         </div>
       ) : null}
-      {f >= 1175 ? <Cta /> : null}
+      {f >= 1175 && f < 1290 ? <FreeWay start={1180} color={GREEN} /> : null}
+      {f >= 1280 ? <Cta /> : null}
     </AbsoluteFill>
   );
 };
