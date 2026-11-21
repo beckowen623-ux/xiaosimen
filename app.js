@@ -1169,6 +1169,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '首页打开更快：网络慢的时候，先显示学期、早鸟自测卷和同步章节卷，可以直接开始做；按章节练、错题本、小四门等内容随后加载出来。'],
   ['2026-11-21', '早鸟自测卷做完后直接告诉你补哪几章：按错题所在章节排序，列出错得最多的 3 章，点一下就进那一章的同步章节卷（数学、物理、化学）。'],
   ['2026-11-21', '同步章节卷显示进度：每套写明已做几题、对几题，卡片上方提示“已经做过几套，下一套做哪一章”；还按期末（九下按中考）日期算好每周做几套，期末前 2 周留给错题复习，日期可以按当地改。'],
   ['2026-11-21', '同步章节卷新增八下英语 4 套（新教材）：Units 1–2 Time to Relax / Stay Healthy、Units 3–4 Growing Up / The Wonders of Nature、Units 5–6 Nature’s Temper / Crossing Cultures、Units 7–8 A Good Read / Making a Difference。动词不定式、used to、过去进行时、现在完成时等重点语法逐个练到，书面表达带范文，前 5 题免费试做。'],
@@ -1991,7 +1992,7 @@ async function ensureNationalSearch() {
 }
 
 function renderHome(focus = '') {
-  if (!banks) return;
+  if (!banks) { renderLiteHome(); return; }
   window.NationalExams?.leave();
   document.body.classList.remove('practice');
   const progress = loadProgress();
@@ -2048,7 +2049,8 @@ function wireSubjectSections() {
   box.querySelectorAll('[data-claude-phone]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePhone, 'phone'); }));
   box.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
 }
-function wireHome() {
+// 首屏几张卡（学期、早鸟卷、小升初、同步卷）的事件：完整首页和轻首页共用
+function wireTopCards() {
   const sync = byId('sync');
   if (sync) {
     sync.querySelectorAll('[data-claude-phone]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePhone, 'phone'); }));
@@ -2065,6 +2067,35 @@ function wireHome() {
   }
   view.querySelectorAll('[data-xsc-subject]').forEach(b => b.addEventListener('click', () => { state.xscSubject = b.dataset.xscSubject; state.xscOpen = true; renderHome(); byId('xsc')?.scrollIntoView({ block: 'start' }); }));
   byId('xsc')?.addEventListener('toggle', event => { state.xscOpen = event.currentTarget.open; });
+  view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); renderHome(); requestAnimationFrame(() => byId('stageBarTitle')?.scrollIntoView({ block: 'start' })); }));
+  view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void earlybirdAction(b.dataset.earlybird, b.closest('#xsc') ? 'xscMark' : 'ebMark'); }));
+  view.querySelectorAll('[data-eb-mode]').forEach(b => b.addEventListener('click', () => setEbMode(b.dataset.ebMode)));
+}
+// 主页、视频里的直达链接：x4m.cc.cd/?go=earlybird / xsc / sync，只跳一次
+function jumpToGoTarget() {
+  if (state.earlybirdJumped || !nationalCatalog) return;
+  const go = new URLSearchParams(location.search).get('go');
+  if (!['earlybird', 'xsc', 'sync'].includes(go)) return;
+  state.earlybirdJumped = true;
+  if (go === 'xsc' && !state.xscOpen) { state.xscOpen = true; renderHome(); }
+  byId(go)?.scrollIntoView({ behavior: 'smooth' });
+}
+// 轻首页：小四门题库（几 MB）还没下完时，先把学期、早鸟卷、同步卷画出来，家长不用干等
+function renderLiteHome() {
+  if (location.hash === '#national') return;
+  document.body.classList.remove('practice');
+  view.innerHTML = `
+    ${homeIntroHTML()}
+    ${xscCardHTML()}
+    ${stageBarHTML()}
+    ${earlybirdCardHTML()}
+    ${syncCardHTML()}
+    <section class="card loading-card" id="liteLoading" role="status"><p class="muted">按章节练、错题本、小四门等内容还在加载，网络慢的话要多等几秒……</p></section>`;
+  wireTopCards();
+  jumpToGoTarget();
+}
+function wireHome() {
+  wireTopCards();
   view.querySelectorAll('[data-unit-subject]').forEach(b => b.addEventListener('click', async () => {
     state.unitSubject = b.dataset.unitSubject;
     renderHome();
@@ -2074,9 +2105,6 @@ function wireHome() {
   view.querySelectorAll('[data-unit]').forEach(b => b.addEventListener('click', () => { void startUnit(b.dataset.unit); }));
   byId('analysisBtn')?.addEventListener('click', () => { void buildAnalysis(); });
   wireAnalysis();
-  view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); renderHome(); requestAnimationFrame(() => byId('stageBarTitle')?.scrollIntoView({ block: 'start' })); }));
-  view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void earlybirdAction(b.dataset.earlybird, b.closest('#xsc') ? 'xscMark' : 'ebMark'); }));
-  view.querySelectorAll('[data-eb-mode]').forEach(b => b.addEventListener('click', () => setEbMode(b.dataset.ebMode)));
   byId('stageSelect')?.addEventListener('change', event => {
     state.stage = event.target.value;
     persist(() => {
@@ -2120,9 +2148,7 @@ function wireHome() {
     window.NationalExams.catalog().then(list => {
       nationalCatalog = list;
       if (byId('subjectSections')) renderHome();
-      // 主页、视频里的直达链接：x4m.cc.cd/?go=earlybird
-      const go = new URLSearchParams(location.search).get('go');
-      if (['earlybird', 'xsc', 'sync'].includes(go) && !state.earlybirdJumped) { state.earlybirdJumped = true; if (go === 'xsc') { state.xscOpen = true; renderHome(); } byId(go)?.scrollIntoView({ behavior: 'smooth' }); }
+      jumpToGoTarget();
     }).catch(() => {
       const box = byId('subjectSections');
       if (box) box.innerHTML = '<section class="card"><p class="muted">分科目录加载失败，刷新页面再试。</p></section>';
@@ -2932,9 +2958,14 @@ document.addEventListener('visibilitychange', () => {
 async function init() {
   try {
     const accessReady = restoreAccess();
+    // 目录（早鸟卷、同步卷都靠它）和小四门题库同时下载，不再等题库下完才开始下目录
+    const catalogReady = window.NationalExams?.catalog ? window.NationalExams.catalog().then(list => { nationalCatalog = list; }).catch(() => {}) : Promise.resolve();
     const loadDaily = dailyQuestions().length ? null : loadScript('./data/daily-questions-xiaosimen.js?v=7').catch(console.warn);
     const subjectiveReady = Promise.allSettled(SUBJECT_ORDER.map(key => loadScript(`./data/subjective-${key}.js?v=${SUBJECTIVE_VERSION}`)));
-    banks = await ensureBanks(SUBJECT_ORDER);
+    const banksReady = ensureBanks(SUBJECT_ORDER);
+    void Promise.all([catalogReady, accessReady]).then(() => { if (!banks && nationalCatalog) renderLiteHome(); }).catch(() => {});
+    banks = await banksReady;
+    await catalogReady;
     await loadDaily;
     await subjectiveReady;
     bankQuestions = allQuestions(banks, SUBJECT_ORDER);
@@ -2955,7 +2986,8 @@ async function init() {
       toast,
     });
     if (location.hash === '#national') await window.NationalExams.open();
-    else renderHome();
+    // 轻首页上已经点进做题的，不要把做题页换掉；回首页时会画完整首页
+    else if (byId('liteLoading') || !document.body.classList.contains('practice')) { renderHome(); jumpToGoTarget(); }
     void refreshReferralProfile();
     void refreshFreeUses().then(() => { if (!paidAccess && byId('subjectSections')) renderHome(); });
     trackVisit('visit');

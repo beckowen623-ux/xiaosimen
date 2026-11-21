@@ -2,6 +2,12 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 首屏提速：轻首页（main）
+- 原来 `init()` 要等四科小四门题库（约 2.6 MB，压缩后约 560 KB）和主观题全部下完才画首页，而早鸟卷、同步卷要用的 `national-catalog.js` 还要等首页画完、在 `wireHome` 里才开始下载，两段串行。
+- 现在：`init()` 一开始就并行下载目录；目录和登录状态到了、题库还没到时先画 `renderLiteHome()`（介绍、小升初、学期、早鸟卷、同步卷 + “其余内容还在加载”），`renderHome()` 在题库没到时自动走轻首页；题库到了再画完整首页。用户如果已经从轻首页点进了做题，不会被完整首页顶掉（看 `#liteLoading` 和 body.practice）。
+- 首屏几张卡的事件抽成 `wireTopCards()`，完整首页和轻首页共用；`?go=earlybird/xsc/sync` 的跳转抽成 `jumpToGoTarget()`（目录提前到了以后原来的跳转分支不会再触发）。
+- 验证：playwright 把四个小四门文件各延迟 4 秒：0.65 秒出轻首页（原来 4.7 秒才有内容），`?go=sync` 跳转正常；轻首页上切学期、切同步卷科目都生效，完整首页接上后保留选择；轻首页点进早鸟卷，题库到了也不会跳回首页；无脚本错误。正常网速下首页、搜索、小四门正常。`node tests/validate.mjs` 通过。
+
 ## 2026-11-21 · Claude Code · 分享预览 Open Graph 标签（main）
 - `index.html` 加 og:type / og:title / og:description（同 meta description）/ og:image（演示视频封面，带站名和卖点）/ og:url，QQ、钉钉、微博等读取 OG 的地方分享链接时有标题、简介和图。
 
