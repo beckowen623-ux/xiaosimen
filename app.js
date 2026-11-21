@@ -1478,7 +1478,21 @@ function stageBarHTML() {
     <h2 id="stageBarTitle">孩子现在在哪个学期？</h2>
     <div class="stage-chips" role="group" aria-label="选择学期">${STAGES.map(st => `<button type="button" class="drill-chip" data-stage-pick="${st.stage}" aria-pressed="${st.stage === state.stage}">${STAGE_SHORT[st.stage]}</button>`).join('')}</div>
     <p class="muted">下面的早鸟自测卷、本周一卷、小四门都按这个学期来；初三再加上中考精编卷和全国真题。</p>
+    ${planTipHTML()}
   </section>`;
+}
+// 这个学期怎么用：把“先测 → 按章补 → 每周一卷 → 错题复习”的方法写成 4 步
+function planTipHTML() {
+  const grade = STAGE_SHORT[state.stage].split(' ')[0];
+  const syncSubjects = [...new Set((nationalCatalog || []).filter(p => p.sync && p.stage === state.stage).map(p => EARLYBIRD_LABEL[p.subject] || p.subjectLabel))];
+  const step2 = state.stage === '7-up' ? '哪章弱就补哪章：七上语数英的章节卷就是“小升初衔接”，每章一套'
+    : syncSubjects.length ? `哪章弱就补哪章：做那一章的同步章节卷（${syncSubjects.join('、')}已上线），或用“按章节练”专项练` : '哪章弱就补哪章：用“按章节练”专项练这一章的题';
+  return `<details class="plan-tip"><summary>📋 ${esc(grade)}怎么用这个题库？4 步走</summary><ol>
+    <li><b>先测：</b>做${esc(grade)}早鸟自测卷，看看哪科哪章弱（限时免费，可以打印整套）。</li>
+    <li><b>按章补：</b>${step2}。</li>
+    <li><b>每周一卷：</b>打印出来周末做，做完点出错题号，10 秒登记。</li>
+    <li><b>错题复习：</b>错题按 1、3、7、14 天提醒重做到会；每周看一次学情分析，期末前再做一次早鸟卷，对比进步。${isNinth() ? '初三再加刷中考精编模拟卷和全国真题。' : ''}</li>
+  </ol></details>`;
 }
 function setStage(stage) {
   if (!STAGES.some(st => st.stage === stage)) return;
@@ -1522,7 +1536,7 @@ function unitCardHTML() {
     }).join('')}</div>` : '<p class="muted">这个科目还没有分章节的题。</p>';
   }
   return `<section class="card unit-card" id="unitCard" aria-labelledby="unitTitle">
-    <div class="section-heading"><h2 id="unitTitle">📚 按章节练</h2><span class="muted">精编卷 · 早鸟卷 · 按教材章节</span></div>
+    <div class="section-heading"><h2 id="unitTitle">📚 按章节练</h2><span class="muted">同步卷 · 早鸟卷 · 精编卷</span></div>
     <div class="weekly-chips" role="group" aria-label="选择科目">${chips}</div>${body}
   </section>`;
 }
@@ -1570,15 +1584,25 @@ async function buildAnalysis() {
         : rate >= 50 ? '基础已经有了，先把薄弱章节的解析看懂，再用“按章节练”每天练 10 题。'
         : '先别急着刷新题：把做错的题解析逐题看懂，从最薄弱的一章开始，一章一章补。';
       return `<div class="analysis-row"><p><b>${esc(label(k))}</b> · 做了 ${s.n} 题 · 正确率 ${rate}%</p>
-        ${weak.length ? `<p class="analysis-weak">需要加强：${weak.map(([n, r, c]) => `${esc(n)}（${r}%，${c} 题）`).join('；')}</p>` : ''}
+        ${weak.length ? `<p class="analysis-weak">需要加强：${weak.map(([n, r, c]) => (unitPool || []).some(q => q.subject === k && q.unit === n)
+          ? `<button type="button" class="analysis-go" data-go-subject="${esc(k)}" data-go-unit="${esc(n)}">${esc(n)}（${r}%，${c} 题）去补 →</button>`
+          : `${esc(n)}（${r}%，${c} 题）`).join('；')}</p>` : ''}
         ${strong.length ? `<p class="analysis-strong">掌握较好：${strong.map(([n, r]) => `${esc(n)}（${r}%）`).join('；')}</p>` : ''}
         <p class="muted">${tip}</p></div>`;
     }).join('');
     state.analysisHTML = `<p>近 7 天学习 <b>${days}</b> 天 · 待复习错题 <b>${due}</b> 道${due ? '（先清掉到期的错题，效果最好）' : ''}</p>${rows}
-      <p class="muted">说明：只统计在本机做过的题；某一章做题少于 3 道时不评价。建议每周看一次。</p>`;
+      <p class="muted">说明：只统计在本机做过的题；某一章做题少于 3 道时不评价。点“去补”直接练这一章（同步章节卷、早鸟卷、精编卷里这一章的题）。建议每周看一次。</p>`;
   }
   const box = byId('analysisOut');
   if (box) box.innerHTML = state.analysisHTML;
+  wireAnalysis();
+}
+function wireAnalysis() {
+  byId('analysisOut')?.querySelectorAll('[data-go-unit]').forEach(b => b.addEventListener('click', async () => {
+    state.unitSubject = b.dataset.goSubject;
+    await ensureUnitPool().catch(() => {});
+    await startUnit(b.dataset.goUnit);
+  }));
 }
 function analysisCardHTML() {
   return `<section class="card analysis-card" id="analysisCard" aria-labelledby="analysisTitle">
@@ -1988,6 +2012,7 @@ function wireHome() {
   }));
   view.querySelectorAll('[data-unit]').forEach(b => b.addEventListener('click', () => { void startUnit(b.dataset.unit); }));
   byId('analysisBtn')?.addEventListener('click', () => { void buildAnalysis(); });
+  wireAnalysis();
   view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); renderHome(); requestAnimationFrame(() => byId('stageBarTitle')?.scrollIntoView({ block: 'start' })); }));
   view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void earlybirdAction(b.dataset.earlybird, b.closest('#xsc') ? 'xscMark' : 'ebMark'); }));
   view.querySelectorAll('[data-eb-mode]').forEach(b => b.addEventListener('click', () => setEbMode(b.dataset.ebMode)));

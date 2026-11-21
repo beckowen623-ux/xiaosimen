@@ -624,3 +624,9 @@ input[type=search]::placeholder { color: #67736c; }
 .content-stats b { flex-basis: 100%; color: var(--muted); font-weight: 600; }
 .content-stats span { padding: 3px 9px; border-radius: 999px; background: #fff; border: 1px solid var(--line); }
 .content-stats small { margin-left: 4px; color: #c2410c; font-size: .75rem; }
+
+/* 学情分析去补按钮、学期用法 */
+.analysis-go { display: inline-block; margin: 4px 4px 0 0; padding: 4px 10px; border: 1px solid #f59e0b; border-radius: 999px; background: #fffbeb; color: #b45309; font: inherit; font-size: .85rem; cursor: pointer; }
+.plan-tip { margin-top: 8px; padding: 8px 12px; border-radius: 10px; background: var(--green-soft, #eef6f1); }
+.plan-tip summary { cursor: pointer; font-weight: 700; color: #14532d; }
+.plan-tip ol { margin: 8px 0 2px; padding-left: 20px; line-height: 1.7; font-size: .9rem; }
