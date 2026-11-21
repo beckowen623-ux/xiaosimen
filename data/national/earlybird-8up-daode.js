@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "中学生应该以学习为主，不该参加社会活动"
+    "text": "亲社会行为有利于个人成长和社会进步"
    },
    {
     "key": "B",
-    "text": "亲社会行为有利于个人成长和社会进步"
+    "text": "中学生应该以学习为主，不该参加社会活动"
    },
    {
     "key": "C",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "关心社会、乐于助人的亲社会行为，有利于养成良好品德，也促进社会和谐。",
   "kp": "亲社会行为",
@@ -65,7 +65,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "B",
-    "text": "网络是一把“双刃剑”，要合理利用"
+    "text": "青少年应该远离网络"
    },
    {
     "key": "C",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "D",
-    "text": "青少年应该远离网络"
+    "text": "网络是一把“双刃剑”，要合理利用"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "网络丰富了生活，但也有信息泄露、沉迷等问题；网络不是法外之地，言行要遵守法律道德。",
   "kp": "网络生活与诚信",
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "社会秩序需要规则来维护"
+    "text": "规则对青少年没有约束力"
    },
    {
     "key": "B",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "D",
-    "text": "规则对青少年没有约束力"
+    "text": "社会秩序需要规则来维护"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "规则是维护社会秩序的重要保障。规则既约束人，又保障自由；道德、纪律、法律都是规则。",
   "kp": "社会规则与社会秩序",
@@ -271,7 +271,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "要防微杜渐，从小事做起，避免沾染不良习气"
+    "text": "逃学只是小事，没关系"
    },
    {
     "key": "B",
@@ -283,11 +283,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "D",
-    "text": "逃学只是小事，没关系"
+    "text": "要防微杜渐，从小事做起，避免沾染不良习气"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "一般违法与犯罪之间没有不可逾越的鸿沟，要防微杜渐，杜绝不良行为。",
   "kp": "违法与犯罪",
@@ -317,11 +317,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "B",
-    "text": "到别人家做客时先敲门"
+    "text": "公共场所大声喧哗"
    },
    {
     "key": "C",
-    "text": "公共场所大声喧哗"
+    "text": "到别人家做客时先敲门"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "尊重他人，讲究礼仪：进门先敲门是有礼貌的表现。",
   "kp": "中华传统美德",
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "B",
-    "text": "考试时偷看同学的答案"
+    "text": "向同学借书，按时归还"
    },
    {
     "key": "C",
-    "text": "向同学借书，按时归还"
+    "text": "考试时偷看同学的答案"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "诚信要求信守诺言、言行一致，借书按时归还是诚信的表现。",
   "kp": "中华传统美德",
@@ -401,7 +401,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "B",
-    "text": "交给警察或想办法联系失主"
+    "text": "等失主来找时索要报酬"
    },
    {
     "key": "C",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "D",
-    "text": "等失主来找时索要报酬"
+    "text": "交给警察或想办法联系失主"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "拾金不昧，把钱包交给警察或联系失主，是诚实守信、尊重他人财产的表现。",
   "kp": "中华传统美德",
@@ -481,7 +481,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "承担责任只有付出，没有回报"
+    "text": "承担责任可能付出时间、精力，但也会获得成长和他人的尊重"
    },
    {
     "key": "B",
@@ -489,7 +489,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "C",
-    "text": "承担责任可能付出时间、精力，但也会获得成长和他人的尊重"
+    "text": "承担责任只有付出，没有回报"
    },
    {
     "key": "D",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "承担责任既有代价也有回报，要不言代价与回报，主动承担责任。",
   "kp": "责任与角色",
@@ -527,11 +527,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "B",
-    "text": "服务社会，奉献社会，在服务中提升自我"
+    "text": "可以不上课"
    },
    {
     "key": "C",
-    "text": "可以不上课"
+    "text": "服务社会，奉献社会，在服务中提升自我"
    },
    {
     "key": "D",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "参加志愿服务，既能服务社会，又能培养社会责任感，实现人生价值。",
   "kp": "亲社会行为",
@@ -565,7 +565,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "国家主权、安全和发展利益"
+    "text": "地方的旅游收入"
    },
    {
     "key": "B",
@@ -577,11 +577,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "D",
-    "text": "地方的旅游收入"
+    "text": "国家主权、安全和发展利益"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "国家核心利益包括国家主权、安全、领土完整、国家统一等，关系国家生存和发展。",
   "kp": "国家利益",
@@ -653,11 +653,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "B",
-    "text": "国家利益是人民利益在国际关系中的集中体现，维护国家利益就是维护个人利益"
+    "text": "只要个人利益得到保障，国家利益无所谓"
    },
    {
     "key": "C",
-    "text": "只要个人利益得到保障，国家利益无所谓"
+    "text": "国家利益是人民利益在国际关系中的集中体现，维护国家利益就是维护个人利益"
    },
    {
     "key": "D",
@@ -665,7 +665,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "国家利益与人民利益本质上一致，维护国家利益就是维护每个人的根本利益。",
   "kp": "国家利益",
@@ -779,11 +779,11 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    },
    {
     "key": "B",
-    "text": "冷静应对，保护好自身安全，记住歹徒特征，事后及时报警"
+    "text": "主动帮歹徒逃跑"
    },
    {
     "key": "C",
-    "text": "主动帮歹徒逃跑"
+    "text": "冷静应对，保护好自身安全，记住歹徒特征，事后及时报警"
    },
    {
     "key": "D",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-8up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "未成年人面对违法犯罪要善于斗争，见义智为，在保护自己安全的前提下运用智慧与违法犯罪作斗争。",
   "kp": "违法与犯罪",

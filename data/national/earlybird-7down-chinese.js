@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "哺育（bǔ）　澎湃（pài）　炽痛（chì）　亘古（gèn）"
+    "text": "瞥见（piě）　踌躇（chóu）　啜泣（chuò）　憔悴（cuì）"
    },
    {
     "key": "B",
@@ -27,7 +27,7 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    },
    {
     "key": "C",
-    "text": "瞥见（piě）　踌躇（chóu）　啜泣（chuò）　憔悴（cuì）"
+    "text": "哺育（bǔ）　澎湃（pài）　炽痛（chì）　亘古（gèn）"
    },
    {
     "key": "D",
@@ -35,9 +35,9 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
-  "explanation": "B“契”读 qì；C“瞥”读 piē；D“迥”读 jiǒng。注意“殷红”的“殷”读 yān，“校对”的“校”读 jiào，这两个都是正确的。",
+  "explanation": "A“瞥”读 piē；B“契”读 qì；D“迥”读 jiǒng。注意“殷红”的“殷”读 yān，“校对”的“校”读 jiào，这两个都是正确的。",
   "kp": "字音",
   "stem": "下列词语中，括号内注音全都正确的一项是（ ）",
   "paperScore": 2.5,
@@ -69,15 +69,15 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    },
    {
     "key": "C",
-    "text": "他在会上妄自菲薄，把同事们的成绩说得一钱不值。"
+    "text": "《西游记》中孙悟空的故事家喻户晓。"
    },
    {
     "key": "D",
-    "text": "《西游记》中孙悟空的故事家喻户晓。"
+    "text": "他在会上妄自菲薄，把同事们的成绩说得一钱不值。"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "“妄自菲薄”指过分看轻自己，不能用来指贬低别人。",
   "kp": "成语运用",
@@ -107,7 +107,7 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    },
    {
     "key": "B",
-    "text": "由于他学习方法得当，使他的成绩提高得很快。"
+    "text": "只有坚持锻炼，才能拥有健康的体魄。"
    },
    {
     "key": "C",
@@ -115,13 +115,13 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    },
    {
     "key": "D",
-    "text": "只有坚持锻炼，才能拥有健康的体魄。"
+    "text": "由于他学习方法得当，使他的成绩提高得很快。"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
-  "explanation": "A 语序不当，先“发现”后“解决”；B 滥用“由于……使……”造成缺主语；C 句式杂糅，应为“《骆驼祥子》的作者是老舍先生”或“《骆驼祥子》是老舍先生写的”。",
+  "explanation": "A 语序不当，先“发现”后“解决”；C 句式杂糅，应为“《骆驼祥子》的作者是老舍先生”或“《骆驼祥子》是老舍先生写的”；D 滥用“由于……使……”造成缺主语。",
   "kp": "病句",
   "stem": "下列句子中，没有语病的一项是（ ）",
   "paperScore": 2.5,
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "《骆驼祥子》中，祥子三次买车又三次失去，最终从一个要强的车夫堕落成“个人主义的末路鬼”。"
+    "text": "《海底两万里》的作者是英国科幻小说家儒勒·凡尔纳。"
    },
    {
     "key": "B",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    },
    {
     "key": "D",
-    "text": "《海底两万里》的作者是英国科幻小说家儒勒·凡尔纳。"
+    "text": "《骆驼祥子》中，祥子三次买车又三次失去，最终从一个要强的车夫堕落成“个人主义的末路鬼”。"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "儒勒·凡尔纳是法国作家，被誉为“科幻小说之父”。",
   "kp": "名著",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "首句写古人做学问不遗余力，十分勤奋。"
+    "text": "这首诗主要描写了冬天夜晚读书的景色，表达了诗人的孤独。"
    },
    {
     "key": "B",
@@ -375,11 +375,11 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    },
    {
     "key": "D",
-    "text": "这首诗主要描写了冬天夜晚读书的景色，表达了诗人的孤独。"
+    "text": "首句写古人做学问不遗余力，十分勤奋。"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "这是一首说理诗，是陆游写给儿子的，告诉他做学问要勤奋、持久，更要躬行实践，并不是写景抒发孤独。",
   "kp": "古诗理解",
@@ -543,7 +543,7 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    },
    {
     "key": "B",
-    "text": "第八段用“刮”“磨”“涂”“夹”“缝”等一系列动词，表现了老周修鞋的认真细致。"
+    "text": "文章采用倒叙手法，先写结局，再回忆修鞋的经过。"
    },
    {
     "key": "C",
@@ -551,11 +551,11 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    },
    {
     "key": "D",
-    "text": "文章采用倒叙手法，先写结局，再回忆修鞋的经过。"
+    "text": "第八段用“刮”“磨”“涂”“夹”“缝”等一系列动词，表现了老周修鞋的认真细致。"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "文章按时间顺序记叙（初见—鞋坏—修鞋—比赛—老周离开—后来），是顺叙，不是倒叙。",
   "kp": "写法分析",
@@ -587,11 +587,11 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    },
    {
     "key": "B",
-    "text": "“引得蜜蜂嗡嗡地赶来”从侧面写出了槐花香气浓郁。"
+    "text": "奶奶说“槐花年年开，吃不完的”，是因为她不喜欢吃槐花饭。"
    },
    {
     "key": "C",
-    "text": "奶奶说“槐花年年开，吃不完的”，是因为她不喜欢吃槐花饭。"
+    "text": "“引得蜜蜂嗡嗡地赶来”从侧面写出了槐花香气浓郁。"
    },
    {
     "key": "D",
@@ -599,7 +599,7 @@ window.NATIONAL_PAPERS["earlybird-7down-chinese"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "奶奶自己很少动筷子，是想把槐花饭留给孩子们吃，表现了奶奶对孙辈的疼爱，不是不喜欢。",
   "kp": "内容理解",

@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "显示了中国人民反抗外来侵略的坚强意志"
+    "text": "导致了《南京条约》的签订"
    },
    {
     "key": "C",
-    "text": "导致了《南京条约》的签订"
+    "text": "显示了中国人民反抗外来侵略的坚强意志"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "虎门销烟显示了中华民族反抗外来侵略的坚强意志。鸦片战争的根本原因是英国要打开中国市场；中国进入近代社会的标志是鸦片战争。",
   "kp": "鸦片战争",
@@ -61,11 +61,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "《南京条约》"
+    "text": "《马关条约》"
    },
    {
     "key": "B",
-    "text": "《马关条约》"
+    "text": "《南京条约》"
    },
    {
     "key": "C",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "1842 年签订的《南京条约》是中国近代史上第一个不平等条约。",
   "kp": "《南京条约》",
@@ -107,11 +107,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "便于英国向中国倾销商品"
+    "text": "使中国丧失关税自主权"
    },
    {
     "key": "C",
-    "text": "使中国丧失关税自主权"
+    "text": "便于英国向中国倾销商品"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "开放通商口岸便于英国向中国倾销商品。割香港岛导致领土主权丧失；协定关税导致关税自主权丧失；允许投资办厂是《马关条约》的内容。",
   "kp": "《南京条约》",
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "故宫"
+    "text": "圆明园"
    },
    {
     "key": "B",
-    "text": "圆明园"
+    "text": "故宫"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "1860 年，英法联军闯入北京，抢劫并焚毁了圆明园。",
   "kp": "第二次鸦片战争",
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "安庆内军械所"
+    "text": "大生纱厂"
    },
    {
     "key": "B",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "大生纱厂"
+    "text": "安庆内军械所"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "安庆内军械所、江南制造总局是军事工业；轮船招商局、汉阳铁厂是民用工业；大生纱厂是张謇创办的民族工业。",
   "kp": "洋务运动",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "使中国彻底摆脱了侵略"
+    "text": "引进了西方先进技术，客观上为中国近代化开辟了道路"
    },
    {
     "key": "B",
@@ -237,7 +237,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "C",
-    "text": "引进了西方先进技术，客观上为中国近代化开辟了道路"
+    "text": "使中国彻底摆脱了侵略"
    },
    {
     "key": "D",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "洋务运动引进西方先进生产技术，创办新式企业和学堂，客观上为中国近代化开辟了道路。",
   "kp": "洋务运动",
@@ -275,11 +275,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "邓世昌"
+    "text": "左宗棠"
    },
    {
     "key": "C",
-    "text": "左宗棠"
+    "text": "邓世昌"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "黄海海战中，致远舰管带邓世昌壮烈殉国。关天培牺牲于鸦片战争中的虎门；左宗棠收复新疆；冯子材是中法战争中的将领。",
   "kp": "甲午中日战争",
@@ -355,11 +355,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "李鸿章、左宗棠"
+    "text": "康有为、梁启超"
    },
    {
     "key": "B",
-    "text": "康有为、梁启超"
+    "text": "李鸿章、左宗棠"
    },
    {
     "key": "C",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "康有为、梁启超是维新派代表，领导了戊戌变法。",
   "kp": "戊戌变法",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "清政府成为“洋人的朝廷”"
+    "text": "中国开始近代化"
    },
    {
     "key": "B",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "中国开始近代化"
+    "text": "清政府成为“洋人的朝廷”"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "清政府保证镇压人民反帝斗争，说明它已完全成为帝国主义统治中国的工具，即“洋人的朝廷”。《辛丑条约》使中国完全沦为半殖民地半封建社会，不是殖民地。",
   "kp": "八国联军侵华",
@@ -439,11 +439,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "推翻了清朝统治，结束了两千多年的君主专制制度"
+    "text": "使中国完全独立"
    },
    {
     "key": "B",
-    "text": "使中国完全独立"
+    "text": "推翻了清朝统治，结束了两千多年的君主专制制度"
    },
    {
     "key": "C",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "辛亥革命推翻了清朝统治，结束了两千多年的君主专制制度，使民主共和观念深入人心。但它没有改变中国半殖民地半封建社会性质。",
   "kp": "辛亥革命",
@@ -573,15 +573,15 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "C",
-    "text": "中国共产党的诞生"
+    "text": "新中国成立"
    },
    {
     "key": "D",
-    "text": "新中国成立"
+    "text": "中国共产党的诞生"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "1921 年中国共产党诞生，中国革命从此有了坚强的领导核心，面貌焕然一新，这是开天辟地的大事变。",
   "kp": "中国共产党的诞生",
@@ -607,11 +607,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "南昌起义"
+    "text": "秋收起义"
    },
    {
     "key": "B",
-    "text": "秋收起义"
+    "text": "南昌起义"
    },
    {
     "key": "C",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "1927 年 8 月 1 日南昌起义打响了武装反抗国民党反动派的第一枪，标志着中国共产党独立领导武装斗争、创建人民军队的开始。",
   "kp": "南昌起义",
@@ -695,7 +695,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "标志着全民族抗战开始"
+    "text": "导致了国共第一次合作"
    },
    {
     "key": "C",
@@ -703,11 +703,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "导致了国共第一次合作"
+    "text": "标志着全民族抗战开始"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "七七事变是全民族抗战的开始；九一八事变是局部抗战的开始。坑点：分清两个“开始”。",
   "kp": "抗日战争",
@@ -733,11 +733,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "彭德怀"
+    "text": "李宗仁"
    },
    {
     "key": "B",
-    "text": "李宗仁"
+    "text": "彭德怀"
    },
    {
     "key": "C",
@@ -749,7 +749,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "台儿庄战役由李宗仁指挥，是抗战以来正面战场取得的最大胜利。",
   "kp": "抗日战争",
@@ -821,7 +821,7 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "三大战役"
+    "text": "重庆谈判"
    },
    {
     "key": "C",
@@ -829,11 +829,11 @@ window.NATIONAL_PAPERS["earlybird-8up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "重庆谈判"
+    "text": "三大战役"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "辽沈、淮海、平津三大战役基本消灭了国民党军队主力，奠定了解放战争在全国胜利的基础。挺进大别山是战略进攻的开始，渡江战役后解放南京。",
   "kp": "解放战争",

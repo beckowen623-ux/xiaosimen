@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "−3"
+    "text": "3"
    },
    {
     "key": "B",
-    "text": "3"
+    "text": "−3"
    },
    {
     "key": "C",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "只有符号不同的两个数互为相反数，−3 的相反数是 3。",
   "kp": "相反数",
@@ -105,7 +105,7 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    },
    {
     "key": "B",
-    "text": "8.45×10⁶"
+    "text": "0.845×10⁷"
    },
    {
     "key": "C",
@@ -113,11 +113,11 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    },
    {
     "key": "D",
-    "text": "0.845×10⁷"
+    "text": "8.45×10⁶"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "科学记数法 a×10ⁿ 中 1≤|a|<10，8450000＝8.45×10⁶。",
   "kp": "科学记数法",
@@ -192,15 +192,15 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    },
    {
     "key": "C",
-    "text": "－2≤x＜3"
+    "text": "－2＜x≤3"
    },
    {
     "key": "D",
-    "text": "－2＜x≤3"
+    "text": "－2≤x＜3"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "由 x－1＜2 得 x＜3；由 2x≥－4 得 x≥－2。取公共部分：－2≤x＜3。",
   "kp": "一元一次不等式组",
@@ -225,11 +225,11 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "x₁＝1，x₂＝3"
+    "text": "x₁＝－1，x₂＝－3"
    },
    {
     "key": "B",
-    "text": "x₁＝－1，x₂＝－3"
+    "text": "x₁＝1，x₂＝3"
    },
    {
     "key": "C",
@@ -241,7 +241,7 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "因式分解：(x－1)(x－3)＝0，所以 x₁＝1，x₂＝3。",
   "kp": "一元二次方程",
@@ -266,11 +266,11 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "5"
+    "text": "5.5"
    },
    {
     "key": "B",
-    "text": "5.5"
+    "text": "5"
    },
    {
     "key": "C",
@@ -282,7 +282,7 @@ window.NATIONAL_PAPERS["claude-2026-math-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "数据已从小到大排列，共 6 个，中位数是第 3、4 个数的平均数：(5＋6)÷2＝5.5。",
   "kp": "中位数",

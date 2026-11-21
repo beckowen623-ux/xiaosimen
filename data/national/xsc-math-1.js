@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    },
    {
     "key": "B",
-    "text": "－214 元"
+    "text": "－300 元"
    },
    {
     "key": "C",
-    "text": "－300 元"
+    "text": "－214 元"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "支出记为负，交水电费支出 214 元，记作 －214 元。题目里的工资、奖金、买书、买药都是干扰信息，只看问的那一笔。",
   "kp": "正数和负数",
@@ -107,7 +107,7 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    },
    {
     "key": "B",
-    "text": "0 既不是正数，也不是负数"
+    "text": "0 是最小的正整数"
    },
    {
     "key": "C",
@@ -115,13 +115,13 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    },
    {
     "key": "D",
-    "text": "0 是最小的正整数"
+    "text": "0 既不是正数，也不是负数"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "负数比 0 小，所以 0 不是最小的有理数；0 的相反数是 0；最小的正整数是 1。只有 B 正确。",
+  "explanation": "负数比 0 小，所以 0 不是最小的有理数；0 的相反数是 0；最小的正整数是 1。只有 D 正确。",
   "kp": "有理数的分类",
   "stem": "关于数 0，下列说法正确的是（ ）",
   "paperScore": 3,
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    },
    {
     "key": "B",
-    "text": "一个数的相反数一定比这个数小"
+    "text": "互为相反数的两个数，它们的绝对值相等"
    },
    {
     "key": "C",
-    "text": "互为相反数的两个数，它们的绝对值相等"
+    "text": "一个数的相反数一定比这个数小"
    },
    {
     "key": "D",
@@ -203,9 +203,9 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
-  "explanation": "A 漏了 0（|0|＝0）；B 负数的相反数比它大，如 －3 的相反数是 3；D 漏了 0，有理数分为正有理数、0、负有理数。C 正确。",
+  "explanation": "A 漏了 0（|0|＝0）；C 负数的相反数比它大，如 －3 的相反数是 3；D 漏了 0，有理数分为正有理数、0、负有理数。B 正确。",
   "kp": "相反数与绝对值",
   "stem": "下列说法中，正确的是（ ）",
   "paperScore": 3,
@@ -271,7 +271,7 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "5"
+    "text": "±5"
    },
    {
     "key": "B",
@@ -279,7 +279,7 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    },
    {
     "key": "C",
-    "text": "±5"
+    "text": "5"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "|a|＝5，a＝±5；点在原点左侧说明 a 是负数，a＝－5，它的相反数是 5。坑点：问的是“相反数”，不是 a 本身。",
   "kp": "相反数与绝对值",
@@ -317,11 +317,11 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    },
    {
     "key": "B",
-    "text": "20.03 mm"
+    "text": "19.99 mm"
    },
    {
     "key": "C",
-    "text": "19.99 mm"
+    "text": "20.03 mm"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "20±0.02 表示直径最小 19.98 mm、最大 20.02 mm 都合格。19.97＜19.98，20.03＞20.02，20.021＞20.02，都不合格；只有 19.99 在范围内。",
   "kp": "正数和负数",
@@ -405,17 +405,17 @@ window.NATIONAL_PAPERS["xsc-math-1"] = [
    },
    {
     "key": "C",
-    "text": "a＜－b"
+    "text": "－a＜b"
    },
    {
     "key": "D",
-    "text": "－a＜b"
+    "text": "a＜－b"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
-  "explanation": "－a 在 0 和 1 之间，－b 在 －2 和 －1 之间。|a|＜1＜|b|，A 错；－a＜1＜b，B 错、D 对；a 在 －1 右边，－b 在 －1 左边，所以 a＞－b，C 错。",
+  "explanation": "－a 在 0 和 1 之间，－b 在 －2 和 －1 之间。|a|＜1＜|b|，A 错；－a＜1＜b，B 错、C 对；a 在 －1 右边，－b 在 －1 左边，所以 a＞－b，D 错。",
   "kp": "数轴",
   "stem": "有理数 a、b 在数轴上的位置是：a 在 －1 和 0 之间，b 在 1 和 2 之间。下列结论正确的是（ ）",
   "paperScore": 3,

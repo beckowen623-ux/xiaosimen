@@ -107,7 +107,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "B",
-    "text": "错误，独立思考不等于盲目否定，要学会听取不同意见"
+    "text": "错误，青少年不应该有自己的想法"
    },
    {
     "key": "C",
@@ -115,13 +115,13 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "D",
-    "text": "错误，青少年不应该有自己的想法"
+    "text": "错误，独立思考不等于盲目否定，要学会听取不同意见"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "青春期要培养独立思考和批判精神，但这不等于盲目否定，要有理有据，也要虚心听取他人意见。D 否定了独立思考，也不对。",
+  "explanation": "青春期要培养独立思考和批判精神，但这不等于盲目否定，要有理有据，也要虚心听取他人意见。B 否定了独立思考，也不对。",
   "kp": "青春期的心理",
   "stem": "“我的青春我做主，我的想法谁都不能反对。”对这种观点，评价正确的是（ ）",
   "paperScore": 2.5,
@@ -233,7 +233,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "B",
-    "text": "情绪是短暂的、复杂多样的，会影响我们的观念和行动"
+    "text": "情绪只影响自己，不会影响他人"
    },
    {
     "key": "C",
@@ -241,11 +241,11 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "D",
-    "text": "情绪只影响自己，不会影响他人"
+    "text": "情绪是短暂的、复杂多样的，会影响我们的观念和行动"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "情绪复杂多样，负面情绪也有积极意义（如适度焦虑促使我们努力）。情绪会相互感染，影响他人。",
   "kp": "情绪的调节",
@@ -279,17 +279,17 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "C",
-    "text": "和好朋友、父母聊聊天"
+    "text": "通宵复习，把所有内容再看一遍"
    },
    {
     "key": "D",
-    "text": "通宵复习，把所有内容再看一遍"
+    "text": "和好朋友、父母聊聊天"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
-  "explanation": "通宵复习会加重疲劳和焦虑，不利于调节情绪；A、B、C 分别是放松训练、积极暗示和合理宣泄。",
+  "explanation": "通宵复习会加重疲劳和焦虑，不利于调节情绪；A、B、D 分别是放松训练、积极暗示和合理宣泄。",
   "kp": "情绪的调节",
   "stem": "考试前，小芳十分紧张，晚上睡不着觉。下列做法中不能帮她调节情绪的是（ ）",
   "paperScore": 2.5,
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "B",
-    "text": "错误，集体的荣誉需要每个人共同努力"
+    "text": "正确，不想参加就不用参加"
    },
    {
     "key": "C",
-    "text": "正确，不想参加就不用参加"
+    "text": "错误，集体的荣誉需要每个人共同努力"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "每个人都是集体的一员，集体荣誉需要大家共同创造，要增强集体荣誉感和责任感。",
   "kp": "集体荣誉感",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "小团体应该完全取消"
+    "text": "要正确看待小群体，不能因小群体损害班集体的利益"
    },
    {
     "key": "B",
@@ -405,7 +405,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "C",
-    "text": "要正确看待小群体，不能因小群体损害班集体的利益"
+    "text": "小团体应该完全取消"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "小群体能满足归属感，但要处理好小群体与集体的关系，不能排斥他人、损害集体利益。",
   "kp": "集体生活",
@@ -443,11 +443,11 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "B",
-    "text": "体现了民主管理，增强同学们的主人翁意识"
+    "text": "班规可以随便定"
    },
    {
     "key": "C",
-    "text": "班规可以随便定"
+    "text": "体现了民主管理，增强同学们的主人翁意识"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "全班共同参与制订班规，体现民主管理，人人都是集体的主人。",
   "kp": "集体生活",
@@ -485,7 +485,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "B",
-    "text": "个人在集体中成长，集体因个人的努力而美好"
+    "text": "个人可以离开集体独立成长"
    },
    {
     "key": "C",
@@ -493,11 +493,11 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "D",
-    "text": "个人可以离开集体独立成长"
+    "text": "个人在集体中成长，集体因个人的努力而美好"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "集体是个人成长的重要环境，美好集体需要每个人共同建设。",
   "kp": "集体生活",
@@ -523,7 +523,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "法律是由国家制定或认可的，靠国家强制力保证实施"
+    "text": "道德和法律没有区别"
    },
    {
     "key": "B",
@@ -531,7 +531,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "C",
-    "text": "道德和法律没有区别"
+    "text": "法律是由国家制定或认可的，靠国家强制力保证实施"
    },
    {
     "key": "D",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "法律由国家制定或认可，由国家强制力保证实施，对全体社会成员具有普遍约束力，既规定权利也规定义务。",
   "kp": "法律的作用",
@@ -565,7 +565,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "法律能规范人们的行为，保护公民的合法权益"
+    "text": "法律只在法院里起作用"
    },
    {
     "key": "B",
@@ -577,11 +577,11 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "D",
-    "text": "法律只在法院里起作用"
+    "text": "法律能规范人们的行为，保护公民的合法权益"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "法律规范行为、保障权利，是国家治理的重要手段。但法律不是万能的，也离不开道德。",
   "kp": "法律的作用",
@@ -607,7 +607,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "家庭保护"
+    "text": "网络保护"
    },
    {
     "key": "B",
@@ -615,7 +615,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "C",
-    "text": "网络保护"
+    "text": "家庭保护"
    },
    {
     "key": "D",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "网络平台采取防沉迷措施，属于网络保护。",
   "kp": "未成年人保护",
@@ -699,15 +699,15 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    },
    {
     "key": "C",
-    "text": "在公共场所故意损坏公共设施"
+    "text": "不尊敬长辈"
    },
    {
     "key": "D",
-    "text": "不尊敬长辈"
+    "text": "在公共场所故意损坏公共设施"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "故意损坏公共财物违反了法律。迟到、作弊、不尊敬长辈属于违反纪律或道德的行为。",
   "kp": "法律的作用",
@@ -775,11 +775,11 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "把好感藏在心里，学会理智对待，把精力放在学习上"
+    "text": "为了引起对方注意，故意在课堂上捣乱"
    },
    {
     "key": "B",
-    "text": "为了引起对方注意，故意在课堂上捣乱"
+    "text": "把好感藏在心里，学会理智对待，把精力放在学习上"
    },
    {
     "key": "C",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-7down-daode"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "对异性有好感是青春期的正常现象，要理智对待，把它留在心里，与异性交往要把握分寸。",
   "kp": "情感",

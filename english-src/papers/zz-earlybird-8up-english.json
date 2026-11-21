@@ -19,11 +19,11 @@
           "stem": "—Where ______ you go on vacation last summer?\n—I went to Hainan with my parents.",
           "options": [
             "do",
-            "did",
             "are",
+            "did",
             "will"
           ],
-          "answer": "B",
+          "answer": "C",
           "kp": "一般过去时",
           "exp": "last summer 是过去时间，用助动词 did。"
         },
@@ -31,12 +31,12 @@
           "n": 2,
           "stem": "My sister is ______ than me, but I'm ______ in our family.",
           "options": [
-            "taller; the tallest",
+            "more tall; the most tall",
             "tall; taller",
             "tallest; tall",
-            "more tall; the most tall"
+            "taller; the tallest"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "比较级和最高级",
           "exp": "than 前用比较级 taller；在家里三者以上比较用最高级 the tallest。"
         },
@@ -70,12 +70,12 @@
           "n": 5,
           "stem": "If it ______ tomorrow, we will have the sports meeting in the gym.",
           "options": [
-            "rain",
             "rains",
+            "rain",
             "will rain",
             "rained"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "条件状语从句",
           "exp": "if 引导条件状语从句，主将从现：主句用将来时，从句用一般现在时，it 是第三人称单数，用 rains。"
         },
@@ -84,11 +84,11 @@
           "stem": "There ______ more trees and fewer cars in our city in ten years.",
           "options": [
             "is",
-            "will be",
+            "has",
             "are going to have",
-            "has"
+            "will be"
           ],
-          "answer": "B",
+          "answer": "D",
           "kp": "一般将来时",
           "exp": "in ten years 表将来，there be 的将来时是 there will be。"
         },
@@ -97,11 +97,11 @@
           "stem": "—Can you come to my party on Saturday?\n—______. I have to prepare for a math test.",
           "options": [
             "Sure, I'd love to",
-            "I'm sorry, I can't",
             "Yes, I can",
+            "I'm sorry, I can't",
             "That sounds great"
           ],
-          "answer": "B",
+          "answer": "C",
           "kp": "交际用语",
           "exp": "后面说要准备数学考试，所以是拒绝邀请：I'm sorry, I can't。"
         },
@@ -109,12 +109,12 @@
           "n": 8,
           "stem": "To make a banana milk shake, first ______ three bananas, then put them into the blender.",
           "options": [
-            "cut up",
             "cut them up",
+            "cut up",
             "cut up them",
             "cuts up"
           ],
-          "answer": "A",
+          "answer": "B",
           "kp": "动词短语",
           "exp": "cut up 后接名词时，名词可放中间或后面：cut up three bananas。代词才必须放中间。C 代词放后面是错的。"
         },
@@ -135,12 +135,12 @@
           "n": 10,
           "stem": "—Thank you for inviting me to your birthday party.\n—______. I'm glad you can come.",
           "options": [
-            "You're welcome",
             "Never mind",
+            "You're welcome",
             "That's all right, I can't",
             "Good idea"
           ],
-          "answer": "A",
+          "answer": "B",
           "kp": "交际用语",
           "exp": "回应感谢用 You're welcome。"
         }
@@ -155,12 +155,12 @@
         {
           "n": 11,
           "options": [
-            "spent",
             "cost",
+            "spent",
             "took",
             "paid"
           ],
-          "answer": "A",
+          "answer": "B",
           "kp": "动词辨析",
           "exp": "人作主语，花费时间用 spend…in/doing，过去式 spent。cost 主语是物，take 用 it takes sb. time to do。"
         },
@@ -179,72 +179,72 @@
         {
           "n": 13,
           "options": [
-            "bored",
+            "surprised",
             "excited",
             "proud",
-            "surprised"
+            "bored"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "上下文",
           "exp": "村里没有商场和电影院，起初觉得有点无聊；后文 But soon I found many interesting things 形成转折。"
         },
         {
           "n": 14,
           "options": [
-            "eager",
-            "afraid",
             "lazy",
+            "afraid",
+            "eager",
             "tired"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "上下文",
           "exp": "but 转折：起初害羞，但非常渴望学习，be eager to do sth.。"
         },
         {
           "n": 15,
           "options": [
-            "how",
+            "why",
             "what",
             "where",
-            "why"
+            "how"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "疑问词＋不定式",
           "exp": "教我怎样在河里抓鱼：how to catch fish。"
         },
         {
           "n": 16,
           "options": [
-            "the children",
             "the teachers",
+            "the children",
             "the parents",
             "the doctors"
           ],
-          "answer": "A",
+          "answer": "B",
           "kp": "上下文",
           "exp": "和城里认识的孩子比较。"
         },
         {
           "n": 17,
           "options": [
-            "singing",
+            "to sing",
             "sang",
             "sings",
-            "to sing"
+            "singing"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "非谓语动词",
           "exp": "现在分词短语作伴随状语，表示“正在和孩子们唱歌”。"
         },
         {
           "n": 18,
           "options": [
-            "to say",
             "saying",
+            "to say",
             "said",
             "says"
           ],
-          "answer": "A",
+          "answer": "B",
           "kp": "疑问词＋不定式",
           "exp": "didn't know what to say 不知道说什么好。"
         },
@@ -263,12 +263,12 @@
         {
           "n": 20,
           "options": [
-            "what",
-            "that",
             "which",
+            "that",
+            "what",
             "how"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "宾语从句",
           "exp": "与后句 It comes from what we give 对应：幸福不来自我们拥有的东西。what 引导宾语从句并作 have 的宾语。"
         }
@@ -301,11 +301,11 @@
               "stem": "How much does a student pay for a ticket at Star Cinema with a student card?",
               "options": [
                 "¥30.",
-                "¥24.",
+                "¥6.",
                 "¥20.",
-                "¥6."
+                "¥24."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "推理判断",
               "exp": "20% off 是打八折：30×80%＝24 元。坑点：把“打八折”理解成“减 20 元”。"
             },
@@ -314,11 +314,11 @@
               "stem": "If you want free popcorn, when should you go to Sun Cinema?",
               "options": [
                 "On Monday.",
-                "On Tuesday.",
                 "On Friday.",
+                "On Tuesday.",
                 "On Sunday."
               ],
-              "answer": "B",
+              "answer": "C",
               "kp": "细节理解",
               "exp": "Popcorn is free on Tuesdays。"
             },
@@ -326,12 +326,12 @@
               "n": 24,
               "stem": "Which of the following is TRUE?",
               "options": [
-                "City Cinema is the closest to the school.",
-                "Sun Cinema is the cheapest.",
                 "Star Cinema is closer to the school than City Cinema.",
+                "Sun Cinema is the cheapest.",
+                "City Cinema is the closest to the school.",
                 "City Cinema shows the newest movies."
               ],
-              "answer": "C",
+              "answer": "A",
               "kp": "细节理解",
               "exp": "Star Cinema 离学校 500 米，City Cinema 5 千米。City 最远、最便宜、常放老电影；Sun 最贵。"
             },
@@ -340,11 +340,11 @@
               "stem": "Tom has only ¥28 and he doesn't have a student card. Which cinema can he go to?",
               "options": [
                 "Sun Cinema.",
-                "Star Cinema.",
                 "City Cinema.",
+                "Star Cinema.",
                 "None of them."
               ],
-              "answer": "C",
+              "answer": "B",
               "kp": "推理判断",
               "exp": "没有学生卡，Star 要 30 元，Sun 要 45 元，只有 City（25 元）买得起。"
             }
@@ -360,11 +360,11 @@
               "stem": "What can robots do today according to the passage?",
               "options": [
                 "Tell jokes.",
-                "Work in factories and clean houses.",
+                "Think like humans.",
                 "Feel sad for their friends.",
-                "Think like humans."
+                "Work in factories and clean houses."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "细节理解",
               "exp": "第一段：They can work in factories, clean houses and even help doctors。"
             },
@@ -372,12 +372,12 @@
               "n": 27,
               "stem": "What do some scientists believe about robots in 50 years?",
               "options": [
-                "Robots will be in every home.",
                 "Robots will disappear.",
+                "Robots will be in every home.",
                 "Robots will be cheaper than cars.",
                 "Robots will become teachers in schools."
               ],
-              "answer": "A",
+              "answer": "B",
               "kp": "细节理解",
               "exp": "in 50 years, robots will be in every home。"
             },
@@ -386,11 +386,11 @@
               "stem": "What does Professor White think?",
               "options": [
                 "Robots will be smarter than humans.",
-                "Robots can't think like humans.",
+                "Robots can understand jokes.",
                 "Robots will take all jobs.",
-                "Robots can understand jokes."
+                "Robots can't think like humans."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "细节理解",
               "exp": "Robots won't be able to think like humans。"
             },
@@ -411,12 +411,12 @@
               "n": 30,
               "stem": "What is the writer's attitude towards robots?",
               "options": [
-                "Completely against them.",
-                "Very excited only.",
                 "Objective, showing different opinions.",
+                "Very excited only.",
+                "Completely against them.",
                 "Not interested at all."
               ],
-              "answer": "C",
+              "answer": "A",
               "kp": "写作态度",
               "exp": "作者列出了支持和反对两种观点，也提到担忧，结尾提问让读者思考，态度客观。"
             }
@@ -446,10 +446,10 @@
               "options": [
                 "Apples.",
                 "Bananas.",
-                "Oranges.",
-                "Grapes."
+                "Grapes.",
+                "Oranges."
               ],
-              "answer": "D",
+              "answer": "C",
               "kp": "细节理解",
               "exp": "Don't cut the grapes — they are small enough。"
             },
@@ -459,10 +459,10 @@
               "options": [
                 "Wash the fruit.",
                 "Peel the bananas.",
-                "Add honey and yogurt.",
-                "Put it in the fridge."
+                "Put it in the fridge.",
+                "Add honey and yogurt."
               ],
-              "answer": "C",
+              "answer": "D",
               "kp": "细节理解",
               "exp": "After that, put all the fruit into a big bowl. Add two spoons of honey and some yogurt。"
             },
@@ -483,12 +483,12 @@
               "n": 35,
               "stem": "This passage is probably from ______.",
               "options": [
-                "a story book",
                 "a cookbook",
+                "a story book",
                 "a science magazine",
                 "a travel guide"
               ],
-              "answer": "B",
+              "answer": "A",
               "kp": "文章出处",
               "exp": "介绍食材和做法步骤，可能出自菜谱。"
             }

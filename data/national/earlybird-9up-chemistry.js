@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "氧气"
+    "text": "二氧化碳"
    },
    {
     "key": "C",
-    "text": "二氧化碳"
+    "text": "氧气"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "按体积计算，氮气约 78%，氧气约 21%，稀有气体约 0.94%，二氧化碳约 0.03%。",
   "kp": "空气的成分",
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
   "options": [
    {
     "key": "A",
-    "text": "红磷的量不足"
+    "text": "装置冷却到室温后才打开弹簧夹"
    },
    {
     "key": "B",
@@ -73,13 +73,13 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    },
    {
     "key": "D",
-    "text": "装置冷却到室温后才打开弹簧夹"
+    "text": "红磷的量不足"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
-  "explanation": "红磷不足，氧气没有被耗尽，结果偏小。B、C 会使瓶内空气受热逸出，结果偏大；D 是正确操作。",
+  "explanation": "红磷不足，氧气没有被耗尽，结果偏小。A 是正确操作；B、C 会使瓶内空气受热逸出，结果偏大。",
   "kp": "测定空气中氧气的含量",
   "stem": "用红磷燃烧测定空气中氧气的含量，实验结束后测得氧气体积分数明显小于 1/5。可能的原因是（ ）",
   "paperScore": 2.5,
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
   "options": [
    {
     "key": "A",
-    "text": "中子数"
+    "text": "质子数"
    },
    {
     "key": "B",
-    "text": "质子数"
+    "text": "中子数"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "元素是质子数（核电荷数）相同的一类原子的总称；最外层电子数决定元素的化学性质。",
   "kp": "元素",
@@ -275,11 +275,11 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "H₂"
+    "text": "2H"
    },
    {
     "key": "C",
-    "text": "2H"
+    "text": "H₂"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "元素符号或化学式前面加上数字，只表示微粒的个数。2H 只表示 2 个氢原子；H 可表示氢元素，H₂、H₂O 可表示物质。",
   "kp": "化学符号的意义",
@@ -313,7 +313,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
   "options": [
    {
     "key": "A",
-    "text": "正极产生的气体能燃烧"
+    "text": "该实验说明水是由氢元素和氧元素组成的"
    },
    {
     "key": "B",
@@ -321,7 +321,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    },
    {
     "key": "C",
-    "text": "该实验说明水是由氢元素和氧元素组成的"
+    "text": "正极产生的气体能燃烧"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "正极产生氧气，负极产生氢气，体积比约为 1∶2，质量比约为 8∶1；水是由氢、氧两种元素组成的纯净物，不含氢气和氧气。",
   "kp": "水的组成",
@@ -401,7 +401,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "碳原子的排列方式不同"
+    "text": "碳原子的数目不同"
    },
    {
     "key": "C",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    },
    {
     "key": "D",
-    "text": "碳原子的数目不同"
+    "text": "碳原子的排列方式不同"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "金刚石、石墨中碳原子的排列方式不同，所以物理性质差异很大，化学性质相似。",
   "kp": "碳单质",
@@ -443,11 +443,11 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "一氧化碳有毒，能与血液中的血红蛋白结合"
+    "text": "二氧化碳有毒，室内浓度过高会使人中毒死亡"
    },
    {
     "key": "C",
-    "text": "二氧化碳有毒，室内浓度过高会使人中毒死亡"
+    "text": "一氧化碳有毒，能与血液中的血红蛋白结合"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "只有二氧化碳能使澄清石灰水变浑浊；二氧化碳本身没有毒，浓度过高使人窒息是因为它不能供给呼吸；二氧化碳不能燃烧。",
   "kp": "一氧化碳与二氧化碳",
@@ -489,15 +489,15 @@ window.NATIONAL_PAPERS["earlybird-9up-chemistry"] = [
    },
    {
     "key": "C",
-    "text": "氢气燃烧只生成水，是最清洁的燃料"
+    "text": "化石燃料取之不尽，可以随意使用"
    },
    {
     "key": "D",
-    "text": "化石燃料取之不尽，可以随意使用"
+    "text": "氢气燃烧只生成水，是最清洁的燃料"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "化石燃料是不可再生能源；天然气的主要成分是甲烷（CH₄）；氢气燃烧产物只有水，无污染。",
   "kp": "燃料与能源",

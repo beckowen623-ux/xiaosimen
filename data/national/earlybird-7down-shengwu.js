@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "卵巢、子宫"
+    "text": "输卵管、子宫"
    },
    {
     "key": "B",
-    "text": "输卵管、子宫"
+    "text": "卵巢、子宫"
    },
    {
     "key": "C",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "精子和卵细胞在输卵管内结合形成受精卵；胚胎和胎儿在子宫内发育。卵巢产生卵细胞。",
   "kp": "人的由来",
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "身高突增"
+    "text": "神经系统开始发育"
    },
    {
     "key": "B",
@@ -69,7 +69,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "神经系统开始发育"
+    "text": "身高突增"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "身高突增是青春期的一个显著特点，此外还有性器官迅速发育、出现第二性征等。",
   "kp": "人的由来",
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "口腔、胃、小肠"
+    "text": "小肠、胃、口腔"
    },
    {
     "key": "B",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "小肠、胃、口腔"
+    "text": "口腔、胃、小肠"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "淀粉在口腔开始消化，蛋白质在胃开始消化，脂肪在小肠开始消化。",
   "kp": "食物的消化",
@@ -195,17 +195,17 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "小肠绒毛壁只由一层上皮细胞构成"
+    "text": "小肠内有肠液、胰液和胆汁等多种消化液"
    },
    {
     "key": "D",
-    "text": "小肠内有肠液、胰液和胆汁等多种消化液"
+    "text": "小肠绒毛壁只由一层上皮细胞构成"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
-  "explanation": "多种消化液与“消化”有关，与“吸收”无关。A、B 增大了吸收面积，C 有利于营养物质进入血液。坑点：分清消化和吸收。",
+  "explanation": "多种消化液与“消化”有关，与“吸收”无关。A、B 增大了吸收面积，D 有利于营养物质进入血液。坑点：分清消化和吸收。",
   "kp": "食物的消化",
   "stem": "小肠是消化和吸收的主要场所。下列结构特点中，与吸收功能无关的是（ ）",
   "paperScore": 2.5,
@@ -233,7 +233,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "肝脏分泌，乳化脂肪"
+    "text": "胃分泌，消化脂肪"
    },
    {
     "key": "C",
@@ -241,11 +241,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "胃分泌，消化脂肪"
+    "text": "肝脏分泌，乳化脂肪"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "胆汁由肝脏分泌，储存在胆囊中；胆汁不含消化酶，能将脂肪乳化成脂肪微粒。坑点：误以为胆汁由胆囊分泌。",
   "kp": "食物的消化",
@@ -313,7 +313,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "收缩，胸廓容积扩大"
+    "text": "舒张，胸廓容积缩小"
    },
    {
     "key": "B",
@@ -325,11 +325,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "舒张，胸廓容积缩小"
+    "text": "收缩，胸廓容积扩大"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "吸气时，膈肌和肋间外肌收缩，胸廓容积扩大，肺扩张，肺内气压低于外界，气体进入肺。",
   "kp": "肺与外界的气体交换",
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "血液"
+    "text": "组织细胞"
    },
    {
     "key": "C",
-    "text": "组织细胞"
+    "text": "血液"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "组织细胞进行呼吸作用分解有机物，产生二氧化碳，经血液运到肺，再呼出体外。",
   "kp": "肺与外界的气体交换",
@@ -447,15 +447,15 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "血小板"
+    "text": "血浆"
    },
    {
     "key": "D",
-    "text": "血浆"
+    "text": "血小板"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "血小板有止血和加速凝血的作用；白细胞能吞噬病菌；红细胞运输氧气。",
   "kp": "血液",
@@ -481,11 +481,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "左心房"
+    "text": "右心房"
    },
    {
     "key": "B",
-    "text": "右心房"
+    "text": "左心房"
    },
    {
     "key": "C",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "药物从上肢或下肢静脉进入，经上、下腔静脉最先回到右心房。",
   "kp": "血液循环",
@@ -527,7 +527,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "动脉血含氧丰富、颜色鲜红，静脉血含氧较少、颜色暗红"
+    "text": "静脉血含二氧化碳少"
    },
    {
     "key": "C",
@@ -535,11 +535,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "静脉血含二氧化碳少"
+    "text": "动脉血含氧丰富、颜色鲜红，静脉血含氧较少、颜色暗红"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "区分动脉血和静脉血看含氧量，不看血管类型。如肺动脉里流的是静脉血，肺静脉里流的是动脉血。",
   "kp": "血液循环",
@@ -565,11 +565,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "肺动脉"
+    "text": "肺静脉"
    },
    {
     "key": "B",
-    "text": "肺静脉"
+    "text": "肺动脉"
    },
    {
     "key": "C",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "血液流经肺部毛细血管时获得氧气，变成动脉血，由肺静脉流回左心房。",
   "kp": "血液循环",
@@ -653,11 +653,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "神经元"
+    "text": "反射弧"
    },
    {
     "key": "C",
-    "text": "反射弧"
+    "text": "神经元"
    },
    {
     "key": "D",
@@ -665,7 +665,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "神经元（神经细胞）是神经系统结构和功能的基本单位；反射弧是反射的结构基础。",
   "kp": "神经系统",
@@ -737,11 +737,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "侏儒症"
+    "text": "呆小症"
    },
    {
     "key": "C",
-    "text": "呆小症"
+    "text": "侏儒症"
    },
    {
     "key": "D",
@@ -749,7 +749,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "幼年生长激素不足患侏儒症（身材矮小、智力正常）；幼年甲状腺激素不足患呆小症（身材矮小、智力低下）。坑点：区分侏儒症和呆小症。",
   "kp": "激素调节",
@@ -775,11 +775,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "晶状体过度变凸，物像落在视网膜前方；凹透镜"
+    "text": "晶状体过度变凸，物像落在视网膜后方；凸透镜"
    },
    {
     "key": "B",
-    "text": "晶状体过度变凸，物像落在视网膜后方；凸透镜"
+    "text": "晶状体过度变凸，物像落在视网膜前方；凹透镜"
    },
    {
     "key": "C",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "近视眼是晶状体曲度过大或眼球前后径过长，物像落在视网膜前方，用凹透镜矫正。",
   "kp": "神经系统",
@@ -817,11 +817,11 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "垃圾分类回收"
+    "text": "大量使用一次性筷子"
    },
    {
     "key": "B",
-    "text": "大量使用一次性筷子"
+    "text": "垃圾分类回收"
    },
    {
     "key": "C",
@@ -833,7 +833,7 @@ window.NATIONAL_PAPERS["earlybird-7down-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "大量使用一次性筷子会消耗大量木材，破坏森林资源。",
   "kp": "人类活动对生物圈的影响",

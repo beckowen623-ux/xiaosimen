@@ -65,7 +65,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    },
    {
     "key": "B",
-    "text": "“闻其声而知其人”主要是根据声音的音色来判断的"
+    "text": "城市道路旁“禁止鸣笛”是在传播过程中减弱噪声"
    },
    {
     "key": "C",
@@ -73,13 +73,13 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    },
    {
     "key": "D",
-    "text": "城市道路旁“禁止鸣笛”是在传播过程中减弱噪声"
+    "text": "“闻其声而知其人”主要是根据声音的音色来判断的"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "声音不能在真空中传播，A、C 错；禁止鸣笛是在声源处减弱噪声，D 错；不同人发声的音色不同，B 正确。",
+  "explanation": "声音不能在真空中传播，A、C 错；禁止鸣笛是在声源处减弱噪声，B 错；不同人发声的音色不同，D 正确。",
   "kp": "声现象",
   "stem": "下列关于声现象的说法中，正确的是（ ）",
   "paperScore": 3,
@@ -149,7 +149,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    },
    {
     "key": "B",
-    "text": "液化现象"
+    "text": "升华现象"
    },
    {
     "key": "C",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    },
    {
     "key": "D",
-    "text": "升华现象"
+    "text": "液化现象"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "室内温暖的水蒸气遇到冰冷的镜片放热液化成小水滴。坑点：“雾”是液态小水滴，不是冰晶，不是凝华。",
   "kp": "物态变化",
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "汽车行驶的速度越大，惯性越大"
+    "text": "一切物体在任何情况下都有惯性"
    },
    {
     "key": "B",
@@ -195,7 +195,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    },
    {
     "key": "C",
-    "text": "一切物体在任何情况下都有惯性"
+    "text": "汽车行驶的速度越大，惯性越大"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "惯性只与质量有关，与速度无关；安全带是减小惯性带来的危害，不能减小惯性；惯性是物体的属性，不能说“受到惯性作用”。",
   "kp": "惯性",
@@ -275,11 +275,11 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    },
    {
     "key": "B",
-    "text": "F甲＜F乙＝F丙"
+    "text": "F甲＝F乙＝F丙"
    },
    {
     "key": "C",
-    "text": "F甲＝F乙＝F丙"
+    "text": "F甲＜F乙＝F丙"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "沉底时 F甲＜G；悬浮和漂浮时浮力都等于重力，F乙＝F丙＝G。坑点：漂浮时排开液体体积小，但液体密度大，浮力仍等于重力。",
   "kp": "物体的浮沉条件",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "发电机"
+    "text": "扬声器"
    },
    {
     "key": "B",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    },
    {
     "key": "C",
-    "text": "扬声器"
+    "text": "发电机"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "电动机原理是通电导体在磁场中受力运动，扬声器也是这个原理。发电机和动圈式话筒是电磁感应；电磁继电器利用电流的磁效应。",
   "kp": "电与磁",
@@ -401,11 +401,11 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    },
    {
     "key": "B",
-    "text": "电流表示数变小，电压表示数变大"
+    "text": "电流表和电压表示数都变小"
    },
    {
     "key": "C",
-    "text": "电流表和电压表示数都变小"
+    "text": "电流表示数变小，电压表示数变大"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-2027-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "R₂ 变大，总电阻变大，电流变小；R₁ 两端电压 U₁＝IR₁ 变小，R₂ 两端电压 U₂＝U－U₁ 变大。电压表与电流表示数之比等于 R₂，变大，D 错。",
   "kp": "动态电路分析",

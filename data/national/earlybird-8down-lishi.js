@@ -23,7 +23,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "《中国人民政治协商会议共同纲领》"
+    "text": "《中华人民共和国土地改革法》"
    },
    {
     "key": "C",
@@ -31,11 +31,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "D",
-    "text": "《中华人民共和国土地改革法》"
+    "text": "《中国人民政治协商会议共同纲领》"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "政协一届全体会议通过了起临时宪法作用的《共同纲领》。1954 年才通过第一部宪法。",
   "kp": "中华人民共和国成立",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "使中国完成了祖国统一"
+    "text": "打破了美帝国主义不可战胜的神话，赢得了国内建设的和平环境"
    },
    {
     "key": "B",
-    "text": "打破了美帝国主义不可战胜的神话，赢得了国内建设的和平环境"
+    "text": "使中国完成了祖国统一"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "抗美援朝战争胜利，打破了美帝国主义不可战胜的神话，维护了亚洲和世界和平，为国内经济建设赢得了相对稳定的和平环境。",
   "kp": "抗美援朝",
@@ -149,7 +149,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "农民土地所有制"
+    "text": "国家所有制"
    },
    {
     "key": "C",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "D",
-    "text": "国家所有制"
+    "text": "农民土地所有制"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "土地改革废除了封建土地制度，实行农民土地所有制，农民成为土地的主人。坑点：三大改造后才变为集体所有制。",
   "kp": "土地改革",
@@ -233,7 +233,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "社会主义制度在我国基本建立"
+    "text": "我国进入社会主义现代化建设新时期"
    },
    {
     "key": "C",
@@ -241,11 +241,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "D",
-    "text": "我国进入社会主义现代化建设新时期"
+    "text": "社会主义制度在我国基本建立"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "三大改造基本完成，标志着社会主义制度在我国基本建立，我国进入社会主义初级阶段。",
   "kp": "三大改造",
@@ -275,11 +275,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "焦裕禄"
+    "text": "邓稼先"
    },
    {
     "key": "C",
-    "text": "邓稼先"
+    "text": "焦裕禄"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "焦裕禄是“县委书记的榜样”；王进喜是“铁人”；邓稼先是“两弹元勋”。",
   "kp": "社会主义建设的探索",
@@ -313,11 +313,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "确立了社会主义制度"
+    "text": "作出了把党和国家的工作中心转移到经济建设上来、实行改革开放的历史性决策"
    },
    {
     "key": "B",
-    "text": "作出了把党和国家的工作中心转移到经济建设上来、实行改革开放的历史性决策"
+    "text": "确立了社会主义制度"
    },
    {
     "key": "C",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "十一届三中全会作出了实行改革开放的历史性决策，开启了改革开放和社会主义现代化建设新时期。",
   "kp": "改革开放",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "安徽凤阳小岗村"
+    "text": "上海浦东"
    },
    {
     "key": "B",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "C",
-    "text": "上海浦东"
+    "text": "安徽凤阳小岗村"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "1978 年，安徽凤阳小岗村农民率先实行包产到户，家庭联产承包责任制在全国推广。",
   "kp": "农村改革",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "深圳"
+    "text": "上海"
    },
    {
     "key": "B",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "D",
-    "text": "上海"
+    "text": "深圳"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "第一批经济特区是深圳、珠海、汕头、厦门；1988 年设立海南经济特区；上海浦东 1990 年开发开放。",
   "kp": "改革开放",
@@ -443,11 +443,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "澳门"
+    "text": "台湾"
    },
    {
     "key": "C",
-    "text": "台湾"
+    "text": "澳门"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "“一国两制”最初是为解决台湾问题提出的，首先成功运用于解决香港、澳门问题。坑点：最早提出和最早成功实践是两回事。",
   "kp": "一国两制",
@@ -569,7 +569,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "邓稼先"
+    "text": "屠呦呦"
    },
    {
     "key": "C",
@@ -577,11 +577,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "D",
-    "text": "屠呦呦"
+    "text": "邓稼先"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "邓稼先为我国原子弹、氢弹研制作出卓越贡献，被誉为“两弹元勋”。钱学森被誉为“中国航天之父”；袁隆平培育杂交水稻；屠呦呦发现青蒿素。",
   "kp": "科技成就",
@@ -611,11 +611,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "成为处理国与国之间关系的基本准则"
+    "text": "标志着新中国外交的开始"
    },
    {
     "key": "C",
-    "text": "标志着新中国外交的开始"
+    "text": "成为处理国与国之间关系的基本准则"
    },
    {
     "key": "D",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "和平共处五项原则已成为处理国与国之间关系的基本准则。1971 年中国恢复在联合国的合法席位。",
   "kp": "外交成就",
@@ -653,7 +653,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "是新中国外交的重大胜利"
+    "text": "标志着中国加入世界贸易组织"
    },
    {
     "key": "C",
@@ -661,11 +661,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "D",
-    "text": "标志着中国加入世界贸易组织"
+    "text": "是新中国外交的重大胜利"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "恢复在联合国的合法席位是新中国外交的重大胜利。中美 1979 年正式建交；2001 年中国加入 WTO。",
   "kp": "外交成就",
@@ -733,7 +733,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "我国成为世界上第三个独立掌握载人航天技术的国家"
+    "text": "我国登上月球"
    },
    {
     "key": "B",
@@ -741,7 +741,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    },
    {
     "key": "C",
-    "text": "我国登上月球"
+    "text": "我国成为世界上第三个独立掌握载人航天技术的国家"
    },
    {
     "key": "D",
@@ -749,7 +749,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "神舟五号载人飞行成功，我国成为继苏联（俄罗斯）、美国之后，第三个独立掌握载人航天技术的国家。",
   "kp": "科技成就",
@@ -775,11 +775,11 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "凭粮票购买粮食"
+    "text": "网上购物"
    },
    {
     "key": "B",
-    "text": "网上购物"
+    "text": "凭粮票购买粮食"
    },
    {
     "key": "C",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-8down-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "20 世纪 50 年代起，我国实行计划供应，购买粮食要凭粮票；网购、高铁、智能手机是 21 世纪的现象。",
   "kp": "社会生活",

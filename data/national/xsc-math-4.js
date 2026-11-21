@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    },
    {
     "key": "B",
-    "text": "－3π/5，3"
+    "text": "－3π/5，4"
    },
    {
     "key": "C",
-    "text": "－3π/5，4"
+    "text": "－3π/5，3"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "π 是常数，属于系数，系数是 －3π/5；次数是所有字母指数的和：x 的指数 2，y 的指数 1，共 3 次。坑点：把 π 当字母算进次数。",
   "kp": "单项式",
@@ -65,7 +65,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    },
    {
     "key": "B",
-    "text": "－5 与 1/2"
+    "text": "3xy 与 3xyz"
    },
    {
     "key": "C",
@@ -73,13 +73,13 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    },
    {
     "key": "D",
-    "text": "3xy 与 3xyz"
+    "text": "－5 与 1/2"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "同类项要求所含字母相同、相同字母的指数也相同。几个常数项也是同类项，所以 －5 与 1/2 是同类项。A 中 x、y 的指数不同，C、D 所含字母不同。",
+  "explanation": "同类项要求所含字母相同、相同字母的指数也相同。几个常数项也是同类项，所以 －5 与 1/2 是同类项。A 中 x、y 的指数不同，B、C 所含字母不同。",
   "kp": "同类项",
   "stem": "下列各组中，是同类项的是（ ）",
   "paperScore": 3,
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "三次四项式"
+    "text": "二次四项式"
    },
    {
     "key": "B",
-    "text": "二次四项式"
+    "text": "三次四项式"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "共有 3x²y、－2x³、4xy、－1 四项；次数最高的项 3x²y 和 －2x³ 都是 3 次，所以是三次四项式。",
   "kp": "多项式",
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "－(a－b)＝－a－b"
+    "text": "a－2(b－c)＝a－2b＋2c"
    },
    {
     "key": "B",
-    "text": "a－2(b－c)＝a－2b＋2c"
+    "text": "－(a－b)＝－a－b"
    },
    {
     "key": "C",
@@ -161,9 +161,9 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
-  "explanation": "括号前是负号，去括号后括号里每一项都要变号；括号前有数字，要乘遍括号里每一项。A 应为 －a＋b；C 应为 3－x－1；D 应为 －2x＋2。",
+  "explanation": "括号前是负号，去括号后括号里每一项都要变号；括号前有数字，要乘遍括号里每一项。B 应为 －a＋b；C 应为 3－x－1；D 应为 －2x＋2。",
   "kp": "去括号",
   "stem": "下列去括号正确的是（ ）",
   "paperScore": 3,
@@ -187,11 +187,11 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "5"
+    "text": "6"
    },
    {
     "key": "B",
-    "text": "6"
+    "text": "5"
    },
    {
     "key": "C",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "同类项中相同字母的指数相同：m＝2，n＝3，m＋n＝5。",
   "kp": "同类项",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "2a－b"
+    "text": "2a＋3b"
    },
    {
     "key": "B",
@@ -241,11 +241,11 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    },
    {
     "key": "D",
-    "text": "2a＋3b"
+    "text": "2a－b"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "3a－2a＋b＋a－2b＝2a－b。",
   "kp": "整式的加减",
@@ -271,7 +271,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "3x²－2x－1"
+    "text": "－x²＋4x－1"
    },
    {
     "key": "B",
@@ -279,7 +279,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    },
    {
     "key": "C",
-    "text": "－x²＋4x－1"
+    "text": "3x²－2x－1"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "所求多项式＝(x²＋x－1)－(2x²－3x)＝x²＋x－1－2x²＋3x＝－x²＋4x－1。",
   "kp": "整式的加减",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "a²－4a＋9"
+    "text": "a²＋4a－9"
    },
    {
     "key": "B",
@@ -405,7 +405,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    },
    {
     "key": "C",
-    "text": "a²＋4a－9"
+    "text": "a²－4a＋9"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["xsc-math-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "先求 M：M＝(5a²＋2a－1)－(2a²＋3a－5)＝3a²－a＋4。正确结果：M－(2a²＋3a－5)＝3a²－a＋4－2a²－3a＋5＝a²－4a＋9。坑点：选成 M 本身（B）。",
   "kp": "整式的加减",

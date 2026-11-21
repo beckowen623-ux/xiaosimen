@@ -65,11 +65,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "B",
-    "text": "位于亚欧板块与太平洋板块的交界处"
+    "text": "受季风影响"
    },
    {
     "key": "C",
-    "text": "受季风影响"
+    "text": "位于亚欧板块与太平洋板块的交界处"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "日本位于亚欧板块与太平洋板块的交界处，地壳活跃，多火山、地震。",
   "kp": "日本",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "这里矿产资源丰富"
+    "text": "这里多优良港湾，便于进口原料、出口产品"
    },
    {
     "key": "B",
-    "text": "这里多优良港湾，便于进口原料、出口产品"
+    "text": "这里矿产资源丰富"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "日本资源贫乏，原料和市场主要依赖国外，工业分布在沿海便于海运。",
   "kp": "日本",
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "地形平坦、土壤肥沃、水源充足、交通便利"
+    "text": "远离海洋"
    },
    {
     "key": "B",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "D",
-    "text": "远离海洋"
+    "text": "地形平坦、土壤肥沃、水源充足、交通便利"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "河流沿岸和三角洲地形平坦、水源充足、土壤肥沃、交通便利，适合农业和城市发展。",
   "kp": "东南亚",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "西南季风不稳定"
+    "text": "河流众多"
    },
    {
     "key": "B",
@@ -237,7 +237,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "C",
-    "text": "河流众多"
+    "text": "西南季风不稳定"
    },
    {
     "key": "D",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "印度降水主要来自西南季风，季风来得早晚、强弱不稳定，造成旱涝灾害频繁。",
   "kp": "印度",
@@ -275,7 +275,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "B",
-    "text": "俄罗斯的河流大多自南向北流，春季易发生凌汛"
+    "text": "俄罗斯是世界上面积第二大的国家"
    },
    {
     "key": "C",
@@ -283,11 +283,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "D",
-    "text": "俄罗斯是世界上面积第二大的国家"
+    "text": "俄罗斯的河流大多自南向北流，春季易发生凌汛"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "俄罗斯亚洲部分的鄂毕河、叶尼塞河、勒拿河自南向北流，春季上游先解冻、下游仍封冻，易发生凌汛。人口主要在欧洲部分，以温带大陆性气候为主，面积世界第一。",
   "kp": "俄罗斯",
@@ -313,11 +313,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "红海沿岸"
+    "text": "波斯湾及其沿岸地区"
    },
    {
     "key": "B",
-    "text": "波斯湾及其沿岸地区"
+    "text": "红海沿岸"
    },
    {
     "key": "C",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "中东石油主要分布在波斯湾及其沿岸地区。",
   "kp": "中东的石油",
@@ -359,7 +359,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "B",
-    "text": "石油资源丰富"
+    "text": "森林资源丰富"
    },
    {
     "key": "C",
@@ -367,11 +367,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "D",
-    "text": "森林资源丰富"
+    "text": "石油资源丰富"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "中东大部分是干旱地区，森林资源并不丰富。位置重要、石油丰富、水资源短缺、民族宗教复杂是热点问题的原因。",
   "kp": "中东的石油",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "气候温和湿润，适合多汁牧草生长"
+    "text": "人口稀少"
    },
    {
     "key": "B",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "D",
-    "text": "人口稀少"
+    "text": "气候温和湿润，适合多汁牧草生长"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "欧洲西部以温带海洋性气候为主，温和湿润，有利于多汁牧草生长，畜牧业发达，乳畜业尤为突出。",
   "kp": "欧洲西部",
@@ -443,11 +443,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "B",
-    "text": "单一商品经济，依赖出口初级产品"
+    "text": "以旅游业为主"
    },
    {
     "key": "C",
-    "text": "以旅游业为主"
+    "text": "单一商品经济，依赖出口初级产品"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "该地区许多国家依赖一两种农产品或矿产品出口，经济结构单一，属于单一商品经济。",
   "kp": "撒哈拉以南非洲",
@@ -569,7 +569,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "B",
-    "text": "地区专业化、生产高度机械化"
+    "text": "农产品主要依赖进口"
    },
    {
     "key": "C",
@@ -577,11 +577,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "D",
-    "text": "农产品主要依赖进口"
+    "text": "地区专业化、生产高度机械化"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "美国农业地区专业化明显（如玉米带、小麦带、棉花带），生产高度机械化，是世界上农产品出口最多的国家之一。",
   "kp": "美国",
@@ -607,11 +607,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "应该大规模开发，发展经济"
+    "text": "热带雨林能调节全球气候，应在保护的前提下合理开发"
    },
    {
     "key": "B",
-    "text": "热带雨林能调节全球气候，应在保护的前提下合理开发"
+    "text": "应该大规模开发，发展经济"
    },
    {
     "key": "C",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "热带雨林能吸收二氧化碳、释放氧气，调节全球气候，被破坏后很难恢复，要在保护的前提下合理利用。",
   "kp": "巴西",
@@ -649,7 +649,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "酷寒、干燥、烈风"
+    "text": "四季分明"
    },
    {
     "key": "B",
@@ -661,11 +661,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "D",
-    "text": "四季分明"
+    "text": "酷寒、干燥、烈风"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "南极大陆是世界上最寒冷、风力最强的大陆，降水稀少，被称为“白色荒漠”。",
   "kp": "极地地区",
@@ -691,7 +691,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "这段时间南极处于暖季，有极昼现象"
+    "text": "这段时间南极风最大"
    },
    {
     "key": "B",
@@ -699,7 +699,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "C",
-    "text": "这段时间南极风最大"
+    "text": "这段时间南极处于暖季，有极昼现象"
    },
    {
     "key": "D",
@@ -707,7 +707,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "11 月至次年 3 月是南半球的夏季，南极处于暖季，气温相对较高，并有极昼现象，便于开展科考。",
   "kp": "极地地区",
@@ -733,11 +733,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "北冰洋；南极大陆"
+    "text": "格陵兰岛；南大洋"
    },
    {
     "key": "B",
-    "text": "格陵兰岛；南大洋"
+    "text": "北冰洋；南极大陆"
    },
    {
     "key": "C",
@@ -749,7 +749,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "北极地区以北冰洋为主体，南极地区以南极大陆为主体。坑点：北极是“海洋”，南极是“陆地”。",
   "kp": "极地地区",
@@ -779,11 +779,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "B",
-    "text": "日本"
+    "text": "俄罗斯"
    },
    {
     "key": "C",
-    "text": "俄罗斯"
+    "text": "日本"
    },
    {
     "key": "D",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "富士山、樱花、新干线都是日本的代表。",
   "kp": "日本",
@@ -821,11 +821,11 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    },
    {
     "key": "B",
-    "text": "澳大利亚——悉尼"
+    "text": "巴西——巴西利亚"
    },
    {
     "key": "C",
-    "text": "巴西——巴西利亚"
+    "text": "澳大利亚——悉尼"
    },
    {
     "key": "D",
@@ -833,7 +833,7 @@ window.NATIONAL_PAPERS["earlybird-7down-dili"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "美国首都是华盛顿，澳大利亚首都是堪培拉，印度首都是新德里。纽约、悉尼、孟买是这些国家的大城市，但不是首都。",
   "kp": "巴西",

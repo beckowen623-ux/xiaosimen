@@ -23,7 +23,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "B",
-    "text": "主动调整学习方法，向老师同学请教"
+    "text": "只学自己感兴趣的科目"
    },
    {
     "key": "C",
@@ -31,13 +31,13 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "D",
-    "text": "只学自己感兴趣的科目"
+    "text": "主动调整学习方法，向老师同学请教"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "面对新环境，要积极主动地调整自己，用新的方法应对新的挑战。A、C 消极被动，D 偏科不可取。",
+  "explanation": "面对新环境，要积极主动地调整自己，用新的方法应对新的挑战。A、C 消极被动，B 偏科不可取。",
   "kp": "中学生活",
   "stem": "升入初中，小林发现课程变多了，老师讲课节奏也快了，一时有些不适应。下列做法中，最有助于他尽快适应中学生活的是（ ）",
   "paperScore": 2.5,
@@ -65,11 +65,11 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "B",
-    "text": "实现梦想需要努力，需要付出行动"
+    "text": "有了梦想就一定能实现"
    },
    {
     "key": "C",
-    "text": "有了梦想就一定能实现"
+    "text": "实现梦想需要努力，需要付出行动"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "梦想需要努力才能实现，努力是一种生活态度，需要立即行动、坚持不懈。",
   "kp": "梦想",
@@ -103,7 +103,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "能够全面客观地认识自己"
+    "text": "不需要再提高数学成绩"
    },
    {
     "key": "B",
@@ -115,11 +115,11 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "D",
-    "text": "不需要再提高数学成绩"
+    "text": "能够全面客观地认识自己"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "小敏既看到了自己的不足，也看到了自己的长处，还参考了他人的评价，是全面、客观地认识自己。",
   "kp": "认识自己",
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "学习就是在学校里读书、考试"
+    "text": "学习是一种快乐与苦乐交织的体验，伴随我们一生"
    },
    {
     "key": "B",
@@ -153,7 +153,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "C",
-    "text": "学习是一种快乐与苦乐交织的体验，伴随我们一生"
+    "text": "学习就是在学校里读书、考试"
    },
    {
     "key": "D",
@@ -161,9 +161,9 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
-  "explanation": "学习不仅仅是读书、考试，观察、操作、体验也是学习；学习伴随人的一生，有苦有乐。A 把学习理解得太狭隘。",
+  "explanation": "学习不仅仅是读书、考试，观察、操作、体验也是学习；学习伴随人的一生，有苦有乐。C 把学习理解得太狭隘。",
   "kp": "学会学习",
   "stem": "下列关于学习的说法，正确的是（ ）",
   "paperScore": 2.5,
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "掌握了科学的学习方法，学会了学习"
+    "text": "只重视成绩，不重视能力"
    },
    {
     "key": "B",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "D",
-    "text": "只重视成绩，不重视能力"
+    "text": "掌握了科学的学习方法，学会了学习"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "先复习后作业、独立思考、整理错题，都是科学的学习方法。",
   "kp": "学会学习",
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "B",
-    "text": "课后私下找老师，礼貌地说明"
+    "text": "装作没看见，反正不关自己的事"
    },
    {
     "key": "C",
-    "text": "装作没看见，反正不关自己的事"
+    "text": "课后私下找老师，礼貌地说明"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "老师也会出错。发现问题时要尊重老师，选择合适的时机和方式提出。",
   "kp": "师生交往",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "友谊是一成不变的"
+    "text": "友谊是一种亲密的关系，是平等的、双向的"
    },
    {
     "key": "B",
@@ -405,7 +405,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "C",
-    "text": "友谊是一种亲密的关系，是平等的、双向的"
+    "text": "友谊是一成不变的"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "友谊是亲密的、平等双向的关系，会随着时间和环境而变化；友谊不能没有原则，帮朋友作弊是错误的。",
   "kp": "友谊的特质",
@@ -485,11 +485,11 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "B",
-    "text": "可以把家庭住址、电话告诉网友"
+    "text": "要学会辨别和选择，不轻易透露个人信息，不随意与网友见面"
    },
    {
     "key": "C",
-    "text": "要学会辨别和选择，不轻易透露个人信息，不随意与网友见面"
+    "text": "可以把家庭住址、电话告诉网友"
    },
    {
     "key": "D",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "网上交友要慎重，提高辨别能力，保护好个人信息。D 一概否定也不对。",
   "kp": "友谊的特质",
@@ -611,11 +611,11 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "B",
-    "text": "不跟陌生人走，先打电话向家人或老师核实"
+    "text": "向陌生人要钱打车去医院"
    },
    {
     "key": "C",
-    "text": "向陌生人要钱打车去医院"
+    "text": "不跟陌生人走，先打电话向家人或老师核实"
    },
    {
     "key": "D",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "面对陌生人要提高警惕，先向家人、老师核实，保护好自己。",
   "kp": "安全自护",
@@ -653,7 +653,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "B",
-    "text": "平凡的人也能创造不平凡的价值"
+    "text": "普通人的生命没有意义"
    },
    {
     "key": "C",
@@ -661,11 +661,11 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "D",
-    "text": "普通人的生命没有意义"
+    "text": "平凡的人也能创造不平凡的价值"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "生命的意义在于发现生命的美好、活出生命的精彩。平凡的人在平凡的岗位上也能创造不平凡的价值。",
   "kp": "生命的意义",
@@ -737,7 +737,7 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "B",
-    "text": "相信自己，认真准备，勇敢尝试"
+    "text": "请老师直接指定她获奖"
    },
    {
     "key": "C",
@@ -745,11 +745,11 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    },
    {
     "key": "D",
-    "text": "请老师直接指定她获奖"
+    "text": "相信自己，认真准备，勇敢尝试"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "要发现自己的潜能，勇于尝试，在实践中不断完善自己。",
   "kp": "梦想",
@@ -817,11 +817,11 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "看到流浪猫就用石头扔它"
+    "text": "过马路时遵守交通信号灯"
    },
    {
     "key": "B",
-    "text": "过马路时遵守交通信号灯"
+    "text": "看到流浪猫就用石头扔它"
    },
    {
     "key": "C",
@@ -833,9 +833,9 @@ window.NATIONAL_PAPERS["earlybird-7up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
-  "explanation": "敬畏生命要珍惜自己和他人的生命，遵守交通规则是保护生命的表现。A、C、D 都不尊重生命或不顾安全。",
+  "explanation": "敬畏生命要珍惜自己和他人的生命，遵守交通规则是保护生命的表现。B、C、D 都不尊重生命或不顾安全。",
   "kp": "珍爱生命",
   "stem": "下列行为中，体现了“敬畏生命”的是（ ）",
   "paperScore": 2.5,

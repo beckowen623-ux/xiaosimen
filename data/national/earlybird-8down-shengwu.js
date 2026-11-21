@@ -27,15 +27,15 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "用种子繁殖玉米"
+    "text": "苹果嫁接"
    },
    {
     "key": "D",
-    "text": "苹果嫁接"
+    "text": "用种子繁殖玉米"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "种子中的胚由受精卵发育而来，经过了两性生殖细胞的结合，属于有性生殖。块茎繁殖、扦插、嫁接都是无性生殖。",
   "kp": "生物的生殖",
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "木质部"
+    "text": "形成层"
    },
    {
     "key": "B",
@@ -69,7 +69,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "形成层"
+    "text": "木质部"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "形成层细胞能不断分裂，接穗与砧木的形成层紧密结合，才能长在一起。",
   "kp": "生物的生殖",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "卵→幼虫→蛹→成虫"
+    "text": "卵→若虫→成虫→蛹"
    },
    {
     "key": "B",
-    "text": "卵→若虫→成虫→蛹"
+    "text": "卵→幼虫→蛹→成虫"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "家蚕经过卵、幼虫、蛹、成虫四个时期，是完全变态发育；蝗虫没有蛹期，是不完全变态发育。",
   "kp": "生物的发育",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "染色体主要由 DNA 和蛋白质组成"
+    "text": "人的体细胞中有 23 条染色体"
    },
    {
     "key": "B",
@@ -241,11 +241,11 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "人的体细胞中有 23 条染色体"
+    "text": "染色体主要由 DNA 和蛋白质组成"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "一个 DNA 分子上有许多基因；基因是有遗传效应的 DNA 片段；人的体细胞中有 23 对（46 条）染色体，生殖细胞中有 23 条。",
   "kp": "基因的遗传",
@@ -447,17 +447,17 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "通过太空育种得到的高产水稻"
+    "text": "水肥充足使小麦穗大粒多"
    },
    {
     "key": "D",
-    "text": "水肥充足使小麦穗大粒多"
+    "text": "通过太空育种得到的高产水稻"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
-  "explanation": "太空育种改变了遗传物质，属于可遗传的变异；A、B、D 是环境引起的，遗传物质没有变化，不能遗传。",
+  "explanation": "太空育种改变了遗传物质，属于可遗传的变异；A、B、C 是环境引起的，遗传物质没有变化，不能遗传。",
   "kp": "基因的遗传",
   "stem": "下列变异中，能够遗传给后代的是（ ）",
   "paperScore": 2.5,
@@ -527,7 +527,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "自然选择"
+    "text": "生物不会变化"
    },
    {
     "key": "C",
@@ -535,11 +535,11 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "生物不会变化"
+    "text": "自然选择"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "达尔文的自然选择学说认为，生物通过遗传、变异和自然选择，不断进化。",
   "kp": "自然选择",
@@ -657,15 +657,15 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "易感人群"
+    "text": "病原体"
    },
    {
     "key": "D",
-    "text": "病原体"
+    "text": "易感人群"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "传染病流行的三个基本环节是传染源、传播途径和易感人群。病原体是引起传染病的细菌、病毒等，不是环节之一。",
   "kp": "传染病的预防",
@@ -695,7 +695,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "切断传播途径"
+    "text": "消灭病原体"
    },
    {
     "key": "C",
@@ -703,11 +703,11 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "消灭病原体"
+    "text": "切断传播途径"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "通风、消毒是切断传播途径；隔离病人是控制传染源；接种疫苗、锻炼身体是保护易感人群。",
   "kp": "传染病的预防",
@@ -775,7 +775,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "中药没有副作用，可以随便吃"
+    "text": "非处方药（OTC）可以自行购买，但要按说明书服用"
    },
    {
     "key": "B",
@@ -783,7 +783,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "非处方药（OTC）可以自行购买，但要按说明书服用"
+    "text": "中药没有副作用，可以随便吃"
    },
    {
     "key": "D",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "是药三分毒，中药也有副作用；用药要按剂量；抗生素只对细菌有效。非处方药可自行购买，但要仔细阅读说明书。",
   "kp": "用药与急救",
@@ -817,11 +817,11 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "在伤口的远心端压迫止血"
+    "text": "在伤口的近心端压迫止血"
    },
    {
     "key": "B",
-    "text": "在伤口的近心端压迫止血"
+    "text": "在伤口的远心端压迫止血"
    },
    {
     "key": "C",
@@ -833,7 +833,7 @@ window.NATIONAL_PAPERS["earlybird-8down-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "血液鲜红、喷射而出，是动脉出血，应在伤口的近心端压迫止血；静脉出血在远心端止血。",
   "kp": "用药与急救",

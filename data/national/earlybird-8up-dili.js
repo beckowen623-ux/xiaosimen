@@ -107,11 +107,11 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "B",
-    "text": "内蒙古自治区"
+    "text": "新疆维吾尔自治区"
    },
    {
     "key": "C",
-    "text": "新疆维吾尔自治区"
+    "text": "内蒙古自治区"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "新疆维吾尔自治区面积约 166 万平方千米，是我国面积最大的省级行政区。",
   "kp": "中国的疆域",
@@ -275,7 +275,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "B",
-    "text": "昆仑山—祁连山—横断山"
+    "text": "天山—阴山"
    },
    {
     "key": "C",
@@ -283,11 +283,11 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "D",
-    "text": "天山—阴山"
+    "text": "昆仑山—祁连山—横断山"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "第一、二级阶梯分界线：昆仑山—祁连山—横断山；第二、三级阶梯分界线：大兴安岭—太行山—巫山—雪峰山。",
   "kp": "中国地势",
@@ -317,11 +317,11 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "B",
-    "text": "黄土高原"
+    "text": "青藏高原"
    },
    {
     "key": "C",
-    "text": "青藏高原"
+    "text": "黄土高原"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "青藏高原平均海拔 4000 米以上，号称“世界屋脊”。",
   "kp": "中国的地形",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "纬度位置"
+    "text": "人类活动"
    },
    {
     "key": "B",
@@ -367,11 +367,11 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "D",
-    "text": "人类活动"
+    "text": "纬度位置"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "冬季我国南北跨纬度广，北方太阳高度小、白昼短，又受冬季风影响，所以南北温差大。主要原因是纬度位置。",
   "kp": "中国的气候",
@@ -401,11 +401,11 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "B",
-    "text": "太平洋和印度洋"
+    "text": "北冰洋"
    },
    {
     "key": "C",
-    "text": "北冰洋"
+    "text": "太平洋和印度洋"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "我国夏季风来自太平洋（东南季风）和印度洋（西南季风），冬季风来自西伯利亚、蒙古一带。",
   "kp": "季风区与非季风区",
@@ -439,11 +439,11 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "从东南沿海向西北内陆递减"
+    "text": "从北向南递减"
    },
    {
     "key": "B",
-    "text": "从北向南递减"
+    "text": "从东南沿海向西北内陆递减"
    },
    {
     "key": "C",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "我国年降水量从东南沿海向西北内陆递减。",
   "kp": "中国的气候",
@@ -485,7 +485,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "B",
-    "text": "长江上游水能资源丰富"
+    "text": "长江是我国的“地上河”"
    },
    {
     "key": "C",
@@ -493,11 +493,11 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "D",
-    "text": "长江是我国的“地上河”"
+    "text": "长江上游水能资源丰富"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "长江发源于唐古拉山，注入东海；上游落差大，水能丰富，建有三峡等水电站。“地上河”指黄河下游。",
   "kp": "长江",
@@ -523,7 +523,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "中游流经黄土高原，带来大量泥沙，下游泥沙淤积"
+    "text": "下游地势高"
    },
    {
     "key": "B",
@@ -531,7 +531,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "C",
-    "text": "下游地势高"
+    "text": "中游流经黄土高原，带来大量泥沙，下游泥沙淤积"
    },
    {
     "key": "D",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "黄河中游流经黄土高原，水土流失严重，泥沙多；下游地势平坦，流速减慢，泥沙淤积，河床抬高，形成“地上河”。",
   "kp": "黄河",
@@ -653,7 +653,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "B",
-    "text": "水稻、小麦"
+    "text": "水稻、玉米"
    },
    {
     "key": "C",
@@ -661,11 +661,11 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "D",
-    "text": "水稻、玉米"
+    "text": "水稻、小麦"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "南方以水田为主，主要种水稻；北方以旱地为主，主要种小麦。",
   "kp": "农业",
@@ -691,7 +691,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "在东北平原种植小麦、玉米、大豆"
+    "text": "在黄土高原陡坡上开垦种粮"
    },
    {
     "key": "B",
@@ -699,7 +699,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "C",
-    "text": "在黄土高原陡坡上开垦种粮"
+    "text": "在东北平原种植小麦、玉米、大豆"
    },
    {
     "key": "D",
@@ -707,7 +707,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "在陡坡上开垦会加剧水土流失，应退耕还林还草。",
   "kp": "农业",
@@ -733,7 +733,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "航空运输"
+    "text": "管道运输"
    },
    {
     "key": "B",
@@ -745,11 +745,11 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "D",
-    "text": "管道运输"
+    "text": "航空运输"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "鲜花容易枯萎，数量少、价值高、时效性强，宜选择速度最快的航空运输。",
   "kp": "交通运输方式的选择",
@@ -775,7 +775,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "智力和技术密集的大城市"
+    "text": "人口稀少的地区"
    },
    {
     "key": "B",
@@ -783,7 +783,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "C",
-    "text": "人口稀少的地区"
+    "text": "智力和技术密集的大城市"
    },
    {
     "key": "D",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "高新技术产业需要大量科技人才，主要分布在高校和科研机构集中、智力和技术密集的大城市，如北京中关村。",
   "kp": "工业",
@@ -817,7 +817,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "京广线"
+    "text": "沪昆线"
    },
    {
     "key": "B",
@@ -825,7 +825,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    },
    {
     "key": "C",
-    "text": "沪昆线"
+    "text": "京广线"
    },
    {
     "key": "D",
@@ -833,7 +833,7 @@ window.NATIONAL_PAPERS["earlybird-8up-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "京广线（北京—广州）是南北走向；陇海线、沪昆线、兰新线大致是东西走向。",
   "kp": "交通运输方式的选择",

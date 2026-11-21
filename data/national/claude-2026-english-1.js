@@ -64,7 +64,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "for"
+    "text": "ago"
    },
    {
     "key": "C",
@@ -72,11 +72,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "D",
-    "text": "ago"
+    "text": "for"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "two years 是一段时间，现在完成时中用 for 接时间段；since 后接时间点。",
   "kp": "现在完成时",
@@ -101,7 +101,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "How long"
+    "text": "How often"
    },
    {
     "key": "B",
@@ -109,7 +109,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "C",
-    "text": "How often"
+    "text": "How long"
    },
    {
     "key": "D",
@@ -117,7 +117,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "答语是频率 three times a week，用 how often 提问。",
   "kp": "特殊疑问句",
@@ -146,7 +146,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "built"
+    "text": "was built"
    },
    {
     "key": "C",
@@ -154,11 +154,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "D",
-    "text": "was built"
+    "text": "built"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "bridge 与 build 是被动关系，last year 表示过去，用 was built。",
   "kp": "一般过去时的被动语态",
@@ -191,15 +191,15 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "C",
-    "text": "the kindest"
+    "text": "the most kind"
    },
    {
     "key": "D",
-    "text": "the most kind"
+    "text": "the kindest"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "in our class 表示范围，用最高级；kind 的最高级是 kindest。",
   "kp": "形容词最高级",
@@ -228,11 +228,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "needn't"
+    "text": "can't"
    },
    {
     "key": "C",
-    "text": "can't"
+    "text": "needn't"
    },
    {
     "key": "D",
@@ -240,7 +240,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "后句说明天也可以，说明今天“不必”交，用 needn't。",
   "kp": "情态动词",
@@ -265,7 +265,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "when"
+    "text": "which"
    },
    {
     "key": "B",
@@ -277,11 +277,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "D",
-    "text": "which"
+    "text": "when"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "根据句意“不知道春游什么时候开始”，用 when 引导宾语从句，并用陈述语序。",
   "kp": "宾语从句",
@@ -306,11 +306,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "rains"
+    "text": "rained"
    },
    {
     "key": "B",
-    "text": "rained"
+    "text": "rains"
    },
    {
     "key": "C",
@@ -322,7 +322,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "if 引导的条件状语从句遵循“主将从现”，用一般现在时 rains。",
   "kp": "条件状语从句",
@@ -347,11 +347,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "sleep"
+    "text": "asleep"
    },
    {
     "key": "B",
-    "text": "asleep"
+    "text": "sleep"
    },
    {
     "key": "C",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "fall asleep 意为“睡着”。",
   "kp": "固定搭配",
@@ -474,7 +474,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "who"
+    "text": "what"
    },
    {
     "key": "C",
@@ -482,11 +482,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "D",
-    "text": "what"
+    "text": "who"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "先行词 the boy 指人，在从句中作主语，用 who。",
   "kp": "定语从句",
@@ -511,7 +511,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "Good luck!"
+    "text": "That's all right."
    },
    {
     "key": "B",
@@ -519,7 +519,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "C",
-    "text": "That's all right."
+    "text": "Good luck!"
    },
    {
     "key": "D",
@@ -527,7 +527,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "对方明天参加比赛，应祝好运。",
   "kp": "情景交际",
@@ -556,11 +556,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "worked"
+    "text": "was working"
    },
    {
     "key": "C",
-    "text": "was working"
+    "text": "worked"
    },
    {
     "key": "D",
@@ -568,7 +568,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "when 引导的时间状语表示“我到家时”，奶奶正在做某事，用过去进行时。",
   "kp": "过去进行时",
@@ -597,11 +597,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "where the post office is"
+    "text": "how can I get to the post office"
    },
    {
     "key": "C",
-    "text": "how can I get to the post office"
+    "text": "where the post office is"
    },
    {
     "key": "D",
@@ -609,7 +609,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "宾语从句用陈述语序；D 时态不对。",
   "kp": "宾语从句语序",
@@ -636,11 +636,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "dirty"
+    "text": "expensive"
    },
    {
     "key": "B",
-    "text": "expensive"
+    "text": "dirty"
    },
    {
     "key": "C",
@@ -652,7 +652,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "旧车“脏”且铃不响，与后文清洗修理呼应。",
   "kp": "形容词辨析",
@@ -683,11 +683,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "sad"
+    "text": "excited"
    },
    {
     "key": "C",
-    "text": "excited"
+    "text": "sad"
    },
    {
     "key": "D",
@@ -695,7 +695,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "同学都有新车，自己只有旧车，感到有点难过。",
   "kp": "情感理解",
@@ -722,7 +722,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "sell"
+    "text": "repair"
    },
    {
     "key": "B",
@@ -730,7 +730,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "C",
-    "text": "repair"
+    "text": "sell"
    },
    {
     "key": "D",
@@ -738,7 +738,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "后文“修链条、刷漆”，说明父亲提议一起修。",
   "kp": "上下文理解",
@@ -765,11 +765,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "painted"
+    "text": "washed"
    },
    {
     "key": "B",
-    "text": "washed"
+    "text": "painted"
    },
    {
     "key": "C",
@@ -781,7 +781,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "paint the bike bright blue 把车漆成亮蓝色。",
   "kp": "动词辨析",
@@ -808,11 +808,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "as"
+    "text": "like"
    },
    {
     "key": "B",
-    "text": "like"
+    "text": "as"
    },
    {
     "key": "C",
@@ -824,7 +824,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "look like new 看起来像新的一样。",
   "kp": "固定搭配",
@@ -855,11 +855,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "surprise"
+    "text": "worry"
    },
    {
     "key": "C",
-    "text": "worry"
+    "text": "surprise"
    },
    {
     "key": "D",
@@ -867,7 +867,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "to one's surprise 令某人惊讶的是。",
   "kp": "固定搭配",
@@ -937,7 +937,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "reminds"
+    "text": "asks"
    },
    {
     "key": "B",
@@ -945,7 +945,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "C",
-    "text": "asks"
+    "text": "reminds"
    },
    {
     "key": "D",
@@ -953,7 +953,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "remind sb. that... 提醒某人……",
   "kp": "动词搭配",
@@ -984,7 +984,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "heart"
+    "text": "head"
    },
    {
     "key": "C",
@@ -992,11 +992,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "D",
-    "text": "head"
+    "text": "heart"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "put your heart into it 用心投入。",
   "kp": "上下文理解",
@@ -1023,7 +1023,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "gift"
+    "text": "problem"
    },
    {
     "key": "B",
@@ -1035,11 +1035,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "D",
-    "text": "problem"
+    "text": "gift"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "和父亲一起度过的时光是最好的“礼物”。",
   "kp": "主旨理解",
@@ -1070,7 +1070,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "Nature Photography."
+    "text": "None of them."
    },
    {
     "key": "C",
@@ -1078,11 +1078,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "D",
-    "text": "None of them."
+    "text": "Nature Photography."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "摄影课在周六上课。",
   "kp": "细节理解",
@@ -1109,7 +1109,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "Nothing."
+    "text": "¥300."
    },
    {
     "key": "B",
@@ -1117,7 +1117,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "C",
-    "text": "¥300."
+    "text": "Nothing."
    },
    {
     "key": "D",
@@ -1125,7 +1125,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "急救课对 16 岁以下学生免费。",
   "kp": "细节理解",
@@ -1199,7 +1199,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "In a newspaper ad."
+    "text": "In a diary."
    },
    {
     "key": "C",
@@ -1207,11 +1207,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "D",
-    "text": "In a diary."
+    "text": "In a newspaper ad."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "介绍课程、价格和报名方式，属于广告。",
   "kp": "推理判断",
@@ -1238,11 +1238,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "To sell vegetables."
+    "text": "To carry books to the children."
    },
    {
     "key": "B",
-    "text": "To carry books to the children."
+    "text": "To sell vegetables."
    },
    {
     "key": "C",
@@ -1254,7 +1254,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "她买旧车装满书，开到各村让孩子借书。",
   "kp": "细节理解",
@@ -1285,11 +1285,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "B",
-    "text": "Two."
+    "text": "Six."
    },
    {
     "key": "C",
-    "text": "Six."
+    "text": "Two."
    },
    {
     "key": "D",
@@ -1297,7 +1297,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "They can borrow two books each time.",
   "kp": "细节理解",
@@ -1332,15 +1332,15 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    },
    {
     "key": "C",
-    "text": "By holding a story evening."
+    "text": "By asking the headmaster for help."
    },
    {
     "key": "D",
-    "text": "By asking the headmaster for help."
+    "text": "By holding a story evening."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "她邀请家长参加故事晚会，和孩子一起朗读。",
   "kp": "细节理解",
@@ -1453,11 +1453,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "a fan"
+    "text": "a computer"
    },
    {
     "key": "B",
-    "text": "a computer"
+    "text": "a fan"
    },
    {
     "key": "C",
@@ -1469,7 +1469,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "就像风扇给电脑降温，把大脑比作电脑。",
   "kp": "推理判断",
@@ -1496,11 +1496,11 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "Easy to spread to others."
+    "text": "Hard to stop."
    },
    {
     "key": "B",
-    "text": "Hard to stop."
+    "text": "Easy to spread to others."
    },
    {
     "key": "C",
@@ -1512,7 +1512,7 @@ window.NATIONAL_PAPERS["claude-2026-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "看到别人打哈欠自己也会打，说明“会传染”。",
   "kp": "词义猜测",

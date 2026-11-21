@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
   "options": [
    {
     "key": "A",
-    "text": "x＋2y＝3"
+    "text": "3x－1＝2x"
    },
    {
     "key": "B",
@@ -31,13 +31,13 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    },
    {
     "key": "D",
-    "text": "3x－1＝2x"
+    "text": "x＋2y＝3"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
-  "explanation": "一元一次方程：只含一个未知数，未知数的次数是 1，等号两边都是整式。A 有两个未知数；B 是二次；C 分母含未知数，不是整式。",
+  "explanation": "一元一次方程：只含一个未知数，未知数的次数是 1，等号两边都是整式。B 是二次；C 分母含未知数，不是整式；D 有两个未知数。",
   "kp": "一元一次方程的概念",
   "stem": "下列方程中，是一元一次方程的是（ ）",
   "paperScore": 3,
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
   "options": [
    {
     "key": "A",
-    "text": "1"
+    "text": "2"
    },
    {
     "key": "B",
@@ -69,7 +69,7 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    },
    {
     "key": "C",
-    "text": "2"
+    "text": "1"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "把 x＝2 代入：6－2a＝4，a＝1。",
   "kp": "方程的解",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
   "options": [
    {
     "key": "A",
-    "text": "若 ac＝bc，则 a＝b"
+    "text": "若 a/c＝b/c，则 a＝b"
    },
    {
     "key": "B",
-    "text": "若 a/c＝b/c，则 a＝b"
+    "text": "若 ac＝bc，则 a＝b"
    },
    {
     "key": "C",
@@ -119,9 +119,9 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
-  "explanation": "A 当 c＝0 时不成立；C 当 c＝0 时没有意义；D 两边乘 2 得 x＝0。B 中 c 在分母上，c 一定不为 0，两边同乘 c 得 a＝b，正确。",
+  "explanation": "B 当 c＝0 时不成立；C 当 c＝0 时没有意义；D 两边乘 2 得 x＝0。A 中 c 在分母上，c 一定不为 0，两边同乘 c 得 a＝b，正确。",
   "kp": "等式的性质",
   "stem": "根据等式的性质，下列变形一定正确的是（ ）",
   "paperScore": 3,
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
   "options": [
    {
     "key": "A",
-    "text": "3(x－1)－2(2x＋1)＝6"
+    "text": "3x－1－4x＋1＝6"
    },
    {
     "key": "B",
-    "text": "3x－1－4x＋1＝6"
+    "text": "3(x－1)－2(2x＋1)＝6"
    },
    {
     "key": "C",
@@ -161,9 +161,9 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
-  "explanation": "两边同乘 6：3(x－1)－2(2x＋1)＝6。B 去分母后没加括号，C 右边的 1 忘了乘 6，D 符号错了。",
+  "explanation": "两边同乘 6：3(x－1)－2(2x＋1)＝6。A 去分母后没加括号，C 右边的 1 忘了乘 6，D 符号错了。",
   "kp": "解一元一次方程",
   "stem": "解方程 (x－1)/2－(2x＋1)/3＝1 时，去分母正确的是（ ）",
   "paperScore": 3,
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
   "options": [
    {
     "key": "A",
-    "text": "1"
+    "text": "2"
    },
    {
     "key": "B",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    },
    {
     "key": "D",
-    "text": "2"
+    "text": "1"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "x－1＝0 的解是 x＝1，代入 2x＋a＝3 得 2＋a＝3，a＝1。",
   "kp": "方程的解",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
   "options": [
    {
     "key": "A",
-    "text": "300×0.8＝(1＋20%)x"
+    "text": "300×0.8－x＝20%×300"
    },
    {
     "key": "B",
@@ -237,7 +237,7 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    },
    {
     "key": "C",
-    "text": "300×0.8－x＝20%×300"
+    "text": "300×0.8＝(1＋20%)x"
    },
    {
     "key": "D",
@@ -245,9 +245,9 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
-  "explanation": "售价＝进价×(1＋利润率)：300×0.8＝(1＋20%)x。利润率是相对进价算的，C 用标价算利润是错的。",
+  "explanation": "售价＝进价×(1＋利润率)：300×0.8＝(1＋20%)x。利润率是相对进价算的，A 用标价算利润是错的。",
   "kp": "实际问题与一元一次方程",
   "stem": "商场里一件衣服标价 300 元，促销期间按八折出售，此时仍可获利 20%。设这件衣服的进价为 x 元，根据题意列出的方程是（ ）",
   "paperScore": 3,
@@ -313,11 +313,11 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
   "options": [
    {
     "key": "A",
-    "text": "2×1200x＝2000(22－x)"
+    "text": "1200x＝2×2000(22－x)"
    },
    {
     "key": "B",
-    "text": "1200x＝2×2000(22－x)"
+    "text": "2×1200x＝2000(22－x)"
    },
    {
     "key": "C",
@@ -329,9 +329,9 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
-  "explanation": "螺母数量是螺钉的 2 倍：螺母数＝2×螺钉数，即 2000(22－x)＝2×1200x。坑点：把 2 乘在螺母那一边（B）。",
+  "explanation": "螺母数量是螺钉的 2 倍：螺母数＝2×螺钉数，即 2000(22－x)＝2×1200x。坑点：把 2 乘在螺母那一边（A）。",
   "kp": "实际问题与一元一次方程",
   "stem": "某车间有 22 名工人，每人每天可以生产 1200 个螺钉或 2000 个螺母。1 个螺钉需要配 2 个螺母，为使每天生产的螺钉和螺母刚好配套，设安排 x 名工人生产螺钉，则下面所列方程正确的是（ ）",
   "paperScore": 3,
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
   "options": [
    {
     "key": "A",
-    "text": "125 元"
+    "text": "120 元"
    },
    {
     "key": "B",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["xsc-math-5"] = [
    },
    {
     "key": "D",
-    "text": "120 元"
+    "text": "125 元"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "设进价为 x 元：1.4x×0.8－x＝15，0.12x＝15，x＝125。",
   "kp": "实际问题与一元一次方程",

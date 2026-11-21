@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "How old"
+    "text": "Where"
    },
    {
     "key": "B",
@@ -31,11 +31,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "D",
-    "text": "Where"
+    "text": "How old"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "答语是年龄，用 how old 提问。",
   "kp": "特殊疑问句",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "a; an"
+    "text": "an; a"
    },
    {
     "key": "B",
-    "text": "an; a"
+    "text": "a; an"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "看读音不看字母：u 读 /juː/，以辅音音素开头，用 a；f 读 /ef/，以元音音素开头，用 an。坑点：看到元音字母 u 就用 an。",
   "kp": "冠词",
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Lucy"
+    "text": "Lucy's"
    },
    {
     "key": "B",
@@ -153,7 +153,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "Lucy's"
+    "text": "Lucy"
    },
    {
     "key": "D",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "“Lucy 的”用名词所有格 Lucy's。",
   "kp": "名词所有格",
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "B",
-    "text": "on"
+    "text": "at"
    },
    {
     "key": "C",
-    "text": "at"
+    "text": "on"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "具体某一天的上午用 on。坑点：in the morning 前面有具体日期修饰时要改用 on。",
   "kp": "时间介词",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "has; don't"
+    "text": "have; doesn't"
    },
    {
     "key": "B",
-    "text": "have; doesn't"
+    "text": "has; don't"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "助动词 does 后面用动词原形 have；主语 he，否定回答用 doesn't。",
   "kp": "一般现在时",
@@ -271,7 +271,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "at"
+    "text": "with"
    },
    {
     "key": "B",
@@ -279,7 +279,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "with"
+    "text": "at"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "be good at 擅长。be good for 对……有益，be good with 和……相处得好。",
   "kp": "固定搭配",
@@ -317,7 +317,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "B",
-    "text": "are; They're"
+    "text": "are; It's"
    },
    {
     "key": "C",
@@ -325,11 +325,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "D",
-    "text": "are; It's"
+    "text": "are; They're"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "shoes 是复数，用 are，回答用 They're。",
   "kp": "how much",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "on; because"
+    "text": "on; so"
    },
    {
     "key": "B",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "on; so"
+    "text": "on; because"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "星期几前用 on；后一句说喜欢周一的原因，用 because。",
   "kp": "介词和连词",
@@ -441,11 +441,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "with"
+    "text": "for"
    },
    {
     "key": "B",
-    "text": "for"
+    "text": "with"
    },
    {
     "key": "C",
@@ -457,7 +457,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "和妈妈一起去：with my mother。",
   "kp": "介词",
@@ -489,11 +489,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "B",
-    "text": "from"
+    "text": "of"
    },
    {
     "key": "C",
-    "text": "of"
+    "text": "from"
    },
    {
     "key": "D",
@@ -501,7 +501,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "be far from 离……远。",
   "kp": "固定搭配",
@@ -529,11 +529,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "is"
+    "text": "are"
    },
    {
     "key": "B",
-    "text": "are"
+    "text": "is"
    },
    {
     "key": "C",
@@ -545,7 +545,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "more than 50,000 books 是复数，用 are。",
   "kp": "There be 句型",
@@ -573,11 +573,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "books"
+    "text": "songs"
    },
    {
     "key": "B",
-    "text": "songs"
+    "text": "books"
    },
    {
     "key": "C",
@@ -589,7 +589,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "在图书馆，妈妈喜欢读历史方面的书。",
   "kp": "上下文",
@@ -661,7 +661,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "share"
+    "text": "lose"
    },
    {
     "key": "B",
@@ -673,11 +673,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "D",
-    "text": "lose"
+    "text": "share"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "读书会成员交流读过的书，分享想法：share their ideas。",
   "kp": "上下文",
@@ -757,15 +757,15 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "saying"
+    "text": "to saying"
    },
    {
     "key": "D",
-    "text": "to saying"
+    "text": "saying"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "try doing sth. 试着做某事。",
   "kp": "非谓语动词",
@@ -793,11 +793,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "with"
+    "text": "for"
    },
    {
     "key": "B",
-    "text": "for"
+    "text": "with"
    },
    {
     "key": "C",
@@ -809,7 +809,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "和他们一起谈论：talk about sth. with sb.。",
   "kp": "介词",
@@ -841,11 +841,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "B",
-    "text": "sharing"
+    "text": "to sharing"
    },
    {
     "key": "C",
-    "text": "to sharing"
+    "text": "sharing"
    },
    {
     "key": "D",
@@ -853,7 +853,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "动名词短语 sharing books with friends 作主语。",
   "kp": "非谓语动词",
@@ -889,15 +889,15 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "¥50."
+    "text": "It's free."
    },
    {
     "key": "D",
-    "text": "It's free."
+    "text": "¥50."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "Cooking Class 一栏 Price: ¥50 a time。",
   "kp": "细节理解",
@@ -925,7 +925,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Painting for Kids."
+    "text": "Cooking Class."
    },
    {
     "key": "B",
@@ -933,7 +933,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "Cooking Class."
+    "text": "Painting for Kids."
    },
    {
     "key": "D",
@@ -941,7 +941,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "Painting for Kids 只收 6–10 岁的孩子。",
   "kp": "推理判断",
@@ -1013,7 +1013,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "On Saturday morning."
+    "text": "On Sunday afternoon."
    },
    {
     "key": "B",
@@ -1025,11 +1025,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "D",
-    "text": "On Sunday afternoon."
+    "text": "On Saturday morning."
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "Chess Club：Sunday 3:00–5:00 pm。",
   "kp": "细节理解",
@@ -1061,7 +1061,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "B",
-    "text": "¥70."
+    "text": "¥100."
    },
    {
     "key": "C",
@@ -1069,11 +1069,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "D",
-    "text": "¥100."
+    "text": "¥70."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "烹饪课 50 元＋乒乓球 20 元＝70 元。她 12 岁，两个活动的年龄要求都符合。",
   "kp": "推理判断",
@@ -1101,7 +1101,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "She was often late for school."
+    "text": "She lost her alarm clock."
    },
    {
     "key": "B",
@@ -1109,7 +1109,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "She lost her alarm clock."
+    "text": "She was often late for school."
    },
    {
     "key": "D",
@@ -1117,7 +1117,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "Last term, she was often late for school。",
   "kp": "细节理解",
@@ -1149,11 +1149,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "B",
-    "text": "At 6:40."
+    "text": "At 9:30."
    },
    {
     "key": "C",
-    "text": "At 9:30."
+    "text": "At 6:40."
    },
    {
     "key": "D",
@@ -1161,7 +1161,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "She goes to bed at 9:30 every night。",
   "kp": "细节理解",
@@ -1189,11 +1189,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "She has breakfast."
+    "text": "She puts her school things in her bag."
    },
    {
     "key": "B",
-    "text": "She puts her school things in her bag."
+    "text": "She has breakfast."
    },
    {
     "key": "C",
@@ -1205,7 +1205,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "She puts her school things in her bag the night before。",
   "kp": "细节理解",
@@ -1237,11 +1237,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "B",
-    "text": "At 7:20."
+    "text": "At 7:30."
    },
    {
     "key": "C",
-    "text": "At 7:30."
+    "text": "At 7:20."
    },
    {
     "key": "D",
@@ -1249,7 +1249,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "7:05 出门，走 15 分钟，7:20 到校；到校比第一节课早 10 分钟，所以第一节课 7:30 开始。",
   "kp": "推理判断",
@@ -1329,15 +1329,15 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "At about 3:30."
+    "text": "At about 5:00."
    },
    {
     "key": "D",
-    "text": "At about 5:00."
+    "text": "At about 3:30."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "finish at about 3:30。",
   "kp": "细节理解",
@@ -1365,11 +1365,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Half an hour."
+    "text": "An hour."
    },
    {
     "key": "B",
-    "text": "An hour."
+    "text": "Half an hour."
    },
    {
     "key": "C",
@@ -1381,7 +1381,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "an hour for lunch。",
   "kp": "细节理解",
@@ -1417,15 +1417,15 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "Grey."
+    "text": "Black."
    },
    {
     "key": "D",
-    "text": "Black."
+    "text": "Grey."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "a grey skirt。白色是衬衫，蓝色是毛衣。",
   "kp": "细节理解",
@@ -1453,11 +1453,11 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Two."
+    "text": "Three."
    },
    {
     "key": "B",
-    "text": "Three."
+    "text": "Two."
    },
    {
     "key": "C",
@@ -1469,7 +1469,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "Our school year has three terms。",
   "kp": "细节理解",
@@ -1497,7 +1497,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "To introduce school life in the UK and make friends."
+    "text": "To sell school uniforms."
    },
    {
     "key": "B",
@@ -1505,7 +1505,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    },
    {
     "key": "C",
-    "text": "To sell school uniforms."
+    "text": "To introduce school life in the UK and make friends."
    },
    {
     "key": "D",
@@ -1513,7 +1513,7 @@ window.NATIONAL_PAPERS["earlybird-7up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "全文介绍英国学校生活，结尾请读者写信介绍自己的学校，有交友的意思。",
   "kp": "写作意图",

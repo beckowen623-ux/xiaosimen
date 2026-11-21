@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
    },
    {
     "key": "B",
-    "text": "(√3)²＝3"
+    "text": "√8÷√2＝4"
    },
    {
     "key": "C",
-    "text": "√8÷√2＝4"
+    "text": "(√3)²＝3"
    },
    {
     "key": "D",
@@ -35,9 +35,9 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
-  "explanation": "A 不是同类二次根式，不能合并；C √8÷√2＝√4＝2；D √((－3)²)＝|－3|＝3。",
+  "explanation": "A 不是同类二次根式，不能合并；B √8÷√2＝√4＝2；D √((－3)²)＝|－3|＝3。",
   "kp": "二次根式的运算",
   "stem": "下列计算正确的是（ ）",
   "paperScore": 3,
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "等边三角形"
+    "text": "矩形"
    },
    {
     "key": "B",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
    },
    {
     "key": "D",
-    "text": "矩形"
+    "text": "等边三角形"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "等边三角形、正五边形只是轴对称图形；平行四边形（非矩形、菱形）只是中心对称图形；矩形两者都是。",
   "kp": "轴对称与中心对称",
@@ -103,7 +103,7 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "(x－3)²＝10"
+    "text": "(x－6)²＝37"
    },
    {
     "key": "B",
@@ -115,11 +115,11 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
    },
    {
     "key": "D",
-    "text": "(x－6)²＝37"
+    "text": "(x－3)²＝10"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "x²－6x＝1，两边加 9：(x－3)²＝10。坑点：两边都要加一次项系数一半的平方。",
   "kp": "配方法",
@@ -191,7 +191,7 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
    },
    {
     "key": "B",
-    "text": "y＝2(x＋1)²－3"
+    "text": "y＝2(x－1)²＋3"
    },
    {
     "key": "C",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
    },
    {
     "key": "D",
-    "text": "y＝2(x－1)²＋3"
+    "text": "y＝2(x＋1)²－3"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "“左加右减，上加下减”：向左平移 1 个单位 x 变为 x＋1，向下平移 3 个单位整体减 3。",
   "kp": "抛物线的平移",
@@ -317,11 +317,11 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
    },
    {
     "key": "B",
-    "text": "50°"
+    "text": "130°"
    },
    {
     "key": "C",
-    "text": "130°"
+    "text": "50°"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "圆周角等于它所对弧的度数的一半，为 50°。坑点：若题目给的是“弦所对的圆周角”，才有 50° 或 130° 两种情况。",
   "kp": "圆周角定理",
@@ -397,11 +397,11 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "4/9"
+    "text": "1/3"
    },
    {
     "key": "B",
-    "text": "1/3"
+    "text": "4/9"
    },
    {
     "key": "C",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-9up-math"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "有放回地摸两次，共 3×3＝9 种等可能结果，两次都是红球有 2×2＝4 种，P＝4/9。坑点：若不放回，概率为 1/3。",
   "kp": "概率",

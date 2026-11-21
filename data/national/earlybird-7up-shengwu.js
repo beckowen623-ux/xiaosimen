@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "含羞草"
+    "text": "钟乳石"
    },
    {
     "key": "B",
@@ -27,7 +27,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "钟乳石"
+    "text": "含羞草"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "钟乳石不能生长繁殖、不需要营养，不是生物。病毒虽然没有细胞结构，但能繁殖，属于生物。坑点：会“长大”的钟乳石不是生物。",
   "kp": "生物的特征",
@@ -107,7 +107,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "生物适应环境"
+    "text": "生物不能适应环境"
    },
    {
     "key": "C",
@@ -115,11 +115,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "生物不能适应环境"
+    "text": "生物适应环境"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "根系发达能吸收深层的水，是生物对干旱环境的适应。",
   "kp": "生物与环境",
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "森林生态系统"
+    "text": "生物圈"
    },
    {
     "key": "B",
@@ -195,7 +195,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "生物圈"
+    "text": "森林生态系统"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "生物圈是地球上所有生物与其环境的总和，是最大的生态系统。",
   "kp": "生态系统",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "先增加后减少"
+    "text": "一直减少"
    },
    {
     "key": "B",
-    "text": "一直减少"
+    "text": "先增加后减少"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "狐减少，兔失去天敌先增多；兔太多会把草吃光，食物不足，兔的数量又会减少。",
   "kp": "生态系统",
@@ -317,11 +317,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "左上方"
+    "text": "右上方"
    },
    {
     "key": "C",
-    "text": "右上方"
+    "text": "左上方"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "显微镜成倒像，物像偏哪个方向，玻片就往哪个方向移动，所以向左上方移动。",
   "kp": "显微镜的使用",
@@ -401,7 +401,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "清水、碘液"
+    "text": "清水、生理盐水"
    },
    {
     "key": "C",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "清水、生理盐水"
+    "text": "清水、碘液"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "植物细胞滴清水，动物细胞（如人口腔上皮细胞）滴生理盐水，染色都用碘液。坑点：动植物细胞滴的液体不同。",
   "kp": "植物细胞的结构",
@@ -443,11 +443,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "细胞壁、叶绿体、液泡"
+    "text": "细胞膜、叶绿体"
    },
    {
     "key": "C",
-    "text": "细胞膜、叶绿体"
+    "text": "细胞壁、叶绿体、液泡"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "植物细胞一般有细胞壁、叶绿体和液泡，动物细胞没有。线粒体动植物细胞都有。",
   "kp": "植物细胞的结构",
@@ -481,11 +481,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "细胞核"
+    "text": "液泡"
    },
    {
     "key": "B",
-    "text": "液泡"
+    "text": "细胞核"
    },
    {
     "key": "C",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "液泡中的细胞液溶解着多种物质，带甜味、带颜色的汁液来自液泡。",
   "kp": "植物细胞的结构",
@@ -527,11 +527,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "细胞质"
+    "text": "细胞核"
    },
    {
     "key": "C",
-    "text": "细胞核"
+    "text": "细胞质"
    },
    {
     "key": "D",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "细胞核内含有遗传物质，是遗传信息库，控制着生物的发育和遗传。",
   "kp": "细胞的生活",
@@ -607,7 +607,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "细胞→组织→器官→系统→人体"
+    "text": "细胞→组织→系统→器官→人体"
    },
    {
     "key": "B",
@@ -619,11 +619,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "细胞→组织→系统→器官→人体"
+    "text": "细胞→组织→器官→系统→人体"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "动物体（人体）的结构层次是细胞→组织→器官→系统→动物体；植物体没有“系统”这一层次。",
   "kp": "生物体的结构层次",
@@ -649,7 +649,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "细胞"
+    "text": "器官"
    },
    {
     "key": "B",
@@ -657,7 +657,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "器官"
+    "text": "细胞"
    },
    {
     "key": "D",
@@ -665,7 +665,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "绿色开花植物有根、茎、叶、花、果实、种子六大器官，果实是器官。",
   "kp": "生物体的结构层次",
@@ -691,7 +691,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "海带"
+    "text": "银杏"
    },
    {
     "key": "B",
@@ -703,11 +703,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "银杏"
+    "text": "海带"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "藻类植物（海带）没有根、茎、叶的分化；苔藓植物（葫芦藓）有茎和叶，没有真正的根；蕨类植物（肾蕨）有根、茎、叶；银杏是裸子植物。",
   "kp": "绿色植物的类群",
@@ -733,11 +733,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "果实"
+    "text": "种子"
    },
    {
     "key": "B",
-    "text": "种子"
+    "text": "果实"
    },
    {
     "key": "C",
@@ -749,7 +749,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "银杏是裸子植物，种子外面没有果皮包被，“白果”是种子而不是果实。坑点：名字带“果”就以为是果实。",
   "kp": "绿色植物的类群",
@@ -779,11 +779,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "胚轴"
+    "text": "胚根"
    },
    {
     "key": "C",
-    "text": "胚根"
+    "text": "胚轴"
    },
    {
     "key": "D",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "种子萌发时，胚根最先突破种皮，发育成根。",
   "kp": "种子萌发的条件",
@@ -821,11 +821,11 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "降低蒸腾作用，减少水分散失"
+    "text": "促进呼吸作用"
    },
    {
     "key": "C",
-    "text": "促进呼吸作用"
+    "text": "降低蒸腾作用，减少水分散失"
    },
    {
     "key": "D",
@@ -833,7 +833,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "移栽时根受损，吸水能力下降。剪去部分枝叶、避开强光，可以减弱蒸腾作用，提高成活率。",
   "kp": "蒸腾作用",
@@ -857,7 +857,7 @@ window.NATIONAL_PAPERS["earlybird-7up-shengwu"] = [
   "source": "七上早鸟卷 · 生物 第 21 题",
   "type": "essay",
   "material": "",
-  "stem": "【生态系统】\n某校生物小组调查了学校附近的一片农田，发现其中有水稻、杂草、蝗虫、青蛙、蛇、鼠、鹰等生物。\n（1）在这个生态系统中，属于生产者的是________；要构成一个完整的生态系统，除了图中生物外，还缺少________者和非生物部分。\n（2）写出一条包含蝗虫、最长的食物链：________。\n（3）农民为了消灭蝗虫，大量喷洒农药，结果青蛙也大量减少，后来蝗虫反而更多了。请解释原因。\n（4）这说明生态系统的自动调节能力有什么特点？",
+  "stem": "【生态系统】\n某校生物小组调查了学校附近的一片农田，发现其中有水稻、杂草、蝗虫、青蛙、蛇、鼠、鹰等生物。\n（1）在这个生态系统中，属于生产者的是________；要构成一个完整的生态系统，除了上述生物外，还缺少________者和非生物部分。\n（2）写出一条包含蝗虫、最长的食物链：________。\n（3）农民为了消灭蝗虫，大量喷洒农药，结果青蛙也大量减少，后来蝗虫反而更多了。请解释原因。\n（4）这说明生态系统的自动调节能力有什么特点？",
   "points": [
    {
     "text": "（1）水稻、杂草；分解",

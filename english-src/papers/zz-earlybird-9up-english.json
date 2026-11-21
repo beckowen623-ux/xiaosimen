@@ -19,11 +19,11 @@
           "stem": "—Is this your English book? —No, it isn't. ____ is on my desk.",
           "options": [
             "My",
-            "Mine",
             "Me",
+            "Mine",
             "I"
           ],
-          "answer": "B",
+          "answer": "C",
           "kp": "名词性物主代词",
           "exp": "空处作主语，指“我的（书）”，用名词性物主代词 Mine。"
         },
@@ -45,11 +45,11 @@
           "stem": "The teacher asked us ____ in the library.",
           "options": [
             "not talk",
-            "not to talk",
+            "to not talking",
             "don't talk",
-            "to not talking"
+            "not to talk"
           ],
-          "answer": "B",
+          "answer": "D",
           "kp": "ask sb. not to do",
           "exp": "ask sb. (not) to do sth. 要求某人（不要）做某事，否定词放在 to 前。"
         },
@@ -57,12 +57,12 @@
           "n": 4,
           "stem": "—I wonder ____ the Science Museum. —It's next to the post office.",
           "options": [
-            "where is",
             "where it is",
+            "where is",
             "how I can get to",
             "when it opens"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "宾语从句",
           "exp": "答语说的是位置，问“在哪里”；宾语从句用陈述语序 where it is。"
         },
@@ -83,12 +83,12 @@
           "n": 6,
           "stem": "He has been a member of the school band ____ two years.",
           "options": [
-            "since",
             "for",
+            "since",
             "ago",
             "before"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "现在完成时的时间状语",
           "exp": "two years 是一段时间，用 for；since 后接时间点或 two years ago。"
         },
@@ -97,11 +97,11 @@
           "stem": "I prefer friends ____ are honest and helpful.",
           "options": [
             "which",
-            "who",
+            "whose",
             "whom",
-            "whose"
+            "who"
           ],
-          "answer": "B",
+          "answer": "D",
           "kp": "定语从句",
           "exp": "先行词 friends 指人，在从句中作主语，用 who（或 that）。"
         },
@@ -110,11 +110,11 @@
           "stem": "You ____ hand in your homework today. Tomorrow is OK.",
           "options": [
             "mustn't",
-            "can't",
             "needn't",
+            "can't",
             "shouldn't"
           ],
-          "answer": "C",
+          "answer": "B",
           "kp": "情态动词",
           "exp": "后句“明天也可以”，说明“今天不必交”，用 needn't。坑点：mustn't 表示“禁止”。"
         },
@@ -124,10 +124,10 @@
           "options": [
             "the more fluent",
             "more fluently",
-            "the more fluently",
-            "the most fluently"
+            "the most fluently",
+            "the more fluently"
           ],
-          "answer": "C",
+          "answer": "D",
           "kp": "the＋比较级, the＋比较级",
           "exp": "“越……就越……”用 the＋比较级, the＋比较级；修饰动词 speak 用副词 fluently。"
         },
@@ -136,11 +136,11 @@
           "stem": "—Would you mind turning down the music? My baby is sleeping. —____",
           "options": [
             "Yes, I would.",
-            "Sorry. I'll do it right away.",
             "That's all right.",
+            "Sorry. I'll do it right away.",
             "Never mind."
           ],
-          "answer": "B",
+          "answer": "C",
           "kp": "情景交际",
           "exp": "对方请求关小音乐，礼貌回应是道歉并马上照做。坑点：回答 Would you mind...? 时，Yes 表示“介意”，不礼貌。"
         }
@@ -155,12 +155,12 @@
         {
           "n": 11,
           "options": [
-            "picked",
+            "looked",
             "gave",
             "put",
-            "looked"
+            "picked"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "动词短语",
           "exp": "pick up 捡起。"
         },
@@ -168,11 +168,11 @@
           "n": 12,
           "options": [
             "know",
-            "worry",
             "think",
+            "worry",
             "hear"
           ],
-          "answer": "B",
+          "answer": "C",
           "kp": "动词辨析",
           "exp": "已经六点、警察局很远，不想让父母担心 worry about me。"
         },
@@ -191,12 +191,12 @@
         {
           "n": 14,
           "options": [
-            "tomorrow",
             "ourselves",
+            "tomorrow",
             "later",
             "first"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "反身代词",
           "exp": "后文母子二人亲自送钱包上门，find the owner ourselves 我们自己找失主。"
         },
@@ -204,11 +204,11 @@
           "n": 15,
           "options": [
             "came",
-            "lit",
+            "gave",
             "looked",
-            "gave"
+            "lit"
           ],
-          "answer": "B",
+          "answer": "D",
           "kp": "固定搭配",
           "exp": "one's eyes lit up 眼睛一亮，表示惊喜。"
         },
@@ -240,35 +240,35 @@
           "n": 18,
           "options": [
             "anyway",
-            "instead",
             "too",
+            "instead",
             "either"
           ],
-          "answer": "B",
+          "answer": "C",
           "kp": "副词辨析",
           "exp": "“我”不要钱，他“转而”送了一本书，用 instead。"
         },
         {
           "n": 19,
           "options": [
-            "how",
             "what",
+            "how",
             "why",
             "where"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "宾语从句引导词",
           "exp": "you got 缺宾语，用 what：你今晚得到了什么。"
         },
         {
           "n": 20,
           "options": [
-            "with",
-            "for",
             "at",
+            "for",
+            "with",
             "of"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "介词 with 的复合结构",
           "exp": "with a smile on my face 脸上带着微笑。"
         }
@@ -313,12 +313,12 @@
               "n": 23,
               "stem": "How long does the Drama Club meet every week?",
               "options": [
-                "1.5 hours.",
-                "2 hours.",
                 "3 hours.",
+                "2 hours.",
+                "1.5 hours.",
                 "4 hours."
               ],
-              "answer": "C",
+              "answer": "A",
               "kp": "数字计算",
               "exp": "每周一、三各 1.5 小时，共 3 小时。坑点：只算一次是 1.5 小时。"
             },
@@ -327,11 +327,11 @@
               "stem": "Which of the following is TRUE?",
               "options": [
                 "Students can join three clubs at most.",
-                "The Chess Club is only for good players.",
                 "Students should sign up before October 13.",
+                "The Chess Club is only for good players.",
                 "The drama show will be held in October."
               ],
-              "answer": "C",
+              "answer": "B",
               "kp": "正误判断",
               "exp": "报名截止 October 13；最多两个社团；国际象棋欢迎初学者；话剧演出在 12 月 20 日。"
             },
@@ -340,11 +340,11 @@
               "stem": "Where can you probably read this passage?",
               "options": [
                 "In a storybook.",
-                "On a school notice board.",
                 "In a newspaper about sports.",
+                "On a school notice board.",
                 "In a science magazine."
               ],
-              "answer": "B",
+              "answer": "C",
               "kp": "文章出处",
               "exp": "学校社团招募通知，常见于学校公告栏。"
             }
@@ -360,11 +360,11 @@
               "stem": "Why was the writer unhappy at first?",
               "options": [
                 "Because Grandpa was strict.",
-                "Because there was no Wi-Fi at Grandpa's house.",
+                "Because he didn't like vegetables.",
                 "Because he had to get up early every day.",
-                "Because he didn't like vegetables."
+                "Because there was no Wi-Fi at Grandpa's house."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "细节理解",
               "exp": "第一段：There was no Wi-Fi at Grandpa's house, and I couldn't play online games。早起是后来的事。"
             },
@@ -385,12 +385,12 @@
               "n": 28,
               "stem": "When is the best time to water the plants according to the passage?",
               "options": [
-                "At noon.",
                 "In the early morning or late afternoon.",
+                "At noon.",
                 "At midnight.",
                 "Any time of the day."
               ],
-              "answer": "B",
+              "answer": "A",
               "kp": "细节理解",
               "exp": "water the plants in the early morning or late afternoon, when the sun was not too strong。"
             },
@@ -411,12 +411,12 @@
               "n": 30,
               "stem": "What is the main idea of the passage?",
               "options": [
-                "Growing vegetables is easy.",
-                "Children should not use phones.",
                 "The writer learned patience from working with Grandpa.",
+                "Children should not use phones.",
+                "Growing vegetables is easy.",
                 "Life in the countryside is boring."
               ],
-              "answer": "C",
+              "answer": "A",
               "kp": "主旨大意",
               "exp": "通过在菜园劳动，作者懂得了“万物各有其时”，学会了耐心。"
             }
@@ -444,12 +444,12 @@
               "n": 32,
               "stem": "Why may the \"more oxygen\" idea not be right?",
               "options": [
-                "Because people breathe faster when they are tired.",
                 "Because people don't yawn more when there is less oxygen.",
+                "Because people breathe faster when they are tired.",
                 "Because animals don't need oxygen.",
                 "Because yawning is catching."
               ],
-              "answer": "B",
+              "answer": "A",
               "kp": "因果推断",
               "exp": "实验表明空气中氧气少时，人并不会更多地打哈欠。"
             },
@@ -471,11 +471,11 @@
               "stem": "What does the underlined word \"empathy\" mean?",
               "options": [
                 "The ability to sleep well.",
-                "The ability to understand other people's feelings.",
+                "The ability to stay awake.",
                 "The ability to breathe deeply.",
-                "The ability to stay awake."
+                "The ability to understand other people's feelings."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "词义猜测",
               "exp": "破折号后直接解释：the ability to understand other people's feelings（共情）。"
             },
@@ -484,13 +484,13 @@
               "stem": "What can we infer from the passage?",
               "options": [
                 "Yawning in class always means you are bored.",
-                "You may catch a yawn more easily from your mom than from a stranger.",
+                "Reading cannot make people yawn.",
                 "Yawning happens most when it is very hot.",
-                "Reading cannot make people yawn."
+                "You may catch a yawn more easily from your mom than from a stranger."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "推理判断",
-              "exp": "第四段：人们更容易被家人和好朋友“传染”打哈欠。A 与最后一段相反；C 与 20°C 左右最常打哈欠的说法不符；D 与 Even reading about yawning can make you yawn 相反。"
+              "exp": "第四段：人们更容易被家人和好朋友“传染”打哈欠。A 与最后一段相反；B 与 Even reading about yawning can make you yawn 相反；C 与 20°C 左右最常打哈欠的说法不符。"
             }
           ]
         }

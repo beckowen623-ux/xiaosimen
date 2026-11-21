@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    },
    {
     "key": "B",
-    "text": "x≥3"
+    "text": "x≤3"
    },
    {
     "key": "C",
-    "text": "x≤3"
+    "text": "x≥3"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "被开方数非负：x－3≥0，x≥3。",
   "kp": "二次根式有意义的条件",
@@ -65,11 +65,11 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    },
    {
     "key": "B",
-    "text": "√(1/2)"
+    "text": "√6"
    },
    {
     "key": "C",
-    "text": "√6"
+    "text": "√(1/2)"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "√8＝2√2，√(1/2) 和 √0.5 的被开方数含分母（小数），都不是最简二次根式。",
   "kp": "最简二次根式",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "√2＋√3＝√5"
+    "text": "2√3×3√3＝18"
    },
    {
     "key": "B",
-    "text": "2√3×3√3＝18"
+    "text": "√2＋√3＝√5"
    },
    {
     "key": "C",
@@ -119,9 +119,9 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
-  "explanation": "A 不是同类二次根式不能合并；B 2×3×3＝18 正确；C 应为 2；D 应为 3。",
+  "explanation": "A 2×3×3＝18 正确；B 不是同类二次根式不能合并；C 应为 2；D 应为 3。",
   "kp": "二次根式的运算",
   "stem": "下列计算正确的是（ ）",
   "paperScore": 3,
@@ -149,7 +149,7 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    },
    {
     "key": "B",
-    "text": "4.8"
+    "text": "2.4"
    },
    {
     "key": "C",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    },
    {
     "key": "D",
-    "text": "2.4"
+    "text": "4.8"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "斜边＝√(36＋64)＝10。面积＝1/2×6×8＝24＝1/2×10×h，h＝4.8。",
   "kp": "勾股定理",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "两组对边分别平行"
+    "text": "一组对边平行，另一组对边相等"
    },
    {
     "key": "B",
@@ -237,7 +237,7 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    },
    {
     "key": "C",
-    "text": "一组对边平行，另一组对边相等"
+    "text": "两组对边分别平行"
    },
    {
     "key": "D",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "一组对边平行、另一组对边相等的四边形可能是等腰梯形，不一定是平行四边形。",
   "kp": "平行四边形的判定",
@@ -271,11 +271,11 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "20"
+    "text": "24"
    },
    {
     "key": "B",
-    "text": "24"
+    "text": "20"
    },
    {
     "key": "C",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "菱形对角线互相垂直平分，半对角线为 3 和 4，边长＝√(9＋16)＝5，周长＝20。",
   "kp": "菱形的性质",
@@ -321,15 +321,15 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    },
    {
     "key": "C",
-    "text": "第三象限"
+    "text": "第四象限"
    },
    {
     "key": "D",
-    "text": "第四象限"
+    "text": "第三象限"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "k＝－2＜0，b＝3＞0，图象经过第一、二、四象限，不经过第三象限。",
   "kp": "一次函数的图象",
@@ -397,11 +397,11 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "175，175"
+    "text": "175，177.5"
    },
    {
     "key": "B",
-    "text": "175，177.5"
+    "text": "175，175"
    },
    {
     "key": "C",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-8down-math"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "从小到大排列：168，170，175，175，180，182。175 出现两次，众数 175；中位数＝(175＋175)÷2＝175。",
   "kp": "中位数",

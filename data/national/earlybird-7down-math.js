@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "±9"
+    "text": "±3"
    },
    {
     "key": "B",
@@ -69,7 +69,7 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    },
    {
     "key": "C",
-    "text": "±3"
+    "text": "±9"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "先算 √81＝9，再求 9 的平方根，是 ±3。坑点：直接求 81 的平方根得 ±9。",
   "kp": "平方根",
@@ -111,17 +111,17 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    },
    {
     "key": "C",
-    "text": "在同一平面内，垂直于同一条直线的两条直线互相平行"
+    "text": "相等的角是对顶角"
    },
    {
     "key": "D",
-    "text": "相等的角是对顶角"
+    "text": "在同一平面内，垂直于同一条直线的两条直线互相平行"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
-  "explanation": "A 要在两直线平行的前提下；B 应是“过直线外一点”；D 对顶角相等，但相等的角不一定是对顶角。",
+  "explanation": "A 要在两直线平行的前提下；B 应是“过直线外一点”；C 对顶角相等，但相等的角不一定是对顶角。",
   "kp": "平行线的性质",
   "stem": "下列说法中，正确的是（ ）",
   "paperScore": 3,
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    },
    {
     "key": "B",
-    "text": "第二象限"
+    "text": "第三象限"
    },
    {
     "key": "C",
-    "text": "第三象限"
+    "text": "第二象限"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "横坐标 －3＜0；m²≥0，所以 m²＋1≥1＞0。横负纵正，在第二象限。",
   "kp": "点的坐标",
@@ -233,7 +233,7 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    },
    {
     "key": "B",
-    "text": "(2，－5)"
+    "text": "(－5，2)"
    },
    {
     "key": "C",
@@ -241,11 +241,11 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    },
    {
     "key": "D",
-    "text": "(－5，2)"
+    "text": "(2，－5)"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "到 x 轴的距离是纵坐标的绝对值，到 y 轴的距离是横坐标的绝对值。第四象限横正纵负，M(2，－5)。坑点：把两个距离对应反了。",
   "kp": "点的坐标",
@@ -321,17 +321,17 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    },
    {
     "key": "C",
-    "text": "a/3＞b/3"
+    "text": "ac²＞bc²"
    },
    {
     "key": "D",
-    "text": "ac²＞bc²"
+    "text": "a/3＞b/3"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
-  "explanation": "两边同除以正数 3，不等号方向不变。B 乘负数要变号；D 当 c＝0 时不成立。",
+  "explanation": "两边同除以正数 3，不等号方向不变。B 乘负数要变号；C 当 c＝0 时不成立。",
   "kp": "不等式的性质",
   "stem": "若 a＞b，则下列不等式一定成立的是（ ）",
   "paperScore": 3,
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    },
    {
     "key": "B",
-    "text": "x≤3"
+    "text": "－1＜x≤3"
    },
    {
     "key": "C",
-    "text": "－1＜x≤3"
+    "text": "x≤3"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-7down-math"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "第一个得 x≤3，第二个得 x＞－1，公共部分为 －1＜x≤3。注意端点是否取等号。",
   "kp": "一元一次不等式组",

@@ -65,7 +65,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "B",
-    "text": "三分之二"
+    "text": "五分之四"
    },
    {
     "key": "C",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "D",
-    "text": "五分之四"
+    "text": "三分之二"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "宪法修改须由全国人大以全体代表的三分之二以上多数通过；普通法律只需过半数。",
   "kp": "宪法的修改程序",
@@ -103,7 +103,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "树立宪法权威，增强宪法意识"
+    "text": "代替宪法的实施"
    },
    {
     "key": "B",
@@ -111,7 +111,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "C",
-    "text": "代替宪法的实施"
+    "text": "树立宪法权威，增强宪法意识"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "宪法宣誓制度有利于彰显宪法权威，激励和教育国家工作人员忠于宪法、遵守宪法、维护宪法。",
   "kp": "宪法的地位",
@@ -149,7 +149,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "B",
-    "text": "人民"
+    "text": "全国人大常委会"
    },
    {
     "key": "C",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "D",
-    "text": "全国人大常委会"
+    "text": "人民"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "宪法规定，中华人民共和国的一切权力属于人民。",
   "kp": "我国的政治制度",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "受教育权"
+    "text": "选举权和被选举权"
    },
    {
     "key": "B",
-    "text": "选举权和被选举权"
+    "text": "受教育权"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "选举权和被选举权是公民最基本的政治权利。受教育权、劳动权属于社会经济文化权利；财产权属于人身和财产方面的权利。",
   "kp": "公民的政治权利",
@@ -275,11 +275,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "B",
-    "text": "错误，公民行使权利不得损害他人的合法权利"
+    "text": "正确，网络是虚拟世界"
    },
    {
     "key": "C",
-    "text": "正确，网络是虚拟世界"
+    "text": "错误，公民行使权利不得损害他人的合法权利"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "公民行使自由和权利时，不得损害国家、社会、集体的利益和其他公民的合法权利。",
   "kp": "权利行使的界限",
@@ -359,7 +359,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "B",
-    "text": "税收取之于民、用之于民"
+    "text": "纳税是可以选择的"
    },
    {
     "key": "C",
@@ -367,11 +367,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "D",
-    "text": "纳税是可以选择的"
+    "text": "税收取之于民、用之于民"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "依法纳税是公民的基本义务，税收取之于民、用之于民，用于国家建设和公共服务。",
   "kp": "公民的基本义务",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "人民代表大会制度"
+    "text": "民族区域自治制度"
    },
    {
     "key": "B",
@@ -405,7 +405,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "C",
-    "text": "民族区域自治制度"
+    "text": "人民代表大会制度"
    },
    {
     "key": "D",
@@ -413,9 +413,9 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
-  "explanation": "人民代表大会制度是我国的根本政治制度；B、C、D 是基本政治制度。",
+  "explanation": "人民代表大会制度是我国的根本政治制度；A、B、D 是基本政治制度。",
   "kp": "人民代表大会制度",
   "stem": "我国的根本政治制度是（ ）",
   "paperScore": 2.5,
@@ -439,7 +439,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "全国人大常委会委员长"
+    "text": "中华人民共和国主席"
    },
    {
     "key": "B",
@@ -447,7 +447,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "C",
-    "text": "中华人民共和国主席"
+    "text": "全国人大常委会委员长"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "国家主席是我国的国家元首，对外代表中华人民共和国。",
   "kp": "国家机构",
@@ -523,11 +523,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "民族区域自治制度"
+    "text": "基层群众自治制度"
    },
    {
     "key": "B",
-    "text": "基层群众自治制度"
+    "text": "民族区域自治制度"
    },
    {
     "key": "C",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "村民委员会是基层群众性自治组织，村民自己管理村里的公共事务，体现了基层群众自治制度。",
   "kp": "基层群众自治制度",
@@ -611,11 +611,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "B",
-    "text": "通过法律途径维护自己的合法权益"
+    "text": "到父亲单位吵闹"
    },
    {
     "key": "C",
-    "text": "到父亲单位吵闹"
+    "text": "通过法律途径维护自己的合法权益"
    },
    {
     "key": "D",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "父母有抚养教育未成年子女的义务，小林可以在其他监护人帮助下，通过法律途径维权。",
   "kp": "人格尊严权与依法维权",
@@ -649,7 +649,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "解决纠纷最有效、最权威的方式"
+    "text": "只能由国家机关提起的方式"
    },
    {
     "key": "B",
@@ -661,11 +661,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "D",
-    "text": "只能由国家机关提起的方式"
+    "text": "解决纠纷最有效、最权威的方式"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "诉讼是维护合法权益最正规、最权威、最有效的方式，但不是唯一方式，还可以协商、调解、仲裁等。",
   "kp": "人格尊严权与依法维权",
@@ -695,11 +695,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "B",
-    "text": "公民平等地享有权利，平等地履行义务，任何人违法都要受到法律追究"
+    "text": "每个人都可以当国家主席"
    },
    {
     "key": "C",
-    "text": "每个人都可以当国家主席"
+    "text": "公民平等地享有权利，平等地履行义务，任何人违法都要受到法律追究"
    },
    {
     "key": "D",
@@ -707,7 +707,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "法律面前人人平等，意味着平等享有权利、平等履行义务、平等适用法律。",
   "kp": "法治精神",
@@ -779,7 +779,7 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "B",
-    "text": "民族区域自治制度有利于维护民族团结和国家统一"
+    "text": "我国所有省份都是民族自治地方"
    },
    {
     "key": "C",
@@ -787,11 +787,11 @@ window.NATIONAL_PAPERS["earlybird-8down-daode"] = [
    },
    {
     "key": "D",
-    "text": "我国所有省份都是民族自治地方"
+    "text": "民族区域自治制度有利于维护民族团结和国家统一"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "民族自治地方是我国不可分离的部分，必须遵守宪法；这一制度有利于民族团结、国家统一。",
   "kp": "民族区域自治制度",

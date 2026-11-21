@@ -64,11 +64,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    },
    {
     "key": "B",
-    "text": "美轮美奂  鞠躬尽瘁"
+    "text": "默守成规  别出心裁"
    },
    {
     "key": "C",
-    "text": "默守成规  别出心裁"
+    "text": "美轮美奂  鞠躬尽瘁"
    },
    {
     "key": "D",
@@ -76,9 +76,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
-  "explanation": "A 应为“一筹莫展”；C 应为“墨守成规”；D 应为“谈笑风生”。",
+  "explanation": "A 应为“一筹莫展”；B 应为“墨守成规”；D 应为“谈笑风生”。",
   "kp": "字形",
   "stem": "下列词语书写全部正确的一项是（ ）",
   "unit": "积累与运用"
@@ -101,7 +101,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "他在比赛中沉着冷静，最终脱颖而出，获得冠军。"
+    "text": "弟弟一个人把房间打扫得干干净净，真是七手八脚。"
    },
    {
     "key": "B",
@@ -113,13 +113,13 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    },
    {
     "key": "D",
-    "text": "弟弟一个人把房间打扫得干干净净，真是七手八脚。"
+    "text": "他在比赛中沉着冷静，最终脱颖而出，获得冠军。"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
-  "explanation": "B“妙笔生花”形容文章写得好，不能形容演讲；C“炙手可热”比喻权势大、气焰盛，含贬义；D“七手八脚”形容人多手杂，与“一个人”矛盾。",
+  "explanation": "A“七手八脚”形容人多手杂，与“一个人”矛盾；B“妙笔生花”形容文章写得好，不能形容演讲；C“炙手可热”比喻权势大、气焰盛，含贬义。",
   "kp": "成语运用",
   "stem": "下列句子中加点成语使用恰当的一项是（ ）",
   "unit": "积累与运用"
@@ -146,11 +146,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    },
    {
     "key": "B",
-    "text": "他那和蔼可亲的面容和亲切的话语，时时浮现在我眼前。"
+    "text": "经过同学们的共同努力，我们班的卫生状况有了明显改善。"
    },
    {
     "key": "C",
-    "text": "经过同学们的共同努力，我们班的卫生状况有了明显改善。"
+    "text": "他那和蔼可亲的面容和亲切的话语，时时浮现在我眼前。"
    },
    {
     "key": "D",
@@ -158,9 +158,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
-  "explanation": "A 否定不当，删“不”；B 搭配不当，“话语”不能“浮现”；D 语序不当，应为“继承和发扬”。",
+  "explanation": "A 否定不当，删“不”；C 搭配不当，“话语”不能“浮现”；D 语序不当，应为“继承和发扬”。",
   "kp": "病句辨析",
   "stem": "下列句子没有语病的一项是（ ）",
   "unit": "积累与运用"
@@ -187,11 +187,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    },
    {
     "key": "B",
-    "text": "《论语》是记录孔子及其弟子言行的书，是儒家经典之一。"
+    "text": "《醉翁亭记》的作者是北宋的苏轼。"
    },
    {
     "key": "C",
-    "text": "《醉翁亭记》的作者是北宋的苏轼。"
+    "text": "《论语》是记录孔子及其弟子言行的书，是儒家经典之一。"
    },
    {
     "key": "D",
@@ -199,9 +199,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
-  "explanation": "A“弱冠”指男子二十岁；C《醉翁亭记》作者是欧阳修；D“家父”是对人称自己的父亲，称别人父亲用“令尊”。",
+  "explanation": "A“弱冠”指男子二十岁；B《醉翁亭记》作者是欧阳修；D“家父”是对人称自己的父亲，称别人父亲用“令尊”。",
   "kp": "文学文化常识",
   "stem": "下列有关文学文化常识的表述，正确的一项是（ ）",
   "unit": "名著与文学常识"
@@ -224,11 +224,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "《骆驼祥子》的作者是老舍，主人公祥子是旧北平的人力车夫。"
+    "text": "《水浒传》中“倒拔垂杨柳”的英雄是武松。"
    },
    {
     "key": "B",
-    "text": "《水浒传》中“倒拔垂杨柳”的英雄是武松。"
+    "text": "《骆驼祥子》的作者是老舍，主人公祥子是旧北平的人力车夫。"
    },
    {
     "key": "C",
@@ -240,9 +240,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
-  "explanation": "B 倒拔垂杨柳的是鲁智深；C《简·爱》的作者是英国作家夏洛蒂·勃朗特；D《傅雷家书》主要是傅雷写给儿子傅聪等人的家信。",
+  "explanation": "A 倒拔垂杨柳的是鲁智深；C《简·爱》的作者是英国作家夏洛蒂·勃朗特；D《傅雷家书》主要是傅雷写给儿子傅聪等人的家信。",
   "kp": "名著阅读",
   "stem": "下列关于名著的表述，正确的一项是（ ）",
   "unit": "名著与文学常识"
@@ -495,11 +495,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    },
    {
     "key": "B",
-    "text": "向者吾见之（向者：刚才）"
+    "text": "恐去母而死也（去：去往）"
    },
    {
     "key": "C",
-    "text": "恐去母而死也（去：去往）"
+    "text": "向者吾见之（向者：刚才）"
    },
    {
     "key": "D",
@@ -507,7 +507,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "“去”在这里是“离开”的意思，“去母而死”即离开母亲而死去。",
   "kp": "文言实词",
@@ -620,7 +620,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "赞扬孙叔敖从小就有为他人着想、舍己为人的品德"
+    "text": "说明母亲很会教育孩子说谎"
    },
    {
     "key": "B",
@@ -632,11 +632,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    },
    {
     "key": "D",
-    "text": "说明母亲很会教育孩子说谎"
+    "text": "赞扬孙叔敖从小就有为他人着想、舍己为人的品德"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "孙叔敖以为自己会死，仍想着不让别人再受害，体现为他人着想的品德。",
   "kp": "主旨理解",
@@ -706,11 +706,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "举例论证"
+    "text": "比喻论证"
    },
    {
     "key": "B",
-    "text": "比喻论证"
+    "text": "举例论证"
    },
    {
     "key": "C",
@@ -722,7 +722,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "用建高楼挖地基比喻学习要打牢基础，生动形象地论证了“慢是为了打牢根基”。",
   "kp": "论证方法",
@@ -749,11 +749,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "提出新的论点"
+    "text": "补充说明，使论证更严密，避免读者误解"
    },
    {
     "key": "B",
-    "text": "补充说明，使论证更严密，避免读者误解"
+    "text": "提出新的论点"
    },
    {
     "key": "C",
@@ -765,7 +765,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "说明“慢”不是拖拉懒散，补充限定，使论证更全面严密。",
   "kp": "论证的严密性",

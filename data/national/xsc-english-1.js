@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "Good morning, Tom!"
+    "text": "Good afternoon!"
    },
    {
     "key": "B",
-    "text": "Good afternoon!"
+    "text": "Good morning, Tom!"
    },
    {
     "key": "C",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "别人说 Good morning，就回答 Good morning。",
   "kp": "交际用语",
@@ -61,11 +61,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "I'm fine."
+    "text": "My name is Peter Brown."
    },
    {
     "key": "B",
-    "text": "My name is Peter Brown."
+    "text": "I'm fine."
    },
    {
     "key": "C",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "问名字，回答 My name is... 或 I'm...。D 是介绍别人用的。",
   "kp": "交际用语",
@@ -103,7 +103,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "Nice to meet you, too."
+    "text": "Thank you."
    },
    {
     "key": "B",
@@ -111,7 +111,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "C",
-    "text": "Thank you."
+    "text": "Nice to meet you, too."
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "初次见面，对方说 Nice to meet you，回答 Nice to meet you, too。",
   "kp": "交际用语",
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "is"
+    "text": "be"
    },
    {
     "key": "B",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "D",
-    "text": "be"
+    "text": "is"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "there be 句型遵循“就近原则”：be 动词和离它最近的名词 a ruler 保持一致，用 is。坑点：看到后面有 two pens 就选 are。",
   "kp": "there be 句型",
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "B",
-    "text": "Where"
+    "text": "How"
    },
    {
     "key": "C",
-    "text": "How"
+    "text": "Where"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "答语是位置（under the chair），用 where 提问。",
   "kp": "特殊疑问句",
@@ -317,7 +317,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "B",
-    "text": "an; a"
+    "text": "a; a"
    },
    {
     "key": "C",
@@ -325,11 +325,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "D",
-    "text": "a; a"
+    "text": "an; a"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "eraser 以元音音素开头，用 an；ruler 以辅音音素开头，用 a。",
   "kp": "冠词",
@@ -401,11 +401,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "B",
-    "text": "on"
+    "text": "at"
    },
    {
     "key": "C",
-    "text": "at"
+    "text": "on"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "在地板上用 on the floor。",
   "kp": "介词",
@@ -481,7 +481,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "is"
+    "text": "are"
    },
    {
     "key": "B",
@@ -489,7 +489,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "C",
-    "text": "are"
+    "text": "is"
    },
    {
     "key": "D",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "主语 My brother and I 是两个人，复数，用 are。坑点：只看离得最近的 I 选 am。",
   "kp": "be 动词",
@@ -523,7 +523,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "they are"
+    "text": "they aren't"
    },
    {
     "key": "B",
@@ -535,11 +535,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "D",
-    "text": "they aren't"
+    "text": "they are"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "these 在回答中用 they 代替，肯定回答 Yes, they are。",
   "kp": "一般疑问句",
@@ -651,11 +651,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "year"
+    "text": "years"
    },
    {
     "key": "B",
-    "text": "years"
+    "text": "year"
    },
    {
     "key": "C",
@@ -667,7 +667,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "“……岁”用 ...years old，twelve 后用复数 years。",
   "kp": "固定表达",
@@ -699,7 +699,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "B",
-    "text": "and"
+    "text": "so"
    },
    {
     "key": "C",
@@ -707,11 +707,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "D",
-    "text": "so"
+    "text": "and"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "small 和 tidy 是并列描述房间的，用 and。",
   "kp": "连词",
@@ -739,7 +739,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "pink"
+    "text": "clean"
    },
    {
     "key": "B",
@@ -747,7 +747,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "C",
-    "text": "clean"
+    "text": "pink"
    },
    {
     "key": "D",
@@ -755,7 +755,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "后面说 it's my favourite colour，空格处要填颜色。",
   "kp": "上下文",
@@ -879,15 +879,15 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "C",
-    "text": "under"
+    "text": "at"
    },
    {
     "key": "D",
-    "text": "at"
+    "text": "under"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "前面说椅子上看不到，后面说 on the floor，所以书包在椅子下面。",
   "kp": "介词",
@@ -919,11 +919,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "B",
-    "text": "your"
+    "text": "his"
    },
    {
     "key": "C",
-    "text": "his"
+    "text": "your"
    },
    {
     "key": "D",
@@ -931,7 +931,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "妈妈对 Lucy 说话，“保持你的房间整洁”，用 your。",
   "kp": "代词",
@@ -1003,11 +1003,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "like"
+    "text": "have"
    },
    {
     "key": "B",
-    "text": "have"
+    "text": "like"
    },
    {
     "key": "C",
@@ -1019,7 +1019,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "前面问 Do you like my room?，这里回答“我非常喜欢它”。",
   "kp": "上下文",
@@ -1095,11 +1095,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "B",
-    "text": "White."
+    "text": "Blue and black."
    },
    {
     "key": "C",
-    "text": "Blue and black."
+    "text": "White."
    },
    {
     "key": "D",
@@ -1107,7 +1107,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "原文 It's blue and black。红色是铅笔盒的颜色，别看错。",
   "kp": "细节理解",
@@ -1311,11 +1311,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "Near a river."
+    "text": "In the town."
    },
    {
     "key": "B",
-    "text": "In the town."
+    "text": "Near a river."
    },
    {
     "key": "C",
@@ -1327,7 +1327,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "It is a big farm near the river。",
   "kp": "细节理解",
@@ -1355,7 +1355,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "Five."
+    "text": "Twelve."
    },
    {
     "key": "B",
@@ -1363,7 +1363,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "C",
-    "text": "Twelve."
+    "text": "Five."
    },
    {
     "key": "D",
@@ -1371,7 +1371,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "There are five of them。六只是鹅，十二只是羊，二十只是鸭子。",
   "kp": "细节理解",
@@ -1407,15 +1407,15 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "C",
-    "text": "Uncle Wang gets milk from the cows."
+    "text": "There are no plants on the farm."
    },
    {
     "key": "D",
-    "text": "There are no plants on the farm."
+    "text": "Uncle Wang gets milk from the cows."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "Uncle Wang gets milk from them every morning。鸭子 20 只，鹅 6 只，鸭子更多；Lucky 是狗；农场里有很多植物。",
   "kp": "细节理解",
@@ -1443,7 +1443,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "照顾"
+    "text": "看见"
    },
    {
     "key": "B",
@@ -1451,7 +1451,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    },
    {
     "key": "C",
-    "text": "看见"
+    "text": "照顾"
    },
    {
     "key": "D",
@@ -1459,7 +1459,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "狗帮王叔叔“照看”羊群，look after 意思是照顾、照看。",
   "kp": "词义猜测",
@@ -1487,11 +1487,11 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "They plant carrots."
+    "text": "They pick and sell apples."
    },
    {
     "key": "B",
-    "text": "They pick and sell apples."
+    "text": "They plant carrots."
    },
    {
     "key": "C",
@@ -1503,7 +1503,7 @@ window.NATIONAL_PAPERS["xsc-english-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "In autumn, Uncle Wang's family picks apples and sells them in town。",
   "kp": "细节理解",

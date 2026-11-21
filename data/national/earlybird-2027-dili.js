@@ -69,15 +69,15 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "C",
-    "text": "1∶500 000"
+    "text": "1∶5 000 000"
    },
    {
     "key": "D",
-    "text": "1∶5 000 000"
+    "text": "1∶500 000"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "10 千米＝1 000 000 厘米，比例尺＝2∶1 000 000＝1∶500 000。坑点：单位换算。",
   "kp": "比例尺",
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "北半球、东半球、低纬度"
+    "text": "北半球、东半球、中纬度"
    },
    {
     "key": "B",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "D",
-    "text": "北半球、东半球、中纬度"
+    "text": "北半球、东半球、低纬度"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "20°N 在北半球；0°～30° 为低纬度；东西半球以 20°W 和 160°E 为界，120°E 在东半球。坑点：东西半球不是以 0° 和 180° 划分。",
   "kp": "经纬度与半球划分",
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "阴转多云"
+    "text": "四季如春"
    },
    {
     "key": "B",
@@ -195,7 +195,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "C",
-    "text": "四季如春"
+    "text": "阴转多云"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "天气是短时间的大气状况，变化快；气候是多年的平均状况，比较稳定。“四季如春”描述的是气候。",
   "kp": "天气与气候",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "全年高温多雨"
+    "text": "夏季炎热干燥，冬季温和多雨"
    },
    {
     "key": "B",
@@ -237,7 +237,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "C",
-    "text": "夏季炎热干燥，冬季温和多雨"
+    "text": "全年高温多雨"
    },
    {
     "key": "D",
@@ -245,9 +245,9 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
-  "explanation": "热带雨林气候全年高温多雨；B 是热带草原气候；C 是地中海气候；D 是温带海洋性气候。",
+  "explanation": "热带雨林气候全年高温多雨；A 是地中海气候；B 是热带草原气候；D 是温带海洋性气候。",
   "kp": "世界气候类型",
   "stem": "亚马孙平原和刚果盆地都分布着大面积的热带雨林，这里的气候特征是（ ）",
   "paperScore": 2.5,
@@ -271,11 +271,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "2‰"
+    "text": "－2‰"
    },
    {
     "key": "B",
-    "text": "－2‰"
+    "text": "2‰"
    },
    {
     "key": "C",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "人口自然增长率＝出生率－死亡率＝9‰－11‰＝－2‰，人口出现负增长。",
   "kp": "人口自然增长率",
@@ -313,7 +313,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "呈放射状流向四周"
+    "text": "大多自东向西流"
    },
    {
     "key": "B",
@@ -321,7 +321,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "C",
-    "text": "大多自东向西流"
+    "text": "呈放射状流向四周"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "地势中部高、四周低，河流多发源于中部高原山地，呈放射状流向四周的海洋。",
   "kp": "亚洲的河流",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "位于亚欧板块和太平洋板块交界处"
+    "text": "四面环海"
    },
    {
     "key": "B",
@@ -367,11 +367,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "D",
-    "text": "四面环海"
+    "text": "位于亚欧板块和太平洋板块交界处"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "板块交界处地壳活跃，多火山、地震。日本位于亚欧板块和太平洋板块交界地带。",
   "kp": "板块构造",
@@ -439,11 +439,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "昆仑山—祁连山—横断山"
+    "text": "大兴安岭—太行山—巫山—雪峰山"
    },
    {
     "key": "B",
-    "text": "大兴安岭—太行山—巫山—雪峰山"
+    "text": "昆仑山—祁连山—横断山"
    },
    {
     "key": "C",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "一二级阶梯界线为昆仑山—祁连山—横断山；二三级阶梯界线为大兴安岭—太行山—巫山—雪峰山。",
   "kp": "中国地势",
@@ -485,11 +485,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "B",
-    "text": "大兴安岭—阴山—贺兰山—巴颜喀拉山—冈底斯山"
+    "text": "400 毫米年等降水量线"
    },
    {
     "key": "C",
-    "text": "400 毫米年等降水量线"
+    "text": "大兴安岭—阴山—贺兰山—巴颜喀拉山—冈底斯山"
    },
    {
     "key": "D",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "季风区与非季风区大致以大兴安岭—阴山—贺兰山—巴颜喀拉山—冈底斯山一线为界。坑点：该线与 400 毫米等降水量线大致相近但不相同。",
   "kp": "季风区与非季风区",
@@ -523,7 +523,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "是 1 月 0 ℃ 等温线经过的地方"
+    "text": "是半湿润区与半干旱区的分界线"
    },
    {
     "key": "B",
@@ -535,11 +535,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "D",
-    "text": "是半湿润区与半干旱区的分界线"
+    "text": "是 1 月 0 ℃ 等温线经过的地方"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "秦岭—淮河是湿润区与半湿润区的分界线；半湿润区与半干旱区大致以 400 毫米等降水量线为界。",
   "kp": "秦岭—淮河",
@@ -607,11 +607,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "修建水库"
+    "text": "跨流域调水"
    },
    {
     "key": "B",
-    "text": "跨流域调水"
+    "text": "修建水库"
    },
    {
     "key": "C",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "跨流域调水（如南水北调）解决空间分布不均；修建水库解决时间分配不均。",
   "kp": "水资源",
@@ -653,7 +653,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "B",
-    "text": "铁路运输"
+    "text": "管道运输"
    },
    {
     "key": "C",
@@ -661,11 +661,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "D",
-    "text": "管道运输"
+    "text": "铁路运输"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "大宗、笨重货物长距离运输宜选铁路（或铁路加水运）；鲜活、短途选公路；贵重、急需、量小选航空；管道适合运输液体和气体。",
   "kp": "交通运输方式的选择",
@@ -695,11 +695,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "B",
-    "text": "北方以旱地为主，南方以水田为主"
+    "text": "南北方都以水田为主"
    },
    {
     "key": "C",
-    "text": "南北方都以水田为主"
+    "text": "北方以旱地为主，南方以水田为主"
    },
    {
     "key": "D",
@@ -707,7 +707,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "北方降水少，以旱地为主，主要种植小麦等；南方降水多，以水田为主，主要种植水稻。",
   "kp": "南北方的差异",
@@ -737,7 +737,7 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "B",
-    "text": "干旱"
+    "text": "炎热"
    },
    {
     "key": "C",
@@ -745,11 +745,11 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "D",
-    "text": "炎热"
+    "text": "干旱"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "西北地区深居内陆、距海远，降水稀少，主要特征是干旱；青藏地区的主要特征是高寒。",
   "kp": "我国四大地理区域",
@@ -825,15 +825,15 @@ window.NATIONAL_PAPERS["earlybird-2027-dili"] = [
    },
    {
     "key": "C",
-    "text": "植被破坏是水土流失加剧的人为原因"
+    "text": "治理水土流失应大规模开垦坡地，扩大耕地面积"
    },
    {
     "key": "D",
-    "text": "治理水土流失应大规模开垦坡地，扩大耕地面积"
+    "text": "植被破坏是水土流失加剧的人为原因"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "开垦坡地会加剧水土流失。治理措施应是退耕还林还草、打坝淤地、修梯田、植树种草等。",
   "kp": "黄土高原",

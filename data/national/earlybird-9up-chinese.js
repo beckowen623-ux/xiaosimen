@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    },
    {
     "key": "B",
-    "text": "吞噬（shì）　 广袤（mào）　 亵渎（xiè）"
+    "text": "解剖（pāo）　 匿名（nì）　 缥缈（piāo）"
    },
    {
     "key": "C",
-    "text": "解剖（pāo）　 匿名（nì）　 缥缈（piāo）"
+    "text": "吞噬（shì）　 广袤（mào）　 亵渎（xiè）"
    },
    {
     "key": "D",
@@ -35,9 +35,9 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
-  "explanation": "A“瀚”读 hàn；C“剖”读 pōu；D“镌”读 juān，“秽”读 huì，“省”读 xǐng。",
+  "explanation": "A“瀚”读 hàn；B“剖”读 pōu；D“镌”读 juān，“秽”读 huì，“省”读 xǐng。",
   "kp": "字音",
   "stem": "下列词语中，加点字的读音全都正确的一项是（ ）",
   "paperScore": 2.5,
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "博物馆里的展品琳琅满目，让参观者目不暇接。"
+    "text": "这部小说情节跌宕起伏，读起来让人不忍卒读。"
    },
    {
     "key": "B",
@@ -69,7 +69,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    },
    {
     "key": "C",
-    "text": "这部小说情节跌宕起伏，读起来让人不忍卒读。"
+    "text": "博物馆里的展品琳琅满目，让参观者目不暇接。"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "“不忍卒读”指不忍心读完，多形容文章内容悲惨动人，与“情节跌宕起伏、吸引人”的语境不符。",
   "kp": "成语运用",
@@ -107,7 +107,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    },
    {
     "key": "B",
-    "text": "在老师的帮助下，使他的成绩有了很大提高。"
+    "text": "通过参加社会实践，同学们增强了动手能力和社会责任感。"
    },
    {
     "key": "C",
@@ -115,13 +115,13 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    },
    {
     "key": "D",
-    "text": "通过参加社会实践，同学们增强了动手能力和社会责任感。"
+    "text": "在老师的帮助下，使他的成绩有了很大提高。"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
-  "explanation": "A 语序不当，应先“继承”后“发扬”；B 缺主语；C 否定不当；D 正确。",
+  "explanation": "A 语序不当，应先“继承”后“发扬”；B 正确；C 否定不当；D 缺主语。",
   "kp": "病句辨析",
   "stem": "下列句子没有语病的一项是（ ）",
   "paperScore": 2.5,
@@ -415,15 +415,15 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    },
    {
     "key": "C",
-    "text": "今日病矣（病：生病）"
+    "text": "其子趋而往视之（趋：快走）"
    },
    {
     "key": "D",
-    "text": "其子趋而往视之（趋：快走）"
+    "text": "今日病矣（病：生病）"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "“病”在这里是“疲倦、劳累”的意思，“今日病矣”即“今天累坏了”。坑点：古今异义。",
   "kp": "文言实词",
@@ -451,7 +451,7 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "宋人把禾苗往上拔，是因为担心禾苗长得慢。"
+    "text": "文章说明只要用心帮助禾苗生长，就一定能获得丰收。"
    },
    {
     "key": "B",
@@ -463,13 +463,13 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    },
    {
     "key": "D",
-    "text": "文章说明只要用心帮助禾苗生长，就一定能获得丰收。"
+    "text": "宋人把禾苗往上拔，是因为担心禾苗长得慢。"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
-  "explanation": "文章强调“非徒无益，而又害之”，违背规律的“帮助”只会坏事，D 与文意相反。",
+  "explanation": "文章强调“非徒无益，而又害之”，违背规律的“帮助”只会坏事，A 与文意相反。",
   "kp": "内容理解",
   "stem": "下列对文章的理解，不正确的一项是（ ）",
   "paperScore": 2.5,
@@ -587,11 +587,11 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    },
    {
     "key": "B",
-    "text": "第二段运用举例论证和类比论证，以竹子的生长类比学习打基础。"
+    "text": "第五段说明“慢”就是放慢脚步、不必努力，与前文观点一致。"
    },
    {
     "key": "C",
-    "text": "第五段说明“慢”就是放慢脚步、不必努力，与前文观点一致。"
+    "text": "第二段运用举例论证和类比论证，以竹子的生长类比学习打基础。"
    },
    {
     "key": "D",
@@ -599,9 +599,9 @@ window.NATIONAL_PAPERS["earlybird-9up-chinese"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
-  "explanation": "第五段明确指出“慢”不等于拖拉、不等于不思进取，是补充论证，使论证更严密。C 的理解与原文相反。",
+  "explanation": "第五段明确指出“慢”不等于拖拉、不等于不思进取，是补充论证，使论证更严密。B 的理解与原文相反。",
   "kp": "议论文阅读",
   "stem": "下列对文章的理解和分析，不正确的一项是（ ）",
   "paperScore": 2.5,

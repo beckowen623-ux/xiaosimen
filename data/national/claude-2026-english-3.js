@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "usual"
+    "text": "unforgettable"
    },
    {
     "key": "B",
-    "text": "unforgettable"
+    "text": "usual"
    },
    {
     "key": "C",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "答语“永远不会忘记”，说明是一次难忘的经历。",
   "kp": "形容词辨析",
@@ -60,7 +60,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "ride"
+    "text": "is riding"
    },
    {
     "key": "B",
@@ -68,7 +68,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "is riding"
+    "text": "ride"
    },
    {
     "key": "D",
@@ -76,7 +76,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "who 指代先行词 students（复数），从句谓语用复数 ride；主句主语 the number of... 用单数 has。",
   "kp": "定语从句中的主谓一致",
@@ -105,7 +105,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "might"
+    "text": "needn't"
    },
    {
     "key": "C",
@@ -113,11 +113,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "D",
-    "text": "needn't"
+    "text": "might"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "“不确定”说明把握不大，用 might。",
   "kp": "情态动词表推测",
@@ -146,11 +146,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "have read"
+    "text": "had read"
    },
    {
     "key": "C",
-    "text": "had read"
+    "text": "have read"
    },
    {
     "key": "D",
@@ -158,7 +158,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "by the end of + 过去时间，表示“到过去某时为止已经完成”，用过去完成时。",
   "kp": "过去完成时",
@@ -265,7 +265,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "than"
+    "text": "or"
    },
    {
     "key": "B",
@@ -273,7 +273,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "or"
+    "text": "than"
    },
    {
     "key": "D",
@@ -281,7 +281,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "would rather do sth. than do sth. 宁愿……而不愿……。",
   "kp": "would rather...than...",
@@ -355,15 +355,15 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "where"
+    "text": "when"
    },
    {
     "key": "D",
-    "text": "when"
+    "text": "where"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "先行词 bookstore 在从句中作地点状语（在书店买），用 where。",
   "kp": "定语从句关系词",
@@ -388,11 +388,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "surprising; surprised"
+    "text": "surprised; surprising"
    },
    {
     "key": "B",
-    "text": "surprised; surprising"
+    "text": "surprising; surprised"
    },
    {
     "key": "C",
@@ -404,7 +404,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "人感到惊讶用 surprised；令人惊讶的消息用 surprising。",
   "kp": "-ed 与 -ing 形容词",
@@ -429,11 +429,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "throw"
+    "text": "to throw"
    },
    {
     "key": "B",
-    "text": "to throw"
+    "text": "throw"
    },
    {
     "key": "C",
@@ -445,7 +445,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "had better 后接动词原形。",
   "kp": "had better do",
@@ -474,7 +474,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "Of course not"
+    "text": "Yes, I do"
    },
    {
     "key": "C",
@@ -482,11 +482,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "D",
-    "text": "Yes, I do"
+    "text": "Of course not"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "Do you mind...? 表示同意时用否定回答：Of course not / Not at all。",
   "kp": "情景交际",
@@ -519,15 +519,15 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "have planted"
+    "text": "have been planted"
    },
    {
     "key": "D",
-    "text": "have been planted"
+    "text": "have planted"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "so far 用现在完成时；树被种植，用被动语态 have been planted。",
   "kp": "现在完成时的被动语态",
@@ -560,15 +560,15 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "visiting"
+    "text": "visited"
    },
    {
     "key": "D",
-    "text": "visited"
+    "text": "visiting"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "forget doing sth. 忘记做过某事（事情已经发生）；forget to do sth. 忘记要去做某事。last summer 说明已经去过。",
   "kp": "forget doing 与 forget to do",
@@ -593,7 +593,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "Don't give up!"
+    "text": "Never mind."
    },
    {
     "key": "B",
@@ -601,7 +601,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "Never mind."
+    "text": "Don't give up!"
    },
    {
     "key": "D",
@@ -609,7 +609,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "对方想放弃，鼓励他“别放弃”，与后文 keep working hard 呼应。",
   "kp": "情景交际",
@@ -636,11 +636,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "oldest"
+    "text": "youngest"
    },
    {
     "key": "B",
-    "text": "youngest"
+    "text": "oldest"
    },
    {
     "key": "C",
@@ -652,7 +652,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "10 岁、被说“自己还是个孩子”，是年龄最小的志愿者。",
   "kp": "上下文理解",
@@ -683,11 +683,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "whether"
+    "text": "what"
    },
    {
     "key": "C",
-    "text": "what"
+    "text": "whether"
    },
    {
     "key": "D",
@@ -695,7 +695,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "doubt 后接 whether/if 表示“怀疑是否”。",
   "kp": "宾语从句引导词",
@@ -726,11 +726,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "tore"
+    "text": "sorted"
    },
    {
     "key": "C",
-    "text": "sorted"
+    "text": "tore"
    },
    {
     "key": "D",
@@ -738,7 +738,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "按颜色把绘本整理分类，sort。",
   "kp": "动词辨析",
@@ -765,7 +765,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "nervous"
+    "text": "proud"
    },
    {
     "key": "B",
@@ -777,11 +777,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "D",
-    "text": "proud"
+    "text": "nervous"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "小孩子面对大人会紧张，所以来找同龄的 Mia。",
   "kp": "情感理解",
@@ -980,7 +980,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "lonely"
+    "text": "healthy"
    },
    {
     "key": "B",
@@ -992,11 +992,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "D",
-    "text": "healthy"
+    "text": "lonely"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "搬到城市后很孤单，阅读角是第一个让他有归属感的地方。",
   "kp": "上下文理解",
@@ -1023,11 +1023,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "promised"
+    "text": "showed"
    },
    {
     "key": "B",
-    "text": "showed"
+    "text": "promised"
    },
    {
     "key": "C",
@@ -1039,7 +1039,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "Mia 用行动向我们表明耐心更重要，show sb. that...。",
   "kp": "动词辨析",
@@ -1066,7 +1066,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "teach"
+    "text": "pay"
    },
    {
     "key": "B",
@@ -1074,7 +1074,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "pay"
+    "text": "teach"
    },
    {
     "key": "D",
@@ -1082,7 +1082,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "让 Mia 教新志愿者如何与小孩交流，teach sb. how to do。",
   "kp": "动词辨析",
@@ -1152,11 +1152,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "afraid"
+    "text": "willing"
    },
    {
     "key": "B",
-    "text": "willing"
+    "text": "afraid"
    },
    {
     "key": "C",
@@ -1168,7 +1168,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "每个人都需要一个愿意等待他的人，be willing to do。",
   "kp": "形容词辨析",
@@ -1195,7 +1195,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "reminding"
+    "text": "remind"
    },
    {
     "key": "B",
@@ -1207,11 +1207,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "D",
-    "text": "remind"
+    "text": "reminding"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "这句话写在墙上，提醒每位来访者，主动关系，用现在分词 reminding 作伴随结果。",
   "kp": "非谓语动词作伴随状语",
@@ -1242,7 +1242,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "means"
+    "text": "takes"
    },
    {
     "key": "C",
@@ -1250,11 +1250,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "D",
-    "text": "takes"
+    "text": "means"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "what kindness really means 善良真正意味着什么。",
   "kp": "动词辨析",
@@ -1281,11 +1281,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "Story Time."
+    "text": "Coding Club."
    },
    {
     "key": "B",
-    "text": "Coding Club."
+    "text": "Story Time."
    },
    {
     "key": "C",
@@ -1297,7 +1297,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "Story Time 面向 4—7 岁，Nature Drawing 也面向所有年龄，但选项中只有 Story Time。",
   "kp": "细节理解",
@@ -1324,7 +1324,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "Nothing."
+    "text": "¥60."
    },
    {
     "key": "B",
@@ -1332,7 +1332,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "¥60."
+    "text": "Nothing."
    },
    {
     "key": "D",
@@ -1340,7 +1340,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "非会员每本书 ¥15，每周一本，4 周共 15×4＝60 元。",
   "kp": "数字计算",
@@ -1371,11 +1371,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "Twice."
+    "text": "Every Sunday."
    },
    {
     "key": "C",
-    "text": "Every Sunday."
+    "text": "Twice."
    },
    {
     "key": "D",
@@ -1383,7 +1383,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "只在 7 月 21 日和 8 月 18 日两个周日举行。",
   "kp": "细节理解",
@@ -1414,7 +1414,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "Because places are limited."
+    "text": "Because members must pay more."
    },
    {
     "key": "C",
@@ -1422,11 +1422,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "D",
-    "text": "Because members must pay more."
+    "text": "Because places are limited."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "只有 20 个名额，先报先得。",
   "kp": "推理判断",
@@ -1453,11 +1453,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "Members can join every program for free."
+    "text": "Members can sign up earlier and get Book Talk books free."
    },
    {
     "key": "B",
-    "text": "Members can sign up earlier and get Book Talk books free."
+    "text": "Members can join every program for free."
    },
    {
     "key": "C",
@@ -1469,7 +1469,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "会员提前三天报名，且读书会的书免费。",
   "kp": "信息整合",
@@ -1500,7 +1500,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "The materials they could use were very limited."
+    "text": "They had to work alone."
    },
    {
     "key": "C",
@@ -1508,11 +1508,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "D",
-    "text": "They had to work alone."
+    "text": "The materials they could use were very limited."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "只有 50 张报纸和一卷胶带，材料很有限，所以抱怨。",
   "kp": "推理判断",
@@ -1539,7 +1539,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "The paper tubes were too thin."
+    "text": "The joints were not strong enough."
    },
    {
     "key": "B",
@@ -1547,7 +1547,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "The joints were not strong enough."
+    "text": "The paper tubes were too thin."
    },
    {
     "key": "D",
@@ -1555,7 +1555,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "管子没问题，薄弱点在连接处，胶带只粘了一面。",
   "kp": "细节理解",
@@ -1586,11 +1586,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "She wanted to understand how the design worked."
+    "text": "She believed their first bridge was the best."
    },
    {
     "key": "C",
-    "text": "She believed their first bridge was the best."
+    "text": "She wanted to understand how the design worked."
    },
    {
     "key": "D",
@@ -1598,7 +1598,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "Ana 说照抄学不到为什么能成功。",
   "kp": "推理判断",
@@ -1668,11 +1668,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "Winning is the most important thing."
+    "text": "Find the weak point of a problem before fixing it."
    },
    {
     "key": "B",
-    "text": "Find the weak point of a problem before fixing it."
+    "text": "Winning is the most important thing."
    },
    {
     "key": "C",
@@ -1684,7 +1684,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "最后一段：遇到难题，先找到薄弱点，再去解决。",
   "kp": "主旨大意",
@@ -1715,7 +1715,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "People forget most quickly soon after learning."
+    "text": "Only old people forget things quickly."
    },
    {
     "key": "C",
@@ -1723,11 +1723,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "D",
-    "text": "Only old people forget things quickly."
+    "text": "People forget most quickly soon after learning."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "新信息在第一天忘得最快，之后变慢。",
   "kp": "细节理解",
@@ -1801,11 +1801,11 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "B",
-    "text": "Highlighting important sentences."
+    "text": "Trying to remember information without looking at notes."
    },
    {
     "key": "C",
-    "text": "Trying to remember information without looking at notes."
+    "text": "Highlighting important sentences."
    },
    {
     "key": "D",
@@ -1813,7 +1813,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "合上书，写下你记得的内容，即主动回忆。",
   "kp": "词义猜测",
@@ -1840,7 +1840,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "To show that sleep helps memory."
+    "text": "To explain how exams are designed."
    },
    {
     "key": "B",
@@ -1848,7 +1848,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    },
    {
     "key": "C",
-    "text": "To explain how exams are designed."
+    "text": "To show that sleep helps memory."
    },
    {
     "key": "D",
@@ -1856,7 +1856,7 @@ window.NATIONAL_PAPERS["claude-2026-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "通宵的学生记得更少，用来说明睡眠对记忆的重要作用。",
   "kp": "写作意图",

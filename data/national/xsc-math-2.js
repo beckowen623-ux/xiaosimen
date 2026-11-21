@@ -65,11 +65,11 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    },
    {
     "key": "B",
-    "text": "1.293×10⁶"
+    "text": "1.293×10⁵"
    },
    {
     "key": "C",
-    "text": "1.293×10⁵"
+    "text": "1.293×10⁶"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "科学记数法写成 a×10ⁿ，1≤|a|＜10。1293000 是 7 位整数，n＝7－1＝6，写成 1.293×10⁶。“城镇人口占 68%”是干扰信息。",
   "kp": "科学记数法",
@@ -103,7 +103,7 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "(－3)²"
+    "text": "－3²"
    },
    {
     "key": "B",
@@ -115,11 +115,11 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    },
    {
     "key": "D",
-    "text": "－3²"
+    "text": "(－3)²"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "(－3)²＝9；－(－3)＝3；|－3|＝3；－3² 表示 3² 的相反数，等于 －9。坑点：－3² 和 (－3)² 不一样，底数不同。",
   "kp": "有理数的乘方",
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "3"
+    "text": "3 或 5"
    },
    {
     "key": "B",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    },
    {
     "key": "D",
-    "text": "3 或 5"
+    "text": "3"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "a＋b＝0，cd＝1，m＝±2 时 m² 都等于 4。原式＝0－1＋4＝3。坑点：m 有两个值，但平方后结果相同，答案只有一个。",
   "kp": "有理数的混合运算",
@@ -275,7 +275,7 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    },
    {
     "key": "B",
-    "text": "a、b 异号，且正数的绝对值较大"
+    "text": "a、b 都是负数"
    },
    {
     "key": "C",
@@ -283,11 +283,11 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    },
    {
     "key": "D",
-    "text": "a、b 都是负数"
+    "text": "a、b 异号，且正数的绝对值较大"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "ab＜0 说明两数异号；异号两数相加取绝对值较大的数的符号，和为正，说明正数的绝对值较大。",
   "kp": "有理数的乘除",
@@ -313,7 +313,7 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "－8÷2×1/2＝－8"
+    "text": "－(－2)³＝8"
    },
    {
     "key": "B",
@@ -325,13 +325,13 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    },
    {
     "key": "D",
-    "text": "－(－2)³＝8"
+    "text": "－8÷2×1/2＝－8"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
-  "explanation": "A 同级运算从左往右：－8÷2＝－4，－4×1/2＝－2；B (－3)³＝－27；C －1－1＝－2；D (－2)³＝－8，－(－8)＝8，正确。坑点：A 不能先算 2×1/2。",
+  "explanation": "A (－2)³＝－8，－(－8)＝8，正确；B (－3)³＝－27；C －1－1＝－2；D 同级运算从左往右：－8÷2＝－4，－4×1/2＝－2。坑点：D 不能先算 2×1/2。",
   "kp": "有理数的混合运算",
   "stem": "下列计算正确的是（ ）",
   "paperScore": 3,
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    },
    {
     "key": "B",
-    "text": "11℃"
+    "text": "－11℃"
    },
    {
     "key": "C",
-    "text": "－11℃"
+    "text": "11℃"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "温差＝最高气温－最低气温＝6－(－5)＝11（℃）。风力、湿度是干扰信息。",
   "kp": "有理数的加减",
@@ -401,7 +401,7 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    },
    {
     "key": "B",
-    "text": "10 厘米"
+    "text": "10 米"
    },
    {
     "key": "C",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["xsc-math-2"] = [
    },
    {
     "key": "D",
-    "text": "10 米"
+    "text": "10 厘米"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "对折 10 次，厚度是原来的 2¹⁰＝1024 倍，0.1×1024＝102.4 毫米，约 10 厘米。",
   "kp": "有理数的乘方",

@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "－√5"
+    "text": "1/3"
    },
    {
     "key": "B",
@@ -31,11 +31,11 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
    },
    {
     "key": "D",
-    "text": "1/3"
+    "text": "－√5"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "√5≈2.236，所以 －√5≈－2.236＜－2＜0＜1/3。",
   "kp": "实数大小比较",
@@ -60,7 +60,7 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "等边三角形"
+    "text": "圆"
    },
    {
     "key": "B",
@@ -72,11 +72,11 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
    },
    {
     "key": "D",
-    "text": "圆"
+    "text": "等边三角形"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "等边三角形、正五边形只是轴对称图形；一般平行四边形只是中心对称图形；圆两者都是。",
   "kp": "轴对称与中心对称",
@@ -105,7 +105,7 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
    },
    {
     "key": "B",
-    "text": "5.6×10¹²"
+    "text": "0.56×10¹³"
    },
    {
     "key": "C",
@@ -113,11 +113,11 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
    },
    {
     "key": "D",
-    "text": "0.56×10¹³"
+    "text": "5.6×10¹²"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "1 万亿＝10¹²，5.6 万亿＝5.6×10¹²。",
   "kp": "科学记数法",
@@ -224,11 +224,11 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "2"
+    "text": "4"
    },
    {
     "key": "B",
-    "text": "4"
+    "text": "2"
    },
    {
     "key": "C",
@@ -240,7 +240,7 @@ window.NATIONAL_PAPERS["claude-2026-math-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "(2＋4＋x＋6＋8)÷5＝5，x＝5。方差＝[(2－5)²＋(4－5)²＋0＋(6－5)²＋(8－5)²]÷5＝20÷5＝4。",
   "kp": "平均数与方差",

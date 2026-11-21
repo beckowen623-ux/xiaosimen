@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "粮食酿酒"
+    "text": "酒精挥发"
    },
    {
     "key": "C",
-    "text": "酒精挥发"
+    "text": "粮食酿酒"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "粮食酿酒生成了新物质酒精，是化学变化；其余只是状态或形状改变。",
   "kp": "物理变化与化学变化",
@@ -65,11 +65,11 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "稀释浓硫酸时，把水慢慢倒入浓硫酸中"
+    "text": "给试管里的液体加热时，液体体积不超过试管容积的 1/3"
    },
    {
     "key": "C",
-    "text": "给试管里的液体加热时，液体体积不超过试管容积的 1/3"
+    "text": "稀释浓硫酸时，把水慢慢倒入浓硫酸中"
    },
    {
     "key": "D",
@@ -77,9 +77,9 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
-  "explanation": "A 易引起失火；B 应把浓硫酸沿器壁慢慢注入水中并搅拌；D 会污染待测液，应用玻璃棒蘸取滴在试纸上。",
+  "explanation": "A 易引起失火；C 应把浓硫酸沿器壁慢慢注入水中并搅拌；D 会污染待测液，应用玻璃棒蘸取滴在试纸上。",
   "kp": "实验基本操作",
   "stem": "下列实验操作正确的是（ ）",
   "paperScore": 2.5,
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "options": [
    {
     "key": "A",
-    "text": "洁净的空气"
+    "text": "冰水混合物"
    },
    {
     "key": "B",
-    "text": "冰水混合物"
+    "text": "洁净的空气"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "冰和水都是 H₂O，只是状态不同，冰水混合物是纯净物。坑点：名字里有“混合物”不代表就是混合物。",
   "kp": "物质的分类",
@@ -149,7 +149,7 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "分子在不断地运动"
+    "text": "分子的体积随温度升高而变大"
    },
    {
     "key": "C",
@@ -157,13 +157,13 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    },
    {
     "key": "D",
-    "text": "分子的体积随温度升高而变大"
+    "text": "分子在不断地运动"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "花香分子不断运动扩散到墙外。温度升高时分子间隔变大，分子本身的体积不变，D 错。",
+  "explanation": "花香分子不断运动扩散到墙外。温度升高时分子间隔变大，分子本身的体积不变，B 错。",
   "kp": "分子的性质",
   "stem": "“墙内开花墙外香”，用分子的观点解释，主要原因是（ ）",
   "paperScore": 2.5,
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "硒原子的核内质子数为 34"
+    "text": "硒的相对原子质量为 78.96 g"
    },
    {
     "key": "C",
-    "text": "硒的相对原子质量为 78.96 g"
+    "text": "硒原子的核内质子数为 34"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "“硒”是石字旁，属于非金属元素；原子序数＝质子数＝核外电子数＝34；相对原子质量的单位是“1”，不是“g”。",
   "kp": "元素周期表",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "options": [
    {
     "key": "A",
-    "text": "－1"
+    "text": "＋1"
    },
    {
     "key": "B",
-    "text": "＋1"
+    "text": "－1"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "Na 为 ＋1，O 为 －2，设 Cl 为 x：＋1＋x－2＝0，x＝＋1。",
   "kp": "化合价",
@@ -397,11 +397,11 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
   "options": [
    {
     "key": "A",
-    "text": "NaCl、KNO₃、Na₂SO₄"
+    "text": "NaOH、NaCl、KNO₃"
    },
    {
     "key": "B",
-    "text": "NaOH、NaCl、KNO₃"
+    "text": "NaCl、KNO₃、Na₂SO₄"
    },
    {
     "key": "C",
@@ -413,9 +413,9 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
-  "explanation": "pH＝1 的溶液中含大量 H⁺。B 中 OH⁻ 与 H⁺ 反应生成水；D 中 CO₃²⁻ 与 H⁺ 反应生成 CO₂；C 能共存，但 CuSO₄ 溶液呈蓝色。坑点：题目有“无色”和“酸性”两个隐含条件。",
+  "explanation": "pH＝1 的溶液中含大量 H⁺。A 中 OH⁻ 与 H⁺ 反应生成水；C 能共存，但 CuSO₄ 溶液呈蓝色；D 中 CO₃²⁻ 与 H⁺ 反应生成 CO₂。坑点：题目有“无色”和“酸性”两个隐含条件。",
   "kp": "离子共存",
   "stem": "下列各组物质在 pH＝1 的溶液中能大量共存，且得到无色溶液的是（ ）",
   "paperScore": 2.5,
@@ -443,7 +443,7 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "NaCl 溶液（Na₂CO₃）：加入适量稀盐酸"
+    "text": "铁粉（铜粉）：加足量稀硫酸，过滤"
    },
    {
     "key": "C",
@@ -451,13 +451,13 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    },
    {
     "key": "D",
-    "text": "铁粉（铜粉）：加足量稀硫酸，过滤"
+    "text": "NaCl 溶液（Na₂CO₃）：加入适量稀盐酸"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "A 二氧化碳中少量 CO 无法点燃，且会引入氧气；B Na₂CO₃＋2HCl＝2NaCl＋H₂O＋CO₂↑，不引入新杂质；C CaO 会与水反应，把要保留的物质除掉了；D 稀硫酸除掉的是铁。",
+  "explanation": "A 二氧化碳中少量 CO 无法点燃，且会引入氧气；B 稀硫酸除掉的是铁；C CaO 会与水反应，把要保留的物质除掉了；D Na₂CO₃＋2HCl＝2NaCl＋H₂O＋CO₂↑，不引入新杂质。",
   "kp": "物质的除杂",
   "stem": "下列除去杂质（括号内为杂质）的方法正确的是（ ）",
   "paperScore": 2.5,
@@ -485,7 +485,7 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    },
    {
     "key": "B",
-    "text": "先产生气泡，盐酸反应完后才开始产生白色沉淀"
+    "text": "生成沉淀的质量从一开始就逐渐增大"
    },
    {
     "key": "C",
@@ -493,11 +493,11 @@ window.NATIONAL_PAPERS["earlybird-2027-chemistry"] = [
    },
    {
     "key": "D",
-    "text": "生成沉淀的质量从一开始就逐渐增大"
+    "text": "先产生气泡，盐酸反应完后才开始产生白色沉淀"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "碳酸钠先与盐酸反应产生 CO₂；即使先生成 CaCO₃，也会被盐酸溶解，所以盐酸反应完后才出现沉淀。pH 由小于 7 逐渐升到 7，氯化钙反应完后碳酸钠过量，pH 大于 7。",
   "kp": "复分解反应的先后顺序",

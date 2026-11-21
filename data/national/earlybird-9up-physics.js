@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "B",
-    "text": "分子在不停地做无规则运动"
+    "text": "破碎处分子间距离太大，分子间作用力几乎为零"
    },
    {
     "key": "C",
-    "text": "破碎处分子间距离太大，分子间作用力几乎为零"
+    "text": "分子在不停地做无规则运动"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "分子间的引力只在距离很小时起作用，镜子破碎处的分子间距离远大于分子直径，作用力几乎为零。坑点：分子间同时存在引力和斥力，A 错。",
   "kp": "分子动理论",
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "冬天晒太阳感到暖和"
+    "text": "两手互相搓动，手掌发热"
    },
    {
     "key": "B",
@@ -69,7 +69,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "C",
-    "text": "两手互相搓动，手掌发热"
+    "text": "冬天晒太阳感到暖和"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "搓手是克服摩擦做功，机械能转化为内能；其余三项都是热传递。",
   "kp": "改变内能的方式",
@@ -107,7 +107,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "B",
-    "text": "水的比热容比砂石大"
+    "text": "沿海地区空气湿度大"
    },
    {
     "key": "C",
@@ -115,11 +115,11 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "D",
-    "text": "沿海地区空气湿度大"
+    "text": "水的比热容比砂石大"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "水的比热容大，吸收或放出相同热量时温度变化小，所以沿海地区昼夜温差小。",
   "kp": "比热容",
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "吸气冲程"
+    "text": "做功冲程"
    },
    {
     "key": "B",
@@ -153,7 +153,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "C",
-    "text": "做功冲程"
+    "text": "吸气冲程"
    },
    {
     "key": "D",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "做功冲程内能转化为机械能；压缩冲程机械能转化为内能。坑点：这两个冲程的能量转化方向正好相反。",
   "kp": "热机",
@@ -195,15 +195,15 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "C",
-    "text": "箔片张开是因为带了同种电荷相互排斥"
+    "text": "接触时电子从玻璃棒转移到验电器"
    },
    {
     "key": "D",
-    "text": "接触时电子从玻璃棒转移到验电器"
+    "text": "箔片张开是因为带了同种电荷相互排斥"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "丝绸摩擦过的玻璃棒带正电（缺少电子）。接触时验电器上的电子转移到玻璃棒，箔片带正电，同种电荷相互排斥而张开。",
   "kp": "电荷与验电器",
@@ -233,11 +233,11 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "B",
-    "text": "光控开关与声控开关串联后，再与灯串联"
+    "text": "光控开关与灯串联，声控开关与灯并联"
    },
    {
     "key": "C",
-    "text": "光控开关与灯串联，声控开关与灯并联"
+    "text": "光控开关与声控开关串联后，再与灯串联"
    },
    {
     "key": "D",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "要求两个条件同时满足灯才亮，两个开关应串联。并联则只要满足一个条件灯就会亮。",
   "kp": "电路设计",
@@ -313,11 +313,11 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "L₁ 两端的电压比 L₂ 大"
+    "text": "L₁、L₂ 两端的电压相等"
    },
    {
     "key": "B",
-    "text": "L₁、L₂ 两端的电压相等"
+    "text": "L₁ 两端的电压比 L₂ 大"
    },
    {
     "key": "C",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "并联电路各支路两端电压相等。L₁ 更亮，说明通过 L₁ 的电流更大，L₁ 的电阻更小。",
   "kp": "并联电路的电压规律",
@@ -359,7 +359,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "B",
-    "text": "导体的电阻与通过它的电流成反比"
+    "text": "导体的电阻由导体本身决定，与电压、电流无关"
    },
    {
     "key": "C",
@@ -367,11 +367,11 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "D",
-    "text": "导体的电阻由导体本身决定，与电压、电流无关"
+    "text": "导体的电阻与通过它的电流成反比"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "电阻是导体本身的性质，由材料、长度、横截面积和温度决定。R＝U/I 只是计算电阻的方法。",
   "kp": "电阻",
@@ -401,11 +401,11 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    },
    {
     "key": "B",
-    "text": "L₁ 断路"
+    "text": "L₂ 短路"
    },
    {
     "key": "C",
-    "text": "L₂ 短路"
+    "text": "L₁ 断路"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-9up-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "两灯都不亮，说明电路断路。电压表接在 L₁ 两端示数接近电源电压，说明电压表与电源两极之间是通的，断点在 L₁ 处。",
   "kp": "电路故障判断",

@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "青春期的心理矛盾是不正常的，应该消除"
+    "text": "既渴望独立又依赖父母是青春期常见的心理矛盾"
    },
    {
     "key": "B",
-    "text": "既渴望独立又依赖父母是青春期常见的心理矛盾"
+    "text": "青春期的心理矛盾是不正常的，应该消除"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "青春期出现心理矛盾是正常的，可以通过积极的方式调节，也可以向他人求助。",
   "kp": "青春期的心理",
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "B",
-    "text": "运动会上，同学们为本班运动员呐喊助威，并主动为其他班级送水"
+    "text": "只关心自己的成绩，不参加集体活动"
    },
    {
     "key": "C",
-    "text": "只关心自己的成绩，不参加集体活动"
+    "text": "运动会上，同学们为本班运动员呐喊助威，并主动为其他班级送水"
    },
    {
     "key": "D",
@@ -203,9 +203,9 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
-  "explanation": "维护集体荣誉要用正当的方式，不能违反规则或隐瞒错误；B 既维护本班荣誉，又体现友好精神。",
+  "explanation": "维护集体荣誉要用正当的方式，不能违反规则或隐瞒错误；C 既维护本班荣誉，又体现友好精神。",
   "kp": "集体荣誉感",
   "stem": "集体荣誉感是集体成员共有的情感。下列行为体现了集体荣誉感的是（ ）",
   "paperScore": 2.5,
@@ -275,7 +275,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "B",
-    "text": "社会公德，破坏了社会秩序"
+    "text": "刑法，应承担刑事责任"
    },
    {
     "key": "C",
@@ -283,11 +283,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "D",
-    "text": "刑法，应承担刑事责任"
+    "text": "社会公德，破坏了社会秩序"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "大声喧哗、随地吐痰主要违反社会公德，影响公共秩序；一般不构成犯罪。",
   "kp": "社会规则与社会秩序",
@@ -317,11 +317,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "B",
-    "text": "犯罪是最严重的违法行为，具有严重社会危害性、刑事违法性和应受刑罚处罚性"
+    "text": "一般违法行为不需要承担法律责任"
    },
    {
     "key": "C",
-    "text": "一般违法行为不需要承担法律责任"
+    "text": "犯罪是最严重的违法行为，具有严重社会危害性、刑事违法性和应受刑罚处罚性"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "一切犯罪都是违法行为，但违法行为不一定是犯罪；一般违法也要承担民事或行政责任；未成年人达到刑事责任年龄的，犯罪也要依法承担刑事责任。",
   "kp": "违法与犯罪",
@@ -401,7 +401,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "B",
-    "text": "宪法规定的是国家生活中最根本、最重要的问题，具有最高的法律效力"
+    "text": "宪法规定了公民的所有权利"
    },
    {
     "key": "C",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "D",
-    "text": "宪法规定了公民的所有权利"
+    "text": "宪法规定的是国家生活中最根本、最重要的问题，具有最高的法律效力"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "宪法规定国家的根本制度和根本任务等最根本问题，具有最高法律效力，制定和修改程序最严格。",
   "kp": "宪法的地位",
@@ -439,7 +439,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "决定当代中国命运的关键一招"
+    "text": "解决一切问题的唯一办法"
    },
    {
     "key": "B",
@@ -447,7 +447,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "C",
-    "text": "解决一切问题的唯一办法"
+    "text": "决定当代中国命运的关键一招"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "改革开放是决定当代中国命运的关键一招，也是决定实现中华民族伟大复兴的关键一招。",
   "kp": "改革开放",
@@ -489,15 +489,15 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "C",
-    "text": "既是最大的国情，也是最大的实际"
+    "text": "根本任务"
    },
    {
     "key": "D",
-    "text": "根本任务"
+    "text": "既是最大的国情，也是最大的实际"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "我国仍处于并将长期处于社会主义初级阶段，这是我国的基本国情，是最大的国情、最大的实际。",
   "kp": "基本国情",
@@ -523,11 +523,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "我国的一切权力属于政府"
+    "text": "公民通过多种渠道参与民主决策和民主监督"
    },
    {
     "key": "B",
-    "text": "公民通过多种渠道参与民主决策和民主监督"
+    "text": "我国的一切权力属于政府"
    },
    {
     "key": "C",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "群众通过热线、留言板等渠道反映意见，政府据此改进政策，体现公民参与民主决策和民主监督。",
   "kp": "参与民主生活",
@@ -565,11 +565,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "建设中国特色社会主义法治体系，建设社会主义法治国家"
+    "text": "实现社会主义现代化"
    },
    {
     "key": "B",
-    "text": "实现社会主义现代化"
+    "text": "建设中国特色社会主义法治体系，建设社会主义法治国家"
    },
    {
     "key": "C",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "全面依法治国的总目标是建设中国特色社会主义法治体系，建设社会主义法治国家。",
   "kp": "全面依法治国",
@@ -607,11 +607,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "中华文化只包括汉族文化"
+    "text": "中华优秀传统文化是中华民族的“根”和“魂”"
    },
    {
     "key": "B",
-    "text": "中华优秀传统文化是中华民族的“根”和“魂”"
+    "text": "中华文化只包括汉族文化"
    },
    {
     "key": "C",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "中华文化是各民族共同创造的；对待传统文化要取其精华、去其糟粕；对待外来文化要取长补短、兼收并蓄。",
   "kp": "中华文化",
@@ -653,11 +653,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "B",
-    "text": "节约资源和保护环境的基本国策"
+    "text": "只发展经济，不顾环境"
    },
    {
     "key": "C",
-    "text": "只发展经济，不顾环境"
+    "text": "节约资源和保护环境的基本国策"
    },
    {
     "key": "D",
@@ -665,7 +665,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "节约资源和保护环境是我国的基本国策。",
   "kp": "资源与环境",
@@ -733,7 +733,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
   "options": [
    {
     "key": "A",
-    "text": "“和平统一、一国两制”"
+    "text": "维持现状"
    },
    {
     "key": "B",
@@ -745,11 +745,11 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "D",
-    "text": "维持现状"
+    "text": "“和平统一、一国两制”"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "解决台湾问题、实现祖国完全统一的基本方针是“和平统一、一国两制”。",
   "kp": "祖国统一",
@@ -821,7 +821,7 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "B",
-    "text": "青少年可以通过合理途径参与公共事务，为家乡发展贡献力量"
+    "text": "参与公共事务只是成年人的事"
    },
    {
     "key": "C",
@@ -829,13 +829,13 @@ window.NATIONAL_PAPERS["earlybird-9up-daode"] = [
    },
    {
     "key": "D",
-    "text": "参与公共事务只是成年人的事"
+    "text": "青少年可以通过合理途径参与公共事务，为家乡发展贡献力量"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "青少年可以通过合理途径参与公共事务，承担社会责任。A、C 说法绝对，D 错误。",
+  "explanation": "青少年可以通过合理途径参与公共事务，承担社会责任。A、C 说法绝对，B 错误。",
   "kp": "参与公共生活",
   "stem": "某中学开展“我为家乡献一策”活动，同学们调查家乡发展中的问题，提出了不少合理建议，被当地政府采纳。这说明（ ）",
   "paperScore": 2.5,

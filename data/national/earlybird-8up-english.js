@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "B",
-    "text": "did"
+    "text": "are"
    },
    {
     "key": "C",
-    "text": "are"
+    "text": "did"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "last summer 是过去时间，用助动词 did。",
   "kp": "一般过去时",
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "taller; the tallest"
+    "text": "more tall; the most tall"
    },
    {
     "key": "B",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "D",
-    "text": "more tall; the most tall"
+    "text": "taller; the tallest"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "than 前用比较级 taller；在家里三者以上比较用最高级 the tallest。",
   "kp": "比较级和最高级",
@@ -187,11 +187,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "rain"
+    "text": "rains"
    },
    {
     "key": "B",
-    "text": "rains"
+    "text": "rain"
    },
    {
     "key": "C",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "if 引导条件状语从句，主将从现：主句用将来时，从句用一般现在时，it 是第三人称单数，用 rains。",
   "kp": "条件状语从句",
@@ -233,7 +233,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "B",
-    "text": "will be"
+    "text": "has"
    },
    {
     "key": "C",
@@ -241,11 +241,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "D",
-    "text": "has"
+    "text": "will be"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "in ten years 表将来，there be 的将来时是 there will be。",
   "kp": "一般将来时",
@@ -275,11 +275,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "B",
-    "text": "I'm sorry, I can't"
+    "text": "Yes, I can"
    },
    {
     "key": "C",
-    "text": "Yes, I can"
+    "text": "I'm sorry, I can't"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "后面说要准备数学考试，所以是拒绝邀请：I'm sorry, I can't。",
   "kp": "交际用语",
@@ -313,11 +313,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "cut up"
+    "text": "cut them up"
    },
    {
     "key": "B",
-    "text": "cut them up"
+    "text": "cut up"
    },
    {
     "key": "C",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "cut up 后接名词时，名词可放中间或后面：cut up three bananas。代词才必须放中间。C 代词放后面是错的。",
   "kp": "动词短语",
@@ -397,11 +397,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "You're welcome"
+    "text": "Never mind"
    },
    {
     "key": "B",
-    "text": "Never mind"
+    "text": "You're welcome"
    },
    {
     "key": "C",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "回应感谢用 You're welcome。",
   "kp": "交际用语",
@@ -441,11 +441,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "spent"
+    "text": "cost"
    },
    {
     "key": "B",
-    "text": "cost"
+    "text": "spent"
    },
    {
     "key": "C",
@@ -457,7 +457,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "人作主语，花费时间用 spend…in/doing，过去式 spent。cost 主语是物，take 用 it takes sb. time to do。",
   "kp": "动词辨析",
@@ -529,7 +529,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "bored"
+    "text": "surprised"
    },
    {
     "key": "B",
@@ -541,11 +541,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "D",
-    "text": "surprised"
+    "text": "bored"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "村里没有商场和电影院，起初觉得有点无聊；后文 But soon I found many interesting things 形成转折。",
   "kp": "上下文",
@@ -573,7 +573,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "eager"
+    "text": "lazy"
    },
    {
     "key": "B",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "C",
-    "text": "lazy"
+    "text": "eager"
    },
    {
     "key": "D",
@@ -589,7 +589,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "but 转折：起初害羞，但非常渴望学习，be eager to do sth.。",
   "kp": "上下文",
@@ -617,7 +617,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "how"
+    "text": "why"
    },
    {
     "key": "B",
@@ -629,11 +629,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "D",
-    "text": "why"
+    "text": "how"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "教我怎样在河里抓鱼：how to catch fish。",
   "kp": "疑问词＋不定式",
@@ -661,11 +661,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "the children"
+    "text": "the teachers"
    },
    {
     "key": "B",
-    "text": "the teachers"
+    "text": "the children"
    },
    {
     "key": "C",
@@ -677,7 +677,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "和城里认识的孩子比较。",
   "kp": "上下文",
@@ -705,7 +705,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "singing"
+    "text": "to sing"
    },
    {
     "key": "B",
@@ -717,11 +717,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "D",
-    "text": "to sing"
+    "text": "singing"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "现在分词短语作伴随状语，表示“正在和孩子们唱歌”。",
   "kp": "非谓语动词",
@@ -749,11 +749,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "to say"
+    "text": "saying"
    },
    {
     "key": "B",
-    "text": "saying"
+    "text": "to say"
    },
    {
     "key": "C",
@@ -765,7 +765,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "didn't know what to say 不知道说什么好。",
   "kp": "疑问词＋不定式",
@@ -837,7 +837,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "what"
+    "text": "which"
    },
    {
     "key": "B",
@@ -845,7 +845,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "C",
-    "text": "which"
+    "text": "what"
    },
    {
     "key": "D",
@@ -853,7 +853,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "与后句 It comes from what we give 对应：幸福不来自我们拥有的东西。what 引导宾语从句并作 have 的宾语。",
   "kp": "宾语从句",
@@ -929,7 +929,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "B",
-    "text": "¥24."
+    "text": "¥6."
    },
    {
     "key": "C",
@@ -937,11 +937,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "D",
-    "text": "¥6."
+    "text": "¥24."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "20% off 是打八折：30×80%＝24 元。坑点：把“打八折”理解成“减 20 元”。",
   "kp": "推理判断",
@@ -973,11 +973,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "B",
-    "text": "On Tuesday."
+    "text": "On Friday."
    },
    {
     "key": "C",
-    "text": "On Friday."
+    "text": "On Tuesday."
    },
    {
     "key": "D",
@@ -985,7 +985,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "Popcorn is free on Tuesdays。",
   "kp": "细节理解",
@@ -1013,7 +1013,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "City Cinema is the closest to the school."
+    "text": "Star Cinema is closer to the school than City Cinema."
    },
    {
     "key": "B",
@@ -1021,7 +1021,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "C",
-    "text": "Star Cinema is closer to the school than City Cinema."
+    "text": "City Cinema is the closest to the school."
    },
    {
     "key": "D",
@@ -1029,7 +1029,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "Star Cinema 离学校 500 米，City Cinema 5 千米。City 最远、最便宜、常放老电影；Sun 最贵。",
   "kp": "细节理解",
@@ -1061,11 +1061,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "B",
-    "text": "Star Cinema."
+    "text": "City Cinema."
    },
    {
     "key": "C",
-    "text": "City Cinema."
+    "text": "Star Cinema."
    },
    {
     "key": "D",
@@ -1073,7 +1073,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "没有学生卡，Star 要 30 元，Sun 要 45 元，只有 City（25 元）买得起。",
   "kp": "推理判断",
@@ -1105,7 +1105,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "B",
-    "text": "Work in factories and clean houses."
+    "text": "Think like humans."
    },
    {
     "key": "C",
@@ -1113,11 +1113,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "D",
-    "text": "Think like humans."
+    "text": "Work in factories and clean houses."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "第一段：They can work in factories, clean houses and even help doctors。",
   "kp": "细节理解",
@@ -1145,11 +1145,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Robots will be in every home."
+    "text": "Robots will disappear."
    },
    {
     "key": "B",
-    "text": "Robots will disappear."
+    "text": "Robots will be in every home."
    },
    {
     "key": "C",
@@ -1161,7 +1161,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "in 50 years, robots will be in every home。",
   "kp": "细节理解",
@@ -1193,7 +1193,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "B",
-    "text": "Robots can't think like humans."
+    "text": "Robots can understand jokes."
    },
    {
     "key": "C",
@@ -1201,11 +1201,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "D",
-    "text": "Robots can understand jokes."
+    "text": "Robots can't think like humans."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "Robots won't be able to think like humans。",
   "kp": "细节理解",
@@ -1277,7 +1277,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Completely against them."
+    "text": "Objective, showing different opinions."
    },
    {
     "key": "B",
@@ -1285,7 +1285,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "C",
-    "text": "Objective, showing different opinions."
+    "text": "Completely against them."
    },
    {
     "key": "D",
@@ -1293,7 +1293,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "作者列出了支持和反对两种观点，也提到担忧，结尾提问让读者思考，态度客观。",
   "kp": "写作态度",
@@ -1373,15 +1373,15 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "C",
-    "text": "Oranges."
+    "text": "Grapes."
    },
    {
     "key": "D",
-    "text": "Grapes."
+    "text": "Oranges."
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "Don't cut the grapes — they are small enough。",
   "kp": "细节理解",
@@ -1417,15 +1417,15 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    },
    {
     "key": "C",
-    "text": "Add honey and yogurt."
+    "text": "Put it in the fridge."
    },
    {
     "key": "D",
-    "text": "Put it in the fridge."
+    "text": "Add honey and yogurt."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "After that, put all the fruit into a big bowl. Add two spoons of honey and some yogurt。",
   "kp": "细节理解",
@@ -1497,11 +1497,11 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "a story book"
+    "text": "a cookbook"
    },
    {
     "key": "B",
-    "text": "a cookbook"
+    "text": "a story book"
    },
    {
     "key": "C",
@@ -1513,7 +1513,7 @@ window.NATIONAL_PAPERS["earlybird-8up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "介绍食材和做法步骤，可能出自菜谱。",
   "kp": "文章出处",

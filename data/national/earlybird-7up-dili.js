@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "B",
-    "text": "站在海边看远处驶来的船，总是先看到桅杆，后看到船身"
+    "text": "一年有四季变化"
    },
    {
     "key": "C",
-    "text": "一年有四季变化"
+    "text": "站在海边看远处驶来的船，总是先看到桅杆，后看到船身"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "船从远处驶来先见桅杆后见船身，是因为地面是弯曲的球面。太阳东升西落、四季变化、昼夜现象与地球运动或不透明有关。",
   "kp": "地球的形状",
@@ -107,11 +107,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "B",
-    "text": "170°E"
+    "text": "150°E"
    },
    {
     "key": "C",
-    "text": "150°E"
+    "text": "170°E"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "西半球范围是 20°W 往西到 160°E。170°E 大于 160°E，属于西半球；10°W、0°、150°E 都属于东半球。",
   "kp": "经纬度与半球划分",
@@ -187,11 +187,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "赤道；昼夜等长"
+    "text": "北回归线；昼最长夜最短"
    },
    {
     "key": "B",
-    "text": "北回归线；昼最长夜最短"
+    "text": "赤道；昼夜等长"
    },
    {
     "key": "C",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "夏至日（6 月 22 日前后）太阳直射北回归线，北半球昼最长、夜最短。",
   "kp": "地球运动",
@@ -233,7 +233,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "B",
-    "text": "北温带"
+    "text": "北寒带"
    },
    {
     "key": "C",
@@ -241,11 +241,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "D",
-    "text": "北寒带"
+    "text": "北温带"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "我国大部分地区位于北回归线和北极圈之间，属于北温带，南部少部分地区位于热带。",
   "kp": "地球运动",
@@ -317,7 +317,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "B",
-    "text": "表示的范围越小，内容越详细"
+    "text": "表示的范围越小，内容越简略"
    },
    {
     "key": "C",
@@ -325,11 +325,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "D",
-    "text": "表示的范围越小，内容越简略"
+    "text": "表示的范围越小，内容越详细"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "图幅相同时，比例尺越大，表示的范围越小，内容越详细。",
   "kp": "比例尺",
@@ -401,11 +401,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "B",
-    "text": "坡度越陡"
+    "text": "海拔越高"
    },
    {
     "key": "C",
-    "text": "海拔越高"
+    "text": "坡度越陡"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "等高线密集，说明在较短的水平距离内高度变化大，坡陡。",
   "kp": "等高线地形图",
@@ -439,7 +439,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "陆地面积大于海洋面积"
+    "text": "北半球陆地面积比南半球大，但无论南北半球，海洋面积都大于陆地面积"
    },
    {
     "key": "B",
@@ -447,7 +447,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "C",
-    "text": "北半球陆地面积比南半球大，但无论南北半球，海洋面积都大于陆地面积"
+    "text": "陆地面积大于海洋面积"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "地球表面约 71% 是海洋、29% 是陆地，即“三分陆地，七分海洋”。陆地主要集中在北半球，但南北半球都是海洋面积大于陆地面积。",
   "kp": "海陆分布",
@@ -489,15 +489,15 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "C",
-    "text": "亚洲、太平洋"
+    "text": "南极洲、北冰洋"
    },
    {
     "key": "D",
-    "text": "南极洲、北冰洋"
+    "text": "亚洲、太平洋"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "亚洲是面积最大的大洲，太平洋是面积最大的大洋。",
   "kp": "大洲和大洋",
@@ -523,11 +523,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "乌拉尔山脉"
+    "text": "苏伊士运河"
    },
    {
     "key": "B",
-    "text": "苏伊士运河"
+    "text": "乌拉尔山脉"
    },
    {
     "key": "C",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "亚非分界线是苏伊士运河；亚欧分界线有乌拉尔山脉等；巴拿马运河是南北美洲分界；白令海峡是亚洲和北美洲的分界。",
   "kp": "大洲和大洋",
@@ -565,11 +565,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "这里过去曾是海洋，海陆在不断变迁"
+    "text": "古代有人把海洋生物带上了山"
    },
    {
     "key": "B",
-    "text": "古代有人把海洋生物带上了山"
+    "text": "这里过去曾是海洋，海陆在不断变迁"
    },
    {
     "key": "C",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "海洋生物化石说明这里曾是海洋，由于板块碰撞挤压，地壳隆起形成高大山脉，证明海陆在变迁。",
   "kp": "板块构造",
@@ -611,7 +611,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "B",
-    "text": "板块交界地带"
+    "text": "大陆中部"
    },
    {
     "key": "C",
@@ -619,11 +619,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "D",
-    "text": "大陆中部"
+    "text": "板块交界地带"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "板块交界地带地壳比较活跃，多火山、地震。",
   "kp": "板块构造",
@@ -649,7 +649,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "昆明四季如春"
+    "text": "明天多云转小雨，有 3～4 级东南风"
    },
    {
     "key": "B",
@@ -657,7 +657,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "C",
-    "text": "明天多云转小雨，有 3～4 级东南风"
+    "text": "昆明四季如春"
    },
    {
     "key": "D",
@@ -665,9 +665,9 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
-  "explanation": "天气是短时间内的大气状况，变化快；气候是多年的天气平均状况，比较稳定。A、B、D 描述的都是气候。",
+  "explanation": "天气是短时间内的大气状况，变化快；气候是多年的天气平均状况，比较稳定。B、C、D 描述的都是气候。",
   "kp": "天气与气候",
   "stem": "下列描述中，属于天气的是（ ）",
   "paperScore": 2.5,
@@ -699,15 +699,15 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "C",
-    "text": "气象上把每天 14 时左右的气温看作一天中的最高气温"
+    "text": "降水量的单位是厘米"
    },
    {
     "key": "D",
-    "text": "降水量的单位是厘米"
+    "text": "气象上把每天 14 时左右的气温看作一天中的最高气温"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "一天中最高气温出现在午后 2 时左右；空气质量指数越大，空气质量越差；风向指风吹来的方向；降水量单位是毫米。",
   "kp": "天气与气候",
@@ -821,11 +821,11 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    },
    {
     "key": "B",
-    "text": "热带草原气候"
+    "text": "热带沙漠气候"
    },
    {
     "key": "C",
-    "text": "热带沙漠气候"
+    "text": "热带草原气候"
    },
    {
     "key": "D",
@@ -833,7 +833,7 @@ window.NATIONAL_PAPERS["earlybird-7up-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "热带草原气候全年高温，有明显的干湿两季；热带雨林气候全年高温多雨；热带沙漠气候全年炎热干燥；地中海气候夏季炎热干燥、冬季温和多雨。",
   "kp": "世界气候类型",

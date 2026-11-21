@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "is"
+    "text": "have"
    },
    {
     "key": "B",
@@ -31,11 +31,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "D",
-    "text": "have"
+    "text": "is"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "就近原则：离 be 最近的是 a library，用 is。表示“某地有某物”用 there be，不用 has/have。",
   "kp": "there be 句型",
@@ -103,7 +103,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "What"
+    "text": "Who"
    },
    {
     "key": "B",
@@ -111,7 +111,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "C",
-    "text": "Who"
+    "text": "What"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "问最喜欢的科目是什么，用 what。",
   "kp": "特殊疑问句",
@@ -187,11 +187,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "in"
+    "text": "on"
    },
    {
     "key": "B",
-    "text": "on"
+    "text": "in"
    },
    {
     "key": "C",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "在星期几用 on。",
   "kp": "时间介词",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "Mr. Hu."
+    "text": "He is tall."
    },
    {
     "key": "B",
-    "text": "He is tall."
+    "text": "Mr. Hu."
    },
    {
     "key": "C",
@@ -245,9 +245,9 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
-  "explanation": "问“是谁”，回答人名。B 描述外貌，回答的是 What is he like?",
+  "explanation": "问“是谁”，回答人名。A 描述外貌，回答的是 What is he like?",
   "kp": "特殊疑问句",
   "stem": "—Who is your music teacher?\n—______",
   "paperScore": 2,
@@ -313,7 +313,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "at; on"
+    "text": "in; on"
    },
    {
     "key": "B",
@@ -325,11 +325,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "D",
-    "text": "in; on"
+    "text": "at; on"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "具体时刻用 at；具体某一天的早上（Monday morning）用 on。坑点：in the morning 是泛指，前面有 Monday 就要用 on。",
   "kp": "时间介词",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "art"
+    "text": "history"
    },
    {
     "key": "B",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "C",
-    "text": "history"
+    "text": "art"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "每天画画，喜欢美术 art。",
   "kp": "词汇",
@@ -397,11 +397,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "don't"
+    "text": "aren't"
    },
    {
     "key": "B",
-    "text": "aren't"
+    "text": "don't"
    },
    {
     "key": "C",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "Do you...? 用 do/don't 回答，主语 we，用 don't。",
   "kp": "一般现在时",
@@ -439,7 +439,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "around"
+    "text": "between"
    },
    {
     "key": "B",
@@ -447,7 +447,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "C",
-    "text": "between"
+    "text": "around"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "树长在操场四周，用 around。",
   "kp": "方位介词",
@@ -531,15 +531,15 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "C",
-    "text": "but"
+    "text": "so"
    },
    {
     "key": "D",
-    "text": "so"
+    "text": "but"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "喜欢语文，“但是”不喜欢数学，前后转折，用 but。",
   "kp": "连词",
@@ -565,11 +565,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "It doesn't matter."
+    "text": "My pleasure."
    },
    {
     "key": "B",
-    "text": "My pleasure."
+    "text": "It doesn't matter."
    },
    {
     "key": "C",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "别人感谢你的帮助，回答 My pleasure（不客气，我很乐意）。It doesn't matter 是回答道歉的。",
   "kp": "交际用语",
@@ -607,7 +607,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "It's great! The teachers are very friendly."
+    "text": "Yes, I do."
    },
    {
     "key": "B",
@@ -619,11 +619,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "D",
-    "text": "Yes, I do."
+    "text": "It's great! The teachers are very friendly."
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "How do you like...? 问“觉得……怎么样”，要回答看法。",
   "kp": "交际用语",
@@ -651,7 +651,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "at"
+    "text": "with"
    },
    {
     "key": "B",
@@ -663,11 +663,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "D",
-    "text": "with"
+    "text": "at"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "在某所学校用 at：a student at No. 5 Middle School。",
   "kp": "介词",
@@ -695,11 +695,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "two"
+    "text": "three"
    },
    {
     "key": "B",
-    "text": "three"
+    "text": "two"
    },
    {
     "key": "C",
@@ -711,7 +711,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "冒号后列出了教学楼、图书馆楼、科学楼，共三栋。",
   "kp": "上下文",
@@ -739,11 +739,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "next to"
+    "text": "far from"
    },
    {
     "key": "B",
-    "text": "far from"
+    "text": "next to"
    },
    {
     "key": "C",
@@ -755,7 +755,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "下课能很快出去玩，说明教学楼在操场旁边。",
   "kp": "上下文",
@@ -783,7 +783,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "books"
+    "text": "balls"
    },
    {
     "key": "B",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "C",
-    "text": "balls"
+    "text": "books"
    },
    {
     "key": "D",
@@ -799,7 +799,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "后一句说常去那里读书，图书馆里有很多书。",
   "kp": "上下文",
@@ -831,7 +831,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "B",
-    "text": "three"
+    "text": "five"
    },
    {
     "key": "C",
@@ -839,11 +839,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "D",
-    "text": "five"
+    "text": "three"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "后一句说一天共七节课，上午四节，下午就是三节。",
   "kp": "上下文",
@@ -871,11 +871,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "favourite"
+    "text": "best"
    },
    {
     "key": "B",
-    "text": "best"
+    "text": "favourite"
    },
    {
     "key": "C",
@@ -887,7 +887,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "后面说科学很有趣，是最喜欢的科目：my favourite subject。",
   "kp": "词汇",
@@ -919,11 +919,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "B",
-    "text": "because"
+    "text": "but"
    },
    {
     "key": "C",
-    "text": "but"
+    "text": "because"
    },
    {
     "key": "D",
@@ -931,7 +931,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "不喜欢历史的原因是觉得难，用 because。",
   "kp": "连词",
@@ -959,11 +959,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "nice"
+    "text": "bad"
    },
    {
     "key": "B",
-    "text": "bad"
+    "text": "nice"
    },
    {
     "key": "C",
@@ -975,7 +975,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "后面说她总是帮助我们，对我们很好：be nice to sb.。",
   "kp": "上下文",
@@ -1091,11 +1091,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "Maths."
+    "text": "Chinese."
    },
    {
     "key": "B",
-    "text": "Chinese."
+    "text": "Maths."
    },
    {
     "key": "C",
@@ -1107,7 +1107,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "Monday 一行第一个是 Chinese。",
   "kp": "细节理解",
@@ -1143,15 +1143,15 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "C",
-    "text": "On Tuesday afternoon."
+    "text": "On Wednesday afternoon."
    },
    {
     "key": "D",
-    "text": "On Wednesday afternoon."
+    "text": "On Tuesday afternoon."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "竖线后面是下午的课，Music 在 Tuesday 的竖线后面，是周二下午。",
   "kp": "细节理解",
@@ -1183,11 +1183,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "B",
-    "text": "Two."
+    "text": "Three."
    },
    {
     "key": "C",
-    "text": "Three."
+    "text": "Two."
    },
    {
     "key": "D",
@@ -1195,7 +1195,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "周一、周二、周三各有一节数学，共三节。",
   "kp": "细节理解",
@@ -1227,11 +1227,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "B",
-    "text": "45 minutes."
+    "text": "50 minutes."
    },
    {
     "key": "C",
-    "text": "50 minutes."
+    "text": "45 minutes."
    },
    {
     "key": "D",
@@ -1239,7 +1239,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "8:00–8:45，每节课 45 分钟。",
   "kp": "推理判断",
@@ -1311,11 +1311,11 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "Because it's relaxing."
+    "text": "Because she likes to learn about different places."
    },
    {
     "key": "B",
-    "text": "Because she likes to learn about different places."
+    "text": "Because it's relaxing."
    },
    {
     "key": "C",
@@ -1327,7 +1327,7 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "I like to learn about different countries and places。",
   "kp": "细节理解",
@@ -1363,15 +1363,15 @@ window.NATIONAL_PAPERS["xsc-english-3"] = [
    },
    {
     "key": "C",
-    "text": "It's difficult."
+    "text": "It's useful."
    },
    {
     "key": "D",
-    "text": "It's useful."
+    "text": "It's difficult."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "it's too difficult for me。relaxing 是他对体育的评价。",
   "kp": "细节理解",

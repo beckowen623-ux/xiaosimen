@@ -32,11 +32,11 @@
           "stem": "—What were you doing when the rainstorm came yesterday?\n—I ______ my homework at home.",
           "options": [
             "do",
-            "did",
             "was doing",
+            "did",
             "am doing"
           ],
-          "answer": "C",
+          "answer": "B",
           "kp": "过去进行时",
           "exp": "问过去某一时刻正在做什么，用过去进行时 was doing。"
         },
@@ -45,11 +45,11 @@
           "stem": "—Have you ever ______ to the Great Wall?\n—Yes, I have. I went there last summer.",
           "options": [
             "gone",
-            "been",
             "go",
+            "been",
             "went"
           ],
-          "answer": "B",
+          "answer": "C",
           "kp": "现在完成时",
           "exp": "have been to 去过某地（已回来）；have gone to 去了某地（还没回来）。坑点：have gone to 不用于问“你去过吗”。"
         },
@@ -57,12 +57,12 @@
           "n": 4,
           "stem": "My uncle ______ this car for five years. He bought it in 2021.",
           "options": [
-            "has bought",
             "has had",
+            "has bought",
             "bought",
             "had"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "现在完成时",
           "exp": "for five years 表一段时间，要用延续性动词，buy 是短暂性动词，改为 have had。"
         },
@@ -83,12 +83,12 @@
           "n": 6,
           "stem": "The box is ______ heavy ______ the little boy can't carry it.",
           "options": [
-            "too; to",
             "so; that",
+            "too; to",
             "such; that",
             "enough; to"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "so...that",
           "exp": "so＋形容词＋that 从句，“如此……以至于……”。too...to 后接动词原形，不接句子。"
         },
@@ -109,12 +109,12 @@
           "n": 8,
           "stem": "I'll call you ______ I get to Beijing.",
           "options": [
-            "as soon as",
+            "before long",
             "until",
             "although",
-            "before long"
+            "as soon as"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "时间状语从句",
           "exp": "as soon as 一……就……，从句用一般现在时表将来。"
         },
@@ -122,12 +122,12 @@
           "n": 9,
           "stem": "Our school needs volunteers to help ______ the old people's home. Many students signed up.",
           "options": [
-            "out at",
-            "up with",
             "off at",
+            "up with",
+            "out at",
             "away from"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "动词短语",
           "exp": "help out 帮忙，help out at the old people's home 到养老院帮忙。"
         },
@@ -136,11 +136,11 @@
           "stem": "—Have you finished reading Treasure Island ______?\n—Not ______. I'll finish it this weekend.",
           "options": [
             "already; already",
-            "yet; yet",
+            "yet; already",
             "already; yet",
-            "yet; already"
+            "yet; yet"
           ],
-          "answer": "B",
+          "answer": "D",
           "kp": "现在完成时",
           "exp": "现在完成时的疑问句和否定句用 yet；肯定句用 already。"
         }
@@ -167,24 +167,24 @@
         {
           "n": 12,
           "options": [
-            "across",
-            "through",
             "over",
+            "through",
+            "across",
             "into"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "介词辨析",
           "exp": "橘子在路面上滚过，across 表示在物体表面横穿。"
         },
         {
           "n": 13,
           "options": [
-            "stopped",
             "laughed",
+            "stopped",
             "shouted",
             "cried"
           ],
-          "answer": "A",
+          "answer": "B",
           "kp": "上下文",
           "exp": "很多人走过，却没有一个人停下来。"
         },
@@ -203,36 +203,36 @@
         {
           "n": 15,
           "options": [
-            "down",
+            "out",
             "up",
             "off",
-            "out"
+            "down"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "动词短语",
           "exp": "fall down 摔倒。"
         },
         {
           "n": 16,
           "options": [
-            "called",
-            "visited",
             "found",
+            "visited",
+            "called",
             "met"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "上下文",
           "exp": "用他的手机给他儿子打电话。"
         },
         {
           "n": 17,
           "options": [
-            "waiting",
+            "paying",
             "looking",
             "asking",
-            "paying"
+            "waiting"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "动词短语",
           "exp": "wait for 等待。"
         },
@@ -251,24 +251,24 @@
         {
           "n": 19,
           "options": [
-            "but",
             "so",
+            "but",
             "and",
             "or"
           ],
-          "answer": "A",
+          "answer": "B",
           "kp": "连词",
           "exp": "身上又湿又冷，但心里很温暖，前后转折。"
         },
         {
           "n": 20,
           "options": [
-            "have learned",
+            "am learning",
             "learn",
             "will learn",
-            "am learning"
+            "have learned"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "现在完成时",
           "exp": "Since then 从那以后，表示从过去持续到现在，用现在完成时 have learned。"
         }
@@ -301,11 +301,11 @@
               "stem": "What will volunteers do at Green Park?",
               "options": [
                 "Read stories.",
-                "Clean up the park and plant trees.",
+                "Sing songs.",
                 "Play chess.",
-                "Sing songs."
+                "Clean up the park and plant trees."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "细节理解",
               "exp": "Help us clean up the park and plant trees。"
             },
@@ -313,12 +313,12 @@
               "n": 23,
               "stem": "When can you volunteer at Happy Home?",
               "options": [
-                "On Saturday morning.",
-                "On Sunday afternoon.",
                 "On Monday afternoon.",
+                "On Sunday afternoon.",
+                "On Saturday morning.",
                 "On Sunday morning."
               ],
-              "answer": "C",
+              "answer": "A",
               "kp": "推理判断",
               "exp": "Weekdays 4:00–6:00 pm，周一下午属于工作日。"
             },
@@ -327,11 +327,11 @@
               "stem": "If you want to work at Green Park, how can you contact them?",
               "options": [
                 "By calling Ms. Lin.",
-                "By sending an e-mail.",
+                "By visiting the library.",
                 "By calling Mr. Zhou.",
-                "By visiting the library."
+                "By sending an e-mail."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "细节理解",
               "exp": "Green Park 只留了邮箱。"
             },
@@ -339,12 +339,12 @@
               "n": 25,
               "stem": "Which is TRUE according to the notices?",
               "options": [
-                "Volunteers at Green Park need to bring their own tools.",
-                "Students can go to Happy Home alone.",
                 "Volunteers at Happy Home can play chess with the old people.",
+                "Students can go to Happy Home alone.",
+                "Volunteers at Green Park need to bring their own tools.",
                 "Sunshine Library needs volunteers on Sunday."
               ],
-              "answer": "C",
+              "answer": "A",
               "kp": "细节理解",
               "exp": "Happy Home 可以陪老人下棋。公园提供工具；学生必须有老师或家长陪同；图书馆是周六。"
             }
@@ -372,12 +372,12 @@
               "n": 27,
               "stem": "What can children learn by cooking meals?",
               "options": [
-                "How to plan and solve problems.",
+                "How to study harder.",
                 "How to make money.",
                 "How to play with friends.",
-                "How to study harder."
+                "How to plan and solve problems."
               ],
-              "answer": "A",
+              "answer": "D",
               "kp": "细节理解",
               "exp": "When they cook meals, they learn how to plan and solve problems。"
             },
@@ -385,12 +385,12 @@
               "n": 28,
               "stem": "How long do experts suggest teenagers spend on chores every day?",
               "options": [
-                "5 to 10 minutes.",
                 "20 to 30 minutes.",
+                "5 to 10 minutes.",
                 "About 1 hour.",
                 "About 2 hours."
               ],
-              "answer": "B",
+              "answer": "A",
               "kp": "细节理解",
               "exp": "about 20 to 30 minutes a day on chores。"
             },
@@ -412,11 +412,11 @@
               "stem": "What is the writer's opinion?",
               "options": [
                 "Teenagers should only study.",
-                "Teenagers should do some chores at home.",
                 "Chores are a waste of time.",
+                "Teenagers should do some chores at home.",
                 "Only girls should do chores."
               ],
-              "answer": "B",
+              "answer": "C",
               "kp": "观点态度",
               "exp": "作者列举做家务的好处，结尾鼓励“拿起扫帚开始吧”，认为青少年应该做些家务。"
             }
@@ -431,12 +431,12 @@
               "n": 31,
               "stem": "How high is Qomolangma?",
               "options": [
-                "8,488.86 meters.",
                 "8,848.86 meters.",
+                "8,488.86 meters.",
                 "8,884.68 meters.",
                 "8,848.68 meters."
               ],
-              "answer": "B",
+              "answer": "A",
               "kp": "细节理解",
               "exp": "It is 8,848.86 meters high。注意数字不要看错。"
             },
@@ -446,10 +446,10 @@
               "options": [
                 "Extremely cold weather.",
                 "Not enough oxygen.",
-                "Strong winds and snowstorms.",
-                "Too many tourists on the top."
+                "Too many tourists on the top.",
+                "Strong winds and snowstorms."
               ],
-              "answer": "D",
+              "answer": "C",
               "kp": "细节理解",
               "exp": "文中提到严寒、缺氧、强风和暴风雪，没有提到山顶游客太多。"
             },
@@ -457,12 +457,12 @@
               "n": 33,
               "stem": "When did Chinese climbers first reach the top from the north side?",
               "options": [
-                "In 1960.",
                 "In 1975.",
+                "In 1960.",
                 "In 2005.",
                 "In 2020."
               ],
-              "answer": "A",
+              "answer": "B",
               "kp": "细节理解",
               "exp": "In 1960, three Chinese climbers reached the top ... from the north side for the first time。"
             },
@@ -471,11 +471,11 @@
               "stem": "What did the Chinese team do in 2020?",
               "options": [
                 "They found a new mountain.",
-                "They measured the new height of Qomolangma.",
+                "They gave up halfway.",
                 "They built a hotel on the top.",
-                "They gave up halfway."
+                "They measured the new height of Qomolangma."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "细节理解",
               "exp": "In 2020, a Chinese team climbed to the top again and measured its new height。"
             },
@@ -484,11 +484,11 @@
               "stem": "What is the spirit of climbing according to the passage?",
               "options": [
                 "Becoming famous.",
-                "Making money.",
                 "Challenging yourself and never giving up.",
+                "Making money.",
                 "Enjoying the view."
               ],
-              "answer": "C",
+              "answer": "B",
               "kp": "推理判断",
               "exp": "最后一段：the spirit of climbing is about challenging themselves and never giving up。"
             }

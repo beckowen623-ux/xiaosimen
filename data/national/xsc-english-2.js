@@ -61,11 +61,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "have"
+    "text": "has"
    },
    {
     "key": "B",
-    "text": "has"
+    "text": "have"
    },
    {
     "key": "C",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "主语 My cousin 是第三人称单数，“有”用 has。",
   "kp": "have/has",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "aunt"
+    "text": "uncle"
    },
    {
     "key": "B",
-    "text": "uncle"
+    "text": "aunt"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "妈妈的姐妹是阿姨 aunt。uncle 是叔叔舅舅，是男性。",
   "kp": "家庭成员",
@@ -149,11 +149,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "Tom's; Lucy's"
+    "text": "Tom's; Lucy"
    },
    {
     "key": "C",
-    "text": "Tom's; Lucy"
+    "text": "Tom's; Lucy's"
    },
    {
     "key": "D",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "“Tom 的尺子”用 Tom's ruler；“是 Lucy 的”后面省略了 ruler，也要用所有格 Lucy's。",
   "kp": "名词所有格",
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "It's 135-6782-4490."
+    "text": "It's a new phone."
    },
    {
     "key": "B",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "D",
-    "text": "It's a new phone."
+    "text": "It's 135-6782-4490."
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "问电话号码，回答号码。",
   "kp": "交际用语",
@@ -271,7 +271,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "Yes, he does"
+    "text": "Yes, he is"
    },
    {
     "key": "B",
@@ -279,7 +279,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "C",
-    "text": "Yes, he is"
+    "text": "Yes, he does"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "Does...? 用 does/doesn't 回答；后面说他常打篮球，是肯定回答。",
   "kp": "一般现在时",
@@ -317,7 +317,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "an"
+    "text": "/"
    },
    {
     "key": "C",
@@ -325,11 +325,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "D",
-    "text": "/"
+    "text": "an"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "English 以元音音素开头，用 an。",
   "kp": "冠词",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "sixty-five"
+    "text": "the sixty-five"
    },
    {
     "key": "B",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "C",
-    "text": "the sixty-five"
+    "text": "sixty-five"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "表示年龄用基数词 sixty-five。",
   "kp": "数词",
@@ -439,11 +439,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "is; English"
+    "text": "are; English"
    },
    {
     "key": "B",
-    "text": "are; English"
+    "text": "is; English"
    },
    {
     "key": "C",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "My parents 是复数，用 are；学科名前不加冠词，teaches English。",
   "kp": "be 动词",
@@ -485,7 +485,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "colour"
+    "text": "sport"
    },
    {
     "key": "C",
@@ -493,11 +493,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "D",
-    "text": "sport"
+    "text": "colour"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "答语 Blue 是颜色。",
   "kp": "词汇",
@@ -607,7 +607,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "Hello, Ben! Nice to meet you."
+    "text": "I'm fine."
    },
    {
     "key": "B",
@@ -619,11 +619,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "D",
-    "text": "I'm fine."
+    "text": "Hello, Ben! Nice to meet you."
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "朋友介绍新朋友，打招呼说 Nice to meet you。",
   "kp": "交际用语",
@@ -651,11 +651,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "photo"
+    "text": "book"
    },
    {
     "key": "B",
-    "text": "book"
+    "text": "photo"
    },
    {
     "key": "C",
@@ -667,7 +667,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "后文一直在说照片中谁在哪里（in the middle、next to him），所以是一张全家福 photo。",
   "kp": "上下文",
@@ -695,7 +695,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "is"
+    "text": "am"
    },
    {
     "key": "B",
@@ -703,7 +703,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "C",
-    "text": "am"
+    "text": "is"
    },
    {
     "key": "D",
@@ -711,7 +711,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "主语 He，用 is。",
   "kp": "be 动词",
@@ -739,11 +739,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "teaches"
+    "text": "learns"
    },
    {
     "key": "B",
-    "text": "learns"
+    "text": "teaches"
    },
    {
     "key": "C",
@@ -755,7 +755,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "她是老师，在中学教语文：teaches Chinese。",
   "kp": "上下文",
@@ -831,11 +831,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "with"
+    "text": "in"
    },
    {
     "key": "C",
-    "text": "in"
+    "text": "with"
    },
    {
     "key": "D",
@@ -843,7 +843,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "live with sb. 和某人住在一起。",
   "kp": "介词",
@@ -915,7 +915,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "and"
+    "text": "but"
    },
    {
     "key": "B",
@@ -923,7 +923,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "C",
-    "text": "but"
+    "text": "and"
    },
    {
     "key": "D",
@@ -931,7 +931,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "她才五岁，“但是”会唱很多英文歌，前后转折，用 but。",
   "kp": "连词",
@@ -963,11 +963,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "me"
+    "text": "my"
    },
    {
     "key": "C",
-    "text": "my"
+    "text": "me"
    },
    {
     "key": "D",
@@ -975,7 +975,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "be 动词后作表语，口语中常用宾格 me：The boy with glasses is me。",
   "kp": "人称代词",
@@ -1003,7 +1003,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "a"
+    "text": "two"
    },
    {
     "key": "B",
@@ -1015,11 +1015,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "D",
-    "text": "two"
+    "text": "a"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "后面说 Its name is Mimi，只有一只猫；pet 以辅音音素开头，用 a。",
   "kp": "冠词",
@@ -1047,7 +1047,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "love"
+    "text": "meet"
    },
    {
     "key": "B",
@@ -1059,11 +1059,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "D",
-    "text": "meet"
+    "text": "love"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "结尾表达对家人的感情：I love my family very much。",
   "kp": "上下文",
@@ -1139,11 +1139,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "Two."
+    "text": "Three."
    },
    {
     "key": "C",
-    "text": "Three."
+    "text": "Two."
    },
    {
     "key": "D",
@@ -1151,7 +1151,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "Maria 的家庭：parents and two brothers。",
   "kp": "细节理解",
@@ -1183,11 +1183,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "Maria."
+    "text": "Ken."
    },
    {
     "key": "C",
-    "text": "Ken."
+    "text": "Maria."
    },
    {
     "key": "D",
@@ -1195,7 +1195,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "三人年龄：Tom 12 岁，Maria 13 岁，Ken 11 岁，Ken 最小。要把三张卡片的 Age 一栏都找出来比较。",
   "kp": "推理判断",
@@ -1231,15 +1231,15 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "C",
-    "text": "Ken."
+    "text": "Tom and Maria."
    },
    {
     "key": "D",
-    "text": "Tom and Maria."
+    "text": "Ken."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "Ken 喜欢 reading and playing chess。",
   "kp": "细节理解",
@@ -1267,11 +1267,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "He likes Chinese food."
+    "text": "He has two brothers."
    },
    {
     "key": "B",
-    "text": "He has two brothers."
+    "text": "He likes Chinese food."
    },
    {
     "key": "C",
@@ -1283,7 +1283,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "Tom 的 Likes 一栏：swimming and Chinese food。",
   "kp": "细节理解",
@@ -1359,7 +1359,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "Mr. Green."
+    "text": "Mr. Jim Green."
    },
    {
     "key": "C",
@@ -1367,11 +1367,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "D",
-    "text": "Mr. Jim Green."
+    "text": "Mr. Green."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "称呼用 Mr.＋姓，Jim 的父亲也姓 Green，叫 Mr. Green。",
   "kp": "细节理解",
@@ -1403,11 +1403,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "middle name"
+    "text": "family name"
    },
    {
     "key": "C",
-    "text": "family name"
+    "text": "middle name"
    },
    {
     "key": "D",
@@ -1415,7 +1415,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "按文中 John Paul Smith 的例子，中间的名字是 middle name。",
   "kp": "推理判断",
@@ -1443,11 +1443,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "People often use their middle names every day."
+    "text": "In many English-speaking families, children get their father's family name."
    },
    {
     "key": "B",
-    "text": "In many English-speaking families, children get their father's family name."
+    "text": "People often use their middle names every day."
    },
    {
     "key": "C",
@@ -1459,7 +1459,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "原文 children get the same family name as their father。中间名日常不常用；中国人姓在前；起英文名不是必须的。",
   "kp": "细节理解",
@@ -1491,11 +1491,11 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    },
    {
     "key": "B",
-    "text": "An English name is not a must. Your Chinese name is great, too."
+    "text": "You should use a middle name."
    },
    {
     "key": "C",
-    "text": "You should use a middle name."
+    "text": "An English name is not a must. Your Chinese name is great, too."
    },
    {
     "key": "D",
@@ -1503,7 +1503,7 @@ window.NATIONAL_PAPERS["xsc-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "最后一段：you don't have to — your Chinese name is great, too!",
   "kp": "推理判断",

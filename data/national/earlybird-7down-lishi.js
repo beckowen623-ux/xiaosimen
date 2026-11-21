@@ -65,11 +65,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "通过考试选拔人才"
+    "text": "由地方推荐人才"
    },
    {
     "key": "C",
-    "text": "由地方推荐人才"
+    "text": "通过考试选拔人才"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "科举制通过分科考试选拔官员，打破了门第限制，让出身较低的读书人也有机会做官。",
   "kp": "科举制的完善",
@@ -153,15 +153,15 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "C",
-    "text": "唐玄宗"
+    "text": "隋文帝"
    },
    {
     "key": "D",
-    "text": "隋文帝"
+    "text": "唐玄宗"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "唐玄宗统治前期，唐朝进入全盛时期，史称“开元盛世”。",
   "kp": "开元盛世",
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "对外交往频繁，开放包容"
+    "text": "国力衰弱"
    },
    {
     "key": "C",
-    "text": "国力衰弱"
+    "text": "对外交往频繁，开放包容"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "遣唐使、鉴真东渡、玄奘西行，体现了唐朝对外交往活跃、开放包容的特点。",
   "kp": "隋唐",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "玄武门之变"
+    "text": "安史之乱"
    },
    {
     "key": "B",
-    "text": "安史之乱"
+    "text": "玄武门之变"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "755 年爆发的安史之乱，是唐朝由盛转衰的转折点。",
   "kp": "隋唐",
@@ -275,7 +275,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "造成“冗官”“冗兵”，军队战斗力下降"
+    "text": "加速了民族交融"
    },
    {
     "key": "C",
@@ -283,11 +283,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "D",
-    "text": "加速了民族交融"
+    "text": "造成“冗官”“冗兵”，军队战斗力下降"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "宋初加强中央集权结束了割据局面，但也造成机构臃肿、军队战斗力下降、财政负担加重等问题。",
   "kp": "北宋加强中央集权",
@@ -397,11 +397,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "西夏"
+    "text": "辽"
    },
    {
     "key": "B",
-    "text": "辽"
+    "text": "西夏"
    },
    {
     "key": "C",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "1005 年，北宋与辽订立“澶渊之盟”，此后宋辽长期保持和平。",
   "kp": "民族关系",
@@ -485,7 +485,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "毕昇"
+    "text": "宋应星"
    },
    {
     "key": "C",
@@ -493,11 +493,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "D",
-    "text": "宋应星"
+    "text": "毕昇"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "北宋毕昇发明活字印刷术，沈括在《梦溪笔谈》中记载了这一发明。",
   "kp": "宋元科技",
@@ -527,11 +527,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "加强君主专制"
+    "text": "发展对外贸易"
    },
    {
     "key": "C",
-    "text": "发展对外贸易"
+    "text": "加强君主专制"
    },
    {
     "key": "D",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "废丞相、设内阁，都是为了把权力集中到皇帝手中，加强君主专制。",
   "kp": "明朝君主专制",
@@ -565,7 +565,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "日本"
+    "text": "非洲东海岸和红海沿岸"
    },
    {
     "key": "B",
@@ -573,7 +573,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "C",
-    "text": "非洲东海岸和红海沿岸"
+    "text": "日本"
    },
    {
     "key": "D",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "郑和七下西洋，最远到达非洲东海岸和红海沿岸。",
   "kp": "郑和下西洋",
@@ -615,15 +615,15 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "C",
-    "text": "反侵略战争"
+    "text": "统一战争"
    },
    {
     "key": "D",
-    "text": "统一战争"
+    "text": "反侵略战争"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "倭寇是侵扰我国东南沿海的日本海盗，戚继光抗倭是反侵略战争。",
   "kp": "戚继光抗倭",
@@ -653,11 +653,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "台湾府"
+    "text": "驻藏大臣"
    },
    {
     "key": "C",
-    "text": "驻藏大臣"
+    "text": "台湾府"
    },
    {
     "key": "D",
@@ -665,7 +665,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "清朝设台湾府，隶属福建省。澎湖巡检司是元朝设的；驻藏大臣管西藏；伊犁将军管新疆。",
   "kp": "清朝巩固统一",
@@ -695,7 +695,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "B",
-    "text": "君主专制达到顶峰"
+    "text": "内阁权力扩大"
    },
    {
     "key": "C",
@@ -703,11 +703,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    },
    {
     "key": "D",
-    "text": "内阁权力扩大"
+    "text": "君主专制达到顶峰"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "军机大臣只是跪受笔录、传达皇帝旨意，军机处的设立标志着君主专制达到顶峰。",
   "kp": "清朝君主专制的强化",
@@ -733,11 +733,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "使中国逐渐落后于世界潮流"
+    "text": "促进了中外交流"
    },
    {
     "key": "B",
-    "text": "促进了中外交流"
+    "text": "使中国逐渐落后于世界潮流"
    },
    {
     "key": "C",
@@ -749,7 +749,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "闭关锁国虽然对西方殖民者有一定防范作用，但阻碍了中外交流和资本主义萌芽发展，使中国逐渐落后于世界。",
   "kp": "闭关锁国",
@@ -775,11 +775,11 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "李时珍、宋应星、徐光启"
+    "text": "宋应星、李时珍、徐光启"
    },
    {
     "key": "B",
-    "text": "宋应星、李时珍、徐光启"
+    "text": "李时珍、宋应星、徐光启"
    },
    {
     "key": "C",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-7down-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "李时珍著《本草纲目》，宋应星著《天工开物》，徐光启著《农政全书》。",
   "kp": "明清科技文化",

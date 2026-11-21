@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "俯瞰（kàn）　恬静（tián）　归省（xǐng）　撺掇（cuān）"
+    "text": "屹立（yì）　戏谑（nüè）　蓦然（mò）　犀利（xī）"
    },
    {
     "key": "B",
-    "text": "屹立（yì）　戏谑（nüè）　蓦然（mò）　犀利（xī）"
+    "text": "俯瞰（kàn）　恬静（tián）　归省（xǐng）　撺掇（cuān）"
    },
    {
     "key": "C",
@@ -35,9 +35,9 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
-  "explanation": "B“谑”读 xuè；C“皴”读 cūn；D“肖”读 xiào。",
+  "explanation": "A“谑”读 xuè；C“皴”读 cūn；D“肖”读 xiào。",
   "kp": "字音",
   "stem": "下列词语中，括号内注音全都正确的一项是（ ）",
   "paperScore": 2.5,
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "他的演讲引人入胜，台下的观众听得津津有味。"
+    "text": "老师讲的道理深入浅出，同学们都听得莫名其妙。"
    },
    {
     "key": "B",
@@ -69,7 +69,7 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    },
    {
     "key": "C",
-    "text": "老师讲的道理深入浅出，同学们都听得莫名其妙。"
+    "text": "他的演讲引人入胜，台下的观众听得津津有味。"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "“莫名其妙”指没有人能说出它的奥妙，形容事情很奇怪，与“深入浅出”的语境矛盾。",
   "kp": "成语运用",
@@ -153,15 +153,15 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    },
    {
     "key": "C",
-    "text": "《经典常谈》的作者是朱自清，书中介绍了《说文解字》《诗经》等中国传统经典。"
+    "text": "《钢铁是怎样炼成的》结尾写保尔在战场上英勇牺牲，表现了他的献身精神。"
    },
    {
     "key": "D",
-    "text": "《钢铁是怎样炼成的》结尾写保尔在战场上英勇牺牲，表现了他的献身精神。"
+    "text": "《经典常谈》的作者是朱自清，书中介绍了《说文解字》《诗经》等中国传统经典。"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "保尔后来全身瘫痪、双目失明，但他没有消沉，以笔为武器开始写作，小说结尾写他的小说即将出版，他获得了新生。他没有在战场上牺牲。",
   "kp": "名著",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "“独怜幽草涧边生”中的“独怜”表明诗人特别喜爱涧边的幽草。"
+    "text": "全诗表达了诗人对官场生活的热爱和对功名的追求。"
    },
    {
     "key": "B",
@@ -375,11 +375,11 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    },
    {
     "key": "D",
-    "text": "全诗表达了诗人对官场生活的热爱和对功名的追求。"
+    "text": "“独怜幽草涧边生”中的“独怜”表明诗人特别喜爱涧边的幽草。"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "诗人喜爱涧边幽草，描绘出闲适、宁静甚至有些寂寥的画面，表达的是恬淡的心境（也有人认为含有不被重用的忧伤），而不是热爱官场、追求功名。",
   "kp": "古诗理解",
@@ -415,15 +415,15 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    },
    {
     "key": "C",
-    "text": "益习其声（习：学习）"
+    "text": "驴不胜怒（不胜：禁不住）"
    },
    {
     "key": "D",
-    "text": "驴不胜怒（不胜：禁不住）"
+    "text": "益习其声（习：学习）"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "“习”在这里是“熟悉”的意思，“益习其声”即渐渐熟悉了驴的叫声。",
   "kp": "文言实词",
@@ -451,7 +451,7 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "老虎第一次见到驴，以为它是神，躲在树林里偷看。"
+    "text": "老虎一开始就看出驴没有本领，只是故意躲着它。"
    },
    {
     "key": "B",
@@ -463,11 +463,11 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    },
    {
     "key": "D",
-    "text": "老虎一开始就看出驴没有本领，只是故意躲着它。"
+    "text": "老虎第一次见到驴，以为它是神，躲在树林里偷看。"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "老虎经历了“以为神—大骇—往来视之—近出前后—益狎”的过程，是逐步试探后才发现“技止此耳”的。",
   "kp": "内容理解",
@@ -543,7 +543,7 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    },
    {
     "key": "B",
-    "text": "班长、李想、陈晨对“我”的安慰，通过语言、动作描写表现了同学之间的友爱。"
+    "text": "文章结尾两次夺冠形成对比，突出了“我”跑得越来越快。"
    },
    {
     "key": "C",
@@ -551,11 +551,11 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    },
    {
     "key": "D",
-    "text": "文章结尾两次夺冠形成对比，突出了“我”跑得越来越快。"
+    "text": "班长、李想、陈晨对“我”的安慰，通过语言、动作描写表现了同学之间的友爱。"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "第一次没有夺冠（第四名），文章前后形成对比，突出的是“我”在集体的温暖和鼓励下成长，交接棒更稳，而不是强调个人跑得快。",
   "kp": "写法分析",
@@ -591,15 +591,15 @@ window.NATIONAL_PAPERS["earlybird-8down-chinese"] = [
    },
    {
     "key": "C",
-    "text": "地磁感应可以帮助候鸟在看不到太阳和星星时辨别方向。"
+    "text": "候鸟的导航系统十分完美，不会受到任何外界干扰。"
    },
    {
     "key": "D",
-    "text": "候鸟的导航系统十分完美，不会受到任何外界干扰。"
+    "text": "地磁感应可以帮助候鸟在看不到太阳和星星时辨别方向。"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "最后一段写城市强光、玻璃幕墙会干扰候鸟导航，使它们迷失方向。",
   "kp": "内容理解",

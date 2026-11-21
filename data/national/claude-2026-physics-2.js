@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    },
    {
     "key": "B",
-    "text": "石油"
+    "text": "太阳能"
    },
    {
     "key": "C",
-    "text": "太阳能"
+    "text": "石油"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "太阳能可以源源不断地获得，属于可再生能源；煤、石油、天然气属于不可再生能源。",
   "kp": "能源分类",
@@ -60,7 +60,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "超声波"
+    "text": "电磁波"
    },
    {
     "key": "B",
@@ -68,7 +68,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    },
    {
     "key": "C",
-    "text": "电磁波"
+    "text": "超声波"
    },
    {
     "key": "D",
@@ -76,7 +76,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "电磁波可以在真空中传播，卫星通信利用电磁波。",
   "kp": "信息的传递",
@@ -105,11 +105,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    },
    {
     "key": "B",
-    "text": "汽化"
+    "text": "液化"
    },
    {
     "key": "C",
-    "text": "液化"
+    "text": "汽化"
    },
    {
     "key": "D",
@@ -117,7 +117,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "空气中的水蒸气遇冷变成小水珠，是液化现象。",
   "kp": "物态变化",
@@ -224,11 +224,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "给自行车轴承加润滑油"
+    "text": "自行车刹车时用力捏闸"
    },
    {
     "key": "B",
-    "text": "自行车刹车时用力捏闸"
+    "text": "给自行车轴承加润滑油"
    },
    {
     "key": "C",
@@ -240,7 +240,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "用力捏闸是通过增大压力来增大摩擦；其余都是减小摩擦。",
   "kp": "摩擦力",
@@ -273,15 +273,15 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    },
    {
     "key": "C",
-    "text": "镊子"
+    "text": "钢丝钳"
    },
    {
     "key": "D",
-    "text": "钢丝钳"
+    "text": "镊子"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "镊子动力臂小于阻力臂，费力但省距离；其余是省力杠杆。",
   "kp": "杠杆的分类",
@@ -306,7 +306,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "吸气冲程"
+    "text": "做功冲程"
    },
    {
     "key": "B",
@@ -314,7 +314,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    },
    {
     "key": "C",
-    "text": "做功冲程"
+    "text": "吸气冲程"
    },
    {
     "key": "D",
@@ -322,7 +322,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "做功冲程中燃气推动活塞做功，内能转化为机械能；压缩冲程是机械能转化为内能。",
   "kp": "热机",
@@ -388,7 +388,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "1.5×10³ kg/m³"
+    "text": "2.5×10³ kg/m³"
    },
    {
     "key": "B",
@@ -396,7 +396,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    },
    {
     "key": "C",
-    "text": "2.5×10³ kg/m³"
+    "text": "1.5×10³ kg/m³"
    },
    {
     "key": "D",
@@ -404,7 +404,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "F浮＝5 N－3 N＝2 N；V＝V排＝F浮/(ρ水g)＝2×10⁻⁴ m³；ρ＝G/(gV)＝5÷(10×2×10⁻⁴)＝2.5×10³ kg/m³。",
   "kp": "称重法测浮力与密度",
@@ -512,7 +512,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "压力不变，压强变大"
+    "text": "压力变小，压强变小"
    },
    {
     "key": "B",
@@ -524,11 +524,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    },
    {
     "key": "D",
-    "text": "压力变小，压强变小"
+    "text": "压力不变，压强变大"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "压力等于砖的重力，不变；竖放时受力面积变小，压强变大。",
   "kp": "压力与压强",
@@ -557,7 +557,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    },
    {
     "key": "B",
-    "text": "2∶1"
+    "text": "4∶1"
    },
    {
     "key": "C",
@@ -565,11 +565,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
    },
    {
     "key": "D",
-    "text": "4∶1"
+    "text": "2∶1"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "并联电压相等，P＝U²/R，功率与电阻成反比，P₁∶P₂＝R₂∶R₁＝2∶1。",
   "kp": "并联电路的功率",
@@ -802,7 +802,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-2"] = [
   "source": "中考物理精编模拟卷（二）· 中考难度 第 22 题",
   "type": "essay",
   "material": "",
-  "stem": "（实验题）小华用如图所示的装置“探究水沸腾时温度变化的特点”。实验时，她在烧杯上盖了一块中间有孔的硬纸板，从水温升到 90 ℃ 开始，每隔 1 min 记录一次温度，数据如下表：\n时间/min：0　1　2　3　4　5　6　7\n温度/℃：90　92　94　96　98　98　98　98\n实验中她观察到：第 4 min 后，水中产生大量气泡，气泡在上升过程中逐渐变大，到水面破裂开来。\n（1）在烧杯上盖硬纸板的目的是什么？\n（2）由表中数据可知，水的沸点是多少？水的沸点低于 100 ℃，可能的原因是什么？\n（3）水沸腾后继续加热，水的温度怎样变化？由此说明水沸腾需要满足什么条件？",
+  "stem": "（实验题）小华用铁架台、酒精灯、烧杯和温度计组装装置“探究水沸腾时温度变化的特点”。实验时，她在烧杯上盖了一块中间有孔的硬纸板，从水温升到 90 ℃ 开始，每隔 1 min 记录一次温度，数据如下表：\n时间/min：0　1　2　3　4　5　6　7\n温度/℃：90　92　94　96　98　98　98　98\n实验中她观察到：第 4 min 后，水中产生大量气泡，气泡在上升过程中逐渐变大，到水面破裂开来。\n（1）在烧杯上盖硬纸板的目的是什么？\n（2）由表中数据可知，水的沸点是多少？水的沸点低于 100 ℃，可能的原因是什么？\n（3）水沸腾后继续加热，水的温度怎样变化？由此说明水沸腾需要满足什么条件？",
   "points": [
    {
     "text": "（1）减少热量散失，缩短加热时间",

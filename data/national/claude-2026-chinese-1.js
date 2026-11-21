@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "抽噎（yē）  畸形（qí）  滑稽（jī）"
+    "text": "炽热（chì）  惬意（qiè）  酝酿（niàng）"
    },
    {
     "key": "B",
-    "text": "炽热（chì）  惬意（qiè）  酝酿（niàng）"
+    "text": "抽噎（yē）  畸形（qí）  滑稽（jī）"
    },
    {
     "key": "C",
@@ -35,9 +35,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
-  "explanation": "A 项“畸”读 jī；C 项“恪”读 kè；D 项“犷”读 guǎng。",
+  "explanation": "B 项“畸”读 jī；C 项“恪”读 kè；D 项“犷”读 guǎng。",
   "kp": "字音",
   "stem": "下列加点字注音全部正确的一项是（ ）",
   "unit": "积累与运用"
@@ -64,11 +64,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "B",
-    "text": "恍然大悟  相得益彰"
+    "text": "再接再励  锲而不舍"
    },
    {
     "key": "C",
-    "text": "再接再励  锲而不舍"
+    "text": "恍然大悟  相得益彰"
    },
    {
     "key": "D",
@@ -76,9 +76,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
-  "explanation": "A 应为“迫不及待”；C 应为“再接再厉”；D 应为“走投无路”。",
+  "explanation": "A 应为“迫不及待”；B 应为“再接再厉”；D 应为“走投无路”。",
   "kp": "字形",
   "stem": "下列词语书写全部正确的一项是（ ）",
   "unit": "积累与运用"
@@ -101,11 +101,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "面对困难，我们要首当其冲，勇往直前。"
+    "text": "春节期间，商场里人山人海，热闹非凡。"
    },
    {
     "key": "B",
-    "text": "春节期间，商场里人山人海，热闹非凡。"
+    "text": "面对困难，我们要首当其冲，勇往直前。"
    },
    {
     "key": "C",
@@ -117,9 +117,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
-  "explanation": "A“首当其冲”指最先受到攻击或遭遇灾难，误用为“冲在最前”；C“栩栩如生”形容艺术形象逼真，不用于书法；D“差强人意”意为大体上还能使人满意，与语境矛盾。",
+  "explanation": "B“首当其冲”指最先受到攻击或遭遇灾难，误用为“冲在最前”；C“栩栩如生”形容艺术形象逼真，不用于书法；D“差强人意”意为大体上还能使人满意，与语境矛盾。",
   "kp": "成语运用",
   "stem": "下列句子中加点成语使用恰当的一项是（ ）",
   "unit": "积累与运用"
@@ -150,17 +150,17 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "C",
-    "text": "学校图书馆新购置了一批科普图书，深受同学们的欢迎。"
+    "text": "我们要防止类似的安全事故不再发生。"
    },
    {
     "key": "D",
-    "text": "我们要防止类似的安全事故不再发生。"
+    "text": "学校图书馆新购置了一批科普图书，深受同学们的欢迎。"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
-  "explanation": "A 缺主语，删“通过”或“使”；B 两面对一面，删“能否”；D 否定不当，删“不”。",
+  "explanation": "A 缺主语，删“通过”或“使”；B 两面对一面，删“能否”；C 否定不当，删“不”。",
   "kp": "病句辨析",
   "stem": "下列句子没有语病的一项是（ ）",
   "unit": "积累与运用"
@@ -187,11 +187,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "B",
-    "text": "妈妈问我：“作业写完了吗？”"
+    "text": "春天来了，桃花、杏花、梨花、都开了。"
    },
    {
     "key": "C",
-    "text": "春天来了，桃花、杏花、梨花、都开了。"
+    "text": "妈妈问我：“作业写完了吗？”"
    },
    {
     "key": "D",
@@ -199,9 +199,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
-  "explanation": "A 是陈述句，句末用句号；C“梨花”后不用顿号；D 直接引语缺引号。",
+  "explanation": "A 是陈述句，句末用句号；B“梨花”后不用顿号；D 直接引语缺引号。",
   "kp": "标点符号",
   "stem": "下列句子标点符号使用正确的一项是（ ）",
   "unit": "积累与运用"
@@ -228,7 +228,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "B",
-    "text": "《背影》的作者是朱自清。"
+    "text": "《西游记》的作者是明代的罗贯中。"
    },
    {
     "key": "C",
@@ -236,11 +236,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "D",
-    "text": "《西游记》的作者是明代的罗贯中。"
+    "text": "《背影》的作者是朱自清。"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "《西游记》的作者是明代吴承恩；罗贯中著有《三国演义》。",
   "kp": "文学常识",
@@ -265,7 +265,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "《西游记》“三打白骨精”中，唐僧被白骨精蒙骗，将孙悟空赶回花果山。"
+    "text": "《红星照耀中国》的作者是中国作家茅盾。"
    },
    {
     "key": "B",
@@ -277,13 +277,13 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "D",
-    "text": "《红星照耀中国》的作者是中国作家茅盾。"
+    "text": "《西游记》“三打白骨精”中，唐僧被白骨精蒙骗，将孙悟空赶回花果山。"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
-  "explanation": "B 祥子三起三落，最终堕落；C 藤野先生是鲁迅在日本仙台学医时的老师；D《红星照耀中国》的作者是美国记者埃德加·斯诺。",
+  "explanation": "A《红星照耀中国》的作者是美国记者埃德加·斯诺；B 祥子三起三落，最终堕落；C 藤野先生是鲁迅在日本仙台学医时的老师。",
   "kp": "名著阅读",
   "stem": "下列关于名著内容的表述，正确的一项是（ ）",
   "unit": "名著与文学常识"
@@ -310,7 +310,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "B",
-    "text": "《钢铁是怎样炼成的》的主人公是保尔·柯察金。"
+    "text": "《昆虫记》的作者是英国生物学家达尔文。"
    },
    {
     "key": "C",
@@ -318,11 +318,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "D",
-    "text": "《昆虫记》的作者是英国生物学家达尔文。"
+    "text": "《钢铁是怎样炼成的》的主人公是保尔·柯察金。"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "《昆虫记》的作者是法国昆虫学家法布尔。",
   "kp": "名著阅读",
@@ -573,7 +573,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "歆辄难之（辄：就）"
+    "text": "宁可以急相弃邪（宁：宁愿）"
    },
    {
     "key": "B",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "C",
-    "text": "宁可以急相弃邪（宁：宁愿）"
+    "text": "歆辄难之（辄：就）"
    },
    {
     "key": "D",
@@ -589,7 +589,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "“宁”在这里是“难道”的意思，“宁可以急相弃邪”是反问句。",
   "kp": "文言实词",
@@ -616,7 +616,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "华歆就对这件事感到为难（不同意）"
+    "text": "华歆就把这个人赶下了船"
    },
    {
     "key": "B",
@@ -628,11 +628,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "D",
-    "text": "华歆就把这个人赶下了船"
+    "text": "华歆就对这件事感到为难（不同意）"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "“难之”是对此感到为难，即不同意让那人搭船。",
   "kp": "句意理解",
@@ -706,7 +706,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "B",
-    "text": "华歆做事考虑周全，一旦答应就负责到底"
+    "text": "这个故事告诉我们遇到危险时要先保全自己"
    },
    {
     "key": "C",
@@ -714,11 +714,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "D",
-    "text": "这个故事告诉我们遇到危险时要先保全自己"
+    "text": "华歆做事考虑周全，一旦答应就负责到底"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "华歆慎重承诺、信守到底；王朗轻率答应、危急时想抛弃，世人以此判定华歆更优。",
   "kp": "主旨理解",
@@ -749,11 +749,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "B",
-    "text": "渲染放学路上的孤单害怕，为下文写灯带来的安心作铺垫"
+    "text": "批评村里的道路没有修好"
    },
    {
     "key": "C",
-    "text": "批评村里的道路没有修好"
+    "text": "渲染放学路上的孤单害怕，为下文写灯带来的安心作铺垫"
    },
    {
     "key": "D",
@@ -761,7 +761,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "环境描写渲染了“我”的孤独与害怕，与下文“看见灯，心落了地”形成对比，为下文作铺垫。",
   "kp": "环境描写的作用",
@@ -835,11 +835,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    },
    {
     "key": "B",
-    "text": "停电时奶奶提着煤油灯等“我”，进一步表现奶奶的关爱。"
+    "text": "结尾写新路灯很明亮，说明旧灯已经没有意义了。"
    },
    {
     "key": "C",
-    "text": "结尾写新路灯很明亮，说明旧灯已经没有意义了。"
+    "text": "停电时奶奶提着煤油灯等“我”，进一步表现奶奶的关爱。"
    },
    {
     "key": "D",
@@ -847,7 +847,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "结尾写新灯是为了反衬旧灯和奶奶的爱在“我”心中的分量，并不是说旧灯没有意义。",
   "kp": "内容理解",

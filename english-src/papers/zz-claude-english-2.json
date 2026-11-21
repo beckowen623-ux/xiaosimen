@@ -10,21 +10,21 @@
     {
       "type": "单项选择",
       "items": [
-        {"n": 1, "stem": "There is ____ \"u\" in the word \"useful\", and it is ____ useful word.", "options": ["a; a", "an; a", "a; an", "an; an"], "answer": "B", "kp": "冠词", "exp": "字母 u 读音以元音开头，用 an；useful 以辅音 /j/ 开头，用 a。"},
+        {"n": 1, "stem": "There is ____ \"u\" in the word \"useful\", and it is ____ useful word.", "options": ["a; a", "an; an", "a; an", "an; a"], "answer": "D", "kp": "冠词", "exp": "字母 u 读音以元音开头，用 an；useful 以辅音 /j/ 开头，用 a。"},
         {"n": 2, "stem": "Mr. Brown is strict ____ his students, but he is very kind to them.", "options": ["with", "at", "for", "to"], "answer": "A", "kp": "固定搭配", "exp": "be strict with sb. 对某人严格。"},
-        {"n": 3, "stem": "—Whose dictionary is this? —It ____ be Tom's. His name is on it.", "options": ["can't", "might", "must", "needn't"], "answer": "C", "kp": "情态动词表推测", "exp": "名字写在上面，有把握的肯定推测用 must。"},
+        {"n": 3, "stem": "—Whose dictionary is this? —It ____ be Tom's. His name is on it.", "options": ["can't", "might", "needn't", "must"], "answer": "D", "kp": "情态动词表推测", "exp": "名字写在上面，有把握的肯定推测用 must。"},
         {"n": 4, "stem": "Neither my parents nor my sister ____ at home this weekend.", "options": ["am", "is", "are", "be"], "answer": "B", "kp": "主谓一致", "exp": "neither...nor... 连接主语时，谓语就近与 my sister 一致，用 is。"},
-        {"n": 5, "stem": "The more you practise, ____ you will speak English.", "options": ["the better", "the best", "better", "best"], "answer": "A", "kp": "比较级句型", "exp": "the + 比较级, the + 比较级，表示“越……就越……”。"},
-        {"n": 6, "stem": "—Have you finished your project yet? —Not yet. I ____ it now.", "options": ["do", "did", "am doing", "have done"], "answer": "C", "kp": "现在进行时", "exp": "now 提示正在做，用现在进行时。"},
-        {"n": 7, "stem": "It's important for us ____ a good habit of reading every day.", "options": ["develop", "to develop", "developing", "developed"], "answer": "B", "kp": "不定式", "exp": "It's + adj. + for sb. + to do sth. 句型。"},
+        {"n": 5, "stem": "The more you practise, ____ you will speak English.", "options": ["better", "the best", "the better", "best"], "answer": "C", "kp": "比较级句型", "exp": "the + 比较级, the + 比较级，表示“越……就越……”。"},
+        {"n": 6, "stem": "—Have you finished your project yet? —Not yet. I ____ it now.", "options": ["do", "am doing", "did", "have done"], "answer": "B", "kp": "现在进行时", "exp": "now 提示正在做，用现在进行时。"},
+        {"n": 7, "stem": "It's important for us ____ a good habit of reading every day.", "options": ["develop", "developed", "developing", "to develop"], "answer": "D", "kp": "不定式", "exp": "It's + adj. + for sb. + to do sth. 句型。"},
         {"n": 8, "stem": "The teacher asked us ____ in the library.", "options": ["not talk", "don't talk", "not to talk", "to not talk"], "answer": "C", "kp": "不定式的否定", "exp": "ask sb. not to do sth. 要求某人不要做某事。"},
-        {"n": 9, "stem": "—How was your trip to the countryside? —Wonderful! I've never seen ____ beautiful scenery before.", "options": ["so", "such", "such a", "so a"], "answer": "B", "kp": "such 与 so", "exp": "scenery 为不可数名词，用 such + adj. + 不可数名词。"},
+        {"n": 9, "stem": "—How was your trip to the countryside? —Wonderful! I've never seen ____ beautiful scenery before.", "options": ["such", "so", "such a", "so a"], "answer": "A", "kp": "such 与 so", "exp": "scenery 为不可数名词，用 such + adj. + 不可数名词。"},
         {"n": 10, "stem": "Many old houses in the town ____ into small museums since 2020.", "options": ["turned", "were turned", "have turned", "have been turned"], "answer": "D", "kp": "现在完成时的被动语态", "exp": "since 2020 用现在完成时；房子“被改造成”，用被动语态。"},
-        {"n": 11, "stem": "You'd better ____ your phone when you are crossing the road.", "options": ["not use", "not to use", "don't use", "not using"], "answer": "A", "kp": "had better 用法", "exp": "had better 的否定为 had better not do sth.。"},
+        {"n": 11, "stem": "You'd better ____ your phone when you are crossing the road.", "options": ["don't use", "not to use", "not use", "not using"], "answer": "C", "kp": "had better 用法", "exp": "had better 的否定为 had better not do sth.。"},
         {"n": 12, "stem": "I will call you as soon as I ____ in Beijing.", "options": ["arrive", "will arrive", "arrived", "am arriving"], "answer": "A", "kp": "时间状语从句", "exp": "as soon as 引导的时间状语从句用一般现在时表示将来。"},
         {"n": 13, "stem": "This is the museum ____ we visited last month.", "options": ["who", "where", "which", "what"], "answer": "C", "kp": "定语从句", "exp": "先行词 museum 指物，在从句中作 visited 的宾语，用 which（也可用 that）。"},
-        {"n": 14, "stem": "—I'm sorry I broke your cup. —____ I have another one.", "options": ["It doesn't matter.", "You're welcome.", "Good idea.", "I hope so."], "answer": "A", "kp": "情景交际", "exp": "回应道歉，表示“没关系”。"},
-        {"n": 15, "stem": "—Do you know ____? —Next Friday, I think.", "options": ["when will the exam be over", "when the exam will be over", "where the exam will be", "how long the exam is"], "answer": "B", "kp": "宾语从句", "exp": "答语是时间，问“什么时候结束”，宾语从句用陈述语序。"}
+        {"n": 14, "stem": "—I'm sorry I broke your cup. —____ I have another one.", "options": ["You're welcome.", "It doesn't matter.", "Good idea.", "I hope so."], "answer": "B", "kp": "情景交际", "exp": "回应道歉，表示“没关系”。"},
+        {"n": 15, "stem": "—Do you know ____? —Next Friday, I think.", "options": ["when the exam will be over", "when will the exam be over", "where the exam will be", "how long the exam is"], "answer": "A", "kp": "宾语从句", "exp": "答语是时间，问“什么时候结束”，宾语从句用陈述语序。"}
       ]
     },
     {
@@ -32,16 +32,16 @@
       "title": "The Note on the Desk",
       "passage": "Last winter, I had a very bad cold and had to stay at home for a week. When I went back to school, I was (16) about my lessons. I had missed so much!\nWhen I sat down at my desk, I found a note (17) it. It said, \"Welcome back! We copied the notes for you. If you have any (18) , just ask us.\" Under the words were the (19) of five classmates.\nIn the next few days, they took turns to (20) me after class. Jack explained the math problems (21) . Lily lent me her English notebook. Even the quiet boy who sat behind me (22) me his physics experiment report.\nTwo weeks later, we had a test. I (23) it with a good grade. I was (24) to all of them. From then on, whenever a classmate is ill, I always (25) to help, just like they did for me.",
       "items": [
-        {"n": 16, "stem": "", "options": ["worried", "excited", "pleased", "sure"], "answer": "A", "kp": "情感理解", "exp": "错过很多课，担心功课。"},
-        {"n": 17, "stem": "", "options": ["under", "on", "behind", "beside"], "answer": "B", "kp": "介词", "exp": "纸条放在课桌上。"},
-        {"n": 18, "stem": "", "options": ["questions", "money", "friends", "time"], "answer": "A", "kp": "上下文理解", "exp": "有问题就问我们。"},
-        {"n": 19, "stem": "", "options": ["pictures", "names", "numbers", "addresses"], "answer": "B", "kp": "上下文理解", "exp": "纸条下方是五位同学的名字。"},
+        {"n": 16, "stem": "", "options": ["sure", "excited", "pleased", "worried"], "answer": "D", "kp": "情感理解", "exp": "错过很多课，担心功课。"},
+        {"n": 17, "stem": "", "options": ["on", "under", "behind", "beside"], "answer": "A", "kp": "介词", "exp": "纸条放在课桌上。"},
+        {"n": 18, "stem": "", "options": ["money", "questions", "friends", "time"], "answer": "B", "kp": "上下文理解", "exp": "有问题就问我们。"},
+        {"n": 19, "stem": "", "options": ["pictures", "numbers", "names", "addresses"], "answer": "C", "kp": "上下文理解", "exp": "纸条下方是五位同学的名字。"},
         {"n": 20, "stem": "", "options": ["help", "call", "visit", "find"], "answer": "A", "kp": "上下文理解", "exp": "课后轮流帮我补课。"},
         {"n": 21, "stem": "", "options": ["quickly", "patiently", "loudly", "angrily"], "answer": "B", "kp": "副词辨析", "exp": "耐心地讲解数学题。"},
-        {"n": 22, "stem": "", "options": ["sold", "showed", "threw", "wrote"], "answer": "B", "kp": "动词辨析", "exp": "把物理实验报告给我看。"},
-        {"n": 23, "stem": "", "options": ["failed", "passed", "missed", "took"], "answer": "B", "kp": "上下文理解", "exp": "取得好成绩，说明通过了考试。"},
+        {"n": 22, "stem": "", "options": ["sold", "threw", "showed", "wrote"], "answer": "C", "kp": "动词辨析", "exp": "把物理实验报告给我看。"},
+        {"n": 23, "stem": "", "options": ["failed", "took", "missed", "passed"], "answer": "D", "kp": "上下文理解", "exp": "取得好成绩，说明通过了考试。"},
         {"n": 24, "stem": "", "options": ["thankful", "careful", "helpful", "hopeful"], "answer": "A", "kp": "形容词辨析", "exp": "be thankful to sb. 感激某人。"},
-        {"n": 25, "stem": "", "options": ["refuse", "offer", "forget", "pretend"], "answer": "B", "kp": "动词辨析", "exp": "offer to help 主动提出帮忙。"}
+        {"n": 25, "stem": "", "options": ["refuse", "pretend", "forget", "offer"], "answer": "D", "kp": "动词辨析", "exp": "offer to help 主动提出帮忙。"}
       ]
     },
     {
@@ -52,10 +52,10 @@
           "title": "Green Week Notice",
           "passage": "Green Week Is Coming!\nDate: April 20–26\nMonday: Bring your old books and clothes to the school hall. They will be given to children in need.\nWednesday: Join the \"No Plastic Lunch\" challenge. Bring your own lunch box and cup.\nFriday: Plant trees on the hill behind the school. Meet at the school gate at 3:30 p.m. Wear comfortable shoes.\nPrizes: The class with the most points will win a trip to the science museum.\nFor more information, ask Ms. Li in Room 302.",
           "items": [
-            {"n": 26, "stem": "On which day can students give away their old clothes?", "options": ["Monday.", "Wednesday.", "Friday.", "Sunday."], "answer": "A", "kp": "细节理解", "exp": "周一把旧书旧衣服送到学校礼堂。"},
+            {"n": 26, "stem": "On which day can students give away their old clothes?", "options": ["Sunday.", "Wednesday.", "Friday.", "Monday."], "answer": "D", "kp": "细节理解", "exp": "周一把旧书旧衣服送到学校礼堂。"},
             {"n": 27, "stem": "What should students bring on Wednesday?", "options": ["Old books.", "A lunch box and a cup.", "Comfortable shoes.", "Young trees."], "answer": "B", "kp": "细节理解", "exp": "Bring your own lunch box and cup."},
             {"n": 28, "stem": "What can the winning class get?", "options": ["Some new books.", "A free lunch.", "A trip to a museum.", "Some trees."], "answer": "C", "kp": "细节理解", "exp": "获胜班级可去科技馆参观。"},
-            {"n": 29, "stem": "Who should students ask for more information?", "options": ["The headmaster.", "Ms. Li.", "Their parents.", "The class monitor."], "answer": "B", "kp": "细节理解", "exp": "ask Ms. Li in Room 302。"}
+            {"n": 29, "stem": "Who should students ask for more information?", "options": ["Ms. Li.", "The headmaster.", "Their parents.", "The class monitor."], "answer": "A", "kp": "细节理解", "exp": "ask Ms. Li in Room 302。"}
           ]
         },
         {
@@ -66,7 +66,7 @@
             {"n": 30, "stem": "What did Chen Yu's grandfather give him?", "options": ["A notebook.", "An old world map.", "A camera.", "A geography book."], "answer": "B", "kp": "细节理解", "exp": "祖父送给他一张旧世界地图。"},
             {"n": 31, "stem": "Who suggested Chen Yu draw maps of his town?", "options": ["His grandfather.", "His teacher.", "A visitor.", "His classmate."], "answer": "B", "kp": "细节理解", "exp": "老师注意到他的兴趣并提出建议。"},
             {"n": 32, "stem": "Why did visitors love Chen Yu's map?", "options": ["It was very cheap.", "It was drawn by a child.", "It showed places not on other maps.", "It was printed in color."], "answer": "C", "kp": "细节理解", "exp": "地图标出了别的地图上没有的小店和花园。"},
-            {"n": 33, "stem": "What can we learn from the story?", "options": ["Interest can lead a person to success.", "Maps are hard to draw.", "Geography is the most important subject.", "We should travel more."], "answer": "A", "kp": "主旨理解", "exp": "兴趣引导他一路走到大学学地理。"}
+            {"n": 33, "stem": "What can we learn from the story?", "options": ["We should travel more.", "Maps are hard to draw.", "Geography is the most important subject.", "Interest can lead a person to success."], "answer": "D", "kp": "主旨理解", "exp": "兴趣引导他一路走到大学学地理。"}
           ]
         }
       ]

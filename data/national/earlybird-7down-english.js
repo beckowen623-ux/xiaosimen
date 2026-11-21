@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "fly"
+    "text": "are flying"
    },
    {
     "key": "B",
@@ -27,7 +27,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "C",
-    "text": "are flying"
+    "text": "fly"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "Look! 提示动作正在发生，用现在进行时 are flying。",
   "kp": "现在进行时",
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "What"
+    "text": "Where"
    },
    {
     "key": "B",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "D",
-    "text": "Where"
+    "text": "What"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "What's the weather like? 是固定问法，相当于 How is the weather?。注意有 like 时用 what。",
   "kp": "特殊疑问句",
@@ -107,11 +107,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "must; don't have to"
+    "text": "can; must"
    },
    {
     "key": "C",
-    "text": "can; must"
+    "text": "must; don't have to"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "周一必须穿校服 must；周五“不必”穿，用 don't have to。mustn't 是“禁止”，与后句“可以穿自己的衣服”不符。",
   "kp": "情态动词",
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "run"
+    "text": "running"
    },
    {
     "key": "B",
-    "text": "running"
+    "text": "run"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "否定祈使句：Don't＋动词原形。",
   "kp": "祈使句",
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "vegetables; junk food"
+    "text": "vegetables; junk foods"
    },
    {
     "key": "C",
-    "text": "vegetables; junk foods"
+    "text": "vegetables; junk food"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "vegetable 是可数名词，more 后用复数；junk food 是不可数名词，less 修饰不可数名词。",
   "kp": "可数名词与不可数名词",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "visit; help"
+    "text": "visited; helped"
    },
    {
     "key": "B",
-    "text": "visited; helped"
+    "text": "visit; help"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "last weekend 是过去时间，两个并列动词都用过去式。",
   "kp": "一般过去时",
@@ -275,7 +275,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "was; was"
+    "text": "was; were"
    },
    {
     "key": "C",
@@ -283,11 +283,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "D",
-    "text": "was; were"
+    "text": "was; was"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "yesterday evening 用过去时；a football match 单数用 was；my father 单数用 was。",
   "kp": "一般过去时",
@@ -355,11 +355,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "save"
+    "text": "to save"
    },
    {
     "key": "B",
-    "text": "to save"
+    "text": "save"
    },
    {
     "key": "C",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "do something to do sth. 做些事情来……，不定式表目的。",
   "kp": "动词不定式",
@@ -401,7 +401,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "Never mind"
+    "text": "Good idea"
    },
    {
     "key": "C",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "D",
-    "text": "Good idea"
+    "text": "Never mind"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "回应道歉用 Never mind（没关系）。",
   "kp": "交际用语",
@@ -441,11 +441,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "went"
+    "text": "go"
    },
    {
     "key": "B",
-    "text": "go"
+    "text": "went"
    },
    {
     "key": "C",
@@ -457,7 +457,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "讲上周六的事，用过去式 went。",
   "kp": "一般过去时",
@@ -529,11 +529,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "around"
+    "text": "for"
    },
    {
     "key": "B",
-    "text": "for"
+    "text": "around"
    },
    {
     "key": "C",
@@ -545,7 +545,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "show sb. around 带某人参观。",
   "kp": "固定搭配",
@@ -573,7 +573,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "taught"
+    "text": "told"
    },
    {
     "key": "B",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "C",
-    "text": "told"
+    "text": "taught"
    },
    {
     "key": "D",
@@ -589,7 +589,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "teach sb. how to do sth. 教某人怎样做某事。",
   "kp": "上下文",
@@ -617,7 +617,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "laughed"
+    "text": "left"
    },
    {
     "key": "B",
@@ -629,11 +629,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "D",
-    "text": "left"
+    "text": "laughed"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "挤不出奶的样子很滑稽，大家都笑了。",
   "kp": "上下文",
@@ -705,7 +705,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "delicious"
+    "text": "expensive"
    },
    {
     "key": "B",
@@ -713,7 +713,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "C",
-    "text": "expensive"
+    "text": "delicious"
    },
    {
     "key": "D",
@@ -721,7 +721,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "又大又红的草莓吃起来很美味。",
   "kp": "上下文",
@@ -749,7 +749,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "rain"
+    "text": "blow"
    },
    {
     "key": "B",
@@ -761,11 +761,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "D",
-    "text": "blow"
+    "text": "rain"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "后文说 the rain，所以是下雨。",
   "kp": "上下文",
@@ -793,11 +793,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "stopped"
+    "text": "started"
    },
    {
     "key": "B",
-    "text": "started"
+    "text": "stopped"
    },
    {
     "key": "C",
@@ -809,7 +809,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "Luckily 幸运的是，雨二十分钟后停了。",
   "kp": "上下文",
@@ -837,7 +837,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "but"
+    "text": "or"
    },
    {
     "key": "B",
@@ -849,11 +849,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "D",
-    "text": "or"
+    "text": "but"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "累但很开心，前后转折，用 but。",
   "kp": "连词",
@@ -881,7 +881,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "On Monday."
+    "text": "On Sunday."
    },
    {
     "key": "B",
@@ -893,11 +893,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "D",
-    "text": "On Sunday."
+    "text": "On Monday."
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "closed on Mondays。",
   "kp": "细节理解",
@@ -925,11 +925,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "¥40."
+    "text": "¥65."
    },
    {
     "key": "B",
-    "text": "¥65."
+    "text": "¥40."
    },
    {
     "key": "C",
@@ -941,7 +941,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "成人 40 元，学生 25 元，6 岁以下儿童免费：40＋25＝65 元。",
   "kp": "推理判断",
@@ -973,11 +973,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "Take a shower."
+    "text": "Run around the pool."
    },
    {
     "key": "C",
-    "text": "Run around the pool."
+    "text": "Take a shower."
    },
    {
     "key": "D",
@@ -985,7 +985,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "规则 1：Take a shower before you swim。",
   "kp": "细节理解",
@@ -1017,11 +1017,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "Swimming with an adult."
+    "text": "Drinking juice in the pool area."
    },
    {
     "key": "C",
-    "text": "Drinking juice in the pool area."
+    "text": "Swimming with an adult."
    },
    {
     "key": "D",
@@ -1029,7 +1029,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "规则 4：泳池区域禁止吃喝。",
   "kp": "细节理解",
@@ -1105,11 +1105,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "She was thirsty."
+    "text": "She wanted to wash."
    },
    {
     "key": "C",
-    "text": "She wanted to wash."
+    "text": "She was thirsty."
    },
    {
     "key": "D",
@@ -1117,7 +1117,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "She was very thirsty。",
   "kp": "细节理解",
@@ -1153,15 +1153,15 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "C",
-    "text": "The water was too low and the bottle neck was narrow."
+    "text": "Another bird was drinking it."
    },
    {
     "key": "D",
-    "text": "Another bird was drinking it."
+    "text": "The water was too low and the bottle neck was narrow."
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "水在瓶底，瓶颈太窄，喙够不到。",
   "kp": "细节理解",
@@ -1193,11 +1193,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "Small stones."
+    "text": "Sticks."
    },
    {
     "key": "C",
-    "text": "Sticks."
+    "text": "Small stones."
    },
    {
     "key": "D",
@@ -1205,7 +1205,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "She picked up a stone and dropped it into the bottle。",
   "kp": "细节理解",
@@ -1233,11 +1233,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "宽的"
+    "text": "窄的"
    },
    {
     "key": "B",
-    "text": "窄的"
+    "text": "宽的"
    },
    {
     "key": "C",
@@ -1249,7 +1249,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "瓶颈 narrow，乌鸦的喙伸进去够不着水，可推断是“窄的”。",
   "kp": "词义猜测",
@@ -1281,7 +1281,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "We should think hard to solve problems."
+    "text": "We should never drink from bottles."
    },
    {
     "key": "C",
@@ -1289,11 +1289,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "D",
-    "text": "We should never drink from bottles."
+    "text": "We should think hard to solve problems."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "use our heads when we have problems，遇到问题要动脑筋。",
   "kp": "推理判断",
@@ -1369,11 +1369,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "It gives you energy for the morning."
+    "text": "You can eat it at noon."
    },
    {
     "key": "C",
-    "text": "You can eat it at noon."
+    "text": "It gives you energy for the morning."
    },
    {
     "key": "D",
@@ -1381,7 +1381,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "It gives you energy for the morning。",
   "kp": "细节理解",
@@ -1409,7 +1409,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Less than half an hour."
+    "text": "At least one hour."
    },
    {
     "key": "B",
@@ -1417,7 +1417,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "C",
-    "text": "At least one hour."
+    "text": "Less than half an hour."
    },
    {
     "key": "D",
@@ -1425,7 +1425,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "at least one hour every day。",
   "kp": "细节理解",
@@ -1457,7 +1457,7 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "B",
-    "text": "Go to bed early."
+    "text": "Eat a big dinner late at night."
    },
    {
     "key": "C",
@@ -1465,11 +1465,11 @@ window.NATIONAL_PAPERS["earlybird-7down-english"] = [
    },
    {
     "key": "D",
-    "text": "Eat a big dinner late at night."
+    "text": "Go to bed early."
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "Don't eat too much at night。",
   "kp": "细节理解",

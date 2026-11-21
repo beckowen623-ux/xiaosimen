@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "菡萏（hàn dàn）　憔悴（qiáo cuì）　喑哑（yīn yǎ）"
+    "text": "粗拙（zhuó）　嗔怪（chēn）　分歧（qí）"
    },
    {
     "key": "B",
-    "text": "粗拙（zhuó）　嗔怪（chēn）　分歧（qí）"
+    "text": "菡萏（hàn dàn）　憔悴（qiáo cuì）　喑哑（yīn yǎ）"
    },
    {
     "key": "C",
@@ -35,9 +35,9 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
-  "explanation": "B“拙”读 zhuō；C“迸”读 bèng；D“侍”读 shì。",
+  "explanation": "A“拙”读 zhuō；C“迸”读 bèng；D“侍”读 shì。",
   "kp": "字音",
   "stem": "下列词语中，括号内注音全都正确的一项是（ ）",
   "paperScore": 2.5,
@@ -103,7 +103,7 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "经过老师的耐心讲解，使我终于弄懂了这道题。"
+    "text": "阅读经典名著，可以丰富我们的精神世界。"
    },
    {
     "key": "B",
@@ -111,7 +111,7 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    },
    {
     "key": "C",
-    "text": "阅读经典名著，可以丰富我们的精神世界。"
+    "text": "经过老师的耐心讲解，使我终于弄懂了这道题。"
    },
    {
     "key": "D",
@@ -119,9 +119,9 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
-  "explanation": "A“经过……使……”造成缺主语；B“防止……不再发生”否定不当，意思反了；D“大约”和“多”语意重复。",
+  "explanation": "B“防止……不再发生”否定不当，意思反了；C“经过……使……”造成缺主语；D“大约”和“多”语意重复。",
   "kp": "病句",
   "stem": "下列句子中，没有语病的一项是（ ）",
   "paperScore": 2.5,
@@ -153,17 +153,17 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    },
    {
     "key": "C",
-    "text": "《西游记》“真假美猴王”一回中，最终是如来佛祖辨出了六耳猕猴。"
+    "text": "《五猖会》中，父亲允许鲁迅先去看会，回来后再背《鉴略》。"
    },
    {
     "key": "D",
-    "text": "《五猖会》中，父亲允许鲁迅先去看会，回来后再背《鉴略》。"
+    "text": "《西游记》“真假美猴王”一回中，最终是如来佛祖辨出了六耳猕猴。"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
-  "explanation": "《五猖会》中，父亲要求鲁迅背出《鉴略》才能去看会，鲁迅背完后去看会，却已失去了兴致。D 把顺序说反了。",
+  "explanation": "《五猖会》中，父亲要求鲁迅背出《鉴略》才能去看会，鲁迅背完后去看会，却已失去了兴致。C 把顺序说反了。",
   "kp": "名著",
   "stem": "下列关于名著的表述，不正确的一项是（ ）",
   "paperScore": 2.5,
@@ -371,15 +371,15 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    },
    {
     "key": "C",
-    "text": "“月出惊山鸟”写月亮升起，月光惊动了山中栖息的鸟儿。"
+    "text": "全诗描写了白天春山的热闹景象，表达了诗人对繁华生活的向往。"
    },
    {
     "key": "D",
-    "text": "全诗描写了白天春山的热闹景象，表达了诗人对繁华生活的向往。"
+    "text": "“月出惊山鸟”写月亮升起，月光惊动了山中栖息的鸟儿。"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "诗中写的是春山夜景（夜静、月出），突出“静”，表达诗人闲适恬淡的心境，不是热闹和繁华。",
   "kp": "古诗理解",
@@ -415,15 +415,15 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    },
    {
     "key": "C",
-    "text": "又尝同席读书（尝：品尝）"
+    "text": "歆废书出看（废：放下）"
    },
    {
     "key": "D",
-    "text": "歆废书出看（废：放下）"
+    "text": "又尝同席读书（尝：品尝）"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "“尝”在这里是“曾经”的意思。坑点：按现代汉语“品尝”理解。",
   "kp": "文言实词",
@@ -451,7 +451,7 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "管宁看到金子毫不动心，就像看到瓦片石头一样。"
+    "text": "管宁“割席分坐”，是因为华歆偷偷拿走了地里的金子。"
    },
    {
     "key": "B",
@@ -463,11 +463,11 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    },
    {
     "key": "D",
-    "text": "管宁“割席分坐”，是因为华歆偷偷拿走了地里的金子。"
+    "text": "管宁看到金子毫不动心，就像看到瓦片石头一样。"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "华歆拿起金子后又扔掉了，并没有拿走。管宁割席，是看出华歆贪慕钱财、羡慕权贵、读书不专心，和自己志趣不同。",
   "kp": "内容理解",
@@ -503,15 +503,15 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    },
    {
     "key": "C",
-    "text": "文竹叶子发黄，是因为“我”浇水太多、又把它放在窗台上暴晒。"
+    "text": "“我”数学成绩提高，主要是因为买了更厚的练习册，每天做题到很晚。"
    },
    {
     "key": "D",
-    "text": "“我”数学成绩提高，主要是因为买了更厚的练习册，每天做题到很晚。"
+    "text": "文竹叶子发黄，是因为“我”浇水太多、又把它放在窗台上暴晒。"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "买练习册、每天做到十一点之后，第二次测试分数“还是没涨”；成绩提高是因为“我”学会了分析错题原因、找对方法。",
   "kp": "内容理解",
@@ -543,11 +543,11 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    },
    {
     "key": "B",
-    "text": "“叶子像一层薄薄的绿雾”运用比喻，写出了文竹叶子细密轻柔的特点。"
+    "text": "新芽“像一个小小的问号”只是描写新芽的形状，与文章内容没有联系。"
    },
    {
     "key": "C",
-    "text": "新芽“像一个小小的问号”只是描写新芽的形状，与文章内容没有联系。"
+    "text": "“叶子像一层薄薄的绿雾”运用比喻，写出了文竹叶子细密轻柔的特点。"
    },
    {
     "key": "D",
@@ -555,7 +555,7 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "“问号”既写出新芽弯弯的形状，也暗示“我”学会了思考、追问原因，与“对它好，得先懂它”的道理呼应。",
   "kp": "写法分析",
@@ -583,7 +583,7 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "文章按照春、夏、秋的顺序，写出了不同季节雨的特点。"
+    "text": "作者搬进城里后不再喜欢雨，所以文章结尾表达了对城市生活的厌恶。"
    },
    {
     "key": "B",
@@ -595,11 +595,11 @@ window.NATIONAL_PAPERS["earlybird-7up-chinese"] = [
    },
    {
     "key": "D",
-    "text": "作者搬进城里后不再喜欢雨，所以文章结尾表达了对城市生活的厌恶。"
+    "text": "文章按照春、夏、秋的顺序，写出了不同季节雨的特点。"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "作者在城里只是听不到雨声了，并不是不喜欢雨。结尾“我想念的不只是雨声”，表达的是对奶奶、对故乡和童年生活的怀念。",
   "kp": "内容理解",

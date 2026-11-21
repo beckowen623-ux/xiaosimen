@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "1 月 0 ℃ 等温线"
+    "text": "季风区与非季风区的分界线"
    },
    {
     "key": "B",
@@ -31,11 +31,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "D",
-    "text": "季风区与非季风区的分界线"
+    "text": "1 月 0 ℃ 等温线"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "季风区与非季风区的分界线是大兴安岭—阴山—贺兰山—巴颜喀拉山—冈底斯山一线。",
   "kp": "秦岭—淮河",
@@ -65,7 +65,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "B",
-    "text": "南方地区"
+    "text": "青藏地区"
    },
    {
     "key": "C",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "D",
-    "text": "青藏地区"
+    "text": "南方地区"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "青藏地区海拔高、气温低，主要自然特征是“高、寒”；西北地区是“干旱”。",
   "kp": "我国四大地理区域",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "北方耕地以水田为主，南方以旱地为主"
+    "text": "北方主要粮食作物是小麦，南方是水稻"
    },
    {
     "key": "B",
-    "text": "北方主要粮食作物是小麦，南方是水稻"
+    "text": "北方耕地以水田为主，南方以旱地为主"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "北方以旱地为主、种小麦，南方以水田为主、种水稻；南方降水多，屋顶坡度大；北方河流冬季结冰。",
   "kp": "南北方的差异",
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "土壤肥沃（黑土广布），地形平坦，雨热同期"
+    "text": "冬季温暖，可以种植两季水稻"
    },
    {
     "key": "B",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "D",
-    "text": "冬季温暖，可以种植两季水稻"
+    "text": "土壤肥沃（黑土广布），地形平坦，雨热同期"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "东北平原黑土肥沃，地形平坦，夏季温暖湿润、雨热同期，人均耕地多，机械化水平高，是重要的商品粮基地。",
   "kp": "东北地区",
@@ -195,15 +195,15 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "C",
-    "text": "地表缺少植被保护"
+    "text": "过度放牧"
    },
    {
     "key": "D",
-    "text": "过度放牧"
+    "text": "地表缺少植被保护"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "过度放牧属于人为原因。",
   "kp": "黄土高原",
@@ -233,7 +233,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "B",
-    "text": "植树种草，保护和恢复植被"
+    "text": "增加人口"
    },
    {
     "key": "C",
@@ -241,11 +241,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "D",
-    "text": "增加人口"
+    "text": "植树种草，保护和恢复植被"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "保护和恢复植被是治理黄土高原水土流失的关键。",
   "kp": "黄土高原",
@@ -321,15 +321,15 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "C",
-    "text": "上海"
+    "text": "苏州"
    },
    {
     "key": "D",
-    "text": "苏州"
+    "text": "上海"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "上海是长江三角洲地区的核心城市，被称为长三角的“龙头”。",
   "kp": "南方地区",
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "B",
-    "text": "以祖国内地为依托"
+    "text": "自然资源十分丰富"
    },
    {
     "key": "C",
-    "text": "自然资源十分丰富"
+    "text": "以祖国内地为依托"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "香港、澳门地域狭小、自然资源贫乏，经济发展依托祖国内地。",
   "kp": "南方地区",
@@ -401,11 +401,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "B",
-    "text": "山地"
+    "text": "高原"
    },
    {
     "key": "C",
-    "text": "高原"
+    "text": "山地"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "台湾岛山地约占三分之二，东部多山，西部多平原，城市和人口集中在西部。",
   "kp": "南方地区",
@@ -439,11 +439,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "荒漠—草原—荒漠草原"
+    "text": "草原—荒漠草原—荒漠"
    },
    {
     "key": "B",
-    "text": "草原—荒漠草原—荒漠"
+    "text": "荒漠—草原—荒漠草原"
    },
    {
     "key": "C",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "西北地区距海越来越远，降水由东向西递减，景观依次为草原—荒漠草原—荒漠。",
   "kp": "西北地区",
@@ -485,7 +485,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "B",
-    "text": "光照充足，昼夜温差大，有利于糖分积累"
+    "text": "气温低"
    },
    {
     "key": "C",
@@ -493,11 +493,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "D",
-    "text": "气温低"
+    "text": "光照充足，昼夜温差大，有利于糖分积累"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "新疆晴天多、光照足，白天光合作用强；昼夜温差大，夜间呼吸作用弱，有利于糖分积累。",
   "kp": "西北地区",
@@ -523,7 +523,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "山麓地带和河流沿岸"
+    "text": "高山顶部"
    },
    {
     "key": "B",
@@ -531,7 +531,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "C",
-    "text": "高山顶部"
+    "text": "山麓地带和河流沿岸"
    },
    {
     "key": "D",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "新疆的绿洲依靠高山冰雪融水灌溉，主要分布在山麓地带和河流沿岸。",
   "kp": "西北地区",
@@ -615,15 +615,15 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "C",
-    "text": "地势高"
+    "text": "受冬季风影响"
    },
    {
     "key": "D",
-    "text": "受冬季风影响"
+    "text": "地势高"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "青藏地区平均海拔 4000 米以上，海拔高，气温低。",
   "kp": "影响气候的因素",
@@ -649,7 +649,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "雅鲁藏布江谷地和湟水谷地"
+    "text": "青藏高原北部的高山"
    },
    {
     "key": "B",
@@ -657,7 +657,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "C",
-    "text": "青藏高原北部的高山"
+    "text": "雅鲁藏布江谷地和湟水谷地"
    },
    {
     "key": "D",
@@ -665,7 +665,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "河谷地带海拔较低，气温较高，水源充足，是青藏地区主要的农业区，主要种植青稞、小麦等。",
   "kp": "青藏地区",
@@ -691,11 +691,11 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "多年冻土"
+    "text": "沙漠"
    },
    {
     "key": "B",
-    "text": "沙漠"
+    "text": "多年冻土"
    },
    {
     "key": "C",
@@ -707,7 +707,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "青藏铁路要穿越多年冻土区，修建以桥代路、通风管道等措施是为了防止冻土融化导致路基不稳。",
   "kp": "青藏地区",
@@ -733,7 +733,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
   "options": [
    {
     "key": "A",
-    "text": "西北地区（新疆塔里木盆地等）"
+    "text": "南方地区"
    },
    {
     "key": "B",
@@ -741,7 +741,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    },
    {
     "key": "C",
-    "text": "南方地区"
+    "text": "西北地区（新疆塔里木盆地等）"
    },
    {
     "key": "D",
@@ -749,7 +749,7 @@ window.NATIONAL_PAPERS["earlybird-8down-dili"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "西气东输把新疆塔里木盆地等地的天然气输送到东部地区，实现资源的跨区域调配。",
   "kp": "西北地区",

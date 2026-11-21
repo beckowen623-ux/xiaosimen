@@ -27,15 +27,15 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    },
    {
     "key": "C",
-    "text": "粮食酿酒"
+    "text": "矿石粉碎"
    },
    {
     "key": "D",
-    "text": "矿石粉碎"
+    "text": "粮食酿酒"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "粮食酿酒生成了酒精等新物质，属于化学变化；其余只是状态或形状改变。",
   "kp": "物理变化与化学变化",
@@ -60,11 +60,11 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "用灯帽盖灭酒精灯"
+    "text": "用燃着的酒精灯去点燃另一盏酒精灯"
    },
    {
     "key": "B",
-    "text": "用燃着的酒精灯去点燃另一盏酒精灯"
+    "text": "用灯帽盖灭酒精灯"
    },
    {
     "key": "C",
@@ -76,9 +76,9 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
-  "explanation": "B 易引起火灾；C 应把浓硫酸沿器壁慢慢注入水中并不断搅拌；D 不能用手接触药品。",
+  "explanation": "A 易引起火灾；C 应把浓硫酸沿器壁慢慢注入水中并不断搅拌；D 不能用手接触药品。",
   "kp": "基本实验操作",
   "stem": "下列实验操作正确的是（ ）",
   "unit": "第一单元·走进化学世界"
@@ -105,7 +105,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    },
    {
     "key": "B",
-    "text": "二氧化锰"
+    "text": "空气"
    },
    {
     "key": "C",
@@ -113,11 +113,11 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    },
    {
     "key": "D",
-    "text": "空气"
+    "text": "二氧化锰"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "氧化物由两种元素组成且其中一种是氧元素。KMnO₄ 含三种元素；O₂ 是单质；空气是混合物。",
   "kp": "物质的分类",
@@ -142,11 +142,11 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "2H：两个氢原子"
+    "text": "Fe²⁺：一个铁离子"
    },
    {
     "key": "B",
-    "text": "Fe²⁺：一个铁离子"
+    "text": "2H：两个氢原子"
    },
    {
     "key": "C",
@@ -158,7 +158,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "Fe²⁺ 是亚铁离子；O₂ 表示氧气或一个氧分子；氧化铝的化学式是 Al₂O₃。",
   "kp": "化学用语",
@@ -183,7 +183,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "硒原子的质子数为 34"
+    "text": "硒的相对原子质量为 78.96 g"
    },
    {
     "key": "B",
@@ -191,7 +191,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    },
    {
     "key": "C",
-    "text": "硒的相对原子质量为 78.96 g"
+    "text": "硒原子的质子数为 34"
    },
    {
     "key": "D",
@@ -199,7 +199,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "相对原子质量的单位是“1”，通常省略不写，不是“g”。",
   "kp": "元素周期表",
@@ -228,11 +228,11 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    },
    {
     "key": "B",
-    "text": "乙醇中碳、氢元素的质量比为 4∶1"
+    "text": "乙醇属于氧化物"
    },
    {
     "key": "C",
-    "text": "乙醇属于氧化物"
+    "text": "乙醇中碳、氢元素的质量比为 4∶1"
    },
    {
     "key": "D",
@@ -240,7 +240,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "一个乙醇分子由 9 个原子构成，不能说乙醇由 9 个原子构成；C∶H＝(12×2)∶(1×6)＝24∶6＝4∶1；乙醇含三种元素，不是氧化物；碳元素质量分数最大。",
   "kp": "化学式的意义与计算",
@@ -269,7 +269,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    },
    {
     "key": "B",
-    "text": "隔绝氧气（或空气）"
+    "text": "使温度降到着火点以下"
    },
    {
     "key": "C",
@@ -277,11 +277,11 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    },
    {
     "key": "D",
-    "text": "使温度降到着火点以下"
+    "text": "隔绝氧气（或空气）"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "盖上锅盖使油与空气隔绝。着火点是物质的固有属性，一般不能降低。",
   "kp": "燃烧与灭火",
@@ -393,11 +393,11 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    },
    {
     "key": "B",
-    "text": "无色酚酞溶液"
+    "text": "锌粒"
    },
    {
     "key": "C",
-    "text": "锌粒"
+    "text": "无色酚酞溶液"
    },
    {
     "key": "D",
@@ -405,7 +405,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "酚酞遇酸性、中性溶液都不变色，无法区分；石蕊遇盐酸变红，锌粒、碳酸钠遇盐酸产生气泡。",
   "kp": "物质的鉴别",
@@ -430,11 +430,11 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "CO₂（CO）：点燃"
+    "text": "NaCl 溶液（Na₂CO₃）：加入适量稀盐酸"
    },
    {
     "key": "B",
-    "text": "NaCl 溶液（Na₂CO₃）：加入适量稀盐酸"
+    "text": "CO₂（CO）：点燃"
    },
    {
     "key": "C",
@@ -446,9 +446,9 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
-  "explanation": "A 二氧化碳中少量一氧化碳无法点燃；B Na₂CO₃＋2HCl＝2NaCl＋H₂O＋CO₂↑，不引入新杂质；C 氧化钙会与水反应，把主要物质除掉了；D 稀硫酸与铁反应，除去的是主要物质。",
+  "explanation": "A Na₂CO₃＋2HCl＝2NaCl＋H₂O＋CO₂↑，不引入新杂质；B 二氧化碳中少量一氧化碳无法点燃；C 氧化钙会与水反应，把主要物质除掉了；D 稀硫酸与铁反应，除去的是主要物质。",
   "kp": "除杂",
   "stem": "除去下列物质中的少量杂质（括号内为杂质），所用方法正确的是（ ）",
   "unit": "第十、十一单元·酸碱盐"
@@ -475,11 +475,11 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    },
    {
     "key": "B",
-    "text": "先产生气泡，后产生白色沉淀"
+    "text": "整个过程中溶液的 pH 一直减小"
    },
    {
     "key": "C",
-    "text": "整个过程中溶液的 pH 一直减小"
+    "text": "先产生气泡，后产生白色沉淀"
    },
    {
     "key": "D",
@@ -487,7 +487,7 @@ window.NATIONAL_PAPERS["claude-2026-chemistry-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "碳酸钠先与盐酸反应产生 CO₂（若先生成 CaCO₃ 沉淀，也会被盐酸溶解），盐酸耗尽后才与氯化钙反应生成白色沉淀。pH 从小于 7 逐渐增大，碳酸钠过量后大于 7；最后溶质为 NaCl 和过量的 Na₂CO₃。",
   "kp": "复分解反应的先后顺序",

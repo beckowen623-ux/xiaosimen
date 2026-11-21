@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "生物能进行呼吸"
+    "text": "生物能对外界刺激作出反应"
    },
    {
     "key": "C",
-    "text": "生物能对外界刺激作出反应"
+    "text": "生物能进行呼吸"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "含羞草受到触碰（刺激）后叶片合拢，是对外界刺激作出的反应（应激性）。",
   "kp": "生物的特征",
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "左下方"
+    "text": "右下方"
    },
    {
     "key": "B",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "右下方"
+    "text": "左下方"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "显微镜成倒像，物像偏向哪个方向，玻片就向哪个方向移动，物像才会移到中央。",
   "kp": "显微镜的使用",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "洋葱不是植物"
+    "text": "并不是所有植物细胞都有叶绿体"
    },
    {
     "key": "B",
-    "text": "并不是所有植物细胞都有叶绿体"
+    "text": "洋葱不是植物"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "叶绿体主要存在于植物绿色部分的细胞中，洋葱鳞片叶内表皮细胞不见光、没有叶绿体。坑点：细胞壁、液泡、叶绿体并不是每个植物细胞都同时具有。",
   "kp": "植物细胞的结构",
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "细胞"
+    "text": "系统"
    },
    {
     "key": "B",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "系统"
+    "text": "细胞"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "植物体：细胞→组织→器官→植物体；人体多了“系统”这一层次。",
   "kp": "生物体的结构层次",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "使叶片中的淀粉运走耗尽"
+    "text": "使叶片充分吸收水分"
    },
    {
     "key": "B",
@@ -237,7 +237,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "使叶片充分吸收水分"
+    "text": "使叶片中的淀粉运走耗尽"
    },
    {
     "key": "D",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "暗处理是为了把叶片中原有的淀粉运走耗尽，排除原有淀粉对实验结果的干扰。",
   "kp": "绿叶在光下制造有机物",
@@ -271,7 +271,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "白天只进行光合作用，夜晚才进行呼吸作用"
+    "text": "所有活细胞都能进行呼吸作用，有光无光都能进行"
    },
    {
     "key": "B",
@@ -279,7 +279,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "所有活细胞都能进行呼吸作用，有光无光都能进行"
+    "text": "白天只进行光合作用，夜晚才进行呼吸作用"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "呼吸作用在所有活细胞中进行，白天和夜晚都在进行；它吸收氧气，释放二氧化碳。",
   "kp": "呼吸作用",
@@ -317,7 +317,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "气孔"
+    "text": "根毛"
    },
    {
     "key": "C",
@@ -325,11 +325,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "根毛"
+    "text": "气孔"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "气孔是植物蒸腾失水的“门户”，也是气体交换的“窗口”。",
   "kp": "蒸腾作用",
@@ -355,11 +355,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "适宜的温度、一定的水分、充足的空气"
+    "text": "适宜的温度、充足的光照、肥沃的土壤"
    },
    {
     "key": "B",
-    "text": "适宜的温度、充足的光照、肥沃的土壤"
+    "text": "适宜的温度、一定的水分、充足的空气"
    },
    {
     "key": "C",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "种子萌发的外界条件是适宜的温度、一定的水分和充足的空气；完整而有活力的胚属于自身条件。光照和土壤不是必需的。",
   "kp": "种子萌发的条件",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "淀粉在口腔开始被消化，最终在小肠中被分解为葡萄糖"
+    "text": "胃是消化和吸收的主要场所"
    },
    {
     "key": "B",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "胃是消化和吸收的主要场所"
+    "text": "淀粉在口腔开始被消化，最终在小肠中被分解为葡萄糖"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "蛋白质在胃中开始消化；胆汁不含消化酶，只能乳化脂肪；小肠是消化和吸收的主要场所。",
   "kp": "食物的消化",
@@ -481,11 +481,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "肾小球的滤过作用异常"
+    "text": "胰岛素分泌不足"
    },
    {
     "key": "B",
-    "text": "胰岛素分泌不足"
+    "text": "肾小球的滤过作用异常"
    },
    {
     "key": "C",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "胰岛素分泌不足，血糖浓度过高，超过肾小管的重吸收能力，尿中出现葡萄糖（糖尿病）。肾小球病变一般导致尿中出现蛋白质或血细胞。",
   "kp": "尿的形成与激素调节",
@@ -531,15 +531,15 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "神经中枢位于脊髓，属于简单（非条件）反射"
+    "text": "先感觉到烫，再缩手"
    },
    {
     "key": "D",
-    "text": "先感觉到烫，再缩手"
+    "text": "神经中枢位于脊髓，属于简单（非条件）反射"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "缩手反射的神经中枢在脊髓，是生来就有的简单反射；缩手发生在感觉到烫之前，因为痛觉要传到大脑皮层，路径更长。",
   "kp": "反射与反射弧",
@@ -569,11 +569,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "生长激素"
+    "text": "胰岛素"
    },
    {
     "key": "C",
-    "text": "胰岛素"
+    "text": "生长激素"
    },
    {
     "key": "D",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "幼年生长激素分泌不足导致侏儒症（身材矮小、智力正常）；幼年甲状腺激素分泌不足导致呆小症（身材矮小、智力低下）。",
   "kp": "激素调节",
@@ -615,15 +615,15 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "运动是在神经系统的调节下，由骨、关节和骨骼肌共同完成的"
+    "text": "一个动作只需要一组骨骼肌参与"
    },
    {
     "key": "D",
-    "text": "一个动作只需要一组骨骼肌参与"
+    "text": "运动是在神经系统的调节下，由骨、关节和骨骼肌共同完成的"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "骨骼肌只能收缩牵拉骨，不能推开骨；一块骨骼肌的两端肌腱附着在不同的骨上；一个动作至少需要两组肌肉相互配合。",
   "kp": "运动的完成",
@@ -775,7 +775,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "农药使害虫产生了抗药性变异"
+    "text": "害虫群体中原本就存在抗药性的变异，农药对其进行了选择"
    },
    {
     "key": "B",
@@ -783,7 +783,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "害虫群体中原本就存在抗药性的变异，农药对其进行了选择"
+    "text": "农药使害虫产生了抗药性变异"
    },
    {
     "key": "D",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "变异是不定向的，抗药性变异原本就存在；农药起选择作用，具有抗药性的个体生存下来并繁殖后代。",
   "kp": "自然选择",
@@ -821,11 +821,11 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "切断传播途径"
+    "text": "保护易感人群"
    },
    {
     "key": "C",
-    "text": "保护易感人群"
+    "text": "切断传播途径"
    },
    {
     "key": "D",
@@ -833,7 +833,7 @@ window.NATIONAL_PAPERS["earlybird-2027-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "接种疫苗使人体产生抗体，提高免疫力，属于保护易感人群。坑点：戴口罩、勤洗手才是切断传播途径。",
   "kp": "传染病的预防",

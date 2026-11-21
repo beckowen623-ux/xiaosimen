@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "北京人是我国境内已知最早的人类"
+    "text": "山顶洞人已经会人工取火"
    },
    {
     "key": "C",
-    "text": "山顶洞人已经会人工取火"
+    "text": "北京人是我国境内已知最早的人类"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "北京人会使用天然火；元谋人是我国境内已知最早的人类；山顶洞人会人工取火、磨制骨针。题干中的遗址（约 3 万年前、骨针）即山顶洞人遗址。",
   "kp": "远古人类",
@@ -65,7 +65,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "商鞅变法"
+    "text": "王安石变法"
    },
    {
     "key": "C",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "D",
-    "text": "王安石变法"
+    "text": "商鞅变法"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "奖励耕战、建立县制、承认土地私有是秦国商鞅变法的内容。",
   "kp": "商鞅变法",
@@ -111,15 +111,15 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "C",
-    "text": "推行郡县制"
+    "text": "颁布推恩令，削弱王国势力"
    },
    {
     "key": "D",
-    "text": "颁布推恩令，削弱王国势力"
+    "text": "推行郡县制"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "推恩令是汉武帝为解决王国问题颁布的。",
   "kp": "秦朝巩固统一的措施",
@@ -149,7 +149,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "加强思想控制，巩固大一统"
+    "text": "改革选官制度，选拔人才"
    },
    {
     "key": "C",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "D",
-    "text": "改革选官制度，选拔人才"
+    "text": "加强思想控制，巩固大一统"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "尊崇儒术是为了统一思想，加强中央集权，巩固大一统。坑点：设立太学只是手段之一，不是根本目的。",
   "kp": "汉武帝大一统",
@@ -233,11 +233,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "进士科"
+    "text": "武举"
    },
    {
     "key": "C",
-    "text": "武举"
+    "text": "进士科"
    },
    {
     "key": "D",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "唐太宗时扩充国学规模；武则天开创殿试和武举；唐玄宗时，诗赋成为进士科的主要考试内容。",
   "kp": "科举制的完善",
@@ -317,7 +317,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "君主专制达到顶峰"
+    "text": "资本主义萌芽出现"
    },
    {
     "key": "C",
@@ -325,11 +325,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "D",
-    "text": "资本主义萌芽出现"
+    "text": "君主专制达到顶峰"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "雍正帝设立军机处，标志着君主专制达到顶峰。明太祖时废除丞相，坑点在 A。",
   "kp": "清朝君主专制的强化",
@@ -359,7 +359,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "赔款 2 100 万银元"
+    "text": "开放南京为通商口岸"
    },
    {
     "key": "C",
@@ -367,11 +367,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "D",
-    "text": "开放南京为通商口岸"
+    "text": "赔款 2 100 万银元"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "《南京条约》开放的“五口”是广州、厦门、福州、宁波、上海，不包括南京。坑点：条约名称与开放口岸混淆。",
   "kp": "《南京条约》",
@@ -401,11 +401,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "洋务运动引进了西方先进技术，使中国出现了第一批近代企业"
+    "text": "洋务运动旨在推翻清朝统治"
    },
    {
     "key": "C",
-    "text": "洋务运动旨在推翻清朝统治"
+    "text": "洋务运动引进了西方先进技术，使中国出现了第一批近代企业"
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "洋务运动没有使中国走上富强道路，目的是维护清朝统治，学习的是西方先进技术（器物层面），不是政治制度。",
   "kp": "洋务运动",
@@ -439,11 +439,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "彻底完成了反帝反封建的任务"
+    "text": "推翻了统治中国两千多年的君主专制制度"
    },
    {
     "key": "B",
-    "text": "推翻了统治中国两千多年的君主专制制度"
+    "text": "彻底完成了反帝反封建的任务"
    },
    {
     "key": "C",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "辛亥革命推翻了清朝统治，结束了两千多年的君主专制制度，但没有改变中国半殖民地半封建社会性质。五四运动才是新民主主义革命的开端。",
   "kp": "辛亥革命",
@@ -485,7 +485,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "宣传马克思主义"
+    "text": "宣传洋务思想"
    },
    {
     "key": "C",
@@ -493,11 +493,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "D",
-    "text": "宣传洋务思想"
+    "text": "宣传马克思主义"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "五四运动后，新文化运动发展为宣传马克思主义的思想运动。",
   "kp": "新文化运动",
@@ -523,11 +523,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "上海黄浦江"
+    "text": "浙江嘉兴南湖"
    },
    {
     "key": "B",
-    "text": "浙江嘉兴南湖"
+    "text": "上海黄浦江"
    },
    {
     "key": "C",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "中共一大在上海召开，最后一天转移到浙江嘉兴南湖的游船上举行。",
   "kp": "中国共产党的诞生",
@@ -569,7 +569,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "遵义会议"
+    "text": "中共十一届三中全会"
    },
    {
     "key": "C",
@@ -577,11 +577,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "D",
-    "text": "中共十一届三中全会"
+    "text": "遵义会议"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "遵义会议是党的历史上一个生死攸关的转折点。",
   "kp": "遵义会议",
@@ -607,11 +607,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "九一八事变标志着全民族抗战的开始"
+    "text": "七七事变标志着全民族抗战的开始"
    },
    {
     "key": "B",
-    "text": "七七事变标志着全民族抗战的开始"
+    "text": "九一八事变标志着全民族抗战的开始"
    },
    {
     "key": "C",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "九一八事变是中国局部抗战的开始；七七事变（卢沟桥事变）是全民族抗战的开始，发生在北平附近。",
   "kp": "抗日战争",
@@ -691,11 +691,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "人民公社化运动"
+    "text": "家庭联产承包责任制"
    },
    {
     "key": "B",
-    "text": "家庭联产承包责任制"
+    "text": "人民公社化运动"
    },
    {
     "key": "C",
@@ -707,7 +707,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "小岗村的做法发展为家庭联产承包责任制，调动了农民的生产积极性。坑点：土地改革是新中国成立初期废除封建土地所有制。",
   "kp": "农村改革",
@@ -737,11 +737,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "古巴比伦的《汉谟拉比法典》"
+    "text": "古罗马的《十二铜表法》"
    },
    {
     "key": "C",
-    "text": "古罗马的《十二铜表法》"
+    "text": "古巴比伦的《汉谟拉比法典》"
    },
    {
     "key": "D",
@@ -749,7 +749,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "《汉谟拉比法典》刻在石柱上，是迄今已知世界上第一部比较完备的成文法典。",
   "kp": "古代两河流域",
@@ -779,11 +779,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "达·伽马"
+    "text": "麦哲伦船队"
    },
    {
     "key": "C",
-    "text": "麦哲伦船队"
+    "text": "达·伽马"
    },
    {
     "key": "D",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "麦哲伦船队完成了人类第一次环球航行，证明了地球是一个圆体；哥伦布到达美洲；达·伽马到达印度；迪亚士到达好望角。",
   "kp": "新航路开辟",
@@ -821,11 +821,11 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    },
    {
     "key": "B",
-    "text": "电气时代"
+    "text": "信息时代"
    },
    {
     "key": "C",
-    "text": "信息时代"
+    "text": "电气时代"
    },
    {
     "key": "D",
@@ -833,7 +833,7 @@ window.NATIONAL_PAPERS["earlybird-2027-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "第二次工业革命使人类进入电气时代；第一次工业革命（以瓦特改良蒸汽机为标志）使人类进入蒸汽时代。",
   "kp": "第二次工业革命",

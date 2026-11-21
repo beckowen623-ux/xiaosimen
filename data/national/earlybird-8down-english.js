@@ -65,11 +65,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "B",
-    "text": "did"
+    "text": "was doing"
    },
    {
     "key": "C",
-    "text": "was doing"
+    "text": "did"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "问过去某一时刻正在做什么，用过去进行时 was doing。",
   "kp": "过去进行时",
@@ -107,11 +107,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "B",
-    "text": "been"
+    "text": "go"
    },
    {
     "key": "C",
-    "text": "go"
+    "text": "been"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "have been to 去过某地（已回来）；have gone to 去了某地（还没回来）。坑点：have gone to 不用于问“你去过吗”。",
   "kp": "现在完成时",
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "has bought"
+    "text": "has had"
    },
    {
     "key": "B",
-    "text": "has had"
+    "text": "has bought"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "for five years 表一段时间，要用延续性动词，buy 是短暂性动词，改为 have had。",
   "kp": "现在完成时",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "too; to"
+    "text": "so; that"
    },
    {
     "key": "B",
-    "text": "so; that"
+    "text": "too; to"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "so＋形容词＋that 从句，“如此……以至于……”。too...to 后接动词原形，不接句子。",
   "kp": "so...that",
@@ -313,7 +313,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "as soon as"
+    "text": "before long"
    },
    {
     "key": "B",
@@ -325,11 +325,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "D",
-    "text": "before long"
+    "text": "as soon as"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "as soon as 一……就……，从句用一般现在时表将来。",
   "kp": "时间状语从句",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "out at"
+    "text": "off at"
    },
    {
     "key": "B",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "C",
-    "text": "off at"
+    "text": "out at"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "help out 帮忙，help out at the old people's home 到养老院帮忙。",
   "kp": "动词短语",
@@ -401,7 +401,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "B",
-    "text": "yet; yet"
+    "text": "yet; already"
    },
    {
     "key": "C",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "D",
-    "text": "yet; already"
+    "text": "yet; yet"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "现在完成时的疑问句和否定句用 yet；肯定句用 already。",
   "kp": "现在完成时",
@@ -485,7 +485,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "across"
+    "text": "over"
    },
    {
     "key": "B",
@@ -493,7 +493,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "C",
-    "text": "over"
+    "text": "across"
    },
    {
     "key": "D",
@@ -501,7 +501,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "橘子在路面上滚过，across 表示在物体表面横穿。",
   "kp": "介词辨析",
@@ -529,11 +529,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "stopped"
+    "text": "laughed"
    },
    {
     "key": "B",
-    "text": "laughed"
+    "text": "stopped"
    },
    {
     "key": "C",
@@ -545,7 +545,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "很多人走过，却没有一个人停下来。",
   "kp": "上下文",
@@ -617,7 +617,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "down"
+    "text": "out"
    },
    {
     "key": "B",
@@ -629,11 +629,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "D",
-    "text": "out"
+    "text": "down"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "fall down 摔倒。",
   "kp": "动词短语",
@@ -661,7 +661,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "called"
+    "text": "found"
    },
    {
     "key": "B",
@@ -669,7 +669,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "C",
-    "text": "found"
+    "text": "called"
    },
    {
     "key": "D",
@@ -677,7 +677,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "用他的手机给他儿子打电话。",
   "kp": "上下文",
@@ -705,7 +705,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "waiting"
+    "text": "paying"
    },
    {
     "key": "B",
@@ -717,11 +717,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "D",
-    "text": "paying"
+    "text": "waiting"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "wait for 等待。",
   "kp": "动词短语",
@@ -793,11 +793,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "but"
+    "text": "so"
    },
    {
     "key": "B",
-    "text": "so"
+    "text": "but"
    },
    {
     "key": "C",
@@ -809,7 +809,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "身上又湿又冷，但心里很温暖，前后转折。",
   "kp": "连词",
@@ -837,7 +837,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "have learned"
+    "text": "am learning"
    },
    {
     "key": "B",
@@ -849,11 +849,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "D",
-    "text": "am learning"
+    "text": "have learned"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "Since then 从那以后，表示从过去持续到现在，用现在完成时 have learned。",
   "kp": "现在完成时",
@@ -929,7 +929,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "B",
-    "text": "Clean up the park and plant trees."
+    "text": "Sing songs."
    },
    {
     "key": "C",
@@ -937,11 +937,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "D",
-    "text": "Sing songs."
+    "text": "Clean up the park and plant trees."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "Help us clean up the park and plant trees。",
   "kp": "细节理解",
@@ -969,7 +969,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "On Saturday morning."
+    "text": "On Monday afternoon."
    },
    {
     "key": "B",
@@ -977,7 +977,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "C",
-    "text": "On Monday afternoon."
+    "text": "On Saturday morning."
    },
    {
     "key": "D",
@@ -985,7 +985,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "Weekdays 4:00–6:00 pm，周一下午属于工作日。",
   "kp": "推理判断",
@@ -1017,7 +1017,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "B",
-    "text": "By sending an e-mail."
+    "text": "By visiting the library."
    },
    {
     "key": "C",
@@ -1025,11 +1025,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "D",
-    "text": "By visiting the library."
+    "text": "By sending an e-mail."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "Green Park 只留了邮箱。",
   "kp": "细节理解",
@@ -1057,7 +1057,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Volunteers at Green Park need to bring their own tools."
+    "text": "Volunteers at Happy Home can play chess with the old people."
    },
    {
     "key": "B",
@@ -1065,7 +1065,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "C",
-    "text": "Volunteers at Happy Home can play chess with the old people."
+    "text": "Volunteers at Green Park need to bring their own tools."
    },
    {
     "key": "D",
@@ -1073,7 +1073,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "Happy Home 可以陪老人下棋。公园提供工具；学生必须有老师或家长陪同；图书馆是周六。",
   "kp": "细节理解",
@@ -1145,7 +1145,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "How to plan and solve problems."
+    "text": "How to study harder."
    },
    {
     "key": "B",
@@ -1157,11 +1157,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "D",
-    "text": "How to study harder."
+    "text": "How to plan and solve problems."
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "When they cook meals, they learn how to plan and solve problems。",
   "kp": "细节理解",
@@ -1189,11 +1189,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "5 to 10 minutes."
+    "text": "20 to 30 minutes."
    },
    {
     "key": "B",
-    "text": "20 to 30 minutes."
+    "text": "5 to 10 minutes."
    },
    {
     "key": "C",
@@ -1205,7 +1205,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "about 20 to 30 minutes a day on chores。",
   "kp": "细节理解",
@@ -1281,11 +1281,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "B",
-    "text": "Teenagers should do some chores at home."
+    "text": "Chores are a waste of time."
    },
    {
     "key": "C",
-    "text": "Chores are a waste of time."
+    "text": "Teenagers should do some chores at home."
    },
    {
     "key": "D",
@@ -1293,7 +1293,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "作者列举做家务的好处，结尾鼓励“拿起扫帚开始吧”，认为青少年应该做些家务。",
   "kp": "观点态度",
@@ -1321,11 +1321,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "8,488.86 meters."
+    "text": "8,848.86 meters."
    },
    {
     "key": "B",
-    "text": "8,848.86 meters."
+    "text": "8,488.86 meters."
    },
    {
     "key": "C",
@@ -1337,7 +1337,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "It is 8,848.86 meters high。注意数字不要看错。",
   "kp": "细节理解",
@@ -1373,15 +1373,15 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "C",
-    "text": "Strong winds and snowstorms."
+    "text": "Too many tourists on the top."
    },
    {
     "key": "D",
-    "text": "Too many tourists on the top."
+    "text": "Strong winds and snowstorms."
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "文中提到严寒、缺氧、强风和暴风雪，没有提到山顶游客太多。",
   "kp": "细节理解",
@@ -1409,11 +1409,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "In 1960."
+    "text": "In 1975."
    },
    {
     "key": "B",
-    "text": "In 1975."
+    "text": "In 1960."
    },
    {
     "key": "C",
@@ -1425,7 +1425,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "In 1960, three Chinese climbers reached the top ... from the north side for the first time。",
   "kp": "细节理解",
@@ -1457,7 +1457,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "B",
-    "text": "They measured the new height of Qomolangma."
+    "text": "They gave up halfway."
    },
    {
     "key": "C",
@@ -1465,11 +1465,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "D",
-    "text": "They gave up halfway."
+    "text": "They measured the new height of Qomolangma."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "In 2020, a Chinese team climbed to the top again and measured its new height。",
   "kp": "细节理解",
@@ -1501,11 +1501,11 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    },
    {
     "key": "B",
-    "text": "Making money."
+    "text": "Challenging yourself and never giving up."
    },
    {
     "key": "C",
-    "text": "Challenging yourself and never giving up."
+    "text": "Making money."
    },
    {
     "key": "D",
@@ -1513,7 +1513,7 @@ window.NATIONAL_PAPERS["earlybird-8down-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "最后一段：the spirit of climbing is about challenging themselves and never giving up。",
   "kp": "推理判断",

@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    },
    {
     "key": "B",
-    "text": "人正常步行的速度约为 1.1 m/s"
+    "text": "一个鸡蛋的质量约为 500 g"
    },
    {
     "key": "C",
-    "text": "一个鸡蛋的质量约为 500 g"
+    "text": "人正常步行的速度约为 1.1 m/s"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "中学生身高约 160 cm＝16 dm；一个鸡蛋约 50 g；教室门高约 2 m。人步行约 1.1 m/s，最接近实际。",
   "kp": "常见物理量的估测",
@@ -69,15 +69,15 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    },
    {
     "key": "C",
-    "text": "自己坐的座椅"
+    "text": "地面"
    },
    {
     "key": "D",
-    "text": "地面"
+    "text": "自己坐的座椅"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "乘客相对于自己坐的座椅位置没有变化，是静止的；相对于树、地面、迎面的车都是运动的。",
   "kp": "参照物",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "音调"
+    "text": "响度"
    },
    {
     "key": "B",
-    "text": "响度"
+    "text": "音调"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "用力大小改变鼓面振动的幅度，振幅越大响度越大。音调与频率有关，音色与发声体本身有关。",
   "kp": "声音的特性",
@@ -149,7 +149,7 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    },
    {
     "key": "B",
-    "text": "用超声波清洗眼镜，说明声能传递能量"
+    "text": "“女高音”中的“高”指的是响度大"
    },
    {
     "key": "C",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    },
    {
     "key": "D",
-    "text": "“女高音”中的“高”指的是响度大"
+    "text": "用超声波清洗眼镜，说明声能传递能量"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "真空不能传声；禁止鸣笛是在声源处减弱噪声；女高音的“高”指音调高。",
   "kp": "声现象",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "清晨草叶上出现露珠"
+    "text": "春天冰雪消融"
    },
    {
     "key": "B",
-    "text": "春天冰雪消融"
+    "text": "清晨草叶上出现露珠"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "冰雪消融是熔化，吸热。露珠是液化、霜是凝华、结冰是凝固，都放热。",
   "kp": "物态变化与吸放热",
@@ -275,11 +275,11 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    },
    {
     "key": "B",
-    "text": "水中的倒影"
+    "text": "插入水中的筷子看起来“弯折”了"
    },
    {
     "key": "C",
-    "text": "插入水中的筷子看起来“弯折”了"
+    "text": "水中的倒影"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "小孔成像和树荫下的光斑是光的直线传播，水中倒影是光的反射，筷子“弯折”是光的折射。",
   "kp": "光现象",
@@ -313,11 +313,11 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "3 m，变大"
+    "text": "3 m，不变"
    },
    {
     "key": "B",
-    "text": "3 m，不变"
+    "text": "3 m，变大"
    },
    {
     "key": "C",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "走近后人离镜 1.5 m，像离镜也是 1.5 m，人与像相距 3 m；平面镜成像大小与物体大小相等，不变。坑点：觉得“近大远小”，像会变大。",
   "kp": "平面镜成像",
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    },
    {
     "key": "B",
-    "text": "10 cm＜f＜20 cm"
+    "text": "f＞20 cm"
    },
    {
     "key": "C",
-    "text": "f＞20 cm"
+    "text": "10 cm＜f＜20 cm"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-8up-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "成倒立放大实像时 f＜u＜2f：f＜20 cm＜2f，解得 10 cm＜f＜20 cm。",
   "kp": "凸透镜成像规律",

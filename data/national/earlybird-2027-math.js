@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "1.0086×10⁷"
+    "text": "1.0086×10³"
    },
    {
     "key": "B",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
    },
    {
     "key": "D",
-    "text": "1.0086×10³"
+    "text": "1.0086×10⁷"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "1 008.6 万＝10 086 000＝1.0086×10⁷。注意“万”要先换算成个位单位，a 必须满足 1≤|a|＜10。",
   "kp": "科学记数法",
@@ -107,11 +107,11 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
    },
    {
     "key": "B",
-    "text": "k＜2 且 k≠1"
+    "text": "k≤2 且 k≠1"
    },
    {
     "key": "C",
-    "text": "k≤2 且 k≠1"
+    "text": "k＜2 且 k≠1"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "Δ＝4－4(k－1)＞0，得 k＜2；又因为是一元二次方程，二次项系数 k－1≠0，所以 k≠1。坑点：只算判别式会误选 A。",
   "kp": "根的判别式",
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "5 和 1.2"
+    "text": "5.5 和 1.2"
    },
    {
     "key": "B",
-    "text": "5.5 和 1.2"
+    "text": "5 和 1.2"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "由平均数得 3＋5＋5＋6＋x＝25，x＝6。数据排序为 3，5，5，6，6，中位数是 5；方差＝[(3－5)²＋0＋0＋1＋1]÷5＝1.2。",
   "kp": "数据的分析",
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "－1≤a＜0"
+    "text": "a＜0"
    },
    {
     "key": "B",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
    },
    {
     "key": "D",
-    "text": "a＜0"
+    "text": "－1≤a＜0"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "解得 a＜x＜2。要恰好有 2 个整数解，只能是 1 和 0，所以 －1≤a＜0。端点检验：a＝－1 时解集为 －1＜x＜2，整数解为 0，1，符合；a＝0 时整数解只有 1，不符合。",
   "kp": "不等式组的整数解",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "4.8"
+    "text": "9.6"
    },
    {
     "key": "B",
@@ -367,11 +367,11 @@ window.NATIONAL_PAPERS["earlybird-2027-math"] = [
    },
    {
     "key": "D",
-    "text": "9.6"
+    "text": "4.8"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "对角线互相垂直平分，边长＝√(3²＋4²)＝5；面积＝6×8÷2＝24；高＝24÷5＝4.8。坑点：5 是边长，2.4 是面积公式少乘 2 的结果。",
   "kp": "菱形的性质",

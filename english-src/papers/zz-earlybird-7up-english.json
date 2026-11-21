@@ -14,15 +14,15 @@
       "type": "单项选择",
       "score": 1,
       "items": [
-        {"n": 1, "stem": "—______ is your cousin?\n—She's twelve. She's in Grade 7, too.", "options": ["How old", "How", "What", "Where"], "answer": "A", "kp": "特殊疑问句", "exp": "答语是年龄，用 how old 提问。"},
+        {"n": 1, "stem": "—______ is your cousin?\n—She's twelve. She's in Grade 7, too.", "options": ["Where", "How", "What", "How old"], "answer": "D", "kp": "特殊疑问句", "exp": "答语是年龄，用 how old 提问。"},
         {"n": 2, "stem": "There ______ some milk and two eggs on the kitchen table.", "options": ["is", "are", "has", "have"], "answer": "A", "kp": "There be 句型", "exp": "there be 就近原则：离 be 最近的 milk 是不可数名词，用 is。"},
-        {"n": 3, "stem": "There is ______ \"u\" and ______ \"f\" in the word \"useful\".", "options": ["a; an", "an; a", "a; a", "an; an"], "answer": "A", "kp": "冠词", "exp": "看读音不看字母：u 读 /juː/，以辅音音素开头，用 a；f 读 /ef/，以元音音素开头，用 an。坑点：看到元音字母 u 就用 an。"},
-        {"n": 4, "stem": "—Whose schoolbag is this?\n—It's ______. Her name is on it.", "options": ["Lucy", "Lucys", "Lucy's", "Lucys'"], "answer": "C", "kp": "名词所有格", "exp": "“Lucy 的”用名词所有格 Lucy's。"},
-        {"n": 5, "stem": "My sister was born ______ the morning of June 1st, so her birthday is on Children's Day.", "options": ["in", "on", "at", "of"], "answer": "B", "kp": "时间介词", "exp": "具体某一天的上午用 on。坑点：in the morning 前面有具体日期修饰时要改用 on。"},
-        {"n": 6, "stem": "—Does your father ______ breakfast at home?\n—No, he ______. He usually eats at work.", "options": ["has; don't", "have; doesn't", "has; doesn't", "have; don't"], "answer": "B", "kp": "一般现在时", "exp": "助动词 does 后面用动词原形 have；主语 he，否定回答用 doesn't。"},
-        {"n": 7, "stem": "Eric is good ______ swimming, so he wants to join the swimming club.", "options": ["at", "for", "with", "in"], "answer": "A", "kp": "固定搭配", "exp": "be good at 擅长。be good for 对……有益，be good with 和……相处得好。"},
-        {"n": 8, "stem": "—How much ______ the sports shoes?\n—______ 85 yuan.", "options": ["is; It's", "are; They're", "is; They're", "are; It's"], "answer": "B", "kp": "how much", "exp": "shoes 是复数，用 are，回答用 They're。"},
-        {"n": 9, "stem": "We have Chinese, maths and English ______ Monday. My favourite day is Monday ______ I like these subjects.", "options": ["on; because", "in; so", "on; so", "at; because"], "answer": "A", "kp": "介词和连词", "exp": "星期几前用 on；后一句说喜欢周一的原因，用 because。"},
+        {"n": 3, "stem": "There is ______ \"u\" and ______ \"f\" in the word \"useful\".", "options": ["an; a", "a; an", "a; a", "an; an"], "answer": "B", "kp": "冠词", "exp": "看读音不看字母：u 读 /juː/，以辅音音素开头，用 a；f 读 /ef/，以元音音素开头，用 an。坑点：看到元音字母 u 就用 an。"},
+        {"n": 4, "stem": "—Whose schoolbag is this?\n—It's ______. Her name is on it.", "options": ["Lucy's", "Lucys", "Lucy", "Lucys'"], "answer": "A", "kp": "名词所有格", "exp": "“Lucy 的”用名词所有格 Lucy's。"},
+        {"n": 5, "stem": "My sister was born ______ the morning of June 1st, so her birthday is on Children's Day.", "options": ["in", "at", "on", "of"], "answer": "C", "kp": "时间介词", "exp": "具体某一天的上午用 on。坑点：in the morning 前面有具体日期修饰时要改用 on。"},
+        {"n": 6, "stem": "—Does your father ______ breakfast at home?\n—No, he ______. He usually eats at work.", "options": ["have; doesn't", "has; don't", "has; doesn't", "have; don't"], "answer": "A", "kp": "一般现在时", "exp": "助动词 does 后面用动词原形 have；主语 he，否定回答用 doesn't。"},
+        {"n": 7, "stem": "Eric is good ______ swimming, so he wants to join the swimming club.", "options": ["with", "for", "at", "in"], "answer": "C", "kp": "固定搭配", "exp": "be good at 擅长。be good for 对……有益，be good with 和……相处得好。"},
+        {"n": 8, "stem": "—How much ______ the sports shoes?\n—______ 85 yuan.", "options": ["is; It's", "are; It's", "is; They're", "are; They're"], "answer": "D", "kp": "how much", "exp": "shoes 是复数，用 are，回答用 They're。"},
+        {"n": 9, "stem": "We have Chinese, maths and English ______ Monday. My favourite day is Monday ______ I like these subjects.", "options": ["on; so", "in; so", "on; because", "at; because"], "answer": "C", "kp": "介词和连词", "exp": "星期几前用 on；后一句说喜欢周一的原因，用 because。"},
         {"n": 10, "stem": "—Would you like to come to my birthday party this Saturday?\n—______", "options": ["Yes, I would.", "I'd love to.", "No, I don't.", "Here you are."], "answer": "B", "kp": "交际用语", "exp": "接受邀请常说 I'd love to.（不说 Yes, I would.）"}
       ]
     },
@@ -32,16 +32,16 @@
       "title": "My Weekend at the Library",
       "passage": "Hi! I'm Kate. Every Saturday morning, I go to the Sunshine Library (11) my mother. The library is not far (12) our home, so we walk there.\nIt's a big library. There (13) more than 50,000 books in it. My mother likes reading (14) about history. I like storybooks. I often sit by the window and read for two (15).\nThe library also has a reading club for students. Members meet every Saturday afternoon. They talk about the books they read and (16) their ideas. I wanted to join it, but I was a little (17). I'm not good at talking in front of many people. My mother said, \"Don't worry. Practice makes perfect. You can try (18) a few words first.\"\nSo last week I joined the club. The members are very friendly. Now I can talk about my favourite books (19) them. I think reading is fun, and (20) books with friends is even more fun!",
       "items": [
-        {"n": 11, "options": ["with", "for", "to", "at"], "answer": "A", "kp": "介词", "exp": "和妈妈一起去：with my mother。"},
-        {"n": 12, "options": ["to", "from", "of", "at"], "answer": "B", "kp": "固定搭配", "exp": "be far from 离……远。"},
-        {"n": 13, "options": ["is", "are", "has", "have"], "answer": "B", "kp": "There be 句型", "exp": "more than 50,000 books 是复数，用 are。"},
-        {"n": 14, "options": ["books", "songs", "movies", "games"], "answer": "A", "kp": "上下文", "exp": "在图书馆，妈妈喜欢读历史方面的书。"},
+        {"n": 11, "options": ["for", "with", "to", "at"], "answer": "B", "kp": "介词", "exp": "和妈妈一起去：with my mother。"},
+        {"n": 12, "options": ["to", "of", "from", "at"], "answer": "C", "kp": "固定搭配", "exp": "be far from 离……远。"},
+        {"n": 13, "options": ["are", "is", "has", "have"], "answer": "A", "kp": "There be 句型", "exp": "more than 50,000 books 是复数，用 are。"},
+        {"n": 14, "options": ["songs", "books", "movies", "games"], "answer": "B", "kp": "上下文", "exp": "在图书馆，妈妈喜欢读历史方面的书。"},
         {"n": 15, "options": ["hours", "days", "weeks", "months"], "answer": "A", "kp": "上下文", "exp": "一个上午坐在窗边读书，读两个小时。"},
-        {"n": 16, "options": ["share", "buy", "sell", "lose"], "answer": "A", "kp": "上下文", "exp": "读书会成员交流读过的书，分享想法：share their ideas。"},
+        {"n": 16, "options": ["lose", "buy", "sell", "share"], "answer": "D", "kp": "上下文", "exp": "读书会成员交流读过的书，分享想法：share their ideas。"},
         {"n": 17, "options": ["shy", "happy", "angry", "tired"], "answer": "A", "kp": "上下文", "exp": "后文说不擅长在很多人面前说话，所以有点害羞。"},
-        {"n": 18, "options": ["says", "said", "saying", "to saying"], "answer": "C", "kp": "非谓语动词", "exp": "try doing sth. 试着做某事。"},
-        {"n": 19, "options": ["with", "for", "about", "in"], "answer": "A", "kp": "介词", "exp": "和他们一起谈论：talk about sth. with sb.。"},
-        {"n": 20, "options": ["share", "sharing", "to sharing", "shares"], "answer": "B", "kp": "非谓语动词", "exp": "动名词短语 sharing books with friends 作主语。"}
+        {"n": 18, "options": ["says", "said", "to saying", "saying"], "answer": "D", "kp": "非谓语动词", "exp": "try doing sth. 试着做某事。"},
+        {"n": 19, "options": ["for", "with", "about", "in"], "answer": "B", "kp": "介词", "exp": "和他们一起谈论：talk about sth. with sb.。"},
+        {"n": 20, "options": ["share", "to sharing", "sharing", "shares"], "answer": "C", "kp": "非谓语动词", "exp": "动名词短语 sharing books with friends 作主语。"}
       ]
     },
     {
@@ -53,11 +53,11 @@
           "title": "Weekend Fun at Greenwood Community Center",
           "passage": "Painting for Kids\nSaturday 9:00–10:30 am   Age: 6–10   Price: ¥30 a time\nBring your own colour pencils.\nTable Tennis\nSaturday 2:00–4:00 pm   Age: 12 and up   Price: ¥20 a time\nWe have bats and balls for you.\nCooking Class\nSunday 10:00–11:30 am   Age: 11–15   Price: ¥50 a time\nLearn to make dumplings and noodles. Please wear an apron.\nChess Club\nSunday 3:00–5:00 pm   All ages   Free! Beginners are welcome.\nCall 8562-3307 for more information.",
           "items": [
-            {"n": 21, "stem": "How much is the Cooking Class a time?", "options": ["¥20.", "¥30.", "¥50.", "It's free."], "answer": "C", "kp": "细节理解", "exp": "Cooking Class 一栏 Price: ¥50 a time。"},
-            {"n": 22, "stem": "Tom is 13 years old. Which activity can't he join?", "options": ["Painting for Kids.", "Table Tennis.", "Cooking Class.", "Chess Club."], "answer": "A", "kp": "推理判断", "exp": "Painting for Kids 只收 6–10 岁的孩子。"},
+            {"n": 21, "stem": "How much is the Cooking Class a time?", "options": ["¥20.", "¥30.", "It's free.", "¥50."], "answer": "D", "kp": "细节理解", "exp": "Cooking Class 一栏 Price: ¥50 a time。"},
+            {"n": 22, "stem": "Tom is 13 years old. Which activity can't he join?", "options": ["Cooking Class.", "Table Tennis.", "Painting for Kids.", "Chess Club."], "answer": "C", "kp": "推理判断", "exp": "Painting for Kids 只收 6–10 岁的孩子。"},
             {"n": 23, "stem": "What should you bring to the painting class?", "options": ["An apron.", "Colour pencils.", "Table tennis bats.", "A chess set."], "answer": "B", "kp": "细节理解", "exp": "Bring your own colour pencils。"},
-            {"n": 24, "stem": "When can people play chess at the center?", "options": ["On Saturday morning.", "On Saturday afternoon.", "On Sunday morning.", "On Sunday afternoon."], "answer": "D", "kp": "细节理解", "exp": "Chess Club：Sunday 3:00–5:00 pm。"},
-            {"n": 25, "stem": "Linda is 12. She wants to take the Cooking Class and play table tennis this weekend. How much will she pay?", "options": ["¥50.", "¥70.", "¥80.", "¥100."], "answer": "B", "kp": "推理判断", "exp": "烹饪课 50 元＋乒乓球 20 元＝70 元。她 12 岁，两个活动的年龄要求都符合。"}
+            {"n": 24, "stem": "When can people play chess at the center?", "options": ["On Sunday afternoon.", "On Saturday afternoon.", "On Sunday morning.", "On Saturday morning."], "answer": "A", "kp": "细节理解", "exp": "Chess Club：Sunday 3:00–5:00 pm。"},
+            {"n": 25, "stem": "Linda is 12. She wants to take the Cooking Class and play table tennis this weekend. How much will she pay?", "options": ["¥50.", "¥100.", "¥80.", "¥70."], "answer": "D", "kp": "推理判断", "exp": "烹饪课 50 元＋乒乓球 20 元＝70 元。她 12 岁，两个活动的年龄要求都符合。"}
           ]
         },
         {
@@ -65,10 +65,10 @@
           "title": "Lucy Is Never Late Now",
           "passage": "Lucy is a Grade 7 student. Last term, she was often late for school. Her alarm clock rang at 6:30, but she always stayed in bed for another twenty minutes. Then she had to eat breakfast quickly and run to the bus stop.\nThis term, Lucy made a plan. She goes to bed at 9:30 every night and gets up at 6:15. She puts her school things in her bag the night before, so she doesn't need to look for them in the morning. She has breakfast with her parents at 6:40 and leaves home at 7:05. It takes her fifteen minutes to walk to school. She gets to school ten minutes before the first class starts.\n\"Now I'm never late, and I'm not tired in class,\" Lucy says. \"A good plan really helps!\"",
           "items": [
-            {"n": 26, "stem": "What was Lucy's problem last term?", "options": ["She was often late for school.", "She didn't like breakfast.", "She lost her alarm clock.", "She was often ill."], "answer": "A", "kp": "细节理解", "exp": "Last term, she was often late for school。"},
-            {"n": 27, "stem": "What time does Lucy go to bed now?", "options": ["At 6:15.", "At 6:40.", "At 9:30.", "At 7:05."], "answer": "C", "kp": "细节理解", "exp": "She goes to bed at 9:30 every night。"},
-            {"n": 28, "stem": "What does Lucy do the night before school?", "options": ["She has breakfast.", "She puts her school things in her bag.", "She walks to school.", "She sets the alarm for 6:30."], "answer": "B", "kp": "细节理解", "exp": "She puts her school things in her bag the night before。"},
-            {"n": 29, "stem": "What time does the first class start at Lucy's school?", "options": ["At 7:05.", "At 7:20.", "At 7:30.", "At 7:40."], "answer": "C", "kp": "推理判断", "exp": "7:05 出门，走 15 分钟，7:20 到校；到校比第一节课早 10 分钟，所以第一节课 7:30 开始。"},
+            {"n": 26, "stem": "What was Lucy's problem last term?", "options": ["She lost her alarm clock.", "She didn't like breakfast.", "She was often late for school.", "She was often ill."], "answer": "C", "kp": "细节理解", "exp": "Last term, she was often late for school。"},
+            {"n": 27, "stem": "What time does Lucy go to bed now?", "options": ["At 6:15.", "At 9:30.", "At 6:40.", "At 7:05."], "answer": "B", "kp": "细节理解", "exp": "She goes to bed at 9:30 every night。"},
+            {"n": 28, "stem": "What does Lucy do the night before school?", "options": ["She puts her school things in her bag.", "She has breakfast.", "She walks to school.", "She sets the alarm for 6:30."], "answer": "A", "kp": "细节理解", "exp": "She puts her school things in her bag the night before。"},
+            {"n": 29, "stem": "What time does the first class start at Lucy's school?", "options": ["At 7:05.", "At 7:30.", "At 7:20.", "At 7:40."], "answer": "B", "kp": "推理判断", "exp": "7:05 出门，走 15 分钟，7:20 到校；到校比第一节课早 10 分钟，所以第一节课 7:30 开始。"},
             {"n": 30, "stem": "What can we learn from the passage?", "options": ["Breakfast is not important.", "A good plan helps us use time well.", "Walking to school is better than taking a bus.", "We should go to bed after 10:00."], "answer": "B", "kp": "推理判断", "exp": "Lucy 做了计划后不再迟到，最后一句 A good plan really helps!"}
           ]
         },
@@ -77,11 +77,11 @@
           "title": "School Life in the UK",
           "passage": "Hi, I'm Emma from London. In the UK, students usually start school at about 8:50 and finish at about 3:30. We have a short break in the morning and an hour for lunch. Many students have lunch at school, but some bring their own lunch boxes.\nMost schools ask students to wear school uniforms. My uniform is a white shirt, a blue jumper and a grey skirt.\nOur school year has three terms. Between the terms, we have holidays. The summer holiday is the longest — about six weeks.\nAfter school, there are many clubs. I'm in the drama club and the music club. My brother likes sports, so he plays football twice a week.\nWhat is your school day like? Please write and tell me!",
           "items": [
-            {"n": 31, "stem": "What time do students in the UK usually finish school?", "options": ["At about 8:50.", "At about 12:00.", "At about 3:30.", "At about 5:00."], "answer": "C", "kp": "细节理解", "exp": "finish at about 3:30。"},
-            {"n": 32, "stem": "How long is the lunch break?", "options": ["Half an hour.", "An hour.", "Two hours.", "Six weeks."], "answer": "B", "kp": "细节理解", "exp": "an hour for lunch。"},
-            {"n": 33, "stem": "What colour is Emma's skirt?", "options": ["White.", "Blue.", "Grey.", "Black."], "answer": "C", "kp": "细节理解", "exp": "a grey skirt。白色是衬衫，蓝色是毛衣。"},
-            {"n": 34, "stem": "How many terms are there in a school year in the UK?", "options": ["Two.", "Three.", "Four.", "Six."], "answer": "B", "kp": "细节理解", "exp": "Our school year has three terms。"},
-            {"n": 35, "stem": "Why does Emma write this passage?", "options": ["To introduce school life in the UK and make friends.", "To ask for help with her homework.", "To sell school uniforms.", "To invite readers to her drama club."], "answer": "A", "kp": "写作意图", "exp": "全文介绍英国学校生活，结尾请读者写信介绍自己的学校，有交友的意思。"}
+            {"n": 31, "stem": "What time do students in the UK usually finish school?", "options": ["At about 8:50.", "At about 12:00.", "At about 5:00.", "At about 3:30."], "answer": "D", "kp": "细节理解", "exp": "finish at about 3:30。"},
+            {"n": 32, "stem": "How long is the lunch break?", "options": ["An hour.", "Half an hour.", "Two hours.", "Six weeks."], "answer": "A", "kp": "细节理解", "exp": "an hour for lunch。"},
+            {"n": 33, "stem": "What colour is Emma's skirt?", "options": ["White.", "Blue.", "Black.", "Grey."], "answer": "D", "kp": "细节理解", "exp": "a grey skirt。白色是衬衫，蓝色是毛衣。"},
+            {"n": 34, "stem": "How many terms are there in a school year in the UK?", "options": ["Three.", "Two.", "Four.", "Six."], "answer": "A", "kp": "细节理解", "exp": "Our school year has three terms。"},
+            {"n": 35, "stem": "Why does Emma write this passage?", "options": ["To sell school uniforms.", "To ask for help with her homework.", "To introduce school life in the UK and make friends.", "To invite readers to her drama club."], "answer": "C", "kp": "写作意图", "exp": "全文介绍英国学校生活，结尾请读者写信介绍自己的学校，有交友的意思。"}
           ]
         }
       ]

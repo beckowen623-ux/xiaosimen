@@ -27,15 +27,15 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
    },
    {
     "key": "C",
-    "text": "长方体"
+    "text": "圆柱"
    },
    {
     "key": "D",
-    "text": "圆柱"
+    "text": "长方体"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "三棱柱有 5 个面（2 个底面、3 个侧面）；四棱锥有 5 个面；长方体有 6 个面；圆柱有 2 个底面和 1 个侧面，共 3 个面。",
   "kp": "立体图形",
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
   "options": [
    {
     "key": "A",
-    "text": "两点之间，线段最短"
+    "text": "垂线段最短"
    },
    {
     "key": "B",
@@ -69,7 +69,7 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
    },
    {
     "key": "C",
-    "text": "垂线段最短"
+    "text": "两点之间，线段最短"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "改直后路程变短，比较的是两点之间连线的长短，依据是“两点之间，线段最短”。",
   "kp": "直线、射线、线段",
@@ -107,7 +107,7 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
    },
    {
     "key": "B",
-    "text": "两点确定一条直线"
+    "text": "经过一点有无数条直线"
    },
    {
     "key": "C",
@@ -115,11 +115,11 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
    },
    {
     "key": "D",
-    "text": "经过一点有无数条直线"
+    "text": "两点确定一条直线"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "两个点就能确定一条直线的位置，依据是“两点确定一条直线”。注意和第 2 题区分：一个讲“最短”，一个讲“确定位置”。",
   "kp": "直线、射线、线段",
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
   "options": [
    {
     "key": "A",
-    "text": "30°"
+    "text": "45°"
    },
    {
     "key": "B",
-    "text": "45°"
+    "text": "30°"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "设这个角为 x°：180－x＝3(90－x)，180－x＝270－3x，x＝45。",
   "kp": "余角和补角",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
   "options": [
    {
     "key": "A",
-    "text": "90°"
+    "text": "75°"
    },
    {
     "key": "B",
-    "text": "75°"
+    "text": "90°"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "分针指向 6，在 180° 处；时针每分钟走 0.5°，3 点 30 分时在 90°＋15°＝105° 处。夹角为 180°－105°＝75°。坑点：以为时针正好指向 3，算成 90°。",
   "kp": "角的度量",
@@ -275,7 +275,7 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
    },
    {
     "key": "B",
-    "text": "38.4°"
+    "text": "38.2°"
    },
    {
     "key": "C",
@@ -283,11 +283,11 @@ window.NATIONAL_PAPERS["xsc-math-6"] = [
    },
    {
     "key": "D",
-    "text": "38.2°"
+    "text": "38.4°"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "1°＝60′，24′＝24÷60＝0.4°，所以 38°24′＝38.4°。坑点：直接写成 38.24°。",
   "kp": "角的度量",

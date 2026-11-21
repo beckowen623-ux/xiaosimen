@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    },
    {
     "key": "B",
-    "text": "3，4，8"
+    "text": "4，5，6"
    },
    {
     "key": "C",
-    "text": "4，5，6"
+    "text": "3，4，8"
    },
    {
     "key": "D",
@@ -35,9 +35,9 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
-  "explanation": "两条较短线段之和要大于最长的线段：4＋5＞6 可以；A、D 两短边之和等于长边，B 小于长边，都不行。",
+  "explanation": "两条较短线段之和要大于最长的线段：4＋5＞6 可以；A、D 两短边之和等于长边，C 小于长边，都不行。",
   "kp": "三角形三边关系",
   "stem": "下列长度的三条线段，能组成三角形的是（ ）",
   "paperScore": 3,
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "(2，3)"
+    "text": "(－2，－3)"
    },
    {
     "key": "B",
-    "text": "(－2，－3)"
+    "text": "(2，3)"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "关于 x 轴对称，横坐标不变，纵坐标互为相反数。坑点：与关于 y 轴对称混淆。",
   "kp": "关于坐标轴对称的点",
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    },
    {
     "key": "B",
-    "text": "22"
+    "text": "17 或 22"
    },
    {
     "key": "C",
-    "text": "17 或 22"
+    "text": "22"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "若腰长为 4：4＋4＜9，不能组成三角形；腰长只能是 9，周长＝9＋9＋4＝22。坑点：不检验三边关系就写两个答案。",
   "kp": "等腰三角形",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "a²·a³＝a⁶"
+    "text": "(－2a²)³＝－8a⁶"
    },
    {
     "key": "B",
@@ -237,7 +237,7 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    },
    {
     "key": "C",
-    "text": "(－2a²)³＝－8a⁶"
+    "text": "a²·a³＝a⁶"
    },
    {
     "key": "D",
@@ -245,9 +245,9 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
-  "explanation": "A 应为 a⁵（同底数幂相乘指数相加）；B 应为 a⁶（幂的乘方指数相乘）；D 应为 a⁴（同底数幂相除指数相减）。",
+  "explanation": "B 应为 a⁶（幂的乘方指数相乘）；C 应为 a⁵（同底数幂相乘指数相加）；D 应为 a⁴（同底数幂相除指数相减）。",
   "kp": "幂的运算",
   "stem": "下列计算正确的是（ ）",
   "paperScore": 3,
@@ -279,15 +279,15 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    },
    {
     "key": "C",
-    "text": "±6"
+    "text": "±3"
    },
    {
     "key": "D",
-    "text": "±3"
+    "text": "±6"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "x²＋mx＋9＝(x±3)²，中间项为 ±6x，所以 m＝±6。坑点：漏掉负值。",
   "kp": "完全平方公式的变形",
@@ -317,11 +317,11 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    },
    {
     "key": "B",
-    "text": "x²＋2x＋1＝x(x＋2)＋1"
+    "text": "a³－a＝a(a＋1)(a－1)"
    },
    {
     "key": "C",
-    "text": "a³－a＝a(a＋1)(a－1)"
+    "text": "x²＋2x＋1＝x(x＋2)＋1"
    },
    {
     "key": "D",
@@ -329,9 +329,9 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
-  "explanation": "A 应为 (x＋2)(x－2)；B 结果不是积的形式，不是因式分解；D 没有分解彻底，应为 2a(a－2)。",
+  "explanation": "A 应为 (x＋2)(x－2)；C 结果不是积的形式，不是因式分解；D 没有分解彻底，应为 2a(a－2)。",
   "kp": "因式分解",
   "stem": "下列因式分解正确的是（ ）",
   "paperScore": 3,
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    },
    {
     "key": "B",
-    "text": "1"
+    "text": "－1"
    },
    {
     "key": "C",
-    "text": "－1"
+    "text": "1"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-8up-math"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "分式值为 0：分子为 0 且分母不为 0。x²－1＝0 得 x＝±1，又 x＋1≠0，所以 x＝1。",
   "kp": "分式的概念",

@@ -163,6 +163,8 @@ for (const file of readdirSync(srcDir).filter(f => f.endsWith(".json")).sort()) 
 }
 // 英语排在前面，同科按年份新到旧、福建优先。
 const order = s => (s === "english" ? 0 : 1);
-catalog.papers.sort((a, b) => order(a.subject) - order(b.subject) || b.year - a.year || (a.region === "福建" ? -1 : b.region === "福建" ? 1 : 0));
+// 比较函数必须前后一致（两张都是福建时返回 0），否则每次构建顺序都会变。
+const fj = p => (p.region === "福建" ? 0 : 1);
+catalog.papers.sort((a, b) => order(a.subject) - order(b.subject) || b.year - a.year || fj(a) - fj(b));
 writeFileSync(catalogPath, "window.NATIONAL_CATALOG = " + JSON.stringify(catalog, null, 2) + ";\n");
 console.log(built.join("\n"));

@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "the; an"
+    "text": "the; a"
    },
    {
     "key": "B",
@@ -27,7 +27,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "C",
-    "text": "the; a"
+    "text": "the; an"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "the Great Wall 是固定说法；amazing 以元音音素开头，用 an。",
   "kp": "冠词",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "two"
+    "text": "second"
    },
    {
     "key": "B",
-    "text": "second"
+    "text": "two"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "表示“读了几遍”用基数词 two times（也可说 twice）。“a second time”表示“再一次”，与 have read it 后接次数不符。",
   "kp": "数词",
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "when will we visit the museum"
+    "text": "when we will visit the museum"
    },
    {
     "key": "B",
-    "text": "when we will visit the museum"
+    "text": "when will we visit the museum"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "宾语从句用陈述语序；答语 Next Monday 是将来，用一般将来时。",
   "kp": "宾语从句",
@@ -191,7 +191,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "has lived"
+    "text": "will live"
    },
    {
     "key": "C",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "D",
-    "text": "will live"
+    "text": "has lived"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "since＋过去时间点，主句用现在完成时。",
   "kp": "现在完成时",
@@ -279,15 +279,15 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "C",
-    "text": "will be built"
+    "text": "was built"
    },
    {
     "key": "D",
-    "text": "was built"
+    "text": "will be built"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "桥是“被建造”，时间 next year，用一般将来时的被动语态。",
   "kp": "被动语态",
@@ -317,11 +317,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "where"
+    "text": "that"
    },
    {
     "key": "C",
-    "text": "that"
+    "text": "where"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "先行词 village 在从句中作地点状语（lived in the village），用 where。坑点：live 是不及物动词，不能直接用 which/that。",
   "kp": "定语从句",
@@ -401,7 +401,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "such"
+    "text": "so a"
    },
    {
     "key": "C",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "D",
-    "text": "so a"
+    "text": "such"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "rain 在这里是不可数名词，用 such＋形容词＋不可数名词。坑点：rain 不可数，不能加 a。",
   "kp": "so/such 的用法",
@@ -445,7 +445,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "troubled"
+    "text": "surprised"
    },
    {
     "key": "C",
@@ -453,11 +453,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "D",
-    "text": "surprised"
+    "text": "troubled"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "下文总在快的部分出错，说明这首曲子一直困扰着“我”。",
   "kp": "上下文理解",
@@ -489,11 +489,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "relaxed"
+    "text": "upset"
    },
    {
     "key": "C",
-    "text": "upset"
+    "text": "relaxed"
    },
    {
     "key": "D",
@@ -501,7 +501,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "重重地敲琴键、大喊“永远弹不好”，说明心烦意乱。",
   "kp": "情感词",
@@ -621,11 +621,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "noticed"
+    "text": "refused"
    },
    {
     "key": "C",
-    "text": "refused"
+    "text": "noticed"
    },
    {
     "key": "D",
@@ -633,7 +633,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "与上一句 only noticed my mistakes 对应：从没注意到自己的进步。",
   "kp": "上下文复现",
@@ -661,7 +661,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Instead"
+    "text": "Finally"
    },
    {
     "key": "B",
@@ -673,11 +673,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "D",
-    "text": "Finally"
+    "text": "Instead"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "不一次弹整首，“而是”一小节一小节地慢慢弹，用 Instead。",
   "kp": "连词",
@@ -793,11 +793,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "how"
+    "text": "where"
    },
    {
     "key": "B",
-    "text": "where"
+    "text": "how"
    },
    {
     "key": "C",
@@ -809,7 +809,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "my fingers knew where to go：手指知道该往哪里去，与开头 fingers seemed to get lost 呼应。",
   "kp": "疑问词＋不定式",
@@ -881,7 +881,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "First Aid Basics."
+    "text": "Cooking for Teens."
    },
    {
     "key": "B",
@@ -889,7 +889,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "C",
-    "text": "Cooking for Teens."
+    "text": "First Aid Basics."
    },
    {
     "key": "D",
@@ -897,7 +897,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "First Aid Basics：Each student gets a free first-aid kit。",
   "kp": "细节理解",
@@ -925,7 +925,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "First Aid Basics."
+    "text": "Cooking for Teens."
    },
    {
     "key": "B",
@@ -933,7 +933,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "C",
-    "text": "Cooking for Teens."
+    "text": "First Aid Basics."
    },
    {
     "key": "D",
@@ -941,7 +941,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "周日上午只有 Cooking for Teens（10:00–12:00），且 13–17 岁，16 岁符合。Robot Club 在周日下午且只到 15 岁。",
   "kp": "信息匹配",
@@ -973,11 +973,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "¥296."
+    "text": "¥280."
    },
    {
     "key": "C",
-    "text": "¥280."
+    "text": "¥296."
    },
    {
     "key": "D",
@@ -985,7 +985,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "第二门（较便宜的一门）打八折：摄影 120×80%＝96，机器人 200，共 296 元。坑点：打折的是较便宜的那门，不是较贵的。",
   "kp": "数字计算",
@@ -1017,11 +1017,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "Students must sign up before March 1."
+    "text": "Photos from the photography course may be shown in June."
    },
    {
     "key": "C",
-    "text": "Photos from the photography course may be shown in June."
+    "text": "Students must sign up before March 1."
    },
    {
     "key": "D",
@@ -1029,7 +1029,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "The best photos will be shown in our hall in June。报名截止是 February 25；摄影课 10 岁以上即可；机器人社 No experience needed。",
   "kp": "推理判断",
@@ -1105,7 +1105,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "Because he was late for school when his bike broke."
+    "text": "Because he wanted to make money."
    },
    {
     "key": "C",
@@ -1113,11 +1113,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "D",
-    "text": "Because he wanted to make money."
+    "text": "Because he was late for school when his bike broke."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "第一段：自行车坏在上学路上，走了 40 分钟，第一次迟到，于是决定学修车。",
   "kp": "细节理解",
@@ -1145,7 +1145,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "He watched more videos."
+    "text": "He kept a notebook of his mistakes."
    },
    {
     "key": "B",
@@ -1153,7 +1153,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "C",
-    "text": "He kept a notebook of his mistakes."
+    "text": "He watched more videos."
    },
    {
     "key": "D",
@@ -1161,7 +1161,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "He wrote down every mistake in a notebook and checked it before each repair.",
   "kp": "细节理解",
@@ -1237,7 +1237,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "Kindness can spread if people keep passing it on."
+    "text": "Kindness is as fast as a bike."
    },
    {
     "key": "C",
@@ -1245,11 +1245,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "D",
-    "text": "Kindness is as fast as a bike."
+    "text": "Kindness can spread if people keep passing it on."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "把善意比作骑车：只要大家不断“往前推”（传递下去），善意就会一直传下去。",
   "kp": "句意理解",
@@ -1277,7 +1277,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Shy and careless."
+    "text": "Determined and caring."
    },
    {
     "key": "B",
@@ -1285,7 +1285,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "C",
-    "text": "Determined and caring."
+    "text": "Shy and careless."
    },
    {
     "key": "D",
@@ -1293,7 +1293,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "犯错不放弃（determined），免费修车并鼓励人们互相帮助（caring）。",
   "kp": "人物性格",
@@ -1369,7 +1369,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "Reviewing a lesson after 1 day, 3 days and 7 days."
+    "text": "Copying a lesson ten times in one hour."
    },
    {
     "key": "C",
@@ -1377,11 +1377,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "D",
-    "text": "Copying a lesson ten times in one hour."
+    "text": "Reviewing a lesson after 1 day, 3 days and 7 days."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "间隔重复是隔 1 天、3 天、一周依次复习。",
   "kp": "推理判断",
@@ -1413,11 +1413,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "B",
-    "text": "Because the information is only in short-term memory."
+    "text": "Because the page is too difficult."
    },
    {
     "key": "C",
-    "text": "Because the page is too difficult."
+    "text": "Because the information is only in short-term memory."
    },
    {
     "key": "D",
@@ -1425,7 +1425,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "第三段：重复读感觉很容易，但信息只在短期记忆里，“我会了”的感觉会误导人。",
   "kp": "因果推断",
@@ -1453,7 +1453,7 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Studying a lot in a short time just before a test."
+    "text": "Writing words on cards."
    },
    {
     "key": "B",
@@ -1465,11 +1465,11 @@ window.NATIONAL_PAPERS["earlybird-2027-english"] = [
    },
    {
     "key": "D",
-    "text": "Writing words on cards."
+    "text": "Studying a lot in a short time just before a test."
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "与 spacing（分散复习）相对，指考前短时间内突击塞进大量内容（临时抱佛脚）。",
   "kp": "词义猜测",

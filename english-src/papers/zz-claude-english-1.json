@@ -11,20 +11,20 @@
       "type": "单项选择",
       "items": [
         {"n": 1, "stem": "—Is this your notebook? —No, it isn't. ____ is on my desk.", "options": ["Mine", "My", "Me", "I"], "answer": "A", "kp": "名词性物主代词", "exp": "空处作主语，指“我的笔记本”，用名词性物主代词 mine。"},
-        {"n": 2, "stem": "My cousin has been a volunteer at the city library ____ two years.", "options": ["since", "for", "in", "ago"], "answer": "B", "kp": "现在完成时", "exp": "two years 是一段时间，现在完成时中用 for 接时间段；since 后接时间点。"},
-        {"n": 3, "stem": "—____ do you practise playing the piano? —Three times a week.", "options": ["How long", "How soon", "How often", "How far"], "answer": "C", "kp": "特殊疑问句", "exp": "答语是频率 three times a week，用 how often 提问。"},
-        {"n": 4, "stem": "The new bridge ____ last year, and now it takes us only ten minutes to cross the river.", "options": ["builds", "built", "is built", "was built"], "answer": "D", "kp": "一般过去时的被动语态", "exp": "bridge 与 build 是被动关系，last year 表示过去，用 was built。"},
-        {"n": 5, "stem": "Lucy is ____ girl in our class. She always helps others with a smile.", "options": ["kind", "kinder", "the kindest", "the most kind"], "answer": "C", "kp": "形容词最高级", "exp": "in our class 表示范围，用最高级；kind 的最高级是 kindest。"},
-        {"n": 6, "stem": "You ____ hand in your homework today. Tomorrow is also OK.", "options": ["mustn't", "needn't", "can't", "shouldn't"], "answer": "B", "kp": "情态动词", "exp": "后句说明天也可以，说明今天“不必”交，用 needn't。"},
-        {"n": 7, "stem": "I don't know ____ the school trip will start. Let's ask Mr. Green.", "options": ["when", "what", "who", "which"], "answer": "A", "kp": "宾语从句", "exp": "根据句意“不知道春游什么时候开始”，用 when 引导宾语从句，并用陈述语序。"},
-        {"n": 8, "stem": "If it ____ tomorrow, we will have the sports meeting in the gym.", "options": ["rains", "rained", "will rain", "is raining"], "answer": "A", "kp": "条件状语从句", "exp": "if 引导的条件状语从句遵循“主将从现”，用一般现在时 rains。"},
-        {"n": 9, "stem": "The film was so boring that many people fell ____ before it ended.", "options": ["sleep", "asleep", "sleepy", "sleeping"], "answer": "B", "kp": "固定搭配", "exp": "fall asleep 意为“睡着”。"},
+        {"n": 2, "stem": "My cousin has been a volunteer at the city library ____ two years.", "options": ["since", "ago", "in", "for"], "answer": "D", "kp": "现在完成时", "exp": "two years 是一段时间，现在完成时中用 for 接时间段；since 后接时间点。"},
+        {"n": 3, "stem": "—____ do you practise playing the piano? —Three times a week.", "options": ["How often", "How soon", "How long", "How far"], "answer": "A", "kp": "特殊疑问句", "exp": "答语是频率 three times a week，用 how often 提问。"},
+        {"n": 4, "stem": "The new bridge ____ last year, and now it takes us only ten minutes to cross the river.", "options": ["builds", "was built", "is built", "built"], "answer": "B", "kp": "一般过去时的被动语态", "exp": "bridge 与 build 是被动关系，last year 表示过去，用 was built。"},
+        {"n": 5, "stem": "Lucy is ____ girl in our class. She always helps others with a smile.", "options": ["kind", "kinder", "the most kind", "the kindest"], "answer": "D", "kp": "形容词最高级", "exp": "in our class 表示范围，用最高级；kind 的最高级是 kindest。"},
+        {"n": 6, "stem": "You ____ hand in your homework today. Tomorrow is also OK.", "options": ["mustn't", "can't", "needn't", "shouldn't"], "answer": "C", "kp": "情态动词", "exp": "后句说明天也可以，说明今天“不必”交，用 needn't。"},
+        {"n": 7, "stem": "I don't know ____ the school trip will start. Let's ask Mr. Green.", "options": ["which", "what", "who", "when"], "answer": "D", "kp": "宾语从句", "exp": "根据句意“不知道春游什么时候开始”，用 when 引导宾语从句，并用陈述语序。"},
+        {"n": 8, "stem": "If it ____ tomorrow, we will have the sports meeting in the gym.", "options": ["rained", "rains", "will rain", "is raining"], "answer": "B", "kp": "条件状语从句", "exp": "if 引导的条件状语从句遵循“主将从现”，用一般现在时 rains。"},
+        {"n": 9, "stem": "The film was so boring that many people fell ____ before it ended.", "options": ["asleep", "sleep", "sleepy", "sleeping"], "answer": "A", "kp": "固定搭配", "exp": "fall asleep 意为“睡着”。"},
         {"n": 10, "stem": "—Would you mind ____ the window? It's a little cold. —Of course not.", "options": ["close", "to close", "closing", "closed"], "answer": "C", "kp": "非谓语动词", "exp": "mind 后接动词 -ing 形式：mind doing sth.。"},
         {"n": 11, "stem": "We should try our best to ____ the problem of plastic waste.", "options": ["deal with", "agree with", "come up", "put off"], "answer": "A", "kp": "动词短语", "exp": "deal with the problem 意为“处理问题”。"},
-        {"n": 12, "stem": "The boy ____ is wearing a blue cap is my brother.", "options": ["which", "who", "whom", "what"], "answer": "B", "kp": "定语从句", "exp": "先行词 the boy 指人，在从句中作主语，用 who。"},
-        {"n": 13, "stem": "—I'm going to take part in the speech contest tomorrow. —____", "options": ["Good luck!", "Never mind.", "That's all right.", "Help yourself."], "answer": "A", "kp": "情景交际", "exp": "对方明天参加比赛，应祝好运。"},
-        {"n": 14, "stem": "My grandma ____ in the garden when I got home yesterday.", "options": ["works", "worked", "was working", "has worked"], "answer": "C", "kp": "过去进行时", "exp": "when 引导的时间状语表示“我到家时”，奶奶正在做某事，用过去进行时。"},
-        {"n": 15, "stem": "—Could you tell me ____? —Sure. Go along this street and you'll find it on your left.", "options": ["where is the post office", "where the post office is", "how can I get to the post office", "how I got to the post office"], "answer": "B", "kp": "宾语从句语序", "exp": "宾语从句用陈述语序；D 时态不对。"}
+        {"n": 12, "stem": "The boy ____ is wearing a blue cap is my brother.", "options": ["which", "what", "whom", "who"], "answer": "D", "kp": "定语从句", "exp": "先行词 the boy 指人，在从句中作主语，用 who。"},
+        {"n": 13, "stem": "—I'm going to take part in the speech contest tomorrow. —____", "options": ["That's all right.", "Never mind.", "Good luck!", "Help yourself."], "answer": "C", "kp": "情景交际", "exp": "对方明天参加比赛，应祝好运。"},
+        {"n": 14, "stem": "My grandma ____ in the garden when I got home yesterday.", "options": ["works", "was working", "worked", "has worked"], "answer": "B", "kp": "过去进行时", "exp": "when 引导的时间状语表示“我到家时”，奶奶正在做某事，用过去进行时。"},
+        {"n": 15, "stem": "—Could you tell me ____? —Sure. Go along this street and you'll find it on your left.", "options": ["where is the post office", "how can I get to the post office", "where the post office is", "how I got to the post office"], "answer": "C", "kp": "宾语从句语序", "exp": "宾语从句用陈述语序；D 时态不对。"}
       ]
     },
     {
@@ -32,16 +32,16 @@
       "title": "The Old Bike",
       "passage": "When I was twelve, my father gave me an old bike. It was (16) and the bell did not work. I felt a little (17) because my classmates all had new bikes.\nOne Saturday, my father said, \"Let's (18) it together.\" We spent the whole afternoon in the yard. He showed me how to fix the chain, and I (19) the bike bright blue. By evening, it looked (20) new.\nThe next Monday, I rode it to school. To my (21), my best friend said, \"Wow, where did you buy such a cool bike?\" I told him the story (22) .\nNow I have a new bike, but I still keep the old one. It (23) me that something old can become special if you put your (24) into it. The time I spent with my father was the best (25) of all.",
       "items": [
-        {"n": 16, "stem": "", "options": ["dirty", "expensive", "light", "fast"], "answer": "A", "kp": "形容词辨析", "exp": "旧车“脏”且铃不响，与后文清洗修理呼应。"},
-        {"n": 17, "stem": "", "options": ["proud", "sad", "excited", "relaxed"], "answer": "B", "kp": "情感理解", "exp": "同学都有新车，自己只有旧车，感到有点难过。"},
-        {"n": 18, "stem": "", "options": ["sell", "ride", "repair", "lend"], "answer": "C", "kp": "上下文理解", "exp": "后文“修链条、刷漆”，说明父亲提议一起修。"},
-        {"n": 19, "stem": "", "options": ["painted", "washed", "drew", "bought"], "answer": "A", "kp": "动词辨析", "exp": "paint the bike bright blue 把车漆成亮蓝色。"},
-        {"n": 20, "stem": "", "options": ["as", "like", "for", "with"], "answer": "B", "kp": "固定搭配", "exp": "look like new 看起来像新的一样。"},
-        {"n": 21, "stem": "", "options": ["sorrow", "surprise", "worry", "anger"], "answer": "B", "kp": "固定搭配", "exp": "to one's surprise 令某人惊讶的是。"},
+        {"n": 16, "stem": "", "options": ["expensive", "dirty", "light", "fast"], "answer": "B", "kp": "形容词辨析", "exp": "旧车“脏”且铃不响，与后文清洗修理呼应。"},
+        {"n": 17, "stem": "", "options": ["proud", "excited", "sad", "relaxed"], "answer": "C", "kp": "情感理解", "exp": "同学都有新车，自己只有旧车，感到有点难过。"},
+        {"n": 18, "stem": "", "options": ["repair", "ride", "sell", "lend"], "answer": "A", "kp": "上下文理解", "exp": "后文“修链条、刷漆”，说明父亲提议一起修。"},
+        {"n": 19, "stem": "", "options": ["washed", "painted", "drew", "bought"], "answer": "B", "kp": "动词辨析", "exp": "paint the bike bright blue 把车漆成亮蓝色。"},
+        {"n": 20, "stem": "", "options": ["like", "as", "for", "with"], "answer": "A", "kp": "固定搭配", "exp": "look like new 看起来像新的一样。"},
+        {"n": 21, "stem": "", "options": ["sorrow", "worry", "surprise", "anger"], "answer": "C", "kp": "固定搭配", "exp": "to one's surprise 令某人惊讶的是。"},
         {"n": 22, "stem": "", "options": ["angrily", "happily", "quietly", "badly"], "answer": "B", "kp": "副词辨析", "exp": "被朋友夸奖，开心地讲述修车的故事。"},
-        {"n": 23, "stem": "", "options": ["reminds", "tells", "asks", "warns"], "answer": "A", "kp": "动词搭配", "exp": "remind sb. that... 提醒某人……"},
-        {"n": 24, "stem": "", "options": ["money", "heart", "hand", "head"], "answer": "B", "kp": "上下文理解", "exp": "put your heart into it 用心投入。"},
-        {"n": 25, "stem": "", "options": ["gift", "lesson", "game", "problem"], "answer": "A", "kp": "主旨理解", "exp": "和父亲一起度过的时光是最好的“礼物”。"}
+        {"n": 23, "stem": "", "options": ["asks", "tells", "reminds", "warns"], "answer": "C", "kp": "动词搭配", "exp": "remind sb. that... 提醒某人……"},
+        {"n": 24, "stem": "", "options": ["money", "head", "hand", "heart"], "answer": "D", "kp": "上下文理解", "exp": "put your heart into it 用心投入。"},
+        {"n": 25, "stem": "", "options": ["problem", "lesson", "game", "gift"], "answer": "D", "kp": "主旨理解", "exp": "和父亲一起度过的时光是最好的“礼物”。"}
       ]
     },
     {
@@ -52,10 +52,10 @@
           "title": "Summer Courses at Sunshine Youth Center",
           "passage": "Summer Courses at Sunshine Youth Center\nCooking for Beginners: Learn to make healthy breakfasts and simple dinners. Time: Mon. & Wed., 9:00–11:00 a.m. Price: ¥300 for 8 lessons.\nNature Photography: Take your camera to the park and learn to take beautiful pictures of birds and flowers. Time: Sat., 7:00–9:00 a.m. Price: ¥200 for 4 lessons.\nFirst Aid Basics: Learn what to do when someone gets hurt. You will get a certificate after the course. Time: Tue. & Thu., 2:00–4:00 p.m. Price: Free for students under 16.\nTo sign up, call 8866 2020 or visit our center before July 5.",
           "items": [
-            {"n": 26, "stem": "Which course is held at the weekend?", "options": ["Cooking for Beginners.", "Nature Photography.", "First Aid Basics.", "None of them."], "answer": "B", "kp": "细节理解", "exp": "摄影课在周六上课。"},
-            {"n": 27, "stem": "How much does a 15-year-old student pay for First Aid Basics?", "options": ["Nothing.", "¥200.", "¥300.", "¥500."], "answer": "A", "kp": "细节理解", "exp": "急救课对 16 岁以下学生免费。"},
+            {"n": 26, "stem": "Which course is held at the weekend?", "options": ["Cooking for Beginners.", "None of them.", "First Aid Basics.", "Nature Photography."], "answer": "D", "kp": "细节理解", "exp": "摄影课在周六上课。"},
+            {"n": 27, "stem": "How much does a 15-year-old student pay for First Aid Basics?", "options": ["¥300.", "¥200.", "Nothing.", "¥500."], "answer": "C", "kp": "细节理解", "exp": "急救课对 16 岁以下学生免费。"},
             {"n": 28, "stem": "What can students get after the First Aid course?", "options": ["A camera.", "A certificate.", "A cookbook.", "A free breakfast."], "answer": "B", "kp": "细节理解", "exp": "原文：You will get a certificate after the course."},
-            {"n": 29, "stem": "Where can we probably read this text?", "options": ["In a science book.", "In a newspaper ad.", "In a storybook.", "In a diary."], "answer": "B", "kp": "推理判断", "exp": "介绍课程、价格和报名方式，属于广告。"}
+            {"n": 29, "stem": "Where can we probably read this text?", "options": ["In a science book.", "In a diary.", "In a storybook.", "In a newspaper ad."], "answer": "D", "kp": "推理判断", "exp": "介绍课程、价格和报名方式，属于广告。"}
           ]
         },
         {
@@ -63,9 +63,9 @@
           "title": "A Library on Wheels",
           "passage": "In a small mountain village, there was no library, and many children had never read a storybook. Ms. Wang, a young teacher, decided to change that. She bought an old van, painted it yellow, and filled it with more than 600 books.\nEvery Friday afternoon, she drives the \"book van\" from one village to another. When the children hear her music, they run out of their houses. They can borrow two books each time and return them the next week.\nAt first, some parents thought reading was a waste of time. \"Children should help on the farm,\" they said. Ms. Wang did not give up. She invited the parents to a story evening and read aloud with their children. Slowly, the parents changed their minds.\nNow the book van visits six villages. Some older students even help Ms. Wang choose new books. \"Books open a window to the world,\" she says. \"Every child should have the chance to look out of it.\"",
           "items": [
-            {"n": 30, "stem": "Why did Ms. Wang buy an old van?", "options": ["To sell vegetables.", "To carry books to the children.", "To take children to the city.", "To travel around the country."], "answer": "B", "kp": "细节理解", "exp": "她买旧车装满书，开到各村让孩子借书。"},
-            {"n": 31, "stem": "How many books can a child borrow each time?", "options": ["One.", "Two.", "Six.", "Six hundred."], "answer": "B", "kp": "细节理解", "exp": "They can borrow two books each time."},
-            {"n": 32, "stem": "How did Ms. Wang change the parents' minds?", "options": ["By giving them money.", "By helping them on the farm.", "By holding a story evening.", "By asking the headmaster for help."], "answer": "C", "kp": "细节理解", "exp": "她邀请家长参加故事晚会，和孩子一起朗读。"},
+            {"n": 30, "stem": "Why did Ms. Wang buy an old van?", "options": ["To carry books to the children.", "To sell vegetables.", "To take children to the city.", "To travel around the country."], "answer": "A", "kp": "细节理解", "exp": "她买旧车装满书，开到各村让孩子借书。"},
+            {"n": 31, "stem": "How many books can a child borrow each time?", "options": ["One.", "Six.", "Two.", "Six hundred."], "answer": "C", "kp": "细节理解", "exp": "They can borrow two books each time."},
+            {"n": 32, "stem": "How did Ms. Wang change the parents' minds?", "options": ["By giving them money.", "By helping them on the farm.", "By asking the headmaster for help.", "By holding a story evening."], "answer": "D", "kp": "细节理解", "exp": "她邀请家长参加故事晚会，和孩子一起朗读。"},
             {"n": 33, "stem": "What does Ms. Wang mean by \"Books open a window to the world\"?", "options": ["Books can help us see and learn about the wider world.", "Reading near a window is good for our eyes.", "Children should build windows for the library.", "Books are more important than farm work."], "answer": "A", "kp": "句意理解", "exp": "比喻：书让孩子了解更广阔的世界。"}
           ]
         },
@@ -75,8 +75,8 @@
           "passage": "Everyone yawns. Babies yawn even before they are born. But why do we do it? Scientists still don't have a final answer, but they have some ideas.\nOne idea is that yawning helps to cool down the brain. When we yawn, we take in a lot of air. The cool air may help the brain work better, just like a fan cools a computer. That may be why people often yawn when they are tired or bored — the brain needs a short \"refresh\".\nAnother interesting fact is that yawning is catching. If you see someone yawn, you will probably yawn too. Some scientists think this is connected with how we understand other people's feelings. In one study, people yawned more often after watching their friends yawn than after watching strangers.\nSo next time you yawn in class, don't worry too much. Your brain may just be getting ready to learn!",
           "items": [
             {"n": 34, "stem": "What is the first idea about why we yawn?", "options": ["It keeps us awake at night.", "It helps to cool down the brain.", "It makes babies grow faster.", "It helps us breathe less air."], "answer": "B", "kp": "细节理解", "exp": "原文 One idea is that yawning helps to cool down the brain。"},
-            {"n": 35, "stem": "The writer compares the brain to ____.", "options": ["a fan", "a computer", "a window", "a classroom"], "answer": "B", "kp": "推理判断", "exp": "就像风扇给电脑降温，把大脑比作电脑。"},
-            {"n": 36, "stem": "What does the word \"catching\" in Paragraph 3 mean?", "options": ["Easy to spread to others.", "Hard to stop.", "Very dangerous.", "Funny to watch."], "answer": "A", "kp": "词义猜测", "exp": "看到别人打哈欠自己也会打，说明“会传染”。"},
+            {"n": 35, "stem": "The writer compares the brain to ____.", "options": ["a computer", "a fan", "a window", "a classroom"], "answer": "A", "kp": "推理判断", "exp": "就像风扇给电脑降温，把大脑比作电脑。"},
+            {"n": 36, "stem": "What does the word \"catching\" in Paragraph 3 mean?", "options": ["Hard to stop.", "Easy to spread to others.", "Very dangerous.", "Funny to watch."], "answer": "B", "kp": "词义猜测", "exp": "看到别人打哈欠自己也会打，说明“会传染”。"},
             {"n": 37, "stem": "What is the best title for the passage?", "options": ["How to Stop Yawning", "Yawning: A Bad Habit", "The Secrets of Yawning", "Why Babies Sleep a Lot"], "answer": "C", "kp": "主旨大意", "exp": "文章介绍了打哈欠的原因和有趣事实。"}
           ]
         }

@@ -65,7 +65,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "统一文字、交通和思想文化的措施"
+    "text": "焚书坑儒"
    },
    {
     "key": "C",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "焚书坑儒"
+    "text": "统一文字、交通和思想文化的措施"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "“书同文”指统一文字，“车同轨”指统一车辆轨距，“行同伦”指统一伦理规范。",
   "kp": "秦朝巩固统一",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "西域都护"
+    "text": "北庭都护府"
    },
    {
     "key": "B",
-    "text": "北庭都护府"
+    "text": "西域都护"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "公元前 60 年西汉设立西域都护。北庭都护府是唐朝，伊犁将军是清朝，宣政院是元朝管理西藏的机构。坑点：不同朝代的边疆管理机构。",
   "kp": "两汉经营西域",
@@ -191,11 +191,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "贞观之治"
+    "text": "开元盛世"
    },
    {
     "key": "C",
-    "text": "开元盛世"
+    "text": "贞观之治"
    },
    {
     "key": "D",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "唐太宗年号贞观；开元盛世是唐玄宗前期。",
   "kp": "隋唐",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "“苏湖熟，天下足”"
+    "text": "“扬一益二”"
    },
    {
     "key": "B",
-    "text": "“扬一益二”"
+    "text": "“苏湖熟，天下足”"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "南宋时“苏湖熟，天下足”，标志着经济重心南移完成。“湖广熟，天下足”是明朝的说法。",
   "kp": "经济重心南移",
@@ -359,7 +359,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "圆明园"
+    "text": "避暑山庄"
    },
    {
     "key": "C",
@@ -367,11 +367,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "避暑山庄"
+    "text": "圆明园"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "1860 年英法联军火烧圆明园。",
   "kp": "第二次鸦片战争",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "割辽东半岛、台湾岛及其附属岛屿和澎湖列岛给日本"
+    "text": "允许日本在中国通商口岸开设工厂"
    },
    {
     "key": "B",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "允许日本在中国通商口岸开设工厂"
+    "text": "割辽东半岛、台湾岛及其附属岛屿和澎湖列岛给日本"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "允许日本在通商口岸开设工厂，适应了列强资本输出的需要，严重阻碍了中国民族资本主义的发展。",
   "kp": "《马关条约》",
@@ -439,7 +439,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "中国在巴黎和会上外交失败"
+    "text": "新文化运动兴起"
    },
    {
     "key": "B",
@@ -447,7 +447,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "C",
-    "text": "新文化运动兴起"
+    "text": "中国在巴黎和会上外交失败"
    },
    {
     "key": "D",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "巴黎和会上中国外交失败，是五四运动爆发的直接导火线。",
   "kp": "五四运动",
@@ -481,11 +481,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "《中华人民共和国宪法》"
+    "text": "《中国人民政治协商会议共同纲领》"
    },
    {
     "key": "B",
-    "text": "《中国人民政治协商会议共同纲领》"
+    "text": "《中华人民共和国宪法》"
    },
    {
     "key": "C",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "政协第一届全体会议通过了起临时宪法作用的《共同纲领》；1954 年第一届全国人大通过《中华人民共和国宪法》。",
   "kp": "中华人民共和国成立",
@@ -527,11 +527,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "古埃及法老拥有至高无上的权力"
+    "text": "古埃及的奴隶起义"
    },
    {
     "key": "C",
-    "text": "古埃及的奴隶起义"
+    "text": "古埃及法老拥有至高无上的权力"
    },
    {
     "key": "D",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "金字塔是法老的陵墓，体现了法老的权威和古埃及人的智慧。",
   "kp": "古代埃及",
@@ -611,7 +611,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "以人为中心，肯定人的价值和尊严"
+    "text": "天赋人权"
    },
    {
     "key": "C",
@@ -619,11 +619,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "天赋人权"
+    "text": "以人为中心，肯定人的价值和尊严"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "人文主义主张以人为中心，反对以神为中心。“天赋人权”是启蒙运动的思想。",
   "kp": "文艺复兴",
@@ -649,11 +649,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "君主专制制度"
+    "text": "君主立宪制"
    },
    {
     "key": "B",
-    "text": "君主立宪制"
+    "text": "君主专制制度"
    },
    {
     "key": "C",
@@ -665,7 +665,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "《权利法案》的颁布标志着英国君主立宪制开始确立。",
   "kp": "英国资产阶级革命",
@@ -691,7 +691,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "《独立宣言》"
+    "text": "《解放黑人奴隶宣言》"
    },
    {
     "key": "B",
@@ -703,11 +703,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "《解放黑人奴隶宣言》"
+    "text": "《独立宣言》"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "《独立宣言》的发表标志着美国诞生；《人权宣言》是法国大革命时颁布的；《解放黑人奴隶宣言》是美国内战时期颁布的。",
   "kp": "美国独立战争",
@@ -779,7 +779,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "棉纺织业"
+    "text": "电力工业"
    },
    {
     "key": "C",
@@ -787,11 +787,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "电力工业"
+    "text": "棉纺织业"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "工业革命从棉纺织业开始，以哈格里夫斯发明“珍妮机”为标志；瓦特改良的蒸汽机推动了工业革命的发展。",
   "kp": "第一次工业革命",
@@ -821,11 +821,11 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "《共产党宣言》"
+    "text": "《国际歌》"
    },
    {
     "key": "C",
-    "text": "《国际歌》"
+    "text": "《共产党宣言》"
    },
    {
     "key": "D",
@@ -833,7 +833,7 @@ window.NATIONAL_PAPERS["earlybird-9up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "《共产党宣言》的发表标志着马克思主义的诞生。",
   "kp": "马克思主义的诞生",

@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "Yes, I can"
+    "text": "No, I can't"
    },
    {
     "key": "B",
-    "text": "No, I can't"
+    "text": "Yes, I can"
    },
    {
     "key": "C",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "Can you...? 用 can/can't 回答；会弹吉他所以想加入音乐社，是肯定回答。",
   "kp": "情态动词 can",
@@ -61,7 +61,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "/; the"
+    "text": "the; the"
    },
    {
     "key": "B",
@@ -69,7 +69,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "C",
-    "text": "the; the"
+    "text": "/; the"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "下棋、打球类前不加冠词：play chess；演奏乐器前加 the：play the piano。",
   "kp": "冠词",
@@ -103,11 +103,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "What time"
+    "text": "How"
    },
    {
     "key": "B",
-    "text": "How"
+    "text": "What time"
    },
    {
     "key": "C",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "答语是时间点，用 what time 提问。",
   "kp": "特殊疑问句",
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "do"
+    "text": "does"
    },
    {
     "key": "B",
-    "text": "does"
+    "text": "do"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "every evening 表示经常性动作，用一般现在时；主语 Tony 是第三人称单数，用 does。",
   "kp": "一般现在时",
@@ -191,7 +191,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "B",
-    "text": "on"
+    "text": "of"
    },
    {
     "key": "C",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "D",
-    "text": "of"
+    "text": "on"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "具体某一天用 on；只说月份才用 in（in October）。坑点：看到 October 就选 in。",
   "kp": "时间介词",
@@ -271,7 +271,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "ten; ten"
+    "text": "ten; tenth"
    },
    {
     "key": "B",
@@ -279,7 +279,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "C",
-    "text": "ten; tenth"
+    "text": "ten; ten"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "年龄用基数词 ten；“第十个生日”用序数词 tenth。",
   "kp": "序数词",
@@ -321,15 +321,15 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "C",
-    "text": "never"
+    "text": "often"
    },
    {
     "key": "D",
-    "text": "often"
+    "text": "never"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "他总是九点睡，说明从不晚睡：never goes to bed late。",
   "kp": "频度副词",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "swim"
+    "text": "swimming"
    },
    {
     "key": "B",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "C",
-    "text": "swimming"
+    "text": "swim"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "can/can't 后接动词原形。",
   "kp": "情态动词 can",
@@ -401,7 +401,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "B",
-    "text": "How much"
+    "text": "How long"
    },
    {
     "key": "C",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "D",
-    "text": "How long"
+    "text": "How much"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "问价格用 how much。",
   "kp": "特殊疑问句",
@@ -439,11 +439,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "with"
+    "text": "for"
    },
    {
     "key": "B",
-    "text": "for"
+    "text": "with"
    },
    {
     "key": "C",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "help sb. with sth. 在某方面帮助某人。",
   "kp": "固定搭配",
@@ -481,7 +481,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "Good idea!"
+    "text": "You're welcome."
    },
    {
     "key": "B",
@@ -489,7 +489,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "C",
-    "text": "You're welcome."
+    "text": "Good idea!"
    },
    {
     "key": "D",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "对别人的建议表示赞同：Good idea!",
   "kp": "交际用语",
@@ -569,11 +569,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "B",
-    "text": "Thank you!"
+    "text": "You too."
    },
    {
     "key": "C",
-    "text": "You too."
+    "text": "Thank you!"
    },
    {
     "key": "D",
@@ -581,7 +581,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "别人祝你生日快乐，回答 Thank you。生日不能回“你也是”。",
   "kp": "交际用语",
@@ -651,11 +651,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "at"
+    "text": "on"
    },
    {
     "key": "B",
-    "text": "on"
+    "text": "at"
    },
    {
     "key": "C",
@@ -667,7 +667,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "具体时刻前用 at。",
   "kp": "时间介词",
@@ -699,7 +699,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "B",
-    "text": "by"
+    "text": "with"
    },
    {
     "key": "C",
@@ -707,11 +707,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "D",
-    "text": "with"
+    "text": "by"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "by bike 骑自行车，by 后直接加交通工具。",
   "kp": "介词",
@@ -739,7 +739,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "want"
+    "text": "stop"
    },
    {
     "key": "B",
@@ -747,7 +747,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "C",
-    "text": "stop"
+    "text": "want"
    },
    {
     "key": "D",
@@ -755,7 +755,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "想把象棋下好，所以一周去两次：want to do sth.。",
   "kp": "上下文",
@@ -783,11 +783,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "do"
+    "text": "make"
    },
    {
     "key": "B",
-    "text": "make"
+    "text": "do"
    },
    {
     "key": "C",
@@ -799,7 +799,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "做作业：do my homework。",
   "kp": "固定搭配",
@@ -871,7 +871,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "go"
+    "text": "have"
    },
    {
     "key": "B",
@@ -883,11 +883,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "D",
-    "text": "have"
+    "text": "go"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "go for a walk 去散步。take a walk、have a walk 后面不加 for。",
   "kp": "固定搭配",
@@ -915,7 +915,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "good"
+    "text": "late"
    },
    {
     "key": "B",
@@ -923,7 +923,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "C",
-    "text": "late"
+    "text": "good"
    },
    {
     "key": "D",
@@ -931,7 +931,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "早睡对我有好处：it's good for me。",
   "kp": "上下文",
@@ -1003,7 +1003,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "plan"
+    "text": "hate"
    },
    {
     "key": "B",
@@ -1015,11 +1015,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "D",
-    "text": "hate"
+    "text": "plan"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "打算邀请所有朋友：plan to do sth.。",
   "kp": "上下文",
@@ -1047,7 +1047,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "excited"
+    "text": "sad"
    },
    {
     "key": "B",
@@ -1055,7 +1055,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "C",
-    "text": "sad"
+    "text": "excited"
    },
    {
     "key": "D",
@@ -1063,7 +1063,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "要过生日、开派对，心情很激动 excited。",
   "kp": "上下文",
@@ -1091,11 +1091,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "Miss Zhang."
+    "text": "Ms. Wu."
    },
    {
     "key": "B",
-    "text": "Ms. Wu."
+    "text": "Miss Zhang."
    },
    {
     "key": "C",
@@ -1107,7 +1107,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "learn to draw with Ms. Wu。Miss Zhang 是报名联系人。",
   "kp": "细节理解",
@@ -1139,7 +1139,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "B",
-    "text": "Twice."
+    "text": "Four times."
    },
    {
     "key": "C",
@@ -1147,11 +1147,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "D",
-    "text": "Four times."
+    "text": "Twice."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "Wednesday and Friday，一周两次。",
   "kp": "细节理解",
@@ -1267,7 +1267,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
   "options": [
    {
     "key": "A",
-    "text": "The Art Club."
+    "text": "The English Club."
    },
    {
     "key": "B",
@@ -1275,7 +1275,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "C",
-    "text": "The English Club."
+    "text": "The Art Club."
    },
    {
     "key": "D",
@@ -1283,7 +1283,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "只有英语社在周四活动。",
   "kp": "推理判断",
@@ -1447,7 +1447,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "B",
-    "text": "Break a pinata full of sweets."
+    "text": "Blow out the candles twice."
    },
    {
     "key": "C",
@@ -1455,11 +1455,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "D",
-    "text": "Blow out the candles twice."
+    "text": "Break a pinata full of sweets."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "children often break a pinata full of sweets。",
   "kp": "细节理解",
@@ -1491,11 +1491,11 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    },
    {
     "key": "B",
-    "text": "Birthday food in different countries."
+    "text": "Why people like birthday parties."
    },
    {
     "key": "C",
-    "text": "Why people like birthday parties."
+    "text": "Birthday food in different countries."
    },
    {
     "key": "D",
@@ -1503,7 +1503,7 @@ window.NATIONAL_PAPERS["xsc-english-4"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "全文介绍中国、英美、俄罗斯、墨西哥过生日吃什么。",
   "kp": "主旨大意",

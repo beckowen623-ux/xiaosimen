@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    },
    {
     "key": "B",
-    "text": "拍打衣服，除去衣服上的灰尘"
+    "text": "乘车时要系好安全带"
    },
    {
     "key": "C",
-    "text": "乘车时要系好安全带"
+    "text": "拍打衣服，除去衣服上的灰尘"
    },
    {
     "key": "D",
@@ -35,9 +35,9 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
-  "explanation": "拍打衣服时，衣服运动，灰尘由于惯性保持静止，从而离开衣服，是利用惯性。A、C、D 都是防止惯性带来的危害。",
+  "explanation": "拍打衣服时，衣服运动，灰尘由于惯性保持静止，从而离开衣服，是利用惯性。A、B、D 都是防止惯性带来的危害。",
   "kp": "惯性",
   "stem": "下列现象中，属于利用惯性的是（ ）",
   "paperScore": 3,
@@ -65,7 +65,7 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    },
    {
     "key": "B",
-    "text": "书的重力与桌面对书的支持力"
+    "text": "桌子的重力与书的重力"
    },
    {
     "key": "C",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    },
    {
     "key": "D",
-    "text": "桌子的重力与书的重力"
+    "text": "书的重力与桌面对书的支持力"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "平衡力作用在同一物体上、大小相等、方向相反、在同一直线上。C 是一对相互作用力，作用在两个物体上。",
   "kp": "二力平衡",
@@ -107,11 +107,11 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    },
    {
     "key": "B",
-    "text": "运动鞋的鞋底刻有花纹"
+    "text": "用滚动代替滑动"
    },
    {
     "key": "C",
-    "text": "用滚动代替滑动"
+    "text": "运动鞋的鞋底刻有花纹"
    },
    {
     "key": "D",
@@ -119,9 +119,9 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
-  "explanation": "鞋底刻花纹是增大接触面的粗糙程度来增大摩擦。A、C、D 都是减小摩擦。",
+  "explanation": "鞋底刻花纹是增大接触面的粗糙程度来增大摩擦。A、B、D 都是减小摩擦。",
   "kp": "摩擦力",
   "stem": "下列做法中，为了增大摩擦的是（ ）",
   "paperScore": 3,
@@ -187,7 +187,7 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "变大"
+    "text": "先变大后变小"
    },
    {
     "key": "B",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    },
    {
     "key": "D",
-    "text": "先变大后变小"
+    "text": "变大"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "液体压强随深度的增加而增大，下潜时深度增加，压强变大。",
   "kp": "液体压强",
@@ -233,11 +233,11 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    },
    {
     "key": "B",
-    "text": "吸盘挂钩贴在墙上"
+    "text": "医生用注射器把药液注入肌肉"
    },
    {
     "key": "C",
-    "text": "医生用注射器把药液注入肌肉"
+    "text": "吸盘挂钩贴在墙上"
    },
    {
     "key": "D",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "注射器把药液推入肌肉是靠人的推力，不是大气压。用注射器“吸”药液才是利用大气压。坑点：分清“吸药”和“注射”。",
   "kp": "大气压强",
@@ -271,7 +271,7 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "火车附近空气流速大、压强小，人会被“推”向火车"
+    "text": "火车会产生很大的吸引力"
    },
    {
     "key": "B",
@@ -279,7 +279,7 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    },
    {
     "key": "C",
-    "text": "火车会产生很大的吸引力"
+    "text": "火车附近空气流速大、压强小，人会被“推”向火车"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "流体流速越大的地方压强越小。火车附近空气流速大、压强小，人身后压强大，压力差会把人推向火车。",
   "kp": "流体压强与流速",
@@ -313,11 +313,11 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
   "options": [
    {
     "key": "A",
-    "text": "浮力变大，船身下沉一些"
+    "text": "浮力不变，船身上浮一些"
    },
    {
     "key": "B",
-    "text": "浮力不变，船身上浮一些"
+    "text": "浮力变大，船身下沉一些"
    },
    {
     "key": "C",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "轮船始终漂浮，浮力等于重力，不变；海水密度大，由 F浮＝ρ液gV排 可知 V排 变小，船身上浮一些。",
   "kp": "物体的浮沉条件",
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    },
    {
     "key": "B",
-    "text": "用力推汽车，汽车没动"
+    "text": "把书从地上捡起放到桌上"
    },
    {
     "key": "C",
-    "text": "把书从地上捡起放到桌上"
+    "text": "用力推汽车，汽车没动"
    },
    {
     "key": "D",
@@ -371,9 +371,9 @@ window.NATIONAL_PAPERS["earlybird-8down-physics"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
-  "explanation": "做功需要力和在力的方向上移动的距离。A 力竖直向上、移动方向水平；B、D 没有移动距离，都不做功。",
+  "explanation": "做功需要力和在力的方向上移动的距离。A 力竖直向上、移动方向水平；C、D 没有移动距离，都不做功。",
   "kp": "功",
   "stem": "下列情况中，人对物体做了功的是（ ）",
   "paperScore": 3,

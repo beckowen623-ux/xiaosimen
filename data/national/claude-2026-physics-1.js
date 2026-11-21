@@ -64,7 +64,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "B",
-    "text": "响度"
+    "text": "传播速度"
    },
    {
     "key": "C",
@@ -72,11 +72,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "D",
-    "text": "传播速度"
+    "text": "响度"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "敲鼓的力越大，鼓面振幅越大，响度越大。",
   "kp": "声音的特性",
@@ -105,11 +105,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "B",
-    "text": "水中的倒影"
+    "text": "插入水中的筷子在水面处“折断”"
    },
    {
     "key": "C",
-    "text": "插入水中的筷子在水面处“折断”"
+    "text": "水中的倒影"
    },
    {
     "key": "D",
@@ -117,7 +117,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "小孔成像和影子是光沿直线传播；倒影是光的反射；筷子“折断”是光从水斜射入空气时发生折射。",
   "kp": "光现象",
@@ -146,7 +146,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "B",
-    "text": "凝华现象"
+    "text": "升华现象"
    },
    {
     "key": "C",
@@ -154,11 +154,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "D",
-    "text": "升华现象"
+    "text": "凝华现象"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "室内温度较高的水蒸气遇到冰冷的玻璃，直接变成固态的小冰晶，属于凝华。",
   "kp": "物态变化",
@@ -187,11 +187,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "B",
-    "text": "L₁、L₂ 并联，开关 S 控制两盏灯"
+    "text": "开关 S 只控制 L₁"
    },
    {
     "key": "C",
-    "text": "开关 S 只控制 L₁"
+    "text": "L₁、L₂ 并联，开关 S 控制两盏灯"
    },
    {
     "key": "D",
@@ -199,7 +199,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "电流从电源出来后分成两路，分别经过 L₁ 和 L₂ 再汇合，两灯并联；开关在干路上，控制两盏灯。",
   "kp": "串联和并联",
@@ -229,7 +229,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "B",
-    "text": "乘客具有惯性"
+    "text": "乘客受到的重力变大"
    },
    {
     "key": "C",
@@ -237,11 +237,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "D",
-    "text": "乘客受到的重力变大"
+    "text": "乘客具有惯性"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "刹车时脚随车停止运动，上身由于惯性保持原来的运动状态，所以向前倾。",
   "kp": "惯性",
@@ -274,15 +274,15 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "C",
-    "text": "增大压强"
+    "text": "减小压强"
    },
    {
     "key": "D",
-    "text": "减小压强"
+    "text": "增大压强"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "压力一定时，增大受力面积可以减小压强，背着更舒服。",
   "kp": "压强",
@@ -307,7 +307,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "在水中大"
+    "text": "一样大"
    },
    {
     "key": "B",
@@ -315,7 +315,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    },
    {
     "key": "C",
-    "text": "一样大"
+    "text": "在水中大"
    },
    {
     "key": "D",
@@ -323,7 +323,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "漂浮时浮力等于重力，木块重力不变，所以两次浮力一样大（盐水中排开的体积更小）。",
   "kp": "物体的浮沉条件",
@@ -390,11 +390,11 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
   "options": [
    {
     "key": "A",
-    "text": "电流的磁效应"
+    "text": "电磁感应"
    },
    {
     "key": "B",
-    "text": "电磁感应"
+    "text": "电流的磁效应"
    },
    {
     "key": "C",
@@ -406,7 +406,7 @@ window.NATIONAL_PAPERS["claude-2026-physics-1"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "闭合电路的一部分导体在磁场中做切割磁感线运动产生电流，即电磁感应，这是发电机的原理；电动机的原理是磁场对通电导体有力的作用。",
   "kp": "电与磁",

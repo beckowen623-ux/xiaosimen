@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    },
    {
     "key": "B",
-    "text": "2又1/3 x"
+    "text": "－5ab"
    },
    {
     "key": "C",
-    "text": "－5ab"
+    "text": "2又1/3 x"
    },
    {
     "key": "D",
@@ -35,9 +35,9 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
-  "explanation": "数字与字母相乘，乘号省略、数字写在前面，A 应写成 3a；带分数与字母相乘要化成假分数，B 应写成 7/3 x；除法要写成分数形式，D 应写成 x/y。",
+  "explanation": "数字与字母相乘，乘号省略、数字写在前面，A 应写成 3a；带分数与字母相乘要化成假分数，C 应写成 7/3 x；除法要写成分数形式，D 应写成 x/y。",
   "kp": "用字母表示数",
   "stem": "下列式子中，书写符合代数式书写规范的是（ ）",
   "paperScore": 3,
@@ -61,11 +61,11 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "a 元"
+    "text": "0.96a 元"
    },
    {
     "key": "B",
-    "text": "0.96a 元"
+    "text": "a 元"
    },
    {
     "key": "C",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "提价后为 1.2a，再降价 20% 是在 1.2a 的基础上打八折：1.2a×0.8＝0.96a。坑点：提价、降价的基数不同，不能直接抵消。",
   "kp": "列代数式",
@@ -149,7 +149,7 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    },
    {
     "key": "B",
-    "text": "9"
+    "text": "－1"
    },
    {
     "key": "C",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    },
    {
     "key": "D",
-    "text": "－1"
+    "text": "9"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "(－2)²－2×(－2)＋1＝4＋4＋1＝9。坑点：负数代入要加括号，(－2)²＝4。",
   "kp": "代数式的值",
@@ -187,11 +187,11 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "1"
+    "text": "－1"
    },
    {
     "key": "B",
-    "text": "－1"
+    "text": "1"
    },
    {
     "key": "C",
@@ -203,7 +203,7 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "整体代入：5－2a＋4b＝5－2(a－2b)＝5－2×3＝－1。",
   "kp": "代数式的值",
@@ -233,11 +233,11 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    },
    {
     "key": "B",
-    "text": "a＋b"
+    "text": "10a＋b"
    },
    {
     "key": "C",
-    "text": "10a＋b"
+    "text": "a＋b"
    },
    {
     "key": "D",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "十位上的 a 表示 a 个十，即 10a，再加个位的 b，得 10a＋b。ab 表示 a×b，不是两位数。",
   "kp": "列代数式",
@@ -275,11 +275,11 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    },
    {
     "key": "B",
-    "text": "0.55m"
+    "text": "m－45%"
    },
    {
     "key": "C",
-    "text": "m－45%"
+    "text": "0.55m"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "女生占 1－45%＝55%，人数为 0.55m。班级数、合唱社团都是干扰信息。",
   "kp": "列代数式",
@@ -317,7 +317,7 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    },
    {
     "key": "B",
-    "text": "－(－2)ⁿ"
+    "text": "(－1)ⁿ·2ⁿ"
    },
    {
     "key": "C",
@@ -325,13 +325,13 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    },
    {
     "key": "D",
-    "text": "(－1)ⁿ·2ⁿ"
+    "text": "－(－2)ⁿ"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "绝对值是 2ⁿ，奇数个为正、偶数个为负。验证 －(－2)ⁿ：n＝1 时为 2，n＝2 时为 －4，符合。A、D 在 n＝1 时得 －2，不对。",
+  "explanation": "绝对值是 2ⁿ，奇数个为正、偶数个为负。验证 －(－2)ⁿ：n＝1 时为 2，n＝2 时为 －4，符合。A、B 在 n＝1 时得 －2，不对。",
   "kp": "规律探究",
   "stem": "观察一列数：2，－4，8，－16，32，……，按此规律，第 n 个数可以表示为（ ）",
   "paperScore": 3,
@@ -359,11 +359,11 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    },
    {
     "key": "B",
-    "text": "(3n＋1) 根"
+    "text": "3n 根"
    },
    {
     "key": "C",
-    "text": "3n 根"
+    "text": "(3n＋1) 根"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "第 1 个用 4 根，以后每多 1 个正方形多用 3 根：4＋3(n－1)＝3n＋1。",
   "kp": "规律探究",
@@ -397,7 +397,7 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "0.12a 元"
+    "text": "0.2a 元"
    },
    {
     "key": "B",
@@ -409,11 +409,11 @@ window.NATIONAL_PAPERS["xsc-math-3"] = [
    },
    {
     "key": "D",
-    "text": "0.2a 元"
+    "text": "0.12a 元"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "标价 1.4a，售价 1.4a×0.8＝1.12a，利润＝1.12a－a＝0.12a。",
   "kp": "列代数式",

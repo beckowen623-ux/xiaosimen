@@ -23,7 +23,7 @@ window.NATIONAL_PAPERS["earlybird-7up-math"] = [
    },
    {
     "key": "B",
-    "text": "2026"
+    "text": "－1/2026"
    },
    {
     "key": "C",
@@ -31,11 +31,11 @@ window.NATIONAL_PAPERS["earlybird-7up-math"] = [
    },
    {
     "key": "D",
-    "text": "－1/2026"
+    "text": "2026"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "先化简：|－2026|＝2026，－|－2026|＝－2026，它的相反数是 2026。坑点：看到绝对值就以为结果一定是正数。",
   "kp": "相反数",
@@ -103,7 +103,7 @@ window.NATIONAL_PAPERS["earlybird-7up-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "(－3)²"
+    "text": "(－3)³"
    },
    {
     "key": "B",
@@ -111,7 +111,7 @@ window.NATIONAL_PAPERS["earlybird-7up-math"] = [
    },
    {
     "key": "C",
-    "text": "(－3)³"
+    "text": "(－3)²"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-7up-math"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "(－3)²＝9，－3²＝－9，(－3)³＝－27，－|－3|＝－3。最小的是 －27。",
   "kp": "有理数的乘方",
@@ -149,7 +149,7 @@ window.NATIONAL_PAPERS["earlybird-7up-math"] = [
    },
    {
     "key": "B",
-    "text": "8"
+    "text": "5"
    },
    {
     "key": "C",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-7up-math"] = [
    },
    {
     "key": "D",
-    "text": "5"
+    "text": "8"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "两个单项式的和仍是单项式，说明它们是同类项：m＋1＝3，n－1＝2，所以 m＝2，n＝3，mⁿ＝2³＝8。",
   "kp": "同类项",
@@ -397,11 +397,11 @@ window.NATIONAL_PAPERS["earlybird-7up-math"] = [
   "options": [
    {
     "key": "A",
-    "text": "－2a＋2b－2c"
+    "text": "2a－2c"
    },
    {
     "key": "B",
-    "text": "2a－2c"
+    "text": "－2a＋2b－2c"
    },
    {
     "key": "C",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-7up-math"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "|c|＜|a| 且 a＜0＜c，所以 a＋c＜0，|a＋c|＝－a－c；b－c＜0，|b－c|＝c－b；a－b＜0，|a－b|＝b－a。原式＝(－a－c)－(c－b)＋(b－a)＝－2a＋2b－2c。",
   "kp": "绝对值化简",

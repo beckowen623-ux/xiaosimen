@@ -19,7 +19,7 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "惬意（qiè）　粗犷（guǎng）　蜷伏（quán）　匀称（chèn）"
+    "text": "狼藉（jí）　踌躇（chú）　訇然（hōng）　肃穆（mù）"
    },
    {
     "key": "B",
@@ -31,13 +31,13 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    },
    {
     "key": "D",
-    "text": "狼藉（jí）　踌躇（chú）　訇然（hōng）　肃穆（mù）"
+    "text": "惬意（qiè）　粗犷（guǎng）　蜷伏（quán）　匀称（chèn）"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
-  "explanation": "B“镌”读 juān；C“锐不可当”的“当”读 dāng；D“踌”读 chóu。",
+  "explanation": "A“踌”读 chóu；B“镌”读 juān；C“锐不可当”的“当”读 dāng。",
   "kp": "字音",
   "stem": "下列词语中，括号内注音全都正确的一项是（ ）",
   "paperScore": 2.5,
@@ -65,11 +65,11 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    },
    {
     "key": "B",
-    "text": "王老师批改作业一丝不苟，连一个标点也不放过。"
+    "text": "这家餐厅的菜味道好、价格实惠，每天都门可罗雀。"
    },
    {
     "key": "C",
-    "text": "这家餐厅的菜味道好、价格实惠，每天都门可罗雀。"
+    "text": "王老师批改作业一丝不苟，连一个标点也不放过。"
    },
    {
     "key": "D",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "“门可罗雀”形容门前冷落、宾客稀少，与“味道好、价格实惠”的语境矛盾。",
   "kp": "成语运用",
@@ -145,7 +145,7 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "《红星照耀中国》的作者是美国记者埃德加·斯诺。"
+    "text": "《昆虫记》是一部纯粹的科学论文集，语言枯燥，没有文学价值。"
    },
    {
     "key": "B",
@@ -157,11 +157,11 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    },
    {
     "key": "D",
-    "text": "《昆虫记》是一部纯粹的科学论文集，语言枯燥，没有文学价值。"
+    "text": "《红星照耀中国》的作者是美国记者埃德加·斯诺。"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "《昆虫记》既是科学著作，又有很高的文学价值，语言生动有趣，被誉为“昆虫的史诗”。",
   "kp": "名著",
@@ -367,7 +367,7 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    },
    {
     "key": "B",
-    "text": "“日暮客愁新”中的“愁”是全诗的情感核心。"
+    "text": "全诗描写了热闹的江边夜市，表达了诗人的喜悦之情。"
    },
    {
     "key": "C",
@@ -375,11 +375,11 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    },
    {
     "key": "D",
-    "text": "全诗描写了热闹的江边夜市，表达了诗人的喜悦之情。"
+    "text": "“日暮客愁新”中的“愁”是全诗的情感核心。"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "诗中写的是旷野、江水、明月，一片空寂，表达的是羁旅之愁，不是热闹和喜悦。",
   "kp": "古诗理解",
@@ -495,7 +495,7 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
   "options": [
    {
     "key": "A",
-    "text": "母亲学用智能手机，是为了能和住校的“我”视频。"
+    "text": "母亲后来很少打视频，是因为她对“我”的不耐烦感到生气，不想再理“我”。"
    },
    {
     "key": "B",
@@ -507,11 +507,11 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    },
    {
     "key": "D",
-    "text": "母亲后来很少打视频，是因为她对“我”的不耐烦感到生气，不想再理“我”。"
+    "text": "母亲学用智能手机，是为了能和住校的“我”视频。"
    }
   ],
   "answer": [
-   "D"
+   "A"
   ],
   "explanation": "母亲少打视频，是怕打扰“我”、怕“我”嫌烦，她把想说的话存进了备忘录，这是体谅和深爱，不是生气。",
   "kp": "内容理解",
@@ -543,7 +543,7 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    },
    {
     "key": "B",
-    "text": "备忘录的内容按时间顺序排列，真实可信，细节感人。"
+    "text": "结尾“我”新建的一条备忘录与上文无关，只是为了增加文章的趣味。"
    },
    {
     "key": "C",
@@ -551,11 +551,11 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    },
    {
     "key": "D",
-    "text": "结尾“我”新建的一条备忘录与上文无关，只是为了增加文章的趣味。"
+    "text": "备忘录的内容按时间顺序排列，真实可信，细节感人。"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
   "explanation": "结尾新建的备忘录与前文母亲的备忘录形成呼应，表达了“我”的悔悟和愿意与母亲沟通的心意，深化了主旨。",
   "kp": "写法分析",
@@ -591,15 +591,15 @@ window.NATIONAL_PAPERS["earlybird-8up-chinese"] = [
    },
    {
     "key": "C",
-    "text": "雨水花园中的土层能过滤雨水中的杂质。"
+    "text": "建成海绵城市后，就可以完全不需要排水管网了。"
    },
    {
     "key": "D",
-    "text": "建成海绵城市后，就可以完全不需要排水管网了。"
+    "text": "雨水花园中的土层能过滤雨水中的杂质。"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "最后一段明确说海绵城市“不是要完全替代传统的排水管网，而是与之配合”。",
   "kp": "内容理解",

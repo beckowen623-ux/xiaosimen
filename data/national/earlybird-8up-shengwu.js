@@ -19,11 +19,11 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "水螅"
+    "text": "涡虫"
    },
    {
     "key": "B",
-    "text": "涡虫"
+    "text": "水螅"
    },
    {
     "key": "C",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "水螅是腔肠动物，身体辐射对称，有口无肛门。涡虫是扁形动物，左右对称，有口无肛门；蛔虫是线形动物，有口有肛门；蚯蚓是环节动物。",
   "kp": "动物的主要类群",
@@ -65,7 +65,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "土壤中缺少氧气，到地面上呼吸"
+    "text": "出来喝水"
    },
    {
     "key": "C",
@@ -73,11 +73,11 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "出来喝水"
+    "text": "土壤中缺少氧气，到地面上呼吸"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "蚯蚓靠湿润的体壁呼吸，雨后土壤中的缝隙被水填满，缺少氧气，蚯蚓只好爬到地面上来呼吸。",
   "kp": "动物的主要类群",
@@ -107,11 +107,11 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "鲨鱼"
+    "text": "鳄鱼"
    },
    {
     "key": "C",
-    "text": "鳄鱼"
+    "text": "鲨鱼"
    },
    {
     "key": "D",
@@ -119,7 +119,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "鲨鱼用鳃呼吸、用鳍游泳，是鱼类。鲸鱼是哺乳动物，鳄鱼是爬行动物，章鱼是软体动物。坑点：名字带“鱼”的不一定是鱼。",
   "kp": "动物的主要类群",
@@ -233,11 +233,11 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "胎生、哺乳"
+    "text": "体内受精"
    },
    {
     "key": "C",
-    "text": "体内受精"
+    "text": "胎生、哺乳"
    },
    {
     "key": "D",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "胎生、哺乳是哺乳动物特有的特征，大大提高了后代的成活率。",
   "kp": "动物的主要类群",
@@ -271,7 +271,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "骨"
+    "text": "骨骼肌"
    },
    {
     "key": "B",
@@ -279,7 +279,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "骨骼肌"
+    "text": "骨"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "运动时，骨起杠杆作用，关节起支点作用，骨骼肌收缩提供动力。",
   "kp": "运动的完成",
@@ -313,7 +313,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "收缩、舒张"
+    "text": "都收缩"
    },
    {
     "key": "B",
@@ -321,7 +321,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "都收缩"
+    "text": "收缩、舒张"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "屈肘时肱二头肌收缩、肱三头肌舒张；伸肘时相反。",
   "kp": "运动的完成",
@@ -363,15 +363,15 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "小狗算算术"
+    "text": "母鸡孵卵"
    },
    {
     "key": "D",
-    "text": "母鸡孵卵"
+    "text": "小狗算算术"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "小狗算算术是通过训练、在生活经验中学习获得的学习行为。蜘蛛结网、蜜蜂采蜜、母鸡孵卵是生来就有的先天性行为。",
   "kp": "动物的行为",
@@ -397,11 +397,11 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "社会行为"
+    "text": "攻击行为"
    },
    {
     "key": "B",
-    "text": "攻击行为"
+    "text": "社会行为"
    },
    {
     "key": "C",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "群体内部有明确分工，有的还有等级，这是社会行为的特征。",
   "kp": "动物的行为",
@@ -447,15 +447,15 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "帮助植物传粉、传播种子"
+    "text": "进行光合作用制造有机物"
    },
    {
     "key": "D",
-    "text": "进行光合作用制造有机物"
+    "text": "帮助植物传粉、传播种子"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "动物细胞没有叶绿体，不能进行光合作用。",
   "kp": "动物在生物圈中的作用",
@@ -485,7 +485,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "没有成形的细胞核"
+    "text": "没有细胞质"
    },
    {
     "key": "C",
@@ -493,11 +493,11 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "没有细胞质"
+    "text": "没有成形的细胞核"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "细菌有细胞壁、细胞膜、细胞质，但只有 DNA 集中的区域，没有成形的细胞核，属于原核生物。",
   "kp": "细菌和真菌",
@@ -527,11 +527,11 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "乳酸菌"
+    "text": "酵母菌"
    },
    {
     "key": "C",
-    "text": "酵母菌"
+    "text": "乳酸菌"
    },
    {
     "key": "D",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "酵母菌是单细胞真菌，有成形的细胞核。大肠杆菌、乳酸菌是细菌，噬菌体是病毒。坑点：名字带“菌”的不一定是真菌。",
   "kp": "细菌和真菌",
@@ -569,7 +569,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "B",
-    "text": "乳酸菌，无氧"
+    "text": "霉菌，无氧"
    },
    {
     "key": "C",
@@ -577,11 +577,11 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "D",
-    "text": "霉菌，无氧"
+    "text": "乳酸菌，无氧"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "乳酸菌在无氧条件下把葡萄糖分解成乳酸，所以泡菜坛要密封。酵母菌用于做馒头、酿酒。",
   "kp": "细菌和真菌",
@@ -607,7 +607,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
   "options": [
    {
     "key": "A",
-    "text": "把食品中的细菌和真菌杀死或抑制它们的生长繁殖"
+    "text": "让食品变得更好吃"
    },
    {
     "key": "B",
@@ -615,7 +615,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    },
    {
     "key": "C",
-    "text": "让食品变得更好吃"
+    "text": "把食品中的细菌和真菌杀死或抑制它们的生长繁殖"
    },
    {
     "key": "D",
@@ -623,7 +623,7 @@ window.NATIONAL_PAPERS["earlybird-8up-shengwu"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "食物腐败主要由细菌和真菌引起，保存食品要杀死或抑制它们的生长繁殖，如冷藏、腌制、真空包装等。",
   "kp": "细菌和真菌",

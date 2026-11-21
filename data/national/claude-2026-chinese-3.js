@@ -60,11 +60,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "锲而不舍  络绎不绝"
+    "text": "相得益章  精益求精"
    },
    {
     "key": "B",
-    "text": "相得益章  精益求精"
+    "text": "锲而不舍  络绎不绝"
    },
    {
     "key": "C",
@@ -76,9 +76,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
-  "explanation": "B 应为“相得益彰”；C 应为“川流不息”；D 应为“直截了当”。",
+  "explanation": "A 应为“相得益彰”；C 应为“川流不息”；D 应为“直截了当”。",
   "kp": "字形",
   "stem": "下列词语书写全部正确的一项是（ ）",
   "unit": "积累与运用"
@@ -101,7 +101,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "他做事一丝不苟，深受同事们的信赖。"
+    "text": "看到这道难题，他胸有成竹，七手八脚地写了起来。"
    },
    {
     "key": "B",
@@ -109,7 +109,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "C",
-    "text": "看到这道难题，他胸有成竹，七手八脚地写了起来。"
+    "text": "他做事一丝不苟，深受同事们的信赖。"
    },
    {
     "key": "D",
@@ -117,9 +117,9 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
-  "explanation": "B“蓬荜生辉”是谦辞，用于宾客来访或别人赠送字画等，使用对象不当；C“七手八脚”形容人多手杂，不能用于一个人；D“差强人意”指大体上还能使人满意，与“被淘汰”矛盾。",
+  "explanation": "A“七手八脚”形容人多手杂，不能用于一个人；B“蓬荜生辉”是谦辞，用于宾客来访或别人赠送字画等，使用对象不当；D“差强人意”指大体上还能使人满意，与“被淘汰”矛盾。",
   "kp": "成语运用",
   "stem": "下列句子中加点成语使用恰当的一项是（ ）",
   "unit": "积累与运用"
@@ -150,17 +150,17 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "C",
-    "text": "阅读经典名著，能够帮助我们开阔视野、提高修养。"
+    "text": "经过一个学期的练习，他的写作水平明显增加了。"
    },
    {
     "key": "D",
-    "text": "经过一个学期的练习，他的写作水平明显增加了。"
+    "text": "阅读经典名著，能够帮助我们开阔视野、提高修养。"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
-  "explanation": "A 缺主语；B 否定不当，删“不”；D 搭配不当，“水平”应与“提高”搭配。",
+  "explanation": "A 缺主语；B 否定不当，删“不”；C 搭配不当，“水平”应与“提高”搭配。",
   "kp": "病句辨析",
   "stem": "下列句子没有语病的一项是（ ）",
   "unit": "积累与运用"
@@ -191,15 +191,15 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "C",
-    "text": "风在吼，马在叫，黄河在咆哮。（排比、拟人）"
+    "text": "飞流直下三千尺，疑是银河落九天。（前句是比喻）"
    },
    {
     "key": "D",
-    "text": "飞流直下三千尺，疑是银河落九天。（前句是比喻）"
+    "text": "风在吼，马在叫，黄河在咆哮。（排比、拟人）"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "“飞流直下三千尺”是夸张；“疑是银河落九天”才是比喻兼夸张。",
   "kp": "修辞手法",
@@ -228,11 +228,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "B",
-    "text": "《水浒传》中，林冲风雪山神庙，被逼上梁山。"
+    "text": "《西游记》中，“大闹天宫”的主人公是猪八戒。"
    },
    {
     "key": "C",
-    "text": "《西游记》中，“大闹天宫”的主人公是猪八戒。"
+    "text": "《水浒传》中，林冲风雪山神庙，被逼上梁山。"
    },
    {
     "key": "D",
@@ -240,7 +240,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "大闹天宫的是孙悟空。",
   "kp": "名著阅读",
@@ -495,7 +495,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "B",
-    "text": "前两句说古人做学问不遗余力，年轻时下功夫，到老年才有所成就。"
+    "text": "诗人认为书本知识没有用，只要实践就够了。"
    },
    {
     "key": "C",
@@ -503,13 +503,13 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "D",
-    "text": "诗人认为书本知识没有用，只要实践就够了。"
+    "text": "前两句说古人做学问不遗余力，年轻时下功夫，到老年才有所成就。"
    }
   ],
   "answer": [
-   "D"
+   "B"
   ],
-  "explanation": "诗人并不否定书本知识，而是强调书本知识要通过亲身实践才能真正理解，D 理解偏颇。",
+  "explanation": "诗人并不否定书本知识，而是强调书本知识要通过亲身实践才能真正理解，B 理解偏颇。",
   "kp": "古诗理解",
   "stem": "下列对这首诗的理解，不正确的一项是（ ）",
   "unit": "古诗词鉴赏"
@@ -542,15 +542,15 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "C",
-    "text": "妻适市来（适：刚好、恰好）"
+    "text": "特与婴儿戏耳（特：特别）"
    },
    {
     "key": "D",
-    "text": "特与婴儿戏耳（特：特别）"
+    "text": "妻适市来（适：刚好、恰好）"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
   "explanation": "“特”在这里是“只是、不过”的意思。",
   "kp": "文言实词",
@@ -577,11 +577,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "回头看看，为你杀猪"
+    "text": "等我回来，给你杀猪吃"
    },
    {
     "key": "B",
-    "text": "等我回来，给你杀猪吃"
+    "text": "回头看看，为你杀猪"
    },
    {
     "key": "C",
@@ -593,7 +593,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "“顾反”即“回来”，“反”通“返”，“彘”是猪。",
   "kp": "句意理解",
@@ -663,11 +663,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "说明孩子应该听从母亲的话"
+    "text": "告诉我们父母要以身作则、言而有信"
    },
    {
     "key": "B",
-    "text": "告诉我们父母要以身作则、言而有信"
+    "text": "说明孩子应该听从母亲的话"
    },
    {
     "key": "C",
@@ -679,7 +679,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "故事通过曾子杀猪兑现承诺，说明教育孩子要言而有信、以身作则。",
   "kp": "主旨理解",
@@ -710,7 +710,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "B",
-    "text": "陈师傅坚持先刮干净旧胶，是因为他想多收钱。"
+    "text": "结尾写陈师傅仍在刮胶，表现他二十年如一日的踏实。"
    },
    {
     "key": "C",
@@ -718,11 +718,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "D",
-    "text": "结尾写陈师傅仍在刮胶，表现他二十年如一日的踏实。"
+    "text": "陈师傅坚持先刮干净旧胶，是因为他想多收钱。"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "文中写他前前后后修了快一个小时，只收五块钱，说明他认真负责、为人厚道，并非为了多收钱。",
   "kp": "内容理解",
@@ -753,11 +753,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "B",
-    "text": "动作描写（细节描写），表现陈师傅做事认真细致"
+    "text": "心理描写，表现陈师傅内心着急"
    },
    {
     "key": "C",
-    "text": "心理描写，表现陈师傅内心着急"
+    "text": "动作描写（细节描写），表现陈师傅做事认真细致"
    },
    {
     "key": "D",
@@ -765,7 +765,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "通过“刮”的动作细节，表现陈师傅认真细致、一丝不苟。",
   "kp": "描写方法",
@@ -792,11 +792,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
   "options": [
    {
     "key": "A",
-    "text": "“我”的运动鞋"
+    "text": "“我”没有真正弄懂的错题"
    },
    {
     "key": "B",
-    "text": "“我”没有真正弄懂的错题"
+    "text": "“我”的运动鞋"
    },
    {
     "key": "C",
@@ -808,7 +808,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "原文：那些错题从来没真正弄懂过，就像没刮干净的旧胶。",
   "kp": "句子含义",
@@ -882,7 +882,7 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "B",
-    "text": "打比方"
+    "text": "作比较"
    },
    {
     "key": "C",
@@ -890,11 +890,11 @@ window.NATIONAL_PAPERS["claude-2026-chinese-3"] = [
    },
    {
     "key": "D",
-    "text": "作比较"
+    "text": "打比方"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "把错题集比作“漏洞地图”，是打比方，生动形象地说明错题本能帮我们找到薄弱点。",
   "kp": "说明方法",

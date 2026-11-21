@@ -23,11 +23,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "Mine"
+    "text": "Me"
    },
    {
     "key": "C",
-    "text": "Me"
+    "text": "Mine"
    },
    {
     "key": "D",
@@ -35,7 +35,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "空处作主语，指“我的（书）”，用名词性物主代词 Mine。",
   "kp": "名词性物主代词",
@@ -107,7 +107,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "not to talk"
+    "text": "to not talking"
    },
    {
     "key": "C",
@@ -115,11 +115,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "D",
-    "text": "to not talking"
+    "text": "not to talk"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "ask sb. (not) to do sth. 要求某人（不要）做某事，否定词放在 to 前。",
   "kp": "ask sb. not to do",
@@ -145,11 +145,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "where is"
+    "text": "where it is"
    },
    {
     "key": "B",
-    "text": "where it is"
+    "text": "where is"
    },
    {
     "key": "C",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "答语说的是位置，问“在哪里”；宾语从句用陈述语序 where it is。",
   "kp": "宾语从句",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "since"
+    "text": "for"
    },
    {
     "key": "B",
-    "text": "for"
+    "text": "since"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "two years 是一段时间，用 for；since 后接时间点或 two years ago。",
   "kp": "现在完成时的时间状语",
@@ -275,7 +275,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "who"
+    "text": "whose"
    },
    {
     "key": "C",
@@ -283,11 +283,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "D",
-    "text": "whose"
+    "text": "who"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "先行词 friends 指人，在从句中作主语，用 who（或 that）。",
   "kp": "定语从句",
@@ -317,11 +317,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "can't"
+    "text": "needn't"
    },
    {
     "key": "C",
-    "text": "needn't"
+    "text": "can't"
    },
    {
     "key": "D",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "后句“明天也可以”，说明“今天不必交”，用 needn't。坑点：mustn't 表示“禁止”。",
   "kp": "情态动词",
@@ -363,15 +363,15 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "C",
-    "text": "the more fluently"
+    "text": "the most fluently"
    },
    {
     "key": "D",
-    "text": "the most fluently"
+    "text": "the more fluently"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "“越……就越……”用 the＋比较级, the＋比较级；修饰动词 speak 用副词 fluently。",
   "kp": "the＋比较级, the＋比较级",
@@ -401,11 +401,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "Sorry. I'll do it right away."
+    "text": "That's all right."
    },
    {
     "key": "C",
-    "text": "That's all right."
+    "text": "Sorry. I'll do it right away."
    },
    {
     "key": "D",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "对方请求关小音乐，礼貌回应是道歉并马上照做。坑点：回答 Would you mind...? 时，Yes 表示“介意”，不礼貌。",
   "kp": "情景交际",
@@ -441,7 +441,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "picked"
+    "text": "looked"
    },
    {
     "key": "B",
@@ -453,11 +453,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "D",
-    "text": "looked"
+    "text": "picked"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "pick up 捡起。",
   "kp": "动词短语",
@@ -489,11 +489,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "worry"
+    "text": "think"
    },
    {
     "key": "C",
-    "text": "think"
+    "text": "worry"
    },
    {
     "key": "D",
@@ -501,7 +501,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "已经六点、警察局很远，不想让父母担心 worry about me。",
   "kp": "动词辨析",
@@ -573,11 +573,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "tomorrow"
+    "text": "ourselves"
    },
    {
     "key": "B",
-    "text": "ourselves"
+    "text": "tomorrow"
    },
    {
     "key": "C",
@@ -589,7 +589,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "后文母子二人亲自送钱包上门，find the owner ourselves 我们自己找失主。",
   "kp": "反身代词",
@@ -621,7 +621,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "lit"
+    "text": "gave"
    },
    {
     "key": "C",
@@ -629,11 +629,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "D",
-    "text": "gave"
+    "text": "lit"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "one's eyes lit up 眼睛一亮，表示惊喜。",
   "kp": "固定搭配",
@@ -753,11 +753,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "instead"
+    "text": "too"
    },
    {
     "key": "C",
-    "text": "too"
+    "text": "instead"
    },
    {
     "key": "D",
@@ -765,7 +765,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "“我”不要钱，他“转而”送了一本书，用 instead。",
   "kp": "副词辨析",
@@ -793,11 +793,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "how"
+    "text": "what"
    },
    {
     "key": "B",
-    "text": "what"
+    "text": "how"
    },
    {
     "key": "C",
@@ -809,7 +809,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "you got 缺宾语，用 what：你今晚得到了什么。",
   "kp": "宾语从句引导词",
@@ -837,7 +837,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "with"
+    "text": "at"
    },
    {
     "key": "B",
@@ -845,7 +845,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "C",
-    "text": "at"
+    "text": "with"
    },
    {
     "key": "D",
@@ -853,7 +853,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "with a smile on my face 脸上带着微笑。",
   "kp": "介词 with 的复合结构",
@@ -969,7 +969,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "1.5 hours."
+    "text": "3 hours."
    },
    {
     "key": "B",
@@ -977,7 +977,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "C",
-    "text": "3 hours."
+    "text": "1.5 hours."
    },
    {
     "key": "D",
@@ -985,7 +985,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "每周一、三各 1.5 小时，共 3 小时。坑点：只算一次是 1.5 小时。",
   "kp": "数字计算",
@@ -1017,11 +1017,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "The Chess Club is only for good players."
+    "text": "Students should sign up before October 13."
    },
    {
     "key": "C",
-    "text": "Students should sign up before October 13."
+    "text": "The Chess Club is only for good players."
    },
    {
     "key": "D",
@@ -1029,7 +1029,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "报名截止 October 13；最多两个社团；国际象棋欢迎初学者；话剧演出在 12 月 20 日。",
   "kp": "正误判断",
@@ -1061,11 +1061,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "On a school notice board."
+    "text": "In a newspaper about sports."
    },
    {
     "key": "C",
-    "text": "In a newspaper about sports."
+    "text": "On a school notice board."
    },
    {
     "key": "D",
@@ -1073,7 +1073,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "学校社团招募通知，常见于学校公告栏。",
   "kp": "文章出处",
@@ -1105,7 +1105,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "Because there was no Wi-Fi at Grandpa's house."
+    "text": "Because he didn't like vegetables."
    },
    {
     "key": "C",
@@ -1113,11 +1113,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "D",
-    "text": "Because he didn't like vegetables."
+    "text": "Because there was no Wi-Fi at Grandpa's house."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "第一段：There was no Wi-Fi at Grandpa's house, and I couldn't play online games。早起是后来的事。",
   "kp": "细节理解",
@@ -1189,11 +1189,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "At noon."
+    "text": "In the early morning or late afternoon."
    },
    {
     "key": "B",
-    "text": "In the early morning or late afternoon."
+    "text": "At noon."
    },
    {
     "key": "C",
@@ -1205,7 +1205,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "water the plants in the early morning or late afternoon, when the sun was not too strong。",
   "kp": "细节理解",
@@ -1277,7 +1277,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Growing vegetables is easy."
+    "text": "The writer learned patience from working with Grandpa."
    },
    {
     "key": "B",
@@ -1285,7 +1285,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "C",
-    "text": "The writer learned patience from working with Grandpa."
+    "text": "Growing vegetables is easy."
    },
    {
     "key": "D",
@@ -1293,7 +1293,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "C"
+   "A"
   ],
   "explanation": "通过在菜园劳动，作者懂得了“万物各有其时”，学会了耐心。",
   "kp": "主旨大意",
@@ -1365,11 +1365,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
   "options": [
    {
     "key": "A",
-    "text": "Because people breathe faster when they are tired."
+    "text": "Because people don't yawn more when there is less oxygen."
    },
    {
     "key": "B",
-    "text": "Because people don't yawn more when there is less oxygen."
+    "text": "Because people breathe faster when they are tired."
    },
    {
     "key": "C",
@@ -1381,7 +1381,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "实验表明空气中氧气少时，人并不会更多地打哈欠。",
   "kp": "因果推断",
@@ -1457,7 +1457,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "The ability to understand other people's feelings."
+    "text": "The ability to stay awake."
    },
    {
     "key": "C",
@@ -1465,11 +1465,11 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "D",
-    "text": "The ability to stay awake."
+    "text": "The ability to understand other people's feelings."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "破折号后直接解释：the ability to understand other people's feelings（共情）。",
   "kp": "词义猜测",
@@ -1501,7 +1501,7 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "B",
-    "text": "You may catch a yawn more easily from your mom than from a stranger."
+    "text": "Reading cannot make people yawn."
    },
    {
     "key": "C",
@@ -1509,13 +1509,13 @@ window.NATIONAL_PAPERS["earlybird-9up-english"] = [
    },
    {
     "key": "D",
-    "text": "Reading cannot make people yawn."
+    "text": "You may catch a yawn more easily from your mom than from a stranger."
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
-  "explanation": "第四段：人们更容易被家人和好朋友“传染”打哈欠。A 与最后一段相反；C 与 20°C 左右最常打哈欠的说法不符；D 与 Even reading about yawning can make you yawn 相反。",
+  "explanation": "第四段：人们更容易被家人和好朋友“传染”打哈欠。A 与最后一段相反；B 与 Even reading about yawning can make you yawn 相反；C 与 20°C 左右最常打哈欠的说法不符。",
   "kp": "推理判断",
   "stem": "What can we infer from the passage?",
   "paperScore": 2,

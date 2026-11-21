@@ -23,7 +23,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "B",
-    "text": "an; a"
+    "text": "an; an"
    },
    {
     "key": "C",
@@ -31,11 +31,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "D",
-    "text": "an; an"
+    "text": "an; a"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "字母 u 读音以元音开头，用 an；useful 以辅音 /j/ 开头，用 a。",
   "kp": "冠词",
@@ -109,15 +109,15 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "C",
-    "text": "must"
+    "text": "needn't"
    },
    {
     "key": "D",
-    "text": "needn't"
+    "text": "must"
    }
   ],
   "answer": [
-   "C"
+   "D"
   ],
   "explanation": "名字写在上面，有把握的肯定推测用 must。",
   "kp": "情态动词表推测",
@@ -183,7 +183,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "the better"
+    "text": "better"
    },
    {
     "key": "B",
@@ -191,7 +191,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "C",
-    "text": "better"
+    "text": "the better"
    },
    {
     "key": "D",
@@ -199,7 +199,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "the + 比较级, the + 比较级，表示“越……就越……”。",
   "kp": "比较级句型",
@@ -228,11 +228,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "B",
-    "text": "did"
+    "text": "am doing"
    },
    {
     "key": "C",
-    "text": "am doing"
+    "text": "did"
    },
    {
     "key": "D",
@@ -240,7 +240,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "now 提示正在做，用现在进行时。",
   "kp": "现在进行时",
@@ -269,7 +269,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "B",
-    "text": "to develop"
+    "text": "developed"
    },
    {
     "key": "C",
@@ -277,11 +277,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "D",
-    "text": "developed"
+    "text": "to develop"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "It's + adj. + for sb. + to do sth. 句型。",
   "kp": "不定式",
@@ -347,11 +347,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "so"
+    "text": "such"
    },
    {
     "key": "B",
-    "text": "such"
+    "text": "so"
    },
    {
     "key": "C",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "scenery 为不可数名词，用 such + adj. + 不可数名词。",
   "kp": "such 与 so",
@@ -429,7 +429,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "not use"
+    "text": "don't use"
    },
    {
     "key": "B",
@@ -437,7 +437,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "C",
-    "text": "don't use"
+    "text": "not use"
    },
    {
     "key": "D",
@@ -445,7 +445,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "had better 的否定为 had better not do sth.。",
   "kp": "had better 用法",
@@ -552,11 +552,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "It doesn't matter."
+    "text": "You're welcome."
    },
    {
     "key": "B",
-    "text": "You're welcome."
+    "text": "It doesn't matter."
    },
    {
     "key": "C",
@@ -568,7 +568,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "回应道歉，表示“没关系”。",
   "kp": "情景交际",
@@ -593,11 +593,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "when will the exam be over"
+    "text": "when the exam will be over"
    },
    {
     "key": "B",
-    "text": "when the exam will be over"
+    "text": "when will the exam be over"
    },
    {
     "key": "C",
@@ -609,7 +609,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "答语是时间，问“什么时候结束”，宾语从句用陈述语序。",
   "kp": "宾语从句",
@@ -636,7 +636,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "worried"
+    "text": "sure"
    },
    {
     "key": "B",
@@ -648,11 +648,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "D",
-    "text": "sure"
+    "text": "worried"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "错过很多课，担心功课。",
   "kp": "情感理解",
@@ -679,11 +679,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "under"
+    "text": "on"
    },
    {
     "key": "B",
-    "text": "on"
+    "text": "under"
    },
    {
     "key": "C",
@@ -695,7 +695,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "纸条放在课桌上。",
   "kp": "介词",
@@ -722,11 +722,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "questions"
+    "text": "money"
    },
    {
     "key": "B",
-    "text": "money"
+    "text": "questions"
    },
    {
     "key": "C",
@@ -738,7 +738,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "有问题就问我们。",
   "kp": "上下文理解",
@@ -769,11 +769,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "B",
-    "text": "names"
+    "text": "numbers"
    },
    {
     "key": "C",
-    "text": "numbers"
+    "text": "names"
    },
    {
     "key": "D",
@@ -781,7 +781,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "纸条下方是五位同学的名字。",
   "kp": "上下文理解",
@@ -898,11 +898,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "B",
-    "text": "showed"
+    "text": "threw"
    },
    {
     "key": "C",
-    "text": "threw"
+    "text": "showed"
    },
    {
     "key": "D",
@@ -910,7 +910,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "把物理实验报告给我看。",
   "kp": "动词辨析",
@@ -941,7 +941,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "B",
-    "text": "passed"
+    "text": "took"
    },
    {
     "key": "C",
@@ -949,11 +949,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "D",
-    "text": "took"
+    "text": "passed"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "取得好成绩，说明通过了考试。",
   "kp": "上下文理解",
@@ -1027,7 +1027,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "B",
-    "text": "offer"
+    "text": "pretend"
    },
    {
     "key": "C",
@@ -1035,11 +1035,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "D",
-    "text": "pretend"
+    "text": "offer"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "offer to help 主动提出帮忙。",
   "kp": "动词辨析",
@@ -1066,7 +1066,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "Monday."
+    "text": "Sunday."
    },
    {
     "key": "B",
@@ -1078,11 +1078,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "D",
-    "text": "Sunday."
+    "text": "Monday."
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "周一把旧书旧衣服送到学校礼堂。",
   "kp": "细节理解",
@@ -1195,11 +1195,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "The headmaster."
+    "text": "Ms. Li."
    },
    {
     "key": "B",
-    "text": "Ms. Li."
+    "text": "The headmaster."
    },
    {
     "key": "C",
@@ -1211,7 +1211,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "ask Ms. Li in Room 302。",
   "kp": "细节理解",
@@ -1367,7 +1367,7 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
   "options": [
    {
     "key": "A",
-    "text": "Interest can lead a person to success."
+    "text": "We should travel more."
    },
    {
     "key": "B",
@@ -1379,11 +1379,11 @@ window.NATIONAL_PAPERS["claude-2026-english-2"] = [
    },
    {
     "key": "D",
-    "text": "We should travel more."
+    "text": "Interest can lead a person to success."
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "兴趣引导他一路走到大学学地理。",
   "kp": "主旨理解",

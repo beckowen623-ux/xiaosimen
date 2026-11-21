@@ -61,11 +61,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "生产工具不同"
+    "text": "自然环境不同"
    },
    {
     "key": "B",
-    "text": "自然环境不同"
+    "text": "生产工具不同"
    },
    {
     "key": "C",
@@ -77,7 +77,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "河姆渡位于长江流域，气候温暖湿润，适合种水稻、住干栏式房屋；半坡位于黄河流域，气候较干燥，适合种粟、住半地穴式房屋。",
   "kp": "原始农耕",
@@ -103,7 +103,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "禅让制被世袭制取代"
+    "text": "宗法制的形成"
    },
    {
     "key": "B",
@@ -115,11 +115,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "宗法制的形成"
+    "text": "禅让制被世袭制取代"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "禹死后，其子启继承王位，标志着王位世袭制代替了禅让制，“公天下”变为“家天下”。",
   "kp": "夏商周",
@@ -149,11 +149,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "诸侯对周王没有任何义务"
+    "text": "分封制加强了周王朝对地方的统治"
    },
    {
     "key": "C",
-    "text": "分封制加强了周王朝对地方的统治"
+    "text": "诸侯对周王没有任何义务"
    },
    {
     "key": "D",
@@ -161,7 +161,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "C"
+   "B"
   ],
   "explanation": "受封者包括王族、功臣和古代帝王的后代；诸侯要服从周王命令、镇守疆土、交纳贡物等。分封制巩固了西周的统治。",
   "kp": "夏商周",
@@ -191,7 +191,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "甲骨文"
+    "text": "隶书"
    },
    {
     "key": "C",
@@ -199,11 +199,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "隶书"
+    "text": "甲骨文"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "商朝的甲骨文是我国目前发现的最早的成体系的文字。金文主要刻铸在青铜器上。",
   "kp": "夏商周",
@@ -229,11 +229,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "促进了农业生产的发展"
+    "text": "提高了军队战斗力"
    },
    {
     "key": "B",
-    "text": "提高了军队战斗力"
+    "text": "促进了农业生产的发展"
    },
    {
     "key": "C",
@@ -245,7 +245,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "奖励军功，按军功大小授予爵位，激励将士奋勇作战，提高了秦军战斗力。",
   "kp": "商鞅变法",
@@ -275,11 +275,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "儒家"
+    "text": "墨家"
    },
    {
     "key": "C",
-    "text": "墨家"
+    "text": "儒家"
    },
    {
     "key": "D",
@@ -287,7 +287,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "C"
   ],
   "explanation": "孔子是儒家学派创始人，提出“仁”的学说，主张“为政以德”。",
   "kp": "百家争鸣",
@@ -313,11 +313,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "由皇帝直接任免"
+    "text": "世代相袭"
    },
    {
     "key": "B",
-    "text": "世代相袭"
+    "text": "由皇帝直接任免"
    },
    {
     "key": "C",
@@ -329,7 +329,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "B"
   ],
   "explanation": "郡县长官由皇帝直接任免，不能世袭，这加强了中央对地方的控制。坑点：与分封制下诸侯世袭混淆。",
   "kp": "秦朝巩固统一的措施",
@@ -355,7 +355,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "促进了经济文化交流，有利于巩固统一"
+    "text": "加强了对百姓的思想控制"
    },
    {
     "key": "B",
@@ -363,7 +363,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "C",
-    "text": "加强了对百姓的思想控制"
+    "text": "促进了经济文化交流，有利于巩固统一"
    },
    {
     "key": "D",
@@ -371,7 +371,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "这些措施便利了各地经济、文化交流，有利于国家统一的巩固。",
   "kp": "秦朝巩固统一的措施",
@@ -397,11 +397,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "遇雨误期，按秦法当斩"
+    "text": "秦朝的暴政"
    },
    {
     "key": "B",
-    "text": "秦朝的暴政"
+    "text": "遇雨误期，按秦法当斩"
    },
    {
     "key": "C",
@@ -413,7 +413,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "秦朝的暴政是根本原因；遇雨误期是直接原因。坑点：分清根本原因和直接原因。",
   "kp": "秦末农民起义",
@@ -481,7 +481,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "成为正统思想"
+    "text": "受到严厉打击"
    },
    {
     "key": "B",
@@ -489,7 +489,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "C",
-    "text": "受到严厉打击"
+    "text": "成为正统思想"
    },
    {
     "key": "D",
@@ -497,7 +497,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "A"
+   "C"
   ],
   "explanation": "汉武帝采纳董仲舒的建议，儒家思想成为封建社会的正统思想。",
   "kp": "汉武帝大一统",
@@ -523,11 +523,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "丝绸之路开通"
+    "text": "今新疆地区正式归属中央政权"
    },
    {
     "key": "B",
-    "text": "今新疆地区正式归属中央政权"
+    "text": "丝绸之路开通"
    },
    {
     "key": "C",
@@ -539,7 +539,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "西域都护的设置，标志着今新疆地区开始正式归属中央政权，成为我国不可分割的一部分。",
   "kp": "两汉经营西域",
@@ -611,7 +611,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "用树皮、麻头、破布、旧渔网造纸，扩大了原料来源"
+    "text": "把纸传到了欧洲"
    },
    {
     "key": "C",
@@ -619,11 +619,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "把纸传到了欧洲"
+    "text": "用树皮、麻头、破布、旧渔网造纸，扩大了原料来源"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "西汉已出现纸。蔡伦改进造纸术，用树皮、麻头等原料，造出了质量较高的“蔡侯纸”。坑点：蔡伦不是造纸术的发明者。",
   "kp": "两汉科技文化",
@@ -695,7 +695,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "B",
-    "text": "赤壁之战"
+    "text": "淝水之战"
    },
    {
     "key": "C",
@@ -703,11 +703,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "淝水之战"
+    "text": "赤壁之战"
    }
   ],
   "answer": [
-   "B"
+   "D"
   ],
   "explanation": "赤壁之战后，曹操退回北方，孙权巩固江东，刘备占据荆州一部分，奠定了三国鼎立的基础。官渡之战使曹操统一北方。",
   "kp": "三国鼎立",
@@ -741,17 +741,17 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "C",
-    "text": "南方社会秩序相对安定"
+    "text": "江南地区已成为全国经济重心"
    },
    {
     "key": "D",
-    "text": "江南地区已成为全国经济重心"
+    "text": "南方社会秩序相对安定"
    }
   ],
   "answer": [
-   "D"
+   "C"
   ],
-  "explanation": "这一时期江南得到开发，但经济重心南移到南宋才完成。D 不是原因，也不符合史实。",
+  "explanation": "这一时期江南得到开发，但经济重心南移到南宋才完成。C 不是原因，也不符合史实。",
   "kp": "江南开发",
   "stem": "东晋南朝时期，江南地区经济得到开发。其原因不包括（ ）",
   "paperScore": 2.5,
@@ -775,11 +775,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "使鲜卑族完全消失"
+    "text": "加速了北方民族交融"
    },
    {
     "key": "B",
-    "text": "加速了北方民族交融"
+    "text": "使鲜卑族完全消失"
    },
    {
     "key": "C",
@@ -791,7 +791,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    }
   ],
   "answer": [
-   "B"
+   "A"
   ],
   "explanation": "孝文帝改革促进了北方民族交融，推动了北方经济和文化的发展。",
   "kp": "北魏孝文帝改革",
@@ -817,7 +817,7 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
   "options": [
    {
     "key": "A",
-    "text": "祖冲之——把圆周率精确到小数点后第七位"
+    "text": "王羲之——被誉为“画圣”"
    },
    {
     "key": "B",
@@ -829,11 +829,11 @@ window.NATIONAL_PAPERS["earlybird-7up-lishi"] = [
    },
    {
     "key": "D",
-    "text": "王羲之——被誉为“画圣”"
+    "text": "祖冲之——把圆周率精确到小数点后第七位"
    }
   ],
   "answer": [
-   "A"
+   "D"
   ],
   "explanation": "贾思勰著《齐民要术》，郦道元著《水经注》，王羲之被誉为“书圣”。B、C 两项张冠李戴。",
   "kp": "魏晋南北朝科技文化",

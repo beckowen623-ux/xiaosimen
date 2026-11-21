@@ -14,12 +14,12 @@
           "n": 1,
           "stem": "—What a(n) ____ experience it was to watch the sunrise on Mount Tai! —Yes. I'll never forget it.",
           "options": [
-            "usual",
             "unforgettable",
+            "usual",
             "boring",
             "terrible"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "形容词辨析",
           "exp": "答语“永远不会忘记”，说明是一次难忘的经历。"
         },
@@ -27,12 +27,12 @@
           "n": 2,
           "stem": "The number of students who ____ to school has increased a lot since the new bike lanes were built.",
           "options": [
-            "ride",
-            "rides",
             "is riding",
+            "rides",
+            "ride",
             "has ridden"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "定语从句中的主谓一致",
           "exp": "who 指代先行词 students（复数），从句谓语用复数 ride；主句主语 the number of... 用单数 has。"
         },
@@ -41,11 +41,11 @@
           "stem": "—Have you seen my keys? —I'm not sure, but they ____ be in your bag. You often put them there.",
           "options": [
             "must",
-            "might",
+            "needn't",
             "can't",
-            "needn't"
+            "might"
           ],
-          "answer": "B",
+          "answer": "D",
           "kp": "情态动词表推测",
           "exp": "“不确定”说明把握不大，用 might。"
         },
@@ -54,11 +54,11 @@
           "stem": "By the end of last term, we ____ more than twenty English novels.",
           "options": [
             "read",
-            "have read",
             "had read",
+            "have read",
             "were reading"
           ],
-          "answer": "C",
+          "answer": "B",
           "kp": "过去完成时",
           "exp": "by the end of + 过去时间，表示“到过去某时为止已经完成”，用过去完成时。"
         },
@@ -92,12 +92,12 @@
           "n": 7,
           "stem": "I'd rather stay at home ____ go shopping on such a rainy day.",
           "options": [
-            "than",
-            "but",
             "or",
+            "but",
+            "than",
             "to"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "would rather...than...",
           "exp": "would rather do sth. than do sth. 宁愿……而不愿……。"
         },
@@ -120,10 +120,10 @@
           "options": [
             "which",
             "that",
-            "where",
-            "when"
+            "when",
+            "where"
           ],
-          "answer": "C",
+          "answer": "D",
           "kp": "定语从句关系词",
           "exp": "先行词 bookstore 在从句中作地点状语（在书店买），用 where。"
         },
@@ -131,12 +131,12 @@
           "n": 10,
           "stem": "The little girl was so ____ at the ____ news that she couldn't say a word.",
           "options": [
-            "surprising; surprised",
             "surprised; surprising",
+            "surprising; surprised",
             "surprised; surprised",
             "surprising; surprising"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "-ed 与 -ing 形容词",
           "exp": "人感到惊讶用 surprised；令人惊讶的消息用 surprising。"
         },
@@ -144,12 +144,12 @@
           "n": 11,
           "stem": "You'd better ____ the plastic bottles into the right bin. They can be recycled.",
           "options": [
-            "throw",
             "to throw",
+            "throw",
             "throwing",
             "threw"
           ],
-          "answer": "A",
+          "answer": "B",
           "kp": "had better do",
           "exp": "had better 后接动词原形。"
         },
@@ -158,11 +158,11 @@
           "stem": "—Do you mind if I open the window? —____. It's a bit hot in here.",
           "options": [
             "Yes, please",
-            "Of course not",
+            "Yes, I do",
             "I'm afraid so",
-            "Yes, I do"
+            "Of course not"
           ],
-          "answer": "B",
+          "answer": "D",
           "kp": "情景交际",
           "exp": "Do you mind...? 表示同意时用否定回答：Of course not / Not at all。"
         },
@@ -172,10 +172,10 @@
           "options": [
             "planted",
             "were planted",
-            "have planted",
-            "have been planted"
+            "have been planted",
+            "have planted"
           ],
-          "answer": "D",
+          "answer": "C",
           "kp": "现在完成时的被动语态",
           "exp": "so far 用现在完成时；树被种植，用被动语态 have been planted。"
         },
@@ -185,10 +185,10 @@
           "options": [
             "visit",
             "to visit",
-            "visiting",
-            "visited"
+            "visited",
+            "visiting"
           ],
-          "answer": "C",
+          "answer": "D",
           "kp": "forget doing 与 forget to do",
           "exp": "forget doing sth. 忘记做过某事（事情已经发生）；forget to do sth. 忘记要去做某事。last summer 说明已经去过。"
         },
@@ -196,12 +196,12 @@
           "n": 15,
           "stem": "—I failed the test again. I don't think I'm good at math. —____ Keep working hard and you will make it.",
           "options": [
-            "Don't give up!",
-            "That's all right.",
             "Never mind.",
+            "That's all right.",
+            "Don't give up!",
             "Good idea!"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "情景交际",
           "exp": "对方想放弃，鼓励他“别放弃”，与后文 keep working hard 呼应。"
         }
@@ -216,12 +216,12 @@
           "n": 16,
           "stem": "",
           "options": [
-            "oldest",
             "youngest",
+            "oldest",
             "busiest",
             "earliest"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "上下文理解",
           "exp": "10 岁、被说“自己还是个孩子”，是年龄最小的志愿者。"
         },
@@ -230,11 +230,11 @@
           "stem": "",
           "options": [
             "that",
-            "whether",
             "what",
+            "whether",
             "which"
           ],
-          "answer": "B",
+          "answer": "C",
           "kp": "宾语从句引导词",
           "exp": "doubt 后接 whether/if 表示“怀疑是否”。"
         },
@@ -243,11 +243,11 @@
           "stem": "",
           "options": [
             "sold",
-            "tore",
             "sorted",
+            "tore",
             "hid"
           ],
-          "answer": "C",
+          "answer": "B",
           "kp": "动词辨析",
           "exp": "按颜色把绘本整理分类，sort。"
         },
@@ -255,12 +255,12 @@
           "n": 19,
           "stem": "",
           "options": [
-            "nervous",
+            "proud",
             "relaxed",
             "excited",
-            "proud"
+            "nervous"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "情感理解",
           "exp": "小孩子面对大人会紧张，所以来找同龄的 Mia。"
         },
@@ -320,12 +320,12 @@
           "n": 24,
           "stem": "",
           "options": [
-            "lonely",
+            "healthy",
             "lucky",
             "careful",
-            "healthy"
+            "lonely"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "上下文理解",
           "exp": "搬到城市后很孤单，阅读角是第一个让他有归属感的地方。"
         },
@@ -333,12 +333,12 @@
           "n": 25,
           "stem": "",
           "options": [
-            "promised",
             "showed",
+            "promised",
             "asked",
             "ordered"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "动词辨析",
           "exp": "Mia 用行动向我们表明耐心更重要，show sb. that...。"
         },
@@ -346,12 +346,12 @@
           "n": 26,
           "stem": "",
           "options": [
-            "teach",
-            "warn",
             "pay",
+            "warn",
+            "teach",
             "allow"
           ],
-          "answer": "A",
+          "answer": "C",
           "kp": "动词辨析",
           "exp": "让 Mia 教新志愿者如何与小孩交流，teach sb. how to do。"
         },
@@ -372,12 +372,12 @@
           "n": 28,
           "stem": "",
           "options": [
-            "afraid",
             "willing",
+            "afraid",
             "sorry",
             "sure"
           ],
-          "answer": "B",
+          "answer": "A",
           "kp": "形容词辨析",
           "exp": "每个人都需要一个愿意等待他的人，be willing to do。"
         },
@@ -385,12 +385,12 @@
           "n": 29,
           "stem": "",
           "options": [
-            "reminding",
+            "remind",
             "reminded",
             "to remind",
-            "remind"
+            "reminding"
           ],
-          "answer": "A",
+          "answer": "D",
           "kp": "非谓语动词作伴随状语",
           "exp": "这句话写在墙上，提醒每位来访者，主动关系，用现在分词 reminding 作伴随结果。"
         },
@@ -399,11 +399,11 @@
           "stem": "",
           "options": [
             "costs",
-            "means",
+            "takes",
             "needs",
-            "takes"
+            "means"
           ],
-          "answer": "B",
+          "answer": "D",
           "kp": "动词辨析",
           "exp": "what kindness really means 善良真正意味着什么。"
         }
@@ -421,12 +421,12 @@
               "n": 31,
               "stem": "Which program is suitable for a 6-year-old child?",
               "options": [
-                "Story Time.",
                 "Coding Club.",
+                "Story Time.",
                 "Book Talk.",
                 "None of them."
               ],
-              "answer": "A",
+              "answer": "B",
               "kp": "细节理解",
               "exp": "Story Time 面向 4—7 岁，Nature Drawing 也面向所有年龄，但选项中只有 Story Time。"
             },
@@ -434,12 +434,12 @@
               "n": 32,
               "stem": "Lily, a 13-year-old non-member, joins Book Talk for 4 weeks. How much should she pay for the books?",
               "options": [
-                "Nothing.",
-                "¥15.",
                 "¥60.",
+                "¥15.",
+                "Nothing.",
                 "¥120."
               ],
-              "answer": "C",
+              "answer": "A",
               "kp": "数字计算",
               "exp": "非会员每本书 ¥15，每周一本，4 周共 15×4＝60 元。"
             },
@@ -448,11 +448,11 @@
               "stem": "How many times will Nature Drawing be held this summer?",
               "options": [
                 "Once.",
-                "Twice.",
                 "Every Sunday.",
+                "Twice.",
                 "Six times."
               ],
-              "answer": "B",
+              "answer": "C",
               "kp": "细节理解",
               "exp": "只在 7 月 21 日和 8 月 18 日两个周日举行。"
             },
@@ -461,11 +461,11 @@
               "stem": "Why should students who want to join Coding Club sign up as early as possible?",
               "options": [
                 "Because it is free.",
-                "Because places are limited.",
+                "Because members must pay more.",
                 "Because it starts in the morning.",
-                "Because members must pay more."
+                "Because places are limited."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "推理判断",
               "exp": "只有 20 个名额，先报先得。"
             },
@@ -473,12 +473,12 @@
               "n": 35,
               "stem": "What is the advantage of being a library member?",
               "options": [
-                "Members can join every program for free.",
                 "Members can sign up earlier and get Book Talk books free.",
+                "Members can join every program for free.",
                 "Members don't need to bring laptops.",
                 "Members can stay longer in Story Time."
               ],
-              "answer": "B",
+              "answer": "A",
               "kp": "信息整合",
               "exp": "会员提前三天报名，且读书会的书免费。"
             }
@@ -494,11 +494,11 @@
               "stem": "Why did most students groan when they heard about the competition?",
               "options": [
                 "They didn't like their science teacher.",
-                "The materials they could use were very limited.",
+                "They had to work alone.",
                 "The competition would take a whole term.",
-                "They had to work alone."
+                "The materials they could use were very limited."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "推理判断",
               "exp": "只有 50 张报纸和一卷胶带，材料很有限，所以抱怨。"
             },
@@ -506,12 +506,12 @@
               "n": 37,
               "stem": "What was the real problem with the team's first bridge?",
               "options": [
-                "The paper tubes were too thin.",
-                "The bridge was too short.",
                 "The joints were not strong enough.",
+                "The bridge was too short.",
+                "The paper tubes were too thin.",
                 "They used too much tape."
               ],
-              "answer": "C",
+              "answer": "A",
               "kp": "细节理解",
               "exp": "管子没问题，薄弱点在连接处，胶带只粘了一面。"
             },
@@ -520,11 +520,11 @@
               "stem": "Why did Ana disagree with Tom's idea?",
               "options": [
                 "She thought copying was not allowed.",
-                "She wanted to understand how the design worked.",
                 "She believed their first bridge was the best.",
+                "She wanted to understand how the design worked.",
                 "She didn't want to work with the strongest team."
               ],
-              "answer": "B",
+              "answer": "C",
               "kp": "推理判断",
               "exp": "Ana 说照抄学不到为什么能成功。"
             },
@@ -545,12 +545,12 @@
               "n": 40,
               "stem": "What is the main lesson the writer learned?",
               "options": [
-                "Winning is the most important thing.",
                 "Find the weak point of a problem before fixing it.",
+                "Winning is the most important thing.",
                 "Paper is stronger than people think.",
                 "Teamwork is not necessary in competitions."
               ],
-              "answer": "B",
+              "answer": "A",
               "kp": "主旨大意",
               "exp": "最后一段：遇到难题，先找到薄弱点，再去解决。"
             }
@@ -566,11 +566,11 @@
               "stem": "What did Ebbinghaus find about forgetting?",
               "options": [
                 "People forget things at the same speed every day.",
-                "People forget most quickly soon after learning.",
+                "Only old people forget things quickly.",
                 "Nonsense words are easy to remember.",
-                "Only old people forget things quickly."
+                "People forget most quickly soon after learning."
               ],
-              "answer": "B",
+              "answer": "D",
               "kp": "细节理解",
               "exp": "新信息在第一天忘得最快，之后变慢。"
             },
@@ -592,11 +592,11 @@
               "stem": "What does \"active recall\" mean in Paragraph 3?",
               "options": [
                 "Reading notes many times.",
-                "Highlighting important sentences.",
                 "Trying to remember information without looking at notes.",
+                "Highlighting important sentences.",
                 "Asking teachers to explain again."
               ],
-              "answer": "C",
+              "answer": "B",
               "kp": "词义猜测",
               "exp": "合上书，写下你记得的内容，即主动回忆。"
             },
@@ -604,12 +604,12 @@
               "n": 44,
               "stem": "Why does the writer mention students who stay up all night?",
               "options": [
-                "To show that sleep helps memory.",
-                "To encourage students to work harder.",
                 "To explain how exams are designed.",
+                "To encourage students to work harder.",
+                "To show that sleep helps memory.",
                 "To prove that forgetting is a failure."
               ],
-              "answer": "A",
+              "answer": "C",
               "kp": "写作意图",
               "exp": "通宵的学生记得更少，用来说明睡眠对记忆的重要作用。"
             },
