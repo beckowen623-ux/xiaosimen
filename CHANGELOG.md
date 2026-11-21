@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 首页介绍改成初一到初三（main）
+- 首页介绍原来只讲“精编模拟卷 · 全国真题”（初三用的东西），而题库现在大头是 67 套同步章节卷和早鸟卷。改为“初一到初三 · 同步章节卷 · 中考精编卷”，正文按“早鸟卷测弱项 → 同步章节卷补 → 初三刷精编卷和真题”写；核心表达那句不动。
+- `index.html` 的 meta description 同步更新（原来漏了化学、早鸟卷、同步章节卷）。
+
 ## 2026-11-21 · Claude Code · 同步章节卷：八下英语 4 套（main）
 - 新增 `zz-sync-english-8down-1..4.json`。人教版 2024 新教材八下单元名已核对：Time to Relax、Stay Healthy、Growing Up、The Wonders of Nature、Nature's Temper、Crossing Cultures、A Good Read、Making a Difference。各单元具体语法分布没查到可靠来源，所以 source 只写话题和八下常考语法（不定式、used to、过去进行时、现在完成时等），不写“某单元学某语法”。
 - 阅读材料里的数据（珠峰 8,848.86 米、长江约 6,300 千米且为世界第三长河、撒哈拉约 900 万平方千米、维多利亚瀑布高约 108 米宽约 1,700 米、鲁滨孙在岛上 28 年等）都是公开常识。
