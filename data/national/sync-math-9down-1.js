@@ -1,0 +1,827 @@
+// 由 tools/build_english.mjs 生成，源文件 english-src/papers/zz-sync-math-9down-1.json，请勿手改。
+window.NATIONAL_PAPERS = window.NATIONAL_PAPERS || {};
+window.NATIONAL_PAPERS["sync-math-9down-1"] = [
+ {
+  "id": "national-sync-math-9down-1-q01",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 1,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 1 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "y＝x/3"
+   },
+   {
+    "key": "B",
+    "text": "y＝3/x²"
+   },
+   {
+    "key": "C",
+    "text": "y＝1/(x＋1)"
+   },
+   {
+    "key": "D",
+    "text": "y＝－2/x"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "反比例函数形如 y＝k/x（k≠0）。A 是正比例函数；B 分母是 x²；C 分母是 x＋1，都不是。",
+  "kp": "反比例函数",
+  "stem": "下列函数中，y 是 x 的反比例函数的是（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q02",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 2,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 2 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "6"
+   },
+   {
+    "key": "B",
+    "text": "－3/2"
+   },
+   {
+    "key": "C",
+    "text": "－6"
+   },
+   {
+    "key": "D",
+    "text": "－2/3"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "k＝xy＝2×(－3)＝－6。",
+  "kp": "反比例函数",
+  "stem": "若反比例函数 y＝k/x 的图象经过点 (2，－3)，则 k 的值为（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q03",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 3,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 3 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "第一、三象限"
+   },
+   {
+    "key": "B",
+    "text": "第二、四象限"
+   },
+   {
+    "key": "C",
+    "text": "第一、二象限"
+   },
+   {
+    "key": "D",
+    "text": "第三、四象限"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "k＝－4＜0，图象位于第二、四象限。",
+  "kp": "反比例函数的性质",
+  "stem": "反比例函数 y＝－4/x 的图象位于（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q04",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 4,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 4 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "y₁＜y₃＜y₂"
+   },
+   {
+    "key": "B",
+    "text": "y₁＜y₂＜y₃"
+   },
+   {
+    "key": "C",
+    "text": "y₃＜y₂＜y₁"
+   },
+   {
+    "key": "D",
+    "text": "y₂＜y₃＜y₁"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "直接代入：y₁＝－6，y₂＝3，y₃＝2，所以 y₁＜y₃＜y₂。坑点：“y 随 x 增大而减小”只在每个象限内成立，A 在第三象限，不能和 B、C 一起比。",
+  "kp": "反比例函数的性质",
+  "stem": "已知点 A(－1，y₁)，B(2，y₂)，C(3，y₃) 都在反比例函数 y＝6/x 的图象上，则 y₁、y₂、y₃ 的大小关系是（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q05",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 5,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 5 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "图象经过点 (1，－2)"
+   },
+   {
+    "key": "B",
+    "text": "图象位于第二、四象限"
+   },
+   {
+    "key": "C",
+    "text": "y 随 x 的增大而减小"
+   },
+   {
+    "key": "D",
+    "text": "当 x＞0 时，y 随 x 的增大而减小"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "k＝2＞0，图象在第一、三象限，在每个象限内 y 随 x 增大而减小。C 少了“在每个象限内”，不正确。",
+  "kp": "反比例函数的性质",
+  "stem": "对于反比例函数 y＝2/x，下列说法正确的是（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q06",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 6,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 6 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "m＞1"
+   },
+   {
+    "key": "B",
+    "text": "m＞0"
+   },
+   {
+    "key": "C",
+    "text": "m＜1"
+   },
+   {
+    "key": "D",
+    "text": "m＜0"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "在每个象限内 y 随 x 增大而增大，说明 k＝m－1＜0，m＜1。",
+  "kp": "反比例函数的性质",
+  "stem": "若反比例函数 y＝(m－1)/x 的图象在每个象限内，y 都随 x 的增大而增大，则 m 的取值范围是（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q07",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 7,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 7 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "6"
+   },
+   {
+    "key": "B",
+    "text": "－6"
+   },
+   {
+    "key": "C",
+    "text": "3"
+   },
+   {
+    "key": "D",
+    "text": "－3"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "S△POA＝|k|/2＝3，|k|＝6；图象在第二、四象限，k＜0，k＝－6。坑点：忘了按象限确定 k 的符号。",
+  "kp": "反比例函数",
+  "stem": "点 P 在反比例函数 y＝k/x 的图象上，过点 P 作 PA⊥x 轴于点 A，O 为原点。若 △POA 的面积为 3，且该函数的图象位于第二、四象限，则 k 的值为（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q08",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 8,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 8 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "(－1，－2) 和 (2，1)"
+   },
+   {
+    "key": "B",
+    "text": "(2，1) 和 (－1，－2)"
+   },
+   {
+    "key": "C",
+    "text": "(1，2)"
+   },
+   {
+    "key": "D",
+    "text": "(1，2) 和 (－2，－1)"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "联立：x＋1＝2/x，x²＋x－2＝0，x₁＝1，x₂＝－2，交点 (1，2)、(－2，－1)。",
+  "kp": "一次函数与反比例函数",
+  "stem": "一次函数 y＝x＋1 与反比例函数 y＝2/x 的图象的交点坐标是（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q09",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 9,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 9 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "6 A"
+   },
+   {
+    "key": "B",
+    "text": "13.5 A"
+   },
+   {
+    "key": "C",
+    "text": "4 A"
+   },
+   {
+    "key": "D",
+    "text": "54 A"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "电压 U＝IR＝36，I＝36/R，R＝6 时 I＝6 A。",
+  "kp": "反比例函数",
+  "stem": "某蓄电池的电压为定值，使用时电流 I（A）与电阻 R（Ω）成反比例。当 R＝4 Ω 时，I＝9 A。当 R＝6 Ω 时，电流 I 为（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q10",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 10,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "单项选择",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 10 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "6"
+   },
+   {
+    "key": "B",
+    "text": "－6"
+   },
+   {
+    "key": "C",
+    "text": "±6"
+   },
+   {
+    "key": "D",
+    "text": "12"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "k＞0 时，x＝1 时最大为 k，x＝3 时最小为 k/3，k－k/3＝4，k＝6；k＜0 时，最大为 k/3，最小为 k，k/3－k＝4，k＝－6。所以 k＝±6。坑点：只考虑 k＞0。",
+  "kp": "反比例函数的性质",
+  "stem": "已知反比例函数 y＝k/x（k≠0），当 1≤x≤3 时，函数的最大值与最小值之差为 4，则 k 的值为（ ）",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q11",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 11,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 11 题",
+  "type": "blank",
+  "stem": "第 11 题：若点 (a，2) 在反比例函数 y＝－6/x 的图象上，则 a＝________。",
+  "blanks": [
+   [
+    "-3"
+   ]
+  ],
+  "answer": [
+   "-3"
+  ],
+  "explanation": "2＝－6/a，a＝－3。",
+  "kp": "反比例函数",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q12",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 12,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 12 题",
+  "type": "blank",
+  "stem": "第 12 题：反比例函数 y＝(2m－1)/x 的图象位于第一、三象限，则 m 的取值范围是________。",
+  "blanks": [
+   [
+    "m>1/2",
+    "m＞1/2",
+    "m>0.5"
+   ]
+  ],
+  "answer": [
+   "m>1/2"
+  ],
+  "explanation": "2m－1＞0，m＞1/2。",
+  "kp": "反比例函数的性质",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q13",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 13,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 13 题",
+  "type": "blank",
+  "stem": "第 13 题：已知 y 与 x 成反比例，当 x＝2 时，y＝6。则当 y＝3 时，x＝________。",
+  "blanks": [
+   [
+    "4"
+   ]
+  ],
+  "answer": [
+   "4"
+  ],
+  "explanation": "k＝2×6＝12，y＝12/x，y＝3 时 x＝4。",
+  "kp": "反比例函数",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q14",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 14,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 14 题",
+  "type": "blank",
+  "stem": "第 14 题：点 A 在反比例函数 y＝k/x 的图象上，且图象位于第一、三象限。过 A 作 AB⊥x 轴于点 B，AC⊥y 轴于点 C。若矩形 OBAC 的面积为 8，则 k＝________。",
+  "blanks": [
+   [
+    "8"
+   ]
+  ],
+  "answer": [
+   "8"
+  ],
+  "explanation": "矩形面积＝|k|＝8，图象在第一、三象限，k＝8。",
+  "kp": "反比例函数",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q15",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 15,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 15 题",
+  "type": "blank",
+  "stem": "第 15 题：一次函数 y＝kx＋b 与反比例函数 y＝m/x 的图象交于 A(1，4)、B(－4，n) 两点，则 n＝________。",
+  "blanks": [
+   [
+    "-1"
+   ]
+  ],
+  "answer": [
+   "-1"
+  ],
+  "explanation": "A 在反比例函数图象上，m＝4；B 也在，n＝4/(－4)＝－1。",
+  "kp": "一次函数与反比例函数",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q16",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 16,
+  "sync": true,
+  "meta": "同步章节卷",
+  "section": "填空题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 16 题",
+  "type": "blank",
+  "stem": "第 16 题：一次函数 y＝x＋3 与反比例函数 y＝4/x 的图象交于 A(1，4)、B(－4，－1) 两点，则不等式 x＋3＞4/x 的解集是________。",
+  "blanks": [
+   [
+    "-4<x<0或x>1",
+    "x>1或-4<x<0",
+    "－4＜x＜0或x＞1"
+   ]
+  ],
+  "answer": [
+   "-4<x<0或x>1"
+  ],
+  "explanation": "看图象：直线在双曲线上方的部分。交点横坐标是 －4 和 1，再加上 x＝0 这条分界线，解集为 －4＜x＜0 或 x＞1。坑点：漏掉 －4＜x＜0 这一段，或把 x＝0 算进去。",
+  "kp": "一次函数与反比例函数",
+  "paperScore": 3,
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q17",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 17,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 17 题",
+  "type": "essay",
+  "material": "",
+  "stem": "已知反比例函数 y＝k/x 的图象经过点 A(－2，3)。\n（1）求 k 的值；\n（2）判断点 B(1，－6)、C(3，2) 是否在这个函数的图象上；\n（3）当 －3＜x＜－1 时，求 y 的取值范围。",
+  "points": [
+   {
+    "text": "（1）k＝－6",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）1×(－6)＝－6，B 在；3×2＝6≠－6，C 不在",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）2＜y＜6",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "（1）k＝(－2)×3＝－6。\n（2）点 B：1×(－6)＝－6＝k，在图象上；点 C：3×2＝6≠－6，不在。\n（3）y＝－6/x，k＜0，在第二象限内 y 随 x 增大而增大。x＝－3 时 y＝2，x＝－1 时 y＝6，所以 2＜y＜6。\n方法：先判断增减性，再代端点。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "反比例函数的性质",
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q18",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 18,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 18 题",
+  "type": "essay",
+  "material": "",
+  "stem": "一次函数 y＝kx＋b 的图象与反比例函数 y＝m/x 的图象交于 A(2，3)、B(－3，n) 两点。\n（1）求这两个函数的解析式；\n（2）求 △AOB 的面积；\n（3）直接写出 kx＋b＜m/x 时 x 的取值范围。",
+  "points": [
+   {
+    "text": "（1）m＝6，反比例函数 y＝6/x",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "n＝－2，一次函数 y＝x＋1",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（2）直线与 y 轴交于 (0，1)，S△AOB＝1/2×1×(2＋3)＝5/2",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）x＜－3 或 0＜x＜2",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "（1）m＝2×3＝6，y＝6/x。n＝6/(－3)＝－2，B(－3，－2)。把 A、B 代入 y＝kx＋b：2k＋b＝3，－3k＋b＝－2，k＝1，b＝1，y＝x＋1。\n（2）直线 y＝x＋1 与 y 轴交于 C(0，1)。S△AOB＝S△AOC＋S△BOC＝1/2×1×2＋1/2×1×3＝5/2。\n（3）直线在双曲线下方：x＜－3 或 0＜x＜2。\n方法：求“斜三角形”面积，用坐标轴把它分成两个三角形。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "一次函数与反比例函数",
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q19",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 19,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 19 题",
+  "type": "essay",
+  "material": "",
+  "stem": "学校用一种药物对教室进行消毒。药物释放过程中，室内每立方米空气中的含药量 y（mg）与时间 x（min）成正比例；药物释放完毕后，y 与 x 成反比例。已知药物 8 min 释放完毕，此时室内每立方米空气中的含药量为 6 mg。\n（1）分别求出药物释放过程中和释放完毕后，y 与 x 之间的函数关系式；\n（2）规定每立方米空气中含药量低于 1.6 mg 时学生才能进教室。从消毒开始，至少经过多少分钟学生才能进教室？\n（3）研究表明，含药量不低于 3 mg 且持续时间不少于 10 min 时，才能有效杀灭空气中的病菌。这次消毒是否有效？请说明理由。",
+  "points": [
+   {
+    "text": "（1）释放过程中 y＝3x/4（0≤x≤8）",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "释放完毕后 y＝48/x（x＞8）",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）48/x＝1.6，x＝30，至少 30 分钟",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）y≥3 的时间从 x＝4 到 x＝16，共 12 分钟，不少于 10 分钟，有效",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "（1）释放过程中设 y＝k₁x，过 (8，6)，k₁＝3/4，y＝3x/4（0≤x≤8）；释放完毕后设 y＝k₂/x，过 (8，6)，k₂＝48，y＝48/x（x＞8）。\n（2）令 48/x＝1.6，x＝30。x＞30 时含药量低于 1.6 mg，所以至少 30 分钟后学生才能进教室。\n（3）释放过程中 3x/4＝3，x＝4；释放完毕后 48/x＝3，x＝16。含药量不低于 3 mg 的时间为 16－4＝12（min）≥10 min，所以有效。\n坑点：第（3）问只算了一段。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "反比例函数",
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q20",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 20,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 20 题",
+  "type": "essay",
+  "material": "",
+  "stem": "在平面直角坐标系中，四边形 OABC 是矩形，点 A 在 x 轴正半轴上，点 C 在 y 轴正半轴上，点 B 的坐标为 (4，2)。反比例函数 y＝k/x（x＞0）的图象经过 BC 的中点 D，并与 AB 交于点 E。\n（1）求 k 的值和点 E 的坐标；\n（2）求 △BDE 的面积；\n（3）求 △ODE 的面积。",
+  "points": [
+   {
+    "text": "（1）D(2，2)，k＝4",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "E(4，1)",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（2）BD＝2，BE＝1，S△BDE＝1",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "（3）S△ODE＝S矩形OABC－S△OCD－S△OAE－S△BDE＝8－2－2－1＝3",
+    "score": 4,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）C(0，2)，BC 的中点 D(2，2)，k＝2×2＝4，y＝4/x。点 E 在 AB 上，横坐标为 4，y＝1，E(4，1)。\n（2）BD＝4－2＝2，BE＝2－1＝1，S△BDE＝1/2×2×1＝1。\n（3）S矩形OABC＝8，S△OCD＝S△OAE＝|k|/2＝2，S△ODE＝8－2－2－1＝3。\n方法：双曲线上的点向坐标轴作垂线，围成的三角形面积都是 |k|/2。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "反比例函数",
+  "unit": "九下·反比例函数"
+ },
+ {
+  "id": "national-sync-math-9down-1-q21",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "sync-math-9down-1",
+  "number": 21,
+  "sync": true,
+  "meta": "解答题",
+  "section": "解答题",
+  "chapter": "九下数学同步章节卷 · 反比例函数",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "九下数学同步章节卷 · 反比例函数 第 21 题",
+  "type": "essay",
+  "material": "",
+  "stem": "一次函数 y＝－x＋5 的图象与反比例函数 y＝4/x（x＞0）的图象交于 A、B 两点（点 A 在点 B 的左侧）。\n（1）求点 A、B 的坐标；\n（2）点 P 在 x 轴上，当 PA＋PB 的值最小时，求点 P 的坐标；\n（3）求 △AOB 的面积。",
+  "points": [
+   {
+    "text": "（1）－x＋5＝4/x，x₁＝1，x₂＝4，A(1，4)，B(4，1)",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "（2）作 B 关于 x 轴的对称点 B′(4，－1)，直线 AB′：y＝－5x/3＋17/3",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "P(17/5，0)",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "（3）直线与 x 轴交于 (5，0)，S△AOB＝1/2×5×4－1/2×5×1＝15/2",
+    "score": 4,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "（1）－x＋5＝4/x，x²－5x＋4＝0，x₁＝1，x₂＝4，A(1，4)，B(4，1)。\n（2）作点 B 关于 x 轴的对称点 B′(4，－1)，连接 AB′ 交 x 轴于点 P，此时 PA＋PB＝AB′ 最小。设直线 AB′：y＝kx＋b，k＋b＝4，4k＋b＝－1，k＝－5/3，b＝17/3。令 y＝0，x＝17/5，P(17/5，0)。\n（3）直线 y＝－x＋5 与 x 轴交于 M(5，0)。S△AOB＝S△AOM－S△BOM＝1/2×5×4－1/2×5×1＝15/2。\n坑点：第（2）问直接连 AB 与 x 轴的交点，那是 |PA－PB| 最大的点。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "kp": "一次函数与反比例函数",
+  "unit": "九下·反比例函数"
+ }
+];

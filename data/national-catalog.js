@@ -1483,6 +1483,72 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-math-9down-1",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "九下·反比例函数",
+      "order": 1,
+      "label": "反比例函数",
+      "title": "九下数学同步章节卷 · 反比例函数",
+      "source": "考查范围：人教版九年级下册“反比例函数”一章（概念、图象与性质、k 的几何意义、与一次函数综合、实际问题），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-9down-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-9down-2",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "九下·相似",
+      "order": 2,
+      "label": "相似",
+      "title": "九下数学同步章节卷 · 相似",
+      "source": "考查范围：人教版九年级下册“相似”一章（比例线段、平行线分线段成比例、相似三角形的判定与性质、相似的应用、位似），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-9down-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-9down-3",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "九下·锐角三角函数",
+      "order": 3,
+      "label": "锐角三角函数",
+      "title": "九下数学同步章节卷 · 锐角三角函数",
+      "source": "考查范围：人教版九年级下册“锐角三角函数”一章（正弦、余弦、正切，特殊角的三角函数值，解直角三角形，仰角俯角、方位角、坡度等实际问题），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-9down-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "sync-math-9up-1",
       "subject": "math",
       "subjectLabel": "数学",
