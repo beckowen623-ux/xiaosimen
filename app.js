@@ -1329,12 +1329,33 @@ function weeklyFor(list, subject = weeklySubjectNow()) {
   return freeOpen('print', id) || freeOpen('phone', id) ? list : list.slice(0, FREE_PREVIEW);
 }
 
+// 题库里现在有什么：按目录实时统计，随更新自动变化（不写死数字）
+function contentStatsHTML() {
+  if (!nationalCatalog) return '';
+  const c = nationalCatalog;
+  const eb = c.filter(p => p.earlybird && p.stage !== 'xsc').length;
+  const xsc = c.filter(p => p.earlybird && p.stage === 'xsc').length;
+  const sync = c.filter(p => p.sync).length;
+  const claude = c.filter(p => p.claude).length;
+  const real = c.filter(p => !p.claude && !p.earlybird && !p.sync).length;
+  const x4m = bankQuestions.length + subjectiveQuestions.length;
+  const items = [
+    eb && `早鸟自测卷 ${eb} 套<small>限时免费</small>`,
+    xsc && `小升初衔接 ${xsc} 套<small>限时免费</small>`,
+    sync && `同步章节卷 ${sync} 套`,
+    claude && `中考精编模拟卷 ${claude} 套`,
+    real && `全国中考真题 ${real} 套<small>原卷免费看</small>`,
+    x4m && `小四门 ${x4m} 道题`,
+  ].filter(Boolean);
+  return items.length ? `<div class="content-stats" aria-label="题库现有内容"><b>现在题库里有：</b>${items.map(s => `<span>${s}</span>`).join('')}</div>` : '';
+}
 function homeIntroHTML() {
   return `<section class="card home-intro">
     <p class="intro-kicker">精编模拟卷 · 全国真题 · 手机刷、打印都行</p>
     <h1 id="homeTitle" tabindex="-1">爱丽克丝中考题库</h1>
     <p class="muted">紧贴课标和中考考点编写的精编模拟卷，加上全国各地真题整理成能刷的题，每套都由我亲自先做、把关后才上线；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
     <p class="promise-line">有能力、有决心、有诚意：用科学的刷题方法帮孩子把考点真正掌握，中考稳稳提分。</p>
+    ${contentStatsHTML()}
     <button class="btn demo-btn" type="button" data-demo-video>▶ 39 秒看怎么用</button>
   </section>`;
 }
