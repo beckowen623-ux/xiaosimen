@@ -6,17 +6,19 @@ import {Img} from 'remotion';
 
 const TEAL = '#0f766e';
 const B = boxes as unknown as Record<string, Record<string, Box>>;
-export const KAOZHENG_FRAMES = 1050;
+export const KAOZHENG_FRAMES = 1170;
 
-// 时间轴：0—110 开场；110—430 早鸟自测；430—840 新考点 + 做一道；840 起结尾
+// 时间轴：0—110 开场；110—430 早鸟自测；430—550 备考计划；550—960 新考点 + 做一道；960 起结尾
 const captions = [
   {from: 110, to: 250, step: '限时免费', title: '早鸟自测水平卷', sub: '初级两科、中级三科 · 题型题量和真实考试一致'},
   {from: 250, to: 330, step: '限时免费', title: '坑点到位，难度对标考试', sub: '60% 算基础过关 · 选一科，一次做完'},
   {from: 330, to: 430, step: '做完就出分', title: '没到 60 分？别慌', sub: '每题写清坑在哪 · 错题按 1、3、7 天自动复习'},
-  {from: 430, to: 540, step: '2027 新考点', title: '利润表改成五类列报', sub: '初级、中级都要考 · 首页置顶，33 题免费做完'},
-  {from: 540, to: 630, step: '2027 新考点', title: '按准则原文逐条整理', sub: '财会〔2026〕11 号 + 答记者问，随大纲更新'},
-  {from: 630, to: 700, step: '做一道试试', title: '按老习惯选 A？', sub: '“冲减财务费用”是旧利润表的做法'},
-  {from: 700, to: 840, step: '做一道试试', title: '错！新准则归投资类别', sub: '每题写清坑点和依据，做错自动进错题复习'},
+  {from: 430, to: 490, step: '科学刷题', title: '填考试日期，自动排计划', sub: '先测水平 → 按章刷 → 强化 → 整套模拟'},
+  {from: 490, to: 550, step: '科学刷题', title: '每天该刷多少题，一目了然', sub: '按题库实际题量算 · 时间不够会提醒'},
+  {from: 550, to: 660, step: '2027 新考点', title: '利润表改成五类列报', sub: '初级、中级都要考 · 首页置顶，33 题免费做完'},
+  {from: 660, to: 750, step: '2027 新考点', title: '按准则原文逐条整理', sub: '财会〔2026〕11 号 + 答记者问，随大纲更新'},
+  {from: 750, to: 820, step: '做一道试试', title: '按老习惯选 A？', sub: '“冲减财务费用”是旧利润表的做法'},
+  {from: 820, to: 960, step: '做一道试试', title: '错！新准则归投资类别', sub: '每题写清坑点和依据，做错自动进错题复习'},
 ];
 
 const Hook: React.FC = () => {
@@ -39,8 +41,8 @@ const Hook: React.FC = () => {
 const Cta: React.FC = () => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const s0 = 840;
-  const lines = ['有能力：作者在职一年 4 门考试全部一次过', '有方法：考点卡 → 章节精练 → 模拟卷 → 错题复习', '有诚意：早鸟自测限时免费 · 先试再买'];
+  const s0 = 960;
+  const lines = ['有能力：作者在职一年 4 门考试全部一次过', '有方法：自动排计划 → 章节精练 → 模拟卷 → 错题复习', '有诚意：早鸟自测限时免费 · 先试再买'];
   const logo = spring({frame: f - s0, fps, config: {damping: 13}});
   return (
     <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center', paddingTop: 230, opacity: fade(f, s0, s0 + 10)}}>
@@ -70,36 +72,42 @@ export const Kaozheng: React.FC = () => {
   return (
     <AbsoluteFill>
       <Background color={TEAL} />
-      <Audio src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1020, 1050], [0, 0.8, 0.8, 0], {extrapolateRight: 'clamp'})} />
+      <Audio src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1140, 1170], [0, 0.8, 0.8, 0], {extrapolateRight: 'clamp'})} />
       {f < 112 ? <Hook /> : null}
       {cap ? <Caption key={cap.from} start={cap.from} step={cap.step} title={cap.title} sub={cap.sub} color={TEAL} /> : null}
-      {f >= 104 && f < 850 ? (
-        <div style={{opacity: 1 - fade(f, 830, 845)}}>
+      {f >= 104 && f < 970 ? (
+        <div style={{opacity: 1 - fade(f, 950, 965)}}>
           <Phone
             enterAt={104}
             shots={[
               {src: 'kz/k07-selftest.png', from: 104},
               {src: 'kz/k08-papers.png', from: 250},
               {src: 'kz/k09-score.png', from: 330},
-              {src: 'kz/k01-home.png', from: 430},
-              {src: 'kz/k02-bank.png', from: 540},
-              {src: 'kz/k03-question.png', from: 630, scrollTo: 260},
-              {src: 'kz/k04-chosen.png', from: 665, scrollTo: 260},
-              {src: 'kz/k05-result.png', from: 700, scrollTo: 300},
+              {src: 'kz/k10-plan-entry.png', from: 430},
+              {src: 'kz/k11-plan.png', from: 470},
+              {src: 'kz/k12-plan-steps.png', from: 510},
+              {src: 'kz/k01-home.png', from: 550},
+              {src: 'kz/k02-bank.png', from: 660},
+              {src: 'kz/k03-question.png', from: 750, scrollTo: 260},
+              {src: 'kz/k04-chosen.png', from: 785, scrollTo: 260},
+              {src: 'kz/k05-result.png', from: 820, scrollTo: 300},
             ]}
             highlight={[
               {shot: 'kz/k07-selftest.png', box: B['k07-selftest'].card, from: 140, to: 250},
               {shot: 'kz/k08-papers.png', box: B['k08-papers'].grid, from: 262, to: 330},
               {shot: 'kz/k09-score.png', box: B['k09-score'].result, from: 345, to: 430},
-              {shot: 'kz/k01-home.png', box: B['k01-home'].pinned, from: 445, to: 540},
-              {shot: 'kz/k02-bank.png', box: B['k02-bank'].notice, from: 552, to: 630},
-              {shot: 'kz/k04-chosen.png', box: B['k04-chosen'].choiceA, from: 672, to: 700},
-              {shot: 'kz/k05-result.png', box: B['k05-result'].panel, from: 715, to: 830},
+              {shot: 'kz/k10-plan-entry.png', box: B['k10-plan-entry'].entry, from: 438, to: 470},
+              {shot: 'kz/k11-plan.png', box: B['k11-plan'].form, from: 478, to: 510},
+              {shot: 'kz/k12-plan-steps.png', box: B['k12-plan-steps'].status, from: 518, to: 550},
+              {shot: 'kz/k01-home.png', box: B['k01-home'].pinned, from: 565, to: 660},
+              {shot: 'kz/k02-bank.png', box: B['k02-bank'].notice, from: 672, to: 750},
+              {shot: 'kz/k04-chosen.png', box: B['k04-chosen'].choiceA, from: 792, to: 820},
+              {shot: 'kz/k05-result.png', box: B['k05-result'].panel, from: 835, to: 950},
             ]}
           />
         </div>
       ) : null}
-      {f >= 835 ? <Cta /> : null}
+      {f >= 955 ? <Cta /> : null}
     </AbsoluteFill>
   );
 };
