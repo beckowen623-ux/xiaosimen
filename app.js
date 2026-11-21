@@ -869,9 +869,9 @@ function accessNoticeHTML(days) {
     </section>`;
   }
   const expired = legacyTrialStartedAt() !== null ? '<p class="muted">7 天完整版体验已结束，原答题记录已保留。</p>' : '';
-  return `<section class="card mini-card access-notice">
-    <div><h2>免费试用</h2>${expired}<p class="muted">每个家庭送 <b>1 次整卷打印</b> + <b>1 套手机整卷</b>（模拟卷、本周一卷、真题卷任选）：${freeUses.print ? '打印已用' : '打印未用'} · ${freeUses.phone ? '手机整卷已用' : '手机整卷未用'}。各地原卷随时免费看、免费打印；其他卷子可试前 5 题。</p></div>
-    <button class="btn" type="button" id="openUnlock">查看完整版 / 兑换</button>
+  return `<section class="card mini-card access-notice slim-notice">
+    <div>${expired}<p><b>免费送：</b>每个家庭 1 套手机整卷（${freeUses.phone ? '已用' : '未用'}）+ 1 次整卷打印（${freeUses.print ? '已用' : '未用'}），任选一套；其他卷子前 5 题免费，各地原卷免费看。</p></div>
+    <button class="btn" type="button" id="openUnlock">完整版 19.9</button>
   </section>`;
 }
 
@@ -1172,6 +1172,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '首页整理得更清爽：介绍缩短，小升初衔接只在七上显示，同步章节卷每章一行，打印练习卷、全题库找题收成可展开的一行（顶部“找题”会自动展开），首页从十几张大卡片精简了约四分之一的长度。'],
   ['2026-11-21', '整卷加计时：手机上做整套早鸟卷、同步章节卷、精编模拟卷、小升初卷时，可以点“开始计时”按考试时长倒计时（同步卷 90 分钟，早鸟卷、精编卷按科目），能暂停，超时变红，做完在总结里显示一共用了多久。只做前 5 题体验时不计时。'],
   ['2026-11-21', '首页打开更快：网络慢的时候，先显示学期、早鸟自测卷和同步章节卷，可以直接开始做；按章节练、错题本、小四门等内容随后加载出来。'],
   ['2026-11-21', '早鸟自测卷做完后直接告诉你补哪几章：按错题所在章节排序，列出错得最多的 3 章，点一下就进那一章的同步章节卷（数学、物理、化学）。'],
@@ -1355,20 +1356,20 @@ function contentStatsHTML() {
   const real = c.filter(p => !p.claude && !p.earlybird && !p.sync).length;
   const x4m = bankQuestions.length + subjectiveQuestions.length;
   const items = [
-    eb && `早鸟自测卷 ${eb} 套<small>限时免费</small>`,
-    xsc && `小升初衔接 ${xsc} 套<small>限时免费</small>`,
-    sync && `同步章节卷 ${sync} 套`,
-    claude && `中考精编模拟卷 ${claude} 套`,
-    real && `全国中考真题 ${real} 套<small>原卷免费看</small>`,
-    x4m && `小四门 ${x4m} 道题`,
+    eb && `早鸟卷 ${eb} 套（限免）`,
+    xsc && `小升初 ${xsc} 套（限免）`,
+    sync && `同步卷 ${sync} 套`,
+    claude && `精编卷 ${claude} 套`,
+    real && `真题 ${real} 套`,
+    x4m && `小四门 ${x4m} 题`,
   ].filter(Boolean);
-  return items.length ? `<div class="content-stats" aria-label="题库现有内容"><b>现在题库里有：</b>${items.map(s => `<span>${s}</span>`).join('')}</div>` : '';
+  return items.length ? `<p class="content-stats" aria-label="题库现有内容">${items.join(' · ')}</p>` : '';
 }
 function homeIntroHTML() {
   return `<section class="card home-intro">
-    <p class="intro-kicker">初一到初三 · 同步章节卷 · 中考精编卷 · 手机刷、打印都行</p>
+    <p class="intro-kicker">初一到初三 · 手机刷、打印都行</p>
     <h1 id="homeTitle" tabindex="-1">爱丽克丝中考题库</h1>
-    <p class="muted">七上到九下按学期组织：早鸟自测卷先测出弱项，同步章节卷跟着课本一章一套补弱项，初三再刷紧贴中考考点的精编模拟卷和全国各地真题。每套都由我亲自先做、把关后才上线；手机上做自动判分、记错题，不想看手机就打印出来在纸上做。</p>
+    <p class="muted">早鸟卷先测出弱项 → 同步章节卷一章一套补上 → 初三刷中考精编卷和真题。每套我都亲自先做一遍才上线。</p>
     <p class="promise-line">有能力、有决心、有诚意：用科学的刷题方法帮孩子把考点真正掌握，中考稳稳提分。</p>
     ${contentStatsHTML()}
     <button class="btn demo-btn" type="button" data-demo-video>▶ 46 秒看怎么用</button>
@@ -1389,7 +1390,7 @@ function weeklyCardHTML(progress) {
       <button class="btn" type="button" data-weekly="mark">✍️ 纸上做完，登记错题</button>
     </div>
     <div id="weeklyMark"></div>
-    <p class="muted weekly-note">手机上做，自动判分、错题进错题本；打印出来在纸上做完，回来点出做错的题号，同样进错题本，按 1、3、7、14 天提醒复习。</p>
+    <p class="muted weekly-note">手机做自动判分；打印出来做完，回来点出错题号。错题都按 1、3、7、14 天提醒复习。</p>
   </section>`;
 }
 function paperFromQuestions(title, questions, note = '') {
@@ -1537,7 +1538,7 @@ async function ensureUnitPool() {
 function unitCardHTML() {
   const subject = state.unitSubject || '';
   const chips = UNIT_SUBJECTS.map(([k, l]) => `<button type="button" class="drill-chip" data-unit-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('');
-  let body = '<p class="muted">先选科目，再选章节专项练。也可以在下面“全题库找题”里直接搜章节名，比如“浮力”“二次函数”“文言文”。</p>';
+  let body = '<p class="muted">先选科目，再选章节专项练。</p>';
   if (subject && !unitPool) body = '<p class="muted" role="status">正在整理章节…</p>';
   if (subject && unitPool) {
     const qs = unitPool.filter(q => q.subject === subject);
@@ -1620,7 +1621,7 @@ function wireAnalysis() {
 function analysisCardHTML() {
   return `<section class="card analysis-card" id="analysisCard" aria-labelledby="analysisTitle">
     <div class="section-heading"><h2 id="analysisTitle">📊 学情分析</h2><span class="muted">按科目、章节自动统计</span></div>
-    <div id="analysisOut">${state.analysisHTML || '<p class="muted">根据孩子做过的题，按科目和章节统计正确率，找出最需要补的章节，并给出复习建议。数据只保存在这台设备上。</p>'}</div>
+    <div id="analysisOut">${state.analysisHTML || '<p class="muted">按科目、章节统计孩子做过的题，找出最该补的章节。数据只保存在这台设备上。</p>'}</div>
     <button class="btn primary" type="button" id="analysisBtn">${state.analysisHTML ? '重新分析' : '生成学情分析'}</button>
   </section>`;
 }
@@ -1648,7 +1649,7 @@ function xscCardHTML() {
 // 早鸟卷、小升初卷三种做法：手机上做 / 打印整卷 / 纸上做完回来登记（家长多数让孩子在纸上做）
 const EB_MODES = [['phone', '📱 手机上做'], ['print', '🖨 打印整卷'], ['mark', '✍️ 纸上做完，登记']];
 const EB_MODE_TIP = {
-  phone: '先选做法，再点科目。手机上做：客观题自动判分，主观题对照得分点自评。',
+  phone: '手机上做：客观题自动判分，主观题对照得分点自评。',
   print: '点科目生成整套卷：题目和答案页分开，每大题标好分值。限时免费，不占免费打印次数。',
   mark: '纸上做完后点科目：填上对照答案页算出的总分，再点出做错的题号。错题进错题本按时复习，学情分析也会算进去。',
 };
@@ -1776,14 +1777,14 @@ function syncCardHTML() {
   const started = papers.filter(p => stats[p.id].done);
   const next = started.length ? papers.find(p => !stats[p.id].done) : null;
   return `<section class="card sync-card" id="sync" aria-labelledby="syncTitle">${head}
-    <p class="muted">按人教版章节顺序出题，题型和难度对标期中、期末，每章一套 100 分，带易错“坑点”和逐题解析。学完一章做一套，哪章弱就补哪章。${hasFullAccess() ? '' : '每套前 5 题免费试做；完整版全部开放，手机做、打印都行。'}</p>
+    <p class="muted">按人教版章节，每章一套 100 分，对标期中期末，带坑点解析。${hasFullAccess() ? '' : '每套前 5 题免费试做。'}</p>
     ${subjects.length > 1 ? `<div class="weekly-chips" role="group" aria-label="选择科目">${subjects.map(([k, l]) => `<button type="button" class="drill-chip" data-sync-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('')}</div>` : ''}
     ${syncPlanHTML(all, progress)}
     ${started.length ? `<p class="sync-progress">已经做过 ${started.length} / ${papers.length} 套${next ? `，下一套：<b>${esc(next.label || next.unit || next.title)}</b>` : '，这一科全部做过了，错题记得按时复习'}</p>` : ''}
-    <div class="paper-rows">${papers.map(p => `<div class="paper-row${stats[p.id].done ? ' is-started' : ''}">
-      <span>${esc(p.label || p.unit || p.title)}<small>${p.questionCount} 题 · 100 分${stats[p.id].done ? ` · 已做 ${stats[p.id].done} 题，对 ${stats[p.id].right} 题` : ''}</small></span>
-      <button class="btn" type="button" data-claude-phone="${p.id}">${freeButtonLabel('phone', p.id, ['手机做', '免费手机做整卷', '试前 5 题'])}</button>
-      <button class="btn" type="button" data-claude-print="${p.id}">${freeButtonLabel('print', p.id, ['打印', '免费打印整卷', '打印前 5 题'])}</button>
+    <div class="paper-rows sync-rows">${papers.map(p => `<div class="paper-row${stats[p.id].done ? ' is-started' : ''}">
+      <span>${esc(p.label || p.unit || p.title)}<small>${p.questionCount} 题${stats[p.id].done ? ` · 已做 ${stats[p.id].done}，对 ${stats[p.id].right}` : ''}</small></span>
+      <button class="btn" type="button" data-claude-phone="${p.id}">${freeButtonLabel('phone', p.id, ['手机做', '手机做', '试做'])}</button>
+      <button class="btn" type="button" data-claude-print="${p.id}">${freeButtonLabel('print', p.id, ['打印', '打印', '试印'])}</button>
     </div>`).join('')}</div>
   </section>`;
 }
@@ -1799,8 +1800,7 @@ function earlybirdCardHTML() {
   return `<section class="card earlybird-card" id="earlybird" aria-labelledby="earlybirdTitle">
     <span class="earlybird-badge">⏰ 限时免费 · 早鸟自测</span>
     <h2 id="earlybirdTitle">${esc(STAGE_SHORT[state.stage])} 早鸟自测卷：看看孩子现在的真实水平</h2>
-    <p>${state.stage === '9-down' ? '中考全范围，九科各一套' : '只考到这个学期为止学过的内容，各科一套'}，${isNinth() ? '按中考题型和题干长度出题，难度比中考略高一点' : '按期末考试题型和题干长度出题，难度比期末考试略高一点'}。客观题自动判分，主观题对照得分点自评，做完出百分制总分，每道题都有解析。</p>
-    <p class="earlybird-tip">分数不是目的：找到会的、找到漏的，后面的复习就有方向了。</p>
+    <p>${state.stage === '9-down' ? '中考全范围，九科各一套' : '只考到这个学期学过的内容，各科一套'}，${isNinth() ? '按中考题型出题' : '按期末题型出题'}、难度略高一点。做完出百分制总分，还告诉你错题集中在哪几章。</p>
     ${ebModesHTML()}
     <div class="earlybird-grid">${papers.map(p => `<button class="btn" type="button" data-earlybird="${p.id}"><b>${esc(EARLYBIRD_LABEL[p.subject] || p.subjectLabel)}</b><small>${done[p.id] != null ? `上次 ${done[p.id]} 分` : `${p.questionCount} 题`}</small></button>`).join('')}</div>
     <div class="eb-mark-box" id="ebMark"></div>
@@ -1848,7 +1848,7 @@ function earlybirdScore(results) {
 function claudePapers(subject) { return (nationalCatalog || []).filter(p => p.claude && p.subject === subject); }
 function subjectSectionsHTML() {
   if (!nationalCatalog) return '<section class="card" role="status">正在加载分科目录…</section>';
-  if (!isNinth()) return `<section class="card subject-later"><h2>中考精编卷和全国真题</h2><p class="muted">语数英物化的中考精编卷、全国各地真题是按中考全范围出的，初三（九上、九下）再刷更合适。现在先把本学期的早鸟卷和小四门练扎实；想提前看看，可以把上面的学期切到“九上”或“九下”。</p></section>`;
+  if (!isNinth()) return `<details class="card fold-row subject-later"><summary><b>中考精编卷和全国真题</b><span>初三再刷 ›</span></summary><p class="muted">语数英物化的中考精编卷、全国各地真题是按中考全范围出的，初三（九上、九下）再刷更合适。现在先把本学期的早鸟卷和小四门练扎实；想提前看看，可以把上面的学期切到“九上”或“九下”。</p></details>`;
   const opened = state.openSubjects || new Set();
   return `<section class="subject-sections" aria-labelledby="subjectsTitle">
     <div class="section-heading"><h2 id="subjectsTitle">分科练习</h2><span class="muted">点开科目看模拟卷和真题</span></div>
@@ -1929,8 +1929,9 @@ function reviewHubHTML(progress) {
 }
 function printCardHTML() {
   const claude = (nationalCatalog || []).filter(p => p.claude);
-  return `<section class="card print-card">
-    <div><h2>🖨 打印练习卷</h2><p class="muted">答案单独一页，带“姓名 / 用时 / 得分”栏。各地真题原卷在上面分科里点“看原卷”，免费打印。</p></div>
+  return `<details class="card fold-row print-card" id="printFold" ${state.printOpen ? 'open' : ''}>
+    <summary><b>🖨 打印练习卷</b><span>本周一卷 · 精编卷 · 小四门 ›</span></summary>
+    <p class="muted">答案单独一页，带“姓名 / 用时 / 得分”栏。各地真题原卷在上面分科里点“看原卷”，免费打印。</p>
     <div class="print-row">
       <select id="printKind" aria-label="打印什么">
         <optgroup label="本周一卷">${weeklySubjectsNow().map(([key, label]) => `<option value="weekly:${key}">本周一卷 · ${label}</option>`).join('')}</optgroup>
@@ -1944,7 +1945,7 @@ function printCardHTML() {
       <button class="btn primary" type="button" id="printPaper">生成并打印</button>
     </div>
     ${hasFullAccess() ? '' : `<p class="muted">${freeUses.print ? `免费整卷打印已用在《${esc(freeUses.print.title)}》上，这一套可以反复打印。` : '每个家庭可以免费打印 1 次整卷（任选一套），之后的卷子可打印前 5 题。'}</p>`}
-  </section>`;
+  </details>`;
 }
 async function claudePaperAction(id, action) {
   try {
@@ -2008,8 +2009,8 @@ function renderHome(focus = '') {
   byId('headerSearch').hidden = false;
   view.innerHTML = `
     ${homeIntroHTML()}
-    ${xscCardHTML()}
     ${stageBarHTML()}
+    ${state.stage === '7-up' ? xscCardHTML() : ''}
     ${earlybirdCardHTML()}
     ${syncCardHTML()}
     ${unitCardHTML()}
@@ -2020,8 +2021,8 @@ function renderHome(focus = '') {
     ${x4mGroupHTML(queue, progress)}
     ${reviewHubHTML(progress)}
     ${printCardHTML()}
-    <section class="card search-card" id="searchPanel" aria-labelledby="searchTitle">
-      <div class="section-heading"><h2 id="searchTitle">${icon('search')} 全题库找题</h2><span class="muted">真题、模拟卷、小四门都能搜</span></div>
+    <details class="card fold-row search-card" id="searchPanel" ${state.searchOpen || state.keyword ? 'open' : ''}>
+      <summary><b id="searchTitle">${icon('search')} 全题库找题</b><span>真题、模拟卷、小四门都能搜 ›</span></summary>
       <div class="search-fields">
         <input type="search" id="searchBox" aria-label="题目关键词" placeholder="试试输入「宋代」「现在完成时」「默写」" value="${esc(state.keyword)}">
         <select id="searchSubject" aria-label="搜索科目">
@@ -2032,7 +2033,7 @@ function renderHome(focus = '') {
       </div>
       <p class="muted" id="searchStatus" role="status"></p>
       <div id="searchOut" class="search-results"></div>
-    </section>
+    </details>
     ${originCardHTML()}
     <details class="card origin-card update-card">
       <summary><b>📝 更新日志</b><span>最近：${UPDATE_LOG[0][0]} · 点开看我们做了什么 ›</span></summary>
@@ -2081,7 +2082,7 @@ function jumpToGoTarget() {
   const go = new URLSearchParams(location.search).get('go');
   if (!['earlybird', 'xsc', 'sync'].includes(go)) return;
   state.earlybirdJumped = true;
-  if (go === 'xsc' && !state.xscOpen) { state.xscOpen = true; renderHome(); }
+  if (go === 'xsc' && (!state.xscOpen || state.stage !== '7-up')) { state.xscOpen = true; setStage('7-up'); renderHome(); }
   // 不用 smooth：滚动动画进行中首页会再画一次（免费额度状态回来），动画会被打断，停在顶部
   byId(go)?.scrollIntoView({ block: 'start' });
 }
@@ -2091,8 +2092,8 @@ function renderLiteHome() {
   document.body.classList.remove('practice');
   view.innerHTML = `
     ${homeIntroHTML()}
-    ${xscCardHTML()}
     ${stageBarHTML()}
+    ${state.stage === '7-up' ? xscCardHTML() : ''}
     ${earlybirdCardHTML()}
     ${syncCardHTML()}
     <section class="card loading-card" id="liteLoading" role="status"><p class="muted">按章节练、错题本、小四门等内容还在加载，网络慢的话要多等几秒……</p></section>`;
@@ -2147,6 +2148,8 @@ function wireHome() {
     if (q) beginPractice([q], 'single');
   });
   wirePrintKind();
+  byId('printFold')?.addEventListener('toggle', e => { state.printOpen = e.currentTarget.open; });
+  byId('searchPanel')?.addEventListener('toggle', e => { state.searchOpen = e.currentTarget.open; });
   void doSearch();
   showReferralProfile();
   if (!nationalCatalog && window.NationalExams?.catalog) {
@@ -3046,7 +3049,10 @@ byId('headerSearch').addEventListener('click', event => {
   const search = byId('searchBox');
   if (!search) return;
   event.preventDefault();
-  search.focus();
+  const fold = byId('searchPanel');
+  if (fold && !fold.open) { fold.open = true; state.searchOpen = true; }
+  fold?.scrollIntoView({ block: 'start' });
+  search.focus({ preventScroll: true });
 });
 const figureDialog = byId('figureDialog');
 figureDialog.addEventListener('click', event => { if (event.target === figureDialog) figureDialog.close(); });

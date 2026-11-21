@@ -650,3 +650,20 @@ input[type=search]::placeholder { color: #67736c; }
 .exam-timer-actions { display: flex; gap: 6px; align-items: center; }
 .exam-timer .btn { min-height: 34px; padding: 0 12px; font-size: 14px; }
 .exam-timer-result { margin: 8px 0 0; padding: 8px 12px; border-radius: 10px; background: var(--green-soft); color: var(--green); font-weight: 600; }
+
+/* ---------- 首页整理：折叠行、紧凑同步卷、细横幅 ---------- */
+.home-intro .content-stats { display: block; margin: 8px 0 10px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.fold-row > summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; list-style: none; cursor: pointer; }
+.fold-row > summary::-webkit-details-marker { display: none; }
+.fold-row > summary b { font-size: 16px; display: inline-flex; align-items: center; gap: 6px; }
+.fold-row > summary span { color: var(--muted); font-size: 13px; text-align: right; }
+.fold-row[open] > summary { margin-bottom: 10px; }
+.sync-rows { gap: 6px; }
+.sync-rows .paper-row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 6px; padding: 8px 10px; }
+.sync-rows .paper-row span { min-width: 0; font-weight: 600; line-height: 1.35; }
+.sync-rows .paper-row small { display: block; font-weight: 400; }
+.sync-rows .paper-row .btn { min-height: 34px; padding: 0 10px; font-size: 13px; white-space: nowrap; }
+.slim-notice { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
+.slim-notice p { margin: 0; font-size: 13px; line-height: 1.6; }
+.slim-notice .btn { flex: none; white-space: nowrap; }
+.update-card > summary b { white-space: nowrap; }
