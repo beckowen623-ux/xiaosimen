@@ -2,6 +2,11 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 修复 app.js 语法错误；自检加语法检查（main）
+- fdd5c9c 的更新记录里 `Let's Communicate!` 的撇号没转义，app.js 解析失败，整站脚本不能运行（推送时检查链写成了 `&&` 后接 `;`，语法检查失败后仍然提交推送了）。1709b54 改成弯撇号修复。
+- `tests/validate.mjs` 开头加了一步：app.js、national-exams.js 等前端脚本用 `vm.Script` 只编译不运行，有语法错误直接 FAIL。已用出错版本验证能拦住。
+- 以后的推送命令：语法检查、validate、提交、推送全部用 `&&` 串起来。
+
 ## 2026-11-21 · Claude Code · 同步章节卷：八上英语 4 套（main）
 - 新增 `zz-sync-english-8up-1..4.json`（人教版 2024 新教材八上，单元名已核对：Happy Holiday、Home Sweet Home、Same or Different?、Amazing Plants and Animals、What a Delicious Meal!、Plan for Yourself、When Tomorrow Comes、Let's Communicate!），两单元一套，46 题 100 分，题型同七下。
 - 答案字母用打散脚本重排（解析无选项字母引用，0 处改动），8up-2 完形开头 ABCD 连号，手工交换 17、18 两题选项。逐题核对了答案文本未变。
