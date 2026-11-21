@@ -612,3 +612,9 @@ input[type=search]::placeholder { color: #67736c; }
 .eb-score { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 8px 0; font-size: .9rem; }
 .eb-score input { width: 96px; min-height: 40px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 10px; font-size: 1rem; }
 .eb-mark-box:empty { display: none; }
+
+/* 同步章节卷、试做后的说明 */
+.sync-card .paper-rows { display: grid; gap: 8px; margin-top: 10px; }
+.trial-upsell { margin: 14px 0; padding: 12px 14px; border: 1px solid #fcd34d; border-radius: 12px; background: #fffbeb; text-align: left; }
+.trial-upsell p { margin: 4px 0; line-height: 1.6; }
+.earlybird-next { margin: 12px 0 6px; line-height: 1.6; }

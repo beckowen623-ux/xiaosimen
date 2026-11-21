@@ -28,6 +28,7 @@ function build(paper) {
     national: true, subject: paper.subject || "english", subjectLabel: paper.subjectLabel || "英语", paperId: paper.id, number: n,
     ...(paper.claude ? { claude: true, meta: "精编模拟卷" } : {}),
     ...(paper.earlybird ? { earlybird: true, meta: paper.stage === "xsc" ? "小升初衔接" : "早鸟自测" } : {}),
+    ...(paper.sync ? { sync: true, meta: "同步章节卷" } : {}),
     section, chapter: paper.title, grade: paper.stage === "xsc" ? "小升初" : "九下", stage: paper.stage === "xsc" ? "xsc" : "9-down",
     source: paper.numbering?.[n] ? `${paper.title} ${paper.numbering[n]}` : `${paper.title} 第 ${n} 题`, ...extra,
   });
@@ -110,7 +111,7 @@ function build(paper) {
     if (section.score) for (const q of out.slice(sectionStart)) if (q.type !== "essay") q.paperScore = section.score;
   }
   // 精编卷、早鸟卷：每道题标章节（数理化等按教材章节，语文英语按考点模块）
-  if (paper.claude || paper.earlybird) {
+  if (paper.claude || paper.earlybird || paper.sync) {
     const units = new Map();
     for (const section of paper.sections) {
       if (section.type === "书面表达") { units.set(section.n, unitOf(paper, section, null, { kp: "书面表达", n: section.n })); continue; }
@@ -123,9 +124,9 @@ function build(paper) {
       q.unit = unit;
     }
   }
-  if (paper.earlybird) {
+  if (paper.earlybird || paper.sync) {
     const full = out.reduce((s, q) => s + (q.type === "essay" ? q.score : q.paperScore || 0), 0);
-    if (Math.abs(full - 100) > 1e-9) throw new Error(`${paper.id}: 早鸟卷总分应为 100，实际 ${full}`);
+    if (Math.abs(full - 100) > 1e-9) throw new Error(`${paper.id}: 整卷总分应为 100，实际 ${full}`);
     if (out.some(q => q.type !== "essay" && !q.paperScore)) throw new Error(`${paper.id}: 有客观题没有分值`);
   }
   const ids = new Set();
@@ -157,7 +158,9 @@ for (const file of readdirSync(srcDir).filter(f => f.endsWith(".json")).sort()) 
   const entry = { ...old, id: paper.id, subject: paper.subject || "english", subjectLabel: paper.subjectLabel || "英语", region: paper.region, year: paper.year,
     ...(paper.claude ? { claude: true } : {}),
     ...(paper.earlybird ? { earlybird: true, stage: paper.stage || "9-down" } : {}),
+    ...(paper.sync ? { sync: true, stage: paper.stage } : {}),
     ...(paper.unit ? { unit: paper.unit, order: paper.order || 0 } : {}),
+    ...(paper.label ? { label: paper.label } : {}),
     title: paper.title, source: paper.source, description: `整卷 ${questions.length} 题${paper.note ? "（" + paper.note.replace(/。$/, "") + "）" : ""}`,
     questionCount: questions.length, data: `./data/national/${paper.id}.js`, sections: counts };
   catalog.papers = [...catalog.papers.filter(p => p.id !== paper.id), entry];

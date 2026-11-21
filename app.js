@@ -604,7 +604,7 @@ const MODE_LABEL = {
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
   essay: '主观题提分', blank: '填空速记', retry: '本组错题重练', national: '全国真题练习',
-  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '早鸟自测', chapter: '按章节练',
+  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '早鸟自测', chapter: '按章节练', sync: '同步章节卷',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -1169,6 +1169,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '新增“同步章节卷”：跟着课本一章一套，按期中期末题型出题，带易错坑点和逐题解析。首批上线九上数学 5 章（一元二次方程、二次函数、旋转、圆、概率初步），每套前 5 题免费试做。首页选学期即可看到；早鸟卷做完也可以直接去对应章节补弱项。'],
   ['2026-11-21', '早鸟自测卷、小升初衔接卷可以打印整套了：题目和答案页分开，每大题标好分值，限时免费，不占免费打印次数。孩子在纸上做完，回来填总分、点出错题号，错题同样进错题本按 1、3、7、14 天提醒复习，学情分析也会算进去。'],
   ['2026-11-20', '新增八下早鸟自测卷：语文、数学、英语、物理、道法、历史、地理、生物各一套。至此七上到九下六个学期的早鸟自测卷全部上线，首页选学期即可，限时免费。'],
   ['2026-11-20', '新增八上早鸟自测卷：语文、数学、英语、物理、道法、历史、地理、生物各一套，考到八年级上册，按期末考试题型编写，难度略高，限时免费。'],
@@ -1373,7 +1374,7 @@ function paperFromQuestions(title, questions, note = '') {
       else { passage = htmlToText(q.materialHtml); printedBodies.set(body, htmlToText(head)); }
     } else if (q.material && q.type !== 'essay') passage = q.material;
     lastMaterial = q.materialHtml || lastMaterial;
-    const tag = q.claude ? '变式题' : (q.source || '').match(/20\d\d/) ? (q.source || '').slice(0, 24) : '';
+    const tag = q.claude || q.sync ? '变式题' : (q.source || '').match(/20\d\d/) ? (q.source || '').slice(0, 24) : '';
     let item;
     if (q.type === 'single' || q.type === 'multiple') {
       item = { type: 'choice', multi: q.type === 'multiple', tag, stem: q.stem, options: q.options.map(o => ({ key: o.key, text: o.text })), answer: q.answer.join(''), explanation: q.explanation || '', source: q.source || '' };
@@ -1478,7 +1479,7 @@ const unitRank = u => { const i = UNIT_RANK.findIndex(prefix => u.startsWith(pre
 let unitPool = null;
 async function ensureUnitPool() {
   if (unitPool) return unitPool;
-  const list = (await window.NationalExams.catalog()).filter(p => p.data && (p.claude || p.earlybird));
+  const list = (await window.NationalExams.catalog()).filter(p => p.data && (p.claude || p.earlybird || p.sync));
   const loaded = await Promise.all(list.map(p => window.NationalExams.loadPaper(p.id).catch(() => [])));
   unitPool = loaded.flat().filter(q => q.unit);
   return unitPool;
@@ -1652,6 +1653,34 @@ function showEarlybirdMark(paper, list, boxId) {
   });
   box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 }
+// ---- 同步章节卷：跟着课本一章一套，按期中期末题型出（前 5 题免费试做，完整版全部开放） ----
+const SYNC_SUBJECTS = [['math', '数学'], ['physics', '物理'], ['chemistry', '化学'], ['english', '英语'], ['chinese', '语文']];
+function syncPapers(stage = state.stage) {
+  return (nationalCatalog || []).filter(p => p.sync && p.stage === stage).sort((a, b) => (a.order || 0) - (b.order || 0));
+}
+function syncCardHTML() {
+  if (!nationalCatalog) return '';
+  const grade = STAGE_SHORT[state.stage].split(' ')[0];
+  const head = `<div class="section-heading"><h2 id="syncTitle">📘 ${grade}同步章节卷</h2><span class="muted">跟着课本，一章一套</span></div>`;
+  if (state.stage === '7-up') return `<section class="card sync-card" id="sync" aria-labelledby="syncTitle">${head}
+    <p class="muted">七上的数学、语文、英语章节卷就是上面的“🎒 小升初衔接”：按七上章节一章一套，现在限时免费，能手机做也能打印。</p>
+    <button class="btn" type="button" data-sync-xsc>去做七上章节卷 →</button></section>`;
+  const all = syncPapers();
+  const subjects = SYNC_SUBJECTS.filter(([k]) => all.some(p => p.subject === k));
+  if (!subjects.length) return `<section class="card sync-card" id="sync" aria-labelledby="syncTitle">${head}
+    <p class="muted">${grade}的同步章节卷正在编写，数学先上，其他科随后。可以先做上面的早鸟卷，看看哪一章最需要补。</p></section>`;
+  const subject = subjects.some(([k]) => k === state.syncSubject) ? state.syncSubject : subjects[0][0];
+  const papers = all.filter(p => p.subject === subject);
+  return `<section class="card sync-card" id="sync" aria-labelledby="syncTitle">${head}
+    <p class="muted">按人教版章节顺序出题，题型和难度对标期中、期末，每章一套 100 分，带易错“坑点”和逐题解析。学完一章做一套，哪章弱就补哪章。${hasFullAccess() ? '' : '每套前 5 题免费试做；完整版全部开放，手机做、打印都行。'}</p>
+    ${subjects.length > 1 ? `<div class="weekly-chips" role="group" aria-label="选择科目">${subjects.map(([k, l]) => `<button type="button" class="drill-chip" data-sync-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('')}</div>` : ''}
+    <div class="paper-rows">${papers.map(p => `<div class="paper-row">
+      <span>${esc(p.label || p.unit || p.title)}<small>${p.questionCount} 题 · 100 分</small></span>
+      <button class="btn" type="button" data-claude-phone="${p.id}">${freeButtonLabel('phone', p.id, ['手机做', '免费手机做整卷', '试前 5 题'])}</button>
+      <button class="btn" type="button" data-claude-print="${p.id}">${freeButtonLabel('print', p.id, ['打印', '免费打印整卷', '打印前 5 题'])}</button>
+    </div>`).join('')}</div>
+  </section>`;
+}
 function earlybirdPapers() {
   return (nationalCatalog || []).filter(p => p.earlybird && (p.stage || '9-down') === state.stage).sort((a, b) => EARLYBIRD_ORDER.indexOf(a.subject) - EARLYBIRD_ORDER.indexOf(b.subject));
 }
@@ -1719,7 +1748,7 @@ function subjectSectionsHTML() {
     <div class="section-heading"><h2 id="subjectsTitle">分科练习</h2><span class="muted">点开科目看模拟卷和真题</span></div>
     ${MAIN_SUBJECTS.map(({ key, label, icon: emoji }) => {
       const claude = claudePapers(key);
-      const real = nationalCatalog.filter(p => p.subject === key && !p.claude && !p.earlybird);
+      const real = nationalCatalog.filter(p => p.subject === key && !p.claude && !p.earlybird && !p.sync);
       const practicable = real.filter(p => p.data);
       const count = practicable.reduce((s, p) => s + (p.questionCount || 0), 0);
       const meta = [claude.length ? `精编模拟卷 ${claude.length} 套` : '', real.length ? `真题 ${real.length} 套` : '', count ? `${count} 道可刷` : ''].filter(Boolean).join(' · ');
@@ -1818,7 +1847,7 @@ async function claudePaperAction(id, action) {
     const claim = await claimFree(action === 'phone' ? 'phone' : 'print', id, paper.title);
     if (claim === 'cancel') return;
     const list = claim === 'full' ? all : all.filter(q => q.preview);
-    if (action === 'phone') beginPractice(list, 'paper');
+    if (action === 'phone') beginPractice(list, paper?.sync ? 'sync' : 'paper');
     else printQuestions(`${paper.title}${claim === 'full' ? '' : ' · 体验版前 5 题'}`, list);
   } catch (error) { toast(error.message || '加载失败，请重试。'); }
 }
@@ -1876,6 +1905,7 @@ function renderHome(focus = '') {
     ${xscCardHTML()}
     ${stageBarHTML()}
     ${earlybirdCardHTML()}
+    ${syncCardHTML()}
     ${unitCardHTML()}
     ${analysisCardHTML()}
     ${accessNotice}
@@ -1918,6 +1948,13 @@ function wireSubjectSections() {
   box.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
 }
 function wireHome() {
+  const sync = byId('sync');
+  if (sync) {
+    sync.querySelectorAll('[data-claude-phone]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePhone, 'phone'); }));
+    sync.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
+    sync.querySelectorAll('[data-sync-subject]').forEach(b => b.addEventListener('click', () => { state.syncSubject = b.dataset.syncSubject; renderHome(); byId('sync')?.scrollIntoView({ block: 'start' }); }));
+    sync.querySelector('[data-sync-xsc]')?.addEventListener('click', () => { state.xscOpen = true; renderHome(); byId('xsc')?.scrollIntoView({ block: 'start' }); });
+  }
   view.querySelectorAll('[data-xsc-subject]').forEach(b => b.addEventListener('click', () => { state.xscSubject = b.dataset.xscSubject; state.xscOpen = true; renderHome(); byId('xsc')?.scrollIntoView({ block: 'start' }); }));
   byId('xsc')?.addEventListener('toggle', event => { state.xscOpen = event.currentTarget.open; });
   view.querySelectorAll('[data-unit-subject]').forEach(b => b.addEventListener('click', async () => {
@@ -1976,7 +2013,7 @@ function wireHome() {
       if (byId('subjectSections')) renderHome();
       // 主页、视频里的直达链接：x4m.cc.cd/?go=earlybird
       const go = new URLSearchParams(location.search).get('go');
-      if ((go === 'earlybird' || go === 'xsc') && !state.earlybirdJumped) { state.earlybirdJumped = true; if (go === 'xsc') { state.xscOpen = true; renderHome(); } byId(go === 'xsc' ? 'xsc' : 'earlybird')?.scrollIntoView({ behavior: 'smooth' }); }
+      if (['earlybird', 'xsc', 'sync'].includes(go) && !state.earlybirdJumped) { state.earlybirdJumped = true; if (go === 'xsc') { state.xscOpen = true; renderHome(); } byId(go)?.scrollIntoView({ behavior: 'smooth' }); }
     }).catch(() => {
       const box = byId('subjectSections');
       if (box) box.innerHTML = '<section class="card"><p class="muted">分科目录加载失败，刷新页面再试。</p></section>';
@@ -2073,7 +2110,7 @@ function beginPractice(queue, mode, index = 0) {
       return;
     }
     const claimedPaper = queue.length && queue.every(q => q.paperId && freeOpen('phone', q.paperId));
-    if (!claimedPaper && !['daily', 'wrong', 'weekly', 'paper', 'earlybird'].includes(mode)) {
+    if (!claimedPaper && !['daily', 'wrong', 'weekly', 'paper', 'sync', 'earlybird'].includes(mode)) {
       const progress = loadProgress();
       const includesHistory = ['favorite', 'single', 'everWrong', 'due'].includes(mode);
       queue = queue.filter(q => isTrialQuestion(q) || (includesHistory && hasQuestionHistory(progress, q)));
@@ -2573,6 +2610,17 @@ function finishPractice() {
   if (state.queue.length < 2 || !state.session.size) { renderHome('homeTitle'); return; }
   renderSummary();
 }
+// 试做完一套卷的前 5 题：告诉家长这套还有多少题、完整版包含什么（不夸大、不制造焦虑）
+function trialUpsellHTML() {
+  if (hasFullAccess() || !['paper', 'sync'].includes(state.mode)) return '';
+  const paperId = state.queue[0]?.paperId;
+  const paper = (nationalCatalog || []).find(p => p.id === paperId);
+  if (!paper || !state.queue.length || state.queue.length >= paper.questionCount) return '';
+  const rest = paper.questionCount - state.queue.length;
+  return `<div class="trial-upsell"><p><b>这套卷还有 ${rest} 题</b>（含压轴的解答题）在完整版里。</p>
+    <p class="muted">完整版 19.9 元一次买断：精编模拟卷、同步章节卷、本周一卷都能做完整套、也能打印，错题自动进错题本按 1、3、7、14 天复习，以后的更新也包含在内。</p>
+    <button class="btn primary" type="button" id="upsellBtn">看看完整版</button></div>`;
+}
 function renderSummary() {
   document.body.classList.add('practice');
   const results = [...state.session.entries()];
@@ -2613,9 +2661,12 @@ function renderSummary() {
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本卷错题</button>` : ''}
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${paper?.stage === 'xsc' ? '返回，做下一章' : '返回首页，测下一科'}</button>
         </div>
+        ${paper && paper.stage !== 'xsc' && syncPapers(paper.stage).some(p => p.subject === paper.subject) ? `<p class="earlybird-next">下一步：看看错题集中在哪几章，用<b>同步章节卷</b>一章一章补，比整卷反复刷更快见效。</p>
+        <button class="btn" type="button" id="toSyncBtn">去同步章节卷补弱项 →</button>` : ''}
       </section>
     </div>`;
     byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, 'retry'));
+    byId('toSyncBtn')?.addEventListener('click', () => { state.syncSubject = paper.subject; if (paper.stage) setStage(paper.stage); renderHome(); byId('sync')?.scrollIntoView({ block: 'start' }); });
     byId('homeBtn').addEventListener('click', () => { const xsc = paper?.stage === 'xsc'; if (xsc) { state.xscOpen = true; state.xscSubject = paper.subject; } renderHome('homeTitle'); byId(xsc ? 'xsc' : 'earlybird')?.scrollIntoView(); });
     state.keys = null;
     moveFocus(byId('summaryTitle'), true);
@@ -2636,6 +2687,7 @@ function renderSummary() {
         </div>
         ${wrongQs.length ? `<div class="summary-wrong"><p class="ref-title">需要再看的题（${wrongQs.length}）</p>
           <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
+        ${trialUpsellHTML()}
         <div class="summary-actions">
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本组错题</button>` : ''}
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button>
@@ -2645,6 +2697,7 @@ function renderSummary() {
     </div>`;
   byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, state.mode === 'national' ? 'national' : 'retry'));
   byId('homeBtn').addEventListener('click', returnFromPractice);
+  byId('upsellBtn')?.addEventListener('click', () => openUnlock());
   state.keys = null;
   moveFocus(byId('summaryTitle'), true);
 }

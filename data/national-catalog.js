@@ -1373,6 +1373,116 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-math-9up-1",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九上·一元二次方程",
+      "order": 1,
+      "label": "第二十一章 一元二次方程",
+      "title": "九上数学同步章节卷 · 一元二次方程",
+      "source": "考查范围：人教版九年级上册第二十一章一元二次方程（概念、配方法、公式法、因式分解法、根的判别式、根与系数的关系、实际问题），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-9up-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-9up-2",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九上·二次函数",
+      "order": 2,
+      "label": "第二十二章 二次函数",
+      "title": "九上数学同步章节卷 · 二次函数",
+      "source": "考查范围：人教版九年级上册第二十二章二次函数（图象与性质、平移、待定系数法、与一元二次方程的关系、实际问题与最值），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-9up-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-9up-3",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九上·旋转",
+      "order": 3,
+      "label": "第二十三章 旋转",
+      "title": "九上数学同步章节卷 · 旋转",
+      "source": "考查范围：人教版九年级上册第二十三章旋转（旋转的性质、中心对称、关于原点对称的点的坐标、旋转作图与旋转构造全等），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-9up-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-9up-4",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九上·圆",
+      "order": 4,
+      "label": "第二十四章 圆",
+      "title": "九上数学同步章节卷 · 圆",
+      "source": "考查范围：人教版九年级上册第二十四章圆（垂径定理、圆周角、点和直线与圆的位置关系、切线、正多边形和圆、弧长和扇形面积、圆锥），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-9up-4.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-math-9up-5",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-up",
+      "unit": "九上·概率初步",
+      "order": 5,
+      "label": "第二十五章 概率初步",
+      "title": "九上数学同步章节卷 · 概率初步",
+      "source": "考查范围：人教版九年级上册第二十五章概率初步（随机事件、概率的意义、列举法求概率、用频率估计概率），按期中期末题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-math-9up-5.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "xsc-chinese-1",
       "subject": "chinese",
       "subjectLabel": "语文",
