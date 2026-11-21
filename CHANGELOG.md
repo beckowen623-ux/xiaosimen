@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 中考演示视频压缩（main）
+- `assets/video/zhongkao-demo.mp4` 重新编码（H.264 CRF 30、faststart），11.3 MB → 3.5 MB，时长不变（43 秒），画面文字清晰。手机流量下打开更快。
+- `promo-video/src/Kaozheng.tsx`、`capture-kaozheng.cjs` 已加备考计划片段（考证视频 39 秒）。
+
 ## 2026-11-21 · Claude Code · 同步章节卷：九下物理信息与能源（main）
 - 新增 `zz-sync-physics-9down-3.json`（unit“九年级·信息与能源”）：信息的传递、能源与可持续发展两章合一套。物理同步卷补齐为 19 套。
 - 之前的更新记录写“物理八上到九下 18 章全部上线”，实际缺这两章；更新记录和主页文案一起改为“19 套全部上线”。同步章节卷共 63 套。
