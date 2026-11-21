@@ -517,7 +517,7 @@ input[type=search]::placeholder { color: #67736c; }
 .weekly-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 8px; margin: 10px 0 12px; }
 .weekly-num { min-height: 42px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 700; }
 .weekly-num[aria-pressed="true"] { background: var(--bad); border-color: var(--bad); color: #fff; }
-.subject-sections { display: grid; gap: 10px; }
+.subject-sections { display: grid; gap: 10px; margin-top: 18px; }
 .subject-section, .x4m-group { padding: 0 18px; }
 .subject-section > summary, .x4m-group > summary { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 16px 0; list-style: none; }
 .subject-section > summary::-webkit-details-marker, .x4m-group > summary::-webkit-details-marker { display: none; }
