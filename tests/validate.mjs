@@ -438,7 +438,7 @@ else {
         if (!q.stem || !q.stem.trim()) fail(`${q.id}: 题干为空`);
         if (q.type === 'blank') {
           blankN++;
-          const slots = q.stem.split('____').length - 1;
+          const slots = q.stem.split(/_{4,}/).length - 1;
           if (!slots || slots !== q.blanks.length) fail(`${q.id}: 空格数 ${slots} 与答案数 ${q.blanks.length} 不一致`);
           q.blanks.forEach((alts, i) => {
             if (!alts.every(a => a.trim())) fail(`${q.id}: 第 ${i + 1} 空有空答案`);
@@ -471,6 +471,25 @@ for (const s of subjects) {
 }
 const total = subjects.reduce((a, s) => a + (banks[s] ? banks[s].questions.length : 0), 0);
 console.log(`合计: ${total} 道 + 每日一题 ${daily ? daily.questions.length : 0} 道`);
+
+// 全国卷 / 同步卷 / 小升初卷 / 精编卷里的填空题：题干空格数（连续 4 个及以上下划线算一个空）必须等于答案数，
+// 否则手机做题页 renderBlank 会因为缺答案而报错（2026-11-21 线上 382 道填空题曾因此打不开）。
+{
+  const dir = path.join(root, 'data', 'national');
+  const nctx = { window: {} };
+  vm.createContext(nctx);
+  for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.js'))) vm.runInContext(fs.readFileSync(path.join(dir, f), 'utf8'), nctx);
+  let nBlank = 0;
+  for (const [pid, qs] of Object.entries(nctx.window.NATIONAL_PAPERS || {})) {
+    for (const q of qs) {
+      if (q.type !== 'blank') continue;
+      nBlank++;
+      const slots = String(q.stem).split(/_{4,}/).length - 1;
+      if (!Array.isArray(q.blanks) || slots !== q.blanks.length) fail(`${pid} 第 ${q.number} 题: 空格数 ${slots} 与答案数 ${q.blanks?.length} 不一致`);
+    }
+  }
+  console.log(`试卷填空题: ${nBlank} 道，空格数与答案数一致`);
+}
 
 if (errors.length) {
   console.error(`\nFAIL: ${errors.length} 个错误`);
