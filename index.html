@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="./referrals.css?v=1">
   <link rel="stylesheet" href="./national-exams.css?v=1">
   <script src="./referrals.js?v=3" defer></script>
-  <script src="./share-offer.js?v=2" defer></script>
+  <script src="./share-offer.js?v=3" defer></script>
   <script src="./national-exams.js?v=1" defer></script>
   <script src="./app.js?v=14" defer></script>
 </head>
@@ -115,7 +115,8 @@
         <input type="text" id="accessCode" maxlength="64" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required>
         <button class="btn primary" type="submit">兑换</button>
       </div>
-      <label class="referral-input">邀请码（好友价 14.9 买的必填，原价可不填）<input id="inviteCode" type="text" maxlength="13" autocomplete="off" autocapitalize="characters"></label>
+      <details class="referral-fold" id="inviteFold"><summary>按好友价 14.9 买的？点这里填邀请码</summary>
+      <label class="referral-input">邀请码（ALIX- 开头，问邀请你的朋友要；原价、分享价买的不用填）<input id="inviteCode" type="text" maxlength="13" autocomplete="off" autocapitalize="characters"></label></details>
     </form>
     <p id="redeemMessage" class="muted" role="status"></p>
   </dialog>

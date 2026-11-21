@@ -661,6 +661,7 @@ const redeemForm = byId('redeemForm');
 const redeemMessage = byId('redeemMessage');
 const inviteInput = byId('inviteCode');
 inviteInput.value = window.QuizReferrals?.incoming() || '';
+if (inviteInput.value) byId('inviteFold')?.setAttribute('open', '');
 const visitorSource = new URL(location.href).searchParams.get('from') || 'direct';
 
 function isTrialQuestion(q) {
@@ -845,6 +846,7 @@ redeemForm.addEventListener('submit', async event => {
         UNAVAILABLE: '兑换服务暂时不可用，请稍后再试。',
       };
       redeemMessage.textContent = messages[data.reason] || '兑换失败，请稍后再试。';
+      if (data.reason === 'REFERRAL_REQUIRED' || data.reason === 'INVALID_REFERRAL') byId('inviteFold')?.setAttribute('open', '');
       return;
     }
     paidAccess = true;

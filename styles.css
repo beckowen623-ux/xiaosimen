@@ -667,3 +667,6 @@ input[type=search]::placeholder { color: #67736c; }
 .slim-notice p { margin: 0; font-size: 13px; line-height: 1.6; }
 .slim-notice .btn { flex: none; white-space: nowrap; }
 .update-card > summary b { white-space: nowrap; }
+.referral-fold { margin-top: 10px; }
+.referral-fold > summary { color: var(--muted); font-size: 14px; cursor: pointer; }
+.referral-fold[open] > summary { margin-bottom: 6px; }
