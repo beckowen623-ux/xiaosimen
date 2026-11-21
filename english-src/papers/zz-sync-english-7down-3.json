@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-7down-3",
+  "sync": true,
+  "stage": "7-down",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "七下英语同步章节卷 · Units 5–6",
+  "label": "Units 5–6 Here and Now · Rain or Shine",
+  "unit": "七下·Units 5–6 Here and Now / Rain or Shine",
+  "order": 3,
+  "source": "人教版七年级下册 Unit 5 Here and Now、Unit 6 Rain or Shine：现在进行时（构成、-ing 拼写、问答）、打电话用语、天气表达（How's the weather? / What's the weather like?）、名词变形容词（sun→sunny）、时差常识。按初一单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "Look! The children ______ kites in the park.", "options": ["fly", "flies", "are flying", "is flying"], "answer": "C", "kp": "现在进行时", "exp": "Look! 提示正在发生，用现在进行时；主语 children 是复数，用 are flying。"},
+        {"n": 2, "stem": "—What's your mother doing?\n—She ______ in the kitchen.", "options": ["is cooking", "cooks", "cook", "cooking"], "answer": "A", "kp": "现在进行时", "exp": "问“正在做什么”，用现在进行时 be＋doing。坑点：只写 cooking 漏了 is。"},
+        {"n": 3, "stem": "—What's the weather like in Harbin?\n—It's very cold and ______. The children are making snowmen.", "options": ["rainy", "windy", "cloudy", "snowy"], "answer": "D", "kp": "天气表达", "exp": "孩子们在堆雪人，说明在下雪 snowy。"},
+        {"n": 4, "stem": "It's raining outside. Take an ______ with you.", "options": ["umbrella", "orange", "egg", "apple"], "answer": "A", "kp": "词汇", "exp": "下雨了，带把伞。"},
+        {"n": 5, "stem": "—Hello, may I speak to Jenny?\n—______", "options": ["I'm Jenny.", "Jenny is me.", "This is Jenny speaking.", "Who are you?"], "answer": "C", "kp": "交际用语", "exp": "打电话时说“我就是”用 This is ... (speaking)，不说 I'm ...。"},
+        {"n": 6, "stem": "Listen! Someone ______ the piano next door.", "options": ["plays", "is playing", "play", "played"], "answer": "B", "kp": "现在进行时", "exp": "Listen! 提示正在发生；someone 作主语按单数，用 is playing。"},
+        {"n": 7, "stem": "The boys are ______ in the river. It's a hot day.", "options": ["swim", "swims", "swiming", "swimming"], "answer": "D", "kp": "现在进行时", "exp": "swim 是重读闭音节，结尾只有一个辅音字母，要双写 m 再加 -ing。"},
+        {"n": 8, "stem": "—Are your parents watching TV?\n—No, ______. They're reading in the study.", "options": ["they don't", "they are", "they aren't", "we aren't"], "answer": "C", "kp": "现在进行时", "exp": "Are ...? 用 be 回答；后面说在看书，用否定 they aren't。"},
+        {"n": 9, "stem": "It's a ______ day today. Let's go to the beach.", "options": ["sun", "rain", "rainy", "sunny"], "answer": "D", "kp": "天气表达", "exp": "修饰名词 day 用形容词；去海滩说明是晴天 sunny。sun 是名词。"},
+        {"n": 10, "stem": "—Hi, Mike. How's it going?\n—______", "options": ["Not bad.", "It's sunny.", "I'm going to school.", "Yes, it is."], "answer": "A", "kp": "交际用语", "exp": "How's it going? 是问候“近来怎么样”，回答 Not bad / Great 等。"},
+        {"n": 11, "stem": "It's 8 p.m. in Beijing, so it's 7 a.m. in New York. Many people there ______ breakfast now.", "options": ["is having", "are having", "have had", "having"], "answer": "B", "kp": "现在进行时", "exp": "now 提示进行时；主语 people 是复数，用 are having。"},
+        {"n": 12, "stem": "What about ______ to the museum this afternoon?", "options": ["go", "goes", "going", "to go"], "answer": "C", "kp": "动词形式", "exp": "What about doing sth.? 提建议，about 是介词，后接 -ing。"},
+        {"n": 13, "stem": "—What are you doing?\n—I'm waiting ______ the bus.", "options": ["at", "for", "to", "on"], "answer": "B", "kp": "固定搭配", "exp": "wait for sb. / sth. 等候某人或某物。"},
+        {"n": 14, "stem": "The weather in Kunming is nice. It's warm ______ winter and cool ______ summer.", "options": ["in; in", "on; on", "at; at", "in; on"], "answer": "A", "kp": "介词", "exp": "季节前用 in：in winter、in summer。"},
+        {"n": 15, "stem": "—I'm going to the park with my friends. The weather is perfect.\n—______", "options": ["Here you are.", "That's too bad.", "You're welcome.", "Have a good time!"], "answer": "D", "kp": "交际用语", "exp": "别人要去玩，祝对方玩得开心：Have a good time!"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "A Postcard from Sydney",
+      "passage": "Dear Mom and Dad,\nI'm having a great time in Sydney with my aunt. It's July now, so it's winter (16). But it's not (17) like winter in Harbin. It's about 15 degrees. Today it's (18), so we can't go to the beach. We are staying at home.\nRight now, my aunt is (19) dinner in the kitchen. It smells good! My cousin Lucy is (20) the piano, and her little brother is playing with his toy cars. Uncle Bob is not at home. He is (21) in his office. He often works on weekends.\nI'm (22) this postcard to you in the living room. Outside, people are walking in the rain with their (23). Some children are jumping in the water and laughing.\nThe weather report says it will be (24) tomorrow. Then we can go to the zoo and see the koalas. I miss you (25)!\nLove,\nMary",
+      "items": [
+        {"n": 16, "options": ["there", "here", "again", "too"], "answer": "B", "kp": "上下文", "exp": "七月在悉尼（南半球）是冬天，写信人就在悉尼，用 here。"},
+        {"n": 17, "options": ["hot", "sunny", "cold", "dry"], "answer": "C", "kp": "上下文", "exp": "大约 15 度，不像哈尔滨的冬天那么冷。"},
+        {"n": 18, "options": ["sunny", "rainy", "hot", "snowy"], "answer": "B", "kp": "天气表达", "exp": "后文说人们在雨中走，今天下雨 rainy，所以去不了海滩。"},
+        {"n": 19, "options": ["eating", "buying", "cooking", "washing"], "answer": "C", "kp": "上下文", "exp": "在厨房、闻起来很香，阿姨在做饭。"},
+        {"n": 20, "options": ["reading", "singing", "watching", "playing"], "answer": "D", "kp": "固定搭配", "exp": "play the piano 弹钢琴。"},
+        {"n": 21, "options": ["working", "sleeping", "shopping", "swimming"], "answer": "A", "kp": "上下文", "exp": "在办公室，且后一句说他周末常工作。"},
+        {"n": 22, "options": ["reading", "writing", "buying", "drawing"], "answer": "B", "kp": "上下文", "exp": "正在写这张明信片：write this postcard。"},
+        {"n": 23, "options": ["hats", "books", "bikes", "umbrellas"], "answer": "D", "kp": "上下文", "exp": "在雨中走，带着伞。"},
+        {"n": 24, "options": ["sunny", "rainy", "windy", "snowy"], "answer": "A", "kp": "天气表达", "exp": "明天能去动物园，说明天气好：sunny。"},
+        {"n": 25, "options": ["very well", "very much", "a little", "at all"], "answer": "B", "kp": "固定搭配", "exp": "miss sb. very much 非常想念某人。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Weather Report for Saturday",
+          "passage": "Beijing: Sunny, 2°C to 12°C. A good day for a walk in the park.\nShanghai: Cloudy, 10°C to 16°C.\nGuangzhou: Rainy, 18°C to 23°C. Don't forget your umbrella.\nHarbin: Snowy, -15°C to -6°C. Wear warm clothes.\nLhasa: Sunny and windy, -3°C to 9°C.",
+          "items": [
+            {"n": 26, "stem": "Which city is the warmest on Saturday?", "options": ["Beijing.", "Shanghai.", "Guangzhou.", "Lhasa."], "answer": "C", "kp": "细节理解", "exp": "广州 18–23°C，最高。"},
+            {"n": 27, "stem": "What's the weather like in Shanghai?", "options": ["Sunny.", "Cloudy.", "Rainy.", "Snowy."], "answer": "B", "kp": "细节理解", "exp": "Shanghai: Cloudy。"},
+            {"n": 28, "stem": "People in ______ need umbrellas on Saturday.", "options": ["Guangzhou", "Beijing", "Harbin", "Lhasa"], "answer": "A", "kp": "细节理解", "exp": "广州下雨，Don't forget your umbrella。"},
+            {"n": 29, "stem": "What's the lowest temperature in Harbin?", "options": ["-6°C.", "-3°C.", "2°C.", "-15°C."], "answer": "D", "kp": "细节理解", "exp": "Harbin: -15°C to -6°C，最低 -15°C。"},
+            {"n": 30, "stem": "Which two cities are sunny?", "options": ["Beijing and Shanghai.", "Guangzhou and Harbin.", "Beijing and Lhasa.", "Shanghai and Lhasa."], "answer": "C", "kp": "细节理解", "exp": "Beijing: Sunny；Lhasa: Sunny and windy。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "At the Same Moment",
+          "passage": "It's 8 o'clock on a Saturday evening in January in Beijing. What are people doing around the world right now?\nLi Tao, Beijing: I'm having dinner with my family. My grandma is telling us a funny story. After dinner, I always watch a basketball game on TV.\nSophie, London: It's 12 noon here. I'm at the market with my mother. We're buying fruit and vegetables for lunch. It's cloudy and a little cold.\nBen, New York: It's 7 a.m. here and I'm still in bed! It's Saturday, so I don't have to get up early. My dog is sitting next to me. He wants to go for a walk.\nHana, Sydney: It's 11 p.m. here. I'm reading a book in my bedroom. It's a hot summer night, so the window is open.",
+          "items": [
+            {"n": 31, "stem": "What is Li Tao doing?", "options": ["Watching a basketball game.", "Telling a story.", "Having dinner with his family.", "Buying vegetables."], "answer": "C", "kp": "细节理解", "exp": "I'm having dinner with my family。看球赛是饭后的习惯，不是正在做的事。"},
+            {"n": 32, "stem": "What time is it in London?", "options": ["8 p.m.", "12 noon.", "7 a.m.", "11 p.m."], "answer": "B", "kp": "细节理解", "exp": "Sophie 说 It's 12 noon here。"},
+            {"n": 33, "stem": "Why is Ben still in bed?", "options": ["Because he is ill.", "Because it's Saturday and he doesn't have to get up early.", "Because it's raining.", "Because his dog is sleeping."], "answer": "B", "kp": "细节理解", "exp": "It's Saturday, so I don't have to get up early。"},
+            {"n": 34, "stem": "Why is Hana's window open?", "options": ["Because it's a hot summer night.", "Because she wants to see the stars.", "Because it's windy.", "Because she is cooking."], "answer": "A", "kp": "细节理解", "exp": "It's a hot summer night, so the window is open。一月在南半球是夏天。"},
+            {"n": 35, "stem": "Which of the following is TRUE?", "options": ["Sophie is buying clothes.", "Hana is sleeping.", "It's sunny in London.", "Ben's dog wants to go for a walk."], "answer": "D", "kp": "推理判断", "exp": "He wants to go for a walk。Sophie 买的是水果蔬菜；Hana 在看书；伦敦是阴天。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "A Rainy Sunday",
+      "passage": "It's Sunday today. It's (36) (rain) outside, so my family is at home. My father is (37) (read) a newspaper in the living room. My mother (38) (make) dumplings in the kitchen. My little brother and I (39) (do) our homework at the table. Our cat is (40) (sleep) under the sofa.\nI like rainy days (41) ______ I can stay at home with my family. The weather report says it will be (42) (sun) tomorrow. Then we can go (43) (hike) in the mountains.\nHow about you? (44) ______ is the weather in your city today? Is it (45) (wind)?",
+      "items": [
+        {"n": 36, "answer": "raining", "hint": "rain", "kp": "现在进行时", "exp": "It's raining. 正在下雨，is 后接 -ing。"},
+        {"n": 37, "answer": "reading", "hint": "read", "kp": "现在进行时", "exp": "is 后接 -ing，现在进行时。"},
+        {"n": 38, "answer": "is making", "hint": "make", "kp": "现在进行时", "exp": "空里要补全 be＋doing；make 去 e 加 -ing。"},
+        {"n": 39, "answer": "are doing", "hint": "do", "kp": "现在进行时", "exp": "主语 My little brother and I 是复数，用 are doing。"},
+        {"n": 40, "answer": "sleeping", "hint": "sleep", "kp": "现在进行时", "exp": "is 后接 -ing。"},
+        {"n": 41, "answer": "because", "kp": "连词", "exp": "喜欢雨天的原因是能和家人待在家里。"},
+        {"n": 42, "answer": "sunny", "hint": "sun", "kp": "天气表达", "exp": "be 后接形容词，sun→sunny，双写 n 加 -y。"},
+        {"n": 43, "answer": "hiking", "hint": "hike", "kp": "动词形式", "exp": "go doing 去做某事：go hiking 去远足。"},
+        {"n": 44, "answer": "How", "kp": "天气表达", "exp": "How is the weather ...? 问天气；What 要说 What's the weather like?"},
+        {"n": 45, "answer": "windy", "hint": "wind", "kp": "天气表达", "exp": "be 后接形容词，wind→windy。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "现在是星期六上午 10 点。请以“Here and Now”为题写一篇短文，描述此刻：1. 你所在城市的天气；2. 至少三位家人（或朋友）正在做什么；3. 你正在做什么，心情怎样。要求：60 词左右，题目已给出，不计入总词数；文中不得出现真实姓名和校名。\nHere and Now",
+      "points": [["描述天气", 3], ["写出至少三人正在做的事", 6], ["写出自己正在做什么和心情", 2], ["语言正确（现在进行时 be＋doing、-ing 拼写、天气形容词），书写规范", 4]],
+      "sample": "Here and Now\nIt's 10 o'clock on Saturday morning. It's sunny and warm in my city today.\nMy family is at home. My grandpa is watering the flowers on the balcony. My mother is cleaning the kitchen, and my father is washing the car outside. My little sister is playing with her dog.\nI'm sitting in my room and writing this passage. Later I'm going to play badminton with my friends. I'm very happy now!",
+      "exp": "写完检查：每个“正在做”都要有 be（am / is / are）；swim→swimming、make→making 这类 -ing 拼写；天气用形容词 sunny、rainy、windy、cloudy、snowy。"
+    }
+  ]
+}

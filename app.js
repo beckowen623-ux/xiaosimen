@@ -1169,6 +1169,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '同步章节卷新增七下英语 4 套：Units 1–2 Animal Friends / No Rules, No Order、Units 3–4 Keep Fit / Eat Well、Units 5–6 Here and Now / Rain or Shine、Units 7–8 A Day to Remember / Once upon a Time。每套 46 题 100 分，单选、完形、阅读、短文填空、书面表达（带范文和评分要点），短文全部原创，前 5 题免费试做。'],
   ['2026-11-21', '同步章节卷化学全册上线：九上 7 个单元（走进化学世界到燃料及其利用）＋九下 5 套（金属和金属材料、溶液、常见的酸和碱、盐和化肥、化学与生活），每套 100 分，实验探究题写清现象和结论，计算题按规范格式写全，前 5 题免费试做。'],
   ['2026-11-21', '同步章节卷新增九下物理 2 章：生活用电、电与磁。至此物理八上到九下 18 章全部上线，前 5 题免费试做。'],
   ['2026-11-21', '同步章节卷新增九上物理 5 章：内能与热机、电流和电路、电压电阻、欧姆定律、电功率，电路题用文字写清连接方式，计算题写全步骤，前 5 题免费试做。'],
@@ -1419,7 +1420,7 @@ function paperFromQuestions(title, questions, note = '') {
   const nums = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'];
   // 早鸟卷、小升初卷按真实试卷写明每大题分值
   const scoreNote = qs => {
-    if (!qs.every(q => q.earlybird)) return note;
+    if (!qs.every(q => q.earlybird || q.sync)) return note;
     const objective = qs.filter(q => q.type !== 'essay');
     const total = Math.round(qs.reduce((s, q) => s + (q.type === 'essay' ? q.score || 0 : q.paperScore || 0), 0) * 10) / 10;
     const each = objective.length === qs.length && new Set(objective.map(q => q.paperScore)).size === 1 ? objective[0].paperScore : 0;

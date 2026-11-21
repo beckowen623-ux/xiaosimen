@@ -2,6 +2,12 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 同步章节卷：七下英语 4 套；打印卷显示分值（main）
+- 新增 `zz-sync-english-7down-1..4.json`（人教版 2024 新教材七下，两单元一套）：Units 1–2 Animal Friends / No Rules, No Order、3–4 Keep Fit / Eat Well、5–6 Here and Now / Rain or Shine、7–8 A Day to Remember / Once upon a Time。题型同七上小升初英语卷：单选 15×2、完形 10×1.5、阅读 2 篇 10×2.5、短文填空 10×1.5、书面表达 15，共 46 题 100 分。短文原创；阅读 B（屠呦呦）只用公开的生平事实。答案字母手工分布，每节 A–D 各 2–4 个，没有跑打散脚本。
+- 修正：`paperFromQuestions` 的 `scoreNote` 原来只对早鸟卷生效，同步章节卷打印时各大题没有“每题 X 分，共 Y 分”；条件改为 `q.earlybird || q.sync`。
+- 同步章节卷共 58 套（数学 24、物理 18、化学 12、英语 4）。
+- 验证：build 通过、`node tests/validate.mjs` 通过；本地预览七下同步卷出现“数学 / 英语”两个标签，手机宽度排版正常；英语、化学同步卷打印分值合计都是 100。
+
 ## 2026-11-21 · Claude Code · 同步章节卷：九下化学 5 套，化学全册齐全（main）
 - 新增 `zz-sync-chemistry-9down-1..5.json`：金属和金属材料、溶液、常见的酸和碱、盐和化肥、化学与生活。酸和碱、盐和化肥两套同属 unit“第十、十一单元·酸碱盐”（order 3、4）。同步章节卷共 54 套（数学 24、物理 18、化学 12）。
 - kp 细化（金属的化学性质、铁的冶炼、溶质质量分数、中和反应、复分解反应、化学肥料等），并补进 `tools/units.mjs` 对应单元，以后真题也能直接归章。

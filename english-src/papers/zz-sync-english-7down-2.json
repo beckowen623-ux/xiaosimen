@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-7down-2",
+  "sync": true,
+  "stage": "7-down",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "七下英语同步章节卷 · Units 3–4",
+  "label": "Units 3–4 Keep Fit · Eat Well",
+  "unit": "七下·Units 3–4 Keep Fit / Eat Well",
+  "order": 2,
+  "source": "人教版七年级下册 Unit 3 Keep Fit、Unit 4 Eat Well：运动与健康、can 表能力、how often 与频度副词、be good at doing、可数与不可数名词、some / any、how many / how much、健康饮食建议。按初一单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "—______ do you exercise?\n—Three times a week.", "options": ["How long", "How often", "How many", "How much"], "answer": "B", "kp": "特殊疑问句", "exp": "回答的是频率（一周三次），用 how often 提问。"},
+        {"n": 2, "stem": "Lily ______ eats junk food because she thinks it's bad for her health.", "options": ["always", "usually", "often", "never"], "answer": "D", "kp": "频度副词", "exp": "她认为垃圾食品对健康不好，所以从不吃：never。"},
+        {"n": 3, "stem": "Tom is good at ______ basketball. He is in the school team.", "options": ["play", "plays", "playing", "to play"], "answer": "C", "kp": "动词形式", "exp": "be good at 中的 at 是介词，后接动词 -ing 形式。"},
+        {"n": 4, "stem": "—Can you swim?\n—______. I'm in the swimming club.", "options": ["Yes, I can", "No, I can't", "Yes, I do", "No, I don't"], "answer": "A", "kp": "情态动词", "exp": "Can 提问用 can 回答；参加了游泳俱乐部，肯定会游泳。"},
+        {"n": 5, "stem": "There ______ some milk and two eggs on the table.", "options": ["are", "is", "be", "have"], "answer": "B", "kp": "there be 句型", "exp": "就近原则：离 be 最近的是不可数名词 milk，用 is。"},
+        {"n": 6, "stem": "—How ______ eggs do you eat every day?\n—Two.", "options": ["much", "long", "many", "often"], "answer": "C", "kp": "可数与不可数名词", "exp": "eggs 是可数名词复数，问数量用 how many。how much 问不可数名词的量或价格。"},
+        {"n": 7, "stem": "I'm thirsty. I'd like a glass of ______.", "options": ["eggs", "milk", "apples", "bread"], "answer": "B", "kp": "可数与不可数名词", "exp": "a glass of 一杯，后接饮料。bread 不能论杯。"},
+        {"n": 8, "stem": "Eating too much junk food is bad ______ our health.", "options": ["for", "at", "to", "with"], "answer": "A", "kp": "固定搭配", "exp": "be bad for 对……有害；be good for 对……有益。"},
+        {"n": 9, "stem": "—Would you like some orange juice?\n—______. I'm really thirsty.", "options": ["No, thanks", "Yes, I would", "Yes, please", "I like it"], "answer": "C", "kp": "交际用语", "exp": "接受别人提供的东西用 Yes, please。坑点：Would you like ...? 不用 Yes, I would 回答。"},
+        {"n": 10, "stem": "Is there ______ bread in the fridge? I'm hungry.", "options": ["any", "some", "a", "many"], "answer": "A", "kp": "可数与不可数名词", "exp": "一般疑问句中用 any；bread 不可数，不能用 a 或 many。坑点：表示请求、建议的问句（Would you like ...?）才用 some。"},
+        {"n": 11, "stem": "Doing sports every day can help us ______ healthy.", "options": ["keeps", "keeping", "kept", "keep"], "answer": "D", "kp": "动词形式", "exp": "help sb. (to) do sth.，后接动词原形。"},
+        {"n": 12, "stem": "It's important to have a ______ diet. Eat more vegetables and less meat.", "options": ["delicious", "balanced", "hungry", "expensive"], "answer": "B", "kp": "词汇", "exp": "多吃蔬菜少吃肉，是均衡的饮食 a balanced diet。"},
+        {"n": 13, "stem": "My sister doesn't like vegetables, ______ she eats some every day for her health.", "options": ["so", "because", "or", "but"], "answer": "D", "kp": "连词", "exp": "不喜欢，却每天吃一些，前后转折，用 but。"},
+        {"n": 14, "stem": "—I often feel tired these days.\n—You should ______ more exercise and go to bed early.", "options": ["do", "does", "doing", "to do"], "answer": "A", "kp": "情态动词", "exp": "should 后接动词原形。"},
+        {"n": 15, "stem": "—Let's play ping-pong after school.\n—______ I love it!", "options": ["I'm sorry to hear that.", "You're welcome.", "That's a good idea.", "It doesn't matter."], "answer": "C", "kp": "交际用语", "exp": "回应别人的提议并表示赞同，用 That's a good idea。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "Jim's New Plan",
+      "passage": "Jim is a 13-year-old boy. He loves eating hamburgers and drinking cola, but he (16) eats vegetables. After school, he plays computer games for hours. He doesn't like sports at all, so he is not very (17). He often feels tired in class.\nOne day, his mother takes him to see a doctor. The doctor says, \"You need to change your (18). Eat more fruit and vegetables, and drink more (19) instead of cola. Also, you should exercise at least three (20) a week.\"\nNow Jim has a new plan. He has milk, an egg and some bread for (21) every morning. He eats junk food only once a week. After school, he (22) basketball with his friends for an hour. On weekends, he goes swimming with his dad. He is (23) at swimming now, and he can swim 500 metres!\nJim feels much better these days. He isn't tired in class any more, and his grades are getting (24). He says, \"Healthy food and sports (25) me happy every day.\"",
+      "items": [
+        {"n": 16, "options": ["always", "often", "never", "usually"], "answer": "C", "kp": "频度副词", "exp": "but 表转折：爱吃汉堡、喝可乐，却从不吃蔬菜。"},
+        {"n": 17, "options": ["busy", "healthy", "careful", "quiet"], "answer": "B", "kp": "上下文", "exp": "完全不运动，所以不太健康；后面说上课常觉得累。"},
+        {"n": 18, "options": ["habits", "school", "friends", "name"], "answer": "A", "kp": "上下文", "exp": "医生让他改变的是生活习惯 habits，后面都是饮食、运动建议。"},
+        {"n": 19, "options": ["coffee", "soup", "oil", "water"], "answer": "D", "kp": "上下文", "exp": "多喝水代替可乐：drink more water instead of cola。"},
+        {"n": 20, "options": ["times", "days", "hours", "weeks"], "answer": "A", "kp": "上下文", "exp": "一周至少锻炼三次：three times a week。"},
+        {"n": 21, "options": ["lunch", "dinner", "breakfast", "supper"], "answer": "C", "kp": "上下文", "exp": "every morning，早餐 breakfast。"},
+        {"n": 22, "options": ["watches", "plays", "buys", "makes"], "answer": "B", "kp": "上下文", "exp": "放学后和朋友打篮球一小时：play basketball。"},
+        {"n": 23, "options": ["bad", "afraid", "sorry", "good"], "answer": "D", "kp": "固定搭配", "exp": "能游 500 米，说明擅长游泳：be good at。"},
+        {"n": 24, "options": ["worse", "lower", "better", "fewer"], "answer": "C", "kp": "上下文", "exp": "身体好了、上课不累了，成绩也越来越好。"},
+        {"n": 25, "options": ["make", "let", "ask", "want"], "answer": "A", "kp": "固定搭配", "exp": "make sb.＋形容词：使某人……。let 后接动词原形，不能接 happy。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Sunshine Sports Centre",
+          "passage": "Open: 6:00 a.m.–9:00 p.m. every day\nSwimming: ¥30 a time (children under 12: ¥15)\nBadminton: ¥40 an hour for one court\nYoga Class: Tuesday and Thursday, 7:00–8:00 p.m., ¥50 a class\nKids' Basketball Club: Saturday, 9:00–11:00 a.m., for children aged 8–14, ¥200 for 10 classes\nNotes: Please wear sports shoes. Don't bring food into the gym.",
+          "items": [
+            {"n": 26, "stem": "How much does a 10-year-old boy pay to go swimming?", "options": ["¥15.", "¥30.", "¥40.", "¥50."], "answer": "A", "kp": "细节理解", "exp": "children under 12: ¥15，10 岁按儿童价。"},
+            {"n": 27, "stem": "When can people take a yoga class?", "options": ["On Saturday morning.", "Every day.", "On Tuesday and Thursday evenings.", "On Monday afternoon."], "answer": "C", "kp": "细节理解", "exp": "Tuesday and Thursday, 7:00–8:00 p.m.。"},
+            {"n": 28, "stem": "Who can join the Kids' Basketball Club?", "options": ["A 6-year-old boy.", "A 16-year-old boy.", "A 20-year-old woman.", "A 12-year-old girl."], "answer": "D", "kp": "推理判断", "exp": "for children aged 8–14，只有 12 岁符合。"},
+            {"n": 29, "stem": "Mr. and Mrs. Li play badminton on one court for two hours. How much do they pay?", "options": ["¥40.", "¥80.", "¥160.", "¥30."], "answer": "B", "kp": "推理判断", "exp": "按场地按小时收费：40×2＝80（元）。坑点：按人头算会得出 160 元。"},
+            {"n": 30, "stem": "What mustn't people do at the sports centre?", "options": ["Wear sports shoes.", "Take a yoga class.", "Bring food into the gym.", "Go swimming at 7:00 a.m."], "answer": "C", "kp": "细节理解", "exp": "Don't bring food into the gym。早上 6 点就开门，7 点可以游泳。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Eat a Rainbow",
+          "passage": "Do you know the saying \"Eat a rainbow\"? It means we should eat fruit and vegetables of different colours every day.\nRed food, like tomatoes and strawberries, is good for our hearts. Orange and yellow food, like carrots and oranges, is good for our eyes. Green food, like broccoli and spinach, makes our bones strong. Blue and purple food, like grapes and eggplants, helps our memory.\nMany children don't like vegetables. Here are some tips for parents. First, let children help in the kitchen. When they cook the vegetables themselves, they are happy to eat them. Second, make food look fun. For example, cut fruit into the shapes of animals. Third, don't give up. Some children need to try a new food ten times before they like it.\nRemember, no single food has everything our bodies need. So eat a rainbow every day!",
+          "items": [
+            {"n": 31, "stem": "What does \"Eat a rainbow\" mean?", "options": ["Eat only red food.", "Eat fruit and vegetables of different colours.", "Eat food after it rains.", "Eat a lot of sweet food."], "answer": "B", "kp": "细节理解", "exp": "It means we should eat fruit and vegetables of different colours every day。"},
+            {"n": 32, "stem": "Which food is good for our eyes?", "options": ["Carrots.", "Tomatoes.", "Broccoli.", "Grapes."], "answer": "A", "kp": "细节理解", "exp": "Orange and yellow food, like carrots and oranges, is good for our eyes。"},
+            {"n": 33, "stem": "Which food helps our memory?", "options": ["Strawberries.", "Spinach.", "Oranges.", "Grapes."], "answer": "D", "kp": "细节理解", "exp": "Blue and purple food, like grapes and eggplants, helps our memory。"},
+            {"n": 34, "stem": "How many tips does the writer give to parents?", "options": ["Two.", "Four.", "Three.", "Five."], "answer": "C", "kp": "细节理解", "exp": "First、Second、Third，共三条。"},
+            {"n": 35, "stem": "Why does the writer tell parents \"don't give up\"?", "options": ["Because vegetables are cheap.", "Because children like cooking.", "Because fruit looks like animals.", "Because some children need to try a new food many times before they like it."], "answer": "D", "kp": "推理判断", "exp": "Some children need to try a new food ten times before they like it。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Healthy Life",
+      "passage": "Hello, I'm Anna. I think I have a healthy life. I eat three (36) (meal) a day. For breakfast, I usually have some bread, an egg and a glass of (37) m______. I eat lots of vegetables, but I don't eat (38) ______ junk food.\nI also exercise every day. I'm good at (39) (run), and I'm in the school running club. I go swimming (40) (two) a week. I go to bed early (41) ______ I want to have enough sleep.\nMy father (42) (not like) sports. I often ask him to go for a walk with me after dinner. Now he (43) (walk) with me every evening. He says walking is (44) (real) relaxing. I think eating well and exercising can help us (45) (stay) healthy.",
+      "items": [
+        {"n": 36, "answer": "meals", "hint": "meal", "kp": "名词复数", "exp": "three 后接可数名词复数 meals。"},
+        {"n": 37, "answer": "milk", "hint": "首字母 m", "kp": "可数与不可数名词", "exp": "a glass of milk 一杯牛奶。"},
+        {"n": 38, "answer": "any / much", "kp": "可数与不可数名词", "exp": "否定句中用 any；junk food 不可数，也可以说 not much。"},
+        {"n": 39, "answer": "running", "hint": "run", "kp": "动词形式", "exp": "be good at doing；run 要双写 n 再加 -ing。"},
+        {"n": 40, "answer": "twice", "hint": "two", "kp": "词汇", "exp": "两次用 twice，三次以上用“基数词＋times”。"},
+        {"n": 41, "answer": "because", "kp": "连词", "exp": "早睡的原因是想睡够觉，用 because。"},
+        {"n": 42, "answer": "doesn't like / does not like", "hint": "not like", "kp": "一般现在时", "exp": "主语 My father 是第三人称单数，一般现在时否定用 doesn't＋动词原形。"},
+        {"n": 43, "answer": "walks", "hint": "walk", "kp": "一般现在时", "exp": "every evening 表示经常性动作，主语 he，用 walks。"},
+        {"n": 44, "answer": "really", "hint": "real", "kp": "词性转换", "exp": "修饰形容词 relaxing 用副词 really。"},
+        {"n": 45, "answer": "stay / to stay", "hint": "stay", "kp": "动词形式", "exp": "help sb. (to) do sth.。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "学校英语角正在开展“健康生活”主题活动。请以“My Healthy Habits”为题写一篇短文：1. 你的饮食习惯（早餐吃什么、喜欢哪些健康食物、怎样对待垃圾食品）；2. 你的运动习惯（做什么运动、多久一次）；3. 给同学们提一条健康建议。要求：60 词左右，题目已给出，不计入总词数；文中不得出现真实姓名和校名。\nMy Healthy Habits",
+      "points": [["写出饮食习惯", 4], ["写出运动习惯（含频率）", 4], ["提出一条健康建议", 3], ["语言正确（频度副词、how often 类表达、可数与不可数名词），书写规范", 4]],
+      "sample": "My Healthy Habits\nI think I have healthy habits. I always eat breakfast. I usually have an egg, some bread and a glass of milk. I like fruit and vegetables very much, and I hardly ever eat junk food.\nI exercise every day. I play basketball with my friends three times a week, and I go swimming on weekends.\nHere is my advice: eat a balanced diet and exercise every day. Then you can keep fit and study well.",
+      "exp": "写完检查：频度副词放在 be 动词之后、实义动词之前；milk、bread、food 不可数，不加 -s；“一周三次”是 three times a week。"
+    }
+  ]
+}

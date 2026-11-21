@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-7down-1",
+  "sync": true,
+  "stage": "7-down",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "七下英语同步章节卷 · Units 1–2",
+  "label": "Units 1–2 Animal Friends · No Rules, No Order",
+  "unit": "七下·Units 1–2 Animal Friends / No Rules, No Order",
+  "order": 1,
+  "source": "人教版七年级下册 Unit 1 Animal Friends、Unit 2 No Rules, No Order：描述动物、why/because、特殊名词复数、规则表达（must / mustn't / have to / can't）、祈使句、be strict with / be kind to。按初一单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "—Why do you like pandas?\n—______ they're very cute and a little shy.", "options": ["So", "Because", "But", "And"], "answer": "B", "kp": "特殊疑问句", "exp": "Why 提问，用 because 回答原因。"},
+        {"n": 2, "stem": "Look at the two ______ on the hill. They are white and soft.", "options": ["sheeps", "wolf", "sheep", "horse"], "answer": "C", "kp": "名词复数", "exp": "sheep 单复数同形，two sheep。wolf、horse 是单数，不能跟在 two 后面。坑点：没有 sheeps 这个词。"},
+        {"n": 3, "stem": "Elephants are very ______. They can remember their friends for many years.", "options": ["lazy", "scary", "shy", "smart"], "answer": "D", "kp": "词汇", "exp": "能记住朋友很多年，说明聪明 smart。"},
+        {"n": 4, "stem": "—______ are koalas from?\n—They're from Australia.", "options": ["Where", "What", "Why", "How"], "answer": "A", "kp": "特殊疑问句", "exp": "回答的是地点，用 where 提问：Where are ... from?"},
+        {"n": 5, "stem": "In our school, we ______ wear a school uniform from Monday to Friday. It's a rule.", "options": ["can", "has to", "don't have to", "have to"], "answer": "D", "kp": "情态动词", "exp": "主语 we，用 have to；has to 用于第三人称单数。规定要做的事，不能用 don't have to。"},
+        {"n": 6, "stem": "______ run in the hallways. It's dangerous.", "options": ["Don't", "Not", "No", "Doesn't"], "answer": "A", "kp": "祈使句", "exp": "祈使句的否定形式：Don't＋动词原形。"},
+        {"n": 7, "stem": "—Must we finish the report today?\n—No, you ______. You can finish it tomorrow.", "options": ["mustn't", "can't", "don't have to", "shouldn't"], "answer": "C", "kp": "情态动词", "exp": "Must ...? 的否定回答用 needn't 或 don't have to（不必）。坑点：mustn't 是“禁止”，意思完全不同。"},
+        {"n": 8, "stem": "My mother is strict ______ me. I can't play computer games on school nights.", "options": ["to", "with", "at", "for"], "answer": "B", "kp": "固定搭配", "exp": "be strict with sb. 对某人要求严格。"},
+        {"n": 9, "stem": "Tom has to ______ his bed every morning before he leaves home.", "options": ["makes", "making", "make", "to make"], "answer": "C", "kp": "情态动词", "exp": "have / has to 后接动词原形。"},
+        {"n": 10, "stem": "We should be kind ______ animals. They are our friends.", "options": ["of", "with", "at", "to"], "answer": "D", "kp": "固定搭配", "exp": "be kind to sb. / sth. 对……友好。"},
+        {"n": 11, "stem": "—Can we eat in the classroom?\n—______. We can only eat in the dining hall.", "options": ["No, we can't", "Yes, we can", "Yes, we must", "No, we don't"], "answer": "A", "kp": "情态动词", "exp": "只能在餐厅吃，说明不能在教室吃。Can ...? 用 can / can't 回答。"},
+        {"n": 12, "stem": "Many people think wolves are ______, but in fact they are afraid of people.", "options": ["cute", "friendly", "scary", "lazy"], "answer": "C", "kp": "词汇", "exp": "but 表转折：人们以为狼很可怕，其实它们怕人。"},
+        {"n": 13, "stem": "A koala sleeps about 20 hours a day. It is ______ lazy.", "options": ["kinds of", "kind of", "a kind of", "kind"], "answer": "B", "kp": "固定搭配", "exp": "kind of＋形容词，意为“有点儿”。a kind of 意为“一种”，后接名词。"},
+        {"n": 14, "stem": "—Excuse me, can I take photos here?\n—______ Look at the sign: No Photos.", "options": ["Yes, you can.", "That's right.", "Never mind.", "Sorry, you can't."], "answer": "D", "kp": "交际用语", "exp": "标志上写着禁止拍照，所以回答 Sorry, you can't。"},
+        {"n": 15, "stem": "I can't watch TV ______ I finish my homework. That's my family rule.", "options": ["after", "before", "because", "so"], "answer": "B", "kp": "连词", "exp": "做完作业之前不能看电视，用 before。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "A Day at the Zoo",
+      "passage": "My name is Lily. I love animals, so I often go to the city zoo with my parents on weekends. My favourite animals are the pandas. They are black and white, and they are really (16).\nThere are many rules at the zoo. First, we (17) feed the animals. The food from people can make them (18). Second, we can't shout near the animals (19) they are easily scared. Third, we must not throw rubbish. There are (20) bins everywhere, so it's easy to keep the zoo clean. Fourth, we have to (21) the zoo before 6 p.m. because the animals need a rest.\nSome visitors don't (22) the rules. Sometimes I see a boy hitting the glass of the tiger house. Then a zookeeper comes over and asks him to (23). I think the rules are important. They keep the animals (24) and happy.\nAnimals are our friends. Let's (25) them and follow the zoo rules!",
+      "items": [
+        {"n": 16, "options": ["scary", "cute", "tall", "angry"], "answer": "B", "kp": "上下文", "exp": "最喜欢的动物，黑白相间，真可爱。"},
+        {"n": 17, "options": ["can", "must", "have to", "mustn't"], "answer": "D", "kp": "情态动词", "exp": "后一句说人的食物会让动物生病，所以是“禁止”喂食：mustn't。"},
+        {"n": 18, "options": ["happy", "ill", "strong", "clean"], "answer": "B", "kp": "上下文", "exp": "人的食物会使动物生病：make them ill。"},
+        {"n": 19, "options": ["but", "so", "because", "or"], "answer": "C", "kp": "连词", "exp": "不能大声喊的原因是动物容易受惊，用 because。"},
+        {"n": 20, "options": ["rubbish", "food", "animal", "water"], "answer": "A", "kp": "上下文", "exp": "前面说不能乱扔垃圾，到处都有垃圾桶 rubbish bins。"},
+        {"n": 21, "options": ["visit", "open", "leave", "clean"], "answer": "C", "kp": "上下文", "exp": "动物要休息，游客必须在 6 点前离开动物园。"},
+        {"n": 22, "options": ["follow", "break", "know", "write"], "answer": "A", "kp": "上下文", "exp": "后面举了拍打玻璃的例子，说明有的游客不遵守规则：don't follow the rules。坑点：don't break 意思正好相反。"},
+        {"n": 23, "options": ["start", "go", "wait", "stop"], "answer": "D", "kp": "上下文", "exp": "管理员让他停下来：ask him to stop。"},
+        {"n": 24, "options": ["safe", "dangerous", "hungry", "noisy"], "answer": "A", "kp": "上下文", "exp": "规则让动物安全又开心：keep the animals safe。"},
+        {"n": 25, "options": ["hurt", "catch", "eat", "protect"], "answer": "D", "kp": "上下文", "exp": "动物是朋友，我们要保护它们 protect。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "Welcome to Green Town Library",
+          "passage": "Opening hours: Monday–Friday 8:30 a.m.–8:00 p.m. / Saturday and Sunday 9:00 a.m.–5:00 p.m.\nYou can borrow 4 books at a time and keep them for two weeks.\nLibrary Rules:\n1. Keep quiet. Don't talk on the phone.\n2. Don't eat or drink in the reading room. You can have snacks in the café on the first floor.\n3. Return books on time. If you are late, you have to pay 0.5 yuan a day for each book.\n4. Children under 10 must come with their parents.\n5. Please don't take photos in the reading room.",
+          "items": [
+            {"n": 26, "stem": "When does the library close on Saturday?", "options": ["At 8:00 p.m.", "At 5:00 p.m.", "At 8:30 a.m.", "At 9:00 a.m."], "answer": "B", "kp": "细节理解", "exp": "Saturday and Sunday 9:00 a.m.–5:00 p.m.，周六下午 5 点关门。"},
+            {"n": 27, "stem": "How many books can you borrow at a time?", "options": ["Two.", "Three.", "Four.", "Five."], "answer": "C", "kp": "细节理解", "exp": "You can borrow 4 books at a time。"},
+            {"n": 28, "stem": "Where can people have snacks?", "options": ["In the reading room.", "In the café on the first floor.", "At the front desk.", "Outside the library only."], "answer": "B", "kp": "细节理解", "exp": "You can have snacks in the café on the first floor。"},
+            {"n": 29, "stem": "Jack returns two books three days late. How much does he have to pay?", "options": ["1.5 yuan.", "1 yuan.", "6 yuan.", "3 yuan."], "answer": "D", "kp": "推理判断", "exp": "每本每天 0.5 元：0.5×2×3＝3（元）。坑点：只算一本书就会选 1.5 元。"},
+            {"n": 30, "stem": "Which of the following is TRUE?", "options": ["You can talk on the phone in the library.", "An 8-year-old boy can go to the library alone.", "You can keep the books for two weeks.", "You can take photos in the reading room."], "answer": "C", "kp": "推理判断", "exp": "keep them for two weeks。10 岁以下必须有父母陪同，8 岁不能单独去。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Elephants",
+          "passage": "Elephants are the largest land animals in the world. They live in Africa and Asia. African elephants have bigger ears than Asian elephants.\nElephants are very smart. They can remember places and friends for many years. They are also kind to each other. When a baby elephant is in trouble, other elephants come to help it.\nAn elephant eats a lot. It can eat about 150 kilograms of food a day — grass, leaves, fruit and even small trees. It drinks about 100 litres of water every day. It uses its long nose, the trunk, to pick up food and drink water.\nBut today elephants are in danger. People cut down forests, so elephants don't have enough places to live. Some people kill elephants for their ivory. We mustn't buy things made of ivory. Let's save the elephants!",
+          "items": [
+            {"n": 31, "stem": "Where do elephants live?", "options": ["In Africa and Asia.", "Only in Africa.", "In Australia.", "In Europe and Asia."], "answer": "A", "kp": "细节理解", "exp": "They live in Africa and Asia。"},
+            {"n": 32, "stem": "What does an elephant use its trunk for?", "options": ["To hear sounds.", "To pick up food and drink water.", "To run fast.", "To sleep."], "answer": "B", "kp": "细节理解", "exp": "It uses its long nose, the trunk, to pick up food and drink water。"},
+            {"n": 33, "stem": "How much water does an elephant drink every day?", "options": ["About 15 litres.", "About 50 litres.", "About 150 litres.", "About 100 litres."], "answer": "D", "kp": "细节理解", "exp": "about 100 litres of water every day。150 是每天吃的食物千克数。"},
+            {"n": 34, "stem": "Why are elephants in danger today?", "options": ["Because they eat too much.", "Because they are not smart.", "Because people cut down forests and kill them for ivory.", "Because they don't help each other."], "answer": "C", "kp": "细节理解", "exp": "最后一段：砍伐森林使大象没有地方住；有人为了象牙捕杀大象。"},
+            {"n": 35, "stem": "What can we learn from the passage?", "options": ["Asian elephants have bigger ears than African elephants.", "Elephants can't remember their friends.", "Elephants eat only grass.", "Elephants help each other when there is trouble."], "answer": "D", "kp": "推理判断", "exp": "When a baby elephant is in trouble, other elephants come to help it。A 说反了；C 还吃树叶、水果、小树。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Family Rules and My Dog",
+      "passage": "My name is Wang Wei. I have many rules at home. On school days, I have to get up at 6:30 and I must (36) (make) my bed. I can't watch TV (37) ______ I finish my homework. At night, I have to (38) (go) to bed before 10:00.\nOn weekends, I have to help my parents with the (39) (house). I usually wash the (40) (dish) after dinner. My parents don't let me (41) (play) computer games on school nights. Sometimes I think I have too many rules, but my mother says rules can help me (42) (learn) good habits.\nI also have a pet dog. His name is Lucky. He is very (43) (friend) to everyone. (44) ______ do I like him? Because he is clever and he always (45) (wait) for me at the door after school.",
+      "items": [
+        {"n": 36, "answer": "make", "hint": "make", "kp": "情态动词", "exp": "must 后接动词原形。"},
+        {"n": 37, "answer": "before / until", "kp": "连词", "exp": "做完作业之前不能看电视：before；也可以用 not ... until（直到……才）。"},
+        {"n": 38, "answer": "go", "hint": "go", "kp": "情态动词", "exp": "have to 后接动词原形。"},
+        {"n": 39, "answer": "housework", "hint": "house", "kp": "词性转换", "exp": "help sb. with the housework 帮某人做家务。housework 是不可数名词。"},
+        {"n": 40, "answer": "dishes", "hint": "dish", "kp": "名词复数", "exp": "wash the dishes 洗碗；dish 以 sh 结尾，加 -es。"},
+        {"n": 41, "answer": "play", "hint": "play", "kp": "动词形式", "exp": "let sb. do sth. 让某人做某事，用动词原形。"},
+        {"n": 42, "answer": "learn / to learn", "hint": "learn", "kp": "动词形式", "exp": "help sb. (to) do sth.，to 可以省略。"},
+        {"n": 43, "answer": "friendly", "hint": "friend", "kp": "词性转换", "exp": "be 后接形容词：be friendly to sb. 对某人友好。"},
+        {"n": 44, "answer": "Why", "kp": "特殊疑问句", "exp": "后面用 Because 回答原因，用 Why 提问。"},
+        {"n": 45, "answer": "waits", "hint": "wait", "kp": "一般现在时", "exp": "主语 he，always 表示经常性动作，用一般现在时第三人称单数 waits。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "你的英国笔友 Tom 想了解你们学校的校规。请以“Rules in My School”为题写一篇短文：1. 介绍至少三条校规（可用 must / mustn't / have to / can't）；2. 选一条你认为有用的校规，说说原因；3. 你还想增加一条什么规定。要求：60 词左右，题目已给出，不计入总词数；文中不得出现真实姓名和校名。\nRules in My School",
+      "points": [["写出至少三条校规", 5], ["写出一条有用的校规及原因", 3], ["提出一条想增加的规定", 3], ["语言正确（must / can't / have to 后接动词原形、祈使句），书写规范", 4]],
+      "sample": "Rules in My School\nThere are many rules in my school. We have to get to school before 7:30. We must wear our school uniforms from Monday to Friday. We can't run in the hallways, and we can't eat in the classroom.\nI think \"Don't run in the hallways\" is a very useful rule because it keeps us safe.\nI want to add a new rule: we must turn off the lights when we leave the classroom. It can help us save energy.",
+      "exp": "写完检查：must / can't / have to 后面一律用动词原形；主语是第三人称单数时用 has to；规则可以换着用不同的说法，不要每句都是 We must。"
+    }
+  ]
+}

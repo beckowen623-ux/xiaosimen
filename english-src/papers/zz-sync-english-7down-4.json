@@ -1,0 +1,113 @@
+{
+  "id": "sync-english-7down-4",
+  "sync": true,
+  "stage": "7-down",
+  "subject": "english",
+  "subjectLabel": "英语",
+  "region": "同步章节卷",
+  "year": 2027,
+  "title": "七下英语同步章节卷 · Units 7–8",
+  "label": "Units 7–8 A Day to Remember · Once upon a Time",
+  "unit": "七下·Units 7–8 A Day to Remember / Once upon a Time",
+  "order": 4,
+  "source": "人教版七年级下册 Unit 7 A Day to Remember、Unit 8 Once upon a Time：一般过去时（be 动词 was / were、规则与不规则动词、否定和疑问）、过去时间状语、讲述经历和故事、时间顺序词。按初一单元测试题型编写（不含听力），百分制",
+  "note": "46 题，不含听力，百分制",
+  "sections": [
+    {
+      "type": "单项选择",
+      "score": 2,
+      "items": [
+        {"n": 1, "stem": "I ______ to the Great Wall with my parents last summer.", "options": ["go", "went", "goes", "going"], "answer": "B", "kp": "一般过去时", "exp": "last summer 是过去时间，用一般过去时；go 的过去式是 went。"},
+        {"n": 2, "stem": "—Did you have a good time at the party?\n—______. It was really fun.", "options": ["Yes, I do", "Yes, I was", "Yes, I did", "No, I didn't"], "answer": "C", "kp": "一般过去时", "exp": "Did ...? 用 did / didn't 回答；后面说很好玩，用肯定回答。"},
+        {"n": 3, "stem": "—What ______ you do last weekend?\n—I visited my grandparents.", "options": ["did", "do", "does", "are"], "answer": "A", "kp": "一般过去时", "exp": "last weekend，一般过去时的特殊疑问句用 did＋主语＋动词原形。"},
+        {"n": 4, "stem": "Last night my father told me a story. It ______ me laugh a lot.", "options": ["makes", "make", "making", "made"], "answer": "D", "kp": "一般过去时", "exp": "讲的是昨晚的事，用过去式 made。"},
+        {"n": 5, "stem": "Once upon a time, there ______ a poor farmer in a small village.", "options": ["is", "were", "was", "are"], "answer": "C", "kp": "一般过去时", "exp": "Once upon a time 讲过去的故事；a poor farmer 是单数，用 was。"},
+        {"n": 6, "stem": "—Where were you yesterday afternoon?\n—I ______ at the science museum.", "options": ["was", "were", "am", "did"], "answer": "A", "kp": "一般过去时", "exp": "yesterday afternoon，主语 I，be 动词过去式用 was。"},
+        {"n": 7, "stem": "We ______ TV last night. We played chess.", "options": ["don't watch", "didn't watched", "not watched", "didn't watch"], "answer": "D", "kp": "一般过去时", "exp": "一般过去时否定：didn't＋动词原形。坑点：didn't 后面不能再用过去式。"},
+        {"n": 8, "stem": "She ______ the heavy box upstairs yesterday.", "options": ["carryed", "carried", "carries", "carry"], "answer": "B", "kp": "一般过去时", "exp": "yesterday 用过去式；carry 以“辅音字母＋y”结尾，变 y 为 i 加 -ed。"},
+        {"n": 9, "stem": "—How was your trip to Hangzhou?\n—______", "options": ["It was great!", "I went by train.", "It's sunny.", "I'm fine."], "answer": "A", "kp": "交际用语", "exp": "How was ...? 问“……怎么样”，回答感受。坐火车回答的是 How did you go there?"},
+        {"n": 10, "stem": "The fox ______ the meat from the crow and ran away.", "options": ["takes", "take", "took", "taking"], "answer": "C", "kp": "一般过去时", "exp": "and 连接的另一个动词 ran 是过去式，前后一致，take 的过去式是 took。"},
+        {"n": 11, "stem": "—When did you get to Beijing?\n—______", "options": ["For two days.", "In two days.", "Two days.", "Two days ago."], "answer": "D", "kp": "一般过去时", "exp": "问过去什么时候到的，用“时间段＋ago”回答。for two days 回答 how long。"},
+        {"n": 12, "stem": "Mozart started to write music ______ he was only five years old.", "options": ["when", "so", "but", "because"], "answer": "A", "kp": "连词", "exp": "他五岁的“时候”开始写音乐，用 when 引导时间状语。"},
+        {"n": 13, "stem": "At first the boy didn't believe the story, but ______ he found it was true.", "options": ["at once", "in the end", "at all", "at first"], "answer": "B", "kp": "时间顺序词", "exp": "at first 起初……in the end 最后……前后对应。"},
+        {"n": 14, "stem": "—I lost my wallet on the bus yesterday.\n—______", "options": ["Good idea!", "You're welcome.", "That's too bad.", "Congratulations!"], "answer": "C", "kp": "交际用语", "exp": "听到不好的消息表示同情：That's too bad / I'm sorry to hear that。"},
+        {"n": 15, "stem": "The little girl was very ______ because she lost her way in the forest.", "options": ["happy", "excited", "relaxed", "scared"], "answer": "D", "kp": "词汇", "exp": "在森林里迷路了，很害怕 scared。"}
+      ]
+    },
+    {
+      "type": "完形填空",
+      "score": 1.5,
+      "title": "Mia and the Little Bird",
+      "passage": "Once upon a time, there was a little girl called Mia. She lived with her grandmother near a big forest. Every day, Mia (16) water from the river for her grandmother.\nOne morning, Mia went to the river as usual. On her way, she (17) a little bird under a tree. Its wing was hurt and it couldn't (18). Mia felt sorry for it. She carefully picked it up and (19) it home.\nFor two weeks, Mia gave the bird food and water every day. Slowly, the bird got (20). One sunny morning, it flew out of the window. Mia was a little (21), but she was happy for the bird, too.\nA year later, Mia's grandmother got very ill. The doctor said she needed a special flower from the top of the mountain. But the mountain was very high and Mia didn't know the (22). Just then, a bird flew to her window and sang. It was the little bird! It flew in front of Mia, and Mia (23) it up the mountain. Finally, she found the flower.\nHer grandmother got well soon. From then on, Mia always (24) one thing: when you help others, they may help you (25).",
+      "items": [
+        {"n": 16, "options": ["drank", "carried", "sold", "bought"], "answer": "B", "kp": "上下文", "exp": "住在河边，每天为奶奶从河里提水：carried water。"},
+        {"n": 17, "options": ["lost", "sold", "found", "hit"], "answer": "C", "kp": "上下文", "exp": "在路上发现一只小鸟：found。"},
+        {"n": 18, "options": ["sing", "eat", "sleep", "fly"], "answer": "D", "kp": "上下文", "exp": "翅膀受伤了，飞不了。"},
+        {"n": 19, "options": ["took", "sent", "threw", "left"], "answer": "A", "kp": "上下文", "exp": "小心捧起，带回家：take sth. home。"},
+        {"n": 20, "options": ["worse", "better", "older", "bigger"], "answer": "B", "kp": "上下文", "exp": "照顾了两周，伤慢慢好了，后来飞走了：got better。"},
+        {"n": 21, "options": ["angry", "afraid", "sad", "surprised"], "answer": "C", "kp": "上下文", "exp": "but 转折：小鸟飞走了有点难过，但也为它高兴。"},
+        {"n": 22, "options": ["way", "name", "time", "door"], "answer": "A", "kp": "上下文", "exp": "后面小鸟在前面带路，说明 Mia 不认识路：didn't know the way。"},
+        {"n": 23, "options": ["stopped", "caught", "called", "followed"], "answer": "D", "kp": "上下文", "exp": "小鸟飞在前面，Mia 跟着它上山：followed。"},
+        {"n": 24, "options": ["forgot", "remembered", "asked", "hated"], "answer": "B", "kp": "上下文", "exp": "从那以后，她一直记着一件事：remembered。"},
+        {"n": 25, "options": ["either", "also", "yet", "too"], "answer": "D", "kp": "固定搭配", "exp": "肯定句句末表示“也”用 too；either 用于否定句；also 一般不放句末。"}
+      ]
+    },
+    {
+      "type": "阅读理解",
+      "score": 2.5,
+      "groups": [
+        {
+          "label": "A",
+          "title": "A School Trip",
+          "passage": "Saturday, May 10th, Sunny\nToday our class went on a school trip to the City Science Museum. We met at the school gate at 8:00 a.m. and took a bus there. It took us about 40 minutes.\nFirst, we visited the space hall. We saw a real spacesuit and learned how astronauts eat and sleep in space. Then we went to the robot room. A robot played chess with me, and I lost! At 12:00 we had lunch in the museum café. I had a sandwich and some orange juice.\nIn the afternoon, we watched a 3D film about the ocean. It was really exciting. Before we left, I bought a model rocket at the gift shop for my little brother. It cost 35 yuan.\nWe got back to school at 4:30 p.m. I was tired but happy. It was a day to remember!",
+          "items": [
+            {"n": 26, "stem": "How did the students go to the museum?", "options": ["On foot.", "By bike.", "By bus.", "By subway."], "answer": "C", "kp": "细节理解", "exp": "took a bus there。"},
+            {"n": 27, "stem": "What time did they get to the museum?", "options": ["At about 8:40 a.m.", "At 8:00 a.m.", "At 12:00.", "At 4:30 p.m."], "answer": "A", "kp": "推理判断", "exp": "8:00 出发，路上约 40 分钟，大约 8:40 到。"},
+            {"n": 28, "stem": "What did the writer do in the robot room?", "options": ["Made a robot.", "Played chess with a robot.", "Watched a film.", "Had lunch."], "answer": "B", "kp": "细节理解", "exp": "A robot played chess with me。"},
+            {"n": 29, "stem": "What did the writer buy for the little brother?", "options": ["A spacesuit.", "A sandwich.", "A robot.", "A model rocket."], "answer": "D", "kp": "细节理解", "exp": "I bought a model rocket at the gift shop for my little brother。"},
+            {"n": 30, "stem": "Which of the following is TRUE?", "options": ["They had lunch at school.", "The writer won the chess game.", "They watched a film about the ocean.", "They got back to school at 4:00 p.m."], "answer": "C", "kp": "推理判断", "exp": "we watched a 3D film about the ocean。下棋输了（I lost）；午饭在博物馆咖啡厅；4:30 回校。"}
+          ]
+        },
+        {
+          "label": "B",
+          "title": "Tu Youyou",
+          "passage": "Tu Youyou was born in Ningbo, Zhejiang in 1930. When she was a teenager, she got very ill and had to stop school for two years. Then she decided to study medicine. She wanted to help sick people.\nAfter university, she worked at the China Academy of Traditional Chinese Medicine in Beijing. In 1969, she and her team started to look for a new medicine for malaria. Malaria was a terrible disease, and it killed many people every year. They looked at more than 2,000 old Chinese recipes. Finally, an old book by Ge Hong gave her an idea, and her team got artemisinin from a plant called qinghao.\nBefore they used the medicine on patients, Tu Youyou and her workmates tested it on themselves. It was safe and it worked well. The medicine saved millions of lives around the world.\nIn 2015, she won the Nobel Prize. She was the first Chinese woman to win a Nobel Prize in science.",
+          "items": [
+            {"n": 31, "stem": "Why did Tu Youyou decide to study medicine?", "options": ["Because she wanted to help sick people.", "Because her parents were doctors.", "Because she liked plants.", "Because she wanted to win prizes."], "answer": "A", "kp": "细节理解", "exp": "She wanted to help sick people。"},
+            {"n": 32, "stem": "When did she start to look for a new medicine for malaria?", "options": ["In 1930.", "In 1969.", "In 2015.", "In 1972."], "answer": "B", "kp": "细节理解", "exp": "In 1969, she and her team started to look for a new medicine for malaria。"},
+            {"n": 33, "stem": "What gave her the idea?", "options": ["A doctor in Beijing.", "A new machine.", "An old book by Ge Hong.", "Her teacher at university."], "answer": "C", "kp": "细节理解", "exp": "an old book by Ge Hong gave her an idea。"},
+            {"n": 34, "stem": "What did Tu Youyou and her workmates do before they used the medicine on patients?", "options": ["They sold it.", "They wrote a book.", "They planted qinghao.", "They tested it on themselves."], "answer": "D", "kp": "细节理解", "exp": "tested it on themselves。"},
+            {"n": 35, "stem": "What kind of person was Tu Youyou?", "options": ["Lazy and careless.", "Brave and hard-working.", "Shy and quiet.", "Funny and outgoing."], "answer": "B", "kp": "推理判断", "exp": "研究了 2000 多个古方，坚持多年；为了安全先在自己身上试药，说明勤奋又勇敢。"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "短文填空",
+      "score": 1.5,
+      "title": "My Winter Holiday",
+      "passage": "Last winter holiday, my family (36) (go) to Harbin. It (37) (be) very cold there, but we had a great time. On the first day, we (38) (visit) the Ice and Snow World. There (39) (be) many beautiful ice buildings. At night, the lights (40) (make) them look like a dream.\nOn the second day, I learned (41) (ski). At first I fell down many times, but I didn't (42) (give) up. In the end, I could ski down a small hill (43) (quick). I took lots of (44) (photo) and sent them to my friends. I will never (45) (forget) this trip.",
+      "items": [
+        {"n": 36, "answer": "went", "hint": "go", "kp": "一般过去时", "exp": "Last winter holiday，go 的过去式 went。"},
+        {"n": 37, "answer": "was", "hint": "be", "kp": "一般过去时", "exp": "主语 It，be 的过去式用 was。"},
+        {"n": 38, "answer": "visited", "hint": "visit", "kp": "一般过去时", "exp": "规则动词过去式加 -ed。"},
+        {"n": 39, "answer": "were", "hint": "be", "kp": "一般过去时", "exp": "There be 就近原则：many beautiful ice buildings 是复数，过去时用 were。"},
+        {"n": 40, "answer": "made", "hint": "make", "kp": "一般过去时", "exp": "讲过去的事，make 的过去式 made；make sb. / sth. do 使……做。"},
+        {"n": 41, "answer": "to ski", "hint": "ski", "kp": "动词形式", "exp": "learn to do sth. 学做某事。"},
+        {"n": 42, "answer": "give", "hint": "give", "kp": "一般过去时", "exp": "didn't 后接动词原形：give up 放弃。"},
+        {"n": 43, "answer": "quickly", "hint": "quick", "kp": "词性转换", "exp": "修饰动词 ski 用副词 quickly。"},
+        {"n": 44, "answer": "photos", "hint": "photo", "kp": "名词复数", "exp": "lots of 后接可数名词复数；photo 直接加 -s（不是 -es）。"},
+        {"n": 45, "answer": "forget", "hint": "forget", "kp": "动词形式", "exp": "will 后接动词原形。"}
+      ]
+    },
+    {
+      "type": "书面表达",
+      "n": 46,
+      "score": 15,
+      "prompt": "每个人都有难忘的一天。请以“A Day to Remember”为题写一篇短文：1. 那是什么时候、你和谁在哪里；2. 按时间顺序写出你们做了哪些事（至少三件）；3. 那一天为什么让你难忘。要求：60 词左右，题目已给出，不计入总词数；文中不得出现真实姓名和校名。\nA Day to Remember",
+      "points": [["交代时间、人物、地点", 3], ["按顺序写出至少三件事", 5], ["写出难忘的原因或感受", 3], ["语言正确（一般过去时、不规则动词、first / then / in the end 等顺序词），书写规范", 4]],
+      "sample": "A Day to Remember\nLast Sunday was a day to remember. My parents and I went to the countryside to visit my grandparents.\nFirst, we picked strawberries in Grandpa's garden. Then Grandma taught me how to make dumplings. My dumplings looked funny, but they were delicious! In the afternoon, we went fishing by the river, and I caught a big fish.\nIn the end, we drove home at six. I was tired but very happy because I learned a lot and spent a great day with my family.",
+      "exp": "写完检查：叙述过去的事全文用一般过去时；常见不规则动词 go→went、take→took、teach→taught、catch→caught、make→made；用 first、then、after that、in the end 把事情串起来。"
+    }
+  ]
+}
