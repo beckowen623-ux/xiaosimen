@@ -1373,6 +1373,116 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-chemistry-9down-1",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "第八单元·金属和金属材料",
+      "order": 1,
+      "label": "金属和金属材料",
+      "title": "九下化学同步章节卷 · 金属和金属材料",
+      "source": "考查范围：人教版九年级下册“金属和金属材料”单元（金属材料与合金、金属的化学性质、金属活动性顺序及验证、置换反应、铁的冶炼及含杂质计算、金属的锈蚀与防护），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9down-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-chemistry-9down-2",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "第九单元·溶液",
+      "order": 2,
+      "label": "溶液",
+      "title": "九下化学同步章节卷 · 溶液",
+      "source": "考查范围：人教版九年级下册“溶液”单元（溶液的形成、溶解时的吸放热、乳化、饱和溶液与不饱和溶液、溶解度及溶解度曲线、结晶、溶质质量分数及配制、稀释与化学方程式结合的计算），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9down-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-chemistry-9down-3",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "第十、十一单元·酸碱盐",
+      "order": 3,
+      "label": "常见的酸和碱",
+      "title": "九下化学同步章节卷 · 常见的酸和碱",
+      "source": "考查范围：人教版九年级下册“酸和碱”单元（酸碱指示剂、浓盐酸和浓硫酸的特性、酸的化学性质、氢氧化钠和氢氧化钙的性质与用途、碱的化学性质、氢氧化钠变质、中和反应及应用、溶液的 pH），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9down-3.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-chemistry-9down-4",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "第十、十一单元·酸碱盐",
+      "order": 4,
+      "label": "盐和化肥",
+      "title": "九下化学同步章节卷 · 盐和化肥",
+      "source": "考查范围：人教版九年级下册“盐 化肥”单元（常见的盐及用途、粗盐提纯、碳酸根的检验、复分解反应及发生条件、离子共存、物质的鉴别与除杂、化肥的种类与铵态氮肥的检验），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9down-4.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-chemistry-9down-5",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "第十二单元·化学与生活",
+      "order": 5,
+      "label": "化学与生活",
+      "title": "九下化学同步章节卷 · 化学与生活",
+      "source": "考查范围：人教版九年级下册“化学与生活”单元（六大营养素及食物来源、化学元素与人体健康、有毒物质、有机化合物、有机合成材料与天然材料的区分、白色污染），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-chemistry-9down-5.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "sync-chemistry-9up-1",
       "subject": "chemistry",
       "subjectLabel": "化学",
