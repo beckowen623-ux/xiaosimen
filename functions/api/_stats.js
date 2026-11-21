@@ -16,6 +16,7 @@ export const TRACK_EVENTS = new Set([
   "xsc_done",
   "xsc_75",
   "earlybird_print",
+  "eb_rx",
   "xsc_print",
 ]);
 

@@ -633,3 +633,8 @@ input[type=search]::placeholder { color: #67736c; }
 
 .sync-progress { margin: 8px 0 4px; padding: 8px 10px; border-radius: 8px; background: var(--green-soft); font-size: 14px; }
 .paper-row.is-started small { color: var(--green); font-weight: 600; }
+.eb-rx { display: grid; gap: 8px; margin-top: 6px; }
+.eb-rx-row { display: grid; gap: 6px; text-align: left; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+.eb-rx-row > span { font-weight: 700; }
+.eb-rx-row small { margin-left: 8px; color: var(--bad); font-weight: 600; }
+.eb-rx-row > div { display: flex; flex-wrap: wrap; gap: 6px; }

@@ -1169,6 +1169,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '早鸟自测卷做完后直接告诉你补哪几章：按错题所在章节排序，列出错得最多的 3 章，点一下就进那一章的同步章节卷（数学、物理、化学）。'],
   ['2026-11-21', '同步章节卷显示进度：每套写明已做几题、对几题，卡片上方提示“已经做过几套，下一套做哪一章”，跟着课本一章一章往下走。'],
   ['2026-11-21', '同步章节卷新增八下英语 4 套（新教材）：Units 1–2 Time to Relax / Stay Healthy、Units 3–4 Growing Up / The Wonders of Nature、Units 5–6 Nature’s Temper / Crossing Cultures、Units 7–8 A Good Read / Making a Difference。动词不定式、used to、过去进行时、现在完成时等重点语法逐个练到，书面表达带范文，前 5 题免费试做。'],
   ['2026-11-21', '同步章节卷新增八上英语 4 套（新教材）：Units 1–2 Happy Holiday / Home Sweet Home、Units 3–4 Same or Different? / Amazing Plants and Animals、Units 5–6 What a Delicious Meal! / Plan for Yourself、Units 7–8 When Tomorrow Comes / Let’s Communicate!。不定代词、比较级和最高级、感叹句、be going to、will 和 if 条件句逐个练到，书面表达带范文，前 5 题免费试做。'],
@@ -2692,6 +2693,23 @@ function trialUpsellHTML() {
     <p class="muted">完整版 19.9 元一次买断：精编模拟卷、同步章节卷、本周一卷都能做完整套、也能打印，错题自动进错题本按 1、3、7、14 天复习，以后的更新也包含在内。</p>
     <button class="btn primary" type="button" id="upsellBtn">看看完整版</button></div>`;
 }
+// 早鸟卷做完：按错题所在章节，直接给出那一章的同步章节卷（错得多的章排前面，最多 3 章）
+// 早鸟卷里跨学期合并的考点模块，对应到同步卷的章节
+const RX_UNIT_ALIAS = { '轴对称与旋转（八上·九上）': ['八上·轴对称', '九上·旋转'], '统计与概率（综合）': ['八下·数据的分析', '九上·概率初步'] };
+function syncPrescriptions(wrongQs, subject, stage) {
+  const counts = new Map();
+  for (const q of wrongQs) if (q.unit) counts.set(q.unit, (counts.get(q.unit) || 0) + 1);
+  // 只推荐这个学期及以前学过的章节
+  const all = (nationalCatalog || []).filter(p => p.sync && p.subject === subject && stageOrder(p.stage) <= stageOrder(stage));
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([unit, n]) => {
+      const units = RX_UNIT_ALIAS[unit] || [unit];
+      return { unit: RX_UNIT_ALIAS[unit] ? unit.replace(/（.*）$/, '') : unit, n, papers: all.filter(p => units.includes(p.unit)).sort((a, b) => stageOrder(a.stage) - stageOrder(b.stage) || (a.order || 0) - (b.order || 0)) };
+    })
+    .filter(x => x.papers.length)
+    .slice(0, 3);
+}
 function renderSummary() {
   document.body.classList.add('practice');
   const results = [...state.session.entries()];
@@ -2708,6 +2726,7 @@ function renderSummary() {
     const paperId = state.earlybirdPaper;
     const paper = (nationalCatalog || []).find(p => p.id === paperId);
     const finished = paper && results.length >= paper.questionCount;
+    const rx = paper && paper.stage !== 'xsc' ? syncPrescriptions(wrongQs, paper.subject, paper.stage) : [];
     if (finished && paperId) {
       const first = loadEarlybirdScores()[paperId] == null;
       saveEarlybirdScore(paperId, score);
@@ -2732,12 +2751,16 @@ function renderSummary() {
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本卷错题</button>` : ''}
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${paper?.stage === 'xsc' ? '返回，做下一章' : '返回首页，测下一科'}</button>
         </div>
-        ${paper && paper.stage !== 'xsc' && syncPapers(paper.stage).some(p => p.subject === paper.subject) ? `<p class="earlybird-next">下一步：看看错题集中在哪几章，用<b>同步章节卷</b>一章一章补，比整卷反复刷更快见效。</p>
+        ${rx.length ? `<div class="eb-rx"><p class="earlybird-next">下一步：错题集中在下面几章，先做这几章的<b>同步章节卷</b>，一章一章补，比整卷反复刷更快见效。</p>
+          ${rx.map(x => `<div class="eb-rx-row"><span>${esc(x.unit.replace(/^[^·]+·/, ''))}<small>错 ${x.n} 题</small></span><div>${x.papers.map(p => `<button class="btn" type="button" data-rx-paper="${p.id}">做「${esc(p.label || p.title)}」→</button>`).join('')}</div></div>`).join('')}
+          <button class="btn ghost" type="button" id="toSyncBtn">看全部同步章节卷</button></div>`
+        : paper && paper.stage !== 'xsc' && syncPapers(paper.stage).some(p => p.subject === paper.subject) ? `<p class="earlybird-next">下一步：看看错题集中在哪几章，用<b>同步章节卷</b>一章一章补，比整卷反复刷更快见效。</p>
         <button class="btn" type="button" id="toSyncBtn">去同步章节卷补弱项 →</button>` : ''}
       </section>
     </div>`;
     byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, 'retry'));
     byId('toSyncBtn')?.addEventListener('click', () => { state.syncSubject = paper.subject; if (paper.stage) setStage(paper.stage); renderHome(); byId('sync')?.scrollIntoView({ block: 'start' }); });
+    view.querySelectorAll('[data-rx-paper]').forEach(b => b.addEventListener('click', () => { trackVisit('eb_rx'); claudePaperAction(b.dataset.rxPaper, 'phone'); }));
     byId('homeBtn').addEventListener('click', () => { const xsc = paper?.stage === 'xsc'; if (xsc) { state.xscOpen = true; state.xscSubject = paper.subject; } renderHome('homeTitle'); byId(xsc ? 'xsc' : 'earlybird')?.scrollIntoView(); });
     state.keys = null;
     moveFocus(byId('summaryTitle'), true);
