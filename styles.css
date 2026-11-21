@@ -630,3 +630,6 @@ input[type=search]::placeholder { color: #67736c; }
 .plan-tip { margin-top: 8px; padding: 8px 12px; border-radius: 10px; background: var(--green-soft, #eef6f1); }
 .plan-tip summary { cursor: pointer; font-weight: 700; color: #14532d; }
 .plan-tip ol { margin: 8px 0 2px; padding-left: 20px; line-height: 1.7; font-size: .9rem; }
+
+.sync-progress { margin: 8px 0 4px; padding: 8px 10px; border-radius: 8px; background: var(--green-soft); font-size: 14px; }
+.paper-row.is-started small { color: var(--green); font-weight: 600; }

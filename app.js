@@ -1169,6 +1169,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-21', '同步章节卷显示进度：每套写明已做几题、对几题，卡片上方提示“已经做过几套，下一套做哪一章”，跟着课本一章一章往下走。'],
   ['2026-11-21', '同步章节卷新增八下英语 4 套（新教材）：Units 1–2 Time to Relax / Stay Healthy、Units 3–4 Growing Up / The Wonders of Nature、Units 5–6 Nature’s Temper / Crossing Cultures、Units 7–8 A Good Read / Making a Difference。动词不定式、used to、过去进行时、现在完成时等重点语法逐个练到，书面表达带范文，前 5 题免费试做。'],
   ['2026-11-21', '同步章节卷新增八上英语 4 套（新教材）：Units 1–2 Happy Holiday / Home Sweet Home、Units 3–4 Same or Different? / Amazing Plants and Animals、Units 5–6 What a Delicious Meal! / Plan for Yourself、Units 7–8 When Tomorrow Comes / Let’s Communicate!。不定代词、比较级和最高级、感叹句、be going to、will 和 if 条件句逐个练到，书面表达带范文，前 5 题免费试做。'],
   ['2026-11-21', '同步章节卷新增七下英语 4 套：Units 1–2 Animal Friends / No Rules, No Order、Units 3–4 Keep Fit / Eat Well、Units 5–6 Here and Now / Rain or Shine、Units 7–8 A Day to Remember / Once upon a Time。每套 46 题 100 分，单选、完形、阅读、短文填空、书面表达（带范文和评分要点），短文全部原创，前 5 题免费试做。'],
@@ -1711,6 +1712,17 @@ const SYNC_SUBJECTS = [['math', '数学'], ['physics', '物理'], ['chemistry', 
 function syncPapers(stage = state.stage) {
   return (nationalCatalog || []).filter(p => p.sync && p.stage === stage).sort((a, b) => (a.order || 0) - (b.order || 0));
 }
+// 同步章节卷每套做了多少：题目 id 是 national-<paperId>-qNN
+function syncPaperProgress(paperId, progress) {
+  const prefix = `national-${paperId}-q`;
+  let done = 0, right = 0;
+  for (const [id, rec] of Object.entries(progress.banks || {})) {
+    if (!id.startsWith(prefix) || !rec?.done) continue;
+    done += 1;
+    if (rec.correct) right += 1;
+  }
+  return { done, right };
+}
 function syncCardHTML() {
   if (!nationalCatalog) return '';
   const grade = STAGE_SHORT[state.stage].split(' ')[0];
@@ -1724,11 +1736,16 @@ function syncCardHTML() {
     <p class="muted">${grade}的同步章节卷正在编写，数学先上，其他科随后。可以先做上面的早鸟卷，看看哪一章最需要补。</p></section>`;
   const subject = subjects.some(([k]) => k === state.syncSubject) ? state.syncSubject : subjects[0][0];
   const papers = all.filter(p => p.subject === subject);
+  const progress = loadProgress();
+  const stats = Object.fromEntries(papers.map(p => [p.id, syncPaperProgress(p.id, progress)]));
+  const started = papers.filter(p => stats[p.id].done);
+  const next = started.length ? papers.find(p => !stats[p.id].done) : null;
   return `<section class="card sync-card" id="sync" aria-labelledby="syncTitle">${head}
     <p class="muted">按人教版章节顺序出题，题型和难度对标期中、期末，每章一套 100 分，带易错“坑点”和逐题解析。学完一章做一套，哪章弱就补哪章。${hasFullAccess() ? '' : '每套前 5 题免费试做；完整版全部开放，手机做、打印都行。'}</p>
     ${subjects.length > 1 ? `<div class="weekly-chips" role="group" aria-label="选择科目">${subjects.map(([k, l]) => `<button type="button" class="drill-chip" data-sync-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('')}</div>` : ''}
-    <div class="paper-rows">${papers.map(p => `<div class="paper-row">
-      <span>${esc(p.label || p.unit || p.title)}<small>${p.questionCount} 题 · 100 分</small></span>
+    ${started.length ? `<p class="sync-progress">已经做过 ${started.length} / ${papers.length} 套${next ? `，下一套：<b>${esc(next.label || next.unit || next.title)}</b>` : '，这一科全部做过了，错题记得按时复习'}</p>` : ''}
+    <div class="paper-rows">${papers.map(p => `<div class="paper-row${stats[p.id].done ? ' is-started' : ''}">
+      <span>${esc(p.label || p.unit || p.title)}<small>${p.questionCount} 题 · 100 分${stats[p.id].done ? ` · 已做 ${stats[p.id].done} 题，对 ${stats[p.id].right} 题` : ''}</small></span>
       <button class="btn" type="button" data-claude-phone="${p.id}">${freeButtonLabel('phone', p.id, ['手机做', '免费手机做整卷', '试前 5 题'])}</button>
       <button class="btn" type="button" data-claude-print="${p.id}">${freeButtonLabel('print', p.id, ['打印', '免费打印整卷', '打印前 5 题'])}</button>
     </div>`).join('')}</div>
