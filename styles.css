@@ -638,3 +638,7 @@ input[type=search]::placeholder { color: #67736c; }
 .eb-rx-row > span { font-weight: 700; }
 .eb-rx-row small { margin-left: 8px; color: var(--bad); font-weight: 600; }
 .eb-rx-row > div { display: flex; flex-wrap: wrap; gap: 6px; }
+.sync-plan { margin: 8px 0 4px; padding: 8px 10px; border: 1px dashed var(--line); border-radius: 8px; font-size: 14px; line-height: 1.6; }
+.sync-plan p { margin: 0; }
+.sync-plan-edit summary { margin-top: 4px; color: var(--green); font-size: 13px; cursor: pointer; }
+.sync-plan-edit input { margin-top: 6px; min-height: 36px; padding: 0 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); font: inherit; }

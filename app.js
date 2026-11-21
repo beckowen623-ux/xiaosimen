@@ -1170,7 +1170,7 @@ function reviewCardsHTML(progress) {
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
   ['2026-11-21', '早鸟自测卷做完后直接告诉你补哪几章：按错题所在章节排序，列出错得最多的 3 章，点一下就进那一章的同步章节卷（数学、物理、化学）。'],
-  ['2026-11-21', '同步章节卷显示进度：每套写明已做几题、对几题，卡片上方提示“已经做过几套，下一套做哪一章”，跟着课本一章一章往下走。'],
+  ['2026-11-21', '同步章节卷显示进度：每套写明已做几题、对几题，卡片上方提示“已经做过几套，下一套做哪一章”；还按期末（九下按中考）日期算好每周做几套，期末前 2 周留给错题复习，日期可以按当地改。'],
   ['2026-11-21', '同步章节卷新增八下英语 4 套（新教材）：Units 1–2 Time to Relax / Stay Healthy、Units 3–4 Growing Up / The Wonders of Nature、Units 5–6 Nature’s Temper / Crossing Cultures、Units 7–8 A Good Read / Making a Difference。动词不定式、used to、过去进行时、现在完成时等重点语法逐个练到，书面表达带范文，前 5 题免费试做。'],
   ['2026-11-21', '同步章节卷新增八上英语 4 套（新教材）：Units 1–2 Happy Holiday / Home Sweet Home、Units 3–4 Same or Different? / Amazing Plants and Animals、Units 5–6 What a Delicious Meal! / Plan for Yourself、Units 7–8 When Tomorrow Comes / Let’s Communicate!。不定代词、比较级和最高级、感叹句、be going to、will 和 if 条件句逐个练到，书面表达带范文，前 5 题免费试做。'],
   ['2026-11-21', '同步章节卷新增七下英语 4 套：Units 1–2 Animal Friends / No Rules, No Order、Units 3–4 Keep Fit / Eat Well、Units 5–6 Here and Now / Rain or Shine、Units 7–8 A Day to Remember / Once upon a Time。每套 46 题 100 分，单选、完形、阅读、短文填空、书面表达（带范文和评分要点），短文全部原创，前 5 题免费试做。'],
@@ -1724,6 +1724,35 @@ function syncPaperProgress(paperId, progress) {
   }
   return { done, right };
 }
+// 期末节奏：按本学期还没做的同步卷，算每周做几套能在期末前 2 周做完。
+// 期末日期各地不同，默认按多数地区估（上学期 1 月 18 日、下学期 6 月 28 日，九下是中考，估 6 月 20 日），家长可以改，存在本机。
+function finalExamDate(stage) {
+  const half = stage === '9-down' ? 'zhongkao' : String(stage).endsWith('up') ? 'up' : 'down';
+  const today = todayStr();
+  let saved = '';
+  try { saved = localStorage.getItem('x4m-final-' + half) || ''; } catch {}
+  if (/^\d{4}-\d{2}-\d{2}$/.test(saved) && saved > today) return { date: saved, own: true, half };
+  const y = Number(today.slice(0, 4));
+  const md = { up: '01-18', down: '06-28', zhongkao: '06-20' }[half];
+  const date = `${y}-${md}` > today ? `${y}-${md}` : `${y + 1}-${md}`;
+  return { date, own: false, half };
+}
+function syncPlanHTML(all, progress) {
+  const { date, own, half } = finalExamDate(state.stage);
+  const month = Number(todayStr().slice(5, 7));
+  const inSession = half === 'up' ? (month >= 9 || month === 1) : (month >= 2 && month <= 7);
+  if (!inSession) return `<div class="sync-plan"><p>📅 ${half === 'up' ? '这是上学期的卷子：9 月开学后学完一章做一套；暑假想预习，可以先做前一两章。' : '这是下学期的卷子：开学后学完一章做一套；寒假想预习，可以先做前一两章。'}</p></div>`;
+  const exam = half === 'zhongkao' ? '中考' : '期末';
+  const days = Math.round((Date.parse(date + 'T00:00:00Z') - Date.parse(todayStr() + 'T00:00:00Z')) / 86400000);
+  const left = all.filter(p => !syncPaperProgress(p.id, progress).done).length;
+  const weeks = Math.floor((days - 14) / 7);
+  const [, m, d] = date.split('-');
+  const text = !left ? `这学期 ${all.length} 套同步卷都做过了：${exam}前把错题按时复习到会，再做一次早鸟卷对比进步。`
+    : weeks < 1 ? `离${exam}不到 3 周：不用再赶新卷，先做早鸟卷找弱项，把错题复习到会。`
+    : `这学期还有 ${left} 套同步卷没做，每周做 ${Math.ceil(left / weeks)} 套，${weeks} 周正好做完，最后 2 周留给错题复习和早鸟卷。`;
+  return `<div class="sync-plan"><p>📅 ${exam} ${Number(m)} 月 ${Number(d)} 日${own ? '' : '（按多数地区估的）'}，还有 ${Math.max(1, Math.ceil(days / 7))} 周。${text}</p>
+    <details class="sync-plan-edit"><summary>${own ? `改${exam}日期` : `按当地的${exam}日期改`}</summary><input type="date" id="finalDate" value="${date}" min="${todayStr(1)}" aria-label="${exam}日期" /></details></div>`;
+}
 function syncCardHTML() {
   if (!nationalCatalog) return '';
   const grade = STAGE_SHORT[state.stage].split(' ')[0];
@@ -1744,6 +1773,7 @@ function syncCardHTML() {
   return `<section class="card sync-card" id="sync" aria-labelledby="syncTitle">${head}
     <p class="muted">按人教版章节顺序出题，题型和难度对标期中、期末，每章一套 100 分，带易错“坑点”和逐题解析。学完一章做一套，哪章弱就补哪章。${hasFullAccess() ? '' : '每套前 5 题免费试做；完整版全部开放，手机做、打印都行。'}</p>
     ${subjects.length > 1 ? `<div class="weekly-chips" role="group" aria-label="选择科目">${subjects.map(([k, l]) => `<button type="button" class="drill-chip" data-sync-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('')}</div>` : ''}
+    ${syncPlanHTML(all, progress)}
     ${started.length ? `<p class="sync-progress">已经做过 ${started.length} / ${papers.length} 套${next ? `，下一套：<b>${esc(next.label || next.unit || next.title)}</b>` : '，这一科全部做过了，错题记得按时复习'}</p>` : ''}
     <div class="paper-rows">${papers.map(p => `<div class="paper-row${stats[p.id].done ? ' is-started' : ''}">
       <span>${esc(p.label || p.unit || p.title)}<small>${p.questionCount} 题 · 100 分${stats[p.id].done ? ` · 已做 ${stats[p.id].done} 题，对 ${stats[p.id].right} 题` : ''}</small></span>
@@ -2025,6 +2055,13 @@ function wireHome() {
     sync.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
     sync.querySelectorAll('[data-sync-subject]').forEach(b => b.addEventListener('click', () => { state.syncSubject = b.dataset.syncSubject; renderHome(); byId('sync')?.scrollIntoView({ block: 'start' }); }));
     sync.querySelector('[data-sync-xsc]')?.addEventListener('click', () => { state.xscOpen = true; renderHome(); byId('xsc')?.scrollIntoView({ block: 'start' }); });
+    byId('finalDate')?.addEventListener('change', e => {
+      const value = e.target.value;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return;
+      try { localStorage.setItem('x4m-final-' + finalExamDate(state.stage).half, value); } catch {}
+      renderHome();
+      byId('sync')?.scrollIntoView({ block: 'start' });
+    });
   }
   view.querySelectorAll('[data-xsc-subject]').forEach(b => b.addEventListener('click', () => { state.xscSubject = b.dataset.xscSubject; state.xscOpen = true; renderHome(); byId('xsc')?.scrollIntoView({ block: 'start' }); }));
   byId('xsc')?.addEventListener('toggle', event => { state.xscOpen = event.currentTarget.open; });
