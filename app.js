@@ -3142,7 +3142,8 @@ async function init() {
     // 手机网络慢时不和目录抢带宽，首屏能早几秒出来
     const subjectiveReady = catalogReady.then(() => Promise.allSettled(SUBJECT_ORDER.map(key => loadScript(`./data/subjective-${key}.js?v=${SUBJECTIVE_VERSION}`))));
     const banksReady = catalogReady.then(() => ensureBanks(SUBJECT_ORDER));
-    void Promise.all([catalogReady, accessReady]).then(() => { if (!banks && nationalCatalog) renderLiteHome(); }).catch(() => {});
+    // 轻首页（学期、早鸟卷、同步卷、小升初）只等目录，不等权限接口（要经服务器查数据库，网络慢时要好几秒）
+    void catalogReady.then(() => { if (!banks && nationalCatalog) renderLiteHome(); }).catch(() => {});
     banks = await banksReady;
     await catalogReady;
     await loadDaily;
@@ -3151,7 +3152,11 @@ async function init() {
     subjectiveQuestions = await loadSubjective().catch(error => { console.warn(error); return []; });
     library = [...bankQuestions, ...subjectiveQuestions, ...dailyQuestions()];
     baseTrialIds = trialQuestionIds(bankQuestions, subjectiveQuestions);
-    await accessReady;
+    // 权限接口最多等 2.5 秒；更晚回来、确认已购买时再画一次首页
+    let accessSettled = false;
+    void accessReady.finally(() => { accessSettled = true; });
+    await Promise.race([accessReady, new Promise(resolve => setTimeout(resolve, 2500))]);
+    if (!accessSettled) void accessReady.then(() => { if (paidAccess && byId('subjectSections')) renderHome(); });
     window.NationalExams.attach({
       view,
       home: () => renderHome('homeTitle'),

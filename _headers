@@ -35,3 +35,7 @@
 
 /qrcode.js
   Cache-Control: public, max-age=14400, stale-while-revalidate=604800
+
+# Service Worker 本身每次都要问服务器有没有新版本（停用开关也靠它）
+/sw.js
+  Cache-Control: no-cache

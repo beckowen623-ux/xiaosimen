@@ -34,7 +34,7 @@ if (existsSync(output)) {
 
 const pages = [
   "app.js", "styles.css", "referrals.js", "share-offer.js", "referrals.css", "qrcode.js",
-  "key-points.html", "key-points.js", "key-points.css", "manifest.webmanifest", "_routes.json", "_headers",
+  "key-points.html", "key-points.js", "key-points.css", "manifest.webmanifest", "_routes.json", "_headers", "sw.js",
   "national-exams.js", "national-exams.css",
 ];
 mkdirSync(output);
@@ -60,7 +60,11 @@ for (const name of readdirSync(join(publicData, "national")).sort()) {
   nationalHash.update(readFileSync(join(publicData, "national", name)));
 }
 const nationalScript = join(output, "national-exams.js");
-writeFileSync(nationalScript, readFileSync(nationalScript, "utf8").replace("__NATIONAL_VERSION__", nationalHash.digest("hex").slice(0, 12)));
+const nationalVersion = nationalHash.digest("hex").slice(0, 12);
+writeFileSync(nationalScript, readFileSync(nationalScript, "utf8").replace("__NATIONAL_VERSION__", nationalVersion));
+// index.html 里预加载真题目录，网址必须和 national-exams.js 里一模一样，才不会下两次
+const indexOutput = join(output, "index.html");
+writeFileSync(indexOutput, readFileSync(indexOutput, "utf8").replace("__NATIONAL_VERSION__", nationalVersion));
 
 // 每次发布按文件内容生成版本号（?v=内容哈希），文件一改，访客浏览器就会拿新文件。
 for (const page of ["index.html", "key-points.html"]) {
