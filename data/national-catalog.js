@@ -2143,6 +2143,50 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "sync-physics-9down-1",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "九年级·生活用电",
+      "order": 1,
+      "label": "生活用电",
+      "title": "九下物理同步章节卷 · 生活用电",
+      "source": "考查范围：人教版九年级“生活用电”一章（家庭电路的组成与连接、火线零线与测电笔、三孔插座与接地、电流过大的原因、保险丝和空气开关、安全用电与触电急救），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-9down-1.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
+      "id": "sync-physics-9down-2",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "同步章节卷",
+      "year": 2027,
+      "sync": true,
+      "stage": "9-down",
+      "unit": "九年级·电与磁",
+      "order": 2,
+      "label": "电与磁",
+      "title": "九下物理同步章节卷 · 电与磁",
+      "source": "考查范围：人教版九年级“电与磁”一章（磁现象与磁场、地磁场、电生磁与安培定则、电磁铁、电磁继电器、电动机、磁生电与发电机），按期中期末和中考题型编写，含易错坑点，百分制",
+      "description": "整卷 21 题（21 题，百分制）",
+      "questionCount": 21,
+      "data": "./data/national/sync-physics-9down-2.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 5
+      }
+    },
+    {
       "id": "sync-physics-9up-1",
       "subject": "physics",
       "subjectLabel": "物理",

@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-21 · Claude Code · 同步章节卷：九下物理 2 章（main）
+- 新增 `zz-sync-physics-9down-1..2.json`：生活用电、电与磁（信息与能源不单独出卷）。同步章节卷共 42 套（数学 24、物理 18）。
+- 验证：build 通过、`node tests/validate.mjs` 通过。
+
 ## 2026-11-21 · Claude Code · 同步章节卷：九上物理 5 章（main）
 - 新增 `zz-sync-physics-9up-1..5.json`：内能与热机、电流和电路、电压电阻、欧姆定律、电功率（unit 用“九年级·…”与精编卷一致）。同步章节卷共 40 套（数学 24、物理 16）。
 - 验证：build 通过、`node tests/validate.mjs` 通过。
