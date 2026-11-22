@@ -11,6 +11,8 @@
   const papers = new Map();
   const dataVersion = '__NATIONAL_VERSION__';
   let catalog;
+  // “全国中考真题”页只放真题：早鸟卷、同步章节卷、精编模拟卷在首页有自己的入口（本周一卷等仍会用到它们的题）
+  const isExamPaper = paper => !paper.earlybird && !paper.sync && !paper.claude;
   let app;
   let revision = 0;
   let opened = false;
@@ -64,7 +66,7 @@
           const key = q.section || 'other';
           const count = seen.get(key) || 0;
           const first = questions.find(x => (x.section || 'other') === key);
-          const trialPaper = catalog.find(p => p.subject === 'english' && p.data && !p.claude && p.sections?.[key]);
+          const trialPaper = catalog.find(p => isExamPaper(p) && p.subject === 'english' && p.data && p.sections?.[key]);
           const ok = key !== '书面表达' && paper.id === trialPaper?.id &&
             (q.groupId ? q.groupId === first.groupId : count < (key === '情景交际' ? 2 : 5));
           if (ok) previewIds.add(q.id);
@@ -144,8 +146,8 @@
     ['配对阅读', '为每条描述选出对应项', 0], ['短文填空', '用词的正确形式填空', 0], ['情景交际', '自己写句子补全对话', 5],
     ['句子运用', '句型转换、翻译和连词成句', 5], ['回答问题', '读短文，用完整句子回答', 0], ['书面表达', '写一篇作文，对照得分点', 1],
   ];
-  const englishPapers = () => catalog.filter(paper => !paper.earlybird && paper.subject === 'english' && paper.data &&
-    (!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year));
+  const englishPapers = (all = false) => catalog.filter(paper => isExamPaper(paper) && paper.subject === 'english' && paper.data &&
+    (all || ((!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year))));
   function englishTypeCards() {
     const papersHere = englishPapers();
     const count = type => papersHere.reduce((sum, paper) => sum + (paper.sections?.[type] || 0), 0);
@@ -161,7 +163,8 @@
     const version = ++revision;
     try {
       const type = button.dataset.type;
-      const lists = await Promise.all(englishPapers().filter(paper => paper.sections?.[type]).map(getQuestions));
+      // 未解锁：免费的那一组固定在全部真题里首套含该题型的卷子上，不受地区/年份筛选影响
+      const lists = await Promise.all(englishPapers(!app.hasAccess()).filter(paper => paper.sections?.[type]).map(getQuestions));
       if (version !== revision || !opened) return;
       const all = lists.flat().filter(q => q.section === type);
       const pool = app.hasAccess() ? all : all.filter(q => q.preview);
@@ -189,17 +192,17 @@
 
   function render() {
     state.paper = null;
-    const filtered = catalog.filter(paper => !paper.earlybird && paper.subject === state.subject &&
+    const filtered = catalog.filter(paper => isExamPaper(paper) && paper.subject === state.subject &&
       (!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year));
     const practice = state.mode === 'short' ? filtered.filter(paper => paper.questionCount > 0) : filtered;
     const typeCards = state.subject === 'english' && state.mode === 'short' ? englishTypeCards() : '';
     if (typeCards) {
-      shell(`${drawFilters(catalog.filter(paper => !paper.earlybird))}${typeCards}`);
+      shell(`${drawFilters(catalog.filter(isExamPaper))}${typeCards}`);
       wireFilters();
       app.view.querySelectorAll('[data-type]').forEach(button => button.addEventListener('click', () => { void startType(button); }));
       return;
     }
-    shell(`${drawFilters(catalog.filter(paper => !paper.earlybird))}
+    shell(`${drawFilters(catalog.filter(isExamPaper))}
       <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : '原卷免费看、免费打印。在线刷题和中文解析属于中考题库完整版（19.9 一起解锁），每种题型可先免费试做一组。'}</p>
       <div class="national-paper-grid">${practice.length ? practice.map(paperCard).join('') :
         `<section class="card national-empty"><h2>${filtered.length ? '这科目前提供原卷与参考答案' : '当前筛选下暂无试卷'}</h2><p class="muted">${filtered.length ? '切换「按原卷练」即可查看和打印。' : '可以切换地区或年份再看看。'}</p>${filtered.length ? '<button type="button" class="btn primary" id="switchToPapers">查看原卷</button>' : ''}</section>`}</div>`);
