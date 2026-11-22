@@ -3184,31 +3184,6 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-chemistry",
-      "subject": "chemistry",
-      "subjectLabel": "化学",
-      "region": "福建",
-      "year": 2026,
-      "title": "2026 年福建中考化学",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/fj-2026-chemistry/p51.webp",
-        "./assets/national/fj-2026-chemistry/p52.webp",
-        "./assets/national/fj-2026-chemistry/p53.webp",
-        "./assets/national/fj-2026-chemistry/p54.webp",
-        "./assets/national/fj-2026-chemistry/p55.webp",
-        "./assets/national/fj-2026-chemistry/p56.webp",
-        "./assets/national/fj-2026-chemistry/p57.webp",
-        "./assets/national/fj-2026-chemistry/p58-question.webp"
-      ],
-      "answerPages": [
-        "./assets/national/fj-2026-chemistry/p58-answer.webp",
-        "./assets/national/fj-2026-chemistry/p59.webp"
-      ],
-      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
       "id": "fj-2026-lishi",
       "subject": "lishi",
       "subjectLabel": "历史",
@@ -3261,6 +3236,36 @@ window.NATIONAL_CATALOG = {
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "fj-2026-chemistry",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "福建",
+      "year": 2026,
+      "title": "2026 年福建中考化学",
+      "questionCount": 18,
+      "pages": [
+        "./assets/national/fj-2026-chemistry/p51.webp",
+        "./assets/national/fj-2026-chemistry/p52.webp",
+        "./assets/national/fj-2026-chemistry/p53.webp",
+        "./assets/national/fj-2026-chemistry/p54.webp",
+        "./assets/national/fj-2026-chemistry/p55.webp",
+        "./assets/national/fj-2026-chemistry/p56.webp",
+        "./assets/national/fj-2026-chemistry/p57.webp",
+        "./assets/national/fj-2026-chemistry/p58-question.webp"
+      ],
+      "answerPages": [
+        "./assets/national/fj-2026-chemistry/p58-answer.webp",
+        "./assets/national/fj-2026-chemistry/p59.webp"
+      ],
+      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "description": "整卷 18 题（选择 10、非选择 8，满分 100，配图取自原卷；答案以官方参考答案为准（第 18 题合订本缺答案页，按题给数据演算），非选择题各小问分值为编者拆分）",
+      "data": "./data/national/fj-2026-chemistry.js",
+      "sections": {
+        "单项选择": 10,
+        "非选择题": 8
+      }
     },
     {
       "id": "fj-2026-math",
