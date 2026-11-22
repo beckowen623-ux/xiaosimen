@@ -32,16 +32,17 @@ function build(paper) {
     section, chapter: paper.title, grade: paper.stage === "xsc" ? "小升初" : "九下", stage: paper.stage === "xsc" ? "xsc" : "9-down",
     source: paper.numbering?.[n] ? `${paper.title} ${paper.numbering[n]}` : `${paper.title} 第 ${n} 题`, ...extra,
   });
+  // answer 写成数组（如 ["C", "D"]）即多选题（江西等省的多项选择）
   const choice = (item, section, extra) => ({
-    ...base(item.n, section, extra), type: "single",
+    ...base(item.n, section, extra), type: Array.isArray(item.answer) ? "multiple" : "single",
     options: item.options.map((text, i) => ({ key: LETTERS[i], text })),
-    answer: [item.answer], explanation: item.exp, kp: item.kp || "",
+    answer: Array.isArray(item.answer) ? [...item.answer].sort() : [item.answer], explanation: item.exp, kp: item.kp || "",
     ...(item.image ? { image: item.image } : {}),
   });
   for (const section of paper.sections) {
     const t = section.type;
     const sectionStart = out.length;
-    if (t === "单项选择") {
+    if (t === "单项选择" || t === "多项选择") {
       for (const item of section.items) out.push({ ...choice(item, t), stem: item.stem });
     } else if (section.passage && (section.choices || section.items.every(item => item.options))) {
       // 完形填空、语法选择（每空自带选项）；七选五、补全对话、配对阅读（共用一组选项）。
@@ -133,8 +134,10 @@ function build(paper) {
   for (const q of out) {
     if (ids.has(q.id)) throw new Error(`${paper.id}: 题号重复 ${q.number}`);
     ids.add(q.id);
-    if (q.type === "single" && !q.options.some(o => o.key === q.answer[0])) throw new Error(`${paper.id} 第 ${q.number} 题答案不在选项里`);
-    if (q.type === "single" && q.options.some(o => !o.text)) throw new Error(`${paper.id} 第 ${q.number} 题有空选项`);
+    const isChoice = q.type === "single" || q.type === "multiple";
+    if (isChoice && !q.answer.every(a => q.options.some(o => o.key === a))) throw new Error(`${paper.id} 第 ${q.number} 题答案不在选项里`);
+    if (q.type === "multiple" && q.answer.length < 2) throw new Error(`${paper.id} 第 ${q.number} 题多选题答案少于 2 项`);
+    if (isChoice && q.options.some(o => !o.text)) throw new Error(`${paper.id} 第 ${q.number} 题有空选项`);
   }
   return out;
 }

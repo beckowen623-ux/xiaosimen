@@ -3340,50 +3340,6 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
-      "id": "jx-2026-physics",
-      "subject": "physics",
-      "subjectLabel": "物理",
-      "region": "江西",
-      "year": 2026,
-      "title": "2026 年江西中考物理",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/jx-2026-physics/p01.webp",
-        "./assets/national/jx-2026-physics/p02.webp",
-        "./assets/national/jx-2026-physics/p03.webp",
-        "./assets/national/jx-2026-physics/p04.webp",
-        "./assets/national/jx-2026-physics/p05.webp"
-      ],
-      "answerPages": [
-        "./assets/national/jx-2026-physics/p01-answer.webp",
-        "./assets/national/jx-2026-physics/p02-answer.webp"
-      ],
-      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西物理试题卷.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
-      "id": "jx-2026-chemistry",
-      "subject": "chemistry",
-      "subjectLabel": "化学",
-      "region": "江西",
-      "year": 2026,
-      "title": "2026 年江西中考化学",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/jx-2026-chemistry/p01.webp",
-        "./assets/national/jx-2026-chemistry/p02.webp",
-        "./assets/national/jx-2026-chemistry/p03.webp",
-        "./assets/national/jx-2026-chemistry/p04.webp",
-        "./assets/national/jx-2026-chemistry/p05.webp"
-      ],
-      "answerPages": [
-        "./assets/national/jx-2026-chemistry/p01-answer.webp",
-        "./assets/national/jx-2026-chemistry/p02-answer.webp"
-      ],
-      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西化学试题卷.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
       "id": "jx-2026-chinese",
       "subject": "chinese",
       "subjectLabel": "语文",
@@ -3712,6 +3668,66 @@ window.NATIONAL_CATALOG = {
       "answerPages": [],
       "source": "2026年湖南中考历史试卷真题及答案完整版.pdf",
       "description": "完整原卷 6 页，参考答案在卷末"
+    },
+    {
+      "id": "jx-2026-chemistry",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "region": "江西",
+      "year": 2026,
+      "title": "2026 年江西中考化学",
+      "questionCount": 20,
+      "pages": [
+        "./assets/national/jx-2026-chemistry/p01.webp",
+        "./assets/national/jx-2026-chemistry/p02.webp",
+        "./assets/national/jx-2026-chemistry/p03.webp",
+        "./assets/national/jx-2026-chemistry/p04.webp",
+        "./assets/national/jx-2026-chemistry/p05.webp"
+      ],
+      "answerPages": [
+        "./assets/national/jx-2026-chemistry/p01-answer.webp",
+        "./assets/national/jx-2026-chemistry/p02-answer.webp"
+      ],
+      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西化学试题卷.pdf",
+      "description": "整卷 20 题（单选 10、选择填充 3、填空与说明 4、实验与探究 2、综合计算 1，满分 70，配图取自原卷；答案以官方参考答案为准，非选择题小问分值为编者拆分）",
+      "data": "./data/national/jx-2026-chemistry.js",
+      "sections": {
+        "单项选择": 10,
+        "选择填充题": 3,
+        "填空与说明题": 4,
+        "实验与探究题": 2,
+        "综合计算题": 1
+      }
+    },
+    {
+      "id": "jx-2026-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "江西",
+      "year": 2026,
+      "title": "2026 年江西中考物理",
+      "questionCount": 21,
+      "pages": [
+        "./assets/national/jx-2026-physics/p01.webp",
+        "./assets/national/jx-2026-physics/p02.webp",
+        "./assets/national/jx-2026-physics/p03.webp",
+        "./assets/national/jx-2026-physics/p04.webp",
+        "./assets/national/jx-2026-physics/p05.webp"
+      ],
+      "answerPages": [
+        "./assets/national/jx-2026-physics/p01-answer.webp",
+        "./assets/national/jx-2026-physics/p02-answer.webp"
+      ],
+      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江西/江西（官方版试卷及答案高清）/2026年江西物理试题卷.pdf",
+      "description": "整卷 21 题（填空 8、单选 4、多选 2、计算 3、实验探究 4，满分 80，配图取自原卷；答案以官方参考答案为准，计算、实验题小问分值为编者拆分）",
+      "data": "./data/national/jx-2026-physics.js",
+      "sections": {
+        "填空题": 8,
+        "单项选择": 4,
+        "多项选择": 2,
+        "计算题": 3,
+        "实验与探究题": 4
+      }
     },
     {
       "id": "claude-2026-chemistry-1",
