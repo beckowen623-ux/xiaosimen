@@ -3386,32 +3386,6 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "hen-2026-math",
-      "subject": "math",
-      "subjectLabel": "数学",
-      "region": "河南",
-      "year": 2026,
-      "title": "2026 年河南中考数学",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/hen-2026-math/p01.webp",
-        "./assets/national/hen-2026-math/p02.webp",
-        "./assets/national/hen-2026-math/p03.webp",
-        "./assets/national/hen-2026-math/p04.webp",
-        "./assets/national/hen-2026-math/p05.webp",
-        "./assets/national/hen-2026-math/p06.webp",
-        "./assets/national/hen-2026-math/p07.webp",
-        "./assets/national/hen-2026-math/p08.webp",
-        "./assets/national/hen-2026-math/p09.webp",
-        "./assets/national/hen-2026-math/p10.webp",
-        "./assets/national/hen-2026-math/p11.webp",
-        "./assets/national/hen-2026-math/p12.webp"
-      ],
-      "answerPages": [],
-      "source": "2026年河南中考数学试卷真题及答案完整版.pdf",
-      "description": "完整原卷 12 页，参考答案在卷末"
-    },
-    {
       "id": "sn-2026-math",
       "subject": "math",
       "subjectLabel": "数学",
@@ -3618,6 +3592,37 @@ window.NATIONAL_CATALOG = {
       "answerPages": [],
       "source": "2026年湖南中考历史试卷真题及答案完整版.pdf",
       "description": "完整原卷 6 页，参考答案在卷末"
+    },
+    {
+      "id": "hen-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "河南",
+      "year": 2026,
+      "title": "2026 年河南中考数学",
+      "questionCount": 23,
+      "pages": [
+        "./assets/national/hen-2026-math/p01.webp",
+        "./assets/national/hen-2026-math/p02.webp",
+        "./assets/national/hen-2026-math/p03.webp",
+        "./assets/national/hen-2026-math/p04.webp",
+        "./assets/national/hen-2026-math/p05.webp",
+        "./assets/national/hen-2026-math/p06.webp"
+      ],
+      "answerPages": [
+        "./assets/national/hen-2026-math/p07.webp",
+        "./assets/national/hen-2026-math/p08.webp",
+        "./assets/national/hen-2026-math/p09.webp",
+        "./assets/national/hen-2026-math/p10.webp"
+      ],
+      "source": "2026年河南中考数学试卷真题及答案完整版.pdf",
+      "description": "整卷 23 题（选择 10、填空 5、解答 8，满分 120，配图取自原卷；答案和分步给分按原卷所附参考答案）",
+      "data": "./data/national/hen-2026-math.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 5,
+        "解答题": 8
+      }
     },
     {
       "id": "js-suzhou-2026-chemistry",

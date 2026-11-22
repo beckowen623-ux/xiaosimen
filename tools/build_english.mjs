@@ -164,6 +164,8 @@ for (const file of readdirSync(srcDir).filter(f => f.endsWith(".json")).sort()) 
     ...(paper.sync ? { sync: true, stage: paper.stage } : {}),
     ...(paper.unit ? { unit: paper.unit, order: paper.order || 0 } : {}),
     ...(paper.label ? { label: paper.label } : {}),
+    // 原卷图片里题目页和答案页混在一起的，在源文件里写 pages / answerPages 重新分开（重复页不列）
+    ...(paper.pages ? { pages: paper.pages } : {}), ...(paper.answerPages ? { answerPages: paper.answerPages } : {}),
     title: paper.title, source: paper.source, description: `整卷 ${questions.length} 题${paper.note ? "（" + paper.note.replace(/。$/, "") + "）" : ""}`,
     questionCount: questions.length, data: `./data/national/${paper.id}.js`, sections: counts };
   catalog.papers = [...catalog.papers.filter(p => p.id !== paper.id), entry];
