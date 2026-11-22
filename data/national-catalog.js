@@ -3363,31 +3363,6 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "js-suzhou-2026-physics",
-      "subject": "physics",
-      "subjectLabel": "物理",
-      "region": "苏州",
-      "year": 2026,
-      "title": "2026 年苏州中考物理",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/js-suzhou-2026-physics/p01.webp",
-        "./assets/national/js-suzhou-2026-physics/p02.webp",
-        "./assets/national/js-suzhou-2026-physics/p03.webp",
-        "./assets/national/js-suzhou-2026-physics/p04.webp",
-        "./assets/national/js-suzhou-2026-physics/p05.webp",
-        "./assets/national/js-suzhou-2026-physics/p06.webp",
-        "./assets/national/js-suzhou-2026-physics/p07.webp",
-        "./assets/national/js-suzhou-2026-physics/p08.webp"
-      ],
-      "answerPages": [
-        "./assets/national/js-suzhou-2026-physics/p09.webp",
-        "./assets/national/js-suzhou-2026-physics/p10.webp"
-      ],
-      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江苏/苏州（官方版试卷及答案无水印版）/2026年苏州物理中考试卷真题及答案解析无水印.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
       "id": "js-suzhou-2026-chemistry",
       "subject": "chemistry",
       "subjectLabel": "化学",
@@ -3668,6 +3643,37 @@ window.NATIONAL_CATALOG = {
       "answerPages": [],
       "source": "2026年湖南中考历史试卷真题及答案完整版.pdf",
       "description": "完整原卷 6 页，参考答案在卷末"
+    },
+    {
+      "id": "js-suzhou-2026-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "苏州",
+      "year": 2026,
+      "title": "2026 年苏州中考物理",
+      "questionCount": 30,
+      "pages": [
+        "./assets/national/js-suzhou-2026-physics/p01.webp",
+        "./assets/national/js-suzhou-2026-physics/p02.webp",
+        "./assets/national/js-suzhou-2026-physics/p03.webp",
+        "./assets/national/js-suzhou-2026-physics/p04.webp",
+        "./assets/national/js-suzhou-2026-physics/p05.webp",
+        "./assets/national/js-suzhou-2026-physics/p06.webp",
+        "./assets/national/js-suzhou-2026-physics/p07.webp",
+        "./assets/national/js-suzhou-2026-physics/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/js-suzhou-2026-physics/p09.webp",
+        "./assets/national/js-suzhou-2026-physics/p10.webp"
+      ],
+      "source": "2025-2026全国各地中考真题汇总/2026年全国各地中考真题汇总/江苏/苏州（官方版试卷及答案无水印版）/2026年苏州物理中考试卷真题及答案解析无水印.pdf",
+      "description": "整卷 30 题（选择 12、填空 9、解答 9，满分 100，配图取自原卷；答案以官方参考答案为准，作图题对照原卷答案图，解答题小问分值为编者拆分）",
+      "data": "./data/national/js-suzhou-2026-physics.js",
+      "sections": {
+        "单项选择": 12,
+        "填空题": 9,
+        "解答题": 9
+      }
     },
     {
       "id": "jx-2026-chemistry",
