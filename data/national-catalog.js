@@ -3184,35 +3184,6 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-physics",
-      "subject": "physics",
-      "subjectLabel": "物理",
-      "region": "福建",
-      "year": 2026,
-      "title": "2026 年福建中考物理",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/fj-2026-physics/p38.webp",
-        "./assets/national/fj-2026-physics/p39.webp",
-        "./assets/national/fj-2026-physics/p40.webp",
-        "./assets/national/fj-2026-physics/p41.webp",
-        "./assets/national/fj-2026-physics/p42.webp",
-        "./assets/national/fj-2026-physics/p43.webp",
-        "./assets/national/fj-2026-physics/p44.webp",
-        "./assets/national/fj-2026-physics/p45.webp",
-        "./assets/national/fj-2026-physics/p46.webp",
-        "./assets/national/fj-2026-physics/p47-question.webp"
-      ],
-      "answerPages": [
-        "./assets/national/fj-2026-physics/p47-answer.webp",
-        "./assets/national/fj-2026-physics/p48.webp",
-        "./assets/national/fj-2026-physics/p49.webp",
-        "./assets/national/fj-2026-physics/p50.webp"
-      ],
-      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
       "id": "fj-2026-chemistry",
       "subject": "chemistry",
       "subjectLabel": "化学",
@@ -3323,6 +3294,44 @@ window.NATIONAL_CATALOG = {
         "单项选择": 10,
         "填空题": 6,
         "解答题": 9
+      }
+    },
+    {
+      "id": "fj-2026-physics",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "region": "福建",
+      "year": 2026,
+      "title": "2026 年福建中考物理",
+      "questionCount": 31,
+      "pages": [
+        "./assets/national/fj-2026-physics/p38.webp",
+        "./assets/national/fj-2026-physics/p39.webp",
+        "./assets/national/fj-2026-physics/p40.webp",
+        "./assets/national/fj-2026-physics/p41.webp",
+        "./assets/national/fj-2026-physics/p42.webp",
+        "./assets/national/fj-2026-physics/p43.webp",
+        "./assets/national/fj-2026-physics/p44.webp",
+        "./assets/national/fj-2026-physics/p45.webp",
+        "./assets/national/fj-2026-physics/p46.webp",
+        "./assets/national/fj-2026-physics/p47-question.webp"
+      ],
+      "answerPages": [
+        "./assets/national/fj-2026-physics/p47-answer.webp",
+        "./assets/national/fj-2026-physics/p48.webp",
+        "./assets/national/fj-2026-physics/p49.webp",
+        "./assets/national/fj-2026-physics/p50.webp"
+      ],
+      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "description": "整卷 31 题（选择 14、填空 6、作图 2、简答 1、实验 5、计算 3，满分 100，配图取自原卷；答案以官方参考答案为准，填空、实验题按每空对照自评）",
+      "data": "./data/national/fj-2026-physics.js",
+      "sections": {
+        "单项选择": 14,
+        "填空题": 6,
+        "作图题": 2,
+        "简答题": 1,
+        "实验题": 5,
+        "计算题": 3
       }
     },
     {
