@@ -3184,34 +3184,6 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷与参考答案"
     },
     {
-      "id": "fj-2026-math",
-      "subject": "math",
-      "subjectLabel": "数学",
-      "region": "福建",
-      "year": 2026,
-      "title": "2026 年福建中考数学",
-      "questionCount": 0,
-      "pages": [
-        "./assets/national/fj-2026-math/p11.webp",
-        "./assets/national/fj-2026-math/p12.webp",
-        "./assets/national/fj-2026-math/p13.webp",
-        "./assets/national/fj-2026-math/p14.webp",
-        "./assets/national/fj-2026-math/p15.webp",
-        "./assets/national/fj-2026-math/p16-question.webp"
-      ],
-      "answerPages": [
-        "./assets/national/fj-2026-math/p16-answer.webp",
-        "./assets/national/fj-2026-math/p17.webp",
-        "./assets/national/fj-2026-math/p18.webp",
-        "./assets/national/fj-2026-math/p19.webp",
-        "./assets/national/fj-2026-math/p20.webp",
-        "./assets/national/fj-2026-math/p21.webp",
-        "./assets/national/fj-2026-math/p22.webp"
-      ],
-      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
-      "description": "完整原卷与参考答案"
-    },
-    {
       "id": "fj-2026-physics",
       "subject": "physics",
       "subjectLabel": "物理",
@@ -3318,6 +3290,40 @@ window.NATIONAL_CATALOG = {
       ],
       "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
       "description": "完整原卷与参考答案"
+    },
+    {
+      "id": "fj-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "福建",
+      "year": 2026,
+      "title": "2026 年福建中考数学",
+      "questionCount": 25,
+      "pages": [
+        "./assets/national/fj-2026-math/p11.webp",
+        "./assets/national/fj-2026-math/p12.webp",
+        "./assets/national/fj-2026-math/p13.webp",
+        "./assets/national/fj-2026-math/p14.webp",
+        "./assets/national/fj-2026-math/p15.webp",
+        "./assets/national/fj-2026-math/p16-question.webp"
+      ],
+      "answerPages": [
+        "./assets/national/fj-2026-math/p16-answer.webp",
+        "./assets/national/fj-2026-math/p17.webp",
+        "./assets/national/fj-2026-math/p18.webp",
+        "./assets/national/fj-2026-math/p19.webp",
+        "./assets/national/fj-2026-math/p20.webp",
+        "./assets/national/fj-2026-math/p21.webp",
+        "./assets/national/fj-2026-math/p22.webp"
+      ],
+      "source": "福建2026年中考试题及参考答案（官方所有科目汇总）.pdf",
+      "description": "整卷 25 题（选择 10、填空 6、解答 9，满分 150，配图取自原卷；答案以官方参考答案为准，解答题分步分值为编者按步骤拆分）",
+      "data": "./data/national/fj-2026-math.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 9
+      }
     },
     {
       "id": "jx-2026-physics",

@@ -1,0 +1,940 @@
+// 由 tools/build_english.mjs 生成，源文件 english-src/papers/fj-2026-math.json，请勿手改。
+window.NATIONAL_PAPERS = window.NATIONAL_PAPERS || {};
+window.NATIONAL_PAPERS["fj-2026-math"] = [
+ {
+  "id": "national-fj-2026-math-q01",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 1,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 1 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "－2"
+   },
+   {
+    "key": "B",
+    "text": "－1"
+   },
+   {
+    "key": "C",
+    "text": "＋1"
+   },
+   {
+    "key": "D",
+    "text": "＋2"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "净胜球＝进球－失球。甲队 0－1＝－1，丙队 2－0＝2，记作 ＋2。坑点：看成“丙队赢 1 场”记成 ＋1。",
+  "kp": "正数和负数",
+  "stem": "福建省首届“闽超”足球比赛正如火如荼进行中，在某轮比赛中甲队与乙队的比赛结果为 0∶1，丙队与丁队的比赛结果为 2∶0。若把这轮比赛中甲队的净胜球数记作 －1，则丙队的净胜球数应记作（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q02",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 2,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 2 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "图 A"
+   },
+   {
+    "key": "B",
+    "text": "图 B"
+   },
+   {
+    "key": "C",
+    "text": "图 C"
+   },
+   {
+    "key": "D",
+    "text": "图 D"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "C（正方形四边各接一个半圆）有 4 条对称轴，绕中心转 180° 也能重合。A 只能旋转重合，没有对称轴；B、D 是轴对称图形，但转 180° 不重合。坑点：D 像正三角形，正三角形不是中心对称图形。",
+  "kp": "轴对称与中心对称",
+  "image": "./assets/national/fj-2026-math/q02.webp",
+  "stem": "下列图形中，既是轴对称图形又是中心对称图形的是（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q03",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 3,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 3 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "0.79×10⁴"
+   },
+   {
+    "key": "B",
+    "text": "7.9×10³"
+   },
+   {
+    "key": "C",
+    "text": "7.9×10²"
+   },
+   {
+    "key": "D",
+    "text": "79×10²"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "科学记数法 a×10ⁿ 要求 1≤|a|＜10。7 900＝7.9×10³。A 的 0.79、D 的 79 都不在 1～10 之间。",
+  "kp": "科学记数法",
+  "stem": "2026 年 5 月 24 日，神舟二十三号飞船成功发射。飞船在轨飞行速度接近地球第一宇宙速度 7 900 米/秒。数据 7 900 用科学记数法表示为（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q04",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 4,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 4 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "主视图和左视图相同"
+   },
+   {
+    "key": "B",
+    "text": "主视图和俯视图相同"
+   },
+   {
+    "key": "C",
+    "text": "左视图和俯视图相同"
+   },
+   {
+    "key": "D",
+    "text": "三种视图都相同"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "圆形土楼是一个“圆环柱”。从正面看、从左面看都是同样大小的矩形（内部看不见的轮廓画虚线，位置也一样），从上面看是两个同心圆。所以主视图和左视图相同。",
+  "kp": "三视图",
+  "image": "./assets/national/fj-2026-math/q04.webp",
+  "stem": "福建土楼产生于宋元，成熟于明末、清代和民国时期。图 1 是一座圆形土楼，图 2 为其示意图（箭头为主视方向），关于它的三视图的描述，下列说法正确的是（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q05",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 5,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 5 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "a＋b＞0"
+   },
+   {
+    "key": "B",
+    "text": "a－b＜0"
+   },
+   {
+    "key": "C",
+    "text": "ab＞0"
+   },
+   {
+    "key": "D",
+    "text": "a/b＜0"
+   }
+  ],
+  "answer": [
+   "D"
+  ],
+  "explanation": "b＜－1，0＜a＜1，所以 |b|＞|a|。a＋b＜0；a－b＞0（大数减小数）；a、b 异号，ab＜0，a/b＜0。选 D。",
+  "kp": "实数与数轴",
+  "image": "./assets/national/fj-2026-math/q05.webp",
+  "stem": "实数 a，b 在数轴上的对应点的位置如图所示（b 在 －1 左侧，a 在 0 和 1 之间），下列结论正确的是（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q06",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 6,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 6 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "(1，1)"
+   },
+   {
+    "key": "B",
+    "text": "(1，2)"
+   },
+   {
+    "key": "C",
+    "text": "(2，1)"
+   },
+   {
+    "key": "D",
+    "text": "(2，2)"
+   }
+  ],
+  "answer": [
+   "A"
+  ],
+  "explanation": "在 y＝1/x 上的点满足 xy＝1。只有 (1，1) 满足 1×1＝1。",
+  "kp": "反比例函数",
+  "stem": "下列各点中，在函数 y＝1/x 图象上的点是（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q07",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 7,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 7 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "30°"
+   },
+   {
+    "key": "B",
+    "text": "45°"
+   },
+   {
+    "key": "C",
+    "text": "60°"
+   },
+   {
+    "key": "D",
+    "text": "75°"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "O 离地面 6＋1＝7 尺，C 离地面 4 尺，所以 C 比 O 低 3 尺。过 C 作 OB 的垂线，在直角三角形中 cos∠AOC＝3/6＝1/2，∠AOC＝60°。坑点：直接用 CD＝4 当竖直距离，忘了要从 O 的高度减。",
+  "kp": "解直角三角形",
+  "image": "./assets/national/fj-2026-math/q07.webp",
+  "stem": "古算诗词题“争荡秋千”示意图如图。已知秋千的绳索长 OA＝6 尺，且绳索始终保持直线状态，踏板的起始位置在点 A 处，OA 与地面 BD 垂直，踏板离地面的高度 AB＝1 尺。当踏板从 A 处绕点 O 运动到 C 处时，踏板离地面的高度 CD＝4 尺，则秋千的绳索荡过的 ∠AOC 的大小为（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q08",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 8,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 8 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "7，7"
+   },
+   {
+    "key": "B",
+    "text": "7，7.5"
+   },
+   {
+    "key": "C",
+    "text": "7.5，7"
+   },
+   {
+    "key": "D",
+    "text": "7.5，7.5"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "从小到大排：6，6，6，6，8，8，10，10。中位数是第 4、5 个数的平均数 (6＋8)÷2＝7。平均数＝(6×4＋8×2＋10×2)÷8＝60÷8＝7.5。坑点：平均数用 (6＋8＋10)÷3＝8，没按班级数加权。",
+  "kp": "中位数与平均数",
+  "image": "./assets/national/fj-2026-math/q08.webp",
+  "stem": "某校 8 个班级分别制作了若干张宣传图片，图片数的条形统计图如图所示（6 张的有 4 个班，8 张的有 2 个班，10 张的有 2 个班）。这 8 个班级宣传图片数的中位数与平均数分别是（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q09",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 9,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 9 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "√2/2"
+   },
+   {
+    "key": "B",
+    "text": "1"
+   },
+   {
+    "key": "C",
+    "text": "√2"
+   },
+   {
+    "key": "D",
+    "text": "2"
+   }
+  ],
+  "answer": [
+   "B"
+  ],
+  "explanation": "连接 BD。AB 是直径，∠ADB＝90°，即 BD⊥AC；又 AD＝CD，所以 BD 垂直平分 AC，BA＝BC。BC 是切线，∠ABC＝90°，△ABC 是等腰直角三角形，∠A＝45°，tanA＝1。",
+  "kp": "切线与圆周角",
+  "image": "./assets/national/fj-2026-math/q09.webp",
+  "stem": "如图，AB 是 ⊙O 的直径，BC 是 ⊙O 的切线，AC 交 ⊙O 于点 D。若 AD＝CD，则 tanA 的值是（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q10",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 10,
+  "section": "单项选择",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 10 题",
+  "type": "single",
+  "options": [
+   {
+    "key": "A",
+    "text": "0"
+   },
+   {
+    "key": "B",
+    "text": "1"
+   },
+   {
+    "key": "C",
+    "text": "2"
+   },
+   {
+    "key": "D",
+    "text": "3"
+   }
+  ],
+  "answer": [
+   "C"
+  ],
+  "explanation": "a＝9－6n，b＝25－10n。a＜b 且 ab＜0，说明 a＜0＜b：9－6n＜0 得 n＞1.5；25－10n＞0 得 n＜2.5。所以 1.5＜n＜2.5，只有 2 符合。坑点：只用 a＜b 得 n＜4，会以为 0、1、2、3 都行。",
+  "kp": "二次函数的性质",
+  "stem": "已知抛物线 y＝x²－2nx 经过点 A(3，a)，B(5，b)。若 a＜b，且 ab＜0，则 n 的取值可以是（ ）",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q11",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 11,
+  "section": "填空题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 11 题",
+  "type": "blank",
+  "stem": "第 11 题：一组数据 9，8，5，2，1，1 的众数是________。",
+  "blanks": [
+   [
+    "1"
+   ]
+  ],
+  "answer": [
+   "1"
+  ],
+  "explanation": "出现次数最多的数是 1（出现 2 次）。",
+  "kp": "众数",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q12",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 12,
+  "section": "填空题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 12 题",
+  "type": "blank",
+  "stem": "第 12 题：如图，A，B 两点被池塘隔开，在 AB 外选择一点 C，连接 AC 和 BC，分别取 AC 和 BC 中点 M，N，测得 MN＝100 米，则 A，B 两点间的距离是________米。",
+  "blanks": [
+   [
+    "200"
+   ]
+  ],
+  "answer": [
+   "200"
+  ],
+  "explanation": "MN 是 △ABC 的中位线，MN＝AB/2，所以 AB＝2×100＝200 米。",
+  "kp": "三角形中位线",
+  "image": "./assets/national/fj-2026-math/q12.webp",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q13",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 13,
+  "section": "填空题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 13 题",
+  "type": "blank",
+  "stem": "第 13 题：因式分解：x²－y²＝________。",
+  "blanks": [
+   [
+    "(x+y)(x-y)",
+    "(x-y)(x+y)",
+    "(x＋y)(x－y)",
+    "(x－y)(x＋y)"
+   ]
+  ],
+  "answer": [
+   "(x+y)(x-y)"
+  ],
+  "explanation": "平方差公式：a²－b²＝(a＋b)(a－b)。",
+  "kp": "因式分解",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q14",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 14,
+  "section": "填空题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 14 题",
+  "type": "blank",
+  "stem": "第 14 题：把一副三角板按如图所示的方式摆放，其中 ∠B＝∠DFC＝90°，∠BAE＝30°，∠CDF＝45°，四边形 ABCD 恰好为矩形，点 E，F 分别在 BC，AE 上，则 ∠AFD 等于________度。",
+  "blanks": [
+   [
+    "75"
+   ]
+  ],
+  "answer": [
+   "75"
+  ],
+  "explanation": "矩形的角都是 90°。∠DAF＝90°－∠BAE＝60°，∠ADF＝90°－∠CDF＝45°。在 △ADF 中，∠AFD＝180°－60°－45°＝75°。",
+  "kp": "矩形与三角形内角和",
+  "image": "./assets/national/fj-2026-math/q14.webp",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q15",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 15,
+  "section": "填空题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 15 题",
+  "type": "blank",
+  "stem": "第 15 题：已知实数 p，q 满足 1/p＋1/q＝1，则 (p－1)(q－1) 的值为________。",
+  "blanks": [
+   [
+    "1"
+   ]
+  ],
+  "answer": [
+   "1"
+  ],
+  "explanation": "1/p＋1/q＝1 两边乘 pq 得 p＋q＝pq。(p－1)(q－1)＝pq－(p＋q)＋1＝1。",
+  "kp": "分式与整体代入",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q16",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 16,
+  "section": "填空题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 16 题",
+  "type": "blank",
+  "stem": "第 16 题：实心的纯金和纯银浸没水中称重时，弹簧测力计的示数分别约为原来的 19/20 和 9/10。一件重 80 克的实心金银饰品，浸没水中称重，弹簧测力计的示数为原来的 15/16。若纯金和纯银浸没水中称重的示数分别按原来的 19/20 和 9/10 计算，则这件金银饰品中含金________克。",
+  "blanks": [
+   [
+    "60"
+   ]
+  ],
+  "answer": [
+   "60"
+  ],
+  "explanation": "设含金 x 克，则含银 (80－x) 克。水中示数：19/20·x＋9/10·(80－x)＝15/16×80＝75，即 0.05x＋72＝75，x＝60。",
+  "kp": "一元一次方程的应用",
+  "paperScore": 4
+ },
+ {
+  "id": "national-fj-2026-math-q17",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 17,
+  "section": "解答题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 17 题",
+  "type": "essay",
+  "meta": "解答题",
+  "material": "",
+  "stem": "（8 分）计算：√4＋|－3|－2²。",
+  "points": [
+   {
+    "text": "√4＝2，|－3|＝3，2²＝4",
+    "score": 6,
+    "keys": []
+   },
+   {
+    "text": "结果正确：1",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "原式＝2＋3－4＝1。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "explanation": "坑点：－2² 表示 －(2²)＝－4，不是 (－2)²。",
+  "kp": "实数运算"
+ },
+ {
+  "id": "national-fj-2026-math-q18",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 18,
+  "section": "解答题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 18 题",
+  "type": "essay",
+  "meta": "解答题",
+  "material": "",
+  "stem": "（8 分）如图，△ABC 是等边三角形，BD⊥BC，CE⊥BC，BD＝CE。求证：AD＝AE。",
+  "points": [
+   {
+    "text": "由垂直得 ∠CBD＝∠BCE＝90°；由等边三角形得 AB＝AC，∠ABC＝∠ACB＝60°",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "推出 ∠ABD＝∠ACE＝150°",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "SAS 证 △ABD≌△ACE，得 AD＝AE",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "∵ BD⊥BC，CE⊥BC，∴ ∠CBD＝∠BCE＝90°。∵ △ABC 是等边三角形，∴ AB＝AC，∠ABC＝∠ACB＝60°，∴ ∠ABD＝∠ACE＝150°。在 △ABD 和 △ACE 中，AB＝AC，∠ABD＝∠ACE，BD＝CE，∴ △ABD≌△ACE（SAS），∴ AD＝AE。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "explanation": "关键是找夹角：∠ABD＝60°＋90°＝150°。",
+  "kp": "全等三角形",
+  "image": "./assets/national/fj-2026-math/q18.webp"
+ },
+ {
+  "id": "national-fj-2026-math-q19",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 19,
+  "section": "解答题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 19 题",
+  "type": "essay",
+  "meta": "解答题",
+  "material": "",
+  "stem": "（8 分）解不等式组：① x－2＞1；② 3x－5＜2(x＋1)。",
+  "points": [
+   {
+    "text": "解①得 x＞3",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "解②得 x＜7",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "写出解集 3＜x＜7",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "解①得 x＞3；解②：3x－5＜2x＋2，x＜7。所以不等式组的解集为 3＜x＜7。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "explanation": "去括号时 2 要乘到括号里每一项：2(x＋1)＝2x＋2。",
+  "kp": "一元一次不等式组"
+ },
+ {
+  "id": "national-fj-2026-math-q20",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 20,
+  "section": "解答题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 20 题",
+  "type": "essay",
+  "meta": "解答题",
+  "material": "",
+  "stem": "（8 分）如图，四边形 ABCD 是矩形，AB＜BC，点 E 在 AD 的延长线上。\n(1) 求作点 F，使点 F 在 AD 边上，且 ∠AFB＝2∠EBC；（尺规作图，不写作法，保留作图痕迹）\n(2) 在 (1) 的条件下，若 AB＝4，BC＝6，DE＝2，求 AF 的长。",
+  "points": [
+   {
+    "text": "(1) 作法正确：作 ∠FBE＝∠EBC（以 BE 为边在上方作等角），交 AD 于 F",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "(2) 由 AD∥BC 得 ∠E＝∠EBC，∠AFB＝∠FBC，结合条件得 ∠FBE＝∠E，BF＝EF",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "AE＝8，设 AF＝x，BF＝8－x，列 x²＋4²＝(8－x)²",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "解得 AF＝3",
+    "score": 1,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "(1) 在 ∠ABE 内作 ∠FBE＝∠EBC，射线 BF 交 AD 于点 F，F 即为所求（此时 ∠FBC＝2∠EBC＝∠AFB）。\n(2) ∵ 四边形 ABCD 是矩形，∴ AD∥BC，AD＝BC＝6，∴ ∠E＝∠EBC，∠AFB＝∠FBC。∵ ∠AFB＝2∠EBC，∴ ∠FBE＝∠EBC＝∠E，∴ BF＝EF。AE＝AD＋DE＝8，设 AF＝x，则 BF＝EF＝8－x。在 Rt△ABF 中，x²＋4²＝(8－x)²，解得 x＝3，即 AF＝3。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "explanation": "思路：∠AFB＝∠FBC（内错角），要让它等于 2∠EBC，只需 BE 平分 ∠FBC，所以作一个和 ∠EBC 相等的角。“平行线＋角平分线”出等腰三角形，再用勾股定理列方程。",
+  "kp": "尺规作图与勾股定理",
+  "image": "./assets/national/fj-2026-math/q20.webp"
+ },
+ {
+  "id": "national-fj-2026-math-q21",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 21,
+  "section": "解答题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 21 题",
+  "type": "essay",
+  "meta": "解答题",
+  "material": "",
+  "stem": "（8 分）一个不透明的盒子中有 1 个标号为 0 的黄球 a₀，2 个标号分别为 1，2 的红球 b₁，b₂，1 个标号为 3 的白球 c₃，这些球除颜色和标号外无其他差别。\n(1) 从盒子中随机摸出 1 个球，求摸出的球是黄球的概率；\n(2) 从盒子中随机摸出 1 个球，不放回，再从中随机摸出 1 个球。求摸出的 2 个球颜色不同且标号之和小于 4 的概率。",
+  "points": [
+   {
+    "text": "(1) P(黄球)＝1/4",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "(2) 列表或画树状图，共 12 种等可能结果",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "满足条件的有 6 种，概率 1/2",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 8,
+  "sample": "(1) 共 4 种等可能结果，黄球 1 种，P＝1/4。\n(2) 不放回摸两次共 4×3＝12 种等可能结果。颜色不同且标号和小于 4 的有：(a₀，b₁)，(a₀，b₂)，(a₀，c₃)，(b₁，a₀)，(b₂，a₀)，(c₃，a₀)，共 6 种。P＝6/12＝1/2。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "explanation": "注意 (b₁，c₃) 和为 4、(b₂，c₃) 和为 5，都不小于 4；(b₁，b₂) 颜色相同。坑点：不放回时同一个球不能摸两次，表格对角线要空着。",
+  "kp": "概率"
+ },
+ {
+  "id": "national-fj-2026-math-q22",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 22,
+  "section": "解答题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 22 题",
+  "type": "essay",
+  "meta": "解答题",
+  "material": "",
+  "stem": "（10 分）如图，在四边形 ABCD 中，E 是 AB 上的一点，∠ADC＝∠BCD＝∠CED＝90°，CE＝DE。四边形 A′B′CD 由四边形 ABCD 沿 CD 翻折得到，点 A，B，E 的对应点分别为 A′，B′，E′。F 是 AD 延长线上的一点，且 FE′∥AB。\n(1) 求证：E′A′＝E′F；\n(2) 若 AD＝√2，DE＝4，求 A′F 的长。",
+  "points": [
+   {
+    "text": "(1) 由 FE′∥AB 得 ∠A＋∠F＝180°，由翻折得 ∠A＝∠DA′E′",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "由邻补角得 ∠F＝∠FA′E′，所以 E′A′＝E′F",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "(2) 由 CE＝DE、∠CED＝90° 得 ∠EDC＝45°，进而 ∠ADE＝45°，翻折得 ∠A′DE′＝45°，A′D＝√2，DE′＝4",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "作 E′G⊥A′F，DG＝4cos45°＝2√2，A′G＝√2，A′F＝2A′G＝2√2",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "(1) ∵ FE′∥AB，∴ ∠A＋∠F＝180°。由翻折，∠A＝∠DA′E′。∵ ∠DA′E′＋∠FA′E′＝180°，∴ ∠F＝∠FA′E′，∴ E′A′＝E′F。\n(2) 过 E′ 作 E′G⊥A′F 于 G。∵ CE＝DE，∠CED＝90°，∴ ∠EDC＝45°；∵ ∠ADC＝90°，∴ ∠ADE＝45°。由翻折，∠A′DE′＝45°，A′D＝AD＝√2，DE′＝DE＝4。在 Rt△DE′G 中，DG＝4cos45°＝2√2，∴ A′G＝DG－A′D＝√2。∵ E′A′＝E′F，E′G⊥A′F，∴ A′F＝2A′G＝2√2。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "explanation": "翻折前后对应角、对应边相等；证出等腰后作底边上的高，用“三线合一”把 A′F 变成 2A′G。",
+  "kp": "翻折与等腰三角形",
+  "image": "./assets/national/fj-2026-math/q22.webp"
+ },
+ {
+  "id": "national-fj-2026-math-q23",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 23,
+  "section": "解答题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 23 题",
+  "type": "essay",
+  "meta": "解答题",
+  "material": "",
+  "stem": "（10 分）阅读材料，回答问题。（√2a 表示 √2 乘 a）\n【提出问题】许多二次根式 √p 为无理数，可表示为整数部分与小数部分的和，即 √p＝m＋n，其中 m 为整数，0＜n＜1。如 √2＝1＋(√2－1)，1－√5＝－2＋(3－√5)。那么形如 (√2a＋b)² 的数，其整数部分 m 与小数部分 n 各有什么特征呢？\n【探究发现】小华的探究过程：\n(1) (√2－1)²＝0＋(3－2√2)；(2) (√2＋1)²＝3＋2√2＝ ① ＋(2√2－2)；\n(3) (2√2－2)²＝0＋(12－8√2)；(4) (2√2＋2)²＝12＋8√2＝23＋ ② ；\n(5) (3√2－4)²＝0＋(34－24√2)；(6) (3√2＋4)²＝34＋24√2＝67＋(24√2－33)。\n据此，小华提出并证明了命题：若整数 a，b 满足 0＜√2a－b＜1，且 (√2a＋b)² 的整数部分为 m，小数部分为 n，则 m 必为奇数，且 (√2a－b)²＝1－n。\n【命题证明】因为 (√2a＋b)²＝2a²＋2√2ab＋b²，(√2a－b)²＝2a²－2√2ab＋b²，所以 (√2a＋b)²＝4a²＋2b²－(√2a－b)²。又 (√2a＋b)²＝m＋n，0＜n＜1，所以 4a²＋2b²－(√2a－b)²＝m＋n。由 0＜√2a－b＜1 得 0＜(√2a－b)²＜1。因此 m＝ ③ ，n＝ ④ 。又 a，b 均为整数，4a²＋2b² 为偶数，故 m 必为奇数，且 (√2a－b)²＝1－n。\n【拓展延伸】问题 1：若整数 a，b 满足 1＜√2a－b＜√2，那么 (√2a＋b)² 的整数部分 m 是否仍为奇数？证明你的结论；问题 2：若整数 a，b 满足 √k＜√2a－b＜√(k＋1)，其中 k 为整数，且 k≥2，试探究 (√2a＋b)² 的整数部分 m 是奇数还是偶数？直接写出结论，不必证明。\n(1) 补全 ①②③④ 所缺的内容；\n(2) 解决问题 1；\n(3) 解决问题 2。",
+  "points": [
+   {
+    "text": "(1) ① 5；② 8√2－11；③ 4a²＋2b²－1；④ 1－(√2a－b)²",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "(2) 结论：m 不是奇数；由 1＜(√2a－b)²＜2 得 m＝4a²＋2b²－2，为偶数",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "(3) k 为偶数时 m 为奇数；k 为奇数时 m 为偶数",
+    "score": 2,
+    "keys": []
+   }
+  ],
+  "score": 10,
+  "sample": "(1) ① 5；② 8√2－11；③ 4a²＋2b²－1；④ 1－(√2a－b)²。\n(2) m 不是奇数。同理 (√2a＋b)²＝4a²＋2b²－(√2a－b)²＝m＋n。由 1＜√2a－b＜√2 得 1＜(√2a－b)²＜2，所以 m＋n＝(4a²＋2b²－2)＋[2－(√2a－b)²]，其中 0＜2－(√2a－b)²＜1，故 m＝4a²＋2b²－2，是偶数，不是奇数。\n(3) 当 k 为偶数（k≥2）时，m 为奇数；当 k 为奇数（k≥2）时，m 为偶数。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "explanation": "核心：(√2a＋b)² 与 (√2a－b)² 的和是整数 4a²＋2b²。(√2a－b)² 落在 (k，k＋1) 之间时，m＝4a²＋2b²－k－1，奇偶性由 k 决定。② 的算法：8√2≈11.31，整数部分 11，所以 12＋8√2＝23＋(8√2－11)。",
+  "kp": "二次根式与代数推理"
+ },
+ {
+  "id": "national-fj-2026-math-q24",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 24,
+  "section": "解答题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 24 题",
+  "type": "essay",
+  "meta": "解答题",
+  "material": "",
+  "stem": "（12 分）如图，四边形 ABCD 内接于 ⊙O，E 是 DC 延长线上的一点，EB 的延长线交 ⊙O 于点 F，AB＝BD，∠CBE＝∠ABD＝60°。\n(1) 求 ∠E 的度数；\n(2) 求证：四边形 AFEC 是平行四边形；\n(3) 设 CF 交 BD 于点 G，且 CG/FG＝2/3，求 BD/AC 的值。",
+  "points": [
+   {
+    "text": "(1) △ABD 等边，∠BAD＝60°；由圆内接四边形得 ∠BCE＝∠BAD＝60°，∠E＝60°",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "(2) ∠ACD＝∠ABD＝60°＝∠E 得 AC∥EF；∠AFB＝180°－∠ADB＝120°，∠AFB＋∠E＝180° 得 AF∥CE；得平行四边形",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "(3) △BCE 等边，证 △CFE≌△BDE 得 BF＝CD＝a，△DEF 等边，BC∥DF",
+    "score": 2,
+    "keys": []
+   },
+   {
+    "text": "由相似得 BE＝2a，EF＝3a，AC＝3a；作 CH⊥BE 求得 CF＝√7a＝BD，BD/AC＝√7/3",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 12,
+  "sample": "(1) ∵ AB＝BD，∠ABD＝60°，∴ △ABD 是等边三角形，∠BAD＝∠BDA＝60°。∵ ABCD 是圆内接四边形，∠BAD＋∠BCD＝180°，又 ∠BCE＋∠BCD＝180°，∴ ∠BCE＝∠BAD＝60°。∵ ∠CBE＝60°，∴ ∠E＝180°－60°－60°＝60°。\n(2) ∵ ∠ACD＝∠ABD＝60°＝∠E，∴ AC∥EF。∵ AFBD 是圆内接四边形，∠AFB＝180°－∠ADB＝120°，∴ ∠AFB＋∠E＝180°，∴ AF∥CE。∴ 四边形 AFEC 是平行四边形。\n(3) 过 C 作 CH⊥BE 于 H，连接 DF，设 CD＝a。∵ ∠E＝∠CBE＝∠BCE＝60°，∴ △BCE 是等边三角形，BE＝CE。又 ∠CFB＝∠CDB，∠E 公共，∴ △CFE≌△BDE，∴ EF＝ED，BF＝CD＝a。∵ ∠E＝60°，∴ △DEF 是等边三角形，∠FDE＝∠BCE＝60°，∴ BC∥DF。∴ △BCG∽△DFG，BC/DF＝CG/FG＝2/3；△BCE∽△FDE，BE/FE＝2/3，∴ BE＝2a，EF＝3a，AC＝EF＝3a。BH＝BE/2＝a，CH＝√3a，FH＝BF＋BH＝2a，CF＝√(4a²＋3a²)＝√7a。∵ △CFE≌△BDE，∴ BD＝CF＝√7a，BD/AC＝√7/3。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "explanation": "第 (3) 问关键：发现 △BCE、△DEF 都是等边三角形，BC∥DF，把 CG/FG 转成 BE/EF；再设 CD＝a，用等边三角形的高求 CF。",
+  "kp": "圆与相似三角形",
+  "image": "./assets/national/fj-2026-math/q24.webp"
+ },
+ {
+  "id": "national-fj-2026-math-q25",
+  "national": true,
+  "subject": "math",
+  "subjectLabel": "数学",
+  "paperId": "fj-2026-math",
+  "number": 25,
+  "section": "解答题",
+  "chapter": "2026 年福建中考数学",
+  "grade": "九下",
+  "stage": "9-down",
+  "source": "2026 年福建中考数学 第 25 题",
+  "type": "essay",
+  "meta": "解答题",
+  "material": "",
+  "stem": "（14 分）已知抛物线 y＝－x²＋bx＋c。\n(1) 若 b＝1，c＝2，求抛物线的顶点坐标；\n(2) 若抛物线上存在一点 P(x₀，y₀) 在 x 轴上方，求证：抛物线与 x 轴有两个交点；\n(3) 抛物线与 x 轴交于 A，B 两点，与 y 轴交于点 C(0，2)，直线 y＝bx＋2 与 y＝－bx－1 相交于点 D，E 是 y 轴上不与点 C 重合的点。若坐标平面内存在点 M 满足 MA＝MB＝MC＝ME，试探究 CD 和 DE 的数量关系，并证明。",
+  "points": [
+   {
+    "text": "(1) 配方 y＝－(x－1/2)²＋9/4，顶点 (1/2，9/4)",
+    "score": 3,
+    "keys": []
+   },
+   {
+    "text": "(2) 由 y₀＞0 得 c＝x₀²－bx₀＋y₀，b²＋4c＝(2x₀－b)²＋4y₀＞0，有两个交点",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "(3) 结论 CD＝DE；由 MA＝MB＝MC 设 M(b/2，m)，解得 m＝1/2",
+    "score": 4,
+    "keys": []
+   },
+   {
+    "text": "求出 D(－3/(2b)，1/2)，MD⊥CE，又 MC＝ME，MD 垂直平分 CE，得 CD＝DE",
+    "score": 3,
+    "keys": []
+   }
+  ],
+  "score": 14,
+  "sample": "(1) y＝－x²＋x＋2＝－(x－1/2)²＋9/4，顶点坐标为 (1/2，9/4)。\n(2) ∵ y₀＝－x₀²＋bx₀＋c＞0，∴ c＝x₀²－bx₀＋y₀。∴ b²＋4c＝b²＋4x₀²－4bx₀＋4y₀＝(2x₀－b)²＋4y₀＞0，即方程 －x²＋bx＋c＝0 有两个不相等的实数根，抛物线与 x 轴有两个交点。\n(3) CD＝DE。c＝2，A、B 的横坐标是 －x²＋bx＋2＝0 的两根 (b±√(b²＋8))/2。由 MA＝MB＝MC，M 在 AB 的垂直平分线 x＝b/2 上，设 M(b/2，m)，由 MA²＝MC² 解得 m＝1/2，M(b/2，1/2)。两直线相交，b≠0，联立 y＝bx＋2，y＝－bx－1 得 D(－3/(2b)，1/2)。M、D 纵坐标都是 1/2，所以 MD 与 y 轴（即 CE）垂直。又 MC＝ME，M 在 CE 的垂直平分线上，所以 MD 垂直平分 CE，CD＝DE。",
+  "method": "先写已知和所求，再列式计算，每一步写清依据，最后写结论。",
+  "answer": [],
+  "explanation": "第 (2) 问把 c 用 P 点表示后配方；第 (3) 问 M 到 A、B、C、E 距离相等，M 是外接圆圆心，抓住“M 的纵坐标 1/2 与 D 的纵坐标相同”。也可由韦达定理 x₁x₂＝－2 直接求 m。",
+  "kp": "二次函数综合"
+ }
+];
