@@ -90,8 +90,10 @@ function build(paper) {
     } else if (t === "古诗文默写" || t === "填空题") {
       for (const item of section.items) {
         const alts = String(item.answer).split(/\s\/\s/).map(s => s.trim()).filter(Boolean); // 用“ / ”分隔多个答案，3/5 这样的分数不拆
+        const blanks = item.blanks ? item.blanks.map(b => Array.isArray(b) ? b : [b]) : [alts];
+        const ans = item.answers || blanks.map(b => b[0]);
         out.push({ ...base(item.n, t), type: "blank", stem: `第 ${item.n} 题：${item.stem}`,
-          blanks: [alts], answer: [alts[0]], explanation: item.exp, kp: item.kp || "", ...(item.image ? { image: item.image } : {}) });
+          blanks, answer: ans, explanation: item.exp, kp: item.kp || "", ...(item.image ? { image: item.image } : {}) });
       }
     } else if (t === "情景交际" || t === "句子运用") {
       for (const item of section.items) {

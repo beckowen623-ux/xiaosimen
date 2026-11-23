@@ -523,5 +523,18 @@
       "sample": "Dear Jack,\nI’d like to be your friend. I’m Zhang Lin. I am a middle school student in Shaanxi. I enjoy reading and playing basketball, and I am good at English. I would be happy to help you learn about our province. Shaanxi has a long history and many interesting places. The Terracotta Army is a great place to visit. You can also enjoy Qinqiang Opera and try delicious local food. I hope we can share our interests and learn from each other. Please write back soon.\nYours,\nZhang Lin",
       "exp": "范文为编写示例，非官方范文。回应启事的自我介绍和陕西介绍两项要求，并补齐邮件称呼、落款。"
     }
+  ],
+  "pages": [
+    "./assets/national/sx-2026-english/p01.webp",
+    "./assets/national/sx-2026-english/p02.webp",
+    "./assets/national/sx-2026-english/p03.webp",
+    "./assets/national/sx-2026-english/p04.webp",
+    "./assets/national/sx-2026-english/p05.webp",
+    "./assets/national/sx-2026-english/p06.webp",
+    "./assets/national/sx-2026-english/p07.webp",
+    "./assets/national/sx-2026-english/p08.webp"
+  ],
+  "answerPages": [
+    "./assets/national/sx-2026-english/p01-answer.webp"
   ]
 }

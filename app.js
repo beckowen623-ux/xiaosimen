@@ -644,7 +644,9 @@ let library = [];
 let toastTimer;
 
 const paidLaunchDate = document.querySelector('meta[name="xiaosimen-paid-launch-date"]')?.content || '';
-let paidAccess = false;
+let paidAccess = (() => {
+  try { return localStorage.getItem('xiaosimen_paid') === '1'; } catch { return false; }
+})();
 let legacyCountdownTimer;
 let referralProfile = null;
 
@@ -683,6 +685,7 @@ function hasQuestionHistory(progress, q) {
 }
 
 function availableQueue(progress) {
+  if (!banks) return [];
   const fullAccess = hasFullAccess();
   const queue = buildQueue(state.stage, banks, progress, fullAccess);
   return fullAccess ? queue : queue.filter(isTrialQuestion);
@@ -718,9 +721,16 @@ function trackVisit(event) {
 async function restoreAccess() {
   try {
     const response = await fetch('/api/access/status', { cache: 'no-store' });
-    if (response.ok) paidAccess = (await response.json()).authenticated === true;
+    if (response.ok) {
+      const authed = (await response.json()).authenticated === true;
+      if (paidAccess !== authed) {
+        paidAccess = authed;
+        try { localStorage.setItem('xiaosimen_paid', authed ? '1' : '0'); } catch {}
+        if (byId('subjectSections')) renderHome();
+      }
+    }
   } catch {
-    // A connection failure leaves the trial available.
+    // A connection failure leaves the trial / cached state available.
   }
 }
 
@@ -863,6 +873,7 @@ redeemForm.addEventListener('submit', async event => {
       return;
     }
     paidAccess = true;
+    try { localStorage.setItem('xiaosimen_paid', '1'); } catch {}
     input.value = '';
     unlockDialog.close();
     renderHome('homeTitle');
@@ -1138,13 +1149,20 @@ function drillCardHTML(progress) {
     </section>`;
 }
 function subjectProgressHTML(progress) {
-  const weak = weakChapters(bankQuestions, progress);
+  if (!banks) {
+    return `
+    <section class="card subject-card" aria-labelledby="subjectTitle">
+      <div class="section-heading"><h2 id="subjectTitle">四科进度</h2><span class="muted">道法 · 历史 · 地理 · 生物 2,453 道</span></div>
+      <p class="muted" style="padding:10px 0 4px">题库后台就绪中，点击上方任意按钮可直接开练…</p>
+    </section>`;
+  }
+  const weak = (bankQuestions && bankQuestions.length) ? weakChapters(bankQuestions, progress) : [];
   return `
     <section class="card subject-card" aria-labelledby="subjectTitle">
-      <div class="section-heading"><h2 id="subjectTitle">四科进度</h2><span class="muted">选择题 ${fmt.format(bankQuestions.length)} 道${subjectiveQuestions.length ? ` · 主观/填空 ${fmt.format(subjectiveQuestions.length)} 道` : ''}</span></div>
+      <div class="section-heading"><h2 id="subjectTitle">四科进度</h2><span class="muted">选择题 ${fmt.format((bankQuestions || []).length)} 道${(subjectiveQuestions || []).length ? ` · 主观/填空 ${fmt.format(subjectiveQuestions.length)} 道` : ''}</span></div>
       <div class="subject-grid">
       ${SUBJECT_ORDER.map(key => {
-        const items = banks[key].questions;
+        const items = banks?.[key]?.questions || [];
         const answered = items.map(q => qProgress(progress, q.id)).filter(hasAnswered);
         const acc = answered.length ? Math.round(answered.filter(r => r.correct).length / answered.length * 100) + '%' : '—';
         return `<article class="subject-entry tone-${key}">
@@ -1187,6 +1205,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-23', '全国中考真题库重磅升级！新增及升级 17 套 2026 年中考全国真题（涵盖成都语文、云南语文/数学、甘肃语文/数学/综合/英语、江西历史/道法/数学、苏州历史/道法/数学、湖南数学、河北/浙江数学压轴专练、陕西英语等）：高清原卷打印版与手机在线交互做题版同步上线，73 幅高清原题配图全部裁切修复，题目、答案与分步给分点严格对照官方标准，全面支持手机做题、自动判分、错题收录与原卷整套打印。'],
   ['2026-11-22', '全国中考真题新增 2026 年河南中考数学可练版：整卷 23 题（选择 10、填空 5、解答 8）逐题整理，答案和分步给分按原卷所附参考答案，每题写了思路和易错点；“查看原卷 / 答案”现在把题目和答案分开显示。'],
   ['2026-11-22', '全国中考真题新增 2026 年苏州中考化学可练版：整卷 26 题（选择 20、非选择 6）逐题整理，配图取自原卷，答案按官方参考答案，每题写了思路和易错点。苏州 2026 物理、化学都能逐题练了。'],
   ['2026-11-22', '全国中考真题新增 2026 年苏州中考物理可练版：整卷 30 题（选择 12、填空 9、解答 9）逐题整理，配图取自原卷，答案按官方参考答案，计算题写全过程，每题有思路和易错点。'],
@@ -1379,14 +1398,14 @@ function contentStatsHTML() {
   const sync = c.filter(p => p.sync).length;
   const claude = c.filter(p => p.claude).length;
   const real = c.filter(p => !p.claude && !p.earlybird && !p.sync).length;
-  const x4m = bankQuestions.length + subjectiveQuestions.length;
+  const x4mCount = bankQuestions ? (bankQuestions.length + (subjectiveQuestions ? subjectiveQuestions.length : 0)) : 2453;
   const items = [
     eb && `早鸟卷 ${eb} 套（限免）`,
     xsc && `小升初 ${xsc} 套（限免）`,
     sync && `同步卷 ${sync} 套`,
     claude && `精编卷 ${claude} 套`,
     real && `真题 ${real} 套`,
-    x4m && `小四门 ${x4m} 题`,
+    `小四门 ${x4mCount} 题`,
   ].filter(Boolean);
   return items.length ? `<p class="content-stats" aria-label="题库现有内容">${items.join(' · ')}</p>` : '';
 }
@@ -1553,23 +1572,27 @@ const UNIT_SUBJECTS = [['math', '数学'], ['physics', '物理'], ['chemistry', 
 const UNIT_RANK = ['七上', '七下', '八上', '八下', '九上', '九年级', '九下', '轴对称', '统计', '第一单元', '第二单元', '第三单元', '第四单元', '第五单元', '第六单元', '第七单元', '第八单元', '第九单元', '第十、', '第十二', '中国古代', '中国近代', '中国现代', '世界古代', '世界近代', '中外', '积累', '古诗文默写', '古诗词', '文言', '记叙', '说明', '议论', '名著', '作文', '语法·词法', '语法·时态', '语法·句子', '补全', '完形', '阅读理解', '短文', '书面'];
 const unitRank = u => { const i = UNIT_RANK.findIndex(prefix => u.startsWith(prefix)); return i < 0 ? 99 : i; };
 let unitPool = null;
-async function ensureUnitPool() {
-  if (unitPool) return unitPool;
-  const list = (await window.NationalExams.catalog()).filter(p => p.data && (p.claude || p.earlybird || p.sync));
+const unitPoolBySubject = new Map();
+async function ensureUnitPool(subject = state.unitSubject) {
+  if (subject && unitPoolBySubject.has(subject)) return unitPoolBySubject.get(subject);
+  const catalog = await window.NationalExams.catalog();
+  const list = catalog.filter(p => p.data && (!subject || p.subject === subject) && (p.claude || p.earlybird || p.sync));
   const loaded = await Promise.all(list.map(p => window.NationalExams.loadPaper(p.id).catch(() => [])));
-  unitPool = loaded.flat().filter(q => q.unit);
-  return unitPool;
+  const qs = loaded.flat().filter(q => q.unit);
+  if (subject) unitPoolBySubject.set(subject, qs);
+  unitPool = subject ? [...(unitPool || []).filter(q => q.subject !== subject), ...qs] : qs;
+  return qs;
 }
 function unitCardHTML() {
   const subject = state.unitSubject || '';
   const chips = UNIT_SUBJECTS.map(([k, l]) => `<button type="button" class="drill-chip" data-unit-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('');
   let body = '<p class="muted">先选科目，再选章节专项练。</p>';
-  if (subject && !unitPool) body = '<p class="muted" role="status">正在整理章节…</p>';
-  if (subject && unitPool) {
-    const qs = unitPool.filter(q => q.subject === subject);
-    const units = [...new Set(qs.map(q => q.unit))].sort((a, b) => unitRank(a) - unitRank(b) || a.localeCompare(b, 'zh'));
+  const subjectQs = subject ? (unitPoolBySubject.get(subject) || unitPool?.filter(q => q.subject === subject)) : null;
+  if (subject && !subjectQs) body = '<p class="muted" role="status">正在整理章节…</p>';
+  if (subject && subjectQs) {
+    const units = [...new Set(subjectQs.map(q => q.unit))].sort((a, b) => unitRank(a) - unitRank(b) || a.localeCompare(b, 'zh'));
     body = units.length ? `<div class="unit-list">${units.map(u => {
-      const inUnit = qs.filter(q => q.unit === u);
+      const inUnit = subjectQs.filter(q => q.unit === u);
       const free = inUnit.filter(isTrialQuestion).length;
       return `<button type="button" class="btn unit-btn" data-unit="${esc(u)}"><b>${esc(u)}</b><small>${inUnit.length} 题${hasFullAccess() ? '' : ` · 免费可做 ${free} 题`}</small></button>`;
     }).join('')}</div>` : '<p class="muted">这个科目还没有分章节的题。</p>';
@@ -1920,16 +1943,17 @@ function x4mGroupHTML(queue, progress) {
   const idx = resumeIndex(queue, progress);
   const x4mOriginals = (nationalCatalog || []).filter(p => SUBJECT_ORDER.includes(p.subject) || p.subject === 'daode' || p.subject === 'lishi');
   const open = state.x4mOpen ?? Object.keys(progress.banks || {}).some(id => !isNationalId(id));
+  const countText = banks ? `${fmt.format(queue.length)} 道` : '2,453 道';
   return `<details class="card x4m-group" id="x4mGroup" ${open ? 'open' : ''}>
     <summary><b>🧭 小四门 · 道法 / 历史 / 地理 / 生物</b><span>按年级学期刷 · 主观题 · 冲刺卷</span></summary>
     <div class="x4m-bar">
       <div class="stage-field"><label for="stageSelect">年级学期</label>
         <select id="stageSelect">${STAGES.map(s => `<option value="${s.stage}" ${s.stage === state.stage ? 'selected' : ''}>${s.label}</option>`).join('')}</select></div>
-      <p class="muted">${activeSubjectsForStage(state.stage).map(k => SUBJECTS[k].short).join(' · ')} · ${fmt.format(queue.length)} 道 · ${idx > 0 ? `上次练到第 ${idx + 1} 题` : esc(STAGE_HINT[state.stage] || '')}</p>
+      <p class="muted">${activeSubjectsForStage(state.stage).map(k => SUBJECTS[k].short).join(' · ')} · ${countText} · ${idx > 0 ? `上次练到第 ${idx + 1} 题` : esc(STAGE_HINT[state.stage] || '')}</p>
       <div class="x4m-actions">
         <button class="btn primary" type="button" data-mode="all">${idx > 0 ? '继续练习' : '按学期刷题'} ${icon('arrow-right')}</button>
         <button class="btn" type="button" data-mode="random">${icon('shuffle')} 随机</button>
-        <button class="btn" type="button" data-mode="unfinished">只做未做题 · ${fmt.format(applyMode(queue, 'unfinished', progress).length)}</button>
+        <button class="btn" type="button" data-mode="unfinished">只做未做题${banks ? ` · ${fmt.format(applyMode(queue, 'unfinished', progress).length)}` : ''}</button>
         <a class="btn" href="./key-points.html">${icon('book-open')} 考点速记</a>
         ${x4mOriginals.length ? `<button class="btn" type="button" data-national-open="${x4mOriginals[0].subject}" data-national-mode="paper">中考原卷</button>` : ''}
       </div>
@@ -2038,8 +2062,17 @@ async function ensureNationalSearch() {
   nationalSearchPool = loaded.flat();
 }
 
+function renderUpdateLogs(all = false) {
+  const list = all ? UPDATE_LOG : UPDATE_LOG.slice(0, 5);
+  const items = list.map(([date, text]) => `<li><time>${date}</time><span>${text}</span></li>`).join('');
+  const moreBtn = (!all && UPDATE_LOG.length > 5)
+    ? `<li class="update-more"><button type="button" class="btn text-button" id="expandUpdates">查看更早的更新记录（还有 ${UPDATE_LOG.length - 5} 条）›</button></li>`
+    : '';
+  return items + moreBtn;
+}
+
 function renderHome(focus = '') {
-  if (!banks) { renderLiteHome(); return; }
+  if (!nationalCatalog && !banks) { renderLiteHome(); return; }
   window.NationalExams?.leave();
   document.body.classList.remove('practice');
   const progress = loadProgress();
@@ -2081,7 +2114,7 @@ function renderHome(focus = '') {
     ${originCardHTML()}
     <details class="card origin-card update-card">
       <summary><b>📝 更新日志</b><span>最近：${UPDATE_LOG[0][0]} · 点开看我们做了什么 ›</span></summary>
-      <ol class="update-list">${UPDATE_LOG.map(([date, text]) => `<li><time>${date}</time><span>${text}</span></li>`).join('')}</ol>
+      <ol class="update-list" id="updateList">${renderUpdateLogs(state.allUpdatesOpen)}</ol>
     </details>
     <section class="card cross-bank-card">${accountingRecommendation()}</section>`;
   wireHome();
@@ -2168,7 +2201,8 @@ function wireHome() {
   view.querySelectorAll('[data-unit-subject]').forEach(b => b.addEventListener('click', async () => {
     state.unitSubject = b.dataset.unitSubject;
     renderHome();
-    if (!unitPool) { await ensureUnitPool().catch(() => {}); renderHome(); }
+    await ensureUnitPool(state.unitSubject).catch(() => {});
+    renderHome();
     byId('unitCard')?.scrollIntoView({ block: 'start' });
   }));
   view.querySelectorAll('[data-unit]').forEach(b => b.addEventListener('click', () => { void startUnit(b.dataset.unit); }));
@@ -2213,6 +2247,11 @@ function wireHome() {
   wirePrintKind();
   byId('printFold')?.addEventListener('toggle', e => { state.printOpen = e.currentTarget.open; });
   byId('searchPanel')?.addEventListener('toggle', e => { state.searchOpen = e.currentTarget.open; });
+  byId('expandUpdates')?.addEventListener('click', () => {
+    state.allUpdatesOpen = true;
+    const ol = byId('updateList');
+    if (ol) ol.innerHTML = renderUpdateLogs(true);
+  });
   void doSearch();
   showReferralProfile();
   if (!nationalCatalog && window.NationalExams?.catalog) {
@@ -2241,6 +2280,9 @@ async function doSearch() {
   const status = byId('searchStatus');
   const out = byId('searchOut');
   if (!kw) { status.textContent = ''; out.replaceChildren(); return; }
+  if (!banks && typeof startBanksBackgroundLoad === 'function') {
+    await startBanksBackgroundLoad();
+  }
   const wantsNational = !state.searchSubject || MAIN_SUBJECTS.some(s => s.key === state.searchSubject);
   if (wantsNational && !nationalSearchPool) {
     status.textContent = '正在加载全部真题和模拟卷…';
@@ -2248,7 +2290,7 @@ async function doSearch() {
     if (byId('searchStatus') !== status) return;
   }
   const textOf = q => [q.unit || '', q.chapter, q.stem, q.material || '', q.materialHtml ? htmlToText(q.materialHtml) : '', q.explanation || ''];
-  const hits = [...bankQuestions, ...subjectiveQuestions, ...(nationalSearchPool || [])].filter(q =>
+  const hits = [...(bankQuestions || []), ...(subjectiveQuestions || []), ...(nationalSearchPool || [])].filter(q =>
     (!state.searchSubject || q.subject === state.searchSubject) &&
     textOf(q).some(text => String(text).normalize('NFKC').toLowerCase().includes(kw)));
   const progress = loadProgress();
@@ -2260,6 +2302,10 @@ async function doSearch() {
 }
 
 async function startPractice(mode) {
+  if (!banks && typeof startBanksBackgroundLoad === 'function') {
+    toast('正在加载题库…');
+    await startBanksBackgroundLoad();
+  }
   const fullAccess = hasFullAccess();
   if (!fullAccess && FULL_ONLY_MODES.has(mode)) {
     openUnlock('这项练习属于完整版。');
@@ -3118,7 +3164,7 @@ byId('resetBtn').addEventListener('click', () => {
   toast('本机进度已清空。');
 });
 byId('homeLink').addEventListener('click', event => {
-  if (banks && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+  if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
     event.preventDefault();
     renderHome('homeTitle');
   }
@@ -3139,32 +3185,76 @@ document.addEventListener('visibilitychange', () => {
   if (!document.hidden) updateLegacyCountdown();
 });
 
-async function init() {
-  state.banksFailed = false;
-  try {
-    const accessReady = restoreAccess();
-    // 目录（早鸟卷、同步卷都靠它）和小四门题库同时下载，不再等题库下完才开始下目录
-    const catalogReady = window.NationalExams?.catalog ? window.NationalExams.catalog().then(list => { nationalCatalog = list; }).catch(() => {}) : Promise.resolve();
-    const loadDaily = dailyQuestions().length ? null : loadScript('./data/daily-questions-xiaosimen.js?v=7').catch(console.warn);
-    // 小四门题库约 600KB，等目录（约 20KB）下完、轻首页（学期、早鸟卷、同步卷、小升初）画出来以后再下，
-    // 手机网络慢时不和目录抢带宽，首屏能早几秒出来
-    const subjectiveReady = catalogReady.then(() => Promise.allSettled(SUBJECT_ORDER.map(key => loadScript(`./data/subjective-${key}.js?v=${SUBJECTIVE_VERSION}`))));
-    const banksReady = catalogReady.then(() => ensureBanks(SUBJECT_ORDER));
-    // 轻首页（学期、早鸟卷、同步卷、小升初）只等目录，不等权限接口（要经服务器查数据库，网络慢时要好几秒）
-    void catalogReady.then(() => { if (!banks && nationalCatalog) renderLiteHome(); }).catch(() => {});
-    banks = await banksReady;
-    await catalogReady;
-    await loadDaily;
-    await subjectiveReady;
+let loadBanksTask = null;
+function startBanksBackgroundLoad() {
+  if (loadBanksTask) return loadBanksTask;
+  loadBanksTask = Promise.all([
+    ensureBanks(SUBJECT_ORDER),
+    Promise.allSettled(SUBJECT_ORDER.map(key => loadScript(`./data/subjective-${key}.js?v=${SUBJECTIVE_VERSION}`)))
+  ]).then(async ([b]) => {
+    banks = b;
     bankQuestions = allQuestions(banks, SUBJECT_ORDER);
     subjectiveQuestions = await loadSubjective().catch(error => { console.warn(error); return []; });
     library = [...bankQuestions, ...subjectiveQuestions, ...dailyQuestions()];
     baseTrialIds = trialQuestionIds(bankQuestions, subjectiveQuestions);
-    // 权限接口最多等 2.5 秒；更晚回来、确认已购买时再画一次首页
-    let accessSettled = false;
-    void accessReady.finally(() => { accessSettled = true; });
-    await Promise.race([accessReady, new Promise(resolve => setTimeout(resolve, 2500))]);
-    if (!accessSettled) void accessReady.then(() => { if (paidAccess && byId('subjectSections')) renderHome(); });
+    // 后台加载完成后，静默更新首页小四门进度和相关组件，无闪烁
+    if (!document.body.classList.contains('practice') && byId('x4mGroup')) {
+      const progress = loadProgress();
+      const queue = availableQueue(progress);
+      const idx = resumeIndex(queue, progress);
+      const pCount = byId('x4mGroup')?.querySelector('.x4m-bar p.muted');
+      if (pCount) {
+        pCount.textContent = `${activeSubjectsForStage(state.stage).map(k => SUBJECTS[k].short).join(' · ')} · ${fmt.format(queue.length)} 道 · ${idx > 0 ? `上次练到第 ${idx + 1} 题` : esc(STAGE_HINT[state.stage] || '')}`;
+      }
+      const unfinishedBtn = byId('x4mGroup')?.querySelector('[data-mode="unfinished"]');
+      if (unfinishedBtn) {
+        unfinishedBtn.textContent = `只做未做题 · ${fmt.format(applyMode(queue, 'unfinished', progress).length)}`;
+      }
+      const sc = byId('x4mGroup')?.querySelector('.subject-card');
+      if (sc) {
+        const temp = document.createElement('div');
+        temp.innerHTML = subjectProgressHTML(progress);
+        if (temp.firstElementChild) sc.replaceWith(temp.firstElementChild);
+      }
+      if (!byId('drillTitle') && subjectiveQuestions.length) {
+        const dl = byId('x4mGroup')?.querySelector('.dashboard-lower');
+        if (dl) {
+          const temp = document.createElement('div');
+          temp.innerHTML = drillCardHTML(progress);
+          const el = temp.firstElementChild;
+          if (el) {
+            dl.before(el);
+            el.querySelectorAll('[data-drill]').forEach(btn => btn.addEventListener('click', () => {
+              state.drillSubject = btn.dataset.drill;
+              renderHome();
+              view.querySelector(`[data-drill="${state.drillSubject}"]`)?.focus();
+            }));
+          }
+        }
+      }
+      const cs = document.querySelector('.content-stats');
+      if (cs) cs.outerHTML = contentStatsHTML();
+    }
+    return banks;
+  }).catch(error => {
+    console.warn('Banks background load error:', error);
+    state.banksFailed = true;
+  });
+  return loadBanksTask;
+}
+
+async function init() {
+  state.banksFailed = false;
+  try {
+    void restoreAccess();
+    void loadPurchaseOptions();
+
+    // 目录（早鸟卷、同步卷、分科练习、真题全靠它）优先下载，仅 ~130KB
+    const catalogReady = window.NationalExams?.catalog
+      ? window.NationalExams.catalog().then(list => { nationalCatalog = list; return list; }).catch(() => null)
+      : Promise.resolve(null);
+    const loadDaily = dailyQuestions().length ? Promise.resolve() : loadScript('./data/daily-questions-xiaosimen.js?v=7').catch(console.warn);
+
     window.NationalExams.attach({
       view,
       home: () => renderHome('homeTitle'),
@@ -3177,9 +3267,21 @@ async function init() {
       hideSearch: () => { byId('headerSearch').hidden = true; },
       toast,
     });
-    if (location.hash === '#national') await window.NationalExams.open();
-    // 轻首页上已经点进做题的，不要把做题页换掉；回首页时会画完整首页
-    else if (byId('liteLoading') || !document.body.classList.contains('practice')) { renderHome(); jumpToGoTarget(); }
+
+    // 小四门 2.5MB 庞大题库在后台静默拉取，绝不阻断首屏渲染
+    startBanksBackgroundLoad();
+
+    // 目录一就位，首屏瞬间秒开
+    await catalogReady;
+    await loadDaily;
+
+    if (location.hash === '#national') {
+      await window.NationalExams.open();
+    } else if (!document.body.classList.contains('practice')) {
+      renderHome();
+      jumpToGoTarget();
+    }
+
     void refreshReferralProfile();
     void refreshFreeUses().then(() => { if (!paidAccess && byId('subjectSections')) renderHome(); });
     trackVisit('visit');
@@ -3190,7 +3292,7 @@ async function init() {
     if (document.body.classList.contains('practice')) return;
     if (byId('liteLoading')) { renderLiteHome(); return; }
     view.innerHTML = '<section class="card loading-card"><h1>题库暂时无法加载</h1><p class="muted">检查网络后再试一次。</p><button class="btn primary" id="retryBtn">重新加载</button></section>';
-    byId('retryBtn').addEventListener('click', async event => {
+    byId('retryBtn')?.addEventListener('click', async event => {
       event.currentTarget.disabled = true;
       event.currentTarget.textContent = '正在加载…';
       await init();

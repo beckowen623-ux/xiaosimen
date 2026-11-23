@@ -825,5 +825,21 @@
     "89": "Ⅷ.完成句子 第4题",
     "90": "Ⅷ.完成句子 第5题",
     "91": "Ⅸ.书面表达"
-  }
+  },
+  "pages": [
+    "./assets/national/gs-2026-english/p01.webp",
+    "./assets/national/gs-2026-english/p02.webp",
+    "./assets/national/gs-2026-english/p03.webp",
+    "./assets/national/gs-2026-english/p04.webp",
+    "./assets/national/gs-2026-english/p05.webp",
+    "./assets/national/gs-2026-english/p06.webp",
+    "./assets/national/gs-2026-english/p07.webp",
+    "./assets/national/gs-2026-english/p08.webp"
+  ],
+  "answerPages": [
+    "./assets/national/gs-2026-english/p01-answer.webp",
+    "./assets/national/gs-2026-english/p02-answer.webp",
+    "./assets/national/gs-2026-english/p03-answer.webp",
+    "./assets/national/gs-2026-english/p04-answer.webp"
+  ]
 }

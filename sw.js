@@ -8,7 +8,7 @@
  */
 const ENABLED = true;
 const CACHE = "elx-quiz-v1";
-const PAGE_TIMEOUT_MS = 3000;
+const PAGE_TIMEOUT_MS = 800;
 
 self.addEventListener("install", () => self.skipWaiting());
 

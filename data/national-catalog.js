@@ -668,7 +668,23 @@ window.NATIONAL_CATALOG = {
         "补全对话": 5,
         "句子运用": 15,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/gs-2026-english/p01.webp",
+        "./assets/national/gs-2026-english/p02.webp",
+        "./assets/national/gs-2026-english/p03.webp",
+        "./assets/national/gs-2026-english/p04.webp",
+        "./assets/national/gs-2026-english/p05.webp",
+        "./assets/national/gs-2026-english/p06.webp",
+        "./assets/national/gs-2026-english/p07.webp",
+        "./assets/national/gs-2026-english/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/gs-2026-english/p01-answer.webp",
+        "./assets/national/gs-2026-english/p02-answer.webp",
+        "./assets/national/gs-2026-english/p03-answer.webp",
+        "./assets/national/gs-2026-english/p04-answer.webp"
+      ]
     },
     {
       "id": "jx-2026-english",
@@ -709,7 +725,20 @@ window.NATIONAL_CATALOG = {
         "回答问题": 5,
         "情景交际": 5,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/sx-2026-english/p01.webp",
+        "./assets/national/sx-2026-english/p02.webp",
+        "./assets/national/sx-2026-english/p03.webp",
+        "./assets/national/sx-2026-english/p04.webp",
+        "./assets/national/sx-2026-english/p05.webp",
+        "./assets/national/sx-2026-english/p06.webp",
+        "./assets/national/sx-2026-english/p07.webp",
+        "./assets/national/sx-2026-english/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/sx-2026-english/p01-answer.webp"
+      ]
     },
     {
       "id": "sxi-2026-english",
@@ -3594,6 +3623,165 @@ window.NATIONAL_CATALOG = {
       "description": "完整原卷 6 页，参考答案在卷末"
     },
     {
+      "id": "cd-2026-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "四川",
+      "year": 2026,
+      "title": "2026年四川省成都市中考语文试卷",
+      "questionCount": 25,
+      "pages": [
+        "assets/national/cd-2026-chinese/p01.webp",
+        "assets/national/cd-2026-chinese/p02.webp",
+        "assets/national/cd-2026-chinese/p03.webp",
+        "assets/national/cd-2026-chinese/p04.webp",
+        "assets/national/cd-2026-chinese/p05.webp",
+        "assets/national/cd-2026-chinese/p06.webp",
+        "assets/national/cd-2026-chinese/p07.webp",
+        "assets/national/cd-2026-chinese/p08.webp"
+      ],
+      "answerPages": [
+        "assets/national/cd-2026-chinese/p01-answer.webp",
+        "assets/national/cd-2026-chinese/p02-answer.webp"
+      ],
+      "source": "成都市教育科学研究院官方试题及参考答案",
+      "description": "整卷 25 题（官方真卷全卷25题（A卷100分+B卷50分，满分150分），含官方参考答案与名著阅读、语言运用解析）",
+      "data": "./data/national/cd-2026-chinese.js",
+      "sections": {
+        "单项选择": 8,
+        "古诗文默写": 1,
+        "现代文阅读": 4,
+        "诗歌鉴赏与名著阅读": 12
+      }
+    },
+    {
+      "id": "gs-2026-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "甘肃",
+      "year": "2026",
+      "title": "2026年甘肃省武威市中考语文真题",
+      "questionCount": 22,
+      "pages": [
+        "./assets/national/gs-2026-chinese/p01.webp",
+        "./assets/national/gs-2026-chinese/p02.webp",
+        "./assets/national/gs-2026-chinese/p03.webp",
+        "./assets/national/gs-2026-chinese/p04.webp",
+        "./assets/national/gs-2026-chinese/p05.webp",
+        "./assets/national/gs-2026-chinese/p06.webp",
+        "./assets/national/gs-2026-chinese/p07.webp",
+        "./assets/national/gs-2026-chinese/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/gs-2026-chinese/p01-answer.webp",
+        "./assets/national/gs-2026-chinese/p02-answer.webp",
+        "./assets/national/gs-2026-chinese/p03-answer.webp",
+        "./assets/national/gs-2026-chinese/p04-answer.webp"
+      ],
+      "source": "2026年甘肃省武威市初中学业水平考试语文试卷",
+      "description": "整卷 22 题",
+      "data": "./data/national/gs-2026-chinese.js",
+      "sections": {
+        "单项选择": 3,
+        "古诗文默写": 1,
+        "解答题": 18
+      }
+    },
+    {
+      "id": "gs-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "甘肃",
+      "year": "2026",
+      "title": "2026年甘肃省武威市中考数学真题",
+      "questionCount": 27,
+      "pages": [
+        "./assets/national/gs-2026-math/p01.webp",
+        "./assets/national/gs-2026-math/p02.webp",
+        "./assets/national/gs-2026-math/p03.webp",
+        "./assets/national/gs-2026-math/p04.webp",
+        "./assets/national/gs-2026-math/p05.webp",
+        "./assets/national/gs-2026-math/p06.webp",
+        "./assets/national/gs-2026-math/p07.webp",
+        "./assets/national/gs-2026-math/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/gs-2026-math/p01-answer.webp",
+        "./assets/national/gs-2026-math/p02-answer.webp",
+        "./assets/national/gs-2026-math/p03-answer.webp",
+        "./assets/national/gs-2026-math/p04-answer.webp",
+        "./assets/national/gs-2026-math/p05-answer.webp",
+        "./assets/national/gs-2026-math/p06-answer.webp"
+      ],
+      "source": "2026年甘肃省武威市初中学业水平考试数学试卷",
+      "description": "整卷 27 题",
+      "data": "./data/national/gs-2026-math.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6,
+        "解答题": 11
+      }
+    },
+    {
+      "id": "gs-2026-zonghe",
+      "subject": "dili",
+      "subjectLabel": "综合",
+      "region": "甘肃",
+      "year": "2026",
+      "title": "2026年甘肃省武威市中考综合真题（生史政地）",
+      "questionCount": 40,
+      "pages": [
+        "./assets/national/gs-2026-zonghe/p01.webp",
+        "./assets/national/gs-2026-zonghe/p02.webp",
+        "./assets/national/gs-2026-zonghe/p03.webp",
+        "./assets/national/gs-2026-zonghe/p04.webp",
+        "./assets/national/gs-2026-zonghe/p05.webp",
+        "./assets/national/gs-2026-zonghe/p06.webp",
+        "./assets/national/gs-2026-zonghe/p07.webp",
+        "./assets/national/gs-2026-zonghe/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/gs-2026-zonghe/p01-answer.webp",
+        "./assets/national/gs-2026-zonghe/p02-answer.webp",
+        "./assets/national/gs-2026-zonghe/p03-answer.webp",
+        "./assets/national/gs-2026-zonghe/p04-answer.webp",
+        "./assets/national/gs-2026-zonghe/p05-answer.webp"
+      ],
+      "source": "2026年甘肃生物历史政治地理综合试卷真题及答案.pdf",
+      "description": "整卷 40 题",
+      "data": "./data/national/gs-2026-zonghe.js",
+      "sections": {
+        "单项选择": 27,
+        "道德与法治·主题活动": 2,
+        "历史·材料与探究": 2,
+        "地理·综合题": 2,
+        "填空题": 4,
+        "生物学·实验与综合": 3
+      }
+    },
+    {
+      "id": "hb-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "河北",
+      "year": 2026,
+      "title": "2026 年河北中考数学（压轴题专练）",
+      "questionCount": 2,
+      "pages": [
+        "./assets/national/hb-2026-math/p01.webp",
+        "./assets/national/hb-2026-math/p02.webp",
+        "./assets/national/hb-2026-math/p03.webp",
+        "./assets/national/hb-2026-math/p04.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年河北中考数学试卷真题及答案.pdf",
+      "description": "整卷 2 题（精选2026河北中考数学核心压轴题（T23二次函数动点与最值综合 + T24几何动点正方形一线三等角综合），配高清晰度配图与完整推理步骤）",
+      "data": "./data/national/hb-2026-math.js",
+      "sections": {
+        "解答题": 2
+      }
+    },
+    {
       "id": "hen-2026-math",
       "subject": "math",
       "subjectLabel": "数学",
@@ -3625,6 +3813,30 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "hun-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "湖南",
+      "year": 2026,
+      "pages": [
+        "./assets/national/hun-2026-math/p01.webp",
+        "./assets/national/hun-2026-math/p02.webp",
+        "./assets/national/hun-2026-math/p03.webp",
+        "./assets/national/hun-2026-math/p04.webp",
+        "./assets/national/hun-2026-math/p05.webp",
+        "./assets/national/hun-2026-math/p06.webp"
+      ],
+      "title": "2026 年湖南中考数学",
+      "source": "2026年湖南中考数学试卷真题及答案完整版（统考）.pdf",
+      "description": "整卷 16 题（选择 10、填空 6、解答 8，满分 120，全卷 6 页高清打印版，试卷题干与参考答案均取自湖南省统考原卷）",
+      "questionCount": 16,
+      "data": "./data/national/hun-2026-math.js",
+      "sections": {
+        "单项选择": 10,
+        "填空题": 6
+      }
+    },
+    {
       "id": "js-suzhou-2026-chemistry",
       "subject": "chemistry",
       "subjectLabel": "化学",
@@ -3652,6 +3864,95 @@ window.NATIONAL_CATALOG = {
       "sections": {
         "单项选择": 20,
         "非选择题": 6
+      }
+    },
+    {
+      "id": "js-suzhou-2026-daode",
+      "subject": "daode",
+      "subjectLabel": "道德与法治",
+      "region": "苏州",
+      "year": 2026,
+      "pages": [
+        "./assets/national/js-suzhou-2026-daode/p01.webp",
+        "./assets/national/js-suzhou-2026-daode/p02.webp",
+        "./assets/national/js-suzhou-2026-daode/p03.webp",
+        "./assets/national/js-suzhou-2026-daode/p04.webp",
+        "./assets/national/js-suzhou-2026-daode/p05.webp",
+        "./assets/national/js-suzhou-2026-daode/p06.webp"
+      ],
+      "answerPages": [
+        "./assets/national/js-suzhou-2026-daode/p01-answer.webp"
+      ],
+      "title": "2026 年苏州中考道德与法治",
+      "source": "2026年苏州道法中考试卷真题及答案解析无水印.pdf",
+      "description": "整卷 23 题（单选 20、简答 2、分析说明 1，满分 50，试卷与参考答案均取自苏州市教育考试院官方原卷）",
+      "questionCount": 23,
+      "data": "./data/national/js-suzhou-2026-daode.js",
+      "sections": {
+        "单项选择": 20,
+        "非选择题": 3
+      }
+    },
+    {
+      "id": "js-suzhou-2026-lishi",
+      "subject": "lishi",
+      "subjectLabel": "历史",
+      "region": "苏州",
+      "year": 2026,
+      "pages": [
+        "./assets/national/js-suzhou-2026-lishi/p01.webp",
+        "./assets/national/js-suzhou-2026-lishi/p02.webp",
+        "./assets/national/js-suzhou-2026-lishi/p03.webp",
+        "./assets/national/js-suzhou-2026-lishi/p04.webp",
+        "./assets/national/js-suzhou-2026-lishi/p05.webp",
+        "./assets/national/js-suzhou-2026-lishi/p06.webp"
+      ],
+      "answerPages": [
+        "./assets/national/js-suzhou-2026-lishi/p01-answer.webp"
+      ],
+      "title": "2026 年苏州中考历史",
+      "source": "2026年苏州中考历史试卷及真题答案.pdf",
+      "description": "整卷 28 题（单选 24、材料题 4，满分 50，配图取自苏州市教育考试院官方试卷与参考答案）",
+      "questionCount": 28,
+      "data": "./data/national/js-suzhou-2026-lishi.js",
+      "sections": {
+        "单项选择": 24,
+        "材料解析题": 4
+      }
+    },
+    {
+      "id": "js-suzhou-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "江苏",
+      "year": 2026,
+      "title": "2026年江苏省苏州市初中学业水平考试数学真题卷",
+      "questionCount": 27,
+      "pages": [
+        "assets/national/js-suzhou-2026-math/p01.webp",
+        "assets/national/js-suzhou-2026-math/p02.webp",
+        "assets/national/js-suzhou-2026-math/p03.webp",
+        "assets/national/js-suzhou-2026-math/p04.webp",
+        "assets/national/js-suzhou-2026-math/p05.webp",
+        "assets/national/js-suzhou-2026-math/p06.webp",
+        "assets/national/js-suzhou-2026-math/p07.webp",
+        "assets/national/js-suzhou-2026-math/p08.webp"
+      ],
+      "answerPages": [
+        "assets/national/js-suzhou-2026-math/p01-answer.webp",
+        "assets/national/js-suzhou-2026-math/p02-answer.webp",
+        "assets/national/js-suzhou-2026-math/p03-answer.webp",
+        "assets/national/js-suzhou-2026-math/p04-answer.webp",
+        "assets/national/js-suzhou-2026-math/p05-answer.webp",
+        "assets/national/js-suzhou-2026-math/p06-answer.webp"
+      ],
+      "source": "苏州市教育考试院官方原卷及详细参考答案",
+      "description": "整卷 27 题（官方原卷全卷27题（8单选+8填空+11解答题），满分130分，含官方参考答案与评分标准）",
+      "data": "./data/national/js-suzhou-2026-math.js",
+      "sections": {
+        "单项选择": 8,
+        "填空题": 8,
+        "解答题": 11
       }
     },
     {
@@ -3716,6 +4017,93 @@ window.NATIONAL_CATALOG = {
       }
     },
     {
+      "id": "jx-2026-daode",
+      "subject": "daode",
+      "subjectLabel": "道德与法治",
+      "region": "江西",
+      "year": 2026,
+      "title": "2026年江西省初中学业水平考试道德与法治真题卷",
+      "questionCount": 23,
+      "pages": [
+        "assets/national/jx-2026-daode/p01.webp",
+        "assets/national/jx-2026-daode/p02.webp",
+        "assets/national/jx-2026-daode/p03.webp",
+        "assets/national/jx-2026-daode/p04.webp",
+        "assets/national/jx-2026-daode/p05.webp"
+      ],
+      "answerPages": [
+        "assets/national/jx-2026-daode/p01-answer.webp",
+        "assets/national/jx-2026-daode/p02-answer.webp"
+      ],
+      "source": "江西省教育考试院官方原卷及参考答案",
+      "description": "整卷 23 题（官方真卷合卷道法部分全卷23题（18道单选+5道主观探究大题），含官方参考答案与评分细则）",
+      "data": "./data/national/jx-2026-daode.js",
+      "sections": {
+        "单项选择": 18,
+        "简要回答": 2,
+        "概括与评析": 1,
+        "探究与实践": 2
+      }
+    },
+    {
+      "id": "jx-2026-lishi",
+      "subject": "lishi",
+      "subjectLabel": "历史",
+      "region": "江西",
+      "year": 2026,
+      "pages": [
+        "./assets/national/jx-2026-lishi/p01.webp",
+        "./assets/national/jx-2026-lishi/p02.webp",
+        "./assets/national/jx-2026-lishi/p03.webp",
+        "./assets/national/jx-2026-lishi/p04.webp",
+        "./assets/national/jx-2026-lishi/p05.webp"
+      ],
+      "answerPages": [
+        "./assets/national/jx-2026-lishi/p01-answer.webp",
+        "./assets/national/jx-2026-lishi/p02-answer.webp"
+      ],
+      "title": "2026 年江西中考历史",
+      "source": "2026年江西历史试题卷.pdf",
+      "description": "整卷 24 题（单选 20、综合 4，满分 80，试题与答案均来自江西官方真题试卷及参考答案）",
+      "questionCount": 24,
+      "data": "./data/national/jx-2026-lishi.js",
+      "sections": {
+        "单项选择": 20,
+        "综合题": 4
+      }
+    },
+    {
+      "id": "jx-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "江西",
+      "year": 2026,
+      "title": "2026年江西省初中学业水平考试数学真题卷",
+      "questionCount": 23,
+      "pages": [
+        "assets/national/jx-2026-math/p01.webp",
+        "assets/national/jx-2026-math/p02.webp",
+        "assets/national/jx-2026-math/p03.webp",
+        "assets/national/jx-2026-math/p04.webp",
+        "assets/national/jx-2026-math/p05.webp",
+        "assets/national/jx-2026-math/p06.webp"
+      ],
+      "answerPages": [
+        "assets/national/jx-2026-math/p01-answer.webp",
+        "assets/national/jx-2026-math/p02-answer.webp",
+        "assets/national/jx-2026-math/p03-answer.webp",
+        "assets/national/jx-2026-math/p04-answer.webp"
+      ],
+      "source": "江西省教育考试院官方原卷及参考答案",
+      "description": "整卷 23 题（官方原卷全卷23题（6单选+6填空+11解答题），含官方参考答案与评分标准）",
+      "data": "./data/national/jx-2026-math.js",
+      "sections": {
+        "单项选择": 6,
+        "填空题": 6,
+        "解答题": 11
+      }
+    },
+    {
       "id": "jx-2026-physics",
       "subject": "physics",
       "subjectLabel": "物理",
@@ -3743,6 +4131,100 @@ window.NATIONAL_CATALOG = {
         "多项选择": 2,
         "计算题": 3,
         "实验与探究题": 4
+      }
+    },
+    {
+      "id": "yn-2026-chinese",
+      "subject": "chinese",
+      "subjectLabel": "语文",
+      "region": "云南",
+      "year": 2026,
+      "title": "2026年云南省初中学业水平考试语文真题卷",
+      "questionCount": 24,
+      "pages": [
+        "assets/national/yn-2026-chinese/p01.webp",
+        "assets/national/yn-2026-chinese/p02.webp",
+        "assets/national/yn-2026-chinese/p03.webp",
+        "assets/national/yn-2026-chinese/p04.webp",
+        "assets/national/yn-2026-chinese/p05.webp",
+        "assets/national/yn-2026-chinese/p06.webp",
+        "assets/national/yn-2026-chinese/p07.webp",
+        "assets/national/yn-2026-chinese/p08.webp"
+      ],
+      "answerPages": [
+        "assets/national/yn-2026-chinese/p01-answer.webp",
+        "assets/national/yn-2026-chinese/p02-answer.webp",
+        "assets/national/yn-2026-chinese/p03-answer.webp",
+        "assets/national/yn-2026-chinese/p04-answer.webp",
+        "assets/national/yn-2026-chinese/p05-answer.webp",
+        "assets/national/yn-2026-chinese/p06-answer.webp"
+      ],
+      "source": "云南省教育科学研究院官方试题卷及参考答案",
+      "description": "整卷 24 题（官方真卷全卷24题，满分100分，含官方参考答案、评分细则及中考范文）",
+      "data": "./data/national/yn-2026-chinese.js",
+      "sections": {
+        "单项选择": 6,
+        "古诗文默写": 1,
+        "解答题": 17
+      }
+    },
+    {
+      "id": "yn-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "云南",
+      "year": "2026",
+      "title": "2026年云南省中考数学真题",
+      "questionCount": 27,
+      "pages": [
+        "./assets/national/yn-2026-math/p01.webp",
+        "./assets/national/yn-2026-math/p02.webp",
+        "./assets/national/yn-2026-math/p03.webp",
+        "./assets/national/yn-2026-math/p04.webp",
+        "./assets/national/yn-2026-math/p05.webp",
+        "./assets/national/yn-2026-math/p06.webp",
+        "./assets/national/yn-2026-math/p07.webp",
+        "./assets/national/yn-2026-math/p08.webp",
+        "./assets/national/yn-2026-math/p09.webp"
+      ],
+      "answerPages": [
+        "./assets/national/yn-2026-math/p01-answer.webp",
+        "./assets/national/yn-2026-math/p02-answer.webp",
+        "./assets/national/yn-2026-math/p03-answer.webp"
+      ],
+      "source": "2026年云南省初中学业水平考试数学试卷",
+      "description": "整卷 27 题",
+      "data": "./data/national/yn-2026-math.js",
+      "sections": {
+        "单项选择": 15,
+        "填空题": 4,
+        "解答题": 8
+      }
+    },
+    {
+      "id": "zj-2026-math",
+      "subject": "math",
+      "subjectLabel": "数学",
+      "region": "浙江",
+      "year": 2026,
+      "title": "2026 年浙江中考数学（压轴题专练）",
+      "questionCount": 2,
+      "pages": [
+        "./assets/national/zj-2026-math/p01.webp",
+        "./assets/national/zj-2026-math/p02.webp",
+        "./assets/national/zj-2026-math/p03.webp",
+        "./assets/national/zj-2026-math/p04.webp",
+        "./assets/national/zj-2026-math/p05.webp",
+        "./assets/national/zj-2026-math/p06.webp",
+        "./assets/national/zj-2026-math/p07.webp"
+      ],
+      "answerPages": [],
+      "source": "2026年浙江省中考数学试卷真题及答案.pdf",
+      "description": "整卷 2 题（精选2026浙江中考数学核心压轴题（T16几何翻折对称极值填空压轴 + T24圆与相似三角形几何综合解答压轴），配全套高清几何原图与权威多解法推导演示）",
+      "data": "./data/national/zj-2026-math.js",
+      "sections": {
+        "填空题": 1,
+        "解答题": 1
       }
     },
     {
