@@ -2,6 +2,7 @@ import { cashImage, chooseReward, findReferrer, referralDetails, saveCashQr } fr
 import { SPRINT_PAPERS } from "./_sprint.js";
 import { handleShare } from "./_share.js";
 import { handleUpload, listMyUploads } from "./_uploads.js";
+import { handlePay } from "./_pay.js";
 
 const COOKIE_NAME = "xiaosimen_access";
 const SITE = "xiaosimen";
@@ -20,6 +21,7 @@ const FAILURE_WINDOW_MS = 15 * 60 * 1000;
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   if (url.pathname.startsWith("/api/share/")) return handleShare(context, SITE);
+  if (url.pathname.startsWith("/api/pay/")) return handlePay(context, { site: SITE, maxDevices: MAX_DEVICES, hashAccessCode: sha256, activateCodeSession });
   if (!PUBLIC_API_PATHS.has(url.pathname)) return context.next();
 
   try {
@@ -407,4 +409,44 @@ async function progressBackup(context) {
     return json({ ok: true, updatedAt: now });
   }
   return json({ ok: false }, 405);
+}
+
+// 供网页直付 Webhook 自动发码后，直接为当前浏览器签发会话与 Cookie
+async function activateCodeSession(context, codeId, referralCode = "", source = "direct") {
+  const { request, env } = context;
+  const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+  const existingToken = readCookie(request.headers.get("Cookie") || "", COOKIE_NAME);
+  if (existingToken) {
+    const existing = await env.DB.prepare(
+      "SELECT 1 AS ok FROM access_sessions WHERE session_token_hash = ? AND code_id = ? AND site = ? LIMIT 1"
+    ).bind(await sha256(existingToken), codeId, SITE).first();
+    if (existing) return json(await redemptionPayload(env.DB, codeId));
+  }
+  const codeRow = await env.DB.prepare(
+    "SELECT id, used_at, reward_for_code_id FROM access_codes WHERE id = ? LIMIT 1"
+  ).bind(codeId).first();
+  if (!codeRow) return json({ ok: false, reason: "INVALID_CODE" }, 404);
+  let referrer = null;
+  if (codeRow.used_at == null && codeRow.reward_for_code_id == null && String(referralCode).trim()) {
+    referrer = await findReferrer(env.DB, referralCode, codeRow.id);
+  }
+  const sessionToken = createToken();
+  const sessionHash = await sha256(sessionToken);
+  const now = new Date().toISOString();
+  const userAgent = (request.headers.get("User-Agent") || "").slice(0, 500);
+  await env.DB.batch([
+    env.DB.prepare(
+      "INSERT INTO access_sessions (code_id, session_token_hash, created_at, ip, user_agent, site) " +
+      "SELECT id, ?, ?, ?, ?, ? FROM access_codes WHERE id = ? AND access_scope IN (" + scopeParams + ") " +
+      "AND (SELECT COUNT(*) FROM access_sessions WHERE code_id = access_codes.id AND site = ?) < COALESCE(access_codes.max_devices, ?)"
+    ).bind(sessionHash, now, ip, userAgent, SITE, codeRow.id, ...PRODUCT_SCOPES, SITE, MAX_DEVICES),
+    env.DB.prepare(
+      "UPDATE access_codes SET used_at = ?, used_ip = ?, used_user_agent = ?, session_token_hash = ?, " +
+      "session_created_at = ?, redeem_source = ?, referred_by = ? WHERE id = ? AND used_at IS NULL " +
+      "AND EXISTS (SELECT 1 FROM access_sessions WHERE code_id = access_codes.id AND session_token_hash = ?)"
+    ).bind(now, ip, userAgent, sessionHash, now, "xiaosimen-" + normalizeSource(source), referrer?.id ?? null, codeRow.id, sessionHash),
+  ]);
+  const response = json(await redemptionPayload(env.DB, codeRow.id));
+  response.headers.set("Set-Cookie", buildCookie(sessionToken));
+  return response;
 }

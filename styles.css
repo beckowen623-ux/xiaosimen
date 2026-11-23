@@ -708,3 +708,5 @@ input[type=search]::placeholder { color: #67736c; }
 .local-backup-label { margin: 10px 0 0; font-size: 13.5px; }
 .access-value-line { margin-top: 6px; font-size: 13.5px; line-height: 1.55; }
 .access-value-line b { color: var(--ink); }
+.direct-pay-box { margin: 10px 0 12px; padding: 12px 14px; border-radius: 10px; background: #eff6ff; border: 1px solid #bfdbfe; font-size: 14px; line-height: 1.6; color: #1e3a8a; }
+.direct-pay-box b { color: #111827; }

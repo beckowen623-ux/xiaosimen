@@ -845,8 +845,76 @@ function openUnlock(message = '') {
   if (!unlockDialog.open) unlockDialog.showModal();
   unlockDialog.scrollTop = 0;
   void loadPurchaseOptions();
+  void loadDirectPayConfig();
   trackVisit('purchase_view');
 }
+
+let payPollTimer = null;
+let directPayEnabled = false;
+async function loadDirectPayConfig() {
+  try {
+    const res = await fetch('/api/pay/config', { cache: 'no-store' });
+    if (!res.ok) return;
+    const cfg = await res.json();
+    directPayEnabled = Boolean(cfg.ok && cfg.enabled);
+    const schoolBtn = byId('directPaySchool');
+    const bundleBtn = byId('directPayBundle');
+    if (schoolBtn) schoolBtn.hidden = !directPayEnabled;
+    if (bundleBtn) bundleBtn.hidden = !directPayEnabled;
+    if (directPayEnabled) {
+      byId('schoolOffer')?.querySelector('a')?.classList.remove('primary');
+    }
+  } catch {}
+}
+async function startDirectPay(sku) {
+  const box = byId('directPayBox');
+  if (!box) return;
+  clearInterval(payPollTimer);
+  box.hidden = false;
+  box.textContent = '正在创建支付订单…';
+  try {
+    const referralCode = (inviteInput?.value || '').trim();
+    const res = await fetch('/api/pay/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sku, referralCode, source: visitorSource }),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok || !data.payUrl) {
+      box.textContent = data.message || '创建订单失败，请稍后重试或使用闲鱼购买。';
+      return;
+    }
+    box.innerHTML = `<p><b>订单已创建（¥${data.amount}）</b>：请在新页面完成付款，付款后本页会自动解锁。</p>
+      <p><a class="btn primary" href="${esc(data.payUrl)}" target="_blank" rel="noopener noreferrer">前往付款 →</a></p>`;
+    window.open(data.payUrl, '_blank', 'noopener');
+    let tries = 0;
+    payPollTimer = setInterval(async () => {
+      tries += 1;
+      if (tries > 120 || !unlockDialog.open) { clearInterval(payPollTimer); return; }
+      try {
+        const stRes = await fetch(`/api/pay/status?orderId=${encodeURIComponent(data.orderId)}`, { cache: 'no-store' });
+        const st = await stRes.json();
+        if (stRes.ok && st.status === 'paid') {
+          clearInterval(payPollTimer);
+          paidAccess = true;
+          trackVisit('redeem_success');
+          try { localStorage.setItem('xiaosimen_paid', '1'); } catch {}
+          box.innerHTML = `<p><b>付款成功，已自动解锁完整版！</b></p>${st.accessCode ? `<p>你的专属备用兑换码：<code>${esc(st.accessCode)}</code>（建议截图保存，可在另外 2 台设备输入激活）</p>` : ''}`;
+          renderHome('homeTitle');
+          void refreshReferralProfile();
+          toast('付款成功，已自动解锁完整版！');
+        }
+      } catch {}
+    }, 2500);
+  } catch {
+    box.textContent = '网络异常，无法创建支付订单，请重试或使用闲鱼购买。';
+  }
+}
+byId('directPaySchool')?.addEventListener('click', () => {
+  const hasInvite = Boolean((inviteInput?.value || '').trim());
+  void startDirectPay(hasInvite ? 'xiaosimen_friend' : 'xiaosimen_full');
+});
+byId('directPayBundle')?.addEventListener('click', () => { void startDirectPay('bundle'); });
 
 redeemForm.addEventListener('submit', async event => {
   event.preventDefault();

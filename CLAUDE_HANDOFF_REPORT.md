@@ -216,3 +216,16 @@ git push origin main
    - `#headerSearch` 支持从 `#national` 页一键跳回首页并展开聚焦搜索框。
 2. `national-exams.js`：移除 `app.hideSearch()`，保持全站顶栏导航一致。
 3. `tests/smoke.mjs`、`sw.js`、`index.html`、`CHANGELOG.md`：冒烟检查扩至 32 项，缓存升级至 `elx-quiz-v7`，资源版本更新为 `styles.css?v=16`、`national-exams.js?v=5`、`app.js?v=20`。
+
+---
+
+## 十二、 网页直付统一代码框架上线（面包多 Pay / 爱发电双适配）(2026-11-23 · Gemini · 分支 `main`)
+
+> **后续接手 AI 请注意**：网页直付代码已完整接入并处于“环境变量开关待启用”状态（详见 `docs/WEB_PAY_SETUP.md`）。站长在 Cloudflare Pages 配置 `PAY_PROVIDER`（`afdian` 或 `mbd`）及对应密钥后自动激活，未配置前前端保持隐藏、完全不影响现有闲鱼入口。
+
+### 本次改动文件清单
+1. `functions/_pay.js`：新增支付订单自动建表（`pay_orders`）、下单、Webhook 验签/爱发电反查、幂等生成 `access_codes` 兑换码与状态轮询逻辑。
+2. `functions/_middleware.js`：挂载 `/api/pay/*` 路由，新增 `activateCodeSession()` 供支付成功后自动下发 `xiaosimen_access` Cookie 秒解锁。
+3. `functions/api/_stats.js`：新增 `pay_create`、`pay_success` 埋点。
+4. `index.html`、`styles.css`、`app.js`：购买弹窗接入直付按钮与 2.5 秒轮询自动解锁及备用兑换码展示；版本更新为 `styles.css?v=17`、`app.js?v=21`。
+5. `docs/WEB_PAY_SETUP.md`、`tests/smoke.mjs`、`sw.js`、`CHANGELOG.md`：新增配置手册，冒烟检查扩至 34 项，缓存升级至 `elx-quiz-v8`。

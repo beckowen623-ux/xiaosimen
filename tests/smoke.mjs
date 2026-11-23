@@ -33,6 +33,7 @@ const moduleJs = [
   'functions/api/track.js',
   'functions/api/_stats.js',
   'functions/api/config.js',
+  'functions/_pay.js',
 ];
 for (const rel of moduleJs) {
   const full = path.join(root, rel);
@@ -76,6 +77,7 @@ check(!read('national-exams.js').includes('app.hideSearch()'), '全国真题页�
 const mwJs = read('functions/_middleware.js');
 check(/const MAX_DEVICES\s*=\s*3;/.test(mwJs), '设备激活上限为 3 台', 'functions/_middleware.js 中 MAX_DEVICES 不为 3');
 check(mwJs.includes('"/api/access/backup"') && mwJs.includes('async function progressBackup'), '后端云端备份接口 /api/access/backup 存在', 'functions/_middleware.js 缺少 /api/access/backup');
+check(mwJs.includes('/api/pay/') && read('functions/_pay.js').includes('export async function handlePay'), '网页直付统一路由 /api/pay/* 存在', '缺少网页直付路由或 functions/_pay.js');
 
 const statsJs = read('functions/api/_stats.js');
 for (const ev of ['buy_click', 'copy_code', 'redeem_success']) {

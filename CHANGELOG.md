@@ -2,6 +2,16 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 搭建网页直付统一代码框架（支持面包多 Pay / 爱发电 Webhook 自动发码秒解锁）（main）
+- 新增后端支付统一适配层 `functions/_pay.js` 并接入 `functions/_middleware.js`：
+  - 提供 `/api/pay/config`、`/api/pay/create`、`/api/pay/status`、`/api/pay/webhook` 四条路由，首次使用自动在 D1 创建 `pay_orders` 表，无需手动跑 SQL。
+  - 同时兼容 **爱发电（`PAY_PROVIDER=afdian`）** 与 **面包多 Pay（`PAY_PROVIDER=mbd`）** 两条个人免营业执照渠道：服务端严格校验 19.9 / 14.9 分享价 / 14.9 好友价 / 29.8 套餐金额，Webhook 验签/反查后自动在 `access_codes` 生成专属兑换码并在轮询时直接签发 `xiaosimen_access` Cookie 秒解锁。
+  - **零侵入安全开关**：未在 Cloudflare Pages 配置 `PAY_PROVIDER` 时，前端自动隐藏直付按钮，现有闲鱼购买流程 100% 不受影响。
+- 前端与文档配套（`index.html`、`styles.css`、`app.js`、`functions/api/_stats.js`、`docs/WEB_PAY_SETUP.md`、`tests/smoke.mjs`）：
+  - 购买弹窗新增 `#directPaySchool`、`#directPayBundle` 与 `#directPayBox` 轮询/备用码展示区；埋点新增 `pay_create`、`pay_success`；新增配置手册 `docs/WEB_PAY_SETUP.md`。
+  - `tests/smoke.mjs` 纳入 `functions/_pay.js` 语法与路由校验（共 34 项通过）；`sw.js` 升级至 `elx-quiz-v8`，`index.html` 更新为 `styles.css?v=17`、`app.js?v=21`。
+- 验证：`node tests/smoke.mjs`（34/34 通过）与 `node tests/validate.mjs` 全量校验通过。
+
 ## 2026-11-23 · Gemini · 升级首页转化横幅与更新日志，修复全国真题页顶栏「找题」消失（main）
 - 升级首页免费额度/转化横幅（`app.js`、`styles.css`）：
   - 在 `accessNoticeHTML()` 中新增 `.access-value-line`，直观展示「完整版 ¥19.9 一次买断用到中考（分享可省 5 元）：3 台设备共用 · 云端错题本同步 · 近期已新上 17 套 2026 真题，后续新卷免费更新」，并将右侧按钮升级为主色 `开通完整版 ¥19.9`。

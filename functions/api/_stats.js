@@ -24,6 +24,8 @@ export const TRACK_EVENTS = new Set([
   "buy_click",
   "copy_code",
   "redeem_success",
+  "pay_create",
+  "pay_success",
 ]);
 
 export function normalizeSource(value) {

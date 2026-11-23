@@ -14,7 +14,7 @@
   <title>爱丽克丝中考题库 · 人教版</title>
   <link rel="icon" type="image/svg+xml" href="./assets/icons/elx-badge.svg">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=16">
+  <link rel="stylesheet" href="./styles.css?v=17">
   <script src="./data/daily-questions-xiaosimen.js?v=7" defer></script>
   <link rel="stylesheet" href="./referrals.css?v=3">
   <link rel="stylesheet" href="./national-exams.css?v=2">
@@ -23,7 +23,7 @@
   <script src="./national-exams.js?v=5" defer></script>
   <!-- 真题目录（早鸟卷、同步卷、小升初都靠它）和页面脚本同时下载，不用等脚本跑起来再下；版本号发布时自动填 -->
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
-  <script src="./app.js?v=20" defer></script>
+  <script src="./app.js?v=21" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
   <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).catch(function () {}); });</script>
 </head>
@@ -103,6 +103,7 @@
       <section id="schoolOffer" class="offer-primary">
         <h3>中考题库完整版 ¥19.9 <span class="offer-badge">分享可省 5 元</span></h3>
         <p class="muted offer-note">解锁全部同步章节卷、全国中考真题手机刷题、精编模拟卷整卷做与打印、本周一卷、小四门全库与 1/3/7/14 天错题自动复习。</p>
+        <button class="btn primary" type="button" id="directPaySchool" hidden>微信/支付宝直接买（付款秒解锁）</button>
         <a class="btn primary" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买</a>
         <button class="btn" type="button" hidden>复制闲鱼口令</button>
       </section>
@@ -112,10 +113,12 @@
       <section id="bundleOffer">
         <h3>双题库套餐 ¥29.8</h3>
         <p class="muted offer-note">中考题库 + <b>爱丽克丝考证题库</b>（初级会计、中级会计、中级审计、软考系统集成、税务师，网址 tinawin.cc.cd）。家里大人在考证可以一起买，单买考证题库也是 19.9。</p>
+        <button class="btn primary" type="button" id="directPayBundle" hidden>微信/支付宝直接买套餐 ¥29.8</button>
         <a class="btn" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买套餐</a>
         <button class="btn" type="button" hidden>复制套餐口令</button>
       </section>
     </div>
+    <div class="direct-pay-box" id="directPayBox" hidden role="status"></div>
     <p class="seller-fallback">闲鱼链接打不开？打开闲鱼 App，搜索用户 <b>王者荣耀速度飞车</b> <button class="btn text-button" type="button" id="copySeller">复制用户名</button></p>
     <details class="price-rules-fold">
       <summary>查看原价 19.9 / 分享价 14.9 / 好友价说明</summary>
