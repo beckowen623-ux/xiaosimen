@@ -2,6 +2,15 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 新增多 AI 提交前自动冒烟检查脚本，修复 `/sw.js` 4 小时缓存拦截更新（main）
+- 新增自动冒烟检查脚本 `tests/smoke.mjs` 并写入 `AGENTS.md` 收工必跑清单：
+  - 自动校验全部前端脚本与 `functions/` ESM 接口语法；
+  - 校验购买弹窗、关闭键、安心保障条、云端同步区块、试做结束转化闭环（`isTrialSliceSession`）、3 台设备上限、核心成交埋点及 `/api/share/me` 防刷限流是否存在，防止多 AI 轮流提交误删关键逻辑；
+  - 自动扫描 `data/national-catalog.js` 全库原卷与答案 WebP 图片（541+ 页）确认零死链。
+- 修复线上 `/sw.js` 被浏览器缓存 4 小时导致发版看不到更新的问题（`index.html`）：
+  - 排查线上响应头发现 `/sw.js` 返回 `cache-control: max-age=14400`；在 `index.html` 注册 Service Worker 时加入 `{ updateViaCache: 'none' }`，强制浏览器检查 `/sw.js` 时绕过 HTTP 缓存。
+- 验证：`node tests/smoke.mjs` 与 `node tests/validate.mjs` 全部通过。
+
 ## 2026-11-23 · Gemini · 上线完整版专属 D1 云端错题本同步，并优化 Service Worker 发版刷新超时（main）
 - 上线「云端错题本与进度同步」（完整版专属付费卖点）（`functions/_middleware.js`、`index.html`、`styles.css`、`app.js`）：
   - 后端新增 `GET/POST /api/access/backup`，严格校验 `accessSession`（未付费返回 `401`），自动建表 `progress_backups (code_id, site, payload, updated_at)`，按兑换码 `code_id` 存储 JSON 备份（上限 450 KB），无需手动执行数据库迁移。

@@ -25,7 +25,7 @@
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
   <script src="./app.js?v=19" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
-  <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });</script>
+  <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).catch(function () {}); });</script>
 </head>
 <body>
   <a class="skip-link" href="#view">跳到主要内容</a>

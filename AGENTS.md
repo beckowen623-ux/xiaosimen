@@ -14,7 +14,7 @@
 - 推送 `main` = Cloudflare Pages 自动上线生产。没有站长同意不要推 main；用分支，Pages 会给分支生成预览。
 
 ## 收工时
-- 跑 `node tests/validate.mjs`（`tests/upgrade-20261118.mjs` 需要完整历史，浅克隆会报找不到提交，不代表出错）。
+- 跑 `node tests/validate.mjs` 和 `node tests/smoke.mjs`（前者查题库数据一致性，后者查前后端语法、转化链路、配置防回归与全库图片零死链；`tests/upgrade-20261118.mjs` 需要完整历史，浅克隆会报找不到提交，不代表出错）。
 - 在 `CHANGELOG.md` 最上面写：日期、改了什么、为什么、怎么验证的、提交号/分支。
 - 面向买家的更新写进 `app.js` 的 `UPDATE_LOG`（首页“更新日志”）。
 

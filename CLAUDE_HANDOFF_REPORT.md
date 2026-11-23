@@ -192,3 +192,15 @@ git push origin main
 2. `index.html` & `styles.css`：`#progressDialog` 新增 `.cloud-sync-box` 云端同步区（含未付费转化入口）；`#unlockDialog` 保障条补充「云端错题本同步」；资源版本更新为 `styles.css?v=15`、`app.js?v=19`。
 3. `app.js`：实现 `refreshCloudSyncUI()`、上传/读取云端备份事件，恢复流程复用 `readProgressBackup()` 与现有二次确认导入框。
 4. `sw.js`、`CHANGELOG.md`：`CACHE` 升级至 `elx-quiz-v6`，`PAGE_TIMEOUT_MS = 1800`，同步更新变更日志。
+
+---
+
+## 十、 自动冒烟检查与 `/sw.js` 缓存更新修复 (2026-11-23 · Gemini · 分支 `main`)
+
+> **后续接手 AI 请注意**：提交前除 `node tests/validate.mjs` 外，请务必同时执行 `node tests/smoke.mjs`（已写入 `AGENTS.md`）。
+
+### 本次改动文件清单
+1. `tests/smoke.mjs`：新增零依赖自动冒烟检查脚本（覆盖前后端语法、转化弹窗与云端同步元素、试做转化闭环、埋点白名单、防刷限流、设备上限及全库原卷图片零死链）。
+2. `AGENTS.md`：将 `node tests/smoke.mjs` 加入收工必跑校验项。
+3. `index.html`：Service Worker 注册改为 `navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' })`，解决线上 `/sw.js` 响应头 `max-age=14400` 导致用户长达 4 小时拿不到新版缓存的问题。
+4. `CHANGELOG.md`：同步记录本次变更。
