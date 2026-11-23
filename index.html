@@ -14,7 +14,7 @@
   <title>爱丽克丝中考题库 · 人教版</title>
   <link rel="icon" type="image/svg+xml" href="./assets/icons/elx-badge.svg">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=13">
+  <link rel="stylesheet" href="./styles.css?v=14">
   <script src="./data/daily-questions-xiaosimen.js?v=7" defer></script>
   <link rel="stylesheet" href="./referrals.css?v=3">
   <link rel="stylesheet" href="./national-exams.css?v=2">
@@ -23,7 +23,7 @@
   <script src="./national-exams.js?v=4" defer></script>
   <!-- 真题目录（早鸟卷、同步卷、小升初都靠它）和页面脚本同时下载，不用等脚本跑起来再下；版本号发布时自动填 -->
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
-  <script src="./app.js?v=17" defer></script>
+  <script src="./app.js?v=18" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
   <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });</script>
 </head>
@@ -81,11 +81,16 @@
     </div>
     <p class="muted" id="unlockReason"></p>
     <button class="btn text-button redeem-jump" type="button" id="redeemJump">已经买了？直接填兑换码 ↓</button>
+    <ul class="unlock-trust" aria-label="购买保障">
+      <li>✓ 一次买断，初一用到初三</li>
+      <li>✓ 3 台设备共用（手机/平板/电脑打印）</li>
+      <li>✓ 后续新卷免费更新 · 无法使用全额退</li>
+    </ul>
     <div class="access-offers">
-      <section id="schoolOffer">
-        <h3>中考题库完整版 ¥19.9</h3>
-        <p class="muted offer-note">全科真题手机刷题、精编模拟卷整卷手机做和打印、本周一卷、小四门全部题目、错题自动复习。</p>
-        <a class="btn" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买</a>
+      <section id="schoolOffer" class="offer-primary">
+        <h3>中考题库完整版 ¥19.9 <span class="offer-badge">分享可省 5 元</span></h3>
+        <p class="muted offer-note">解锁全部同步章节卷、全国中考真题手机刷题、精编模拟卷整卷做与打印、本周一卷、小四门全库与 1/3/7/14 天错题自动复习。</p>
+        <a class="btn primary" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买</a>
         <button class="btn" type="button" hidden>复制闲鱼口令</button>
       </section>
       <section id="shareOffer">
@@ -99,14 +104,17 @@
       </section>
     </div>
     <p class="seller-fallback">闲鱼链接打不开？打开闲鱼 App，搜索用户 <b>王者荣耀速度飞车</b> <button class="btn text-button" type="button" id="copySeller">复制用户名</button></p>
-    <div class="price-rules">
-      <p><b>原价 19.9</b>：直接在闲鱼拍，拿到兑换码填在下面就行，<b>不用填邀请码</b>。</p>
-      <p><b>分享价 14.9</b>：把上面的专属链接发到朋友圈、家长群或学习群，3 位朋友点开后解锁验证码，在闲鱼发给作者按 14.9 买，<b>不用填邀请码</b>。</p>
-      <p><b>好友价 14.9</b>：只限点朋友的专属邀请链接进来的新用户；兑换时要填朋友的邀请码。没有邀请链接就按原价买或分享后买。</p>
-      <p><b>优惠不叠加</b>：三种价格只能选一种，最低 14.9。点朋友邀请链接进来的，直接买好友价就行，不用再分享。</p>
-    </div>
-    <details class="free-way" data-free-way open>
-      <summary><b>🎁 题库可以免费拿</b><span>14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元，等于白用，还多 1 毛 ›</span></summary>
+    <details class="price-rules-fold">
+      <summary>查看原价 19.9 / 分享价 14.9 / 好友价说明</summary>
+      <div class="price-rules">
+        <p><b>原价 19.9</b>：直接在闲鱼拍，拿到兑换码填在下面就行，<b>不用填邀请码</b>。</p>
+        <p><b>分享价 14.9</b>：把上面的专属链接发到朋友圈、家长群或学习群，3 位朋友点开后解锁验证码，在闲鱼发给作者按 14.9 买，<b>不用填邀请码</b>。</p>
+        <p><b>好友价 14.9</b>：只限点朋友的专属邀请链接进来的新用户；兑换时要填朋友的邀请码。没有邀请链接就按原价买或分享后买。</p>
+        <p><b>优惠不叠加</b>：三种价格只能选一种，最低 14.9。点朋友邀请链接进来的，直接买好友价就行，不用再分享。</p>
+      </div>
+    </details>
+    <details class="free-way" data-free-way>
+      <summary><b>🎁 买后还能免单</b><span>按 14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元，等于免费用 ›</span></summary>
       <ol>
         <li><b>先按 14.9 买：</b>用上面的分享价，把专属链接发到家长群，3 位朋友点开就能按 14.9 买；点朋友邀请链接进来的，直接买好友价 14.9。</li>
         <li><b>买完你也有邀请链接：</b>解锁后首页会出现你的专属邀请链接和二维码海报。朋友点你的链接，按好友价 14.9 买，比原价省 5 元，他也划算。</li>
@@ -118,8 +126,8 @@
       <summary>买之前常见问题</summary>
       <dl>
         <dt>怎么买？</dt><dd>点上面「去闲鱼购买」或复制口令，在闲鱼下单，卖家发你兑换码，回到这里输入兑换。</dd>
-        <dt>能用几台设备？</dt><dd>每个兑换码在本题库可以激活两个浏览器（比如孩子手机 + 家长电脑）。套餐码在两个题库各自兑换，各两个浏览器。</dd>
-        <dt>换手机、清了浏览器怎么办？</dt><dd>在新浏览器再输一次兑换码即可；两个名额都用满了，到闲鱼联系我重置。学习进度可在「进度管理」下载备份再导入。</dd>
+        <dt>能用几台设备？</dt><dd>每个兑换码在本题库可以激活 3 个浏览器（比如孩子手机 + 平板 + 家长电脑打印）。套餐码在两个题库各自兑换，各 3 个浏览器。</dd>
+        <dt>换手机、清了浏览器怎么办？</dt><dd>在新浏览器再输一次兑换码即可；3 个名额都用满了，到闲鱼联系我免费重置。学习进度可在「进度管理」下载备份再导入。</dd>
         <dt>以后新加的卷子要另外付钱吗？</dt><dd>不用。完整版一次买断，之后新增的精编卷、真题和功能都包含在内。</dd>
       </dl>
     </details>

@@ -2,6 +2,19 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 付费转化体验打磨：购买弹窗信息重构、设备上限放宽至 3 台、早鸟诊断转化衔接（main）
+- 放宽兑换码设备激活上限至 3 台（`functions/_middleware.js`、`index.html`、`app.js`、`AGENTS.md`）：
+  - `MAX_DEVICES` 由 `2` 调整为 `3`，覆盖家庭高频“孩子手机 + 平板 + 家长电脑打印”三端场景，并同步更新 `DEVICE_LIMIT` 提示与购买弹窗 FAQ 文案。
+- 重构购买弹窗 `#unlockDialog` 信息层次（`index.html`、`styles.css`）：
+  - 顶部新增「安心保障条」（一次买断初一用到初三 / 3 台设备共用 / 后续新卷免费更新与无法使用全额退）。
+  - 主推卡 `#schoolOffer` 增加 `.offer-primary` 边框高亮、「分享可省 5 元」标签与 `btn primary` 主按钮，视觉焦点一眼锁定 ¥19.9 完整版。
+  - 将 4 段式 `.price-rules` 细则与「🎁 买后还能免单」默认折叠为 `<details>`，缩短弹窗首屏长度，让权益、下单按钮与兑换框同屏可见（保留闲鱼保底用户名「王者荣耀速度飞车」不变）。
+- 增强试做与早鸟诊断的付费转化衔接（`app.js`、`styles.css`）：
+  - 在早鸟自测卷错题处方（`.eb-rx`）下方为未付费用户新增温和转化条（`#ebUpsellBtn`），把“刚测出的薄弱章节”直接衔接到同步章节卷与完整版错题自动复习。
+  - 优化 `trialUpsellHTML()` 权益文案与按钮标签为「解锁完整版（¥19.9）」。
+- 升级缓存与资源版本（`sw.js`、`index.html`）：`sw.js` 升级至 `elx-quiz-v5`，`index.html` 更新为 `styles.css?v=14`、`app.js?v=18`。
+- 验证：`node -c app.js sw.js`、`node --check --input-type=module < functions/_middleware.js` 及 `node tests/validate.mjs` 全量校验通过。
+
 ## 2026-11-23 · Gemini · 修复试做转化断点、补齐成交漏斗埋点与分享接口防刷（main）
 - 修复试做结束静默返回首页的转化断点（`app.js`）：
   - 新增 `isTrialSliceSession()` 判定；当未付费用户在同步卷/精编模拟卷/全国真题试做完（或浏览完）前 5 题/首组题后点击「结束练习」，即使未提交答案（`state.session.size === 0`），也会进入结算页并展示 `trialUpsellHTML()` 完整版升级引导，避免直接静默退回首页导致转化流失。

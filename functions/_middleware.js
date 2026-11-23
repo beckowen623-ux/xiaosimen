@@ -10,7 +10,7 @@ const scopeParams = PRODUCT_SCOPES.map(() => "?").join(", ");
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 const HASH_PREFIX = "sha256:";
 const FULL_SCOPE = "full";
-const MAX_DEVICES = 2;
+const MAX_DEVICES = 3;
 const PUBLIC_API_PATHS = new Set(["/api/access/redeem", "/api/access/status", "/api/access/referral",
   "/api/access/reward-choice", "/api/access/sprint", "/api/access/sprint-preview", "/api/access/cash-qr", "/api/access/cash-proof", "/api/access/friend-offer", "/api/access/upload", "/api/access/my-uploads",
   "/api/access/free-status", "/api/access/free-use"]);

@@ -865,7 +865,7 @@ redeemForm.addEventListener('submit', async event => {
     const data = await response.json();
     if (!response.ok || !data.ok) {
       const messages = {
-        DEVICE_LIMIT: '这个兑换码在本题库已激活两个浏览器。',
+        DEVICE_LIMIT: '这个兑换码在本题库已激活 3 个浏览器（换设备超出名额可到闲鱼联系我免费重置）。',
         INVALID_CODE: '兑换码无效，或不适用于爱丽克丝中考题库。',
         INVALID_REFERRAL: '邀请码有误，请核对或留空后继续。',
         REFERRAL_REQUIRED: '这是好友价兑换码，请填写邀请你的朋友的邀请码（ALIX- 开头，问朋友要）。',
@@ -2983,9 +2983,9 @@ function trialUpsellHTML() {
   const paper = (nationalCatalog || []).find(p => p.id === paperId);
   if (!paper || !state.queue.length || state.queue.length >= paper.questionCount) return '';
   const rest = paper.questionCount - state.queue.length;
-  return `<div class="trial-upsell"><p><b>这套卷还有 ${rest} 题</b>（含压轴的解答题）在完整版里。</p>
-    <p class="muted">完整版 19.9 元一次买断：精编模拟卷、同步章节卷、本周一卷都能做完整套、也能打印，错题自动进错题本按 1、3、7、14 天复习，以后的更新也包含在内。</p>
-    <button class="btn primary" type="button" id="upsellBtn">看看完整版</button></div>`;
+  return `<div class="trial-upsell"><p><b>这套卷还有 ${rest} 题</b>（含压轴解答题与逐题解析）在完整版里。</p>
+    <p class="muted">完整版 ¥19.9 一次买断（分享可省 5 元）：71 套同步章节卷、全国真题、精编模拟卷整卷做与打印、3 台设备共用、错题按 1/3/7/14 天自动复习，后续新卷免费更新。</p>
+    <button class="btn primary" type="button" id="upsellBtn">解锁完整版（¥19.9）</button></div>`;
 }
 // 早鸟卷做完：按错题所在章节，直接给出那一章的同步章节卷（错得多的章排前面，最多 3 章）
 // 早鸟卷里跨学期合并的考点模块，对应到同步卷的章节
@@ -3049,7 +3049,8 @@ function renderSummary() {
         </div>
         ${rx.length ? `<div class="eb-rx"><p class="earlybird-next">下一步：错题集中在下面几章，先做这几章的<b>同步章节卷</b>，一章一章补，比整卷反复刷更快见效。</p>
           ${rx.map(x => `<div class="eb-rx-row"><span>${esc(x.unit.replace(/^[^·]+·/, ''))}<small>错 ${x.n} 题</small></span><div>${x.papers.map(p => `<button class="btn" type="button" data-rx-paper="${p.id}">做「${esc(p.label || p.title)}」→</button>`).join('')}</div></div>`).join('')}
-          <button class="btn ghost" type="button" id="toSyncBtn">看全部同步章节卷</button></div>`
+          <button class="btn ghost" type="button" id="toSyncBtn">看全部同步章节卷</button>
+          ${!hasFullAccess() ? `<div class="eb-rx-upsell"><span class="muted">每章前 5 题可免费试做；完整版 ¥19.9 解锁全套同步卷 + 自动错题复习（3 台设备共用）。</span><button class="btn primary" type="button" id="ebUpsellBtn">看看完整版</button></div>` : ''}</div>`
         : paper && paper.stage !== 'xsc' && syncPapers(paper.stage).some(p => p.subject === paper.subject) ? `<p class="earlybird-next">下一步：看看错题集中在哪几章，用<b>同步章节卷</b>一章一章补，比整卷反复刷更快见效。</p>
         <button class="btn" type="button" id="toSyncBtn">去同步章节卷补弱项 →</button>` : ''}
       </section>
@@ -3057,6 +3058,7 @@ function renderSummary() {
     byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, 'retry'));
     byId('toSyncBtn')?.addEventListener('click', () => { state.syncSubject = paper.subject; if (paper.stage) setStage(paper.stage); renderHome(); byId('sync')?.scrollIntoView({ block: 'start' }); });
     view.querySelectorAll('[data-rx-paper]').forEach(b => b.addEventListener('click', () => { trackVisit('eb_rx'); claudePaperAction(b.dataset.rxPaper, 'phone'); }));
+    byId('ebUpsellBtn')?.addEventListener('click', () => openUnlock('开通完整版（¥19.9 一次买断），即可做完整套薄弱章节同步卷并开启 1/3/7/14 天错题自动复习。'));
     byId('homeBtn').addEventListener('click', () => { const xsc = paper?.stage === 'xsc'; if (xsc) { state.xscOpen = true; state.xscSubject = paper.subject; } renderHome('homeTitle'); byId(xsc ? 'xsc' : 'earlybird')?.scrollIntoView(); });
     state.keys = null;
     moveFocus(byId('summaryTitle'), true);

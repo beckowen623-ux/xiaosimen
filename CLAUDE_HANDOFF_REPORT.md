@@ -163,3 +163,20 @@ git push origin main
 4. `functions/api/_stats.js`：`TRACK_EVENTS` 新增 `buy_click`、`copy_code`、`redeem_success`。
 5. `functions/_share.js`：`/api/share/me` 新增同网络 24 小时最多创建 20 条 `share_offers` 的防刷频控。
 6. `sw.js` & `index.html`：缓存升级至 `elx-quiz-v4`，脚本版本更新为 `national-exams.js?v=4`、`app.js?v=17`。
+
+---
+
+## 八、 付费转化体验打磨与设备上限升级 (2026-11-23 · Gemini · 分支 `main`)
+
+> **后续接手 AI 请注意**：每站默认设备数已由 2 台放宽至 **3 台**（`functions/_middleware.js` 的 `MAX_DEVICES = 3`），并同步更新了 `AGENTS.md`；仍保留闲鱼保底用户名「王者荣耀速度飞车」未改。
+
+### 本次改动文件清单
+1. `functions/_middleware.js`：`MAX_DEVICES` 从 `2` 提升至 `3`。
+2. `index.html` & `styles.css`：
+   - `#unlockDialog` 顶部新增 `.unlock-trust` 保障条；`#schoolOffer` 突出主推样式（`.offer-primary` + `btn primary` + 「分享可省 5 元」标签）。
+   - `.price-rules` 与 `data-free-way` 改为默认折叠 `<details>`，减少新客认知负担；FAQ 同步更新为 3 台设备。
+   - 样式与脚本版本更新为 `styles.css?v=14`、`app.js?v=18`。
+3. `app.js`：
+   - 更新 `DEVICE_LIMIT` 提示为 3 个浏览器；优化 `trialUpsellHTML()` 文案。
+   - 早鸟自测错题处方区（`.eb-rx`）新增未付费用户的 `#ebUpsellBtn` 转化入口。
+4. `sw.js`、`AGENTS.md`、`CHANGELOG.md`：缓存升级至 `elx-quiz-v5`，同步更新协作规则与变更记录。
