@@ -26,6 +26,7 @@ export const TRACK_EVENTS = new Set([
   "redeem_success",
   "pay_create",
   "pay_success",
+  "score_poster",
 ]);
 
 export function normalizeSource(value) {

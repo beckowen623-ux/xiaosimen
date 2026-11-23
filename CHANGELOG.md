@@ -2,6 +2,14 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 上线「练习成绩单 / 诊断单」一键晒图裂变海报（main）
+- 在练习结算页（早鸟自测卷、同步章节卷与常规刷题）新增「📸 生成成绩单海报」按钮（`app.js`、`functions/api/_stats.js`）：
+  - 复用 `./qrcode.js` 纯前端 Canvas 生成 750×980 高清成绩单海报，展示试卷名、得分/正确率、薄弱章节诊断与题库二维码；
+  - 若当前为已付费老客，海报二维码自动附带其专属邀请码（`?invite=ALIX-...`），家长晒图分享到朋友圈/家长群即可自动计入返现裂变；
+  - 新增 `score_poster` 埋点统计海报生成次数。
+- 更新冒烟检查与资源版本（`tests/smoke.mjs`、`sw.js`、`index.html`）：冒烟检查扩至 35 项，缓存升级至 `elx-quiz-v9`，`index.html` 更新为 `app.js?v=22`。
+- 验证：`node tests/smoke.mjs`（35/35 通过）与 `node tests/validate.mjs` 全量校验通过。
+
 ## 2026-11-23 · Gemini · 搭建网页直付统一代码框架（支持面包多 Pay / 爱发电 Webhook 自动发码秒解锁）（main）
 - 新增后端支付统一适配层 `functions/_pay.js` 并接入 `functions/_middleware.js`：
   - 提供 `/api/pay/config`、`/api/pay/create`、`/api/pay/status`、`/api/pay/webhook` 四条路由，首次使用自动在 D1 创建 `pay_orders` 表，无需手动跑 SQL。

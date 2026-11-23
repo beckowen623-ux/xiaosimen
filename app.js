@@ -3074,6 +3074,111 @@ function syncPrescriptions(wrongQs, subject, stage) {
     .filter(x => x.papers.length)
     .slice(0, 3);
 }
+
+// ---- 成绩单 / 诊断单一键晒图裂变海报（复用 ./qrcode.js，已付费老客自动带专属邀请码） ----
+function loadQrLib() {
+  if (window.qrcode) return Promise.resolve(window.qrcode);
+  return new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = './qrcode.js';
+    s.onload = () => (window.qrcode ? resolve(window.qrcode) : reject(new Error('qr')));
+    s.onerror = () => reject(new Error('qr'));
+    document.head.appendChild(s);
+  });
+}
+async function openScorePoster({ title, metric, metricSub, verdict, focusLine }) {
+  try {
+    const qrFactory = await loadQrLib();
+    const url = new URL(location.pathname, location.origin);
+    url.searchParams.set('from', 'score-poster');
+    const inviteCode = byId('referralPanel')?.querySelector('[data-ref-code]')?.textContent?.trim()
+      || (document.querySelector('#referralPanel code')?.textContent?.trim() || '');
+    if (/^ALIX-[A-Z0-9]{8}$/i.test(inviteCode)) url.searchParams.set('invite', inviteCode.toUpperCase());
+
+    const W = 750, H = 980;
+    const canvas = document.createElement('canvas');
+    canvas.width = W; canvas.height = H;
+    const ctx = canvas.getContext('2d');
+
+    const grad = ctx.createLinearGradient(0, 0, W, 380);
+    grad.addColorStop(0, '#1e3a8a'); grad.addColorStop(1, '#1d4ed8');
+    ctx.fillStyle = '#f8fafc'; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = grad; ctx.fillRect(0, 0, W, 390);
+
+    ctx.fillStyle = 'rgba(255,255,255,0.88)';
+    ctx.font = '600 26px system-ui, -apple-system, sans-serif';
+    ctx.fillText('爱丽克丝中考题库 · 练习成绩单', 52, 74);
+    ctx.fillStyle = 'rgba(255,255,255,0.72)';
+    ctx.font = '22px system-ui, -apple-system, sans-serif';
+    ctx.fillText(todayStr(), W - 185, 74);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '700 34px system-ui, -apple-system, sans-serif';
+    ctx.fillText(String(title || '中考同步自测').slice(0, 20), 52, 138);
+
+    ctx.font = '800 96px system-ui, -apple-system, sans-serif';
+    ctx.fillText(String(metric || ''), 52, 265);
+    ctx.font = '500 26px system-ui, -apple-system, sans-serif';
+    ctx.fillStyle = 'rgba(255,255,255,0.92)';
+    ctx.fillText(String(metricSub || ''), 52, 320);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(42, 420, W - 84, 240);
+    ctx.strokeStyle = '#e2e8f0'; ctx.lineWidth = 2;
+    ctx.strokeRect(42, 420, W - 84, 240);
+
+    ctx.fillStyle = '#0f172a';
+    ctx.font = '700 28px system-ui, -apple-system, sans-serif';
+    ctx.fillText(String(verdict || '继续加油，把错题过一遍就更稳！').slice(0, 22), 72, 480);
+    ctx.fillStyle = '#334155';
+    ctx.font = '24px system-ui, -apple-system, sans-serif';
+    const focus = String(focusLine || '错题已自动收录进错题本，按 1、3、7、14 天提醒复习。');
+    ctx.fillText(focus.slice(0, 26), 72, 540);
+    if (focus.length > 26) ctx.fillText(focus.slice(26, 52), 72, 580);
+    ctx.fillStyle = '#1d4ed8';
+    ctx.font = '600 22px system-ui, -apple-system, sans-serif';
+    ctx.fillText('七上到九下同步卷 · 全国各地中考真题 · 手机做 & 可打印', 72, 632);
+
+    // 二维码区域
+    const qr = qrFactory(0, 'M');
+    qr.addData(url.href); qr.make();
+    const count = qr.getModuleCount();
+    const qrSize = 188, cell = qrSize / count, qx = 64, qy = 716;
+    ctx.fillStyle = '#ffffff'; ctx.fillRect(qx - 10, qy - 10, qrSize + 20, qrSize + 20);
+    ctx.fillStyle = '#0f172a';
+    for (let r = 0; r < count; r++) {
+      for (let c = 0; c < count; c++) {
+        if (qr.isDark(r, c)) ctx.fillRect(qx + c * cell, qy + r * cell, Math.ceil(cell), Math.ceil(cell));
+      }
+    }
+    ctx.fillStyle = '#0f172a';
+    ctx.font = '700 28px system-ui, -apple-system, sans-serif';
+    ctx.fillText('长按识别二维码，免费试做同款试卷', 282, 778);
+    ctx.fillStyle = '#475569';
+    ctx.font = '22px system-ui, -apple-system, sans-serif';
+    ctx.fillText('每个家庭免费送 1 套手机整卷 + 1 次整卷打印', 282, 826);
+    ctx.fillText('网址：x4m.cc.cd', 282, 868);
+
+    const dataUrl = canvas.toDataURL('image/png');
+    trackVisit('score_poster');
+    const overlay = document.createElement('div');
+    overlay.className = 'share-poster-overlay';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(15,23,42,.72);display:flex;align-items:center;justify-content:center;padding:16px;';
+    overlay.innerHTML = `<div class="share-poster-card" style="background:#fff;border-radius:14px;padding:14px;max-width:380px;width:100%;text-align:center;">
+      <p style="margin:0 0 8px;font-size:14px;color:#334155;">长按图片保存，可直接发朋友圈或家长群</p>
+      <img src="${dataUrl}" alt="练习成绩单海报" style="width:100%;border-radius:8px;display:block;border:1px solid #e2e8f0;">
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:10px;">
+        <a class="btn primary" href="${dataUrl}" download="xiaosimen-score-${todayStr()}.png">保存图片</a>
+        <button class="btn" type="button" data-close-poster>关闭</button>
+      </div>
+    </div>`;
+    overlay.addEventListener('click', e => { if (e.target === overlay || e.target.closest('[data-close-poster]')) overlay.remove(); });
+    document.body.appendChild(overlay);
+  } catch {
+    toast('成绩单海报生成失败，请稍后重试。');
+  }
+}
+
 function renderSummary() {
   document.body.classList.add('practice');
   const timerLine = stopExamTimer();
@@ -3115,6 +3220,7 @@ function renderSummary() {
           <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
         <div class="summary-actions">
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本卷错题</button>` : ''}
+          <button class="btn" type="button" id="scorePosterBtn">📸 生成成绩单海报</button>
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${paper?.stage === 'xsc' ? '返回，做下一章' : '返回首页，测下一科'}</button>
         </div>
         ${rx.length ? `<div class="eb-rx"><p class="earlybird-next">下一步：错题集中在下面几章，先做这几章的<b>同步章节卷</b>，一章一章补，比整卷反复刷更快见效。</p>
@@ -3128,6 +3234,13 @@ function renderSummary() {
     byId('retryBtn')?.addEventListener('click', () => beginPractice(wrongQs, 'retry'));
     byId('toSyncBtn')?.addEventListener('click', () => { state.syncSubject = paper.subject; if (paper.stage) setStage(paper.stage); renderHome(); byId('sync')?.scrollIntoView({ block: 'start' }); });
     view.querySelectorAll('[data-rx-paper]').forEach(b => b.addEventListener('click', () => { trackVisit('eb_rx'); claudePaperAction(b.dataset.rxPaper, 'phone'); }));
+    byId('scorePosterBtn')?.addEventListener('click', () => void openScorePoster({
+      title: paper?.title || '早鸟自测卷',
+      metric: `${score} 分`,
+      metricSub: `客观题答对 ${right} 题${essayTotal ? ` · 主观题 ${essayScore}/${essayTotal} 分` : ''}`,
+      verdict: head,
+      focusLine: rx.length ? `本次诊断薄弱章：${rx.map(x => x.unit.replace(/^[^·]+·/, '')).join('、')}` : '错题已自动进错题本，按 1/3/7/14 天提醒复习。',
+    }));
     byId('ebUpsellBtn')?.addEventListener('click', () => openUnlock('开通完整版（¥19.9 一次买断），即可做完整套薄弱章节同步卷并开启 1/3/7/14 天错题自动复习。'));
     byId('homeBtn').addEventListener('click', () => { const xsc = paper?.stage === 'xsc'; if (xsc) { state.xscOpen = true; state.xscSubject = paper.subject; } renderHome('homeTitle'); byId(xsc ? 'xsc' : 'earlybird')?.scrollIntoView(); });
     state.keys = null;
@@ -3160,6 +3273,7 @@ function renderSummary() {
         ${trialUpsellHTML()}
         <div class="summary-actions">
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本组错题</button>` : ''}
+          ${results.length ? `<button class="btn" type="button" id="scorePosterBtn">📸 生成成绩单海报</button>` : ''}
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button>
         </div>
         ${nextSync ? `<button class="btn next-sync" type="button" id="nextSyncBtn">下一章：${esc(nextSync.label || nextSync.title)} →</button>` : ''}
@@ -3170,6 +3284,13 @@ function renderSummary() {
   byId('homeBtn').addEventListener('click', returnFromPractice);
   byId('nextSyncBtn')?.addEventListener('click', () => { void claudePaperAction(nextSync.id, 'phone'); });
   byId('upsellBtn')?.addEventListener('click', () => openUnlock());
+  byId('scorePosterBtn')?.addEventListener('click', () => void openScorePoster({
+    title: syncDone?.title || `${MODE_LABEL[state.mode] || '同步练习'}`,
+    metric: syncDone ? `${syncScore} 分` : `${acc}%`,
+    metricSub: `本组作答 ${results.length} 题 · 答对 ${right} 题`,
+    verdict: cheer,
+    focusLine: wrongQs.length ? `本组有 ${wrongQs.length} 道错题已自动进入错题本按时复习。` : '本组全部答对，继续保持！',
+  }));
   state.keys = null;
   moveFocus(byId('summaryTitle'), true);
 }

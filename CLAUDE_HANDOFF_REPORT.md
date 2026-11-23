@@ -229,3 +229,12 @@ git push origin main
 3. `functions/api/_stats.js`：新增 `pay_create`、`pay_success` 埋点。
 4. `index.html`、`styles.css`、`app.js`：购买弹窗接入直付按钮与 2.5 秒轮询自动解锁及备用兑换码展示；版本更新为 `styles.css?v=17`、`app.js?v=21`。
 5. `docs/WEB_PAY_SETUP.md`、`tests/smoke.mjs`、`sw.js`、`CHANGELOG.md`：新增配置手册，冒烟检查扩至 34 项，缓存升级至 `elx-quiz-v8`。
+
+---
+
+## 十三、 练习成绩单 / 诊断单一键晒图裂变海报 (2026-11-23 · Gemini · 分支 `main`)
+
+### 本次改动文件清单
+1. `app.js`：新增 `openScorePoster()`（复用 `./qrcode.js` 生成高清成绩单海报，已付费老客自动附带专属 `?invite=ALIX-...` 邀请参数），并在早鸟自测与常规练习结算页接入「📸 生成成绩单海报」按钮。
+2. `functions/api/_stats.js`：新增 `score_poster` 埋点。
+3. `tests/smoke.mjs`、`sw.js`、`index.html`、`CHANGELOG.md`：冒烟检查扩至 35 项，缓存升级至 `elx-quiz-v9`，脚本版本更新为 `app.js?v=22`。
