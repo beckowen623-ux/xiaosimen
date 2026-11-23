@@ -1394,6 +1394,35 @@ function freeButtonLabel(kind, paperId, labels) {
   return freeUses[kind] ? labels[2] : labels[1];
 }
 // 返回 'full'（可用整卷）、'preview'（只能试前 5 题）或 'cancel'（家长取消）
+function confirmFreeClaim(message) {
+  const dlg = byId('claimConfirmDialog');
+  const txt = byId('claimConfirmText');
+  const okBtn = byId('claimConfirmOk');
+  const cancelBtn = byId('claimConfirmCancel');
+  if (!dlg || !txt || !okBtn || !cancelBtn || typeof dlg.showModal !== 'function') {
+    return Promise.resolve(window.confirm(message));
+  }
+  txt.textContent = message;
+  return new Promise(resolve => {
+    let settled = false;
+    const done = val => {
+      if (settled) return;
+      settled = true;
+      okBtn.removeEventListener('click', onOk);
+      cancelBtn.removeEventListener('click', onCancel);
+      dlg.removeEventListener('close', onClose);
+      if (dlg.open) dlg.close();
+      resolve(val);
+    };
+    const onOk = () => done(true);
+    const onCancel = () => done(false);
+    const onClose = () => done(false);
+    okBtn.addEventListener('click', onOk);
+    cancelBtn.addEventListener('click', onCancel);
+    dlg.addEventListener('close', onClose);
+    dlg.showModal();
+  });
+}
 async function claimFree(kind, paperId, title) {
   if (freeOpen(kind, paperId)) return 'full';
   if (freeUses[kind]) {
@@ -1401,7 +1430,8 @@ async function claimFree(kind, paperId, title) {
     return 'preview';
   }
   const again = kind === 'print' ? '打印' : '做';
-  if (!window.confirm(`每个家庭可以免费${FREE_KIND_LABEL[kind]} 1 次。\n确定用在《${title}》上吗？\n（这一套以后还能反复${again}）`)) return 'cancel';
+  const confirmed = await confirmFreeClaim(`每个家庭可以免费${FREE_KIND_LABEL[kind]} 1 次。确定用在《${title}》上吗？（这一套以后还能反复${again}）`);
+  if (!confirmed) return 'cancel';
   try {
     const response = await fetch('/api/access/free-use', {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ kind, paperId, title, deviceId: await deviceId() }),
@@ -1837,9 +1867,24 @@ function showEarlybirdMark(paper, list, boxId) {
     const isXsc = paper.stage === 'xsc';
     if (first) { trackVisit(isXsc ? 'xsc_done' : 'earlybird_done'); if (score >= 75) trackVisit(isXsc ? 'xsc_75' : 'earlybird_75'); }
     const [head, body] = earlybirdVerdict(score, paper);
+    const wrongQs = list.filter((_, i) => wrong.has(i));
+    const rx = !isXsc ? syncPrescriptions(wrongQs, paper.subject, paper.stage) : [];
     box.innerHTML = `<div class="weekly-mark"><p><b>${score} 分${estimated ? '（按错题号估算）' : ''} · ${esc(head)}</b></p>
       <p class="earlybird-verdict">${esc(body)}</p>
-      <p class="muted">${wrong.size ? `错的 ${wrong.size} 题已进错题本，明天开始按 1、3、7、14 天提醒复习；学情分析也已算进去。` : '全对，已登记！'}</p></div>`;
+      <p class="muted">${wrong.size ? `错的 ${wrong.size} 题已进错题本，明天开始按 1、3、7、14 天提醒复习；学情分析也已算进去。` : '全对，已登记！'}</p>
+      <div class="weekly-actions"><button class="btn" type="button" data-mark-poster>📸 生成成绩单海报</button></div>
+      ${rx.length ? `<div class="eb-rx"><p class="earlybird-next">下一步：错题集中在下面几章，先做这几章的<b>同步章节卷</b>，一章一章补见效最快：</p>
+        ${rx.map(x => `<div class="eb-rx-row"><span>${esc(x.unit.replace(/^[^·]+·/, ''))}<small>错 ${x.n} 题</small></span><div>${x.papers.map(p => `<button class="btn" type="button" data-rx-paper="${p.id}">做「${esc(p.label || p.title)}」→</button>`).join('')}</div></div>`).join('')}
+        ${!hasFullAccess() ? `<div class="eb-rx-upsell"><span class="muted">每章前 5 题可免费试做；完整版 ¥19.9 解锁全套同步卷 + 无限打印 + 云端错题本同步。</span><button class="btn primary" type="button" data-mark-upsell>看看完整版</button></div>` : ''}</div>` : ''}</div>`;
+    box.querySelector('[data-mark-poster]')?.addEventListener('click', () => void openScorePoster({
+      title: paper.title || '早鸟自测卷',
+      metric: `${score} 分`,
+      metricSub: `纸上完成登记 · 错题 ${wrong.size} 道`,
+      verdict: head,
+      focusLine: rx.length ? `本次诊断薄弱章：${rx.map(x => x.unit.replace(/^[^·]+·/, '')).join('、')}` : '错题已自动进错题本，按 1/3/7/14 天提醒复习。',
+    }));
+    box.querySelectorAll('[data-rx-paper]').forEach(b => b.addEventListener('click', () => { trackVisit('eb_rx'); claudePaperAction(b.dataset.rxPaper, 'phone'); }));
+    box.querySelector('[data-mark-upsell]')?.addEventListener('click', () => openUnlock('开通完整版（¥19.9 一次买断），即可做完并打印全部薄弱章节同步卷，并开启 1/3/7/14 天错题自动复习与云端同步。'));
     const small = document.querySelector(`[data-earlybird="${paper.id}"] small`);
     if (small) small.textContent = `上次 ${score} 分`;
   });

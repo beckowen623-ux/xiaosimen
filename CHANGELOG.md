@@ -2,6 +2,15 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 免费整卷领取改用站内弹窗防拦截，补齐“纸上做完登记”弱项处方与转化闭环（main）
+- 根治移动端/微信 WebView 点击「手机做整卷（免费 1 套）」被静默拦截隐患（`index.html`、`app.js`、`national-exams.js`）：
+  - 核实线上原卷 WebP 图片与真题 JS 均为 HTTP 200 正常响应，原无响应主因为 `claimFree()` 依赖浏览器原生 `window.confirm()`（在部分内置浏览器/自动化环境中会被静默取消）。
+  - 新增站内 `<dialog id="claimConfirmDialog">` 与 `confirmFreeClaim()` 替代 `window.confirm()`，避免弹窗被拦截，交互体验更清晰；原卷图片新增 `error` 加载失败文案兜底提示。
+- 补齐“纸上做完，回来登记”高意向家长的转化闭环（`app.js`）：
+  - `showEarlybirdMark()` 登记完成后，同步计算薄弱章节并展示「同步章节卷处方（`.eb-rx`）」、「📸 生成成绩单海报」按钮以及未付费用户的「看看完整版」升级引导。
+- 更新冒烟检查与资源版本（`tests/smoke.mjs`、`sw.js`、`index.html`）：冒烟检查扩至 37 项，缓存升级至 `elx-quiz-v10`，资源版本更新为 `styles.css?v=18`、`national-exams.js?v=6`、`app.js?v=23`。
+- 验证：`node tests/smoke.mjs`（37/37 通过）与 `node tests/validate.mjs` 全量校验通过。
+
 ## 2026-11-23 · Gemini · 上线「练习成绩单 / 诊断单」一键晒图裂变海报（main）
 - 在练习结算页（早鸟自测卷、同步章节卷与常规刷题）新增「📸 生成成绩单海报」按钮（`app.js`、`functions/api/_stats.js`）：
   - 复用 `./qrcode.js` 纯前端 Canvas 生成 750×980 高清成绩单海报，展示试卷名、得分/正确率、薄弱章节诊断与题库二维码；

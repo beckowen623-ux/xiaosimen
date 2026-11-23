@@ -338,6 +338,15 @@
         shell(`<div class="national-reader-bar"><button type="button" class="btn" id="nationalBack">← 返回列表</button>${paper.pages?.length && !paper.answerPages?.length ? '' : `<button type="button" class="btn" id="nationalAnswers">${state.showAnswers ? '收起答案' : '显示答案'}</button>`}<button type="button" class="btn" id="nationalPrint">打印</button></div>
           <h2 class="national-reader-title">${escape(paper.title)}</h2><div class="national-reader" id="nationalPrintArea">${readerContent(paper, questions)}</div>`);
         document.getElementById('nationalBack').onclick = () => { revision++; render(); };
+        app.view.querySelectorAll('.national-original img').forEach(img => {
+          img.addEventListener('error', () => {
+            const cap = img.parentElement?.querySelector('figcaption');
+            if (cap && !cap.dataset.failed) {
+              cap.dataset.failed = '1';
+              cap.textContent += '（图片加载较慢，请刷新或切换网络重试）';
+            }
+          });
+        });
         const answersButton = document.getElementById('nationalAnswers');
         if (answersButton) answersButton.onclick = () => { state.showAnswers = !state.showAnswers; draw(); };
         document.getElementById('nationalPrint').onclick = async event => {

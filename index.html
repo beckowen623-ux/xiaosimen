@@ -14,16 +14,16 @@
   <title>爱丽克丝中考题库 · 人教版</title>
   <link rel="icon" type="image/svg+xml" href="./assets/icons/elx-badge.svg">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=17">
+  <link rel="stylesheet" href="./styles.css?v=18">
   <script src="./data/daily-questions-xiaosimen.js?v=7" defer></script>
   <link rel="stylesheet" href="./referrals.css?v=3">
   <link rel="stylesheet" href="./national-exams.css?v=2">
   <script src="./referrals.js?v=6" defer></script>
   <script src="./share-offer.js?v=3" defer></script>
-  <script src="./national-exams.js?v=5" defer></script>
+  <script src="./national-exams.js?v=6" defer></script>
   <!-- 真题目录（早鸟卷、同步卷、小升初都靠它）和页面脚本同时下载，不用等脚本跑起来再下；版本号发布时自动填 -->
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
-  <script src="./app.js?v=22" defer></script>
+  <script src="./app.js?v=23" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
   <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).catch(function () {}); });</script>
 </head>
@@ -161,6 +161,17 @@
   <dialog class="dialog video-dialog" id="demoDialog" aria-label="50 秒使用演示">
     <form method="dialog"><button class="btn text-button" aria-label="关闭演示视频">关闭</button></form>
     <video id="demoVideo" controls playsinline preload="none" data-poster="./assets/video/zhongkao-demo-poster.jpg" data-src="./assets/video/zhongkao-demo.mp4"></video>
+  </dialog>
+  <dialog class="dialog" id="claimConfirmDialog" aria-labelledby="claimConfirmTitle">
+    <div class="dialog-head">
+      <h2 id="claimConfirmTitle">领取免费整卷</h2>
+      <form method="dialog"><button class="btn text-button" aria-label="关闭确认窗口">关闭</button></form>
+    </div>
+    <p id="claimConfirmText" class="muted"></p>
+    <div class="dialog-actions">
+      <button class="btn primary" type="button" id="claimConfirmOk">确定用在这一套</button>
+      <button class="btn" type="button" id="claimConfirmCancel">再看看其他卷</button>
+    </div>
   </dialog>
   <dialog class="dialog figure-dialog" id="figureDialog" aria-label="查看题目配图">
     <form method="dialog"><button class="btn text-button" aria-label="关闭配图">关闭</button></form>

@@ -238,3 +238,13 @@ git push origin main
 1. `app.js`：新增 `openScorePoster()`（复用 `./qrcode.js` 生成高清成绩单海报，已付费老客自动附带专属 `?invite=ALIX-...` 邀请参数），并在早鸟自测与常规练习结算页接入「📸 生成成绩单海报」按钮。
 2. `functions/api/_stats.js`：新增 `score_poster` 埋点。
 3. `tests/smoke.mjs`、`sw.js`、`index.html`、`CHANGELOG.md`：冒烟检查扩至 35 项，缓存升级至 `elx-quiz-v9`，脚本版本更新为 `app.js?v=22`。
+
+---
+
+## 十四、 站内免费整卷确认弹窗与纸上登记转化闭环补齐 (2026-11-23 · Gemini · 分支 `main`)
+
+### 本次改动文件清单
+1. `index.html` & `app.js`：新增 `#claimConfirmDialog` 与 `confirmFreeClaim()` 替代 `claimFree()` 中的原生 `window.confirm()`，彻底避免微信/内置浏览器静默拦截导致「手机做整卷」看似无响应。
+2. `app.js`：`showEarlybirdMark()` 登记完成后新增薄弱章节同步卷处方（`.eb-rx`）、成绩单海报按钮（`data-mark-poster`）与完整版转化引导（`data-mark-upsell`）。
+3. `national-exams.js`：原卷图片新增 `error` 失败兜底提示文案。
+4. `tests/smoke.mjs`、`sw.js`、`CHANGELOG.md`：冒烟检查扩至 37 项，缓存升级至 `elx-quiz-v10`，脚本版本更新为 `styles.css?v=18`、`national-exams.js?v=6`、`app.js?v=23`。
