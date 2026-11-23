@@ -108,6 +108,37 @@ git push origin main
   ```
 * **硬回退到上一个稳定版本**：
   ```bash
-  git reset --hard c86d46a
+  git reset --hard c096469
   git push origin main --force
   ```
+
+---
+
+## 六、 免费整卷领取逻辑与英语真题试做闭环修复 (最新)
+
+### 1. 现象与用户反馈
+用户反馈：“我选择原卷1次机会，做新疆那个英语2025，为什么直接跳出购买版，是因为其实原卷已经用掉了么？那应该有提示啊”。
+
+### 2. 三重根因剖析
+1. **免费机会确实已被使用**：用户的手机或网络环境此前已领取过其他试卷（例如在测试《云南2026语文》或其他真题时已将 `freeUses.phone` 消耗），服务端 `/api/free-use` 返回 `reason: "USED"`。
+2. **试卷卡片未动态感知配额消耗状态**：卡片按钮写死判断 `app.hasAccess() || app.paperOpen(paper) ? '按原题顺序练' : '手机做整卷（免费 1 套）'`，未检查全局 `freeUses.phone`，误导用户以为本套试卷仍有免费整卷机会。
+3. **英语真题试做池（Preview Pool）逻辑缺陷致题目为空**：
+   - 在 `national-exams.js` 的 `getQuestions` 中，原逻辑使用 `const trialPaper = catalog.find(...)` 寻找题型首卷。对于新疆 2025 英语等非首套卷子，该条件恒为 `false`，导致整卷 76 题的 `q.preview` 全为 `false`。
+   - `claimFree` 返回 `'preview'` 后，试题池 `pool = questions.filter(q => q.preview)` 过滤结果为空数组 `[]`。
+   - 代码直接触发 `if (!pool.length) { app.unlock?.(...); return; }`，弹窗拦截覆盖了 Toast 提示，让用户误以为是直接弹购买窗且毫无提示。
+4. **`isTrialQuestion` 鉴权盲区**：`app.js` 的 `isTrialQuestion(q)` 原未对已领取的 `freeOpen('phone', q.paperId)` 放行，即使整卷已领，在未买 VIP 时进入非 preview 题目也会被误拦截踢回首页。
+
+### 3. 完备修复方案
+1. **卡片按钮状态精准化**：
+   - 已领该卷整卷或已购 VIP：显示 `按原题顺序练`
+   - 已将免费整卷机会用在其他试卷上：显示 `试做体验（免费整卷已领）`
+   - 尚未消耗免费机会：显示 `手机做整卷（免费 1 套）`
+2. **真题顶部状态栏透明化**：
+   - 明确显示当前已领取的免费试卷名称：`原卷免费看、免费打印。您已领取的免费整卷为《...》，其他真题每种题型可先免费试做一组。`
+3. **英语试做池全量保底**：
+   - 确保全库所有 15 套英语真题无论是否为首卷，其第一大题/题组（完形填空首篇或单选前 5 题）`preview` 均置为 `true`，试做题数 3～15 题不等，彻底告别空试题池。
+4. **底层鉴权健全**：
+   - `isTrialQuestion(q)` 增加 `if (q.paperId && freeOpen('phone', q.paperId)) return true;`，已领试卷全卷无阻畅练。
+   - `beginPractice` 将 `'national'` 加入受信任考试模式，试做完成页 `trialUpsellHTML` 正确提示剩余题目与完整版权益。
+5. **缓存版本迭代**：
+   - `sw.js` 缓存名升至 `elx-quiz-v3`，`index.html` 资源版本更新至 `national-exams.js?v=3`、`app.js?v=16`。

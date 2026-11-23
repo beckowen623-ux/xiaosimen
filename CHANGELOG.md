@@ -2,6 +2,22 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Antigravity · 优化免费整卷领取提示与英语真题试做体验，透明化配额与付费引导（main）
+- 优化免费整卷机会提示与卡片交互（`national-exams.js`、`app.js`）：
+  - 试卷卡片动态感知免费配额状态：若用户尚未消耗免费机会，显示「手机做整卷（免费 1 套）」；若已在其他试卷上消耗免费机会，按钮自适应变更为「试做体验（免费整卷已领）」，避免虚假承诺导致用户困惑。
+  - 在全国真题顶部状态栏明确告知用户当前已领取的免费整卷名称（如《云南2026中考语文》），并提示其他卷子提供免费试做体验。
+  - 当触发免费配额限制或试题池为空时，`claimFree` 与 `openUnlock` 明确展示用户此前使用的具体试卷名称，清楚告知 19.9 元可解锁全部科目题库，原卷与打印始终免费。
+- 修复英语真题预览试做池（Preview Pool）为空导致的弹窗拦截 Bug（`national-exams.js`）：
+  - 修复 `getQuestions`：原先试做题仅对目录中该题型首套试卷开放，导致新疆 2025 英语等后续试卷 preview 题目数为 0，进而引发直接触发购买弹窗且无法试做。
+  - 重构后，全库所有 15 套英语真题无论排位均默认开放第一大题/题组（完形填空或单选，3～15 题）供免费试做。
+- 修复底层权限与模式联动（`app.js`）：
+  - `isTrialQuestion` 增加 `freeOpen('phone', q.paperId)` 判断，彻底解决已领整卷在做第 6 题及后续非 preview 题目时被 `renderPractice` 意外踢回购买界面的鉴权漏洞。
+  - `beginPractice` 将 `'national'` 加入受信任模式白名单，并在完成页 `trialUpsellHTML` 正确展示试做结算与完整版升级入口。
+- 升级 Service Worker 至 v3 与资源版本号（`sw.js`、`index.html`）：
+  - `sw.js` 缓存升级为 `const CACHE = "elx-quiz-v3";`，清理 `elx-quiz-v2` 与旧版缓存。
+  - `index.html` 资源版本更新为 `national-exams.js?v=3`、`app.js?v=16`。
+- 验证：`node -c national-exams.js app.js sw.js` 语法检查全部通过；`node tests/validate.mjs` 校验 100% 通过。
+
 ## 2026-11-23 · Antigravity · 根治打印 undefined 隐患、升级缓存版本与优化试卷卡片选项（main）
 - 修复真题阅读与打印 undefined 及空指针异常（`national-exams.js`、`referrals.js`、`app.js`）：
   - 彻底杜绝纯文本模式下 `${question.originalHtml}` 导致的页面大面积显示 "undefined" 问题，对 `stem`、`options`、`image`、`number`、`section`、`explanation`、`sample` 等全部字段建立防御性空值保护。

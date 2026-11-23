@@ -62,14 +62,18 @@
         [...questions].sort((a, b) => a.number - b.number).slice(0, 5).forEach(q => previewIds.add(q.id));
       } else if (paper.subject === 'english') {
         const seen = new Map();
+        const firstQ = questions[0];
+        const firstGroupId = firstQ?.groupId;
         for (const q of questions) {
           const key = q.section || 'other';
           const count = seen.get(key) || 0;
           const first = questions.find(x => (x.section || 'other') === key);
           const trialPaper = catalog.find(p => isExamPaper(p) && p.subject === 'english' && p.data && p.sections?.[key]);
-          const ok = key !== '书面表达' && paper.id === trialPaper?.id &&
+          const isTrialPaperGroup = key !== '书面表达' && paper.id === trialPaper?.id &&
             (q.groupId ? q.groupId === first.groupId : count < (key === '情景交际' ? 2 : 5));
-          if (ok) previewIds.add(q.id);
+          const isThisPaperFirstGroup = key !== '书面表达' &&
+            (firstGroupId ? q.groupId === firstGroupId : q.number <= (firstQ?.number ? firstQ.number + 4 : 5));
+          if (isTrialPaperGroup || isThisPaperFirstGroup) previewIds.add(q.id);
           seen.set(key, count + 1);
         }
       } else {
@@ -131,11 +135,18 @@
       ? `${paper.description || '已录入真题'} · ${questionCount} 道已整理题`
       : ansImages ? `完整试题 ${images} 页 · 答案 ${ansImages} 页` : paper.description || (images ? `完整试题 ${images} 页` : '已整理真题');
     const readBtnLabel = images ? (ansImages ? '查看原卷 / 答案' : '查看原卷') : '查看试题 / 答案';
+    const startBtnLabel = state.mode === 'short'
+      ? (paper.subject === 'english' ? '阅读 1 篇' : '练 5 题')
+      : (app?.hasAccess?.() || app?.paperOpen?.(paper))
+        ? '按原题顺序练'
+        : app?.freePhonePaper?.()
+          ? '试做体验（免费整卷已领）'
+          : '手机做整卷（免费 1 套）';
     return `<article class="card national-paper-card">
       <div class="national-paper-meta"><span>${escape(paper.region)}</span><span>${paper.year}</span></div>
       <h2>${escape(paper.title)}</h2><p class="muted">${escape(description)}</p>
       <div class="national-actions">
-        ${questionCount ? `<button class="btn primary" type="button" data-start="${paper.id}">${state.mode === 'short' ? (paper.subject === 'english' ? '阅读 1 篇' : '练 5 题') : app.hasAccess() || app.paperOpen?.(paper) ? '按原题顺序练' : '手机做整卷（免费 1 套）'}</button>` : ''}
+        ${questionCount ? `<button class="btn primary" type="button" data-start="${paper.id}">${startBtnLabel}</button>` : ''}
         <button class="btn ${questionCount ? '' : 'primary'}" type="button" data-read="${paper.id}">${readBtnLabel}</button>
       </div>
     </article>`;
@@ -205,7 +216,7 @@
       return;
     }
     shell(`${drawFilters(catalog.filter(isExamPaper))}
-      <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : '原卷免费看、免费打印。在线刷题和中文解析属于中考题库完整版（19.9 一起解锁），每种题型可先免费试做一组。'}</p>
+      <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : app?.freePhonePaper?.() ? `原卷免费看、免费打印。您已领取的免费整卷为《${escape(app.freePhonePaper().title || '')}》，其他真题每种题型可先免费试做一组。` : '原卷免费看、免费打印。每人可免费做 1 套完整试卷；在线刷题和中文解析属于中考题库完整版（19.9 一起解锁）。'}</p>
       <div class="national-paper-grid">${practice.length ? practice.map(paperCard).join('') :
         `<section class="card national-empty"><h2>${filtered.length ? '这科目前提供原卷与参考答案' : '当前筛选下暂无试卷'}</h2><p class="muted">${filtered.length ? '切换「按原卷练」即可查看和打印。' : '可以切换地区或年份再看看。'}</p>${filtered.length ? '<button type="button" class="btn primary" id="switchToPapers">查看原卷</button>' : ''}</section>`}</div>`);
     wireFilters();
@@ -236,7 +247,14 @@
         whole = claim === 'full';
       }
       const pool = whole ? questions : questions.filter(q => q.preview);
-      if (!pool.length) { app.unlock?.('在线刷题属于完整版，原卷可以免费看。'); return; }
+      if (!pool.length) {
+        const used = app.freePhonePaper?.();
+        const msg = used
+          ? `免费手机做整卷机会已用在《${used.title || '另一套试卷'}》上。如需在手机上做《${paper.title}》整卷及查看解析，19.9 元可解锁全部科目真题；原卷随时免费看、免费打印。`
+          : '在线刷题属于完整版，原卷可以免费看。';
+        app.unlock?.(msg);
+        return;
+      }
       const progress = app.progress();
       const fresh = pool.filter(question => !progress.banks[question.id]?.done);
       const choices = fresh.length ? fresh : pool;

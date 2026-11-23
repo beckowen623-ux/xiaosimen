@@ -675,6 +675,7 @@ const visitorSource = new URL(location.href).searchParams.get('from') || 'direct
 
 function isTrialQuestion(q) {
   if (q.earlybird) return true; // 早鸟自测卷限时免费
+  if (q.paperId && freeOpen('phone', q.paperId)) return true; // 已领取的免费整卷
   if (q.national) return q.preview === true; // 原卷免费看；在线刷题属于完整版，每种题型可免费试一组
   return baseTrialIds.has(q.id) || shareTrial.ids.includes(q.id);
 }
@@ -1322,7 +1323,7 @@ function freeButtonLabel(kind, paperId, labels) {
 async function claimFree(kind, paperId, title) {
   if (freeOpen(kind, paperId)) return 'full';
   if (freeUses[kind]) {
-    toast(`免费${FREE_KIND_LABEL[kind]}已用在《${freeUses[kind].title || '另一套卷子'}》上；这套先试前 5 题，完整版可用全部卷子。`);
+    toast(`免费${FREE_KIND_LABEL[kind]}已用在《${freeUses[kind].title || '另一套卷子'}》上；这套先为您开启试做体验。`);
     return 'preview';
   }
   const again = kind === 'print' ? '打印' : '做';
@@ -1334,7 +1335,11 @@ async function claimFree(kind, paperId, title) {
     const data = await response.json();
     if (data.free) freeUses = data.free;
     if (response.ok && data.ok) { trackVisit(`free_${kind}`); return 'full'; }
-    if (data.reason === 'USED') { toast(`这台手机或这个网络已经用过免费${FREE_KIND_LABEL[kind]}（《${freeUses[kind]?.title || '另一套卷子'}》）。`); return 'preview'; }
+    if (data.reason === 'USED') {
+      const usedTitle = freeUses[kind]?.title || data.free?.[kind]?.title || '另一套卷子';
+      toast(`这台手机或网络已领过免费${FREE_KIND_LABEL[kind]}（《${usedTitle}》），这套先为您开启试做。`);
+      return 'preview';
+    }
     toast('领取失败，请稍后再试。');
   } catch { toast('网络不好，领取失败，请稍后再试。'); }
   return 'cancel';
@@ -2362,7 +2367,7 @@ function beginPractice(queue, mode, index = 0) {
       return;
     }
     const claimedPaper = queue.length && queue.every(q => q.paperId && freeOpen('phone', q.paperId));
-    if (!claimedPaper && !['daily', 'wrong', 'weekly', 'paper', 'sync', 'earlybird'].includes(mode)) {
+    if (!claimedPaper && !['daily', 'wrong', 'weekly', 'paper', 'sync', 'earlybird', 'national'].includes(mode)) {
       const progress = loadProgress();
       const includesHistory = ['favorite', 'single', 'everWrong', 'due'].includes(mode);
       queue = queue.filter(q => isTrialQuestion(q) || (includesHistory && hasQuestionHistory(progress, q)));
@@ -2964,7 +2969,7 @@ function finishPractice() {
 }
 // 试做完一套卷的前 5 题：告诉家长这套还有多少题、完整版包含什么（不夸大、不制造焦虑）
 function trialUpsellHTML() {
-  if (hasFullAccess() || !['paper', 'sync'].includes(state.mode)) return '';
+  if (hasFullAccess() || !['paper', 'sync', 'national'].includes(state.mode)) return '';
   const paperId = state.queue[0]?.paperId;
   const paper = (nationalCatalog || []).find(p => p.id === paperId);
   if (!paper || !state.queue.length || state.queue.length >= paper.questionCount) return '';
@@ -3266,6 +3271,8 @@ async function init() {
       unlock: message => openUnlock(message),
       hideSearch: () => { byId('headerSearch').hidden = true; },
       toast,
+      freePhonePaper: () => freeUses.phone,
+      freePrintPaper: () => freeUses.print,
     });
 
     // 小四门 2.5MB 庞大题库在后台静默拉取，绝不阻断首屏渲染

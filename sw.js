@@ -7,7 +7,7 @@
  * 要停用：把下面 ENABLED 改成 false 发布，访客下次打开时会自动注销并清空缓存。
  */
 const ENABLED = true;
-const CACHE = "elx-quiz-v2";
+const CACHE = "elx-quiz-v3";
 const PAGE_TIMEOUT_MS = 800;
 
 self.addEventListener("install", () => self.skipWaiting());

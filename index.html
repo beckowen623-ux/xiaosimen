@@ -20,10 +20,10 @@
   <link rel="stylesheet" href="./national-exams.css?v=2">
   <script src="./referrals.js?v=6" defer></script>
   <script src="./share-offer.js?v=3" defer></script>
-  <script src="./national-exams.js?v=2" defer></script>
+  <script src="./national-exams.js?v=3" defer></script>
   <!-- 真题目录（早鸟卷、同步卷、小升初都靠它）和页面脚本同时下载，不用等脚本跑起来再下；版本号发布时自动填 -->
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
-  <script src="./app.js?v=15" defer></script>
+  <script src="./app.js?v=16" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
   <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });</script>
 </head>
