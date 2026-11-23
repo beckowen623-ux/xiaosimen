@@ -142,3 +142,24 @@ git push origin main
    - `beginPractice` 将 `'national'` 加入受信任考试模式，试做完成页 `trialUpsellHTML` 正确提示剩余题目与完整版权益。
 5. **缓存版本迭代**：
    - `sw.js` 缓存名升至 `elx-quiz-v3`，`index.html` 资源版本更新至 `national-exams.js?v=3`、`app.js?v=16`。
+
+---
+
+## 七、 转化漏斗止血修复与埋点/风控补齐 (2026-11-23 · Gemini · 分支 `main`)
+
+> **后续接手 AI（Claude / Codex / Antigravity）请注意**：本次改动聚焦商业化转化断点与线上体验修复，**按站长要求保留了闲鱼兜底用户名「王者荣耀速度飞车」未作修改**，未改动收费规则、兑换码逻辑及 `xiaosimen-quiz-v1` 本地进度结构。
+
+### 本次改动文件清单
+1. `app.js`：
+   - 新增 `isTrialSliceSession()`，修复试做（同步卷/模拟卷/真题前 5 题）未提交答案直接点「结束练习」时静默回首页、跳过 `trialUpsellHTML()` 的转化断点，并修复 `results.length === 0` 的 `NaN%` 计算。
+   - `openUnlock()` 增加 `unlockDialog.scrollTop = 0`，避免弹窗打开后顶部关闭按钮被卷出视口。
+   - `freeWayHTML()` 文案补充「分享/好友价 14.9」，消除与「完整版 19.9」按钮的冲突。
+   - 初三（`9-up`、`9-down`）隐藏「小升初衔接」卡片；每日一题分享解锁后 Toast 明确指向「按学期刷题」。
+   - 接入 3 项新增成交漏斗埋点：`buy_click`、`copy_code`、`redeem_success`。
+2. `national-exams.js`：
+   - `start()`、`startType()` 增加「正在加载…」按钮状态反馈。
+   - `readerContent()` 原卷前 2 页图片改为 `loading="eager"`，提升首屏渲染稳定性。
+3. `key-points.html`：顶栏副标题修正为「初中小四门考点速记 · 人教版」（移除未上线的「+ 英语」）。
+4. `functions/api/_stats.js`：`TRACK_EVENTS` 新增 `buy_click`、`copy_code`、`redeem_success`。
+5. `functions/_share.js`：`/api/share/me` 新增同网络 24 小时最多创建 20 条 `share_offers` 的防刷频控。
+6. `sw.js` & `index.html`：缓存升级至 `elx-quiz-v4`，脚本版本更新为 `national-exams.js?v=4`、`app.js?v=17`。

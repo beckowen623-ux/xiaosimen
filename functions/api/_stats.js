@@ -21,6 +21,9 @@ export const TRACK_EVENTS = new Set([
   "x4m_timer_done",
   "free_way_open_x4m",
   "xsc_print",
+  "buy_click",
+  "copy_code",
+  "redeem_success",
 ]);
 
 export function normalizeSource(value) {

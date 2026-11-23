@@ -752,12 +752,14 @@ async function loadPurchaseOptions() {
       if (/^https:\/\//i.test(offer?.link || '')) {
         link.href = offer.link;
         link.hidden = false;
+        link.onclick = () => trackVisit('buy_click');
       }
       if (offer?.text) {
         copy.hidden = false;
         copy.onclick = async () => {
           try {
             await navigator.clipboard.writeText(offer.text);
+            trackVisit('copy_code');
             redeemMessage.textContent = '闲鱼口令已复制。';
           } catch {
             redeemMessage.textContent = '复制失败，请重试。';
@@ -778,7 +780,7 @@ byId('redeemJump')?.addEventListener('click', () => {
   input?.focus({ preventScroll: true });
 });
 byId('copySeller')?.addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText('王者荣耀速度飞车'); redeemMessage.textContent = '已复制，打开闲鱼搜索框粘贴，切换到“用户”就能找到。'; }
+  try { await navigator.clipboard.writeText('王者荣耀速度飞车'); trackVisit('copy_code'); redeemMessage.textContent = '已复制，打开闲鱼搜索框粘贴，切换到“用户”就能找到。'; }
   catch { redeemMessage.textContent = '复制失败，请手动输入用户名搜索。'; }
 });
 // ---------- 打印练习卷：按科目、册次组一张纸质卷（未解锁时用免费题组“体验卷”） ----------
@@ -841,6 +843,7 @@ function openUnlock(message = '') {
   byId('unlockReason').textContent = message || '先免费试：各地原卷随时免费看、免费打印；每个家庭再送 1 次整卷打印 + 1 套手机整卷。觉得孩子用得上再买。';
   redeemMessage.textContent = '';
   if (!unlockDialog.open) unlockDialog.showModal();
+  unlockDialog.scrollTop = 0;
   void loadPurchaseOptions();
   trackVisit('purchase_view');
 }
@@ -874,6 +877,7 @@ redeemForm.addEventListener('submit', async event => {
       return;
     }
     paidAccess = true;
+    trackVisit('redeem_success');
     try { localStorage.setItem('xiaosimen_paid', '1'); } catch {}
     input.value = '';
     unlockDialog.close();
@@ -935,7 +939,7 @@ async function shareDailyQuestion(button) {
       })) {
         shareTrial = nextTrial;
         renderHome('dailyShare');
-        toast(`已解锁 ${nextTrial.ids.length - currentTrial.ids.length} 道额外练习题。`);
+        toast(`已解锁 ${nextTrial.ids.length - currentTrial.ids.length} 道额外练习题，点下方「按学期刷题」即可开始练！`);
         return;
       }
     }
@@ -1781,7 +1785,7 @@ function syncPapers(stage = state.stage) {
 function freeWayHTML() {
   if (paidAccess) return '';
   return `<details class="card fold-row free-way" data-free-way ${state.freeWayOpen ? 'open' : ''}>
-      <summary><b>🎁 题库可以免费拿</b><span>14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元，等于白用，还多 1 毛 ›</span></summary>
+      <summary><b>🎁 题库可以免费拿</b><span>分享/好友价 14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元，等于免费用 ›</span></summary>
       <ol>
         <li><b>先按 14.9 买：</b>点“完整版 19.9”，选分享价，把专属链接发到家长群，3 位朋友点开就能按 14.9 买；点朋友邀请链接进来的，直接买好友价 14.9。</li>
         <li><b>买完你也有邀请链接：</b>解锁后首页会出现你的专属邀请链接和二维码海报。朋友点你的链接，按好友价 14.9 买，比原价省 5 元，他也划算。</li>
@@ -2093,7 +2097,7 @@ function renderHome(focus = '') {
     ${state.stage === '7-up' ? xscCardHTML() : ''}
     ${earlybirdCardHTML()}
     ${syncCardHTML()}
-    ${state.stage === '7-up' ? '' : xscCardHTML()}
+    ${state.stage === '7-up' || String(state.stage).startsWith('9-') ? '' : xscCardHTML()}
     ${unitCardHTML()}
     ${analysisCardHTML()}
     ${accessNotice}
@@ -2189,7 +2193,7 @@ function renderLiteHome() {
     ${state.stage === '7-up' ? xscCardHTML() : ''}
     ${earlybirdCardHTML()}
     ${syncCardHTML()}
-    ${state.stage === '7-up' ? '' : xscCardHTML()}
+    ${state.stage === '7-up' || String(state.stage).startsWith('9-') ? '' : xscCardHTML()}
     <section class="card loading-card" id="liteLoading" role="status">${state.banksFailed
       ? '<p class="muted">按章节练、错题本、小四门等内容没加载下来（网络不稳）。上面的早鸟卷、同步章节卷、小升初衔接照常能用。</p><button class="btn" type="button" id="liteRetry">重新加载</button>'
       : '<p class="muted">按章节练、错题本、小四门等内容还在加载，网络慢的话要多等几秒……</p>'}</section>`;
@@ -2962,9 +2966,14 @@ function renderEssay(q) {
 }
 
 // 一组题做完：给出本组小结（正确率、主观题得分、错题重练）。
+function isTrialSliceSession() {
+  if (hasFullAccess() || !['paper', 'sync', 'national'].includes(state.mode)) return false;
+  const paper = (nationalCatalog || []).find(p => p.id === state.queue[0]?.paperId);
+  return Boolean(paper && state.queue.length && state.queue.length < paper.questionCount);
+}
 function finishPractice() {
   keepPosition(null);
-  if (state.queue.length < 2 || !state.session.size) { renderHome('homeTitle'); return; }
+  if (state.queue.length < 2 || (!state.session.size && !isTrialSliceSession())) { renderHome('homeTitle'); return; }
   renderSummary();
 }
 // 试做完一套卷的前 5 题：告诉家长这套还有多少题、完整版包含什么（不夸大、不制造焦虑）
@@ -3004,7 +3013,7 @@ function renderSummary() {
   const essayScore = essays.reduce((s, [, r]) => s + r.score, 0);
   const essayTotal = essays.reduce((s, [, r]) => s + r.total, 0);
   const wrongQs = dedupeById(results.filter(([, r]) => !r.correct).map(([id]) => state.queue.find(q => q.id === id) || library.find(q => q.id === id)).filter(Boolean));
-  const acc = Math.round(right / results.length * 100);
+  const acc = results.length ? Math.round(right / results.length * 100) : 0;
   if (state.mode === 'earlybird') {
     const score = earlybirdScore(results);
     const paperForVerdict = (nationalCatalog || []).find(p => p.id === state.earlybirdPaper);
@@ -3053,7 +3062,8 @@ function renderSummary() {
     moveFocus(byId('summaryTitle'), true);
     return;
   }
-  const cheer = acc >= 90 ? '太棒了，保持这个状态！' : acc >= 70 ? '不错，把错题再过一遍就更稳了。' : '别灰心，错题已进错题本，按时复习就能拿下。';
+  const cheer = !results.length ? '已完成本套试做题浏览，看看完整版包含哪些内容：'
+    : acc >= 90 ? '太棒了，保持这个状态！' : acc >= 70 ? '不错，把错题再过一遍就更稳了。' : '别灰心，错题已进错题本，按时复习就能拿下。';
   // 整套同步卷做完：按卷面算百分制得分，并给出“下一章”按钮
   const syncDone = state.mode === 'sync' ? timedPaper() : null;
   const syncScore = syncDone ? earlybirdScore(results) : null;
@@ -3066,10 +3076,11 @@ function renderSummary() {
         <p class="summary-kicker">${esc(MODE_LABEL[state.mode] || '练习')} · 本组完成</p>
         <h1 id="summaryTitle" tabindex="-1">${cheer}</h1>
         <div class="summary-stats">
+          ${!results.length ? `<div><b>${state.queue.length}</b><span>已浏览试做题</span></div>` : `
           ${syncDone ? `<div><b>${syncScore}<small>/100</small></b><span>本卷得分${essayTotal ? '（含主观题自评）' : ''}</span></div>` : `<div><b>${results.length}</b><span>本组作答</span></div>`}
           <div><b>${right}</b><span>答对 / 过关</span></div>
           <div><b>${acc}%</b><span>正确率</span></div>
-          ${essayTotal ? `<div><b>${essayScore}<small>/${essayTotal}</small></b><span>主观题得分</span></div>` : ''}
+          ${essayTotal ? `<div><b>${essayScore}<small>/${essayTotal}</small></b><span>主观题得分</span></div>` : ''}`}
         </div>
         ${timerLine}
         ${wrongQs.length ? `<div class="summary-wrong"><p class="ref-title">需要再看的题（${wrongQs.length}）</p>

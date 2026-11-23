@@ -2,6 +2,26 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 修复试做转化断点、补齐成交漏斗埋点与分享接口防刷（main）
+- 修复试做结束静默返回首页的转化断点（`app.js`）：
+  - 新增 `isTrialSliceSession()` 判定；当未付费用户在同步卷/精编模拟卷/全国真题试做完（或浏览完）前 5 题/首组题后点击「结束练习」，即使未提交答案（`state.session.size === 0`），也会进入结算页并展示 `trialUpsellHTML()` 完整版升级引导，避免直接静默退回首页导致转化流失。
+  - 修复 `renderSummary()` 在 `results.length === 0` 时的除零 `NaN%` 隐患，改为展示「已浏览试做题」统计。
+- 优化购买弹窗、首页文案与年级展示（`app.js`、`key-points.html`）：
+  - `openUnlock()` 打开 `<dialog>` 时重置 `unlockDialog.scrollTop = 0`，确保顶部「关闭」按钮始终在视口顶部可见。
+  - `freeWayHTML()` 摘要文案由「14.9 买下…」微调为「分享/好友价 14.9 买下…」，消除与首页「完整版 19.9」按钮的价格认知冲突（保留闲鱼保底用户名「王者荣耀速度飞车」不变）。
+  - 初三（`9-up` / `9-down`）首页不再展示「小升初衔接」卡片，保持中考冲刺阶段首屏聚焦。
+  - 每日一题分享解锁 3 题后的 Toast 明确提示「点下方『按学期刷题』即可开始练」。
+  - `key-points.html` 顶栏副标题改为「初中小四门考点速记 · 人教版」，与实际 4 科 Tab（道法/历史/地理/生物）保持一致。
+- 优化全国真题按钮加载反馈与原卷首屏图片渲染（`national-exams.js`）：
+  - `start()` 与 `startType()` 异步加载期间将按钮文案切换为「正在加载…」，结束后恢复原状，消除点击无反馈感。
+  - `readerContent()` 原卷前 2 页图片改为 `loading="eager"`，避免动态插入 DOM 后首屏原卷停留在空白占位框。
+- 补齐成交漏斗埋点与分享接口频控（`functions/api/_stats.js`、`functions/_share.js`、`app.js`）：
+  - `TRACK_EVENTS` 新增 `buy_click`（点击去闲鱼购买）、`copy_code`（复制闲鱼口令/卖家名）、`redeem_success`（兑换成功），完善 `visit → purchase_view → buy_click/copy_code → redeem_success` 转化归因。
+  - `functions/_share.js` 的 `mine()` 新增同网络（`owner_net`）24 小时创建上限（20 条，超限返回 429 `RATE_LIMITED`），防止脚本刷爆 D1 `share_offers` 表。
+- 升级缓存与脚本版本（`sw.js`、`index.html`）：
+  - `sw.js` 缓存升级至 `elx-quiz-v4`；`index.html` 更新为 `national-exams.js?v=4`、`app.js?v=17`。
+- 验证：`node -c app.js national-exams.js sw.js` 语法检查通过；`node tests/validate.mjs` 全量校验通过（2453 基础题 + 681 填空题）。
+
 ## 2026-11-23 · Antigravity · 优化免费整卷领取提示与英语真题试做体验，透明化配额与付费引导（main）
 - 优化免费整卷机会提示与卡片交互（`national-exams.js`、`app.js`）：
   - 试卷卡片动态感知免费配额状态：若用户尚未消耗免费机会，显示「手机做整卷（免费 1 套）」；若已在其他试卷上消耗免费机会，按钮自适应变更为「试做体验（免费整卷已领）」，避免虚假承诺导致用户困惑。

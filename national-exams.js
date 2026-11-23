@@ -172,7 +172,9 @@
     return cards ? `<p class="national-status muted">${note}</p><div class="national-paper-grid">${cards}</div>` : '';
   }
   async function startType(button) {
+    const origText = button.textContent;
     button.disabled = true;
+    button.textContent = '正在加载…';
     const version = ++revision;
     try {
       const type = button.dataset.type;
@@ -200,7 +202,7 @@
       app.practice(chosen);
       window.scrollTo(0, 0);
     } catch (error) { app.toast(error.message); }
-    finally { button.disabled = false; }
+    finally { button.disabled = false; button.textContent = origText; }
   }
 
   function render() {
@@ -234,7 +236,9 @@
   }
 
   async function start(button) {
+    const origText = button.textContent;
     button.disabled = true;
+    button.textContent = '正在加载…';
     const version = ++revision;
     try {
       const paper = catalog.find(item => item.id === button.dataset.start);
@@ -266,7 +270,7 @@
       app.practice(chosen);
       window.scrollTo(0, 0);
     } catch (error) { app.toast(error.message); }
-    finally { button.disabled = false; }
+    finally { button.disabled = false; button.textContent = origText; }
   }
 
   function formatQuestionBody(question) {
@@ -313,7 +317,7 @@
   function readerContent(paper, questions) {
     if (paper.pages?.length) {
       const pageImages = (paths, title) => `<section class="national-original"><h2>${title}</h2>${(paths || []).map((url, i) =>
-        `<figure><img src="${escape(url)}" alt="${escape(paper.title)}${title}第 ${i + 1} 页" loading="lazy" decoding="async"><figcaption>${title} · 第 ${i + 1} 页</figcaption></figure>`).join('')}</section>`;
+        `<figure><img src="${escape(url)}" alt="${escape(paper.title)}${title}第 ${i + 1} 页" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async"><figcaption>${title} · 第 ${i + 1} 页</figcaption></figure>`).join('')}</section>`;
       const ansSection = (state.showAnswers && paper.answerPages?.length) ? pageImages(paper.answerPages, '参考答案') : '';
       return pageImages(paper.pages, '原卷试题') + ansSection;
     }

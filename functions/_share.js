@@ -23,6 +23,11 @@ export async function handleShare(context, site) {
 
 async function mine(DB, site, dev, net) {
   let row = await DB.prepare("SELECT * FROM share_offers WHERE site = ? AND owner_device = ?").bind(site, dev).first();
+  if (!row) {
+    const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+    const recent = await DB.prepare("SELECT COUNT(*) AS n FROM share_offers WHERE owner_net = ? AND created_at >= ?").bind(net, since).first();
+    if ((recent?.n || 0) >= 20) return json({ ok: false, reason: "RATE_LIMITED" }, 429);
+  }
   for (let attempt = 0; !row && attempt < 5; attempt += 1) {
     const id = randomText(8);
     const code = randomText(6);
