@@ -204,3 +204,15 @@ git push origin main
 2. `AGENTS.md`：将 `node tests/smoke.mjs` 加入收工必跑校验项。
 3. `index.html`：Service Worker 注册改为 `navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' })`，解决线上 `/sw.js` 响应头 `max-age=14400` 导致用户长达 4 小时拿不到新版缓存的问题。
 4. `CHANGELOG.md`：同步记录本次变更。
+
+---
+
+## 十一、 首页转化横幅升级、更新日志与顶栏「找题」一致性修复 (2026-11-23 · Gemini · 分支 `main`)
+
+### 本次改动文件清单
+1. `app.js` & `styles.css`：
+   - 升级首页 `accessNoticeHTML()` 转化横幅（新增 `.access-value-line` 与主色按钮「开通完整版 ¥19.9」）；
+   - `UPDATE_LOG` 顶部新增「云端错题本同步 + 3 台设备共用」买家可见记录；兑换成功 Toast 同步引导云端备份与邀请返现；
+   - `#headerSearch` 支持从 `#national` 页一键跳回首页并展开聚焦搜索框。
+2. `national-exams.js`：移除 `app.hideSearch()`，保持全站顶栏导航一致。
+3. `tests/smoke.mjs`、`sw.js`、`index.html`、`CHANGELOG.md`：冒烟检查扩至 32 项，缓存升级至 `elx-quiz-v7`，资源版本更新为 `styles.css?v=16`、`national-exams.js?v=5`、`app.js?v=20`。

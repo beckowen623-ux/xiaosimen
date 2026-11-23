@@ -98,7 +98,6 @@
 
   function shell(content) {
     document.body.classList.remove('practice');
-    app.hideSearch();
     app.view.innerHTML = `
       <div class="national-header">
         <button type="button" class="btn text-button" data-national="home">← 返回首页</button>

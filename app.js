@@ -883,7 +883,7 @@ redeemForm.addEventListener('submit', async event => {
     unlockDialog.close();
     renderHome('homeTitle');
     void refreshReferralProfile();
-    toast('已解锁爱丽克丝中考题库完整版。');
+    toast('已解锁完整版！可在「进度管理」一键云端备份错题本，首页也已生成你的专属邀请链接（邀 3 位朋友返现 15 元）。');
   } catch {
     redeemMessage.textContent = '兑换服务暂时不可用，请稍后再试。';
   } finally {
@@ -901,8 +901,9 @@ function accessNoticeHTML(days) {
   }
   const expired = legacyTrialStartedAt() !== null ? '<p class="muted">7 天完整版体验已结束，原答题记录已保留。</p>' : '';
   return `<section class="card mini-card access-notice slim-notice">
-    <div>${expired}<p><b>免费送：</b>每个家庭 1 套手机整卷（${freeUses.phone ? '已用' : '未用'}）+ 1 次整卷打印（${freeUses.print ? '已用' : '未用'}），任选一套；其他卷子前 5 题免费，各地原卷免费看。</p></div>
-    <button class="btn" type="button" id="openUnlock">完整版 19.9</button>
+    <div>${expired}<p><b>免费送：</b>每个家庭 1 套手机整卷（${freeUses.phone ? '已用' : '未用'}）+ 1 次整卷打印（${freeUses.print ? '已用' : '未用'}），任选一套；其他卷子前 5 题免费，各地原卷免费看。</p>
+    <p class="muted access-value-line">完整版 <b>¥19.9 一次买断用到中考</b>（分享可省 5 元）：3 台设备共用 · 云端错题本同步 · 近期已新上 17 套 2026 真题，后续新卷免费更新。</p></div>
+    <button class="btn primary" type="button" id="openUnlock">开通完整版 ¥19.9</button>
   </section>`;
 }
 
@@ -1210,6 +1211,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-23', '完整版上线「云端错题本同步」并升级至 3 台设备共用：在右上角「进度管理」中可按兑换码一键将错题本、答题记录与打卡进度同步到云端，在孩子手机、平板和家长打印电脑之间随时恢复，换手机或清理微信缓存也不怕丢进度。'],
   ['2026-11-23', '全国中考真题库重磅升级！新增及升级 17 套 2026 年中考全国真题（涵盖成都语文、云南语文/数学、甘肃语文/数学/综合/英语、江西历史/道法/数学、苏州历史/道法/数学、湖南数学、河北/浙江数学压轴专练、陕西英语等）：高清原卷打印版与手机在线交互做题版同步上线，73 幅高清原题配图全部裁切修复，题目、答案与分步给分点严格对照官方标准，全面支持手机做题、自动判分、错题收录与原卷整套打印。'],
   ['2026-11-22', '全国中考真题新增 2026 年河南中考数学可练版：整卷 23 题（选择 10、填空 5、解答 8）逐题整理，答案和分步给分按原卷所附参考答案，每题写了思路和易错点；“查看原卷 / 答案”现在把题目和答案分开显示。'],
   ['2026-11-22', '全国中考真题新增 2026 年苏州中考化学可练版：整卷 26 题（选择 20、非选择 6）逐题整理，配图取自原卷，答案按官方参考答案，每题写了思路和易错点。苏州 2026 物理、化学都能逐题练了。'],
@@ -3271,13 +3273,16 @@ byId('homeLink').addEventListener('click', event => {
   }
 });
 byId('headerSearch').addEventListener('click', event => {
-  const search = byId('searchBox');
-  if (!search) return;
   event.preventDefault();
+  if (!byId('searchBox')) {
+    window.NationalExams?.leave?.();
+    state.searchOpen = true;
+    renderHome('searchTitle');
+  }
   const fold = byId('searchPanel');
   if (fold && !fold.open) { fold.open = true; state.searchOpen = true; }
   fold?.scrollIntoView({ block: 'start' });
-  search.focus({ preventScroll: true });
+  byId('searchBox')?.focus({ preventScroll: true });
 });
 const figureDialog = byId('figureDialog');
 figureDialog.addEventListener('click', event => { if (event.target === figureDialog) figureDialog.close(); });

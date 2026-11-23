@@ -2,6 +2,15 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 升级首页转化横幅与更新日志，修复全国真题页顶栏「找题」消失（main）
+- 升级首页免费额度/转化横幅（`app.js`、`styles.css`）：
+  - 在 `accessNoticeHTML()` 中新增 `.access-value-line`，直观展示「完整版 ¥19.9 一次买断用到中考（分享可省 5 元）：3 台设备共用 · 云端错题本同步 · 近期已新上 17 套 2026 真题，后续新卷免费更新」，并将右侧按钮升级为主色 `开通完整版 ¥19.9`。
+  - 在首页 `UPDATE_LOG` 顶部新增面向买家的「云端错题本同步 + 3 台设备共用」功能更新记录；兑换成功 Toast 同步提示云端备份入口与专属邀请返现链接。
+- 修复 `#national` 全国真题页顶栏「找题」消失问题（`national-exams.js`、`app.js`）：
+  - 移除 `national-exams.js` 中 `app.hideSearch()` 调用；升级 `#headerSearch` 点击逻辑，在真题页点击「找题」可一键离开真题页、返回首页并自动展开聚焦全题库搜索框。
+- 更新冒烟检查与资源版本（`tests/smoke.mjs`、`sw.js`、`index.html`）：`tests/smoke.mjs` 新增 2 项检查（共 32 项通过）；`sw.js` 升级至 `elx-quiz-v7`，`index.html` 更新为 `styles.css?v=16`、`national-exams.js?v=5`、`app.js?v=20`。
+- 验证：`node tests/smoke.mjs`（32/32 通过）与 `node tests/validate.mjs` 全量校验通过。
+
 ## 2026-11-23 · Gemini · 新增多 AI 提交前自动冒烟检查脚本，修复 `/sw.js` 4 小时缓存拦截更新（main）
 - 新增自动冒烟检查脚本 `tests/smoke.mjs` 并写入 `AGENTS.md` 收工必跑清单：
   - 自动校验全部前端脚本与 `functions/` ESM 接口语法；

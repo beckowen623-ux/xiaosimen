@@ -706,3 +706,5 @@ input[type=search]::placeholder { color: #67736c; }
 .cloud-sync-head { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; font-size: 15px; color: #1f5130; }
 .cloud-sync-box p { margin: 4px 0 0; font-size: 13.5px; line-height: 1.55; }
 .local-backup-label { margin: 10px 0 0; font-size: 13.5px; }
+.access-value-line { margin-top: 6px; font-size: 13.5px; line-height: 1.55; }
+.access-value-line b { color: var(--ink); }
