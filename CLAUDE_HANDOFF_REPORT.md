@@ -248,3 +248,12 @@ git push origin main
 2. `app.js`：`showEarlybirdMark()` 登记完成后新增薄弱章节同步卷处方（`.eb-rx`）、成绩单海报按钮（`data-mark-poster`）与完整版转化引导（`data-mark-upsell`）。
 3. `national-exams.js`：原卷图片新增 `error` 失败兜底提示文案。
 4. `tests/smoke.mjs`、`sw.js`、`CHANGELOG.md`：冒烟检查扩至 37 项，缓存升级至 `elx-quiz-v10`，脚本版本更新为 `styles.css?v=18`、`national-exams.js?v=6`、`app.js?v=23`。
+
+---
+
+## 十五、 首页视觉降噪与三大区块结构改版 (2026-11-23 · Gemini · 分支 `main`)
+
+### 本次改动文件清单
+1. `app.js`：`renderHome()` 重组为三大清晰分区（`.home-section-head`）与双列折叠网格（`.home-tools-grid` / `.home-meta-grid`），清理标题冗余彩色 Emoji，100% 保留原有功能与事件绑定。
+2. `styles.css`：版心收紧至 `940px`，细化卡片边框与阴影，新增桌面端双列工具网格（`details[open]` 自动跨列全宽）。
+3. `tests/smoke.mjs`、`sw.js`、`index.html`、`CHANGELOG.md`：冒烟检查扩至 38 项，缓存升级至 `elx-quiz-v11`，资源版本更新为 `styles.css?v=19`、`app.js?v=24`。

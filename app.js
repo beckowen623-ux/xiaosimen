@@ -1780,7 +1780,7 @@ function wireAnalysis() {
 }
 function analysisCardHTML() {
   return `<section class="card analysis-card" id="analysisCard" aria-labelledby="analysisTitle">
-    <div class="section-heading"><h2 id="analysisTitle">📊 学情分析</h2><span class="muted">按科目、章节自动统计</span></div>
+    <div class="section-heading"><h2 id="analysisTitle">学情分析</h2><span class="muted">按科目、章节自动统计</span></div>
     <div id="analysisOut">${state.analysisHTML || '<p class="muted">按科目、章节统计孩子做过的题，找出最该补的章节。数据只保存在这台设备上。</p>'}</div>
     <button class="btn primary" type="button" id="analysisBtn">${state.analysisHTML ? '重新分析' : '生成学情分析'}</button>
   </section>`;
@@ -1797,7 +1797,7 @@ function xscCardHTML() {
   const done = loadEarlybirdScores();
   const papers = xscPapers(subject);
   return `<details class="card xsc-card" id="xsc" ${state.xscOpen ? 'open' : ''}>
-    <summary><b>🎒 小升初衔接 · 按七年级上册章节</b><span>限时免费 · 六年级暑假、初一开学前用</span></summary>
+    <summary><b>小升初衔接 · 按七年级上册章节</b><span>限时免费 · 六年级暑假、初一开学前用</span></summary>
     <p class="muted">语文、数学、英语按初一上册的章节，每章一套练习，题型和题干按初中考试标准出，难度贴近初一期中期末。每题有解析，做完出分。</p>
     <div class="weekly-chips" role="group" aria-label="选择科目">${XSC_SUBJECTS.map(([k, l]) => `<button type="button" class="drill-chip" data-xsc-subject="${k}" aria-pressed="${subject === k}">${l}</button>`).join('')}</div>
     ${ebModesHTML()}
@@ -1807,7 +1807,7 @@ function xscCardHTML() {
 }
 
 // 早鸟卷、小升初卷三种做法：手机上做 / 打印整卷 / 纸上做完回来登记（家长多数让孩子在纸上做）
-const EB_MODES = [['phone', '📱 手机上做'], ['print', '🖨 打印整卷'], ['mark', '✍️ 纸上做完，登记']];
+const EB_MODES = [['phone', '手机上做'], ['print', '打印整卷'], ['mark', '纸上做完登记']];
 const EB_MODE_TIP = {
   phone: '手机上做：客观题自动判分，主观题对照得分点自评。',
   print: '已选打印：点下面要打印的那一套，打开后点顶部“打印”。题目和答案页分开，每大题标好分值。限时免费，不占免费打印次数。微信里打印不了的话，按提示换浏览器打开。',
@@ -1900,7 +1900,7 @@ function syncPapers(stage = state.stage) {
 function freeWayHTML() {
   if (paidAccess) return '';
   return `<details class="card fold-row free-way" data-free-way ${state.freeWayOpen ? 'open' : ''}>
-      <summary><b>🎁 题库可以免费拿</b><span>分享/好友价 14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元，等于免费用 ›</span></summary>
+      <summary><b>买后还能免单</b><span>分享/好友价 14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元，等于免费用 ›</span></summary>
       <ol>
         <li><b>先按 14.9 买：</b>点“完整版 19.9”，选分享价，把专属链接发到家长群，3 位朋友点开就能按 14.9 买；点朋友邀请链接进来的，直接买好友价 14.9。</li>
         <li><b>买完你也有邀请链接：</b>解锁后首页会出现你的专属邀请链接和二维码海报。朋友点你的链接，按好友价 14.9 买，比原价省 5 元，他也划算。</li>
@@ -2209,37 +2209,44 @@ function renderHome(focus = '') {
   view.innerHTML = `
     ${homeIntroHTML()}
     ${stageBarHTML()}
+    <div class="home-section-head"><span>本学期核心练习</span><small>先用早鸟卷测出弱项，再按章节补齐</small></div>
     ${state.stage === '7-up' ? xscCardHTML() : ''}
     ${earlybirdCardHTML()}
     ${syncCardHTML()}
-    ${state.stage === '7-up' || String(state.stage).startsWith('9-') ? '' : xscCardHTML()}
-    ${unitCardHTML()}
-    ${analysisCardHTML()}
+    <div id="subjectSections">${subjectSectionsHTML()}</div>
+    <div class="home-section-head"><span>复习与提分工具</span><small>小四门、错题复习、学情分析与打印找题</small></div>
+    <div class="home-tools-grid">
+      ${x4mGroupHTML(queue, progress)}
+      ${reviewHubHTML(progress)}
+      ${weeklyCardHTML(progress)}
+      ${unitCardHTML()}
+      ${printCardHTML()}
+      <details class="card fold-row search-card" id="searchPanel" ${state.searchOpen || state.keyword ? 'open' : ''}>
+        <summary><b id="searchTitle">${icon('search')} 全题库找题</b><span>真题、模拟卷、小四门都能搜 ›</span></summary>
+        <div class="search-fields">
+          <input type="search" id="searchBox" aria-label="题目关键词" placeholder="试试输入「宋代」「现在完成时」「默写」" value="${esc(state.keyword)}">
+          <select id="searchSubject" aria-label="搜索科目">
+            <option value="">全部科目</option>
+            ${MAIN_SUBJECTS.map(s => `<option value="${s.key}" ${state.searchSubject === s.key ? 'selected' : ''}>${s.label}</option>`).join('')}
+            ${SUBJECT_ORDER.map(key => `<option value="${key}" ${state.searchSubject === key ? 'selected' : ''}>${SUBJECTS[key].label}</option>`).join('')}
+          </select>
+        </div>
+        <p class="muted" id="searchStatus" role="status"></p>
+        <div id="searchOut" class="search-results"></div>
+      </details>
+      ${state.stage === '7-up' || String(state.stage).startsWith('9-') ? '' : xscCardHTML()}
+      ${analysisCardHTML()}
+    </div>
+    <div class="home-section-head"><span>完整版权益与说明</span><small>一次买断用到中考 · 3 台设备共用 + 云端错题同步</small></div>
     ${accessNotice}
     ${freeWayHTML()}
-    ${weeklyCardHTML(progress)}
-    <div id="subjectSections">${subjectSectionsHTML()}</div>
-    ${x4mGroupHTML(queue, progress)}
-    ${reviewHubHTML(progress)}
-    ${printCardHTML()}
-    <details class="card fold-row search-card" id="searchPanel" ${state.searchOpen || state.keyword ? 'open' : ''}>
-      <summary><b id="searchTitle">${icon('search')} 全题库找题</b><span>真题、模拟卷、小四门都能搜 ›</span></summary>
-      <div class="search-fields">
-        <input type="search" id="searchBox" aria-label="题目关键词" placeholder="试试输入「宋代」「现在完成时」「默写」" value="${esc(state.keyword)}">
-        <select id="searchSubject" aria-label="搜索科目">
-          <option value="">全部科目</option>
-          ${MAIN_SUBJECTS.map(s => `<option value="${s.key}" ${state.searchSubject === s.key ? 'selected' : ''}>${s.label}</option>`).join('')}
-          ${SUBJECT_ORDER.map(key => `<option value="${key}" ${state.searchSubject === key ? 'selected' : ''}>${SUBJECTS[key].label}</option>`).join('')}
-        </select>
-      </div>
-      <p class="muted" id="searchStatus" role="status"></p>
-      <div id="searchOut" class="search-results"></div>
-    </details>
-    ${originCardHTML()}
-    <details class="card origin-card update-card">
-      <summary><b>📝 更新日志</b><span>最近：${UPDATE_LOG[0][0]} · 点开看我们做了什么 ›</span></summary>
-      <ol class="update-list" id="updateList">${renderUpdateLogs(state.allUpdatesOpen)}</ol>
-    </details>
+    <div class="home-meta-grid">
+      ${originCardHTML()}
+      <details class="card origin-card update-card">
+        <summary><b>更新日志</b><span>最近：${UPDATE_LOG[0][0]} · 查看更新内容 ›</span></summary>
+        <ol class="update-list" id="updateList">${renderUpdateLogs(state.allUpdatesOpen)}</ol>
+      </details>
+    </div>
     <section class="card cross-bank-card">${accountingRecommendation()}</section>`;
   wireHome();
   if (focus) moveFocus(byId(focus), focus === 'homeTitle');
