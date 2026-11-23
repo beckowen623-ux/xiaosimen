@@ -275,3 +275,12 @@ git push origin main
 1. `assets/hero-scholar-desk.webp`：新增 31 KB 定制手绘书卷风首屏插画（与宣纸底色 `#f4f2e8` 无缝融合）。
 2. `index.html`、`styles.css`、`app.js`：引入 `Noto Serif SC` 衬线标题体系、朱砂印章红 `--seal: #b83b2a` 点缀、开放式宣纸首屏 `.editorial-hero`、克制 `10px` 书页卡片细线与章节分隔线，并清理剩余冗余 Emoji。
 3. `tests/smoke.mjs`、`sw.js`、`CHANGELOG.md`：冒烟检查扩至 39 项（含插画文件存在校验），缓存升级至 `elx-quiz-v13`，资源版本更新为 `styles.css?v=21`、`app.js?v=26`。
+
+---
+
+## 十八、 海报视觉统一为现代书卷风、优化结算页顺序与接入学情诊断海报 (2026-11-23 · Gemini · 分支 `main`)
+
+### 本次改动文件清单
+1. `app.js`：`renderSummary()` 将操作按钮移至购买引导卡片上方避免遮挡；`buildAnalysis()` 新增 `#analysisPosterBtn` 学情诊断海报按钮；`openScorePoster()` 视觉升级为宣纸 + 墨绿 + 朱砂书卷风。
+2. `index.html`：`#shareOffer` 分享海报配色同步为 `#164e3f,#0e352a`，脚本更新为 `app.js?v=27`。
+3. `sw.js`、`tests/smoke.mjs`、`CHANGELOG.md`：缓存升级至 `elx-quiz-v14`，冒烟检查 39/39 通过。

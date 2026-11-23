@@ -1772,7 +1772,19 @@ async function buildAnalysis() {
         ${strong.length ? `<p class="analysis-strong">掌握较好：${strong.map(([n, r]) => `${esc(n)}（${r}%）`).join('；')}</p>` : ''}
         <p class="muted">${tip}</p></div>`;
     }).join('');
+    const totalAnswered = subjects.reduce((sum, [, s]) => sum + s.n, 0);
+    const totalRight = subjects.reduce((sum, [, s]) => sum + s.right, 0);
+    const overallRate = totalAnswered ? Math.round(totalRight / totalAnswered * 100) : 0;
+    const weakestUnit = subjects.flatMap(([, s]) => Object.entries(s.units).filter(([, u]) => u.n >= 3).map(([name, u]) => [name, Math.round(u.right / u.n * 100)])).sort((a, b) => a[1] - b[1])[0];
+    state.analysisMeta = {
+      title: '学情分析与错题诊断单',
+      metric: `${overallRate}%`,
+      metricSub: `累计作答 ${totalAnswered} 题 · 近 7 天学习 ${days} 天 · 待复习错题 ${due} 道`,
+      verdict: overallRate >= 85 ? '整体掌握扎实，保持节奏稳步冲刺' : overallRate >= 70 ? '基础不错，集中攻克薄弱章节提分最快' : '找准薄弱环节逐章补齐，进步看得见',
+      focusLine: weakestUnit ? `当前最需补强章节：${weakestUnit[0]}（正确率 ${weakestUnit[1]}%）` : '错题已自动收录进错题本，按 1、3、7、14 天提醒复习。',
+    };
     state.analysisHTML = `<p>近 7 天学习 <b>${days}</b> 天 · 待复习错题 <b>${due}</b> 道${due ? '（先清掉到期的错题，效果最好）' : ''}</p>${rows}
+      <div class="weekly-actions" style="margin:12px 0;"><button class="btn" type="button" id="analysisPosterBtn">生成学情诊断海报</button></div>
       <p class="muted">说明：只统计在本机做过的题；某一章做题少于 3 道时不评价。点“去补”直接练这一章（同步章节卷、早鸟卷、精编卷里这一章的题）。建议每周看一次。</p>`;
   }
   const box = byId('analysisOut');
@@ -1787,6 +1799,9 @@ function wireAnalysis() {
     await ensureUnitPool().catch(() => {});
     await startUnit(b.dataset.goUnit);
   }));
+  byId('analysisPosterBtn')?.addEventListener('click', () => {
+    if (state.analysisMeta) void openScorePoster(state.analysisMeta);
+  });
 }
 function analysisCardHTML() {
   return `<section class="card analysis-card" id="analysisCard" aria-labelledby="analysisTitle">
@@ -1882,7 +1897,7 @@ function showEarlybirdMark(paper, list, boxId) {
     box.innerHTML = `<div class="weekly-mark"><p><b>${score} 分${estimated ? '（按错题号估算）' : ''} · ${esc(head)}</b></p>
       <p class="earlybird-verdict">${esc(body)}</p>
       <p class="muted">${wrong.size ? `错的 ${wrong.size} 题已进错题本，明天开始按 1、3、7、14 天提醒复习；学情分析也已算进去。` : '全对，已登记！'}</p>
-      <div class="weekly-actions"><button class="btn" type="button" data-mark-poster>📸 生成成绩单海报</button></div>
+      <div class="weekly-actions"><button class="btn" type="button" data-mark-poster>生成成绩单海报</button></div>
       ${rx.length ? `<div class="eb-rx"><p class="earlybird-next">下一步：错题集中在下面几章，先做这几章的<b>同步章节卷</b>，一章一章补见效最快：</p>
         ${rx.map(x => `<div class="eb-rx-row"><span>${esc(x.unit.replace(/^[^·]+·/, ''))}<small>错 ${x.n} 题</small></span><div>${x.papers.map(p => `<button class="btn" type="button" data-rx-paper="${p.id}">做「${esc(p.label || p.title)}」→</button>`).join('')}</div></div>`).join('')}
         ${!hasFullAccess() ? `<div class="eb-rx-upsell"><span class="muted">每章前 5 题可免费试做；完整版 ¥19.9 解锁全套同步卷 + 无限打印 + 云端错题本同步。</span><button class="btn primary" type="button" data-mark-upsell>看看完整版</button></div>` : ''}</div>` : ''}</div>`;
@@ -3174,9 +3189,10 @@ async function openScorePoster({ title, metric, metricSub, verdict, focusLine })
     const ctx = canvas.getContext('2d');
 
     const grad = ctx.createLinearGradient(0, 0, W, 380);
-    grad.addColorStop(0, '#1e3a8a'); grad.addColorStop(1, '#1d4ed8');
-    ctx.fillStyle = '#f8fafc'; ctx.fillRect(0, 0, W, H);
+    grad.addColorStop(0, '#0e352a'); grad.addColorStop(1, '#164e3f');
+    ctx.fillStyle = '#f4f2e8'; ctx.fillRect(0, 0, W, H);
     ctx.fillStyle = grad; ctx.fillRect(0, 0, W, 390);
+    ctx.fillStyle = '#b83b2a'; ctx.fillRect(0, 390, W, 6);
 
     ctx.fillStyle = 'rgba(255,255,255,0.88)';
     ctx.font = '600 26px system-ui, -apple-system, sans-serif';
@@ -3195,22 +3211,22 @@ async function openScorePoster({ title, metric, metricSub, verdict, focusLine })
     ctx.fillStyle = 'rgba(255,255,255,0.92)';
     ctx.fillText(String(metricSub || ''), 52, 320);
 
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(42, 420, W - 84, 240);
-    ctx.strokeStyle = '#e2e8f0'; ctx.lineWidth = 2;
-    ctx.strokeRect(42, 420, W - 84, 240);
+    ctx.fillStyle = '#fcfbf6';
+    ctx.fillRect(42, 424, W - 84, 236);
+    ctx.strokeStyle = '#dcd9cc'; ctx.lineWidth = 2;
+    ctx.strokeRect(42, 424, W - 84, 236);
 
-    ctx.fillStyle = '#0f172a';
-    ctx.font = '700 28px system-ui, -apple-system, sans-serif';
-    ctx.fillText(String(verdict || '继续加油，把错题过一遍就更稳！').slice(0, 22), 72, 480);
-    ctx.fillStyle = '#334155';
+    ctx.fillStyle = '#1a2420';
+    ctx.font = '700 28px Georgia, "Songti SC", serif';
+    ctx.fillText(String(verdict || '继续加油，把错题过一遍就更稳！').slice(0, 22), 72, 482);
+    ctx.fillStyle = '#37413c';
     ctx.font = '24px system-ui, -apple-system, sans-serif';
     const focus = String(focusLine || '错题已自动收录进错题本，按 1、3、7、14 天提醒复习。');
     ctx.fillText(focus.slice(0, 26), 72, 540);
     if (focus.length > 26) ctx.fillText(focus.slice(26, 52), 72, 580);
-    ctx.fillStyle = '#1d4ed8';
+    ctx.fillStyle = '#b83b2a';
     ctx.font = '600 22px system-ui, -apple-system, sans-serif';
-    ctx.fillText('七上到九下同步卷 · 全国各地中考真题 · 手机做 & 可打印', 72, 632);
+    ctx.fillText('作者亲测 · 七上到九下同步卷与全国中考真题 · 手机做 & 可打印', 72, 632);
 
     // 二维码区域
     const qr = qrFactory(0, 'M');
@@ -3293,7 +3309,7 @@ function renderSummary() {
           <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
         <div class="summary-actions">
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本卷错题</button>` : ''}
-          <button class="btn" type="button" id="scorePosterBtn">📸 生成成绩单海报</button>
+          <button class="btn" type="button" id="scorePosterBtn">生成成绩单海报</button>
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${paper?.stage === 'xsc' ? '返回，做下一章' : '返回首页，测下一科'}</button>
         </div>
         ${rx.length ? `<div class="eb-rx"><p class="earlybird-next">下一步：错题集中在下面几章，先做这几章的<b>同步章节卷</b>，一章一章补，比整卷反复刷更快见效。</p>
@@ -3343,12 +3359,12 @@ function renderSummary() {
         ${timerLine}
         ${wrongQs.length ? `<div class="summary-wrong"><p class="ref-title">需要再看的题（${wrongQs.length}）</p>
           <ol>${wrongQs.slice(0, 8).map(q => `<li>${subjectChip(q.subject)} <span>${esc(q.stem)}</span></li>`).join('')}</ol></div>` : ''}
-        ${trialUpsellHTML()}
         <div class="summary-actions">
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本组错题</button>` : ''}
-          ${results.length ? `<button class="btn" type="button" id="scorePosterBtn">📸 生成成绩单海报</button>` : ''}
+          ${results.length ? `<button class="btn" type="button" id="scorePosterBtn">生成成绩单海报</button>` : ''}
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button>
         </div>
+        ${trialUpsellHTML()}
         ${nextSync ? `<button class="btn next-sync" type="button" id="nextSyncBtn">下一章：${esc(nextSync.label || nextSync.title)} →</button>` : ''}
         <p class="checkin-cross">${accountingRecommendation()}</p>
       </section>
