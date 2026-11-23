@@ -75,6 +75,7 @@ check(appJs.includes('async function openScorePoster(') && read('functions/api/_
 check(indexHtml.includes('id="claimConfirmDialog"') && appJs.includes('function confirmFreeClaim('), '免费整卷领取使用站内弹窗避免 WebView 拦截', '缺少 #claimConfirmDialog 或 confirmFreeClaim');
 check(appJs.includes('data-mark-poster') && appJs.includes('data-mark-upsell'), '纸上登记完成后含弱项处方、海报与转化引导', 'showEarlybirdMark 缺少海报或转化引导');
 check(appJs.includes('home-section-head') && appJs.includes('function rerenderHomeInPlace('), '首页三大分区与防跳屏原地重绘逻辑完整', 'app.js 缺少首页分区或 rerenderHomeInPlace');
+check(fs.existsSync(path.join(root, 'assets/hero-scholar-desk.webp')) && appJs.includes('hero-scholar-desk.webp'), '现代书卷风首屏插画存在且已引用', '缺少首屏定制插画 hero-scholar-desk.webp');
 check(!read('national-exams.js').includes('app.hideSearch()'), '全国真题页保留顶栏「找题」入口', 'national-exams.js 不应隐藏顶栏找题入口');
 
 // 5. 后端规则与风控护栏防回归

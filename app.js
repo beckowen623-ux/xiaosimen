@@ -1519,13 +1519,23 @@ function contentStatsHTML() {
   return items.length ? `<p class="content-stats" aria-label="题库现有内容">${items.join(' · ')}</p>` : '';
 }
 function homeIntroHTML() {
-  return `<section class="card home-intro">
-    <p class="intro-kicker">初一到初三 · 手机刷、打印都行</p>
-    <h1 id="homeTitle" tabindex="-1">爱丽克丝中考题库</h1>
-    <p class="muted">早鸟卷先测出弱项 → 同步章节卷一章一套补上 → 初三刷中考精编卷和真题。每套我都亲自先做一遍才上线。</p>
-    <p class="promise-line">有能力、有决心、有诚意：用科学的刷题方法帮孩子把考点真正掌握，中考稳稳提分。</p>
-    ${contentStatsHTML()}
-    <button class="btn demo-btn" type="button" data-demo-video>▶ 50 秒看怎么用</button>
+  return `<section class="home-intro editorial-hero">
+    <div class="editorial-hero-copy">
+      <div class="editorial-meta-row">
+        <span class="editorial-seal">作者亲测 · 2026 真题</span>
+        <span class="intro-kicker">初一到初三 · 手机刷、纸质打印都行</span>
+      </div>
+      <h1 id="homeTitle" tabindex="-1">爱丽克丝中考题库</h1>
+      <p class="editorial-lead">早鸟卷先测出弱项，同步章节卷一章一套补上，初三刷中考精编模拟卷与全国各地真题。每套卷子上线前都亲自做过一遍。</p>
+      <p class="promise-line">不押题、不焦虑——用可复盘的同步练习与错题复习，帮孩子把考点真正学透。</p>
+      ${contentStatsHTML()}
+      <div class="editorial-hero-actions">
+        <button class="btn demo-btn" type="button" data-demo-video>▶ 50 秒看怎么用</button>
+      </div>
+    </div>
+    <figure class="editorial-hero-art" aria-hidden="true">
+      <img src="./assets/hero-scholar-desk.webp" alt="" width="840" height="680" decoding="async" fetchpriority="high">
+    </figure>
   </section>`;
 }
 function weeklyCardHTML(progress) {
@@ -1534,13 +1544,13 @@ function weeklyCardHTML(progress) {
   const done = list ? weeklyFor(list).filter(q => hasAnswered(qProgress(progress, q.id))).length : 0;
   const total = list ? list.length : WEEKLY_SIZE[subject];
   return `<section class="card weekly-card" aria-labelledby="weeklyTitle">
-    <div class="section-heading"><h2 id="weeklyTitle">🗓 本周一卷</h2><span class="muted">${weekRangeLabel()} · 每周一换</span></div>
+    <div class="section-heading"><h2 id="weeklyTitle">本周一卷</h2><span class="muted">${weekRangeLabel()} · 每周一换</span></div>
     <div class="weekly-chips" role="group" aria-label="选择科目">${weeklySubjectsNow().map(([key, label]) => `<button type="button" class="drill-chip" data-weekly-subject="${key}" aria-pressed="${subject === key}">${label}</button>`).join('')}</div>
     <p class="weekly-meta"><b>${esc(weeklySubjectLabel(subject))}</b> · ${total} 题${list ? ` · 已做 ${done}` : ''}</p>
     <div class="weekly-actions">
-      <button class="btn primary" type="button" data-weekly="phone">📱 手机上做</button>
-      <button class="btn" type="button" data-weekly="print">🖨 打印</button>
-      <button class="btn" type="button" data-weekly="mark">✍️ 纸上做完，登记错题</button>
+      <button class="btn primary" type="button" data-weekly="phone">手机上做</button>
+      <button class="btn" type="button" data-weekly="print">打印整卷</button>
+      <button class="btn" type="button" data-weekly="mark">纸上做完，登记错题</button>
     </div>
     <div id="weeklyMark"></div>
     <p class="muted weekly-note">手机做自动判分；打印出来做完，回来点出错题号。错题都按 1、3、7、14 天提醒复习。</p>
@@ -1654,7 +1664,7 @@ function planTipHTML() {
   const syncSubjects = [...new Set((nationalCatalog || []).filter(p => p.sync && p.stage === state.stage).map(p => EARLYBIRD_LABEL[p.subject] || p.subjectLabel))];
   const step2 = state.stage === '7-up' ? '哪章弱就补哪章：七上语数英的章节卷就是“小升初衔接”，每章一套'
     : syncSubjects.length ? `哪章弱就补哪章：做那一章的同步章节卷（${syncSubjects.join('、')}已上线），或用“按章节练”专项练` : '哪章弱就补哪章：用“按章节练”专项练这一章的题';
-  return `<details class="plan-tip"><summary>📋 ${esc(grade)}怎么用这个题库？4 步走</summary><ol>
+  return `<details class="plan-tip"><summary>${esc(grade)}怎么用这个题库？4 步走</summary><ol>
     <li><b>先测：</b>做${esc(grade)}早鸟自测卷，看看哪科哪章弱（限时免费，可以打印整套）。</li>
     <li><b>按章补：</b>${step2}。</li>
     <li><b>每周一卷：</b>打印出来周末做，做完点出错题号，10 秒登记。</li>

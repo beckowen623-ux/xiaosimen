@@ -266,3 +266,12 @@ git push origin main
 1. `styles.css`：移除 `.home-tools-grid` / `.home-meta-grid` 在 `details[open]` 时的跨列 `grid-column: 1 / -1` 规则，改为稳定单列折叠堆叠，消除点击右列卡片时的跨行位移。
 2. `app.js`：新增 `rerenderHomeInPlace(anchorId)`，替换切换学期/科目/日期后的 `renderHome() + scrollIntoView` 强跳逻辑，点任何芯片卡片都保持在原位不动。
 3. `tests/smoke.mjs`、`sw.js`、`index.html`、`CHANGELOG.md`：冒烟检查 38/38 通过，缓存升级至 `elx-quiz-v12`，资源版本更新为 `styles.css?v=20`、`app.js?v=25`。
+
+---
+
+## 十七、 全站视觉升级为「精品出版社 · 现代书卷风」与首屏专属插画 (2026-11-23 · Gemini · 分支 `main`)
+
+### 本次改动文件清单
+1. `assets/hero-scholar-desk.webp`：新增 31 KB 定制手绘书卷风首屏插画（与宣纸底色 `#f4f2e8` 无缝融合）。
+2. `index.html`、`styles.css`、`app.js`：引入 `Noto Serif SC` 衬线标题体系、朱砂印章红 `--seal: #b83b2a` 点缀、开放式宣纸首屏 `.editorial-hero`、克制 `10px` 书页卡片细线与章节分隔线，并清理剩余冗余 Emoji。
+3. `tests/smoke.mjs`、`sw.js`、`CHANGELOG.md`：冒烟检查扩至 39 项（含插画文件存在校验），缓存升级至 `elx-quiz-v13`，资源版本更新为 `styles.css?v=21`、`app.js?v=26`。

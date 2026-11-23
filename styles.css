@@ -1,18 +1,21 @@
 :root {
   color-scheme: light;
-  --canvas: #f6f5ef;
-  --paper: #fffefa;
-  --ink: #1c2924;
-  --muted: #58665f;
-  --line: #dedfd6;
-  --green: #145843;
-  --green-dark: #0c3a2c;
-  --green-soft: #e9f2ec;
-  --gold: #f2e5af;
-  --gold-ink: #554416;
-  --good: #157040;
+  --canvas: #f4f2e8;
+  --paper: #fcfbf6;
+  --ink: #1a2420;
+  --muted: #55615a;
+  --line: #dcd9cc;
+  --green: #164e3f;
+  --green-dark: #0e352a;
+  --green-soft: #e8f0eb;
+  --seal: #b83b2a;
+  --seal-soft: #f9ecea;
+  --gold: #efe3b4;
+  --gold-ink: #554316;
+  --good: #15683c;
   --bad: #a53132;
-  --shadow: 0 3px 18px #28271908;
+  --shadow: 0 1px 3px rgba(26, 36, 32, 0.04);
+  --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", Georgia, serif;
   font-family: Inter, "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -60,7 +63,7 @@ button, input, select, summary, a { -webkit-tap-highlight-color: transparent; }
 .page { max-width: 940px; margin: 0 auto; padding: 24px 24px 0; }
 .foot { margin: 26px auto 0; padding: 0 20px max(28px, env(safe-area-inset-bottom)); text-align: center; font-size: 12px; color: var(--muted); }
 .author-home-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--green); text-underline-offset: 3px; }
-.card { min-width: 0; padding: 20px 22px; background: var(--paper); border: 1px solid #e4e5dc; border-radius: 16px; box-shadow: 0 2px 10px #1c292408; }
+.card { min-width: 0; padding: 20px 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); }
 .loading-card { max-width: 720px; margin: 0 auto; padding: 32px; }
 .loading-card h1 { font-size: 21px; }
 .loading-card .btn { margin-top: 14px; }
@@ -722,3 +725,64 @@ input[type=search]::placeholder { color: #67736c; }
 .home-tools-grid > .card, .home-meta-grid > .card { margin: 0 !important; }
 .fold-row { transition: border-color .15s ease, box-shadow .15s ease; }
 .fold-row:hover { border-color: #c5d3c9; }
+
+/* === 方向 A：精品出版社 · 现代书卷风视觉体系 === */
+body { font-variant-numeric: tabular-nums; }
+.topbar { background: var(--canvas); border-bottom: 1px solid var(--line); }
+.brand b, h1, h2 { font-family: var(--serif); letter-spacing: 0.01em; }
+.brand b { font-weight: 700; color: var(--ink); }
+
+/* 开放式宣纸首屏 Hero（去白盒，与手绘插画无缝融为一体） */
+.editorial-hero {
+  display: grid; grid-template-columns: 1fr; gap: 18px; align-items: center;
+  padding: 10px 2px 26px; margin-bottom: 18px;
+  border-bottom: 2px solid var(--ink);
+  background: transparent; border-top: 0; border-left: 0; border-right: 0; border-radius: 0; box-shadow: none;
+}
+.editorial-meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 12px; }
+.editorial-seal {
+  display: inline-flex; align-items: center; padding: 2px 8px;
+  border: 1.5px solid var(--seal); border-radius: 3px;
+  color: var(--seal); background: var(--seal-soft);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+}
+.editorial-hero .intro-kicker { margin: 0; font-size: 13px; color: var(--muted); font-weight: 500; }
+.editorial-hero h1 {
+  font-size: clamp(28px, 4vw, 38px); line-height: 1.2; font-weight: 700;
+  color: var(--ink); margin: 0 0 12px;
+}
+.editorial-lead { font-size: 15.5px; line-height: 1.72; color: #2b3832; margin: 0 0 8px; }
+.editorial-hero .promise-line {
+  font-size: 14px; line-height: 1.65; color: var(--muted);
+  padding-left: 12px; border-left: 2px solid var(--seal); margin: 10px 0 14px;
+}
+.editorial-hero-actions { margin-top: 14px; }
+.editorial-hero-art { margin: 0; display: flex; justify-content: center; }
+.editorial-hero-art img {
+  display: block; width: min(100%, 340px); height: auto;
+  mix-blend-mode: multiply;
+}
+@media (min-width: 760px) {
+  .editorial-hero { grid-template-columns: minmax(0, 1.32fr) minmax(240px, 0.88fr); gap: 28px; padding: 14px 4px 30px; }
+  .editorial-hero-art img { width: 100%; max-width: 360px; }
+}
+
+/* 书卷章节分隔线：上粗墨线 + 下细线 + 朱砂点睛 */
+.home-section-head {
+  margin: 30px 0 14px; padding: 10px 2px 8px;
+  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line);
+}
+.home-section-head span {
+  font-family: var(--serif); font-size: 16.5px; font-weight: 700; color: var(--ink);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.home-section-head span::before {
+  content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--seal);
+}
+
+/* 克制精致的按钮与胶囊 */
+.btn { border-radius: 7px; }
+.btn.primary { background: var(--green); border-color: var(--green); color: #fffefa; }
+.btn.primary:hover { background: var(--green-dark); border-color: var(--green-dark); }
+.drill-chip { border-radius: 6px; }
+.drill-chip[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #fffefa; }

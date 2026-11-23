@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f6f5ef">
+  <meta name="theme-color" content="#f4f2e8">
   <meta name="xiaosimen-paid-launch-date" content="">
   <meta name="description" content="爱丽克丝中考题库：七上到九下按学期组织，早鸟自测卷先测弱项，数理化英同步章节卷一章一套，初三刷语数英物化精编模拟卷和全国各地中考真题；手机刷题自动判分，也能打印整套；小四门按年级学期练习。">
   <meta property="og:type" content="website" />
@@ -14,7 +14,10 @@
   <title>爱丽克丝中考题库 · 人教版</title>
   <link rel="icon" type="image/svg+xml" href="./assets/icons/elx-badge.svg">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=20">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="./styles.css?v=21">
   <script src="./data/daily-questions-xiaosimen.js?v=7" defer></script>
   <link rel="stylesheet" href="./referrals.css?v=3">
   <link rel="stylesheet" href="./national-exams.css?v=2">
@@ -23,7 +26,7 @@
   <script src="./national-exams.js?v=6" defer></script>
   <!-- 真题目录（早鸟卷、同步卷、小升初都靠它）和页面脚本同时下载，不用等脚本跑起来再下；版本号发布时自动填 -->
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
-  <script src="./app.js?v=25" defer></script>
+  <script src="./app.js?v=26" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
   <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).catch(function () {}); });</script>
 </head>
