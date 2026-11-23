@@ -2,6 +2,20 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Antigravity · 根治打印 undefined 隐患、升级缓存版本与优化试卷卡片选项（main）
+- 修复真题阅读与打印 undefined 及空指针异常（`national-exams.js`、`referrals.js`、`app.js`）：
+  - 彻底杜绝纯文本模式下 `${question.originalHtml}` 导致的页面大面积显示 "undefined" 问题，对 `stem`、`options`、`image`、`number`、`section`、`explanation`、`sample` 等全部字段建立防御性空值保护。
+  - 在 `national-exams.js` 中修复 `readerContent`：当试卷未配 `answerPages` 时，收起答案渲染，严格避免调用 `pageImages(paper.answerPages)` 导致 TypeError。
+  - 修复 `nationalPrint.onclick`：对原卷及配图解码增加 `.catch(() => {})` 容错，彻底杜绝单张图片解码异常或慢加载中断浏览器打印调用的问题。
+  - 修复 `referrals.js` 及 `app.js` 打印渲染中 `item.score` 为空时输出 `undefined分` 的模板字符串隐患，所有分值标签规范安全输出。
+- 升级 Service Worker 缓存版本与前端资源版本号（`sw.js`、`index.html`）：
+  - `sw.js` 缓存升级为 `const CACHE = "elx-quiz-v2";`，自动在激活时清空旧缓存 `elx-quiz-v1`，避免用户本地持续受 Service Worker 800ms 超时回退机制影响加载旧版有缺陷的 `national-exams.js` 与目录。
+  - 更新 `index.html` 中引用静态脚本版本（`national-exams.js?v=2`、`app.js?v=15`、`referrals.js?v=6` 等），保障端侧立时生效。
+- 优化试卷卡片操作按钮与描述文案（`national-exams.js`）：
+  - 针对无原卷扫描件的卷子，操作按钮文案由原先容易误解的「查看已整理题」优化为更加规范的「查看试题 / 答案」；有原卷扫描件的统一显示「查看原卷 / 答案」（或「查看原卷」）。
+  - 完善 `paperCard` 描述生成逻辑，避免 `images` 未定义时输出 `完整试题 undefined 页` 的边界情况。
+- 验证：`node -c national-exams.js referrals.js app.js sw.js` 语法检查通过；`node tests/validate.mjs` 2453 道题 + 681 填空全量校验通过；`stage_pages_release.mjs` 构建演练通过。
+
 ## 2026-11-23 · Antigravity · 修复答案空白缺陷并补全 12 套英语真题原卷试题与官方答案（main）
 - 修复纯文本阅读器主观题答案空白与排版缺陷（`national-exams.js`）：
   - 针对无原卷图时降级纯文本阅读器（`readerContent`），原逻辑直接读取 `question.answer.join('、')`，导致所有书面表达、问答等主观题渲染为空白（因为主观题在 `question.sample` 和 `question.points` 里存储答案）。

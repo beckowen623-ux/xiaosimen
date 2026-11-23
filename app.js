@@ -1464,7 +1464,7 @@ function paperFromQuestions(title, questions, note = '') {
       item = { type: 'blank', stem: String(q.stem || '').replace(/^第 \d+ 题：/, ''), answer: q.answer, explanation: q.explanation || '' };
     } else {
       const kind = q.earlybird ? q.section : (q.meta || q.section);
-      item = { type: 'essay', kind, tag, material: q.material || '', stem: q.stem, score: q.score, points: (q.points || []).map(p => ({ text: p.text, score: p.score })), sample: q.sample, explanation: q.explanation || '', source: q.source || '' };
+      item = { type: 'essay', kind, tag, material: q.material || '', stem: q.stem || '', score: q.score ?? (q.paperScore ?? null), points: (q.points || []).map(p => ({ text: p?.text || '', score: p?.score ?? null })), sample: q.sample || '', explanation: q.explanation || '', source: q.source || '' };
     }
     if (passage) item.passage = passage;
     if (q.image) item.image = typeof q.image === 'string' ? q.image : `./data/figures/${encodeURIComponent(q.id)}.jpg`;

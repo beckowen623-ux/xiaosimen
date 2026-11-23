@@ -584,9 +584,10 @@
           answers.push(`<li><b>${n}. ${esc(item.answer.join("；"))}</b> ${esc(item.explanation)}</li>`);
           return `<li class="sprint-q">${lead}<p>${n}. ${esc(item.stem)}</p></li>`;
         }
-        const points = item.points.map(p => `${esc(p.text)}（${p.score}分）`).join("；");
+        const points = (item.points || []).map(p => `${esc(p?.text || '')}${p?.score != null ? `（${p.score}分）` : ''}`).join("；");
         answers.push(`<li><b>${n}. 得分点：</b>${points}${item.sample ? `<br>参考答案：${esc(item.sample)}` : ""}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</li>`);
-        return `<li class="sprint-q">${lead}<p>${n}. ${esc(item.kind || "主观题")}（${item.score}分）${tag}</p>${item.material ? `<blockquote>${esc(item.material)}</blockquote>` : ""}<p>${esc(item.stem)}</p><div class="sprint-lines"></div></li>`;
+        const scoreLabel = item.score != null ? `（${item.score}分）` : '';
+        return `<li class="sprint-q">${lead}<p>${n}. ${esc(item.kind || "主观题")}${scoreLabel}${tag}</p>${item.material ? `<blockquote>${esc(item.material)}</blockquote>` : ""}<p>${esc(item.stem)}</p><div class="sprint-lines"></div></li>`;
       }).join("");
       return `<section><h3>${esc(section.title)}</h3>${section.note ? `<p class="sprint-note">${esc(section.note)}</p>` : ""}<ol class="sprint-list">${items}</ol></section>`;
     }).join("");
@@ -610,7 +611,7 @@
         const s = st[n] || {};
         const tag = item.tag ? `<span class="sprint-tag${/变式/.test(item.tag) ? " hot" : ""}">${esc(item.tag)}</span>` : "";
         const reveal = s.done ? `<div class="sp-explain">${item.type === "essay"
-          ? `<b>得分点：</b>${item.points.map(p => `${esc(p.text)}（${p.score}分）`).join("；")}${item.sample ? `<br><b>参考答案：</b>${esc(item.sample)}` : ""}`
+          ? `<b>得分点：</b>${(item.points || []).map(p => `${esc(p?.text || '')}${p?.score != null ? `（${p.score}分）` : ''}`).join("；")}${item.sample ? `<br><b>参考答案：</b>${esc(item.sample)}` : ""}`
           : `<b>答案：${esc(Array.isArray(item.answer) ? item.answer.join("；") : item.answer)}</b> ${esc(item.explanation || "")}`}${item.source ? `<small>（${esc(item.source)}）</small>` : ""}</div>` : "";
         const mark = s.done && s.correct !== undefined ? `<span class="sp-mark ${s.correct ? "ok" : "bad"}">${s.correct ? "✓ 答对" : "✗ 答错"}</span>` : "";
         let control = "";
@@ -635,7 +636,8 @@
           control = `<textarea class="sp-text" rows="4" placeholder="先自己写，再对照得分点" data-text="${n}">${esc(s.text || "")}</textarea>${s.done ? "" : `<button type="button" class="sp-submit" data-reveal="${n}">对照得分点</button>`}`;
         }
         const material = item.material ? `<blockquote>${esc(item.material)}</blockquote>` : "";
-        const head = item.type === "essay" ? `${n}. ${esc(item.kind || "主观题")}（${item.score}分）${tag}${material}<br>${esc(item.stem)}` : `${n}. ${esc(item.stem)} ${item.multi ? '<span class="sprint-tag">多选</span>' : ""}${tag}`;
+        const essayHead = `${n}. ${esc(item.kind || "主观题")}${item.score != null ? `（${item.score}分）` : ''}${tag}${material}<br>${esc(item.stem)}`;
+        const head = item.type === "essay" ? essayHead : `${n}. ${esc(item.stem)} ${item.multi ? '<span class="sprint-tag">多选</span>' : ""}${tag}`;
         const lead = (item.passage ? `<blockquote class="sprint-passage">${esc(item.passage).replace(/\n/g, "<br>")}</blockquote>` : "") +
           (item.image ? `<img class="sprint-fig" src="${esc(item.image)}" alt="题目配图">` : "");
         return `<li class="sprint-q">${lead}<p>${head} ${mark}</p>${control}${reveal}</li>`;

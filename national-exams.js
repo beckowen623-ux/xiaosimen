@@ -124,17 +124,19 @@
   }
 
   function paperCard(paper) {
-    const questionCount = paper.questionCount;
-    const images = paper.pages?.length;
+    const questionCount = paper.questionCount || 0;
+    const images = paper.pages?.length || 0;
+    const ansImages = paper.answerPages?.length || 0;
     const description = questionCount
-      ? `${paper.description} · ${questionCount} 道已整理题`
-      : paper.answerPages?.length ? `完整试题 ${images} 页 · 答案 ${paper.answerPages.length} 页` : paper.description || `完整试题 ${images} 页`;
+      ? `${paper.description || '已录入真题'} · ${questionCount} 道已整理题`
+      : ansImages ? `完整试题 ${images} 页 · 答案 ${ansImages} 页` : paper.description || (images ? `完整试题 ${images} 页` : '已整理真题');
+    const readBtnLabel = images ? (ansImages ? '查看原卷 / 答案' : '查看原卷') : '查看试题 / 答案';
     return `<article class="card national-paper-card">
       <div class="national-paper-meta"><span>${escape(paper.region)}</span><span>${paper.year}</span></div>
       <h2>${escape(paper.title)}</h2><p class="muted">${escape(description)}</p>
       <div class="national-actions">
         ${questionCount ? `<button class="btn primary" type="button" data-start="${paper.id}">${state.mode === 'short' ? (paper.subject === 'english' ? '阅读 1 篇' : '练 5 题') : app.hasAccess() || app.paperOpen?.(paper) ? '按原题顺序练' : '手机做整卷（免费 1 套）'}</button>` : ''}
-        <button class="btn ${questionCount ? '' : 'primary'}" type="button" data-read="${paper.id}">${images ? '查看原卷 / 答案' : '查看已整理题'}</button>
+        <button class="btn ${questionCount ? '' : 'primary'}" type="button" data-read="${paper.id}">${readBtnLabel}</button>
       </div>
     </article>`;
   }
@@ -250,31 +252,40 @@
   }
 
   function formatQuestionBody(question) {
-    if (question.originalHtml) return question.originalHtml;
+    if (question.originalHtml && typeof question.originalHtml === 'string' && question.originalHtml !== 'undefined') {
+      return question.originalHtml;
+    }
     const parts = [];
-    if (question.stem) {
-      parts.push(`<p><strong>第 ${question.number || ''} 题${question.section ? ` · ${escape(question.section)}` : ''}</strong> ${escape(question.stem)}</p>`);
+    if (question.stem || question.number) {
+      parts.push(`<p><strong>第 ${question.number || ''} 题${question.section ? ` · ${escape(question.section)}` : ''}</strong> ${escape(question.stem || '')}</p>`);
     }
     if (question.options?.length) {
       parts.push(`<div class="national-options" style="margin: 8px 0 12px 16px;">${question.options.map(opt =>
-        `<div style="margin: 4px 0;"><b>${escape(opt.key)}.</b> ${escape(opt.text)}</div>`).join('')}</div>`);
+        `<div style="margin: 4px 0;"><b>${escape(opt?.key || '')}.</b> ${escape(opt?.text || '')}</div>`).join('')}</div>`);
     }
     if (question.image) {
-      parts.push(`<figure><img src="${escape(question.image)}" alt="第 ${question.number} 题配图" loading="lazy"></figure>`);
+      parts.push(`<figure><img src="${escape(question.image)}" alt="第 ${question.number || ''} 题配图" loading="lazy"></figure>`);
     }
     return parts.join('');
   }
 
   function formatQuestionAnswer(question) {
     const ansParts = [];
-    const ansText = (question.answer && question.answer.length) ? question.answer.join('、') : (question.sample || '');
-    if (ansText) {
+    let ansText = '';
+    if (question.answer && question.answer.length) {
+      ansText = question.type === 'judge'
+        ? (question.answer[0] === 'true' ? '正确（True）' : '错误（False）')
+        : question.answer.join('、');
+    } else if (question.sample) {
+      ansText = question.sample;
+    }
+    if (ansText && ansText !== 'undefined') {
       ansParts.push(`<strong>答案 ${escape(ansText)}</strong>`);
     }
     if (question.points?.length) {
-      ansParts.push(`<div style="margin: 6px 0; font-size: 0.95em;"><strong>评分标准：</strong><ul style="margin: 4px 0 4px 20px; padding: 0;">${question.points.map(p => `<li>${escape(p.text)} (${p.score}分)</li>`).join('')}</ul></div>`);
+      ansParts.push(`<div style="margin: 6px 0; font-size: 0.95em;"><strong>评分标准：</strong><ul style="margin: 4px 0 4px 20px; padding: 0;">${question.points.map(p => `<li>${escape(p?.text || '')}${p?.score != null ? ` (${p.score}分)` : ''}</li>`).join('')}</ul></div>`);
     }
-    if (question.explanation) {
+    if (question.explanation && question.explanation !== 'undefined') {
       ansParts.push(`<p style="margin: 6px 0;">${escape(question.explanation).replace(/\n/g, '<br>')}</p>`);
     }
     if (!ansParts.length) return '';
@@ -283,11 +294,13 @@
 
   function readerContent(paper, questions) {
     if (paper.pages?.length) {
-      const pageImages = (paths, title) => `<section class="national-original"><h2>${title}</h2>${paths.map((url, i) =>
+      const pageImages = (paths, title) => `<section class="national-original"><h2>${title}</h2>${(paths || []).map((url, i) =>
         `<figure><img src="${escape(url)}" alt="${escape(paper.title)}${title}第 ${i + 1} 页" loading="lazy" decoding="async"><figcaption>${title} · 第 ${i + 1} 页</figcaption></figure>`).join('')}</section>`;
-      return pageImages(paper.pages, '原卷试题') + (state.showAnswers ? pageImages(paper.answerPages, '参考答案') : '');
+      const ansSection = (state.showAnswers && paper.answerPages?.length) ? pageImages(paper.answerPages, '参考答案') : '';
+      return pageImages(paper.pages, '原卷试题') + ansSection;
     }
-    return `<section class="national-prepared"><p class="muted">以下为已核对的${escape(paper.description)}，共 ${questions.length} 道。</p>${questions.map((question, i) =>
+    const desc = paper.description || '已核对试题';
+    return `<section class="national-prepared"><p class="muted">以下为${escape(desc)}，共 ${questions.length} 道。</p>${questions.map((question, i) =>
       `<article class="national-source-question">${question.materialHtml && (i === 0 || questions[i - 1].groupId !== question.groupId) ? `<div class="national-reading">${question.materialHtml}</div>` : ''}${formatQuestionBody(question)}
       ${state.showAnswers ? formatQuestionAnswer(question) : ''}</article>`).join('')}</section>`;
   }
@@ -313,7 +326,7 @@
           try {
             const images = [...document.querySelectorAll('#nationalPrintArea img')];
             images.forEach(img => { img.loading = 'eager'; });
-            await Promise.all(images.map(img => img.decode()));
+            await Promise.all(images.map(img => img.decode().catch(() => {})));
             if (state.paper?.id !== id || !opened) return;
             document.body.classList.add('national-printing');
             // 微信等 App 里打印没反应：共享脚本会提示换浏览器打开
