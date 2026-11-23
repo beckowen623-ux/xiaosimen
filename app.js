@@ -2262,25 +2262,37 @@ function wireSubjectSections() {
   box.querySelectorAll('[data-claude-phone]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePhone, 'phone'); }));
   box.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
 }
+// 原地重绘首页：记住当前卡片在视口中的位置，切换学期或科目后绝不跳屏
+function rerenderHomeInPlace(anchorId) {
+  const prevY = window.scrollY;
+  const beforeEl = anchorId ? byId(anchorId) : null;
+  const beforeTop = beforeEl ? beforeEl.getBoundingClientRect().top : null;
+  renderHome();
+  const afterEl = anchorId ? byId(anchorId) : null;
+  if (afterEl && beforeTop !== null) {
+    window.scrollBy(0, afterEl.getBoundingClientRect().top - beforeTop);
+  } else {
+    window.scrollTo(0, prevY);
+  }
+}
 // 首屏几张卡（学期、早鸟卷、小升初、同步卷）的事件：完整首页和轻首页共用
 function wireTopCards() {
   const sync = byId('sync');
   if (sync) {
     sync.querySelectorAll('[data-claude-phone]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePhone, 'phone'); }));
     sync.querySelectorAll('[data-claude-print]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePrint, 'print'); }));
-    sync.querySelectorAll('[data-sync-subject]').forEach(b => b.addEventListener('click', () => { state.syncSubject = b.dataset.syncSubject; renderHome(); byId('sync')?.scrollIntoView({ block: 'start' }); }));
+    sync.querySelectorAll('[data-sync-subject]').forEach(b => b.addEventListener('click', () => { state.syncSubject = b.dataset.syncSubject; rerenderHomeInPlace('sync'); }));
     sync.querySelector('[data-sync-xsc]')?.addEventListener('click', () => { state.xscOpen = true; renderHome(); byId('xsc')?.scrollIntoView({ block: 'start' }); });
     byId('finalDate')?.addEventListener('change', e => {
       const value = e.target.value;
       if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return;
       try { localStorage.setItem('x4m-final-' + finalExamDate(state.stage).half, value); } catch {}
-      renderHome();
-      byId('sync')?.scrollIntoView({ block: 'start' });
+      rerenderHomeInPlace('sync');
     });
   }
-  view.querySelectorAll('[data-xsc-subject]').forEach(b => b.addEventListener('click', () => { state.xscSubject = b.dataset.xscSubject; state.xscOpen = true; renderHome(); byId('xsc')?.scrollIntoView({ block: 'start' }); }));
+  view.querySelectorAll('[data-xsc-subject]').forEach(b => b.addEventListener('click', () => { state.xscSubject = b.dataset.xscSubject; state.xscOpen = true; rerenderHomeInPlace('xsc'); }));
   byId('xsc')?.addEventListener('toggle', event => { state.xscOpen = event.currentTarget.open; });
-  view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); renderHome(); requestAnimationFrame(() => byId('stageBarTitle')?.scrollIntoView({ block: 'start' })); }));
+  view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); rerenderHomeInPlace('stageBarTitle'); }));
   view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void earlybirdAction(b.dataset.earlybird, b.closest('#xsc') ? 'xscMark' : 'ebMark'); }));
   view.querySelectorAll('[data-eb-mode]').forEach(b => b.addEventListener('click', () => setEbMode(b.dataset.ebMode)));
 }
@@ -2331,10 +2343,9 @@ function wireHome() {
   wireTopCards();
   view.querySelectorAll('[data-unit-subject]').forEach(b => b.addEventListener('click', async () => {
     state.unitSubject = b.dataset.unitSubject;
-    renderHome();
+    rerenderHomeInPlace('unitCard');
     await ensureUnitPool(state.unitSubject).catch(() => {});
-    renderHome();
-    byId('unitCard')?.scrollIntoView({ block: 'start' });
+    rerenderHomeInPlace('unitCard');
   }));
   view.querySelectorAll('[data-unit]').forEach(b => b.addEventListener('click', () => { void startUnit(b.dataset.unit); }));
   byId('analysisBtn')?.addEventListener('click', () => { void buildAnalysis(); });
@@ -2352,13 +2363,13 @@ function wireHome() {
   view.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => { void startPractice(btn.dataset.mode); }));
   view.querySelectorAll('[data-drill]').forEach(btn => btn.addEventListener('click', () => {
     state.drillSubject = btn.dataset.drill;
-    renderHome();
-    view.querySelector(`[data-drill="${state.drillSubject}"]`)?.focus();
+    rerenderHomeInPlace('x4mGroup');
+    view.querySelector(`[data-drill="${state.drillSubject}"]`)?.focus({ preventScroll: true });
   }));
   view.querySelectorAll('[data-weekly-subject]').forEach(btn => btn.addEventListener('click', async () => {
     state.weeklySubject = btn.dataset.weeklySubject;
     try { await buildWeekly(state.weeklySubject); } catch { /* 网络不好时仍可切换 */ }
-    renderHome();
+    rerenderHomeInPlace('weeklyCard');
   }));
   view.querySelectorAll('[data-weekly]').forEach(btn => btn.addEventListener('click', () => { void runWeekly(btn.dataset.weekly); }));
   view.querySelectorAll('[data-national-open]').forEach(btn => btn.addEventListener('click', () => {

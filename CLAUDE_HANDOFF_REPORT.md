@@ -257,3 +257,12 @@ git push origin main
 1. `app.js`：`renderHome()` 重组为三大清晰分区（`.home-section-head`）与双列折叠网格（`.home-tools-grid` / `.home-meta-grid`），清理标题冗余彩色 Emoji，100% 保留原有功能与事件绑定。
 2. `styles.css`：版心收紧至 `940px`，细化卡片边框与阴影，新增桌面端双列工具网格（`details[open]` 自动跨列全宽）。
 3. `tests/smoke.mjs`、`sw.js`、`index.html`、`CHANGELOG.md`：冒烟检查扩至 38 项，缓存升级至 `elx-quiz-v11`，资源版本更新为 `styles.css?v=19`、`app.js?v=24`。
+
+---
+
+## 十六、 根治点击展开卡片与切换科目/学期跳屏问题 (2026-11-23 · Gemini · 分支 `main`)
+
+### 本次改动文件清单
+1. `styles.css`：移除 `.home-tools-grid` / `.home-meta-grid` 在 `details[open]` 时的跨列 `grid-column: 1 / -1` 规则，改为稳定单列折叠堆叠，消除点击右列卡片时的跨行位移。
+2. `app.js`：新增 `rerenderHomeInPlace(anchorId)`，替换切换学期/科目/日期后的 `renderHome() + scrollIntoView` 强跳逻辑，点任何芯片卡片都保持在原位不动。
+3. `tests/smoke.mjs`、`sw.js`、`index.html`、`CHANGELOG.md`：冒烟检查 38/38 通过，缓存升级至 `elx-quiz-v12`，资源版本更新为 `styles.css?v=20`、`app.js?v=25`。

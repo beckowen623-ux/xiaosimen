@@ -2,6 +2,14 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 根治点击卡片与切换科目/学期时画面跳屏问题（main）
+- 根治桌面端展开折叠卡片跨列跳位（`styles.css`）：
+  - 移除 `.home-tools-grid` / `.home-meta-grid` 的桌面端 2 列切换 `grid-column: 1 / -1` 规则，改为稳定单列折叠堆叠（保留三大分区与 `940px` 舒适版心），点开任意 `<details>` 仅原地向下展开，不再把相邻卡片挤飞。
+- 根治切换学期、同步卷科目、小升初科目、按考点科目、小四门科目、本周一卷科目时整页跳屏（`app.js`）：
+  - 新增 `rerenderHomeInPlace(anchorId)`：重绘前记录当前模块相对视口顶部的精确坐标，重绘后即时对齐，并给 `.focus()` 加上 `{ preventScroll: true }`，彻底消除 `renderHome() + scrollIntoView` 造成的反复跳屏。
+- 更新缓存与版本（`sw.js`、`index.html`、`tests/smoke.mjs`）：`sw.js` 升级至 `elx-quiz-v12`，`index.html` 更新为 `styles.css?v=20`、`app.js?v=25`。
+- 验证：`node tests/smoke.mjs`（38/38 通过）与 `node tests/validate.mjs` 全量校验通过。
+
 ## 2026-11-23 · Gemini · 首页视觉降噪与三大区块重构：收紧版心、桌面端双列工具网格、去冗余 Emoji（main）
 - 重构首页信息架构为三大清晰板块（`app.js`、`styles.css`）：
   - 用 `.home-section-head` 细线标题将原先 16 张平铺卡片归拢为「本学期核心练习」「复习与提分工具」「完整版权益与说明」三大区块，主次一眼分明。

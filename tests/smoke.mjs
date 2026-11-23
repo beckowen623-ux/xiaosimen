@@ -74,7 +74,7 @@ check(appJs.includes('access-value-line') && appJs.includes('开通完整版 ¥1
 check(appJs.includes('async function openScorePoster(') && read('functions/api/_stats.js').includes('"score_poster"'), '成绩单裂变海报与埋点存在', '缺少成绩单裂变海报或 score_poster 埋点');
 check(indexHtml.includes('id="claimConfirmDialog"') && appJs.includes('function confirmFreeClaim('), '免费整卷领取使用站内弹窗避免 WebView 拦截', '缺少 #claimConfirmDialog 或 confirmFreeClaim');
 check(appJs.includes('data-mark-poster') && appJs.includes('data-mark-upsell'), '纸上登记完成后含弱项处方、海报与转化引导', 'showEarlybirdMark 缺少海报或转化引导');
-check(appJs.includes('home-section-head') && appJs.includes('home-tools-grid'), '首页三大分区与双列工具网格结构完整', 'app.js 缺少首页分区与双列网格结构');
+check(appJs.includes('home-section-head') && appJs.includes('function rerenderHomeInPlace('), '首页三大分区与防跳屏原地重绘逻辑完整', 'app.js 缺少首页分区或 rerenderHomeInPlace');
 check(!read('national-exams.js').includes('app.hideSearch()'), '全国真题页保留顶栏「找题」入口', 'national-exams.js 不应隐藏顶栏找题入口');
 
 // 5. 后端规则与风控护栏防回归
