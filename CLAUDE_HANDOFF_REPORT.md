@@ -180,3 +180,15 @@ git push origin main
    - 更新 `DEVICE_LIMIT` 提示为 3 个浏览器；优化 `trialUpsellHTML()` 文案。
    - 早鸟自测错题处方区（`.eb-rx`）新增未付费用户的 `#ebUpsellBtn` 转化入口。
 4. `sw.js`、`AGENTS.md`、`CHANGELOG.md`：缓存升级至 `elx-quiz-v5`，同步更新协作规则与变更记录。
+
+---
+
+## 九、 完整版专属 D1 云端错题本同步与 SW 刷新优化 (2026-11-23 · Gemini · 分支 `main`)
+
+> **后续接手 AI 请注意**：已新增 `/api/access/backup`（自动 `CREATE TABLE IF NOT EXISTS progress_backups`），按兑换码 `code_id` 实现 3 台设备跨端错题本与进度同步；`sw.js` 的 `PAGE_TIMEOUT_MS` 已调至 `1800ms` 改善国内首刷拿新版体验。
+
+### 本次改动文件清单
+1. `functions/_middleware.js`：新增 `GET/POST /api/access/backup`（`accessSession` 鉴权、自动建表 `progress_backups`、450 KB 大小与 JSON 校验）。
+2. `index.html` & `styles.css`：`#progressDialog` 新增 `.cloud-sync-box` 云端同步区（含未付费转化入口）；`#unlockDialog` 保障条补充「云端错题本同步」；资源版本更新为 `styles.css?v=15`、`app.js?v=19`。
+3. `app.js`：实现 `refreshCloudSyncUI()`、上传/读取云端备份事件，恢复流程复用 `readProgressBackup()` 与现有二次确认导入框。
+4. `sw.js`、`CHANGELOG.md`：`CACHE` 升级至 `elx-quiz-v6`，`PAGE_TIMEOUT_MS = 1800`，同步更新变更日志。

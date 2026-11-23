@@ -14,7 +14,7 @@
   <title>爱丽克丝中考题库 · 人教版</title>
   <link rel="icon" type="image/svg+xml" href="./assets/icons/elx-badge.svg">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=14">
+  <link rel="stylesheet" href="./styles.css?v=15">
   <script src="./data/daily-questions-xiaosimen.js?v=7" defer></script>
   <link rel="stylesheet" href="./referrals.css?v=3">
   <link rel="stylesheet" href="./national-exams.css?v=2">
@@ -23,7 +23,7 @@
   <script src="./national-exams.js?v=4" defer></script>
   <!-- 真题目录（早鸟卷、同步卷、小升初都靠它）和页面脚本同时下载，不用等脚本跑起来再下；版本号发布时自动填 -->
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
-  <script src="./app.js?v=18" defer></script>
+  <script src="./app.js?v=19" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
   <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });</script>
 </head>
@@ -61,9 +61,22 @@
       <h2 id="progressTitle">进度管理</h2>
       <form method="dialog"><button class="btn text-button" aria-label="关闭进度管理">关闭</button></form>
     </div>
-    <p class="muted">备份包含答题记录、错题、收藏、打卡积分和练习位置。文件只在本机处理。</p>
+    <p class="muted">备份包含答题记录、错题、收藏、打卡积分和练习位置。</p>
+    <section class="cloud-sync-box" id="cloudSyncBox" aria-label="云端错题本同步">
+      <div class="cloud-sync-head"><b>☁️ 云端错题本同步</b><span class="offer-badge">完整版专属</span></div>
+      <p class="muted" id="cloudSyncDesc">换手机或清理微信缓存怕丢错题本？完整版支持按兑换码一键云端备份与跨设备恢复（3 台设备互通）。</p>
+      <div class="dialog-actions" id="cloudPaidActions" hidden>
+        <button class="btn primary" id="cloudSaveBtn" type="button">上传到云端</button>
+        <button class="btn" id="cloudLoadBtn" type="button">从云端恢复</button>
+      </div>
+      <div class="dialog-actions" id="cloudLockedActions">
+        <button class="btn primary" id="cloudUnlockBtn" type="button">解锁云端同步（¥19.9）</button>
+      </div>
+      <p id="cloudSyncStatus" class="muted" role="status"></p>
+    </section>
+    <p class="muted local-backup-label">本机文件备份（免费可用，文件只在本机处理）：</p>
     <div class="dialog-actions">
-      <button class="btn primary" id="exportBtn" type="button">下载备份</button>
+      <button class="btn" id="exportBtn" type="button">下载备份</button>
       <button class="btn" id="importBtn" type="button">选择备份文件</button>
       <input type="file" id="importFile" accept=".json,application/json" hidden>
     </div>
@@ -83,7 +96,7 @@
     <button class="btn text-button redeem-jump" type="button" id="redeemJump">已经买了？直接填兑换码 ↓</button>
     <ul class="unlock-trust" aria-label="购买保障">
       <li>✓ 一次买断，初一用到初三</li>
-      <li>✓ 3 台设备共用（手机/平板/电脑打印）</li>
+      <li>✓ 3 台设备共用 + 云端错题本同步</li>
       <li>✓ 后续新卷免费更新 · 无法使用全额退</li>
     </ul>
     <div class="access-offers">

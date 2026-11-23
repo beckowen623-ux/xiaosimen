@@ -701,3 +701,8 @@ input[type=search]::placeholder { color: #67736c; }
 .price-rules-fold { margin: 10px 0; font-size: 14px; }
 .price-rules-fold summary { cursor: pointer; font-weight: 600; padding: 4px 0; color: var(--muted); }
 .eb-rx-upsell { margin-top: 10px; padding-top: 10px; border-top: 1px dashed #d9e0d7; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; font-size: 13.5px; }
+
+.cloud-sync-box { margin: 12px 0 14px; padding: 12px 14px; border-radius: 12px; background: #f2f8f3; border: 1px solid #cce3d0; }
+.cloud-sync-head { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; font-size: 15px; color: #1f5130; }
+.cloud-sync-box p { margin: 4px 0 0; font-size: 13.5px; line-height: 1.55; }
+.local-backup-label { margin: 10px 0 0; font-size: 13.5px; }

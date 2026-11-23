@@ -2,6 +2,15 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 上线完整版专属 D1 云端错题本同步，并优化 Service Worker 发版刷新超时（main）
+- 上线「云端错题本与进度同步」（完整版专属付费卖点）（`functions/_middleware.js`、`index.html`、`styles.css`、`app.js`）：
+  - 后端新增 `GET/POST /api/access/backup`，严格校验 `accessSession`（未付费返回 `401`），自动建表 `progress_backups (code_id, site, payload, updated_at)`，按兑换码 `code_id` 存储 JSON 备份（上限 450 KB），无需手动执行数据库迁移。
+  - 顶部「进度管理」弹窗新增「☁️ 云端错题本同步（完整版专属）」模块：已付费用户可一键「上传到云端 / 从云端恢复」（复用现有 `createProgressBackup` / `readProgressBackup` 并二次确认防止误覆盖）；未付费用户展示换设备/清微信缓存防丢说明与「解锁云端同步（¥19.9）」转化入口。
+  - 购买弹窗安心保障条同步突出「3 台设备共用 + 云端错题本同步」。
+- 优化 Service Worker 发版首刷命中率（`sw.js`、`index.html`）：
+  - `PAGE_TIMEOUT_MS` 由 `800` 调整为 `1800`（1.8 秒），减少国内访问 Cloudflare Pages 时发版后需刷新两次才能看到新版的问题；缓存升级至 `elx-quiz-v6`，静态资源版本更新为 `styles.css?v=15`、`app.js?v=19`。
+- 验证：`node -c app.js sw.js`、`node --check --input-type=module < functions/_middleware.js` 及 `node tests/validate.mjs` 全量校验通过。
+
 ## 2026-11-23 · Gemini · 付费转化体验打磨：购买弹窗信息重构、设备上限放宽至 3 台、早鸟诊断转化衔接（main）
 - 放宽兑换码设备激活上限至 3 台（`functions/_middleware.js`、`index.html`、`app.js`、`AGENTS.md`）：
   - `MAX_DEVICES` 由 `2` 调整为 `3`，覆盖家庭高频“孩子手机 + 平板 + 家长电脑打印”三端场景，并同步更新 `DEVICE_LIMIT` 提示与购买弹窗 FAQ 文案。

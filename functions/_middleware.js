@@ -13,7 +13,7 @@ const FULL_SCOPE = "full";
 const MAX_DEVICES = 3;
 const PUBLIC_API_PATHS = new Set(["/api/access/redeem", "/api/access/status", "/api/access/referral",
   "/api/access/reward-choice", "/api/access/sprint", "/api/access/sprint-preview", "/api/access/cash-qr", "/api/access/cash-proof", "/api/access/friend-offer", "/api/access/upload", "/api/access/my-uploads",
-  "/api/access/free-status", "/api/access/free-use"]);
+  "/api/access/free-status", "/api/access/free-use", "/api/access/backup"]);
 const MAX_REDEEM_FAILURES = 20;
 const FAILURE_WINDOW_MS = 15 * 60 * 1000;
 
@@ -33,6 +33,7 @@ export async function onRequest(context) {
     if (url.pathname === "/api/access/friend-offer") return await friendOffer(context);
     if (url.pathname === "/api/access/free-status") return await freeStatus(context);
     if (url.pathname === "/api/access/free-use") return await freeUse(context);
+    if (url.pathname === "/api/access/backup") return await progressBackup(context);
     if (url.pathname === "/api/access/upload" || url.pathname === "/api/access/my-uploads") {
       if (!context.env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
       const row = await accessSession(context);
@@ -367,4 +368,43 @@ function json(data, status = 200) {
       "Cache-Control": "no-store",
     },
   });
+}
+
+// ---- 完整版云端错题本与进度同步（按兑换码 code_id 存储，3 台设备互通） ----
+const MAX_BACKUP_BYTES = 450 * 1024;
+async function ensureBackupTable(DB) {
+  await DB.prepare(
+    "CREATE TABLE IF NOT EXISTS progress_backups (" +
+    "code_id INTEGER NOT NULL, site TEXT NOT NULL, payload TEXT NOT NULL, updated_at TEXT NOT NULL, " +
+    "PRIMARY KEY (code_id, site))"
+  ).run();
+}
+async function progressBackup(context) {
+  const { request, env } = context;
+  if (!env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
+  const row = await accessSession(context);
+  if (!row) return json({ ok: false, reason: "UNAUTHENTICATED", message: "开通完整版后可使用云端错题本同步。" }, 401);
+  await ensureBackupTable(env.DB);
+  if (request.method === "GET") {
+    const saved = await env.DB.prepare(
+      "SELECT payload, updated_at FROM progress_backups WHERE code_id = ? AND site = ?"
+    ).bind(row.id, SITE).first();
+    if (!saved) return json({ ok: true, hasBackup: false });
+    return json({ ok: true, hasBackup: true, updatedAt: saved.updated_at, payload: saved.payload });
+  }
+  if (request.method === "POST") {
+    const body = await request.json().catch(() => ({}));
+    const payload = typeof body?.payload === "string" ? body.payload : "";
+    if (!payload || payload.length > MAX_BACKUP_BYTES) {
+      return json({ ok: false, reason: "INVALID_PAYLOAD", message: "备份数据为空或超出 450 KB 上限。" }, 400);
+    }
+    try { JSON.parse(payload); } catch { return json({ ok: false, reason: "INVALID_JSON" }, 400); }
+    const now = new Date().toISOString();
+    await env.DB.prepare(
+      "INSERT INTO progress_backups (code_id, site, payload, updated_at) VALUES (?, ?, ?, ?) " +
+      "ON CONFLICT(code_id, site) DO UPDATE SET payload = excluded.payload, updated_at = excluded.updated_at"
+    ).bind(row.id, SITE, payload, now).run();
+    return json({ ok: true, updatedAt: now });
+  }
+  return json({ ok: false }, 405);
 }

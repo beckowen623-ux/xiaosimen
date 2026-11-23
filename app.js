@@ -3124,7 +3124,90 @@ function showImportMessage(message = '', preview = false) {
   byId('importMessage').textContent = message;
   byId('importPreview').hidden = !preview;
 }
-byId('progressButton').addEventListener('click', () => progressDialog.showModal());
+function formatCloudTime(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  const p = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+async function refreshCloudSyncUI() {
+  const paidBox = byId('cloudPaidActions');
+  const lockBox = byId('cloudLockedActions');
+  const statusEl = byId('cloudSyncStatus');
+  if (!paidBox || !lockBox || !statusEl) return;
+  paidBox.hidden = !paidAccess;
+  lockBox.hidden = paidAccess;
+  statusEl.textContent = '';
+  if (!paidAccess) return;
+  statusEl.textContent = '正在检查云端备份…';
+  try {
+    const res = await fetch('/api/access/backup', { cache: 'no-store' });
+    const data = await res.json();
+    if (!progressDialog.open) return;
+    if (res.ok && data.ok) {
+      statusEl.textContent = data.hasBackup ? `上次云端备份：${formatCloudTime(data.updatedAt)}` : '还没有云端备份，点「上传到云端」即可保存当前进度。';
+    } else {
+      statusEl.textContent = '云端状态暂不可用，仍可使用下方本机文件备份。';
+    }
+  } catch {
+    if (progressDialog.open) statusEl.textContent = '网络不太稳，稍后再试或先用本机文件备份。';
+  }
+}
+byId('cloudUnlockBtn')?.addEventListener('click', () => {
+  progressDialog.close();
+  openUnlock('云端错题本同步与 3 台设备跨端恢复属于完整版（¥19.9 一次买断，换手机或清微信缓存也不丢错题）。');
+});
+byId('cloudSaveBtn')?.addEventListener('click', async () => {
+  const btn = byId('cloudSaveBtn');
+  const statusEl = byId('cloudSyncStatus');
+  btn.disabled = true;
+  statusEl.textContent = '正在上传到云端…';
+  try {
+    const payload = JSON.stringify(createProgressBackup());
+    const res = await fetch('/api/access/backup', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ payload }),
+    });
+    const data = await res.json();
+    if (res.ok && data.ok) {
+      statusEl.textContent = `已同步到云端（${formatCloudTime(data.updatedAt)}），在另一台设备登录同一兑换码即可恢复。`;
+      toast('学习进度与错题本已同步到云端。');
+    } else {
+      statusEl.textContent = data.message || '上传失败，请稍后重试。';
+    }
+  } catch {
+    statusEl.textContent = '网络异常，上传失败，请稍后重试。';
+  } finally {
+    btn.disabled = false;
+  }
+});
+byId('cloudLoadBtn')?.addEventListener('click', async () => {
+  const btn = byId('cloudLoadBtn');
+  const statusEl = byId('cloudSyncStatus');
+  const revision = ++importRevision;
+  btn.disabled = true;
+  statusEl.textContent = '正在从云端读取…';
+  try {
+    const res = await fetch('/api/access/backup', { cache: 'no-store' });
+    const data = await res.json();
+    if (revision !== importRevision || !progressDialog.open) return;
+    if (!res.ok || !data.ok) { statusEl.textContent = data.message || '读取云端备份失败。'; return; }
+    if (!data.hasBackup || !data.payload) { statusEl.textContent = '云端还没有备份记录，请先在旧设备点「上传到云端」。'; return; }
+    const progress = readProgressBackup(data.payload);
+    importProgress = progress;
+    const count = Object.values(progress.banks).filter(hasAnswered).length;
+    statusEl.textContent = `已读取云端备份（${formatCloudTime(data.updatedAt)}），请在下方确认导入。`;
+    showImportMessage(`云端备份包含 ${count} 道作答记录。确认后将覆盖当前浏览器的本机进度。`, true);
+  } catch {
+    if (revision === importRevision) statusEl.textContent = '云端备份读取失败，请稍后再试。';
+  } finally {
+    btn.disabled = false;
+  }
+});
+byId('progressButton').addEventListener('click', () => {
+  progressDialog.showModal();
+  void refreshCloudSyncUI();
+});
 progressDialog.addEventListener('close', () => {
   importRevision++;
   importProgress = null;
