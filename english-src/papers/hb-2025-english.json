@@ -551,5 +551,21 @@
       "sample": "Alice, a student from abroad, had a PE class in our school last Friday. She learned many things about ping-pong, for example, the history and rules of the game. Alice tried her best to learn skills and she practiced ping-pong for nearly 20 minutes. And then she shared her school life. At last, she said the PE teacher is very patient and she expressed her thanks to the teacher. She also said the students are very lovely and friendly. “I’m so lucky to have the chance to take the PE class,” she said excitedly.",
       "exp": "采访报道用第三人称、一般过去时；覆盖记录中要点并补全两处内容。"
     }
+  ],
+  "pages": [
+    "./assets/national/hb-2025-english/p01.webp",
+    "./assets/national/hb-2025-english/p02.webp",
+    "./assets/national/hb-2025-english/p03.webp",
+    "./assets/national/hb-2025-english/p04.webp",
+    "./assets/national/hb-2025-english/p05.webp",
+    "./assets/national/hb-2025-english/p06.webp",
+    "./assets/national/hb-2025-english/p07.webp",
+    "./assets/national/hb-2025-english/p08.webp"
+  ],
+  "answerPages": [
+    "./assets/national/hb-2025-english/p01-answer.webp",
+    "./assets/national/hb-2025-english/p02-answer.webp",
+    "./assets/national/hb-2025-english/p03-answer.webp",
+    "./assets/national/hb-2025-english/p04-answer.webp"
   ]
 }

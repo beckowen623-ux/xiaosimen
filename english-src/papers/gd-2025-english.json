@@ -545,5 +545,28 @@
         }
       ]
     }
+  ],
+  "pages": [
+    "./assets/national/gd-2025-english/p01.webp",
+    "./assets/national/gd-2025-english/p02.webp",
+    "./assets/national/gd-2025-english/p03.webp",
+    "./assets/national/gd-2025-english/p04.webp",
+    "./assets/national/gd-2025-english/p05.webp",
+    "./assets/national/gd-2025-english/p06.webp",
+    "./assets/national/gd-2025-english/p07.webp",
+    "./assets/national/gd-2025-english/p08.webp",
+    "./assets/national/gd-2025-english/p09.webp",
+    "./assets/national/gd-2025-english/p10.webp",
+    "./assets/national/gd-2025-english/p11.webp",
+    "./assets/national/gd-2025-english/p12.webp"
+  ],
+  "answerPages": [
+    "./assets/national/gd-2025-english/p01-answer.webp",
+    "./assets/national/gd-2025-english/p02-answer.webp",
+    "./assets/national/gd-2025-english/p03-answer.webp",
+    "./assets/national/gd-2025-english/p04-answer.webp",
+    "./assets/national/gd-2025-english/p05-answer.webp",
+    "./assets/national/gd-2025-english/p06-answer.webp",
+    "./assets/national/gd-2025-english/p07-answer.webp"
   ]
 }

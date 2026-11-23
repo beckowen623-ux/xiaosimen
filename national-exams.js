@@ -249,6 +249,38 @@
     finally { button.disabled = false; }
   }
 
+  function formatQuestionBody(question) {
+    if (question.originalHtml) return question.originalHtml;
+    const parts = [];
+    if (question.stem) {
+      parts.push(`<p><strong>第 ${question.number || ''} 题${question.section ? ` · ${escape(question.section)}` : ''}</strong> ${escape(question.stem)}</p>`);
+    }
+    if (question.options?.length) {
+      parts.push(`<div class="national-options" style="margin: 8px 0 12px 16px;">${question.options.map(opt =>
+        `<div style="margin: 4px 0;"><b>${escape(opt.key)}.</b> ${escape(opt.text)}</div>`).join('')}</div>`);
+    }
+    if (question.image) {
+      parts.push(`<figure><img src="${escape(question.image)}" alt="第 ${question.number} 题配图" loading="lazy"></figure>`);
+    }
+    return parts.join('');
+  }
+
+  function formatQuestionAnswer(question) {
+    const ansParts = [];
+    const ansText = (question.answer && question.answer.length) ? question.answer.join('、') : (question.sample || '');
+    if (ansText) {
+      ansParts.push(`<strong>答案 ${escape(ansText)}</strong>`);
+    }
+    if (question.points?.length) {
+      ansParts.push(`<div style="margin: 6px 0; font-size: 0.95em;"><strong>评分标准：</strong><ul style="margin: 4px 0 4px 20px; padding: 0;">${question.points.map(p => `<li>${escape(p.text)} (${p.score}分)</li>`).join('')}</ul></div>`);
+    }
+    if (question.explanation) {
+      ansParts.push(`<p style="margin: 6px 0;">${escape(question.explanation).replace(/\n/g, '<br>')}</p>`);
+    }
+    if (!ansParts.length) return '';
+    return `<div class="national-answer">${ansParts.join('')}</div>`;
+  }
+
   function readerContent(paper, questions) {
     if (paper.pages?.length) {
       const pageImages = (paths, title) => `<section class="national-original"><h2>${title}</h2>${paths.map((url, i) =>
@@ -256,8 +288,8 @@
       return pageImages(paper.pages, '原卷试题') + (state.showAnswers ? pageImages(paper.answerPages, '参考答案') : '');
     }
     return `<section class="national-prepared"><p class="muted">以下为已核对的${escape(paper.description)}，共 ${questions.length} 道。</p>${questions.map((question, i) =>
-      `<article class="national-source-question">${question.materialHtml && (i === 0 || questions[i - 1].groupId !== question.groupId) ? `<div class="national-reading">${question.materialHtml}</div>` : ''}${question.originalHtml}
-      ${state.showAnswers ? `<div class="national-answer"><strong>答案 ${escape(question.answer.join('、'))}</strong><p>${escape(question.explanation).replace(/\n/g, '<br>')}</p></div>` : ''}</article>`).join('')}</section>`;
+      `<article class="national-source-question">${question.materialHtml && (i === 0 || questions[i - 1].groupId !== question.groupId) ? `<div class="national-reading">${question.materialHtml}</div>` : ''}${formatQuestionBody(question)}
+      ${state.showAnswers ? formatQuestionAnswer(question) : ''}</article>`).join('')}</section>`;
   }
 
   async function readPaper(id) {

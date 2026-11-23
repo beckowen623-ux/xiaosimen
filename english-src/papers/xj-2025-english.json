@@ -749,5 +749,19 @@
       "sample": "Three Things to Do for Summer Vacation With the temperature rising, a colorful vacation is around the corner. Three things come into my mind when I am making a list. On the top of the list is a self-improvement plan, which includes reading books, watching movies and writing diaries. Besides, I also plan to build my body to keep a good shape and stay lively. I’ll invite some classmates to go to the gym together and keep a daily record. The last thing is to relax with friends. It’s a nice chance to meet some friends who I haven’t seen for a long time because of my busy study. In a word, I can’t wait to enjoy the coming vacation.",
       "exp": "按三件事分层表达，每件事给出具体行动，计划主要用一般将来时或 plan to。"
     }
+  ],
+  "pages": [
+    "./assets/national/xj-2025-english/p01.webp",
+    "./assets/national/xj-2025-english/p02.webp",
+    "./assets/national/xj-2025-english/p03.webp",
+    "./assets/national/xj-2025-english/p04.webp",
+    "./assets/national/xj-2025-english/p05.webp",
+    "./assets/national/xj-2025-english/p06.webp",
+    "./assets/national/xj-2025-english/p07.webp",
+    "./assets/national/xj-2025-english/p08.webp"
+  ],
+  "answerPages": [
+    "./assets/national/xj-2025-english/p01-answer.webp",
+    "./assets/national/xj-2025-english/p02-answer.webp"
   ]
 }

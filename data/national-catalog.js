@@ -705,7 +705,20 @@ window.NATIONAL_CATALOG = {
         "七选五": 5,
         "补全对话": 5,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/jx-2026-english/p01.webp",
+        "./assets/national/jx-2026-english/p02.webp",
+        "./assets/national/jx-2026-english/p03.webp",
+        "./assets/national/jx-2026-english/p04.webp",
+        "./assets/national/jx-2026-english/p05.webp",
+        "./assets/national/jx-2026-english/p06.webp",
+        "./assets/national/jx-2026-english/p07.webp",
+        "./assets/national/jx-2026-english/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/jx-2026-english/p01-answer.webp"
+      ]
     },
     {
       "id": "sx-2026-english",
@@ -759,7 +772,25 @@ window.NATIONAL_CATALOG = {
         "回答问题": 5,
         "短文填空": 15,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/sxi-2026-english/p01.webp",
+        "./assets/national/sxi-2026-english/p02.webp",
+        "./assets/national/sxi-2026-english/p03.webp",
+        "./assets/national/sxi-2026-english/p04.webp",
+        "./assets/national/sxi-2026-english/p05.webp",
+        "./assets/national/sxi-2026-english/p06.webp",
+        "./assets/national/sxi-2026-english/p07.webp"
+      ],
+      "answerPages": [
+        "./assets/national/sxi-2026-english/p01-answer.webp",
+        "./assets/national/sxi-2026-english/p02-answer.webp",
+        "./assets/national/sxi-2026-english/p03-answer.webp",
+        "./assets/national/sxi-2026-english/p04-answer.webp",
+        "./assets/national/sxi-2026-english/p05-answer.webp",
+        "./assets/national/sxi-2026-english/p06-answer.webp",
+        "./assets/national/sxi-2026-english/p07-answer.webp"
+      ]
     },
     {
       "id": "claude-2026-english-1",
@@ -843,7 +874,25 @@ window.NATIONAL_CATALOG = {
         "情景交际": 5,
         "短文填空": 10,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/fj-2025-english/p01.webp",
+        "./assets/national/fj-2025-english/p02.webp",
+        "./assets/national/fj-2025-english/p03.webp",
+        "./assets/national/fj-2025-english/p04.webp",
+        "./assets/national/fj-2025-english/p05.webp",
+        "./assets/national/fj-2025-english/p06.webp",
+        "./assets/national/fj-2025-english/p07.webp",
+        "./assets/national/fj-2025-english/p08.webp",
+        "./assets/national/fj-2025-english/p09.webp",
+        "./assets/national/fj-2025-english/p10.webp",
+        "./assets/national/fj-2025-english/p11.webp",
+        "./assets/national/fj-2025-english/p12.webp"
+      ],
+      "answerPages": [
+        "./assets/national/fj-2025-english/p01-answer.webp",
+        "./assets/national/fj-2025-english/p02-answer.webp"
+      ]
     },
     {
       "id": "cq-2025-english",
@@ -864,7 +913,23 @@ window.NATIONAL_CATALOG = {
         "回答问题": 8,
         "句子运用": 5,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/cq-2025-english/p01.webp",
+        "./assets/national/cq-2025-english/p02.webp",
+        "./assets/national/cq-2025-english/p03.webp",
+        "./assets/national/cq-2025-english/p04.webp",
+        "./assets/national/cq-2025-english/p05.webp",
+        "./assets/national/cq-2025-english/p06.webp",
+        "./assets/national/cq-2025-english/p07.webp",
+        "./assets/national/cq-2025-english/p08.webp",
+        "./assets/national/cq-2025-english/p09.webp",
+        "./assets/national/cq-2025-english/p10.webp"
+      ],
+      "answerPages": [
+        "./assets/national/cq-2025-english/p01-answer.webp",
+        "./assets/national/cq-2025-english/p02-answer.webp"
+      ]
     },
     {
       "id": "gd-2025-english",
@@ -885,7 +950,30 @@ window.NATIONAL_CATALOG = {
         "配对阅读": 5,
         "短文填空": 10,
         "回答问题": 4
-      }
+      },
+      "pages": [
+        "./assets/national/gd-2025-english/p01.webp",
+        "./assets/national/gd-2025-english/p02.webp",
+        "./assets/national/gd-2025-english/p03.webp",
+        "./assets/national/gd-2025-english/p04.webp",
+        "./assets/national/gd-2025-english/p05.webp",
+        "./assets/national/gd-2025-english/p06.webp",
+        "./assets/national/gd-2025-english/p07.webp",
+        "./assets/national/gd-2025-english/p08.webp",
+        "./assets/national/gd-2025-english/p09.webp",
+        "./assets/national/gd-2025-english/p10.webp",
+        "./assets/national/gd-2025-english/p11.webp",
+        "./assets/national/gd-2025-english/p12.webp"
+      ],
+      "answerPages": [
+        "./assets/national/gd-2025-english/p01-answer.webp",
+        "./assets/national/gd-2025-english/p02-answer.webp",
+        "./assets/national/gd-2025-english/p03-answer.webp",
+        "./assets/national/gd-2025-english/p04-answer.webp",
+        "./assets/national/gd-2025-english/p05-answer.webp",
+        "./assets/national/gd-2025-english/p06-answer.webp",
+        "./assets/national/gd-2025-english/p07-answer.webp"
+      ]
     },
     {
       "id": "gx-2025-english",
@@ -905,7 +993,24 @@ window.NATIONAL_CATALOG = {
         "回答问题": 5,
         "短文填空": 10,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/gx-2025-english/p01.webp",
+        "./assets/national/gx-2025-english/p02.webp",
+        "./assets/national/gx-2025-english/p03.webp",
+        "./assets/national/gx-2025-english/p04.webp",
+        "./assets/national/gx-2025-english/p05.webp",
+        "./assets/national/gx-2025-english/p06.webp",
+        "./assets/national/gx-2025-english/p07.webp",
+        "./assets/national/gx-2025-english/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/gx-2025-english/p01-answer.webp",
+        "./assets/national/gx-2025-english/p02-answer.webp",
+        "./assets/national/gx-2025-english/p03-answer.webp",
+        "./assets/national/gx-2025-english/p04-answer.webp",
+        "./assets/national/gx-2025-english/p05-answer.webp"
+      ]
     },
     {
       "id": "gz-2025-english",
@@ -925,7 +1030,20 @@ window.NATIONAL_CATALOG = {
         "七选五": 5,
         "短文填空": 15,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/gz-2025-english/p01.webp",
+        "./assets/national/gz-2025-english/p02.webp",
+        "./assets/national/gz-2025-english/p03.webp",
+        "./assets/national/gz-2025-english/p04.webp",
+        "./assets/national/gz-2025-english/p05.webp",
+        "./assets/national/gz-2025-english/p06.webp",
+        "./assets/national/gz-2025-english/p07.webp",
+        "./assets/national/gz-2025-english/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/gz-2025-english/p01-answer.webp"
+      ]
     },
     {
       "id": "ha-2025-english",
@@ -945,7 +1063,24 @@ window.NATIONAL_CATALOG = {
         "短文填空": 15,
         "情景交际": 5,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/ha-2025-english/p01.webp",
+        "./assets/national/ha-2025-english/p02.webp",
+        "./assets/national/ha-2025-english/p03.webp",
+        "./assets/national/ha-2025-english/p04.webp",
+        "./assets/national/ha-2025-english/p05.webp",
+        "./assets/national/ha-2025-english/p06.webp",
+        "./assets/national/ha-2025-english/p07.webp",
+        "./assets/national/ha-2025-english/p08.webp",
+        "./assets/national/ha-2025-english/p09.webp",
+        "./assets/national/ha-2025-english/p10.webp"
+      ],
+      "answerPages": [
+        "./assets/national/ha-2025-english/p01-answer.webp",
+        "./assets/national/ha-2025-english/p02-answer.webp",
+        "./assets/national/ha-2025-english/p03-answer.webp"
+      ]
     },
     {
       "id": "hb-2025-english",
@@ -965,7 +1100,23 @@ window.NATIONAL_CATALOG = {
         "回答问题": 5,
         "情景交际": 5,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/hb-2025-english/p01.webp",
+        "./assets/national/hb-2025-english/p02.webp",
+        "./assets/national/hb-2025-english/p03.webp",
+        "./assets/national/hb-2025-english/p04.webp",
+        "./assets/national/hb-2025-english/p05.webp",
+        "./assets/national/hb-2025-english/p06.webp",
+        "./assets/national/hb-2025-english/p07.webp",
+        "./assets/national/hb-2025-english/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/hb-2025-english/p01-answer.webp",
+        "./assets/national/hb-2025-english/p02-answer.webp",
+        "./assets/national/hb-2025-english/p03-answer.webp",
+        "./assets/national/hb-2025-english/p04-answer.webp"
+      ]
     },
     {
       "id": "hn-2025-english",
@@ -985,7 +1136,33 @@ window.NATIONAL_CATALOG = {
         "短文填空": 10,
         "回答问题": 5,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/hn-2025-english/p01.webp",
+        "./assets/national/hn-2025-english/p02.webp",
+        "./assets/national/hn-2025-english/p03.webp",
+        "./assets/national/hn-2025-english/p04.webp",
+        "./assets/national/hn-2025-english/p05.webp",
+        "./assets/national/hn-2025-english/p06.webp",
+        "./assets/national/hn-2025-english/p07.webp",
+        "./assets/national/hn-2025-english/p08.webp",
+        "./assets/national/hn-2025-english/p09.webp"
+      ],
+      "answerPages": [
+        "./assets/national/hn-2025-english/p01-answer.webp",
+        "./assets/national/hn-2025-english/p02-answer.webp",
+        "./assets/national/hn-2025-english/p03-answer.webp",
+        "./assets/national/hn-2025-english/p04-answer.webp",
+        "./assets/national/hn-2025-english/p05-answer.webp",
+        "./assets/national/hn-2025-english/p06-answer.webp",
+        "./assets/national/hn-2025-english/p07-answer.webp",
+        "./assets/national/hn-2025-english/p08-answer.webp",
+        "./assets/national/hn-2025-english/p09-answer.webp",
+        "./assets/national/hn-2025-english/p10-answer.webp",
+        "./assets/national/hn-2025-english/p11-answer.webp",
+        "./assets/national/hn-2025-english/p12-answer.webp",
+        "./assets/national/hn-2025-english/p13-answer.webp"
+      ]
     },
     {
       "id": "sx-2025-english",
@@ -1008,7 +1185,25 @@ window.NATIONAL_CATALOG = {
         "回答问题": 5,
         "情景交际": 5,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/sx-2025-english/p01.webp",
+        "./assets/national/sx-2025-english/p02.webp",
+        "./assets/national/sx-2025-english/p03.webp",
+        "./assets/national/sx-2025-english/p04.webp",
+        "./assets/national/sx-2025-english/p05.webp",
+        "./assets/national/sx-2025-english/p06.webp",
+        "./assets/national/sx-2025-english/p07.webp",
+        "./assets/national/sx-2025-english/p08.webp",
+        "./assets/national/sx-2025-english/p09.webp",
+        "./assets/national/sx-2025-english/p10.webp"
+      ],
+      "answerPages": [
+        "./assets/national/sx-2025-english/p01-answer.webp",
+        "./assets/national/sx-2025-english/p02-answer.webp",
+        "./assets/national/sx-2025-english/p03-answer.webp",
+        "./assets/national/sx-2025-english/p04-answer.webp"
+      ]
     },
     {
       "id": "xj-2025-english",
@@ -1029,7 +1224,21 @@ window.NATIONAL_CATALOG = {
         "短文填空": 28,
         "回答问题": 3,
         "书面表达": 1
-      }
+      },
+      "pages": [
+        "./assets/national/xj-2025-english/p01.webp",
+        "./assets/national/xj-2025-english/p02.webp",
+        "./assets/national/xj-2025-english/p03.webp",
+        "./assets/national/xj-2025-english/p04.webp",
+        "./assets/national/xj-2025-english/p05.webp",
+        "./assets/national/xj-2025-english/p06.webp",
+        "./assets/national/xj-2025-english/p07.webp",
+        "./assets/national/xj-2025-english/p08.webp"
+      ],
+      "answerPages": [
+        "./assets/national/xj-2025-english/p01-answer.webp",
+        "./assets/national/xj-2025-english/p02-answer.webp"
+      ]
     },
     {
       "id": "earlybird-7down-chinese",

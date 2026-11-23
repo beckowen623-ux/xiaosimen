@@ -9,21 +9,186 @@
     {
       "type": "单项选择",
       "items": [
-        {"n": 21, "stem": "— Do you like sports?\n— Sure. I am good ________ table tennis.", "options": ["of", "at", "to"], "answer": "B", "kp": "介词", "exp": "be good at 擅长……，固定搭配。"},
-        {"n": 22, "stem": "— I am going to meet Miss Chen in two days.\n— Please send my best wishes to ________.", "options": ["her", "she", "herself"], "answer": "A", "kp": "代词", "exp": "介词 to 后接宾格，指 Miss Chen 用 her。"},
-        {"n": 23, "stem": "— I'd like to travel to Shandong.\n— Mount Taishan is a place of interest. You can't ________ it.", "options": ["miss", "reach", "change"], "answer": "A", "kp": "动词辨析", "exp": "can't miss it 不能错过；泰山是名胜，劝对方一定要去。"},
-        {"n": 24, "stem": "AI technology in China has developed ________ than anyone expected.", "options": ["fast", "faster", "fastest"], "answer": "B", "kp": "比较级", "exp": "有 than，用比较级 faster。"},
-        {"n": 25, "stem": "In the art classroom, Li Li cut out a thin wood board in the ________ of Tian'anmen.", "options": ["place", "size", "shape"], "answer": "C", "kp": "名词辨析", "exp": "in the shape of 呈……的形状。"},
-        {"n": 26, "stem": "Since last year, our school ________ free breakfasts to students in need.", "options": ["offered", "has offered", "was offering"], "answer": "B", "kp": "时态", "exp": "since + 过去时间点，用现在完成时 has offered。"},
-        {"n": 27, "stem": "Harbin held the 9th Asian Winter Games ________ in February 2025.", "options": ["quickly", "suddenly", "successfully"], "answer": "C", "kp": "副词辨析", "exp": "成功举办亚冬会，用 successfully。"},
-        {"n": 28, "stem": "My parents love our hometown so much that ________ of them have gone back to help build a new countryside.", "options": ["all", "both", "either"], "answer": "B", "kp": "代词", "exp": "父母是两个人，“两个都”用 both；all 指三者及以上，either 后谓语用单数。"},
-        {"n": 29, "stem": "Sue looked at her son ________. She couldn't believe that he won the game.", "options": ["in surprise", "by mistake", "on purpose"], "answer": "A", "kp": "介词短语", "exp": "不敢相信儿子赢了，所以是惊讶地看着他，in surprise。"},
-        {"n": 30, "stem": "China's Beijing Library ________ \"Public Library of the Year\" in 2024.", "options": ["named", "was named", "will be named"], "answer": "B", "kp": "被动语态", "exp": "图书馆是“被评为”，2024 年是过去，用一般过去时的被动语态 was named。"},
-        {"n": 31, "stem": "— Mom, let's go to the supermarket.\n— Wait a moment. It's ________ to make a shopping list first.", "options": ["wise", "friendly", "difficult"], "answer": "A", "kp": "形容词辨析", "exp": "先列购物清单是明智的，It's wise to do sth。"},
-        {"n": 32, "stem": "How did you ________ the difficult math problem?", "options": ["work out", "hear about", "give up"], "answer": "A", "kp": "动词短语", "exp": "work out 算出、解决（难题）。"},
-        {"n": 33, "stem": "We will attend the tea festival in our town ________ more about tea culture.", "options": ["learning", "to learn", "learned"], "answer": "B", "kp": "非谓语动词", "exp": "表示目的，用动词不定式 to learn。"},
-        {"n": 34, "stem": "— Have a safe trip to Hangzhou, my dear!\n— OK, Dad. I'll give you a call ________ I arrive there.", "options": ["until", "so that", "as soon as"], "answer": "C", "kp": "连词", "exp": "“一到就给你打电话”，as soon as 一……就……。"},
-        {"n": 35, "stem": "— Could you tell me ________?\n— This Sunday morning.", "options": ["when we will do volunteer work in the community", "which community we will do volunteer work in", "who will do volunteer work in the community"], "answer": "A", "kp": "宾语从句", "exp": "答语是时间，问“什么时候”，用 when 引导的宾语从句，语序为陈述句语序。"}
+        {
+          "n": 21,
+          "stem": "— Do you like sports?\n— Sure. I am good ________ table tennis.",
+          "options": [
+            "of",
+            "at",
+            "to"
+          ],
+          "answer": "B",
+          "kp": "介词",
+          "exp": "be good at 擅长……，固定搭配。"
+        },
+        {
+          "n": 22,
+          "stem": "— I am going to meet Miss Chen in two days.\n— Please send my best wishes to ________.",
+          "options": [
+            "her",
+            "she",
+            "herself"
+          ],
+          "answer": "A",
+          "kp": "代词",
+          "exp": "介词 to 后接宾格，指 Miss Chen 用 her。"
+        },
+        {
+          "n": 23,
+          "stem": "— I'd like to travel to Shandong.\n— Mount Taishan is a place of interest. You can't ________ it.",
+          "options": [
+            "miss",
+            "reach",
+            "change"
+          ],
+          "answer": "A",
+          "kp": "动词辨析",
+          "exp": "can't miss it 不能错过；泰山是名胜，劝对方一定要去。"
+        },
+        {
+          "n": 24,
+          "stem": "AI technology in China has developed ________ than anyone expected.",
+          "options": [
+            "fast",
+            "faster",
+            "fastest"
+          ],
+          "answer": "B",
+          "kp": "比较级",
+          "exp": "有 than，用比较级 faster。"
+        },
+        {
+          "n": 25,
+          "stem": "In the art classroom, Li Li cut out a thin wood board in the ________ of Tian'anmen.",
+          "options": [
+            "place",
+            "size",
+            "shape"
+          ],
+          "answer": "C",
+          "kp": "名词辨析",
+          "exp": "in the shape of 呈……的形状。"
+        },
+        {
+          "n": 26,
+          "stem": "Since last year, our school ________ free breakfasts to students in need.",
+          "options": [
+            "offered",
+            "has offered",
+            "was offering"
+          ],
+          "answer": "B",
+          "kp": "时态",
+          "exp": "since + 过去时间点，用现在完成时 has offered。"
+        },
+        {
+          "n": 27,
+          "stem": "Harbin held the 9th Asian Winter Games ________ in February 2025.",
+          "options": [
+            "quickly",
+            "suddenly",
+            "successfully"
+          ],
+          "answer": "C",
+          "kp": "副词辨析",
+          "exp": "成功举办亚冬会，用 successfully。"
+        },
+        {
+          "n": 28,
+          "stem": "My parents love our hometown so much that ________ of them have gone back to help build a new countryside.",
+          "options": [
+            "all",
+            "both",
+            "either"
+          ],
+          "answer": "B",
+          "kp": "代词",
+          "exp": "父母是两个人，“两个都”用 both；all 指三者及以上，either 后谓语用单数。"
+        },
+        {
+          "n": 29,
+          "stem": "Sue looked at her son ________. She couldn't believe that he won the game.",
+          "options": [
+            "in surprise",
+            "by mistake",
+            "on purpose"
+          ],
+          "answer": "A",
+          "kp": "介词短语",
+          "exp": "不敢相信儿子赢了，所以是惊讶地看着他，in surprise。"
+        },
+        {
+          "n": 30,
+          "stem": "China's Beijing Library ________ \"Public Library of the Year\" in 2024.",
+          "options": [
+            "named",
+            "was named",
+            "will be named"
+          ],
+          "answer": "B",
+          "kp": "被动语态",
+          "exp": "图书馆是“被评为”，2024 年是过去，用一般过去时的被动语态 was named。"
+        },
+        {
+          "n": 31,
+          "stem": "— Mom, let's go to the supermarket.\n— Wait a moment. It's ________ to make a shopping list first.",
+          "options": [
+            "wise",
+            "friendly",
+            "difficult"
+          ],
+          "answer": "A",
+          "kp": "形容词辨析",
+          "exp": "先列购物清单是明智的，It's wise to do sth。"
+        },
+        {
+          "n": 32,
+          "stem": "How did you ________ the difficult math problem?",
+          "options": [
+            "work out",
+            "hear about",
+            "give up"
+          ],
+          "answer": "A",
+          "kp": "动词短语",
+          "exp": "work out 算出、解决（难题）。"
+        },
+        {
+          "n": 33,
+          "stem": "We will attend the tea festival in our town ________ more about tea culture.",
+          "options": [
+            "learning",
+            "to learn",
+            "learned"
+          ],
+          "answer": "B",
+          "kp": "非谓语动词",
+          "exp": "表示目的，用动词不定式 to learn。"
+        },
+        {
+          "n": 34,
+          "stem": "— Have a safe trip to Hangzhou, my dear!\n— OK, Dad. I'll give you a call ________ I arrive there.",
+          "options": [
+            "until",
+            "so that",
+            "as soon as"
+          ],
+          "answer": "C",
+          "kp": "连词",
+          "exp": "“一到就给你打电话”，as soon as 一……就……。"
+        },
+        {
+          "n": 35,
+          "stem": "— Could you tell me ________?\n— This Sunday morning.",
+          "options": [
+            "when we will do volunteer work in the community",
+            "which community we will do volunteer work in",
+            "who will do volunteer work in the community"
+          ],
+          "answer": "A",
+          "kp": "宾语从句",
+          "exp": "答语是时间，问“什么时候”，用 when 引导的宾语从句，语序为陈述句语序。"
+        }
       ]
     },
     {
@@ -31,16 +196,106 @@
       "title": "中国援非医疗队医生救治早产儿",
       "passage": "Wen Yan is a doctor of China Medical Team to Africa. She often thought of the fight to (36) Beauty, a baby who was born with only 800 grams. She had weak lungs (肺) and could hardly breathe. It was believed that she couldn't live long in a hospital (37) necessary equipment (设备). \"But even with the smallest chance, my team and I had to try our best,\" said Wen.\nTo keep the baby (38), Wen coated Beauty with a soft cloth. The most dangerous moment arrived when Beauty's heart beat only 30 times a minute. Wen stayed close to Beauty to (39) her for almost five hours. (40), Beauty was able to breathe by herself.\nBy the time of her leaving hospital over two months later, Beauty weighed 2,050 grams. The medical team and her family (41) the great moment with laughter and tears. Beauty's mother held Wen's hands and said, \"I want my daughter to be a doctor like you.\"\nDuring her stay in Africa, Wen helped thousands of (42). Wen traveled to faraway villages under a burning hot sun. (43) she often felt tired after long traveling, she had no time to take a rest, because the local people were lining up for help. They endlessly expressed their (44) for her efforts.\nBesides saving lives, Wen's team also (45) local doctors and nurses every week to better their skills.",
       "items": [
-        {"n": 36, "options": ["wake", "dress", "save"], "answer": "C", "exp": "婴儿出生只有 800 克、呼吸困难，医生是在全力“救”她，save。"},
-        {"n": 37, "options": ["short of", "filled with", "famous for"], "answer": "A", "exp": "人们认为她在“缺少”必要设备的医院里活不久，short of 缺少。"},
-        {"n": 38, "options": ["clever", "warm", "lovely"], "answer": "B", "exp": "用软布裹住婴儿，是为了给她保暖，keep the baby warm。"},
-        {"n": 39, "options": ["look after", "play with", "talk about"], "answer": "A", "exp": "守在婴儿身边近五个小时，是在照顾她，look after。"},
-        {"n": 40, "options": ["Clearly", "Finally", "Certainly"], "answer": "B", "exp": "经过五个小时的努力，婴儿“终于”能自主呼吸了，Finally。"},
-        {"n": 41, "options": ["celebrated", "forgot", "held"], "answer": "A", "exp": "出院时大家含着笑和泪“庆祝”这一刻，celebrated。"},
-        {"n": 42, "options": ["travelers", "patients", "volunteers"], "answer": "B", "exp": "医生在非洲帮助了成千上万的“病人”，patients。"},
-        {"n": 43, "options": ["Unless", "As", "Though"], "answer": "C", "exp": "前后是让步关系：“虽然”长途奔波很累，她也没时间休息，Though。"},
-        {"n": 44, "options": ["interests", "ideas", "thanks"], "answer": "C", "exp": "当地人不断表达对她付出的“感谢”，express thanks for。"},
-        {"n": 45, "options": ["called", "trained", "ordered"], "answer": "B", "exp": "为了提高当地医护人员的技能，医疗队每周“培训”他们，trained。"}
+        {
+          "n": 36,
+          "options": [
+            "wake",
+            "dress",
+            "save"
+          ],
+          "answer": "C",
+          "exp": "婴儿出生只有 800 克、呼吸困难，医生是在全力“救”她，save。"
+        },
+        {
+          "n": 37,
+          "options": [
+            "short of",
+            "filled with",
+            "famous for"
+          ],
+          "answer": "A",
+          "exp": "人们认为她在“缺少”必要设备的医院里活不久，short of 缺少。"
+        },
+        {
+          "n": 38,
+          "options": [
+            "clever",
+            "warm",
+            "lovely"
+          ],
+          "answer": "B",
+          "exp": "用软布裹住婴儿，是为了给她保暖，keep the baby warm。"
+        },
+        {
+          "n": 39,
+          "options": [
+            "look after",
+            "play with",
+            "talk about"
+          ],
+          "answer": "A",
+          "exp": "守在婴儿身边近五个小时，是在照顾她，look after。"
+        },
+        {
+          "n": 40,
+          "options": [
+            "Clearly",
+            "Finally",
+            "Certainly"
+          ],
+          "answer": "B",
+          "exp": "经过五个小时的努力，婴儿“终于”能自主呼吸了，Finally。"
+        },
+        {
+          "n": 41,
+          "options": [
+            "celebrated",
+            "forgot",
+            "held"
+          ],
+          "answer": "A",
+          "exp": "出院时大家含着笑和泪“庆祝”这一刻，celebrated。"
+        },
+        {
+          "n": 42,
+          "options": [
+            "travelers",
+            "patients",
+            "volunteers"
+          ],
+          "answer": "B",
+          "exp": "医生在非洲帮助了成千上万的“病人”，patients。"
+        },
+        {
+          "n": 43,
+          "options": [
+            "Unless",
+            "As",
+            "Though"
+          ],
+          "answer": "C",
+          "exp": "前后是让步关系：“虽然”长途奔波很累，她也没时间休息，Though。"
+        },
+        {
+          "n": 44,
+          "options": [
+            "interests",
+            "ideas",
+            "thanks"
+          ],
+          "answer": "C",
+          "exp": "当地人不断表达对她付出的“感谢”，express thanks for。"
+        },
+        {
+          "n": 45,
+          "options": [
+            "called",
+            "trained",
+            "ordered"
+          ],
+          "answer": "B",
+          "exp": "为了提高当地医护人员的技能，医疗队每周“培训”他们，trained。"
+        }
       ]
     },
     {
@@ -51,11 +306,71 @@
           "title": "保护地球的五个小办法",
           "passage": "The earth is our home. There are some ways that you and your family can use to help the planet and make a difference.\n① Use less water. Take shorter showers. A 10-minute shower or a full bathtub (浴缸) can waste a lot of water. Also, turn off the tap as you brush your teeth. Use less water in the garden and let the rain clean cars.\n② Avoid wasting food. Don't take more than you can eat. About one-third of food in some areas is thrown out or wasted.\n③ Care and repair. Take good care of things you own and they will get a long life. If they break, try to repair them. If you can't repair them, call a repairman. Producing new goods will add CO2 to the air.\n④ Use reusable bags. Use plastic and paper bags more than once. When you go shopping, use cloth bags instead of plastic bags.\n⑤ Use fewer paper cups. Use reusable cups instead of throwaway paper cups if necessary. If you use more paper cups, you will produce more rubbish.",
           "items": [
-            {"n": 46, "stem": "What can you do to save water?", "options": ["Take shorter showers.", "Bathe in a full bathtub.", "Stop using the tap.", "Clean cars every day."], "answer": "A", "kp": "细节理解", "exp": "第①条：Take shorter showers. 缩短淋浴时间可以省水。"},
-            {"n": 47, "stem": "What should you do when something breaks?", "options": ["Throw it away.", "Repair it if possible.", "Produce new goods.", "Take good care of it."], "answer": "B", "kp": "细节理解", "exp": "第③条：If they break, try to repair them. 坏了先尽量修。"},
-            {"n": 48, "stem": "What does the writer suggest?", "options": ["Using fewer paper cups.", "Using more plastic bags.", "Using throwaway paper cups.", "Using paper bags just once."], "answer": "A", "kp": "细节理解", "exp": "第⑤条标题就是 Use fewer paper cups。"},
-            {"n": 49, "stem": "Which of the following is about reusing things?", "options": ["①④", "①⑤", "②③", "④⑤"], "answer": "D", "kp": "归纳概括", "exp": "④用可重复使用的袋子、⑤用可重复使用的杯子，都和“重复使用”有关。"},
-            {"n": 50, "stem": "In which section of a newspaper can you probably read the text?", "options": ["Culture.", "Health.", "Sports.", "Environment."], "answer": "D", "kp": "文章出处", "exp": "全文讲保护地球、节约资源，属于环境版块。"}
+            {
+              "n": 46,
+              "stem": "What can you do to save water?",
+              "options": [
+                "Take shorter showers.",
+                "Bathe in a full bathtub.",
+                "Stop using the tap.",
+                "Clean cars every day."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "第①条：Take shorter showers. 缩短淋浴时间可以省水。"
+            },
+            {
+              "n": 47,
+              "stem": "What should you do when something breaks?",
+              "options": [
+                "Throw it away.",
+                "Repair it if possible.",
+                "Produce new goods.",
+                "Take good care of it."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "第③条：If they break, try to repair them. 坏了先尽量修。"
+            },
+            {
+              "n": 48,
+              "stem": "What does the writer suggest?",
+              "options": [
+                "Using fewer paper cups.",
+                "Using more plastic bags.",
+                "Using throwaway paper cups.",
+                "Using paper bags just once."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "第⑤条标题就是 Use fewer paper cups。"
+            },
+            {
+              "n": 49,
+              "stem": "Which of the following is about reusing things?",
+              "options": [
+                "①④",
+                "①⑤",
+                "②③",
+                "④⑤"
+              ],
+              "answer": "D",
+              "kp": "归纳概括",
+              "exp": "④用可重复使用的袋子、⑤用可重复使用的杯子，都和“重复使用”有关。"
+            },
+            {
+              "n": 50,
+              "stem": "In which section of a newspaper can you probably read the text?",
+              "options": [
+                "Culture.",
+                "Health.",
+                "Sports.",
+                "Environment."
+              ],
+              "answer": "D",
+              "kp": "文章出处",
+              "exp": "全文讲保护地球、节约资源，属于环境版块。"
+            }
           ]
         },
         {
@@ -63,11 +378,71 @@
           "title": "Mary 的宇航员梦",
           "passage": "Mary's uncle Ted was an engineer. He told her great stories about the rockets he helped design, and he often brought Mary science books. He also taught her some knowledge about space. Mary loved technology and science, and she was also adventurous (爱冒险的). For those reasons, Mary's family kept telling her she should be an astronaut when she grew up, but she just wasn't sure.\nOne Saturday, Mary and Uncle Ted went to visit the Science Museum. They watched a show on space travel. Uncle Ted told her something interesting about spaceships and space suits. But she was most interested in two model robot arms and tried operating (操作) them. She stayed there all day and felt very excited.\nBy the time they got on the bus to return home, Mary was very tired. Closing her eyes, she was thinking about what it would be like to fly into space. As she nearly fell asleep, Mary started to feel the weightlessness that astronauts must feel when they are in zero gravity (重力). The next thing she knew, she was looking out the window not of a bus but of a spaceship. Mary was operating a huge robot arm outside the spaceship. She felt nervous. But she kept at it. Soon she succeeded. She felt proud of herself.\nJust then, Mary heard Uncle Ted's voice. \"Wake up, my dear! We're back home now.\" When she opened her eyes, she realized she had been dreaming, but she knew this for sure — she wanted to be an astronaut one day and couldn't wait for her first trip into space.",
           "items": [
-            {"n": 51, "stem": "What did Uncle Ted do?", "options": ["He was a writer.", "He was an engineer.", "He was an astronaut.", "He was a teacher."], "answer": "B", "kp": "细节理解", "exp": "首句：Mary's uncle Ted was an engineer."},
-            {"n": 52, "stem": "What interested Mary most in the museum?", "options": ["Two model robot arms.", "Amazing space suits.", "A long show on space.", "An interesting spaceship."], "answer": "A", "kp": "细节理解", "exp": "第二段：she was most interested in two model robot arms."},
-            {"n": 53, "stem": "How did Mary feel in the museum that Saturday?", "options": ["Excited.", "Tired.", "Nervous.", "Proud."], "answer": "A", "kp": "细节理解", "exp": "第二段末：She stayed there all day and felt very excited. 累是在回家的车上，紧张和自豪是在梦里。"},
-            {"n": 54, "stem": "What happened to Mary on her way home?", "options": ["She was sent into space.", "She operated a robot arm.", "She had a wonderful dream.", "She experienced zero gravity."], "answer": "C", "kp": "推理判断", "exp": "最后一段：she realized she had been dreaming. 操作机械臂、失重都发生在梦里。"},
-            {"n": 55, "stem": "At last Mary decided to be an astronaut because of ________.", "options": ["her science books", "her parents' wish", "her uncle's encouragement", "her trip to the museum"], "answer": "D", "kp": "推理判断", "exp": "家人劝她时她还不确定；参观科技馆、做了那个梦之后，她才确定要当宇航员。"}
+            {
+              "n": 51,
+              "stem": "What did Uncle Ted do?",
+              "options": [
+                "He was a writer.",
+                "He was an engineer.",
+                "He was an astronaut.",
+                "He was a teacher."
+              ],
+              "answer": "B",
+              "kp": "细节理解",
+              "exp": "首句：Mary's uncle Ted was an engineer."
+            },
+            {
+              "n": 52,
+              "stem": "What interested Mary most in the museum?",
+              "options": [
+                "Two model robot arms.",
+                "Amazing space suits.",
+                "A long show on space.",
+                "An interesting spaceship."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "第二段：she was most interested in two model robot arms."
+            },
+            {
+              "n": 53,
+              "stem": "How did Mary feel in the museum that Saturday?",
+              "options": [
+                "Excited.",
+                "Tired.",
+                "Nervous.",
+                "Proud."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "第二段末：She stayed there all day and felt very excited. 累是在回家的车上，紧张和自豪是在梦里。"
+            },
+            {
+              "n": 54,
+              "stem": "What happened to Mary on her way home?",
+              "options": [
+                "She was sent into space.",
+                "She operated a robot arm.",
+                "She had a wonderful dream.",
+                "She experienced zero gravity."
+              ],
+              "answer": "C",
+              "kp": "推理判断",
+              "exp": "最后一段：she realized she had been dreaming. 操作机械臂、失重都发生在梦里。"
+            },
+            {
+              "n": 55,
+              "stem": "At last Mary decided to be an astronaut because of ________.",
+              "options": [
+                "her science books",
+                "her parents' wish",
+                "her uncle's encouragement",
+                "her trip to the museum"
+              ],
+              "answer": "D",
+              "kp": "推理判断",
+              "exp": "家人劝她时她还不确定；参观科技馆、做了那个梦之后，她才确定要当宇航员。"
+            }
           ]
         },
         {
@@ -75,11 +450,71 @@
           "title": "用耳朵听大自然",
           "passage": "As we often use eyes to touch nature, most of us \"lose\" the ability to listen to the world.\nPeter writes music. He likes sounds and uses natural sounds as part of his music. He often went out to the wild with his microphone and recorded interesting sounds to put in movies or to use in his own songs. Instead of trying to capture just the sound of one animal or bird, he recorded the sound of everything all together — the animals, the trees, the wind and the earth. He called these recordings soundscapes — the sound of a certain place. Every soundscape Peter recorded had a lot of information.\nBack in his workshop, Peter used a computer to make a picture of all the sounds going on in a place. Each animal, bird and insect had its own place on the picture — its own notes in the music. The busier the picture, the richer the life in that place. \"While a picture may be worth 1,000 words, a soundscape is worth 1,000 pictures,\" Peter said. \"Our ears tell us the sound of every leaf and animal and speak to the natural sources (来源) of our lives, which may hold the secrets of love for all things, especially our own humanity.\"\nBut not everything is satisfying. When Peter began recording over forty years ago, he could record for ten hours and get one hour of usable material good enough for a movie. Now, because of human activities, it can take up to 1,000 hours or more to get the same thing. Some of the places he has recorded over the years have slowly fallen silent. His sound pictures show that although nature might look the same to humans, it has lost part of its orchestra (管弦乐队).\nSo next time you are in the forests, try another way to look — shut your eyes, and listen.",
           "items": [
-            {"n": 56, "stem": "Why did Peter record natural sounds?", "options": ["To write songs for a music group.", "To discover rich lives in the forest.", "To use some of them in his music.", "To make music about birds singing."], "answer": "C", "kp": "细节理解", "exp": "第二段：recorded interesting sounds to put in movies or to use in his own songs."},
-            {"n": 57, "stem": "What does the underlined word \"capture\" in paragraph 2 mean?", "options": ["Shut.", "Catch.", "Touch.", "Check."], "answer": "B", "kp": "词义猜测", "exp": "录下某种动物的声音，capture 在这里是“捕捉”，同 catch。"},
-            {"n": 58, "stem": "What is a sound picture in the text?", "options": ["The sound of every leaf and animal in nature.", "The sound recorded in the natural environment.", "A picture of music with sounds of 1,000 animals.", "A picture of music with natural sounds in a place."], "answer": "D", "kp": "细节理解", "exp": "第三段：用电脑把一个地方所有声音做成一幅图，每种生物在图上都有自己的位置、自己的音符。"},
-            {"n": 59, "stem": "What can we learn from paragraph 4?", "options": ["Recording sounds needs less material.", "Sound pictures are the same as before.", "Some beautiful sounds in nature are lost.", "Human activities improve recording results."], "answer": "C", "kp": "段落大意", "exp": "第四段：有些地方渐渐安静了，大自然失去了“管弦乐队”的一部分。"},
-            {"n": 60, "stem": "What does the writer mainly want to tell us?", "options": ["Nature is the source of our future.", "Nature has wonders to be heard.", "Making music enriches our lives.", "Making music needs information."], "answer": "B", "kp": "主旨大意", "exp": "首尾呼应：我们常常只用眼睛看自然，作者劝我们闭上眼睛去听，大自然有值得倾听的奇妙声音。"}
+            {
+              "n": 56,
+              "stem": "Why did Peter record natural sounds?",
+              "options": [
+                "To write songs for a music group.",
+                "To discover rich lives in the forest.",
+                "To use some of them in his music.",
+                "To make music about birds singing."
+              ],
+              "answer": "C",
+              "kp": "细节理解",
+              "exp": "第二段：recorded interesting sounds to put in movies or to use in his own songs."
+            },
+            {
+              "n": 57,
+              "stem": "What does the underlined word \"capture\" in paragraph 2 mean?",
+              "options": [
+                "Shut.",
+                "Catch.",
+                "Touch.",
+                "Check."
+              ],
+              "answer": "B",
+              "kp": "词义猜测",
+              "exp": "录下某种动物的声音，capture 在这里是“捕捉”，同 catch。"
+            },
+            {
+              "n": 58,
+              "stem": "What is a sound picture in the text?",
+              "options": [
+                "The sound of every leaf and animal in nature.",
+                "The sound recorded in the natural environment.",
+                "A picture of music with sounds of 1,000 animals.",
+                "A picture of music with natural sounds in a place."
+              ],
+              "answer": "D",
+              "kp": "细节理解",
+              "exp": "第三段：用电脑把一个地方所有声音做成一幅图，每种生物在图上都有自己的位置、自己的音符。"
+            },
+            {
+              "n": 59,
+              "stem": "What can we learn from paragraph 4?",
+              "options": [
+                "Recording sounds needs less material.",
+                "Sound pictures are the same as before.",
+                "Some beautiful sounds in nature are lost.",
+                "Human activities improve recording results."
+              ],
+              "answer": "C",
+              "kp": "段落大意",
+              "exp": "第四段：有些地方渐渐安静了，大自然失去了“管弦乐队”的一部分。"
+            },
+            {
+              "n": 60,
+              "stem": "What does the writer mainly want to tell us?",
+              "options": [
+                "Nature is the source of our future.",
+                "Nature has wonders to be heard.",
+                "Making music enriches our lives.",
+                "Making music needs information."
+              ],
+              "answer": "B",
+              "kp": "主旨大意",
+              "exp": "首尾呼应：我们常常只用眼睛看自然，作者劝我们闭上眼睛去听，大自然有值得倾听的奇妙声音。"
+            }
           ]
         },
         {
@@ -87,11 +522,71 @@
           "title": "珊瑚的反击",
           "passage": "Deep under the Pacific Ocean lie coral reefs colored by some algae that live with corals. Corals usually provide nitrogen (氮) to algae, and in return they get carbon (碳), which gives them energy.\nIn the early 1980s, a huge heat wave turned more than 90 percent of these corals a pale, lifeless white. And it was believed that about 50 percent of reefs with beautiful corals might disappear by 2030. Heat waves warmed up the same Pacific waters in the late 1990s and again in 2015-2016, but scientists noticed that these heat waves didn't influence the reefs as badly as the first. Maybe corals have found a way to adapt (适应).\nSwimming to cooler waters is not a good choice for corals, for it makes them easily hurt by the changing climate. But corals are able to adapt. Some turn to those algae that can deal well with heat. Others can use rows of tiny hairs on their bodies to \"fan\" away too much harmful oxygen (O2) let out by stressed-out algae. Certain baby corals change their own metabolisms (新陈代谢) in order to fight the warming waters. But all these adaptations can protect themselves only to some degree.\nAfter studying and understanding these adaptations, scientists are trying to find ways to help corals fight. If researchers can make corals accept algae that can deal with heat pressure or if they energize genes (基因) that can deal with heat pressure, it will raise the corals' chance of living through future ocean heat waves.\n\"When I go down to the sea and see a beautiful healthy reef with these colorful corals, I feel this pleasure of being in this underwater world,\" a famous biologist says. \"It will be really sad to see it dead. But that does drive you to want to use your skills and your love to help fight.\"",
           "items": [
-            {"n": 61, "stem": "What can we know from paragraph 1?", "options": ["Corals make algae more colorful.", "Algae provide room for corals to live in.", "Corals and algae depend on each other.", "Algae produce nitrogen to influence corals."], "answer": "C", "kp": "段落大意", "exp": "珊瑚给藻类提供氮，藻类回报珊瑚碳，二者互相依存。"},
-            {"n": 62, "stem": "What does the underlined part \"the first\" in paragraph 2 refer to?", "options": ["The heat wave in the early 1980s.", "The heat wave in the late 1990s.", "The Pacific waters in 2015-2016.", "The reefs' disappearance by 2030."], "answer": "A", "kp": "代词指代", "exp": "后来几次热浪的影响不如“第一次”严重，第一次指 20 世纪 80 年代初那次热浪。"},
-            {"n": 63, "stem": "What difficulty do corals face?", "options": ["They cannot completely adapt to heat waves.", "They cannot change their own metabolisms.", "They have no ability to swim to cooler waters.", "They have no ability to drive away harmful oxygen."], "answer": "A", "kp": "细节理解", "exp": "第三段末：all these adaptations can protect themselves only to some degree. 只能在一定程度上适应。"},
-            {"n": 64, "stem": "What can we infer from the last paragraph?", "options": ["It's necessary to live with corals.", "The ocean has become unhealthy.", "We should try our best to save corals.", "Making a study of the ocean is a must."], "answer": "C", "kp": "推理判断", "exp": "生物学家说看到珊瑚死去会很难过，这促使人们用技能和爱去帮助珊瑚。"},
-            {"n": 65, "stem": "Which would be the best title for the text?", "options": ["Corals Die Out", "Corals Fight Back", "Corals Break Down", "Corals Come into Being"], "answer": "B", "kp": "最佳标题", "exp": "全文讲珊瑚想办法适应热浪、科学家帮助它们对抗变暖，“珊瑚反击”最贴切。"}
+            {
+              "n": 61,
+              "stem": "What can we know from paragraph 1?",
+              "options": [
+                "Corals make algae more colorful.",
+                "Algae provide room for corals to live in.",
+                "Corals and algae depend on each other.",
+                "Algae produce nitrogen to influence corals."
+              ],
+              "answer": "C",
+              "kp": "段落大意",
+              "exp": "珊瑚给藻类提供氮，藻类回报珊瑚碳，二者互相依存。"
+            },
+            {
+              "n": 62,
+              "stem": "What does the underlined part \"the first\" in paragraph 2 refer to?",
+              "options": [
+                "The heat wave in the early 1980s.",
+                "The heat wave in the late 1990s.",
+                "The Pacific waters in 2015-2016.",
+                "The reefs' disappearance by 2030."
+              ],
+              "answer": "A",
+              "kp": "代词指代",
+              "exp": "后来几次热浪的影响不如“第一次”严重，第一次指 20 世纪 80 年代初那次热浪。"
+            },
+            {
+              "n": 63,
+              "stem": "What difficulty do corals face?",
+              "options": [
+                "They cannot completely adapt to heat waves.",
+                "They cannot change their own metabolisms.",
+                "They have no ability to swim to cooler waters.",
+                "They have no ability to drive away harmful oxygen."
+              ],
+              "answer": "A",
+              "kp": "细节理解",
+              "exp": "第三段末：all these adaptations can protect themselves only to some degree. 只能在一定程度上适应。"
+            },
+            {
+              "n": 64,
+              "stem": "What can we infer from the last paragraph?",
+              "options": [
+                "It's necessary to live with corals.",
+                "The ocean has become unhealthy.",
+                "We should try our best to save corals.",
+                "Making a study of the ocean is a must."
+              ],
+              "answer": "C",
+              "kp": "推理判断",
+              "exp": "生物学家说看到珊瑚死去会很难过，这促使人们用技能和爱去帮助珊瑚。"
+            },
+            {
+              "n": 65,
+              "stem": "Which would be the best title for the text?",
+              "options": [
+                "Corals Die Out",
+                "Corals Fight Back",
+                "Corals Break Down",
+                "Corals Come into Being"
+              ],
+              "answer": "B",
+              "kp": "最佳标题",
+              "exp": "全文讲珊瑚想办法适应热浪、科学家帮助它们对抗变暖，“珊瑚反击”最贴切。"
+            }
           ]
         }
       ]
@@ -100,23 +595,74 @@
       "type": "七选五",
       "title": "如何开始一个爱好",
       "passage": "Hobbies lead to better health, more sleep, lower pressure and greater life satisfaction. Get joy from your hobby, and you'll be a better person. (66) Here are some suggestions from experts.\n(67)\nHobbies can help you calm down. An expert suggests asking yourself how you want an activity to make you feel. Relaxed or socially connected?\nStart small.\n(68) Wait for a while to find out if it's right for you. You can always do more later. It's also smart not to do something more than you can. If you don't want to do that, just stop. (69)\nTake a trip back in time.\nRecall activities you loved when you were young, like singing or collecting things. It's a really helpful place to start, and it allows you to feel comfortable.\nAlso, consider going back to school. (70) Or sign up for a lesson at a local community center and learn more about a potential (潜在的) hobby.\nAlways keep in mind that if a hobby makes you healthier and happier, everyone around you will benefit.",
-      "choices": ["But where do we start?", "Check out classes at university.", "Ask yourself: How do I want to feel?", "You get fun from hobbies, not pressure.", "Don't spend a lot of time on a new hobby at once."],
+      "choices": [
+        "But where do we start?",
+        "Check out classes at university.",
+        "Ask yourself: How do I want to feel?",
+        "You get fun from hobbies, not pressure.",
+        "Don't spend a lot of time on a new hobby at once."
+      ],
       "items": [
-        {"n": 66, "answer": "A", "exp": "后一句 Here are some suggestions 引出建议，前面应是提问“那从哪里开始呢？”"},
-        {"n": 67, "answer": "C", "exp": "这是小标题，后文讲问自己想从活动中获得什么感受，对应 C。"},
-        {"n": 68, "answer": "E", "exp": "小标题 Start small，空后说等一段时间看是否适合，所以是“不要一开始就花太多时间”。"},
-        {"n": 69, "answer": "D", "exp": "前一句说不想做就停下，总结为“爱好带来乐趣，而不是压力”。"},
-        {"n": 70, "answer": "B", "exp": "前一句 consider going back to school，后面接“看看大学里的课程”。"}
+        {
+          "n": 66,
+          "answer": "A",
+          "exp": "后一句 Here are some suggestions 引出建议，前面应是提问“那从哪里开始呢？”"
+        },
+        {
+          "n": 67,
+          "answer": "C",
+          "exp": "这是小标题，后文讲问自己想从活动中获得什么感受，对应 C。"
+        },
+        {
+          "n": 68,
+          "answer": "E",
+          "exp": "小标题 Start small，空后说等一段时间看是否适合，所以是“不要一开始就花太多时间”。"
+        },
+        {
+          "n": 69,
+          "answer": "D",
+          "exp": "前一句说不想做就停下，总结为“爱好带来乐趣，而不是压力”。"
+        },
+        {
+          "n": 70,
+          "answer": "B",
+          "exp": "前一句 consider going back to school，后面接“看看大学里的课程”。"
+        }
       ]
     },
     {
       "type": "情景交际",
       "items": [
-        {"n": 71, "stem": "A: Happy New Year!\nB: ________!", "answer": "Happy New Year! / The same to you!", "exp": "回应节日祝福，用 Happy New Year! 或 The same to you!"},
-        {"n": 72, "stem": "A: Which sport do you like better, running or swimming?\nB: ________.", "answer": "Running. / Swimming. / I like running better.", "exp": "选择疑问句不用 yes/no 回答，从两项中选一项。"},
-        {"n": 73, "stem": "A: ________ is it from your home to school?\nB: About five kilometers.", "answer": "How far", "exp": "答语是距离，问“多远”用 How far。"},
-        {"n": 74, "stem": "A: ________?\nB: Fine, thank you.", "answer": "How are you?", "exp": "Fine, thank you. 是回答 How are you? 的标准答语。"},
-        {"n": 75, "stem": "A: ________?\nB: I come from Fujian.", "answer": "Where do you come from? / Where are you from?", "exp": "答语说来自哪里，问 Where do you come from?"}
+        {
+          "n": 71,
+          "stem": "A: Happy New Year!\nB: ________!",
+          "answer": "Happy New Year! / The same to you!",
+          "exp": "回应节日祝福，用 Happy New Year! 或 The same to you!"
+        },
+        {
+          "n": 72,
+          "stem": "A: Which sport do you like better, running or swimming?\nB: ________.",
+          "answer": "Running. / Swimming. / I like running better.",
+          "exp": "选择疑问句不用 yes/no 回答，从两项中选一项。"
+        },
+        {
+          "n": 73,
+          "stem": "A: ________ is it from your home to school?\nB: About five kilometers.",
+          "answer": "How far",
+          "exp": "答语是距离，问“多远”用 How far。"
+        },
+        {
+          "n": 74,
+          "stem": "A: ________?\nB: Fine, thank you.",
+          "answer": "How are you?",
+          "exp": "Fine, thank you. 是回答 How are you? 的标准答语。"
+        },
+        {
+          "n": 75,
+          "stem": "A: ________?\nB: I come from Fujian.",
+          "answer": "Where do you come from? / Where are you from?",
+          "exp": "答语说来自哪里，问 Where do you come from?"
+        }
       ]
     },
     {
@@ -124,16 +670,63 @@
       "title": "守护天祝长城的人",
       "passage": "The Great Wall, which is a symbol of our history, snakes across a mountain area of Tianzhu, Gansu province. Thirty-nine protectors work (81) (careful) in the area to protect the great wonder.\nWith (82) history of over 2,000 years, the wall in Gansu wasn't in good condition. Nature did great harm to the wall. Some (83) (part) of the wall were washed away by heavy rains and blown away by strong winds. People in some places also harmed it.\nBut things started to change. In 2006, Great Wall Protection Regulations (条例) (84) (come) into effect. After that, more and more people started to take part (85) caring for the wall. In recent years, the government of Tianzhu has spent more and more money (86) (protect) the wall. Modern technology like self-driven sensing technology (87) drones (无人机) have also been used to watch the wall.\nWith all these efforts, the protectors are still busy with the work. Every week they guard the wall, and any changes are well recorded and (88) (report) to the government. They also help people realize it's important to protect cultural heritage (遗产). Luckily, with (89) (they) hard work, much greater changes have taken place.\n\"As long as we are here, we will protect this wall. It is our job and our (90) (proud),\" said one of the protectors.",
       "items": [
-        {"n": 81, "hint": "careful", "answer": "carefully", "exp": "修饰动词 work，用副词 carefully。"},
-        {"n": 82, "answer": "a", "exp": "with a history of …… 有……年的历史，history 在此用不定冠词 a。"},
-        {"n": 83, "hint": "part", "answer": "parts", "exp": "Some 后接可数名词复数，且谓语 were，用 parts。"},
-        {"n": 84, "hint": "come", "answer": "came", "exp": "In 2006 是过去时间，come into effect 生效，用一般过去时 came。"},
-        {"n": 85, "answer": "in", "exp": "take part in 参加，固定搭配。"},
-        {"n": 86, "hint": "protect", "answer": "protecting", "exp": "spend money (in) doing sth 花钱做某事，用 protecting。"},
-        {"n": 87, "answer": "and", "exp": "sensing technology 和 drones 并列，谓语 have 用复数，用 and。"},
-        {"n": 88, "hint": "report", "answer": "reported", "exp": "与 recorded 并列，are recorded and reported，被动语态用过去分词。"},
-        {"n": 89, "hint": "they", "answer": "their", "exp": "修饰名词 hard work，用形容词性物主代词 their。"},
-        {"n": 90, "hint": "proud", "answer": "pride", "exp": "our 后接名词，proud 的名词是 pride。"}
+        {
+          "n": 81,
+          "hint": "careful",
+          "answer": "carefully",
+          "exp": "修饰动词 work，用副词 carefully。"
+        },
+        {
+          "n": 82,
+          "answer": "a",
+          "exp": "with a history of …… 有……年的历史，history 在此用不定冠词 a。"
+        },
+        {
+          "n": 83,
+          "hint": "part",
+          "answer": "parts",
+          "exp": "Some 后接可数名词复数，且谓语 were，用 parts。"
+        },
+        {
+          "n": 84,
+          "hint": "come",
+          "answer": "came",
+          "exp": "In 2006 是过去时间，come into effect 生效，用一般过去时 came。"
+        },
+        {
+          "n": 85,
+          "answer": "in",
+          "exp": "take part in 参加，固定搭配。"
+        },
+        {
+          "n": 86,
+          "hint": "protect",
+          "answer": "protecting",
+          "exp": "spend money (in) doing sth 花钱做某事，用 protecting。"
+        },
+        {
+          "n": 87,
+          "answer": "and",
+          "exp": "sensing technology 和 drones 并列，谓语 have 用复数，用 and。"
+        },
+        {
+          "n": 88,
+          "hint": "report",
+          "answer": "reported",
+          "exp": "与 recorded 并列，are recorded and reported，被动语态用过去分词。"
+        },
+        {
+          "n": 89,
+          "hint": "they",
+          "answer": "their",
+          "exp": "修饰名词 hard work，用形容词性物主代词 their。"
+        },
+        {
+          "n": 90,
+          "hint": "proud",
+          "answer": "pride",
+          "exp": "our 后接名词，proud 的名词是 pride。"
+        }
       ]
     },
     {
@@ -142,13 +735,43 @@
       "score": 15,
       "prompt": "假定你是某校学生李华，近日你校开展了以“共植诚信之树”（Plant an Honest Tree Together）为主题的活动。请你结合以下提示，用英语给笔友 Henry 写一封电子邮件，分享活动内容及感受。词数 80 左右。\n提示：Time: June 10th, 2025；Activities: watch a video / listen to a speech / have a discussion / plant an honest tree；Feeling(s): ...\n开头已给出：Dear Henry, I'm glad to share with you the event \"Plant an Honest Tree Together\" in our school.",
       "points": [
-        ["写出活动时间（June 10th, 2025）", 2],
-        ["写全四项活动：看视频、听讲座、讨论、种诚信树", 6],
-        ["写出自己的感受或收获", 3],
-        ["书信格式正确，语言通顺，用 First / Then / After that / At last 等连接", 4]
+        [
+          "写出活动时间（June 10th, 2025）",
+          2
+        ],
+        [
+          "写全四项活动：看视频、听讲座、讨论、种诚信树",
+          6
+        ],
+        [
+          "写出自己的感受或收获",
+          3
+        ],
+        [
+          "书信格式正确，语言通顺，用 First / Then / After that / At last 等连接",
+          4
+        ]
       ],
       "sample": "Dear Henry,\nI'm glad to share with you the event \"Plant an Honest Tree Together\" in our school.\nIt was held on June 10th, 2025. First, we watched a video about our school's model students, who always tell the truth and help others. Then, we listened to a speech about the importance of being honest. After that, we had a discussion on how to take action in our daily life, and we all promised to be honest in competitions and exams. At last, we planted an honest tree in our school.\nWe all think the event is educational, and we will take good care of the tree.\nBest wishes!\nYours,\nLi Hua",
       "exp": "按提示逐条写：时间 → 四项活动（用顺序词串起来）→ 感受。范文为官方参考范文（略有润色）。"
     }
+  ],
+  "pages": [
+    "./assets/national/fj-2025-english/p01.webp",
+    "./assets/national/fj-2025-english/p02.webp",
+    "./assets/national/fj-2025-english/p03.webp",
+    "./assets/national/fj-2025-english/p04.webp",
+    "./assets/national/fj-2025-english/p05.webp",
+    "./assets/national/fj-2025-english/p06.webp",
+    "./assets/national/fj-2025-english/p07.webp",
+    "./assets/national/fj-2025-english/p08.webp",
+    "./assets/national/fj-2025-english/p09.webp",
+    "./assets/national/fj-2025-english/p10.webp",
+    "./assets/national/fj-2025-english/p11.webp",
+    "./assets/national/fj-2025-english/p12.webp"
+  ],
+  "answerPages": [
+    "./assets/national/fj-2025-english/p01-answer.webp",
+    "./assets/national/fj-2025-english/p02-answer.webp"
   ]
 }

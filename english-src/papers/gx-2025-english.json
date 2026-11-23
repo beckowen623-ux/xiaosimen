@@ -499,5 +499,22 @@
       "sample": "My School Library My favourite place in my school is the library. It is on the third floor of Building 3. It is large and bright. There are many kinds of books in the library, such as novels and magazines. I often read my favourite books there. Those books can help me explore different fields and increase knowledge. To express my love for the library, I will be a volunteer to help organize the books and clean the library, I hope more and more students come to the library and enjoy the pleasure of reading.",
       "exp": "按照基本情况、帮助、行动三层组织，介绍现状用一般现在时，计划用 will 或 be going to。"
     }
+  ],
+  "pages": [
+    "./assets/national/gx-2025-english/p01.webp",
+    "./assets/national/gx-2025-english/p02.webp",
+    "./assets/national/gx-2025-english/p03.webp",
+    "./assets/national/gx-2025-english/p04.webp",
+    "./assets/national/gx-2025-english/p05.webp",
+    "./assets/national/gx-2025-english/p06.webp",
+    "./assets/national/gx-2025-english/p07.webp",
+    "./assets/national/gx-2025-english/p08.webp"
+  ],
+  "answerPages": [
+    "./assets/national/gx-2025-english/p01-answer.webp",
+    "./assets/national/gx-2025-english/p02-answer.webp",
+    "./assets/national/gx-2025-english/p03-answer.webp",
+    "./assets/national/gx-2025-english/p04-answer.webp",
+    "./assets/national/gx-2025-english/p05-answer.webp"
   ]
 }

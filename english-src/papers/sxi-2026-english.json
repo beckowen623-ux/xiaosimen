@@ -528,5 +528,23 @@
       "sample": "Hello, everyone! In my eyes, small steps are the effort to learn something new and the courage to put up my hand in class. These small steps bring out the best in me.\nI still remember working out a problem quickly in a math class. However, afraid of making a mistake, I hid my hands under the desk. Just then, I caught the teacher’s encouraging look. Taking a deep breath, I slowly raised my hand. My voice shook at first, but as I explained the steps clearly, my fear gradually disappeared. It was through this small step that I made a breakthrough.\nNot only do I feel more confident now, but I can also face challenges bravely. Remember: take one small step today, and you will see yourself grow. That’s all. Thank you!",
       "exp": "先定义小步，再用具体经历说明突破，最后写影响。范文来自附卷答案。"
     }
+  ],
+  "pages": [
+    "./assets/national/sxi-2026-english/p01.webp",
+    "./assets/national/sxi-2026-english/p02.webp",
+    "./assets/national/sxi-2026-english/p03.webp",
+    "./assets/national/sxi-2026-english/p04.webp",
+    "./assets/national/sxi-2026-english/p05.webp",
+    "./assets/national/sxi-2026-english/p06.webp",
+    "./assets/national/sxi-2026-english/p07.webp"
+  ],
+  "answerPages": [
+    "./assets/national/sxi-2026-english/p01-answer.webp",
+    "./assets/national/sxi-2026-english/p02-answer.webp",
+    "./assets/national/sxi-2026-english/p03-answer.webp",
+    "./assets/national/sxi-2026-english/p04-answer.webp",
+    "./assets/national/sxi-2026-english/p05-answer.webp",
+    "./assets/national/sxi-2026-english/p06-answer.webp",
+    "./assets/national/sxi-2026-english/p07-answer.webp"
   ]
 }

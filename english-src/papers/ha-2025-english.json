@@ -590,5 +590,22 @@
       "sample": "Hello, everyone! I am looking for a partner to sing the English song Auld Lang Syne with me at the graduation ceremony. To begin with, since I am a girl, I’d like to pair up with a girl. So it will be more convenient for us both. Second, I wish to work with a partner who is good at singing as excellent singing skills can lead to a successful act. Last, it will be perfect if my would-be partner is easy to get along with because there may be disagreements during the preparation. Team up with me if you are the one I am looking for. Let’s create a piece that belongs to you and me, belongs to the class of 2025! Thanks for listening!",
       "exp": "三项要求都要覆盖，理由对应具体要求，用 To begin with、Second、Last 组织。"
     }
+  ],
+  "pages": [
+    "./assets/national/ha-2025-english/p01.webp",
+    "./assets/national/ha-2025-english/p02.webp",
+    "./assets/national/ha-2025-english/p03.webp",
+    "./assets/national/ha-2025-english/p04.webp",
+    "./assets/national/ha-2025-english/p05.webp",
+    "./assets/national/ha-2025-english/p06.webp",
+    "./assets/national/ha-2025-english/p07.webp",
+    "./assets/national/ha-2025-english/p08.webp",
+    "./assets/national/ha-2025-english/p09.webp",
+    "./assets/national/ha-2025-english/p10.webp"
+  ],
+  "answerPages": [
+    "./assets/national/ha-2025-english/p01-answer.webp",
+    "./assets/national/ha-2025-english/p02-answer.webp",
+    "./assets/national/ha-2025-english/p03-answer.webp"
   ]
 }

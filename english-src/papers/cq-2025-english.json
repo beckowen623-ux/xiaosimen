@@ -636,5 +636,21 @@
       "sample": "According to the survey, 16% show little interest in reading. 12% don’t know what to read. And 4% have other reasons. Most students, about 68%, think they have no time. However, I think if we truly want to read, we can always find time. First, we can use spare moments wisely. We can read during short moments while waiting for the bus. Also, always carrying a book makes it convenient to read. Every minute counts. Second, we can create an AI reading agent. It creates our own reading plans, records our reading time and reminds us about our reading tasks. It can help us manage time well. Dear friends, time is like sunshine — if you look for it, you’ll always find some. Let’s swim together in the ocean of reading.",
       "exp": "先概述数据，再围绕时间不足给建议，避免只谈怎样选书；图表已完整转为文字。"
     }
+  ],
+  "pages": [
+    "./assets/national/cq-2025-english/p01.webp",
+    "./assets/national/cq-2025-english/p02.webp",
+    "./assets/national/cq-2025-english/p03.webp",
+    "./assets/national/cq-2025-english/p04.webp",
+    "./assets/national/cq-2025-english/p05.webp",
+    "./assets/national/cq-2025-english/p06.webp",
+    "./assets/national/cq-2025-english/p07.webp",
+    "./assets/national/cq-2025-english/p08.webp",
+    "./assets/national/cq-2025-english/p09.webp",
+    "./assets/national/cq-2025-english/p10.webp"
+  ],
+  "answerPages": [
+    "./assets/national/cq-2025-english/p01-answer.webp",
+    "./assets/national/cq-2025-english/p02-answer.webp"
   ]
 }

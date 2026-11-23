@@ -484,5 +484,18 @@
       "sample": "An Unforgettable Story\nLast Friday, our class held an English story competition. I was nervous because it was my first time speaking in front of so many people. When I forgot a sentence, our English teacher smiled and encouraged me. My classmates clapped for me, too. I took a deep breath and continued my story. Although I did not win first prize, I felt proud of myself. This experience taught me that courage and support from others can help us overcome difficulties.",
       "exp": "范文为编写示例，非官方范文。以一般过去时写校园经历，补全标题并清楚表达感受。"
     }
+  ],
+  "pages": [
+    "./assets/national/gz-2025-english/p01.webp",
+    "./assets/national/gz-2025-english/p02.webp",
+    "./assets/national/gz-2025-english/p03.webp",
+    "./assets/national/gz-2025-english/p04.webp",
+    "./assets/national/gz-2025-english/p05.webp",
+    "./assets/national/gz-2025-english/p06.webp",
+    "./assets/national/gz-2025-english/p07.webp",
+    "./assets/national/gz-2025-english/p08.webp"
+  ],
+  "answerPages": [
+    "./assets/national/gz-2025-english/p01-answer.webp"
   ]
 }

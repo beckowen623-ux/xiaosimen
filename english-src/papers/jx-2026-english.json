@@ -724,5 +724,18 @@
       "sample": "Dear Editor,\nKnowing that our school offers two themes for labor classes, I prefer to learn housework skills. First, I hope to learn how to cook simple and healthy meals. I also want to learn to keep my room clean and wash my clothes properly. These skills are useful in everyday life. By learning them, I can take better care of myself and help my parents after school. Working together can also bring our family closer. Besides, doing housework will teach me to be responsible and value other people’s hard work.\nI hope you can consider my suggestion.\nYours sincerely,\nLi Hua",
       "exp": "范文为编写示例，非官方范文。选择一个主题，学习内容与理由对应，结尾说明成长收获。"
     }
+  ],
+  "pages": [
+    "./assets/national/jx-2026-english/p01.webp",
+    "./assets/national/jx-2026-english/p02.webp",
+    "./assets/national/jx-2026-english/p03.webp",
+    "./assets/national/jx-2026-english/p04.webp",
+    "./assets/national/jx-2026-english/p05.webp",
+    "./assets/national/jx-2026-english/p06.webp",
+    "./assets/national/jx-2026-english/p07.webp",
+    "./assets/national/jx-2026-english/p08.webp"
+  ],
+  "answerPages": [
+    "./assets/national/jx-2026-english/p01-answer.webp"
   ]
 }

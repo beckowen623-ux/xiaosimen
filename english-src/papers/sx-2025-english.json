@@ -652,5 +652,23 @@
       "sample": "We experienced more and surely made progress. As for me, I can’t forget my friend Wang Gang. Wang Gang is good at playing basketball, but I wasn’t. Wang Gang saw this and came to help me. He showed me how to move the ball and trained me how to pass or catch the ball. After that, he encouraged me to play it with others. He had a great influence on me. I started to play better and better. The more I played it, the more I liked it. Now we’re both in the class team. I will never forget his help and I will help others like him!",
       "exp": "两种任务只选一种，按人物或问题、过程、结果展开，讲经历以过去时为主。"
     }
+  ],
+  "pages": [
+    "./assets/national/sx-2025-english/p01.webp",
+    "./assets/national/sx-2025-english/p02.webp",
+    "./assets/national/sx-2025-english/p03.webp",
+    "./assets/national/sx-2025-english/p04.webp",
+    "./assets/national/sx-2025-english/p05.webp",
+    "./assets/national/sx-2025-english/p06.webp",
+    "./assets/national/sx-2025-english/p07.webp",
+    "./assets/national/sx-2025-english/p08.webp",
+    "./assets/national/sx-2025-english/p09.webp",
+    "./assets/national/sx-2025-english/p10.webp"
+  ],
+  "answerPages": [
+    "./assets/national/sx-2025-english/p01-answer.webp",
+    "./assets/national/sx-2025-english/p02-answer.webp",
+    "./assets/national/sx-2025-english/p03-answer.webp",
+    "./assets/national/sx-2025-english/p04-answer.webp"
   ]
 }
