@@ -13,11 +13,11 @@ const SEMESTERS = [
   { key: "7b", stage: "7-down", label: "初一下学期", unitPrefix: "七下" },
   { key: "8a", stage: "8-up", label: "初二上学期", unitPrefix: "八上" },
   { key: "8b", stage: "8-down", label: "初二下学期", unitPrefix: "八下" },
-  { key: "9a", stage: "9-up", label: "初三上学期", unitPrefix: "九上", altPrefixes: ["九年级"] },
-  { key: "9b", stage: "9-down", label: "初三下学期", unitPrefix: "九下", altPrefixes: ["九年级"] },
+  { key: "9a", stage: "9-up", label: "初三上学期", unitPrefix: "九上", altPrefixes: ["九年级", "第一单元", "第二单元", "第三单元", "第四单元", "第五单元", "第六单元", "第七单元"] },
+  { key: "9b", stage: "9-down", label: "初三下学期", unitPrefix: "九下", altPrefixes: ["九年级", "第八单元", "第九单元", "第十单元", "第十一单元", "第十、十一单元", "第十二单元"] },
   { key: "sp", stage: "special", label: "专题与压轴", unitPrefix: "专题" },
 ];
-const SUBJECTS = { math: "数学", physics: "物理" };
+const SUBJECTS = { math: "数学", physics: "物理", chemistry: "化学" };
 const LETTERS = ["A", "B", "C", "D"];
 const LEVEL = { 1: "基础", 2: "提高", 3: "拓展" };
 // 配图：源文件里写 "img": "文件名.svg"，图片放在 assets/knowledge/<科目>/<学期>/ 下
@@ -57,7 +57,7 @@ function balance(q, slot) {
 }
 const SUP = { "²": "^2", "³": "^3", "⁴": "^4", "ⁿ": "^n" };
 function blankAlts(text) {
-  const alts = String(text).split(/\s\/\s/).map(s => s.trim()).filter(Boolean);
+  const alts = String(text).split(/\s\/\s|\|/).map(s => s.trim()).filter(Boolean);
   for (const a of [...alts]) if (/[²³⁴ⁿ]/.test(a)) alts.push(a.replace(/[²³⁴ⁿ]/g, ch => SUP[ch]));
   return [...new Set(alts)];
 }
@@ -71,7 +71,7 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
   const subjectIndex = { key: subject, label: subjectLabel, semesters: [] };
   for (const sem of SEMESTERS) {
     const mine = files.filter(f => f.startsWith(sem.key + "-"));
-    if (!mine.length) { if (subject === "physics" && (sem.key === "7a" || sem.key === "7b")) continue; subjectIndex.semesters.push({ key: sem.key, stage: sem.stage, label: sem.label, ready: false }); continue; }
+    if (!mine.length) { if ((subject === "physics" && (sem.key === "7a" || sem.key === "7b")) || (subject === "chemistry" && ["7a", "7b", "8a", "8b"].includes(sem.key))) continue; subjectIndex.semesters.push({ key: sem.key, stage: sem.stage, label: sem.label, ready: false }); continue; }
     const chapters = [];
     const questions = [];
     const ids = new Set();
@@ -118,7 +118,7 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
         });
         const kpSet = new Set(p.kp || []);
         const prefixes = [sem.unitPrefix, ...(sem.altPrefixes || [])];
-        const refs = oldQs.filter(q => q.subject === subject && prefixes.some(pr => String(q.unit || "").startsWith(pr)) && kpSet.has(q.kp))
+        const refs = oldQs.filter(q => q.subject === subject && ((!q.unit && subject === "chemistry") || prefixes.some(pr => String(q.unit || "").startsWith(pr))) && kpSet.has(q.kp))
           .sort((a, b) => String(a.paperId).localeCompare(String(b.paperId)) || a.number - b.number);
         chapter.points.push({ id: pointId, name: p.name, tag: p.tag || "", card: p.card, qids, refs: refs.map(q => q.id) });
         for (const q of refs) if (!questions.some(x => x.id === q.id)) questions.push({ ...q, kpId: pointId, kpRef: true });

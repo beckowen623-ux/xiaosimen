@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <circle cx="48" cy="86" r="10" fill="#111"/>
+      <circle cx="64" cy="86" r="7" fill="#fff" stroke="#111" stroke-width="1.6"/>
+      <circle cx="48" cy="118" r="10" fill="#111"/>
+      <circle cx="64" cy="118" r="7" fill="#fff" stroke="#111" stroke-width="1.6"/>
+      <text x="84" y="106" font-size="16" fill="#111" font-family="sans-serif">＋</text>
+      <circle cx="116" cy="100" r="8" fill="#fff" stroke="#c0392b" stroke-width="1.8"/>
+      <circle cx="132" cy="100" r="8" fill="#fff" stroke="#c0392b" stroke-width="1.8"/>
+      <line x1="152" y1="100" x2="188" y2="100" stroke="#111" stroke-width="2" marker-end="url(#arr)"/>
+      <text x="155" y="92" font-size="10" fill="#333" font-family="sans-serif">点燃</text>
+      <circle cx="226" cy="86" r="10" fill="#111"/>
+      <circle cx="211" cy="86" r="7" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+      <circle cx="241" cy="86" r="7" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+      <circle cx="226" cy="118" r="10" fill="#111"/>
+      <circle cx="211" cy="118" r="7" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+      <circle cx="241" cy="118" r="7" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+      <text x="48" y="168" font-size="12" fill="#333" font-family="sans-serif">2CO ＋ O2 ＝ 2CO2（反应前后原子种类和数目不变）</text>
+    </svg>

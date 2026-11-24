@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <polygon points="104,46 196,46 150,108" fill="#f7f9fc" stroke="#111" stroke-width="1.8"/>
+      <line x1="150" y1="108" x2="150" y2="148" stroke="#111" stroke-width="2.2"/>
+      <line x1="112" y1="20" x2="146" y2="82" stroke="#2c6eb5" stroke-width="2.2"/>
+      <text x="40" y="34" font-size="11" fill="#2c6eb5" font-family="sans-serif">玻璃棒引流</text>
+      <rect x="122" y="128" width="90" height="50" fill="#e6f3ff" stroke="#111" stroke-width="1.8"/>
+      <text x="218" y="72" font-size="11" fill="#c0392b" font-family="sans-serif">一贴二低三靠</text>
+      <text x="218" y="94" font-size="10" fill="#333" font-family="sans-serif">滤纸低于漏斗口</text>
+      <text x="218" y="112" font-size="10" fill="#333" font-family="sans-serif">液面低于滤纸边</text>
+      <text x="218" y="130" font-size="10" fill="#333" font-family="sans-serif">棒靠三层滤纸</text>
+    </svg>
