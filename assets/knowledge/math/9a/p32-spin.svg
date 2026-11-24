@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<circle cx="160" cy="105" r="75" stroke-width="2"/>
+<line x1="85.0" y1="105.0" x2="235.0" y2="105.0" stroke-width="1.6"/>
+<line x1="160.0" y1="30.0" x2="160.0" y2="180.0" stroke-width="1.6"/>
+<text x="128.0" y="79.0" font-size="16" fill="#111" stroke="none" text-anchor="middle">红</text>
+<text x="192.0" y="79.0" font-size="16" fill="#111" stroke="none" text-anchor="middle">蓝</text>
+<text x="128.0" y="143.0" font-size="16" fill="#111" stroke="none" text-anchor="middle">黄</text>
+<text x="192.0" y="143.0" font-size="16" fill="#111" stroke="none" text-anchor="middle">绿</text>
+<circle cx="160.0" cy="105.0" r="2.8" fill="#111" stroke="none"/>
+</svg>

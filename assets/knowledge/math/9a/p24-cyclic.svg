@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<circle cx="160" cy="105" r="74" stroke-width="2"/>
+<polygon points="112.4,48.3 220.6,62.6 224.1,142.0 99.4,147.4" fill="none" stroke="#111" stroke-width="2"/>
+<circle cx="112.4" cy="48.3" r="2.8" fill="#111" stroke="none"/><text x="100.4" y="42.3" fill="#111" stroke="none" text-anchor="middle">A</text>
+<circle cx="220.6" cy="62.6" r="2.8" fill="#111" stroke="none"/><text x="232.6" y="56.6" fill="#111" stroke="none" text-anchor="middle">B</text>
+<circle cx="224.1" cy="142.0" r="2.8" fill="#111" stroke="none"/><text x="236.1" y="152.0" fill="#111" stroke="none" text-anchor="middle">C</text>
+<circle cx="99.4" cy="147.4" r="2.8" fill="#111" stroke="none"/><text x="85.4" y="157.4" fill="#111" stroke="none" text-anchor="middle">D</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="160.0" y1="30.0" x2="95.0" y2="165.0" stroke-width="2"/>
+<line x1="160.0" y1="30.0" x2="225.0" y2="165.0" stroke-width="2"/>
+<path d="M 95 165 A 65 18 0 0 0 225 165" stroke-width="2"/>
+<path d="M 95 165 A 65 18 0 0 1 225 165" stroke-dasharray="5 4" stroke-width="1.5"/>
+<line x1="160.0" y1="30.0" x2="160.0" y2="165.0" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="160.0" y1="165.0" x2="225.0" y2="165.0" stroke-width="1.5" stroke-dasharray="6 5"/>
+<polyline points="160.0,155.0 170.0,155.0 170.0,165.0" stroke-width="1.5"/>
+<text x="148.0" y="105.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">h</text>
+<text x="192.0" y="158.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">r</text>
+<text x="204.0" y="95.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">l</text>
+</svg>

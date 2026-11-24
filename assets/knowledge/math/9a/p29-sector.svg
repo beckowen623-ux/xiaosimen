@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<path d="M 160 150 L 77.7 102.5 A 95 95 0 0 1 242.3 102.5 Z" fill="#ddd" stroke="#111" stroke-width="2"/>
+<circle cx="160.0" cy="150.0" r="2.8" fill="#111" stroke="none"/><text x="160.0" y="168.0" fill="#111" stroke="none" text-anchor="middle">O</text>
+<circle cx="77.7" cy="102.5" r="2.8" fill="#111" stroke="none"/><text x="65.7" y="98.5" fill="#111" stroke="none" text-anchor="middle">A</text>
+<circle cx="242.3" cy="102.5" r="2.8" fill="#111" stroke="none"/><text x="254.3" y="98.5" fill="#111" stroke="none" text-anchor="middle">B</text>
+<text x="160.0" y="120.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">n°</text>
+<text x="114.0" y="140.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">R</text>
+</svg>
