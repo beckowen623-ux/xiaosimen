@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-24 · Gemini · 全库质检修复：清零草稿残留、消除 29 处“接上题”断链与 2 处无图“如图”（main）
+- 改动：对初一上～初三下及专题与压轴全部 1,768 道数学题和 221 张卡片做全库扫描，修复 4 类影响家长信任的隐患：① 清理 `sp-4.json` p17 卡片公式中 1 处草稿自问残留；② 将全部 29 处“接上题”（含 4 道独立诊断题与多道拓展题）改为条件完全独立的题干，避免诊断/冲高/错题本/打印卷出现上下文断链；③ 修复 2 处含“如图”但缺配图的题（`9b-2.json` p10 第 3 题去掉“如图”，`sp-4.json` p16 第 7 题补挂 `p16-hbg.svg`）；④ 为 `7a-2.json` 中 13 道负整数填空补齐半角/全角负号双兼容。
+- 验证：复检四项指标全部清零（0/0/0/0）；`node tools/build_knowledge.mjs`、`node --check app.js && node --check knowledge.js`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）均通过。
+
 ## 2026-11-24 · Gemini · 数学补缺新增「薄弱知识点一键 A4 打印卷」与「诊断交卷提分处方卡」（main）
 - 改动：在 `knowledge.js` 与 `knowledge.css` 新增站内 A4 打印预览层（含速记卡、带 SVG 配图练习题及独立分页「参考答案与解析」，兼容手机/微信 WebView 且严格遵循免费/完整版边界），列表页支持“打印薄弱 A4 卷”，单点页支持“打印本点 A4 卷”；在 `knowledge.js` 新增 `summaryRxHTML` / `wireSummaryRx` 并接入 `app.js` `renderSummary()`，知识点诊断交卷后直接输出薄弱点清单、预计提分空间、一键集中补弱、一键打印本次薄弱卷及未解锁引导。
 - 验证：`node --check app.js && node --check knowledge.js`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）及本地预览打包均通过。
