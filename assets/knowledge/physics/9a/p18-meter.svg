@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <rect x="64" y="22" width="192" height="148" rx="8" fill="#f7f9fc" stroke="#111" stroke-width="2"/>
+      <text x="132" y="42" font-size="13" fill="#111" font-family="sans-serif">kW·h</text>
+      <rect x="92" y="50" width="136" height="28" fill="#fff" stroke="#111" stroke-width="1.6"/>
+      <text x="100" y="70" font-size="16" fill="#111" font-family="monospace">0 2 5 6</text>
+      <rect x="198" y="52" width="26" height="24" fill="#ffe6e6" stroke="#c0392b" stroke-width="1.2"/>
+      <text x="205" y="70" font-size="16" fill="#c0392b" font-family="monospace">4</text>
+      <text x="90" y="106" font-size="12" fill="#111" font-family="sans-serif">220 V   10(20) A   50 Hz</text>
+      <text x="90" y="132" font-size="12" fill="#2c6eb5" font-family="sans-serif">3 000 r/(kW·h)</text>
+      <text x="64" y="190" font-size="12" fill="#333" font-family="sans-serif">末位红框是小数位：示数为 256.4 kW·h</text>
+    </svg>

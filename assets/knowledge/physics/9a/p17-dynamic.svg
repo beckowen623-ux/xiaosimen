@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <rect x="48" y="40" width="224" height="110" fill="none" stroke="#111" stroke-width="1.8"/>
+      <rect x="142" y="30" width="36" height="20" fill="#ffffff"/>
+      <line x1="154" y1="30" x2="154" y2="50" stroke="#111" stroke-width="2.5"/>
+      <line x1="166" y1="35" x2="166" y2="45" stroke="#111" stroke-width="3.5"/>
+      <circle cx="92" cy="40" r="12" fill="#fff" stroke="#111" stroke-width="1.8"/>
+      <text x="87" y="44" font-size="11" fill="#111" font-family="sans-serif">A</text>
+      <rect x="82" y="139" width="52" height="22" fill="#eef4fb" stroke="#111" stroke-width="1.8"/>
+      <text x="100" y="154" font-size="11" fill="#111" font-family="sans-serif">R1</text>
+      <rect x="184" y="139" width="52" height="22" fill="#f7ead9" stroke="#111" stroke-width="1.8"/>
+      <text x="200" y="154" font-size="11" fill="#111" font-family="sans-serif">R2</text>
+      <line x1="210" y1="120" x2="210" y2="139" stroke="#c0392b" stroke-width="2" marker-end="url(#arr-r)"/>
+      <polyline points="174,150 174,96 246,96 246,150" fill="none" stroke="#c0392b" stroke-width="1.8"/>
+      <circle cx="210" cy="96" r="12" fill="#fff" stroke="#c0392b" stroke-width="1.8"/>
+      <text x="205" y="100" font-size="11" fill="#c0392b" font-family="sans-serif">V</text>
+      <text x="48" y="188" font-size="12" fill="#333" font-family="sans-serif">串联分压：R2 变大 → I 变小 → U1 变小 → U2(V) 变大</text>
+    </svg>

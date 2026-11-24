@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <rect x="24" y="42" width="118" height="106" fill="none" stroke="#111" stroke-width="1.8"/>
+      <rect x="64" y="32" width="38" height="20" fill="#ffffff"/>
+      <line x1="76" y1="32" x2="76" y2="52" stroke="#111" stroke-width="2.5"/>
+      <line x1="88" y1="37" x2="88" y2="47" stroke="#111" stroke-width="3.5"/>
+      <circle cx="52" cy="148" r="12" fill="#fff" stroke="#111" stroke-width="1.8"/>
+      <text x="45" y="152" font-size="10" fill="#111" font-family="sans-serif">L1</text>
+      <circle cx="114" cy="148" r="12" fill="#fff" stroke="#111" stroke-width="1.8"/>
+      <text x="107" y="152" font-size="10" fill="#111" font-family="sans-serif">L2</text>
+      <text x="58" y="184" font-size="12" fill="#111" font-family="sans-serif">串联电路</text>
+      <rect x="178" y="42" width="118" height="106" fill="none" stroke="#111" stroke-width="1.8"/>
+      <line x1="178" y1="96" x2="296" y2="96" stroke="#111" stroke-width="1.8"/>
+      <rect x="218" y="32" width="38" height="20" fill="#ffffff"/>
+      <line x1="230" y1="32" x2="230" y2="52" stroke="#111" stroke-width="2.5"/>
+      <line x1="242" y1="37" x2="242" y2="47" stroke="#111" stroke-width="3.5"/>
+      <circle cx="237" cy="96" r="12" fill="#fff" stroke="#111" stroke-width="1.8"/>
+      <text x="230" y="100" font-size="10" fill="#111" font-family="sans-serif">L1</text>
+      <circle cx="237" cy="148" r="12" fill="#fff" stroke="#111" stroke-width="1.8"/>
+      <text x="230" y="152" font-size="10" fill="#111" font-family="sans-serif">L2</text>
+      <text x="212" y="184" font-size="12" fill="#2c6eb5" font-family="sans-serif">并联电路</text>
+    </svg>

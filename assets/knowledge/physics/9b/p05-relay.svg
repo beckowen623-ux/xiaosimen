@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <rect x="28" y="34" width="118" height="120" fill="#f7f9fc" stroke="#2c6eb5" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="38" y="52" font-size="11" fill="#2c6eb5" font-family="sans-serif">低压控制电路</text>
+      <rect x="82" y="74" width="44" height="54" fill="#dce8f8" stroke="#111" stroke-width="1.8"/>
+      <text x="86" y="105" font-size="11" fill="#111" font-family="sans-serif">电磁铁</text>
+      <rect x="174" y="34" width="118" height="120" fill="#fff7f7" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="184" y="52" font-size="11" fill="#c0392b" font-family="sans-serif">高压工作电路</text>
+      <line x1="148" y1="68" x2="148" y2="128" stroke="#111" stroke-width="3"/>
+      <text x="134" y="144" font-size="11" fill="#111" font-family="sans-serif">衔铁</text>
+      <circle cx="232" cy="104" r="16" fill="#fff" stroke="#111" stroke-width="1.8"/>
+      <text x="225" y="108" font-size="12" fill="#111" font-family="sans-serif">M</text>
+      <text x="58" y="182" font-size="12" fill="#333" font-family="sans-serif">实质：利用电磁铁控制工作电路通断的开关</text>
+    </svg>

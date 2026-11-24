@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <circle cx="160" cy="34" r="14" fill="#dce8f8" stroke="#111" stroke-width="1.8"/>
+      <text x="155" y="38" font-size="14" fill="#c0392b" font-family="sans-serif">＋</text>
+      <line x1="160" y1="48" x2="160" y2="112" stroke="#111" stroke-width="3"/>
+      <circle cx="160" cy="116" r="46" fill="none" stroke="#111" stroke-width="1.8"/>
+      <line x1="160" y1="112" x2="136" y2="144" stroke="#c0392b" stroke-width="2.5"/>
+      <line x1="160" y1="112" x2="184" y2="144" stroke="#c0392b" stroke-width="2.5"/>
+      <text x="122" y="152" font-size="12" fill="#c0392b" font-family="sans-serif">＋</text>
+      <text x="186" y="152" font-size="12" fill="#c0392b" font-family="sans-serif">＋</text>
+      <text x="72" y="186" font-size="12" fill="#333" font-family="sans-serif">原理：同种电荷互相排斥</text>
+    </svg>

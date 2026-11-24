@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <rect x="46" y="48" width="84" height="84" fill="#e6f3ff" stroke="#111" stroke-width="1.8"/>
+      <line x1="88" y1="22" x2="88" y2="112" stroke="#c0392b" stroke-width="2.2"/>
+      <circle cx="88" cy="116" r="4" fill="#c0392b"/>
+      <rect x="64" y="138" width="48" height="22" rx="3" fill="#f7ead9" stroke="#111" stroke-width="1.5"/>
+      <text x="72" y="153" font-size="11" fill="#111" font-family="sans-serif">加热器</text>
+      <text x="78" y="96" font-size="13" fill="#111" font-family="sans-serif">水</text>
+      <rect x="190" y="48" width="84" height="84" fill="#fff3cc" stroke="#111" stroke-width="1.8"/>
+      <line x1="232" y1="22" x2="232" y2="112" stroke="#c0392b" stroke-width="2.2"/>
+      <circle cx="232" cy="116" r="4" fill="#c0392b"/>
+      <rect x="208" y="138" width="48" height="22" rx="3" fill="#f7ead9" stroke="#111" stroke-width="1.5"/>
+      <text x="216" y="153" font-size="11" fill="#111" font-family="sans-serif">加热器</text>
+      <text x="212" y="96" font-size="13" fill="#111" font-family="sans-serif">食用油</text>
+      <text x="48" y="184" font-size="12" fill="#333" font-family="sans-serif">相同质量、相同加热器：水升温慢，c水＞c油</text>
+    </svg>
