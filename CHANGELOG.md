@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-24 · Gemini · 数学补缺新增「薄弱知识点一键 A4 打印卷」与「诊断交卷提分处方卡」（main）
+- 改动：在 `knowledge.js` 与 `knowledge.css` 新增站内 A4 打印预览层（含速记卡、带 SVG 配图练习题及独立分页「参考答案与解析」，兼容手机/微信 WebView 且严格遵循免费/完整版边界），列表页支持“打印薄弱 A4 卷”，单点页支持“打印本点 A4 卷”；在 `knowledge.js` 新增 `summaryRxHTML` / `wireSummaryRx` 并接入 `app.js` `renderSummary()`，知识点诊断交卷后直接输出薄弱点清单、预计提分空间、一键集中补弱、一键打印本次薄弱卷及未解锁引导。
+- 验证：`node --check app.js && node --check knowledge.js`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）及本地预览打包均通过。
+
 ## 2026-11-24 · Gemini · 完善数学全链路：新增“专题与压轴”（6 章 24 个高频模型/保底点）及分层练题入口（main）
 - 改动：在 `tools/build_knowledge.mjs` 新增 `sp`（专题与压轴）标签；新增 `knowledge-src/math/sp-1.json`～`sp-6.json`，覆盖中考计算保底与防错（4 点）、全等与辅助线模型（5 点）、相似与圆综合压轴（4 点）、几何最值压轴模型（4 点）、二次函数压轴综合（4 点）、代数压轴与中考新定义（3 点），共 24 个专题点、192 道原创分层题及 15 幅精确 SVG 矢量图（`assets/knowledge/math/sp/`）。
 - 链路优化：在 `knowledge.js` 首页知识点主卡片新增“专题与压轴”直达入口，在知识点详情页新增“保底：基础+提高”与“冲高：拓展/压轴”分层按钮，方便基础弱学生稳步托底、拔尖学生直刷压轴，原有免费边界不变。

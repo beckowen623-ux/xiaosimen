@@ -1289,6 +1289,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-24', '数学补缺新增两大实用功能：①「薄弱知识点一键 A4 打印卷」：家长不用让孩子长时间盯手机，可直接预览并打印薄弱点速记卡＋练习题＋独立背面解析；②「诊断交卷提分处方卡」：做完诊断立刻给出薄弱漏洞清单、预计提分空间，支持一键集中补弱或直接打印本次补缺卷。'],
   ['2026-11-24', '数学补缺链路全面升级！新增「专题与压轴」频道（6 大模块 24 个高频模型、192 道原创题＋15 幅矢量图）：既含面向基础薄弱生的“中考计算保底与防错”，也含面向拔尖冲高生的倍长中线、手拉手、一线三等角、半角、隐圆、瓜豆、胡不归、二次函数存在性与铅垂高面积最值等中考压轴模型；同时知识点页新增“保底：基础+提高”与“冲高：拓展/压轴”快捷入口，差生好生都能按需提分。'],
   ['2026-11-23', '按知识点补缺补漏上线数学初三下学期：覆盖反比例函数、相似、锐角三角函数、投影与视图共 4 章 20 个知识点，新增 160 道分层新题并配 14 幅清晰矢量图，至此初中数学初一到初三六个学期全部上线！'],
   ['2026-11-23', '按知识点补缺补漏上线数学初三上学期：覆盖一元二次方程、二次函数、旋转、圆、概率初步共 5 章 34 个知识点，新增 272 道分层新题并配 16 幅函数/圆/旋转/概率图，同时归位同类真题与同步题，每点前 3 题和诊断题免费体验。'],
@@ -3385,6 +3386,7 @@ function renderSummary() {
           ${results.length ? `<button class="btn" type="button" id="scorePosterBtn">生成成绩单海报</button>` : ''}
           <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : state.mode === 'knowledge' ? '返回知识点' : '返回首页'}</button>
         </div>
+        ${state.mode === 'knowledge' ? (window.KnowledgeHub?.summaryRxHTML?.(state.queue, results) || '') : ''}
         ${trialUpsellHTML()}
         ${nextSync ? `<button class="btn next-sync" type="button" id="nextSyncBtn">下一章：${esc(nextSync.label || nextSync.title)} →</button>` : ''}
         <p class="checkin-cross">${accountingRecommendation()}</p>
@@ -3394,6 +3396,7 @@ function renderSummary() {
   byId('homeBtn').addEventListener('click', returnFromPractice);
   byId('nextSyncBtn')?.addEventListener('click', () => { void claudePaperAction(nextSync.id, 'phone'); });
   byId('upsellBtn')?.addEventListener('click', () => openUnlock());
+  if (state.mode === 'knowledge') window.KnowledgeHub?.wireSummaryRx?.(view, state.queue, results);
   byId('scorePosterBtn')?.addEventListener('click', () => void openScorePoster({
     title: syncDone?.title || `${MODE_LABEL[state.mode] || '同步练习'}`,
     metric: syncDone ? `${syncScore} 分` : `${acc}%`,
