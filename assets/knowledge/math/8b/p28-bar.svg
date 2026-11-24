@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="45.0" y1="170.0" x2="290.0" y2="170.0" stroke-width="1.5"/>
+<line x1="45.0" y1="170.0" x2="45.0" y2="25.0" stroke-width="1.5"/>
+<rect x="75" y="130" width="32" height="40" fill="#ddd" stroke="#111" stroke-width="1.6"/>
+<rect x="130" y="110" width="32" height="60" fill="#ddd" stroke="#111" stroke-width="1.6"/>
+<rect x="185" y="50" width="32" height="120" fill="#ddd" stroke="#111" stroke-width="1.6"/>
+<rect x="240" y="90" width="32" height="80" fill="#ddd" stroke="#111" stroke-width="1.6"/>
+<text x="91.0" y="124.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">2</text>
+<text x="146.0" y="104.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">3</text>
+<text x="201.0" y="44.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">6</text>
+<text x="256.0" y="84.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">4</text>
+<text x="91.0" y="188.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">70分</text>
+<text x="146.0" y="188.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">80分</text>
+<text x="201.0" y="188.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">90分</text>
+<text x="256.0" y="188.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">100分</text>
+<text x="30.0" y="32.0" font-size="12" fill="#111" stroke="none" text-anchor="middle">人数</text>
+</svg>

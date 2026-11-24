@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="24.0" y1="150.0" x2="300.0" y2="150.0" stroke-width="1.5"/>
+<line x1="120.0" y1="192.0" x2="120.0" y2="18.0" stroke-width="1.5"/>
+<polyline points="293,145 300,150 293,155" stroke-width="1.5"/>
+<polyline points="115,25 120,18 125,25" stroke-width="1.5"/>
+<text x="300.0" y="168.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">x</text>
+<text x="134.0" y="24.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">y</text>
+<text x="108.0" y="166.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">O</text>
+<line x1="56.0" y1="182.0" x2="216.0" y2="22.0" stroke-width="2"/>
+<line x1="104.0" y1="38.0" x2="248.0" y2="182.0" stroke-width="2"/>
+<line x1="152.0" y1="86.0" x2="152.0" y2="150.0" stroke-width="1.2" stroke-dasharray="6 5"/>
+<line x1="120.0" y1="86.0" x2="152.0" y2="86.0" stroke-width="1.2" stroke-dasharray="6 5"/>
+<circle cx="152.0" cy="86.0" r="2.8" fill="#111" stroke="none"/><text x="186.0" y="90.0" fill="#111" stroke="none" text-anchor="middle">P(1,2)</text>
+<text x="152.0" y="166.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">1</text>
+<text x="108.0" y="90.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">2</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="24.0" y1="120.0" x2="300.0" y2="120.0" stroke-width="1.5"/>
+<line x1="155.0" y1="192.0" x2="155.0" y2="18.0" stroke-width="1.5"/>
+<polyline points="293,115 300,120 293,125" stroke-width="1.5"/>
+<polyline points="150,25 155,18 160,25" stroke-width="1.5"/>
+<text x="300.0" y="138.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">x</text>
+<text x="169.0" y="24.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">y</text>
+<text x="143.0" y="136.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">O</text>
+<line x1="80.0" y1="165.0" x2="230.0" y2="15.0" stroke-width="2.2"/>
+<circle cx="155.0" cy="90.0" r="2.8" fill="#111" stroke="none"/><text x="127.0" y="94.0" fill="#111" stroke="none" text-anchor="middle">(0,1)</text>
+<circle cx="125.0" cy="120.0" r="2.8" fill="#111" stroke="none"/><text x="115.0" y="138.0" fill="#111" stroke="none" text-anchor="middle">(-1,0)</text>
+</svg>

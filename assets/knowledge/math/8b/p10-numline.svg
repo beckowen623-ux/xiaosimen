@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="25.0" y1="160.0" x2="295.0" y2="160.0" stroke-width="1.6"/>
+<polyline points="288,155 295,160 288,165" stroke-width="1.5"/>
+<line x1="60.0" y1="155.0" x2="60.0" y2="165.0" stroke-width="1.5"/>
+<line x1="105.0" y1="155.0" x2="105.0" y2="165.0" stroke-width="1.5"/>
+<line x1="150.0" y1="155.0" x2="150.0" y2="165.0" stroke-width="1.5"/>
+<line x1="195.0" y1="155.0" x2="195.0" y2="165.0" stroke-width="1.5"/>
+<line x1="240.0" y1="155.0" x2="240.0" y2="165.0" stroke-width="1.5"/>
+<text x="60.0" y="182.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">0</text>
+<text x="105.0" y="182.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">1</text>
+<text x="150.0" y="182.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">2</text>
+<text x="195.0" y="182.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">3</text>
+<line x1="150.0" y1="160.0" x2="150.0" y2="115.0" stroke-width="2"/>
+<line x1="60.0" y1="160.0" x2="150.0" y2="115.0" stroke-width="2"/>
+<polyline points="150.0,150.0 140.0,150.0 140.0,160.0" stroke-width="1.5"/>
+<path d="M 150 115 A 100.6 100.6 0 0 1 160.6 160" stroke-dasharray="5 4" stroke-width="1.5"/>
+<circle cx="60.0" cy="160.0" r="2.8" fill="#111" stroke="none"/><text x="52.0" y="150.0" fill="#111" stroke="none" text-anchor="middle">O</text>
+<circle cx="150.0" cy="115.0" r="2.8" fill="#111" stroke="none"/><text x="160.0" y="107.0" fill="#111" stroke="none" text-anchor="middle">A</text>
+<circle cx="160.6" cy="160.0" r="2.8" fill="#111" stroke="none"/><text x="168.6" y="150.0" fill="#111" stroke="none" text-anchor="middle">P</text>
+</svg>

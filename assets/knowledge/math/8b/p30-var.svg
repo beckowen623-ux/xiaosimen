@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="45.0" y1="170.0" x2="295.0" y2="170.0" stroke-width="1.5"/>
+<line x1="45.0" y1="170.0" x2="45.0" y2="25.0" stroke-width="1.5"/>
+<line x1="45.0" y1="100.0" x2="290.0" y2="100.0" stroke-width="1" stroke-dasharray="6 5"/>
+<polyline points="75,100 125,100 175,80 225,120 275,100" stroke-width="2.2"/>
+<polyline points="75,160 125,60 175,140 225,60 275,80" stroke-dasharray="6 4" stroke-width="1.8"/>
+<text x="250.0" y="35.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">实线:甲  虚线:乙</text>
+<text x="75.0" y="188.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">1</text>
+<text x="125.0" y="188.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">2</text>
+<text x="175.0" y="188.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">3</text>
+<text x="225.0" y="188.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">4</text>
+<text x="275.0" y="188.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">5</text>
+<text x="28.0" y="104.0" font-size="12" fill="#111" stroke="none" text-anchor="middle">平均</text>
+</svg>
