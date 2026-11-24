@@ -35,7 +35,7 @@ if (existsSync(output)) {
 const pages = [
   "app.js", "styles.css", "referrals.js", "share-offer.js", "referrals.css", "qrcode.js",
   "key-points.html", "key-points.js", "key-points.css", "manifest.webmanifest", "_routes.json", "_headers", "sw.js",
-  "national-exams.js", "national-exams.css",
+  "national-exams.js", "national-exams.css", "knowledge.js", "knowledge.css",
 ];
 mkdirSync(output);
 writeFileSync(join(output, "index.html"), index.replace(dateMeta, `name="xiaosimen-paid-launch-date" content="${launchDate}"`));
@@ -65,6 +65,12 @@ writeFileSync(nationalScript, readFileSync(nationalScript, "utf8").replace("__NA
 // index.html 里预加载真题目录，网址必须和 national-exams.js 里一模一样，才不会下两次
 const indexOutput = join(output, "index.html");
 writeFileSync(indexOutput, readFileSync(indexOutput, "utf8").replace("__NATIONAL_VERSION__", nationalVersion));
+
+// 知识点数据（data/knowledge-*.js）按内容生成版本号，填进 knowledge.js
+const knowledgeHash = createHash("sha256");
+for (const name of readdirSync(publicData).filter(n => n.startsWith("knowledge-")).sort()) knowledgeHash.update(readFileSync(join(publicData, name)));
+const knowledgeScript = join(output, "knowledge.js");
+writeFileSync(knowledgeScript, readFileSync(knowledgeScript, "utf8").replace("__KNOWLEDGE_VERSION__", knowledgeHash.digest("hex").slice(0, 12)));
 
 // 每次发布按文件内容生成版本号（?v=内容哈希），文件一改，访客浏览器就会拿新文件。
 for (const page of ["index.html", "key-points.html"]) {

@@ -40,6 +40,15 @@ const STAGES = [
   { stage: '9-down', grade: '九下', label: '初三下学期', order: 5 },
 ];
 const STAGE_MAP = Object.fromEntries(STAGES.map(s => [s.stage, s]));
+// 页面上统一说“初一上学期”等，不说“七上、八下”：只改显示出来的文字，数据里的章节名（按章节练、做题记录靠它对应）不动
+const GRADE_CN = { 七: '一', 八: '二', 九: '三' };
+function gradeText(text) { return String(text).replace(/([七八九])([上下])(?![册午面])/g, (m, g, h) => `初${GRADE_CN[g]}${h}学期`); }
+function prettifyGrades(node) {
+  if (node.nodeType === 3) { if (/[七八九][上下]/.test(node.data)) node.data = gradeText(node.data); return; }
+  if (node.nodeType !== 1 || /^(SCRIPT|STYLE|TEXTAREA)$/.test(node.nodeName)) return;
+  const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+  for (let t = walker.nextNode(); t; t = walker.nextNode()) if (/[七八九][上下]/.test(t.data)) t.data = gradeText(t.data);
+}
 // 福州：地理、生物在初二下学期会考；道法、历史在初三中考。
 const EXAM_STAGE = { dili: '8-down', shengwu: '8-down', daode: '9-down', lishi: '9-down' };
 
@@ -611,7 +620,7 @@ const MODE_LABEL = {
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
   essay: '主观题提分', blank: '填空速记', retry: '本组错题重练', national: '全国真题练习',
-  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '早鸟自测', chapter: '按章节练', sync: '同步章节卷',
+  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '早鸟自测', chapter: '按章节练', sync: '同步章节卷', knowledge: '知识点补缺',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -674,6 +683,7 @@ if (inviteInput.value) byId('inviteFold')?.setAttribute('open', '');
 const visitorSource = new URL(location.href).searchParams.get('from') || 'direct';
 
 function isTrialQuestion(q) {
+  if (q.kpFree) return true; // 知识点补缺：每个知识点前 3 题和诊断题免费
   if (q.earlybird) return true; // 早鸟自测卷限时免费
   if (q.paperId && freeOpen('phone', q.paperId)) return true; // 已领取的免费整卷
   if (q.national) return q.preview === true; // 原卷免费看；在线刷题属于完整版，每种题型可免费试一组
@@ -1279,6 +1289,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-23', '题库改版：首页新增主线“按知识点补缺补漏”（先上线数学初一上学期样板：6 章 40 个知识点）。每个知识点一张卡片（要点、公式方法、易错点、例题），配基础、提高、拓展三档练习共 320 道新题，另把真题和卷子里的同类题 157 道归到对应知识点。可以做学期诊断或本章诊断自动找出薄弱点，也可以家长直接勾选孩子不会的点，再一键集中练薄弱点。每个知识点前 3 题和诊断题免费。早鸟卷、同步章节卷、全国真题移到“更多练习”。年级统一改叫“初一上学期”等。'],
   ['2026-11-23', '完整版上线「云端错题本同步」并升级至 3 台设备共用：在右上角「进度管理」中可按兑换码一键将错题本、答题记录与打卡进度同步到云端，在孩子手机、平板和家长打印电脑之间随时恢复，换手机或清理微信缓存也不怕丢进度。'],
   ['2026-11-23', '全国中考真题库重磅升级！新增及升级 17 套 2026 年中考全国真题（涵盖成都语文、云南语文/数学、甘肃语文/数学/综合/英语、江西历史/道法/数学、苏州历史/道法/数学、湖南数学、河北/浙江数学压轴专练、陕西英语等）：高清原卷打印版与手机在线交互做题版同步上线，73 幅高清原题配图全部裁切修复，题目、答案与分步给分点严格对照官方标准，全面支持手机做题、自动判分、错题收录与原卷整套打印。'],
   ['2026-11-22', '全国中考真题新增 2026 年河南中考数学可练版：整卷 23 题（选择 10、填空 5、解答 8）逐题整理，答案和分步给分按原卷所附参考答案，每题写了思路和易错点；“查看原卷 / 答案”现在把题目和答案分开显示。'],
@@ -1526,7 +1537,7 @@ function homeIntroHTML() {
         <span class="intro-kicker">初一到初三 · 手机刷、纸质打印都行</span>
       </div>
       <h1 id="homeTitle" tabindex="-1">爱丽克丝中考题库</h1>
-      <p class="editorial-lead">早鸟卷先测出弱项，同步章节卷一章一套补上，初三刷中考精编模拟卷与全国各地真题。每套卷子上线前都亲自做过一遍。</p>
+      <p class="editorial-lead">按知识点补缺补漏：先诊断出孩子哪些知识点没掌握，看一张知识点卡片，再集中练这个点的题，练完再测。早鸟卷、同步章节卷和全国真题作为配套练习。</p>
       <p class="promise-line">不押题、不焦虑——用可复盘的同步练习与错题复习，帮孩子把考点真正学透。</p>
       ${contentStatsHTML()}
       <div class="editorial-hero-actions">
@@ -2223,6 +2234,7 @@ function renderUpdateLogs(all = false) {
 function renderHome(focus = '') {
   if (!nationalCatalog && !banks) { renderLiteHome(); return; }
   window.NationalExams?.leave();
+  window.KnowledgeHub?.leave();
   document.body.classList.remove('practice');
   const progress = loadProgress();
   if (!paidAccess && paidLaunchDate) persist(() => startLegacyTrial(progress, paidLaunchDate));
@@ -2233,8 +2245,9 @@ function renderHome(focus = '') {
   byId('headerSearch').hidden = false;
   view.innerHTML = `
     ${homeIntroHTML()}
+    ${window.KnowledgeHub?.homeCardHTML(state.stage) || ''}
     ${stageBarHTML()}
-    <div class="home-section-head"><span>本学期核心练习</span><small>先用早鸟卷测出弱项，再按章节补齐</small></div>
+    <div class="home-section-head"><span>更多练习</span><small>早鸟自测卷、同步章节卷、分科整卷，按需选用</small></div>
     ${state.stage === '7-up' ? xscCardHTML() : ''}
     ${earlybirdCardHTML()}
     ${syncCardHTML()}
@@ -2274,6 +2287,7 @@ function renderHome(focus = '') {
     </div>
     <section class="card cross-bank-card">${accountingRecommendation()}</section>`;
   wireHome();
+  if (byId('knowledgeHome')) window.KnowledgeHub.wireHome(byId('knowledgeHome'));
   if (focus) moveFocus(byId(focus), focus === 'homeTitle');
   updateLegacyCountdown();
 }
@@ -2718,7 +2732,7 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
   const studyMode = ['all', 'random', 'random20', 'unfinished', 'essay', 'blank'].includes(state.mode);
   return `
     <div class="practice-shell tone-${esc(q.subject)}">
-      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button><span>${esc(state.mode === 'earlybird' && String(state.earlybirdPaper || '').startsWith('xsc-') ? '小升初衔接' : MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
+      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : state.mode === 'knowledge' ? '返回知识点' : '返回首页'}</button><span>${esc(state.mode === 'earlybird' && String(state.earlybirdPaper || '').startsWith('xsc-') ? '小升初衔接' : MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
       ${examTimerHTML()}
       <section class="card question-card" aria-labelledby="questionTitle">
         <div class="question-progress">
@@ -2748,6 +2762,7 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
 // 外壳里通用按钮的事件；返回结束作答后切换按钮状态的函数。
 function returnFromPractice() {
   if (state.mode === 'national') { void window.NationalExams.open(); return; }
+  if (state.mode === 'knowledge') { void window.KnowledgeHub.open(); return; }
   renderHome('homeTitle');
 }
 
@@ -3362,7 +3377,7 @@ function renderSummary() {
         <div class="summary-actions">
           ${wrongQs.length ? `<button class="btn primary" id="retryBtn">${icon('rotate-ccw')} 重练本组错题</button>` : ''}
           ${results.length ? `<button class="btn" type="button" id="scorePosterBtn">生成成绩单海报</button>` : ''}
-          <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : '返回首页'}</button>
+          <button class="btn ${wrongQs.length ? '' : 'primary'}" id="homeBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : state.mode === 'knowledge' ? '返回知识点' : '返回首页'}</button>
         </div>
         ${trialUpsellHTML()}
         ${nextSync ? `<button class="btn next-sync" type="button" id="nextSyncBtn">下一章：${esc(nextSync.label || nextSync.title)} →</button>` : ''}
@@ -3654,6 +3669,22 @@ async function init() {
       freePrintPaper: () => freeUses.print,
     });
 
+    prettifyGrades(view);
+    new MutationObserver(list => { for (const m of list) m.addedNodes.forEach(prettifyGrades); }).observe(view, { childList: true, subtree: true });
+    window.KnowledgeHub?.attach({
+      view,
+      home: () => renderHome('homeTitle'),
+      practice: questions => beginPractice(questions, 'knowledge'),
+      progress: loadProgress,
+      hasAccess: hasFullAccess,
+      isTrial: isTrialQuestion,
+      unlock: message => openUnlock(message),
+      toast,
+      stage: () => state.stage,
+    });
+    // 知识点目录（约 15KB）到了就刷新首页的知识点卡片
+    void window.KnowledgeHub?.loadIndex().then(() => { if (byId('knowledgeHome') && !document.body.classList.contains('practice')) rerenderHomeInPlace('knowledgeHome'); }).catch(() => {});
+
     // 小四门 2.5MB 庞大题库在后台静默拉取，绝不阻断首屏渲染
     startBanksBackgroundLoad();
 
@@ -3663,6 +3694,8 @@ async function init() {
 
     if (location.hash === '#national') {
       await window.NationalExams.open();
+    } else if (location.hash === '#knowledge' && window.KnowledgeHub) {
+      await window.KnowledgeHub.open();
     } else if (!document.body.classList.contains('practice')) {
       renderHome();
       jumpToGoTarget();

@@ -20,7 +20,7 @@ function loadDataFile(rel) {
 }
 
 // 前端脚本先过一遍语法：只编译不运行，防止一个没转义的引号把整站弄坏
-for (const rel of ['app.js', 'national-exams.js', 'key-points.js', 'referrals.js', 'share-offer.js', 'qrcode.js']) {
+for (const rel of ['app.js', 'national-exams.js', 'knowledge.js', 'key-points.js', 'referrals.js', 'share-offer.js', 'qrcode.js']) {
   const file = path.join(root, rel);
   if (!fs.existsSync(file)) continue;
   try { new vm.Script(fs.readFileSync(file, 'utf8'), { filename: rel }); }

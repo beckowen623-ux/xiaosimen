@@ -1,0 +1,62 @@
+/* 知识点补缺：首页主线卡片 + 知识点页 */
+.kp-home { margin: 14px 0 22px; padding: 20px; border: 2px solid var(--green); background: var(--paper); }
+.kp-home-head { display: flex; align-items: center; gap: 10px; }
+.kp-home-head h2 { font-family: var(--serif); font-size: clamp(20px, 3.4vw, 26px); margin: 0; color: var(--green-dark); }
+.kp-badge { flex: none; background: var(--seal); color: #fff; font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 4px; letter-spacing: 1px; }
+.kp-home-lead { margin: 10px 0 6px; line-height: 1.7; }
+.kp-home-sem { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+.kp-home-stats { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 10px 0 14px; }
+.kp-home-stats span { color: var(--muted); font-size: 14px; }
+.kp-home-stats b { font-size: 22px; color: var(--ink); margin-right: 3px; font-variant-numeric: tabular-nums; }
+.kp-weak-text b { color: var(--seal); }
+.kp-home-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.kp-sem-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.kp-sem-tabs .btn small { margin-left: 4px; font-size: 11px; opacity: .7; }
+.kp-sem-tabs .btn[aria-disabled="true"] { opacity: .75; }
+.kp-summary { padding: 18px; margin-bottom: 14px; }
+.kp-how { line-height: 1.7; font-size: 13.5px; }
+.kp-select-tip { margin: 10px 0 0; color: var(--seal); font-size: 13.5px; }
+.kp-chapter { margin-bottom: 10px; padding: 0; }
+.kp-chapter > summary { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 15px 18px; cursor: pointer; list-style: none; }
+.kp-chapter > summary::-webkit-details-marker { display: none; }
+.kp-chapter > summary b { font-size: 17px; }
+.kp-chapter > summary span { color: var(--muted); font-size: 13px; }
+.kp-list { list-style: none; margin: 0; padding: 0 12px; }
+.kp-row { display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--line); }
+.kp-check { width: 20px; height: 20px; flex: none; accent-color: var(--seal); }
+.kp-point { flex: 1; display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 6px; background: none; border: 0; text-align: left; font: inherit; color: var(--ink); cursor: pointer; min-height: 48px; }
+.kp-point:hover .kp-name { color: var(--green); }
+.kp-name { font-weight: 600; line-height: 1.5; }
+.kp-meta { flex: none; font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.kp-meta i, .kp-state i { font-style: normal; padding: 2px 7px; border-radius: 10px; margin-left: 4px; }
+.kp-tag { font-style: normal; color: var(--seal); font-size: 12px; margin-left: 5px; }
+.kp-none { background: #eeede6; color: var(--muted); }
+.kp-weak { background: var(--seal-soft); color: var(--seal); font-weight: 700; }
+.kp-shaky { background: var(--gold); color: var(--gold-ink); }
+.kp-ok { background: var(--green-soft); color: var(--green); }
+.kp-good { background: var(--green); color: #fff; }
+.kp-chapter-actions { padding: 6px 18px 16px; }
+.kp-foot { font-size: 12.5px; line-height: 1.7; margin-top: 14px; }
+.kp-back { margin-bottom: 10px; }
+.kp-card { padding: 20px; margin-bottom: 14px; }
+.kp-card h2 { font-family: var(--serif); font-size: clamp(22px, 3.6vw, 28px); margin: 4px 0 6px; }
+.kp-crumb { margin: 0; color: var(--muted); font-size: 13px; }
+.kp-state { margin: 0 0 12px; font-size: 14px; }
+.kp-card section { border-top: 1px solid var(--line); padding: 12px 0 4px; }
+.kp-card h3 { font-size: 15px; margin: 0 0 6px; color: var(--green-dark); }
+.kp-card ul { margin: 0; padding-left: 20px; line-height: 1.8; }
+.kp-pitfall h3 { color: var(--seal); }
+.kp-example p { line-height: 1.8; margin: 4px 0; }
+.kp-example summary { cursor: pointer; color: var(--green); font-weight: 600; margin-top: 4px; }
+.kp-practice { padding: 18px; margin-bottom: 12px; }
+.kp-practice h3 { margin: 0 0 4px; }
+.kp-mark { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; margin-left: 4px; }
+.kp-nav { display: flex; justify-content: space-between; gap: 10px; margin: 6px 0 20px; }
+.kp-empty { padding: 20px; }
+@media (max-width: 560px) {
+  .kp-home { padding: 16px; }
+  .kp-point { flex-direction: column; align-items: flex-start; gap: 3px; }
+  .kp-meta { white-space: normal; }
+}
+/* 手机上首屏留给“知识点补缺”主线：书桌插画只在宽屏显示 */
+@media (max-width: 640px) { .editorial-hero-art { display: none; } }
