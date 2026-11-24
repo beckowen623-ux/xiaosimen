@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<rect x="35" y="115" width="26" height="26" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="35" y="89" width="26" height="26" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="61" y="115" width="26" height="26" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<text x="61.0" y="168.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">主视图</text>
+<rect x="135" y="115" width="26" height="26" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="135" y="89" width="26" height="26" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="161" y="115" width="26" height="26" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<text x="161.0" y="168.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">左视图</text>
+<rect x="235" y="89" width="26" height="26" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="261" y="89" width="26" height="26" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="235" y="115" width="26" height="26" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<text x="261.0" y="168.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">俯视图</text>
+</svg>

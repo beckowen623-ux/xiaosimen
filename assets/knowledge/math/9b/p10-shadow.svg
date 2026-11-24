@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="30.0" y1="170.0" x2="290.0" y2="170.0" stroke-width="1.8"/>
+<line x1="75.0" y1="170.0" x2="75.0" y2="45.0" stroke-width="2.5"/>
+<line x1="75.0" y1="45.0" x2="165.0" y2="170.0" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="210.0" y1="170.0" x2="210.0" y2="120.0" stroke-width="2.5"/>
+<line x1="210.0" y1="120.0" x2="246.0" y2="170.0" stroke-width="1.5" stroke-dasharray="6 5"/>
+<circle cx="75.0" cy="45.0" r="2.8" fill="#111" stroke="none"/><text x="63.0" y="41.0" fill="#111" stroke="none" text-anchor="middle">A</text>
+<circle cx="75.0" cy="170.0" r="2.8" fill="#111" stroke="none"/><text x="75.0" y="188.0" fill="#111" stroke="none" text-anchor="middle">B</text>
+<circle cx="165.0" cy="170.0" r="2.8" fill="#111" stroke="none"/><text x="165.0" y="188.0" fill="#111" stroke="none" text-anchor="middle">C</text>
+<circle cx="210.0" cy="120.0" r="2.8" fill="#111" stroke="none"/><text x="198.0" y="116.0" fill="#111" stroke="none" text-anchor="middle">D</text>
+<circle cx="210.0" cy="170.0" r="2.8" fill="#111" stroke="none"/><text x="210.0" y="188.0" fill="#111" stroke="none" text-anchor="middle">E</text>
+<circle cx="246.0" cy="170.0" r="2.8" fill="#111" stroke="none"/><text x="246.0" y="188.0" fill="#111" stroke="none" text-anchor="middle">F</text>
+</svg>
