@@ -2,6 +2,11 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 新增数学初二上学期“按知识点补缺补漏”内容（6 章 34 个知识点，含 21 幅 SVG 几何配图）（main）
+- 改动：新增 `knowledge-src/math/8a-1.json`～`8a-6.json`，覆盖三角形（5 点）、全等三角形（5 点）、轴对称（6 点）、整式的乘法（6 点）、因式分解（5 点）、分式（7 点）共 34 个知识点（`p01`～`p34`），新增原创题 272 道（单选分布 A36/B41/C40/D35），归位八上旧题 137 道（29 个旧题 kp 全覆盖）；为几何三章（`p01`～`p16`）例题与核心题绘制 21 幅精确 SVG 矢量图存入 `assets/knowledge/math/8a/`。
+- 自查：逐题复算，修正了 `8a-1.json` p01 第 7 题（绝对值化简答案 `2a－2c`）、第 8 题（第三边偶数种数 5 种）及 `8a-6.json` p33 第 8 题（分式方程无解条件，重构为 `(x－1)/(x－2)＝m/(x－2)＋2`，增根 `x＝2` 得 `m＝1`）。
+- 验证：`node tools/build_knowledge.mjs`、`node --check app.js && node --check knowledge.js`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）与本地预览打包均通过。
+
 ## 2026-11-24 · Claude Code · 知识点补缺支持配图（main）
 - 站长指出数学题没有图显得空洞。知识点题目和卡片例题现在可以配图：源文件写 `"img": "文件名.svg"`，图片放 `assets/knowledge/<科目>/<学期>/`。`tools/build_knowledge.mjs` 检查文件名和文件是否存在，题目生成 `image` 字段（沿用原做题页的配图和“放大配图”），例题图由 `knowledge.js` 在卡片里显示（`.kp-fig`）。
 - 样例：初一下学期“平行线中的拐点模型”第 6 题和例题配上猪蹄模型 SVG 图（`assets/knowledge/math/7b/p06-zhuti.svg`），题干改为“如图，……”。

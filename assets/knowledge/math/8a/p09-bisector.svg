@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="45.0" y1="165.0" x2="290.0" y2="165.0" stroke-width="2"/>
+<line x1="45.0" y1="165.0" x2="192.8" y2="-24.1" stroke-width="2"/>
+<line x1="45.0" y1="165.0" x2="256.2" y2="62.0" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="202.3" y1="88.3" x2="202.3" y2="165.0" stroke-width="2"/>
+<line x1="202.3" y1="88.3" x2="141.8" y2="41.1" stroke-width="2"/>
+<polyline points="202.3,155.0 192.3,155.0 192.3,165.0" stroke-width="1.5"/>
+<polyline points="148.0,33.2 155.9,39.3 149.7,47.2" stroke-width="1.5"/>
+<circle cx="45.0" cy="165.0" r="2.8" fill="#111" stroke="none"/><text x="31.0" y="171.0" fill="#111" stroke="none" text-anchor="middle">O</text>
+<circle cx="285.0" cy="165.0" r="2.8" fill="#111" stroke="none"/><text x="285.0" y="183.0" fill="#111" stroke="none" text-anchor="middle">A</text>
+<circle cx="192.8" cy="-24.1" r="2.8" fill="#111" stroke="none"/><text x="180.8" y="-28.1" fill="#111" stroke="none" text-anchor="middle">B</text>
+<circle cx="202.3" cy="88.3" r="2.8" fill="#111" stroke="none"/><text x="216.3" y="86.3" fill="#111" stroke="none" text-anchor="middle">P</text>
+<circle cx="202.3" cy="165.0" r="2.8" fill="#111" stroke="none"/><text x="202.3" y="183.0" fill="#111" stroke="none" text-anchor="middle">D</text>
+<circle cx="141.8" cy="41.1" r="2.8" fill="#111" stroke="none"/><text x="127.8" y="35.1" fill="#111" stroke="none" text-anchor="middle">E</text>
+</svg>
