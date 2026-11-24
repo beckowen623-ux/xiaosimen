@@ -246,7 +246,7 @@
         <section><h3>知识要点</h3><ul>${li(card.concept)}</ul></section>
         <section><h3>公式与方法</h3><ul>${li(card.formula)}</ul></section>
         <section class="kp-pitfall"><h3>易错点</h3><ul>${li(card.pitfall)}</ul></section>
-        <section class="kp-example"><h3>例题</h3><p>${esc(card.example.q)}</p>
+        <section class="kp-example"><h3>例题</h3><p>${esc(card.example.q)}</p>${card.example.img ? `<img class="kp-fig" src="${esc(card.example.img)}" alt="例题配图" loading="lazy">` : ''}
           <details><summary>看解答</summary><p>${esc(card.example.a)}</p></details></section>
       </article>
       <section class="card kp-practice">

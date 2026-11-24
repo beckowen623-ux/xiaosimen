@@ -60,3 +60,4 @@
 }
 /* 手机上首屏留给“知识点补缺”主线：书桌插画只在宽屏显示 */
 @media (max-width: 640px) { .editorial-hero-art { display: none; } }
+.kp-fig { display: block; max-width: min(100%, 360px); height: auto; margin: 8px 0; border: 1px solid var(--line); border-radius: 6px; background: #fff; }

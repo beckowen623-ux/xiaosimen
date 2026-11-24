@@ -19,6 +19,14 @@ const SEMESTERS = [
 const SUBJECTS = { math: "数学" };
 const LETTERS = ["A", "B", "C", "D"];
 const LEVEL = { 1: "基础", 2: "提高", 3: "拓展" };
+// 配图：源文件里写 "img": "文件名.svg"，图片放在 assets/knowledge/<科目>/<学期>/ 下
+function figure(subject, sem, name, where) {
+  if (!name) return null;
+  if (!/^[\w.-]+\.(svg|webp|png)$/.test(name)) throw new Error(`${where} 配图文件名不合法：${name}`);
+  const rel = `assets/knowledge/${subject}/${sem}/${name}`;
+  if (!existsSync(join(root, rel))) throw new Error(`${where} 配图不存在：${rel}`);
+  return `./${rel}`;
+}
 
 // 旧题：全国真题、同步卷、早鸟卷、精编卷里已标 kp 的题，按 kp 归到知识点下
 function loadOldQuestions() {
@@ -77,6 +85,8 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
         ids.add(pointId);
         for (const key of ["concept", "formula", "pitfall"]) if (!p.card?.[key]?.length) throw new Error(`${pointId} 卡片缺 ${key}`);
         if (!p.card.example?.q || !p.card.example?.a) throw new Error(`${pointId} 卡片缺例题`);
+        const exampleImg = figure(subject, sem.key, p.card.example.img, `${pointId} 例题`);
+        if (exampleImg) p.card = { ...p.card, example: { ...p.card.example, img: exampleImg } };
         if ((p.qs || []).length < 6) throw new Error(`${pointId} 新题少于 6 道`);
         const qids = [];
         p.qs.forEach((raw, i) => {
@@ -88,6 +98,7 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
             id, subject, subjectLabel, knowledge: true, kpId: pointId, kp: p.name, unit: chapter.unit,
             chapter: `${sem.label} · ${chapter.name}`, source: `知识点精练 · ${sem.label} · ${p.name}（${LEVEL[raw.lv] || "基础"}）`,
             level: raw.lv || 1, kpFree: i < 3 || diag, ...(diag ? { kpDiag: true } : {}),
+            ...(raw.img ? { image: figure(subject, sem.key, raw.img, id) } : {}),
           };
           if (raw.t === "c") {
             if (!Array.isArray(raw.o) || raw.o.length !== 4 || raw.o.some(t => !String(t).trim())) throw new Error(`${id} 选项应为 4 个且不为空`);
