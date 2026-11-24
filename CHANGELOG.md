@@ -2,6 +2,12 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-24 · Gemini · 完善数学全链路：新增“专题与压轴”（6 章 24 个高频模型/保底点）及分层练题入口（main）
+- 改动：在 `tools/build_knowledge.mjs` 新增 `sp`（专题与压轴）标签；新增 `knowledge-src/math/sp-1.json`～`sp-6.json`，覆盖中考计算保底与防错（4 点）、全等与辅助线模型（5 点）、相似与圆综合压轴（4 点）、几何最值压轴模型（4 点）、二次函数压轴综合（4 点）、代数压轴与中考新定义（3 点），共 24 个专题点、192 道原创分层题及 15 幅精确 SVG 矢量图（`assets/knowledge/math/sp/`）。
+- 链路优化：在 `knowledge.js` 首页知识点主卡片新增“专题与压轴”直达入口，在知识点详情页新增“保底：基础+提高”与“冲高：拓展/压轴”分层按钮，方便基础弱学生稳步托底、拔尖学生直刷压轴，原有免费边界不变。
+- 自查：逐题复算，修正了 `sp-1.json` p04 第 3 题（增根方程改写）、`sp-2.json` p05 第 8 题（整数和 14）、`sp-3.json` p12 第 4 题（矩形尺寸改 6×4 使最小距离为整数 2）、`sp-4.json` p14/p16/p17 压轴最值数值整除化、`sp-6.json` p23 第 8 题（改问最小整数值 －4）。
+- 验证：`node tools/build_knowledge.mjs`、`node --check app.js && node --check knowledge.js`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）与本地预览打包均通过。
+
 ## 2026-11-23 · Gemini · 初一上、下学期几何、数轴、坐标系与统计题补图（main）
 - 改动：新增 `assets/knowledge/math/7a/`（14 幅 SVG）与 `assets/knowledge/math/7b/`（新增 18 幅 SVG，保留原有 `p06-zhuti.svg`），为 `7a-1.json`(p03)、`7a-5b.json`(p32)、`7a-6.json`(p33～p40)、`7b-1.json`(p01～p08)、`7b-3.json`(p15～p19)、`7b-6.json`(p36～p37) 的卡片例题及核心题目挂载 `img` 字段，不改动任何原题数字、选项和答案；同步重建 `data/knowledge-math-7a.js`、`data/knowledge-math-7b.js`、`data/knowledge-index.js`。
 - 验证：`node tools/build_knowledge.mjs`、`node --check app.js && node --check knowledge.js`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）与本地预览打包均通过。

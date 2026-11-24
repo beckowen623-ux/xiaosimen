@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="15" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="24.0" y1="165.0" x2="300.0" y2="165.0" stroke-width="1.5"/>
+<line x1="75.0" y1="192.0" x2="75.0" y2="18.0" stroke-width="1.5"/>
+<polyline points="293,160 300,165 293,170" stroke-width="1.5"/>
+<polyline points="70,25 75,18 80,25" stroke-width="1.5"/>
+<text x="300.0" y="182.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">x</text>
+<text x="88.0" y="24.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">y</text>
+<text x="63.0" y="181.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">O</text>
+<polyline points="49.0,109.0 53.9,100.2 58.9,91.9 63.8,84.2 68.8,77.1 73.7,70.6 78.6,64.7 83.6,59.3 88.5,54.5 93.5,50.3 98.4,46.7 103.3,43.6 108.3,41.1 113.2,39.2 118.2,37.9 123.1,37.2 128.0,37.0 133.0,37.4 137.9,38.4 142.9,40.0 147.8,42.1 152.7,44.8 157.7,48.1 162.6,52.0 167.6,56.5 172.5,61.5 177.4,67.1 182.4,73.3 187.3,80.1 192.3,87.4 197.2,95.3 202.1,103.8 207.1,112.9 212.0,122.5 217.0,132.8 221.9,143.6 226.8,155.0 231.8,166.9 236.7,179.5 241.7,192.6" stroke-width="2.2"/>
+<line x1="75.0" y1="69.0" x2="231.0" y2="165.0" stroke-width="1.8"/>
+<line x1="153.0" y1="45.0" x2="153.0" y2="117.0" stroke-width="1.8" stroke-dasharray="6 5"/>
+<circle cx="75.0" cy="69.0" r="2.8" fill="#111" stroke="none"/><text x="49.0" y="73.0" fill="#111" stroke="none" text-anchor="middle">C(0,3)</text>
+<circle cx="231.0" cy="165.0" r="2.8" fill="#111" stroke="none"/><text x="245.0" y="182.0" fill="#111" stroke="none" text-anchor="middle">B(3,0)</text>
+<circle cx="153.0" cy="45.0" r="2.8" fill="#111" stroke="none"/><text x="163.0" y="37.0" fill="#111" stroke="none" text-anchor="middle">P</text>
+<circle cx="153.0" cy="117.0" r="2.8" fill="#111" stroke="none"/><text x="165.0" y="129.0" fill="#111" stroke="none" text-anchor="middle">Q</text>
+</svg>

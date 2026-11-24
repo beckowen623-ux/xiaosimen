@@ -15,6 +15,7 @@ const SEMESTERS = [
   { key: "8b", stage: "8-down", label: "初二下学期", unitPrefix: "八下" },
   { key: "9a", stage: "9-up", label: "初三上学期", unitPrefix: "九上" },
   { key: "9b", stage: "9-down", label: "初三下学期", unitPrefix: "九下" },
+  { key: "sp", stage: "special", label: "专题与压轴", unitPrefix: "专题" },
 ];
 const SUBJECTS = { math: "数学" };
 const LETTERS = ["A", "B", "C", "D"];

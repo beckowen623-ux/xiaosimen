@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="15" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<circle cx="110" cy="105" r="56" stroke-width="1.8"/>
+<circle cx="185" cy="105" r="28" stroke-dasharray="6 5" stroke-width="1.6"/>
+<line x1="110.0" y1="105.0" x2="146.0" y2="62.1" stroke-width="1.4"/>
+<line x1="260.0" y1="105.0" x2="146.0" y2="62.1" stroke-width="1.8"/>
+<circle cx="110.0" cy="105.0" r="2.8" fill="#111" stroke="none"/><text x="98.0" y="111.0" fill="#111" stroke="none" text-anchor="middle">O</text>
+<circle cx="260.0" cy="105.0" r="2.8" fill="#111" stroke="none"/><text x="272.0" y="111.0" fill="#111" stroke="none" text-anchor="middle">A</text>
+<circle cx="146.0" cy="62.1" r="2.8" fill="#111" stroke="none"/><text x="146.0" y="52.1" fill="#111" stroke="none" text-anchor="middle">P</text>
+<circle cx="203.0" cy="83.6" r="2.8" fill="#111" stroke="none"/><text x="211.0" y="73.6" fill="#111" stroke="none" text-anchor="middle">M</text>
+<circle cx="185.0" cy="105.0" r="2.8" fill="#111" stroke="none"/><text x="185.0" y="121.0" fill="#111" stroke="none" text-anchor="middle">O'</text>
+</svg>

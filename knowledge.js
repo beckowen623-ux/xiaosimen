@@ -79,6 +79,7 @@
         <div class="kp-home-actions">
           <button class="btn primary" type="button" data-kp-go="diag">${st.none === st.total ? '先做一次诊断' : '再诊断一次'}</button>
           <button class="btn" type="button" data-kp-go="${weak ? 'weak' : 'mark'}">${weak ? `练薄弱点（${weak} 个）` : '我来选薄弱点'}</button>
+          <button class="btn" type="button" data-kp-sem="sp">专题与压轴</button>
           <button class="btn text-button" type="button" data-kp-go="list">看全部知识点 ›</button>
         </div>`;
     } else {
@@ -232,6 +233,8 @@
     const st = pointStatus([...point.qids, ...point.refs], progress, marked, point.id);
     const all = pointQuestions(data, point);
     const undone = pointQuestions(data, point, true);
+    const basic = all.filter(q => levelOf(q) <= 2);
+    const adv = all.filter(q => levelOf(q) >= 3);
     const card = point.card;
     const li = arr => arr.map(t => `<li>${esc(t)}</li>`).join('');
     const levels = [1, 2, 3].map(lv => all.filter(q => q.knowledge && q.level === lv).length);
@@ -254,6 +257,8 @@
         <p class="muted">共 ${all.length} 题：基础 ${levels[0]}、提高 ${levels[1]}、拓展 ${levels[2]}${point.refs.length ? `，另有真题和卷子里的同类题 ${point.refs.length} 道` : ''}。</p>
         <div class="kp-home-actions">
           <button class="btn primary" type="button" data-start="all">从基础练起（${all.length} 题）</button>
+          <button class="btn" type="button" data-start="basic" ${basic.length ? '' : 'disabled'}>保底：基础+提高（${basic.length} 题）</button>
+          <button class="btn" type="button" data-start="adv" ${adv.length ? '' : 'disabled'}>冲高：拓展/压轴（${adv.length} 题）</button>
           <button class="btn" type="button" data-start="undone" ${undone.length && undone.length < all.length ? '' : 'disabled'}>只练没做对的（${undone.length} 题）</button>
           <label class="kp-mark"><input type="checkbox" data-mark-one ${marked.has(point.id) ? 'checked' : ''}> 标记为薄弱点</label>
         </div>
@@ -262,6 +267,8 @@
     wireTabs();
     app.view.querySelector('[data-back]').addEventListener('click', () => { state.view = 'list'; state.open.add(chapter.name); void render(); });
     app.view.querySelector('[data-start="all"]').addEventListener('click', () => startList(all));
+    app.view.querySelector('[data-start="basic"]').addEventListener('click', () => startList(basic));
+    app.view.querySelector('[data-start="adv"]').addEventListener('click', () => startList(adv));
     app.view.querySelector('[data-start="undone"]').addEventListener('click', () => startList(undone));
     app.view.querySelector('[data-mark-one]').addEventListener('change', e => { const set = readMarked(); if (e.target.checked) set.add(point.id); else set.delete(point.id); saveMarked(set); });
     app.view.querySelectorAll('[data-goto]').forEach(b => b.addEventListener('click', () => { state.point = b.dataset.goto; void render(); }));
