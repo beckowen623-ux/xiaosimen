@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <polygon points="145,148 160,115 175,148" fill="#ddd" stroke="#111" stroke-width="1.8"/>
+      <line x1="36" y1="115" x2="284" y2="115" stroke="#111" stroke-width="3.2"/>
+      <circle cx="160" cy="115" r="4" fill="#c0392b"/>
+      <text x="155" y="104" font-size="13" fill="#c0392b" font-family="sans-serif">O</text>
+      <line x1="65" y1="115" x2="65" y2="170" stroke="#2c6eb5" stroke-width="2" marker-end="url(#arr)"/>
+      <text x="42" y="168" font-size="13" fill="#2c6eb5" font-family="sans-serif">F1</text>
+      <line x1="230" y1="115" x2="230" y2="170" stroke="#111" stroke-width="2" marker-end="url(#arr)"/>
+      <text x="238" y="168" font-size="13" fill="#111" font-family="sans-serif">F2</text>
+      <line x1="65" y1="86" x2="160" y2="86" stroke="#2c6eb5" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+      <text x="104" y="80" font-size="12" fill="#2c6eb5" font-family="sans-serif">l1</text>
+      <line x1="160" y1="86" x2="230" y2="86" stroke="#111" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+      <text x="190" y="80" font-size="12" fill="#111" font-family="sans-serif">l2</text>
+      <text x="95" y="36" font-size="13" fill="#111" font-family="sans-serif">平衡条件：F1·l1＝F2·l2</text>
+    </svg>

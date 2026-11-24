@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <rect x="26" y="138" width="110" height="32" fill="#f2efe9" stroke="#111" stroke-width="1.5"/>
+      <rect x="44" y="108" width="74" height="30" fill="#dce8f8" stroke="#111" stroke-width="1.8"/>
+      <text x="68" y="128" font-size="12" fill="#111" font-family="sans-serif">平放</text>
+      <text x="50" y="188" font-size="12" fill="#333" font-family="sans-serif">S大 → p小</text>
+      <rect x="184" y="138" width="110" height="32" fill="#f2efe9" stroke="#111" stroke-width="1.5"/>
+      <path d="M184,138 L220,138 L224,152 L254,152 L258,138 L294,138" fill="#ffffff" stroke="#111" stroke-width="1.5"/>
+      <rect x="224" y="78" width="30" height="74" fill="#dce8f8" stroke="#111" stroke-width="1.8"/>
+      <text x="228" y="120" font-size="12" fill="#111" font-family="sans-serif">竖放</text>
+      <text x="208" y="188" font-size="12" fill="#c0392b" font-family="sans-serif">S小 → p大</text>
+      <text x="90" y="34" font-size="12" fill="#111" font-family="sans-serif">同一块砖：F＝G 相同，p＝F/S</text>
+    </svg>

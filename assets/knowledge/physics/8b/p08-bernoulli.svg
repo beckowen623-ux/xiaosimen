@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <path d="M55,112 Q135,55 255,108 Q160,118 55,112 Z" fill="#dce8f8" stroke="#111" stroke-width="2"/>
+      <path d="M30,86 Q135,34 285,84" fill="none" stroke="#2c6eb5" stroke-width="1.8" marker-end="url(#arr)"/>
+      <path d="M30,132 L285,132" fill="none" stroke="#2c6eb5" stroke-width="1.8" marker-end="url(#arr)"/>
+      <line x1="150" y1="106" x2="150" y2="52" stroke="#c0392b" stroke-width="2.2" marker-end="url(#arr-r)"/>
+      <text x="158" y="64" font-size="12" fill="#c0392b" font-family="sans-serif">升力 F升</text>
+      <text x="64" y="34" font-size="12" fill="#111" font-family="sans-serif">上方：流速大，压强小</text>
+      <text x="64" y="162" font-size="12" fill="#111" font-family="sans-serif">下方：流速小，压强大</text>
+    </svg>

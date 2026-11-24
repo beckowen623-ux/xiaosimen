@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <line x1="30" y1="138" x2="290" y2="138" stroke="#111" stroke-width="2.2"/>
+      <rect x="120" y="88" width="80" height="50" fill="#eef4fb" stroke="#111" stroke-width="1.8"/>
+      <circle cx="160" cy="113" r="3" fill="#111"/>
+      <line x1="160" y1="113" x2="160" y2="38" stroke="#2c6eb5" stroke-width="2.2" marker-end="url(#arr)"/>
+      <line x1="160" y1="113" x2="160" y2="186" stroke="#c0392b" stroke-width="2.2" marker-end="url(#arr-r)"/>
+      <line x1="160" y1="113" x2="255" y2="113" stroke="#111" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="160" y1="113" x2="65" y2="113" stroke="#111" stroke-width="2" marker-end="url(#arr)"/>
+      <text x="168" y="48" font-size="13" fill="#2c6eb5" font-family="sans-serif">F支</text>
+      <text x="168" y="182" font-size="13" fill="#c0392b" font-family="sans-serif">G</text>
+      <text x="242" y="104" font-size="13" fill="#111" font-family="sans-serif">F拉</text>
+      <text x="58" y="104" font-size="13" fill="#111" font-family="sans-serif">f</text>
+      <text x="90" y="24" font-size="12" fill="#333" font-family="sans-serif">匀速直线运动：F拉＝f，F支＝G</text>
+    </svg>
