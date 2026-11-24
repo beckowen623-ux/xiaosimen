@@ -1,4 +1,4 @@
-# 任务提示词：数学初二上学期～初三下学期知识点补缺（一次做完四个学期）
+# 任务提示词：数学初二上学期～初三下学期知识点补缺（一次做完四个学期），最后给初一已上线的几何题补图
 
 你在仓库 `C:\Users\admin\Documents\ChatGPT\爱丽克丝的小站开发\xiaosimen`（线上 x4m.cc.cd）工作。全程用中文回复。站长在休息，中途不要提问，按本说明自己做完；遇到拿不准的，选更保守、更不容易出错的做法，并写进最后的报告。
 
@@ -45,6 +45,19 @@ node tests/smoke.mjs
 - 提交：`git -c user.name=Codex -c user.email=codex@users.noreply.github.com commit`，提交信息写明“新增数学某学期按知识点补缺内容（几章几个知识点、几道新题）”，末尾加一行 `Co-Authored-By: Gemini <gemini@users.noreply.github.com>`。
 - 发布：`git fetch` → `git rebase origin/main` → `git push origin HEAD:main`。不要用 wrangler 手动部署，不要动线上数据库，不要强推，不要 `git reset --hard`，不要改别人的提交。
 - 只改本任务相关文件：`knowledge-src/math/*`、`assets/knowledge/math/*`、`data/knowledge-*.js`、`CHANGELOG.md`、`app.js` 里的 `UPDATE_LOG` 一行。不要改页面样式、收费规则、做题逻辑或其他功能。
+
+## 最后一步：给初一上、下学期已上线的题补图（四个学期都做完并推送后再做）
+初一上学期（`7a`）、初一下学期（`7b`）的几何类题目当初是纯文字写的，现在要补图，让题目不空洞。
+- 范围：
+  - `knowledge-src/math/7a-6.json`（几何图形初步，p33～p40）：线段、角、角平分线、余角补角、方位角、钟面角、立体图形与展开图等题和例题；
+  - `knowledge-src/math/7a-1.json` 的数轴（p03）、`7a-5b.json` 的数轴动点（p32）：画数轴；
+  - `knowledge-src/math/7b-1.json`（相交线与平行线，p01～p08）：相交线、垂线、三线八角、平行线、拐点模型、平移；
+  - `knowledge-src/math/7b-3.json`（平面直角坐标系，p15～p19）：坐标系里的点、平移、图形面积；
+  - `knowledge-src/math/7b-6.json`（统计）：扇形图、条形图、频数直方图类的题可画统计图。
+- 做法：按“配图”一节画 SVG，放 `assets/knowledge/math/7a/` 或 `assets/knowledge/math/7b/`，在对应题目或卡片例题上加 `"img"`，题干开头可改成“如图，……”。**不改题目的数字、选项和答案**；如果发现某题配上图后和原文字条件矛盾，改图，不改答案；实在无法画出唯一图形的题，在报告里列出，不要硬画。
+- 不需要每道题都配图：题干本身已经很清楚的计算题可以不配；每个几何类知识点至少卡片例题和 3 道题有图。
+- 已有图的样例 `7b-1.json` p06 第 6 题保持不变。
+- 改完照常运行构建和全部检查，本地预览抽看带图的题，`CHANGELOG.md` 记一条，单独提交推送一次（提交信息写“初一上、下学期几何题补图”）。
 
 ## 交付报告（全部做完后）
 - 每个学期的提交号、章节和知识点名单、新题数、归位旧题数、单选答案分布（构建输出里有）。
