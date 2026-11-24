@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <circle cx="160" cy="44" r="24" fill="#ffeaea" stroke="#c0392b" stroke-width="1.8"/>
+      <text x="142" y="49" font-size="12" fill="#c0392b" font-family="sans-serif">CaCO3</text>
+      <circle cx="72" cy="144" r="24" fill="#eef4fb" stroke="#111" stroke-width="1.8"/>
+      <text x="58" y="149" font-size="12" fill="#111" font-family="sans-serif">CaO</text>
+      <circle cx="248" cy="144" r="24" fill="#e6f7ee" stroke="#2e7d32" stroke-width="1.8"/>
+      <text x="226" y="149" font-size="11" fill="#2e7d32" font-family="sans-serif">Ca(OH)2</text>
+      <line x1="142" y1="62" x2="88" y2="124" stroke="#111" stroke-width="1.8" marker-end="url(#arr)"/>
+      <text x="82" y="90" font-size="10" fill="#111" font-family="sans-serif">高温</text>
+      <line x1="96" y1="144" x2="220" y2="144" stroke="#111" stroke-width="1.8" marker-end="url(#arr)"/>
+      <text x="142" y="136" font-size="10" fill="#2c6eb5" font-family="sans-serif">＋H2O</text>
+      <line x1="232" y1="124" x2="178" y2="62" stroke="#111" stroke-width="1.8" marker-end="url(#arr)"/>
+      <text x="210" y="90" font-size="10" fill="#2e7d32" font-family="sans-serif">＋CO2/Na2CO3</text>
+      <text x="54" y="188" font-size="11" fill="#333" font-family="sans-serif">经典钙三角：CaCO3 → CaO → Ca(OH)2 → CaCO3</text>
+    </svg>
