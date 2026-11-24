@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <line x1="48" y1="158" x2="282" y2="158" stroke="#111" stroke-width="1.8" marker-end="url(#arr)"/>
+      <line x1="48" y1="158" x2="48" y2="24" stroke="#111" stroke-width="1.8" marker-end="url(#arr)"/>
+      <text x="276" y="174" font-size="11" fill="#111" font-family="sans-serif">h/cm</text>
+      <text x="22" y="30" font-size="11" fill="#111" font-family="sans-serif">F/N</text>
+      <polyline points="48,50 112,50 192,110 264,110" fill="none" stroke="#c0392b" stroke-width="2.4"/>
+      <line x1="48" y1="110" x2="192" y2="110" stroke="#555" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="112" y1="50" x2="112" y2="158" stroke="#555" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="192" y1="110" x2="192" y2="158" stroke="#555" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="22" y="54" font-size="11" fill="#c0392b" font-family="sans-serif">10</text>
+      <text x="28" y="114" font-size="11" fill="#2c6eb5" font-family="sans-serif">6</text>
+      <text x="108" y="172" font-size="11" fill="#111" font-family="sans-serif">4</text>
+      <text x="188" y="172" font-size="11" fill="#111" font-family="sans-serif">8</text>
+      <text x="58" y="192" font-size="11" fill="#333" font-family="sans-serif">G＝10 N，浸没 F拉＝6 N → F浮＝4 N，物高 4 cm</text>
+    </svg>

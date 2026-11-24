@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <line x1="48" y1="160" x2="282" y2="160" stroke="#111" stroke-width="1.8" marker-end="url(#arr)"/>
+      <line x1="48" y1="160" x2="48" y2="22" stroke="#111" stroke-width="1.8" marker-end="url(#arr)"/>
+      <text x="284" y="164" font-size="11" fill="#111" font-family="sans-serif">U/V</text>
+      <text x="22" y="28" font-size="11" fill="#111" font-family="sans-serif">I/A</text>
+      <path d="M48,160 Q110,75 245,45" fill="none" stroke="#c0392b" stroke-width="2.2"/>
+      <line x1="48" y1="160" x2="255" y2="62" stroke="#2c6eb5" stroke-width="2"/>
+      <circle cx="152" cy="111" r="4" fill="#111"/>
+      <line x1="152" y1="111" x2="152" y2="160" stroke="#555" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="48" y1="111" x2="152" y2="111" stroke="#555" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="144" y="176" font-size="11" fill="#111" font-family="sans-serif">3 V</text>
+      <text x="18" y="115" font-size="11" fill="#111" font-family="sans-serif">0.3</text>
+      <text x="224" y="38" font-size="11" fill="#c0392b" font-family="sans-serif">灯泡 L</text>
+      <text x="224" y="84" font-size="11" fill="#2c6eb5" font-family="sans-serif">定值 R</text>
+      <text x="58" y="192" font-size="11" fill="#333" font-family="sans-serif">交点处 U、I 同值：R_L＝R＝10 Ω</text>
+    </svg>

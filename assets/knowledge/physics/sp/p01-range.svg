@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200"><rect width="320" height="200" fill="#ffffff"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/></marker><marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/></marker></defs>
+      <rect x="46" y="38" width="228" height="112" fill="none" stroke="#111" stroke-width="1.8"/>
+      <rect x="142" y="28" width="36" height="20" fill="#ffffff"/>
+      <line x1="154" y1="28" x2="154" y2="48" stroke="#111" stroke-width="2.5"/>
+      <line x1="166" y1="33" x2="166" y2="43" stroke="#111" stroke-width="3.5"/>
+      <text x="142" y="20" font-size="11" fill="#111" font-family="sans-serif">U＝6 V</text>
+      <circle cx="90" cy="38" r="12" fill="#fff" stroke="#111" stroke-width="1.8"/>
+      <text x="85" y="42" font-size="11" fill="#111" font-family="sans-serif">A</text>
+      <rect x="78" y="139" width="56" height="22" fill="#eef4fb" stroke="#111" stroke-width="1.8"/>
+      <text x="86" y="154" font-size="11" fill="#111" font-family="sans-serif">R1＝10 Ω</text>
+      <rect x="186" y="139" width="56" height="22" fill="#f7ead9" stroke="#111" stroke-width="1.8"/>
+      <text x="200" y="154" font-size="11" fill="#111" font-family="sans-serif">R2 滑</text>
+      <line x1="214" y1="120" x2="214" y2="139" stroke="#c0392b" stroke-width="2" marker-end="url(#arr-r)"/>
+      <polyline points="176,150 176,94 252,94 252,150" fill="none" stroke="#c0392b" stroke-width="1.8"/>
+      <circle cx="214" cy="94" r="12" fill="#fff" stroke="#c0392b" stroke-width="1.8"/>
+      <text x="209" y="98" font-size="11" fill="#c0392b" font-family="sans-serif">V</text>
+      <text x="34" y="188" font-size="11" fill="#333" font-family="sans-serif">安全范围：I≤Imax 定 R2min；U2≤U2max 定 R2max</text>
+    </svg>
