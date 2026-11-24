@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="24.0" y1="135.0" x2="300.0" y2="135.0" stroke-width="1.5"/>
+<line x1="185.0" y1="192.0" x2="185.0" y2="18.0" stroke-width="1.5"/>
+<polyline points="293,130 300,135 293,140" stroke-width="1.5"/>
+<polyline points="180,25 185,18 190,25" stroke-width="1.5"/>
+<text x="300.0" y="153.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">x</text>
+<text x="199.0" y="24.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">y</text>
+<text x="173.0" y="151.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">O</text>
+<line x1="105.0" y1="65.0" x2="105.0" y2="135.0" stroke-width="1.4" stroke-dasharray="6 5"/>
+<line x1="105.0" y1="65.0" x2="185.0" y2="65.0" stroke-width="1.4" stroke-dasharray="6 5"/>
+<circle cx="105.0" cy="65.0" r="2.8" fill="#111" stroke="none"/><text x="93.0" y="55.0" fill="#111" stroke="none" text-anchor="middle">P(-4,3)</text>
+<text x="145.0" y="58.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">4</text>
+<text x="93.0" y="104.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">3</text>
+</svg>

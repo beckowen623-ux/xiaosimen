@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="180" fill="#fff" stroke="none"/>
+<line x1="20.0" y1="115.0" x2="300.0" y2="115.0" stroke-width="1.8"/>
+<polyline points="292,110 300,115 292,120" stroke-width="1.6"/>
+<line x1="38.0" y1="110.0" x2="38.0" y2="120.0" stroke-width="1.5"/>
+<text x="38.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">-5</text>
+<line x1="60.0" y1="110.0" x2="60.0" y2="120.0" stroke-width="1.5"/>
+<text x="60.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">-4</text>
+<line x1="82.0" y1="110.0" x2="82.0" y2="120.0" stroke-width="1.5"/>
+<text x="82.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">-3</text>
+<line x1="104.0" y1="110.0" x2="104.0" y2="120.0" stroke-width="1.5"/>
+<text x="104.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">-2</text>
+<line x1="126.0" y1="110.0" x2="126.0" y2="120.0" stroke-width="1.5"/>
+<text x="126.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">-1</text>
+<line x1="148.0" y1="110.0" x2="148.0" y2="120.0" stroke-width="1.5"/>
+<text x="148.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">0</text>
+<line x1="170.0" y1="110.0" x2="170.0" y2="120.0" stroke-width="1.5"/>
+<text x="170.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">1</text>
+<line x1="192.0" y1="110.0" x2="192.0" y2="120.0" stroke-width="1.5"/>
+<text x="192.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">2</text>
+<line x1="214.0" y1="110.0" x2="214.0" y2="120.0" stroke-width="1.5"/>
+<text x="214.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">3</text>
+<line x1="236.0" y1="110.0" x2="236.0" y2="120.0" stroke-width="1.5"/>
+<text x="236.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">4</text>
+<line x1="258.0" y1="110.0" x2="258.0" y2="120.0" stroke-width="1.5"/>
+<text x="258.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">5</text>
+<line x1="280.0" y1="110.0" x2="280.0" y2="120.0" stroke-width="1.5"/>
+<text x="280.0" y="138.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">6</text>
+</svg>

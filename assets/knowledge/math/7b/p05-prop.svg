@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="35.0" y1="55.0" x2="285.0" y2="55.0" stroke-width="2"/>
+<line x1="35.0" y1="155.0" x2="285.0" y2="155.0" stroke-width="2"/>
+<line x1="110.0" y1="20.0" x2="175.0" y2="190.0" stroke-width="2"/>
+<line x1="123.0" y1="55.0" x2="235.0" y2="155.0" stroke-width="2"/>
+<circle cx="123.0" cy="55.0" r="2.8" fill="#111" stroke="none"/><text x="109.0" y="49.0" fill="#111" stroke="none" text-anchor="middle">E</text>
+<circle cx="162.0" cy="155.0" r="2.8" fill="#111" stroke="none"/><text x="148.0" y="171.0" fill="#111" stroke="none" text-anchor="middle">F</text>
+<circle cx="235.0" cy="155.0" r="2.8" fill="#111" stroke="none"/><text x="235.0" y="173.0" fill="#111" stroke="none" text-anchor="middle">G</text>
+<text x="32.0" y="50.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">A</text>
+<text x="285.0" y="50.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">B</text>
+<text x="32.0" y="150.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">C</text>
+<text x="285.0" y="150.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">D</text>
+</svg>

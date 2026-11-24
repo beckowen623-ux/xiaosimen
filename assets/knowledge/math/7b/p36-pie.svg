@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<circle cx="160" cy="105" r="74" stroke-width="2"/>
+<path d="M 160 105 L 160.0 31.0 A 74 74 0 0 1 230.4 82.1 Z" fill="#ddd" stroke="#111" stroke-width="2"/>
+<text x="192.0" y="81.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">72°</text>
+<text x="186.0" y="63.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">阅读</text>
+<text x="136.0" y="131.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">其他</text>
+</svg>

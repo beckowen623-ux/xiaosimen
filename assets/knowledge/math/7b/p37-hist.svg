@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="45.0" y1="170.0" x2="295.0" y2="170.0" stroke-width="1.6"/>
+<line x1="45.0" y1="170.0" x2="45.0" y2="25.0" stroke-width="1.6"/>
+<rect x="65" y="134" width="38" height="36" fill="#ddd" stroke="#111" stroke-width="1.6"/>
+<rect x="103" y="98" width="38" height="72" fill="#ddd" stroke="#111" stroke-width="1.6"/>
+<rect x="141" y="80" width="38" height="90" fill="#ddd" stroke="#111" stroke-width="1.6"/>
+<rect x="179" y="110" width="38" height="60" fill="#ddd" stroke="#111" stroke-width="1.6"/>
+<rect x="217" y="128" width="38" height="42" fill="#eee" stroke="#111" stroke-width="1.6"/>
+<text x="84.0" y="128.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">6</text>
+<text x="122.0" y="92.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">12</text>
+<text x="160.0" y="74.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">15</text>
+<text x="198.0" y="104.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">10</text>
+<text x="236.0" y="122.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">?</text>
+<text x="30.0" y="32.0" font-size="12" fill="#111" stroke="none" text-anchor="middle">频数</text>
+<text x="160.0" y="192.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">分组</text>
+</svg>

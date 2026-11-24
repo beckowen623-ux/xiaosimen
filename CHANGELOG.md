@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-23 · Gemini · 初一上、下学期几何、数轴、坐标系与统计题补图（main）
+- 改动：新增 `assets/knowledge/math/7a/`（14 幅 SVG）与 `assets/knowledge/math/7b/`（新增 18 幅 SVG，保留原有 `p06-zhuti.svg`），为 `7a-1.json`(p03)、`7a-5b.json`(p32)、`7a-6.json`(p33～p40)、`7b-1.json`(p01～p08)、`7b-3.json`(p15～p19)、`7b-6.json`(p36～p37) 的卡片例题及核心题目挂载 `img` 字段，不改动任何原题数字、选项和答案；同步重建 `data/knowledge-math-7a.js`、`data/knowledge-math-7b.js`、`data/knowledge-index.js`。
+- 验证：`node tools/build_knowledge.mjs`、`node --check app.js && node --check knowledge.js`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）与本地预览打包均通过。
+
 ## 2026-11-23 · Gemini · 新增数学初三下学期“按知识点补缺补漏”内容（4 章 20 个知识点，含 14 幅 SVG 配图）（main）
 - 改动：新增 `knowledge-src/math/9b-1.json`～`9b-4.json`，覆盖反比例函数（5 点）、相似（6 点）、锐角三角函数（5 点）、投影与视图（4 点）共 20 个知识点（`p01`～`p20`），新增原创题 160 道，归位九下全部 11 个旧题 kp；绘制 14 幅精确 SVG 矢量图存入 `assets/knowledge/math/9b/`。至此初中数学六个学期知识点补缺全部上线。
 - 自查：逐题复算，修正了 `9b-1.json` p04 第 8 题（直线与双曲线相切改用 `y＝－4/x`，使判别式 `b²－16＝0` 有实解 `b＝4`）。

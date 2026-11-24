@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<rect x="55" y="115" width="30" height="30" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="55" y="85" width="30" height="30" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="85" y="115" width="30" height="30" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="115" y="115" width="30" height="30" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="115" y="85" width="30" height="30" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="115" y="55" width="30" height="30" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<text x="100.0" y="168.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">从正面看</text>
+<rect x="200" y="95" width="30" height="30" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="230" y="95" width="30" height="30" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<rect x="260" y="95" width="30" height="30" fill="#eee" stroke="#111" stroke-width="1.8"/>
+<text x="215.0" y="116.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">2</text>
+<text x="245.0" y="116.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">1</text>
+<text x="275.0" y="116.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">3</text>
+<text x="245.0" y="152.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">从上面看(层数)</text>
+</svg>

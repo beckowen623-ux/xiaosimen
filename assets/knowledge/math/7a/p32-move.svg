@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="180" fill="#fff" stroke="none"/>
+<line x1="20.0" y1="120.0" x2="300.0" y2="120.0" stroke-width="1.8"/>
+<polyline points="292,115 300,120 292,125" stroke-width="1.6"/>
+<circle cx="90.0" cy="120.0" r="2.8" fill="#111" stroke="none"/><text x="90.0" y="142.0" fill="#111" stroke="none" text-anchor="middle">A(-4)</text>
+<circle cx="150.0" cy="120.0" r="2.8" fill="#111" stroke="none"/><text x="150.0" y="142.0" fill="#111" stroke="none" text-anchor="middle">O(0)</text>
+<circle cx="255.0" cy="120.0" r="2.8" fill="#111" stroke="none"/><text x="255.0" y="142.0" fill="#111" stroke="none" text-anchor="middle">B(8)</text>
+<line x1="90.0" y1="85.0" x2="135.0" y2="85.0" stroke-width="1.6"/>
+<polyline points="128,80 135,85 128,90" stroke-width="1.5"/>
+<text x="112.0" y="76.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">P→</text>
+<line x1="255.0" y1="85.0" x2="205.0" y2="85.0" stroke-width="1.6"/>
+<polyline points="212,80 205,85 212,90" stroke-width="1.5"/>
+<text x="230.0" y="76.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">←Q</text>
+</svg>

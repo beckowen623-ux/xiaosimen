@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="16" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="85.0" y1="170.0" x2="265.0" y2="170.0" stroke-width="2"/>
+<line x1="85.0" y1="170.0" x2="85.0" y2="35.0" stroke-width="2"/>
+<line x1="85.0" y1="170.0" x2="220.0" y2="65.0" stroke-width="2"/>
+<polyline points="85.0,157.0 98.0,157.0 98.0,170.0" stroke-width="1.5"/>
+<circle cx="85.0" cy="170.0" r="2.8" fill="#111" stroke="none"/><text x="71.0" y="178.0" fill="#111" stroke="none" text-anchor="middle">O</text>
+<text x="125.0" y="105.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">∠1</text>
+<text x="165.0" y="148.0" font-size="15" fill="#111" stroke="none" text-anchor="middle">∠2</text>
+</svg>
