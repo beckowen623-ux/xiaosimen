@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" font-family="Times New Roman, serif" font-size="14" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="200" fill="#fff" stroke="none"/>
+<line x1="50.0" y1="165.0" x2="285.0" y2="165.0" stroke-width="1.6"/>
+<line x1="50.0" y1="165.0" x2="50.0" y2="25.0" stroke-width="1.6"/>
+<polyline points="278,160 285,165 278,170" stroke-width="1.5"/>
+<polyline points="45,32 50,25 55,32" stroke-width="1.5"/>
+<text x="285.0" y="184.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">t/s</text>
+<text x="68.0" y="30.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">s/m</text>
+<text x="40.0" y="180.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">O</text>
+<line x1="50.0" y1="165.0" x2="170.0" y2="45.0" stroke-width="2.2"/>
+<line x1="50.0" y1="165.0" x2="250.0" y2="65.0" stroke-width="2"/>
+<line x1="170.0" y1="45.0" x2="170.0" y2="165.0" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="50.0" y1="45.0" x2="170.0" y2="45.0" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="170.0" y="182.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">4</text>
+<text x="32.0" y="49.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">40</text>
+<text x="155.0" y="40.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">甲</text>
+<text x="255.0" y="62.0" font-size="14" fill="#111" stroke="none" text-anchor="middle">乙</text>
+</svg>

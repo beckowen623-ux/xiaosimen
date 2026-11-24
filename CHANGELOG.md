@@ -2,6 +2,10 @@
 
 新记录写在最上面。格式：日期 · 改动 · 原因 · 验证 · 分支/提交。面向买家的说明另写在 `app.js` 的 `UPDATE_LOG`。
 
+## 2026-11-24 · Gemini · 开启物理“按知识点补缺补漏”并上线初二上学期物理（6 章 22 点、176 题、11 幅 SVG 图）（main）
+- 改动：在 `tools/build_knowledge.mjs` 与 `knowledge.js` 打通 `数学 / 物理` 双科切换（首页、详情页、A4 打印卷与诊断提分处方卡全通用）；新增 `knowledge-src/physics/8a-1.json`～`8a-6.json`（机械运动 4 点、声现象 3 点、物态变化 4 点、光现象 4 点、透镜及其应用 3 点、质量与密度 4 点，共 22 点 176 道原创分层题），绘制 11 幅精确 SVG 物理图（刻度尺、s-t 图、声波、熔化/沸腾曲线、反射/平面镜/折射/透镜光路、m-V 图），并归位八上物理旧题。
+- 验证：`node tools/build_knowledge.mjs`、`node --check app.js && node --check knowledge.js`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）及本地预览打包均通过。
+
 ## 2026-11-24 · Gemini · 全库质检修复：清零草稿残留、消除 29 处“接上题”断链与 2 处无图“如图”（main）
 - 改动：对初一上～初三下及专题与压轴全部 1,768 道数学题和 221 张卡片做全库扫描，修复 4 类影响家长信任的隐患：① 清理 `sp-4.json` p17 卡片公式中 1 处草稿自问残留；② 将全部 29 处“接上题”（含 4 道独立诊断题与多道拓展题）改为条件完全独立的题干，避免诊断/冲高/错题本/打印卷出现上下文断链；③ 修复 2 处含“如图”但缺配图的题（`9b-2.json` p10 第 3 题去掉“如图”，`sp-4.json` p16 第 7 题补挂 `p16-hbg.svg`）；④ 为 `7a-2.json` 中 13 道负整数填空补齐半角/全角负号双兼容。
 - 验证：复检四项指标全部清零（0/0/0/0）；`node tools/build_knowledge.mjs`、`node --check app.js && node --check knowledge.js`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）均通过。

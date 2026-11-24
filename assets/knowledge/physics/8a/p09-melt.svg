@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" font-family="Times New Roman, serif" font-size="14" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="200" fill="#fff" stroke="none"/>
+<line x1="50.0" y1="170.0" x2="290.0" y2="170.0" stroke-width="1.5"/>
+<line x1="50.0" y1="170.0" x2="50.0" y2="22.0" stroke-width="1.5"/>
+<text x="285.0" y="188.0" font-size="12" fill="#111" stroke="none" text-anchor="middle">t/min</text>
+<text x="72.0" y="28.0" font-size="12" fill="#111" stroke="none" text-anchor="middle">T/℃</text>
+<polyline points="55,155 110,105 200,105 265,45" stroke-width="2.2"/>
+<line x1="50.0" y1="105.0" x2="110.0" y2="105.0" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="110.0" y1="105.0" x2="110.0" y2="170.0" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="200.0" y1="105.0" x2="200.0" y2="170.0" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="34.0" y="109.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">0</text>
+<text x="110.0" y="186.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">4</text>
+<text x="200.0" y="186.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">10</text>
+<text x="58.0" y="146.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">A</text>
+<text x="106.0" y="96.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">B</text>
+<text x="204.0" y="96.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">C</text>
+<text x="268.0" y="42.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">D</text>
+</svg>

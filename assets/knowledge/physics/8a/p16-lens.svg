@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" font-family="Times New Roman, serif" font-size="14" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="200" fill="#fff" stroke="none"/>
+<line x1="20.0" y1="100.0" x2="300.0" y2="100.0" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M 160 30 Q 174 100 160 170 Q 146 100 160 30 Z" fill="#eef5f8" stroke="#111" stroke-width="1.8"/>
+<line x1="40.0" y1="60.0" x2="160.0" y2="60.0" stroke-width="1.8"/><polyline points="93.1,64.0 100.0,60.0 93.1,56.0" stroke-width="1.5"/>
+<line x1="160.0" y1="60.0" x2="260.0" y2="120.0" stroke-width="1.8"/><polyline points="202.0,89.9 210.0,90.0 206.1,83.0" stroke-width="1.5"/>
+<circle cx="100" cy="100" r="2.5" fill="#111" stroke="none"/>
+<text x="100.0" y="118.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">F</text>
+<circle cx="220" cy="100" r="2.5" fill="#111" stroke="none"/>
+<text x="220.0" y="118.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">F</text>
+<circle cx="160" cy="100" r="2.5" fill="#111" stroke="none"/>
+<text x="150.0" y="118.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">O</text>
+</svg>

@@ -60,9 +60,10 @@
   // ---- 首页大卡片 ----
   function homeCardHTML(stage) {
     const idx = window.KNOWLEDGE_INDEX;
-    const math = idx?.subjects?.find(s => s.key === 'math');
-    const sem = math?.semesters.find(s => s.stage === stage) || math?.semesters[0];
-    const ready = math?.semesters.filter(s => s.ready) || [];
+    const subj = idx?.subjects?.find(s => s.key === state.subject) || idx?.subjects?.[0];
+    const sem = subj?.semesters.find(s => s.stage === stage && s.ready) || subj?.semesters.find(s => s.ready) || subj?.semesters[0];
+    const ready = subj?.semesters.filter(s => s.ready) || [];
+    const math = subj;
     let body;
     if (!math) {
       body = '<p class="muted">正在加载知识点目录…</p>';
@@ -87,7 +88,8 @@
         <div class="kp-home-actions">${ready.map(s => `<button class="btn primary" type="button" data-kp-sem="${s.key}">看${esc(s.label)}样板</button>`).join('')}</div>`;
     }
     return `<section class="card kp-home" id="knowledgeHome">
-      <div class="kp-home-head"><span class="kp-badge">主线</span><h2>按知识点补缺补漏 · 数学</h2></div>
+      <div class="kp-home-head"><span class="kp-badge">主线</span><h2>按知识点补缺补漏</h2></div>
+      <div class="kp-sem-tabs" style="margin:8px 0 6px">${(idx?.subjects || []).map(s => `<button type="button" class="btn ${s.key === (subj?.key || 'math') ? 'primary' : ''}" data-kp-subj="${s.key}">${esc(s.label)}</button>`).join('')}</div>
       <p class="kp-home-lead">哪里不会补哪里：先诊断找出薄弱知识点，看一张知识点卡片，再集中练这个点的基础、提高、拓展题，练完再测。</p>
       ${sem ? `<p class="kp-home-sem">当前：<b>${esc(sem.label)}</b>${sem.ready ? ` · ${sem.chapters.length} 章` : ''}</p>` : ''}
       ${body}
@@ -98,7 +100,8 @@
       const go = b.dataset.kpGo;
       void open({ stage: app.stage(), action: go });
     }));
-    root.querySelectorAll('[data-kp-sem]').forEach(b => b.addEventListener('click', () => { void open({ semester: b.dataset.kpSem }); }));
+    root.querySelectorAll('[data-kp-sem]').forEach(b => b.addEventListener('click', () => { void open({ subject: state.subject, semester: b.dataset.kpSem }); }));
+    root.querySelectorAll('[data-kp-subj]').forEach(b => b.addEventListener('click', () => { state.subject = b.dataset.kpSubj; const el = document.getElementById('knowledgeHome'); if (el) { const wrap = document.createElement('div'); wrap.innerHTML = homeCardHTML(app.stage()); el.replaceWith(wrap.firstElementChild); wireHome(document.getElementById('knowledgeHome')); } }));
   }
 
   // ---- 页面 ----
@@ -108,13 +111,14 @@
       <div class="national-header">
         <button type="button" class="btn text-button" data-kp-home>← 返回首页</button>
         <h1 id="kpTitle" tabindex="-1">按知识点补缺补漏</h1>
-        <p class="muted">人教版 · 数学 · 先诊断，再补薄弱点。题目分基础、提高、拓展三档，每题都有解析。</p>
+        <p class="muted">人教版 · 先诊断，再补薄弱点。题目分基础、提高、拓展三档，每题都有解析。</p>
       </div>${inner}`;
     app.view.querySelector('[data-kp-home]').addEventListener('click', () => { leave(); app.home(); });
   }
   function semTabs(idx) {
-    const math = idx.subjects.find(s => s.key === state.subject);
-    return `<div class="kp-sem-tabs" role="tablist">${math.semesters.map(s => `<button type="button" class="btn ${s.key === state.semester ? 'primary' : ''}" data-sem="${s.key}" ${s.ready ? '' : 'aria-disabled="true"'}>${esc(s.label)}${s.ready ? '' : '<small>整理中</small>'}</button>`).join('')}</div>`;
+    const subj = idx.subjects.find(s => s.key === state.subject) || idx.subjects[0];
+    const subjBar = idx.subjects.length > 1 ? `<div class="kp-sem-tabs" role="tablist" aria-label="切换学科">${idx.subjects.map(s => `<button type="button" class="btn ${s.key === subj.key ? 'primary' : ''}" data-subj="${s.key}">${esc(s.label)}</button>`).join('')}</div>` : "";
+    return subjBar + `<div class="kp-sem-tabs" role="tablist">${subj.semesters.map(s => `<button type="button" class="btn ${s.key === state.semester ? 'primary' : ''}" data-sem="${s.key}" ${s.ready ? '' : 'aria-disabled="true"'}>${esc(s.label)}${s.ready ? '' : '<small>整理中</small>'}</button>`).join('')}</div>`;
   }
   function levelOf(q) { return q.knowledge ? (q.level || 1) : 4; }
   function pointQuestions(data, point, onlyUndone = false) {
@@ -249,6 +253,11 @@
     wireTabs();
   }
   function wireTabs() {
+    app.view.querySelectorAll('[data-subj]').forEach(b => b.addEventListener('click', () => {
+      state.subject = b.dataset.subj;
+      state.semester = semesterForStage(window.KNOWLEDGE_INDEX, app.stage());
+      state.view = 'list'; state.selecting = false; void render();
+    }));
     app.view.querySelectorAll('[data-sem]').forEach(b => b.addEventListener('click', () => { state.semester = b.dataset.sem; state.view = 'list'; state.selecting = false; void render(); }));
   }
 
@@ -289,7 +298,7 @@
     app.view.querySelectorAll('[data-diag-chapter]').forEach(b => b.addEventListener('click', () => startList(diagQuestions(data, b.dataset.diagChapter))));
     app.view.querySelector('[data-kp-act="diag"]').addEventListener('click', () => startList(diagQuestions(data)));
     app.view.querySelector('[data-kp-act="weak"]').addEventListener('click', () => startList(weakQueue(data, weakPoints(data)), '薄弱知识点的题都做对了，可以再诊断一次。'));
-    app.view.querySelector('[data-kp-act="print-weak"]').addEventListener('click', () => openPrintSheet(data, weakPoints(data), `${data.label} · 数学薄弱知识点补缺卷`));
+    app.view.querySelector('[data-kp-act="print-weak"]').addEventListener('click', () => openPrintSheet(data, weakPoints(data), `${data.label} · 薄弱知识点补缺卷`));
     app.view.querySelector('[data-kp-act="select"]').addEventListener('click', () => { state.selecting = !state.selecting; drawList(idx, data); });
   }
 
@@ -345,23 +354,26 @@
   }
 
   function semesterForStage(idx, stage) {
-    const math = idx.subjects.find(s => s.key === 'math');
-    return (math.semesters.find(s => s.stage === stage) || math.semesters[0]).key;
+    const subj = idx.subjects.find(s => s.key === state.subject) || idx.subjects[0];
+    return (subj.semesters.find(s => s.stage === stage && s.ready) || subj.semesters.find(s => s.ready) || subj.semesters[0]).key;
   }
 
   async function open(opts = {}) {
     const idx = await loadIndex().catch(() => null);
     if (!idx) { app.toast('知识点资料加载失败，请检查网络后重试。'); return; }
+    if (opts.subject) state.subject = opts.subject;
     if (opts.semester) state.semester = opts.semester;
     else if (opts.stage) state.semester = semesterForStage(idx, opts.stage);
     else if (!state.semester) state.semester = semesterForStage(idx, app.stage());
     if (opts.point) { state.point = opts.point; state.view = 'point'; } else if (opts.action || opts.stage || opts.semester) state.view = 'list';
     state.selecting = opts.action === 'mark';
     if (location.hash !== '#knowledge') history.replaceState(null, '', '#knowledge');
-    const sem = idx.subjects.find(s => s.key === 'math').semesters.find(s => s.key === state.semester);
+    const subjObj = idx.subjects.find(s => s.key === state.subject) || idx.subjects[0];
+    if (!subjObj.semesters.some(s => s.key === state.semester)) state.semester = semesterForStage(idx, app.stage());
+    const sem = subjObj.semesters.find(s => s.key === state.semester);
     if ((opts.action === 'diag' || opts.action === 'weak') && sem?.ready) {
       try {
-        const data = await loadSemester('math', state.semester);
+        const data = await loadSemester(state.subject, state.semester);
         if (opts.action === 'diag') { startList(diagQuestions(data)); return; }
         startList(weakQueue(data, weakPoints(data)), '薄弱知识点的题都做对了，可以再诊断一次。'); return;
       } catch (error) { app.toast(error.message); }
@@ -402,7 +414,7 @@
       ? `<div class="kp-rx-upsell"><span>完整版 ¥19.9 一次买断，解锁全部 221 个知识点、1,768 道分层题＋压轴专题＋无限 A4 打印（3 台设备共用）。</span><button class="btn primary" type="button" id="kpRxUnlock">解锁完整版</button></div>`
       : "";
     return `<div class="kp-rx">
-      <div class="kp-rx-head"><span class="kp-badge">提分处方</span><h3>本次数学学情诊断建议</h3></div>
+      <div class="kp-rx-head"><span class="kp-badge">提分处方</span><h3>本次学情诊断建议</h3></div>
       <p class="kp-rx-lead">${headline}</p>
       ${listHtml ? `<div class="kp-rx-list">${listHtml}</div>` : ""}
       <div class="kp-rx-actions">
@@ -413,21 +425,23 @@
   }
   function wireSummaryRx(root, queue, results) {
     const { weak } = analyzeSession(queue, results);
-    const semKey = state.semester || (queue?.[0]?.kpId?.split("-")[1]) || "7a";
+    const firstParts = (queue?.[0]?.kpId || "").split("-");
+    const subjKey = firstParts[0] || state.subject || "math";
+    const semKey = firstParts[1] || state.semester || "8a";
     root.querySelectorAll("[data-rx-point]").forEach(b => b.addEventListener("click", () => {
       const pid = b.dataset.rxPoint;
-      const sk = pid.split("-")[1] || semKey;
-      void open({ semester: sk, point: pid });
+      const parts = pid.split("-");
+      void open({ subject: parts[0] || subjKey, semester: parts[1] || semKey, point: pid });
     }));
     root.querySelector("#kpRxPractice")?.addEventListener("click", async () => {
-      const data = await loadSemester("math", semKey);
+      const data = await loadSemester(subjKey, semKey);
       const idSet = new Set(weak.map(x => x.id));
       const pts = [];
       for (const c of data.chapters) for (const p of c.points) if (idSet.has(p.id)) pts.push(p);
       startList(weakQueue(data, pts), "这些薄弱点的题目都已做对。");
     });
     root.querySelector("#kpRxPrint")?.addEventListener("click", async () => {
-      const data = await loadSemester("math", semKey);
+      const data = await loadSemester(subjKey, semKey);
       const idSet = new Set(weak.map(x => x.id));
       const pts = [];
       for (const c of data.chapters) for (const p of c.points) if (idSet.has(p.id)) pts.push(p);
