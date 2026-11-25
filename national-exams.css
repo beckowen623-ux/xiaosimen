@@ -19,7 +19,7 @@
 .national-actions { margin-top: 18px; }
 .national-empty { padding: 20px; grid-column: 1 / -1; }
 .national-empty .btn { margin-top: 15px; }
-.national-reader-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.national-reader-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; position: sticky; top: 8px; z-index: 20; background: var(--paper, #fff); padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, .06); }
 .national-reader-title { font-size: 22px; margin-bottom: 15px; }
 .national-original { max-width: 900px; margin: 0 auto 24px; }
 .national-original h2 { margin-bottom: 12px; }

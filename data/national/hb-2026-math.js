@@ -40,7 +40,7 @@ window.NATIONAL_PAPERS["hb-2026-math"] = [
   "answer": [],
   "explanation": "【解析】\n（1）当 t = 1 时，抛物线 y = (x - 1)(x - 3) = x² - 4x + 3，顶点 P(2, -1)，对称轴 x = 2。\n直线 OP 过原点 O(0,0) 和 P(2, -1)，解析式为 y = -1/2 x。\n当 x = 0 时 y = 3，即 C(0, 3)。点 C 关于对称轴 x = 2 的对称点为 C'(4, 3)。\n将 x = 4 代入 y = -1/2 x 得 y = -2 ≠ 3，所以点 C' 不在 OP 上。\n\n（2）抛物线开口向上，对称轴为 x = 2t。\n① 若 2t < (3 + 6)/2 = 9/2，即 t < 9/4，在 3 ≤ x ≤ 6 上，x = 6 处取得最大值：\nf(6) = (6 - t)(6 - 3t) = 9，整理得 t² - 8t + 9 = 0，解得 t = 4 - √7（4 + √7 > 9/4 舍去）；\n② 若 2t > 9/2，即 t > 9/4，在 x = 3 处取得最大值：\nf(3) = (3 - t)(3 - 3t) = 9，整理得 t² - 4t = 0，解得 t = 4（t = 0 舍去）。\n综上，t = 4 - √7 或 t = 4。\n\n（3）点 A(t, 0)，点 B(3t, 0)，AB = 2t。\n点 B 绕点 A 顺时针旋转 90° 得 B'(t, -2t)。\n顶点 P(2t, -t²)，直线 OP 斜率 k = (-t²) / (2t) = -t/2，故 OP 解析式为 y = -t/2 x。\n设平移后直线为 y = -t/2 x + b，代入点 B'(t, -2t)：\n-2t = -t/2 · t + b ⇒ b = 1/2 t² - 2t。\n该直线交 y 轴于 M(0, m)，则 m = 1/2 t² - 2t = 1/2 (t - 2)² - 2。\n当 t = 2 时，m 取得最小值 -2。",
   "kp": "",
-  "image": "assets/national/hb-2026-math/q23.png"
+  "image": "assets/national/hb-2026-math/q23.webp"
  },
  {
   "id": "national-hb-2026-math-q24",
@@ -81,6 +81,6 @@ window.NATIONAL_PAPERS["hb-2026-math"] = [
   "answer": [],
   "explanation": "【解析】\n（1）∵ 四边形 DEFG 为正方形，∴ DE = EF，∠DEF = 90°。\n∵ ∠DEB = 45°，平角 ∠BEC = 180°，∴ ∠FEC = 180° - 90° - 45° = 45° = ∠DEB。\n∵ AB = AC，∴ ∠B = ∠C。\n在 △DEB 与 △FEC 中，∠DEB = ∠FEC，∠B = ∠C，DE = EF，\n∴ △DEB ≌ △FEC (AAS)，∴ BE = EC。\n\n（2）作 AH ⊥ BC 于 H，则 BH = HC = 6，AH = √(10² - 6²) = 8。\ncos B = 6/10 = 3/5，sin B = 4/5，tan B = 4/3。\n过 D 作 DM ⊥ BC 于 M，过 F 作 FN ⊥ BC 于 N。\n易得 △DMB ∽ △ENF（一线三等角）。\n由几何比例关系计算，当 BD = 20/7 时，可得 BE = 44/7。\n由对称性，当 BD = 40/7 时点 E 处于关于底边高的对称位置，移动距离为 4√5/7。\n\n（3）利用坐标系或正方形顶点投影计算，可确定 G 点运动轨迹及到 BC 距离的极大值。",
   "kp": "",
-  "image": "assets/national/hb-2026-math/q24.png"
+  "image": "assets/national/hb-2026-math/q24.webp"
  }
 ];

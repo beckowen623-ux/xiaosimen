@@ -76,7 +76,7 @@ window.NATIONAL_PAPERS["yn-2026-math"] = [
   ],
   "explanation": "∠BOC = 180° - ∠AOC = 180° - 110° = 70°。故选B。",
   "kp": "",
-  "image": "./assets/national/yn-2026-math/q02.png",
+  "image": "./assets/national/yn-2026-math/q02.webp",
   "stem": "如图，点 O 在直线 AB 上，若 ∠AOC = 110°，则 ∠BOC =（2分）",
   "paperScore": 2
  },
@@ -194,7 +194,7 @@ window.NATIONAL_PAPERS["yn-2026-math"] = [
   ],
   "explanation": "D项具有一条垂直对称轴，属于轴对称图形。故选D。",
   "kp": "",
-  "image": "./assets/national/yn-2026-math/q05.png",
+  "image": "./assets/national/yn-2026-math/q05.webp",
   "stem": "下列四个图形中，是轴对称图形的为（2分）",
   "paperScore": 2
  },
@@ -273,7 +273,7 @@ window.NATIONAL_PAPERS["yn-2026-math"] = [
   ],
   "explanation": "正方体的俯视图是正方形；圆柱和球的俯视图为圆。故选B。",
   "kp": "",
-  "image": "./assets/national/yn-2026-math/q07.png",
+  "image": "./assets/national/yn-2026-math/q07.webp",
   "stem": "下列四个几何体中，俯视图是正方形的为（2分）",
   "paperScore": 2
  },
@@ -352,7 +352,7 @@ window.NATIONAL_PAPERS["yn-2026-math"] = [
   ],
   "explanation": "同弧所对的圆心角等于圆周角的 2 倍，∠AOB = 2∠ACB = 2 × 26° = 52°。故选D。",
   "kp": "",
-  "image": "./assets/national/yn-2026-math/q09.png",
+  "image": "./assets/national/yn-2026-math/q09.webp",
   "stem": "如图，AB 是 ⊙O 的弦，点 C 在 ⊙O 上。若 ∠ACB = 26°，则 ∠AOB =（2分）",
   "paperScore": 2
  },
@@ -431,7 +431,7 @@ window.NATIONAL_PAPERS["yn-2026-math"] = [
   ],
   "explanation": "∵ AB // CD，∴ △COD ∽ △AOB，相似比为 CD/AB = 2/3，面积比等于相似比的平方：S₁/S₂ = (2/3)² = 4/9。故选C。",
   "kp": "",
-  "image": "./assets/national/yn-2026-math/q11.png",
+  "image": "./assets/national/yn-2026-math/q11.webp",
   "stem": "如图，AC, BD 相交于点 O，AB // CD，记 △COD 的面积为 S₁，△AOB 的面积为 S₂。若 CD/AB = 2/3，则 S₁/S₂ =（2分）",
   "paperScore": 2
  },
@@ -735,7 +735,7 @@ window.NATIONAL_PAPERS["yn-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：利用 SSS 判定全等三角形。",
   "kp": "",
-  "image": "./assets/national/yn-2026-math/q20.png"
+  "image": "./assets/national/yn-2026-math/q20.webp"
  },
  {
   "id": "national-yn-2026-math-q21",
@@ -771,7 +771,7 @@ window.NATIONAL_PAPERS["yn-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) 150 (2) 360人。",
   "kp": "",
-  "image": "./assets/national/yn-2026-math/q21.png"
+  "image": "./assets/national/yn-2026-math/q21.webp"
  },
  {
   "id": "national-yn-2026-math-q22",
@@ -897,7 +897,7 @@ window.NATIONAL_PAPERS["yn-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) 判定菱形 (2) ∠ACB = 60°。",
   "kp": "",
-  "image": "./assets/national/yn-2026-math/q24.png"
+  "image": "./assets/national/yn-2026-math/q24.webp"
  },
  {
   "id": "national-yn-2026-math-q25",
@@ -1028,6 +1028,6 @@ window.NATIONAL_PAPERS["yn-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) 证明 OC ⊥ PC (2) PA = (16/11)√21 (3) S₁ > S₂。",
   "kp": "",
-  "image": "./assets/national/yn-2026-math/q27.png"
+  "image": "./assets/national/yn-2026-math/q27.webp"
  }
 ];

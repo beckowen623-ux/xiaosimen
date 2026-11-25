@@ -63,7 +63,7 @@
             "图D"
           ],
           "answer": "B",
-          "image": "assets/national/js-suzhou-2026-math/q03.png",
+          "image": "assets/national/js-suzhou-2026-math/q03.webp",
           "exp": "根据长方体表面展开图的特征，图B能围成封闭的长方体纸盒。故选B。"
         },
         {
@@ -88,7 +88,7 @@
             "65°"
           ],
           "answer": "C",
-          "image": "assets/national/js-suzhou-2026-math/q05.png",
+          "image": "assets/national/js-suzhou-2026-math/q05.webp",
           "exp": "在 △ABC 中，∠B = 180° - 55° - 65° = 60°。∵ CE // AB，∴ 同位角 ∠DCE = ∠B = 60°。故选C。"
         },
         {
@@ -125,7 +125,7 @@
             "27/8"
           ],
           "answer": "C",
-          "image": "assets/national/js-suzhou-2026-math/q08.png",
+          "image": "assets/national/js-suzhou-2026-math/q08.webp",
           "exp": "设 AE = x (0 < x < 3)，则 BE = 3 - x。在 Rt△EAF 与 Rt△CBE 中，∠AEF = 90° - ∠BEC = ∠BCE，∴ △AEF ∽ △BCE，AF/BE = AE/BC，即 AF/(3-x) = x/2，AF = (3x - x²)/2。AE + AF = x + (3x - x²)/2 = -1/2 x² + 5/2 x = -1/2 (x - 5/2)² + 25/8。当 x = 5/2 时，最大值为 25/8。故选C。"
         }
       ]
@@ -160,28 +160,28 @@
         {
           "n": 13,
           "stem": "如图，Rt△ABC 中，∠ACB = 90°，BC = 6，分别以点 A, B 为圆心，大于 1/2 AB 的长为半径画弧，两弧相交于点 D, E。过 D, E 两点作直线，分别交 AB, AC 于点 F, G。连接 CF。若 CF = 5，则 AG = ____",
-          "image": "assets/national/js-suzhou-2026-math/q13.png",
+          "image": "assets/national/js-suzhou-2026-math/q13.webp",
           "answer": "25/4",
           "exp": "FG 为 AB 的垂直平分线，F 为 AB 中点。在 Rt△ABC 中斜边中线 CF = 5，所以 AB = 10。由勾股定理 AC = √(10² - 6²) = 8。在 Rt△AFG ∽ Rt△ACB 中，AG/AB = AF/AC，即 AG/10 = 5/8，解得 AG = 25/4。"
         },
         {
           "n": 14,
           "stem": "苏州园林中的月洞门形如满月。某月洞门内廓由弧 ABC、线段 CD, DE, EA 四部分构成，AE, CD 分别垂直于地面 l。经测量，月洞门最高点 B 到地面的距离为 21分米，AE = CD = 3分米，DE = 12分米，则弧 ABC 所在圆的半径为____分米",
-          "image": "assets/national/js-suzhou-2026-math/q14.png",
+          "image": "assets/national/js-suzhou-2026-math/q14.webp",
           "answer": "10",
           "exp": "设圆心为 O，半径为 R。弦 AC = DE = 12分米，弦心距为 d。最高点到地面的距离为 R + d + 3 = 21分米，即 R + d = 18。在直角三角形中 R² = d² + 6²，解得 R = 10分米。"
         },
         {
           "n": 15,
           "stem": "如图，关于 x 的二次函数 y = x² - 2mx + m² + 1 的图象为抛物线 C，直线 y = a 与抛物线 C 交于 A, B 两点，过抛物线 C 的顶点作 x 轴的平行线 l，过 A, B 分别作 l 的垂线，垂足为 M, N。若四边形 ABNM 为正方形，则 a = ____",
-          "image": "assets/national/js-suzhou-2026-math/q15.png",
+          "image": "assets/national/js-suzhou-2026-math/q15.webp",
           "answer": "5",
           "exp": "抛物线顶点纵坐标为 1，直线 l 为 y = 1。正方形边长 h = a - 1。抛物线宽度 AB = 2√(a - 1)。由 AB = h 得 2√(a - 1) = a - 1，解得 a - 1 = 4，a = 5。"
         },
         {
           "n": 16,
           "stem": "如图，在等边 △ABC 中，D, E 分别是 AB, AC 边上的点，AB = 2。将 △ADE 沿 DE 翻折得到 △A'DE，若点 A' 恰好落在边 BC 上，则线段 AD 长度的最小值为____",
-          "image": "assets/national/js-suzhou-2026-math/q16.png",
+          "image": "assets/national/js-suzhou-2026-math/q16.webp",
           "answer": "4√3 - 6",
           "exp": "由翻折知 DA = DA'。设 BD = x，则 AD = DA' = 2 - x。在 △A'BD 中由余弦定理或建立函数极值模型，利用几何轨迹或三角求得 AD 的最小值为 4√3 - 6。"
         }

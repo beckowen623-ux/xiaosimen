@@ -84,8 +84,8 @@
           <button class="btn text-button" type="button" data-kp-go="list">看全部知识点 ›</button>
         </div>`;
     } else {
-      body = `<p class="muted">${esc(sem?.label || '')}数学知识点正在整理，已上线：${ready.map(s => esc(s.label)).join('、') || '—'}。</p>
-        <div class="kp-home-actions">${ready.map(s => `<button class="btn primary" type="button" data-kp-sem="${s.key}">看${esc(s.label)}样板</button>`).join('')}</div>`;
+      body = `<p class="muted">${esc(sem?.label || '')}${esc(subj?.label || '')}知识点正在整理，已上线：${ready.map(s => esc(s.label)).join('、') || '—'}。</p>
+        <div class="kp-home-actions">${ready.map(s => `<button class="btn primary" type="button" data-kp-sem="${s.key}">看${esc(s.label)}</button>`).join('')}</div>`;
     }
     return `<section class="card kp-home" id="knowledgeHome">
       <div class="kp-home-head"><span class="kp-badge">主线</span><h2>按知识点补缺补漏</h2></div>
@@ -161,6 +161,28 @@
     return out;
   }
 
+  function totalSummaryCounts() {
+    const idx = window.KNOWLEDGE_INDEX;
+    let pts = 0; let qs = 0;
+    for (const s of idx?.subjects || []) {
+      for (const sem of s.semesters || []) {
+        if (!sem.ready) continue;
+        for (const c of sem.chapters || []) {
+          for (const p of c.points || []) { pts++; qs += (p.ids?.length || 0); }
+        }
+      }
+    }
+    return { pts: pts || 354, qs: qs || 4600, subjects: (idx?.subjects || []).map(s => s.label).join('、') || '数理化' };
+  }
+  function formatPrintAnswer(q) {
+    if (q.type === "judge") return q.answer?.[0] === "true" ? "正确" : "错误";
+    if (q.type === "essay") {
+      if (q.sample) return q.sample;
+      if (q.points?.length) return q.points.map((p, i) => `${i + 1}. ${p.text}`).join("；");
+    }
+    return Array.isArray(q.answer) ? q.answer.join(" / ") : String(q.answer || "");
+  }
+
   // ---- 薄弱知识点一键 A4 打印卷（卡片 + 分层题 + 独立答案解析页） ----
   function openPrintSheet(data, points, title) {
     if (!points.length) { app.toast("当前没有可打印的知识点。"); return; }
@@ -176,11 +198,11 @@
       if (allQs.length > picked.length) omitted += (allQs.length - picked.length);
       const qHtml = picked.map(q => {
         qNo++;
-        const opts = q.type === "single" && q.options?.length
+        const opts = (q.type === "single" || q.type === "multiple") && q.options?.length
           ? `<div class="kp-pr-opts">${q.options.map(o => `<span><b>${esc(o.key)}.</b> ${esc(o.text)}</span>`).join("")}</div>` : "";
         const img = q.image ? `<img class="kp-pr-fig" src="${esc(q.image)}" alt="题目配图">` : "";
-        const ansStr = Array.isArray(q.answer) ? q.answer.join(" / ") : String(q.answer || "");
-        answers.push(`<div class="kp-pr-ans-item"><b>${qNo}.</b> 答案：<b>${esc(ansStr)}</b>　解析：${esc(q.explanation || "")}</div>`);
+        const ansStr = formatPrintAnswer(q);
+        answers.push(`<div class="kp-pr-ans-item"><b>${qNo}.</b> 答案：<b>${esc(ansStr)}</b>${q.explanation ? `　解析：${esc(q.explanation)}` : ""}</div>`);
         return `<div class="kp-pr-q"><p class="kp-pr-stem"><b>${qNo}.</b> ${esc(q.stem)}</p>${img}${opts}</div>`;
       }).join("");
       const c = p.card;
@@ -222,8 +244,14 @@
     document.body.appendChild(overlay);
     document.body.classList.add("kp-printing");
     overlay.querySelector("#kpPrClose").addEventListener("click", () => { overlay.remove(); document.body.classList.remove("kp-printing"); });
-    overlay.querySelector("#kpPrGo").addEventListener("click", () => window.print());
-    overlay.querySelector("#kpPrUnlock")?.addEventListener("click", () => { overlay.remove(); document.body.classList.remove("kp-printing"); app.unlock("开通完整版（¥19.9 一次买断），即可无限打印全部 221 个知识点的完整练习卷与解析。"); });
+    overlay.querySelector("#kpPrGo").addEventListener("click", async () => {
+      const imgs = [...overlay.querySelectorAll("img")];
+      await Promise.all(imgs.map(im => im.decode().catch(() => {})));
+      if (window.QuizReferrals?.print) window.QuizReferrals.print(location.href);
+      else window.print();
+    });
+    const totals = totalSummaryCounts();
+    overlay.querySelector("#kpPrUnlock")?.addEventListener("click", () => { overlay.remove(); document.body.classList.remove("kp-printing"); app.unlock(`开通完整版（¥19.9 一次买断），即可无限打印${totals.subjects}全部 ${totals.pts} 个知识点的完整练习卷与解析。`); });
   }
 
   function weakQueue(data, points) {
@@ -249,7 +277,9 @@
   let renderRev = 0;
 
   function drawNotReady(idx, sem) {
-    shell(`${semTabs(idx)}<section class="card kp-empty"><h2>${esc(sem?.label || '')}知识点正在整理</h2><p class="muted">先上线的是初一上学期样板（6 章、40 个知识点）。其余学期会按同样的方式陆续补齐。</p><button class="btn primary" type="button" data-sem="7a">看初一上学期</button></section>`);
+    const subj = idx.subjects.find(s => s.key === state.subject) || idx.subjects[0];
+    const firstReady = subj?.semesters?.find(s => s.ready);
+    shell(`${semTabs(idx)}<section class="card kp-empty"><h2>${esc(sem?.label || '')}${esc(subj?.label || '')}知识点正在整理</h2><p class="muted">其余已上线学期可直接点击切换学习。</p>${firstReady ? `<button class="btn primary" type="button" data-sem="${esc(firstReady.key)}">看${esc(firstReady.label)}</button>` : ''}</section>`);
     wireTabs();
   }
   function wireTabs() {
@@ -410,8 +440,9 @@
     const headline = weak.length
       ? `本次共检测 <b>${tested.length}</b> 个知识点：已过关 <b>${passed}</b> 个，发现 <b>${weak.length}</b> 个薄弱漏洞（优先补齐预计可抢回 <b>${minGain}～${maxGain} 分</b>）。`
       : `本次检测的 <b>${tested.length}</b> 个知识点全部过关！建议直接进入“专题与压轴”挑战中考拉分题。`;
+    const totals = totalSummaryCounts();
     const upsell = !app.hasAccess() && weak.length
-      ? `<div class="kp-rx-upsell"><span>完整版 ¥19.9 一次买断，解锁全部 221 个知识点、1,768 道分层题＋压轴专题＋无限 A4 打印（3 台设备共用）。</span><button class="btn primary" type="button" id="kpRxUnlock">解锁完整版</button></div>`
+      ? `<div class="kp-rx-upsell"><span>完整版 ¥19.9 一次买断，解锁${esc(totals.subjects)}全部 ${totals.pts} 个知识点、${totals.qs.toLocaleString('zh-CN')} 道分层题与真题＋压轴专题＋无限 A4 打印（3 台设备共用）。</span><button class="btn primary" type="button" id="kpRxUnlock">解锁完整版</button></div>`
       : "";
     return `<div class="kp-rx">
       <div class="kp-rx-head"><span class="kp-badge">提分处方</span><h3>本次学情诊断建议</h3></div>
@@ -447,9 +478,12 @@
       for (const c of data.chapters) for (const p of c.points) if (idSet.has(p.id)) pts.push(p);
       openPrintSheet(data, pts, `${data.label} · 本次诊断薄弱知识点补缺卷`);
     });
-    root.querySelector("#kpRxSp")?.addEventListener("click", () => { void open({ semester: "sp" }); });
+    root.querySelector("#kpRxSp")?.addEventListener("click", () => { void open({ subject: subjKey, semester: "sp" }); });
     root.querySelector("#kpRxUnlock")?.addEventListener("click", () => app.unlock("开通完整版（¥19.9 一次买断），即可做完整套薄弱知识点分层题、压轴专题并无限打印 A4 补缺卷。"));
   }
 
-  window.KnowledgeHub = { attach: options => { app = options; }, open, leave, loadIndex, homeCardHTML, wireHome, summaryRxHTML, wireSummaryRx };
+  function refresh() {
+    if (location.hash === '#knowledge' && !document.body.classList.contains('practice')) void render();
+  }
+  window.KnowledgeHub = { attach: options => { app = options; }, open, leave, refresh, loadIndex, homeCardHTML, wireHome, summaryRxHTML, wireSummaryRx };
 })();

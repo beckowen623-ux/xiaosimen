@@ -493,7 +493,7 @@ window.NATIONAL_PAPERS["jx-2026-daode"] = [
   ],
   "explanation": "漫画中口岸提示“禁止携带外来物种入境”，严防生物安全风险。启示青少年要自觉履行维护国家安全义务，加强国家安全知识学习。①④正确。故选B。",
   "kp": "",
-  "image": "assets/national/jx-2026-daode/q13.png",
+  "image": "assets/national/jx-2026-daode/q13.webp",
   "stem": "右图漫画启示青少年要\n①自觉履行维护国家安全的义务\n②自觉增强保守国家秘密的意识\n③依法打击危害国家安全的行为\n④加强学习国家安全有关知识"
  },
  {
@@ -608,7 +608,7 @@ window.NATIONAL_PAPERS["jx-2026-daode"] = [
   ],
   "explanation": "图表中燃油车销量逐年下降，新能源汽车销量和渗透率持续上升，表明我国燃油车销量呈下降趋势，中国大力推广新能源汽车为全球绿色低碳转型作出巨大贡献。①④正确。故选B。",
   "kp": "",
-  "image": "assets/national/jx-2026-daode/q16.png",
+  "image": "assets/national/jx-2026-daode/q16.webp",
   "stem": "右图是2019—2025年中国国内汽车销量变化情况。由此可见\n①我国燃油车销量呈下降趋势\n②新能源车销量增长动力不足\n③我国居民普遍践行了绿色消费理念\n④中国为全球绿色低碳转型作出贡献"
  },
  {

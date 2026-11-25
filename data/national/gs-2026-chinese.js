@@ -37,7 +37,7 @@ window.NATIONAL_PAPERS["gs-2026-chinese"] = [
   ],
   "explanation": "官方标准答案：C。海报1中的简牍书法字体以隶书/汉简草隶为主，并非笔画婉转、粗细均匀的篆书。",
   "kp": "",
-  "image": "./assets/national/gs-2026-chinese/q02.png",
+  "image": "./assets/national/gs-2026-chinese/q02.webp",
   "stem": "小文收藏了甘肃简牍博物馆的两张展览海报，下面对海报分析有误的一项是（3分）",
   "paperScore": 3
  },
@@ -764,7 +764,7 @@ window.NATIONAL_PAPERS["gs-2026-chinese"] = [
   "answer": [],
   "explanation": "官方标准答案：名著阅读图像图景再现与核心情节分析。",
   "kp": "",
-  "image": "./assets/national/gs-2026-chinese/q19.png"
+  "image": "./assets/national/gs-2026-chinese/q19.webp"
  },
  {
   "id": "national-gs-2026-chinese-q20",

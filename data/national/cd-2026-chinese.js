@@ -877,6 +877,6 @@ window.NATIONAL_PAPERS["cd-2026-chinese"] = [
   "answer": [],
   "explanation": "考查图文转换、逻辑排序（因果-递进-引用-总结）及宣传用语的推敲润色。",
   "kp": "",
-  "image": "assets/national/cd-2026-chinese/q12_charts.png"
+  "image": "assets/national/cd-2026-chinese/q12_charts.webp"
  }
 ];

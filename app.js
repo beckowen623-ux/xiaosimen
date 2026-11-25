@@ -738,6 +738,10 @@ async function restoreAccess() {
         paidAccess = authed;
         try { localStorage.setItem('xiaosimen_paid', authed ? '1' : '0'); } catch {}
         if (byId('subjectSections')) renderHome();
+        else {
+          window.NationalExams?.refresh?.();
+          window.KnowledgeHub?.refresh?.();
+        }
       }
     }
   } catch {
@@ -801,6 +805,11 @@ function fillPrintChapters() {
   const subjectSelect = byId('printSubject');
   const chapterSelect = byId('printChapter');
   if (!subjectSelect || !chapterSelect) return;
+  if (!banks) {
+    chapterSelect.innerHTML = '<option value="">正在加载册次…</option>';
+    void startBanksBackgroundLoad().then(() => { if (banks) fillPrintChapters(); });
+    return;
+  }
   const stageIndex = Math.max(0, STAGES.findIndex(s => s.stage === state.stage));
   chapterSelect.innerHTML = printChapters(subjectSelect.value).map(c => `<option value="${c.id}">${esc(c.title.split(' · ')[0])}${/会考/.test(c.title) ? ' · ' + esc(c.title.split(' · ')[1] || '') : ''}</option>`).join('');
   const preferred = [...chapterSelect.options].find(o => Number(o.value) === stageIndex + 1);
@@ -1009,6 +1018,7 @@ async function shareDailyQuestion(button) {
     else await navigator.clipboard.writeText(text);
     trackVisit('daily_share');
     if (!hasFullAccess()) {
+      if (!banks) await startBanksBackgroundLoad();
       const currentTrial = readShareTrial();
       const candidates = buildQueue(state.stage, banks, loadProgress(), false).filter(q => !baseTrialIds.has(q.id));
       const nextTrial = extendShareTrial(currentTrial, todayStr(), candidates);
@@ -1505,6 +1515,7 @@ async function buildWeekly(subject) {
   if (weeklyCache.has(cacheKey)) return weeklyCache.get(cacheKey);
   let pool = [];
   if (subject === 'x4m') {
+    if (!banks) await startBanksBackgroundLoad();
     pool = buildQueue(state.stage, banks, loadProgress(), true).filter(q => (q.type === 'single' || q.type === 'multiple') && !q.image);
   } else {
     const all = await window.NationalExams.loadSubject(subject);
@@ -2152,7 +2163,7 @@ function reviewHubHTML(progress) {
     { name: '曾错题', mode: 'everWrong', icon: 'rotate-ccw', tone: 'shengwu' },
     { name: '收藏题', mode: 'favorite', icon: 'bookmark', tone: 'daode' },
   ];
-  return `<section class="quick-section" aria-labelledby="modesTitle">
+  return `<section class="quick-section" id="reviewHub" aria-labelledby="modesTitle">
     <div class="section-heading"><h2 id="modesTitle">错题与收藏 · 全科</h2><span class="muted">英语、语文、模拟卷、本周一卷、小四门都记在这里</span></div>
     <div class="quick-grid">
       ${options.map(entry => {
@@ -2201,6 +2212,11 @@ async function printSelected() {
   const kind = byId('printKind').value;
   if (kind.startsWith('weekly:')) { state.weeklySubject = kind.slice(7); await runWeekly('print'); return; }
   if (kind.startsWith('claude:')) { await claudePaperAction(kind.slice(7), 'print'); return; }
+  if (!banks) {
+    toast('正在加载小四门题库…');
+    await startBanksBackgroundLoad();
+    fillPrintChapters();
+  }
   const subject = byId('printSubject').value;
   const chapterId = Number(byId('printChapter').value);
   const title = `${SUBJECTS[subject].label} · ${printChapters(subject).find(c => c.id === chapterId)?.title || ''} 练习卷`;
@@ -2227,12 +2243,32 @@ async function withNationalExtras(mode, progress) {
   if (!ids.length || !window.NationalExams?.resolve) return [];
   try { return applyMode(await window.NationalExams.resolve(ids), mode, progress); } catch { return []; }
 }
-let nationalSearchPool = null;
-async function ensureNationalSearch() {
-  if (nationalSearchPool || !window.NationalExams?.catalog) return;
-  const list = (await window.NationalExams.catalog()).filter(p => p.data);
-  const loaded = await Promise.all(list.map(p => window.NationalExams.loadPaper(p.id).catch(() => [])));
-  nationalSearchPool = loaded.flat();
+const nationalSearchLoaded = new Map();
+let nationalSearchPool = [];
+let searchSeq = 0;
+let searchTimer;
+async function ensureNationalSearch(subject = '', onProgress = null) {
+  if (!window.NationalExams?.catalog) return [];
+  const list = (await window.NationalExams.catalog()).filter(p => p.data && (!subject || p.subject === subject));
+  const missing = list.filter(p => !nationalSearchLoaded.has(p.id));
+  if (missing.length) {
+    // 分批并发加载（每批 6 个），避免 180+ 个脚本同时涌入阻塞手机网络
+    const CONCURRENCY = 6;
+    let done = 0;
+    let cursor = 0;
+    const worker = async () => {
+      while (cursor < missing.length) {
+        const paper = missing[cursor++];
+        const qs = await window.NationalExams.loadPaper(paper.id).catch(() => []);
+        nationalSearchLoaded.set(paper.id, qs);
+        done++;
+        onProgress?.(done, missing.length);
+      }
+    };
+    await Promise.all(Array.from({ length: Math.min(CONCURRENCY, missing.length) }, worker));
+    nationalSearchPool = [...nationalSearchLoaded.values()].flat();
+  }
+  return subject ? list.flatMap(p => nationalSearchLoaded.get(p.id) || []) : nationalSearchPool;
 }
 
 function renderUpdateLogs(all = false) {
@@ -2431,7 +2467,15 @@ function wireHome() {
   byId('dailyBtn')?.addEventListener('click', () => beginPractice([dailyQuestion()], 'daily'));
   byId('dailyShare')?.addEventListener('click', event => { void shareDailyQuestion(event.currentTarget); });
   view.querySelectorAll('#openUnlock').forEach(btn => btn.addEventListener('click', () => openUnlock()));
-  byId('searchBox').addEventListener('input', event => { state.keyword = event.target.value; void doSearch(); });
+  const searchInput = byId('searchBox');
+  let searchComposing = false;
+  const scheduleSearch = () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => { void doSearch(); }, 250);
+  };
+  searchInput.addEventListener('compositionstart', () => { searchComposing = true; });
+  searchInput.addEventListener('compositionend', event => { searchComposing = false; state.keyword = event.target.value; scheduleSearch(); });
+  searchInput.addEventListener('input', event => { state.keyword = event.target.value; if (!searchComposing && !event.isComposing) scheduleSearch(); });
   byId('searchSubject').addEventListener('change', event => { state.searchSubject = event.target.value; void doSearch(); });
   byId('searchOut').addEventListener('click', event => {
     const id = event.target.closest('button[data-qid]')?.dataset.qid;
@@ -2470,21 +2514,32 @@ function wirePrintKind() {
   syncPrint();
 }
 async function doSearch() {
+  const seq = ++searchSeq;
   const kw = state.keyword.trim().normalize('NFKC').toLowerCase();
   const status = byId('searchStatus');
   const out = byId('searchOut');
+  if (!status || !out) return;
   if (!kw) { status.textContent = ''; out.replaceChildren(); return; }
   if (!banks && typeof startBanksBackgroundLoad === 'function') {
+    status.textContent = '正在加载小四门题库…';
     await startBanksBackgroundLoad();
+    if (seq !== searchSeq || byId('searchStatus') !== status) return;
   }
   const wantsNational = !state.searchSubject || MAIN_SUBJECTS.some(s => s.key === state.searchSubject);
-  if (wantsNational && !nationalSearchPool) {
-    status.textContent = '正在加载全部真题和模拟卷…';
-    try { await ensureNationalSearch(); } catch { /* 只搜本地题 */ }
-    if (byId('searchStatus') !== status) return;
+  let natPool = [];
+  if (wantsNational) {
+    status.textContent = state.searchSubject ? '正在加载该科真题与模拟卷…' : '正在分批加载全部真题和模拟卷…';
+    try {
+      natPool = await ensureNationalSearch(state.searchSubject, (done, total) => {
+        if (seq === searchSeq && byId('searchStatus') === status) {
+          status.textContent = `正在加载真题与模拟卷（${done}/${total}）…`;
+        }
+      });
+    } catch { /* 只搜本地题 */ }
+    if (seq !== searchSeq || byId('searchStatus') !== status) return;
   }
   const textOf = q => [q.unit || '', q.chapter, q.stem, q.material || '', q.materialHtml ? htmlToText(q.materialHtml) : '', q.explanation || ''];
-  const hits = [...(bankQuestions || []), ...(subjectiveQuestions || []), ...(nationalSearchPool || [])].filter(q =>
+  const hits = [...(bankQuestions || []), ...(subjectiveQuestions || []), ...natPool].filter(q =>
     (!state.searchSubject || q.subject === state.searchSubject) &&
     textOf(q).some(text => String(text).normalize('NFKC').toLowerCase().includes(kw)));
   const progress = loadProgress();
@@ -2551,7 +2606,8 @@ function beginPractice(queue, mode, index = 0) {
   const selected = queue[index];
   if (!selected) return;
   if (!hasFullAccess()) {
-    if (FULL_ONLY_MODES.has(mode)) {
+    const retryAllowed = mode === 'retry' && queue.length && queue.every(isTrialQuestion);
+    if (FULL_ONLY_MODES.has(mode) && !retryAllowed) {
       openUnlock('这项练习属于完整版。');
       return;
     }
@@ -2889,8 +2945,9 @@ function renderPractice() {
   document.body.classList.add('practice');
   byId('headerSearch').hidden = true;
   refreshStreak();
+  const retryAllowed = state.mode === 'retry' && isTrialQuestion(q);
   if (!hasFullAccess() && state.mode !== 'daily' &&
-      (state.mode === 'wrong' || FULL_ONLY_MODES.has(state.mode) || !isTrialQuestion(q))) {
+      (state.mode === 'wrong' || (FULL_ONLY_MODES.has(state.mode) && !retryAllowed) || !isTrialQuestion(q))) {
     if (hasQuestionHistory(loadProgress(), q)) return renderSavedQuestion(q);
     renderHome('homeTitle');
     openUnlock('这项练习属于完整版。');
@@ -3085,7 +3142,7 @@ function renderEssay(q) {
         <ol class="point-ref">${q.points.map((p, i) => `<li class="${checked ? (checked[i] ? 'got' : 'miss') : ''}"><span>${esc(p.text)}</span><b>${p.score} 分</b></li>`).join('')}</ol>
       </div>
       ${q.sample ? `<details class="ref-sample" open><summary>参考示例</summary>${materialHTML(q.sample)}</details>` : ''}
-      <div class="exp-body">${expParas(q.explanation)}</div>
+      ${q.explanation ? `<div class="exp-body">${expParas(q.explanation)}</div>` : ''}
       ${sourceHTML(q)}`;
   }
   function showResult(score, checked) {
@@ -3584,6 +3641,7 @@ byId('headerSearch').addEventListener('click', event => {
   event.preventDefault();
   if (!byId('searchBox')) {
     window.NationalExams?.leave?.();
+    window.KnowledgeHub?.leave?.();
     state.searchOpen = true;
     renderHome('searchTitle');
   }
@@ -3611,14 +3669,14 @@ function startBanksBackgroundLoad() {
     subjectiveQuestions = await loadSubjective().catch(error => { console.warn(error); return []; });
     library = [...bankQuestions, ...subjectiveQuestions, ...dailyQuestions()];
     baseTrialIds = trialQuestionIds(bankQuestions, subjectiveQuestions);
-    // 后台加载完成后，静默更新首页小四门进度和相关组件，无闪烁
+    // 后台加载完成后，静默更新首页小四门进度、主观题、错题与收藏计数，无闪烁
     if (!document.body.classList.contains('practice') && byId('x4mGroup')) {
       const progress = loadProgress();
       const queue = availableQueue(progress);
       const idx = resumeIndex(queue, progress);
       const pCount = byId('x4mGroup')?.querySelector('.x4m-bar p.muted');
       if (pCount) {
-        pCount.textContent = `${activeSubjectsForStage(state.stage).map(k => SUBJECTS[k].short).join(' · ')} · ${fmt.format(queue.length)} 道 · ${idx > 0 ? `上次练到第 ${idx + 1} 题` : esc(STAGE_HINT[state.stage] || '')}`;
+        pCount.textContent = `${activeSubjectsForStage(state.stage).map(k => SUBJECTS[k].short).join(' · ')} · ${fmt.format(queue.length)} 道 · ${idx > 0 ? `上次练到第 ${idx + 1} 题` : (STAGE_HINT[state.stage] || '')}`;
       }
       const unfinishedBtn = byId('x4mGroup')?.querySelector('[data-mode="unfinished"]');
       if (unfinishedBtn) {
@@ -3643,7 +3701,25 @@ function startBanksBackgroundLoad() {
               renderHome();
               view.querySelector(`[data-drill="${state.drillSubject}"]`)?.focus();
             }));
+            el.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => { void startPractice(btn.dataset.mode); }));
           }
+        }
+      }
+      const dailyCol = byId('x4mGroup')?.querySelector('.daily-column');
+      if (dailyCol) {
+        dailyCol.innerHTML = `${dailyCardHTML(progress)}${reviewCardsHTML(progress)}`;
+        byId('dailyBtn')?.addEventListener('click', () => beginPractice([dailyQuestion()], 'daily'));
+        byId('dailyShare')?.addEventListener('click', event => { void shareDailyQuestion(event.currentTarget); });
+        dailyCol.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => { void startPractice(btn.dataset.mode); }));
+      }
+      const hub = byId('reviewHub');
+      if (hub) {
+        const temp = document.createElement('div');
+        temp.innerHTML = reviewHubHTML(progress);
+        const nextHub = temp.firstElementChild;
+        if (nextHub) {
+          hub.replaceWith(nextHub);
+          nextHub.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => { void startPractice(btn.dataset.mode); }));
         }
       }
       const cs = document.querySelector('.content-stats');
@@ -3652,6 +3728,7 @@ function startBanksBackgroundLoad() {
     return banks;
   }).catch(error => {
     console.warn('Banks background load error:', error);
+    loadBanksTask = null;
     state.banksFailed = true;
   });
   return loadBanksTask;
@@ -3663,7 +3740,7 @@ async function init() {
     void restoreAccess();
     void loadPurchaseOptions();
 
-    // 目录（早鸟卷、同步卷、分科练习、真题全靠它）优先下载，仅 ~130KB
+    // 目录（早鸟卷、同步卷、分科练习、真题全靠它）优先下载，仅 ~180KB
     const catalogReady = window.NationalExams?.catalog
       ? window.NationalExams.catalog().then(list => { nationalCatalog = list; return list; }).catch(() => null)
       : Promise.resolve(null);
@@ -3700,10 +3777,7 @@ async function init() {
     // 知识点目录（约 15KB）到了就刷新首页的知识点卡片
     void window.KnowledgeHub?.loadIndex().then(() => { if (byId('knowledgeHome') && !document.body.classList.contains('practice')) rerenderHomeInPlace('knowledgeHome'); }).catch(() => {});
 
-    // 小四门 2.5MB 庞大题库在后台静默拉取，绝不阻断首屏渲染
-    startBanksBackgroundLoad();
-
-    // 目录一就位，首屏瞬间秒开
+    // 目录一就位，首屏瞬间秒开；小四门 2.5MB 题库等首屏画完后再后台空闲拉取，避免与首屏抢带宽
     await catalogReady;
     await loadDaily;
 
@@ -3716,8 +3790,16 @@ async function init() {
       jumpToGoTarget();
     }
 
+    const deferBanks = () => { void startBanksBackgroundLoad(); };
+    if (typeof requestIdleCallback === 'function') requestIdleCallback(deferBanks, { timeout: 1200 });
+    else setTimeout(deferBanks, 400);
+
     void refreshReferralProfile();
-    void refreshFreeUses().then(() => { if (!paidAccess && byId('subjectSections')) renderHome(); });
+    void refreshFreeUses().then(() => {
+      if (paidAccess) return;
+      if (byId('subjectSections')) renderHome();
+      else window.NationalExams?.refresh?.();
+    });
     trackVisit('visit');
   } catch (error) {
     console.error(error);

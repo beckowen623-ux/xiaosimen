@@ -20,7 +20,7 @@
         {
           "n": 23,
           "stem": "已知抛物线 y = (x - t)(x - 3t) (t > 0)，与 x 轴交于 A、B 两点（点 A 在点 B 左侧）。将点 B 绕点 A 顺时针旋转 90° 得点 B'，抛物线顶点为 P，与 y 轴交于点 C。\n（1）当 t = 1 时，连接 OP，求直线 OP 的解析式，并判断点 C 关于对称轴的对称点 C' 是否在 OP 上；\n（2）当 3 ≤ x ≤ 6 时，y 的最大值为 9，求 t 的值；\n（3）连接 OP，将直线 OP 向下平移经过点 B'，交 y 轴于点 M(0, m)，求 m 的最小值。",
-          "image": "assets/national/hb-2026-math/q23.png",
+          "image": "assets/national/hb-2026-math/q23.webp",
           "points": [
             ["（1）OP 解析式为 y = -1/2 x；点 C' 不在 OP 上", 3],
             ["（2）t = 4 - √7 或 t = 4", 4],
@@ -32,7 +32,7 @@
         {
           "n": 24,
           "stem": "已知 △ABC 中，AB = AC = 10，BC = 12。点 D 在 AB 边上运动，作正方形 DEFG，使点 E、F 分别在 BC、AC 上。\n（1）当 ∠DEB = 45° 时，求证：BE = EC；\n（2）当 BD = 20/7 时，求 BE 的长；当 BD = 40/7 时，求点 E 的移动距离；\n（3）探究正方形 DEFG 在运动变化过程中顶点 G 到 BC 的距离及相关几何极值。",
-          "image": "assets/national/hb-2026-math/q24.png",
+          "image": "assets/national/hb-2026-math/q24.webp",
           "points": [
             ["（1）由正方形性质及等腰三角形性质证明 △DEB ≌ △FEC，得 BE = EC", 3],
             ["（2）当 BD = 20/7 时 BE = 44/7；点 E 移动距离为 4√5/7", 5],

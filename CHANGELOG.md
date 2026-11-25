@@ -1,5 +1,25 @@
 # 技术变更记录
 
+## 2026-11-25 · Antigravity · 全站体检优化：移除大陆白屏字体阻塞、发布瘦身 11.6 MB、知识点补缺与做题体验多项修复（main）
+- **首屏与国内访问速度根治（`index.html`、`app.js`、`tools/stage_pages_release.mjs`、`assets/national/`）**：
+  - 移除 `<head>` 中渲染阻塞的 `fonts.googleapis.com` 外部字体样式表（中国大陆移动网络访问常卡顿 15～60 秒白屏），改由系统原生中文字体栈零延迟渲染。
+  - 解除首屏带宽竞争：将小四门 2.65 MB 题库后台拉取推迟至首屏渲染完毕后的浏览器空闲时段（`requestIdleCallback`），点击小四门、打印、本周一卷或找题时按需即刻触发。
+  - 将 `assets/national/` 下 72 张高体积 PNG 题图（7.54 MB）全部转为高清 WebP（1.16 MB），节省 6.38 MB（压缩率 84.6%），同步更新 `data/national`、`data/knowledge-*`、`data/national-catalog.js` 与 `english-src` 引用。
+  - `tools/stage_pages_release.mjs` 排除已废弃的旧版 base64 图库 `data/figures.js`（5.09 MB）与 `data/figures-2.js`（145 KB），发布产物合计瘦身 11.6 MB。
+- **知识点补缺补漏模块修复（`knowledge.js`、`app.js`）**：
+  - A4 补缺卷打印接入 `window.QuizReferrals.print` 并等待图片解码，解决微信 / 抖音 / QQ 内置浏览器点「立即打印」毫无反应的痛点；补齐多选题选项、判断题「正确/错误」与主观题答案的打印格式。
+  - 去除硬编码的过时数字（原写死「221 个知识点、1,768 道题」），改为从 `KNOWLEDGE_INDEX` 实时汇总数理化全部 354 个知识点与 4,600+ 道分层题及真题。
+  - 修复诊断满分后点击「去挑战专题与压轴」未携带学科参数（物理/化学可能错跳）的缺陷，以及「整理中」占位文案与回退按钮写死「数学 / 初一上学期」的缺陷。
+  - 补齐顶部「找题」按钮从 `#knowledge` 返回首页时清理 hash，并增加 `KnowledgeHub.refresh()` 以响应登录状态更新。
+- **做题、搜索与全国真题交互修复（`app.js`、`national-exams.js`、`national-exams.css`）**：
+  - 修复早鸟卷 / 小升初等限时免费卷做完后点「重练本卷错题」被 `FULL_ONLY_MODES` 误拦截弹购买窗的 Bug。
+  - 修复 495 道主观大题（早鸟卷 / 同步卷 / 小升初）在已有完整得分点与参考示例下底部仍显示刺眼「暂无解析」的问题。
+  - 修复小四门后台加载完成后首页「错题本 / 到期复习 / 曾错题 / 收藏题」计数未刷新、动态插入的「主观题提分」卡片按钮无响应（缺 `[data-mode]` 绑定）、`STAGE_HINT` 被双重转义等 3 处同步缺陷。
+  - 重构「全题库找题」：新增中文输入法 `compositionstart/compositionend` 兼容、250ms 防抖与搜索序号防乱序，将单字触发 183 文件并发（7.75 MB）改为按科目按需分批加载（每批并发 6 个）并显示进度。
+  - 全国真题页「地区 / 年份」筛选按当前科目动态联动，英语按题型练优先尊重当前地区/年份筛选；原卷阅读器操作栏吸顶（`position: sticky`），点「显示答案」局部展开不重绘原卷图片且自动平滑滚动到答案区；`/api/access/free-status` 与 `/api/access/status` 完成后同步刷新 `#national` 页面。
+- **缓存升级（`sw.js`、`index.html`）**：`sw.js` 缓存名升至 `elx-quiz-v15`，同步更新静态资源版本号。
+- **验证**：`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）、`node tools/stage_pages_release.mjs .deploy-preview` 及全库 198 套试卷 / 354 知识点图片零死链校验全部通过。
+
 ### 2026-11-24 — 物理初二下（8b）知识点精练上线
 - 新增 `physics/8b`（运动和力、压强、浮力、功和机械能、简单机械）5 章 20 个知识点、160 道原创梯度新题（单选答案均衡分布 A25/B25/C24/D24），归位 154 道八下物理旧题。
 - 新增 15 张初二下物理矢量 SVG 配图（重力与测力计、惯性斜面、二力平衡、滑动摩擦力、固体/液体压强、托里拆利、流体伯努利、称重法/阿基米德/浮沉、单摆、杠杆力臂、滑轮组、斜面）。

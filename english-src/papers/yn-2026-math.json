@@ -44,7 +44,7 @@
         {
           "n": 2,
           "stem": "如图，点 O 在直线 AB 上，若 ∠AOC = 110°，则 ∠BOC =（2分）",
-          "image": "./assets/national/yn-2026-math/q02.png",
+          "image": "./assets/national/yn-2026-math/q02.webp",
           "options": [
             "100°",
             "70°",
@@ -81,7 +81,7 @@
         {
           "n": 5,
           "stem": "下列四个图形中，是轴对称图形的为（2分）",
-          "image": "./assets/national/yn-2026-math/q05.png",
+          "image": "./assets/national/yn-2026-math/q05.webp",
           "options": [
             "A",
             "B",
@@ -106,7 +106,7 @@
         {
           "n": 7,
           "stem": "下列四个几何体中，俯视图是正方形的为（2分）",
-          "image": "./assets/national/yn-2026-math/q07.png",
+          "image": "./assets/national/yn-2026-math/q07.webp",
           "options": [
             "三棱锥",
             "正方体",
@@ -131,7 +131,7 @@
         {
           "n": 9,
           "stem": "如图，AB 是 ⊙O 的弦，点 C 在 ⊙O 上。若 ∠ACB = 26°，则 ∠AOB =（2分）",
-          "image": "./assets/national/yn-2026-math/q09.png",
+          "image": "./assets/national/yn-2026-math/q09.webp",
           "options": [
             "10°",
             "26°",
@@ -156,7 +156,7 @@
         {
           "n": 11,
           "stem": "如图，AC, BD 相交于点 O，AB // CD，记 △COD 的面积为 S₁，△AOB 的面积为 S₂。若 CD/AB = 2/3，则 S₁/S₂ =（2分）",
-          "image": "./assets/national/yn-2026-math/q11.png",
+          "image": "./assets/national/yn-2026-math/q11.webp",
           "options": [
             "2/5",
             "3/7",
@@ -256,7 +256,7 @@
         {
           "n": 20,
           "stem": "（6分）如图，AB = DC，AE = DE，点 E 是线段 BC 的中点。求证：△ABE ≌ △DCE。",
-          "image": "./assets/national/yn-2026-math/q20.png",
+          "image": "./assets/national/yn-2026-math/q20.webp",
           "points": [
             [
               "∵ 点 E 是线段 BC 的中点，∴ EB = EC",
@@ -277,7 +277,7 @@
         {
           "n": 21,
           "stem": "（6分）某校组织唱歌、舞蹈、书法、绘画、诵读活动，随机抽取了 n 名学生调查最想参加的活动，绘制出如下统计图（唱歌: 36人, 舞蹈: 24人, 书法: 32人, 绘画: 18人, 诵读: 40人）：\n(1) 求 n 的值；\n(2) 若该校有学生 1500 人，请估计该校学生最想参加唱歌活动的人数。",
-          "image": "./assets/national/yn-2026-math/q21.png",
+          "image": "./assets/national/yn-2026-math/q21.webp",
           "points": [
             [
               "(1) n = 36 + 24 + 32 + 18 + 40 = 150",
@@ -334,7 +334,7 @@
         {
           "n": 24,
           "stem": "（8分）如图，在四边形 ABCD 中，AC, BD 相交于点 O，AD = BC，∠ABC + ∠BAD = 180°，BD 平分 ∠ABC。\n(1) 求证：四边形 ABCD 是菱形；\n(2) 若 ∠BAD = 2∠ABC，求 ∠ACB 的度数。",
-          "image": "./assets/national/yn-2026-math/q24.png",
+          "image": "./assets/national/yn-2026-math/q24.webp",
           "points": [
             [
               "(1) 证明 AD // BC，结合 AD = BC 证出平行四边形",
@@ -407,7 +407,7 @@
         {
           "n": 27,
           "stem": "（12分）如图，⊙O 是 △ABC 的外接圆，AB 是 ⊙O 的直径。点 P 在 BA 的延长线上，且 PC² = PA · PB。点 E 在 AC 的延长线上。线段 BE 的中点 M 与点 C、点 P 在同一条直线上。线段 OM 与 ⊙O 相交于点 D，与线段 BC 相交于点 N。DH ⊥ AB 于点 H，线段 DH 与线段 BC 相交于点 F，连接 OF。记 △OFD 的面积为 S₁，△OFH 的面积为 S₂。\n(1) 求证：直线 PC 是 ⊙O 的切线；\n(2) 若 AB = 2√21，BE = 6√6，求线段 PA 的长；\n(3) 观察，探究，发现与证明：以下三个结论：S₁ < S₂，S₁ = S₂，S₁ > S₂，你认为哪个正确？请证明你认为正确的那个结论。",
-          "image": "./assets/national/yn-2026-math/q27.png",
+          "image": "./assets/national/yn-2026-math/q27.webp",
           "points": [
             [
               "(1) 证明 △PAC ∽ △PCB 得到 ∠PCA = ∠PBC，再证 OC ⊥ PC",

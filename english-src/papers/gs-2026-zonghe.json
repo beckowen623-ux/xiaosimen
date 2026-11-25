@@ -161,7 +161,7 @@
         {
           "n": 10,
           "stem": "【历史】右图为甘肃武威出土的铜奔马，其造型肆意傲然，洒脱自信，足下强劲有力，奔腾在飞燕之上，展现了汉代高超的雕塑艺术。该文物体现出汉代（2分）",
-          "image": "./assets/national/gs-2026-zonghe/q01_horse.png",
+          "image": "./assets/national/gs-2026-zonghe/q01_horse.webp",
           "options": [
             "青铜铸造技术世界领先",
             "河西走廊的牧马业兴旺",
@@ -286,7 +286,7 @@
         {
           "n": 18,
           "stem": "【地理】2026年5月21日是小满节气，此时地球运行在公转轨道的春分与夏至之间。此时（2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_earth.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_earth.webp",
           "options": [
             "武威市昼长夜短",
             "全球昼夜等长",
@@ -299,7 +299,7 @@
         {
           "n": 19,
           "stem": "【地理】农谚“小满小满，江河渐满”，形象地描绘了雨水增多、江河水位上涨的现象。小满后长江流域水位上涨的主要原因是（2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_earth.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_earth.webp",
           "options": [
             "水土流失加剧，泥沙淤积导致河床抬升",
             "夏季风的势力增强，降水增多",
@@ -312,7 +312,7 @@
         {
           "n": 20,
           "stem": "【地理】日本、新西兰两国多火山地震，其原因可能是（2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_japan_nz.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_japan_nz.webp",
           "options": [
             "均为多山地形",
             "均位于板块内部",
@@ -325,7 +325,7 @@
         {
           "n": 21,
           "stem": "【地理】两国国土面积狭小，但日本稻米可以自给，新西兰则是世界主要的畜产品出口国，造成这种差异的自然因素主要是（2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_japan_nz.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_japan_nz.webp",
           "options": [
             "河流",
             "地形",
@@ -338,7 +338,7 @@
         {
           "n": 22,
           "stem": "【地理】甘肃省武威市九墩滩光伏治沙园区位于腾格里沙漠边缘，年日照时数超3000小时。九墩滩发展光伏产业的有利条件是（2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_pv.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_pv.webp",
           "options": [
             "晴天多，太阳辐射强",
             "地形平坦，交通便利",
@@ -351,7 +351,7 @@
         {
           "n": 23,
           "stem": "【地理】该园区在光伏板下种植梭梭、四翅滨藜等沙生植物，其主要作用是（2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_pv.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_pv.webp",
           "options": [
             "增加土壤有机物",
             "防风固沙",
@@ -364,7 +364,7 @@
         {
           "n": 24,
           "stem": "【地理】宁夏平原是我国著名的灌溉农业区，贺兰山被称为宁夏平原的“守护神”，主要原因是（2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_yellow_river.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_yellow_river.webp",
           "options": [
             "阻挡冬季风，不受寒潮侵袭",
             "山地森林茂密，提供充足木材",
@@ -377,7 +377,7 @@
         {
           "n": 25,
           "stem": "【地理】黄河宁夏平原段对当地经济发展的主要贡献是提供了（2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_yellow_river.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_yellow_river.webp",
           "options": [
             "丰富的水能资源",
             "便利的航运条件",
@@ -396,7 +396,7 @@
         {
           "n": 26,
           "stem": "【地理·综合题】（6分）南迦巴瓦峰海拔7782米，峰顶终年积雪，被誉为“中国最美山峰”之首。读周边等高线地形图回答：\n(1) 南迦巴瓦峰在甲地的 ________ 方向，与甲地的相对高度为 ________ 米。（2分）\n(2) 雅鲁藏布江谷地多农田，请说明此谷地发展种植业的有利条件。（至少两点，2分）\n(3) 南迦巴瓦峰生态环境脆弱，请为当地旅游业发展提出一条合理的建议。（2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_contour.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_contour.webp",
           "points": [
             [
               "(1) 东北（1分）；4782米（1分）",
@@ -417,7 +417,7 @@
         {
           "n": 27,
           "stem": "【地理·综合题】（8分）阅读长江三角洲及附近地区简图，回答下列问题：\n(1) 太湖平原为我国重要的商品粮基地之一，请分析该地区发展种植业的有利自然条件。（至少两点，2分）\n(2) 聚焦高新技术领域的宇树科技、DeepSeek等人工智能企业汇聚于杭州市。请简述该地区高新技术产业迅速发展的条件。（至少两点，2分）\n(3) 本区是我国主要的珍珠淡水养殖基地，请简要分析该地区养殖淡水珍珠的自然条件。（2分）\n(4) 长江三角洲是我国经济发达地区之一，请简述长江对本地区经济发展发挥了怎样的作用。（至少两点，2分）",
-          "image": "./assets/national/gs-2026-zonghe/geo_yangtze.png",
+          "image": "./assets/national/gs-2026-zonghe/geo_yangtze.webp",
           "points": [
             [
               "(1) 气候温暖湿润，雨热同期；地势平坦；土壤肥沃；水源充足（任答两点）",
@@ -508,7 +508,7 @@
         {
           "n": 33,
           "stem": "【生物学】下图为某一哺乳动物体细胞的染色体示意图，其性别决定方式与人类相同。下列分析中，错误的是（2分）",
-          "image": "./assets/national/gs-2026-zonghe/bio_chromosome.png",
+          "image": "./assets/national/gs-2026-zonghe/bio_chromosome.webp",
           "options": [
             "该个体是雄性个体",
             "该细胞有 21 对基因",
@@ -577,7 +577,7 @@
         {
           "n": 39,
           "stem": "【生物学·分析说明题】（6分）粮食安全是“国之大者”。下图为麦田的部分食物网示意图（小麦→田鼠→蛇→猫头鹰；小麦→蝗虫→蜘蛛→麻雀→蛇/猫头鹰）：\n(1) 若要组成一个完整的生态系统，图中还缺少的成分是非生物部分和 ________。\n(2) 该食物网中最短的一条食物链是 ________。\n(3) 图中麻雀和蜘蛛的关系是 ________。\n(4) 该生态系统中能量的源头是 ________。\n(5) 此生态系统在受到一定程度的外界影响后，逐步恢复原有的结构与功能，说明生态系统具有 ________。\n(6) 践行“山水林田湖草沙”一体化保护理念。",
-          "image": "./assets/national/gs-2026-zonghe/bio_foodweb.png",
+          "image": "./assets/national/gs-2026-zonghe/bio_foodweb.webp",
           "points": [
             [
               "(1) 分解者",
@@ -610,7 +610,7 @@
         {
           "n": 40,
           "stem": "【生物学·分析说明题】（6分）武威盛产早酥梨，图1为梨树的花，图2为梨的果实及剖面：\n(1) 梨树根吸收的水分向上运输的“动力”来自于 ________。\n(2) 从图1到图2，要经历的两个重要生理过程是 ________。\n(3) 梨树的叶肉细胞利用光能，在 ________ 中合成有机物，释放的氧气通过叶片表皮的 ________ 离开植物体。\n(4) 图2中观察到的种子是由 ________ 发育而来的。\n(5) 室温条件下将早酥梨放置较长时间，发现其糖分减少，这是因为果肉细胞进行 ________ 的结果。",
-          "image": "./assets/national/gs-2026-zonghe/bio_pear.png",
+          "image": "./assets/national/gs-2026-zonghe/bio_pear.webp",
           "points": [
             [
               "(1) 蒸腾作用（蒸腾拉力）",

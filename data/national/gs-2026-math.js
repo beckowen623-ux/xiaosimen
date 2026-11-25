@@ -76,7 +76,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   ],
   "explanation": "主视图和左视图均为等腰三角形，俯视图为带圆心的圆，该几何体为圆锥。故选C。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q02.png",
+  "image": "./assets/national/gs-2026-math/q02.webp",
   "stem": "某几何体的三视图如图所示，该几何体为（3分）",
   "paperScore": 3
  },
@@ -194,7 +194,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   ],
   "explanation": "c 与 a 的锐角夹角为 50°，顺时针旋转到与 a 垂直，需转过 90° - 50° = 40°。故选C。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q05.png",
+  "image": "./assets/national/gs-2026-math/q05.webp",
   "stem": "如图，直线 a，b 及木条 c 在同一平面内，将木条 c 绕点 O 顺时针旋转到与直线 a 垂直时，其旋转角的最小度数是（3分）",
   "paperScore": 3
  },
@@ -234,7 +234,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   ],
   "explanation": "位似比 = OB / OB' = 4 / 2 = 2，所以 AB = 2 × A'B' = 2√5。故选B。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q06.png",
+  "image": "./assets/national/gs-2026-math/q06.webp",
   "stem": "如图，四边形 ABCD 与四边形 A'B'C'D' 是以原点 O 为位似中心的位似图形。若 B'(2, 0)，B(4, 0)，A'B' = √5，则 AB =（3分）",
   "paperScore": 3
  },
@@ -274,7 +274,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   ],
   "explanation": "数据为 127, 123, 132, 139, 127, 132, 152, 132，其中 132 出现 3 次，127 出现 2 次，众数是 132 分钟，故 A 项错误。故选A。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q07.png",
+  "image": "./assets/national/gs-2026-math/q07.webp",
   "stem": "小凯记录了自己连续八周每周使用 AI 辅助学习的时间（单位：分钟），并绘制了如图所示的折线统计图。根据统计图，下列描述错误的是（3分）",
   "paperScore": 3
  },
@@ -314,7 +314,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   ],
   "explanation": "CD 是直径则 ∠CBD = 90°。由同弧所对圆周角得 ∠D = ∠A = 180° - 60° - 50° = 70°。在 Rt△BDC 中，∠BCD = 90° - 70° = 20°。在 △PBC 中，∠BPC = 180° - ∠PBC - ∠PCB = 180° - 60° - 20° = 100°。故选B。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q08.png",
+  "image": "./assets/national/gs-2026-math/q08.webp",
   "stem": "如图，△ABC 内接于 ⊙O，CD 是 ⊙O 的直径，AB 与 CD 交于点 P。若 ∠ABC = 60°，∠ACB = 50°，则 ∠BPC =（3分）",
   "paperScore": 3
  },
@@ -393,7 +393,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   ],
   "explanation": "由图象知 OA = 3，OC + CD = 9。在 Rt△OCD 中设 OC = c, OD = d, CD = 9 - c。由 c² + d² = (9 - c)² 结合图象得 OC = 3, CD = 6, OD = 3√3。当 AM ⊥ CD 时，由面积法得 AM = 3√3。故选D。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q10.png",
+  "image": "./assets/national/gs-2026-math/q10.webp",
   "stem": "如图1，在菱形 ABCD 中，对角线 AC 与 BD 交于点 O，动点 M 从点 O 出发，沿 OC→CD 匀速运动至点 D 时停止。设点 M 的运动路程为 x，AM 的长度为 y，y 与 x 的函数图象如图2所示，在点 M 的运动过程中，当 AM ⊥ CD 时，AM 的长度是（3分）",
   "paperScore": 3
  },
@@ -506,7 +506,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   ],
   "explanation": "∠BEB' = 180° - 60° = 120°，由翻折知 ∠AEB = 60°。在 Rt△ABE 中，BE = AB / tan60° = √3。过 B' 作 B'H ⊥ AD，计算可得点 B' 到 AD 的距离为 1.5 cm。",
   "kp": "翻折变换与矩形性质",
-  "image": "./assets/national/gs-2026-math/q14.png",
+  "image": "./assets/national/gs-2026-math/q14.webp",
   "paperScore": 3
  },
  {
@@ -534,7 +534,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   ],
   "explanation": "根据刘徽割圆术与开普勒面积转化原理，扇形 AOB 面积等于 △OMN 面积。S_扇形 = 1/2 × OD × MN = (n/360)π r²，解得 n = 20°。",
   "kp": "扇形面积与圆的转化",
-  "image": "./assets/national/gs-2026-math/q15.png",
+  "image": "./assets/national/gs-2026-math/q15.webp",
   "paperScore": 3
  },
  {
@@ -561,7 +561,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   ],
   "explanation": "当 x = 20 时，y = -(1/10) × 400 + 4 × 20 = -40 + 80 = 40 ≠ 50，点 P 不在抛物线上，所以不能击中昆虫。",
   "kp": "二次函数的实际应用",
-  "image": "./assets/national/gs-2026-math/q16.png",
+  "image": "./assets/national/gs-2026-math/q16.webp",
   "paperScore": 3
  },
  {
@@ -718,7 +718,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) 中心对称 (2) 作图痕迹清晰，交点标出 O。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q20.png"
+  "image": "./assets/national/gs-2026-math/q20.webp"
  },
  {
   "id": "national-gs-2026-math-q21",
@@ -799,7 +799,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：AB 约为 340 米。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q22.png"
+  "image": "./assets/national/gs-2026-math/q22.webp"
  },
  {
   "id": "national-gs-2026-math-q23",
@@ -845,7 +845,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) 18, 0.3 (2) C组高18 (3) C组 (4) 72人。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q23.png"
+  "image": "./assets/national/gs-2026-math/q23.webp"
  },
  {
   "id": "national-gs-2026-math-q24",
@@ -891,7 +891,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) y = 3x - 3, y = 6/x (2) 面积为 10。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q24.png"
+  "image": "./assets/national/gs-2026-math/q24.webp"
  },
  {
   "id": "national-gs-2026-math-q25",
@@ -937,7 +937,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) 证明 OC ⊥ CE (2) ① 1/2 ② BC = 2√5。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q25.png"
+  "image": "./assets/national/gs-2026-math/q25.webp"
  },
  {
   "id": "national-gs-2026-math-q26",
@@ -978,7 +978,7 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) AP = 2 (2) CD = QE (3) BP = 2QE。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q26.png"
+  "image": "./assets/national/gs-2026-math/q26.webp"
  },
  {
   "id": "national-gs-2026-math-q27",
@@ -1024,6 +1024,6 @@ window.NATIONAL_PAPERS["gs-2026-math"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) y = (2/3)x² + (5/3)x - 6 (2) ① 8 ② (-4, -2) (3) 最小值为 (13/4)√5，p = 9/4。",
   "kp": "",
-  "image": "./assets/national/gs-2026-math/q27.png"
+  "image": "./assets/national/gs-2026-math/q27.webp"
  }
 ];

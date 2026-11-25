@@ -37,7 +37,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   ],
   "explanation": "根据轴对称图形定义，图B不能沿某条直线折叠完全重合，属于中心对称而非轴对称。故选B。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q01.png",
+  "image": "assets/national/jx-2026-math/q01.webp",
   "stem": "下列图书馆标志不是轴对称图形的是"
  },
  {
@@ -114,7 +114,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   ],
   "explanation": "因为 a // b，内错角相等，与∠2邻补的角等于∠1=40°，所以 ∠2 = 180° - 40° = 140°。故选D。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q03.png",
+  "image": "assets/national/jx-2026-math/q03.webp",
   "stem": "如图，已知 a // b，∠1 = 40°，则 ∠2 的度数为"
  },
  {
@@ -191,7 +191,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   ],
   "explanation": "观察夜间达标率柱状图数据：80.1% -> 82.9% -> 86.6% -> 87.0% -> 88.2%，逐年上升。故选B。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q05.png",
+  "image": "assets/national/jx-2026-math/q05.webp",
   "stem": "如图是2020—2024年全国城市声环境功能区昼间、夜间达标率统计图，则下列说法正确的是"
  },
  {
@@ -230,7 +230,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   ],
   "explanation": "对称轴 x = -b/(2a) = -1.5。已知一根 x₁ 在 0.5 到 1 之间（约 0.79），由根与系数关系 x₁ + x₂ = -3，可得 x₂ = -3 - x₁ 约在 -3.8 到 -3.5 之间，当 x=-4 时 y = 16-12-3 = 1 > 0，当 x=-3 时 y = 9-9-3 = -3 < 0，所以根在 -4 和 -3 之间且距 -4 更近。故选B。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q06.png",
+  "image": "assets/national/jx-2026-math/q06.webp",
   "stem": "如图，观察函数 y = x² + 3x - 3 的图象，可以发现方程 x² + 3x - 3 = 0 在 0，1 之间有根。取 0，1 的平均数 0.5，当 x = 0.5 时，y < 0，进一步可知这个根在 0.5 和 1 之间，则与方程 x² + 3x - 3 = 0 另一根更接近的是"
  },
  {
@@ -332,7 +332,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   ],
   "explanation": "半圆半径 R = 3。设切点为 T，OT⊥CT，在 Rt△OTC 中，OT = 3，OC = 9，sin∠OCT = 3/9 = 1/3，利用对称性与对顶角性质可求得张角 ∠AOB = 150°。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q10.png"
+  "image": "assets/national/jx-2026-math/q10.webp"
  },
  {
   "id": "national-jx-2026-math-q11",
@@ -358,7 +358,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   ],
   "explanation": "因为 CF ⊥ BF，点 F 在以 BC 为直径的半圆上运动。当 △BFC 面积最大时，Rt△BFC 为等腰直角三角形，BF = CF = 2√2。通过相似或三角函数求得 AE = 3，故 DE = AD - AE = 4 - 3 = 1。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q11.png"
+  "image": "assets/national/jx-2026-math/q11.webp"
  },
  {
   "id": "national-jx-2026-math-q12",
@@ -384,7 +384,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   ],
   "explanation": "设 P(x, -x+b)。矩形面积 |x(-x+b)| = 1。当 x(-x+b) = 1 时，x² - bx + 1 = 0，判别式 Δ = b² - 4 = 0（点P有且仅有3个要求相切一个交点两个），故 b = 2。方程 x² - 2x + 1 = 0 解得 x = 1；另一部分 -x(-x+b) = 1 即 x² - 2x - 1 = 0，解得 x = 1 ± √2。故 P 的横坐标为 1 或 1-√2 或 1+√2。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q12.png"
+  "image": "assets/national/jx-2026-math/q12.webp"
  },
  {
   "id": "national-jx-2026-math-q13",
@@ -455,7 +455,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   "answer": [],
   "explanation": "考查平行线分线段成比例及相似三角形性质。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q14.png"
+  "image": "assets/national/jx-2026-math/q14.webp"
  },
  {
   "id": "national-jx-2026-math-q15",
@@ -526,7 +526,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   "answer": [],
   "explanation": "考查网格作图、中位线性质及解直角三角形求线段长。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q16.png"
+  "image": "assets/national/jx-2026-math/q16.webp"
  },
  {
   "id": "national-jx-2026-math-q17",
@@ -562,7 +562,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   "answer": [],
   "explanation": "考查圆的性质、菱形性质及切线的判定。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q17.png"
+  "image": "assets/national/jx-2026-math/q17.webp"
  },
  {
   "id": "national-jx-2026-math-q18",
@@ -598,7 +598,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   "answer": [],
   "explanation": "考查用列举法或树状图计算古典概型概率。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q18.png"
+  "image": "assets/national/jx-2026-math/q18.webp"
  },
  {
   "id": "national-jx-2026-math-q19",
@@ -634,7 +634,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   "answer": [],
   "explanation": "考查平行四边形性质、一次函数与反比例函数综合交点问题。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q19.png"
+  "image": "assets/national/jx-2026-math/q19.webp"
  },
  {
   "id": "national-jx-2026-math-q20",
@@ -675,7 +675,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   "answer": [],
   "explanation": "考查二元一次方程组应用、统计图表信息读取及平均数、中位数、极差的综合分析。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q20.png"
+  "image": "assets/national/jx-2026-math/q20.webp"
  },
  {
   "id": "national-jx-2026-math-q21",
@@ -711,7 +711,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   "answer": [],
   "explanation": "考查旋转全等、等腰三角形性质及解直角三角形。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q21.png"
+  "image": "assets/national/jx-2026-math/q21.webp"
  },
  {
   "id": "national-jx-2026-math-q22",
@@ -752,7 +752,7 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   "answer": [],
   "explanation": "考查解直角三角形在实际测量中的跨学科建模应用。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q22.png"
+  "image": "assets/national/jx-2026-math/q22.webp"
  },
  {
   "id": "national-jx-2026-math-q23",
@@ -798,6 +798,6 @@ window.NATIONAL_PAPERS["jx-2026-math"] = [
   "answer": [],
   "explanation": "考查二次函数新定义题型、伴随对称抛物线性质、代数证明及几何图形（正方形）综合探究。",
   "kp": "",
-  "image": "assets/national/jx-2026-math/q23.png"
+  "image": "assets/national/jx-2026-math/q23.webp"
  }
 ];

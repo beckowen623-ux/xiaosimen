@@ -113,7 +113,7 @@ window.NATIONAL_PAPERS["js-suzhou-2026-math"] = [
   ],
   "explanation": "根据长方体表面展开图的特征，图B能围成封闭的长方体纸盒。故选B。",
   "kp": "",
-  "image": "assets/national/js-suzhou-2026-math/q03.png",
+  "image": "assets/national/js-suzhou-2026-math/q03.webp",
   "stem": "下列硬纸片可以沿虚线折叠成长方体纸盒的是"
  },
  {
@@ -190,7 +190,7 @@ window.NATIONAL_PAPERS["js-suzhou-2026-math"] = [
   ],
   "explanation": "在 △ABC 中，∠B = 180° - 55° - 65° = 60°。∵ CE // AB，∴ 同位角 ∠DCE = ∠B = 60°。故选C。",
   "kp": "",
-  "image": "assets/national/js-suzhou-2026-math/q05.png",
+  "image": "assets/national/js-suzhou-2026-math/q05.webp",
   "stem": "如图，△ABC 中，∠A = 55°，∠ACB = 65°，延长 BC 至 D，过 C 作 CE // AB，则 ∠DCE 的度数是"
  },
  {
@@ -305,7 +305,7 @@ window.NATIONAL_PAPERS["js-suzhou-2026-math"] = [
   ],
   "explanation": "设 AE = x (0 < x < 3)，则 BE = 3 - x。在 Rt△EAF 与 Rt△CBE 中，∠AEF = 90° - ∠BEC = ∠BCE，∴ △AEF ∽ △BCE，AF/BE = AE/BC，即 AF/(3-x) = x/2，AF = (3x - x²)/2。AE + AF = x + (3x - x²)/2 = -1/2 x² + 5/2 x = -1/2 (x - 5/2)² + 25/8。当 x = 5/2 时，最大值为 25/8。故选C。",
   "kp": "",
-  "image": "assets/national/js-suzhou-2026-math/q08.png",
+  "image": "assets/national/js-suzhou-2026-math/q08.webp",
   "stem": "如图，在矩形 ABCD 中，AB = 3，BC = 2，E 是 AB 边上的动点（点 E 在 A, B 之间运动，不与 A, B 重合），过 E 作 CE 的垂线交 AD 边于点 F，则 AE + AF 的最大值是"
  },
  {
@@ -432,7 +432,7 @@ window.NATIONAL_PAPERS["js-suzhou-2026-math"] = [
   ],
   "explanation": "FG 为 AB 的垂直平分线，F 为 AB 中点。在 Rt△ABC 中斜边中线 CF = 5，所以 AB = 10。由勾股定理 AC = √(10² - 6²) = 8。在 Rt△AFG ∽ Rt△ACB 中，AG/AB = AF/AC，即 AG/10 = 5/8，解得 AG = 25/4。",
   "kp": "",
-  "image": "assets/national/js-suzhou-2026-math/q13.png"
+  "image": "assets/national/js-suzhou-2026-math/q13.webp"
  },
  {
   "id": "national-js-suzhou-2026-math-q14",
@@ -458,7 +458,7 @@ window.NATIONAL_PAPERS["js-suzhou-2026-math"] = [
   ],
   "explanation": "设圆心为 O，半径为 R。弦 AC = DE = 12分米，弦心距为 d。最高点到地面的距离为 R + d + 3 = 21分米，即 R + d = 18。在直角三角形中 R² = d² + 6²，解得 R = 10分米。",
   "kp": "",
-  "image": "assets/national/js-suzhou-2026-math/q14.png"
+  "image": "assets/national/js-suzhou-2026-math/q14.webp"
  },
  {
   "id": "national-js-suzhou-2026-math-q15",
@@ -484,7 +484,7 @@ window.NATIONAL_PAPERS["js-suzhou-2026-math"] = [
   ],
   "explanation": "抛物线顶点纵坐标为 1，直线 l 为 y = 1。正方形边长 h = a - 1。抛物线宽度 AB = 2√(a - 1)。由 AB = h 得 2√(a - 1) = a - 1，解得 a - 1 = 4，a = 5。",
   "kp": "",
-  "image": "assets/national/js-suzhou-2026-math/q15.png"
+  "image": "assets/national/js-suzhou-2026-math/q15.webp"
  },
  {
   "id": "national-js-suzhou-2026-math-q16",
@@ -510,7 +510,7 @@ window.NATIONAL_PAPERS["js-suzhou-2026-math"] = [
   ],
   "explanation": "由翻折知 DA = DA'。设 BD = x，则 AD = DA' = 2 - x。在 △A'BD 中由余弦定理或建立函数极值模型，利用几何轨迹或三角求得 AD 的最小值为 4√3 - 6。",
   "kp": "",
-  "image": "assets/national/js-suzhou-2026-math/q16.png"
+  "image": "assets/national/js-suzhou-2026-math/q16.webp"
  },
  {
   "id": "national-js-suzhou-2026-math-q17",

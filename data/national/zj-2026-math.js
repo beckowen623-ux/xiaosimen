@@ -25,7 +25,7 @@ window.NATIONAL_PAPERS["zj-2026-math"] = [
   ],
   "explanation": "【解析】在 △ABC 中，∠BAC = ∠ABC = 30°，AB = 4√6，过 C 作 CH⊥AB 于 H，解直角三角形得 AC = AB / √3 = 4√2。\n∵ D、E 分别是 AB、AC 的中点，∴ DE ∥ BC，CE = AC / 2 = 2√2。\n∵ 线段 B'D' ⊥ DE，由 DE ∥ BC 知 B'D' ⊥ BC，∴ ∠B'PC = 60°。\n由轴对称性质，∠BPQ = ∠B'PQ = (180° - 60°) / 2 = 60°。\n又 ∠C = 180° - 30° - 30° = 120°，由同旁内角互补或平行线性质可得 PQ ∥ CE。\n结合 DE ∥ BC，四边形 PCEQ 为平行四边形，故 QP = CE = 2√2。",
   "kp": "",
-  "image": "assets/national/zj-2026-math/q16.png"
+  "image": "assets/national/zj-2026-math/q16.webp"
  },
  {
   "id": "national-zj-2026-math-q24",
@@ -66,6 +66,6 @@ window.NATIONAL_PAPERS["zj-2026-math"] = [
   "answer": [],
   "explanation": "【解析】\n（1）∵ AB 为直径，∴ ∠ACB = 90°。∵ AC = AD，∴ ∠ACD = ∠ADC = (180° - α) / 2 = 90° - α/2。\n由圆周角定理，∠ABE = ∠ACE = 90° - α/2。\n∵ FG ⊥ CE，∴ 在 Rt△DKG 中，∠KGD = 90° - ∠ADG = 90° - (90° - α/2) = α/2，即 ∠FGB = α/2。\n\n（2）连接 OF、OE。由同弧所对圆周角相等得 ∠ACD = ∠EBD，又 AC = AD 得 ∠ACD = ∠ADC = ∠EDB = ∠EBD，故 ED = EB = BF。\n又已知 CF = CD，故 CB = CF + FB = CD + DE = CE，△CBE 为等腰三角形。\n可得 α = 72°，进而证明 △CDO ≌ △CFO (SAS)，推导得 ∠GFO = ∠GOF = 72°，故 GF = GO。\n\n（3）连接 AE、作 EH⊥AB。设 AG = x，则 OD = 2x，OB = 1，AB = 2。\n由射影定理或构造相似三角形 △ADE ≌ △GFB，得到关于 x 的一元二次方程：\n(2 - x)² = (3/2 + x) × 2，整理得 x² - 6x + 1 = 0。\n解得 x = 3 - 2√2（x = 3 + 2√2 > 1 舍去）。\n从而 AC = AD = 1 + 2x = 1 + 2(3 - 2√2) = 7 - 4√2。",
   "kp": "",
-  "image": "assets/national/zj-2026-math/q24.png"
+  "image": "assets/national/zj-2026-math/q24.webp"
  }
 ];

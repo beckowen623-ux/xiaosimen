@@ -47,8 +47,9 @@ cpSync(join(project, "assets"), join(output, "assets"), { recursive: true });
 const data = join(project, "data");
 const publicData = join(output, "data");
 mkdirSync(publicData);
+const LEGACY_DATA_FILES = new Set(["figures.js", "figures-2.js"]);
 for (const file of readdirSync(data, { withFileTypes: true })) {
-  if (file.isFile() && file.name.endsWith(".js")) {
+  if (file.isFile() && file.name.endsWith(".js") && !LEGACY_DATA_FILES.has(file.name)) {
     copyFileSync(join(data, file.name), join(publicData, file.name));
   }
 }

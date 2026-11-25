@@ -412,7 +412,7 @@ window.NATIONAL_PAPERS["yn-2026-chinese"] = [
   "answer": [],
   "explanation": "考查名著阅读中道具物件的结构与主题作用分析。",
   "kp": "",
-  "image": "assets/national/yn-2026-chinese/q10_mindmap.png"
+  "image": "assets/national/yn-2026-chinese/q10_mindmap.webp"
  },
  {
   "id": "national-yn-2026-chinese-q12",
@@ -738,7 +738,7 @@ window.NATIONAL_PAPERS["yn-2026-chinese"] = [
   "answer": [],
   "explanation": "考查游记散文行文脉络与游踪线索的梳理提炼。",
   "kp": "",
-  "image": "assets/national/yn-2026-chinese/q20_chart.png"
+  "image": "assets/national/yn-2026-chinese/q20_chart.webp"
  },
  {
   "id": "national-yn-2026-chinese-q21",

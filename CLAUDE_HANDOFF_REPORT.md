@@ -284,3 +284,19 @@ git push origin main
 1. `app.js`：`renderSummary()` 将操作按钮移至购买引导卡片上方避免遮挡；`buildAnalysis()` 新增 `#analysisPosterBtn` 学情诊断海报按钮；`openScorePoster()` 视觉升级为宣纸 + 墨绿 + 朱砂书卷风。
 2. `index.html`：`#shareOffer` 分享海报配色同步为 `#164e3f,#0e352a`，脚本更新为 `app.js?v=27`。
 3. `sw.js`、`tests/smoke.mjs`、`CHANGELOG.md`：缓存升级至 `elx-quiz-v14`，冒烟检查 39/39 通过。
+
+---
+
+## 十九、 2026-11-25 全站体检优化：移除大陆白屏阻塞、瘦身 11.6 MB、知识点与做题体验多项修复 (main)
+
+### 本次改动清单
+1. **`index.html` & `sw.js`**：移除 `<head>` 中渲染阻塞的 `fonts.googleapis.com` 外部字体链接（避免中国大陆网络长时间白屏）；`sw.js` 缓存升至 `elx-quiz-v15`，同步更新静态脚本/样式版本号。
+2. **`tools/stage_pages_release.mjs` & `assets/national/`**：发布脚本跳过已废弃的旧版 `data/figures.js` / `data/figures-2.js`（减 5.23 MB）；72 张高体积 PNG 题图全部转为 WebP（7.54 MB → 1.16 MB，减 6.38 MB / 84.6%），合计发布包瘦身 **11.6 MB**。
+3. **`knowledge.js`**：A4 打印接入 `QuizReferrals.print`（微信/抖音兼容）并补齐多选/判断/主观题打印答案格式；推广文案动态读取数理化全部 354 知识点 / 4,600+ 题不再写死 221/1,768；修复满分跳压轴丢学科参数与占位文案写死数学/初一上学期问题；暴露 `refresh()`。
+4. **`app.js`**：
+   - 修复早鸟卷/小升初点「重练本卷错题」被 `FULL_ONLY_MODES` 误拦截的 Bug；
+   - 修复 495 道主观大题在已有得分点/参考示例下仍显示「暂无解析」；
+   - 小四门 2.65 MB 后台拉取延迟到首屏画完后空闲执行（首屏零带宽竞争），并在拉完后同步刷新「错题本/收藏」数字、修复动态插入「主观题提分」死按钮、清理 `STAGE_HINT` 双重转义；
+   - 「全题库找题」重构为 IME 兼容 + 250ms 防抖 + 按科目分批并发加载（上限 6 并发）；
+   - 顶栏「找题」支持从 `#knowledge` 清理 hash，`/api/access/status` 与 `free-status` 同步刷新 `#national` / `#knowledge`。
+5. **`national-exams.js` & `national-exams.css`**：地区/年份筛选按当前科目动态联动；英语按题型练优先尊重筛选；原卷阅读器顶部操作条吸顶，点「显示答案」局部展开不闪屏并平滑滚动定位答案。

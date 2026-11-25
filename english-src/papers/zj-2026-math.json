@@ -23,7 +23,7 @@
         {
           "n": 16,
           "stem": "如图，∠BAC = ∠ABC = 30°，AB = 4√6，D、E 分别是 AB、AC 的中点，Q、P 分别为 BC、DE 上任意点。当 BD 关于 QP 对称的线段 B'D' 垂直 DE 时，QP = ____。",
-          "image": "assets/national/zj-2026-math/q16.png",
+          "image": "assets/national/zj-2026-math/q16.webp",
           "answer": "2√2",
           "alts": ["2根号2", "2√2", "2*sqrt(2)", "2sqrt(2)"],
           "exp": "【解析】在 △ABC 中，∠BAC = ∠ABC = 30°，AB = 4√6，过 C 作 CH⊥AB 于 H，解直角三角形得 AC = AB / √3 = 4√2。\n∵ D、E 分别是 AB、AC 的中点，∴ DE ∥ BC，CE = AC / 2 = 2√2。\n∵ 线段 B'D' ⊥ DE，由 DE ∥ BC 知 B'D' ⊥ BC，∴ ∠B'PC = 60°。\n由轴对称性质，∠BPQ = ∠B'PQ = (180° - 60°) / 2 = 60°。\n又 ∠C = 180° - 30° - 30° = 120°，由同旁内角互补或平行线性质可得 PQ ∥ CE。\n结合 DE ∥ BC，四边形 PCEQ 为平行四边形，故 QP = CE = 2√2。"
@@ -36,7 +36,7 @@
         {
           "n": 24,
           "stem": "如图，已知 AB 是 ⊙O 的直径，点 C 在 ⊙O 的上半圆上，弦 CE 交 AB 于点 D，且满足 AC = AD。点 F 在弦 BC 上，且 BF = DE。过点 F 作直线 FG ⊥ CE，交 AB 于点 G。\n（1）设 ∠CAB = α，求 ∠ABE 和 ∠FGB 的大小（用含 α 的代数式表示）；\n（2）若 CF = CD，求证：GF = GO；\n（3）若 ⊙O 的半径为 1，点 D 在半径 OB 上，且 OD = 2AG，求 AC 的长。",
-          "image": "assets/national/zj-2026-math/q24.png",
+          "image": "assets/national/zj-2026-math/q24.webp",
           "points": [
             ["（1）∠ABE = 90° - α/2，∠FGB = α/2", 3],
             ["（2）证明 △CDO ≌ △CFO，得 ∠GFO = ∠GOF = 72°，从而 GF = GO", 4],

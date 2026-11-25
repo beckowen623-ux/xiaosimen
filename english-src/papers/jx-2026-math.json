@@ -35,7 +35,7 @@
             "图D（对称宝塔书台）"
           ],
           "answer": "B",
-          "image": "assets/national/jx-2026-math/q01.png",
+          "image": "assets/national/jx-2026-math/q01.webp",
           "exp": "根据轴对称图形定义，图B不能沿某条直线折叠完全重合，属于中心对称而非轴对称。故选B。"
         },
         {
@@ -60,7 +60,7 @@
             "140°"
           ],
           "answer": "D",
-          "image": "assets/national/jx-2026-math/q03.png",
+          "image": "assets/national/jx-2026-math/q03.webp",
           "exp": "因为 a // b，内错角相等，与∠2邻补的角等于∠1=40°，所以 ∠2 = 180° - 40° = 140°。故选D。"
         },
         {
@@ -85,7 +85,7 @@
             "昼间达标率逐年上升"
           ],
           "answer": "B",
-          "image": "assets/national/jx-2026-math/q05.png",
+          "image": "assets/national/jx-2026-math/q05.webp",
           "exp": "观察夜间达标率柱状图数据：80.1% -> 82.9% -> 86.6% -> 87.0% -> 88.2%，逐年上升。故选B。"
         },
         {
@@ -98,7 +98,7 @@
             "-3"
           ],
           "answer": "B",
-          "image": "assets/national/jx-2026-math/q06.png",
+          "image": "assets/national/jx-2026-math/q06.webp",
           "exp": "对称轴 x = -b/(2a) = -1.5。已知一根 x₁ 在 0.5 到 1 之间（约 0.79），由根与系数关系 x₁ + x₂ = -3，可得 x₂ = -3 - x₁ 约在 -3.8 到 -3.5 之间，当 x=-4 时 y = 16-12-3 = 1 > 0，当 x=-3 时 y = 9-9-3 = -3 < 0，所以根在 -4 和 -3 之间且距 -4 更近。故选B。"
         }
       ]
@@ -127,21 +127,21 @@
         {
           "n": 10,
           "stem": "生活中的剪刀蕴含着数学知识。如图10-1是某剪刀，如图10-2，剪刀所在直线与指圈所在半圆相切。已知 AC 与 BD 相交于点 O，CE 为半圆的直径，OC = 9，CE = 6，则此时张角 ∠AOB 的大小为____°",
-          "image": "assets/national/jx-2026-math/q10.png",
+          "image": "assets/national/jx-2026-math/q10.webp",
           "answer": "150",
           "exp": "半圆半径 R = 3。设切点为 T，OT⊥CT，在 Rt△OTC 中，OT = 3，OC = 9，sin∠OCT = 3/9 = 1/3，利用对称性与对顶角性质可求得张角 ∠AOB = 150°。"
         },
         {
           "n": 11,
           "stem": "如图，在矩形 ABCD 中，AB = 3，BC = 4，E 是边 AD 上的动点，连接 BE，过点 C 作 CF ⊥ BE 于点 F。当 △BFC 面积最大时，DE 的长为____",
-          "image": "assets/national/jx-2026-math/q11.png",
+          "image": "assets/national/jx-2026-math/q11.webp",
           "answer": "1",
           "exp": "因为 CF ⊥ BF，点 F 在以 BC 为直径的半圆上运动。当 △BFC 面积最大时，Rt△BFC 为等腰直角三角形，BF = CF = 2√2。通过相似或三角函数求得 AE = 3，故 DE = AD - AE = 4 - 3 = 1。"
         },
         {
           "n": 12,
           "stem": "如图，点 P 在直线 y = -x + b (b > 0) 上，过 P 作 x 轴、y 轴的垂线，垂足分别为 A, B，矩形 OAPB 的面积为 1（O为坐标原点）。若满足条件的点 P 有且仅有三个，则点 P 的横坐标为____",
-          "image": "assets/national/jx-2026-math/q12.png",
+          "image": "assets/national/jx-2026-math/q12.webp",
           "answer": "1 或 1-√2 或 1+√2",
           "exp": "设 P(x, -x+b)。矩形面积 |x(-x+b)| = 1。当 x(-x+b) = 1 时，x² - bx + 1 = 0，判别式 Δ = b² - 4 = 0（点P有且仅有3个要求相切一个交点两个），故 b = 2。方程 x² - 2x + 1 = 0 解得 x = 1；另一部分 -x(-x+b) = 1 即 x² - 2x - 1 = 0，解得 x = 1 ± √2。故 P 的横坐标为 1 或 1-√2 或 1+√2。"
         }
@@ -163,7 +163,7 @@
         {
           "n": 14,
           "stem": "如图，D, E 分别在 △ABC 的边 BA, CA 的延长线上，DE // BC，AD = 3，AB = 5，DE = 5，求 BC 的长。",
-          "image": "assets/national/jx-2026-math/q14.png",
+          "image": "assets/national/jx-2026-math/q14.webp",
           "points": [
             ["证明 △ABC ∽ △ADE", 3],
             ["根据相似比例列式求得 BC = 25/3", 3]
@@ -184,7 +184,7 @@
         {
           "n": 16,
           "stem": "如图，在 8×4 的正方形网格中，△ABC 的顶点 B, C 均在格点上，∠A = 90°，∠C = 30°，MN 为 △ABC 的中位线。\n（1）请仅用无刻度直尺作 ∠ABC 的平分线，交 MN 于点 P；（保留作图痕迹）\n（2）若网格中小正方形的边长为 1，则（1）中 BP 的长为____。",
-          "image": "assets/national/jx-2026-math/q16.png",
+          "image": "assets/national/jx-2026-math/q16.webp",
           "points": [
             ["（1）正确找出格点连线作出角平分线交点 P", 3],
             ["（2）计算求得 BP = 2√3", 3]
@@ -195,7 +195,7 @@
         {
           "n": 17,
           "stem": "如图，AD 为 ⊙O 的直径，AD = 4，B, C 是 ⊙O 上的点，四边形 OABC 为菱形。\n（1）求 AC 的长；\n（2）延长 AD 到点 P，使得 DP = 2，求证：PC 是 ⊙O 的切线。",
-          "image": "assets/national/jx-2026-math/q17.png",
+          "image": "assets/national/jx-2026-math/q17.webp",
           "points": [
             ["（1）连接 OC，利用等边三角形求得 AC = 2√3", 4],
             ["（2）在 △OCP 中计算各边满足勾股定理，证明 ∠OCP = 90° 得切线", 4]
@@ -206,7 +206,7 @@
         {
           "n": 18,
           "stem": "如图，我国古代典籍《周易》用“卦”描述事物的变化规律，共包括“乾、坤、震、巽、坎、离、艮、兑”八个卦象。每个卦象由三个爻组成，其中“—”表示阳爻，“--”表示阴爻。\n（1）若从八个卦象中随机抽取一个卦象，则抽到的卦象只有两个阳爻的概率是____；\n（2）现从“乾、坤、震、巽”中随机抽取两个卦象，请用画树状图法或列表法，求抽到的卦象中每个卦象至少有一个阳爻的概率。",
-          "image": "assets/national/jx-2026-math/q18.png",
+          "image": "assets/national/jx-2026-math/q18.webp",
           "points": [
             ["（1）八个卦象中两阳一阴有兑、离、巽3个，概率为 3/8", 3],
             ["（2）画树状图或列表求得概率为 1/2", 5]
@@ -217,7 +217,7 @@
         {
           "n": 19,
           "stem": "如图，四边形 ABCD 是平行四边形，A(-2, m)，B(2, 0)，C(0, -1)，点 D 在 x 轴上，反比例函数 y = k/x (k < 0) 的图象经过点 A。\n（1）求反比例函数的表达式；\n（2）P 为边 BC 上的一点，直线 AP 交双曲线另一支于点 Q，当 △ABP 的面积等于平行四边形 ABCD 面积的 1/4 时，求点 Q 的坐标。",
-          "image": "assets/national/jx-2026-math/q19.png",
+          "image": "assets/national/jx-2026-math/q19.webp",
           "points": [
             ["（1）根据平行四边形向量关系求得 A(-2, 1)，代入得 y = -2/x", 4],
             ["（2）求得 P 点坐标及直线 AP 解析式，联立双曲线求得 Q(4, -1/2)", 4]
@@ -228,7 +228,7 @@
         {
           "n": 20,
           "stem": "“以球之名，为城而战”，2025年江西省城市足球超级联赛拉开帷幕。南、北两赛区各进行循环赛积分。根据积分表与进/失球折线统计图解答问题：\n（1）x = ____，y = ____，m = ____；\n（2）分别求两个赛区平均每场比赛进球数；\n（3）现收集了7名球员每个人的进球个数（最多的进7个球），甲乙两位同学对此进行分析：甲：平均数为3，极差为4；乙：众数为2，平均数为4。试分别判断甲乙两人的分析是否具有一定的可信度，并说明理由。",
-          "image": "assets/national/jx-2026-math/q20.png",
+          "image": "assets/national/jx-2026-math/q20.webp",
           "points": [
             ["（1）由二元一次方程组解得 x=3, y=1, m=10", 3],
             ["（2）分别计算南北赛区进球总数并除以场次数求得平均数", 3],
@@ -240,7 +240,7 @@
         {
           "n": 21,
           "stem": "如图，在 △ABC 中，AB = AC，∠BAC = 30°，点 P 在 BC 的延长线上，将 AP 绕点 A 按逆时针方向旋转 30° 得到 AQ，连接 CQ, PQ。\n（1）求证：BP = CQ；\n（2）若 ∠CAP = 15°，PQ = 2√2，求 BP 的长。",
-          "image": "assets/national/jx-2026-math/q21.png",
+          "image": "assets/national/jx-2026-math/q21.webp",
           "points": [
             ["（1）通过 SAS 证明 △ABP ≌ △ACQ 得 BP = CQ", 4],
             ["（2）利用旋转性质及解直角三角形求得 BP = 2 + 2√3", 5]
@@ -251,7 +251,7 @@
         {
           "n": 22,
           "stem": "为了测量一个圆柱型土坑的深度，某数学兴趣小组想利用镜面反射法进行测量。测量数据：AB = 18 m，DE = 12 m，∠CAB = 30°，∠CBD = 60°，θ = 22.5°。参考数据：sin75°≈0.966，cos75°≈0.259，tan75°≈3.732，√3≈1.732。\n任务一：计算点 C 离水平地面的高度；\n任务二：计算 ∠GCF = ____°，∠BCG = ____°；\n任务三：计算土坑的深度。（结果精确到 0.01 m）",
-          "image": "assets/national/jx-2026-math/q22.png",
+          "image": "assets/national/jx-2026-math/q22.webp",
           "points": [
             ["任务一：利用三角形外角及特殊角求得高度约为 15.59 m", 3],
             ["任务二：根据光的反射定律求出相应入射角和反射角", 2],
@@ -263,7 +263,7 @@
         {
           "n": 23,
           "stem": "如果两条不共顶点的抛物线，都经过对方的顶点，那么称这两条抛物线互为“伴随对称抛物线”。\n（1）试判断 y = x² - 4x + 4 与 y = -x² + 2x 是否互为“伴随对称抛物线”，并说明理由；\n（2）若 C₁: y = a₁(x - h₁)² + k₁ 与 C₂: y = a₂(x - h₂)² + k₂ 互为“伴随对称抛物线”，顶点分别为 A₁, A₂，记 C₁, C₂ 组成的图形为 C。\n① 试猜想 a₁ 与 a₂ 的数量关系，并证明；\n② 进一步探究可知 C 为中心对称图形，请确定 C 的对称中心的位置；（直接写出结果）\n③ 如图2，若 C₁: y = x²，h₂ > 0，B₁, B₂ 分别为 C₁, C₂ 上的点，且四边形 A₁B₁A₂B₂ 为正方形，求 (h₂ - 2)(h₂ - 1)(h₂ + 1) 的值。",
-          "image": "assets/national/jx-2026-math/q23.png",
+          "image": "assets/national/jx-2026-math/q23.webp",
           "points": [
             ["（1）分别求出顶点坐标代入对方解析式验证成立", 3],
             ["（2）① 证明 a₁ + a₂ = 0", 3],

@@ -380,7 +380,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "铜奔马（马踏飞燕）造型豪迈奔放、昂扬向上，生动反映了汉代大一统帝国开拓进取、自信昂扬的社会精神风貌。故选C。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/q01_horse.png",
+  "image": "./assets/national/gs-2026-zonghe/q01_horse.webp",
   "stem": "【历史】右图为甘肃武威出土的铜奔马，其造型肆意傲然，洒脱自信，足下强劲有力，奔腾在飞燕之上，展现了汉代高超的雕塑艺术。该文物体现出汉代（2分）",
   "paperScore": 2
  },
@@ -695,7 +695,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "5月21日太阳直射点位于北半球并向北移动，北半球各地（武威市）昼长夜短；南半球为冬季。故选A。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_earth.png",
+  "image": "./assets/national/gs-2026-zonghe/geo_earth.webp",
   "stem": "【地理】2026年5月21日是小满节气，此时地球运行在公转轨道的春分与夏至之间。此时（2分）",
   "paperScore": 2
  },
@@ -735,7 +735,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "5月下旬夏季风北上影响我国南方地区，暖湿气流带来丰沛锋面雨，导致长江流域河流水位暴涨。故选B。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_earth.png",
+  "image": "./assets/national/gs-2026-zonghe/geo_earth.webp",
   "stem": "【地理】农谚“小满小满，江河渐满”，形象地描绘了雨水增多、江河水位上涨的现象。小满后长江流域水位上涨的主要原因是（2分）",
   "paperScore": 2
  },
@@ -775,7 +775,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "板块交界地带地壳活跃。日本位于亚欧板块与太平洋板块交界处，新西兰位于太平洋板块与印度洋板块交界处，处于环太平洋火山地震带。故选D。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_japan_nz.png",
+  "image": "./assets/national/gs-2026-zonghe/geo_japan_nz.webp",
   "stem": "【地理】日本、新西兰两国多火山地震，其原因可能是（2分）",
   "paperScore": 2
  },
@@ -815,7 +815,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "日本属季风气候，雨热同期利于水稻种植；新西兰属温带海洋性气候，终年温和湿润，多阴雨少光照，适宜多汁牧草生长，利于乳畜业发展。故选C。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_japan_nz.png",
+  "image": "./assets/national/gs-2026-zonghe/geo_japan_nz.webp",
   "stem": "【地理】两国国土面积狭小，但日本稻米可以自给，新西兰则是世界主要的畜产品出口国，造成这种差异的自然因素主要是（2分）",
   "paperScore": 2
  },
@@ -855,7 +855,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "温带大陆性气候深居内陆，降水少晴天多，年日照时间长，太阳辐射丰富。故选A。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_pv.png",
+  "image": "./assets/national/gs-2026-zonghe/geo_pv.webp",
   "stem": "【地理】甘肃省武威市九墩滩光伏治沙园区位于腾格里沙漠边缘，年日照时数超3000小时。九墩滩发展光伏产业的有利条件是（2分）",
   "paperScore": 2
  },
@@ -895,7 +895,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "沙生植物根系发达耐干旱，能有效减缓近地面风速，固定流沙，发挥防风固沙、遏制沙漠扩张的生态作用。故选B。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_pv.png",
+  "image": "./assets/national/gs-2026-zonghe/geo_pv.webp",
   "stem": "【地理】该园区在光伏板下种植梭梭、四翅滨藜等沙生植物，其主要作用是（2分）",
   "paperScore": 2
  },
@@ -935,7 +935,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "贺兰山呈南北走向，巍然挺立在宁夏平原西侧，阻挡了腾格里沙漠风沙的东侵。故选C。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_yellow_river.png",
+  "image": "./assets/national/gs-2026-zonghe/geo_yellow_river.webp",
   "stem": "【地理】宁夏平原是我国著名的灌溉农业区，贺兰山被称为宁夏平原的“守护神”，主要原因是（2分）",
   "paperScore": 2
  },
@@ -975,7 +975,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "宁夏平原降水稀少干旱，正是引黄灌溉造就了“塞上江南”，黄河提供了最宝贵的农业灌溉水源。故选C。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_yellow_river.png",
+  "image": "./assets/national/gs-2026-zonghe/geo_yellow_river.webp",
   "stem": "【地理】黄河宁夏平原段对当地经济发展的主要贡献是提供了（2分）",
   "paperScore": 2
  },
@@ -1018,7 +1018,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   "answer": [],
   "explanation": "官方标准答案：(1) 东北；4782米 (2) 气温/水源/地形任答两点得2分 (3) 生态保护建议合理即得2分。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_contour.png"
+  "image": "./assets/national/gs-2026-zonghe/geo_contour.webp"
  },
  {
   "id": "national-gs-2026-zonghe-q27",
@@ -1064,7 +1064,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   "answer": [],
   "explanation": "官方标准答案：自然条件、区位优势综合分析。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/geo_yangtze.png"
+  "image": "./assets/national/gs-2026-zonghe/geo_yangtze.webp"
  },
  {
   "id": "national-gs-2026-zonghe-q28",
@@ -1297,7 +1297,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   ],
   "explanation": "染色体由DNA和蛋白质构成，每条染色体上有许多个基因，细胞内有成千上万个基因，而非仅21对，B项错误。故选B。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/bio_chromosome.png",
+  "image": "./assets/national/gs-2026-zonghe/bio_chromosome.webp",
   "stem": "【生物学】下图为某一哺乳动物体细胞的染色体示意图，其性别决定方式与人类相同。下列分析中，错误的是（2分）",
   "paperScore": 2
  },
@@ -1498,7 +1498,7 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   "answer": [],
   "explanation": "官方标准答案：生态系统结构与功能考查。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/bio_foodweb.png"
+  "image": "./assets/national/gs-2026-zonghe/bio_foodweb.webp"
  },
  {
   "id": "national-gs-2026-zonghe-q40",
@@ -1549,6 +1549,6 @@ window.NATIONAL_PAPERS["gs-2026-zonghe"] = [
   "answer": [],
   "explanation": "官方标准答案：植物各大生理过程与生殖发育。",
   "kp": "",
-  "image": "./assets/national/gs-2026-zonghe/bio_pear.png"
+  "image": "./assets/national/gs-2026-zonghe/bio_pear.webp"
  }
 ];

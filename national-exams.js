@@ -108,8 +108,11 @@
   }
 
   function drawFilters(available) {
-    const regions = [...new Set(available.map(paper => paper.region))].sort((a, b) => a === '福建' ? -1 : b === '福建' ? 1 : a.localeCompare(b, 'zh'));
-    const years = [...new Set(available.map(paper => paper.year))].sort((a, b) => b - a);
+    const forSubject = available.filter(paper => paper.subject === state.subject);
+    const regions = [...new Set(forSubject.map(paper => paper.region))].sort((a, b) => a === '福建' ? -1 : b === '福建' ? 1 : a.localeCompare(b, 'zh'));
+    const years = [...new Set(forSubject.map(paper => paper.year))].sort((a, b) => b - a);
+    if (state.region && !regions.includes(state.region)) state.region = '';
+    if (state.year && !years.some(y => String(y) === state.year)) state.year = '';
     const liveSubjects = subjects.filter(subject => available.some(paper => paper.subject === subject));
     return `<section class="card national-filters" aria-label="筛选真题">
       <div class="national-tabs" role="group" aria-label="练习方式">
@@ -177,11 +180,17 @@
     const version = ++revision;
     try {
       const type = button.dataset.type;
-      // 未解锁：免费的那一组固定在全部真题里首套含该题型的卷子上，不受地区/年份筛选影响
-      const lists = await Promise.all(englishPapers(!app.hasAccess()).filter(paper => paper.sections?.[type]).map(getQuestions));
+      // 优先使用当前地区/年份筛选下的真题；未解锁时若该筛选下该题型无试做组，再回退到全库试做组
+      let lists = await Promise.all(englishPapers(false).filter(paper => paper.sections?.[type]).map(getQuestions));
       if (version !== revision || !opened) return;
-      const all = lists.flat().filter(q => q.section === type);
-      const pool = app.hasAccess() ? all : all.filter(q => q.preview);
+      let all = lists.flat().filter(q => q.section === type);
+      let pool = app.hasAccess() ? all : all.filter(q => q.preview);
+      if (!app.hasAccess() && !pool.length && (state.region || state.year)) {
+        lists = await Promise.all(englishPapers(true).filter(paper => paper.sections?.[type]).map(getQuestions));
+        if (version !== revision || !opened) return;
+        all = lists.flat().filter(q => q.section === type);
+        pool = all.filter(q => q.preview);
+      }
       if (!pool.length) { app.unlock?.(`「${type}」在线刷题属于完整版：题库 19.9 一起解锁，原卷可以免费看。`); return; }
       const progress = app.progress();
       const fresh = pool.filter(q => !progress.banks[q.id]?.done);
@@ -206,17 +215,21 @@
 
   function render() {
     state.paper = null;
-    const filtered = catalog.filter(paper => isExamPaper(paper) && paper.subject === state.subject &&
+    const allExams = catalog.filter(isExamPaper);
+    const forSubject = allExams.filter(paper => paper.subject === state.subject);
+    if (state.region && !forSubject.some(paper => paper.region === state.region)) state.region = '';
+    if (state.year && !forSubject.some(paper => String(paper.year) === state.year)) state.year = '';
+    const filtered = forSubject.filter(paper =>
       (!state.region || paper.region === state.region) && (!state.year || String(paper.year) === state.year));
     const practice = state.mode === 'short' ? filtered.filter(paper => paper.questionCount > 0) : filtered;
     const typeCards = state.subject === 'english' && state.mode === 'short' ? englishTypeCards() : '';
     if (typeCards) {
-      shell(`${drawFilters(catalog.filter(isExamPaper))}${typeCards}`);
+      shell(`${drawFilters(allExams)}${typeCards}`);
       wireFilters();
       app.view.querySelectorAll('[data-type]').forEach(button => button.addEventListener('click', () => { void startType(button); }));
       return;
     }
-    shell(`${drawFilters(catalog.filter(isExamPaper))}
+    shell(`${drawFilters(allExams)}
       <p class="national-status muted" role="status">${app.hasAccess() ? '已解锁完整版，全部题目都能刷。' : app?.freePhonePaper?.() ? `原卷免费看、免费打印。您已领取的免费整卷为《${escape(app.freePhonePaper().title || '')}》，其他真题每种题型可先免费试做一组。` : '原卷免费看、免费打印。每人可免费做 1 套完整试卷；在线刷题和中文解析属于中考题库完整版（19.9 一起解锁）。'}</p>
       <div class="national-paper-grid">${practice.length ? practice.map(paperCard).join('') :
         `<section class="card national-empty"><h2>${filtered.length ? '这科目前提供原卷与参考答案' : '当前筛选下暂无试卷'}</h2><p class="muted">${filtered.length ? '切换「按原卷练」即可查看和打印。' : '可以切换地区或年份再看看。'}</p>${filtered.length ? '<button type="button" class="btn primary" id="switchToPapers">查看原卷</button>' : ''}</section>`}</div>`);
@@ -315,9 +328,11 @@
 
   function readerContent(paper, questions) {
     if (paper.pages?.length) {
-      const pageImages = (paths, title) => `<section class="national-original"><h2>${title}</h2>${(paths || []).map((url, i) =>
+      const pageImages = (paths, title, idAttr = '') => `<section class="national-original"${idAttr ? ` id="${idAttr}"` : ''}><h2>${title}</h2>${(paths || []).map((url, i) =>
         `<figure><img src="${escape(url)}" alt="${escape(paper.title)}${title}第 ${i + 1} 页" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async"><figcaption>${title} · 第 ${i + 1} 页</figcaption></figure>`).join('')}</section>`;
-      const ansSection = (state.showAnswers && paper.answerPages?.length) ? pageImages(paper.answerPages, '参考答案') : '';
+      const ansSection = paper.answerPages?.length
+        ? `<div id="nationalAnswerWrap" ${state.showAnswers ? '' : 'hidden'}>${state.showAnswers ? pageImages(paper.answerPages, '参考答案', 'nationalAnswerSection') : ''}</div>`
+        : '';
       return pageImages(paper.pages, '原卷试题') + ansSection;
     }
     const desc = paper.description || '已核对试题';
@@ -334,11 +349,10 @@
     try {
       const questions = paper.data ? await getQuestions(paper) : [];
       if (version !== revision || !opened) return;
-      const draw = () => {
-        shell(`<div class="national-reader-bar"><button type="button" class="btn" id="nationalBack">← 返回列表</button>${paper.pages?.length && !paper.answerPages?.length ? '' : `<button type="button" class="btn" id="nationalAnswers">${state.showAnswers ? '收起答案' : '显示答案'}</button>`}<button type="button" class="btn" id="nationalPrint">打印</button></div>
-          <h2 class="national-reader-title">${escape(paper.title)}</h2><div class="national-reader" id="nationalPrintArea">${readerContent(paper, questions)}</div>`);
-        document.getElementById('nationalBack').onclick = () => { revision++; render(); };
-        app.view.querySelectorAll('.national-original img').forEach(img => {
+      const pageImages = (paths, title, idAttr = '') => `<section class="national-original"${idAttr ? ` id="${idAttr}"` : ''}><h2>${title}</h2>${(paths || []).map((url, i) =>
+        `<figure><img src="${escape(url)}" alt="${escape(paper.title)}${title}第 ${i + 1} 页" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async"><figcaption>${title} · 第 ${i + 1} 页</figcaption></figure>`).join('')}</section>`;
+      const wireImgErrors = root => {
+        root.querySelectorAll('.national-original img').forEach(img => {
           img.addEventListener('error', () => {
             const cap = img.parentElement?.querySelector('figcaption');
             if (cap && !cap.dataset.failed) {
@@ -347,14 +361,36 @@
             }
           });
         });
+      };
+      const draw = () => {
+        shell(`<div class="national-reader-bar"><button type="button" class="btn" id="nationalBack">← 返回列表</button>${paper.pages?.length && !paper.answerPages?.length ? '' : `<button type="button" class="btn" id="nationalAnswers">${state.showAnswers ? '收起答案' : '显示答案'}</button>`}<button type="button" class="btn" id="nationalPrint">打印</button></div>
+          <h2 class="national-reader-title">${escape(paper.title)}</h2><div class="national-reader" id="nationalPrintArea">${readerContent(paper, questions)}</div>`);
+        document.getElementById('nationalBack').onclick = () => { revision++; render(); };
+        wireImgErrors(app.view);
         const answersButton = document.getElementById('nationalAnswers');
-        if (answersButton) answersButton.onclick = () => { state.showAnswers = !state.showAnswers; draw(); };
+        if (answersButton) answersButton.onclick = () => {
+          state.showAnswers = !state.showAnswers;
+          if (paper.pages?.length && paper.answerPages?.length) {
+            const wrap = document.getElementById('nationalAnswerWrap');
+            if (wrap) {
+              wrap.hidden = !state.showAnswers;
+              if (state.showAnswers && !wrap.childElementCount) {
+                wrap.innerHTML = pageImages(paper.answerPages, '参考答案', 'nationalAnswerSection');
+                wireImgErrors(wrap);
+              }
+              answersButton.textContent = state.showAnswers ? '收起答案' : '显示答案';
+              if (state.showAnswers) wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              return;
+            }
+          }
+          draw();
+        };
         document.getElementById('nationalPrint').onclick = async event => {
           const button = event.currentTarget;
           button.disabled = true;
           button.textContent = '正在准备…';
           try {
-            const images = [...document.querySelectorAll('#nationalPrintArea img')];
+            const images = [...document.querySelectorAll('#nationalPrintArea img')].filter(img => !img.closest('[hidden]'));
             images.forEach(img => { img.loading = 'eager'; });
             await Promise.all(images.map(img => img.decode().catch(() => {})));
             if (state.paper?.id !== id || !opened) return;
@@ -414,5 +450,8 @@
     const set = new Set(wanted);
     return loaded.filter(q => set.has(q.id));
   }
-  window.NationalExams = { attach: options => { app = options; }, open, leave, catalog: getCatalog, loadPaper, loadSubject, resolve, labels };
+  function refresh() {
+    if (opened && catalog && !state.paper) render();
+  }
+  window.NationalExams = { attach: options => { app = options; }, open, leave, refresh, catalog: getCatalog, loadPaper, loadSubject, resolve, labels };
 })();
