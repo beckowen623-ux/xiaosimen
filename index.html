@@ -96,28 +96,63 @@
     </div>
     <p class="muted" id="unlockReason"></p>
     <button class="btn text-button redeem-jump" type="button" id="redeemJump">已经买了？直接填兑换码 ↓</button>
-    <ul class="unlock-trust" aria-label="购买保障">
-      <li>✓ 一次买断，初一用到初三</li>
+    <ul class="unlock-trust" aria-label="核心权益">
+      <li>✓ 一次买断 ¥19.9，初一用到初三</li>
       <li>✓ 3 台设备共用 + 云端错题本同步</li>
-      <li>✓ 后续新卷免费更新 · 无法使用全额退</li>
+      <li>✓ 含 36 道数理化压轴大题 + 无限 A4 打印</li>
+      <li>✓ 后续新卷与新功能免费更新</li>
     </ul>
+    <div class="unlock-compare" aria-label="性价比对比">
+      <div><span>纸质教辅 / 单科练习册</span><b>¥35～50 / 本</b><small>做完即废，无自动错题复习</small></div>
+      <div class="is-best"><span>爱丽克丝中考题库完整版</span><b>¥19.9 一次买断</b><small>初一到初三全科 + A4 补缺卷 + 云端错题</small></div>
+    </div>
+    <div class="unlock-rating-bar">
+      <button type="button" class="rating-thumb-btn" id="ratingProofBtn" title="点击放大查看闲鱼 100% 好评原图">
+        <img src="./assets/proof/xianyu-rating.webp" alt="闲鱼 100% 好评截图" width="68" height="48" loading="lazy">
+      </button>
+      <div>
+        <b>闲鱼真实交易 · 100% 服务好评</b>
+        <span>卖家名：<b>王者荣耀速度飞车</b> · 拍下即发 10 位兑换码</span>
+      </div>
+    </div>
+    <ol class="unlock-steps-3" aria-label="3 步购买流程">
+      <li><b>① 复制口令</b><span>点下方按钮一键复制</span></li>
+      <li><b>② 打开闲鱼</b><span>自动弹出商品页拍下</span></li>
+      <li><b>③ 回来兑换</b><span>填 10 位码立即解锁</span></li>
+    </ol>
     <div class="access-offers">
       <section id="schoolOffer" class="offer-primary">
-        <h3>中考题库完整版 ¥19.9 <span class="offer-badge">分享可省 5 元</span></h3>
-        <p class="muted offer-note">解锁全部同步章节卷、全国中考真题手机刷题、精编模拟卷整卷做与打印、本周一卷、小四门全库与 1/3/7/14 天错题自动复习。</p>
+        <h3>最省心 · 直接买完整版 ¥19.9 <span class="offer-badge">推荐</span></h3>
+        <p class="muted offer-note">解锁全部 354 个数理化知识点与 36 道中考压轴解答大题、无水印 A4 专属补缺卷无限打印、71 套同步章节卷、全国真题手机刷题与云端错题同步。</p>
         <button class="btn primary" type="button" id="directPaySchool" hidden>微信/支付宝直接买（付款秒解锁）</button>
-        <a class="btn primary" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买</a>
-        <button class="btn" type="button" hidden>复制闲鱼口令</button>
+        <div class="offer-cta-row">
+          <button class="btn primary" type="button" hidden>复制闲鱼口令（推荐）</button>
+          <a class="btn" target="_blank" rel="noopener noreferrer" hidden>直达闲鱼商品页</a>
+        </div>
       </section>
-      <section id="shareOffer">
-        <div data-share-offer data-price="14.9" data-message="我在用爱丽克丝中考题库给孩子刷题：语数英物化精编模拟卷对标中考，全国各地中考原卷免费看、免费打印，手机做自动判分，错题按 1、3、7、14 天提醒复习。买完还能邀 3 位朋友返现 15 元，等于免费用。点链接先免费试：" data-poster-title="爱丽克丝中考题库" data-poster-sub="语文 · 数学 · 英语 · 物理 · 化学 · 小四门" data-poster-points="语数英物化精编模拟卷，题量难度对标中考，每题有解析|全国各地中考原卷免费看、免费打印|每周一卷可打印，纸上做完回来登记错题|错题按 1、3、7、14 天自动提醒复习|每个家庭送 1 次整卷打印＋1 套手机整卷" data-poster-colors="#164e3f,#0e352a"></div>
-      </section>
+      <details class="share-save-fold" id="shareSaveFold">
+        <summary>想省 5 元（¥14.9）或邀 3 人返现免单？展开看玩法 ›</summary>
+        <section id="shareOffer">
+          <div data-share-offer data-price="14.9" data-message="我在用爱丽克丝中考题库给孩子补数理化：3 分钟快测出《孩子学情体检单》，354 个知识点配卡片和压轴解答大题，还能一键印出专属 A4 补缺卷，全国各地中考原卷免费看。点链接先免费试：" data-poster-title="爱丽克丝中考题库" data-poster-sub="数理化知识点补缺 · 同步卷 · 全国真题 · 可打印" data-poster-points="3 分钟免费快测，立刻出《孩子学情体检单》|354 个数理化知识点 + 36 道中考压轴解答大题|一键打印名校教研风 A4 专属补缺卷|全国各地中考原卷免费看、免费打印|错题按 1、3、7、14 天提醒复习，3 台设备云端同步" data-poster-colors="#164e3f,#0e352a"></div>
+        </section>
+        <details class="free-way" data-free-way>
+          <summary><b>🎁 买后邀 3 位朋友返现 15 元</b><span>按 14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元 ›</span></summary>
+          <ol>
+            <li><b>先按 14.9 买：</b>把专属链接发到家长群，3 位朋友点开就能按 14.9 买；点朋友邀请链接进来的，直接买好友价 14.9。</li>
+            <li><b>买完你也有邀请链接：</b>解锁后首页会出现你的专属邀请链接和二维码海报，朋友点你的链接按 14.9 买也省 5 元。</li>
+            <li><b>邀满 3 位返现 15 元：</b>作者确认后 24 小时内打到微信或支付宝，也可换考证题库完整版。</li>
+          </ol>
+          <p class="free-note">朋友用你的邀请码兑换题库才算邀请成功；双题库套餐不参加邀请奖励。</p>
+        </details>
+      </details>
       <section id="bundleOffer">
-        <h3>双题库套餐 ¥29.8</h3>
-        <p class="muted offer-note">中考题库 + <b>爱丽克丝考证题库</b>（初级会计、中级会计、中级审计、软考系统集成、税务师，网址 tinawin.cc.cd）。家里大人在考证可以一起买，单买考证题库也是 19.9。</p>
+        <h3>双题库套餐 ¥29.8 <span class="offer-badge">家长+孩子一起省 ¥10</span></h3>
+        <p class="muted offer-note">中考题库 + <b>爱丽克丝考证题库</b>（初级/中级会计、中级审计、软考、税务师，tinawin.cc.cd），家里大人在考证一起买更划算。</p>
         <button class="btn primary" type="button" id="directPayBundle" hidden>微信/支付宝直接买套餐 ¥29.8</button>
-        <a class="btn" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买套餐</a>
-        <button class="btn" type="button" hidden>复制套餐口令</button>
+        <div class="offer-cta-row">
+          <a class="btn" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买套餐</a>
+          <button class="btn" type="button" hidden>复制套餐口令</button>
+        </div>
       </section>
     </div>
     <div class="direct-pay-box" id="directPayBox" hidden role="status"></div>
@@ -130,15 +165,6 @@
         <p><b>好友价 14.9</b>：只限点朋友的专属邀请链接进来的新用户；兑换时要填朋友的邀请码。没有邀请链接就按原价买或分享后买。</p>
         <p><b>优惠不叠加</b>：三种价格只能选一种，最低 14.9。点朋友邀请链接进来的，直接买好友价就行，不用再分享。</p>
       </div>
-    </details>
-    <details class="free-way" data-free-way>
-      <summary><b>🎁 买后还能免单</b><span>按 14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元，等于免费用 ›</span></summary>
-      <ol>
-        <li><b>先按 14.9 买：</b>用上面的分享价，把专属链接发到家长群，3 位朋友点开就能按 14.9 买；点朋友邀请链接进来的，直接买好友价 14.9。</li>
-        <li><b>买完你也有邀请链接：</b>解锁后首页会出现你的专属邀请链接和二维码海报。朋友点你的链接，按好友价 14.9 买，比原价省 5 元，他也划算。</li>
-        <li><b>邀满 3 位，返现 15 元：</b>作者确认后 24 小时内打到你的微信或支付宝，题库等于免费用。不要返现的，也可以换考证题库完整版。邀到第 1 位就先解锁冲刺卷。</li>
-      </ol>
-      <p class="free-note">朋友用你的邀请码兑换题库才算邀请成功；双题库套餐不参加邀请奖励。</p>
     </details>
     <details class="buy-faq">
       <summary>买之前常见问题</summary>

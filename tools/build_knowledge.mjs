@@ -64,6 +64,8 @@ function blankAlts(text) {
 
 const index = { updated: new Date().toISOString().slice(0, 10), subjects: [] };
 const oldQs = loadOldQuestions();
+const capstonePath = join(root, "knowledge-src", "capstone-essays.json");
+const capstoneEssays = existsSync(capstonePath) ? JSON.parse(readFileSync(capstonePath, "utf8")) : {};
 
 for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
   const srcDir = join(root, "knowledge-src", subject);
@@ -89,16 +91,18 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
         const exampleImg = figure(subject, sem.key, p.card.example.img, `${pointId} 例题`);
         if (exampleImg) p.card = { ...p.card, example: { ...p.card.example, img: exampleImg } };
         if ((p.qs || []).length < 6) throw new Error(`${pointId} 新题少于 6 道`);
+        const extraEssay = capstoneEssays[pointId];
+        const allRawQs = extraEssay ? [...p.qs, extraEssay] : p.qs;
         const qids = [];
-        p.qs.forEach((raw, i) => {
+        allRawQs.forEach((raw, i) => {
           const n = String(i + 1).padStart(2, "0");
           const id = `kp-${pointId}-${n}`;
-          if (!raw.q || !raw.e || !raw.a) throw new Error(`${id} 缺题干、答案或解析`);
+          if (!raw.q || !raw.e || (!raw.a && !raw.sample)) throw new Error(`${id} 缺题干、答案或解析`);
           const diag = i === p.qs.findIndex(q => q.lv === 2);
           const base = {
             id, subject, subjectLabel, knowledge: true, kpId: pointId, kp: p.name, unit: chapter.unit,
-            chapter: `${sem.label} · ${chapter.name}`, source: `知识点精练 · ${sem.label} · ${p.name}（${LEVEL[raw.lv] || "基础"}）`,
-            level: raw.lv || 1, kpFree: i < 3 || diag, ...(diag ? { kpDiag: true } : {}),
+            chapter: `${sem.label} · ${chapter.name}`, source: `知识点精练 · ${sem.label} · ${p.name}（${raw.t === "e" ? "压轴解答" : (LEVEL[raw.lv] || "基础")}）`,
+            level: raw.lv || 1, kpFree: raw.t === "e" ? false : (i < 3 || diag), ...(diag ? { kpDiag: true } : {}),
             ...(raw.img ? { image: figure(subject, sem.key, raw.img, id) } : {}),
           };
           if (raw.t === "c") {
@@ -113,6 +117,22 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
             if (/[<>＜＞]/.test(raw.a)) throw new Error(`${id} 填空答案含 < > 符号，判分会被吞掉，请改成选择题`);
             const alts = blankAlts(raw.a);
             questions.push({ ...base, type: "blank", stem: raw.q, blanks: [alts], answer: [alts[0]], explanation: raw.e });
+          } else if (raw.t === "e") {
+            if (!Array.isArray(raw.points) || !raw.points.length) throw new Error(`${id} 解答题缺 points 得分点`);
+            const pts = raw.points.map(pt => ({ text: pt.text, score: pt.score, keys: pt.keys || [] }));
+            const score = raw.score || pts.reduce((s, x) => s + x.score, 0);
+            if (pts.reduce((s, x) => s + x.score, 0) !== score) throw new Error(`${id} 得分点分值之和不等于满分`);
+            questions.push({
+              ...base,
+              type: "essay",
+              meta: raw.meta || "解答压轴题",
+              stem: raw.q,
+              score,
+              points: pts,
+              method: raw.method || "",
+              sample: raw.sample || raw.a,
+              explanation: raw.e,
+            });
           } else throw new Error(`${id} 未知题型 ${raw.t}`);
           qids.push(id);
         });
@@ -120,9 +140,13 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
         const prefixes = [sem.unitPrefix, ...(sem.altPrefixes || [])];
         const refs = oldQs.filter(q => q.subject === subject && ((!q.unit && subject === "chemistry") || prefixes.some(pr => String(q.unit || "").startsWith(pr))) && kpSet.has(q.kp))
           .sort((a, b) => String(a.paperId).localeCompare(String(b.paperId)) || a.number - b.number);
-        chapter.points.push({ id: pointId, name: p.name, tag: p.tag || "", card: p.card, qids, refs: refs.map(q => q.id) });
+        chapter.points.push({ id: pointId, name: p.name, tag: p.tag || "", ...(extraEssay ? { hasEssay: true } : {}), card: p.card, qids, refs: refs.map(q => q.id) });
         for (const q of refs) if (!questions.some(x => x.id === q.id)) questions.push({ ...q, kpId: pointId, kpRef: true });
       }
+    }
+    // 数学“专题与压轴”优先展示几何/函数压轴模型，把“中考计算保底与防错”放至最后（所有章/点/题 ID 保持不变）
+    if (subject === "math" && sem.key === "sp" && chapters.length > 1 && chapters[0].id === "math-sp-c1") {
+      chapters.push(chapters.shift());
     }
     const fresh = questions.filter(q => q.knowledge);
     const dist = {};
@@ -132,7 +156,7 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
       `// 由 tools/build_knowledge.mjs 生成，源文件 knowledge-src/${subject}/${sem.key}-*.json，请勿手改。\nwindow.KNOWLEDGE_DATA = window.KNOWLEDGE_DATA || {};\nwindow.KNOWLEDGE_DATA[${JSON.stringify(`${subject}-${sem.key}`)}] = ${JSON.stringify(data)};\n`);
     const pointCount = chapters.reduce((s, c) => s + c.points.length, 0);
     subjectIndex.semesters.push({ key: sem.key, stage: sem.stage, label: sem.label, ready: true,
-      chapters: chapters.map(c => ({ name: c.name, points: c.points.map(p => ({ id: p.id, name: p.name, tag: p.tag, ids: [...p.qids, ...p.refs] })) })),
+      chapters: chapters.map(c => ({ name: c.name, points: c.points.map(p => ({ id: p.id, name: p.name, tag: p.tag, ...(p.hasEssay ? { hasEssay: true } : {}), ids: [...p.qids, ...p.refs] })) })),
       pointCount, questionCount: questions.length });
     console.log(`${subject}-${sem.key}: ${chapters.length} 章 ${pointCount} 个知识点，新题 ${fresh.length} 道（单选答案分布 ${JSON.stringify(dist)}），归位旧题 ${questions.length - fresh.length} 道`);
   }

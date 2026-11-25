@@ -760,7 +760,7 @@ async function loadPurchaseOptions() {
     for (const [elementId, offer] of [['schoolOffer', options.xiaosimen], ['bundleOffer', options.bundle]]) {
       const offerElement = byId(elementId);
       const link = offerElement.querySelector('a');
-      const copy = offerElement.querySelector('button');
+      const copy = offerElement.querySelector('.offer-cta-row button') || offerElement.querySelector('button:not(#directPaySchool):not(#directPayBundle)');
       link.hidden = true;
       copy.hidden = true;
       if (/^https:\/\//i.test(offer?.link || '')) {
@@ -774,9 +774,10 @@ async function loadPurchaseOptions() {
           try {
             await navigator.clipboard.writeText(offer.text);
             trackVisit('copy_code');
-            redeemMessage.textContent = '闲鱼口令已复制。';
+            redeemMessage.textContent = '✓ 口令已复制！请现在切换到「闲鱼 App」，会自动弹出商品页；下单拿到 10 位码回来填在下方即可秒解锁。';
+            toast('闲鱼口令已复制，去打开闲鱼 App 即可看到商品');
           } catch {
-            redeemMessage.textContent = '复制失败，请重试。';
+            redeemMessage.textContent = '复制失败，请直接打开闲鱼搜索用户「王者荣耀速度飞车」。';
           }
         };
       }
@@ -796,6 +797,15 @@ byId('redeemJump')?.addEventListener('click', () => {
 byId('copySeller')?.addEventListener('click', async () => {
   try { await navigator.clipboard.writeText('王者荣耀速度飞车'); trackVisit('copy_code'); redeemMessage.textContent = '已复制，打开闲鱼搜索框粘贴，切换到“用户”就能找到。'; }
   catch { redeemMessage.textContent = '复制失败，请手动输入用户名搜索。'; }
+});
+byId('ratingProofBtn')?.addEventListener('click', () => {
+  const fig = byId('figureDialog');
+  const full = byId('figureFull');
+  const src = byId('figureSource');
+  if (!fig || !full) return;
+  full.src = './assets/proof/xianyu-rating.webp';
+  if (src) src.textContent = '闲鱼卖家主页实拍 · 100% 服务好评（用户名：王者荣耀速度飞车）';
+  if (!fig.open) fig.showModal();
 });
 // ---------- 打印练习卷：按科目、册次组一张纸质卷（未解锁时用免费题组“体验卷”） ----------
 function printChapters(subject) {
@@ -859,8 +869,9 @@ function wirePrintCard() {
 }
 
 function openUnlock(message = '') {
-  byId('unlockReason').textContent = message || '先免费试：各地原卷随时免费看、免费打印；每个家庭再送 1 次整卷打印 + 1 套手机整卷。觉得孩子用得上再买。';
+  byId('unlockReason').textContent = message || '先免费试：3 分钟快测与每点前 3 题免费、各地原卷免费看；每个家庭再送 1 次整卷打印 + 1 套手机整卷。觉得孩子用得上再买。';
   redeemMessage.textContent = '';
+  if (inviteInput?.value) byId('shareSaveFold')?.setAttribute('open', '');
   if (!unlockDialog.open) unlockDialog.showModal();
   unlockDialog.scrollTop = 0;
   void loadPurchaseOptions();
@@ -1299,6 +1310,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-25', '数理化补缺新增 36 道中考压轴解答大题（数学 18 道、物理 10 道、化学 8 道，含分步审题思路、采分点自评与规范解答）；上线「3 分钟免费快测（8 题）」与《孩子学情体检单》（含 3 天补缺清单），A4 补缺卷升级解题步骤留白区与家长核对引导页。'],
   ['2026-11-24', '化学中考压轴专题上线，数理化三科全链路闭环！新增工业工艺流程、框图推断与离子共存、变质与成分探究、复分解拐点图像与溶液综合计算共 4 大模块 12 专题 96 题＋6 张压轴图解；初中化学全库 16 章 48 考点 384 题＋24 张矢量图全部上线。'],
   ['2026-11-24', '按知识点补缺补漏正式开启「化学」学科，数理化三科全部打通！首批上线初三上（7 单元 20 考点 160 题＋11 张实验/微观图）与初三下（5 单元 16 考点 128 题＋7 张溶解度/中和曲线图），同步归位中考真题并支持一键 A4 补弱打印。'],
   ['2026-11-24', '物理中考压轴专题上线，全学段物理闭环完成！新增动态电路安全最值、浮力压强综合、力热电跨学科综合与特殊实验测量共 4 大模块 12 专题 96 题＋8 张压轴图解；初中物理（初二上至初三下＋压轴专题）共 23 章 85 个知识点、680 道原创梯度新题与 53 张清晰矢量图全部上线。'],
@@ -1557,12 +1569,20 @@ function homeIntroHTML() {
   return `<section class="home-intro editorial-hero">
     <div class="editorial-hero-copy">
       <div class="editorial-meta-row">
-        <span class="editorial-seal">作者亲测 · 2026 真题</span>
+        <span class="editorial-seal">2026 真题 · 压轴大题</span>
         <span class="intro-kicker">初一到初三 · 手机刷、纸质打印都行</span>
       </div>
       <h1 id="homeTitle" tabindex="-1">爱丽克丝中考题库</h1>
-      <p class="editorial-lead">按知识点补缺补漏：先诊断出孩子哪些知识点没掌握，看一张知识点卡片，再集中练这个点的题，练完再测。早鸟卷、同步章节卷和全国真题作为配套练习。</p>
-      <p class="promise-line">不押题、不焦虑——用可复盘的同步练习与错题复习，帮孩子把考点真正学透。</p>
+      <p class="editorial-lead">3 分钟测出数理化薄弱点，自动出《孩子学情体检单》与教研风 A4 专属补缺卷；同步章节卷、精编卷与全国真题一站配齐。</p>
+      <div class="hero-stage-row" aria-label="快捷切换年级学期">
+        <span class="hero-stage-label">孩子学期：</span>
+        <div class="stage-chips hero-stage-chips" role="group" aria-label="快捷切换学期">${STAGES.map(st => `<button type="button" class="drill-chip" data-stage-pick="${st.stage}" aria-pressed="${st.stage === state.stage}">${STAGE_SHORT[st.stage].split(' ')[0]}</button>`).join('')}</div>
+      </div>
+      <div class="hero-trust-strip">
+        <span>✓ 闲鱼 100% 好评</span>
+        <span>✓ 3 台设备 + 云端错题</span>
+        <span>✓ ¥19.9 一次买断用到中考</span>
+      </div>
       ${contentStatsHTML()}
       <div class="editorial-hero-actions">
         <button class="btn demo-btn" type="button" data-demo-video>▶ 50 秒看怎么用</button>
@@ -2292,48 +2312,70 @@ function renderHome(focus = '') {
   const accessNotice = accessNoticeHTML(trialDays);
   refreshStreak(progress);
   byId('headerSearch').hidden = false;
+  const homeTab = state.homeTab || 'kp';
+  const homeTabs = [
+    ['kp', '🎯 补缺主线'],
+    ['papers', '📝 同步与真题'],
+    ['review', '📕 错题与小四门'],
+    ['mine', '🎁 说明与更多'],
+  ];
   view.innerHTML = `
     ${homeIntroHTML()}
-    ${window.KnowledgeHub?.homeCardHTML(state.stage) || ''}
-    ${stageBarHTML()}
-    <div class="home-section-head"><span>更多练习</span><small>早鸟自测卷、同步章节卷、分科整卷，按需选用</small></div>
-    ${state.stage === '7-up' ? xscCardHTML() : ''}
-    ${earlybirdCardHTML()}
-    ${syncCardHTML()}
-    <div id="subjectSections">${subjectSectionsHTML()}</div>
-    <div class="home-section-head"><span>复习与提分工具</span><small>小四门、错题复习、学情分析与打印找题</small></div>
-    <div class="home-tools-grid">
-      ${x4mGroupHTML(queue, progress)}
-      ${reviewHubHTML(progress)}
-      ${weeklyCardHTML(progress)}
-      ${unitCardHTML()}
-      ${printCardHTML()}
-      <details class="card fold-row search-card" id="searchPanel" ${state.searchOpen || state.keyword ? 'open' : ''}>
-        <summary><b id="searchTitle">${icon('search')} 全题库找题</b><span>真题、模拟卷、小四门都能搜 ›</span></summary>
-        <div class="search-fields">
-          <input type="search" id="searchBox" aria-label="题目关键词" placeholder="试试输入「宋代」「现在完成时」「默写」" value="${esc(state.keyword)}">
-          <select id="searchSubject" aria-label="搜索科目">
-            <option value="">全部科目</option>
-            ${MAIN_SUBJECTS.map(s => `<option value="${s.key}" ${state.searchSubject === s.key ? 'selected' : ''}>${s.label}</option>`).join('')}
-            ${SUBJECT_ORDER.map(key => `<option value="${key}" ${state.searchSubject === key ? 'selected' : ''}>${SUBJECTS[key].label}</option>`).join('')}
-          </select>
-        </div>
-        <p class="muted" id="searchStatus" role="status"></p>
-        <div id="searchOut" class="search-results"></div>
-      </details>
-      ${state.stage === '7-up' || String(state.stage).startsWith('9-') ? '' : xscCardHTML()}
-      ${analysisCardHTML()}
+    <nav class="home-tabs" role="tablist" aria-label="首页功能导航">
+      ${homeTabs.map(([k, label]) => `<button type="button" class="home-tab-btn" role="tab" data-home-tab="${k}" aria-selected="${homeTab === k}">${label}</button>`).join('')}
+    </nav>
+    <div class="home-tab-panel" data-tab-panel="kp" ${homeTab !== 'kp' ? 'hidden' : ''}>
+      ${window.KnowledgeHub?.homeCardHTML(state.stage) || ''}
+      <section class="card home-tab-hint">
+        <div><b>还需要刷整套同步章节卷、早鸟卷或全国各地真题？</b><span class="muted">点上方「📝 同步与真题」即可按学期刷卷或整卷打印；小四门、每周一卷与错题本在「📕 错题与小四门」。</span></div>
+        <button type="button" class="btn" data-home-tab="papers">去看同步与真题 ›</button>
+      </section>
     </div>
-    <div class="home-section-head"><span>完整版权益与说明</span><small>一次买断用到中考 · 3 台设备共用 + 云端错题同步</small></div>
+    <div class="home-tab-panel" data-tab-panel="papers" ${homeTab !== 'papers' ? 'hidden' : ''}>
+      ${stageBarHTML()}
+      <div class="home-section-head"><span>更多练习</span><small>早鸟自测卷、同步章节卷、分科整卷，按需选用</small></div>
+      ${state.stage === '7-up' ? xscCardHTML() : ''}
+      ${earlybirdCardHTML()}
+      ${syncCardHTML()}
+      <div id="subjectSections">${subjectSectionsHTML()}</div>
+    </div>
+    <div class="home-tab-panel" data-tab-panel="review" ${homeTab !== 'review' ? 'hidden' : ''}>
+      <div class="home-section-head"><span>复习与提分工具</span><small>小四门、错题复习、学情分析与打印找题</small></div>
+      <div class="home-tools-grid">
+        ${x4mGroupHTML(queue, progress)}
+        ${reviewHubHTML(progress)}
+        ${weeklyCardHTML(progress)}
+        ${unitCardHTML()}
+        ${printCardHTML()}
+        <details class="card fold-row search-card" id="searchPanel" ${state.searchOpen || state.keyword ? 'open' : ''}>
+          <summary><b id="searchTitle">${icon('search')} 全题库找题</b><span>真题、模拟卷、小四门都能搜 ›</span></summary>
+          <div class="search-fields">
+            <input type="search" id="searchBox" aria-label="题目关键词" placeholder="试试输入「宋代」「现在完成时」「默写」" value="${esc(state.keyword)}">
+            <select id="searchSubject" aria-label="搜索科目">
+              <option value="">全部科目</option>
+              ${MAIN_SUBJECTS.map(s => `<option value="${s.key}" ${state.searchSubject === s.key ? 'selected' : ''}>${s.label}</option>`).join('')}
+              ${SUBJECT_ORDER.map(key => `<option value="${key}" ${state.searchSubject === key ? 'selected' : ''}>${SUBJECTS[key].label}</option>`).join('')}
+            </select>
+          </div>
+          <p class="muted" id="searchStatus" role="status"></p>
+          <div id="searchOut" class="search-results"></div>
+        </details>
+        ${state.stage === '7-up' || String(state.stage).startsWith('9-') ? '' : xscCardHTML()}
+        ${analysisCardHTML()}
+      </div>
+    </div>
+    <div class="home-tab-panel" data-tab-panel="mine" ${homeTab !== 'mine' ? 'hidden' : ''}>
+      <div class="home-section-head"><span>完整版权益与说明</span><small>一次买断用到中考 · 3 台设备共用 + 云端错题同步</small></div>
+      ${freeWayHTML()}
+      <div class="home-meta-grid">
+        ${originCardHTML()}
+        <details class="card origin-card update-card">
+          <summary><b>更新日志</b><span>最近：${UPDATE_LOG[0][0]} · 查看更新内容 ›</span></summary>
+          <ol class="update-list" id="updateList">${renderUpdateLogs(state.allUpdatesOpen)}</ol>
+        </details>
+      </div>
+    </div>
     ${accessNotice}
-    ${freeWayHTML()}
-    <div class="home-meta-grid">
-      ${originCardHTML()}
-      <details class="card origin-card update-card">
-        <summary><b>更新日志</b><span>最近：${UPDATE_LOG[0][0]} · 查看更新内容 ›</span></summary>
-        <ol class="update-list" id="updateList">${renderUpdateLogs(state.allUpdatesOpen)}</ol>
-      </details>
-    </div>
     <section class="card cross-bank-card">${accountingRecommendation()}</section>`;
   wireHome();
   if (byId('knowledgeHome')) window.KnowledgeHub.wireHome(byId('knowledgeHome'));
@@ -2380,7 +2422,12 @@ function wireTopCards() {
   }
   view.querySelectorAll('[data-xsc-subject]').forEach(b => b.addEventListener('click', () => { state.xscSubject = b.dataset.xscSubject; state.xscOpen = true; rerenderHomeInPlace('xsc'); }));
   byId('xsc')?.addEventListener('toggle', event => { state.xscOpen = event.currentTarget.open; });
-  view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); rerenderHomeInPlace('stageBarTitle'); }));
+  view.querySelectorAll('[data-stage-pick]').forEach(b => b.addEventListener('click', () => { setStage(b.dataset.stagePick); rerenderHomeInPlace(b.closest('#stageBarTitle') ? 'stageBarTitle' : 'knowledgeHome'); }));
+  view.querySelectorAll('[data-home-tab]').forEach(b => b.addEventListener('click', () => {
+    state.homeTab = b.dataset.homeTab;
+    view.querySelectorAll('[data-home-tab][role="tab"]').forEach(t => t.setAttribute('aria-selected', String(t.dataset.homeTab === state.homeTab)));
+    view.querySelectorAll('[data-tab-panel]').forEach(p => { p.hidden = p.dataset.tabPanel !== state.homeTab; });
+  }));
   view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void earlybirdAction(b.dataset.earlybird, b.closest('#xsc') ? 'xscMark' : 'ebMark'); }));
   view.querySelectorAll('[data-eb-mode]').forEach(b => b.addEventListener('click', () => setEbMode(b.dataset.ebMode)));
 }
@@ -2401,7 +2448,9 @@ function jumpToGoTarget() {
   const go = new URLSearchParams(location.search).get('go');
   if (!['earlybird', 'xsc', 'sync'].includes(go)) return;
   state.earlybirdJumped = true;
-  if (go === 'xsc' && !state.xscOpen) { state.xscOpen = true; renderHome(); }
+  state.homeTab = 'papers';
+  if (go === 'xsc' && !state.xscOpen) state.xscOpen = true;
+  renderHome();
   // 不用 smooth：滚动动画进行中首页会再画一次（免费额度状态回来），动画会被打断，停在顶部
   byId(go)?.scrollIntoView({ block: 'start' });
 }
@@ -2484,6 +2533,14 @@ function wireHome() {
   });
   wirePrintKind();
   byId('printFold')?.addEventListener('toggle', e => { state.printOpen = e.currentTarget.open; });
+  byId('headerSearch')?.addEventListener('click', () => {
+    if (state.homeTab !== 'review') {
+      state.homeTab = 'review';
+      view.querySelectorAll('[data-home-tab][role="tab"]').forEach(t => t.setAttribute('aria-selected', String(t.dataset.homeTab === 'review')));
+      view.querySelectorAll('[data-tab-panel]').forEach(p => { p.hidden = p.dataset.tabPanel !== 'review'; });
+    }
+    byId('searchPanel')?.setAttribute('open', '');
+  });
   byId('searchPanel')?.addEventListener('toggle', e => { state.searchOpen = e.currentTarget.open; });
   byId('expandUpdates')?.addEventListener('click', () => {
     state.allUpdatesOpen = true;
@@ -3773,6 +3830,7 @@ async function init() {
       unlock: message => openUnlock(message),
       toast,
       stage: () => state.stage,
+      track: trackVisit,
     });
     // 知识点目录（约 15KB）到了就刷新首页的知识点卡片
     void window.KnowledgeHub?.loadIndex().then(() => { if (byId('knowledgeHome') && !document.body.classList.contains('practice')) rerenderHomeInPlace('knowledgeHome'); }).catch(() => {});

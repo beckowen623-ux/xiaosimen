@@ -1,5 +1,15 @@
 # 技术变更记录
 
+## 2026-11-25 · Antigravity · 数理化 36 道压轴解答大题、3 分钟快测《学情体检单》、教研风 A4 卷与首页/收银台转化升级（main）
+- **数理化知识点补缺深化（`knowledge-src/capstone-essays.json`、`tools/build_knowledge.mjs`、`data/knowledge-*-sp.js`、`data/knowledge-index.js`、`knowledge.js`、`knowledge.css`、`functions/api/_stats.js`）**：
+  - 核对 `D:\资料归档\审计`（实际存放 2025-2026 全国中考真题汇总）与线上库：确认线上题库 0 空答案 / 0 空解析，13 套 `ansPages=0` 的 2026 扫描原卷末尾均自带官方参考答案页。
+  - 新增 36 道中考压轴解答大题（数学 18 道、物理 10 道、化学 8 道，含分步审题思路 `method`、采分点自评 `points`、规范解答 `sample` 与阅卷提醒），按方案 A 设为完整版专属（`kpFree: false`），所有既有免费承诺与旧题目 ID 100% 保持不变；将数学 `sp` 的「中考计算保底与防错」移至压轴模型章节之后；修正 `chemistry/sp-1.json` 中 `kp-chemistry-sp-p01-01` 解析笔误（`D 顺序错误` → `A 顺序错误`）。
+  - 新增「3 分钟免费快测（8 题阶梯摸底）」，交卷输出《孩子学情体检单》（掌握率进度条、红/绿逐点标注、本周 3 天补缺清单、一键预览/打印专属 A4 卷）；升级名校教研风 A4 补缺卷（难度标签、解答题横线步骤留白区、独立家长核对与引导页）及首页零门槛样卷预览入口；新增 `kp_quick_diag_start`、`kp_quick_diag_done`、`kp_print_preview` 埋点。
+- **首页减负与极简闲鱼收银台（`index.html`、`app.js`、`styles.css`、`assets/proof/xianyu-rating.webp`）**：
+  - 首页 Hero 内嵌 6 学期快捷切换与信任条，新增吸顶 4 标签导航（补缺主线 / 同步与真题 / 错题与小四门 / 说明与更多），默认聚焦数理化补缺主线，兼容 `?go=earlybird/xsc/sync` 与找题跳转。
+  - 重构 `#unlockDialog`：增加纸质教辅 vs ¥19.9 一次买断对比卡、闲鱼 100% 好评缩略图（点击放大）与 3 步防迷路图解；默认主推 ¥19.9 直接买（复制口令给出切闲鱼 App 指引），将分享省 5 元与邀 3 人返现收进折叠条（带邀请码自动展开）；按站长要求移除原 `index.html` 的「无法使用全额退」，全站零退款承诺。
+- **验证**：`node tools/build_knowledge.mjs`、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）与 `node tools/stage_pages_release.mjs` 全部通过。
+
 ## 2026-11-25 · Antigravity · 全站体检优化：移除大陆白屏字体阻塞、发布瘦身 11.6 MB、知识点补缺与做题体验多项修复（main）
 - **首屏与国内访问速度根治（`index.html`、`app.js`、`tools/stage_pages_release.mjs`、`assets/national/`）**：
   - 移除 `<head>` 中渲染阻塞的 `fonts.googleapis.com` 外部字体样式表（中国大陆移动网络访问常卡顿 15～60 秒白屏），改由系统原生中文字体栈零延迟渲染。
