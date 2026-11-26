@@ -1000,7 +1000,7 @@ function accessNoticeHTML(days) {
   const expired = legacyTrialStartedAt() !== null ? '<p class="muted">7 天完整版体验已结束，原答题记录已保留。</p>' : '';
   return `<section class="card mini-card access-notice slim-notice">
     <div>${expired}<p><b>免费送：</b>每个家庭 1 套手机整卷（${freeUses.phone ? '已用' : '未用'}）+ 1 次整卷打印（${freeUses.print ? '已用' : '未用'}），任选一套；其他卷子前 5 题免费，各地原卷免费看。</p>
-    <p class="muted access-value-line">完整版 <b>¥19.9 一次买断用到中考</b>（分享可省 5 元）：3 台设备共用 · 云端错题本同步 · 近期已新上 17 套 2026 真题，后续新卷免费更新。</p></div>
+    <p class="muted access-value-line"><b>作者自家孩子同步自用，每天都在完善</b>，内容价值远超 <b>¥19.9</b>（后期会调价，已购用户长期不限使用，分享可省 5 元）：3 台设备共用 · 云端错题本同步 · 后续新增知识点、大题与真题全部免费更新。</p></div>
     <button class="btn primary" type="button" id="openUnlock">开通完整版 ¥19.9</button>
   </section>`;
 }

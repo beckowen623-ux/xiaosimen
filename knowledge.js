@@ -99,22 +99,24 @@
     }
     return out;
   }
+  function subjectSummaryCounts(subj) {
+    let pts = 0; let qs = 0; let essays = 0;
+    for (const sem of subj?.semesters || []) {
+      if (!sem.ready) continue;
+      pts += (sem.pointCount || 0);
+      qs += (sem.questionCount || 0);
+      for (const c of sem.chapters || []) for (const p of c.points || []) if (p.hasEssay) essays++;
+    }
+    return { pts, qs, essays };
+  }
   function totalSummaryCounts() {
     const idx = window.KNOWLEDGE_INDEX;
     let pts = 0; let qs = 0; let essays = 0;
     for (const s of idx?.subjects || []) {
-      for (const sem of s.semesters || []) {
-        if (!sem.ready) continue;
-        for (const c of sem.chapters || []) {
-          for (const p of c.points || []) {
-            pts++;
-            qs += (p.ids?.length || 0);
-            if (p.hasEssay) essays++;
-          }
-        }
-      }
+      const sub = subjectSummaryCounts(s);
+      pts += sub.pts; qs += sub.qs; essays += sub.essays;
     }
-    return { pts: pts || 354, qs: qs || 4670, essays: essays || 36, subjects: (idx?.subjects || []).map(s => s.label).join('、') || '数理化' };
+    return { pts: pts || 358, qs: qs || 4650, essays: essays || 88, subjects: (idx?.subjects || []).map(s => s.label).join('、') || '数理化' };
   }
 
   // ---- 3 分钟快测（8 题阶梯摸底：2 基础 + 4 提高 + 2 拓展，分散覆盖各章高频点） ----
@@ -173,6 +175,10 @@
     const sem = subj?.semesters.find(s => s.stage === stage && s.ready) || subj?.semesters.find(s => s.ready) || subj?.semesters[0];
     const ready = subj?.semesters.filter(s => s.ready) || [];
     const totals = totalSummaryCounts();
+    const subTotals = subjectSummaryCounts(subj);
+    const semPills = ready.length
+      ? `<div class="kp-home-sems" aria-label="${esc(subj?.label || '')}全部学期知识点">${ready.map(s => `<button type="button" class="kp-sem-pill ${s.key === sem?.key ? 'is-cur' : ''}" data-kp-sem="${s.key}">${esc(s.label.replace('学期', ''))}<b>${s.pointCount}点</b></button>`).join('')}</div>`
+      : '';
     let body;
     if (!subj) {
       body = '<p class="muted">正在加载知识点目录…</p>';
@@ -181,27 +187,29 @@
       const weak = st.weak + st.shaky;
       body = `
         <div class="kp-home-stats">
-          <span><b>${st.total}</b>个知识点</span>
-          <span class="kp-weak-text"><b>${weak}</b>个待补</span>
-          <span><b>${st.ok + st.good}</b>个已掌握</span>
-          <span><b>${totals.essays}</b>道压轴大题</span>
+          <span><b>${subTotals.pts}</b>${esc(subj.label)}全初中点<small class="kp-sub-note">（本学期 ${st.total} 点）</small></span>
+          <span><b>${subTotals.essays}</b>道${esc(subj.label)}解答大题<small class="kp-sub-note">（三科共 ${totals.essays} 道）</small></span>
+          <span class="kp-weak-text"><b>${weak}</b>本学期待补</span>
+          <span><b>${st.ok + st.good}</b>本学期已掌握</span>
         </div>
+        ${semPills}
         <div class="kp-home-actions">
           <button class="btn primary" type="button" data-kp-go="quick">开始 3 分钟快测（8 题免费）</button>
           <button class="btn" type="button" data-kp-go="${weak ? 'weak' : 'mark'}">${weak ? `集中补弱项（${weak} 个）` : '家长勾选薄弱点'}</button>
           <button class="btn" type="button" data-kp-sem="sp">专题与压轴（含大题）</button>
           <button class="btn" type="button" data-kp-go="sample-print">预览 A4 补缺样卷</button>
-          <button class="btn text-button" type="button" data-kp-go="list">查看全部知识点 ›</button>
+          <button class="btn text-button" type="button" data-kp-go="list">查看全部 ${subTotals.pts} 个知识点 ›</button>
         </div>`;
     } else {
-      body = `<p class="muted">${esc(sem?.label || '')}${esc(subj?.label || '')}知识点正在整理，已上线：${ready.map(s => esc(s.label)).join('、') || '—'}。</p>
-        <div class="kp-home-actions">${ready.map(s => `<button class="btn primary" type="button" data-kp-sem="${s.key}">看${esc(s.label)}</button>`).join('')}</div>`;
+      body = `<p class="muted">${esc(sem?.label || '')}${esc(subj?.label || '')}知识点正在整理，全初中已上线 <b>${subTotals.pts} 个知识点</b>：${ready.map(s => esc(s.label)).join('、') || '—'}。</p>
+        ${semPills}
+        <div class="kp-home-actions">${ready.map(s => `<button class="btn primary" type="button" data-kp-sem="${s.key}">看${esc(s.label)}（${s.pointCount}点）</button>`).join('')}</div>`;
     }
     return `<section class="card kp-home" id="knowledgeHome">
-      <div class="kp-home-head"><span class="kp-badge">数理化补缺主线 · 名师 4 步微课</span><h2>3 分钟测出薄弱点，4 步通关 ＋ 印专属 A4 卷</h2></div>
-      <div class="kp-sem-tabs" style="margin:10px 0 6px">${(idx?.subjects || []).map(s => `<button type="button" class="btn ${s.key === (subj?.key || 'math') ? 'primary' : ''}" data-kp-subj="${s.key}">${esc(s.label)}</button>`).join('')}</div>
-      <p class="kp-home-lead">先用 8 道阶梯题生成<b>《孩子学情体检单》</b>，再进<b>《名师 4 步通关微课》</b>（遮罩背公式 → 拆母题 → 3 关集 ★★★ 含 <b>${totals.essays}</b> 道解答大题），一键印 A4 卷纸上验收。</p>
-      ${sem ? `<p class="kp-home-sem">当前学期：<b>${esc(sem.label)}</b>${sem.ready ? ` · ${sem.chapters.length} 章 · 免费测 8 题＋每点前 3 题免费` : ''}</p>` : ''}
+      <div class="kp-home-head"><span class="kp-badge">数理化补缺主线 · 名师 4 步微课</span><h2>全初中 ${totals.pts} 个知识点 · 3 分钟测弱项 ＋ 印 A4 卷</h2></div>
+      <div class="kp-sem-tabs" style="margin:10px 0 6px">${(idx?.subjects || []).map(s => { const sc = subjectSummaryCounts(s); return `<button type="button" class="btn ${s.key === (subj?.key || 'math') ? 'primary' : ''}" data-kp-subj="${s.key}">${esc(s.label)}（${sc.pts}点）</button>`; }).join('')}</div>
+      <p class="kp-home-lead">全初中数理化共 <b>${totals.pts}</b> 个核心知识点、<b>${totals.qs.toLocaleString()}</b> 道分层题与 <b>${totals.essays}</b> 道解答大题。先用 8 道阶梯题出<b>《孩子学情体检单》</b>，再进<b>《名师 4 步通关微课》</b>（遮罩背公式 → 拆母题 → 3 关集 ★★★），一键印 A4 卷纸上验收。</p>
+      ${sem ? `<p class="kp-home-sem">当前定位：<b>${esc(sem.label)}</b>${sem.ready ? `（${sem.chapters.length} 章 ${sem.pointCount} 点，点上方胶囊可切全初中任意学期）· 免费测 8 题＋每点第 1 关免费` : ''}</p>` : ''}
       ${body}
     </section>`;
   }
@@ -258,8 +266,8 @@
   }
   function semTabs(idx) {
     const subj = idx.subjects.find(s => s.key === state.subject) || idx.subjects[0];
-    const subjBar = idx.subjects.length > 1 ? `<div class="kp-sem-tabs" role="tablist" aria-label="切换学科">${idx.subjects.map(s => `<button type="button" class="btn ${s.key === subj.key ? 'primary' : ''}" data-subj="${s.key}">${esc(s.label)}</button>`).join('')}</div>` : '';
-    return subjBar + `<div class="kp-sem-tabs" role="tablist">${subj.semesters.map(s => `<button type="button" class="btn ${s.key === state.semester ? 'primary' : ''}" data-sem="${s.key}" ${s.ready ? '' : 'aria-disabled="true"'}>${esc(s.label)}${s.ready ? '' : '<small>整理中</small>'}</button>`).join('')}</div>`;
+    const subjBar = idx.subjects.length > 1 ? `<div class="kp-sem-tabs" role="tablist" aria-label="切换学科">${idx.subjects.map(s => { const sc = subjectSummaryCounts(s); return `<button type="button" class="btn ${s.key === subj.key ? 'primary' : ''}" data-subj="${s.key}">${esc(s.label)}（${sc.pts}点）</button>`; }).join('')}</div>` : '';
+    return subjBar + `<div class="kp-sem-tabs" role="tablist">${subj.semesters.map(s => `<button type="button" class="btn ${s.key === state.semester ? 'primary' : ''}" data-sem="${s.key}" ${s.ready ? '' : 'aria-disabled="true"'}>${esc(s.label)}${s.ready ? `<small>${s.pointCount}点</small>` : '<small>整理中</small>'}</button>`).join('')}</div>`;
   }
   function levelOf(q) {
     if (q.type === 'essay') return 3.5;
