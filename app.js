@@ -1310,6 +1310,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-26', '重磅上线《🎮 小四门反死记硬背实验室》（lab-x4m.html）＋全科速记权威勘误扩容至 253 条：历史「专属女声故事磨耳朵＋12 关时间轴排雷」、道法「18 关 30 秒生活小判官」、地理「15 关因果多米诺推导」、生物「12 关红细胞/原尿/米饭生命流程大冒险」（共 57 关每科前 3 关免费＋6 期专属女声故事前 4 期免费）；小四门 123 条旧考点全量复核并全部加配「💡 一句话秒记口诀」，补齐 40 条中考/会考高频漏点。'],
   ['2026-11-26', '上线《🏆 初中数理化 59 大名师压轴模型速查图鉴》（models.html）：数学 32 / 物理 13 / 化学 14 一页速查，全量免费在线浏览并支持开启零透字背诵遮罩、单模型 1 秒直达 4 步微课（?pt= 深链）与一键打印《A4 压轴口诀速查手册》（前 10 大镇站模型免费预览）；解锁弹窗新增买前 3 个常见疑问速答。'],
   ['2026-11-26', '新增 10 大全国中考名师压轴模型与 9 张高清矢量图，并彻底升级搜索引擎：数学补齐婆罗摩笈多模型、阿氏圆、费马点、十字架＋赵爽弦图、鸡爪＋对角互补、12345 模型、逆等线、平行线猪蹄/铅笔拐点＋建系斜化直；物理补齐杠杆最小力与动态杠杆；化学补齐万能瓶（多功能瓶）与气体制取净化全流程。全初中升级至 395 个知识点与名师模型（数学 241 / 物理 98 / 化学 56）、125 道规范解答大题、129 套名师详讲；搜索新增全文关键词索引与 60+ 组名师模型/易错字别名（搜“婆罗摩笈多、安阻法、滤液滤渣、多档位、一线三垂直、万能瓶”全部 1 秒直达）。'],
   ['2026-11-26', '全新重制 39 秒高清语音使用演示视频（专属女声解说＋大字同步字幕＋最新界面实拍），快节奏带你看懂 395 个知识点与名师模型秒搜、名师 4 步微课、防背答案变式、语英＋小四门 213 条 A4 默写纸与考前 7 天急救包。'],
@@ -2172,7 +2173,8 @@ function x4mGroupHTML(queue, progress) {
         <button class="btn primary" type="button" data-mode="all">${idx > 0 ? '继续练习' : '按学期刷题'} ${icon('arrow-right')}</button>
         <button class="btn" type="button" data-mode="random">${icon('shuffle')} 随机</button>
         <button class="btn" type="button" data-mode="unfinished">只做未做题${banks ? ` · ${fmt.format(applyMode(queue, 'unfinished', progress).length)}` : ''}</button>
-        <a class="btn" href="./key-points.html">${icon('book-open')} 考点速记</a>
+        <a class="btn primary" href="./lab-x4m.html">🎮 趣味记忆+故事</a>
+        <a class="btn" href="./key-points.html">${icon('book-open')} 253 条口诀默写</a>
         ${x4mOriginals.length ? `<button class="btn" type="button" data-national-open="${x4mOriginals[0].subject}" data-national-mode="paper">中考原卷</button>` : ''}
       </div>
     </div>
@@ -2554,6 +2556,11 @@ function jumpToGoTarget() {
   }
   const go = new URLSearchParams(location.search).get('go');
   if (!go) return;
+  if (go === 'lab-x4m') {
+    state.earlybirdJumped = true;
+    location.replace('./lab-x4m.html');
+    return;
+  }
   if (go === 'yuwen' || go === 'yingyu') {
     state.earlybirdJumped = true;
     location.replace(`./key-points.html?subject=${go}`);

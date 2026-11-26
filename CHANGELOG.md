@@ -1,5 +1,15 @@
 # 技术变更记录
 
+## 2026-11-26 · Antigravity · 上线《🎮 小四门反死记硬背实验室》(lab-x4m.html) ＋ 小四门 123→163 条权威勘误与口诀扩容 ＋ 6 期本机女声故事音频（main）
+- **小四门 123 条旧考点全量事实勘误 ＋ 新增 40 条高频漏点 ＋ 全量补齐「💡 一句话秒记口诀」(`data/key-points-{daode,lishi,dili,shengwu}.js`, `key-points.js`, `key-points.css`, `key-points.html`)**：
+  - 核对 2022 义教课标与新人教版教材，道法（33→43）、历史（30→40）、地理（30→40）、生物（30→40）共 163 条小四门考点全部加配 `mnemonic` 秒记口诀并同步接入双层零透字遮罩与 A4 挖空默写纸，全科速记总量增至 **253 条**。
+- **《🎮 小四门反死记硬背实验室》(`lab-x4m.html`, `lab-x4m.css`, `lab-x4m.js`, `data/x4m-lab-data.js`, `assets/audio/x4m-ep01..06.mp3`)**：
+  - 按四科不同记忆规律打造 4 套互动闯关（历史时间轴排雷 12 关、道法 30 秒生活小判官 18 关、地理因果多米诺 15 关、生物生命流程大冒险 12 关，共 57 关，每科前 3 关免费）；
+  - 配套 6 期本机 GPT-SoVITS 专属女声故事磨耳朵音频（全部逐句通过本机 `whisper.bat --check` 查漏字 `OK`，前 4 期免费试听，支持 0.8×–1.5× 倍速、±15s、连播与零透字逐字文稿遮罩）。
+- **入口与发布同步 (`index.html`, `app.js`, `sitemap.xml`, `tools/stage_pages_release.mjs`, `functions/api/_stats.js`)**：
+  - 顶栏、小四门专区与速记页均新增实验室入口，支持 `?go=lab-x4m` 深链，新增 `x4m_lab_open` / `x4m_lab_clear` / `x4m_audio_play` 埋点并同步 `sitemap.xml` 与发布白名单。
+- **验证**：音频逐句 Whisper 100% `OK`、`validate.mjs`（253 条速记）、`smoke.mjs`（40/40）、`stage_pages_release.mjs` 与线上 390×844 移动端实测通过。
+
 ## 2026-11-26 · Antigravity · 上线《初中数理化 59 大名师压轴模型速查图鉴》(models.html) ＋ ?pt= 单点直达 ＋ 买前 3 问与 SEO 补齐（main）
 - **59 大压轴模型公开图鉴与 A4 手册 (`tools/build_knowledge.mjs`, `models.html`, `models.css`, `models.js`)**：
   - 构建期自动读取 `math/physics/chemistry` 全部 59 个 `sp` 压轴模型生成静态语义化 HTML `models.html`（含 SVG 配图缩略、核心通法口诀、学科筛选、关键词过滤、零透字背诵遮罩、`ItemList` JSON-LD）；支持一键打印《A4 压轴口诀速查手册》（前 10 大镇站模型免费预览，全套 59 个归入 ¥19.9 完整版）。

@@ -84,12 +84,16 @@ function maskKeywords(text, forPrintBlank = false) {
 function pointHTML(item, sources) {
   const ruleHtml = reciteMode ? maskKeywords(item.rule) : escapeHTML(item.rule);
   const pitfallHtml = reciteMode ? maskKeywords(item.pitfall) : escapeHTML(item.pitfall);
+  const mnemonicHtml = item.mnemonic
+    ? `<div class="point-mnemonic"><b>💡 秒记口诀：</b><span>${reciteMode ? maskKeywords(item.mnemonic) : escapeHTML(item.mnemonic)}</span></div>`
+    : '';
   return `<article class="card point-card" aria-labelledby="${escapeHTML(item.id)}">
     <div class="point-meta">
       <span class="chip ${item.type === 'trap' ? 'tone-daode' : ''}">${types[item.type]}</span>
       <span class="muted">${escapeHTML(item.topic)}</span>
     </div>
     <h3 id="${escapeHTML(item.id)}">${escapeHTML(item.title)}</h3>
+    ${mnemonicHtml}
     <div class="point-detail"><h4>要点</h4><p>${ruleHtml}</p></div>
     <div class="point-detail point-pitfall"><h4>易混点</h4><p>${pitfallHtml}</p></div>
     <details class="point-answer">
@@ -123,6 +127,7 @@ function openPointsPrint(matches, blankMode) {
   const rowsHtml = picked.map((item, idx) => `
     <div class="pt-pr-item">
       <p class="pt-pr-title"><b>${idx + 1}. ${escapeHTML(item.title)}</b> <small>（${escapeHTML(stages[item.stage] || '')} · ${escapeHTML(item.topic)}）</small></p>
+      ${item.mnemonic ? `<p><b>口诀：</b>${blankMode ? maskKeywords(item.mnemonic, true) : escapeHTML(item.mnemonic)}</p>` : ''}
       <p><b>要点：</b>${blankMode ? maskKeywords(item.rule, true) : escapeHTML(item.rule)}</p>
       <p><b>易混：</b>${blankMode ? maskKeywords(item.pitfall, true) : escapeHTML(item.pitfall)}</p>
       <p><b>自测：</b>${escapeHTML(item.question)} ${blankMode ? '______________________' : `（答：${escapeHTML(item.answer)}）`}</p>
@@ -141,7 +146,7 @@ function openPointsPrint(matches, blankMode) {
       </div>
     </div>
     <div class="pt-pr-page">
-      ${!paidAccess && omitted > 0 ? `<div class="pt-pr-note">免费体验可打印每科前 5 条，完整版 ¥19.9 一次买断可无水印打印全部 213 条全科（语英＋小四门）考点速记与默写纸。</div>` : ''}
+      ${!paidAccess && omitted > 0 ? `<div class="pt-pr-note">免费体验可打印每科前 5 条，完整版 ¥19.9 一次买断可无水印打印全部 253 条全科（语英＋小四门）权威口诀速记与默写纸。</div>` : ''}
       <header class="pt-pr-head">
         <h1>爱丽克丝中考题库 · ${escapeHTML(subjectInfo[subject].name)}${modeLabel}</h1>
         <p>人教版 · 姓名：__________　日期：__________　核对得分：______</p>
@@ -184,7 +189,7 @@ function render() {
   const matches = bank.items.filter(item => {
     if ((currentStage && item.stage !== currentStage) || (currentType && item.type !== currentType)) return false;
     if (!words.length) return true;
-    const text = normalize([item.title, item.topic, item.rule, item.pitfall, item.question, item.answer].join(' '));
+    const text = normalize([item.title, item.topic, item.mnemonic || '', item.rule, item.pitfall, item.question, item.answer].join(' '));
     return words.every(word => text.includes(word));
   });
   status.textContent = `${subjectInfo[subject].name} · ${matches.length} 条考点`;

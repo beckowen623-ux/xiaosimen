@@ -85,3 +85,10 @@
   body.pt-printing .no-print { display: none !important; }
   body.pt-printing .pt-pr-page { max-width: none; border: 0; padding: 0; }
 }
+
+/* 秒记口诀与反死记硬背实验室横幅 */
+.point-mnemonic { margin: 8px 0; padding: 8px 10px; border-radius: 8px; background: #fef6e4; border-left: 3px solid #d97706; color: #78350f; font-size: 13.5px; line-height: 1.6; }
+.point-mnemonic b { color: #9a5b04; }
+.kp-lab-banner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px; margin-bottom: 12px; border-radius: 12px; background: linear-gradient(135deg, #fef6e4 0%, #f5efe0 100%); border: 1px solid #e7c97a; }
+.kp-lab-banner b { display: block; color: #78350f; font-size: 14.5px; }
+.kp-lab-banner span { font-size: 13px; color: #6c5733; }
