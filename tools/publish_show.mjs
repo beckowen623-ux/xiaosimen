@@ -25,7 +25,7 @@ const videoPath = arg("video");
 const posterPath = arg("poster");
 const target = arg("target", "local");
 const bucket = arg("bucket", "x4m-media");
-const domain = arg("domain", "https://media.x4m.cc.cd").replace(/\/+$/, "");
+const domain = arg("domain", "/api/media").replace(/\/+$/, "");
 const hlPath = arg("highlights");
 const customTitle = arg("title");
 const customDuration = arg("duration");
@@ -55,11 +55,11 @@ if (target === "local") {
 } else if (target === "r2") {
   const vKey = `shows/${id}.mp4`;
   console.log(`正在上传 ${basename(videoPath)} (${sizeMB.toFixed(2)} MB) 到 R2: ${bucket}/${vKey} ...`);
-  execFileSync("npx", ["--yes", "wrangler", "r2", "object", "put", `${bucket}/${vKey}`, "--file", videoPath, "--content-type", "video/mp4", "--remote"], { stdio: "inherit" });
+  execFileSync("cmd", ["/c", "npx", "--yes", "wrangler", "r2", "object", "put", `${bucket}/${vKey}`, "--file", videoPath, "--content-type", "video/mp4", "--remote"], { stdio: "inherit" });
   videoUrl = `${domain}/${vKey}`;
   if (posterPath && existsSync(posterPath)) {
     const pKey = `shows/${id}-poster.jpg`;
-    execFileSync("npx", ["--yes", "wrangler", "r2", "object", "put", `${bucket}/${pKey}`, "--file", posterPath, "--content-type", "image/jpeg", "--remote"], { stdio: "inherit" });
+    execFileSync("cmd", ["/c", "npx", "--yes", "wrangler", "r2", "object", "put", `${bucket}/${pKey}`, "--file", posterPath, "--content-type", "image/jpeg", "--remote"], { stdio: "inherit" });
     posterUrl = `${domain}/${pKey}`;
   }
 } else {

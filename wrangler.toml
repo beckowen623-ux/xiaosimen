@@ -6,3 +6,7 @@ compatibility_date = "2026-11-17"
 binding = "DB"
 database_name = "quiz-bank-access"
 database_id = "deb5dab5-7c09-42b0-a337-9ec415a511f2"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "x4m-media"
