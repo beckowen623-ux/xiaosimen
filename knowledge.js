@@ -74,9 +74,15 @@
     return `<span class="kp-stars ${cls}" aria-label="已点亮 ${stars} 颗星（满分 3 星）">${filled}${empty}</span>`;
   }
   function maskKpText(raw) {
-    const s = esc(raw);
-    return s.replace(/([「“][^」”]{2,18}[」”]|(?:\d+(?:\.\d+)?(?:\s*[°%℃ΩVAJWs]|\/[a-zA-Z0-9]+)?)|(?:[A-Za-z][A-Za-z0-9²³⁴⁺⁻₀₁₂₃₄₅₆₇₈₉]*\s*[＝=＜＞<>≤≥≈∝]\s*[^，。；、！？（()）]{1,18}))/g,
-      '<button type="button" class="kp-blank" data-kp-blank aria-pressed="false">$1</button>');
+    const src = String(raw ?? '');
+    const re = /([「“][^」”]{2,18}[」”]|(?:\d+(?:\.\d+)?(?:\s*[°%℃ΩVAJWs]|\/[a-zA-Z0-9]+)?)|(?:[A-Za-z][A-Za-z0-9²³⁴⁺⁻₀₁₂₃₄₅₆₇₈₉]*\s*[＝=＜＞<>≤≥≈∝]\s*[^，。；、！？（()）]{1,18}))/g;
+    let out = ''; let last = 0; let m;
+    while ((m = re.exec(src)) !== null) {
+      out += esc(src.slice(last, m.index));
+      out += `<button type="button" class="kp-blank" data-kp-blank aria-pressed="false">${esc(m[0])}</button>`;
+      last = m.index + m[0].length;
+    }
+    return out + esc(src.slice(last));
   }
   function splitExampleSteps(text) {
     const parts = String(text || '').split(/[；;。\n]/).map(s => s.trim()).filter(Boolean);
