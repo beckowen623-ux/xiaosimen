@@ -10,6 +10,7 @@
   --gold-soft: #fef6e4;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font: 15px/1.65 -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; overflow-x: clip; }
 a { color: var(--brand); text-decoration: none; }
 a:hover { text-decoration: underline; }
