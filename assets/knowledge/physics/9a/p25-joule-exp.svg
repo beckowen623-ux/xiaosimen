@@ -28,6 +28,6 @@
   <line x1="164" y1="152" x2="164" y2="164" stroke="#111" stroke-width="1.4"/>
   <text x="156" y="145" font-size="9.5" fill="#111" text-anchor="middle">电源</text>
   <!-- 底部方法标注 -->
-  <text x="160" y="184" font-size="10" fill="#1e293b" text-anchor="middle">串联保证 I、t 相同，探究 Q 与 R 关系；右盒外并联分流电阻探究 Q 与 I 关系</text>
-  <text x="160" y="200" font-size="9.5" fill="#dc2626" text-anchor="middle">注意：U 形管不是连通器；实验前须检查气密性，使两液面相平</text>
+  <text x="160" y="184" font-size="9" fill="#1e293b" text-anchor="middle">串联(I、t 同)探 Q 与 R；右盒外并联分流电阻探 Q 与 I</text>
+  <text x="160" y="200" font-size="9" fill="#dc2626" text-anchor="middle">注意：U 形管不是连通器；实验前须查气密性并使液面相平</text>
 </svg>
