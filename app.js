@@ -2428,7 +2428,7 @@ function x4mShowcaseCardHTML(compact = true) {
       <a class="x4m-ml-tile is-audio" href="./lab-x4m.html?tab=audio"><b>🎧 故事磨耳朵</b><small>6 期专属女声 · 前 4 期免费</small></a>
     </div>
     <div class="x4m-ml-foot">
-      <a class="btn primary" href="./lab-x4m.html?tab=studio">🎬 进入《考点演播室》与闯关 →</a>
+      <a class="btn primary" href="./lab-x4m.html?tab=studio">▶ 试看第 1 集《鸦片战争》· 前 10 分钟免费 →</a>
       <a class="btn" href="./key-points.html">📝 253 条带口诀 A4 默写纸</a>
       ${compact ? '<button type="button" class="btn" data-home-tab="x4m">刷 2,453 道小四门真题 ›</button>' : ''}
     </div>
