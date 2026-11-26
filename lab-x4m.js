@@ -41,9 +41,10 @@
   const saveProg = (p) => { try { localStorage.setItem(PROG_KEY, JSON.stringify(p)); } catch {} };
 
   const DATA = window.X4M_LAB_DATA || { history: [], politics: [], geography: [], biology: [], audio: [] };
+  const SHOWS = window.X4M_SHOWS || [];
   const prog = loadProg();
   const state = {
-    tab: 'history',
+    tab: 'studio',
     idx: { history: 0, politics: 0, geography: 0, biology: 0 },
     hOrder: [],
     hChecked: false,
@@ -53,11 +54,20 @@
     bStep: 0,
     bChoice: -1,
     bCleared: false,
+    showId: (SHOWS[0] && SHOWS[0].id) || 'show-01',
+    showRate: 1,
+    showLockedHit: false,
     audioId: (DATA.audio[0] && DATA.audio[0].id) || 'x4m-ep01',
     audioRate: 1,
     audioAutoNext: true,
     scriptMask: false,
   };
+  function fmtSec(sec) {
+    const s = Math.max(0, Math.floor(Number(sec) || 0));
+    const m = Math.floor(s / 60);
+    const r = s % 60;
+    return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
+  }
 
   function markDone(id) {
     if (!prog[id]) {
@@ -345,6 +355,96 @@
       </div>`;
   }
 
+  function renderStudio() {
+    const cur = SHOWS.find(s => s.id === state.showId) || SHOWS[0];
+    if (!cur) return '<div class="lx-card"><p>演播室节目单加载中…</p></div>';
+    const isReady = cur.status === 'ready' && !!cur.videoUrl;
+    const previewMin = Math.round((cur.freePreviewSec || 600) / 60);
+    const accessLabel = cur.free
+      ? '本集免费全片看'
+      : (paidAccess ? '完整版已解锁全片' : `免费试看前 ${previewMin} 分钟`);
+
+    const stageMediaHtml = isReady
+      ? `<div class="lx-video-wrap">
+           <video id="lxStudioVideo" controls playsinline preload="none" ${cur.poster ? `poster="${esc(cur.poster)}"` : ''} src="${esc(cur.videoUrl)}"></video>
+           ${state.showLockedHit && !paidAccess && !cur.free ? `
+             <div class="lx-video-lock-overlay">
+               <h3>已免费试看前 ${previewMin} 分钟</h3>
+               <p>开通爱丽克丝中考题库完整版（¥19.9 一次买断），畅看《考点演播室》全季男女双主持视频＋57 关趣味闯关＋395 个数理化知识点与 59 大压轴模型。</p>
+               <div class="lx-actions">
+                 <a class="lx-btn gold" href="./?from=studio-preview">去首页解锁完整版 ¥19.9 →</a>
+                 <button type="button" class="lx-btn" id="lxStudioRewind">重温前 ${previewMin} 分钟</button>
+               </div>
+             </div>` : ''}
+         </div>
+         <div class="lx-ap-controls">
+           <button type="button" class="lx-ap-btn" id="lxVBack">↺ -15s</button>
+           <button type="button" class="lx-ap-btn" id="lxVFwd">+15s ↻</button>
+           ${[0.8, 1, 1.25, 1.5].map(r => `<button type="button" class="lx-ap-btn ${state.showRate === r ? 'is-on' : ''}" data-vrate="${r}">${r}×</button>`).join('')}
+         </div>`
+      : `<div class="lx-upcoming-stage">
+           <div class="lx-hosts-row">🎙️ 男主持 × 女主持 · Remotion 动态演播室画面（每集 15–20 分钟 · ${esc(accessLabel)}）</div>
+           <div class="lx-banner-demo"><em>考点横幅示例</em><span>${esc((cur.highlights && cur.highlights[0] && cur.highlights[0].text) || '讲到中考核心得分点时，画面自动弹出高亮横幅')}</span></div>
+           <p class="lx-studio-desc">本集双人视频节目正在后期渲染上架中！现在可以先听同主题专属女声故事音频，或直接点下方考点书签与配套闯关抢先掌握得分点：</p>
+           <div class="lx-actions">
+             ${cur.fallbackAudioId ? `<button type="button" class="lx-btn gold" data-open-audio="${esc(cur.fallbackAudioId)}">🎧 先听本集主题女声故事 →</button>` : ''}
+             <button type="button" class="lx-btn" data-jump-tab="${esc(cur.quizTab || 'history')}">${esc(cur.quizLabel || '去玩配套闯关 →')}</button>
+           </div>
+         </div>`;
+
+    const hlHtml = (cur.highlights && cur.highlights.length) ? `
+      <div class="lx-hl-box">
+        <div class="lx-hl-head">
+          <span>🔖 本集考点横幅书签（${isReady ? '点击 1 秒跳转重看' : '本集必考得分点抢先看'}）</span>
+          <span>${cur.highlights.length} 个核心考点</span>
+        </div>
+        <div class="lx-hl-list">
+          ${cur.highlights.map((h, i) => `
+            <button type="button" class="lx-hl-item" data-hl-idx="${i}" data-hl-sec="${h.t}">
+              <span class="lx-hl-time">${fmtSec(h.t)}</span>
+              <span class="lx-hl-badge">${esc(h.badge || '考点')}</span>
+              <span>${esc(h.text)}</span>
+            </button>`).join('')}
+        </div>
+      </div>` : '';
+
+    const listHtml = SHOWS.map(s => {
+      const isCur = s.id === cur.id;
+      const ready = s.status === 'ready' && !!s.videoUrl;
+      const pMin = Math.round((s.freePreviewSec || 600) / 60);
+      return `<article class="lx-show-card ${isCur ? 'is-cur' : ''}">
+        <div class="lx-ep-head">
+          <div>
+            <span class="lx-chip">${esc(s.badge)}</span>
+            <span class="lx-chip gold">${s.free ? '免费全片' : `前 ${pMin} 分钟免费试看`}</span>
+            <span class="lx-chip">${ready ? '▶ 可观看' : '🎬 筹备上架中'}</span>
+          </div>
+          <button type="button" class="lx-btn ${isCur ? 'primary' : ''} sm" data-pick-show="${esc(s.id)}">${isCur ? '正在查看' : (ready ? '▶ 观看本集' : '查看考点预告')}</button>
+        </div>
+        <h3>${esc(s.title)}</h3>
+        <p class="lx-sub">${esc(s.hosts)} · ${esc(s.durationText)}</p>
+        <div class="lx-actions">
+          <button type="button" class="lx-btn sm" data-jump-tab="${esc(s.quizTab || 'history')}">${esc(s.quizLabel || '配套闯关 →')}</button>
+          <a class="lx-btn sm" href="${esc(s.kpLink || './key-points.html')}">印本集口诀默写纸 ›</a>
+        </div>
+      </article>`;
+    }).join('');
+
+    return `
+      <div class="lx-studio-stage">
+        <div class="lx-studio-meta">
+          <span class="lx-studio-pill">${esc(cur.badge)}</span>
+          <span class="lx-studio-pill">${esc(cur.durationText)}</span>
+          <span class="lx-studio-pill">${esc(accessLabel)}</span>
+        </div>
+        <h2>${esc(cur.title)}</h2>
+        <p class="lx-studio-desc">${esc(cur.summary)}</p>
+        ${stageMediaHtml}
+        ${hlHtml}
+      </div>
+      <div class="lx-show-grid">${listHtml}</div>`;
+  }
+
   function renderAudio() {
     const eps = DATA.audio || [];
     const curEp = eps.find(e => e.id === state.audioId) || eps[0];
@@ -409,7 +509,70 @@
       render();
     });
 
-    if (state.tab === 'history') {
+    if (state.tab === 'studio') {
+      const cur = SHOWS.find(s => s.id === state.showId) || SHOWS[0];
+      const videoEl = stageEl.querySelector('#lxStudioVideo');
+      if (videoEl && cur) {
+        videoEl.playbackRate = state.showRate;
+        videoEl.addEventListener('play', () => track('x4m_studio_play'), { once: true });
+        const limitSec = (!paidAccess && !cur.free) ? (cur.freePreviewSec || 600) : 0;
+        const hlBtns = [...stageEl.querySelectorAll('[data-hl-sec]')];
+        videoEl.addEventListener('timeupdate', () => {
+          const t = videoEl.currentTime || 0;
+          if (limitSec && t >= limitSec) {
+            videoEl.pause();
+            videoEl.currentTime = limitSec;
+            if (!state.showLockedHit) { state.showLockedHit = true; render(); }
+            return;
+          }
+          let activeIdx = -1;
+          for (let i = 0; i < hlBtns.length; i++) {
+            if (t >= Number(hlBtns[i].dataset.hlSec || 0)) activeIdx = i;
+          }
+          hlBtns.forEach((b, i) => b.classList.toggle('is-active', i === activeIdx));
+        });
+      }
+      stageEl.querySelector('#lxStudioRewind')?.addEventListener('click', () => {
+        state.showLockedHit = false;
+        render();
+        const v = stageEl.querySelector('#lxStudioVideo');
+        if (v) { v.currentTime = 0; v.play().catch(() => {}); }
+      });
+      stageEl.querySelector('#lxVBack')?.addEventListener('click', () => { if (videoEl) videoEl.currentTime = Math.max(0, videoEl.currentTime - 15); });
+      stageEl.querySelector('#lxVFwd')?.addEventListener('click', () => {
+        if (!videoEl) return;
+        const limit = (!paidAccess && cur && !cur.free) ? (cur.freePreviewSec || 600) : (videoEl.duration || 9999);
+        videoEl.currentTime = Math.min(limit, videoEl.currentTime + 15);
+      });
+      stageEl.querySelectorAll('[data-vrate]').forEach(b => b.addEventListener('click', () => {
+        state.showRate = Number(b.dataset.vrate) || 1;
+        if (videoEl) videoEl.playbackRate = state.showRate;
+        stageEl.querySelectorAll('[data-vrate]').forEach(x => x.classList.toggle('is-on', x === b));
+      }));
+      stageEl.querySelectorAll('[data-hl-sec]').forEach(b => b.addEventListener('click', () => {
+        if (!videoEl) return;
+        const sec = Number(b.dataset.hlSec || 0);
+        const limit = (!paidAccess && cur && !cur.free) ? (cur.freePreviewSec || 600) : 999999;
+        if (sec >= limit) {
+          state.showLockedHit = true;
+          render();
+          return;
+        }
+        videoEl.currentTime = sec;
+        videoEl.play().catch(() => {});
+      }));
+      stageEl.querySelectorAll('[data-pick-show]').forEach(b => b.addEventListener('click', () => {
+        state.showId = b.dataset.pickShow;
+        state.showLockedHit = false;
+        render();
+      }));
+      stageEl.querySelectorAll('[data-open-audio]').forEach(b => b.addEventListener('click', () => {
+        state.audioId = b.dataset.openAudio;
+        switchTab('audio');
+        setTimeout(() => stageEl.querySelector('#lxAudioEl')?.play?.().catch(() => {}), 80);
+      }));
+      stageEl.querySelectorAll('[data-jump-tab]').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.jumpTab)));
+    } else if (state.tab === 'history') {
       stageEl.querySelectorAll('[data-add-ev]').forEach(btn => btn.addEventListener('click', () => {
         const id = btn.dataset.addEv;
         if (!state.hOrder.includes(id)) { state.hOrder.push(id); render(); }
@@ -504,20 +667,22 @@
   });
 
   function switchTab(tab) {
-    if (!['history', 'politics', 'geography', 'biology', 'audio'].includes(tab)) return;
+    if (!['studio', 'history', 'politics', 'geography', 'biology', 'audio'].includes(tab)) return;
     state.tab = tab;
+    if (tab === 'studio') track('x4m_studio_open');
     tabBtns.forEach(b => {
       const on = b.dataset.tab === tab;
       b.classList.toggle('is-active', on);
       b.setAttribute('aria-selected', on ? 'true' : 'false');
     });
-    if (tab !== 'audio') resetLevelState(tab);
+    if (tab !== 'audio' && tab !== 'studio') resetLevelState(tab);
     render();
   }
 
   function render() {
     updateProgress();
-    if (state.tab === 'history') stageEl.innerHTML = renderHistory();
+    if (state.tab === 'studio') stageEl.innerHTML = renderStudio();
+    else if (state.tab === 'history') stageEl.innerHTML = renderHistory();
     else if (state.tab === 'politics') stageEl.innerHTML = renderPolitics();
     else if (state.tab === 'geography') stageEl.innerHTML = renderGeography();
     else if (state.tab === 'biology') stageEl.innerHTML = renderBiology();
@@ -528,6 +693,6 @@
   tabBtns.forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
 
   const initTab = new URLSearchParams(location.search).get('tab') || location.hash.replace(/^#/, '');
-  if (['history', 'politics', 'geography', 'biology', 'audio'].includes(initTab)) switchTab(initTab);
-  else { resetLevelState('history'); render(); }
+  if (['studio', 'history', 'politics', 'geography', 'biology', 'audio'].includes(initTab)) switchTab(initTab);
+  else switchTab('studio');
 })();

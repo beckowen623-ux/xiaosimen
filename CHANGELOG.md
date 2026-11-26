@@ -1,5 +1,15 @@
 # 技术变更记录
 
+## 2026-11-26 · Antigravity · 小四门主线首屏 C 位扶正 ＋ 《🎬 考点演播室》双人视频剧场（前 10 分钟免费试看）＋ Remotion 零成本双轨托管流水线（main）
+- **首屏 C 位主线改造 (`app.js`, `styles.css`, `index.html`)**：
+  - 首页顶部 4 枚吸顶 Tab 升级为 `🎯 提分双主线 / 🎬 小四门主线 / 📝 同步与真题 / 📕 错题与更多`；
+  - 默认首屏第 1 张主卡直接展示《小四门王牌主线大卡》（《考点演播室》入口＋首页内嵌第 1 期免费历史故事 1 秒迷你试听条＋4 科 57 关趣味闯关 2×2 磁贴＋253 条带口诀 A4 默写纸），家长 0 点击即刻看见并试听试玩；新增 `?go=studio` 直达深链。
+- **《🎬 考点演播室》视频剧场与考点横幅书签 (`data/x4m-shows.js`, `lab-x4m.html`, `lab-x4m.css`, `lab-x4m.js`, `functions/api/_stats.js`)**：
+  - 升级 6 格导航栏并置顶 `🎬 考点演播室`（支持 15–20 分钟男女双主持 Remotion 视频节目、0.8×–1.5× 倍速、±15s、**前 10 分钟 / 600 秒免费试看门禁**、以及与画面考点横幅 1:1 同步的可点击跳转考点书签），新增 `x4m_studio_open` / `x4m_studio_play` 埋点。
+- **大体积 Remotion 视频零成本双轨上架流水线 (`tools/pack_show_video.ps1`, `tools/publish_show.mjs`, `docs/REMOTION_SHOW_SPEC.md`)**：
+  - 提供本机 `ffmpeg` `-tune animation` 一键瘦身与截封面脚本（15–20 分钟压至 ~16–25 MB）、双轨上架脚本（`--target local` 或 Cloudflare R2 永久免费 10 GB `--target r2`），以及可直接发给 Claude Code 的 Remotion 规格对接单。
+- **验证**：`validate.mjs`、`smoke.mjs`（40/40）、`stage_pages_release.mjs` 与线上 390×844 移动端实测通过。
+
 ## 2026-11-26 · Antigravity · 上线《🎮 小四门反死记硬背实验室》(lab-x4m.html) ＋ 小四门 123→163 条权威勘误与口诀扩容 ＋ 6 期本机女声故事音频（main）
 - **小四门 123 条旧考点全量事实勘误 ＋ 新增 40 条高频漏点 ＋ 全量补齐「💡 一句话秒记口诀」(`data/key-points-{daode,lishi,dili,shengwu}.js`, `key-points.js`, `key-points.css`, `key-points.html`)**：
   - 核对 2022 义教课标与新人教版教材，道法（33→43）、历史（30→40）、地理（30→40）、生物（30→40）共 163 条小四门考点全部加配 `mnemonic` 秒记口诀并同步接入双层零透字遮罩与 A4 挖空默写纸，全科速记总量增至 **253 条**。

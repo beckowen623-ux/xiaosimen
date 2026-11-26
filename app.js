@@ -1310,6 +1310,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-26', '首屏 C 位升级为「🎯 提分双主线」并正式上线《🎬 考点演播室》节目剧场：一进首页即可直接试听专属女声历史故事、一键直达 4 科 57 关反死记硬背闯关与 253 条带口诀 A4 默写纸；演播室支持 15–20 分钟男女双主持视频节目（讲到考点自动弹横幅＋下方可点击考点书签 1 秒跳转重看，每集前 10 分钟免费试看）。'],
   ['2026-11-26', '重磅上线《🎮 小四门反死记硬背实验室》（lab-x4m.html）＋全科速记权威勘误扩容至 253 条：历史「专属女声故事磨耳朵＋12 关时间轴排雷」、道法「18 关 30 秒生活小判官」、地理「15 关因果多米诺推导」、生物「12 关红细胞/原尿/米饭生命流程大冒险」（共 57 关每科前 3 关免费＋6 期专属女声故事前 4 期免费）；小四门 123 条旧考点全量复核并全部加配「💡 一句话秒记口诀」，补齐 40 条中考/会考高频漏点。'],
   ['2026-11-26', '上线《🏆 初中数理化 59 大名师压轴模型速查图鉴》（models.html）：数学 32 / 物理 13 / 化学 14 一页速查，全量免费在线浏览并支持开启零透字背诵遮罩、单模型 1 秒直达 4 步微课（?pt= 深链）与一键打印《A4 压轴口诀速查手册》（前 10 大镇站模型免费预览）；解锁弹窗新增买前 3 个常见疑问速答。'],
   ['2026-11-26', '新增 10 大全国中考名师压轴模型与 9 张高清矢量图，并彻底升级搜索引擎：数学补齐婆罗摩笈多模型、阿氏圆、费马点、十字架＋赵爽弦图、鸡爪＋对角互补、12345 模型、逆等线、平行线猪蹄/铅笔拐点＋建系斜化直；物理补齐杠杆最小力与动态杠杆；化学补齐万能瓶（多功能瓶）与气体制取净化全流程。全初中升级至 395 个知识点与名师模型（数学 241 / 物理 98 / 化学 56）、125 道规范解答大题、129 套名师详讲；搜索新增全文关键词索引与 60+ 组名师模型/易错字别名（搜“婆罗摩笈多、安阻法、滤液滤渣、多档位、一线三垂直、万能瓶”全部 1 秒直达）。'],
@@ -2403,6 +2404,37 @@ function renderUpdateLogs(all = false) {
   return items + moreBtn;
 }
 
+function x4mShowcaseCardHTML(compact = true) {
+  return `<section class="card x4m-mainline-card" aria-label="小四门王牌主线：考点演播室与反死记硬背实验室">
+    <div class="x4m-ml-head">
+      <span class="x4m-ml-badge">🎬 王牌主线 · 告别小四门死记硬背</span>
+      <a class="x4m-ml-more" href="./lab-x4m.html?tab=studio">进入完整实验室 →</a>
+    </div>
+    <h2>《考点演播室》＋ 故事磨耳朵 ＋ 57 关趣味闯关</h2>
+    <p class="x4m-ml-lead">历史听故事排时间轴、道法当 30 秒生活小判官、地理推因果多米诺、生物变身红细胞大冒险；更有<b>男女双主持《考点演播室》视频节目</b>（每集 15–20 分钟，讲到考点自动弹高亮横幅，<b>前 10 分钟免费试看</b>）！</p>
+    <div class="x4m-ml-audio-bar">
+      <div class="x4m-ml-audio-info">
+        <b>🎧 首页 1 秒免费试听：历史故事第 1 期</b>
+        <span>《商鞅扛木头到秦始皇砸铜钱：100 秒听懂分封、郡县与秦汉大一统》</span>
+      </div>
+      <audio class="x4m-ml-mini-audio" controls preload="none" src="./assets/audio/x4m-ep01.mp3"></audio>
+    </div>
+    <div class="x4m-ml-grid">
+      <a class="x4m-ml-tile is-studio" href="./lab-x4m.html?tab=studio"><b>🎬 考点演播室</b><small>男女双主持 · 前 10 分钟免费</small></a>
+      <a class="x4m-ml-tile" href="./lab-x4m.html?tab=history"><b>📜 历史时间轴</b><small>12 关排雷 · 前 3 关免费</small></a>
+      <a class="x4m-ml-tile" href="./lab-x4m.html?tab=politics"><b>⚖️ 道法小判官</b><small>18 关断案 · 前 3 关免费</small></a>
+      <a class="x4m-ml-tile" href="./lab-x4m.html?tab=geography"><b>🌍 地理多米诺</b><small>15 关推导 · 前 3 关免费</small></a>
+      <a class="x4m-ml-tile" href="./lab-x4m.html?tab=biology"><b>🧬 生物大冒险</b><small>12 关接龙 · 前 3 关免费</small></a>
+      <a class="x4m-ml-tile is-audio" href="./lab-x4m.html?tab=audio"><b>🎧 故事磨耳朵</b><small>6 期专属女声 · 前 4 期免费</small></a>
+    </div>
+    <div class="x4m-ml-foot">
+      <a class="btn primary" href="./lab-x4m.html?tab=studio">🎬 进入《考点演播室》与闯关 →</a>
+      <a class="btn" href="./key-points.html">📝 253 条带口诀 A4 默写纸</a>
+      ${compact ? '<button type="button" class="btn" data-home-tab="x4m">刷 2,453 道小四门真题 ›</button>' : ''}
+    </div>
+  </section>`;
+}
+
 function renderHome(focus = '') {
   if (!nationalCatalog && !banks) { renderLiteHome(); return; }
   window.NationalExams?.leave();
@@ -2415,12 +2447,12 @@ function renderHome(focus = '') {
   const accessNotice = accessNoticeHTML(trialDays);
   refreshStreak(progress);
   byId('headerSearch').hidden = false;
-  const homeTab = state.homeTab || 'kp';
+  const homeTab = ['kp', 'x4m', 'papers', 'review'].includes(state.homeTab) ? state.homeTab : 'kp';
   const homeTabs = [
-    ['kp', '🎯 补缺主线'],
+    ['kp', '🎯 提分双主线'],
+    ['x4m', '🎬 小四门主线'],
     ['papers', '📝 同步与真题'],
-    ['review', '📕 错题与小四门'],
-    ['mine', '🎁 说明与更多'],
+    ['review', '📕 错题与更多'],
   ];
   view.innerHTML = `
     ${homeIntroHTML()}
@@ -2428,11 +2460,18 @@ function renderHome(focus = '') {
       ${homeTabs.map(([k, label]) => `<button type="button" class="home-tab-btn" role="tab" data-home-tab="${k}" aria-selected="${homeTab === k}">${label}</button>`).join('')}
     </nav>
     <div class="home-tab-panel" data-tab-panel="kp" ${homeTab !== 'kp' ? 'hidden' : ''}>
+      ${x4mShowcaseCardHTML(true)}
       ${window.KnowledgeHub?.homeCardHTML(state.stage) || ''}
       <section class="card home-tab-hint">
-        <div><b>还需要刷整套同步章节卷、早鸟卷或全国各地真题？</b><span class="muted">点上方「📝 同步与真题」即可按学期刷卷或整卷打印；小四门、每周一卷与错题本在「📕 错题与小四门」。</span></div>
+        <div><b>还需要刷整套同步章节卷、早鸟卷或全国各地真题？</b><span class="muted">点上方「📝 同步与真题」即可按学期刷卷或整卷打印；小四门刷题在「🎬 小四门主线」，错题本与更多说明在「📕 错题与更多」。</span></div>
         <button type="button" class="btn" data-home-tab="papers">去看同步与真题 ›</button>
       </section>
+    </div>
+    <div class="home-tab-panel" data-tab-panel="x4m" ${homeTab !== 'x4m' ? 'hidden' : ''}>
+      ${x4mShowcaseCardHTML(false)}
+      <div class="home-tools-grid">
+        ${x4mGroupHTML(queue, progress, true)}
+      </div>
     </div>
     <div class="home-tab-panel" data-tab-panel="papers" ${homeTab !== 'papers' ? 'hidden' : ''}>
       ${stageBarHTML()}
@@ -2443,9 +2482,8 @@ function renderHome(focus = '') {
       <div id="subjectSections">${subjectSectionsHTML()}</div>
     </div>
     <div class="home-tab-panel" data-tab-panel="review" ${homeTab !== 'review' ? 'hidden' : ''}>
-      <div class="home-section-head"><span>复习与提分工具</span><small>小四门、错题复习、学情分析与打印找题</small></div>
+      <div class="home-section-head"><span>错题复习、打印与完整版说明</span><small>错题清零、本周战报、找题打印与 3 台云端同步</small></div>
       <div class="home-tools-grid">
-        ${x4mGroupHTML(queue, progress)}
         ${reviewHubHTML(progress)}
         ${weeklyCardHTML(progress)}
         ${unitCardHTML()}
@@ -2466,9 +2504,6 @@ function renderHome(focus = '') {
         ${state.stage === '7-up' || String(state.stage).startsWith('9-') ? '' : xscCardHTML()}
         ${analysisCardHTML()}
       </div>
-    </div>
-    <div class="home-tab-panel" data-tab-panel="mine" ${homeTab !== 'mine' ? 'hidden' : ''}>
-      <div class="home-section-head"><span>完整版权益与说明</span><small>一次买断用到中考 · 3 台设备共用 + 云端错题同步</small></div>
       ${freeWayHTML()}
       <div class="home-meta-grid">
         ${originCardHTML()}
@@ -2556,6 +2591,11 @@ function jumpToGoTarget() {
   }
   const go = new URLSearchParams(location.search).get('go');
   if (!go) return;
+  if (go === 'studio') {
+    state.earlybirdJumped = true;
+    location.replace('./lab-x4m.html?tab=studio');
+    return;
+  }
   if (go === 'lab-x4m') {
     state.earlybirdJumped = true;
     location.replace('./lab-x4m.html');

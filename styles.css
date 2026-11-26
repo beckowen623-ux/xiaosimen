@@ -849,3 +849,27 @@ body { font-variant-numeric: tabular-nums; }
 .prebuy-faq dl { margin: 10px 0 0; }
 .prebuy-faq dt { font-weight: 700; color: var(--ink); margin-top: 8px; }
 .prebuy-faq dd { margin: 3px 0 0; color: var(--muted); line-height: 1.6; }
+
+/* 首屏 C 位小四门王牌主线大卡（《考点演播室》＋故事试听＋57 关趣味闯关） */
+.x4m-mainline-card { border: 1.5px solid #d7b76c; background: linear-gradient(180deg, #fffdf6 0%, #f9f6ea 100%); box-shadow: 0 6px 20px rgba(22, 78, 63, .08); margin-bottom: 14px; }
+.x4m-ml-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+.x4m-ml-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; background: #164e3f; color: #ffe5aa; font-size: 12px; font-weight: 700; }
+.x4m-ml-more { font-size: 13px; font-weight: 700; color: #164e3f; text-decoration: none; }
+.x4m-mainline-card h2 { margin: 0 0 6px; font-size: clamp(18px, 4.4vw, 22px); line-height: 1.35; color: #14362c; }
+.x4m-ml-lead { margin: 0 0 12px; font-size: 13.8px; color: #3c4a44; line-height: 1.65; }
+.x4m-ml-audio-bar { padding: 10px 12px; border-radius: 12px; background: linear-gradient(135deg, #164e3f 0%, #0e352a 100%); color: #fff; display: grid; gap: 8px; margin-bottom: 12px; }
+.x4m-ml-audio-info b { display: block; font-size: 13.5px; color: #ffe5aa; }
+.x4m-ml-audio-info span { display: block; font-size: 12.5px; color: #dbece6; margin-top: 2px; }
+.x4m-ml-mini-audio { width: 100%; height: 36px; border-radius: 8px; }
+.x4m-ml-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; }
+.x4m-ml-tile { display: flex; flex-direction: column; gap: 2px; padding: 10px 10px; border-radius: 11px; border: 1px solid #dfd6c0; background: #fff; color: #1f2421; text-decoration: none; transition: transform .12s, border-color .15s; }
+.x4m-ml-tile:hover { border-color: #164e3f; transform: translateY(-1px); text-decoration: none; }
+.x4m-ml-tile b { font-size: 13.5px; color: #14362c; }
+.x4m-ml-tile small { font-size: 11.5px; color: #64706a; }
+.x4m-ml-tile.is-studio { background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-color: #d97706; }
+.x4m-ml-tile.is-studio b { color: #9a3412; }
+.x4m-ml-tile.is-audio { background: #eef7f4; border-color: #8bc0ae; }
+.x4m-ml-foot { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+@media (max-width: 560px) {
+  .x4m-ml-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

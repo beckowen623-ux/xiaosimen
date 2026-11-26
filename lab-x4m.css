@@ -144,3 +144,42 @@ a { color: var(--brand); text-decoration: none; }
   .lx-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); top: 82px; }
   .lx-topbar-inner { padding: 8px 12px; }
 }
+
+/* 6 格导航栏 + 《考点演播室》视频剧场样式 */
+.lx-tabs { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.lx-tab.is-studio { border-color: #d97706; background: linear-gradient(135deg, #fffaf0 0%, #fef3c7 100%); color: #78350f; }
+.lx-tab.is-studio.is-active { background: linear-gradient(135deg, #9a3412 0%, #7c2d12 100%); border-color: #9a3412; color: #fff; }
+.lx-tab.is-studio.is-active small { color: #fde68a; }
+
+.lx-studio-stage { background: linear-gradient(145deg, #102a22 0%, #0b1d18 100%); color: #fff; border-radius: 16px; padding: 16px; display: grid; gap: 12px; margin-bottom: 14px; }
+.lx-studio-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.lx-studio-pill { display: inline-block; padding: 3px 9px; border-radius: 999px; background: rgba(255, 229, 170, .18); color: #ffe5aa; font-size: 12px; font-weight: 700; }
+.lx-studio-stage h2 { margin: 0; font-size: 17.5px; line-height: 1.4; color: #fff; }
+.lx-studio-desc { margin: 0; font-size: 13.5px; color: #cde3db; line-height: 1.6; }
+.lx-video-wrap { position: relative; border-radius: 12px; overflow: hidden; background: #050d0a; border: 1px solid rgba(255, 255, 255, .14); }
+.lx-video-wrap video { width: 100%; max-height: 520px; display: block; background: #000; }
+.lx-video-lock-overlay { position: absolute; inset: 0; background: rgba(8, 22, 17, .9); backdrop-filter: blur(6px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 20px; text-align: center; }
+.lx-video-lock-overlay h3 { margin: 0; font-size: 17px; color: #ffe5aa; }
+.lx-video-lock-overlay p { margin: 0; font-size: 13.5px; color: #e2f3ee; max-width: 380px; }
+
+.lx-upcoming-stage { padding: 18px 14px; border-radius: 12px; background: radial-gradient(circle at top right, rgba(255, 229, 170, .14), rgba(255, 255, 255, .04)); border: 1px dashed rgba(255, 229, 170, .42); display: grid; gap: 10px; }
+.lx-hosts-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 13px; color: #ffe5aa; font-weight: 700; }
+.lx-banner-demo { padding: 9px 12px; border-radius: 10px; background: linear-gradient(90deg, #b45309 0%, #d97706 100%); color: #fff; font-size: 13.5px; font-weight: 700; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, .25); }
+.lx-banner-demo em { font-style: normal; padding: 2px 7px; border-radius: 6px; background: rgba(0, 0, 0, .25); font-size: 11.5px; white-space: nowrap; }
+
+.lx-hl-box { background: rgba(255, 255, 255, .07); border-radius: 12px; padding: 12px; display: grid; gap: 8px; }
+.lx-hl-head { font-size: 13px; font-weight: 700; color: #ffe5aa; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.lx-hl-list { display: grid; gap: 6px; }
+.lx-hl-item { display: flex; align-items: flex-start; gap: 8px; padding: 8px 10px; border-radius: 9px; border: 1px solid rgba(255, 255, 255, .14); background: rgba(255, 255, 255, .06); color: #eef7f4; font: inherit; font-size: 13px; text-align: left; cursor: pointer; transition: all .15s; }
+.lx-hl-item:hover { background: rgba(255, 229, 170, .14); border-color: rgba(255, 229, 170, .45); }
+.lx-hl-item.is-active { background: rgba(255, 229, 170, .22); border-color: #ffe5aa; color: #fff; }
+.lx-hl-time { flex: 0 0 auto; font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; padding: 2px 6px; border-radius: 5px; background: rgba(0, 0, 0, .35); color: #ffe5aa; }
+.lx-hl-badge { flex: 0 0 auto; font-size: 11px; padding: 2px 6px; border-radius: 5px; background: #d97706; color: #fff; font-weight: 700; }
+
+.lx-show-grid { display: grid; gap: 10px; }
+.lx-show-card { background: var(--paper); border: 1.5px solid var(--line); border-radius: 14px; padding: 14px; display: grid; gap: 8px; }
+.lx-show-card.is-cur { border-color: #b45309; box-shadow: 0 2px 12px rgba(180, 83, 9, .14); }
+
+@media (max-width: 640px) {
+  .lx-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
