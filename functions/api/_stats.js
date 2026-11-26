@@ -33,6 +33,9 @@ export const TRACK_EVENTS = new Set([
   "kp_rx_poster",
   "wrong_print",
   "recite_print",
+  "x4m_weekly_poster",
+  "x4m_sprint7_open",
+  "x4m_variant_check",
 ]);
 
 export function normalizeSource(value) {

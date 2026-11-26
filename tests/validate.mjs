@@ -120,7 +120,8 @@ else {
 
 // 考点速记的每册、每类和来源引用都要能在静态页面中加载。
 const pointIds = new Set();
-for (const subject of subjects) {
+const keyPointSubjects = ['yuwen', 'yingyu', ...subjects];
+for (const subject of keyPointSubjects) {
   const dataFile = `data/key-points-${subject}.js`;
   if (!fs.existsSync(path.join(root, dataFile))) { fail(`考点速记缺少 ${dataFile}`); continue; }
   const data = loadDataFile(dataFile).XIAOSIMEN_KEY_POINTS?.[subject];

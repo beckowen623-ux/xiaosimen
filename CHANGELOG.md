@@ -1,5 +1,15 @@
 # 技术变更记录
 
+## 2026-11-26 · Antigravity · Phase 8 全科考点速记与默写（新增语文 45 条＋英语 45 条，共 213 条）与全链路直达/埋点（main）
+- **新增语文 45 条与英语 45 条全科考点速记与默写 (`data/key-points-yuwen.js`, `data/key-points-yingyu.js`, `key-points.html`, `key-points.js`, `key-points.css`, `tests/validate.mjs`)**：
+  - 语文 45 条覆盖七上至九下必背古诗文理解性默写与易错字红线（观沧海、次北固山下、论语十二章、木兰诗、陋室铭、爱莲说、三峡、记承天寺夜游、黄鹤楼、使至塞上、钱塘湖春行、桃花源记、小石潭记、茅屋为秋风所破歌、卖炭翁、岳阳楼记、醉翁亭记、水调歌头、行路难、酬乐天扬州初逢席上见赠、鱼我所欲也、送东阳马生序、曹刿论战、出师表、破阵子、江城子、过零丁洋、山坡羊·潼关怀古等）、文言虚词（之/而/以/其/于）与实词、修辞/病句/成语/标点及阅读答题模板。
+  - 英语 45 条覆盖七上至九下高频固定搭配与易混词辨析（used to / be used to、remember/stop doing/to do、spend/cost/take/pay、borrow/lend/keep、say/speak/talk/tell、look for/find/find out、few/little、so/such...that、too...to/enough、neither/either/both、in front of、across/through/over、because/because of 等）、AAA/ABB/ABC 不规则动词分组、核心从句与书面表达模板。
+  - `key-points.html` 升级为「全科考点速记与默写（语英＋小四门共 213 条）」，桌面 6 列 / 手机 3×2 网格，同步更新打印提示文案与 `tests/validate.mjs` 全科校验；全部 213 条屏幕背诵遮罩与 A4 挖空默写纸实现 0% 漏遮、0 破损 HTML。
+- **直达链接 (`?go=...`) 与 Phase 7/8 埋点 (`functions/api/_stats.js`, `app.js`, `knowledge.js`, `index.html`)**：
+  - `TRACK_EVENTS` 新增 `x4m_weekly_poster`、`x4m_sprint7_open`、`x4m_variant_check`，分别接入 `openWeeklyPoster`、`openSprint7` 与 `startVariantCheck`。
+  - `jumpToGoTarget` 扩展支持 `?go=sprint7`、`?go=quick-diag`、`?go=weekly-poster`、`?go=yuwen`、`?go=yingyu`；顶栏入口升级为「速记默写」，递增静态资源版本并更新 `UPDATE_LOG`。
+- **验证**：213 条全量遮罩与零退款词校验、`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 PASS）与 `node tools/stage_pages_release.mjs` 全部通过。
+
 ## 2026-11-26 · Antigravity · Phase 7 三大高杠杆学习功能：错题变式验证、本周补缺战报长图与考前 7 天急救包（main）
 - **错题本「🔄 换一道同类变式题验证（防背答案）」(`app.js`, `knowledge.js`, `styles.css`)**：
   - 错题本、到期复习、曾错题、错题订正及知识点错题支持一键点击「🔄 换一道同类变式题验证」：数理化知识点题通过 `KnowledgeHub.findVariantQuestions` 自动抽取同知识点的另一道未练/非重复题；同步卷与小四门题自动抽取同章节/同科目的另一道不同题，进入 `防背答案变式验收` 单题专练；答对弹出正向反馈并可一键返回原错题队列。

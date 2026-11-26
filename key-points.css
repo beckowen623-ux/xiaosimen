@@ -5,8 +5,10 @@
 .points-hero .hero-art { width: 66%; object-position: right 51%; }
 .points-hero::after { background: linear-gradient(90deg, #10382f 22%, #10382fe8 44%, #10382f00 83%); }
 
+.tone-yuwen { --accent: #7a3e48; --wash: #f6eaec; }
+.tone-yingyu { --accent: #3d4f8a; --wash: #eaeef8; }
 .point-filters { margin-top: 16px; padding: 15px 18px; }
-.point-subjects { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+.point-subjects { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 7px; }
 .point-subject {
   display: inline-flex; justify-content: center; align-items: center; gap: 7px;
   min-height: 44px; padding: 8px; border: 1px solid var(--line); border-radius: 9px;
@@ -40,6 +42,7 @@
 .points-empty .btn { margin-top: 10px; }
 
 @media (max-width: 710px) {
+  .point-subjects { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .point-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 480px) {

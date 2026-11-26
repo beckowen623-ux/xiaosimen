@@ -1,6 +1,8 @@
 'use strict';
 
 const subjectInfo = {
+  yuwen: { name: '语文', icon: 'book-open' },
+  yingyu: { name: '英语', icon: 'notebook-pen' },
   daode: { name: '道法', icon: 'scale' },
   lishi: { name: '历史', icon: 'landmark' },
   dili: { name: '地理', icon: 'compass' },
@@ -17,7 +19,7 @@ const stages = {
 const types = { core: '应知应会', trap: '易错辨析' };
 const data = window.XIAOSIMEN_KEY_POINTS || {};
 const params = new URLSearchParams(location.search);
-let subject = Object.hasOwn(subjectInfo, params.get('subject')) ? params.get('subject') : 'daode';
+let subject = Object.hasOwn(subjectInfo, params.get('subject')) ? params.get('subject') : 'yuwen';
 const tabList = document.getElementById('pointSubjects');
 const filters = document.getElementById('pointFilters');
 const keyword = document.getElementById('pointSearch');
@@ -139,7 +141,7 @@ function openPointsPrint(matches, blankMode) {
       </div>
     </div>
     <div class="pt-pr-page">
-      ${!paidAccess && omitted > 0 ? `<div class="pt-pr-note">免费体验可打印每科前 5 条，完整版 ¥19.9 一次买断可无水印打印全部 123 条小四门考点速记与默写纸。</div>` : ''}
+      ${!paidAccess && omitted > 0 ? `<div class="pt-pr-note">免费体验可打印每科前 5 条，完整版 ¥19.9 一次买断可无水印打印全部 213 条全科（语英＋小四门）考点速记与默写纸。</div>` : ''}
       <header class="pt-pr-head">
         <h1>爱丽克丝中考题库 · ${escapeHTML(subjectInfo[subject].name)}${modeLabel}</h1>
         <p>人教版 · 姓名：__________　日期：__________　核对得分：______</p>
@@ -156,7 +158,7 @@ function openPointsPrint(matches, blankMode) {
 function updateURL() {
   if (!['http:', 'https:'].includes(location.protocol)) return;
   const query = new URLSearchParams();
-  if (subject !== 'daode') query.set('subject', subject);
+  if (subject !== 'yuwen') query.set('subject', subject);
   if (stageFilter.value) query.set('book', stageFilter.value);
   if (typeFilter.value) query.set('type', typeFilter.value);
   const suffix = query.size ? `?${query}` : '';

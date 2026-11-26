@@ -1160,6 +1160,7 @@
   async function openSprint7(stage) {
     const idx = await loadIndex().catch(() => null);
     if (!idx) { app.toast('知识点资料加载失败，请检查网络后重试。'); return; }
+    app.track?.('x4m_sprint7_open');
     const progress = app.progress();
     const marked = readMarked();
     const stageLabel = app.stageLabel?.() || '当前学期';

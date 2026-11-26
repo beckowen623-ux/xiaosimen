@@ -1310,6 +1310,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-26', '「全科考点速记与默写」重磅扩充至 213 条（新增语文 45 条＋英语 45 条）：语文覆盖七上至九下中考必背古诗文理解性默写与易错字红线、文言虚实词、修辞病句成语及阅读答题模板；英语覆盖高频固定搭配与易混词辨析、AAA/ABB/ABC 不规则动词分组、核心从句与写作句型，全部支持一键背诵遮罩与 A4 挖空默写纸打印。'],
   ['2026-11-26', '上线三大提分实用功能：① 错题本新增「🔄 换一道同类变式题验证（防背答案）」，自动从同知识点或同章节抽另一道变式题检验是否真正掌握；② 新增「📊 一键生成《本周孩子补缺战报》长图」，实时汇总答题数、正确率、连续打卡、知识点与错题本进度，方便存图打卡；③ 首页补缺主线新增「🔥 考前 7 天急救包」，按当前学期与薄弱点自动排好 Day 1–Day 7 每天 15 分钟冲刺清单并支持本地打卡记录。'],
   ['2026-11-26', '背诵遮罩引擎全面升级：彻底修复数理化微课与小四门考点速记部分条目漏遮问题（覆盖率提升至 100%，A4 挖空默写纸同步受益），采用双层物理隐身遮罩杜绝透字，并新增「全部揭晓 / 全部重遮」快捷开关；优化首页吸顶毛玻璃导航与手机端阅读质感。'],
   ['2026-11-26', '数理化细粒度盲区再补 15 个高频考点、15 道规范解答大题、15 套名师详讲与 6 张教学矢量图：数学补齐降幂/升幂与不含某项求值、坐标系动点规律、三角形角平分线三大夹角与飞镖/8字模型、一次函数动点分段面积、二次函数交点式与对称性巧算、黄金分割与位似中心坐标变换；物理补齐斜面测平均速度实验、晶体熔化与水沸腾图像对比、固体切割叠放、病房呼叫/声光控电路设计与互画、焦耳定律 U 形管实验探究；化学补齐一氧化碳还原金属氧化物实验、溶液配制与误差速判、常见物质俗名颜色沉淀速查、粗盐提纯与铵态氮肥检验。全初中升级至 385 个知识点（数学 233 / 物理 97 / 化学 55）、115 道规范解答大题、119 套名师详讲档案。'],
@@ -2528,7 +2529,7 @@ function wireTopCards() {
   view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void earlybirdAction(b.dataset.earlybird, b.closest('#xsc') ? 'xscMark' : 'ebMark'); }));
   view.querySelectorAll('[data-eb-mode]').forEach(b => b.addEventListener('click', () => setEbMode(b.dataset.ebMode)));
 }
-// 主页、视频里的直达链接：x4m.cc.cd/?go=earlybird / xsc / sync，只跳一次
+// 主页、视频里的直达链接：x4m.cc.cd/?go=earlybird / xsc / sync / sprint7 / quick-diag / weekly-poster / yuwen / yingyu，只跳一次
 function jumpToGoTarget() {
   if (!state.printJumped && nationalCatalog) {
     // ?print=卷子 id：从微信复制到浏览器的打印链接，打开直接是这套卷的打印版（只限早鸟卷、小升初卷）
@@ -2541,8 +2542,30 @@ function jumpToGoTarget() {
       return;
     }
   }
-  if (state.earlybirdJumped || !nationalCatalog) return;
+  if (state.earlybirdJumped) return;
   const go = new URLSearchParams(location.search).get('go');
+  if (!go) return;
+  if (go === 'yuwen' || go === 'yingyu') {
+    state.earlybirdJumped = true;
+    location.replace(`./key-points.html?subject=${go}`);
+    return;
+  }
+  if (!nationalCatalog) return;
+  if (go === 'sprint7') {
+    state.earlybirdJumped = true;
+    void window.KnowledgeHub?.openSprint7?.(state.stage);
+    return;
+  }
+  if (go === 'quick-diag') {
+    state.earlybirdJumped = true;
+    void window.KnowledgeHub?.open?.({ stage: state.stage, action: 'quick' });
+    return;
+  }
+  if (go === 'weekly-poster') {
+    state.earlybirdJumped = true;
+    void openWeeklyPoster();
+    return;
+  }
   if (!['earlybird', 'xsc', 'sync'].includes(go)) return;
   state.earlybirdJumped = true;
   state.homeTab = 'papers';
@@ -2958,6 +2981,7 @@ function canShowVariantBtn(q, progress = loadProgress()) {
 }
 async function startVariantCheck(q) {
   if (!q) return;
+  trackVisit('x4m_variant_check');
   const progress = loadProgress();
   const paid = hasFullAccess();
   let candidates = [];
@@ -3602,6 +3626,7 @@ async function openScorePoster({ title, metric, metricSub, verdict, focusLine })
 // ---- 一键生成《本周孩子补缺战报》720×980 Canvas 长图 ----
 async function openWeeklyPoster() {
   try {
+    trackVisit('x4m_weekly_poster');
     const qrFactory = await loadQrLib().catch(() => null);
     const progress = loadProgress();
     const entries = Object.entries(progress.banks || {});
