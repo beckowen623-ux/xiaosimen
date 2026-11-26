@@ -84,6 +84,11 @@ function extractSearchKw(p, deepGuide) {
 }
 
 const index = { updated: new Date().toISOString().slice(0, 10), subjects: [] };
+const spModels = [];
+const FREE_PRINT_MODELS = new Set([
+  "math-sp-p25", "math-sp-p26", "math-sp-p27", "math-sp-p16", "math-sp-p13",
+  "math-sp-p07", "math-sp-p08", "physics-sp-p13", "physics-sp-p11", "chemistry-sp-p14",
+]);
 const oldQs = loadOldQuestions();
 const capstonePath = join(root, "knowledge-src", "capstone-essays.json");
 const capstoneEssays = existsSync(capstonePath) ? JSON.parse(readFileSync(capstonePath, "utf8")) : {};
@@ -173,6 +178,24 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
         const deepGuide = deepGuides[pointId];
         const kw = extractSearchKw(p, deepGuide);
         chapter.points.push({ id: pointId, name: p.name, tag: p.tag || "", kw, ...(extraEssay ? { hasEssay: true } : {}), ...(deepGuide ? { hasDeep: true, deep: deepGuide } : {}), card: p.card, qids, refs: refs.map(q => q.id) });
+        if (sem.key === "sp") {
+          const toLine = (v, max = 2) => Array.isArray(v) ? v.slice(0, max).join("；") : String(v || "");
+          spModels.push({
+            id: pointId,
+            subject,
+            subjectLabel,
+            chapter: chapter.name,
+            name: p.name,
+            formula: toLine(p.card.formula, 2),
+            concept: toLine(p.card.concept, 1),
+            img: p.card.example?.img || "",
+            kw,
+            qCount: qids.length + refs.length,
+            hasEssay: !!extraEssay,
+            hasDeep: !!deepGuide,
+            freePrint: FREE_PRINT_MODELS.has(pointId),
+          });
+        }
         for (const q of refs) if (!questions.some(x => x.id === q.id)) questions.push({ ...q, kpId: pointId, kpRef: true });
       }
     }
@@ -196,3 +219,127 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
 }
 writeFileSync(join(root, "data", "knowledge-index.js"),
   `// 由 tools/build_knowledge.mjs 生成，请勿手改。\nwindow.KNOWLEDGE_INDEX = ${JSON.stringify(index)};\n`);
+
+// 自动生成静态 SEO 友好《初中数理化压轴模型速查图鉴》(models.html)
+const escHtml = s => String(s ?? "").replace(/[&<>"']/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+const mathCnt = spModels.filter(m => m.subject === "math").length;
+const physCnt = spModels.filter(m => m.subject === "physics").length;
+const chemCnt = spModels.filter(m => m.subject === "chemistry").length;
+const freeCnt = spModels.filter(m => m.freePrint).length;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `初中数理化 ${spModels.length} 大名师压轴模型速查图鉴`,
+  description: "涵盖婆罗摩笈多、阿氏圆、费马点、胡不归、瓜豆、手拉手、一线三等角、十字架、赵爽弦图、鸡爪、12345、逆等线、安阻法、伏阻法、杠杆最小力、万能瓶、滤液滤渣等全国中考高频压轴模型。",
+  url: "https://x4m.cc.cd/models.html",
+  numberOfItems: spModels.length,
+  itemListElement: spModels.map((m, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: m.name,
+    url: `https://x4m.cc.cd/?pt=${encodeURIComponent(m.id)}&from=models`,
+  })),
+};
+const cardsHtml = spModels.map(m => {
+  const hay = `${m.subjectLabel} ${m.chapter} ${m.name} ${m.kw} ${m.formula}`.replace(/"/g, "");
+  const imgHtml = m.img ? `<div class="m-thumb"><img src="./${escHtml(m.img)}" alt="${escHtml(m.name)}教学示意图" loading="lazy"></div>` : "";
+  return `<article class="m-card" data-subj="${escHtml(m.subject)}" data-id="${escHtml(m.id)}" data-free-print="${m.freePrint ? "1" : "0"}" data-hay="${escHtml(hay)}">
+    <div class="m-card-head">
+      <span class="m-subj ${escHtml(m.subject)}">${escHtml(m.subjectLabel)}</span>
+      <div class="m-tags">
+        ${m.freePrint ? '<span class="m-tag is-free">免费 A4 预览</span>' : ""}
+        ${m.hasDeep ? '<span class="m-tag">名师详讲</span>' : ""}
+        ${m.hasEssay ? '<span class="m-tag">含解答大题</span>' : ""}
+      </div>
+    </div>
+    <h2>${escHtml(m.name)}</h2>
+    <p class="m-chapter">${escHtml(m.chapter)}</p>
+    ${imgHtml}
+    <p class="m-formula"><b>核心通法/口诀：</b><span class="m-formula-text">${escHtml(m.formula)}</span></p>
+    <p class="m-concept">${escHtml(m.concept)}</p>
+    <div class="m-card-foot">
+      <span class="m-qcount">${m.qCount} 道配套分层题与大题</span>
+      <a class="m-btn primary" href="./?pt=${encodeURIComponent(m.id)}&amp;from=models">直达 4 步微课 →</a>
+    </div>
+  </article>`;
+}).join("\n");
+
+const modelsHtml = `<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f2e8">
+  <title>初中数理化 ${spModels.length} 大名师压轴模型速查图鉴 · 爱丽克丝中考题库</title>
+  <meta name="description" content="初中数理化 ${spModels.length} 大名师压轴模型免费在线速查图鉴（数学 ${mathCnt} / 物理 ${physCnt} / 化学 ${chemCnt}）：婆罗摩笈多、阿氏圆、费马点、胡不归、瓜豆、手拉手、一线三等角、十字架、鸡爪、12345、逆等线、安阻法、杠杆最小力、万能瓶、滤液滤渣，点开直达 4 步微课与变式题，支持一键打印 A4 压轴口诀速查手册。">
+  <link rel="canonical" href="https://x4m.cc.cd/models.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="初中数理化 ${spModels.length} 大名师压轴模型速查图鉴">
+  <meta property="og:description" content="婆罗摩笈多、阿氏圆、费马点、胡不归、安阻法、万能瓶等 ${spModels.length} 个中考压轴模型一页速查，带图带口诀，点开直达 4 步微课，支持 A4 打印。">
+  <meta property="og:image" content="https://x4m.cc.cd/assets/video/zhongkao-demo-poster.jpg">
+  <meta property="og:url" content="https://x4m.cc.cd/models.html">
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/elx-badge.svg">
+  <link rel="stylesheet" href="./models.css?v=1">
+  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+</head>
+<body>
+  <header class="m-topbar">
+    <div class="m-topbar-inner">
+      <a class="m-back" href="./">← 返回爱丽克丝中考题库</a>
+      <div class="m-top-actions">
+        <a class="m-btn" href="./key-points.html">语英+小四门默写纸</a>
+        <a class="m-btn primary" href="./?go=quick-diag&amp;from=models">3 分钟免费测弱项</a>
+      </div>
+    </div>
+  </header>
+  <main class="m-wrap">
+    <div class="m-print-banner">
+      <h1>初中数理化 ${spModels.length} 大名师压轴模型口诀速查手册</h1>
+      <p id="mPrintMeta">爱丽克丝中考题库（x4m.cc.cd）</p>
+    </div>
+    <section class="m-hero">
+      <span class="m-badge">🏆 全国通用 · 全量免费在线速查</span>
+      <h1>初中数理化 ${spModels.length} 大名师压轴模型速查图鉴</h1>
+      <p>数学几何/函数压轴 ${mathCnt} 个 ＋ 物理实验/力电综合 ${physCnt} 个 ＋ 化学工艺/探究 ${chemCnt} 个。每个模型均可 1 秒直达「名师 4 步通关微课＋分层变式＋规范解答大题」，支持开启零透字背诵遮罩与一键打印 A4 贴桌速查手册。</p>
+      <div class="m-hero-btns">
+        <button type="button" class="m-btn gold" id="mPrintBtn">🖨️ 一键打印 A4 压轴口诀手册（前 ${freeCnt} 个免费预览）</button>
+        <a class="m-btn ghost" href="./#knowledge">去搜全部 395 个知识点 →</a>
+      </div>
+    </section>
+    <section class="m-controls" aria-label="筛选压轴模型">
+      <div class="m-tabs" role="tablist">
+        <button type="button" class="m-tab is-active" role="tab" aria-selected="true" data-m-subj="all">全部模型（${spModels.length}）</button>
+        <button type="button" class="m-tab" role="tab" aria-selected="false" data-m-subj="math">数学压轴（${mathCnt}）</button>
+        <button type="button" class="m-tab" role="tab" aria-selected="false" data-m-subj="physics">物理压轴（${physCnt}）</button>
+        <button type="button" class="m-tab" role="tab" aria-selected="false" data-m-subj="chemistry">化学压轴（${chemCnt}）</button>
+      </div>
+      <div class="m-search-row">
+        <input type="search" id="mSearch" class="m-search" placeholder="🔍 筛选模型名或别名：如 婆罗摩笈多、阿氏圆、费马点、安阻法、万能瓶…" autocomplete="off" aria-label="筛选压轴模型">
+        <div class="m-mask-tools">
+          <button type="button" class="m-btn" id="mMaskToggle">🙈 开启背诵遮罩</button>
+          <button type="button" class="m-btn" id="mRevealAll" hidden>全部揭晓</button>
+          <button type="button" class="m-btn" id="mHideAll" hidden>全部重遮</button>
+        </div>
+      </div>
+      <p class="m-status" id="mStatus">当前展示 ${spModels.length} / ${spModels.length} 个初中数理化名师压轴模型 · 全量免费在线速查</p>
+    </section>
+    <section class="m-grid" aria-label="压轴模型列表">
+      ${cardsHtml}
+    </section>
+    <div class="m-print-lock-note" id="mPrintLockNote">
+      以上为免费预览精选的 ${freeCnt} 大镇站模型（婆罗摩笈多、阿氏圆、费马点、胡不归、瓜豆、手拉手、一线三等角、杠杆最小力、安阻法、万能瓶）。访问 <b>x4m.cc.cd</b> 解锁完整版（¥19.9 一次买断），即可无水印无限打印全套 ${spModels.length} 大压轴模型手册 ＋ 395 个知识点 A4 补缺卷与语英小四门 213 条默写纸。
+    </div>
+    <section class="m-foot-cta">
+      <div>
+        <b>自家孩子也在用的中考提分工具 · 这次期中考从年级中上游冲进名列前茅</b>
+        <p>不只是看模型结论：点开任意模型即可刷分层题、做规范解答大题、错题换一道变式题防背答案，还能一键印出专属 A4 补缺卷。</p>
+      </div>
+      <a class="m-btn primary" href="./?go=quick-diag&amp;from=models">立即 3 分钟免费测弱项 →</a>
+    </section>
+  </main>
+  <script src="./models.js?v=1" defer></script>
+</body>
+</html>
+`;
+writeFileSync(join(root, "models.html"), modelsHtml);
+console.log(`models.html: 已生成 ${spModels.length} 个名师压轴模型（数学 ${mathCnt} / 物理 ${physCnt} / 化学 ${chemCnt}，免费 A4 预览 ${freeCnt} 个）`);

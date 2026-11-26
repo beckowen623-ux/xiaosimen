@@ -37,6 +37,8 @@ export const TRACK_EVENTS = new Set([
   "x4m_sprint7_open",
   "x4m_variant_check",
   "kp_search_miss",
+  "x4m_models_wall",
+  "x4m_models_print",
 ]);
 
 export function normalizeSource(value) {

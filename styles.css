@@ -841,3 +841,11 @@ body { font-variant-numeric: tabular-nums; }
 .variant-check-btn { border-color: var(--green); background: #fff; color: var(--green-dark); font-weight: 700; }
 .variant-check-btn:hover { background: var(--green-soft); }
 .variant-tool-btn { color: var(--green-dark); font-weight: 700; }
+
+/* 买前 3 问折叠答疑 */
+.prebuy-faq { margin: 10px 0 6px; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: #f8f6ee; font-size: 13.5px; }
+.prebuy-faq summary { cursor: pointer; font-weight: 700; color: var(--brand); list-style: none; }
+.prebuy-faq summary::-webkit-details-marker { display: none; }
+.prebuy-faq dl { margin: 10px 0 0; }
+.prebuy-faq dt { font-weight: 700; color: var(--ink); margin-top: 8px; }
+.prebuy-faq dd { margin: 3px 0 0; color: var(--muted); line-height: 1.6; }

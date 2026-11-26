@@ -1,5 +1,15 @@
 # 技术变更记录
 
+## 2026-11-26 · Antigravity · 上线《初中数理化 59 大名师压轴模型速查图鉴》(models.html) ＋ ?pt= 单点直达 ＋ 买前 3 问与 SEO 补齐（main）
+- **59 大压轴模型公开图鉴与 A4 手册 (`tools/build_knowledge.mjs`, `models.html`, `models.css`, `models.js`)**：
+  - 构建期自动读取 `math/physics/chemistry` 全部 59 个 `sp` 压轴模型生成静态语义化 HTML `models.html`（含 SVG 配图缩略、核心通法口诀、学科筛选、关键词过滤、零透字背诵遮罩、`ItemList` JSON-LD）；支持一键打印《A4 压轴口诀速查手册》（前 10 大镇站模型免费预览，全套 59 个归入 ¥19.9 完整版）。
+- **任意知识点单点直达与转化精修 (`app.js`, `knowledge.js`, `index.html`, `styles.css`, `knowledge.css`)**：
+  - 支持 `?pt=<pointId>` 1 秒直达对应知识点的 4 步微课；搜索热搜栏新增「🏆 59 大压轴模型图鉴 & A4 手册 →」入口；
+  - 解锁弹窗新增折叠式「买前最常问的 3 个问题」（跨版本通用/3 台云端同步/闲鱼发货激活，零退款词），同步更新分享海报文案至 395 点 / 59 大压轴模型 / 213 条默写纸。
+- **SEO 与发布配置 (`robots.txt`, `sitemap.xml`, `tools/stage_pages_release.mjs`, `functions/api/_stats.js`)**：
+  - 补齐 `robots.txt`、`sitemap.xml`、`canonical` 与 `WebSite` JSON-LD，新增 `x4m_models_wall` / `x4m_models_print` 埋点并同步注册发布白名单。
+- **验证**：`build_knowledge.mjs`、`validate.mjs`、`smoke.mjs`（40/40）、`stage_pages_release.mjs` 与线上 390×844 移动端实测通过。
+
 ## 2026-11-26 · Antigravity · 补齐 10 大全国中考名师压轴模型（395 点 / 125 大题 / 129 详讲 / +8 SVG）与搜索引擎全文关键词升级（main）
 - **新增 10 大名师高频压轴模型 (`knowledge-src/*/sp-*.json`, `capstone-essays.json`, `deep-guides.json`, `assets/knowledge/*/sp/*.svg`)**：
   - 数学 +8 点（`math-sp-p25`..`p32`）：婆罗摩笈多模型、阿氏圆、费马点、十字架＋赵爽弦图、鸡爪与对角互补、12345 模型、逆等线模型、平行线猪蹄/铅笔/锯齿拐点＋建系与斜化直通法（配 6 张几何 SVG）；

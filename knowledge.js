@@ -291,7 +291,7 @@
       <div class="kp-search-row">
         <input type="search" class="kp-search-input" id="${idPrefix}KpSearch" placeholder="🔍 搜课本考点或名师模型：如 婆罗摩笈多、阿氏圆、安阻法、万能瓶、滤液滤渣…" autocomplete="off" aria-label="搜索数理化知识点或压轴模型">
       </div>
-      <div class="kp-search-hots"><span>热搜模型：</span>${hots.map(h => `<button type="button" class="kp-hot-chip" data-kp-hot="${h}">${h}</button>`).join('')}</div>
+      <div class="kp-search-hots"><span>热搜模型：</span>${hots.map(h => `<button type="button" class="kp-hot-chip" data-kp-hot="${h}">${h}</button>`).join('')}<a class="kp-models-link" href="./models.html">🏆 59 大压轴模型图鉴 &amp; A4 手册 →</a></div>
       <div class="kp-search-results" data-kp-search-results hidden></div>
     </div>`;
   }
@@ -930,6 +930,18 @@
   async function open(opts = {}) {
     const idx = await loadIndex().catch(() => null);
     if (!idx) { app.toast('知识点资料加载失败，请检查网络后重试。'); return; }
+    if (opts.point && (!opts.subject || !opts.semester)) {
+      outer: for (const s of idx.subjects || []) {
+        for (const sem of s.semesters || []) {
+          for (const ch of sem.chapters || []) {
+            if ((ch.points || []).some(p => p.id === opts.point)) {
+              opts = { ...opts, subject: s.key, semester: sem.key };
+              break outer;
+            }
+          }
+        }
+      }
+    }
     if (opts.subject) state.subject = opts.subject;
     if (opts.semester) state.semester = opts.semester;
     else if (opts.stage) state.semester = semesterForStage(idx, opts.stage);
@@ -1002,7 +1014,7 @@
       : `本次检测的 <b>${tested.length}</b> 个知识点全部过关（掌握率 100%）！建议直接挑战“专题与压轴”里的中考解答大题。`;
     const totals = totalSummaryCounts();
     const upsell = !app.hasAccess()
-      ? `<div class="kp-rx-upsell"><span>完整版 <b>¥19.9 一次买断</b>：解锁${esc(totals.subjects)}全部 ${totals.pts} 个知识点、${totals.essays} 道中考压轴解答大题＋无水印 A4 专属补缺卷无限打印（3 台设备共用）。</span><button class="btn primary" type="button" id="kpRxUnlock">开通完整版 ¥19.9</button></div>`
+      ? `<div class="kp-rx-upsell"><span>已锁定薄弱点！完整版 <b>¥19.9 一次买断</b>（分享家长群可享 ¥14.9）：解锁${esc(totals.subjects)}全部 ${totals.pts} 个知识点与 59 大压轴模型、${totals.essays} 道解答大题＋无水印 A4 专属补缺卷无限打印（3 台设备共用）。</span><button class="btn primary" type="button" id="kpRxUnlock">开通完整版 ¥19.9</button></div>`
       : '';
     return `<div class="kp-rx">
       <div class="kp-rx-head"><span class="kp-badge">${isQuick ? '3 分钟快测报告' : '学情体检单'}</span><h3>孩子本次学情体检单</h3></div>
