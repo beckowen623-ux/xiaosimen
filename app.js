@@ -2447,10 +2447,10 @@ function renderHome(focus = '') {
   const accessNotice = accessNoticeHTML(trialDays);
   refreshStreak(progress);
   byId('headerSearch').hidden = false;
-  const homeTab = ['kp', 'x4m', 'papers', 'review'].includes(state.homeTab) ? state.homeTab : 'kp';
+  const homeTab = ['x4m', 'kp', 'papers', 'review'].includes(state.homeTab) ? state.homeTab : 'x4m';
   const homeTabs = [
-    ['kp', '🎯 提分双主线'],
     ['x4m', '🎬 小四门主线'],
+    ['kp', '🎯 数理化主线'],
     ['papers', '📝 同步与真题'],
     ['review', '📕 错题与更多'],
   ];
@@ -2459,19 +2459,22 @@ function renderHome(focus = '') {
     <nav class="home-tabs" role="tablist" aria-label="首页功能导航">
       ${homeTabs.map(([k, label]) => `<button type="button" class="home-tab-btn" role="tab" data-home-tab="${k}" aria-selected="${homeTab === k}">${label}</button>`).join('')}
     </nav>
-    <div class="home-tab-panel" data-tab-panel="kp" ${homeTab !== 'kp' ? 'hidden' : ''}>
-      ${x4mShowcaseCardHTML(true)}
-      ${window.KnowledgeHub?.homeCardHTML(state.stage) || ''}
-      <section class="card home-tab-hint">
-        <div><b>还需要刷整套同步章节卷、早鸟卷或全国各地真题？</b><span class="muted">点上方「📝 同步与真题」即可按学期刷卷或整卷打印；小四门刷题在「🎬 小四门主线」，错题本与更多说明在「📕 错题与更多」。</span></div>
-        <button type="button" class="btn" data-home-tab="papers">去看同步与真题 ›</button>
-      </section>
-    </div>
     <div class="home-tab-panel" data-tab-panel="x4m" ${homeTab !== 'x4m' ? 'hidden' : ''}>
       ${x4mShowcaseCardHTML(false)}
       <div class="home-tools-grid">
         ${x4mGroupHTML(queue, progress, true)}
       </div>
+      <section class="card home-tab-hint">
+        <div><b>还需要补数理化知识点（395 点与 59 大压轴模型）？</b><span class="muted">点上方「🎯 数理化主线」即可秒搜考点、3 分钟测弱项并印 A4 补缺卷。</span></div>
+        <button type="button" class="btn" data-home-tab="kp">去看数理化主线 ›</button>
+      </section>
+    </div>
+    <div class="home-tab-panel" data-tab-panel="kp" ${homeTab !== 'kp' ? 'hidden' : ''}>
+      ${window.KnowledgeHub?.homeCardHTML(state.stage) || ''}
+      <section class="card home-tab-hint">
+        <div><b>还需要刷整套同步章节卷、早鸟卷或全国各地真题？</b><span class="muted">点上方「📝 同步与真题」即可按学期刷卷或整卷打印；错题本与更多说明在「📕 错题与更多」。</span></div>
+        <button type="button" class="btn" data-home-tab="papers">去看同步与真题 ›</button>
+      </section>
     </div>
     <div class="home-tab-panel" data-tab-panel="papers" ${homeTab !== 'papers' ? 'hidden' : ''}>
       ${stageBarHTML()}
