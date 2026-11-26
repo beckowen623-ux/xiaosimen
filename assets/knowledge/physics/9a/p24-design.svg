@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="sans-serif">
+  <rect width="320" height="210" fill="#ffffff"/>
+  <text x="160" y="17" font-size="12" font-weight="bold" fill="#1e3a8a" text-anchor="middle">两大高频电路设计模型（并联互不影响 vs 串联同时满足）</text>
+  <!-- 左图：病房呼叫电路（并联+干路电铃） -->
+  <g transform="translate(10,28)">
+    <rect x="0" y="0" width="146" height="144" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="73" y="16" font-size="10.5" font-weight="bold" fill="#2563eb" text-anchor="middle">① 病房呼叫（并联）</text>
+    <!-- 干路左侧电源 -->
+    <line x1="20" y1="42" x2="20" y2="112" stroke="#111" stroke-width="1.6"/>
+    <line x1="12" y1="73" x2="28" y2="73" stroke="#111" stroke-width="2.2"/>
+    <line x1="16" y1="81" x2="24" y2="81" stroke="#111" stroke-width="1.4"/>
+    <text x="10" y="68" font-size="9" fill="#dc2626">＋</text>
+    <!-- 干路顶部电铃 -->
+    <line x1="20" y1="42" x2="46" y2="42" stroke="#111" stroke-width="1.6"/>
+    <rect x="46" y="34" width="24" height="16" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="1.4"/>
+    <text x="58" y="45" font-size="9" fill="#92400e" text-anchor="middle">电铃</text>
+    <line x1="70" y1="42" x2="82" y2="42" stroke="#111" stroke-width="1.6"/>
+    <!-- 支路1 -->
+    <line x1="82" y1="42" x2="82" y2="96" stroke="#111" stroke-width="1.6"/>
+    <line x1="82" y1="54" x2="94" y2="54" stroke="#111" stroke-width="1.6"/>
+    <line x1="94" y1="54" x2="104" y2="47" stroke="#2563eb" stroke-width="1.6"/>
+    <line x1="106" y1="54" x2="112" y2="54" stroke="#111" stroke-width="1.6"/>
+    <circle cx="120" cy="54" r="7" fill="#fff" stroke="#111" stroke-width="1.4"/>
+    <line x1="115" y1="49" x2="125" y2="59" stroke="#111" stroke-width="1.2"/>
+    <line x1="125" y1="49" x2="115" y2="59" stroke="#111" stroke-width="1.2"/>
+    <line x1="127" y1="54" x2="136" y2="54" stroke="#111" stroke-width="1.6"/>
+    <text x="100" y="44" font-size="8.5" fill="#2563eb" text-anchor="middle">S₁</text>
+    <text x="120" y="44" font-size="8.5" fill="#111" text-anchor="middle">L₁</text>
+    <!-- 支路2 -->
+    <line x1="82" y1="96" x2="94" y2="96" stroke="#111" stroke-width="1.6"/>
+    <line x1="94" y1="96" x2="104" y2="89" stroke="#2563eb" stroke-width="1.6"/>
+    <line x1="106" y1="96" x2="112" y2="96" stroke="#111" stroke-width="1.6"/>
+    <circle cx="120" cy="96" r="7" fill="#fff" stroke="#111" stroke-width="1.4"/>
+    <line x1="115" y1="91" x2="125" y2="101" stroke="#111" stroke-width="1.2"/>
+    <line x1="125" y1="91" x2="115" y2="101" stroke="#111" stroke-width="1.2"/>
+    <line x1="127" y1="96" x2="136" y2="96" stroke="#111" stroke-width="1.6"/>
+    <text x="100" y="86" font-size="8.5" fill="#2563eb" text-anchor="middle">S₂</text>
+    <text x="120" y="86" font-size="8.5" fill="#111" text-anchor="middle">L₂</text>
+    <!-- 汇合回负极 -->
+    <line x1="136" y1="54" x2="136" y2="112" stroke="#111" stroke-width="1.6"/>
+    <line x1="20" y1="112" x2="136" y2="112" stroke="#111" stroke-width="1.6"/>
+    <text x="73" y="132" font-size="9.5" fill="#334155" text-anchor="middle">各床灯并联，电铃在干路</text>
+  </g>
+  <!-- 右图：声光控楼道灯（双开关串联） -->
+  <g transform="translate(164,28)">
+    <rect x="0" y="0" width="146" height="144" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="73" y="16" font-size="10.5" font-weight="bold" fill="#059669" text-anchor="middle">② 声光控开关（串联）</text>
+    <!-- 闭合回路 -->
+    <line x1="20" y1="46" x2="20" y2="112" stroke="#111" stroke-width="1.6"/>
+    <line x1="12" y1="75" x2="28" y2="75" stroke="#111" stroke-width="2.2"/>
+    <line x1="16" y1="83" x2="24" y2="83" stroke="#111" stroke-width="1.4"/>
+    <line x1="20" y1="46" x2="40" y2="46" stroke="#111" stroke-width="1.6"/>
+    <!-- 光控开关 -->
+    <line x1="40" y1="46" x2="54" y2="38" stroke="#059669" stroke-width="1.8"/>
+    <text x="48" y="34" font-size="8.5" fill="#059669" text-anchor="middle">光控S₁</text>
+    <line x1="56" y1="46" x2="78" y2="46" stroke="#111" stroke-width="1.6"/>
+    <!-- 声控开关 -->
+    <line x1="78" y1="46" x2="92" y2="38" stroke="#059669" stroke-width="1.8"/>
+    <text x="86" y="34" font-size="8.5" fill="#059669" text-anchor="middle">声控S₂</text>
+    <line x1="94" y1="46" x2="128" y2="46" stroke="#111" stroke-width="1.6"/>
+    <line x1="128" y1="46" x2="128" y2="112" stroke="#111" stroke-width="1.6"/>
+    <!-- 底部灯泡 -->
+    <line x1="20" y1="112" x2="66" y2="112" stroke="#111" stroke-width="1.6"/>
+    <circle cx="74" cy="112" r="8" fill="#fff" stroke="#111" stroke-width="1.5"/>
+    <line x1="69" y1="107" x2="79" y2="117" stroke="#111" stroke-width="1.2"/>
+    <line x1="79" y1="107" x2="69" y2="117" stroke="#111" stroke-width="1.2"/>
+    <line x1="82" y1="112" x2="128" y2="112" stroke="#111" stroke-width="1.6"/>
+    <text x="74" y="99" font-size="9" fill="#111" text-anchor="middle">L</text>
+    <text x="73" y="132" font-size="9.5" fill="#334155" text-anchor="middle">“天黑且有声”双开关闭合</text>
+  </g>
+  <text x="160" y="192" font-size="10" fill="#1e293b" text-anchor="middle">画图铁律：横平竖直、元件不放拐角、导线不交叉、节点打实心黑点</text>
+</svg>

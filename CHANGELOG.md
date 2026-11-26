@@ -1,5 +1,14 @@
 # 技术变更记录
 
+## 2026-11-26 · Antigravity · 模块 4：再补 15 个数理化细粒度高频考点（385 点 / 115 大题 / 119 详讲 / +6 SVG）（main）
+- **新增 15 个高频细粒度知识点 + 120 道分层题 + 15 道解答大题 + 15 套名师详讲 + 6 张教学 SVG (`knowledge-src/*/*.json`, `capstone-essays.json`, `deep-guides.json`, `assets/knowledge/*/*/*.svg`, `data/knowledge-*.js`)**：
+  - 数学 +6 点（227→233）：`math-7a-p42` 降幂/升幂与不含某项求值、`math-7b-p39` 坐标系图形规律与动点坐标、`math-8a-p37` 三角形角平分线三大夹角模型与飞镖/8字模型（配 `p37-angmodel.svg`）、`math-8b-p33` 一次函数动点几何面积与分段函数、`math-9a-p37` 二次函数交点式与对称性巧算、`math-9b-p21` 黄金分割与位似中心坐标变换；
+  - 物理 +5 点（92→97）：`physics-8a-p24` 斜面测平均速度实验（配 `p24-slope.svg`）、`physics-8a-p25` 晶体熔化与水沸腾实验对比（配 `p25-melt.svg`）、`physics-8b-p22` 固体切割叠放与 `p=ρgh`、`physics-9a-p24` 串并联电路设计与互画（配 `p24-design.svg`）、`physics-9a-p25` 焦耳定律 U 形管实验探究（配 `p25-joule-exp.svg`）；
+  - 化学 +4 点（51→55）：`chemistry-9a-p22` 一氧化碳还原氧化铜/氧化铁实验（配 `p22-co.svg`）、`chemistry-9b-p18` 配制一定溶质质量分数溶液与误差分析、`chemistry-9b-p19` 常见物质俗名颜色与特征沉淀速查专练、`chemistry-9b-p20` 粗盐提纯与铵态氮肥检验；
+  - 全部采用尾部顺延 `pNN` 追加，既有 370 点与旧题 ID 零变动。
+- **同步体量文案与更新日志 (`index.html`, `app.js`)**：刷新购买弹窗与分享海报文案为 `385 个知识点 / 115 道解答大题 / 119 套名师详讲`，新增用户可见 `UPDATE_LOG`。
+- **验证**：`node tools/build_knowledge.mjs`、`node tests/validate.mjs`、`node tests/smoke.mjs` 与 `node tools/stage_pages_release.mjs` 全部通过，6 张新 SVG 已核验写入 `.deploy-pages`。
+
 ## 2026-11-26 · Antigravity · 全初中知识点秒搜直达、补齐 12 个数理化高频盲区点（370 点 / 100 大题 / 104 详讲）与同步更新日志（main）
 - **全初中知识点秒搜直达 (`knowledge.js`, `knowledge.css`)**：在首页主线卡片与目录页顶部新增跨学科/跨学期/跨教材版本搜索框（内置 16 组口语与跨版本别名映射 + 6 枚热搜胶囊），输入关键词毫秒级直达对应《名师 4 步通关微课》；搜不到时引导家长留言补题。
 - **补齐 12 个真实高频盲区知识点 + 9 张教学 SVG + 24 套初一/初二详讲 (`knowledge-src/*/*.json`, `capstone-essays.json`, `deep-guides.json`, `assets/knowledge/*/*.svg`, `data/knowledge-*.js`)**：

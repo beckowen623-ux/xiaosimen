@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="sans-serif">
+  <rect width="320" height="210" fill="#ffffff"/>
+  <defs>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <text x="160" y="17" font-size="12" font-weight="bold" fill="#1e3a8a" text-anchor="middle">一氧化碳还原氧化铜/氧化铁实验装置</text>
+  <!-- CO 通入箭头 -->
+  <line x1="12" y1="78" x2="48" y2="78" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-b)"/>
+  <text x="26" y="68" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">CO</text>
+  <!-- 硬质玻璃管 -->
+  <rect x="50" y="68" width="110" height="20" rx="2" fill="#f8fafc" stroke="#334155" stroke-width="1.6"/>
+  <!-- 氧化铜/氧化铁粉末堆 -->
+  <path d="M 86 86 Q 105 74 124 86 Z" fill="#1e293b"/>
+  <text x="105" y="61" font-size="10" fill="#111" text-anchor="middle">CuO（黑→红）</text>
+  <!-- 加热酒精灯/喷灯火焰 -->
+  <path d="M 105 90 Q 112 103 105 110 Q 98 103 105 90 Z" fill="#f97316" stroke="#dc2626" stroke-width="1.2"/>
+  <rect x="92" y="112" width="26" height="22" rx="3" fill="#e2e8f0" stroke="#475569" stroke-width="1.3"/>
+  <text x="105" y="148" font-size="9.5" fill="#dc2626" text-anchor="middle">先通气，后加热</text>
+  <!-- 导气管到澄清石灰水试管 -->
+  <polyline points="160,78 202,78 202,130" fill="none" stroke="#334155" stroke-width="1.6"/>
+  <!-- 广口瓶/试管装澄清石灰水 -->
+  <rect x="184" y="96" width="52" height="52" rx="5" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+  <rect x="185" y="116" width="50" height="31" rx="3" fill="#e0f2fe"/>
+  <text x="210" y="135" font-size="9" fill="#0369a1" text-anchor="middle">澄清石灰水</text>
+  <text x="210" y="160" font-size="9" fill="#0369a1" text-anchor="middle">变浑浊(CO₂)</text>
+  <!-- 尾气导出管与点燃酒精灯 -->
+  <polyline points="222,110 222,78 274,78" fill="none" stroke="#334155" stroke-width="1.6"/>
+  <path d="M 278 60 Q 285 72 278 78 Q 271 72 278 60 Z" fill="#38bdf8" stroke="#0284c7" stroke-width="1.2"/>
+  <rect x="266" y="84" width="24" height="20" rx="3" fill="#e2e8f0" stroke="#475569" stroke-width="1.3"/>
+  <text x="278" y="118" font-size="9.5" fill="#0284c7" text-anchor="middle">尾气点燃</text>
+  <text x="278" y="131" font-size="8.5" fill="#64748b" text-anchor="middle">防CO中毒</text>
+  <!-- 底部口诀 -->
+  <text x="160" y="184" font-size="10.5" font-weight="bold" fill="#1e293b" text-anchor="middle">口诀：CO 早出晚归，酒精灯迟到早退</text>
+  <text x="160" y="200" font-size="9.5" fill="#475569" text-anchor="middle">前通气防爆炸；后停气防炽热铜/铁被重新氧化及防石灰水倒吸</text>
+</svg>

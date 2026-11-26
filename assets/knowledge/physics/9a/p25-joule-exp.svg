@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="sans-serif">
+  <rect width="320" height="210" fill="#ffffff"/>
+  <text x="160" y="17" font-size="12" font-weight="bold" fill="#1e3a8a" text-anchor="middle">焦耳定律实验：U 形管液面差转换法（Q＝I²Rt）</text>
+  <!-- 左侧密闭空气盒 R1=5Ω -->
+  <rect x="26" y="42" width="64" height="66" rx="5" fill="#eff6ff" stroke="#1e40af" stroke-width="1.6"/>
+  <rect x="40" y="76" width="36" height="14" fill="#fff" stroke="#dc2626" stroke-width="1.6"/>
+  <text x="58" y="87" font-size="10" fill="#dc2626" text-anchor="middle">5 Ω</text>
+  <text x="58" y="57" font-size="9.5" fill="#1e3a8a" text-anchor="middle">密闭空气盒</text>
+  <!-- 左侧 U 形管（液面差较小） -->
+  <path d="M 90 54 L 112 54 L 112 114 Q 112 124 122 124 Q 132 124 132 114 L 132 50" fill="none" stroke="#475569" stroke-width="2"/>
+  <path d="M 112 96 L 112 114 Q 112 124 122 124 Q 132 124 132 114 L 132 82" fill="none" stroke="#3b82f6" stroke-width="4.5"/>
+  <text x="122" y="138" font-size="9.5" fill="#2563eb" text-anchor="middle">Δh₁ 较小</text>
+  <!-- 右侧密闭空气盒 R2=10Ω -->
+  <rect x="174" y="42" width="64" height="66" rx="5" fill="#eff6ff" stroke="#1e40af" stroke-width="1.6"/>
+  <rect x="188" y="76" width="36" height="14" fill="#fff" stroke="#dc2626" stroke-width="1.6"/>
+  <text x="206" y="87" font-size="10" fill="#dc2626" text-anchor="middle">10 Ω</text>
+  <text x="206" y="57" font-size="9.5" fill="#1e3a8a" text-anchor="middle">密闭空气盒</text>
+  <!-- 右侧 U 形管（液面差更大） -->
+  <path d="M 238 54 L 260 54 L 260 114 Q 260 124 270 124 Q 280 124 280 114 L 280 50" fill="none" stroke="#475569" stroke-width="2"/>
+  <path d="M 260 104 L 260 114 Q 260 124 270 124 Q 280 124 280 114 L 280 62" fill="none" stroke="#dc2626" stroke-width="4.5"/>
+  <text x="270" y="138" font-size="9.5" fill="#dc2626" text-anchor="middle">Δh₂ 较大</text>
+  <!-- 串联导线与电源 -->
+  <line x1="76" y1="83" x2="188" y2="83" stroke="#111" stroke-width="1.6"/>
+  <polyline points="40,83 14,83 14,158 148,158" fill="none" stroke="#111" stroke-width="1.6"/>
+  <polyline points="224,83 302,83 302,158 164,158" fill="none" stroke="#111" stroke-width="1.6"/>
+  <!-- 电源符号 -->
+  <line x1="148" y1="148" x2="148" y2="168" stroke="#111" stroke-width="2.2"/>
+  <line x1="164" y1="152" x2="164" y2="164" stroke="#111" stroke-width="1.4"/>
+  <text x="156" y="145" font-size="9.5" fill="#111" text-anchor="middle">电源</text>
+  <!-- 底部方法标注 -->
+  <text x="160" y="184" font-size="10" fill="#1e293b" text-anchor="middle">串联保证 I、t 相同，探究 Q 与 R 关系；右盒外并联分流电阻探究 Q 与 I 关系</text>
+  <text x="160" y="200" font-size="9.5" fill="#dc2626" text-anchor="middle">注意：U 形管不是连通器；实验前须检查气密性，使两液面相平</text>
+</svg>
