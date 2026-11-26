@@ -1,5 +1,11 @@
 # 技术变更记录
 
+## 2026-11-26 · Antigravity · 错题本一键印 A4 错题重做卷、《学情体检单》长图裂变、小四门背诵遮罩与 A4 默写纸（main）
+- **错题本 A4 重做卷 (`app.js`, `styles.css`, `functions/api/_stats.js`)**：在错题与收藏卡片新增「一键印出专属 A4 错题重做卷」（支持当前错题/全部曾错题，自动汇总数理化知识点、同步卷、早鸟卷与小四门错题，免费体验样卷 3 题、完整版无限打印），新增 `wrong_print` 埋点。
+- **《孩子学情体检单》长图分享 (`knowledge.js`, `app.js`, `functions/api/_stats.js`)**：体检单新增「📸 保存《学情体检单》长图」（Canvas + `qrcode.js` 生成含掌握率、红绿薄弱点、3 天补缺建议与 `x4m.cc.cd` 二维码长图），新增 `kp_rx_poster` 埋点。
+- **小四门考点速记升级 (`key-points.html`, `key-points.js`, `key-points.css`)**：新增「👁️ 背诵遮罩模式」与「🖨️ 打印 A4 速记单 / 📝 打印 A4 挖空默写纸」（免费印每科前 5 条、完整版印全部 123 条），修正页脚旧称 `返回小四门题库` → `返回爱丽克丝中考题库`，新增 `recite_print` 埋点。
+- **验证**：`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 通过）与 `node tools/stage_pages_release.mjs` 全部通过。
+
 ## 2026-11-25 · Antigravity · 数理化 36 道压轴解答大题、3 分钟快测《学情体检单》、教研风 A4 卷与首页/收银台转化升级（main）
 - **数理化知识点补缺深化（`knowledge-src/capstone-essays.json`、`tools/build_knowledge.mjs`、`data/knowledge-*-sp.js`、`data/knowledge-index.js`、`knowledge.js`、`knowledge.css`、`functions/api/_stats.js`）**：
   - 核对 `D:\资料归档\审计`（实际存放 2025-2026 全国中考真题汇总）与线上库：确认线上题库 0 空答案 / 0 空解析，13 套 `ansPages=0` 的 2026 扫描原卷末尾均自带官方参考答案页。

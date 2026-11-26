@@ -616,9 +616,137 @@
         ${weak.length
           ? `<button class="btn primary" type="button" id="kpRxPractice">立即补这 ${weak.length} 个薄弱点</button><button class="btn" type="button" id="kpRxPrint">预览 / 打印专属 A4 补缺卷</button>`
           : '<button class="btn primary" type="button" id="kpRxSp">去挑战专题与压轴大题 →</button>'}
+        <button class="btn" type="button" id="kpRxPoster">📸 保存《学情体检单》长图</button>
       </div>
       ${upsell}
     </div>`;
+  }
+  async function openRxPoster(queue, results) {
+    const { tested, weak, passed } = analyzeSession(queue, results);
+    if (!tested.length) return;
+    app.track?.('kp_rx_poster');
+    try {
+      const qrFactory = await app.loadQrLib?.();
+      const firstParts = (queue?.[0]?.kpId || '').split('-');
+      const subjNames = { math: '数学', physics: '物理', chemistry: '化学' };
+      const subjLabel = subjNames[firstParts[0]] || '数理化';
+      const pct = Math.round((passed / tested.length) * 100);
+      const url = new URL(location.pathname, location.origin);
+      url.searchParams.set('from', 'rx-poster');
+      const inv = document.querySelector('#referralPanel [data-ref-code]')?.textContent?.trim()
+        || document.querySelector('#referralPanel code')?.textContent?.trim() || '';
+      if (/^ALIX-[A-Z0-9]{8}$/i.test(inv)) url.searchParams.set('invite', inv.toUpperCase());
+
+      const W = 750;
+      const rows = tested.slice(0, 8);
+      const H = 640 + rows.length * 56 + (weak.length ? 160 : 40);
+      const canvas = document.createElement('canvas');
+      canvas.width = W; canvas.height = H;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#f4f2e8'; ctx.fillRect(0, 0, W, H);
+
+      const grad = ctx.createLinearGradient(0, 0, W, 270);
+      grad.addColorStop(0, '#0e352a'); grad.addColorStop(1, '#185443');
+      ctx.fillStyle = grad; ctx.fillRect(0, 0, W, 270);
+      ctx.fillStyle = '#b83b2a'; ctx.fillRect(0, 270, W, 6);
+
+      ctx.fillStyle = 'rgba(255,255,255,0.88)';
+      ctx.font = '600 24px system-ui, -apple-system, sans-serif';
+      ctx.fillText('爱丽克丝中考题库 · 孩子学情体检单', 46, 62);
+      ctx.fillStyle = 'rgba(255,255,255,0.75)';
+      ctx.font = '20px system-ui, -apple-system, sans-serif';
+      ctx.fillText(new Date().toISOString().slice(0, 10), W - 165, 62);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '700 34px system-ui, -apple-system, sans-serif';
+      ctx.fillText(`${subjLabel}知识点摸底 · 掌握率 ${pct}%`, 46, 132);
+      ctx.font = '500 23px system-ui, -apple-system, sans-serif';
+      ctx.fillStyle = 'rgba(255,255,255,0.9)';
+      ctx.fillText(`共测 ${tested.length} 个知识点 · 已过关 ${passed} 个 · 待补薄弱点 ${weak.length} 个`, 46, 178);
+
+      // 掌握率进度条
+      ctx.fillStyle = 'rgba(255,255,255,0.22)';
+      ctx.fillRect(46, 206, W - 92, 18);
+      ctx.fillStyle = pct >= 80 ? '#4ade80' : pct >= 50 ? '#fbbf24' : '#f87171';
+      ctx.fillRect(46, 206, Math.max(24, Math.round((W - 92) * pct / 100)), 18);
+
+      // 逐点诊断卡片
+      let y = 304;
+      ctx.fillStyle = '#18362a';
+      ctx.font = '700 24px system-ui, -apple-system, sans-serif';
+      ctx.fillText('知识点诊断明细', 46, y);
+      y += 22;
+      for (const item of rows) {
+        const ok = item.right === item.done;
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(46, y, W - 92, 46);
+        ctx.fillStyle = ok ? '#15803d' : '#b83b2a';
+        ctx.fillRect(46, y, 6, 46);
+        ctx.font = '700 18px system-ui, -apple-system, sans-serif';
+        ctx.fillText(ok ? '过关' : '薄弱', 66, y + 30);
+        ctx.fillStyle = '#1a2420';
+        ctx.font = '500 21px system-ui, -apple-system, sans-serif';
+        ctx.fillText(String(item.name).slice(0, 22), 126, y + 30);
+        ctx.fillStyle = '#64748b';
+        ctx.font = '20px system-ui, -apple-system, sans-serif';
+        ctx.fillText(`${item.right}/${item.done}`, W - 110, y + 30);
+        y += 56;
+      }
+
+      if (weak.length) {
+        y += 10;
+        ctx.fillStyle = '#fcfbf6';
+        ctx.fillRect(46, y, W - 92, 134);
+        ctx.strokeStyle = '#d5d3c8'; ctx.lineWidth = 2;
+        ctx.strokeRect(46, y, W - 92, 134);
+        ctx.fillStyle = '#18362a';
+        ctx.font = '700 22px system-ui, -apple-system, sans-serif';
+        ctx.fillText('本周 3 天补缺建议', 66, y + 34);
+        ctx.fillStyle = '#334155';
+        ctx.font = '20px system-ui, -apple-system, sans-serif';
+        ctx.fillText(`Day 1：读标红薄弱点速记卡，把基础+提高题全做对`, 66, y + 68);
+        ctx.fillText(`Day 2：攻克同类变式与中考压轴解答大题`, 66, y + 96);
+        ctx.fillText(`Day 3：一键印出专属 A4 补缺卷在纸上限时验收`, 66, y + 122);
+        y += 154;
+      }
+
+      // 底部二维码
+      y += 24;
+      if (qrFactory) {
+        const qr = qrFactory(0, 'M');
+        qr.addData(url.href); qr.make();
+        const cnt = qr.getModuleCount();
+        const qrSize = 156, cell = qrSize / cnt, qx = 54, qy = y;
+        ctx.fillStyle = '#ffffff'; ctx.fillRect(qx - 8, qy - 8, qrSize + 16, qrSize + 16);
+        ctx.fillStyle = '#0f172a';
+        for (let r = 0; r < cnt; r++) for (let c = 0; c < cnt; c++) {
+          if (qr.isDark(r, c)) ctx.fillRect(qx + c * cell, qy + r * cell, Math.ceil(cell), Math.ceil(cell));
+        }
+      }
+      ctx.fillStyle = '#0f172a';
+      ctx.font = '700 25px system-ui, -apple-system, sans-serif';
+      ctx.fillText('长按识别二维码 · 3 分钟免费测弱项', 238, y + 48);
+      ctx.fillStyle = '#475569';
+      ctx.font = '21px system-ui, -apple-system, sans-serif';
+      ctx.fillText('数理化 354 个知识点 · 36 道压轴大题', 238, y + 88);
+      ctx.fillText('一键打印教研风 A4 专属补缺卷', 238, y + 122);
+      ctx.fillStyle = '#164e3f';
+      ctx.font = '600 20px system-ui, -apple-system, sans-serif';
+      ctx.fillText('网址：x4m.cc.cd', 238, y + 154);
+
+      const dataUrl = canvas.toDataURL('image/png');
+      const dlg = document.createElement('dialog');
+      dlg.className = 'dialog kp-poster-dialog';
+      dlg.innerHTML = `<div class="dialog-head"><h2>《孩子学情体检单》长图</h2><form method="dialog"><button class="btn text-button">关闭</button></form></div>
+        <p class="muted" style="margin:0 0 10px">手机可长按图片直接保存发给家人或存相册，电脑可点下方按钮下载。</p>
+        <img src="${dataUrl}" alt="孩子学情体检单长图" style="width:100%;height:auto;border-radius:10px;border:1px solid var(--line)" />
+        <div class="dialog-actions" style="margin-top:12px"><a class="btn primary" href="${dataUrl}" download="学情体检单-${subjLabel}.png">下载长图 PNG</a></div>`;
+      dlg.addEventListener('close', () => dlg.remove());
+      document.body.appendChild(dlg);
+      dlg.showModal();
+    } catch {
+      app.toast('生成体检单长图失败，请稍后重试。');
+    }
   }
   function wireSummaryRx(root, queue, results) {
     const { weak, isQuick } = analyzeSession(queue, results);
@@ -646,6 +774,7 @@
       openPrintSheet(data, pts, `${data.label} · 本次诊断薄弱知识点补缺卷`);
     });
     root.querySelector('#kpRxSp')?.addEventListener('click', () => { void open({ subject: subjKey, semester: 'sp' }); });
+    root.querySelector('#kpRxPoster')?.addEventListener('click', () => { void openRxPoster(queue, results); });
     root.querySelector('#kpRxUnlock')?.addEventListener('click', () => app.unlock('开通完整版（¥19.9 一次买断），解锁全部薄弱点分层题、36 道数理化压轴解答大题与无水印 A4 补缺卷无限打印。'));
   }
 

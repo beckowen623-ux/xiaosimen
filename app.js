@@ -2195,7 +2195,64 @@ function reviewHubHTML(progress) {
       </button>`;
       }).join('')}
     </div>
+    <div class="wrong-print-bar">
+      <div>
+        <b>🖨️ 省掉错题打印机：一键印出专属 A4 错题重做卷</b>
+        <span class="muted">自动汇总数理化知识点、同步卷、早鸟卷与小四门错题，附独立家长答案解析页。</span>
+      </div>
+      <div class="wrong-print-actions">
+        <button type="button" class="btn primary" data-wrong-print="wrong">印当前错题卷</button>
+        <button type="button" class="btn" data-wrong-print="everWrong">印全部曾错题</button>
+      </div>
+    </div>
   </section>`;
+}
+async function openWrongPrintSheet(mode) {
+  if (!banks && typeof startBanksBackgroundLoad === 'function') {
+    toast('正在整理全科错题…');
+    await startBanksBackgroundLoad();
+  }
+  const progress = loadProgress();
+  const baseList = [...applyMode(library, mode, progress), ...await withNationalExtras(mode, progress)];
+  // 同时汇入数理化知识点补缺中的错题
+  const kpIds = Object.entries(progress.banks || {})
+    .filter(([id, r]) => id.startsWith('kp-') && r && (mode === 'wrong' ? r.wrong : (r.wrong || (r.wrongCount || 0) > 0)))
+    .map(([id]) => id);
+  const kpList = [];
+  if (kpIds.length) {
+    const sems = new Set(kpIds.map(id => { const p = id.split('-'); return p.length >= 3 ? `${p[1]}-${p[2]}` : ''; }).filter(Boolean));
+    for (const semKey of sems) {
+      if (!window.KNOWLEDGE_DATA?.[semKey]) {
+        try {
+          await new Promise((resolve, reject) => {
+            const s = document.createElement('script');
+            s.src = `./data/knowledge-${semKey}.js`;
+            s.onload = resolve; s.onerror = reject;
+            document.head.appendChild(s);
+          });
+        } catch {}
+      }
+      const d = window.KNOWLEDGE_DATA?.[semKey];
+      if (d?.questions) {
+        const want = new Set(kpIds);
+        for (const q of d.questions) if (want.has(q.id)) kpList.push(q);
+      }
+    }
+  }
+  const seen = new Set();
+  const all = [...kpList, ...baseList].filter(q => q && !seen.has(q.id) && seen.add(q.id));
+  if (!all.length) { toast('错题本还是空的，先做一套 3 分钟快测或同步卷吧！'); return; }
+  trackVisit('wrong_print');
+  const paid = hasFullAccess();
+  const picked = paid ? all.slice(0, 45) : all.slice(0, 3);
+  const label = mode === 'everWrong' ? '全部曾错题' : '当前错题';
+  const title = paid
+    ? `爱丽克丝中考题库 · 我的专属 A4 错题重做卷（${label} ${picked.length} 题）`
+    : `我的专属 A4 错题重做卷（体验样卷 · 完整版可印全部 ${all.length} 题）`;
+  printQuestions(title, picked);
+  if (!paid && all.length > picked.length) {
+    toast(`当前为免费体验样卷（前 ${picked.length} 题），开通完整版 ¥19.9 可无限打印全部 ${all.length} 道错题。`);
+  }
 }
 function printCardHTML() {
   const claude = (nationalCatalog || []).filter(p => p.claude);
@@ -2498,6 +2555,7 @@ function wireHome() {
   });
   byId('x4mGroup')?.addEventListener('toggle', event => { state.x4mOpen = event.currentTarget.open; });
   view.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => { void startPractice(btn.dataset.mode); }));
+  view.querySelectorAll('[data-wrong-print]').forEach(btn => btn.addEventListener('click', () => { void openWrongPrintSheet(btn.dataset.wrongPrint); }));
   view.querySelectorAll('[data-drill]').forEach(btn => btn.addEventListener('click', () => {
     state.drillSubject = btn.dataset.drill;
     rerenderHomeInPlace('x4mGroup');
@@ -3831,6 +3889,7 @@ async function init() {
       toast,
       stage: () => state.stage,
       track: trackVisit,
+      loadQrLib,
     });
     // 知识点目录（约 15KB）到了就刷新首页的知识点卡片
     void window.KnowledgeHub?.loadIndex().then(() => { if (byId('knowledgeHome') && !document.body.classList.contains('practice')) rerenderHomeInPlace('knowledgeHome'); }).catch(() => {});

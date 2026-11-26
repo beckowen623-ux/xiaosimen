@@ -30,6 +30,9 @@ export const TRACK_EVENTS = new Set([
   "kp_quick_diag_start",
   "kp_quick_diag_done",
   "kp_print_preview",
+  "kp_rx_poster",
+  "wrong_print",
+  "recite_print",
 ]);
 
 export function normalizeSource(value) {

@@ -824,3 +824,8 @@ body { font-variant-numeric: tabular-nums; }
   .home-tab-btn { font-size: 12.5px; padding: 6px 4px; }
   .unlock-compare { grid-template-columns: 1fr; }
 }
+
+.wrong-print-bar { margin-top: 12px; padding: 14px 16px; border-radius: 14px; background: linear-gradient(135deg, #f3f9f6 0%, #fffdf7 100%); border: 1.5px solid var(--green); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; }
+.wrong-print-bar b { display: block; font-size: 14.5px; color: var(--green-dark); margin-bottom: 2px; }
+.wrong-print-bar span { font-size: 12.5px; }
+.wrong-print-actions { display: flex; flex-wrap: wrap; gap: 8px; }

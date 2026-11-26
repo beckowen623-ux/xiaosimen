@@ -56,3 +56,27 @@
   .point-fields input { grid-column: 1 / -1; }
   .point-card { padding: 14px; }
 }
+
+/* 背诵遮罩 + A4 速记/挖空默写纸打印 */
+.point-recite-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.pt-blank { display: inline-block; padding: 0 5px; border-radius: 4px; background: var(--green); color: transparent; cursor: pointer; user-select: none; }
+.pt-blank.revealed { background: #fef3c7; color: #92400e; font-weight: 700; }
+.pt-print-overlay { position: fixed; inset: 0; z-index: 9999; background: #eceae2; overflow: auto; padding: 14px 12px 40px; }
+.pt-pr-bar { max-width: 820px; margin: 0 auto 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--line); border-radius: 12px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; position: sticky; top: 8px; z-index: 2; }
+.pt-pr-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.pt-pr-page { max-width: 820px; margin: 0 auto; background: #fff; padding: 26px 34px; border: 1px solid var(--line); border-radius: 8px; color: #111; line-height: 1.7; }
+.pt-pr-note { margin: 0 0 12px; padding: 8px 12px; border-radius: 6px; background: #fff7ed; border: 1px solid #fdba74; color: #9a3412; font-size: 12.5px; text-align: center; }
+.pt-pr-head { text-align: center; border-bottom: 2px solid #18362a; padding-bottom: 10px; margin-bottom: 16px; }
+.pt-pr-head h1 { margin: 0 0 6px; font-size: 20px; }
+.pt-pr-head p { margin: 0; font-size: 13px; color: #444; }
+.pt-pr-item { margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb; break-inside: avoid; font-size: 13.5px; }
+.pt-pr-item p { margin: 3px 0; }
+.pt-pr-title { font-size: 14.5px; color: #18362a; }
+.pt-pr-ans { margin-top: 22px; padding-top: 14px; border-top: 2px dashed #888; page-break-before: always; break-before: page; font-size: 13px; }
+.pt-pr-ans h2 { margin: 0 0 10px; font-size: 16px; }
+@media print {
+  body.pt-printing > *:not(#ptPrintOverlay) { display: none !important; }
+  body.pt-printing #ptPrintOverlay { position: static; background: #fff; padding: 0; overflow: visible; }
+  body.pt-printing .no-print { display: none !important; }
+  body.pt-printing .pt-pr-page { max-width: none; border: 0; padding: 0; }
+}

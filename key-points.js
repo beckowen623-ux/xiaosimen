@@ -34,15 +34,32 @@ function escapeHTML(value) {
 function normalize(value) {
   return value.trim().normalize('NFKC').toLowerCase();
 }
+let reciteMode = false;
+let paidAccess = false;
+try { paidAccess = localStorage.getItem('xiaosimen_paid') === '1'; } catch {}
+void fetch('/api/access/status', { cache: 'no-store' })
+  .then(r => (r.ok ? r.json() : null))
+  .then(d => { if (d && typeof d.authenticated === 'boolean') paidAccess = d.authenticated; })
+  .catch(() => {});
+
+function maskKeywords(text, forPrintBlank = false) {
+  const safe = escapeHTML(text);
+  const re = /(“[^”]{2,16}”|《[^》]{2,14}》|\d{2,4}年|\d+(?:\.\d+)?(?:%|℃|毫米|米|条|项|大)|(?:根本|核心|前提|基础|关键|标志|实质|原则|制度|特征)是[^，。；、]{2,16})/g;
+  if (forPrintBlank) return safe.replace(re, ' ____________ ');
+  return safe.replace(re, m => `<span class="pt-blank" tabindex="0">${m}</span>`);
+}
+
 function pointHTML(item, sources) {
+  const ruleHtml = reciteMode ? maskKeywords(item.rule) : escapeHTML(item.rule);
+  const pitfallHtml = reciteMode ? maskKeywords(item.pitfall) : escapeHTML(item.pitfall);
   return `<article class="card point-card" aria-labelledby="${escapeHTML(item.id)}">
     <div class="point-meta">
       <span class="chip ${item.type === 'trap' ? 'tone-daode' : ''}">${types[item.type]}</span>
       <span class="muted">${escapeHTML(item.topic)}</span>
     </div>
     <h3 id="${escapeHTML(item.id)}">${escapeHTML(item.title)}</h3>
-    <div class="point-detail"><h4>要点</h4><p>${escapeHTML(item.rule)}</p></div>
-    <div class="point-detail point-pitfall"><h4>易混点</h4><p>${escapeHTML(item.pitfall)}</p></div>
+    <div class="point-detail"><h4>要点</h4><p>${ruleHtml}</p></div>
+    <div class="point-detail point-pitfall"><h4>易混点</h4><p>${pitfallHtml}</p></div>
     <details class="point-answer">
       <summary>自测 · ${escapeHTML(item.question)}</summary>
       <p>${escapeHTML(item.answer)}</p>
@@ -56,6 +73,54 @@ function pointHTML(item, sources) {
       }).join('')}</ul>
     </details>
   </article>`;
+}
+
+function openPointsPrint(matches, blankMode) {
+  if (!matches.length) return;
+  void fetch('/api/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ event: 'recite_print', source: 'key-points' }),
+    keepalive: true,
+  }).catch(() => {});
+  const picked = paidAccess ? matches : matches.slice(0, 5);
+  const omitted = matches.length - picked.length;
+  const old = document.getElementById('ptPrintOverlay');
+  if (old) old.remove();
+  const modeLabel = blankMode ? 'A4 挖空默写纸' : 'A4 考前速记单';
+  const rowsHtml = picked.map((item, idx) => `
+    <div class="pt-pr-item">
+      <p class="pt-pr-title"><b>${idx + 1}. ${escapeHTML(item.title)}</b> <small>（${escapeHTML(stages[item.stage] || '')} · ${escapeHTML(item.topic)}）</small></p>
+      <p><b>要点：</b>${blankMode ? maskKeywords(item.rule, true) : escapeHTML(item.rule)}</p>
+      <p><b>易混：</b>${blankMode ? maskKeywords(item.pitfall, true) : escapeHTML(item.pitfall)}</p>
+      <p><b>自测：</b>${escapeHTML(item.question)} ${blankMode ? '______________________' : `（答：${escapeHTML(item.answer)}）`}</p>
+    </div>`).join('');
+  const ansHtml = blankMode ? `<div class="pt-pr-ans"><h2>家长核对参考答案</h2>${picked.map((item, idx) => `<p><b>${idx + 1}. ${escapeHTML(item.title)}：</b>${escapeHTML(item.rule)} ｜ 自测答：<b>${escapeHTML(item.answer)}</b></p>`).join('')}</div>` : '';
+  const overlay = document.createElement('div');
+  overlay.id = 'ptPrintOverlay';
+  overlay.className = 'pt-print-overlay';
+  overlay.innerHTML = `
+    <div class="pt-pr-bar no-print">
+      <div><b>${escapeHTML(subjectInfo[subject].name)} · ${modeLabel}（共 ${picked.length} 条）</b></div>
+      <div class="pt-pr-btns">
+        ${!paidAccess && omitted > 0 ? `<a class="btn" href="./">回首页开通完整版 ¥19.9（印全部 ${matches.length} 条）</a>` : ''}
+        <button type="button" class="btn primary" id="ptPrGo">立即打印 / 存 PDF</button>
+        <button type="button" class="btn" id="ptPrClose">关闭</button>
+      </div>
+    </div>
+    <div class="pt-pr-page">
+      ${!paidAccess && omitted > 0 ? `<div class="pt-pr-note">免费体验可打印每科前 5 条，完整版 ¥19.9 一次买断可无水印打印全部 123 条小四门考点速记与默写纸。</div>` : ''}
+      <header class="pt-pr-head">
+        <h1>爱丽克丝中考题库 · ${escapeHTML(subjectInfo[subject].name)}${modeLabel}</h1>
+        <p>人教版 · 姓名：__________　日期：__________　核对得分：______</p>
+      </header>
+      ${rowsHtml}
+      ${ansHtml}
+    </div>`;
+  document.body.appendChild(overlay);
+  document.body.classList.add('pt-printing');
+  overlay.querySelector('#ptPrClose').addEventListener('click', () => { overlay.remove(); document.body.classList.remove('pt-printing'); });
+  overlay.querySelector('#ptPrGo').addEventListener('click', () => window.print());
 }
 
 function updateURL() {
@@ -91,6 +156,7 @@ function render() {
     return words.every(word => text.includes(word));
   });
   status.textContent = `${subjectInfo[subject].name} · ${matches.length} 条考点`;
+  currentMatches = matches;
   if (!matches.length) {
     results.innerHTML = '<div class="card points-empty"><p>没找到符合筛选条件的考点。</p><button class="btn" id="resetPoints" type="button">重置筛选</button></div>';
     document.getElementById('resetPoints').addEventListener('click', () => {
@@ -137,8 +203,26 @@ for (const filter of [stageFilter, typeFilter]) {
 keyword.addEventListener('input', event => { if (!event.isComposing) render(); });
 keyword.addEventListener('compositionend', render);
 
+let currentMatches = [];
+function currentFilteredMatches() { return currentMatches; }
+
 updateStages(params.get('book'));
 typeFilter.value = Object.hasOwn(types, params.get('type')) ? params.get('type') : '';
 updateSubjectButtons();
 filters.hidden = false;
+
+const reciteBtn = document.getElementById('pointReciteBtn');
+reciteBtn?.addEventListener('click', () => {
+  reciteMode = !reciteMode;
+  reciteBtn.setAttribute('aria-pressed', String(reciteMode));
+  reciteBtn.classList.toggle('primary', reciteMode);
+  reciteBtn.textContent = reciteMode ? '👁️ 已开背诵遮罩（点关键词显答案）' : '👁️ 开启背诵遮罩';
+  render();
+});
+results.addEventListener('click', event => {
+  const blank = event.target.closest('.pt-blank');
+  if (blank) blank.classList.toggle('revealed');
+});
+document.getElementById('pointPrintNoteBtn')?.addEventListener('click', () => openPointsPrint(currentFilteredMatches(), false));
+document.getElementById('pointPrintBlankBtn')?.addEventListener('click', () => openPointsPrint(currentFilteredMatches(), true));
 render();
