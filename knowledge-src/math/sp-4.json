@@ -300,7 +300,8 @@
         ],
         "example": {
           "q": "矩形 ABCD 中 AB＝6，BC＝8，E 在 BC 上，把 △ABE 沿 AE 折叠得 △AB'E，求 B'C 最小值。",
-          "a": "AB'＝AB＝6，AC＝10，B' 在以 A 为圆心、6 为半径的圆上，B'C 最小＝AC－AB'＝10－6＝4。"
+          "a": "AB'＝AB＝6，AC＝10，B' 在以 A 为圆心、6 为半径的圆上，B'C 最小＝AC－AB'＝10－6＝4。",
+          "img": "p17-fold.svg"
         }
       },
       "qs": [

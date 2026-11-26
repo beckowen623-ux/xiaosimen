@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="14" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="24.0" y1="158.0" x2="298.0" y2="158.0" stroke-width="1.4"/>
+<polyline points="291,154 298,158 291,162" stroke-width="1.4"/>
+<line x1="64.0" y1="186.0" x2="64.0" y2="20.0" stroke-width="1.4"/>
+<polyline points="60,27 64,20 68,27" stroke-width="1.4"/>
+<text x="298.0" y="174.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">x</text>
+<text x="76.0" y="26.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">y</text>
+<text x="53.0" y="172.0" font-size="13" fill="#111" stroke="none" text-anchor="middle">O</text>
+<circle cx="178.0" cy="90.0" r="50.0" fill="#f3f4f6" stroke="#111" stroke-width="1.6" stroke-dasharray="6 4"/>
+<line x1="132.0" y1="162.0" x2="260.0" y2="66.0" stroke-width="1.4" stroke="#666"/>
+<line x1="164.0" y1="138.0" x2="228.0" y2="90.0" stroke-width="2.6" stroke="#111"/>
+<line x1="178.0" y1="90.0" x2="148.0" y2="50.0" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="178.0" y1="90.0" x2="196.0" y2="114.0" stroke-width="1.2" stroke-dasharray="3 3" stroke="#555"/>
+<polyline points="191.8,108.4 197.4,104.2 201.6,109.8" stroke-width="1.2" stroke="#555"/>
+<circle cx="178.0" cy="90.0" r="2.8" fill="#111" stroke="none"/><text x="188.0" y="85.0" fill="#111" stroke="none" text-anchor="middle">P</text>
+<circle cx="148.0" cy="50.0" r="2.6" fill="#111" stroke="none"/><text x="137.0" y="47.0" fill="#111" stroke="none" text-anchor="middle">Q</text>
+<text x="155.0" y="76.0" font-style="italic" font-size="13" fill="#111" stroke="none" text-anchor="middle">r</text>
+<text x="180.0" y="109.0" font-style="italic" font-size="12" fill="#555" stroke="none" text-anchor="middle">d</text>
+<circle cx="164.0" cy="138.0" r="2.8" fill="#111" stroke="none"/><text x="154.0" y="152.0" fill="#111" stroke="none" text-anchor="middle">M</text>
+<circle cx="228.0" cy="90.0" r="2.8" fill="#111" stroke="none"/><text x="240.0" y="96.0" fill="#111" stroke="none" text-anchor="middle">N</text>
+<text x="268.0" y="64.0" font-style="italic" font-size="13" fill="#444" stroke="none" text-anchor="middle">l</text>
+<text x="178.0" y="28.0" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#444" stroke="none" text-anchor="middle">&#x5173;&#x8054;&#x70B9;&#x5706;&#x57DF;&#xFF08;PM &#x2264; r&#xFF09;</text>
+<text x="180.0" y="200.0" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#444" stroke="none" text-anchor="middle">&#x4E34;&#x754C;&#x70B9; M&#x3001;N &#x4F4D;&#x4E8E;&#x5706;&#x57DF;&#x8FB9;&#x754C;&#xFF08;d &#x2264; r&#xFF09;</text>
+</svg>

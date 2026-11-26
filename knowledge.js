@@ -36,7 +36,7 @@
   function readMarked() { try { const v = JSON.parse(localStorage.getItem(SELECT_KEY) || '[]'); return new Set(Array.isArray(v) ? v : []); } catch { return new Set(); } }
   function saveMarked(set) { try { localStorage.setItem(SELECT_KEY, JSON.stringify([...set])); } catch { /* 隐私模式 */ } }
 
-  // 一个知识点的掌握情况：只看做过的题最近一次对不对
+  // 一个知识点的掌握情况 + 3 星闯关进度（基础稳拿 / 提分变式 / 拓展压轴）
   function pointStatus(ids, progress, marked, pointId) {
     let done = 0; let right = 0;
     for (const id of ids) {
@@ -49,6 +49,39 @@
     if (done) key = rate < 0.6 ? 'weak' : (rate < 0.85 ? 'shaky' : (done >= 5 ? 'good' : 'ok'));
     if (marked.has(pointId) && (key === 'none' || key === 'ok')) key = 'weak';
     return { key, done, right, total: ids.length, marked: marked.has(pointId) };
+  }
+  function isCorrectRec(progress, id) {
+    const r = progress.banks?.[id];
+    return Boolean(r?.done && r.correct && !(r.revealed && !(r.attempts > 0)));
+  }
+  function pointMastery(data, point, progress) {
+    const byId = new Map(data.questions.map(q => [q.id, q]));
+    const all = [...point.qids, ...point.refs].map(id => byId.get(id)).filter(Boolean);
+    const l1 = all.filter(q => q.knowledge && q.type !== 'essay' && (q.level || 1) === 1);
+    const l2 = all.filter(q => q.knowledge && q.type !== 'essay' && q.level === 2);
+    const l3e = all.filter(q => q.type === 'essay' || (q.knowledge && q.level >= 3));
+    const countRight = arr => arr.filter(q => isCorrectRec(progress, q.id)).length;
+    const s1 = { list: l1, right: countRight(l1), total: l1.length, cleared: l1.length > 0 && countRight(l1) >= l1.length };
+    const s2 = { list: l2, right: countRight(l2), total: l2.length, cleared: l2.length > 0 && countRight(l2) >= l2.length };
+    const s3 = { list: l3e, right: countRight(l3e), total: l3e.length, cleared: l3e.length > 0 && countRight(l3e) >= l3e.length };
+    const stars = (s1.cleared ? 1 : 0) + (s2.cleared ? 1 : 0) + (s3.cleared ? 1 : 0);
+    return { s1, s2, s3, stars, maxStars: 3 };
+  }
+  function starBadgeHTML(stars) {
+    const filled = '★'.repeat(stars);
+    const empty = '☆'.repeat(3 - stars);
+    const cls = stars === 3 ? 'is-gold' : stars > 0 ? 'is-mid' : 'is-zero';
+    return `<span class="kp-stars ${cls}" aria-label="已点亮 ${stars} 颗星（满分 3 星）">${filled}${empty}</span>`;
+  }
+  function maskKpText(raw) {
+    const s = esc(raw);
+    return s.replace(/([「“][^」”]{2,18}[」”]|(?:\d+(?:\.\d+)?(?:\s*[°%℃ΩVAJWs]|\/[a-zA-Z0-9]+)?)|(?:[A-Za-z][A-Za-z0-9²³⁴⁺⁻₀₁₂₃₄₅₆₇₈₉]*\s*[＝=＜＞<>≤≥≈∝]\s*[^，。；、！？（()）]{1,18}))/g,
+      '<button type="button" class="kp-blank" data-kp-blank aria-pressed="false">$1</button>');
+  }
+  function splitExampleSteps(text) {
+    const parts = String(text || '').split(/[；;。\n]/).map(s => s.trim()).filter(Boolean);
+    if (parts.length <= 1) return { hint: '先圈出题干中的已知量/图形特征，对应上方通法公式列出核心关系式。', full: String(text || '') };
+    return { hint: parts[0] + '……', full: String(text || '') };
   }
   function semesterStats(sem, progress = app.progress()) {
     const marked = readMarked();
@@ -159,9 +192,9 @@
         <div class="kp-home-actions">${ready.map(s => `<button class="btn primary" type="button" data-kp-sem="${s.key}">看${esc(s.label)}</button>`).join('')}</div>`;
     }
     return `<section class="card kp-home" id="knowledgeHome">
-      <div class="kp-home-head"><span class="kp-badge">数理化补缺主线</span><h2>3 分钟测出薄弱点，一键印出专属 A4 补缺卷</h2></div>
+      <div class="kp-home-head"><span class="kp-badge">数理化补缺主线 · 名师 4 步微课</span><h2>3 分钟测出薄弱点，4 步通关 ＋ 印专属 A4 卷</h2></div>
       <div class="kp-sem-tabs" style="margin:10px 0 6px">${(idx?.subjects || []).map(s => `<button type="button" class="btn ${s.key === (subj?.key || 'math') ? 'primary' : ''}" data-kp-subj="${s.key}">${esc(s.label)}</button>`).join('')}</div>
-      <p class="kp-home-lead">先用 8 道阶梯题生成<b>《孩子学情体检单》</b>，再看知识点卡片、刷基础/提高/压轴解答大题，纸上印卷验收，告别盲目题海。</p>
+      <p class="kp-home-lead">先用 8 道阶梯题生成<b>《孩子学情体检单》</b>，再进<b>《名师 4 步通关微课》</b>（遮罩背公式 → 拆母题 → 3 关集 ★★★ 含 <b>${totals.essays}</b> 道解答大题），一键印 A4 卷纸上验收。</p>
       ${sem ? `<p class="kp-home-sem">当前学期：<b>${esc(sem.label)}</b>${sem.ready ? ` · ${sem.chapters.length} 章 · 免费测 8 题＋每点前 3 题免费` : ''}</p>` : ''}
       ${body}
     </section>`;
@@ -208,11 +241,12 @@
   // ---- 页面 ----
   function shell(inner) {
     document.body.classList.remove('practice');
+    const totals = totalSummaryCounts();
     app.view.innerHTML = `
       <div class="national-header">
         <button type="button" class="btn text-button" data-kp-home>← 返回首页</button>
         <h1 id="kpTitle" tabindex="-1">数理化按知识点补缺补漏</h1>
-        <p class="muted">人教版同步 ＋ 中考专题与压轴（含 36 道解答大题分步拆解）。先 3 分钟快测定位薄弱点，再刷卡片与分层题，支持一键打印 A4 卷。</p>
+        <p class="muted">人教版同步 ＋ 中考专题与压轴（<b>${totals.pts} 个知识点 · ${totals.essays} 道解答大题分步拆解</b>）。名师 4 步通关微课：遮罩背公式 → 拆母题 → 3 关星级闯关 → 一键印 A4 卷。</p>
       </div>${inner}`;
     app.view.querySelector('[data-kp-home]').addEventListener('click', () => { leave(); app.home(); });
   }
@@ -239,8 +273,9 @@
       const free = list.filter(app.isTrial);
       if (!free.length) {
         const hasEssay = list.some(q => q.type === 'essay');
+        const totals = totalSummaryCounts();
         app.unlock(hasEssay
-          ? '中考压轴解答大题（含分步审题思路＋采分点自评）属于完整版专属：一次买断 ¥19.9，解锁全部 36 道数理化压轴大题、354 个知识点与无限 A4 打印。'
+          ? `中考压轴解答大题（含分步审题思路＋采分点自评）属于完整版专属：一次买断 ¥19.9，解锁全部 ${totals.essays} 道数理化解答大题、${totals.pts} 个知识点与无限 A4 打印。`
           : '这些知识点的提高/拓展题属于完整版：每个知识点前 3 题与 3 分钟快测免费，完整版全部开放。');
         return;
       }
@@ -328,12 +363,15 @@
         return `<div class="kp-pr-q"><p class="kp-pr-stem"><b>${qNo}.</b> ${levelBadge(q)} ${esc(q.stem)}</p>${img}${optsHtml}${workbox}</div>`;
       }).join('');
       const c = p.card;
+      const d = p.deep;
       sections.push(`<section class="kp-pr-sec">
         <div class="kp-pr-card">
-          <h3>${esc(p.name)}${p.tag ? ` <small>${esc(p.tag)}</small>` : ''}${p.hasEssay ? ' <span class="kp-pr-essay-pill">含中考压轴大题</span>' : ''}</h3>
+          <h3>${esc(p.name)}${p.tag ? ` <small>${esc(p.tag)}</small>` : ''}${p.hasEssay ? ' <span class="kp-pr-essay-pill">含压轴大题</span>' : ''}</h3>
           <p><b>核心要点：</b>${c.concept.map(esc).join(' ')}</p>
           <p><b>通法公式：</b>${c.formula.map(esc).join(' ')}</p>
           <p><b>防错红线：</b>${c.pitfall.map(esc).join(' ')}</p>
+          ${d?.triggers?.length ? `<p><b>题眼识别：</b>${d.triggers.map(esc).join('；')}</p>` : ''}
+          ${d?.parentGuide?.ask ? `<p><b>家长 30 秒抽查：</b>${esc(d.parentGuide.ask)}</p>` : ''}
         </div>
         ${qHtml || '<p class="muted">（本点暂无可打印题目）</p>'}
       </section>`);
@@ -424,25 +462,30 @@
 
   function drawList(idx, data) {
     const progress = app.progress(); const marked = readMarked();
-    const stats = { none: 0, weak: 0, shaky: 0, ok: 0, good: 0, essays: 0 };
+    const stats = { none: 0, weak: 0, shaky: 0, ok: 0, good: 0, essays: 0, cleared: 0, deep: 0 };
     const rows = data.chapters.map((c, ci) => {
       let chEssays = 0;
+      let chCleared = 0;
       const items = c.points.map(p => {
         const st = pointStatus([...p.qids, ...p.refs], progress, marked, p.id); stats[st.key]++;
+        const m = pointMastery(data, p, progress);
+        if (m.stars === 3) { chCleared++; stats.cleared++; }
         if (p.hasEssay) { stats.essays++; chEssays++; }
+        if (p.hasDeep || p.deep) stats.deep++;
         const sel = state.selecting ? `<input type="checkbox" class="kp-check" data-mark="${p.id}" ${marked.has(p.id) ? 'checked' : ''} aria-label="标记为薄弱：${esc(p.name)}">` : '';
-        return `<li class="kp-row">${sel}<button type="button" class="kp-point" data-point="${p.id}"><span class="kp-name">${esc(p.name)}${p.tag ? `<em class="kp-tag">${esc(p.tag)}</em>` : ''}${p.hasEssay ? '<em class="kp-essay-tag">含压轴大题</em>' : ''}</span><span class="kp-meta">${p.qids.length + p.refs.length} 题 · <i class="${STATUS[st.key].cls}">${STATUS[st.key].label}${st.done ? ` ${st.right}/${st.done}` : ''}</i></span></button></li>`;
+        return `<li class="kp-row">${sel}<button type="button" class="kp-point" data-point="${p.id}"><span class="kp-name">${esc(p.name)}${p.tag ? `<em class="kp-tag">${esc(p.tag)}</em>` : ''}${p.hasDeep || p.deep ? '<em class="kp-deep-tag">名师详讲</em>' : ''}${p.hasEssay ? '<em class="kp-essay-tag">含压轴大题</em>' : ''}</span><span class="kp-meta">${starBadgeHTML(m.stars)} · ${p.qids.length + p.refs.length} 题 · <i class="${STATUS[st.key].cls}">${STATUS[st.key].label}${st.done ? ` ${st.right}/${st.done}` : ''}</i></span></button></li>`;
       }).join('');
+      const chPct = c.points.length ? Math.round((chCleared / c.points.length) * 100) : 0;
       const open = state.open.has(c.name) || state.selecting || (state.semester === 'sp' && ci === 0 && state.open.size === 0);
-      return `<details class="card kp-chapter" data-chapter="${esc(c.name)}" ${open ? 'open' : ''}><summary><b>${esc(c.name)}</b><span>${c.points.length} 个知识点${chEssays ? ` · ${chEssays} 道大题` : ''} ›</span></summary><ol class="kp-list">${items}</ol><div class="kp-chapter-actions"><button class="btn" type="button" data-diag-chapter="${esc(c.name)}">本章诊断（${diagQuestions(data, c.name).length} 题）</button></div></details>`;
+      return `<details class="card kp-chapter" data-chapter="${esc(c.name)}" ${open ? 'open' : ''}><summary><span class="kp-ch-title"><b>${esc(c.name)}</b><i class="kp-ch-bar" aria-hidden="true"><b style="width:${chPct}%"></b></i></span><span>已通关 ${chCleared}/${c.points.length}${chEssays ? ` · ${chEssays} 道大题` : ''} ›</span></summary><ol class="kp-list">${items}</ol><div class="kp-chapter-actions"><button class="btn" type="button" data-diag-chapter="${esc(c.name)}">本章诊断（${diagQuestions(data, c.name).length} 题）</button></div></details>`;
     }).join('');
     const weak = weakPoints(data);
     const total = data.chapters.reduce((s, c) => s + c.points.length, 0);
     const qDiag = quickDiagQuestions(data);
     shell(`${semTabs(idx)}
       <section class="card kp-summary">
-        <div class="kp-home-stats"><span><b>${total}</b>个知识点</span><span class="kp-weak-text"><b>${stats.weak + stats.shaky}</b>个待补</span><span><b>${stats.ok + stats.good}</b>个已掌握</span>${stats.essays ? `<span><b>${stats.essays}</b>道压轴大题</span>` : `<span><b>${stats.none}</b>个未练</span>`}</div>
-        <p class="muted kp-how">推荐路径：① 先做 <b>3 分钟快测（${qDiag.length} 题）</b>，立刻拿到《孩子学情体检单》；② 点开薄弱点看卡片、刷分层题与压轴大题；③ 一键打印专属 A4 补缺卷在纸上验收。</p>
+        <div class="kp-home-stats"><span><b>${total}</b>个知识点</span><span><b>${stats.cleared}</b>个三星通关</span><span class="kp-weak-text"><b>${stats.weak + stats.shaky}</b>个待补</span>${stats.essays ? `<span><b>${stats.essays}</b>道解答大题</span>` : `<span><b>${stats.ok + stats.good}</b>个已掌握</span>`}</div>
+        <p class="muted kp-how">名师 4 步补缺闭环：① 先做 <b>3 分钟快测（${qDiag.length} 题）</b>拿《孩子学情体检单》；② 点开知识点进入<b>《名师 4 步通关微课》</b>（遮罩背公式 → 拆母题 → 3 关集齐 ★★★）；③ 一键打印专属 A4 补缺卷在纸上验收。</p>
         <div class="kp-home-actions">
           <button class="btn primary" type="button" data-kp-act="quick">3 分钟快测（${qDiag.length} 题）</button>
           <button class="btn" type="button" data-kp-act="diag">全学期深度诊断（${diagQuestions(data).length} 题）</button>
@@ -453,7 +496,7 @@
         ${state.selecting ? '<p class="kp-select-tip">在下面勾选孩子不会的知识点，勾上的会算作“薄弱”，可随时取消。</p>' : ''}
       </section>
       ${rows}
-      <p class="muted kp-foot">知识点按人教版新教材整理；带 ★ 为中考高频，◆ 为易错点，“含压轴大题”配分步思路与采分点自评。3 分钟快测与每点前 3 题免费，完整版全部开放。</p>`);
+      <p class="muted kp-foot">知识点按人教版新教材整理；带 ★ 为中考高频，◆ 为易错点，“名师详讲”含题眼识别、通法 3 步走与家长 30 秒提问卡，“含压轴大题”配分步思路与采分点自评。3 分钟快测与每点第 1 关免费，完整版全部开放。</p>`);
     wireTabs();
     app.view.querySelectorAll('details[data-chapter]').forEach(d => d.addEventListener('toggle', () => { if (d.open) state.open.add(d.dataset.chapter); else state.open.delete(d.dataset.chapter); }));
     app.view.querySelectorAll('[data-point]').forEach(b => b.addEventListener('click', () => { state.point = b.dataset.point; state.view = 'point'; void render(); }));
@@ -468,56 +511,173 @@
     app.view.querySelector('[data-kp-act="select"]').addEventListener('click', () => { state.selecting = !state.selecting; drawList(idx, data); });
   }
 
+  let reciteMaskOn = false;
+
   function drawPoint(idx, data) {
     let point; let chapter;
     for (const c of data.chapters) for (const p of c.points) if (p.id === state.point) { point = p; chapter = c; }
     if (!point) { state.view = 'list'; drawList(idx, data); return; }
     const progress = app.progress(); const marked = readMarked();
     const st = pointStatus([...point.qids, ...point.refs], progress, marked, point.id);
+    const mastery = pointMastery(data, point, progress);
     const all = pointQuestions(data, point);
     const undone = pointQuestions(data, point, true);
-    const basic = all.filter(q => levelOf(q) <= 2);
-    const adv = all.filter(q => levelOf(q) >= 3);
     const essays = all.filter(q => q.type === 'essay');
     const card = point.card;
-    const li = arr => arr.map(t => `<li>${esc(t)}</li>`).join('');
-    const levels = [1, 2, 3].map(lv => all.filter(q => q.knowledge && q.type !== 'essay' && q.level === lv).length);
+    const deep = point.deep;
+    const li = arr => (arr || []).map(t => `<li>${reciteMaskOn ? maskKpText(t) : esc(t)}</li>`).join('');
     const flat = chapter.points;
     const i = flat.indexOf(point);
+    const paid = app.hasAccess();
+    const starTip = mastery.stars === 3
+      ? '🎉 已集齐 3 颗星！建议印出 A4 卷在纸上限时验收。'
+      : !mastery.s1.cleared
+        ? `先刷「第 1 关·基础稳拿」答对剩余 ${mastery.s1.total - mastery.s1.right} 题，点亮第 1 颗星（免费）！`
+        : !mastery.s2.cleared
+          ? `第 1 关已过！再攻克「第 2 关·提分变式」剩余 ${mastery.s2.total - mastery.s2.right} 题，点亮第 2 颗星！`
+          : `离满分三星只差最后一步！攻克「第 3 关·拓展${essays.length ? '/压轴大题' : ''}」即可三星通关！`;
+
+    const primaryStep = splitExampleSteps(card.example.a);
+    const bonusExamplesHtml = (deep?.examples || []).map((ex, ei) => `
+      <div class="kp-step-ex" data-step-ex>
+        <p class="kp-ex-badge">进阶母题 ${ei + 2} · ${esc(ex.title || '高频变式拆解')}</p>
+        <p class="kp-ex-q">${esc(ex.q)}</p>
+        <div class="kp-step-reveal-bar">
+          <button type="button" class="btn" data-rev-step="1">① 看审题题眼</button>
+          <button type="button" class="btn" data-rev-step="2">② 看破题通法</button>
+          <button type="button" class="btn" data-rev-step="3">③ 看规范解答</button>
+        </div>
+        <div class="kp-rev-box" data-rev-box="1" hidden><b>① 审题题眼：</b>${esc(ex.eye)}</div>
+        <div class="kp-rev-box" data-rev-box="2" hidden><b>② 破题通法：</b>${esc(ex.method)}</div>
+        <div class="kp-rev-box is-final" data-rev-box="3" hidden><b>③ 规范解答：</b>${Array.isArray(ex.steps) ? ex.steps.map(s => `<div style="margin-top:4px">${esc(s)}</div>`).join('') : esc(ex.steps)}</div>
+      </div>`).join('');
+
+    const deepBlocksHtml = deep ? `
+      <section class="kp-deep-block kp-deep-triggers">
+        <h3>🎯 题眼识别（题目出现这些词立刻用）</h3>
+        <ul>${li(deep.triggers)}</ul>
+      </section>
+      <section class="kp-deep-block kp-deep-steps">
+        <h3>🧭 名师通法 3 步走</h3>
+        <ol class="kp-steps-ol">${(deep.steps || []).map(t => `<li>${reciteMaskOn ? maskKpText(t) : esc(t)}</li>`).join('')}</ol>
+      </section>
+      <section class="kp-deep-block kp-deep-variants">
+        <h3>🔀 常考变式对照（从保底到压轴）</h3>
+        <ul>${li(deep.variants)}</ul>
+      </section>
+      ${deep.parentGuide ? `<section class="kp-parent-box">
+        <h3>👨‍👩‍👧 家长 30 秒陪练抽查（不懂数理化也能考孩子）</h3>
+        <p class="kp-parent-ask"><b>直接这样问孩子：</b>${esc(deep.parentGuide.ask)}</p>
+        <details><summary>点开看孩子要答到哪些核心得分词</summary><p class="kp-parent-key">${esc(deep.parentGuide.key)}</p></details>
+      </section>` : ''}` : '';
+
     shell(`${semTabs(idx)}
       <button type="button" class="btn text-button kp-back" data-back>← ${esc(chapter.name)} · 全部知识点</button>
+
+      <section class="card kp-mastery-banner">
+        <div class="kp-mastery-top">
+          <div>
+            <p class="kp-crumb">${esc(data.label)} · ${esc(chapter.name)}</p>
+            <h2>${esc(point.name)}${point.tag ? `<em class="kp-tag">${esc(point.tag)}</em>` : ''}${deep ? '<em class="kp-deep-tag">名师详讲</em>' : ''}${essays.length ? '<em class="kp-essay-tag">含压轴大题</em>' : ''}</h2>
+          </div>
+          <div class="kp-mastery-stars">
+            ${starBadgeHTML(mastery.stars)}
+            <span>${mastery.stars}/3 星通关</span>
+          </div>
+        </div>
+        <div class="kp-mastery-bar" aria-hidden="true"><i style="width:${Math.round((mastery.stars / 3) * 100)}%"></i></div>
+        <p class="kp-mastery-tip">${starTip}</p>
+      </section>
+
       <article class="card kp-card">
-        <p class="kp-crumb">${esc(data.label)} · ${esc(chapter.name)}</p>
-        <h2>${esc(point.name)}${point.tag ? `<em class="kp-tag">${esc(point.tag)}</em>` : ''}${essays.length ? '<em class="kp-essay-tag">含中考压轴大题</em>' : ''}</h2>
-        <p class="kp-state">掌握情况：<i class="${STATUS[st.key].cls}">${STATUS[st.key].label}</i>${st.done ? `（做过 ${st.done} 题，对 ${st.right} 题）` : ''}</p>
+        <div class="kp-step-head">
+          <span class="kp-step-pill">第 1 步 · 考点速通</span>
+          <button type="button" class="btn ${reciteMaskOn ? 'primary' : ''}" id="kpMaskToggle">${reciteMaskOn ? '👁️ 关闭背诵遮罩' : '👁️ 开启背诵遮罩'}</button>
+        </div>
+        ${reciteMaskOn ? '<p class="kp-mask-hint">已遮住核心公式、条件与关键词，先在心里默背，再轻点绿色色块逐个核对。</p>' : ''}
         <section><h3>知识要点</h3><ul>${li(card.concept)}</ul></section>
         <section><h3>公式与方法</h3><ul>${li(card.formula)}</ul></section>
-        <section class="kp-pitfall"><h3>易错点</h3><ul>${li(card.pitfall)}</ul></section>
-        <section class="kp-example"><h3>例题</h3><p>${esc(card.example.q)}</p>${card.example.img ? `<img class="kp-fig" src="${esc(card.example.img)}" alt="例题配图" loading="lazy">` : ''}
-          <details><summary>看解答</summary><p>${esc(card.example.a)}</p></details></section>
+        <section class="kp-pitfall"><h3>⚠️ 防错红线（高频扣分坑）</h3><ul>${li(card.pitfall)}</ul></section>
+        ${deepBlocksHtml}
       </article>
+
+      <section class="card kp-example-card">
+        <div class="kp-step-head">
+          <span class="kp-step-pill">第 2 步 · 母题分步拆解</span>
+          <span class="muted" style="font-size:12.5px">先想再点，逐层揭晓不直接剧透</span>
+        </div>
+        <div class="kp-step-ex" data-step-ex>
+          <p class="kp-ex-badge">基础母题 1 · 规范示范</p>
+          <p class="kp-ex-q">${esc(card.example.q)}</p>
+          ${card.example.img ? `<img class="kp-fig" src="${esc(card.example.img)}" alt="例题配图" loading="lazy">` : ''}
+          <div class="kp-step-reveal-bar">
+            <button type="button" class="btn" data-rev-step="1">① 先看破题提示</button>
+            <button type="button" class="btn" data-rev-step="2">② 看完整规范解答</button>
+          </div>
+          <div class="kp-rev-box" data-rev-box="1" hidden><b>① 破题提示：</b>${esc(primaryStep.hint)}</div>
+          <div class="kp-rev-box is-final" data-rev-box="2" hidden><b>② 完整解答：</b>${esc(primaryStep.full)}</div>
+        </div>
+        ${bonusExamplesHtml}
+      </section>
+
       <section class="card kp-practice">
-        <h3>练这个知识点</h3>
-        <p class="muted">共 ${all.length} 题：基础 ${levels[0]}、提高 ${levels[1]}、拓展 ${levels[2]}${essays.length ? `、<b>压轴解答大题 ${essays.length} 道（分步思路＋采分点自评）</b>` : ''}${point.refs.length ? `，另有真题同类题 ${point.refs.length} 道` : ''}。</p>
+        <div class="kp-step-head">
+          <span class="kp-step-pill">第 3 步 · 3 关阶梯闯关</span>
+          <span class="kp-state">当前状态：<i class="${STATUS[st.key].cls}">${STATUS[st.key].label}</i>${st.done ? `（已对 ${st.right}/${st.done}）` : ''}</span>
+        </div>
+        <div class="kp-stage-grid">
+          <button type="button" class="kp-stage-card ${mastery.s1.cleared ? 'is-cleared' : ''}" data-start="s1" ${mastery.s1.total ? '' : 'disabled'}>
+            <span class="kp-stage-lv">第 1 关 · 基础稳拿 <em>免费体验</em></span>
+            <b>${mastery.s1.cleared ? '★ 已过关' : `去闯关（${mastery.s1.right}/${mastery.s1.total}）`}</b>
+            <small>吃透定义与直接代公式，确保基础题零失分</small>
+          </button>
+          <button type="button" class="kp-stage-card ${mastery.s2.cleared ? 'is-cleared' : ''}" data-start="s2" ${mastery.s2.total ? '' : 'disabled'}>
+            <span class="kp-stage-lv">第 2 关 · 提分变式 ${!paid ? '<em class="is-pro">完整版</em>' : ''}</span>
+            <b>${mastery.s2.cleared ? '★ 已过关' : `去闯关（${mastery.s2.right}/${mastery.s2.total}）`}</b>
+            <small>专练期中/期末拉分变式与隐含条件坑点</small>
+          </button>
+          <button type="button" class="kp-stage-card ${mastery.s3.cleared ? 'is-cleared' : ''} ${essays.length ? 'has-essay' : ''}" data-start="s3" ${mastery.s3.total ? '' : 'disabled'}>
+            <span class="kp-stage-lv">第 3 关 · 拓展${essays.length ? '＋压轴大题' : '冲高'} ${!paid ? '<em class="is-pro">完整版</em>' : ''}</span>
+            <b>${mastery.s3.cleared ? '★ 已过关' : `去冲刺（${mastery.s3.right}/${mastery.s3.total}）`}</b>
+            <small>${essays.length ? `含 ${essays.length} 道规范解答大题（分步审题＋采分点自评）` : '挑战综合拓展题，冲刺高分档'}</small>
+          </button>
+        </div>
+        <div class="kp-step-head" style="margin-top:14px">
+          <span class="kp-step-pill">第 4 步 · 巩固与纸上验收</span>
+        </div>
         <div class="kp-home-actions">
-          <button class="btn primary" type="button" data-start="all">从基础练起（${all.length} 题）</button>
-          <button class="btn" type="button" data-start="basic" ${basic.length ? '' : 'disabled'}>保底：基础+提高（${basic.length} 题）</button>
-          <button class="btn" type="button" data-start="adv" ${adv.length ? '' : 'disabled'}>冲高：拓展${essays.length ? '/压轴大题' : '/压轴'}（${adv.length} 题）</button>
+          <button class="btn primary" type="button" data-start="all">从头连刷本点（${all.length} 题${point.refs.length ? `，含 ${point.refs.length} 道真题` : ''}）</button>
           ${essays.length ? `<button class="btn kp-essay-btn" type="button" data-start="essay">直攻压轴解答大题（${essays.length} 题）</button>` : ''}
           <button class="btn" type="button" data-start="undone" ${undone.length && undone.length < all.length ? '' : 'disabled'}>只练没做对的（${undone.length} 题）</button>
-          <button class="btn" type="button" data-start="print-one">打印本点 A4 卷</button>
+          <button class="btn" type="button" data-start="print-one">🖨️ 打印本点 A4 通关卷</button>
           <label class="kp-mark"><input type="checkbox" data-mark-one ${marked.has(point.id) ? 'checked' : ''}> 标记为薄弱点</label>
         </div>
       </section>
       <nav class="kp-nav">${i > 0 ? `<button class="btn text-button" type="button" data-goto="${flat[i - 1].id}">‹ ${esc(flat[i - 1].name)}</button>` : '<span></span>'}${i < flat.length - 1 ? `<button class="btn text-button" type="button" data-goto="${flat[i + 1].id}">${esc(flat[i + 1].name)} ›</button>` : ''}</nav>`);
     wireTabs();
     app.view.querySelector('[data-back]').addEventListener('click', () => { state.view = 'list'; state.open.add(chapter.name); void render(); });
+    app.view.querySelector('#kpMaskToggle')?.addEventListener('click', () => { reciteMaskOn = !reciteMaskOn; drawPoint(idx, data); });
+    app.view.querySelectorAll('[data-kp-blank]').forEach(btn => btn.addEventListener('click', () => {
+      const on = btn.classList.toggle('revealed');
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    }));
+    app.view.querySelectorAll('[data-step-ex]').forEach(wrap => {
+      wrap.querySelectorAll('[data-rev-step]').forEach(btn => btn.addEventListener('click', () => {
+        const n = btn.dataset.revStep;
+        const box = wrap.querySelector(`[data-rev-box="${n}"]`);
+        if (!box) return;
+        const nextHidden = !box.hidden;
+        box.hidden = nextHidden;
+        btn.classList.toggle('primary', !nextHidden);
+      }));
+    });
+    app.view.querySelector('[data-start="s1"]')?.addEventListener('click', () => startList(mastery.s1.list));
+    app.view.querySelector('[data-start="s2"]')?.addEventListener('click', () => startList(mastery.s2.list));
+    app.view.querySelector('[data-start="s3"]')?.addEventListener('click', () => startList(mastery.s3.list));
     app.view.querySelector('[data-start="all"]').addEventListener('click', () => startList(all));
-    app.view.querySelector('[data-start="basic"]').addEventListener('click', () => startList(basic));
-    app.view.querySelector('[data-start="adv"]').addEventListener('click', () => startList(adv));
     app.view.querySelector('[data-start="essay"]')?.addEventListener('click', () => startList(essays));
     app.view.querySelector('[data-start="undone"]').addEventListener('click', () => startList(undone));
-    app.view.querySelector('[data-start="print-one"]').addEventListener('click', () => openPrintSheet(data, [point], `${data.label} · ${point.name}（补缺专练卷）`));
+    app.view.querySelector('[data-start="print-one"]').addEventListener('click', () => openPrintSheet(data, [point], `${data.label} · ${point.name}（通关专练卷）`));
     app.view.querySelector('[data-mark-one]').addEventListener('change', e => { const set = readMarked(); if (e.target.checked) set.add(point.id); else set.delete(point.id); saveMarked(set); });
     app.view.querySelectorAll('[data-goto]').forEach(b => b.addEventListener('click', () => { state.point = b.dataset.goto; void render(); }));
   }
@@ -728,7 +888,8 @@
       ctx.fillText('长按识别二维码 · 3 分钟免费测弱项', 238, y + 48);
       ctx.fillStyle = '#475569';
       ctx.font = '21px system-ui, -apple-system, sans-serif';
-      ctx.fillText('数理化 354 个知识点 · 36 道压轴大题', 238, y + 88);
+      const totals = totalSummaryCounts();
+      ctx.fillText(`数理化 ${totals.pts} 个知识点 · ${totals.essays} 道压轴大题`, 238, y + 88);
       ctx.fillText('一键打印教研风 A4 专属补缺卷', 238, y + 122);
       ctx.fillStyle = '#164e3f';
       ctx.font = '600 20px system-ui, -apple-system, sans-serif';
@@ -775,7 +936,10 @@
     });
     root.querySelector('#kpRxSp')?.addEventListener('click', () => { void open({ subject: subjKey, semester: 'sp' }); });
     root.querySelector('#kpRxPoster')?.addEventListener('click', () => { void openRxPoster(queue, results); });
-    root.querySelector('#kpRxUnlock')?.addEventListener('click', () => app.unlock('开通完整版（¥19.9 一次买断），解锁全部薄弱点分层题、36 道数理化压轴解答大题与无水印 A4 补缺卷无限打印。'));
+    root.querySelector('#kpRxUnlock')?.addEventListener('click', () => {
+      const totals = totalSummaryCounts();
+      app.unlock(`开通完整版（¥19.9 一次买断），解锁全部薄弱点分层题、${totals.essays} 道数理化解答大题与无水印 A4 补缺卷无限打印。`);
+    });
   }
 
   function refresh() {

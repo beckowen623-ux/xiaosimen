@@ -145,7 +145,8 @@
         ],
         "example": {
           "q": "CaCl2 溶液与 Na2CO3 溶液反应过滤后，某同学猜想滤液溶质为 NaCl、CaCl2 和 Na2CO3，该猜想合理吗？",
-          "a": "不合理！CaCl2 和 Na2CO3 在溶液中会继续反应生成 CaCO3 沉淀，不能共存。"
+          "a": "不合理！CaCl2 和 Na2CO3 在溶液中会继续反应生成 CaCO3 沉淀，不能共存。",
+          "img": "p08-solute.svg"
         }
       },
       "qs": [

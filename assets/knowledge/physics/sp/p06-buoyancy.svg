@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210">
+  <rect width="320" height="210" fill="#ffffff"/>
+  <defs>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2c6eb5"/>
+    </marker>
+    <marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arr-k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <!-- Title Bar / Divider -->
+  <text x="16" y="18" font-size="11" font-weight="bold" fill="#111" font-family="sans-serif">一、底绳剪断模型</text>
+  <line x1="162" y1="10" x2="162" y2="176" stroke="#d5dde6" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="174" y="18" font-size="11" font-weight="bold" fill="#111" font-family="sans-serif">二、冰块熔化液面变化</text>
+
+  <!-- Left Panel: Cut String (Before) -->
+  <rect x="14" y="64" width="54" height="86" fill="#e6f3ff"/>
+  <polyline points="14,44 14,150 68,150 68,44" fill="none" stroke="#111" stroke-width="1.8"/>
+  <line x1="14" y1="64" x2="68" y2="64" stroke="#2c6eb5" stroke-width="1.4"/>
+  <!-- Submerged wood block -->
+  <rect x="27" y="88" width="28" height="28" fill="#f7ead9" stroke="#111" stroke-width="1.5"/>
+  <text x="35" y="106" font-size="10" fill="#111" font-family="sans-serif">木</text>
+  <!-- Bottom string -->
+  <line x1="41" y1="116" x2="41" y2="150" stroke="#c0392b" stroke-width="1.6"/>
+  <!-- Force arrows on submerged block -->
+  <line x1="41" y1="88" x2="41" y2="68" stroke="#2c6eb5" stroke-width="1.6" marker-end="url(#arr-b)"/>
+  <text x="45" y="77" font-size="9" fill="#2c6eb5" font-family="sans-serif">F浮</text>
+  <line x1="35" y1="116" x2="35" y2="136" stroke="#111" stroke-width="1.4" marker-end="url(#arr-k)"/>
+  <text x="18" y="135" font-size="9" fill="#111" font-family="sans-serif">G</text>
+  <line x1="47" y1="116" x2="47" y2="136" stroke="#c0392b" stroke-width="1.4" marker-end="url(#arr-r)"/>
+  <text x="50" y="135" font-size="9" fill="#c0392b" font-family="sans-serif">F绳</text>
+  <text x="24" y="164" font-size="10" fill="#444" font-family="sans-serif">剪绳前</text>
+
+  <!-- Transition arrow -->
+  <line x1="72" y1="98" x2="90" y2="98" stroke="#c0392b" stroke-width="1.8" marker-end="url(#arr-r)"/>
+  <text x="71" y="91" font-size="9" fill="#c0392b" font-family="sans-serif">剪断</text>
+
+  <!-- Left Panel: Cut String (After) -->
+  <rect x="96" y="78" width="54" height="72" fill="#e6f3ff"/>
+  <polyline points="96,44 96,150 150,150 150,44" fill="none" stroke="#111" stroke-width="1.8"/>
+  <!-- Old water level dashed -->
+  <line x1="96" y1="64" x2="150" y2="64" stroke="#888" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="96" y1="78" x2="150" y2="78" stroke="#2c6eb5" stroke-width="1.4"/>
+  <!-- Floating wood block -->
+  <rect x="109" y="66" width="28" height="28" fill="#f7ead9" stroke="#111" stroke-width="1.5"/>
+  <text x="117" y="84" font-size="10" fill="#111" font-family="sans-serif">木</text>
+  <!-- Delta h indicator -->
+  <line x1="154" y1="64" x2="154" y2="78" stroke="#c0392b" stroke-width="1.4" marker-end="url(#arr-r)"/>
+  <text x="139" y="59" font-size="9" fill="#c0392b" font-family="sans-serif">Δh↓</text>
+  <text x="99" y="164" font-size="10" fill="#444" font-family="sans-serif">漂浮 F浮'=G</text>
+
+  <!-- Right Panel: Pure Ice in Pure Water -->
+  <rect x="174" y="66" width="56" height="60" fill="#e6f3ff"/>
+  <polyline points="174,44 174,126 230,126 230,44" fill="none" stroke="#111" stroke-width="1.8"/>
+  <line x1="174" y1="66" x2="230" y2="66" stroke="#2c6eb5" stroke-width="1.4"/>
+  <!-- Ice cube -->
+  <rect x="188" y="58" width="26" height="24" fill="#ffffff" stroke="#2c6eb5" stroke-width="1.4" stroke-dasharray="3,1"/>
+  <text x="195" y="74" font-size="10" fill="#2c6eb5" font-family="sans-serif">冰</text>
+  <text x="176" y="140" font-size="10" fill="#111" font-family="sans-serif">纯水+纯冰</text>
+  <text x="176" y="154" font-size="10" font-weight="bold" fill="#1b7a46" font-family="sans-serif">液面不变</text>
+
+  <!-- Right Panel: Pure Ice in Salt Water -->
+  <rect x="248" y="66" width="56" height="60" fill="#d9eefc"/>
+  <polyline points="248,44 248,126 304,126 304,44" fill="none" stroke="#111" stroke-width="1.8"/>
+  <!-- New higher water level dashed -->
+  <line x1="248" y1="54" x2="304" y2="54" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="3,2"/>
+  <line x1="248" y1="66" x2="304" y2="66" stroke="#2c6eb5" stroke-width="1.4"/>
+  <!-- Ice cube -->
+  <rect x="262" y="58" width="26" height="22" fill="#ffffff" stroke="#2c6eb5" stroke-width="1.4" stroke-dasharray="3,1"/>
+  <text x="269" y="73" font-size="10" fill="#2c6eb5" font-family="sans-serif">冰</text>
+  <line x1="308" y1="66" x2="308" y2="54" stroke="#c0392b" stroke-width="1.4" marker-end="url(#arr-r)"/>
+  <text x="250" y="140" font-size="10" fill="#111" font-family="sans-serif">盐水+纯冰</text>
+  <text x="250" y="154" font-size="10" font-weight="bold" fill="#c0392b" font-family="sans-serif">液面上升↑</text>
+
+  <!-- Bottom Summary Strip -->
+  <rect x="10" y="178" width="300" height="24" rx="4" fill="#f4f7fb" stroke="#d5dde6" stroke-width="1"/>
+  <text x="18" y="194" font-size="10" fill="#222" font-family="sans-serif">剪绳：Δp底＝F绳/S容（桌面压强不变）｜含铁冰熔化：液面下降↓</text>
+</svg>

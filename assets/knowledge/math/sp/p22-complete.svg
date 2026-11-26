@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="13" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="160.0" y1="16.0" x2="160.0" y2="198.0" stroke="#d4d4d8" stroke-width="1.2"/>
+<text x="80.0" y="24.0" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="12" fill="#111" stroke="none" text-anchor="middle">a &gt; 0 &#x5F00;&#x53E3;&#x5411;&#x4E0A;</text>
+<line x1="18.0" y1="154.0" x2="148.0" y2="154.0" stroke-width="1.4"/>
+<polyline points="142,150 148,154 142,158" stroke-width="1.4"/>
+<line x1="40.0" y1="178.0" x2="40.0" y2="40.0" stroke-width="1.4"/>
+<polyline points="36,46 40,40 44,46" stroke-width="1.4"/>
+<text x="148.0" y="169.0" fill="#111" stroke="none" text-anchor="middle">x</text>
+<text x="30.0" y="46.0" fill="#111" stroke="none" text-anchor="middle">y</text>
+<text x="31.0" y="167.0" fill="#111" stroke="none" text-anchor="middle">O</text>
+<line x1="92.0" y1="48.0" x2="92.0" y2="154.0" stroke-width="1.2" stroke-dasharray="5 4" stroke="#666"/>
+<line x1="40.0" y1="122.0" x2="92.0" y2="122.0" stroke-width="1.2" stroke-dasharray="5 4" stroke="#666"/>
+<path d="M 50.0,58.5 Q 92.0,185.5 134.0,58.5" stroke-width="2.2"/>
+<circle cx="92.0" cy="122.0" r="2.8" fill="#111" stroke="none"/>
+<text x="92.0" y="168.0" fill="#111" stroke="none" text-anchor="middle">h</text>
+<text x="31.0" y="126.0" fill="#111" stroke="none" text-anchor="middle">k</text>
+<text x="115.0" y="136.0" fill="#111" stroke="none" text-anchor="middle">(h, k)</text>
+<text x="80.0" y="198.0" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#444" stroke="none" text-anchor="middle">x = h &#x65F6;&#xFF0C;&#x6700;&#x5C0F;&#x503C; = k</text>
+<text x="240.0" y="24.0" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="12" fill="#111" stroke="none" text-anchor="middle">a &lt; 0 &#x5F00;&#x53E3;&#x5411;&#x4E0B;</text>
+<line x1="176.0" y1="154.0" x2="306.0" y2="154.0" stroke-width="1.4"/>
+<polyline points="300,150 306,154 300,158" stroke-width="1.4"/>
+<line x1="198.0" y1="178.0" x2="198.0" y2="40.0" stroke-width="1.4"/>
+<polyline points="194,46 198,40 202,46" stroke-width="1.4"/>
+<text x="306.0" y="169.0" fill="#111" stroke="none" text-anchor="middle">x</text>
+<text x="188.0" y="46.0" fill="#111" stroke="none" text-anchor="middle">y</text>
+<text x="189.0" y="167.0" fill="#111" stroke="none" text-anchor="middle">O</text>
+<line x1="250.0" y1="54.0" x2="250.0" y2="154.0" stroke-width="1.2" stroke-dasharray="5 4" stroke="#666"/>
+<line x1="198.0" y1="72.0" x2="250.0" y2="72.0" stroke-width="1.2" stroke-dasharray="5 4" stroke="#666"/>
+<path d="M 208.0,135.5 Q 250.0,8.5 292.0,135.5" stroke-width="2.2"/>
+<circle cx="250.0" cy="72.0" r="2.8" fill="#111" stroke="none"/>
+<text x="250.0" y="168.0" fill="#111" stroke="none" text-anchor="middle">h</text>
+<text x="189.0" y="76.0" fill="#111" stroke="none" text-anchor="middle">k</text>
+<text x="250.0" y="59.0" fill="#111" stroke="none" text-anchor="middle">(h, k)</text>
+<text x="240.0" y="198.0" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#444" stroke="none" text-anchor="middle">x = h &#x65F6;&#xFF0C;&#x6700;&#x5927;&#x503C; = k</text>
+</svg>

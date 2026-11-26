@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="14" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<line x1="160.0" y1="16.0" x2="160.0" y2="198.0" stroke="#d4d4d8" stroke-width="1.2"/>
+<text x="80.0" y="25.0" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="12" fill="#111" stroke="none" text-anchor="middle">&#x7B49;&#x8170;&#xFF1A;&#x4E24;&#x5706;&#x4E00;&#x5782;&#x7EBF;</text>
+<circle cx="57.0" cy="118.0" r="46.0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<circle cx="103.0" cy="118.0" r="46.0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line x1="80.0" y1="48.0" x2="80.0" y2="186.0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<polyline points="80.0,111.0 87.0,111.0 87.0,118.0" stroke-width="1.2"/>
+<line x1="57.0" y1="118.0" x2="103.0" y2="118.0" stroke-width="2.2"/>
+<circle cx="57.0" cy="118.0" r="2.6" fill="#111" stroke="none"/><text x="47.0" y="133.0" fill="#111" stroke="none" text-anchor="middle">A</text>
+<circle cx="103.0" cy="118.0" r="2.6" fill="#111" stroke="none"/><text x="113.0" y="133.0" fill="#111" stroke="none" text-anchor="middle">B</text>
+<text x="80.0" y="201.0" font-size="11" fill="#444" stroke="none" text-anchor="middle">AB=AP / BA=BP / PA=PB</text>
+<text x="240.0" y="25.0" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="12" fill="#111" stroke="none" text-anchor="middle">&#x76F4;&#x89D2;&#xFF1A;&#x4E24;&#x5782;&#x4E00;&#x5706;</text>
+<circle cx="236.0" cy="118.0" r="38.0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line x1="198.0" y1="48.0" x2="198.0" y2="186.0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line x1="274.0" y1="48.0" x2="274.0" y2="186.0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<polyline points="198.0,111.0 205.0,111.0 205.0,118.0" stroke-width="1.2"/>
+<polyline points="274.0,111.0 267.0,111.0 267.0,118.0" stroke-width="1.2"/>
+<line x1="198.0" y1="118.0" x2="274.0" y2="118.0" stroke-width="2.2"/>
+<polyline points="198.0,118.0 216.0,85.7 274.0,118.0" stroke-width="1.6"/>
+<polyline points="212.1,92.7 219.1,96.6 223.0,89.6" stroke-width="1.2"/>
+<circle cx="198.0" cy="118.0" r="2.6" fill="#111" stroke="none"/><text x="188.0" y="133.0" fill="#111" stroke="none" text-anchor="middle">A</text>
+<circle cx="274.0" cy="118.0" r="2.6" fill="#111" stroke="none"/><text x="284.0" y="133.0" fill="#111" stroke="none" text-anchor="middle">B</text>
+<circle cx="216.0" cy="85.7" r="2.6" fill="#111" stroke="none"/><text x="212.0" y="76.0" fill="#111" stroke="none" text-anchor="middle">P</text>
+<text x="240.0" y="201.0" font-size="11" fill="#444" stroke="none" text-anchor="middle">&#x2220;A=90&#xB0; / &#x2220;B=90&#xB0; / &#x2220;P=90&#xB0;</text>
+</svg>

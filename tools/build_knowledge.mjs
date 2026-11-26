@@ -66,6 +66,15 @@ const index = { updated: new Date().toISOString().slice(0, 10), subjects: [] };
 const oldQs = loadOldQuestions();
 const capstonePath = join(root, "knowledge-src", "capstone-essays.json");
 const capstoneEssays = existsSync(capstonePath) ? JSON.parse(readFileSync(capstonePath, "utf8")) : {};
+const deepPath = join(root, "knowledge-src", "deep-guides.json");
+const deepGuides = existsSync(deepPath) ? JSON.parse(readFileSync(deepPath, "utf8")) : {};
+for (const [pid, g] of Object.entries(deepGuides)) {
+  if (!Array.isArray(g?.triggers) || !g.triggers.length) throw new Error(`deep-guides ${pid} 缺 triggers`);
+  if (!Array.isArray(g?.steps) || !g.steps.length) throw new Error(`deep-guides ${pid} 缺 steps`);
+  if (!Array.isArray(g?.variants) || !g.variants.length) throw new Error(`deep-guides ${pid} 缺 variants`);
+  if (!g?.parentGuide?.ask || !g?.parentGuide?.key) throw new Error(`deep-guides ${pid} 缺 parentGuide`);
+  if (g.examples && !Array.isArray(g.examples)) throw new Error(`deep-guides ${pid} examples 应为数组`);
+}
 
 for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
   const srcDir = join(root, "knowledge-src", subject);
@@ -140,7 +149,8 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
         const prefixes = [sem.unitPrefix, ...(sem.altPrefixes || [])];
         const refs = oldQs.filter(q => q.subject === subject && ((!q.unit && subject === "chemistry") || prefixes.some(pr => String(q.unit || "").startsWith(pr))) && kpSet.has(q.kp))
           .sort((a, b) => String(a.paperId).localeCompare(String(b.paperId)) || a.number - b.number);
-        chapter.points.push({ id: pointId, name: p.name, tag: p.tag || "", ...(extraEssay ? { hasEssay: true } : {}), card: p.card, qids, refs: refs.map(q => q.id) });
+        const deepGuide = deepGuides[pointId];
+        chapter.points.push({ id: pointId, name: p.name, tag: p.tag || "", ...(extraEssay ? { hasEssay: true } : {}), ...(deepGuide ? { hasDeep: true, deep: deepGuide } : {}), card: p.card, qids, refs: refs.map(q => q.id) });
         for (const q of refs) if (!questions.some(x => x.id === q.id)) questions.push({ ...q, kpId: pointId, kpRef: true });
       }
     }
@@ -156,7 +166,7 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
       `// 由 tools/build_knowledge.mjs 生成，源文件 knowledge-src/${subject}/${sem.key}-*.json，请勿手改。\nwindow.KNOWLEDGE_DATA = window.KNOWLEDGE_DATA || {};\nwindow.KNOWLEDGE_DATA[${JSON.stringify(`${subject}-${sem.key}`)}] = ${JSON.stringify(data)};\n`);
     const pointCount = chapters.reduce((s, c) => s + c.points.length, 0);
     subjectIndex.semesters.push({ key: sem.key, stage: sem.stage, label: sem.label, ready: true,
-      chapters: chapters.map(c => ({ name: c.name, points: c.points.map(p => ({ id: p.id, name: p.name, tag: p.tag, ...(p.hasEssay ? { hasEssay: true } : {}), ids: [...p.qids, ...p.refs] })) })),
+      chapters: chapters.map(c => ({ name: c.name, points: c.points.map(p => ({ id: p.id, name: p.name, tag: p.tag, ...(p.hasEssay ? { hasEssay: true } : {}), ...(p.hasDeep ? { hasDeep: true } : {}), ids: [...p.qids, ...p.refs] })) })),
       pointCount, questionCount: questions.length });
     console.log(`${subject}-${sem.key}: ${chapters.length} 章 ${pointCount} 个知识点，新题 ${fresh.length} 道（单选答案分布 ${JSON.stringify(dist)}），归位旧题 ${questions.length - fresh.length} 道`);
   }

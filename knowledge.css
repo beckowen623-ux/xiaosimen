@@ -135,3 +135,64 @@
 .kp-rx-plan ol { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.75; color: var(--ink); }
 .kp-rx-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .kp-rx-upsell { margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: #f3f7f4; border: 1px dashed var(--green); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; font-size: 13px; color: var(--ink); }
+
+/* ---- 名师 4 步通关微课 · 星级通关墙 · 遮罩背诵 · 家长 30 秒抽查 ---- */
+.kp-deep-tag { display: inline-block; font-style: normal; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-left: 6px; background: #e8f5ee; color: #165e41; border: 1px solid #9bd4b5; vertical-align: 1px; }
+.kp-stars { font-size: 13.5px; letter-spacing: 1px; font-weight: 700; }
+.kp-stars.is-zero { color: #b9b6a8; }
+.kp-stars.is-mid { color: #d97706; }
+.kp-stars.is-gold { color: #15803d; }
+.kp-ch-title { display: grid; gap: 5px; min-width: 0; flex: 1; }
+.kp-ch-bar { display: block; width: min(180px, 100%); height: 5px; border-radius: 999px; background: #e8e6dc; overflow: hidden; }
+.kp-ch-bar b { display: block; height: 100%; background: var(--green); border-radius: 999px; transition: width .25s ease; }
+
+.kp-mastery-banner { padding: 18px 20px; margin-bottom: 14px; border-radius: 14px; border: 1.5px solid var(--green); background: linear-gradient(135deg, #fffdf8 0%, #f1f8f4 100%); }
+.kp-mastery-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.kp-mastery-top h2 { font-family: var(--serif); font-size: clamp(20px, 3.5vw, 26px); margin: 4px 0 0; }
+.kp-mastery-stars { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; padding: 6px 12px; border-radius: 10px; background: #fff; border: 1px solid var(--line); }
+.kp-mastery-stars .kp-stars { font-size: 17px; }
+.kp-mastery-stars span { font-size: 12px; color: var(--muted); font-weight: 600; }
+.kp-mastery-bar { height: 7px; border-radius: 999px; background: #e4e2d8; overflow: hidden; margin: 12px 0 8px; }
+.kp-mastery-bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--green), #22a06b); border-radius: 999px; transition: width .3s ease; }
+.kp-mastery-tip { margin: 0; font-size: 13.5px; color: var(--green-dark); font-weight: 600; line-height: 1.6; }
+
+.kp-step-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; }
+.kp-step-pill { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 999px; background: var(--green); color: #fff; font-size: 12.5px; font-weight: 700; letter-spacing: .02em; }
+.kp-mask-hint { margin: 0 0 10px; padding: 8px 12px; border-radius: 8px; background: #f0f9f4; border: 1px dashed var(--green); color: var(--green-dark); font-size: 13px; }
+.kp-blank { display: inline; padding: 0 6px; margin: 0 2px; border: 0; border-radius: 4px; background: var(--green); color: transparent; font: inherit; cursor: pointer; user-select: none; transition: background .15s ease, color .15s ease; }
+.kp-blank.revealed { background: #fef3c7; color: #92400e; font-weight: 700; }
+
+.kp-deep-block { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+.kp-steps-ol { margin: 0; padding-left: 20px; line-height: 1.85; }
+.kp-steps-ol li { margin-bottom: 4px; }
+.kp-parent-box { margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: #fffaf0; border: 1px solid #ecc97b; }
+.kp-parent-box h3 { margin: 0 0 6px; font-size: 14.5px; color: #92400e; }
+.kp-parent-ask { margin: 0 0 6px; font-size: 14px; line-height: 1.7; color: var(--ink); }
+.kp-parent-box summary { cursor: pointer; font-size: 13.5px; font-weight: 700; color: var(--green-dark); }
+.kp-parent-key { margin: 6px 0 0; padding: 8px 10px; border-radius: 8px; background: #fff; font-size: 13.5px; line-height: 1.7; color: var(--ink); }
+
+.kp-example-card { padding: 18px 20px; margin-bottom: 14px; border-radius: 14px; }
+.kp-step-ex { padding: 12px 14px; border-radius: 10px; background: #faf9f4; border: 1px solid var(--line); margin-top: 10px; }
+.kp-step-ex:first-of-type { margin-top: 0; }
+.kp-ex-badge { margin: 0 0 6px; font-size: 12.5px; font-weight: 700; color: var(--green-dark); }
+.kp-ex-q { margin: 0 0 10px; font-size: 15px; line-height: 1.75; color: var(--ink); font-weight: 500; }
+.kp-step-reveal-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.kp-step-reveal-bar .btn { min-height: 34px; padding: 0 12px; font-size: 13px; }
+.kp-rev-box { margin-top: 8px; padding: 10px 12px; border-radius: 8px; background: #fff; border-left: 3px solid var(--green); font-size: 13.5px; line-height: 1.75; color: var(--ink); }
+.kp-rev-box.is-final { border-left-color: var(--seal); background: #fffdf9; }
+
+.kp-stage-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 6px; }
+.kp-stage-card { display: grid; gap: 5px; align-content: start; padding: 14px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; text-align: left; font: inherit; color: var(--ink); cursor: pointer; transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease; }
+.kp-stage-card:hover:not(:disabled) { border-color: var(--green); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(20, 62, 47, .08); }
+.kp-stage-card.is-cleared { border-color: #22a06b; background: #f0fdf4; }
+.kp-stage-card.has-essay:not(.is-cleared) { border-color: #f59e0b; background: #fffdf5; }
+.kp-stage-lv { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 700; color: var(--green-dark); }
+.kp-stage-lv em { font-style: normal; font-size: 11px; padding: 1px 6px; border-radius: 999px; background: #dcfce7; color: #166534; }
+.kp-stage-lv em.is-pro { background: #fef3c7; color: #92400e; }
+.kp-stage-card b { font-size: 15.5px; color: var(--ink); }
+.kp-stage-card.is-cleared b { color: #15803d; }
+.kp-stage-card small { font-size: 12px; color: var(--muted); line-height: 1.5; }
+@media (max-width: 680px) {
+  .kp-stage-grid { grid-template-columns: 1fr; }
+  .kp-mastery-stars { align-items: flex-start; flex-direction: row; align-items: center; gap: 8px; }
+}

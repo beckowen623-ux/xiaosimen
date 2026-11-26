@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210">
+  <rect width="320" height="210" fill="#ffffff"/>
+  <defs>
+    <marker id="arr-k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/>
+    </marker>
+    <marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2c6eb5"/>
+    </marker>
+  </defs>
+
+  <!-- Panel Dividers -->
+  <line x1="107" y1="10" x2="107" y2="174" stroke="#d5dde6" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="213" y1="10" x2="213" y2="174" stroke="#d5dde6" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- Panel 1: Optics Refraction -->
+  <text x="18" y="20" font-size="10.5" font-weight="bold" fill="#111" font-family="sans-serif">① 光的折射</text>
+  <rect x="10" y="92" width="90" height="58" fill="#e6f3ff"/>
+  <line x1="10" y1="92" x2="100" y2="92" stroke="#111" stroke-width="1.6"/>
+  <text x="14" y="86" font-size="9" fill="#555" font-family="sans-serif">空气</text>
+  <text x="14" y="106" font-size="9" fill="#2c6eb5" font-family="sans-serif">水</text>
+  <!-- Normal line dashed + right angle -->
+  <line x1="55" y1="36" x2="55" y2="148" stroke="#666" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <polyline points="55,84 63,84 63,92" fill="none" stroke="#666" stroke-width="1"/>
+  <!-- Incident ray -->
+  <line x1="20" y1="48" x2="55" y2="92" stroke="#c0392b" stroke-width="1.8" marker-end="url(#arr-r)"/>
+  <text x="41" y="64" font-size="9.5" fill="#c0392b" font-family="sans-serif">i</text>
+  <!-- Refracted ray (closer to normal) -->
+  <line x1="55" y1="92" x2="77" y2="142" stroke="#2c6eb5" stroke-width="1.8" marker-end="url(#arr-b)"/>
+  <text x="60" y="128" font-size="9.5" fill="#2c6eb5" font-family="sans-serif">r&lt;i</text>
+  <text x="14" y="166" font-size="9.5" fill="#333" font-family="sans-serif">法线虚线·必带箭头</text>
+
+  <!-- Panel 2: Lever Min Force -->
+  <text x="116" y="20" font-size="10.5" font-weight="bold" fill="#111" font-family="sans-serif">② 杠杆最小力</text>
+  <!-- Pivot O -->
+  <polygon points="124,116 118,128 130,128" fill="#ddd" stroke="#111" stroke-width="1.4"/>
+  <circle cx="124" cy="116" r="2.5" fill="#111"/>
+  <text x="114" y="114" font-size="10" font-weight="bold" fill="#111" font-family="sans-serif">O</text>
+  <!-- Bent lever O-B-A -->
+  <polyline points="124,116 168,116 194,82" fill="none" stroke="#111" stroke-width="2.4"/>
+  <!-- Load G at B -->
+  <line x1="158" y1="116" x2="158" y2="132" stroke="#111" stroke-width="1.4"/>
+  <rect x="150" y="132" width="16" height="16" fill="#f7ead9" stroke="#111" stroke-width="1.4"/>
+  <text x="154" y="144" font-size="9.5" fill="#111" font-family="sans-serif">G</text>
+  <!-- Longest lever arm OA dashed -->
+  <line x1="124" y1="116" x2="194" y2="82" stroke="#2c6eb5" stroke-width="1.4" stroke-dasharray="4,2"/>
+  <text x="148" y="96" font-size="9" fill="#2c6eb5" font-family="sans-serif">Lmax</text>
+  <!-- Fmin perpendicular to OA at A -->
+  <line x1="194" y1="82" x2="178" y2="48" stroke="#c0392b" stroke-width="1.8" marker-end="url(#arr-r)"/>
+  <polyline points="187,85 184,79 191,75" fill="none" stroke="#c0392b" stroke-width="1.1"/>
+  <text x="197" y="85" font-size="10" fill="#111" font-family="sans-serif">A</text>
+  <text x="164" y="45" font-size="9.5" font-weight="bold" fill="#c0392b" font-family="sans-serif">Fmin</text>
+  <text x="115" y="166" font-size="9.5" fill="#333" font-family="sans-serif">连OA作最长臂·F⊥OA</text>
+
+  <!-- Panel 3: Solenoid N/S -->
+  <text x="224" y="20" font-size="10.5" font-weight="bold" fill="#111" font-family="sans-serif">③ 通电螺线管</text>
+  <!-- Solenoid body -->
+  <rect x="234" y="70" width="64" height="32" rx="3" fill="#eef4fb" stroke="#111" stroke-width="1.5"/>
+  <!-- Front coils with upward current arrows -->
+  <line x1="244" y1="102" x2="244" y2="70" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-r)"/>
+  <line x1="258" y1="102" x2="258" y2="70" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-r)"/>
+  <line x1="272" y1="102" x2="272" y2="70" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-r)"/>
+  <line x1="286" y1="102" x2="286" y2="70" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-r)"/>
+  <!-- Poles -->
+  <text x="220" y="90" font-size="12" font-weight="bold" fill="#c0392b" font-family="sans-serif">N</text>
+  <text x="302" y="90" font-size="12" font-weight="bold" fill="#2c6eb5" font-family="sans-serif">S</text>
+  <!-- Magnetic field curve N -> S -->
+  <path d="M 228,74 C 228,44 304,44 304,74" fill="none" stroke="#2c6eb5" stroke-width="1.3" stroke-dasharray="3,2"/>
+  <line x1="262" y1="51" x2="272" y2="51" stroke="#2c6eb5" stroke-width="1.4" marker-end="url(#arr-b)"/>
+  <!-- Circuit wires & power source -->
+  <polyline points="244,102 244,132 258,132" fill="none" stroke="#111" stroke-width="1.5"/>
+  <polyline points="286,102 286,132 272,132" fill="none" stroke="#111" stroke-width="1.5"/>
+  <line x1="258" y1="124" x2="258" y2="140" stroke="#111" stroke-width="1.8"/>
+  <line x1="266" y1="128" x2="266" y2="136" stroke="#111" stroke-width="3"/>
+  <line x1="266" y1="132" x2="272" y2="132" stroke="#111" stroke-width="1.5"/>
+  <text x="249" y="147" font-size="9.5" fill="#c0392b" font-family="sans-serif">+</text>
+  <text x="270" y="147" font-size="9.5" fill="#2c6eb5" font-family="sans-serif">-</text>
+  <text x="220" y="166" font-size="9.5" fill="#333" font-family="sans-serif">右手握管·拇指指N极</text>
+
+  <!-- Bottom Reminder Strip -->
+  <rect x="10" y="178" width="300" height="24" rx="4" fill="#f4f7fb" stroke="#d5dde6" stroke-width="1"/>
+  <text x="24" y="194" font-size="10" fill="#222" font-family="sans-serif">作图扣分红线：漏箭头、漏垂足、实虚线画反、磁极标错</text>
+</svg>

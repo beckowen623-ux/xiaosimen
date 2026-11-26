@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210">
+  <rect width="320" height="210" fill="#ffffff"/>
+  <defs>
+    <marker id="arr-k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/>
+    </marker>
+    <marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="14" y="18" font-size="11" font-weight="bold" fill="#111" font-family="sans-serif">缺天平“一漂一沉法”测漂浮物密度</text>
+
+  <!-- Cylinder 1: V1 -->
+  <rect x="26" y="102" width="44" height="50" fill="#e6f3ff"/>
+  <polyline points="26,38 26,152 70,152 70,38" fill="none" stroke="#111" stroke-width="1.8"/>
+  <line x1="20" y1="152" x2="76" y2="152" stroke="#111" stroke-width="2"/>
+  <line x1="26" y1="102" x2="70" y2="102" stroke="#2c6eb5" stroke-width="1.6"/>
+  <!-- Scale ticks -->
+  <line x1="26" y1="54" x2="32" y2="54" stroke="#666" stroke-width="1"/>
+  <line x1="26" y1="70" x2="32" y2="70" stroke="#666" stroke-width="1"/>
+  <line x1="26" y1="86" x2="32" y2="86" stroke="#666" stroke-width="1"/>
+  <line x1="26" y1="102" x2="34" y2="102" stroke="#2c6eb5" stroke-width="1.3"/>
+  <line x1="26" y1="118" x2="32" y2="118" stroke="#666" stroke-width="1"/>
+  <text x="74" y="105" font-size="10" font-weight="bold" fill="#2c6eb5" font-family="sans-serif">V₁</text>
+  <text x="22" y="168" font-size="10" fill="#333" font-family="sans-serif">① 适量水</text>
+
+  <!-- Cylinder 2: V2 (Floating) -->
+  <rect x="128" y="76" width="44" height="76" fill="#e6f3ff"/>
+  <polyline points="128,38 128,152 172,152 172,38" fill="none" stroke="#111" stroke-width="1.8"/>
+  <line x1="122" y1="152" x2="178" y2="152" stroke="#111" stroke-width="2"/>
+  <line x1="128" y1="102" x2="172" y2="102" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="128" y1="76" x2="172" y2="76" stroke="#2c6eb5" stroke-width="1.6"/>
+  <!-- Floating Wood -->
+  <rect x="138" y="64" width="24" height="24" fill="#f7ead9" stroke="#111" stroke-width="1.5"/>
+  <text x="145" y="80" font-size="10" fill="#111" font-family="sans-serif">木</text>
+  <text x="176" y="79" font-size="10" font-weight="bold" fill="#2c6eb5" font-family="sans-serif">V₂</text>
+  <text x="120" y="168" font-size="10" fill="#333" font-family="sans-serif">② 漂浮定质量</text>
+
+  <!-- Cylinder 3: V3 (Submerged by needle) -->
+  <rect x="230" y="58" width="44" height="94" fill="#e6f3ff"/>
+  <polyline points="230,38 230,152 274,152 274,38" fill="none" stroke="#111" stroke-width="1.8"/>
+  <line x1="224" y1="152" x2="280" y2="152" stroke="#111" stroke-width="2"/>
+  <line x1="230" y1="102" x2="274" y2="102" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="230" y1="58" x2="274" y2="58" stroke="#c0392b" stroke-width="1.6"/>
+  <!-- Submerged Wood + Thin Needle -->
+  <rect x="240" y="86" width="24" height="24" fill="#f7ead9" stroke="#111" stroke-width="1.5"/>
+  <text x="247" y="102" font-size="10" fill="#111" font-family="sans-serif">木</text>
+  <line x1="252" y1="28" x2="252" y2="86" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="256" y="36" font-size="9" fill="#c0392b" font-family="sans-serif">细针压没</text>
+  <text x="278" y="61" font-size="10" font-weight="bold" fill="#c0392b" font-family="sans-serif">V₃</text>
+  <text x="222" y="168" font-size="10" fill="#333" font-family="sans-serif">③ 浸没定体积</text>
+
+  <!-- Bottom Formula Strip -->
+  <rect x="10" y="176" width="300" height="26" rx="4" fill="#f4f7fb" stroke="#d5dde6" stroke-width="1"/>
+  <text x="18" y="193" font-size="10" font-weight="bold" fill="#111" font-family="sans-serif">m＝ρ水(V₂－V₁)，V＝V₃－V₁ ⇒ ρ木＝[(V₂－V₁)/(V₃－V₁)]·ρ水</text>
+</svg>

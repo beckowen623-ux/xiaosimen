@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210">
+  <rect width="320" height="210" fill="#ffffff"/>
+  <defs>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2c6eb5"/>
+    </marker>
+    <marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="14" y="20" font-size="11" font-weight="bold" fill="#111" font-family="sans-serif">力—热—电跨学科能量转化链与效率模型</text>
+
+  <!-- Row 1: New Energy Vehicle -->
+  <rect x="14" y="32" width="102" height="44" rx="5" fill="#eef4fb" stroke="#2c6eb5" stroke-width="1.6"/>
+  <text x="34" y="49" font-size="10" font-weight="bold" fill="#2c6eb5" font-family="sans-serif">新能源汽车电池</text>
+  <text x="23" y="66" font-size="10" fill="#111" font-family="sans-serif">W电＝UIt（A·h）</text>
+
+  <line x1="116" y1="54" x2="188" y2="54" stroke="#2c6eb5" stroke-width="2" marker-end="url(#arr-b)"/>
+  <text x="128" y="47" font-size="10" font-weight="bold" fill="#2c6eb5" font-family="sans-serif">效率 η机</text>
+  <!-- Waste branch 1 -->
+  <line x1="152" y1="54" x2="152" y2="82" stroke="#888" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arr-g)"/>
+  <text x="158" y="79" font-size="9" fill="#666" font-family="sans-serif">电机发热损耗</text>
+
+  <rect x="192" y="32" width="114" height="44" rx="5" fill="#eaf6ef" stroke="#1b7a46" stroke-width="1.6"/>
+  <text x="210" y="49" font-size="10" font-weight="bold" fill="#1b7a46" font-family="sans-serif">牵引机械功输出</text>
+  <text x="202" y="66" font-size="10" fill="#111" font-family="sans-serif">W机＝Fs＝Pt＝ηW电</text>
+
+  <!-- Row 2: Electric Kettle / Fuel Heating -->
+  <rect x="14" y="102" width="102" height="44" rx="5" fill="#fdf2e9" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="26" y="119" font-size="10" font-weight="bold" fill="#c0392b" font-family="sans-serif">电热水壶 / 燃料</text>
+  <text x="20" y="136" font-size="10" fill="#111" font-family="sans-serif">W电＝Pt / Q放＝mq</text>
+
+  <line x1="116" y1="124" x2="188" y2="124" stroke="#c0392b" stroke-width="2" marker-end="url(#arr-r)"/>
+  <text x="128" y="117" font-size="10" font-weight="bold" fill="#c0392b" font-family="sans-serif">效率 η热</text>
+  <!-- Waste branch 2 -->
+  <line x1="152" y1="124" x2="152" y2="152" stroke="#888" stroke-width="1.3" stroke-dasharray="3,2" marker-end="url(#arr-g)"/>
+  <text x="158" y="149" font-size="9" fill="#666" font-family="sans-serif">散热/废气损耗</text>
+
+  <rect x="192" y="102" width="114" height="44" rx="5" fill="#eaf6ef" stroke="#1b7a46" stroke-width="1.6"/>
+  <text x="218" y="119" font-size="10" font-weight="bold" fill="#1b7a46" font-family="sans-serif">水吸收热量</text>
+  <text x="202" y="136" font-size="10" fill="#111" font-family="sans-serif">Q吸＝cmΔt＝ηW电</text>
+
+  <!-- Bottom Formula Strip -->
+  <rect x="12" y="166" width="296" height="34" rx="4" fill="#f4f7fb" stroke="#d5dde6" stroke-width="1"/>
+  <text x="22" y="180" font-size="10" font-weight="bold" fill="#111" font-family="sans-serif">统一主线：有用输出能 ＝ η × 输入总能</text>
+  <text x="22" y="194" font-size="9.5" fill="#444" font-family="sans-serif">换算：1 kW·h＝3.6×10⁶ J ｜ 1 m/s＝3.6 km/h ｜ 1 L 水＝1 kg</text>
+</svg>

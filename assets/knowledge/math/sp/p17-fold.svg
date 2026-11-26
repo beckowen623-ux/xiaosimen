@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210" font-family="Times New Roman, serif" font-size="15" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect width="320" height="210" fill="#fff" stroke="none"/>
+<polygon points="55.0,124.3 55.0,168.0 127.0,168.0" fill="#f3f4f6" stroke="none"/>
+<polyline points="55.0,124.3 55.0,168.0 265.0,168.0 265.0,40.0 204.8,40.0" stroke-width="2"/>
+<polyline points="55.0,124.3 55.0,40.0 204.8,40.0" stroke-width="1.6" stroke-dasharray="6 5"/>
+<line x1="55.0" y1="124.3" x2="204.8" y2="40.0" stroke-width="2.2"/>
+<polyline points="55.0,124.3 127.0,168.0 204.8,40.0" stroke-width="2"/>
+<line x1="55.0" y1="40.0" x2="127.0" y2="168.0" stroke-width="1.2" stroke-dasharray="4 4" stroke="#666"/>
+<polyline points="55.0,159.0 64.0,159.0 64.0,168.0" stroke-width="1.4"/>
+<polyline points="119.3,163.3 124.0,155.6 131.7,160.3" stroke-width="1.4"/>
+<circle cx="55.0" cy="40.0" r="2.8" fill="#111" stroke="none"/><text x="43.0" y="36.0" fill="#111" stroke="none" text-anchor="middle">A</text>
+<circle cx="55.0" cy="168.0" r="2.8" fill="#111" stroke="none"/><text x="43.0" y="178.0" fill="#111" stroke="none" text-anchor="middle">B</text>
+<circle cx="265.0" cy="168.0" r="2.8" fill="#111" stroke="none"/><text x="277.0" y="178.0" fill="#111" stroke="none" text-anchor="middle">C</text>
+<circle cx="265.0" cy="40.0" r="2.8" fill="#111" stroke="none"/><text x="277.0" y="36.0" fill="#111" stroke="none" text-anchor="middle">D</text>
+<circle cx="55.0" cy="124.3" r="2.8" fill="#111" stroke="none"/><text x="42.0" y="128.0" fill="#111" stroke="none" text-anchor="middle">E</text>
+<circle cx="204.8" cy="40.0" r="2.8" fill="#111" stroke="none"/><text x="205.0" y="29.0" fill="#111" stroke="none" text-anchor="middle">F</text>
+<circle cx="127.0" cy="168.0" r="2.8" fill="#111" stroke="none"/><text x="127.0" y="185.0" fill="#111" stroke="none" text-anchor="middle">A&#x2032;</text>
+<text x="160.0" y="202.0" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#444" stroke="none" text-anchor="middle">AE = A&#x2032;E&#xFF0C;Rt&#x25B3;EBA&#x2032; &#x5217;&#x52FE;&#x80A1;&#x65B9;&#x7A0B;</text>
+</svg>
