@@ -73,16 +73,47 @@
     const cls = stars === 3 ? 'is-gold' : stars > 0 ? 'is-mid' : 'is-zero';
     return `<span class="kp-stars ${cls}" aria-label="已点亮 ${stars} 颗星（满分 3 星）">${filled}${empty}</span>`;
   }
+  function wrapKpBlank(txt) {
+    return `<button type="button" class="kp-blank" data-kp-blank aria-pressed="false" aria-label="点击揭晓答案"><span class="mask-inner">${esc(txt)}</span></button>`;
+  }
   function maskKpText(raw) {
     const src = String(raw ?? '');
-    const re = /([「“][^」”]{2,18}[」”]|(?:\d+(?:\.\d+)?(?:\s*[°%℃ΩVAJWs]|\/[a-zA-Z0-9]+)?)|(?:[A-Za-z][A-Za-z0-9²³⁴⁺⁻₀₁₂₃₄₅₆₇₈₉]*\s*[＝=＜＞<>≤≥≈∝]\s*[^，。；、！？（()）]{1,18}))/g;
-    let out = ''; let last = 0; let m;
+    const re = /([「“][^」”]{2,18}[」”]|(?:[A-Za-z][A-Za-z0-9²³⁴⁺⁻₀₁₂₃₄₅₆₇₈₉]*\s*[＝=＜＞<>≤≥≈∝]\s*[^，。；、！？（()）]{1,18})|(?:\d+(?:\.\d+)?(?:\s*[°%℃ΩVAJWs]|\/[a-zA-Z0-9]+)?)|(?:先[^，。；]{1,6}后[^，。；]{1,6}|偏大|偏小|变大|变小|增大|减小|不变)|(?:叫做|称为|统称为|表示|等于|成正比|成反比|定律[：:]|原理[：:]|条件[：:]|性质[：:]|判定[：:]|结论[：:]|现象[：:]|实质[：:]|口诀[：:]|规律[：:])([^，。；、！？（）()\n]{2,14}))/g;
+    let out = ''; let last = 0; let m; let hits = 0;
     while ((m = re.exec(src)) !== null) {
-      out += esc(src.slice(last, m.index));
-      out += `<button type="button" class="kp-blank" data-kp-blank aria-pressed="false">${esc(m[0])}</button>`;
+      hits++;
+      if (m[2]) {
+        const prefixLen = m[0].length - m[2].length;
+        out += esc(src.slice(last, m.index + prefixLen));
+        out += wrapKpBlank(m[2]);
+      } else {
+        out += esc(src.slice(last, m.index));
+        out += wrapKpBlank(m[0]);
+      }
       last = m.index + m[0].length;
     }
-    return out + esc(src.slice(last));
+    if (hits > 0) return out + esc(src.slice(last));
+    // 100% 兜底：若该行未命中理科符号/词库，自动遮住冒号后或句末 4–14 字核心结论
+    const trimmed = src.trim();
+    if (trimmed.length < 5) return wrapKpBlank(src);
+    const colonIdx = src.search(/[：:]/);
+    if (colonIdx > 0 && colonIdx <= 20 && src.length - colonIdx - 1 >= 4) {
+      const rest = src.slice(colonIdx + 1);
+      const seg = rest.match(/^(\s*)([^，。；！？\n]{3,14})/);
+      if (seg) {
+        const s0 = colonIdx + 1 + seg[1].length;
+        return esc(src.slice(0, s0)) + wrapKpBlank(seg[2]) + esc(src.slice(s0 + seg[2].length));
+      }
+    }
+    const tail = src.match(/([^，。；：、！？\n]{4,14})([。；！？]*)$/);
+    if (tail) {
+      const start = src.length - tail[0].length;
+      const keepLen = tail[1].length > 8 ? Math.floor(tail[1].length * 0.35) : 0;
+      const maskStart = start + keepLen;
+      const maskStr = tail[1].slice(keepLen);
+      return esc(src.slice(0, maskStart)) + wrapKpBlank(maskStr) + esc(tail[2]);
+    }
+    return wrapKpBlank(src);
   }
   function splitExampleSteps(text) {
     const parts = String(text || '').split(/[；;。\n]/).map(s => s.trim()).filter(Boolean);
@@ -706,7 +737,7 @@
           <span class="kp-step-pill">第 1 步 · 考点速通</span>
           <button type="button" class="btn ${reciteMaskOn ? 'primary' : ''}" id="kpMaskToggle">${reciteMaskOn ? '👁️ 关闭背诵遮罩' : '👁️ 开启背诵遮罩'}</button>
         </div>
-        ${reciteMaskOn ? '<p class="kp-mask-hint">已遮住核心公式、条件与关键词，先在心里默背，再轻点绿色色块逐个核对。</p>' : ''}
+        ${reciteMaskOn ? '<div class="kp-mask-hint"><span>已遮住核心公式、条件与关键词，先默背再轻点绿色色块核对。</span><div class="kp-mask-tools"><button type="button" class="btn" id="kpRevealAll">👁️ 全部揭晓</button><button type="button" class="btn" id="kpHideAll">🙈 全部重遮</button></div></div>' : ''}
         <section><h3>知识要点</h3><ul>${li(card.concept)}</ul></section>
         <section><h3>公式与方法</h3><ul>${li(card.formula)}</ul></section>
         <section class="kp-pitfall"><h3>⚠️ 防错红线（高频扣分坑）</h3><ul>${li(card.pitfall)}</ul></section>
@@ -769,6 +800,12 @@
     wireTabs();
     app.view.querySelector('[data-back]').addEventListener('click', () => { state.view = 'list'; state.open.add(chapter.name); void render(); });
     app.view.querySelector('#kpMaskToggle')?.addEventListener('click', () => { reciteMaskOn = !reciteMaskOn; drawPoint(idx, data); });
+    app.view.querySelector('#kpRevealAll')?.addEventListener('click', () => {
+      app.view.querySelectorAll('[data-kp-blank]').forEach(btn => { btn.classList.add('revealed'); btn.setAttribute('aria-pressed', 'true'); });
+    });
+    app.view.querySelector('#kpHideAll')?.addEventListener('click', () => {
+      app.view.querySelectorAll('[data-kp-blank]').forEach(btn => { btn.classList.remove('revealed'); btn.setAttribute('aria-pressed', 'false'); });
+    });
     app.view.querySelectorAll('[data-kp-blank]').forEach(btn => btn.addEventListener('click', () => {
       const on = btn.classList.toggle('revealed');
       btn.setAttribute('aria-pressed', on ? 'true' : 'false');

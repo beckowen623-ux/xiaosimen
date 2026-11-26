@@ -158,9 +158,13 @@
 
 .kp-step-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; }
 .kp-step-pill { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 999px; background: var(--green); color: #fff; font-size: 12.5px; font-weight: 700; letter-spacing: .02em; }
-.kp-mask-hint { margin: 0 0 10px; padding: 8px 12px; border-radius: 8px; background: #f0f9f4; border: 1px dashed var(--green); color: var(--green-dark); font-size: 13px; }
-.kp-blank { display: inline; padding: 0 6px; margin: 0 2px; border: 0; border-radius: 4px; background: var(--green); color: transparent; font: inherit; cursor: pointer; user-select: none; transition: background .15s ease, color .15s ease; }
-.kp-blank.revealed { background: #fef3c7; color: #92400e; font-weight: 700; }
+.kp-mask-hint { margin: 0 0 10px; padding: 8px 12px; border-radius: 8px; background: #f0f9f4; border: 1px dashed var(--green); color: var(--green-dark); font-size: 13px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.kp-mask-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+.kp-mask-tools .btn { min-height: 32px; padding: 4px 10px; font-size: 12.5px; }
+.kp-blank { display: inline; padding: 1px 7px; margin: 0 2px; border: 0; border-radius: 5px; background: #145843; color: transparent !important; -webkit-text-fill-color: transparent !important; font: inherit; cursor: pointer; user-select: none; -webkit-user-select: none; transition: background .16s ease; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.kp-blank .mask-inner { opacity: 0 !important; visibility: hidden !important; color: transparent !important; -webkit-text-fill-color: transparent !important; text-shadow: none !important; transition: opacity .16s ease; }
+.kp-blank.revealed { background: #fef3c7; color: #92400e !important; -webkit-text-fill-color: #92400e !important; font-weight: 700; }
+.kp-blank.revealed .mask-inner { opacity: 1 !important; visibility: visible !important; color: #92400e !important; -webkit-text-fill-color: #92400e !important; }
 
 .kp-deep-block { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
 .kp-steps-ol { margin: 0; padding-left: 20px; line-height: 1.85; }

@@ -42,11 +42,41 @@ void fetch('/api/access/status', { cache: 'no-store' })
   .then(d => { if (d && typeof d.authenticated === 'boolean') paidAccess = d.authenticated; })
   .catch(() => {});
 
+function wrapPtBlank(txt, forPrintBlank) {
+  if (forPrintBlank) return ' ____________ ';
+  return `<span class="pt-blank" role="button" tabindex="0" aria-label="点击揭晓答案"><span class="mask-inner">${escapeHTML(txt)}</span></span>`;
+}
+
 function maskKeywords(text, forPrintBlank = false) {
-  const safe = escapeHTML(text);
-  const re = /(“[^”]{2,16}”|《[^》]{2,14}》|\d{2,4}年|\d+(?:\.\d+)?(?:%|℃|毫米|米|条|项|大)|(?:根本|核心|前提|基础|关键|标志|实质|原则|制度|特征)是[^，。；、]{2,16})/g;
-  if (forPrintBlank) return safe.replace(re, ' ____________ ');
-  return safe.replace(re, m => `<span class="pt-blank" tabindex="0">${m}</span>`);
+  const src = String(text ?? '');
+  const re = /([“「][^”」]{2,16}[”」]|《[^》]{2,14}》|\d{2,4}年|\d+(?:\.\d+)?(?:%|℃|毫米|米|条|项|大)|(?:根本|核心|前提|基础|关键|标志|实质|原则|制度|特征|意义|作用|影响|地位|目标是|本质是|主要是|包括|决定|要求|坚持|体现为|表现为|是)([^，。；、！？（）()\n]{2,14}))/g;
+  let out = '';
+  let last = 0;
+  let m;
+  let hits = 0;
+  while ((m = re.exec(src)) !== null) {
+    hits++;
+    if (m[1]) {
+      const prefixLen = m[0].length - m[1].length;
+      out += escapeHTML(src.slice(last, m.index + prefixLen));
+      out += wrapPtBlank(m[1], forPrintBlank);
+    } else {
+      out += escapeHTML(src.slice(last, m.index));
+      out += wrapPtBlank(m[0], forPrintBlank);
+    }
+    last = m.index + m[0].length;
+  }
+  if (hits > 0) return out + escapeHTML(src.slice(last));
+  const trimmed = src.trim();
+  if (trimmed.length < 5) return wrapPtBlank(src, forPrintBlank);
+  const tail = src.match(/([^，。；：、！？\n]{4,14})([。；！？]*)$/);
+  if (tail) {
+    const start = src.length - tail[0].length;
+    const keepLen = tail[1].length > 8 ? Math.floor(tail[1].length * 0.35) : 0;
+    const maskStart = start + keepLen;
+    return escapeHTML(src.slice(0, maskStart)) + wrapPtBlank(tail[1].slice(keepLen), forPrintBlank) + escapeHTML(tail[2]);
+  }
+  return wrapPtBlank(src, forPrintBlank);
 }
 
 function pointHTML(item, sources) {
@@ -212,12 +242,22 @@ updateSubjectButtons();
 filters.hidden = false;
 
 const reciteBtn = document.getElementById('pointReciteBtn');
+const revealAllBtn = document.getElementById('pointRevealAllBtn');
+const hideAllBtn = document.getElementById('pointHideAllBtn');
 reciteBtn?.addEventListener('click', () => {
   reciteMode = !reciteMode;
   reciteBtn.setAttribute('aria-pressed', String(reciteMode));
   reciteBtn.classList.toggle('primary', reciteMode);
-  reciteBtn.textContent = reciteMode ? '👁️ 已开背诵遮罩（点关键词显答案）' : '👁️ 开启背诵遮罩';
+  reciteBtn.textContent = reciteMode ? '👁️ 已开背诵遮罩（点绿块显答案）' : '👁️ 开启背诵遮罩';
+  if (revealAllBtn) revealAllBtn.hidden = !reciteMode;
+  if (hideAllBtn) hideAllBtn.hidden = !reciteMode;
   render();
+});
+revealAllBtn?.addEventListener('click', () => {
+  results.querySelectorAll('.pt-blank').forEach(el => el.classList.add('revealed'));
+});
+hideAllBtn?.addEventListener('click', () => {
+  results.querySelectorAll('.pt-blank').forEach(el => el.classList.remove('revealed'));
 });
 results.addEventListener('click', event => {
   const blank = event.target.closest('.pt-blank');

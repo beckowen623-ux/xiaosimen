@@ -1,5 +1,14 @@
 # 技术变更记录
 
+## 2026-11-26 · Antigravity · 背诵遮罩彻底根治（0 透字 + 0 漏遮）、首页亲用期中提分标语与吸顶质感升级（main）
+- **双站背诵遮罩物理零透字与 100% 覆盖 (`knowledge.js`, `knowledge.css`, `key-points.js`, `key-points.css`, `key-points.html`)**：
+  - 升级 `maskKpText`（数理化 385 点微课）与 `maskKeywords`（小四门 123 点速记及 A4 挖空默写纸）为「学科语义词库 + 100% 核心结论兜底」双引擎，将漏遮率分别从 43% / 75% 降至 **0%**。
+  - `.kp-blank` 与 `.pt-blank` 改用内外双层 `.mask-inner` 物理隐身（`opacity: 0; visibility: hidden; -webkit-text-fill-color: transparent`），彻底消除透字，并在工具栏新增「全部揭晓 / 全部重遮」快捷按钮。
+- **自家孩子亲用 ＋ 期中提分信任标语与界面精修 (`app.js`, `index.html`, `styles.css`)**：
+  - 首页 Hero 新增书香手记风 `.hero-story-banner`，真诚说明“写给自家孩子用的中考提分题库，本次期中考从年级中上游冲进名列前茅”与按点补缺闭环；同步更新解锁弹窗与「为什么做这个题库」故事卡。
+  - 首页 4 大 Tab 升级毛玻璃吸顶导航，触控高度统一至 44px；更新静态资源版本号与 `UPDATE_LOG`。
+- **验证**：遮罩零漏网脚本全量校验（0% 漏遮）、`validate.mjs`、`smoke.mjs`（40/40）、`stage_pages_release.mjs` 与线上 390×844 手机端实测通过。
+
 ## 2026-11-26 · Antigravity · 模块 4：再补 15 个数理化细粒度高频考点（385 点 / 115 大题 / 119 详讲 / +6 SVG）（main）
 - **新增 15 个高频细粒度知识点 + 120 道分层题 + 15 道解答大题 + 15 套名师详讲 + 6 张教学 SVG (`knowledge-src/*/*.json`, `capstone-essays.json`, `deep-guides.json`, `assets/knowledge/*/*/*.svg`, `data/knowledge-*.js`)**：
   - 数学 +6 点（227→233）：`math-7a-p42` 降幂/升幂与不含某项求值、`math-7b-p39` 坐标系图形规律与动点坐标、`math-8a-p37` 三角形角平分线三大夹角模型与飞镖/8字模型（配 `p37-angmodel.svg`）、`math-8b-p33` 一次函数动点几何面积与分段函数、`math-9a-p37` 二次函数交点式与对称性巧算、`math-9b-p21` 黄金分割与位似中心坐标变换；

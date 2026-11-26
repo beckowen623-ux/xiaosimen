@@ -59,8 +59,10 @@
 
 /* 背诵遮罩 + A4 速记/挖空默写纸打印 */
 .point-recite-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
-.pt-blank { display: inline-block; padding: 0 5px; border-radius: 4px; background: var(--green); color: transparent; cursor: pointer; user-select: none; }
-.pt-blank.revealed { background: #fef3c7; color: #92400e; font-weight: 700; }
+.pt-blank { display: inline; padding: 1px 6px; margin: 0 1px; border-radius: 5px; background: #145843; color: transparent !important; -webkit-text-fill-color: transparent !important; cursor: pointer; user-select: none; -webkit-user-select: none; box-decoration-break: clone; -webkit-box-decoration-break: clone; transition: background .16s ease; }
+.pt-blank .mask-inner { opacity: 0 !important; visibility: hidden !important; color: transparent !important; -webkit-text-fill-color: transparent !important; text-shadow: none !important; }
+.pt-blank.revealed { background: #fef3c7; color: #92400e !important; -webkit-text-fill-color: #92400e !important; font-weight: 700; }
+.pt-blank.revealed .mask-inner { opacity: 1 !important; visibility: visible !important; color: #92400e !important; -webkit-text-fill-color: #92400e !important; }
 .pt-print-overlay { position: fixed; inset: 0; z-index: 9999; background: #eceae2; overflow: auto; padding: 14px 12px 40px; }
 .pt-pr-bar { max-width: 820px; margin: 0 auto 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--line); border-radius: 12px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; position: sticky; top: 8px; z-index: 2; }
 .pt-pr-btns { display: flex; flex-wrap: wrap; gap: 8px; }
