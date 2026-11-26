@@ -620,7 +620,7 @@ const MODE_LABEL = {
   wrong: '错题本', due: '到期复习', favorite: '收藏题', clearWrong: '错题订正',
   sunday: '周日小测', daily: '每日一题', single: '单题练习',
   essay: '主观题提分', blank: '填空速记', retry: '本组错题重练', national: '全国真题练习',
-  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '早鸟自测', chapter: '按章节练', sync: '同步章节卷', knowledge: '知识点补缺',
+  weekly: '本周一卷', paper: '精编模拟卷', everWrong: '曾错题', earlybird: '早鸟自测', chapter: '按章节练', sync: '同步章节卷', knowledge: '知识点补缺', variant: '防背答案变式验收',
 };
 const SUBJECT_ICON = { daode: 'scale', lishi: 'landmark', dili: 'compass', shengwu: 'leaf' };
 const STAGE_HINT = {
@@ -1310,6 +1310,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-26', '上线三大提分实用功能：① 错题本新增「🔄 换一道同类变式题验证（防背答案）」，自动从同知识点或同章节抽另一道变式题检验是否真正掌握；② 新增「📊 一键生成《本周孩子补缺战报》长图」，实时汇总答题数、正确率、连续打卡、知识点与错题本进度，方便存图打卡；③ 首页补缺主线新增「🔥 考前 7 天急救包」，按当前学期与薄弱点自动排好 Day 1–Day 7 每天 15 分钟冲刺清单并支持本地打卡记录。'],
   ['2026-11-26', '背诵遮罩引擎全面升级：彻底修复数理化微课与小四门考点速记部分条目漏遮问题（覆盖率提升至 100%，A4 挖空默写纸同步受益），采用双层物理隐身遮罩杜绝透字，并新增「全部揭晓 / 全部重遮」快捷开关；优化首页吸顶毛玻璃导航与手机端阅读质感。'],
   ['2026-11-26', '数理化细粒度盲区再补 15 个高频考点、15 道规范解答大题、15 套名师详讲与 6 张教学矢量图：数学补齐降幂/升幂与不含某项求值、坐标系动点规律、三角形角平分线三大夹角与飞镖/8字模型、一次函数动点分段面积、二次函数交点式与对称性巧算、黄金分割与位似中心坐标变换；物理补齐斜面测平均速度实验、晶体熔化与水沸腾图像对比、固体切割叠放、病房呼叫/声光控电路设计与互画、焦耳定律 U 形管实验探究；化学补齐一氧化碳还原金属氧化物实验、溶液配制与误差速判、常见物质俗名颜色沉淀速查、粗盐提纯与铵态氮肥检验。全初中升级至 385 个知识点（数学 233 / 物理 97 / 化学 55）、115 道规范解答大题、119 套名师详讲档案。'],
   ['2026-11-26', '数理化知识点补缺上线「🔍 全初中秒搜直达」：支持跨学期、跨教材版本和口语别名（搜“尺规作图、动点、电路故障、金属与酸图像、气密性”一点直达）；同步审查并补齐尺规作图、旋转动角与双角平分线、分组分解法、中点四边形、统计与概率大题、平面镜成像实验、多物体摩擦力、电路故障速判、气密性检查、金属与酸四大图像、数字化传感实验与常见物质俗名沉淀总表等 12 个高频知识点与 9 张教学矢量图，全初中达 370 个知识点、100 道规范解答大题、104 套名师详讲档案。'],
@@ -2185,6 +2186,34 @@ function nationalRecordCount(progress, mode) {
     mode === 'wrong' ? r.wrong : mode === 'favorite' ? r.favorite : mode === 'everWrong' ? (r.wrong || (r.wrongCount || 0) > 0)
       : mode === 'due' ? (r.srs && !r.mastered && r.srs.due && r.srs.due <= today) : false)).length;
 }
+function kpRecordCount(progress, mode) {
+  const today = todayStr();
+  return Object.entries(progress.banks || {}).filter(([id, r]) => id.startsWith('kp-') && r && (
+    mode === 'wrong' ? r.wrong : mode === 'favorite' ? r.favorite : mode === 'everWrong' ? (r.wrong || (r.wrongCount || 0) > 0)
+      : mode === 'due' ? (r.srs && !r.mastered && r.srs.due && r.srs.due <= today) : false)).length;
+}
+async function withKpExtras(mode, progress) {
+  const today = todayStr();
+  const kpIds = Object.entries(progress.banks || {})
+    .filter(([id, r]) => id.startsWith('kp-') && r && (
+      mode === 'wrong' ? r.wrong : mode === 'favorite' ? r.favorite : mode === 'everWrong' ? (r.wrong || (r.wrongCount || 0) > 0)
+        : mode === 'due' ? (r.srs && !r.mastered && r.srs.due && r.srs.due <= today) : false))
+    .map(([id]) => id);
+  if (!kpIds.length) return [];
+  const sems = new Set(kpIds.map(id => { const p = id.split('-'); return p.length >= 3 ? `${p[1]}-${p[2]}` : ''; }).filter(Boolean));
+  const out = [];
+  const want = new Set(kpIds);
+  for (const semKey of sems) {
+    if (!window.KNOWLEDGE_DATA?.[semKey]) {
+      try { await loadScript(`./data/knowledge-${semKey}.js`); } catch {}
+    }
+    const d = window.KNOWLEDGE_DATA?.[semKey];
+    if (d?.questions) {
+      for (const q of d.questions) if (want.has(q.id)) out.push(q);
+    }
+  }
+  return out;
+}
 function reviewHubHTML(progress) {
   const options = [
     { name: '错题本', mode: 'wrong', icon: 'notebook-pen', tone: 'lishi' },
@@ -2193,10 +2222,10 @@ function reviewHubHTML(progress) {
     { name: '收藏题', mode: 'favorite', icon: 'bookmark', tone: 'daode' },
   ];
   return `<section class="quick-section" id="reviewHub" aria-labelledby="modesTitle">
-    <div class="section-heading"><h2 id="modesTitle">错题与收藏 · 全科</h2><span class="muted">英语、语文、模拟卷、本周一卷、小四门都记在这里</span></div>
+    <div class="section-heading"><h2 id="modesTitle">错题与收藏 · 全科</h2><span class="muted">数理化知识点、同步卷、真题与小四门都记在这里</span></div>
     <div class="quick-grid">
       ${options.map(entry => {
-        const n = applyMode(library, entry.mode, progress).length + nationalRecordCount(progress, entry.mode);
+        const n = applyMode(library, entry.mode, progress).length + nationalRecordCount(progress, entry.mode) + kpRecordCount(progress, entry.mode);
         return `<button class="quick-card tone-${entry.tone}" data-mode="${entry.mode}">
         <span class="tile-icon">${icon(entry.icon)}</span>
         <span class="quick-name"><strong>${entry.name}</strong><small>${!hasFullAccess() && entry.mode === 'due' ? '完整版' : fmt.format(n) + ' 道'}</small></span>
@@ -2207,11 +2236,12 @@ function reviewHubHTML(progress) {
     <div class="wrong-print-bar">
       <div>
         <b>🖨️ 省掉错题打印机：一键印出专属 A4 错题重做卷</b>
-        <span class="muted">自动汇总数理化知识点、同步卷、早鸟卷与小四门错题，附独立家长答案解析页。</span>
+        <span class="muted">自动汇总数理化知识点、同步卷、早鸟卷与小四门错题，附独立家长答案解析页；也可一键生成本周补缺战报。</span>
       </div>
       <div class="wrong-print-actions">
         <button type="button" class="btn primary" data-wrong-print="wrong">印当前错题卷</button>
         <button type="button" class="btn" data-wrong-print="everWrong">印全部曾错题</button>
+        <button type="button" class="btn" data-weekly-poster>📊 生成本周补缺战报</button>
       </div>
     </div>
   </section>`;
@@ -2566,6 +2596,7 @@ function wireHome() {
   byId('x4mGroup')?.addEventListener('toggle', event => { state.x4mOpen = event.currentTarget.open; });
   view.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => { void startPractice(btn.dataset.mode); }));
   view.querySelectorAll('[data-wrong-print]').forEach(btn => btn.addEventListener('click', () => { void openWrongPrintSheet(btn.dataset.wrongPrint); }));
+  view.querySelectorAll('[data-weekly-poster]').forEach(btn => btn.addEventListener('click', () => { void openWeeklyPoster(); }));
   view.querySelectorAll('[data-drill]').forEach(btn => btn.addEventListener('click', () => {
     state.drillSubject = btn.dataset.drill;
     rerenderHomeInPlace('x4mGroup');
@@ -2704,7 +2735,7 @@ async function startPractice(mode) {
   if (mode === 'sunday') {
     queue = sundayMock(bankQuestions, progress);
   } else if (['wrong', 'due', 'favorite', 'everWrong'].includes(mode)) {
-    queue = [...applyMode(library, mode, progress), ...await withNationalExtras(mode, progress)];
+    queue = dedupeById([...await withKpExtras(mode, progress), ...applyMode(library, mode, progress), ...await withNationalExtras(mode, progress)]);
   } else {
     const base = availableQueue(progress);
     const stats = mode === 'random20' ? checkinStatus(library, progress, fullAccess) : null;
@@ -2916,6 +2947,71 @@ if (typeof setInterval === 'function') setInterval(() => {
   el.textContent = x4mTimerText(t, limitMs);
   if (x4mElapsed(t) > limitMs && !box.classList.contains('over')) { box.classList.remove('running'); box.classList.add('over'); }
 }, 1000);
+// ---- 错题本「换一道同类变式题验证（防背答案）」 ----
+const VARIANT_ELIGIBLE_MODES = new Set(['wrong', 'due', 'everWrong', 'clearWrong', 'retry', 'knowledge']);
+function canShowVariantBtn(q, progress = loadProgress()) {
+  if (!q || state.mode === 'variant') return false;
+  const rec = qProgress(progress, q.id);
+  const hasWrongHistory = Boolean(rec?.wrong || (rec?.wrongCount || 0) > 0);
+  if (!VARIANT_ELIGIBLE_MODES.has(state.mode) && !hasWrongHistory) return false;
+  return Boolean(q.kpId || String(q.id || '').startsWith('kp-') || q.chapter || q.unit || q.subject);
+}
+async function startVariantCheck(q) {
+  if (!q) return;
+  const progress = loadProgress();
+  const paid = hasFullAccess();
+  let candidates = [];
+  const isKp = Boolean(q.kpId || String(q.id || '').startsWith('kp-'));
+  if (isKp && window.KnowledgeHub?.findVariantQuestions) {
+    try {
+      const res = await window.KnowledgeHub.findVariantQuestions(q, progress);
+      candidates = res?.candidates || [];
+    } catch { candidates = []; }
+  }
+  if (!candidates.length) {
+    if (!banks && SUBJECTS[q.subject] && typeof startBanksBackgroundLoad === 'function') {
+      toast('正在加载同类变式题…');
+      await startBanksBackgroundLoad();
+    }
+    const pool = dedupeById([...(state.queue || []), ...(library || []), ...(nationalSearchPool || [])])
+      .filter(cand => cand && cand.id !== q.id && cand.stem !== q.stem && cand.subject === q.subject);
+    const sameChapter = pool.filter(cand => (q.chapter && cand.chapter === q.chapter) || (q.unit && cand.unit === q.unit));
+    const source = sameChapter.length ? sameChapter : pool;
+    const scoreOf = cand => {
+      const r = qProgress(progress, cand.id);
+      let s = 0;
+      if (!hasAnswered(r)) s += 30;
+      else if (!r.correct) s += 15;
+      if (cand.type === q.type) s += 8;
+      if (cand.stage && q.stage && cand.stage === q.stage) s += 6;
+      return s + Math.random() * 4;
+    };
+    candidates = source.sort((a, b) => scoreOf(b) - scoreOf(a));
+  }
+  if (!candidates.length) {
+    toast('暂无更多同类变式题，说明这个考点你已经练得很透了！');
+    return;
+  }
+  const usable = paid ? candidates : candidates.filter(isTrialQuestion);
+  if (!usable.length) {
+    openUnlock('更多同类变式题验收属于完整版：一次买断 ¥19.9，解锁全部 385 个数理化知识点变式题、115 道解答大题与 71 套同步章节卷。');
+    return;
+  }
+  const picked = usable[0];
+  if (state.mode !== 'variant') {
+    state.variantOrigin = {
+      mode: state.mode,
+      queue: state.queue,
+      idx: state.idx,
+      session: state.session,
+      clearPending: state.clearPending,
+      clearTotal: state.clearTotal,
+    };
+  }
+  toast('已为你换一道同类变式题，检验是否真正掌握！');
+  beginPractice([picked], 'variant', 0);
+}
+
 // 练习页外壳：进度、科目/题型、材料、题干、配图、作答区、结果区、操作按钮、答题卡。
 function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提交答案', submitDisabled = true, revealLabel = '查看解析' }) {
   const rec = qProgress(progress, q.id);
@@ -2924,13 +3020,14 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
   const position = state.idx + 1;
   const typeLabel = q.section || (q.type === 'essay' ? q.meta : (TYPE_LABEL[q.type] || '选择题'));
   const studyMode = ['all', 'random', 'random20', 'unfinished', 'essay', 'blank'].includes(state.mode);
+  const showToolbarVariant = canShowVariantBtn(q, progress) && ['wrong', 'due', 'everWrong', 'clearWrong', 'retry'].includes(state.mode);
   return `
     <div class="practice-shell tone-${esc(q.subject)}">
-      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} ${state.mode === 'national' ? '返回全国真题' : state.mode === 'knowledge' ? '返回知识点' : '返回首页'}</button><span>${esc(state.mode === 'earlybird' && String(state.earlybirdPaper || '').startsWith('xsc-') ? '小升初衔接' : MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
+      <div class="practice-top"><button class="btn text-button" id="backBtn">${icon('arrow-left')} ${state.mode === 'variant' ? '返回原题' : state.mode === 'national' ? '返回全国真题' : state.mode === 'knowledge' ? '返回知识点' : '返回首页'}</button><span>${esc(state.mode === 'earlybird' && String(state.earlybirdPaper || '').startsWith('xsc-') ? '小升初衔接' : MODE_LABEL[state.mode] || '')}${studyMode ? ' · ' + STAGE_MAP[state.stage].label : ''}</span></div>
       ${examTimerHTML()}
       <section class="card question-card" aria-labelledby="questionTitle">
         <div class="question-progress">
-          <div class="progress-label"><strong>${clearing ? '订正进度' : `第 ${position} <span>/ ${total} 题</span>`}</strong><span id="qProg">${questionStats(progress)}</span></div>
+          <div class="progress-label"><strong>${clearing ? '订正进度' : state.mode === 'variant' ? '防背答案变式验收' : `第 ${position} <span>/ ${total} 题</span>`}</strong><span id="qProg">${questionStats(progress)}</span></div>
           ${clearing ? meter(state.clearTotal - state.clearPending.size, state.clearTotal, '错题订正进度') : meter(position, total, `第 ${position} 题，共 ${total} 题`)}
         </div>
         <div class="question-meta">${subjectChip(q.subject, q.subjectLabel)}<span class="chip type-chip">${esc(typeLabel)}</span>${q.type === 'essay' ? `<span class="chip score-chip">${q.score} 分</span>` : ''}${/中考/.test(q.source || '') && isSubjective(q) ? '<span class="chip real-chip">中考真题</span>' : ''}<span class="chapter-tag">${esc(q.chapter)}</span></div>
@@ -2943,6 +3040,7 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
           <div class="question-tools">
             <button class="btn text-button" id="revealBtn">${icon('eye')} ${revealLabel}</button>
             <button class="btn text-button" id="favBtn" aria-pressed="${!!rec?.favorite}">${icon('bookmark')} ${rec?.favorite ? '已收藏' : '收藏'}</button>
+            ${showToolbarVariant ? '<button class="btn text-button variant-tool-btn" type="button" data-variant-check>🔄 换一道同类变式题验证</button>' : ''}
           </div>
           <div class="question-flow">
             <button class="btn primary" id="submitBtn" ${submitDisabled ? 'disabled' : ''}>${submitLabel}</button>
@@ -2955,6 +3053,14 @@ function practiceShellHTML(q, progress, { title, body = '', submitLabel = '提�
 }
 // 外壳里通用按钮的事件；返回结束作答后切换按钮状态的函数。
 function returnFromPractice() {
+  if (state.mode === 'variant' && state.variantOrigin) {
+    const origin = state.variantOrigin;
+    state.variantOrigin = null;
+    Object.assign(state, origin);
+    renderPractice();
+    return;
+  }
+  state.variantOrigin = null;
   if (state.mode === 'national') { void window.NationalExams.open(); return; }
   if (state.mode === 'knowledge') { void window.KnowledgeHub.open(); return; }
   renderHome('homeTitle');
@@ -2965,6 +3071,7 @@ function wireShell(q) {
   const reveal = byId('revealBtn');
   const next = byId('nextBtn');
   byId('backBtn').addEventListener('click', returnFromPractice);
+  view.querySelectorAll('[data-variant-check]').forEach(btn => btn.addEventListener('click', () => { void startVariantCheck(q); }));
   byId('favBtn').addEventListener('click', event => {
     const favorited = persist(() => toggleFavorite(q.id));
     if (favorited === undefined) return;
@@ -2986,14 +3093,22 @@ function wireShell(q) {
   state.keys = { submit, next, options: [] };
   return function finishUI() {
     const result = byId('result');
-    byId('qProg').textContent = questionStats(loadProgress());
+    const latestProgress = loadProgress();
+    byId('qProg').textContent = questionStats(latestProgress);
     if (state.mode === 'clearWrong') view.querySelector('.question-progress progress').value = state.clearTotal - state.clearPending.size;
+    if (canShowVariantBtn(q, latestProgress) && result && !result.querySelector('[data-variant-check]')) {
+      const bar = document.createElement('div');
+      bar.className = 'variant-verify-bar';
+      bar.innerHTML = '<span>怕只是背住了原题答案？换一道同考点变式题真检验：</span><button type="button" class="btn variant-check-btn" data-variant-check>🔄 换一道同类变式题验证</button>';
+      bar.querySelector('[data-variant-check]').addEventListener('click', () => { void startVariantCheck(q); });
+      result.appendChild(bar);
+    }
     submit.hidden = true;
     reveal.hidden = true;
     if (state.keys) state.keys.submit = null;
     next.hidden = false;
     next.classList.add('primary');
-    next.innerHTML = `${state.idx < state.queue.length - 1 ? '下一题' : '完成练习'} ${icon('arrow-right')}`;
+    next.innerHTML = `${state.mode === 'variant' ? (state.variantOrigin ? '返回原错题' : '完成验收') : state.idx < state.queue.length - 1 ? '下一题' : '完成练习'} ${icon('arrow-right')}`;
     if (byId('navBox')?.open) renderAnswerSheet();
     const resultTop = result.getBoundingClientRect().top;
     result.focus({ preventScroll: true });
@@ -3013,7 +3128,10 @@ function afterAnswer(q, correct, res, extra = {}) {
   const clearing = state.mode === 'clearWrong';
   state.session.set(q.id, { correct, ...extra });
   state.streakCorrect = correct ? state.streakCorrect + 1 : 0;
-  if (clearing && !correct) {
+  if (state.mode === 'variant') {
+    if (correct) toast('🎉 变式题也做对了！说明真正掌握，不是背答案！');
+    else toast('变式题还不太稳，看看解析再巩固一下，已自动收入错题本。');
+  } else if (clearing && !correct) {
     state.queue.push(q);
     toast('这道题已放回队尾，稍后再做一次。');
   } else if (clearing && state.clearPending.delete(q.id) && !state.clearPending.size) {
@@ -3053,12 +3171,14 @@ function renderSavedQuestion(q) {
         ${sourceHTML(q)}
         <div class="dialog-actions">
           ${hasNext ? '<button class="btn" id="savedNext">看下一题</button>' : ''}
+          ${canShowVariantBtn(q) ? '<button class="btn variant-check-btn" type="button" id="savedVariant">🔄 换一道同类变式题验证</button>' : ''}
           <button class="btn" id="savedAccess">解锁错题复习</button>
         </div>
       </section>
     </div>`;
   byId('savedHome').addEventListener('click', returnFromPractice);
   byId('savedNext')?.addEventListener('click', () => goToQuestion(state.idx + 1));
+  byId('savedVariant')?.addEventListener('click', () => { void startVariantCheck(q); });
   byId('savedAccess').addEventListener('click', () => openUnlock('自动复习与订正错题属于完整版。'));
   if (q.image) renderFigure(q);
   moveFocus(byId('questionTitle'), true);
@@ -3341,6 +3461,7 @@ function isTrialSliceSession() {
 }
 function finishPractice() {
   keepPosition(null);
+  if (state.mode === 'variant') { returnFromPractice(); return; }
   if (state.queue.length < 2 || (!state.session.size && !isTrialSliceSession())) { renderHome('homeTitle'); return; }
   renderSummary();
 }
@@ -3475,6 +3596,183 @@ async function openScorePoster({ title, metric, metricSub, verdict, focusLine })
     document.body.appendChild(overlay);
   } catch {
     toast('成绩单海报生成失败，请稍后重试。');
+  }
+}
+
+// ---- 一键生成《本周孩子补缺战报》720×980 Canvas 长图 ----
+async function openWeeklyPoster() {
+  try {
+    const qrFactory = await loadQrLib().catch(() => null);
+    const progress = loadProgress();
+    const entries = Object.entries(progress.banks || {});
+    const answered = entries.filter(([, r]) => hasAnswered(r));
+    const totalAnswered = answered.length;
+    const totalCorrect = answered.filter(([, r]) => r.correct).length;
+    const acc = totalAnswered ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+    const weekStartMs = Date.parse(weekKeyOf(todayStr()) + 'T00:00:00+08:00');
+    const weekAnswered = answered.filter(([, r]) => r.lastAt && r.lastAt >= weekStartMs).length;
+    const streak = streakDays(progress);
+    const totalDays = studyDates(progress).length;
+    const kpPoints = new Set();
+    for (const [id] of answered) {
+      if (id.startsWith('kp-')) {
+        const parts = id.split('-');
+        if (parts.length >= 4) kpPoints.add(`${parts[1]}-${parts[2]}-${parts[3]}`);
+      }
+    }
+    const wrongCount = entries.filter(([, r]) => r && r.wrong).length;
+    const stageLabel = STAGE_MAP[state.stage]?.label || '初二上学期';
+
+    const url = new URL('https://x4m.cc.cd/');
+    url.searchParams.set('from', 'weekly-poster');
+    const inviteCode = byId('referralPanel')?.querySelector('[data-ref-code]')?.textContent?.trim()
+      || (document.querySelector('#referralPanel code')?.textContent?.trim() || '');
+    if (/^ALIX-[A-Z0-9]{8}$/i.test(inviteCode)) url.searchParams.set('invite', inviteCode.toUpperCase());
+
+    const W = 720, H = 980;
+    const canvas = document.createElement('canvas');
+    canvas.width = W; canvas.height = H;
+    const ctx = canvas.getContext('2d');
+
+    // 背景：书卷宣纸色
+    ctx.fillStyle = '#f4f2e8';
+    ctx.fillRect(0, 0, W, H);
+
+    // 顶部深翠墨绿头图 + 朱砂金线
+    const grad = ctx.createLinearGradient(0, 0, W, 240);
+    grad.addColorStop(0, '#0e352a');
+    grad.addColorStop(1, '#185443');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, 238);
+    ctx.fillStyle = '#b83b2a';
+    ctx.fillRect(0, 238, W, 6);
+
+    ctx.fillStyle = 'rgba(255,255,255,0.82)';
+    ctx.font = '600 22px system-ui, -apple-system, sans-serif';
+    ctx.fillText('爱丽克丝中考题库 · 家长陪伴打卡', 44, 58);
+    ctx.fillStyle = 'rgba(255,255,255,0.78)';
+    ctx.font = '20px system-ui, -apple-system, sans-serif';
+    ctx.fillText(todayStr(), W - 160, 58);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '700 38px Georgia, "Songti SC", serif';
+    ctx.fillText('本周孩子补缺战报', 44, 124);
+
+    // 学期胶囊
+    ctx.fillStyle = 'rgba(255,255,255,0.16)';
+    ctx.fillRect(44, 150, 210, 40);
+    ctx.strokeStyle = 'rgba(255,255,255,0.35)';
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(44, 150, 210, 40);
+    ctx.fillStyle = '#fef08a';
+    ctx.font = '700 21px system-ui, -apple-system, sans-serif';
+    ctx.fillText(`当前学期：${stageLabel}`, 58, 177);
+
+    ctx.fillStyle = 'rgba(255,255,255,0.88)';
+    ctx.font = '500 20px system-ui, -apple-system, sans-serif';
+    ctx.fillText('每天 15 分钟 · 按点补缺稳步提分', 274, 177);
+
+    // 4 格核心数据瓷砖（2×2）
+    const tiles = [
+      { label: '累计答题数', value: `${totalAnswered} 题`, sub: `本周新答 ${weekAnswered} 题`, accent: '#164e3f' },
+      { label: '综合正确率', value: totalAnswered ? `${acc}%` : '待开启', sub: `累计答对 ${totalCorrect} 题`, accent: '#15803d' },
+      { label: '连续学习天数', value: `${streak} 天`, sub: `累计打卡 ${totalDays} 天`, accent: '#b45309' },
+      { label: '已练知识点 / 错题本', value: `${kpPoints.size} 个点`, sub: wrongCount ? `错题本待清 ${wrongCount} 题` : '错题本已清零', accent: '#b83b2a' },
+    ];
+    const cardW = 306, cardH = 152, gapX = 20, gapY = 18, startX = 44, startY = 274;
+    tiles.forEach((t, idx) => {
+      const col = idx % 2;
+      const row = Math.floor(idx / 2);
+      const x = startX + col * (cardW + gapX);
+      const y = startY + row * (cardH + gapY);
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(x, y, cardW, cardH);
+      ctx.strokeStyle = '#dcd9cc';
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(x, y, cardW, cardH);
+      ctx.fillStyle = t.accent;
+      ctx.fillRect(x, y, 7, cardH);
+
+      ctx.fillStyle = '#57645e';
+      ctx.font = '600 20px system-ui, -apple-system, sans-serif';
+      ctx.fillText(t.label, x + 24, y + 40);
+
+      ctx.fillStyle = '#182620';
+      ctx.font = '800 42px system-ui, -apple-system, sans-serif';
+      ctx.fillText(t.value, x + 24, y + 96);
+
+      ctx.fillStyle = '#64748b';
+      ctx.font = '500 18px system-ui, -apple-system, sans-serif';
+      ctx.fillText(t.sub, x + 24, y + 132);
+    });
+
+    // 鼓励评语卡片
+    const noteY = startY + cardH * 2 + gapY + 24;
+    ctx.fillStyle = '#fcfbf6';
+    ctx.fillRect(44, noteY, W - 88, 128);
+    ctx.strokeStyle = '#d5d3c8';
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(44, noteY, W - 88, 128);
+    ctx.fillStyle = '#164e3f';
+    ctx.fillRect(44, noteY, 7, 128);
+
+    ctx.fillStyle = '#164e3f';
+    ctx.font = '700 22px system-ui, -apple-system, sans-serif';
+    ctx.fillText('本周学习评语', 68, noteY + 38);
+    ctx.fillStyle = '#1a2420';
+    ctx.font = '600 22px Georgia, "Songti SC", serif';
+    ctx.fillText('本周按点补缺稳步推进，坚持 1/3/7 天错题清零！', 68, noteY + 76);
+    ctx.fillStyle = '#475569';
+    ctx.font = '19px system-ui, -apple-system, sans-serif';
+    const subEncourage = wrongCount
+      ? `还剩 ${wrongCount} 道错题待复盘，换道同类变式题验收一下更扎实。`
+      : '错题保持清零状态，继续用 3 分钟快测和压轴大题冲刺高分！';
+    ctx.fillText(subEncourage, 68, noteY + 108);
+
+    // 底部二维码打卡区
+    const qrY = noteY + 154;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(44, qrY, W - 88, 178);
+    ctx.strokeStyle = '#dcd9cc';
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(44, qrY, W - 88, 178);
+
+    if (qrFactory) {
+      const qr = qrFactory(0, 'M');
+      qr.addData(url.href);
+      qr.make();
+      const cnt = qr.getModuleCount();
+      const qrSize = 144, cell = qrSize / cnt, qx = 64, qy = qrY + 17;
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(qx - 6, qy - 6, qrSize + 12, qrSize + 12);
+      ctx.fillStyle = '#0f172a';
+      for (let r = 0; r < cnt; r++) for (let c = 0; c < cnt; c++) {
+        if (qr.isDark(r, c)) ctx.fillRect(qx + c * cell, qy + r * cell, Math.ceil(cell), Math.ceil(cell));
+      }
+    }
+    ctx.fillStyle = '#0f172a';
+    ctx.font = '700 22px system-ui, -apple-system, sans-serif';
+    ctx.fillText('长按保存图片 · 发家族群/朋友圈', 234, qrY + 52);
+    ctx.fillText('打卡记录孩子进步', 234, qrY + 84);
+    ctx.fillStyle = '#475569';
+    ctx.font = '18px system-ui, -apple-system, sans-serif';
+    ctx.fillText('数理化 385 知识点 · 名师 4 步微课 · 可印 A4 卷', 234, qrY + 122);
+    ctx.fillStyle = '#164e3f';
+    ctx.font = '700 19px system-ui, -apple-system, sans-serif';
+    ctx.fillText('扫码免费体验：x4m.cc.cd', 234, qrY + 154);
+
+    const dataUrl = canvas.toDataURL('image/png');
+    const dlg = document.createElement('dialog');
+    dlg.className = 'dialog kp-poster-dialog';
+    dlg.innerHTML = `<div class="dialog-head"><h2>📊 《本周孩子补缺战报》长图</h2><form method="dialog"><button class="btn text-button">关闭</button></form></div>
+      <p class="muted" style="margin:0 0 10px">长按保存图片 · 发家族群/朋友圈打卡记录孩子进步，电脑可点下方按钮下载。</p>
+      <img src="${dataUrl}" alt="本周孩子补缺战报长图" style="width:100%;height:auto;border-radius:10px;border:1px solid var(--line)" />
+      <div class="dialog-actions" style="margin-top:12px"><a class="btn primary" href="${dataUrl}" download="本周孩子补缺战报-${todayStr()}.png">下载战报长图 PNG</a></div>`;
+    dlg.addEventListener('close', () => dlg.remove());
+    document.body.appendChild(dlg);
+    dlg.showModal();
+  } catch {
+    toast('生成本周补缺战报失败，请稍后重试。');
   }
 }
 
@@ -3845,6 +4143,8 @@ function startBanksBackgroundLoad() {
         if (nextHub) {
           hub.replaceWith(nextHub);
           nextHub.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => { void startPractice(btn.dataset.mode); }));
+          nextHub.querySelectorAll('[data-wrong-print]').forEach(btn => btn.addEventListener('click', () => { void openWrongPrintSheet(btn.dataset.wrongPrint); }));
+          nextHub.querySelectorAll('[data-weekly-poster]').forEach(btn => btn.addEventListener('click', () => { void openWeeklyPoster(); }));
         }
       }
       const cs = document.querySelector('.content-stats');
@@ -3898,8 +4198,12 @@ async function init() {
       unlock: message => openUnlock(message),
       toast,
       stage: () => state.stage,
+      stageLabel: () => STAGE_MAP[state.stage]?.label || '',
       track: trackVisit,
       loadQrLib,
+      openWeeklyPoster,
+      openWrongPrint: mode => openWrongPrintSheet(mode),
+      startWrongMode: mode => startPractice(mode),
     });
     // 知识点目录（约 15KB）到了就刷新首页的知识点卡片
     void window.KnowledgeHub?.loadIndex().then(() => { if (byId('knowledgeHome') && !document.body.classList.contains('practice')) rerenderHomeInPlace('knowledgeHome'); }).catch(() => {});

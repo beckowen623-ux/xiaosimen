@@ -835,3 +835,9 @@ body { font-variant-numeric: tabular-nums; }
 .wrong-print-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .author-use-note { margin: 8px 0 12px; padding: 11px 13px; border-radius: 10px; background: #fff9eb; border: 1px solid #ecc97b; border-left: 4px solid #b45309; font-size: 13px; line-height: 1.65; color: #5c3a0d; }
 .author-use-note b { display: block; color: #92400e; margin-bottom: 3px; font-size: 13.5px; }
+
+/* 错题本「换一道同类变式题验证（防背答案）」 */
+.variant-verify-bar { margin-top: 12px; padding: 11px 14px; border-radius: 11px; background: #f3f9f6; border: 1px dashed var(--green); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px; font-size: 13.5px; color: var(--green-dark); }
+.variant-check-btn { border-color: var(--green); background: #fff; color: var(--green-dark); font-weight: 700; }
+.variant-check-btn:hover { background: var(--green-soft); }
+.variant-tool-btn { color: var(--green-dark); font-weight: 700; }

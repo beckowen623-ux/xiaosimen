@@ -1,5 +1,16 @@
 # 技术变更记录
 
+## 2026-11-26 · Antigravity · Phase 7 三大高杠杆学习功能：错题变式验证、本周补缺战报长图与考前 7 天急救包（main）
+- **错题本「🔄 换一道同类变式题验证（防背答案）」(`app.js`, `knowledge.js`, `styles.css`)**：
+  - 错题本、到期复习、曾错题、错题订正及知识点错题支持一键点击「🔄 换一道同类变式题验证」：数理化知识点题通过 `KnowledgeHub.findVariantQuestions` 自动抽取同知识点的另一道未练/非重复题；同步卷与小四门题自动抽取同章节/同科目的另一道不同题，进入 `防背答案变式验收` 单题专练；答对弹出正向反馈并可一键返回原错题队列。
+  - 错题本与首页计数同步纳入数理化 `kp-*` 知识点错题（`kpRecordCount` / `withKpExtras`），完整保留 `xiaosimen-quiz-v1` 结构与方案 A 免费/完整版边界。
+- **一键生成《本周孩子补缺战报》720×980 Canvas 长图 (`app.js`, `knowledge.js`)**：
+  - 在首页「🎯 补缺主线」主卡片与「📕 错题与小四门」错题区新增「📊 生成本周补缺战报」入口；基于 `localStorage` 真实进度绘制 720×980 书香教研风 Canvas 长图（累计答题、正确率、连续学习天数、已练知识点与错题本状态、鼓励小结及 `https://x4m.cc.cd/?from=weekly-poster` 二维码），在 `<dialog>` 中支持长按存图与 PNG 下载。
+- **🔥「考前 7 天急救包」(`knowledge.js`, `knowledge.css`, `index.html`)**：
+  - 在「🎯 补缺主线」主卡片新增「🔥 考前 7 天急救包」弹窗，按当前所选学期自动生成 Day 1–Day 7（每天 15 分钟）冲刺清单（Day 1 快测摸底、Day 2–4 每天 2 个薄弱/高频核心点直达微课、Day 5 清错题+印 A4 错题卷、Day 6 练 2 道解答大题、Day 7 开启背诵遮罩速览防错红线）；打卡状态独立持久化至 `xiaosimen-sprint7-v1`。
+- **缓存版本与日志 (`index.html`, `app.js`, `CHANGELOG.md`)**：递增 `styles.css?v=23`、`knowledge.css?v=3`、`knowledge.js?v=5`、`app.js?v=31` 并更新 `UPDATE_LOG`。
+- **验证**：`node tests/validate.mjs`、`node tests/smoke.mjs`（40/40 PASS）与 `node tools/stage_pages_release.mjs` 全部通过。
+
 ## 2026-11-26 · Antigravity · 背诵遮罩彻底根治（0 透字 + 0 漏遮）、首页亲用期中提分标语与吸顶质感升级（main）
 - **双站背诵遮罩物理零透字与 100% 覆盖 (`knowledge.js`, `knowledge.css`, `key-points.js`, `key-points.css`, `key-points.html`)**：
   - 升级 `maskKpText`（数理化 385 点微课）与 `maskKeywords`（小四门 123 点速记及 A4 挖空默写纸）为「学科语义词库 + 100% 核心结论兜底」双引擎，将漏遮率分别从 43% / 75% 降至 **0%**。

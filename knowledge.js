@@ -321,15 +321,17 @@
         ${semPills}
         <div class="kp-home-actions">
           <button class="btn primary" type="button" data-kp-go="quick">开始 3 分钟快测（8 题免费）</button>
+          <button class="btn kp-sprint-btn" type="button" data-kp-go="sprint7">🔥 考前 7 天急救包</button>
           <button class="btn" type="button" data-kp-go="${weak ? 'weak' : 'mark'}">${weak ? `集中补弱项（${weak} 个）` : '家长勾选薄弱点'}</button>
           <button class="btn" type="button" data-kp-sem="sp">专题与压轴（含大题）</button>
           <button class="btn" type="button" data-kp-go="sample-print">预览 A4 补缺样卷</button>
+          <button class="btn" type="button" data-kp-go="weekly-poster">📊 生成本周补缺战报</button>
           <button class="btn text-button" type="button" data-kp-go="list">查看全部 ${subTotals.pts} 个知识点 ›</button>
         </div>`;
     } else {
       body = `<p class="muted">${esc(sem?.label || '')}${esc(subj?.label || '')}知识点正在整理，全初中已上线 <b>${subTotals.pts} 个知识点</b>：${ready.map(s => esc(s.label)).join('、') || '—'}。</p>
         ${semPills}
-        <div class="kp-home-actions">${ready.map(s => `<button class="btn primary" type="button" data-kp-sem="${s.key}">看${esc(s.label)}（${s.pointCount}点）</button>`).join('')}</div>`;
+        <div class="kp-home-actions">${ready.map(s => `<button class="btn primary" type="button" data-kp-sem="${s.key}">看${esc(s.label)}（${s.pointCount}点）</button>`).join('')}<button class="btn kp-sprint-btn" type="button" data-kp-go="sprint7">🔥 考前 7 天急救包</button><button class="btn" type="button" data-kp-go="weekly-poster">📊 生成本周补缺战报</button></div>`;
     }
     return `<section class="card kp-home" id="knowledgeHome">
       <div class="kp-home-head"><span class="kp-badge">数理化补缺主线 · 名师 4 步微课</span><h2>全初中 ${totals.pts} 个知识点 · 秒搜直达 ＋ 3 分钟测弱项</h2></div>
@@ -345,6 +347,8 @@
     root.querySelectorAll('[data-kp-go]').forEach(b => b.addEventListener('click', () => {
       const go = b.dataset.kpGo;
       if (go === 'sample-print') { void previewSampleSheet(app.stage()); return; }
+      if (go === 'sprint7') { void openSprint7(app.stage()); return; }
+      if (go === 'weekly-poster') { app.openWeeklyPoster?.(); return; }
       void open({ stage: app.stage(), action: go });
     }));
     root.querySelectorAll('[data-kp-sem]').forEach(b => b.addEventListener('click', () => { void open({ subject: state.subject, semester: b.dataset.kpSem }); }));
@@ -844,6 +848,7 @@
     else if (opts.stage) state.semester = semesterForStage(idx, opts.stage);
     else if (!state.semester) state.semester = semesterForStage(idx, app.stage());
     if (opts.point) { state.point = opts.point; state.view = 'point'; } else if (opts.action || opts.stage || opts.semester) state.view = 'list';
+    if (typeof opts.mask === 'boolean') reciteMaskOn = opts.mask;
     state.selecting = opts.action === 'mark';
     if (location.hash !== '#knowledge') history.replaceState(null, '', '#knowledge');
     const subjObj = idx.subjects.find(s => s.key === state.subject) || idx.subjects[0];
@@ -1091,8 +1096,263 @@
     });
   }
 
+  // ---- 错题本「换一道同类变式题验证」：根据 kpId / kp-* ID 找出同知识点的另一道题 ----
+  async function findVariantQuestions(q, progress = app.progress()) {
+    let kpId = q?.kpId || '';
+    if (!kpId && String(q?.id || '').startsWith('kp-')) {
+      const parts = String(q.id).split('-');
+      if (parts.length >= 4) kpId = `${parts[1]}-${parts[2]}-${parts[3]}`;
+    }
+    if (!kpId) return { candidates: [], kpName: '' };
+    const parts = kpId.split('-');
+    if (parts.length < 3) return { candidates: [], kpName: '' };
+    const [subjKey, semKey] = parts;
+    const data = await loadSemester(subjKey, semKey).catch(() => null);
+    if (!data) return { candidates: [], kpName: '' };
+    let point = null;
+    for (const c of data.chapters || []) {
+      for (const p of c.points || []) {
+        if (p.id === kpId) { point = p; break; }
+      }
+      if (point) break;
+    }
+    if (!point) return { candidates: [], kpName: '' };
+    const byId = new Map((data.questions || []).map(item => [item.id, item]));
+    const others = [...(point.qids || []), ...(point.refs || [])]
+      .map(id => byId.get(id))
+      .filter(cand => cand && cand.id !== q.id && cand.stem !== q.stem);
+    const scoreOf = cand => {
+      const r = progress?.banks?.[cand.id];
+      let s = 0;
+      if (!r?.done) s += 30;
+      else if (!r.correct) s += 16;
+      if (q.type !== 'essay' && cand.type !== 'essay') s += 12;
+      if (cand.type === q.type) s += 6;
+      if (cand.level && q.level && cand.level === q.level) s += 5;
+      return s + Math.random() * 4;
+    };
+    return {
+      candidates: others.sort((a, b) => scoreOf(b) - scoreOf(a)),
+      kpName: point.name,
+    };
+  }
+
+  // ---- 🔥 「考前 7 天急救包」（每天 15 分钟 · 打卡独立存入 xiaosimen-sprint7-v1） ----
+  const SPRINT7_KEY = 'xiaosimen-sprint7-v1';
+  function readSprint7All() {
+    try {
+      const v = JSON.parse(localStorage.getItem(SPRINT7_KEY) || '{}');
+      return v && typeof v === 'object' ? v : {};
+    } catch { return {}; }
+  }
+  function readSprint7(stage) {
+    const all = readSprint7All();
+    const cur = all[stage];
+    return cur && typeof cur === 'object' ? cur : {};
+  }
+  function saveSprint7(stage, map) {
+    try {
+      const all = readSprint7All();
+      all[stage] = map;
+      localStorage.setItem(SPRINT7_KEY, JSON.stringify(all));
+    } catch { /* 隐私模式 */ }
+  }
+  async function openSprint7(stage) {
+    const idx = await loadIndex().catch(() => null);
+    if (!idx) { app.toast('知识点资料加载失败，请检查网络后重试。'); return; }
+    const progress = app.progress();
+    const marked = readMarked();
+    const stageLabel = app.stageLabel?.() || '当前学期';
+
+    // 收集当前学期（跨数理化可用学科）的全部知识点，按薄弱度 + 高频度排序
+    const pool = [];
+    const essayPool = [];
+    const spEssayPool = [];
+    for (const subj of idx.subjects || []) {
+      const sem = subj.semesters?.find(s => s.stage === stage && s.ready);
+      if (sem) {
+        for (const ch of sem.chapters || []) {
+          for (const p of ch.points || []) {
+            const st = pointStatus(p.ids || [], progress, marked, p.id);
+            const hasWrong = (p.ids || []).some(id => progress.banks?.[id]?.wrong);
+            const isWeak = hasWrong || st.key === 'weak' || st.key === 'shaky' || marked.has(p.id);
+            let score = 0;
+            if (hasWrong) score += 140;
+            if (marked.has(p.id)) score += 110;
+            if (st.key === 'weak') score += 90;
+            else if (st.key === 'shaky') score += 60;
+            if (String(p.tag || '').includes('★')) score += 30;
+            if (p.hasEssay) score += 22;
+            if (p.hasDeep) score += 12;
+            const item = {
+              subject: subj.key, subjectLabel: subj.label,
+              semester: sem.key, semLabel: sem.label,
+              chapter: ch.name, id: p.id, name: p.name,
+              tag: p.tag || '', hasEssay: !!p.hasEssay, hasDeep: !!p.hasDeep,
+              isWeak, score,
+            };
+            pool.push(item);
+            if (p.hasEssay) essayPool.push(item);
+          }
+        }
+      }
+      const spSem = subj.semesters?.find(s => s.key === 'sp' && s.ready);
+      if (spSem) {
+        for (const ch of spSem.chapters || []) {
+          for (const p of ch.points || []) {
+            if (!p.hasEssay) continue;
+            spEssayPool.push({
+              subject: subj.key, subjectLabel: subj.label,
+              semester: 'sp', semLabel: spSem.label,
+              chapter: ch.name, id: p.id, name: p.name,
+              tag: p.tag || '', hasEssay: true, hasDeep: !!p.hasDeep,
+              isWeak: marked.has(p.id), score: (marked.has(p.id) ? 100 : 0) + (String(p.tag || '').includes('★') ? 20 : 0),
+            });
+          }
+        }
+      }
+    }
+    pool.sort((a, b) => b.score - a.score);
+    essayPool.sort((a, b) => b.score - a.score);
+    spEssayPool.sort((a, b) => b.score - a.score);
+
+    // Day 2–4：每天 2 个核心点（共 6 个），优先薄弱/错题点，不足用高频核心点补齐
+    const core6 = pool.slice(0, 6);
+    const day2Pts = core6.slice(0, 2);
+    const day3Pts = core6.slice(2, 4);
+    const day4Pts = core6.slice(4, 6);
+    const day6Essays = (essayPool.length >= 2 ? essayPool : [...essayPool, ...spEssayPool]).slice(0, 2);
+    const day7Pt = core6[0] || pool[0] || null;
+    const wrongCount = Object.values(progress.banks || {}).filter(r => r && r.wrong).length;
+
+    const ptRowsHTML = (pts, btnText = '去学微课 →') => pts.length
+      ? `<div class="kp-s7-pts">${pts.map(p => `
+        <div class="kp-s7-pt">
+          <span><em class="kp-s7-badge ${p.isWeak ? 'is-weak' : ''}">${p.isWeak ? '薄弱急补' : esc(p.subjectLabel + '核心')}</em><b>${esc(p.name)}</b><small>${esc(p.subjectLabel)} · ${esc(p.chapter)}</small></span>
+          <button type="button" class="btn" data-s7-open="${esc(p.subject)}|${esc(p.semester)}|${esc(p.id)}">${btnText}</button>
+        </div>`).join('')}</div>`
+      : '<p class="muted" style="margin:6px 0 0;font-size:13px">本学期知识点已准备就绪，可点上方学科目录自由挑选。</p>';
+
+    const days = [
+      {
+        key: 'd1', day: 'Day 1', title: '3 分钟快测摸底 + 锁定前 3 个薄弱点',
+        desc: '先用 8 道阶梯题快速诊断，拿到《孩子学情体检单》，把最容易丢分的 3 个点标出来。',
+        body: `<div class="kp-s7-actions"><button type="button" class="btn primary" data-s7-act="quick">开始 3 分钟快测 →</button></div>`,
+      },
+      {
+        key: 'd2', day: 'Day 2', title: '攻克 2 个高频核心知识点（第 1 组）',
+        desc: '读 2 分钟考点卡 + 刷通第 1、2 关，把基础分和拉分变式稳稳装进口袋。',
+        body: ptRowsHTML(day2Pts),
+      },
+      {
+        key: 'd3', day: 'Day 3', title: '攻克 2 个高频核心知识点（第 2 组）',
+        desc: '重点看「防错红线」与母题拆解，做对后再换一道变式题防背答案。',
+        body: ptRowsHTML(day3Pts),
+      },
+      {
+        key: 'd4', day: 'Day 4', title: '攻克 2 个高频核心知识点（第 3 组）',
+        desc: '补齐剩余高频考点，争取把 6 个核心点全部点亮三星。',
+        body: ptRowsHTML(day4Pts),
+      },
+      {
+        key: 'd5', day: 'Day 5', title: '集中清零错题本 + 一键印出《A4 错题重做卷》',
+        desc: wrongCount
+          ? `当前错题本还有 ${wrongCount} 道待清零，手机重做一遍或印成 A4 卷在纸上限时过关。`
+          : '错题本目前很干净！可以印一份「全部曾错题」做考前二次防复发验收。',
+        body: `<div class="kp-s7-actions"><button type="button" class="btn primary" data-s7-act="wrong">去清错题本</button><button type="button" class="btn" data-s7-act="wrong-print">🖨️ 印 A4 错题重做卷</button></div>`,
+      },
+      {
+        key: 'd6', day: 'Day 6', title: '挑 2 道规范解答大题练分步采分点',
+        desc: '考前不用题海，亲手写完 2 道规范大题、对照采分点自评，确保大题步骤分一分不丢。',
+        body: ptRowsHTML(day6Essays, '练解答大题 →'),
+      },
+      {
+        key: 'd7', day: 'Day 7', title: '考前防错红线速览（背诵遮罩过一遍）+ 轻松上考场',
+        desc: '开启「背诵遮罩」把核心公式与易错红线默背一遍，早睡养足精神，稳稳发挥！',
+        body: day7Pt
+          ? `<div class="kp-s7-actions"><button type="button" class="btn primary" data-s7-mask="${esc(day7Pt.subject)}|${esc(day7Pt.semester)}|${esc(day7Pt.id)}">👁️ 开启遮罩速览红线 →</button></div>`
+          : '',
+      },
+    ];
+
+    const checks = readSprint7(stage);
+    const old = document.getElementById('kpSprint7Dialog');
+    if (old) old.remove();
+    const dlg = document.createElement('dialog');
+    dlg.id = 'kpSprint7Dialog';
+    dlg.className = 'dialog kp-sprint-dialog';
+    const doneCount = () => days.filter(d => checks[d.key]).length;
+    const renderProgress = () => {
+      const n = doneCount();
+      const pct = Math.round((n / 7) * 100);
+      const txt = dlg.querySelector('#s7ProgText');
+      const bar = dlg.querySelector('#s7ProgFill');
+      if (txt) txt.textContent = `已完成 ${n} / 7 天${n === 7 ? ' 🎉 考前急救全部通关！' : ''}`;
+      if (bar) bar.style.width = `${pct}%`;
+    };
+    dlg.innerHTML = `
+      <div class="dialog-head">
+        <h2>🔥 考前 7 天急救包 · ${esc(stageLabel)}</h2>
+        <form method="dialog"><button class="btn text-button">关闭</button></form>
+      </div>
+      <p class="muted" style="margin:0 0 10px">每天只需 15 分钟 · 已结合孩子当前的薄弱点与${esc(stageLabel)}高频考点自动排期，完成一天勾一天。</p>
+      <div class="kp-s7-prog">
+        <div class="kp-s7-prog-row"><b id="s7ProgText"></b><button type="button" class="btn text-button" id="s7ResetBtn">重置打卡</button></div>
+        <div class="kp-s7-bar"><i id="s7ProgFill"></i></div>
+      </div>
+      <ol class="kp-s7-list">
+        ${days.map(d => `
+          <li class="kp-s7-item ${checks[d.key] ? 'is-done' : ''}" data-s7-row="${d.key}">
+            <label class="kp-s7-check-head">
+              <input type="checkbox" data-s7-day="${d.key}" ${checks[d.key] ? 'checked' : ''}>
+              <span class="kp-s7-day-pill">${d.day}</span>
+              <b>${esc(d.title)}</b>
+            </label>
+            <p class="kp-s7-desc">${esc(d.desc)}</p>
+            ${d.body}
+          </li>`).join('')}
+      </ol>`;
+    dlg.addEventListener('close', () => dlg.remove());
+    document.body.appendChild(dlg);
+    renderProgress();
+
+    dlg.querySelectorAll('[data-s7-day]').forEach(box => box.addEventListener('change', () => {
+      const k = box.dataset.s7Day;
+      checks[k] = box.checked;
+      saveSprint7(stage, checks);
+      dlg.querySelector(`[data-s7-row="${k}"]`)?.classList.toggle('is-done', box.checked);
+      renderProgress();
+    }));
+    dlg.querySelector('#s7ResetBtn')?.addEventListener('click', () => {
+      for (const d of days) checks[d.key] = false;
+      saveSprint7(stage, checks);
+      dlg.querySelectorAll('[data-s7-day]').forEach(b => { b.checked = false; });
+      dlg.querySelectorAll('[data-s7-row]').forEach(r => r.classList.remove('is-done'));
+      renderProgress();
+      app.toast('已重置 7 天急救包打卡。');
+    });
+    dlg.querySelectorAll('[data-s7-open]').forEach(btn => btn.addEventListener('click', () => {
+      const [subjKey, semKey, ptId] = btn.dataset.s7Open.split('|');
+      dlg.close();
+      void open({ subject: subjKey, semester: semKey, point: ptId });
+    }));
+    dlg.querySelectorAll('[data-s7-mask]').forEach(btn => btn.addEventListener('click', () => {
+      const [subjKey, semKey, ptId] = btn.dataset.s7Mask.split('|');
+      dlg.close();
+      void open({ subject: subjKey, semester: semKey, point: ptId, mask: true });
+    }));
+    dlg.querySelectorAll('[data-s7-act]').forEach(btn => btn.addEventListener('click', () => {
+      const act = btn.dataset.s7Act;
+      dlg.close();
+      if (act === 'quick') void open({ stage, action: 'quick' });
+      else if (act === 'wrong') void app.startWrongMode?.('wrong');
+      else if (act === 'wrong-print') void app.openWrongPrint?.(wrongCount ? 'wrong' : 'everWrong');
+    }));
+    dlg.showModal();
+  }
+
   function refresh() {
     if (location.hash === '#knowledge' && !document.body.classList.contains('practice')) void render();
   }
-  window.KnowledgeHub = { attach: options => { app = options; }, open, leave, refresh, loadIndex, searchPoints, homeCardHTML, wireHome, summaryRxHTML, wireSummaryRx, previewSampleSheet };
+  window.KnowledgeHub = { attach: options => { app = options; }, open, leave, refresh, loadIndex, searchPoints, findVariantQuestions, openSprint7, homeCardHTML, wireHome, summaryRxHTML, wireSummaryRx, previewSampleSheet };
 })();
