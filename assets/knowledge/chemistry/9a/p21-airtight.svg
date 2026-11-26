@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" width="320" height="210">
+  <rect width="320" height="210" fill="#ffffff"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1f2937"/>
+    </marker>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <text x="160" y="16" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#111827" font-family="sans-serif">三种装置气密性检查方法对比</text>
+  <!-- Panel 1: 手捂法 -->
+  <rect x="6" y="24" width="98" height="178" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="55" y="38" text-anchor="middle" font-size="10" font-weight="bold" fill="#1d4ed8" font-family="sans-serif">1. 手捂法（微热）</text>
+  <!-- Test tube -->
+  <path d="M22,68 L22,124 A8,8 0 0,0 38,124 L38,68" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+  <!-- Stopper -->
+  <polygon points="21,64 39,64 37,72 23,72" fill="#94a3b8" stroke="#1f2937" stroke-width="1"/>
+  <!-- Hand warmth indicator -->
+  <path d="M15,96 Q11,105 15,114" fill="none" stroke="#dc2626" stroke-width="1.3"/>
+  <path d="M45,96 Q49,105 45,114" fill="none" stroke="#dc2626" stroke-width="1.3"/>
+  <text x="30" y="143" text-anchor="middle" font-size="8.5" fill="#dc2626" font-family="sans-serif">手紧握外壁</text>
+  <!-- Tube to beaker -->
+  <polyline points="30,64 30,52 72,52 72,126" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+  <!-- Beaker -->
+  <path d="M56,98 L56,134 L94,134 L94,98" fill="none" stroke="#1f2937" stroke-width="1.4"/>
+  <rect x="57" y="110" width="36" height="23" fill="#bae6fd" opacity="0.75"/>
+  <!-- Bubbles -->
+  <circle cx="72" cy="122" r="2" fill="#ffffff" stroke="#2563eb" stroke-width="1"/>
+  <circle cx="76" cy="117" r="1.7" fill="#ffffff" stroke="#2563eb" stroke-width="1"/>
+  <circle cx="69" cy="113" r="1.4" fill="#ffffff" stroke="#2563eb" stroke-width="1"/>
+  <text x="55" y="160" text-anchor="middle" font-size="8.5" fill="#111827" font-family="sans-serif">先浸水再手握</text>
+  <text x="55" y="173" text-anchor="middle" font-size="8.5" fill="#047857" font-family="sans-serif">冒气泡，松手成水柱</text>
+  <text x="55" y="189" text-anchor="middle" font-size="8" fill="#64748b" font-family="sans-serif">原理：热胀冷缩</text>
+
+  <!-- Panel 2: 长颈漏斗液封法 -->
+  <rect x="111" y="24" width="98" height="178" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="160" y="38" text-anchor="middle" font-size="10" font-weight="bold" fill="#1d4ed8" font-family="sans-serif">2. 液封法（注水）</text>
+  <!-- Conical flask -->
+  <polygon points="150,78 170,78 186,134 134,134" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+  <!-- Water in flask -->
+  <polygon points="140,114 180,114 185,133 135,133" fill="#bae6fd" opacity="0.8"/>
+  <!-- Stopper -->
+  <polygon points="149,73 171,73 169,80 151,80" fill="#94a3b8" stroke="#1f2937" stroke-width="1"/>
+  <!-- Long-neck funnel -->
+  <polygon points="147,50 163,50 157,62 153,62" fill="#e0f2fe" stroke="#1f2937" stroke-width="1.2"/>
+  <line x1="155" y1="62" x2="155" y2="124" stroke="#1f2937" stroke-width="2.6"/>
+  <line x1="155" y1="62" x2="155" y2="124" stroke="#ffffff" stroke-width="1.2"/>
+  <!-- Water column inside funnel stem -->
+  <line x1="155" y1="88" x2="155" y2="124" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- Side tube with clamp -->
+  <polyline points="164,73 164,62 194,62" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+  <rect x="176" y="57" width="8" height="10" rx="1" fill="#dc2626"/>
+  <text x="186" y="53" text-anchor="middle" font-size="8" fill="#dc2626" font-family="sans-serif">夹紧止水夹</text>
+  <!-- Liquid level diff -->
+  <line x1="142" y1="88" x2="152" y2="88" stroke="#047857" stroke-width="1" stroke-dasharray="2,1"/>
+  <text x="134" y="91" text-anchor="end" font-size="7.5" fill="#047857" font-family="sans-serif">稳定</text>
+  <text x="134" y="100" text-anchor="end" font-size="7.5" fill="#047857" font-family="sans-serif">水柱</text>
+  <text x="160" y="160" text-anchor="middle" font-size="8.5" fill="#111827" font-family="sans-serif">夹闭导管后注水</text>
+  <text x="160" y="173" text-anchor="middle" font-size="8.5" fill="#047857" font-family="sans-serif">形成稳定液面差</text>
+  <text x="160" y="189" text-anchor="middle" font-size="8" fill="#64748b" font-family="sans-serif">原理：封闭气压平衡</text>
+
+  <!-- Panel 3: 注射器推拉法 -->
+  <rect x="216" y="24" width="98" height="178" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="265" y="38" text-anchor="middle" font-size="10" font-weight="bold" fill="#1d4ed8" font-family="sans-serif">3. 注射器推拉法</text>
+  <!-- Flask -->
+  <polygon points="242,84 260,84 274,134 228,134" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+  <polygon points="233,115 269,115 273,133 229,133" fill="#bae6fd" opacity="0.8"/>
+  <polygon points="241,79 261,79 259,86 243,86" fill="#94a3b8" stroke="#1f2937" stroke-width="1"/>
+  <!-- Funnel stem submerged -->
+  <polygon points="239,58 253,58 248,68 244,68" fill="#ffffff" stroke="#1f2937" stroke-width="1.1"/>
+  <line x1="246" y1="68" x2="246" y2="125" stroke="#1f2937" stroke-width="2.4"/>
+  <line x1="246" y1="68" x2="246" y2="125" stroke="#ffffff" stroke-width="1"/>
+  <line x1="246" y1="92" x2="246" y2="125" stroke="#2563eb" stroke-width="1.4"/>
+  <!-- Syringe -->
+  <polyline points="255,79 255,68 273,68" fill="none" stroke="#1f2937" stroke-width="1.4"/>
+  <rect x="273" y="62" width="24" height="12" fill="#e2e8f0" stroke="#1f2937" stroke-width="1.2"/>
+  <rect x="285" y="63" width="4" height="10" fill="#475569"/>
+  <line x1="289" y1="68" x2="306" y2="68" stroke="#1f2937" stroke-width="1.8"/>
+  <line x1="306" y1="63" x2="306" y2="73" stroke="#1f2937" stroke-width="1.8"/>
+  <!-- Push/pull arrows -->
+  <line x1="292" y1="54" x2="278" y2="54" stroke="#2563eb" stroke-width="1.3" marker-end="url(#arr-b)"/>
+  <line x1="294" y1="54" x2="308" y2="54" stroke="#dc2626" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="292" y="49" text-anchor="middle" font-size="7.5" fill="#1f2937" font-family="sans-serif">推 / 拉</text>
+  <text x="265" y="156" text-anchor="middle" font-size="8.2" fill="#2563eb" font-family="sans-serif">推活塞：管内水柱上升</text>
+  <text x="265" y="170" text-anchor="middle" font-size="8.2" fill="#dc2626" font-family="sans-serif">拉活塞：管口冒出气泡</text>
+  <text x="265" y="189" text-anchor="middle" font-size="8" fill="#64748b" font-family="sans-serif">原理：改变内部气压</text>
+</svg>

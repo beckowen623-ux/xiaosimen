@@ -119,6 +119,101 @@
     return { pts: pts || 358, qs: qs || 4650, essays: essays || 88, subjects: (idx?.subjects || []).map(s => s.label).join('、') || '数理化' };
   }
 
+  const KP_ALIASES = [
+    [/辅助线|中点|倍长/, ['倍长中线', '截长补短', '中位线', '中点四边形', '斜边中线']],
+    [/动点|动角|旋转/, ['动点', '动角', '将军饮马', '瓜豆', '胡不归', '折叠', '手拉手', '存在性']],
+    [/尺规|作图|画图/, ['尺规作图', '作图', '力臂', '平面镜']],
+    [/十字相乘|分解因式|因式/, ['十字相乘', '因式分解', '分组分解']],
+    [/韦达|两根/, ['韦达定理', '根与系数']],
+    [/切线|隐圆|共圆/, ['切线', '隐圆', '圆周角', '垂径']],
+    [/故障|短路|断路|测电笔/, ['电路故障', '家庭电路', '试电笔']],
+    [/动态电路|变阻器|极值|多开关/, ['动态电路', '滑动变阻器', '多开关', '安全取值']],
+    [/浮力|阿基米德|漂浮|冰块|压强/, ['浮力', '阿基米德', '漂浮', '浸没', '压强']],
+    [/滤渣|滤液|置换|金属与酸|金属活动/, ['滤渣', '金属活动性', '金属与酸']],
+    [/传感器|数字化|压强曲线|ph曲线|图像/i, ['数字化传感', '图像', '拐点', '溶解度曲线']],
+    [/气密性|实验操作|仪器/, ['气密性', '实验基本操作']],
+    [/俗名|烧碱|纯碱|小苏打|沉淀|推断/, ['俗名', '常见的盐', '常见的碱', '框图推断', '复分解']],
+    [/统计|概率|树状图|方差/, ['统计', '概率', '方差', '中位数']],
+    [/摩擦|受力|叠放/, ['摩擦力', '受力分析', '二力平衡']],
+    [/透镜|成像|近视|远视/, ['凸透镜', '平面镜', '近视']],
+  ];
+  function searchPoints(rawQuery) {
+    const q = String(rawQuery || '').trim().toLowerCase();
+    if (!q || !window.KNOWLEDGE_INDEX?.subjects) return [];
+    const terms = [q];
+    for (const [re, words] of KP_ALIASES) if (re.test(q)) terms.push(...words.map(w => w.toLowerCase()));
+    const results = [];
+    for (const subj of window.KNOWLEDGE_INDEX.subjects) {
+      for (const sem of subj.semesters || []) {
+        if (!sem.ready) continue;
+        for (const ch of sem.chapters || []) {
+          for (const p of ch.points || []) {
+            const hay = `${subj.label} ${sem.label} ${ch.name} ${p.name}`.toLowerCase();
+            let score = 0;
+            if (p.name.toLowerCase().includes(q)) score += 100;
+            else if (ch.name.toLowerCase().includes(q)) score += 60;
+            else if (hay.includes(q)) score += 40;
+            else if (terms.some(t => hay.includes(t))) score += 25;
+            if (!score) continue;
+            if (p.hasDeep) score += 8;
+            if (p.hasEssay) score += 6;
+            if (String(p.tag || '').includes('★')) score += 4;
+            results.push({
+              subject: subj.key, subjectLabel: subj.label,
+              semester: sem.key, semLabel: sem.label,
+              chapter: ch.name, id: p.id, name: p.name, tag: p.tag || '',
+              hasEssay: !!p.hasEssay, hasDeep: !!p.hasDeep,
+              count: p.ids?.length || 0, score,
+            });
+          }
+        }
+      }
+    }
+    return results.sort((a, b) => b.score - a.score).slice(0, 10);
+  }
+  function searchBoxHTML(idPrefix) {
+    const hots = ['尺规作图', '动点', '电路故障', '浮力', '金属与酸', '酸碱盐'];
+    return `<div class="kp-search-wrap" data-kp-search-wrap>
+      <div class="kp-search-row">
+        <input type="search" class="kp-search-input" id="${idPrefix}KpSearch" placeholder="🔍 搜孩子不会的知识点（跨学期/跨教材）：如 尺规作图、动点、电路故障、浮力…" autocomplete="off" aria-label="搜索数理化知识点">
+      </div>
+      <div class="kp-search-hots"><span>热搜：</span>${hots.map(h => `<button type="button" class="kp-hot-chip" data-kp-hot="${h}">${h}</button>`).join('')}</div>
+      <div class="kp-search-results" data-kp-search-results hidden></div>
+    </div>`;
+  }
+  function wireSearchBox(root) {
+    const wrap = root?.querySelector('[data-kp-search-wrap]');
+    if (!wrap) return;
+    const input = wrap.querySelector('.kp-search-input');
+    const box = wrap.querySelector('[data-kp-search-results]');
+    const run = async (val) => {
+      const q = String(val || '').trim();
+      if (!q) { box.hidden = true; box.innerHTML = ''; return; }
+      await loadIndex().catch(() => null);
+      const list = searchPoints(q);
+      if (!list.length) {
+        box.innerHTML = `<div class="kp-sr-empty">暂时没搜到「<b>${esc(q)}</b>」对应的知识点。<a href="https://elx.cc.cd/?panel=feedback&from=x4m-kp-miss" target="_blank" rel="noopener">把教材版本和考点名留给作者，我尽快补进题库 ›</a></div>`;
+        box.hidden = false;
+        return;
+      }
+      box.innerHTML = list.map(item => `
+        <button type="button" class="kp-sr-item" data-sr-subj="${esc(item.subject)}" data-sr-sem="${esc(item.semester)}" data-sr-pt="${esc(item.id)}">
+          <span class="kp-sr-main"><b>${esc(item.name)}</b>${item.hasDeep ? '<em class="kp-deep-tag">名师详讲</em>' : ''}${item.hasEssay ? '<em class="kp-essay-tag">含大题</em>' : ''}</span>
+          <span class="kp-sr-sub">${esc(item.subjectLabel)} · ${esc(item.semLabel)} · ${esc(item.chapter)}（${item.count} 题）›</span>
+        </button>`).join('');
+      box.hidden = false;
+      box.querySelectorAll('[data-sr-pt]').forEach(btn => btn.addEventListener('click', () => {
+        void open({ subject: btn.dataset.srSubj, semester: btn.dataset.srSem, point: btn.dataset.srPt });
+      }));
+    };
+    input.addEventListener('input', () => { void run(input.value); });
+    wrap.querySelectorAll('[data-kp-hot]').forEach(btn => btn.addEventListener('click', () => {
+      input.value = btn.dataset.kpHot;
+      void run(btn.dataset.kpHot);
+      input.focus();
+    }));
+  }
+
   // ---- 3 分钟快测（8 题阶梯摸底：2 基础 + 4 提高 + 2 拓展，分散覆盖各章高频点） ----
   function quickDiagQuestions(data) {
     const byId = new Map(data.questions.map(q => [q.id, q]));
@@ -206,7 +301,8 @@
         <div class="kp-home-actions">${ready.map(s => `<button class="btn primary" type="button" data-kp-sem="${s.key}">看${esc(s.label)}（${s.pointCount}点）</button>`).join('')}</div>`;
     }
     return `<section class="card kp-home" id="knowledgeHome">
-      <div class="kp-home-head"><span class="kp-badge">数理化补缺主线 · 名师 4 步微课</span><h2>全初中 ${totals.pts} 个知识点 · 3 分钟测弱项 ＋ 印 A4 卷</h2></div>
+      <div class="kp-home-head"><span class="kp-badge">数理化补缺主线 · 名师 4 步微课</span><h2>全初中 ${totals.pts} 个知识点 · 秒搜直达 ＋ 3 分钟测弱项</h2></div>
+      ${searchBoxHTML('home')}
       <div class="kp-sem-tabs" style="margin:10px 0 6px">${(idx?.subjects || []).map(s => { const sc = subjectSummaryCounts(s); return `<button type="button" class="btn ${s.key === (subj?.key || 'math') ? 'primary' : ''}" data-kp-subj="${s.key}">${esc(s.label)}（${sc.pts}点）</button>`; }).join('')}</div>
       <p class="kp-home-lead">全初中数理化共 <b>${totals.pts}</b> 个核心知识点、<b>${totals.qs.toLocaleString()}</b> 道分层题与 <b>${totals.essays}</b> 道解答大题。先用 8 道阶梯题出<b>《孩子学情体检单》</b>，再进<b>《名师 4 步通关微课》</b>（遮罩背公式 → 拆母题 → 3 关集 ★★★），一键印 A4 卷纸上验收。</p>
       ${sem ? `<p class="kp-home-sem">当前定位：<b>${esc(sem.label)}</b>${sem.ready ? `（${sem.chapters.length} 章 ${sem.pointCount} 点，点上方胶囊可切全初中任意学期）· 免费测 8 题＋每点第 1 关免费` : ''}</p>` : ''}
@@ -214,6 +310,7 @@
     </section>`;
   }
   function wireHome(root) {
+    wireSearchBox(root);
     root.querySelectorAll('[data-kp-go]').forEach(b => b.addEventListener('click', () => {
       const go = b.dataset.kpGo;
       if (go === 'sample-print') { void previewSampleSheet(app.stage()); return; }
@@ -496,7 +593,7 @@
     const weak = weakPoints(data);
     const total = data.chapters.reduce((s, c) => s + c.points.length, 0);
     const qDiag = quickDiagQuestions(data);
-    shell(`${semTabs(idx)}
+    shell(`${searchBoxHTML('dir')}${semTabs(idx)}
       <section class="card kp-summary">
         <div class="kp-home-stats"><span><b>${total}</b>个知识点</span><span><b>${stats.cleared}</b>个三星通关</span><span class="kp-weak-text"><b>${stats.weak + stats.shaky}</b>个待补</span>${stats.essays ? `<span><b>${stats.essays}</b>道解答大题</span>` : `<span><b>${stats.ok + stats.good}</b>个已掌握</span>`}</div>
         <p class="muted kp-how">名师 4 步补缺闭环：① 先做 <b>3 分钟快测（${qDiag.length} 题）</b>拿《孩子学情体检单》；② 点开知识点进入<b>《名师 4 步通关微课》</b>（遮罩背公式 → 拆母题 → 3 关集齐 ★★★）；③ 一键打印专属 A4 补缺卷在纸上验收。</p>
@@ -511,6 +608,7 @@
       </section>
       ${rows}
       <p class="muted kp-foot">知识点按人教版新教材整理；带 ★ 为中考高频，◆ 为易错点，“名师详讲”含题眼识别、通法 3 步走与家长 30 秒提问卡，“含压轴大题”配分步思路与采分点自评。3 分钟快测与每点第 1 关免费，完整版全部开放。</p>`);
+    wireSearchBox(app.view);
     wireTabs();
     app.view.querySelectorAll('details[data-chapter]').forEach(d => d.addEventListener('toggle', () => { if (d.open) state.open.add(d.dataset.chapter); else state.open.delete(d.dataset.chapter); }));
     app.view.querySelectorAll('[data-point]').forEach(b => b.addEventListener('click', () => { state.point = b.dataset.point; state.view = 'point'; void render(); }));
@@ -959,5 +1057,5 @@
   function refresh() {
     if (location.hash === '#knowledge' && !document.body.classList.contains('practice')) void render();
   }
-  window.KnowledgeHub = { attach: options => { app = options; }, open, leave, refresh, loadIndex, homeCardHTML, wireHome, summaryRxHTML, wireSummaryRx, previewSampleSheet };
+  window.KnowledgeHub = { attach: options => { app = options; }, open, leave, refresh, loadIndex, searchPoints, homeCardHTML, wireHome, summaryRxHTML, wireSummaryRx, previewSampleSheet };
 })();
