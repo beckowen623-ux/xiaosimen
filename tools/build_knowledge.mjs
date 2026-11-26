@@ -61,6 +61,27 @@ function blankAlts(text) {
   for (const a of [...alts]) if (/[²³⁴ⁿ]/.test(a)) alts.push(a.replace(/[²³⁴ⁿ]/g, ch => SUP[ch]));
   return [...new Set(alts)];
 }
+function extractSearchKw(p, deepGuide) {
+  const parts = [];
+  if (Array.isArray(p.keywords)) parts.push(...p.keywords);
+  if (Array.isArray(p.kp)) parts.push(...p.kp);
+  const pool = [
+    ...(p.card?.concept || []),
+    ...(p.card?.formula || []),
+    ...(p.card?.pitfall || []),
+    ...(deepGuide?.triggers || []),
+    ...(deepGuide?.variants || []),
+  ].join(" ");
+  // 抽取括号/引号内模型术语与常见专业词块，控制索引紧凑体积
+  const re = /([「“（(][^」”）)]{2,18}[」”）)]|[A-Za-z0-9]{2,8}(?:图像|曲线|模型|公式|定律)?)/g;
+  let m;
+  while ((m = re.exec(pool)) !== null) parts.push(m[1].replace(/[「」“”（）()]/g, ""));
+  // 再补入概念首句与触发词精简版，确保正文高频模型词 100% 可搜
+  const summary = [...(p.card?.concept || []).slice(0, 1), ...(deepGuide?.triggers || []).slice(0, 2)].join(" ").slice(0, 96);
+  if (summary) parts.push(summary);
+  const uniq = [...new Set(parts.map(s => String(s || "").trim()).filter(s => s.length >= 2))];
+  return uniq.join(" ").slice(0, 180);
+}
 
 const index = { updated: new Date().toISOString().slice(0, 10), subjects: [] };
 const oldQs = loadOldQuestions();
@@ -150,7 +171,8 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
         const refs = oldQs.filter(q => q.subject === subject && ((!q.unit && subject === "chemistry") || prefixes.some(pr => String(q.unit || "").startsWith(pr))) && kpSet.has(q.kp))
           .sort((a, b) => String(a.paperId).localeCompare(String(b.paperId)) || a.number - b.number);
         const deepGuide = deepGuides[pointId];
-        chapter.points.push({ id: pointId, name: p.name, tag: p.tag || "", ...(extraEssay ? { hasEssay: true } : {}), ...(deepGuide ? { hasDeep: true, deep: deepGuide } : {}), card: p.card, qids, refs: refs.map(q => q.id) });
+        const kw = extractSearchKw(p, deepGuide);
+        chapter.points.push({ id: pointId, name: p.name, tag: p.tag || "", kw, ...(extraEssay ? { hasEssay: true } : {}), ...(deepGuide ? { hasDeep: true, deep: deepGuide } : {}), card: p.card, qids, refs: refs.map(q => q.id) });
         for (const q of refs) if (!questions.some(x => x.id === q.id)) questions.push({ ...q, kpId: pointId, kpRef: true });
       }
     }
@@ -166,7 +188,7 @@ for (const [subject, subjectLabel] of Object.entries(SUBJECTS)) {
       `// 由 tools/build_knowledge.mjs 生成，源文件 knowledge-src/${subject}/${sem.key}-*.json，请勿手改。\nwindow.KNOWLEDGE_DATA = window.KNOWLEDGE_DATA || {};\nwindow.KNOWLEDGE_DATA[${JSON.stringify(`${subject}-${sem.key}`)}] = ${JSON.stringify(data)};\n`);
     const pointCount = chapters.reduce((s, c) => s + c.points.length, 0);
     subjectIndex.semesters.push({ key: sem.key, stage: sem.stage, label: sem.label, ready: true,
-      chapters: chapters.map(c => ({ name: c.name, points: c.points.map(p => ({ id: p.id, name: p.name, tag: p.tag, ...(p.hasEssay ? { hasEssay: true } : {}), ...(p.hasDeep ? { hasDeep: true } : {}), ids: [...p.qids, ...p.refs] })) })),
+      chapters: chapters.map(c => ({ name: c.name, points: c.points.map(p => ({ id: p.id, name: p.name, tag: p.tag, ...(p.kw ? { kw: p.kw } : {}), ...(p.hasEssay ? { hasEssay: true } : {}), ...(p.hasDeep ? { hasDeep: true } : {}), ids: [...p.qids, ...p.refs] })) })),
       pointCount, questionCount: questions.length });
     console.log(`${subject}-${sem.key}: ${chapters.length} 章 ${pointCount} 个知识点，新题 ${fresh.length} 道（单选答案分布 ${JSON.stringify(dist)}），归位旧题 ${questions.length - fresh.length} 道`);
   }

@@ -22,10 +22,10 @@
   <script src="./share-offer.js?v=3" defer></script>
   <script src="./national-exams.js?v=7" defer></script>
   <link rel="stylesheet" href="./knowledge.css?v=3">
-  <script src="./knowledge.js?v=6" defer></script>
+  <script src="./knowledge.js?v=7" defer></script>
   <!-- 真题目录（早鸟卷、同步卷、小升初都靠它）和页面脚本同时下载，不用等脚本跑起来再下；版本号发布时自动填 -->
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
-  <script src="./app.js?v=33" defer></script>
+  <script src="./app.js?v=34" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
   <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).catch(function () {}); });</script>
 </head>
@@ -99,7 +99,7 @@
     <ul class="unlock-trust" aria-label="核心权益">
       <li>✓ 作者自家孩子同步自用，本次期中从年级中上游冲进名列前茅</li>
       <li>✓ 一次买断 ¥19.9，后期会调价，已购长期不限使用</li>
-      <li>✓ 含 385 个数理化知识点、115 道解答大题 + 无限 A4 打印</li>
+      <li>✓ 含 395 个数理化知识点与名师压轴模型、125 道解答大题 + 无限 A4 打印</li>
       <li>✓ 3 台设备共用 + 云端错题本同步 + 后续新题免费更新</li>
     </ul>
     <div class="author-use-note">
@@ -127,7 +127,7 @@
     <div class="access-offers">
       <section id="schoolOffer" class="offer-primary">
         <h3>最省心 · 直接买完整版 ¥19.9 <span class="offer-badge">后期调价 · 已购不限用</span></h3>
-        <p class="muted offer-note">作者孩子自用、每天持续完善：一次解锁全部 385 个数理化知识点（名师 4 步通关微课）与 115 道解答大题、无水印 A4 专属补缺卷无限打印、71 套同步章节卷、全国真题手机刷题与云端错题同步。</p>
+        <p class="muted offer-note">作者孩子自用、每天持续完善：一次解锁全部 395 个数理化知识点与名师模型（名师 4 步通关微课）与 125 道解答大题、无水印 A4 专属补缺卷与语英小四门 213 条默写纸无限打印、71 套同步章节卷、全国真题手机刷题与云端错题同步。</p>
         <button class="btn primary" type="button" id="directPaySchool" hidden>微信/支付宝直接买（付款秒解锁）</button>
         <div class="offer-cta-row">
           <button class="btn primary" type="button" hidden>复制闲鱼口令（推荐）</button>

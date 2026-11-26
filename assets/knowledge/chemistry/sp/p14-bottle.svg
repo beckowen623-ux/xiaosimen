@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="380" height="230" font-family="sans-serif">
+  <rect width="380" height="230" fill="#ffffff"/>
+  <defs>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <!-- 左侧：万能瓶结构图 (居中 x=88) -->
+  <text x="88" y="21" font-size="12.5" font-weight="bold" fill="#1e40af" text-anchor="middle">万能瓶（多功能瓶）</text>
+  <!-- 瓶身与瓶口 -->
+  <path d="M 68 54 L 68 74 Q 44 82 44 102 L 44 176 Q 44 186 54 186 L 122 186 Q 132 186 132 176 L 132 102 Q 132 82 108 74 L 108 54 Z" fill="#f8fafc" stroke="#111" stroke-width="2"/>
+  <!-- 瓶内淡蓝液面提示（示意可装液体） -->
+  <path d="M 45 128 L 131 128 L 131 176 Q 131 185 122 185 L 54 185 Q 45 185 45 176 Z" fill="#dbeafe" fill-opacity="0.65" stroke="none"/>
+  <line x1="45" y1="128" x2="131" y2="128" stroke="#60a5fa" stroke-width="1.3" stroke-dasharray="4 2"/>
+  <!-- 橡胶塞 -->
+  <rect x="66" y="48" width="44" height="14" rx="2" fill="#94a3b8" stroke="#111" stroke-width="1.5"/>
+  <!-- 长导管 a (左侧插入瓶底) -->
+  <polyline points="22,36 77,36 77,172" fill="none" stroke="#c0392b" stroke-width="2.4" stroke-linejoin="round"/>
+  <!-- 短导管 b (右侧刚露出塞子) -->
+  <polyline points="99,76 99,36 154,36" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linejoin="round"/>
+  <!-- 端口标注 -->
+  <text x="18" y="52" font-size="13" font-weight="bold" fill="#c0392b" text-anchor="middle">a</text>
+  <text x="36" y="66" font-size="10.5" fill="#c0392b" text-anchor="middle">长管</text>
+  <text x="156" y="52" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">b</text>
+  <text x="142" y="66" font-size="10.5" fill="#2563eb" text-anchor="middle">短管</text>
+  <text x="88" y="160" font-size="10.5" fill="#1e40af" text-anchor="middle">洗气/排水液面</text>
+  <!-- 右侧四大核心用法卡片 -->
+  <rect x="176" y="28" width="188" height="158" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+  <text x="270" y="48" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">四大用途进出气铁律</text>
+  <line x1="186" y1="55" x2="354" y2="55" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- 用途1 -->
+  <text x="186" y="75" font-size="11.5" font-weight="bold" fill="#c0392b">① 洗气 / 干燥（装液）：</text>
+  <text x="194" y="90" font-size="11" fill="#334155">长进短出（a 进 b 出）</text>
+  <!-- 用途2 -->
+  <text x="186" y="110" font-size="11.5" font-weight="bold" fill="#1e40af">② 排空气集气（空瓶正放）：</text>
+  <text x="194" y="125" font-size="10" fill="#334155">大长(O₂/CO₂ a进) 小短(H₂ b进)</text>
+  <!-- 用途3 -->
+  <text x="186" y="145" font-size="11.5" font-weight="bold" fill="#15803d">③ 排水集气 / 量气（满水）：</text>
+  <text x="194" y="160" font-size="11" fill="#334155">短进长出（b 进 a 出接量筒）</text>
+  <!-- 用途4提示 -->
+  <text x="186" y="178" font-size="10.5" fill="#64748b">④ 医院供氧观测气泡：a进b出</text>
+  <!-- 底部总口诀 -->
+  <rect x="16" y="194" width="348" height="28" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="190" y="212" font-size="11.5" fill="#991b1b" font-weight="bold" text-anchor="middle">速记口诀：洗气长进短出，排空大长小短，排水/量气短进长出！</text>
+</svg>

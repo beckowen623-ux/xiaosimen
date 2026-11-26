@@ -147,45 +147,128 @@
       const sub = subjectSummaryCounts(s);
       pts += sub.pts; qs += sub.qs; essays += sub.essays;
     }
-    return { pts: pts || 358, qs: qs || 4650, essays: essays || 88, subjects: (idx?.subjects || []).map(s => s.label).join('、') || '数理化' };
+    return { pts: pts || 395, qs: qs || 4800, essays: essays || 125, subjects: (idx?.subjects || []).map(s => s.label).join('、') || '数理化' };
+  }
+
+  function normSearchText(s) {
+    return String(s || '')
+      .toLowerCase()
+      .normalize('NFKC')
+      .replace(/档/g, '挡')
+      .replace(/融化/g, '熔化')
+      .replace(/锤/g, '垂')
+      .replace(/[·・•\-—_，。、！？：；（）()【】「」“”\s]/g, '');
   }
 
   const KP_ALIASES = [
-    [/辅助线|中点|倍长/, ['倍长中线', '截长补短', '中位线', '中点四边形', '斜边中线']],
-    [/动点|动角|旋转/, ['动点', '动角', '将军饮马', '瓜豆', '胡不归', '折叠', '手拉手', '存在性']],
-    [/尺规|作图|画图/, ['尺规作图', '作图', '力臂', '平面镜']],
-    [/十字相乘|分解因式|因式/, ['十字相乘', '因式分解', '分组分解']],
-    [/韦达|两根/, ['韦达定理', '根与系数']],
-    [/切线|隐圆|共圆/, ['切线', '隐圆', '圆周角', '垂径']],
-    [/故障|短路|断路|测电笔/, ['电路故障', '家庭电路', '试电笔']],
-    [/动态电路|变阻器|极值|多开关/, ['动态电路', '滑动变阻器', '多开关', '安全取值']],
-    [/浮力|阿基米德|漂浮|冰块|压强/, ['浮力', '阿基米德', '漂浮', '浸没', '压强']],
-    [/滤渣|滤液|置换|金属与酸|金属活动/, ['滤渣', '金属活动性', '金属与酸']],
-    [/传感器|数字化|压强曲线|ph曲线|图像/i, ['数字化传感', '图像', '拐点', '溶解度曲线']],
+    // 数学名师几何/函数压轴模型全覆盖（数组第 1 项为最精准主匹配，排序优先）
+    [/婆罗摩|笈多|双等腰直角|中线与高互换/, ['婆罗摩笈多', '双等腰直角', '倍长中线', '手拉手']],
+    [/阿氏圆|阿波罗|pa\+k|kpb/i, ['阿氏圆', '母子相似', '胡不归']],
+    [/费马点|三线段最值|60度旋转|60°旋转/, ['费马点', '旋转60°', '最值']],
+    [/十字架|赵爽|弦图|垂直线段/, ['十字架', '赵爽弦图', '勾股']],
+    [/鸡爪|对角互补|共顶点三线段/, ['鸡爪', '对角互补', '旋转全等']],
+    [/12345|45度角|45°角|半角正切/, ['12345', '45°', '半角']],
+    [/逆等线|定角夹等长/, ['逆等线', '平移', '最值']],
+    [/猪蹄|铅笔|锯齿|鹰嘴|拐点|平行线拐点/, ['平行线拐点', '猪蹄', '铅笔', '锯齿']],
+    [/建系|坐标法|斜化直/, ['建系法', '斜化直', '铅垂高']],
+    [/一线三垂直|k字|k型|一线三直角|三垂直|一线三等角/i, ['一线三等角', '一线三直角', '相似综合']],
+    [/手拉手|共顶点旋转|旋转全等/, ['手拉手', '婆罗摩笈多', '鸡爪']],
+    [/半角模型|半角|90夹45|120夹60/, ['半角模型', '截长补短']],
+    [/子母相似|母子相似|母子型|射影定理|双垂|反a|反8|a字|8字/i, ['相似综合', '母子型', '射影', '三角形相似']],
+    [/飞镖|角平分线模型|双内|双外|一内一外/, ['角平分线三大夹角', '飞镖', '角平分线']],
+    [/将军饮马|胡不归|瓜豆|一箭穿心|点圆最值|垂线段最短/, ['将军饮马', '胡不归', '瓜豆', '一箭穿心', '阿氏圆', '费马点']],
+    [/隐圆|四点共圆|定弦定角|定边定角|定点定长|米勒|托勒密|梅涅劳斯/, ['隐圆', '四点共圆', '定弦定角', '圆与切线']],
+    [/铅垂法|铅垂高|水平宽|斜高|面积最值/, ['铅垂高', '面积最值']],
+    [/辅助线|中点|倍长|截长补短|中位线|斜边中线/, ['倍长中线', '截长补短', '中位线', '中点四边形', '斜边中线']],
+    [/动点|动角|折叠|存在性|等腰存在|直角存在|平行四边形存在/, ['动点', '动角', '折叠', '存在性', '等腰', '平行四边形']],
+    [/黄金分割|位似/, ['黄金分割', '位似']],
+    [/交点式|两根式|韦达|根与系数|对称性/, ['交点式', '韦达定理', '根与系数']],
+    [/降幂|升幂|不含某项|与字母无关|含参/, ['降幂', '不含某项', '含参']],
+    [/尺规|作图|画图/, ['尺规作图', '作图', '力臂', '平面镜', '实物图']],
+    [/十字相乘|分解因式|因式分解|分组分解/, ['十字相乘', '因式分解', '分组分解']],
+    [/统计|概率|树状图|方差|中位数|众数/, ['统计', '概率', '方差', '中位数']],
+    // 物理名师模型与高频实验
+    [/杠杆最小力|最小力|动态杠杆|力臂|穿绳|滑轮组/, ['杠杆最小力', '动态杠杆', '滑轮组', '机械效率', '杠杆']],
+    [/安阻法|伏阻法|单表法|特殊法测电阻|缺电流表|缺电压表|等效替代/, ['单表法', '缺电压表', '缺电流表', '测电阻', '额定功率']],
+    [/特殊法测密度|缺量筒|缺天平|缺砝码|漂浮法|溢水杯|等浮力|双提法/, ['缺砝码', '缺量筒', '特殊测密度', '溢水法', '等浮力']],
+    [/多挡位|多档位|电热器|高中低挡|高中低档|多开关/, ['多挡位', '电热器', '多开关', '动态电路']],
+    [/动态电路|变阻器|极值|范围最值|安全取值|敏感电阻/, ['滑动变阻器安全取值', '动态电路', '非线性灯泡']],
+    [/故障|短路|断路|测电笔|试电笔|家庭电路/, ['电路故障', '家庭电路', '试电笔', '串并联电路设计']],
+    [/电路设计|病房呼叫|声光控|实物图|电路图/, ['串并联电路设计', '实物图', '电路图']],
+    [/浮力|阿基米德|漂浮|冰块|液面变化|液面升降|浸没|提拉|f-h/i, ['液面变化', '冰块熔化', '浸没提拉', '浮力', '漂浮']],
+    [/切割|叠放|竖切|横切|柱体压强|液柱压强|连通器/, ['切割叠放', '固体切割', '液面变化', '压强', '连通器']],
+    [/摩擦|受力|多物体|叠放受力|二力平衡/, ['摩擦力', '受力分析', '二力平衡', '多物体']],
+    [/焦耳|u形管|电热|比热容|吸放热/, ['焦耳定律', '比热容', '热机', '内能']],
+    [/平均速度|斜面小车|晶体熔化|海波|水沸腾/, ['平均速度', '晶体熔化', '水沸腾', '物态变化']],
+    [/透镜|凸透镜|成像|平面镜|近视|远视/, ['凸透镜', '平面镜', '近视']],
+    // 化学名师模型与高频实验
+    [/万能瓶|多功能瓶|洗气瓶|排空气|排水集气|气体制取|气体净化|量气/, ['万能瓶', '多功能瓶', '气体制取', '气体净化', '氧气', '二氧化碳']],
+    [/滤渣|滤液|滤液滤渣|四大图像|金属与盐|混合盐/, ['滤渣滤液', '混合盐', '金属与酸', '金属活动性']],
+    [/工业流程|工艺流程|海水提镁|矿石|碳捕集|双碳/, ['粗盐除可溶性杂质', '海水提镁', '矿石综合利用', '碳捕集']],
+    [/变质|氢氧化钠变质|生石灰变质|氧化钙变质|成分探究|溶质成分/, ['变质程度探究', '溶质成分', '氢氧化钠']],
+    [/传感器|数字化|压强曲线|ph曲线|温度曲线|中和曲线|拐点图像/i, ['数字化传感', '拐点图像', '复分解', '中和反应', '溶解度曲线']],
+    [/粗盐提纯|除杂|鉴别|玻璃棒|铵态氮肥|化肥/, ['粗盐', '多步除杂', '鉴别', '铵态氮肥', '可溶性杂质']],
+    [/溶液配制|质量分数|偏大偏小|溶解度/, ['溶液配制', '溶质质量分数', '溶解度']],
+    [/一氧化碳|co还原|炼铁|氧化铜|氧化铁|尾气/i, ['一氧化碳还原', '氧化铜', '氧化铁', '碳']],
     [/气密性|实验操作|仪器/, ['气密性', '实验基本操作']],
-    [/俗名|烧碱|纯碱|小苏打|沉淀|推断/, ['俗名', '常见的盐', '常见的碱', '框图推断', '复分解']],
-    [/统计|概率|树状图|方差/, ['统计', '概率', '方差', '中位数']],
-    [/摩擦|受力|叠放/, ['摩擦力', '受力分析', '二力平衡']],
-    [/透镜|成像|近视|远视/, ['凸透镜', '平面镜', '近视']],
+    [/俗名|烧碱|纯碱|小苏打|沉淀|推断|框图|离子共存|三角转化/, ['框图推断', '离子共存', '俗名沉淀', '特征沉淀', '常见的盐']],
+    [/差量法|守恒法|元素守恒|质量守恒|极值法/, ['元素守恒法', '差量法', '质量守恒']],
   ];
+
   function searchPoints(rawQuery) {
-    const q = String(rawQuery || '').trim().toLowerCase();
-    if (!q || !window.KNOWLEDGE_INDEX?.subjects) return [];
-    const terms = [q];
-    for (const [re, words] of KP_ALIASES) if (re.test(q)) terms.push(...words.map(w => w.toLowerCase()));
+    const qRaw = String(rawQuery || '').trim();
+    const q = qRaw.toLowerCase();
+    const qNorm = normSearchText(qRaw);
+    if (!qNorm || !window.KNOWLEDGE_INDEX?.subjects) return [];
+    const aliasTerms = [];
+    for (const [re, words] of KP_ALIASES) {
+      if (re.test(q) || re.test(qNorm)) {
+        words.forEach((w, idx) => {
+          const nw = normSearchText(w);
+          if (nw) aliasTerms.push({ term: nw, rank: idx });
+        });
+      }
+    }
+    // 双字/词元切分，用于容错匹配（如“多档位电热器”“金属混合盐滤液”）
+    const tokens = [];
+    const alpha = qNorm.match(/[a-z0-9]+/g) || [];
+    tokens.push(...alpha.filter(t => t.length >= 2));
+    const cjk = qNorm.replace(/[a-z0-9]+/g, '');
+    for (let i = 0; i < cjk.length - 1; i++) tokens.push(cjk.slice(i, i + 2));
+    const uniqTokens = [...new Set(tokens)];
+
     const results = [];
     for (const subj of window.KNOWLEDGE_INDEX.subjects) {
       for (const sem of subj.semesters || []) {
         if (!sem.ready) continue;
         for (const ch of sem.chapters || []) {
           for (const p of ch.points || []) {
-            const hay = `${subj.label} ${sem.label} ${ch.name} ${p.name}`.toLowerCase();
+            const nameN = normSearchText(p.name);
+            const chN = normSearchText(ch.name);
+            const kwN = normSearchText(p.kw || '');
+            const hayN = `${normSearchText(subj.label)}${normSearchText(sem.label)}${chN}${nameN}`;
+            const fullN = `${hayN}${kwN}`;
             let score = 0;
-            if (p.name.toLowerCase().includes(q)) score += 100;
-            else if (ch.name.toLowerCase().includes(q)) score += 60;
-            else if (hay.includes(q)) score += 40;
-            else if (terms.some(t => hay.includes(t))) score += 25;
+            if (nameN.includes(qNorm)) score += 120;
+            else if (chN.includes(qNorm)) score += 75;
+            else if (kwN.includes(qNorm)) score += 65;
+            else if (hayN.includes(qNorm)) score += 50;
+            else {
+              let bestAlias = 0;
+              for (const a of aliasTerms) {
+                const bonus = a.rank === 0 ? 12 : (a.rank === 1 ? 6 : 0);
+                if (nameN.includes(a.term)) bestAlias = Math.max(bestAlias, 44 + bonus);
+                else if (fullN.includes(a.term)) bestAlias = Math.max(bestAlias, 30 + Math.floor(bonus / 2));
+              }
+              if (bestAlias) score += bestAlias;
+              else if (uniqTokens.length >= 2) {
+                const hitCnt = uniqTokens.filter(t => fullN.includes(t)).length;
+                const ratio = hitCnt / uniqTokens.length;
+                if (ratio >= 0.5) score += Math.round(22 * ratio);
+              }
+            }
             if (!score) continue;
+            if (sem.key === 'sp') score += 5;
             if (p.hasDeep) score += 8;
             if (p.hasEssay) score += 6;
             if (String(p.tag || '').includes('★')) score += 4;
@@ -200,18 +283,19 @@
         }
       }
     }
-    return results.sort((a, b) => b.score - a.score).slice(0, 10);
+    return results.sort((a, b) => b.score - a.score).slice(0, 12);
   }
   function searchBoxHTML(idPrefix) {
-    const hots = ['尺规作图', '动点', '电路故障', '浮力', '金属与酸', '酸碱盐'];
+    const hots = ['婆罗摩笈多', '阿氏圆', '安阻法', '万能瓶', '滤液滤渣', '电路故障'];
     return `<div class="kp-search-wrap" data-kp-search-wrap>
       <div class="kp-search-row">
-        <input type="search" class="kp-search-input" id="${idPrefix}KpSearch" placeholder="🔍 搜孩子不会的知识点（跨学期/跨教材）：如 尺规作图、动点、电路故障、浮力…" autocomplete="off" aria-label="搜索数理化知识点">
+        <input type="search" class="kp-search-input" id="${idPrefix}KpSearch" placeholder="🔍 搜课本考点或名师模型：如 婆罗摩笈多、阿氏圆、安阻法、万能瓶、滤液滤渣…" autocomplete="off" aria-label="搜索数理化知识点或压轴模型">
       </div>
-      <div class="kp-search-hots"><span>热搜：</span>${hots.map(h => `<button type="button" class="kp-hot-chip" data-kp-hot="${h}">${h}</button>`).join('')}</div>
+      <div class="kp-search-hots"><span>热搜模型：</span>${hots.map(h => `<button type="button" class="kp-hot-chip" data-kp-hot="${h}">${h}</button>`).join('')}</div>
       <div class="kp-search-results" data-kp-search-results hidden></div>
     </div>`;
   }
+  let missTrackTimer = null;
   function wireSearchBox(root) {
     const wrap = root?.querySelector('[data-kp-search-wrap]');
     if (!wrap) return;
@@ -223,7 +307,10 @@
       await loadIndex().catch(() => null);
       const list = searchPoints(q);
       if (!list.length) {
-        box.innerHTML = `<div class="kp-sr-empty">暂时没搜到「<b>${esc(q)}</b>」对应的知识点。<a href="https://elx.cc.cd/?panel=feedback&from=x4m-kp-miss" target="_blank" rel="noopener">把教材版本和考点名留给作者，我尽快补进题库 ›</a></div>`;
+        clearTimeout(missTrackTimer);
+        if (q.length >= 2) missTrackTimer = setTimeout(() => app.track?.('kp_search_miss'), 900);
+        const fbUrl = `https://elx.cc.cd/?panel=feedback&from=x4m-kp-miss&q=${encodeURIComponent(q)}`;
+        box.innerHTML = `<div class="kp-sr-empty">暂时没搜到「<b>${esc(q)}</b>」对应的知识点或模型。<a href="${fbUrl}" target="_blank" rel="noopener">一键把「${esc(q)}」带去留言给作者，优先补进题库 ›</a></div>`;
         box.hidden = false;
         return;
       }

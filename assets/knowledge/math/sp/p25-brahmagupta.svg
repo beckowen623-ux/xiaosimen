@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" width="360" height="230" font-family="sans-serif">
+  <rect width="360" height="230" fill="#ffffff"/>
+  <!-- 共顶点 A(180,108) 的双等腰直角三角形：△ABC(左，∠BAC=90°,AB=AC=66) 与 △ADE(右，∠DAE=90°,AD=AE=56) -->
+  <!-- 旋转方向：AB向左上(-46,-46)→B(134,62), AC向左下(-46,+46)→C(134,154)? 更好：让 B,E 在上, C,D 在下，对称美观 -->
+  <!-- 设 A(180,112)：
+       △ABC：AB=(-62,-32)→B(118,80)，顺时针转90°得 AC=(+32,-62)? 不，逆时针90°：(-62,-32)→(+32,-62)在上方；
+       用标准直观摆放：
+       B(106,154) → vec AB=(-74, 42)；顺时针90°: (x,y)->(-y,x) 在SVG(y向下)顺时针90°是(-y,x)，逆时针是(y,-x)。
+       验证：vec AB=(-74,42), vec AC=(-42,-74) 点积=(-74)(-42)+(42)(-74)=0, 等长 √(74²+42²)=85.1!
+       那 C=(138,38), B=(106,154).
+       再画右侧等腰Rt△ADE：vec AD=(+70, 36) → D(250,148)；vec AE=(+36,-70) → E(216,42)，点积=70*36+36*(-70)=0!
+       检验 CE 与 BD：
+       C(138,38), E(216,42) → 中点 M(177, 40)!
+       vec AM = (-3, -72).
+       vec BD = D - B = (250-106, 148-154) = (144, -6)!
+       点积 AM · BD = (-3)(144) + (-72)(-6) = -432 + 432 = 0!! 精确垂直!!
+       再算 H (直线 AM 与 BD 的交点)：
+       BD: y - 154 = (-6/144)(x - 106) = -(1/24)(x - 106)
+       AM: x = 180 + t(-3), y = 112 + t(-72) → 当 t = -0.54 时 y = 112 + 38.9 = 150.9, x = 181.6
+       解方程：112 - 72t - 154 = -(1/24)(180 - 3t - 106) = -(1/24)(74 - 3t)
+       -42 - 72t = -74/24 + t/8 → -42 + 3.083 = 72.125t → t = -38.917 / 72.125 = -0.5396
+       H = (180 + 1.62, 112 + 38.85) = (181.6, 150.9)!
+       长度检验：BD = √(144²+6²) = 144.12，AM = √(3²+72²) = 72.06 = BD/2!! 精确一半!! -->
+  <!-- 两个等腰直角三角形填充淡色 -->
+  <polygon points="180,112 106,154 138,38" fill="#eef4fb" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/>
+  <polygon points="180,112 250,148 216,42" fill="#fef5e7" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- 连接 CE 和 BD -->
+  <line x1="138" y1="38" x2="216" y2="42" stroke="#2563eb" stroke-width="1.8"/>
+  <line x1="106" y1="154" x2="250" y2="148" stroke="#c0392b" stroke-width="2"/>
+  <!-- 过 A 的中线 AM 与垂线 AH（同一条直线） -->
+  <line x1="177" y1="40" x2="181.6" y2="150.9" stroke="#15803d" stroke-width="2" stroke-dasharray="5 3"/>
+  <!-- A 处两个直角符号 -->
+  <!-- △ABC 在 A 处单位向量：uAB=(-0.87,0.49), uAC=(-0.49,-0.87) -->
+  <polyline points="171.3,116.9 166.4,108.2 175.1,103.3" fill="none" stroke="#111" stroke-width="1.2"/>
+  <!-- △ADE 在 A 处单位向量：uAD=(0.89,0.46), uAE=(0.46,-0.89) -->
+  <polyline points="188.9,116.6 193.5,107.7 184.6,103.1" fill="none" stroke="#111" stroke-width="1.2"/>
+  <!-- H 处直角符号：沿 HA=(-0.04,-1), 沿 HD=(1,-0.04) -->
+  <polyline points="181.2,141.9 190.2,141.5 190.6,150.5" fill="none" stroke="#15803d" stroke-width="1.4"/>
+  <!-- 中点 M 两侧等长短线 -->
+  <line x1="157" y1="35" x2="157" y2="43" stroke="#2563eb" stroke-width="1.6"/>
+  <line x1="197" y1="37" x2="197" y2="45" stroke="#2563eb" stroke-width="1.6"/>
+  <!-- 关键点与标注 -->
+  <circle cx="180" cy="112" r="3" fill="#111"/>
+  <text x="180" y="130" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">A</text>
+  <circle cx="106" cy="154" r="3" fill="#111"/>
+  <text x="93" y="160" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">B</text>
+  <circle cx="138" cy="38" r="3" fill="#111"/>
+  <text x="128" y="30" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">C</text>
+  <circle cx="250" cy="148" r="3" fill="#111"/>
+  <text x="263" y="155" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">D</text>
+  <circle cx="216" cy="42" r="3" fill="#111"/>
+  <text x="227" y="34" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">E</text>
+  <circle cx="177" cy="40" r="3.2" fill="#15803d"/>
+  <text x="177" y="27" font-size="13" font-weight="bold" fill="#15803d" text-anchor="middle">M（中点）</text>
+  <circle cx="181.6" cy="150.9" r="3.2" fill="#15803d"/>
+  <text x="182" y="170" font-size="13" font-weight="bold" fill="#15803d" text-anchor="middle">H（垂足）</text>
+  <!-- 底部核心结论 -->
+  <rect x="20" y="184" width="320" height="36" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="180" y="200" font-size="11.5" fill="#111" text-anchor="middle">核心结论（中线与高互换）：M 为 CE 中点 ⇔ AM⊥BD</text>
+  <text x="180" y="215" font-size="11.5" fill="#c0392b" font-weight="bold" text-anchor="middle">且 BD＝2AM，S△ACE＝S△ABD（倍长中线或旋转 90° 证全等）</text>
+</svg>

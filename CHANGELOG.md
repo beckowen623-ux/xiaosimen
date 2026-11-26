@@ -1,5 +1,17 @@
 # 技术变更记录
 
+## 2026-11-26 · Antigravity · 补齐 10 大全国中考名师压轴模型（395 点 / 125 大题 / 129 详讲 / +8 SVG）与搜索引擎全文关键词升级（main）
+- **新增 10 大名师高频压轴模型 (`knowledge-src/*/sp-*.json`, `capstone-essays.json`, `deep-guides.json`, `assets/knowledge/*/sp/*.svg`)**：
+  - 数学 +8 点（`math-sp-p25`..`p32`）：婆罗摩笈多模型、阿氏圆、费马点、十字架＋赵爽弦图、鸡爪与对角互补、12345 模型、逆等线模型、平行线猪蹄/铅笔/锯齿拐点＋建系与斜化直通法（配 6 张几何 SVG）；
+  - 物理 +1 点（`physics-sp-p13`）：杠杆最小力作图与动态杠杆＋滑轮组穿绳最省力（配 `p13-lever-min.svg`）；
+  - 化学 +1 点（`chemistry-sp-p14`）：万能瓶（多功能瓶）与气体制取净化全流程（配 `p14-bottle.svg`）；
+  - 全初中升级至 **395 个知识点与名师模型（数学 241 / 物理 98 / 化学 56）、125 道解答大题、129 套名师详讲**，零改动既有 385 点与旧题 ID。
+- **搜索引擎彻底升级 (`tools/build_knowledge.mjs`, `knowledge.js`, `functions/api/_stats.js`)**：
+  - 构建期为每个知识点自动抽取紧凑 `kw` 关键词索引写入 `knowledge-index.js`；
+  - `KP_ALIASES` 扩充至 60+ 组名师模型与易错字同义映射（`档↔挡`、`滤液滤渣↔滤渣滤液`、`安阻法/伏阻法/单表法`、`一线三垂直/K字`、`子母相似/反A/反8`、`铅垂法/铅垂高` 等），并加入双字分词容错评分；
+  - 未命中时自动带词跳往个人主页留言框预填（`?panel=feedback&q=...`）并上报匿名 `kp_search_miss`。
+- **验证**：80+ 名师模型全量搜索回归（100% 命中）、`build_knowledge.mjs`、`validate.mjs`、`smoke.mjs`（40/40）、`stage_pages_release.mjs` 与线上 390×844 手机端实测通过。
+
 ## 2026-11-26 · Antigravity · 重制 39 秒高清女声语音使用演示视频与封面图（main）
 - **全新 1080×1920 演示视频与封面 (`assets/video/zhongkao-demo.mp4`, `zhongkao-demo-poster.jpg`, `app.js`, `index.html`)**：
   - 使用 Chrome 2× Retina 实拍最新版 7 大高光模块（自家孩子亲用期中提分首页、385 点秒搜与焦耳定律矢量图、名师 4 步微课＋零透字遮罩、防背答案变式验收、语文/英语＋小四门 213 条 A4 挖空默写纸、考前 7 天急救包＋本周战报、3 分钟快测与同步卷），搭配本机 GPT-SoVITS 专属女声配音（7/7 句 Whisper 查漏字 `OK`）、同步大字字幕、轻快 BGM 与交互音效，成片 38.7 秒 / 4.67 MB（`+faststart`），更新按钮文案为 `▶ 39 秒看怎么用` 与 `?v=2` 防缓存。

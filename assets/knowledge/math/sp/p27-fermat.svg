@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" width="360" height="230" font-family="sans-serif">
+  <rect width="360" height="230" fill="#ffffff"/>
+  <!-- △ABC: B(70,152), C(196,158), A(128,44) -->
+  <!-- 内点 P(136,118) -->
+  <!-- 将 △APC 绕 C(196,158) 顺时针旋转 60° (在SVG中 y向下，顺时针60°公式: x'=dx*0.5 - dy*0.866, y'=dx*0.866 + dy*0.5?
+       注意SVG里 y向下，顺时针转 θ：x' = x cosθ - y sinθ, y' = x sinθ + y cosθ!
+       验证：(1,0)顺时针90°→(0,1)向下，正确！
+       而我们要把 A(128,44) 向右旋转到外部，即顺时针 60°:
+       dxA = 128-196 = -68, dyA = 44-158 = -114
+       xA' = 196 + (-68)(0.5) - (-114)(0.866) = 196 - 34 + 98.7 = 260.7
+       yA' = 158 + (-68)(0.866) + (-114)(0.5) = 158 - 58.9 - 57 = 42.1
+       dxP = 136-196 = -60, dyP = 118-158 = -40
+       xP' = 196 + (-60)(0.5) - (-40)(0.866) = 196 - 30 + 34.6 = 200.6
+       yP' = 158 + (-60)(0.866) + (-40)(0.5) = 158 - 52.0 - 20 = 86.0
+       检验距离：CP = √(60²+40²) = 72.11; CP' = √(4.6²+72²) = 72.15; PP' = √(64.6²+32²) = 72.1! 精确等边三角形! -->
+  <!-- △ABC 与旋转后 △A'P'C -->
+  <polygon points="128,44 70,152 196,158" fill="#f8fafc" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/>
+  <polygon points="196,158 260.7,42.1 200.6,86.0" fill="#fef5e7" stroke="#2563eb" stroke-width="1.6" stroke-dasharray="5 3" stroke-linejoin="round"/>
+  <!-- 辅助等边 △ACA' 的边 AA' 浅色提示 -->
+  <line x1="128" y1="44" x2="260.7" y2="42.1" stroke="#cbd5e1" stroke-width="1.3" stroke-dasharray="4 3"/>
+  <!-- 等边 △PP'C -->
+  <polygon points="136,118 200.6,86.0 196,158" fill="#eef4fb" fill-opacity="0.7" stroke="#15803d" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- PA, PB, PC -->
+  <line x1="136" y1="118" x2="128" y2="44" stroke="#111" stroke-width="1.8"/>
+  <line x1="136" y1="118" x2="70" y2="152" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="136" y1="118" x2="196" y2="158" stroke="#15803d" stroke-width="1.8"/>
+  <!-- 折线化直：PB + PP' + P'A' 与直线 BA' -->
+  <line x1="136" y1="118" x2="200.6" y2="86.0" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="200.6" y1="86.0" x2="260.7" y2="42.1" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="70" y1="152" x2="260.7" y2="42.1" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <!-- 旋转角 60° 提示 -->
+  <text x="180" y="131" font-size="11" fill="#15803d" font-weight="bold" text-anchor="middle">60°</text>
+  <text x="275" y="102" font-size="11" fill="#2563eb" text-anchor="middle">绕 C 顺转 60°</text>
+  <text x="275" y="117" font-size="11" fill="#2563eb" text-anchor="middle">PA＝P'A'</text>
+  <text x="275" y="132" font-size="11" fill="#15803d" text-anchor="middle">PC＝PP'</text>
+  <!-- 顶点标注 -->
+  <circle cx="128" cy="44" r="3" fill="#111"/>
+  <text x="122" y="34" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">A</text>
+  <circle cx="70" cy="152" r="3" fill="#111"/>
+  <text x="56" y="158" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">B</text>
+  <circle cx="196" cy="158" r="3" fill="#111"/>
+  <text x="206" y="168" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">C</text>
+  <circle cx="136" cy="118" r="3.2" fill="#c0392b"/>
+  <text x="123" y="115" font-size="13" font-weight="bold" fill="#c0392b" text-anchor="middle">P</text>
+  <circle cx="200.6" cy="86.0" r="3.2" fill="#2563eb"/>
+  <text x="215" y="88" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">P'</text>
+  <circle cx="260.7" cy="42.1" r="3.2" fill="#2563eb"/>
+  <text x="273" y="37" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">A'</text>
+  <!-- 底部结论框 -->
+  <rect x="18" y="182" width="324" height="38" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="180" y="198" font-size="11.5" fill="#111" text-anchor="middle">绕顶点旋转 60° 得等边 △PP'C 与 △ACA'</text>
+  <text x="180" y="214" font-size="11.5" fill="#c0392b" font-weight="bold" text-anchor="middle">PA＋PB＋PC＝PB＋PP'＋P'A' ≥ BA'（最小值为 BA'）</text>
+</svg>

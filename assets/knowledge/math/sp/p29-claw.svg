@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="380" height="230" font-family="sans-serif">
+  <rect width="380" height="230" fill="#ffffff"/>
+  <!-- 左图：鸡爪模型（等腰Rt△ABC，∠BAC=90°，内点 P，绕 A 顺时针转 90° 到 P'） -->
+  <!-- A(104, 50), B(36, 118)? 设 AB=(-64,64), AC=(+64,64) → 朝下的等腰直角三角形!
+       A(106,42), B(42,106), C(170,106)? 点积=(-64)(64)+(64)(64)=0! 更紧凑放：
+       A(104,44), B(46,136), C(162,136)? 不，直角要90°：
+       A(104,48), B(46,106), C(162,106) → AB=(-58,58), AC=(+58,58), 边长=82.0!
+       内点 P(112, 92): vec AP = (+8, +44).
+       绕 A 顺时针转 90° (x,y)->(-y,x) 在SVG里: vec AP' = (-44, +8) → P'(60, 56)!
+       验证：PB = √((112-46)²+(92-106)²) = √(66²+14²) = 67.5;
+       PC = √((112-162)²+(92-106)²) = √(50²+14²) = 51.9;
+       P'B = √((60-46)²+(56-106)²) = √(14²+50²) = 51.9 = PC!! 精确全等!
+       PP' = √((112-60)²+(92-56)²) = √(52²+36²) = √(4000) = √2 * AP = √2 * √(8²+44²) = √2 * √2000 = √4000!! 100%精确! -->
+  <text x="102" y="22" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">① 鸡爪模型（共顶点三线旋转）</text>
+  <polygon points="104,48 46,106 162,106" fill="#f8fafc" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- 旋转后的 △AP'B 与等腰Rt△APP' -->
+  <polygon points="104,48 60,56 46,106" fill="#fef5e7" stroke="#2563eb" stroke-width="1.6" stroke-dasharray="5 3" stroke-linejoin="round"/>
+  <line x1="60" y1="56" x2="112" y2="92" stroke="#15803d" stroke-width="1.8" stroke-dasharray="5 3"/>
+  <!-- 三条鸡爪线 PA, PB, PC -->
+  <line x1="104" y1="48" x2="112" y2="92" stroke="#c0392b" stroke-width="2"/>
+  <line x1="46" y1="106" x2="112" y2="92" stroke="#c0392b" stroke-width="2"/>
+  <line x1="162" y1="106" x2="112" y2="92" stroke="#c0392b" stroke-width="2"/>
+  <!-- 点与标注 -->
+  <circle cx="104" cy="48" r="2.8" fill="#111"/>
+  <text x="106" y="39" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">A</text>
+  <circle cx="46" cy="106" r="2.8" fill="#111"/>
+  <text x="35" y="113" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">B</text>
+  <circle cx="162" cy="106" r="2.8" fill="#111"/>
+  <text x="172" y="113" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">C</text>
+  <circle cx="112" cy="92" r="3" fill="#c0392b"/>
+  <text x="122" y="92" font-size="12" font-weight="bold" fill="#c0392b" text-anchor="middle">P</text>
+  <circle cx="60" cy="56" r="3" fill="#2563eb"/>
+  <text x="50" y="52" font-size="12" font-weight="bold" fill="#2563eb" text-anchor="middle">P'</text>
+  <text x="102" y="132" font-size="11" fill="#15803d" text-anchor="middle">PP'＝√2·PA，P'B＝PC</text>
+  <text x="102" y="148" font-size="11" fill="#475569" text-anchor="middle">三边聚到 △PP'B 用勾股</text>
+  <!-- 中间分隔线 -->
+  <line x1="192" y1="16" x2="192" y2="170" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <!-- 右图：对角互补模型 (∠AOB=90°, OC平分∠AOB, ∠MDN=90° → 四边形 OMDN 对角互补且 DM=DN) -->
+  <!-- O(222,146), X轴向右(354,146), Y轴向上(222,36), 角平分线 OC 沿 45° 到 D(290,78) -->
+  <!-- 过 D 向两边作垂线：垂足 H1(290,146), H2(222,78) → DH1=DH2=68 -->
+  <!-- 取 M 在 OY 上 (222, 60) → H2M = 18; 取 N 在 OX 上 (308, 146) → H1N = 18 -->
+  <!-- 验证 DM = (-68,-18), DN = (+18,+68)? 旋转90°：(-68,-18)逆时针90°为(-18,+68) → N=(290-18, 78+68)=(272,146)!
+       再验证 DM=(-68,-18), DN=(-18,68) 点积 = 68*18 - 18*68 = 0!! 精确 90° 且等长! -->
+  <text x="288" y="22" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">② 对角互补（90°＋90°）</text>
+  <!-- 直角坐标边 OA, OB -->
+  <polyline points="222,40 222,146 350,146" fill="none" stroke="#111" stroke-width="1.8"/>
+  <!-- 对角线 OD（角平分线）与双垂线 -->
+  <line x1="222" y1="146" x2="290" y2="78" stroke="#64748b" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <line x1="290" y1="78" x2="222" y2="78" stroke="#15803d" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <line x1="290" y1="78" x2="290" y2="146" stroke="#15803d" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <!-- DM 与 DN -->
+  <polygon points="222,146 222,60 290,78 272,146" fill="#eef4fb" fill-opacity="0.55" stroke="none"/>
+  <line x1="290" y1="78" x2="222" y2="60" stroke="#2563eb" stroke-width="2"/>
+  <line x1="290" y1="78" x2="272" y2="146" stroke="#2563eb" stroke-width="2"/>
+  <!-- 直角符号 O 处 -->
+  <polyline points="222,136 232,136 232,146" fill="none" stroke="#111" stroke-width="1.2"/>
+  <!-- 点标注 -->
+  <text x="212" y="156" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">O</text>
+  <circle cx="290" cy="78" r="3" fill="#c0392b"/>
+  <text x="302" y="75" font-size="12" font-weight="bold" fill="#c0392b" text-anchor="middle">D</text>
+  <circle cx="222" cy="60" r="2.8" fill="#2563eb"/>
+  <text x="210" y="63" font-size="12" font-weight="bold" fill="#2563eb" text-anchor="middle">M</text>
+  <circle cx="272" cy="146" r="2.8" fill="#2563eb"/>
+  <text x="272" y="161" font-size="12" font-weight="bold" fill="#2563eb" text-anchor="middle">N</text>
+  <text x="328" y="106" font-size="11" fill="#15803d" text-anchor="middle">双垂全等</text>
+  <text x="328" y="121" font-size="11" fill="#2563eb" text-anchor="middle">DM＝DN</text>
+  <text x="328" y="136" font-size="11" fill="#c0392b" text-anchor="middle">OM＋ON</text>
+  <text x="328" y="150" font-size="11" fill="#c0392b" text-anchor="middle">＝√2·OD</text>
+  <!-- 底部总结论 -->
+  <rect x="16" y="182" width="348" height="38" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="190" y="198" font-size="10.5" fill="#111" text-anchor="middle">鸡爪模型：等边转 60°、等腰直角转 90°，把三线段装进同一三角形</text>
+  <text x="190" y="214" font-size="10.5" fill="#c0392b" font-weight="bold" text-anchor="middle">对角互补（角平分线＋互补角）：向两边作双垂或旋转，知二推二</text>
+</svg>

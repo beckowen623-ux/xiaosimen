@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" width="360" height="230" font-family="sans-serif">
+  <rect width="360" height="230" fill="#ffffff"/>
+  <!-- 经典逆等线模型：等边 △ABC 中，D 在 BC 上，E 在 AC 上，且 BD = CE（首尾逆向等长动线段），求 AD + BE 最小值？
+       或者更标准直观的逆等线：△ABC 中，AC=BC 或一般定角：
+       在等边 △ABC 中 (边长 132)：B(68,156), C(200,156), A(134, 41.7)
+       动点 E 在 AB 上，D 在 BC 上，满足 AE = BD (逆等线！A→E 与 B→D 同长但不同起点共线，求 AD + CE 最小！)
+       构造全等：在 AB 下方或 BC 外侧构造与 △ACE 全等的定点三角形！
+       更好：以 A 为起点、C 为起点构造：将 △BCD 移到 △AEF 处，即过 A 作 AF 平行等于 BC (或作 ∠CAF = 60°, AF = BC = 132)!
+       验证：若作 AF∥BC 且 AF = BC = 132 → F(266, 41.7)! (ABCF 为平行四边形? 不，看方向：
+       B(68,156)→C(200,156) 向量 (+132, 0).
+       若 E 在 AB 上，D 在 BC 上，AE = CD (逆向等长! E 从 A→B, D 从 C→B):
+       取 t = 0.42:
+       E = A + 0.42*(B-A) = (134 - 27.7, 41.7 + 48.0) = (106.3, 89.7)
+       D = C + 0.42*(B-C) = (200 - 55.4, 156) = (144.6, 156)
+       此时 AE = CD = 55.44!
+       在 △ACD 中，边 CD = AE, AC = 132, ∠ACD = 60°。
+       在 △AEF 中，已有边 AE，只要以 A 为顶点、作定点 F 使 AF = AC = 132 且 ∠EAF = 60° (向下偏右? 看夹角：
+       向量 AE 方向是 (-0.5, +0.866) 即 120°方向；逆时针转 60° (朝右下方向) 是 (+0.5, +0.866)，那就是 AC 方向! 那会重合！
+       所以应该用：△AEF 中让 F 在 AB 左侧：向量 AE 顺时针转 60° (即 (-1, 0) 向左!) → F = A + (-132, 0) = (2, 41.7) 太靠左!
+       换个更居中美观的经典逆等线！
+       【经典母题】：Rt△ABC 中 ∠C=90°，AC=BC 或 AC=8, BC=6? 用 ∠BAC=90° 或 ∠B=60° 的等边 △ABC：
+       动点 D 在 AB 上，E 在 AC 上，满足 AD = CE，求 CD + BE 最小！
+       A(126, 42), B(60, 156), C(192, 156) (边长 132).
+       D 在 AB 上: AD = 52 → D = (126 - 26, 42 + 45.0) = (100, 87.0).
+       E 在 AC 上: CE = 52 → E = (192 - 26, 156 - 45.0) = (166, 111.0).
+       要转化 CD + BE：
+       把 △BCE 中的 CE (长52, 沿 CA 方向 (-0.5,-0.866)) 搬到 AD (长52, 沿 AB 方向 (-0.5,+0.866))!
+       直接过 C 向右上方作定点 F 使 CF = BC = 132 且 ∠ACF = 60°? 试一下：
+       △CBE 中有边 CE、边 CB=132、夹角 ∠BCE = 60°。
+       找与 △CBE 全等、以 AD 为边的三角形 △DAF：
+       AD 方向 (-0.5,+0.866)，作 AF = CB = 132，夹角 ∠DAF = 60° → F 在 A 右侧 (258, 42) (向量 AF = (+132, 0) 与 AD=(-0.5,0.866) 夹角120°不行！)
+       想要夹角 60°：以 C、A 为参照，F 应在 AB 左侧？不对！在 △DAF 中，要让 D 与 E 对应、A 与 C 对应、F 与 B 对应，
+       则 ∠DAF = ∠ECB = 60°，AF = CB = 132，AD = CE ⇒ △DAF ≌ △ECB (SAS) ⇒ DF = EB!!
+       看向量：AD 沿 (-0.5, +0.866) (与 +x 轴夹角 120°)。与它成 60° 的两个方向是：
+       方向1: 120° - 60° = 60° → (+0.5, +0.866)，即 AC 方向 (重合C点，正是等边三角形对称，DF=DC 不好！)
+       方向2: 120° + 60° = 180° → (-1, 0)，即向左！
+       那我们把 △ABC 往右放，F 就在左上角，超居中！
+       算坐标：A(196, 44), B(130, 158), C(262, 158) (边长 132)
+       向左作 AF = 132 → F(64, 44)!!
+       检验坐标范围：x 从 64 到 262，居中对称得像教科书插图!!
+       验证：
+       - AF = 132 = CB
+       - ∠FAD = 60° (AF 向左 180°, AD 沿 120°, 夹角 = 60° = ∠ECB!)
+       - D 在 AB 上取 AD = 54 → D = (196 - 27, 44 + 46.8) = (169, 90.8)
+       - E 在 AC 上取 CE = 54 → E = (262 - 27, 158 - 46.8) = (235, 111.2)
+       - 验证 DF 与 BE 的长度：
+         DF = √((169-64)² + (90.8-44)²) = √(105² + 46.8²) = √(11025 + 2190) = 115.0
+         BE = √((235-130)² + (111.2-158)²) = √(105² + (-46.8)²) = 115.0!! 100% 精确相等!!
+       - 求 CD + BE = CD + DF ≥ CF!! (连接 CF，当 C、D、F 共线时取最小值 CF!) -->
+  <!-- △ABC -->
+  <polygon points="196,44 130,158 262,158" fill="#f8fafc" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- 构造的全等三角形 △DAF -->
+  <polygon points="196,44 64,44 169,90.8" fill="#fef5e7" stroke="#2563eb" stroke-width="1.6" stroke-dasharray="5 3" stroke-linejoin="round"/>
+  <!-- 原两条逆等线高亮加粗 -->
+  <line x1="196" y1="44" x2="169" y2="90.8" stroke="#15803d" stroke-width="3"/>
+  <line x1="262" y1="158" x2="235" y2="111.2" stroke="#15803d" stroke-width="3"/>
+  <!-- 原求最小值的两条线段 CD 和 BE -->
+  <line x1="262" y1="158" x2="169" y2="90.8" stroke="#c0392b" stroke-width="2"/>
+  <line x1="130" y1="158" x2="235" y2="111.2" stroke="#64748b" stroke-width="1.7" stroke-dasharray="4 3"/>
+  <!-- 转化线段 DF 与最短线段 CF -->
+  <line x1="64" y1="44" x2="169" y2="90.8" stroke="#c0392b" stroke-width="2"/>
+  <line x1="64" y1="44" x2="262" y2="158" stroke="#2563eb" stroke-width="1.9" stroke-dasharray="6 4"/>
+  <!-- 标注角度与等长 -->
+  <text x="165" y="57" font-size="11" fill="#2563eb" font-weight="bold" text-anchor="middle">60°</text>
+  <text x="242" y="150" font-size="11" fill="#15803d" font-weight="bold" text-anchor="middle">60°</text>
+  <text x="128" y="37" font-size="11" fill="#2563eb" text-anchor="middle">作 AF＝BC 且 ∠FAD＝60°</text>
+  <text x="308" y="128" font-size="11" fill="#15803d" font-weight="bold" text-anchor="middle">AD＝CE</text>
+  <text x="308" y="143" font-size="10.5" fill="#475569" text-anchor="middle">（逆向等长）</text>
+  <!-- 顶点 -->
+  <circle cx="196" cy="44" r="3" fill="#111"/>
+  <text x="206" y="37" font-size="12.5" font-weight="bold" fill="#111" text-anchor="middle">A</text>
+  <circle cx="130" cy="158" r="3" fill="#111"/>
+  <text x="120" y="169" font-size="12.5" font-weight="bold" fill="#111" text-anchor="middle">B</text>
+  <circle cx="262" cy="158" r="3" fill="#111"/>
+  <text x="272" y="169" font-size="12.5" font-weight="bold" fill="#111" text-anchor="middle">C</text>
+  <circle cx="169" cy="90.8" r="3.2" fill="#c0392b"/>
+  <text x="155" y="96" font-size="12.5" font-weight="bold" fill="#c0392b" text-anchor="middle">D</text>
+  <circle cx="235" cy="111.2" r="3.2" fill="#15803d"/>
+  <text x="249" y="109" font-size="12.5" font-weight="bold" fill="#15803d" text-anchor="middle">E</text>
+  <circle cx="64" cy="44" r="3.4" fill="#2563eb"/>
+  <text x="51" y="47" font-size="12.5" font-weight="bold" fill="#2563eb" text-anchor="middle">F(定)</text>
+  <!-- 底部结论框 -->
+  <rect x="18" y="182" width="324" height="38" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="180" y="198" font-size="11.5" fill="#111" text-anchor="middle">构造全等 △DAF ≌ △ECB（SAS）⇒ DF＝BE（首尾相连）</text>
+  <text x="180" y="214" font-size="11.5" fill="#c0392b" font-weight="bold" text-anchor="middle">CD＋BE＝CD＋DF ≥ CF（F、D、C 三点共线取最小值）</text>
+</svg>

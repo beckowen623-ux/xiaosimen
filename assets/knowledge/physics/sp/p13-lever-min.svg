@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="380" height="230" font-family="sans-serif">
+  <rect width="380" height="230" fill="#ffffff"/>
+  <defs>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arr-k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#111"/>
+    </marker>
+  </defs>
+  <!-- 左侧：曲杆 OAB 最小力作图 -->
+  <text x="112" y="22" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">① 杠杆最小力三步作图</text>
+  <!-- 支点 O(54, 118) -->
+  <polygon points="54,118 44,136 64,136" fill="#cbd5e1" stroke="#111" stroke-width="1.5"/>
+  <line x1="36" y1="136" x2="72" y2="136" stroke="#111" stroke-width="1.8"/>
+  <!-- 曲杆 O(54,118) -> A(142,118) -> B(176,68) -->
+  <polyline points="54,118 142,118 176,68" fill="none" stroke="#334155" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 重物挂在 C(108,118) -->
+  <line x1="108" y1="118" x2="108" y2="144" stroke="#111" stroke-width="1.6"/>
+  <rect x="94" y="144" width="28" height="22" rx="2" fill="#e2e8f0" stroke="#111" stroke-width="1.5"/>
+  <text x="108" y="159" font-size="11" font-weight="bold" fill="#111" text-anchor="middle">G</text>
+  <!-- 阻力箭头 -->
+  <line x1="108" y1="120" x2="108" y2="141" stroke="#111" stroke-width="1.8" marker-end="url(#arr-k)"/>
+  <!-- 最大力臂 l_max = OB：连接 O(54,118) 与最远点 B(176,68) -->
+  <!-- vec OB = (122, -50), 长度=131.8, 单位向量 u = (0.925, -0.379) -->
+  <!-- 垂直于 OB 向上（使杠杆逆时针转以抗衡 G 的顺时针转!）单位法向量 n = (-0.379, -0.925) -->
+  <!-- F_min 箭头从 B(176,68) 指向 (176 - 20, 68 - 48) = (156, 20) -->
+  <line x1="54" y1="118" x2="176" y2="68" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <line x1="176" y1="68" x2="157" y2="22" stroke="#c0392b" stroke-width="2.4" marker-end="url(#arr-r)"/>
+  <!-- B 处直角符号: 沿 BO=(-0.925,0.379), 沿 F=(-0.379,-0.925) -->
+  <polyline points="166.8,71.8 163.0,62.5 172.2,58.7" fill="none" stroke="#c0392b" stroke-width="1.3"/>
+  <!-- 标注 -->
+  <circle cx="54" cy="118" r="3" fill="#111"/>
+  <text x="41" y="114" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">O</text>
+  <text x="151" y="128" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">A</text>
+  <circle cx="176" cy="68" r="3" fill="#c0392b"/>
+  <text x="188" y="72" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">B</text>
+  <text x="108" y="87" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">l_max＝OB</text>
+  <text x="185" y="34" font-size="12" font-weight="bold" fill="#c0392b" text-anchor="middle">F_min</text>
+  <!-- 中间分隔线 -->
+  <line x1="214" y1="16" x2="214" y2="172" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <!-- 右侧：动态杠杆对比（始终竖直 vs 始终垂直） -->
+  <text x="297" y="22" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">② 缓抬动态杠杆对比</text>
+  <!-- 支点 O'(232, 134), 杠杆斜向上到端点 (336, 74) (30°角) -->
+  <polygon points="232,134 225,146 239,146" fill="#cbd5e1" stroke="#111" stroke-width="1.4"/>
+  <line x1="232" y1="134" x2="338" y2="134" stroke="#cbd5e1" stroke-width="1.3" stroke-dasharray="4 3"/>
+  <line x1="232" y1="134" x2="322" y2="82" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+  <!-- 竖直向上力 F1 -->
+  <line x1="322" y1="82" x2="322" y2="36" stroke="#15803d" stroke-width="2.2" marker-end="url(#arr-k)"/>
+  <text x="348" y="46" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">竖直向上</text>
+  <text x="348" y="60" font-size="10" fill="#15803d" text-anchor="middle">F₁不变</text>
+  <!-- 垂直于杆的力 F2 -->
+  <line x1="322" y1="82" x2="296" y2="42" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arr-b)"/>
+  <text x="270" y="46" font-size="10" font-weight="bold" fill="#2563eb" text-anchor="middle">垂直于杆</text>
+  <text x="270" y="60" font-size="10" fill="#2563eb" text-anchor="middle">F₂变小</text>
+  <!-- 挂重物 -->
+  <line x1="278" y1="107" x2="278" y2="146" stroke="#111" stroke-width="1.5" marker-end="url(#arr-k)"/>
+  <text x="290" y="148" font-size="11" font-weight="bold" fill="#111" text-anchor="middle">G</text>
+  <text x="295" y="166" font-size="10.5" fill="#475569" text-anchor="middle">水平→竖直过程：l₂ 变小</text>
+  <!-- 底部总结框 -->
+  <rect x="16" y="182" width="348" height="38" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="190" y="198" font-size="10.5" fill="#111" text-anchor="middle">最小力三步：找最远点 B → 连 OB 为最大力臂 → 过 B 作垂线</text>
+  <text x="190" y="214" font-size="10.5" fill="#c0392b" font-weight="bold" text-anchor="middle">动态杠杆：始终竖直拉 F 不变；始终垂直杆（l₂减小）F 变小</text>
+</svg>
