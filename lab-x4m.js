@@ -54,7 +54,8 @@
     bStep: 0,
     bChoice: -1,
     bCleared: false,
-    showId: (SHOWS[0] && SHOWS[0].id) || 'show-01',
+    showId: '',
+    showFilter: 'all',
     showRate: 1,
     showLockedHit: false,
     audioId: (DATA.audio[0] && DATA.audio[0].id) || 'x4m-ep01',
@@ -356,17 +357,95 @@
   }
 
   function renderStudio() {
-    const cur = SHOWS.find(s => s.id === state.showId) || SHOWS[0];
-    if (!cur) return '<div class="lx-card"><p>演播室节目单加载中…</p></div>';
+    if (!SHOWS.length) return '<div class="lx-card"><p>演播室节目单加载中…</p></div>';
+    const readyAll = SHOWS.filter(s => s.status === 'ready' && !!s.videoUrl);
+    const cur = state.showId ? SHOWS.find(s => s.id === state.showId) : null;
+
+    // 视图 1：默认进入「选集目录页」—— 一眼看清已更新几集，点哪集再展开播放
+    if (!cur) {
+      const f = state.showFilter || 'all';
+      const subCounts = {
+        lishi: SHOWS.filter(s => s.subject === 'lishi').length,
+        daode: SHOWS.filter(s => s.subject === 'daode').length,
+        dili: SHOWS.filter(s => s.subject === 'dili').length,
+        shengwu: SHOWS.filter(s => s.subject === 'shengwu').length,
+      };
+      const filters = [
+        { k: 'all', label: `全部 (${SHOWS.length})` },
+        { k: 'ready', label: `▶ 已上线 (${readyAll.length})` },
+        { k: 'lishi', label: `📜 历史 (${subCounts.lishi})` },
+        { k: 'daode', label: `⚖️ 道法 (${subCounts.daode})` },
+        { k: 'dili', label: `🌍 地理 (${subCounts.dili})` },
+        { k: 'shengwu', label: `🧬 生物 (${subCounts.shengwu})` },
+      ].filter(x => x.k === 'all' || x.k === 'ready' || subCounts[x.k] > 0);
+
+      const matched = SHOWS.filter(s => {
+        if (f === 'ready') return s.status === 'ready' && !!s.videoUrl;
+        if (f === 'all') return true;
+        return s.subject === f;
+      });
+      const readyList = matched.filter(s => s.status === 'ready' && !!s.videoUrl);
+      const upcomingList = matched.filter(s => !(s.status === 'ready' && !!s.videoUrl));
+
+      const renderCard = (s, ready) => {
+        const pMin = Math.round((s.freePreviewSec || 600) / 60);
+        const hlCount = (s.highlights && s.highlights.length) || 0;
+        const accessTag = s.free ? '免费全片' : (paidAccess ? '已解锁全片' : `前 ${pMin} 分钟免费`);
+        return `<button type="button" class="lx-cat-card ${ready ? 'is-ready' : 'is-upcoming'}" data-pick-show="${esc(s.id)}">
+          ${ready
+            ? `<div class="lx-cat-thumb">
+                 ${s.poster ? `<img src="${esc(s.poster)}" alt="${esc(s.title)}" loading="lazy">` : '<div class="lx-cat-thumb-ph">🎬</div>'}
+                 <span class="lx-cat-play">▶</span>
+                 <span class="lx-cat-dur">${esc(s.durationText)}</span>
+               </div>`
+            : `<div class="lx-cat-thumb is-soon"><div class="lx-cat-thumb-ph">🎬</div><span class="lx-cat-dur">筹备中</span></div>`}
+          <div class="lx-cat-body">
+            <div class="lx-cat-tags">
+              <span class="lx-chip">${esc(s.badge)}</span>
+              <span class="lx-chip ${ready ? 'gold' : ''}">${ready ? esc(accessTag) : '点看考点预告'}</span>
+            </div>
+            <h3>${esc(s.title)}</h3>
+            <div class="lx-cat-foot">
+              <span>${hlCount} 个同步考点书签</span>
+              <span class="lx-cat-cta">${ready ? '点进观看 →' : '看预告 →'}</span>
+            </div>
+          </div>
+        </button>`;
+      };
+
+      return `
+        <div class="lx-studio-bar">
+          <div class="lx-studio-bar-head">
+            <div>
+              <h2>🎬 考点演播室 · 已更新 <em>${readyAll.length}</em> 集可看</h2>
+              <p>男女双主持拆解中考底层逻辑，讲到考点自动弹高亮横幅 · 每集前 10 分钟免费试看</p>
+            </div>
+          </div>
+          <div class="lx-filter-row" role="tablist" aria-label="演播室剧集筛选">
+            ${filters.map(x => `<button type="button" class="lx-fchip ${f === x.k ? 'is-on' : ''}" data-show-filter="${esc(x.k)}">${esc(x.label)}</button>`).join('')}
+          </div>
+        </div>
+        ${readyList.length ? `<div class="lx-cat-list">${readyList.map(s => renderCard(s, true)).join('')}</div>` : ''}
+        ${upcomingList.length ? `
+          <div class="lx-cat-sec-title">⏳ 筹备上架中（${upcomingList.length} 集 · 点开可先听故事音频与考点预告）</div>
+          <div class="lx-cat-list is-compact">${upcomingList.map(s => renderCard(s, false)).join('')}</div>` : ''}
+        ${!matched.length ? '<div class="lx-card"><p>该科目暂无剧集，请切换其他筛选查看。</p></div>' : ''}`;
+    }
+
+    // 视图 2：点进某集后的「单集专注播放页」
     const isReady = cur.status === 'ready' && !!cur.videoUrl;
     const previewMin = Math.round((cur.freePreviewSec || 600) / 60);
     const accessLabel = cur.free
       ? '本集免费全片看'
       : (paidAccess ? '完整版已解锁全片' : `免费试看前 ${previewMin} 分钟`);
 
+    const curIdx = SHOWS.findIndex(s => s.id === cur.id);
+    const prevShow = curIdx > 0 ? SHOWS[curIdx - 1] : null;
+    const nextShow = curIdx >= 0 && curIdx + 1 < SHOWS.length ? SHOWS[curIdx + 1] : null;
+
     const stageMediaHtml = isReady
       ? `<div class="lx-video-wrap">
-           <video id="lxStudioVideo" controls playsinline preload="none" ${cur.poster ? `poster="${esc(cur.poster)}"` : ''} src="${esc(cur.videoUrl)}"></video>
+           <video id="lxStudioVideo" controls playsinline preload="metadata" ${cur.poster ? `poster="${esc(cur.poster)}"` : ''} src="${esc(cur.videoUrl)}"></video>
            ${state.showLockedHit && !paidAccess && !cur.free ? `
              <div class="lx-video-lock-overlay">
                <h3>已免费试看前 ${previewMin} 分钟</h3>
@@ -393,11 +472,11 @@
          </div>`;
 
     const hlHtml = (cur.highlights && cur.highlights.length) ? `
-      <div class="lx-hl-box">
-        <div class="lx-hl-head">
-          <span>🔖 本集考点横幅书签（${isReady ? '点击 1 秒跳转重看' : '本集必考得分点抢先看'}）</span>
-          <span>${cur.highlights.length} 个核心考点</span>
-        </div>
+      <details class="lx-hl-box">
+        <summary class="lx-hl-head">
+          <span>🔖 本集 ${cur.highlights.length} 个考点横幅书签（点此展开 · ${isReady ? '1 秒跳转重看' : '抢先看得分点'}）</span>
+          <span class="lx-hl-caret">展开 ▾</span>
+        </summary>
         <div class="lx-hl-list">
           ${cur.highlights.map((h, i) => `
             <button type="button" class="lx-hl-item" data-hl-idx="${i}" data-hl-sec="${h.t}">
@@ -406,31 +485,16 @@
               <span>${esc(h.text)}</span>
             </button>`).join('')}
         </div>
-      </div>` : '';
-
-    const listHtml = SHOWS.map(s => {
-      const isCur = s.id === cur.id;
-      const ready = s.status === 'ready' && !!s.videoUrl;
-      const pMin = Math.round((s.freePreviewSec || 600) / 60);
-      return `<article class="lx-show-card ${isCur ? 'is-cur' : ''}">
-        <div class="lx-ep-head">
-          <div>
-            <span class="lx-chip">${esc(s.badge)}</span>
-            <span class="lx-chip gold">${s.free ? '免费全片' : `前 ${pMin} 分钟免费试看`}</span>
-            <span class="lx-chip">${ready ? '▶ 可观看' : '🎬 筹备上架中'}</span>
-          </div>
-          <button type="button" class="lx-btn ${isCur ? 'primary' : ''} sm" data-pick-show="${esc(s.id)}">${isCur ? '正在查看' : (ready ? '▶ 观看本集' : '查看考点预告')}</button>
-        </div>
-        <h3>${esc(s.title)}</h3>
-        <p class="lx-sub">${esc(s.hosts)} · ${esc(s.durationText)}</p>
-        <div class="lx-actions">
-          <button type="button" class="lx-btn sm" data-jump-tab="${esc(s.quizTab || 'history')}">${esc(s.quizLabel || '配套闯关 →')}</button>
-          <a class="lx-btn sm" href="${esc(s.kpLink || './key-points.html')}">印本集口诀默写纸 ›</a>
-        </div>
-      </article>`;
-    }).join('');
+      </details>` : '';
 
     return `
+      <div class="lx-studio-nav">
+        <button type="button" class="lx-btn sm" id="lxStudioBack">← 返回选集目录（已更 ${readyAll.length} 集）</button>
+        <div class="lx-studio-nav-r">
+          ${prevShow ? `<button type="button" class="lx-btn sm" data-pick-show="${esc(prevShow.id)}">‹ 上一集</button>` : ''}
+          ${nextShow ? `<button type="button" class="lx-btn sm primary" data-pick-show="${esc(nextShow.id)}">下一集 ›</button>` : ''}
+        </div>
+      </div>
       <div class="lx-studio-stage">
         <div class="lx-studio-meta">
           <span class="lx-studio-pill">${esc(cur.badge)}</span>
@@ -441,8 +505,11 @@
         <p class="lx-studio-desc">${esc(cur.summary)}</p>
         ${stageMediaHtml}
         ${hlHtml}
-      </div>
-      <div class="lx-show-grid">${listHtml}</div>`;
+        <div class="lx-actions" style="margin-top:4px">
+          <button type="button" class="lx-btn sm gold" data-jump-tab="${esc(cur.quizTab || 'history')}">${esc(cur.quizLabel || '配套闯关 →')}</button>
+          <a class="lx-btn sm" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25)" href="${esc(cur.kpLink || './key-points.html')}">印本集口诀默写纸 ›</a>
+        </div>
+      </div>`;
   }
 
   function renderAudio() {
@@ -510,7 +577,16 @@
     });
 
     if (state.tab === 'studio') {
-      const cur = SHOWS.find(s => s.id === state.showId) || SHOWS[0];
+      stageEl.querySelectorAll('[data-show-filter]').forEach(b => b.addEventListener('click', () => {
+        state.showFilter = b.dataset.showFilter || 'all';
+        render();
+      }));
+      stageEl.querySelector('#lxStudioBack')?.addEventListener('click', () => {
+        state.showId = '';
+        state.showLockedHit = false;
+        render();
+      });
+      const cur = state.showId ? SHOWS.find(s => s.id === state.showId) : null;
       const videoEl = stageEl.querySelector('#lxStudioVideo');
       if (videoEl && cur) {
         videoEl.playbackRate = state.showRate;
@@ -565,6 +641,7 @@
         state.showId = b.dataset.pickShow;
         state.showLockedHit = false;
         render();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }));
       stageEl.querySelectorAll('[data-open-audio]').forEach(b => b.addEventListener('click', () => {
         state.audioId = b.dataset.openAudio;
@@ -692,7 +769,15 @@
 
   tabBtns.forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
 
-  const initTab = new URLSearchParams(location.search).get('tab') || location.hash.replace(/^#/, '');
+  const studioTabSub = document.querySelector('[data-tab="studio"] small');
+  const readyShowCount = SHOWS.filter(s => s.status === 'ready' && !!s.videoUrl).length;
+  if (studioTabSub && readyShowCount > 0) studioTabSub.textContent = `已更 ${readyShowCount} 集`;
+
+  const qs = new URLSearchParams(location.search);
+  const initShow = qs.get('show');
+  if (initShow && SHOWS.some(s => s.id === initShow)) state.showId = initShow;
+
+  const initTab = qs.get('tab') || location.hash.replace(/^#/, '');
   if (['studio', 'history', 'politics', 'geography', 'biology', 'audio'].includes(initTab)) switchTab(initTab);
   else switchTab('studio');
 })();
