@@ -240,10 +240,7 @@ async function sprintPapers(context) {
   if (!context.env.DB) return json({ ok: false, reason: "UNAVAILABLE" }, 503);
   const row = await accessSession(context);
   if (!row) return json({ ok: false, reason: "UNAUTHENTICATED" }, 401);
-  if (Number(row.sprint_unlocked) !== 1) {
-    const referral = await referralDetails(context.env.DB, row);
-    if (!referral?.sprint) return json({ ok: false, reason: "LOCKED", required: referral?.sprintRequired || 1 }, 403);
-  }
+  // 所有已购完整版（含单库/套餐/老客）均永久免费解锁全部考点冲刺卷。
   return json({ ok: true, papers: SPRINT_PAPERS });
 }
 
