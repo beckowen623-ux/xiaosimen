@@ -1,9 +1,9 @@
 .points-hero { min-height: 194px; }
 .points-hero .hero-content { padding-block: 26px; }
 .points-hero h1 { margin: 0 0 9px; font-size: clamp(32px, 4vw, 45px); }
-.points-hero p { max-width: 28em; color: #dbeafe; }
+.points-hero p { max-width: 28em; color: #f5eadb; }
 .points-hero .hero-art { width: 66%; object-position: right 51%; }
-.points-hero::after { background: linear-gradient(90deg, #1e3a8a 22%, #1e3a8ae8 44%, #1e3a8a00 83%); }
+.points-hero::after { background: linear-gradient(90deg, #5a402a 22%, #5a402ae8 44%, #5a402a00 83%); }
 
 .tone-yuwen { --accent: #7a3e48; --wash: #f6eaec; }
 .tone-yingyu { --accent: #3d4f8a; --wash: #eaeef8; }
@@ -50,7 +50,7 @@
   .points-hero .hero-content { padding: 18px 15px; }
   .points-hero .hero-art { width: 86%; }
   .points-hero p { max-width: 20em; font-size: 13px; }
-  .points-hero::after { background: linear-gradient(90deg, #1e3a8a 11%, #1e3a8af8 43%, #1e3a8a50 100%); }
+  .points-hero::after { background: linear-gradient(90deg, #5a402a 11%, #5a402af8 43%, #5a402a50 100%); }
   .point-filters { padding: 11px; }
   .point-subjects { gap: 5px; }
   .point-subject { gap: 3px; padding: 7px 2px; font-size: 13px; }
@@ -62,7 +62,7 @@
 
 /* 背诵遮罩 + A4 速记/挖空默写纸打印 */
 .point-recite-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
-.pt-blank { display: inline; padding: 1px 6px; margin: 0 1px; border-radius: 5px; background: #1d4ed8; color: transparent !important; -webkit-text-fill-color: transparent !important; cursor: pointer; user-select: none; -webkit-user-select: none; box-decoration-break: clone; -webkit-box-decoration-break: clone; transition: background .16s ease; }
+.pt-blank { display: inline; padding: 1px 6px; margin: 0 1px; border-radius: 5px; background: #7d5a3c; color: transparent !important; -webkit-text-fill-color: transparent !important; cursor: pointer; user-select: none; -webkit-user-select: none; box-decoration-break: clone; -webkit-box-decoration-break: clone; transition: background .16s ease; }
 .pt-blank .mask-inner { opacity: 0 !important; visibility: hidden !important; color: transparent !important; -webkit-text-fill-color: transparent !important; text-shadow: none !important; }
 .pt-blank.revealed { background: #fef3c7; color: #92400e !important; -webkit-text-fill-color: #92400e !important; font-weight: 700; }
 .pt-blank.revealed .mask-inner { opacity: 1 !important; visibility: visible !important; color: #92400e !important; -webkit-text-fill-color: #92400e !important; }

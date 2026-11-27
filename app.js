@@ -2649,7 +2649,13 @@ function renderHome(focus = '') {
         </details>
       </div>
     </div>
-    ${accessNotice}
+    ${accessNotice || (!paidAccess ? `<section class="card home-bottom-buy">
+      <div>
+        <b>开通完整版 · 初一用到初三（单买 ¥99.9 / 3 人拼团 ¥59.9）</b>
+        <span>一次解锁三大提分主线、283 条口诀默写纸、全套《考点冲刺卷》与 3 台设备云端同步；已有兑换码可点右侧直接激活。</span>
+      </div>
+      <button class="btn primary" type="button" id="openUnlock">开通完整版 / 输入兑换码</button>
+    </section>` : '')}
     <section class="card cross-bank-card">${accountingRecommendation()}</section>`;
   wireHome();
   if (byId('knowledgeHome')) window.KnowledgeHub.wireHome(byId('knowledgeHome'));
