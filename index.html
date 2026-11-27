@@ -19,7 +19,7 @@
     "@type": "WebSite",
     "name": "爱丽克丝中考题库",
     "url": "https://x4m.cc.cd/",
-    "description": "初一到初三数理化 395 个知识点与 59 大名师压轴模型秒搜补缺、125 道规范解答大题、语英与小四门 213 条 A4 挖空默写纸、71 套同步章节卷与全国各地中考真题。"
+    "description": "初一到初三全科三大提分主线：小四门《考点演播室》视频与 57 关闯关、数理化 395 个知识点与 59 大名师压轴模型秒搜补缺、《语英提分工坊》114 关与 3 期听写、全科 253 条带口诀 A4 挖空默写纸、71 套同步章节卷与全国各地中考真题。"
   }
   </script>
   <link rel="icon" type="image/svg+xml" href="./assets/icons/elx-badge.svg">
@@ -35,7 +35,7 @@
   <script src="./knowledge.js?v=8" defer></script>
   <!-- 真题目录（早鸟卷、同步卷、小升初都靠它）和页面脚本同时下载，不用等脚本跑起来再下；版本号发布时自动填 -->
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
-  <script src="./app.js?v=41" defer></script>
+  <script src="./app.js?v=42" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
   <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).catch(function () {}); });</script>
 </head>
@@ -51,10 +51,11 @@
           </a>
         </div>
         <div class="topbar-tools">
-          <a href="./lab-x4m.html" id="headerLabX4m">趣味实验室</a>
+          <a href="./lab-x4m.html?tab=studio" id="headerLabX4m">演播室</a>
+          <a href="./lab-yy.html" id="headerLabYy">语英工坊</a>
           <a href="./key-points.html" id="headerKeyPoints">速记默写</a>
           <a href="#searchPanel" id="headerSearch" hidden>找题</a>
-          <button class="header-button" type="button" id="progressButton">进度管理</button>
+          <button class="header-button" type="button" id="progressButton">进度</button>
           <span class="streak" id="streakBox" hidden>连续学习 <b id="streakDays">0</b> 天</span>
         </div>
       </div>
@@ -110,7 +111,7 @@
     <ul class="unlock-trust" aria-label="核心权益">
       <li>✓ 作者自家孩子同步自用，本次期中从年级中上游冲进名列前茅</li>
       <li>✓ 一次买断 ¥19.9，后期会调价，已购长期不限使用</li>
-      <li>✓ 含 395 个数理化知识点与名师压轴模型、125 道解答大题 + 无限 A4 打印</li>
+      <li>✓ 含数理化 395 点/59 大压轴模型 ＋ 小四门演播室/57 关 ＋ 语英工坊 114 关 ＋ 无限 A4 打印</li>
       <li>✓ 3 台设备共用 + 云端错题本同步 + 后续新题免费更新</li>
     </ul>
     <div class="author-use-note">
@@ -138,7 +139,7 @@
     <div class="access-offers">
       <section id="schoolOffer" class="offer-primary">
         <h3>最省心 · 直接买完整版 ¥19.9 <span class="offer-badge">后期调价 · 已购不限用</span></h3>
-        <p class="muted offer-note">作者孩子自用、每天持续完善：一次解锁全部 395 个数理化知识点与 59 大名师压轴模型（名师 4 步通关微课）与 125 道解答大题、小四门反死记硬背实验室 57 关＋6 期专属女声故事音频、无水印 A4 专属补缺卷与全科 253 条带口诀默写纸无限打印、71 套同步章节卷、全国真题手机刷题与云端错题同步。</p>
+        <p class="muted offer-note">作者孩子自用、每天持续完善：一次解锁全科三大主线——小四门《考点演播室》双主持视频＋57 关反死记硬背闯关＋6 期专属女声故事、数理化 395 个知识点与 59 大名师压轴模型（4 步通关微课）与 125 道解答大题、《语英提分工坊》114 关（古诗易错字/阅读采分点/文言病句/英语升格）＋3 期女声听写、无水印 A4 补缺卷与全科 253 条带口诀默写纸无限打印、71 套同步章节卷、全国真题手机刷题与 3 台云端同步。</p>
         <button class="btn primary" type="button" id="directPaySchool" hidden>微信/支付宝直接买（付款秒解锁）</button>
         <div class="offer-cta-row">
           <button class="btn primary" type="button" hidden>复制闲鱼口令（推荐）</button>
@@ -159,7 +160,7 @@
       <details class="share-save-fold" id="shareSaveFold">
         <summary>想省 5 元（¥14.9）或邀 3 人返现免单？展开看玩法 ›</summary>
         <section id="shareOffer">
-          <div data-share-offer data-price="14.9" data-message="我在用爱丽克丝中考题库给孩子补数理化：作者写给自家孩子用、期中考冲进名列前茅，3 分钟快测出《学情体检单》，395 个知识点与 59 大压轴模型（婆罗摩笈多/阿氏圆/费马点/安阻法/万能瓶等）秒搜直达，配 125 道解答大题和语英小四门 213 条 A4 默写纸。点链接先免费试：" data-poster-title="爱丽克丝中考题库" data-poster-sub="自家孩子亲用期中冲进名列前茅 · 395 点 + 59 大压轴模型" data-poster-points="作者自家孩子同步自用，本次期中从年级中上游冲进名列前茅|395 个数理化知识点与 59 大名师压轴模型秒搜直达（婆罗摩笈多/阿氏圆/万能瓶等）|125 道规范解答大题 + 129 套名师 4 步通关微课 + 防背答案变式验证|一键打印教研风 A4 专属补缺卷、59 大模型手册与语英小四门 213 条默写纸|错题按 1、3、7、14 天自动复习，3 台设备云端同步" data-poster-colors="#164e3f,#0e352a"></div>
+          <div data-share-offer data-price="14.9" data-message="我在用爱丽克丝中考题库给孩子全科提分：作者写给自家孩子用、期中考冲进名列前茅，包含小四门《考点演播室》视频+57关闯关、数理化395点与59大压轴模型秒搜、《语英提分工坊》114关（古诗易错字/阅读采分点/英语作文升格）和全科253条带口诀A4默写纸。点链接先免费试：" data-poster-title="爱丽克丝中考题库" data-poster-sub="自家孩子亲用期中冲进名列前茅 · 全科三大提分主线" data-poster-points="作者自家孩子同步自用，本次期中从年级中上游冲进名列前茅|小四门《考点演播室》双主持视频＋57 关反死记硬背闯关＋6 期女声故事|数理化 395 个知识点与 59 大压轴模型秒搜直达＋125 道规范解答大题|《语英提分工坊》114 关（古诗易错字/阅读采分点/英语作文 10→15 分升格）＋3 期听写|一键打印教研风 A4 补缺卷与全科 253 条带口诀默写纸，3 台设备云端同步" data-poster-colors="#164e3f,#0e352a"></div>
         </section>
         <details class="free-way" data-free-way>
           <summary><b>🎁 买后邀 3 位朋友返现 15 元</b><span>按 14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元 ›</span></summary>

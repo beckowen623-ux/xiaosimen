@@ -137,6 +137,8 @@ function legacyTrialDays(now = Date.now()) {
   const remaining = LEGACY_TRIAL_MS - Math.max(0, now - startedAt);
   return Math.max(0, Math.ceil(remaining / DAY_MS));
 }
+const X4M_LAB_KEY = 'xiaosimen-x4m-lab-v1';
+const YY_LAB_KEY = 'xiaosimen-yy-lab-v1';
 function createProgressBackup() {
   const progress = loadProgress();
   return {
@@ -144,7 +146,29 @@ function createProgressBackup() {
     version: 1,
     exportedAt: new Date().toISOString(),
     progress: { ...progress, studyDays: studyDates(progress) },
+    labs: {
+      x4m: readStored(X4M_LAB_KEY),
+      yy: readStored(YY_LAB_KEY),
+    },
   };
+}
+function readLabsBackup(text) {
+  try {
+    const backup = JSON.parse(text);
+    const labs = backup?.labs;
+    if (!isRecord(labs)) return null;
+    const cleanMap = obj => {
+      if (!isRecord(obj)) return null;
+      const out = {};
+      for (const [k, v] of Object.entries(obj)) {
+        if (typeof k === 'string' && /^[a-z0-9-]+$/i.test(k) && typeof v === 'boolean') out[k] = v;
+      }
+      return out;
+    };
+    return { x4m: cleanMap(labs.x4m), yy: cleanMap(labs.yy) };
+  } catch {
+    return null;
+  }
 }
 function readProgressBackup(text) {
   const backup = JSON.parse(text);
@@ -1310,6 +1334,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-27', '学习进度备份、云端同步与《本周孩子补缺战报》全面接入《小四门反死记硬背实验室》（57 关）和《语英提分工坊》（114 关）通关进度，换手机或平板恢复云端备份时两座实验室的闯关记录也会一并保留。'],
   ['2026-11-27', '重磅上线首页第 3 大主线「📖 语英主线」与《语英提分工坊》（lab-yy.html）：语文含 30 篇古诗文易错字“火眼金睛”排雷、18 个阅读采分点公式（1 分答案 vs 满分答案同屏对比＋A4 公式速查卡打印）、18 关文言一字多面与病句手术台、3 期专属女声古诗文易错字听写磨耳朵；英语含 18 组词形与固定搭配点读快刷、18 关语法与微完形“线索词破案”、12 大中考作文 10→15 分三级升格工坊（支持英文朗读＋A4 金句手卡打印）；同时为 90 条语英速记考点全部补齐 1 行秒记口诀，全站 253 条速记默写 100% 带口诀。'],
   ['2026-11-26', '首屏 C 位升级为「🎯 提分双主线」并正式上线《🎬 考点演播室》节目剧场：一进首页即可直接试听专属女声历史故事、一键直达 4 科 57 关反死记硬背闯关与 253 条带口诀 A4 默写纸；演播室支持 15–20 分钟男女双主持视频节目（讲到考点自动弹横幅＋下方可点击考点书签 1 秒跳转重看，每集前 10 分钟免费试看）。'],
   ['2026-11-26', '重磅上线《🎮 小四门反死记硬背实验室》（lab-x4m.html）＋全科速记权威勘误扩容至 253 条：历史「专属女声故事磨耳朵＋12 关时间轴排雷」、道法「18 关 30 秒生活小判官」、地理「15 关因果多米诺推导」、生物「12 关红细胞/原尿/米饭生命流程大冒险」（共 57 关每科前 3 关免费＋6 期专属女声故事前 4 期免费）；小四门 123 条旧考点全量复核并全部加配「💡 一句话秒记口诀」，补齐 40 条中考/会考高频漏点。'],
@@ -1575,6 +1600,8 @@ function contentStatsHTML() {
     claude && `精编卷 ${claude} 套`,
     real && `真题 ${real} 套`,
     `小四门 ${x4mCount} 题`,
+    '语英/小四门 171 关工坊',
+    '253 条口诀默写',
   ].filter(Boolean);
   return items.length ? `<p class="content-stats" aria-label="题库现有内容">${items.join(' · ')}</p>` : '';
 }
@@ -3801,6 +3828,8 @@ async function openWeeklyPoster() {
       }
     }
     const wrongCount = entries.filter(([, r]) => r && r.wrong).length;
+    const x4mCleared = Object.values(readStored(X4M_LAB_KEY)).filter(Boolean).length;
+    const yyCleared = Object.values(readStored(YY_LAB_KEY)).filter(Boolean).length;
     const stageLabel = STAGE_MAP[state.stage]?.label || '初二上学期';
 
     const url = new URL('https://x4m.cc.cd/');
@@ -3856,7 +3885,7 @@ async function openWeeklyPoster() {
     const tiles = [
       { label: '累计答题数', value: `${totalAnswered} 题`, sub: `本周新答 ${weekAnswered} 题`, accent: '#164e3f' },
       { label: '综合正确率', value: totalAnswered ? `${acc}%` : '待开启', sub: `累计答对 ${totalCorrect} 题`, accent: '#15803d' },
-      { label: '连续学习天数', value: `${streak} 天`, sub: `累计打卡 ${totalDays} 天`, accent: '#b45309' },
+      { label: '连续学习天数', value: `${streak} 天`, sub: `小四门 ${x4mCleared}/57 关 · 语英 ${yyCleared}/114 关`, accent: '#b45309' },
       { label: '已练知识点 / 错题本', value: `${kpPoints.size} 个点`, sub: wrongCount ? `错题本待清 ${wrongCount} 题` : '错题本已清零', accent: '#b83b2a' },
     ];
     const cardW = 306, cardH = 152, gapX = 20, gapY = 18, startX = 44, startY = 274;
@@ -4165,9 +4194,12 @@ byId('cloudLoadBtn')?.addEventListener('click', async () => {
     if (!data.hasBackup || !data.payload) { statusEl.textContent = '云端还没有备份记录，请先在旧设备点「上传到云端」。'; return; }
     const progress = readProgressBackup(data.payload);
     importProgress = progress;
+    state.importLabs = readLabsBackup(data.payload);
     const count = Object.values(progress.banks).filter(hasAnswered).length;
+    const labN = (state.importLabs?.x4m ? Object.values(state.importLabs.x4m).filter(Boolean).length : 0)
+      + (state.importLabs?.yy ? Object.values(state.importLabs.yy).filter(Boolean).length : 0);
     statusEl.textContent = `已读取云端备份（${formatCloudTime(data.updatedAt)}），请在下方确认导入。`;
-    showImportMessage(`云端备份包含 ${count} 道作答记录。确认后将覆盖当前浏览器的本机进度。`, true);
+    showImportMessage(`云端备份包含 ${count} 道作答记录${labN ? `与 ${labN} 关实验室通关进度` : ''}。确认后将覆盖当前浏览器的本机进度。`, true);
   } catch {
     if (revision === importRevision) statusEl.textContent = '云端备份读取失败，请稍后再试。';
   } finally {
@@ -4202,25 +4234,35 @@ importInput.addEventListener('change', async () => {
   if (file.size > 4 * 1024 * 1024) { showImportMessage('备份文件过大，请选择从本应用下载的 JSON 文件。'); return; }
   showImportMessage('正在读取备份…');
   try {
-    const progress = readProgressBackup(await file.text());
+    const rawText = await file.text();
+    const progress = readProgressBackup(rawText);
     if (revision !== importRevision || !progressDialog.open) return;
     importProgress = progress;
+    state.importLabs = readLabsBackup(rawText);
     const count = Object.values(progress.banks).filter(hasAnswered).length;
-    showImportMessage(`备份包含 ${count} 道作答记录。确认后将覆盖当前网址的本机进度。`, true);
+    const labN = (state.importLabs?.x4m ? Object.values(state.importLabs.x4m).filter(Boolean).length : 0)
+      + (state.importLabs?.yy ? Object.values(state.importLabs.yy).filter(Boolean).length : 0);
+    showImportMessage(`备份包含 ${count} 道作答记录${labN ? `与 ${labN} 关实验室通关进度` : ''}。确认后将覆盖当前网址的本机进度。`, true);
   } catch {
     if (revision !== importRevision) return;
     showImportMessage('无法读取此备份，请选择从本题库（原中考提分题库）下载的 JSON 文件。');
   }
 });
-byId('cancelImport').addEventListener('click', () => { importProgress = null; showImportMessage(); });
+byId('cancelImport').addEventListener('click', () => { importProgress = null; state.importLabs = null; showImportMessage(); });
 byId('confirmImport').addEventListener('click', () => {
   if (!importProgress) return;
-  const done = persist(() => { saveProgress(importProgress); return true; });
+  const done = persist(() => {
+    saveProgress(importProgress);
+    if (state.importLabs?.x4m) localStorage.setItem(X4M_LAB_KEY, JSON.stringify(state.importLabs.x4m));
+    if (state.importLabs?.yy) localStorage.setItem(YY_LAB_KEY, JSON.stringify(state.importLabs.yy));
+    return true;
+  });
   if (!done) return;
+  state.importLabs = null;
   state.stage = stagePref(importProgress);
   progressDialog.close();
   renderHome('homeTitle');
-  toast('学习进度已导入。');
+  toast('学习进度与实验室通关记录已导入。');
 });
 byId('resetBtn').addEventListener('click', () => {
   if (!confirm('确定清空当前浏览器的题库答题、收藏和打卡记录？')) return;

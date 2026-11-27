@@ -58,6 +58,9 @@ check(indexHtml.includes('王者荣耀速度飞车'), '闲鱼保底用户名保�
 check(indexHtml.includes('id="cloudSyncBox"') && indexHtml.includes('id="cloudSaveBtn"') && indexHtml.includes('id="cloudLoadBtn"'),
   '进度管理云端同步模块完整', 'index.html 缺少云端同步模块元素');
 check(indexHtml.includes("updateViaCache: 'none'"), 'Service Worker 注册启用 updateViaCache: none', 'index.html 注册 SW 未设置 updateViaCache: none');
+check(!indexHtml.includes('213 条'), 'index.html 已清除旧的 213 条表述', 'index.html 仍残留旧的 213 条表述');
+check(indexHtml.includes('href="./lab-yy.html"'), 'index.html 顶栏包含语英工坊入口', 'index.html 顶栏缺少 lab-yy.html 入口');
+check(read('app.js').includes('function readLabsBackup('), '进度备份已接入两座实验室通关进度', 'app.js 缺少 readLabsBackup');
 
 // 3. 考点速记页文案一致性
 const kpHtml = read('key-points.html');
