@@ -672,6 +672,7 @@ input[type=search]::placeholder { color: #67736c; }
 .slim-notice .btn { flex: none; white-space: nowrap; }
 @media (max-width: 640px) {
   .slim-notice { flex-direction: column; align-items: stretch; }
+  .slim-notice > div { flex: 0 0 auto; }
   .slim-notice .btn { width: 100%; margin-top: 2px; }
 }
 .update-card > summary b { white-space: nowrap; }
