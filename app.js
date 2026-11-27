@@ -1334,7 +1334,8 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
-  ['2026-11-27', '学习进度备份、云端同步与《本周孩子补缺战报》全面接入《小四门反死记硬背实验室》（57 关）和《语英提分工坊》（114 关）通关进度，换手机或平板恢复云端备份时两座实验室的闯关记录也会一并保留。'],
+  ['2026-11-27', '《语英提分工坊》V2 扩容定型至 8 大实战台 142 关：新增语文「📜 中考 16 篇文言必考句精译」（逐词踩中古今异义/活用/倒装采分点，支持一键印 A4 精译手卡）与英语「📰 短文语法填空 & 还原句子（五选五）12 篇实战微短文」（配衔接线索高亮与英文朗读），全站语文 4 台 + 英语 4 台全题型打通。'],
+  ['2026-11-27', '学习进度备份、云端同步与《本周孩子补缺战报》全面接入《小四门反死记硬背实验室》（57 关）和《语英提分工坊》（142 关）通关进度，换手机或平板恢复云端备份时两座实验室的闯关记录也会一并保留。'],
   ['2026-11-27', '重磅上线首页第 3 大主线「📖 语英主线」与《语英提分工坊》（lab-yy.html）：语文含 30 篇古诗文易错字“火眼金睛”排雷、18 个阅读采分点公式（1 分答案 vs 满分答案同屏对比＋A4 公式速查卡打印）、18 关文言一字多面与病句手术台、3 期专属女声古诗文易错字听写磨耳朵；英语含 18 组词形与固定搭配点读快刷、18 关语法与微完形“线索词破案”、12 大中考作文 10→15 分三级升格工坊（支持英文朗读＋A4 金句手卡打印）；同时为 90 条语英速记考点全部补齐 1 行秒记口诀，全站 253 条速记默写 100% 带口诀。'],
   ['2026-11-26', '首屏 C 位升级为「🎯 提分双主线」并正式上线《🎬 考点演播室》节目剧场：一进首页即可直接试听专属女声历史故事、一键直达 4 科 57 关反死记硬背闯关与 253 条带口诀 A4 默写纸；演播室支持 15–20 分钟男女双主持视频节目（讲到考点自动弹横幅＋下方可点击考点书签 1 秒跳转重看，每集前 10 分钟免费试看）。'],
   ['2026-11-26', '重磅上线《🎮 小四门反死记硬背实验室》（lab-x4m.html）＋全科速记权威勘误扩容至 253 条：历史「专属女声故事磨耳朵＋12 关时间轴排雷」、道法「18 关 30 秒生活小判官」、地理「15 关因果多米诺推导」、生物「12 关红细胞/原尿/米饭生命流程大冒险」（共 57 关每科前 3 关免费＋6 期专属女声故事前 4 期免费）；小四门 123 条旧考点全量复核并全部加配「💡 一句话秒记口诀」，补齐 40 条中考/会考高频漏点。'],
@@ -1600,7 +1601,7 @@ function contentStatsHTML() {
     claude && `精编卷 ${claude} 套`,
     real && `真题 ${real} 套`,
     `小四门 ${x4mCount} 题`,
-    '语英/小四门 171 关工坊',
+    '语英/小四门 199 关工坊',
     '253 条口诀默写',
   ].filter(Boolean);
   return items.length ? `<p class="content-stats" aria-label="题库现有内容">${items.join(' · ')}</p>` : '';
@@ -2482,8 +2483,8 @@ function yyShowcaseCardHTML() {
       <span class="yy-ml-badge">📖 语英主线 · 默写零错字 · 踩点拿高分</span>
       <a class="yy-ml-more" href="./lab-yy.html">进入完整工坊 →</a>
     </div>
-    <h2>《语英提分工坊》6 大实战台 ＋ 3 期女声听写磨耳朵</h2>
-    <p class="x4m-ml-lead">语文不靠瞎蒙：<b>古诗易错字排雷、阅读 1 分 vs 满分采分点对比、文言病句动手术</b>；英语不背死表：<b>词形搭配点读、语法完形先划线索词、中考作文 10→15 分三级升格</b>！</p>
+    <h2>《语英提分工坊》8 大实战台 ＋ 3 期女声听写磨耳朵</h2>
+    <p class="x4m-ml-lead">语文 4 台全覆盖：<b>古诗易错字排雷、16 篇文言必考句精译、阅读 1 分 vs 满分对比、文言病句动手术</b>；英语 4 台全打通：<b>词形搭配点读、语法完形找线索、短文填空与还原句子、作文 10→15 分三级升格</b>！</p>
     <div class="yy-ml-demo-grid">
       <div class="yy-ml-demo-box">
         <b>✍️ 5 秒试玩 · 古诗文易错字排雷</b>
@@ -2513,14 +2514,17 @@ function yyShowcaseCardHTML() {
     </div>
     <div class="x4m-ml-grid">
       <a class="x4m-ml-tile" href="./lab-yy.html?tab=poems"><b>✍️ 古诗易错字</b><small>30 篇排雷 · 前 6 关免费</small></a>
+      <a class="x4m-ml-tile" href="./lab-yy.html?tab=translate"><b>📜 文言句精译</b><small>16 篇采分词 · 可印 A4 卡</small></a>
       <a class="x4m-ml-tile" href="./lab-yy.html?tab=reading"><b>🔍 阅读采分点</b><small>18 母题对比 · 可印 A4 卡</small></a>
       <a class="x4m-ml-tile" href="./lab-yy.html?tab=clinic"><b>🩺 文言与病句</b><small>18 关找茬手术 · 前 4 关免费</small></a>
       <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=vocab"><b>⚡ 词形与搭配</b><small>18 组点读快刷 · 前 4 组免费</small></a>
       <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=grammar"><b>🧩 语法找线索</b><small>18 关完形破案 · 前 4 关免费</small></a>
+      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=passage"><b>📰 短文与还原</b><small>12 篇真题微短文 · 前 3 篇免费</small></a>
       <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=writing"><b>✨ 作文升格</b><small>12 话题 10→15 分 · 印金句卡</small></a>
+      <a class="x4m-ml-tile is-audio" href="./lab-yy.html?tab=audio"><b>🎧 听写磨耳朵</b><small>3 期女声易错字 · 前 2 期免费</small></a>
     </div>
     <div class="x4m-ml-foot">
-      <a class="btn primary" href="./lab-yy.html">▶ 进入《语英提分工坊》（114 关＋3 期听写）→</a>
+      <a class="btn primary" href="./lab-yy.html">▶ 进入《语英提分工坊》（142 关＋3 期听写）→</a>
       <a class="btn" href="./key-points.html?subject=yuwen">📝 90 条语英带口诀 A4 默写纸</a>
       <a class="btn" href="./lab-yy.html?tab=audio">🎧 3 期女声易错字听写</a>
     </div>
@@ -3885,7 +3889,7 @@ async function openWeeklyPoster() {
     const tiles = [
       { label: '累计答题数', value: `${totalAnswered} 题`, sub: `本周新答 ${weekAnswered} 题`, accent: '#164e3f' },
       { label: '综合正确率', value: totalAnswered ? `${acc}%` : '待开启', sub: `累计答对 ${totalCorrect} 题`, accent: '#15803d' },
-      { label: '连续学习天数', value: `${streak} 天`, sub: `小四门 ${x4mCleared}/57 关 · 语英 ${yyCleared}/114 关`, accent: '#b45309' },
+      { label: '连续学习天数', value: `${streak} 天`, sub: `小四门 ${x4mCleared}/57 关 · 语英 ${yyCleared}/142 关`, accent: '#b45309' },
       { label: '已练知识点 / 错题本', value: `${kpPoints.size} 个点`, sub: wrongCount ? `错题本待清 ${wrongCount} 题` : '错题本已清零', accent: '#b83b2a' },
     ];
     const cardW = 306, cardH = 152, gapX = 20, gapY = 18, startX = 44, startY = 274;

@@ -1586,5 +1586,418 @@ window.YY_LAB_DATA = {
         { en: 'I believe every drop of sweat today will bloom into tomorrow’s success.', cn: '我相信今天的每一滴汗水，都将绽放成明天的成功。' }
       ]
     }
+  ],
+
+  translate: [
+    {
+      id: 't-01', stage: '初二下', title: '《桃花源记》· 陶渊明', free: true,
+      sentence: '率【妻子】邑人来此【绝境】，不复出焉，遂与外人【间隔】。',
+      syntax: '古今异义高频坑：三个加粗词全都是“古今异义”，千万不能用现代汉语望文生义！',
+      keywords: [
+        { word: '妻子', choices: ['妻子和儿女', '男子的配偶（老婆）', '家人和仆人'], answer: 0, tip: '古义“妻+子”=妻子和儿女，译成“老婆”直接扣 1 分！' },
+        { word: '绝境', choices: ['与人世隔绝的地方', '走投无路的境地', '风景极美的地方'], answer: 0, tip: '桃花源是与世隔绝之所，不是陷入绝境。' },
+        { word: '间隔', choices: ['隔绝、不通音讯', '时间相隔', '中间有墙'], answer: 0, tip: '古义指断绝往来、隔绝。' }
+      ],
+      translation: '带领着妻子儿女和同乡人来到这个与人世隔绝的地方，不再出去，于是就同外界的人隔绝了。',
+      mnemonic: '桃花源三古义：妻子=妻和儿女、绝境=隔绝之地、无论=不要说更不必说'
+    },
+    {
+      id: 't-02', stage: '初三下', title: '《出师表》· 诸葛亮', free: true,
+      sentence: '先帝不以臣【卑鄙】，猥自枉屈，三顾臣于草庐之中。',
+      syntax: '状语后置（于草庐之中三顾臣）+ 古今异义（卑鄙）+ 动词（顾：拜访）。',
+      keywords: [
+        { word: '卑鄙', choices: ['社会地位低微，见识短浅', '品行恶劣、不道德', '胆小懦弱'], answer: 0, tip: '古义是谦辞（身份低微、见识浅薄），绝无贬义！' },
+        { word: '顾', choices: ['拜访', '回头看', '照顾'], answer: 0, tip: '“三顾茅庐”的顾=拜访。' }
+      ],
+      translation: '先帝不因为我身份低微、见识短浅，委屈自己降低身份，三次到草庐中来拜访我。',
+      mnemonic: '先帝不嫌我“卑鄙”=地位低微见识浅（非坏人）；“痛恨”=痛心遗憾（非仇恨）'
+    },
+    {
+      id: 't-03', stage: '初三上', title: '《岳阳楼记》· 范仲淹', free: true,
+      sentence: '【微】斯人，吾谁与归？',
+      syntax: '宾语前置（“吾谁与归” = “吾与谁归”）+ 高频实词“微”。',
+      keywords: [
+        { word: '微', choices: ['如果没有', '微小的', '暗中'], answer: 0, tip: '句首“微”表假设否定：如果没有！' },
+        { word: '谁与归', choices: ['同谁一道呢（归依）', '谁和我回家', '谁归顺我'], answer: 0, tip: '宾语前置，必须调序译为“我同谁一道呢”。' }
+      ],
+      translation: '如果没有这种人，我同谁一道呢？',
+      mnemonic: '“微斯人”记死“如果没有”；“谁与归”宾语前置要倒过来译！'
+    },
+    {
+      id: 't-04', stage: '初二上', title: '《三峡》· 郦道元', free: true,
+      sentence: '虽【乘奔御风】，不以【疾】也。',
+      syntax: '词类活用（奔：动词作名词，飞奔的马）+ 高频实词（虽：即使；疾：快）。',
+      keywords: [
+        { word: '虽', choices: ['即使', '虽然', '只有'], answer: 0, tip: '文言文中“虽”多表假设让步，译作“即使”！' },
+        { word: '奔', choices: ['飞奔的马', '奔跑', '逃跑'], answer: 0, tip: '动词活用作名词，指飞奔的快马。' },
+        { word: '疾', choices: ['快', '生病', '痛恨'], answer: 0, tip: '这里形容水流速度快，译作“快”。' }
+      ],
+      translation: '即使骑着飞奔的马，驾着疾风，也没有这么快。',
+      mnemonic: '“虽”常译即使，“奔”指飞奔的马，“疾”是快非生病'
+    },
+    {
+      id: 't-05', stage: '初一上', title: '《论语》十二章', free: false,
+      sentence: '【可以为师】矣；温【故】而知新。',
+      syntax: '古今异义（可以=可以凭借；故=学过的旧知识）。',
+      keywords: [
+        { word: '可以', choices: ['可以凭借（这）', '能够（现代单义词）', '也许可以'], answer: 0, tip: '古汉语中“可”+“以”是两个词：可以凭借！' },
+        { word: '故', choices: ['学过的旧知识', '缘故', '所以'], answer: 0, tip: '形容词活用作名词，指学过的知识。' }
+      ],
+      translation: '温习学过的知识，可以得到新的理解和体会，就可以凭借这一点做老师了。',
+      mnemonic: '“可以”拆两词=可以凭借；“温故”的故=学过的知识'
+    },
+    {
+      id: 't-06', stage: '初一下', title: '《陋室铭》· 刘禹锡', free: false,
+      sentence: '孔子云：何陋【之】有？',
+      syntax: '宾语前置句（“何陋之有” = “有何陋”），“之”是宾语前置标志，不译！',
+      keywords: [
+        { word: '何陋之有', choices: ['有什么简陋的呢', '为什么简陋呢', '简陋的东西在哪里'], answer: 0, tip: '典型“何……之有”倒装句，调回“有何陋”。' },
+        { word: '之', choices: ['宾语前置的标志，不译', '结构助词“的”', '代词“它”'], answer: 0, tip: '绝对不要把“之”硬译成“的”！' }
+      ],
+      translation: '孔子说：有什么简陋的呢？',
+      mnemonic: '看到“何+名+之有”，立刻调序成“有何+名”，中间“之”字删不译'
+    },
+    {
+      id: 't-07', stage: '初一下', title: '《爱莲说》· 周敦颐', free: false,
+      sentence: '予独爱莲之出淤泥而不染，【濯】清涟而不【妖】。',
+      syntax: '主谓之间“之”取消独立性（不译）+ 实词“濯”“妖”。',
+      keywords: [
+        { word: '濯', choices: ['洗、洗涤', '照耀', '跳跃'], answer: 0, tip: '三点水“濯”=洗。' },
+        { word: '妖', choices: ['艳丽、过分妖娆', '妖怪', '妖艳的女子'], answer: 0, tip: '形容词，指过分艳丽媚俗。' }
+      ],
+      translation: '我唯独喜爱莲花从积存的淤泥中长出却不被污染，经过清水的洗涤却不显得妖艳。',
+      mnemonic: '“濯”是洗涤、“妖”是过分艳丽，“之”在主谓间省去不译'
+    },
+    {
+      id: 't-08', stage: '初二上', title: '《记承天寺夜游》· 苏轼', free: false,
+      sentence: '【但】少闲人如吾两人者耳。',
+      syntax: '高频实词“但”（只、只是）+ 语气词“耳”（罢了）。',
+      keywords: [
+        { word: '但', choices: ['只是、仅仅', '但是、可是', '只要'], answer: 0, tip: '文言文中“但”90% 译作“只是”，不是转折“但是”！' },
+        { word: '耳', choices: ['罢了', '耳朵', '而已罢了（连译）'], answer: 0, tip: '句末“耳”=“而已”的合音，译作“罢了”。' }
+      ],
+      translation: '只是缺少像我们两个这样清闲的人罢了。',
+      mnemonic: '文言“但”=只是（非但是），句末“耳”=罢了'
+    },
+    {
+      id: 't-09', stage: '初二上', title: '《答谢中书书》· 陶弘景', free: false,
+      sentence: '夕日欲颓，沉鳞【竞跃】……自康乐以来，未复有能【与】其奇者。',
+      syntax: '借代（沉鳞=水中潜游的鱼）+ 多音实词“与”（yù，参与、欣赏）。',
+      keywords: [
+        { word: '沉鳞', choices: ['水中潜游的鱼', '沉在水底的鱼鳞', '石头'], answer: 0, tip: '借代手法，用“鳞”代指鱼。' },
+        { word: '与', choices: ['参与，这里指欣赏、领悟', '给予', '和、同'], answer: 0, tip: '读 yù，译作“参与/欣赏”是本题核心采分点！' }
+      ],
+      translation: '夕阳快要落山了，水中潜游的鱼争相跳出水面……自从谢灵运以来，就再也没有人能够欣赏这种奇丽景色了。',
+      mnemonic: '“沉鳞”代指鱼，“与其奇”的“与”读 yù 译作欣赏领悟'
+    },
+    {
+      id: 't-10', stage: '初二下', title: '《小石潭记》· 柳宗元', free: false,
+      sentence: '其岸势【犬牙差互】，不可知其源。',
+      syntax: '名词作状语（犬牙=像狗的牙齿一样）+ 实词（差互=参差不齐、互相交错）。',
+      keywords: [
+        { word: '犬牙', choices: ['像狗的牙齿一样', '狗的牙齿', '犬齿形状的石头'], answer: 0, tip: '名词作状语，必须译出“像……一样”！' },
+        { word: '差互', choices: ['互相交错、参差不齐', '相差很大', '互相追逐'], answer: 0, tip: '形容两岸地形交错起伏。' }
+      ],
+      translation: '那溪岸的地势像狗的牙齿那样互相交错，不能知道它的源头。',
+      mnemonic: '名词放动词前常作状语：“犬牙”=像狗牙一样，“斗折蛇行”=像北斗像蛇一样'
+    },
+    {
+      id: 't-11', stage: '初二下', title: '《北冥有鱼》· 《庄子》', free: false,
+      sentence: '野马也，尘埃也，生物之以息相吹也。天之苍苍，【其】正色邪？',
+      syntax: '古今异义（野马=山野中的雾气）+ 选择问句“其……其……”（是……还是……）。',
+      keywords: [
+        { word: '野马', choices: ['山野中的雾气，奔腾如野马', '野生的马群', '草原上的马'], answer: 0, tip: '古今异义，指游动如野马的山间雾气！' },
+        { word: '其', choices: ['表示选择（是……还是……）', '它的', '大概'], answer: 0, tip: '“其正色邪？其远而无所至极邪？”表选择疑问。' }
+      ],
+      translation: '山野中的雾气，空气中的尘埃，都是生物用气息吹拂的结果。天色湛蓝，是它真正的颜色吗？',
+      mnemonic: '《北冥》野马是雾气，两“其”相连表选择（是…还是…）'
+    },
+    {
+      id: 't-12', stage: '初三上', title: '《醉翁亭记》· 欧阳修', free: false,
+      sentence: '醉翁之意不在酒，在乎山水之间也。山水之乐，【得之心而寓之酒】也。',
+      syntax: '古今异义（意=意趣、情趣）+ 省略句（得之[于]心而寓之[于]酒）。',
+      keywords: [
+        { word: '意', choices: ['意趣、情趣', '意思、想法', '心意'], answer: 0, tip: '核心实词，“醉翁之意”指醉翁的情趣。' },
+        { word: '寓', choices: ['寄托', '居住', '寓言'], answer: 0, tip: '把这份快乐寄托在喝酒上。' }
+      ],
+      translation: '醉翁的情趣不在于喝酒，而在于欣赏山水之间的美景。欣赏山水的乐趣，领会于心间，寄托在酒上。',
+      mnemonic: '醉翁之“意”是情趣，“寓”是寄托，省略介词“于”要补出来'
+    },
+    {
+      id: 't-13', stage: '初三下', title: '《鱼我所欲也》· 孟子', free: false,
+      sentence: '万钟则不【辩】礼义而受之，万钟于我何【加】焉！',
+      syntax: '通假字（辩通“辨”，辨别）+ 高频实词（加=益处、好处）。',
+      keywords: [
+        { word: '辩', choices: ['同“辨”，辨别', '辩论、争辩', '表达'], answer: 0, tip: '通假字必考点：辩通辨，辨别！' },
+        { word: '加', choices: ['益处、好处', '增加', '施加'], answer: 0, tip: '“于我何加焉”=对我有什么益处呢！' }
+      ],
+      translation: '优厚的俸禄如果不辨别是否合乎礼义就接受它，那么优厚的俸禄对我有什么益处呢？',
+      mnemonic: '“辩”通“辨”辨礼义，“何加”不是加减而是“有什么益处”'
+    },
+    {
+      id: 't-14', stage: '初三下', title: '《送东阳马生序》· 宋濂', free: false,
+      sentence: '以中有足乐者，不知口体之【奉】不【若】人也。',
+      syntax: '虚词（以=因为）+ 实词（奉=供养；若=如、比得上）。',
+      keywords: [
+        { word: '以', choices: ['因为', '用、拿', '来'], answer: 0, tip: '句首交代原因，译作“因为”。' },
+        { word: '奉', choices: ['供养、吃穿供给', '奉承', '奉献'], answer: 0, tip: '口体之奉=吃穿的供给。' },
+        { word: '若', choices: ['如、比得上', '如果', '好像'], answer: 0, tip: '不若人=比不上别人。' }
+      ],
+      translation: '因为内心有足以快乐的事，就不觉得吃的穿的比不上别人了。',
+      mnemonic: '“以”因为、“奉”供养、“若”比得上，三词踩准满分稳拿'
+    },
+    {
+      id: 't-15', stage: '初三下', title: '《曹刿论战》· 《左传》', free: false,
+      sentence: '小大之【狱】，虽不能【察】，必以【情】。',
+      syntax: '古今异义（狱=诉讼事件/案件；情=诚心/实情）+ 实词（察=明察）。',
+      keywords: [
+        { word: '狱', choices: ['指诉讼事件、案件', '监狱、牢房', '地狱'], answer: 0, tip: '古义指案件，绝不是现代的“监狱”！' },
+        { word: '情', choices: ['诚心（或合情合理/实情）', '感情、爱情', '情况'], answer: 0, tip: '必以情=一定根据实情（诚心）合理判断。' }
+      ],
+      translation: '大大小小的诉讼案件，即使不能件件明察，也一定根据实情（诚心）合理处理。',
+      mnemonic: '古文“狱”是案件非监狱，“虽”译即使，“以情”译诚心实情'
+    },
+    {
+      id: 't-16', stage: '初三下', title: '《邹忌讽齐王纳谏》· 《战国策》', free: false,
+      sentence: '能【面刺】寡人之过者，受上赏；能【谤讥】于市朝，闻寡人之耳者，受下赏。',
+      syntax: '古今异义（面刺=当面指责；谤讥=公开指责议论，无贬义）+ 状语后置（于市朝谤讥）。',
+      keywords: [
+        { word: '面刺', choices: ['当面指责', '用刀刺脸', '当面讽刺嘲笑'], answer: 0, tip: '“刺”=指责，“面”名词作状语=当面。' },
+        { word: '谤讥', choices: ['指责议论（中性词）', '恶意诽谤造谣', '讽刺挖苦'], answer: 0, tip: '古义指公开议论过失，没有现代“造谣诽谤”的贬义！' }
+      ],
+      translation: '能够当面指责我的过错的人，给予上等奖赏；能够在公共场合议论我的过失，传到我耳朵里的人，给予下等奖赏。',
+      mnemonic: '“面刺”当面指责，“谤讥”公开议论（中性词无贬义）'
+    }
+  ],
+
+  passage: [
+    {
+      id: 'ps-01', mode: 'cloze', topic: '校园科技 · 短文语法填空', title: '短文填空①：Smart Library at Our School', free: true,
+      hint: '根据括号提示词变形，或根据上下文逻辑填入冠词/介词/连词/代词：',
+      segments: [
+        'Last month, our school ',
+        { prompt: '(build)', choices: ['built', 'builds', 'building'], answer: 0, tag: '一般过去时', explain: '句首 Last month 提示过去动作，build 过去式为不规则 built。' },
+        ' a smart library. Students can borrow books ',
+        { prompt: '(easy)', choices: ['easily', 'easy', 'easier'], answer: 0, tag: '形变副', explain: '修饰动词 borrow，形容词 easy 变副词 easily。' },
+        ' by scanning their student cards. There are thousands of ',
+        { prompt: '(book)', choices: ['books', 'book', 'booking'], answer: 0, tag: '名词复数', explain: 'thousands of 后接可数名词复数 books。' },
+        ' on science and history. ',
+        { prompt: '(无提示词)', choices: ['Although', 'Because', 'So'], answer: 0, tag: '让步连词', explain: '前后“空间不大”与“非常安静舒适”形成转折让步，填 Although。' },
+        ' it is not very large, it is quiet and comfortable. I look forward to ',
+        { prompt: '(spend)', choices: ['spending', 'spend', 'spent'], answer: 0, tag: '固定搭配', explain: 'look forward to doing 盼望做某事，填 spending。' },
+        ' more afternoons reading there.'
+      ],
+      fullEn: 'Last month, our school built a smart library. Students can borrow books easily by scanning their student cards. There are thousands of books on science and history. Although it is not very large, it is quiet and comfortable. I look forward to spending more afternoons reading there.'
+    },
+    {
+      id: 'ps-02', mode: 'restore', topic: '学习习惯 · 还原句子（五选五）', title: '还原句子①：How to Take Better Notes', free: true,
+      hint: '找准前后句的代词（it/they）、列举词（First/Second）和转折词，10 秒锁死还原句！',
+      options: [
+        'A. First, don’t try to write down every single word the teacher says.',
+        'B. Instead, use keywords, short phrases, and simple symbols.',
+        'C. Finally, review your notes within 24 hours after class.',
+        'D. Buying expensive notebooks is the only secret to good grades.'
+      ],
+      segments: [
+        'Taking good notes in class helps you remember key points better. Here are three practical tips. ',
+        { answer: 0, clue: '前句提示“three practical tips”，后句出现“That will only make you tired”，对应 First 开头句 A！' },
+        ' That will only make you tired and miss the main ideas. ',
+        { answer: 1, clue: '前句说“别逐字抄”，本空用转折词 Instead（相反）承接，引出“用关键词和符号”，选 B！' },
+        ' Second, leave some blank space on each page so you can add questions later. ',
+        { answer: 2, clue: '前面已有 First、Second，本空对应收尾序列词 Finally，选 C！（D 项说法绝对是典型干扰项）' },
+        ' This short review keeps knowledge fresh in your mind.'
+      ],
+      fullEn: 'Taking good notes in class helps you remember key points better. Here are three practical tips. First, don’t try to write down every single word the teacher says. That will only make you tired and miss the main ideas. Instead, use keywords, short phrases, and simple symbols. Second, leave some blank space on each page so you can add questions later. Finally, review your notes within 24 hours after class. This short review keeps knowledge fresh in your mind.'
+    },
+    {
+      id: 'ps-03', mode: 'cloze', topic: '传统文化 · 短文语法填空', title: '短文填空②：The Beauty of Tea Culture', free: true,
+      hint: '注意被动语态、最高级、冠词与介词搭配：',
+      segments: [
+        'Chinese tea has ',
+        { prompt: '(无提示词)', choices: ['a', 'an', 'the'], answer: 0, tag: '不定冠词', explain: 'have a long history 固定搭配，long 辅音音素开头用 a。' },
+        ' history of over 4,000 years. It is ',
+        { prompt: '(wide)', choices: ['widely', 'wide', 'wider'], answer: 0, tag: '形变副', explain: '修饰动词 enjoyed，wide 变副词 widely（广泛地）。' },
+        ' enjoyed by people all over the world. Today, green tea is one of the ',
+        { prompt: '(popular)', choices: ['most popular', 'more popular', 'popular'], answer: 0, tag: '最高级', explain: 'one of the + 形容词最高级 + 复数名词，填 most popular。' },
+        ' drinks in China. Tea leaves ',
+        { prompt: '(pick)', choices: ['are picked', 'pick', 'picked'], answer: 0, tag: '一般现在被动', explain: '茶叶是“被采摘”，一般现在时被动用 are picked。' },
+        ' by hand in spring and then sent ',
+        { prompt: '(无提示词)', choices: ['for', 'at', 'of'], answer: 0, tag: '介词搭配', explain: 'be sent for processing 送去加工，表目的用 for。' },
+        ' processing.'
+      ],
+      fullEn: 'Chinese tea has a history of over 4,000 years. It is widely enjoyed by people all over the world. Today, green tea is one of the most popular drinks in China. Tea leaves are picked by hand in spring and then sent for processing.'
+    },
+    {
+      id: 'ps-04', mode: 'restore', topic: '绿色环保 · 还原句子（五选五）', title: '还原句子②：Small Steps for a Greener Earth', free: false,
+      hint: '紧盯原词复现（water / plastic / ride）与转折衔接：',
+      options: [
+        'A. For example, turn off the tap while brushing your teeth.',
+        'B. Bringing your own cloth bag to the supermarket is another easy habit.',
+        'C. However, many people think one person’s effort is too small.',
+        'D. Everyone should move to the countryside immediately.'
+      ],
+      segments: [
+        'Protecting our planet starts with small daily habits. ',
+        { answer: 2, clue: '后句“In fact, when millions of people act together...”是对“个人力量太小”的反驳，选转折句 C！' },
+        ' In fact, when millions of people act together, huge changes happen. Saving water at home is a great start. ',
+        { answer: 0, clue: '前句讲“Saving water”，A 项“turn off the tap（关水龙头）”精准举例呼应，选 A！' },
+        ' Also, try to cut down on single-use plastic bags. ',
+        { answer: 1, clue: '前句讲减少“plastic bags”，B 项“own cloth bag（自带布袋）”直接对应，选 B！' },
+        ' Every small choice counts.'
+      ],
+      fullEn: 'Protecting our planet starts with small daily habits. However, many people think one person’s effort is too small. In fact, when millions of people act together, huge changes happen. Saving water at home is a great start. For example, turn off the tap while brushing your teeth. Also, try to cut down on single-use plastic bags. Bringing your own cloth bag to the supermarket is another easy habit. Every small choice counts.'
+    },
+    {
+      id: 'ps-05', mode: 'cloze', topic: '健康生活 · 短文语法填空', title: '短文填空③：Why Sleep Matters for Teens', free: false,
+      hint: '注意情态动词、反身代词、比较级与非谓语：',
+      segments: [
+        'Doctors say teenagers need at ',
+        { prompt: '(little)', choices: ['least', 'less', 'little'], answer: 0, tag: '固定短语', explain: 'at least 至少（little 的最高级）。' },
+        ' eight hours of sleep every night. Without enough sleep, students may find it hard ',
+        { prompt: '(focus)', choices: ['to focus', 'focusing', 'focus'], answer: 0, tag: 'find it + adj. + to do', explain: 'find it + adj. + to do sth. 固定句型，填 to focus。' },
+        ' in class. Worse still, staying up late ',
+        { prompt: '(be)', choices: ['is', 'are', 'were'], answer: 0, tag: '主谓一致', explain: '动名词短语 staying up late 作主语，谓语用单数 is。' },
+        ' harmful to our memory. So turn off your phone before bed ',
+        { prompt: '(无提示词)', choices: ['and', 'but', 'or'], answer: 0, tag: '并列连词', explain: '“关手机”与“给自己安静夜晚”是顺承并列，用 and。' },
+        ' give ',
+        { prompt: '(you)', choices: ['yourself', 'your', 'yours'], answer: 0, tag: '反身代词', explain: '祈使句主语是 you，给自己用反身代词 yourself。' },
+        ' a peaceful night.'
+      ],
+      fullEn: 'Doctors say teenagers need at least eight hours of sleep every night. Without enough sleep, students may find it hard to focus in class. Worse still, staying up late is harmful to our memory. So turn off your phone before bed and give yourself a peaceful night.'
+    },
+    {
+      id: 'ps-06', mode: 'restore', topic: '情绪管理 · 还原句子（五选五）', title: '还原句子③：Dealing with Exam Stress', free: false,
+      hint: '关注问句-答句呼应与代词指代：',
+      options: [
+        'A. First, make a realistic study plan instead of cramming at the last minute.',
+        'B. Talking with parents or friends can also lighten your heavy heart.',
+        'C. It is completely normal to feel a bit nervous before a big test.',
+        'D. Never talk to anyone when you feel worried.'
+      ],
+      segments: [
+        'Do your hands get sweaty before an important exam? ',
+        { answer: 2, clue: '紧接开篇问句“考前手心出汗吗？”，C 项“考前紧张完全正常”自然安抚承接，选 C！' },
+        ' The key is learning how to manage stress wisely. ',
+        { answer: 0, clue: '给出第一条建议 First，且与后句“Breaking big tasks into small goals”呼应，选 A！' },
+        ' Breaking big tasks into small daily goals builds real confidence. ',
+        { answer: 1, clue: '后句“Sometimes just sharing your worries makes them half as scary”与 B 项“Talking with parents or friends”完全对应，选 B！' },
+        ' Sometimes just sharing your worries makes them half as scary.'
+      ],
+      fullEn: 'Do your hands get sweaty before an important exam? It is completely normal to feel a bit nervous before a big test. The key is learning how to manage stress wisely. First, make a realistic study plan instead of cramming at the last minute. Breaking big tasks into small daily goals builds real confidence. Talking with parents or friends can also lighten your heavy heart. Sometimes just sharing your worries makes them half as scary.'
+    },
+    {
+      id: 'ps-07', mode: 'cloze', topic: '人物故事 · 短文语法填空', title: '短文填空④：A Kind Stranger on a Rainy Day', free: false,
+      hint: '注意现在完成时、名词变形、定语从句与介词：',
+      segments: [
+        'It was pouring when I walked out of the station ',
+        { prompt: '(无提示词)', choices: ['without', 'with', 'for'], answer: 0, tag: '逻辑介词', explain: '下文陌生人递伞，说明出门“没带”伞，填 without。' },
+        ' an umbrella. Suddenly, an old lady ',
+        { prompt: '(无提示词)', choices: ['who', 'which', 'what'], answer: 0, tag: '定语从句', explain: '先行词 lady 指人，从句缺主语用 who。' },
+        ' stood beside me offered to share hers. Her ',
+        { prompt: '(kind)', choices: ['kindness', 'kindly', 'kinder'], answer: 0, tag: '形变名', explain: '形容词性物主代词 Her 后接名词 kindness（善意）。' },
+        ' warmed me immediately. Since that day, I ',
+        { prompt: '(decide)', choices: ['have decided', 'decided', 'decide'], answer: 0, tag: '现在完成时', explain: 'Since that day 是现在完成时铁标志，填 have decided。' },
+        ' to pass on warmth whenever others are ',
+        { prompt: '(无提示词)', choices: ['in', 'on', 'at'], answer: 0, tag: '固定短语', explain: 'in need / in trouble 处于困境中，固定用 in。' },
+        ' need.'
+      ],
+      fullEn: 'It was pouring when I walked out of the station without an umbrella. Suddenly, an old lady who stood beside me offered to share hers. Her kindness warmed me immediately. Since that day, I have decided to pass on warmth whenever others are in need.'
+    },
+    {
+      id: 'ps-08', mode: 'restore', topic: '人工智能 · 还原句子（五选五）', title: '还原句子④：Using AI Tools Wisely', free: false,
+      hint: '锁定“好处 → 转折担忧 → 正确用法”三段式结构：',
+      options: [
+        'A. For instance, it can explain a tricky math step in seconds.',
+        'B. However, copying AI answers directly will hurt your own thinking.',
+        'C. Treat AI as a patient tutor, not a homework machine.',
+        'D. AI will completely replace human teachers next week.'
+      ],
+      segments: [
+        'AI tools are becoming popular helpers for middle school students. ',
+        { answer: 0, clue: '前句讲 AI 是好帮手，A 项用 For instance 举例说明“几秒讲透难题”，选 A！' },
+        ' It also helps polish English grammar mistakes. ',
+        { answer: 1, clue: '前两句讲优点，B 项用 However 转折引出“直接抄答案会伤害思考”的风险，选 B！' },
+        ' When exams come, you still have to solve problems on your own. ',
+        { answer: 2, clue: '段末总结正确态度：把 AI 当耐心导师而不是写作业机器，选 C！' },
+        ' Used properly, it can truly speed up your progress.'
+      ],
+      fullEn: 'AI tools are becoming popular helpers for middle school students. For instance, it can explain a tricky math step in seconds. It also helps polish English grammar mistakes. However, copying AI answers directly will hurt your own thinking. When exams come, you still have to solve problems on your own. Treat AI as a patient tutor, not a homework machine. Used properly, it can truly speed up your progress.'
+    },
+    {
+      id: 'ps-09', mode: 'cloze', topic: '劳动实践 · 短文语法填空', title: '短文填空⑤：Our Rooftop Vegetable Garden', free: false,
+      hint: '注意序数词、感叹/动词不定式、比较级与代词：',
+      segments: [
+        'This term, our class started our ',
+        { prompt: '(one)', choices: ['first', 'once', 'one'], answer: 0, tag: '基变序', explain: 'our first garden 我们第一个菜园，基数词变序数词 first。' },
+        ' rooftop garden. Every Friday, we take turns ',
+        { prompt: '(water)', choices: ['to water', 'watered', 'waters'], answer: 0, tag: '固定搭配', explain: 'take turns to do sth. 轮流做某事。' },
+        ' the tomatoes and pull weeds. Although our hands get dirty, we feel much ',
+        { prompt: '(happy)', choices: ['happier', 'happy', 'happiest'], answer: 0, tag: '比较级', explain: 'much 修饰形容词比较级 happier（开心得多）。' },
+        ' when we harvest fresh vegetables by ',
+        { prompt: '(we)', choices: ['ourselves', 'us', 'our'], answer: 0, tag: '反身代词', explain: 'by ourselves 靠我们自己。' },
+        '. Labor really teaches us ',
+        { prompt: '(无提示词)', choices: ['how', 'what', 'why'], answer: 0, tag: '疑问词+to do', explain: 'how to value food 如何珍惜粮食，填 how。' },
+        ' to value every meal.'
+      ],
+      fullEn: 'This term, our class started our first rooftop garden. Every Friday, we take turns to water the tomatoes and pull weeds. Although our hands get dirty, we feel much happier when we harvest fresh vegetables by ourselves. Labor really teaches us how to value every meal.'
+    },
+    {
+      id: 'ps-10', mode: 'restore', topic: '阅读习惯 · 还原句子（五选五）', title: '还原句子⑤：Building a Daily Reading Habit', free: false,
+      hint: '抓住“时间门槛低 → 选感兴趣书 → 坚持复利”线索：',
+      options: [
+        'A. Start small—just ten minutes before bed is enough.',
+        'B. Choose topics that truly excite you, such as science fiction or history.',
+        'C. Over a year, those ten minutes will add up to several whole books.',
+        'D. You must finish a 500-page dictionary every weekend.'
+      ],
+      segments: [
+        'Many students want to read more, yet they always say they are too busy. ',
+        { answer: 0, clue: '针对“too busy（太忙）”，A 项“从每天睡前 10 分钟开始”直接破局，选 A！' },
+        ' You don’t need a whole free afternoon to begin. ',
+        { answer: 1, clue: '后句“When you enjoy the story, reading feels like fun instead of homework”呼应 B 项“选你真正喜欢的题材”，选 B！' },
+        ' When you enjoy the story, reading feels like fun instead of homework. ',
+        { answer: 2, clue: 'C 项“those ten minutes”原词回指前文 A 项的 ten minutes，收束复利价值，选 C！' },
+        ' Pick up a book tonight and enjoy the journey.'
+      ],
+      fullEn: 'Many students want to read more, yet they always say they are too busy. Start small—just ten minutes before bed is enough. You don’t need a whole free afternoon to begin. Choose topics that truly excite you, such as science fiction or history. When you enjoy the story, reading feels like fun instead of homework. Over a year, those ten minutes will add up to several whole books. Pick up a book tonight and enjoy the journey.'
+    },
+    {
+      id: 'ps-11', mode: 'cloze', topic: '志愿公益 · 短文语法填空', title: '短文填空⑥：Weekend Volunteers at the Museum', free: false,
+      hint: '注意名词词性转换、介词、时态与固定句型：',
+      segments: [
+        'Every Saturday morning, ten students work as ',
+        { prompt: '(guide)', choices: ['guides', 'guide', 'guiding'], answer: 0, tag: '名词复数', explain: 'ten students 对应复数名词 guides（讲解员）。' },
+        ' at the city history museum. They introduce ancient artifacts ',
+        { prompt: '(patient)', choices: ['patiently', 'patient', 'patience'], answer: 0, tag: '形变副', explain: '修饰动词 introduce，patient 变副词 patiently（耐心地）。' },
+        ' to visitors. Last week, a foreign ',
+        { prompt: '(tour)', choices: ['tourist', 'tour', 'touring'], answer: 0, tag: '词性转换', explain: 'a foreign tourist 一位外国游客。' },
+        ' praised Lin Tao for his clear English. Lin Tao said it was ',
+        { prompt: '(无提示词)', choices: ['such', 'so', 'very'], answer: 0, tag: 'such + a + 名词', explain: 'such a meaningful experience 固定结构（中心词是名词 experience）。' },
+        ' a meaningful experience that he ',
+        { prompt: '(never forget)', choices: ['would never forget', 'never forgets', 'forgot'], answer: 0, tag: '宾从主过从过', explain: '主句 said 为过去时，从句表“将永远不会忘”用过去将来时 would never forget。' },
+        ' it.'
+      ],
+      fullEn: 'Every Saturday morning, ten students work as guides at the city history museum. They introduce ancient artifacts patiently to visitors. Last week, a foreign tourist praised Lin Tao for his clear English. Lin Tao said it was such a meaningful experience that he would never forget it.'
+    },
+    {
+      id: 'ps-12', mode: 'restore', topic: '人际交往 · 还原句子（五选五）', title: '还原句子⑥：The Art of Being a Good Listener', free: false,
+      hint: '抓住“肢体信号 + 不打断 + 复述确认”三步逻辑：',
+      options: [
+        'A. Put down your phone and look at the speaker’s eyes.',
+        'B. Let the other person finish speaking before you share your own opinion.',
+        'C. Everyone loves friends who truly listen to them.',
+        'D. Interrupting loudly shows you are very smart.'
+      ],
+      segments: [
+        'Good communication is not just about speaking well. ',
+        { answer: 2, clue: '承接首句“好沟通不止于会说”，C 项引出本文核心主题“倾听（listen）”，选 C！' },
+        ' How can you become a better listener? ',
+        { answer: 0, clue: '后句“Eye contact shows that you respect their words”与 A 项“look at the speaker’s eyes”精准原词复现，选 A！' },
+        ' Eye contact shows that you respect their words. ',
+        { answer: 1, clue: 'B 项“让对方说完再发表意见”与后句“Patience builds deep trust”逻辑顺承，选 B！' },
+        ' Patience builds deep trust in any friendship.'
+      ],
+      fullEn: 'Good communication is not just about speaking well. Everyone loves friends who truly listen to them. How can you become a better listener? Put down your phone and look at the speaker’s eyes. Eye contact shows that you respect their words. Let the other person finish speaking before you share your own opinion. Patience builds deep trust in any friendship.'
+    }
   ]
 };

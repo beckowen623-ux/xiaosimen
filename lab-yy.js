@@ -40,7 +40,7 @@
   const loadProg = () => { try { return JSON.parse(localStorage.getItem(PROG_KEY) || '{}') || {}; } catch { return {}; } };
   const saveProg = (p) => { try { localStorage.setItem(PROG_KEY, JSON.stringify(p)); } catch {} };
 
-  const DATA = window.YY_LAB_DATA || { poems: [], reading: [], clinic: [], vocab: [], grammar: [], writing: [], audio: [] };
+  const DATA = window.YY_LAB_DATA || { poems: [], translate: [], reading: [], clinic: [], vocab: [], grammar: [], passage: [], writing: [], audio: [] };
   const prog = loadProg();
   const canSpeak = typeof window !== 'undefined' && 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
 
@@ -64,11 +64,13 @@
 
   const state = {
     tab: 'poems',
-    idx: { poems: 0, reading: 0, clinic: 0, vocab: 0, grammar: 0, writing: 0 },
+    idx: { poems: 0, translate: 0, reading: 0, clinic: 0, vocab: 0, grammar: 0, passage: 0, writing: 0 },
     // poems
     pActiveSlot: 0,
     pPicked: {},
     pMaskMode: false,
+    // translate
+    tAns: {},
     // reading
     rPicked: new Set(),
     rChecked: false,
@@ -82,6 +84,9 @@
     gClueFound: false,
     gWrongClue: -1,
     gChoice: -1,
+    // passage
+    psActive: 0,
+    psAns: {},
     // writing
     wTier: 'lv10',
     wBuildAns: {},
@@ -92,11 +97,11 @@
   };
 
   function allLevelIds() {
-    return ['poems', 'reading', 'clinic', 'vocab', 'grammar', 'writing'].flatMap(k => (DATA[k] || []).map(x => x.id));
+    return ['poems', 'translate', 'reading', 'clinic', 'vocab', 'grammar', 'passage', 'writing'].flatMap(k => (DATA[k] || []).map(x => x.id));
   }
   function updateProgress() {
     const ids = allLevelIds();
-    const total = ids.length || 114;
+    const total = ids.length || 142;
     const done = ids.filter(id => prog[id]).length;
     if (progSummary) progSummary.textContent = `已攻克 ${done} / ${total} 关`;
     if (progFill) progFill.style.width = `${Math.round((done / total) * 100)}%`;
@@ -112,10 +117,12 @@
 
   function resetLevel(tab) {
     if (tab === 'poems') { state.pActiveSlot = 0; state.pPicked = {}; }
+    else if (tab === 'translate') { state.tAns = {}; }
     else if (tab === 'reading') { state.rPicked = new Set(); state.rChecked = false; }
     else if (tab === 'clinic') { state.cWenyanAns = {}; state.cBugPicked = -1; state.cTypePicked = -1; }
     else if (tab === 'vocab') { state.vAns = {}; }
     else if (tab === 'grammar') { state.gClueFound = false; state.gWrongClue = -1; state.gChoice = -1; }
+    else if (tab === 'passage') { state.psActive = 0; state.psAns = {}; }
     else if (tab === 'writing') { state.wTier = 'lv10'; state.wBuildAns = {}; }
   }
 
@@ -215,6 +222,123 @@
             </div>
           ` : ''}
         `}
+      </article>`;
+  }
+
+  // ==================== 1.5 文言文必考句精译（16 篇） ====================
+  function renderTranslate() {
+    const list = DATA.translate || [];
+    const cur = state.idx.translate;
+    const lv = list[cur];
+    if (!lv) return '';
+    if (!paidAccess && !lv.free) return levelStripHTML('translate', list) + lockBoxHTML('中考 16 篇文言必考句精译', list.length, 4);
+
+    const allRight = lv.keywords.every((kw, ki) => state.tAns[ki] === kw.answer);
+    if (allRight) markDone(lv.id);
+    const sentHtml = esc(lv.sentence).replace(/【([^】]+)】/g, '<mark>$1</mark>');
+
+    return `${levelStripHTML('translate', list)}
+      <article class="yy-card">
+        <div class="yy-card-head">
+          <span class="yy-chip">${esc(lv.stage)} · ${esc(lv.title)}</span>
+          <button type="button" class="yy-btn sm gold" id="yyPrintTranslate">🖨️ 印 A4《16 篇文言精译手卡》</button>
+        </div>
+        <div class="yy-wenyan-sent" style="padding:14px;border-radius:12px;background:#faf8f1;border:1px solid #e2dac8;line-height:1.8">${sentHtml}</div>
+        <div class="yy-sub"><b>句式/踩分点提示：</b>${esc(lv.syntax)}</div>
+        ${lv.keywords.map((kw, ki) => {
+          const picked = state.tAns[ki];
+          const isOk = picked === kw.answer;
+          return `<div class="yy-wenyan-row">
+            <div style="font-weight:700;font-size:15px">采分关键词 ${ki + 1}：「<span style="color:#92400e">${esc(kw.word)}</span>」应译为：</div>
+            <div class="yy-vocab-choices">
+              ${kw.choices.map((c, ci) => {
+                const cls = ['yy-vocab-btn', picked === ci ? (ci === kw.answer ? 'is-right' : 'is-wrong') : ''].filter(Boolean).join(' ');
+                return `<button type="button" class="${cls}" data-tr-kw="${ki}" data-tr-opt="${ci}">${esc(c)}</button>`;
+              }).join('')}
+            </div>
+            ${picked !== undefined ? `<div class="yy-sub" style="color:${isOk ? '#15803d' : '#b91c1c'}">${isOk ? '✓ ' : '✗ '}${esc(kw.tip)}</div>` : ''}
+          </div>`;
+        }).join('')}
+        ${allRight ? `
+          <div class="yy-feedback is-ok">
+            <b>✅ 全部采分词精准命中！中考标准直译：</b>
+            <div style="font-size:15px;font-weight:700;color:#14532d">${esc(lv.translation)}</div>
+            <div class="yy-mnemonic">💡 必背口诀：${esc(lv.mnemonic)}</div>
+          </div>
+          <div class="yy-actions">${nextBtnHTML('translate', list)}</div>
+        ` : ''}
+      </article>`;
+  }
+
+  // ==================== 5.5 英语短文语法填空 & 还原句子（12 篇） ====================
+  function renderPassage() {
+    const list = DATA.passage || [];
+    const cur = state.idx.passage;
+    const lv = list[cur];
+    if (!lv) return '';
+    if (!paidAccess && !lv.free) return levelStripHTML('passage', list) + lockBoxHTML('英语短文填空与还原句子实战', list.length, 3);
+
+    const blanks = lv.segments.filter(s => typeof s === 'object');
+    const allRight = blanks.length > 0 && blanks.every((b, bi) => state.psAns[bi] === b.answer);
+    if (allRight) markDone(lv.id);
+
+    let biCursor = 0;
+    const bodyHtml = lv.segments.map(seg => {
+      if (typeof seg === 'string') return esc(seg);
+      const bi = biCursor++;
+      const picked = state.psAns[bi];
+      const ok = picked === seg.answer;
+      const cls = ['yy-ps-slot', bi === state.psActive && !allRight ? 'is-cur' : '', picked !== undefined ? (ok ? 'is-ok' : 'is-bad') : ''].filter(Boolean).join(' ');
+      if (lv.mode === 'cloze') {
+        const label = picked !== undefined ? seg.choices[picked] : `(${bi + 1}) ${seg.prompt}`;
+        return `<button type="button" class="${cls}" data-ps-slot="${bi}">${esc(label)}</button>`;
+      }
+      const label = picked !== undefined ? `${String.fromCharCode(65 + picked)} 句` : `【还原空 ${bi + 1}】`;
+      return `<button type="button" class="${cls}" data-ps-slot="${bi}">${esc(label)}</button>`;
+    }).join('');
+
+    const activeBlank = blanks[state.psActive] || blanks[0];
+    const activePicked = state.psAns[state.psActive];
+
+    return `${levelStripHTML('passage', list)}
+      <article class="yy-card">
+        <div class="yy-card-head">
+          <span class="yy-chip en">${esc(lv.topic)} · 第 ${cur + 1}/${list.length} 篇</span>
+          ${allRight ? speakBtnHTML(lv.fullEn, '🔊 朗读全文') : ''}
+        </div>
+        <h2>${esc(lv.title)}</h2>
+        <p class="yy-sub">${esc(lv.hint)}</p>
+        <div class="yy-passage-body">${bodyHtml}</div>
+        ${lv.mode === 'cloze' && activeBlank ? `
+          <div class="yy-wenyan-row">
+            <div style="font-weight:700">第 (${state.psActive + 1}) 空 ${esc(activeBlank.prompt)}：请选择正确词形或功能词</div>
+            <div class="yy-vocab-choices">
+              ${activeBlank.choices.map((c, ci) => {
+                const cls = ['yy-vocab-btn', activePicked === ci ? (ci === activeBlank.answer ? 'is-right' : 'is-wrong') : ''].filter(Boolean).join(' ');
+                return `<button type="button" class="${cls}" data-ps-opt="${ci}">${esc(c)}</button>`;
+              }).join('')}
+            </div>
+            ${activePicked !== undefined ? `<div class="yy-sub" style="color:${activePicked === activeBlank.answer ? '#15803d' : '#b91c1c'}"><b>[${esc(activeBlank.tag)}]</b> ${esc(activeBlank.explain)}</div>` : ''}
+          </div>
+        ` : ''}
+        ${lv.mode === 'restore' && activeBlank ? `
+          <div class="yy-restore-pool">
+            <div style="font-weight:700;color:#1e3a5f">为【还原空 ${state.psActive + 1}】选出最契合上下文的句子：</div>
+            <div class="yy-opts">
+              ${lv.options.map((opt, oi) => {
+                const cls = ['yy-opt', activePicked === oi ? (oi === activeBlank.answer ? 'is-right' : 'is-wrong') : ''].filter(Boolean).join(' ');
+                return `<button type="button" class="${cls}" data-ps-opt="${oi}">${esc(opt)}</button>`;
+              }).join('')}
+            </div>
+            ${activePicked !== undefined ? `<div class="yy-sub" style="color:${activePicked === activeBlank.answer ? '#15803d' : '#b91c1c'}"><b>🔎 衔接线索：</b>${esc(activeBlank.clue)}</div>` : ''}
+          </div>
+        ` : ''}
+        ${allRight ? `
+          <div class="yy-feedback is-ok">
+            <b>🎉 整篇全部攻克！${lv.mode === 'cloze' ? '本篇覆盖考点：' + blanks.map(b => b.tag).join(' / ') : '已掌握上下句衔接与代词指代破题法！'}</b>
+          </div>
+          <div class="yy-actions">${nextBtnHTML('passage', list)}</div>
+        ` : ''}
       </article>`;
   }
 
@@ -595,11 +719,12 @@
     const old = document.getElementById('yyPrintOverlay');
     if (old) old.remove();
     const isReading = kind === 'reading';
-    const list = isReading ? (DATA.reading || []) : (DATA.writing || []);
-    const freeLimit = isReading ? 4 : 3;
+    const isTranslate = kind === 'translate';
+    const list = isReading ? (DATA.reading || []) : (isTranslate ? (DATA.translate || []) : (DATA.writing || []));
+    const freeLimit = isReading || isTranslate ? 4 : 3;
     const picked = paidAccess ? list : list.slice(0, freeLimit);
     const omitted = list.length - picked.length;
-    const title = isReading ? '中考语文阅读答题公式速查卡' : '中考英语作文三级升格金句手卡';
+    const title = isReading ? '中考语文阅读答题公式速查卡' : (isTranslate ? '中考 16 篇文言必考句精译手卡' : '中考英语作文三级升格金句手卡');
 
     const itemsHtml = isReading
       ? picked.map((it, i) => `<div class="yy-pr-item">
@@ -608,12 +733,19 @@
           <p><b>满分示例：</b>${esc(it.fullAns)}</p>
           <p><b>秒记口诀：</b>${esc(it.mnemonic)}</p>
         </div>`).join('')
-      : picked.map((it, i) => `<div class="yy-pr-item">
-          <h3>${i + 1}. 【${esc(it.topic)}】${esc(it.title)} <small style="font-weight:400;color:#555">（${esc(it.scene)}）</small></h3>
-          <p><b>普通 10 分句：</b>${esc(it.levels.lv10.en)}</p>
-          <p><b>高分 15 分句：</b><b>${esc(it.levels.lv15.en)}</b>（${esc(it.levels.lv15.cn)}）</p>
-          <p><b>万能模板：</b>${it.templates.map(t => `${esc(t.en)}`).join(' ｜ ')}</p>
-        </div>`).join('');
+      : isTranslate
+        ? picked.map((it, i) => `<div class="yy-pr-item">
+            <h3>${i + 1}. ${esc(it.title)} <small style="font-weight:400;color:#555">（${esc(it.stage)}）</small></h3>
+            <p><b>原句：</b>${esc(it.sentence.replace(/[【】]/g, ''))}</p>
+            <p><b>标准直译：</b><b>${esc(it.translation)}</b></p>
+            <p><b>采分口诀：</b>${esc(it.mnemonic)}</p>
+          </div>`).join('')
+        : picked.map((it, i) => `<div class="yy-pr-item">
+            <h3>${i + 1}. 【${esc(it.topic)}】${esc(it.title)} <small style="font-weight:400;color:#555">（${esc(it.scene)}）</small></h3>
+            <p><b>普通 10 分句：</b>${esc(it.levels.lv10.en)}</p>
+            <p><b>高分 15 分句：</b><b>${esc(it.levels.lv15.en)}</b>（${esc(it.levels.lv15.cn)}）</p>
+            <p><b>万能模板：</b>${it.templates.map(t => `${esc(t.en)}`).join(' ｜ ')}</p>
+          </div>`).join('');
 
     const overlay = document.createElement('div');
     overlay.id = 'yyPrintOverlay';
@@ -650,10 +782,12 @@
       b.setAttribute('aria-selected', String(on));
     });
     if (state.tab === 'poems') stageEl.innerHTML = renderPoems();
+    else if (state.tab === 'translate') stageEl.innerHTML = renderTranslate();
     else if (state.tab === 'reading') stageEl.innerHTML = renderReading();
     else if (state.tab === 'clinic') stageEl.innerHTML = renderClinic();
     else if (state.tab === 'vocab') stageEl.innerHTML = renderVocab();
     else if (state.tab === 'grammar') stageEl.innerHTML = renderGrammar();
+    else if (state.tab === 'passage') stageEl.innerHTML = renderPassage();
     else if (state.tab === 'writing') stageEl.innerHTML = renderWriting();
     else if (state.tab === 'audio') stageEl.innerHTML = renderAudio();
     wireStage();
@@ -688,6 +822,30 @@
       if (blanks[state.pActiveSlot] && ch === blanks[state.pActiveSlot].blank) {
         const nextEmpty = blanks.findIndex((bl, bi) => state.pPicked[bi] !== bl.blank);
         if (nextEmpty >= 0) state.pActiveSlot = nextEmpty;
+      }
+      render();
+    }));
+
+    // translate
+    stageEl.querySelectorAll('[data-tr-kw]').forEach(b => b.addEventListener('click', () => {
+      state.tAns[Number(b.dataset.trKw)] = Number(b.dataset.trOpt);
+      render();
+    }));
+    stageEl.querySelector('#yyPrintTranslate')?.addEventListener('click', () => openPrintSheet('translate'));
+
+    // passage
+    stageEl.querySelectorAll('[data-ps-slot]').forEach(b => b.addEventListener('click', () => {
+      state.psActive = Number(b.dataset.psSlot) || 0;
+      render();
+    }));
+    stageEl.querySelectorAll('[data-ps-opt]').forEach(b => b.addEventListener('click', () => {
+      const lv = DATA.passage[state.idx.passage];
+      const blanks = lv.segments.filter(s => typeof s === 'object');
+      const opt = Number(b.dataset.psOpt);
+      state.psAns[state.psActive] = opt;
+      if (blanks[state.psActive] && opt === blanks[state.psActive].answer) {
+        const nextEmpty = blanks.findIndex((bl, bi) => state.psAns[bi] !== bl.answer);
+        if (nextEmpty >= 0) state.psActive = nextEmpty;
       }
       render();
     }));
@@ -777,7 +935,7 @@
   }));
 
   const initTab = new URLSearchParams(location.search).get('tab');
-  if (['poems', 'reading', 'clinic', 'vocab', 'grammar', 'writing', 'audio'].includes(initTab)) {
+  if (['poems', 'translate', 'reading', 'clinic', 'vocab', 'grammar', 'passage', 'writing', 'audio'].includes(initTab)) {
     state.tab = initTab;
   }
   render();
