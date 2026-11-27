@@ -1334,6 +1334,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-27', '《🎬 考点演播室》重磅上架历史初二上第 4 课《洋务运动》完整版（22 分 14 秒男女双主持，16 张高频考点自动弹横幅，前 10 分钟免费试看）；全科速记默写再扩容至 283 条（语文补齐至 60 条：新增《诫子书》《生于忧患》《马说》《白雪歌》、古今异义 TOP 15、6 大必考名著速览、古诗赏析与中考一类文升格法；英语补齐至 60 条：新增冠词/数词/反意疑问句/高频易混词、短文填空 10 大秒杀口诀、情景交际、听力抢分与 5 大作文主题金句）；同步升级「晴空海盐蓝」清爽视觉界面，全套《考点冲刺卷》改为已购完整版即永久免费全解锁。'],
   ['2026-11-27', '《语英提分工坊》重磅升级至 10 大实战台 166 关 ＋ 9 期中英双语真实音频：语文新增「📚 12 部中考必考名著导读排雷（附 A4 排雷手卡打印）」与 2 期女声听写（高频字音字形＋16 篇文言古今异义）；英语新增「🗣️ 12 关情景交际与补全对话」、4 期美式标准男女双声 MP3（不规则动词韵律/易混词/15 分作文金句跟读/6 大情景微对话），且全部英语实战台顶部常驻 🔊 朗读按钮，微信与手机端随时点听。'],
   ['2026-11-27', '《语英提分工坊》V2 扩容定型至 8 大实战台 142 关：新增语文「📜 中考 16 篇文言必考句精译」（逐词踩中古今异义/活用/倒装采分点，支持一键印 A4 精译手卡）与英语「📰 短文语法填空 & 还原句子（五选五）12 篇实战微短文」（配衔接线索高亮与英文朗读），全站语文 4 台 + 英语 4 台全题型打通。'],
   ['2026-11-27', '学习进度备份、云端同步与《本周孩子补缺战报》全面接入《小四门反死记硬背实验室》（57 关）和《语英提分工坊》（142 关）通关进度，换手机或平板恢复云端备份时两座实验室的闯关记录也会一并保留。'],
@@ -1603,7 +1604,7 @@ function contentStatsHTML() {
     real && `真题 ${real} 套`,
     `小四门 ${x4mCount} 题`,
     '语英/小四门 223 关工坊',
-    '253 条口诀默写',
+    '283 条口诀默写',
   ].filter(Boolean);
   return items.length ? `<p class="content-stats" aria-label="题库现有内容">${items.join(' · ')}</p>` : '';
 }
@@ -2022,15 +2023,15 @@ function syncPapers(stage = state.stage) {
   return (nationalCatalog || []).filter(p => p.sync && p.stage === stage).sort((a, b) => (a.order || 0) - (b.order || 0));
 }
 // 同步章节卷每套做了多少：题目 id 是 national-<paperId>-qNN
-// 3 人拼团优惠说明（一次发 3 个独立兑换码，团长私信享额外福利）
+// 3 人拼团优惠说明（一次发 3 个独立兑换码）
 function freeWayHTML() {
   if (paidAccess) return '';
   return `<details class="card fold-row free-way" data-free-way ${state.freeWayOpen ? 'open' : ''}>
-      <summary><b>👥 3 人拼团每人低至 ¥59.9</b><span>找 2 位同班家长组团，每人立省 ¥40，团长另有专属优惠 ›</span></summary>
+      <summary><b>👥 3 人拼团 · 每人 ¥59.9</b><span>找 2 位同班家长组团，每人立省 ¥40，一次领取 3 个独立码 ›</span></summary>
       <ol>
-        <li><b>3 人组团每人立省 ¥40：</b>单买原价 ¥99.9，找 2 位同班或同学家长凑齐 3 人，每人公开团购价仅需 <b>¥59.9</b>！</li>
+        <li><b>3 人组团每人立省 ¥40：</b>单买原价 ¥99.9，找 2 位同班或同学家长凑齐 3 人，每人仅需 <b>¥59.9</b>！</li>
         <li><b>发 3 个独立兑换码：</b>每个家庭独享 1 个 10 位兑换码，各自独立绑定 3 台设备与云端错题本同步，互不干扰。</li>
-        <li><b>想当团长发起 3 人团？</b>打开闲鱼搜索 <b>王者荣耀速度飞车</b> 私信「我要开 3 人团」，<b>团长另享额外专属福利</b>！</li>
+        <li><b>怎么开团？</b>由发起人打开闲鱼搜索 <b>王者荣耀速度飞车</b> 私信「我要开 3 人团」，统一对接登记并领取 3 个独立兑换码。</li>
       </ol>
       <p class="free-note">不想组团的个人买家，也可以点「开通完整版」走单人分享价（¥79.9，立省 ¥20）。</p>
     </details>`;
@@ -2205,7 +2206,7 @@ function x4mGroupHTML(queue, progress) {
         <button class="btn" type="button" data-mode="random">${icon('shuffle')} 随机</button>
         <button class="btn" type="button" data-mode="unfinished">只做未做题${banks ? ` · ${fmt.format(applyMode(queue, 'unfinished', progress).length)}` : ''}</button>
         <a class="btn primary" href="./lab-x4m.html">🎮 趣味记忆+故事</a>
-        <a class="btn" href="./key-points.html">${icon('book-open')} 253 条口诀默写</a>
+        <a class="btn" href="./key-points.html">${icon('book-open')} 283 条口诀默写</a>
         ${x4mOriginals.length ? `<button class="btn" type="button" data-national-open="${x4mOriginals[0].subject}" data-national-mode="paper">中考原卷</button>` : ''}
       </div>
     </div>
@@ -2459,7 +2460,7 @@ function x4mShowcaseCardHTML(compact = true) {
     </div>
     <div class="x4m-ml-foot">
       <a class="btn primary" href="./lab-x4m.html?tab=studio">▶ 试看历史演播室（第 1–3 课已上线）· 每集前 10 分钟免费 →</a>
-      <a class="btn" href="./key-points.html">📝 253 条带口诀 A4 默写纸</a>
+      <a class="btn" href="./key-points.html">📝 283 条带口诀 A4 默写纸</a>
       ${compact ? '<button type="button" class="btn" data-home-tab="x4m">刷 2,453 道小四门真题 ›</button>' : ''}
     </div>
   </section>`;

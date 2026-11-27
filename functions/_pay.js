@@ -8,7 +8,7 @@ const SKU_CONFIG = {
   xiaosimen_full: { scope: "xiaosimen", amountCents: 9990, friendPrice: 0, title: "爱丽克丝中考题库完整版（单买）" },
   xiaosimen_share: { scope: "xiaosimen", amountCents: 7990, friendPrice: 0, title: "爱丽克丝中考题库完整版（分享价）" },
   xiaosimen_friend: { scope: "xiaosimen", amountCents: 5990, friendPrice: 0, title: "爱丽克丝中考题库完整版（拼团价）" },
-  bundle: { scope: "bundle", amountCents: 10980, friendPrice: 0, title: "爱丽克丝双题库套餐（中考 + 考证）" },
+  bundle: { scope: "bundle", amountCents: 13980, friendPrice: 0, title: "爱丽克丝双题库套餐（中考 + 考证）" },
 };
 const CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
 
@@ -69,7 +69,7 @@ function payConfig(env) {
     ok: true,
     enabled: Boolean(provider),
     provider: provider || null,
-    prices: { full: 19.9, discount: 14.9, bundle: 29.8 },
+    prices: { full: 99.9, discount: 79.9, bundle: 139.8 },
   });
 }
 

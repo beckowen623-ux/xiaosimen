@@ -264,16 +264,12 @@
     line.append(ask);
     return line;
   }
-  const PROMISE = "每月至少更新一次，考前 2—3 个月加密更新。邀请成功 1 位朋友，就永久解锁全部卷子和以后的每一次更新。";
+  const PROMISE = "每月至少更新一次，考前 2—3 个月加密更新。已购完整版用户永久免费解锁全部《考点冲刺卷》及后续每一次更新。";
 
   function sprintCard(profile, message) {
-    const card = node("div", "", "referral-sprint" + (profile.sprint ? " unlocked" : ""));
+    const card = node("div", "", "referral-sprint unlocked");
     card.append(node("p", SPRINT_STORY[siteKey] || SPRINT_STORY.full, "sprint-story"), node("p", PROMISE, "sprint-promise"), extraNode());
-    if (profile.sprint) {
-      card.append(node("strong", "📝 冲刺卷已解锁"), button("📱 在线做 / 打印冲刺卷", () => openSprint(message)));
-    } else {
-      card.append(node("strong", "📝 冲刺卷 · 邀请 1 位朋友即可解锁"));
-    }
+    card.append(node("strong", "📝 考点冲刺卷已永久解锁（完整版专属权益）"), button("📱 在线做 / 打印冲刺卷", () => openSprint(message)));
     return card;
   }
 
@@ -412,7 +408,7 @@
     box.append(node("strong", "📮 把新卷子发给我，帮你抓考点"));
     if (!paid) {
       const hint = node("p", "", "referral-message");
-      box.append(node("p", "手上有新卷子？买了题库后就能在这里上传。被采用的，送冲刺卷永久解锁。", "upload-small"),
+      box.append(node("p", "手上有新卷子？开通完整版后可直接解锁全部冲刺卷，也能在这里上传新卷子一起共创高频考点。", "upload-small"),
         button("📷 上传卷子", () => {
           hint.replaceChildren(node("span", "购买并解锁题库后就能上传（已经买了的，先在本页输入兑换码解锁）。 "),
             button("我要购买 / 输入兑换码", () => window.dispatchEvent(new CustomEvent("quiz-sprint-buy"))));
@@ -420,7 +416,7 @@
       return box;
     }
     const text = UPLOAD_TEXT[key] || UPLOAD_TEXT.full;
-    box.append(node("p", text.body), node("p", "🎁 被采用的，送你冲刺卷永久解锁（和邀请成功 1 位朋友一样）。", "upload-gift"));
+    box.append(node("p", text.body), node("p", "✨ 欢迎一起共创题库：整理好的高频考点会免费更新进冲刺卷，所有完整版用户都能练。", "upload-gift"));
     const note = node("input", "", "upload-note");
     note.type = "text";
     note.maxLength = 100;
@@ -473,26 +469,8 @@
     return box;
   }
 
-  async function friendBanner(container) {
-    const code = incoming();
-    if (!code) return;
-    let offer = {};
-    try {
-      const response = await fetch("/api/access/friend-offer", { method: "POST", cache: "no-store" });
-      if (response.ok) offer = await response.json();
-    } catch {
-      // 没取到商品入口时，仍提示邀请码已记住。
-    }
-    const banner = node("div", "", "friend-banner");
-    banner.append(node("strong", "🎁 朋友邀请你：好友专享价 14.9 元（比原价省 5 元）"),
-      node("p", `先免费试用；觉得好再去闲鱼买好友价。买到兑换码后回到这里兑换，邀请码 ${code} 已自动带上。好友价和分享价不叠加，最低就是 14.9 元。`));
-    const actions = node("div", "", "referral-actions");
-    const status = node("p", "", "referral-message");
-    const buy = link("去闲鱼买好友价", offer.link);
-    if (buy) actions.append(buy);
-    if (offer.text) actions.append(button("复制闲鱼口令", () => copyText(offer.text, status)));
-    if (actions.childElementCount) banner.append(actions, status);
-    container.prepend(banner);
+  async function friendBanner() {
+    // 好友价与买后返现体系已退休，全站统一为简洁的分享价/拼团价，避免规则冲突。
   }
 
   function mountTeaser(container, key, options = {}) {
@@ -822,62 +800,24 @@
     panel.replaceChildren();
     if (!profile) return;
 
-    const site = targets[key];
     const target = targets[profile.target];
-    const url = new URL(site.url);
-    url.searchParams.set("from", "referral");
-    url.searchParams.set("invite", profile.code);
-    const share = lastShare = `我在用的${site.label}，推荐给你。\n点我的专属链接，可以先免费试，再用好友价 14.9 元买（省 5 元）：\n${url.href}\n你买完也会有自己的邀请链接，邀满 3 位朋友返现 15 元，等于免费用。\n（打不开或很慢的话，换个网络或多试几次就好）\n如果兑换时提示填邀请码，填 ${profile.code}`;
     const message = node("p", "", "referral-message");
     message.setAttribute("role", "status");
-    const left = Math.max(0, profile.required - profile.invited);
-    const progress = profile.invited >= profile.required
-      ? `已经有 ${profile.invited} 位朋友用你的邀请码买了题库，两档奖励都拿到了。`
-      : profile.invited > 0
-        ? `已经有 ${profile.invited} 位朋友用你的邀请码买了题库，冲刺卷已解锁；再邀 ${left} 位，可领大奖。`
-        : "还没有朋友用你的邀请码。邀 1 位解锁冲刺卷；邀满 3 位返现 15 元，题库等于免费。";
 
     const box = node("details", "", "referral-box");
     try { box.open = localStorage.getItem(OPEN_KEY) === "1"; } catch { /* 隐私模式 */ }
     box.addEventListener("toggle", () => { try { localStorage.setItem(OPEN_KEY, box.open ? "1" : "0"); } catch { /* 隐私模式 */ } });
-    const done = Math.min(profile.invited, profile.required);
     const summary = node("summary", "", "referral-summary");
-    summary.append(node("span", "🎁 邀请好友", "referral-title"),
-      node("span", done >= profile.required ? `已邀 ${done}/${profile.required} · 奖励已到` : `邀满 ${profile.required} 位返现 15 元 · 已邀 ${done}/${profile.required}`, "referral-badge"));
+    summary.append(node("span", "📝 完整版专属 · 考点冲刺卷", "referral-title"),
+      node("span", "已永久解锁 · 在线做/可打印", "referral-badge"));
     box.append(summary);
-
-    const steps = node("ol", "", "referral-steps");
-    steps.append(
-      node("li", "点“生成转发海报”，长按保存后转发到朋友圈、家长群；或者点“复制邀请文案”直接发给朋友。海报上的二维码带着你的邀请码。"),
-      node("li", "朋友点开链接，页面上就有好友价 14.9 元的购买入口，省 5 元。"),
-      node("li", "朋友买到兑换码、解锁题库后，自动算你邀请成功，不用你做任何事。"),
-      node("li", `邀请成功 1 位：马上解锁冲刺卷${sprintHint(key)}，以后每月的更新也永久免费。`),
-      node("li", `邀请成功 ${profile.required} 位：这里会出现两个选项，二选一——返现 ${profile.cashAmount || 15} 元，或送你${target.label}完整版。`),
-      node("li", `选返现的：上传你的微信或支付宝收款码，作者确认后 24 小时内打款，并在这里回传打款截图。`));
-    box.append(node("p", progress, "referral-progress"));
     box.append(sprintCard(profile, message));
-    box.append(steps, node("strong", profile.code, "referral-code"));
-    const actions = node("div", "", "referral-actions");
-    actions.append(button("复制邀请文案", () => copyText(share, message)),
-      button("生成转发海报", () => { void saveCard(profile.code, site, url, message); }));
-    box.append(actions);
-
-    const big = bigReward(panel, profile, key, target, message);
-    if (big) box.append(big);
-    if (profile.rewardCode) {
+    if (profile.rewardCode && target) {
       const gift = node("div", "", "referral-offer");
       const redeem = link("去" + target.label + "兑换", target.url);
-      gift.append(node("strong", "奖励兑换码 " + profile.rewardCode),
+      gift.append(node("strong", "历史奖励兑换码 " + profile.rewardCode),
         button("复制奖励码", () => copyText(profile.rewardCode, message)), redeem);
       box.append(gift);
-    } else {
-      const offer = node("div", "", "referral-offer");
-      offer.append(node("strong", "已购专享 · " + target.label + " 9.9 元"));
-      const purchase = link("查看闲鱼商品", profile.offer?.link);
-      if (purchase) offer.append(purchase);
-      if (profile.offer?.text) offer.append(button("复制闲鱼口令", () => copyText(profile.offer.text, message)));
-      if (!purchase && !profile.offer?.text) offer.append(node("p", "购买时可向作者询问已购专享入口。"));
-      box.append(offer);
     }
     box.append(message);
     panel.append(box);

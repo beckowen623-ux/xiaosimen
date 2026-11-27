@@ -1,5 +1,5 @@
 export const REFERRAL_THRESHOLD = 3;
-export const SPRINT_THRESHOLD = 1;
+export const SPRINT_THRESHOLD = 0;
 export const CASH_REWARD = 15;
 const alphabet = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
 

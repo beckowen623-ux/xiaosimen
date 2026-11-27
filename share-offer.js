@@ -181,9 +181,8 @@
     const dialog = box.closest("dialog");
     if (dialog && !dialog.open) return;
     box.dataset.shareMounted = "1";
-    const price = box.dataset.price || "14.9";
-    const invite = invitedCode();
-    if (invite) { friendNotice(box, invite, price); return; }
+    const price = box.dataset.price || "49.9";
+    const save = box.dataset.save || (Number(price) >= 70 ? "20" : "10");
     const message = box.dataset.message || "";
     box.classList.add("share-offer");
     box.replaceChildren(el("p", "share-offer-loading", "正在生成你的专属分享链接……"));
@@ -192,15 +191,15 @@
       box.replaceChildren(el("p", "share-offer-tip", "分享优惠暂时加载不了，请稍后刷新再试；也可以在闲鱼联系作者。"));
       return;
     }
-    render(box, data, price, message);
+    render(box, data, price, message, save);
   }
 
-  function render(box, data, price, message) {
+  function render(box, data, price, message, save = "10") {
     const link = shareLink(data.id);
     const text = (message ? message + "\n" + link : link) + "\n（打不开或很慢的话，换个网络或多试几次就好）";
     const head = el("div", "share-offer-head");
-    head.append(el("strong", "", "分享价（比原价省 5 元）"), el("b", "", "¥" + price));
-    const intro = el("p", "", `把下面这段话（带你的专属链接）发到朋友圈、学习群或家长群。有 ${data.required} 位不同的朋友点开链接，就会解锁分享验证码；在闲鱼把验证码发给作者，按 ¥${price} 购买。分享价和好友价不叠加，最低就是 ¥${price}。`);
+    head.append(el("strong", "", `分享价（比原价立省 ${save} 元）`), el("b", "", "¥" + price));
+    const intro = el("p", "", `把下面这段话（带你的专属链接）发到朋友圈、学习群或家长群。有 ${data.required} 位不同的朋友点开链接，就会解锁 6 位分享验证码；在闲鱼把验证码发给作者，按 ¥${price} 改价购买。`);
     const pre = el("div", "share-offer-text", text);
     const copyBtn = el("button", "share-offer-btn primary", "复制分享文案");
     copyBtn.type = "button";
