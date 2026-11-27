@@ -1,13 +1,13 @@
 :root {
-  --bg: #f7f3eb;
-  --paper: #fffdf9;
-  --ink: #2d2722;
-  --muted: #70665c;
-  --line: #e6ddd0;
-  --brand: #7d5a3c;
-  --brand-soft: #f3ebe0;
-  --gold: #9a5b04;
-  --gold-soft: #fdf6e7;
+  --bg: #f7f8fa;
+  --paper: #ffffff;
+  --ink: #1e293b;
+  --muted: #64748b;
+  --line: #e4e8ef;
+  --brand: #4f6d8a;
+  --brand-soft: #eff4f8;
+  --gold: #8c6d38;
+  --gold-soft: #faf7f0;
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
@@ -15,22 +15,22 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); fo
 a { color: var(--brand); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.m-topbar { position: sticky; top: 0; z-index: 20; background: rgba(247, 243, 235, .92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.m-topbar { position: sticky; top: 0; z-index: 20; background: rgba(247, 248, 250, .92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .m-topbar-inner { max-width: 1020px; margin: 0 auto; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .m-back { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--brand); font-size: 14px; }
 .m-top-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 
 .m-wrap { max-width: 1020px; margin: 0 auto; padding: 16px 14px 48px; }
-.m-hero { background: linear-gradient(135deg, #7d5a3c 0%, #583d26 100%); color: #fff; border-radius: 16px; padding: 20px 18px; margin-bottom: 14px; }
-.m-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; background: rgba(255, 255, 255, .18); color: #fce7be; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+.m-hero { background: linear-gradient(135deg, #4f6d8a 0%, #3a546d 100%); color: #fff; border-radius: 16px; padding: 20px 18px; margin-bottom: 14px; }
+.m-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; background: rgba(255, 255, 255, .16); color: #f6ead4; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
 .m-hero h1 { margin: 0 0 8px; font-size: clamp(20px, 4.8vw, 28px); line-height: 1.3; }
-.m-hero p { margin: 0 0 14px; color: #f2e6d6; font-size: 14px; }
+.m-hero p { margin: 0 0 14px; color: #e2ecf4; font-size: 14px; }
 .m-hero-btns { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .m-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; }
-.m-btn:hover { background: #f3ebe0; border-color: #d6c3aa; text-decoration: none; }
+.m-btn:hover { background: #eff4f8; border-color: #c4d2e0; text-decoration: none; }
 .m-btn.primary { background: var(--brand); border-color: var(--brand); color: #fff; }
-.m-btn.primary:hover { background: #5c4028; }
+.m-btn.primary:hover { background: #3a546d; }
 .m-btn.gold { background: #ffe5aa; border-color: #f3cc7a; color: #2b2108; }
 .m-btn.gold:hover { background: #fcd888; }
 .m-btn.ghost { background: rgba(255, 255, 255, .12); border-color: rgba(255, 255, 255, .28); color: #fff; }
@@ -65,10 +65,10 @@ a:hover { text-decoration: underline; }
 .m-qcount { font-size: 12px; color: var(--muted); }
 
 /* 双层物理零透字遮罩 */
-.m-blank { display: inline; padding: 1px 6px; margin: 0 2px; border-radius: 5px; border: 1px solid #7d5a3c; background: #7d5a3c; cursor: pointer; font: inherit; vertical-align: baseline; }
+.m-blank { display: inline; padding: 1px 6px; margin: 0 2px; border-radius: 5px; border: 1px solid #4f6d8a; background: #4f6d8a; cursor: pointer; font: inherit; vertical-align: baseline; }
 .m-blank .mask-inner { opacity: 0; visibility: hidden; color: transparent; -webkit-text-fill-color: transparent; user-select: none; }
-.m-blank.is-open { background: #f3ebe0; border-color: #d6c3aa; }
-.m-blank.is-open .mask-inner { opacity: 1; visibility: visible; color: #5c4028; -webkit-text-fill-color: #5c4028; font-weight: 700; user-select: text; }
+.m-blank.is-open { background: #eff4f8; border-color: #c4d2e0; }
+.m-blank.is-open .mask-inner { opacity: 1; visibility: visible; color: #3a546d; -webkit-text-fill-color: #3a546d; font-weight: 700; user-select: text; }
 
 .m-foot-cta { margin-top: 22px; padding: 18px; border-radius: 14px; background: var(--paper); border: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
 .m-foot-cta b { display: block; font-size: 16px; margin-bottom: 4px; }

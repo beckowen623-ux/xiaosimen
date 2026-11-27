@@ -1,5 +1,5 @@
 /* 知识点补缺：首页主线卡片 + 知识点页 + 《孩子学情体检单》 + 教研风 A4 打印 */
-.kp-home { margin: 14px 0 22px; padding: 22px; border: 2px solid var(--green); border-radius: 16px; background: linear-gradient(180deg, #fffdf9 0%, #f8f2e7 100%); box-shadow: 0 8px 24px rgba(92, 64, 40, .06); }
+.kp-home { margin: 14px 0 22px; padding: 22px; border: 1.5px solid #cbd7e4; border-radius: 16px; background: linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%); box-shadow: 0 6px 20px rgba(30, 41, 59, .05); }
 .kp-home-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .kp-home-head h2 { font-family: var(--serif); font-size: clamp(19px, 3.2vw, 25px); margin: 0; color: var(--green-dark); line-height: 1.35; }
 .kp-badge { flex: none; background: var(--seal); color: #fff; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; letter-spacing: .5px; }
