@@ -666,9 +666,14 @@ input[type=search]::placeholder { color: #67736c; }
 .sync-rows .paper-row span { min-width: 0; font-weight: 600; line-height: 1.35; }
 .sync-rows .paper-row small { display: block; font-weight: 400; }
 .sync-rows .paper-row .btn { min-height: 34px; padding: 0 10px; font-size: 13px; white-space: nowrap; }
-.slim-notice { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
+.slim-notice { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 14px; padding: 12px 14px; }
+.slim-notice > div { flex: 1 1 260px; min-width: 0; }
 .slim-notice p { margin: 0; font-size: 13px; line-height: 1.6; }
 .slim-notice .btn { flex: none; white-space: nowrap; }
+@media (max-width: 640px) {
+  .slim-notice { flex-direction: column; align-items: stretch; }
+  .slim-notice .btn { width: 100%; margin-top: 2px; }
+}
 .update-card > summary b { white-space: nowrap; }
 .referral-fold { margin-top: 10px; }
 .referral-fold > summary { color: var(--muted); font-size: 14px; cursor: pointer; }
