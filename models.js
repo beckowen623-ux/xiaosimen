@@ -139,7 +139,7 @@
     if (printMeta) {
       printMeta.textContent = paidAccess
         ? `爱丽克丝中考题库（x4m.cc.cd）· 完整版 A4 压轴模型口诀速查手册 · 共 ${printed} 个模型`
-        : `爱丽克丝中考题库（x4m.cc.cd）· 免费预览版（精选前 ${printed} 大镇站模型，完整版 ¥19.9 解锁全套 ${cards.length} 个模型无限打印）`;
+        : `爱丽克丝中考题库（x4m.cc.cd）· 免费预览版（精选前 ${printed} 大镇站模型，完整版 ¥99.9 / 3 人团 ¥59.9 解锁全套 ${cards.length} 个模型无限打印）`;
     }
     if (printLockNote) printLockNote.classList.toggle('is-shown', !paidAccess);
     window.print();

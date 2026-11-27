@@ -32,10 +32,10 @@
   <script src="./share-offer.js?v=3" defer></script>
   <script src="./national-exams.js?v=7" defer></script>
   <link rel="stylesheet" href="./knowledge.css?v=4">
-  <script src="./knowledge.js?v=8" defer></script>
+  <script src="./knowledge.js?v=9" defer></script>
   <!-- 真题目录（早鸟卷、同步卷、小升初都靠它）和页面脚本同时下载，不用等脚本跑起来再下；版本号发布时自动填 -->
   <link rel="preload" as="script" href="data/national-catalog.js?v=__NATIONAL_VERSION__">
-  <script src="./app.js?v=44" defer></script>
+  <script src="./app.js?v=45" defer></script>
   <!-- 第二次打开不用等网络：脚本、题库存在本机（sw.js），网页 3 秒没回来就用上次的版本 -->
   <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', function () { navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).catch(function () {}); });</script>
 </head>
@@ -84,7 +84,7 @@
         <button class="btn" id="cloudLoadBtn" type="button">从云端恢复</button>
       </div>
       <div class="dialog-actions" id="cloudLockedActions">
-        <button class="btn primary" id="cloudUnlockBtn" type="button">解锁云端同步（¥19.9）</button>
+        <button class="btn primary" id="cloudUnlockBtn" type="button">解锁云端同步（¥99.9 · 3 人团低至 ¥59.9）</button>
       </div>
       <p id="cloudSyncStatus" class="muted" role="status"></p>
     </section>
@@ -110,17 +110,17 @@
     <button class="btn text-button redeem-jump" type="button" id="redeemJump">已经买了？直接填兑换码 ↓</button>
     <ul class="unlock-trust" aria-label="核心权益">
       <li>✓ 作者自家孩子同步自用，本次期中从年级中上游冲进名列前茅</li>
-      <li>✓ 一次买断 ¥19.9，后期会调价，已购长期不限使用</li>
-      <li>✓ 含数理化 395 点/59 大压轴模型 ＋ 小四门演播室/57 关 ＋ 语英工坊 142 关 ＋ 无限 A4 打印</li>
-      <li>✓ 3 台设备共用 + 云端错题本同步 + 后续新题免费更新</li>
+      <li>✓ 一次买断 ¥99.9（3 人拼团每人低至 ¥59.9），初一用到初三</li>
+      <li>✓ 含数理化 395 点/59 大压轴模型 ＋ 小四门演播室/57 关 ＋ 语英工坊 166 关 ＋ 9 期中英音频</li>
+      <li>✓ 3 台设备共用 + 云端错题本同步 + 后续新课新题免费更新</li>
     </ul>
     <div class="author-use-note">
-      <b>👨‍👩‍👧 写给自家孩子用的题库 · 期中亲测从年级中上游冲进名列前茅</b>
-      <span>这不是外包凑出来的模板题库，是我为了解决自家孩子偏科和错题反复错亲手做、天天在用的工具。孩子按「3 分钟测弱项 → 4 步微课学透 → 印 A4 补缺卷 → 错题 1/3/7 天清零」这一套跑下来，这次期中成绩直接从年级中上游冲进名列前茅。每天都在跟着孩子进度持续打磨完善，后期会随内容扩充逐步调价；现在 ¥19.9 一次买断用到中考，绝不二次收费。</span>
+      <b>👨‍👩‍👧 写给自家孩子用的全科题库 · 期中亲测从年级中上游冲进名列前茅</b>
+      <span>这不是外包凑出来的模板题库，是我为了解决自家孩子偏科和错题反复错亲手做、天天在用的全科提分系统。包含小四门《考点演播室》视频与闯关、数理化 395 点与 59 大名师压轴模型、《语英提分工坊》10 大实战台 166 关与 9 期中英双语音频、全科 253 条带口诀 A4 默写纸。一次买断用到中考，绝不二次收费；找 2 位同班家长 3 人组团每人仅需 ¥59.9！</span>
     </div>
     <div class="unlock-compare" aria-label="性价比对比">
-      <div><span>纸质教辅 / 单科练习册</span><b>¥35～50 / 本</b><small>做完即废，无自动错题复习</small></div>
-      <div class="is-best"><span>爱丽克丝中考题库完整版</span><b>¥19.9 早期买断价</b><small>后期将调价 · 已购初一用到初三不限使用</small></div>
+      <div><span>买齐初中全科教辅 / 1 节辅导课</span><b>¥300～600+</b><small>做完即废，无视频/音频与自动错题复习</small></div>
+      <div class="is-best"><span>爱丽克丝中考题库完整版</span><b>¥99.9（3 人团 ¥59.9/人）</b><small>初一用到初三 · 3 台设备云端同步 · 后续免费更新</small></div>
     </div>
     <div class="unlock-rating-bar">
       <button type="button" class="rating-thumb-btn" id="ratingProofBtn" title="点击放大查看闲鱼 100% 好评原图">
@@ -138,8 +138,8 @@
     </ol>
     <div class="access-offers">
       <section id="schoolOffer" class="offer-primary">
-        <h3>最省心 · 直接买完整版 ¥19.9 <span class="offer-badge">后期调价 · 已购不限用</span></h3>
-        <p class="muted offer-note">作者孩子自用、每天持续完善：一次解锁全科三大主线——小四门《考点演播室》双主持视频＋57 关反死记硬背闯关＋6 期专属女声故事、数理化 395 个知识点与 59 大名师压轴模型（4 步通关微课）与 125 道解答大题、《语英提分工坊》8 大实战台 142 关（古诗易错字/16 篇文言精译/阅读采分点/短文填空还原/英语作文升格）＋3 期女声听写、无水印 A4 补缺卷与全科 253 条带口诀默写纸无限打印、71 套同步章节卷、全国真题手机刷题与 3 台云端同步。</p>
+        <h3>单人完整版 ¥99.9 <span class="offer-badge">3 人拼团低至 ¥59.9/人</span></h3>
+        <p class="muted offer-note">作者孩子自用、每天持续完善：一次解锁全科三大主线——小四门《考点演播室》双主持视频＋57 关反死记硬背闯关＋6 期专属女声故事、数理化 395 个知识点与 59 大名师压轴模型（4 步通关微课）与 125 道解答大题、《语英提分工坊》10 大实战台 166 关（古诗易错字/16 篇文言精译/12 部名著排雷/阅读采分点/英语短文还原与情景对话/作文升格）＋9 期中英双语真实音频、无水印 A4 补缺卷与全科 253 条带口诀默写纸无限打印、71 套同步章节卷与 3 台云端同步。</p>
         <button class="btn primary" type="button" id="directPaySchool" hidden>微信/支付宝直接买（付款秒解锁）</button>
         <div class="offer-cta-row">
           <button class="btn primary" type="button" hidden>复制闲鱼口令（推荐）</button>
@@ -152,30 +152,30 @@
           <dt>1. 孩子用的不是人教版（北师大/苏科/沪科/浙教）能用吗？</dt>
           <dd>能用。数理化 395 个知识点与 59 大名师压轴模型全国通用，直接在搜索框输考点名或俗称（如婆罗摩笈多、阿氏圆、安阻法、万能瓶）1 秒直达，不受教材编排顺序限制。</dd>
           <dt>2. 换手机、平板或清理微信缓存，做题记录和错题本会丢吗？</dt>
-          <dd>不会。完整版支持 3 台设备共用，并自带按兑换码一键云端备份与恢复错题本，随时也可免费下载本机 JSON 备份文件。</dd>
+          <dd>不会。完整版支持 3 台设备共用，并自带按兑换码一键云端备份与恢复（错题本与两座实验室通关进度一并同步），随时也可免费下载本机 JSON 备份文件。</dd>
           <dt>3. 在闲鱼下单后怎么发货、怎么激活？</dt>
           <dd>点上方「复制闲鱼口令」打开闲鱼拍下后，会发你一组 10 位兑换码，回到本弹窗底部粘贴点「解锁」立刻永久生效，一次买断用到中考，绝无二次收费。</dd>
         </dl>
       </details>
-      <details class="share-save-fold" id="shareSaveFold">
-        <summary>想省 5 元（¥14.9）或邀 3 人返现免单？展开看玩法 ›</summary>
-        <section id="shareOffer">
-          <div data-share-offer data-price="14.9" data-message="我在用爱丽克丝中考题库给孩子全科提分：作者写给自家孩子用、期中考冲进名列前茅，包含小四门《考点演播室》视频+57关闯关、数理化395点与59大压轴模型秒搜、《语英提分工坊》8大实战台142关（古诗易错字/文言精译/阅读采分点/英语短文填空与作文升格）和全科253条带口诀A4默写纸。点链接先免费试：" data-poster-title="爱丽克丝中考题库" data-poster-sub="自家孩子亲用期中冲进名列前茅 · 全科三大提分主线" data-poster-points="作者自家孩子同步自用，本次期中从年级中上游冲进名列前茅|小四门《考点演播室》双主持视频＋57 关反死记硬背闯关＋6 期女声故事|数理化 395 个知识点与 59 大压轴模型秒搜直达＋125 道规范解答大题|《语英提分工坊》142 关（古诗易错字/文言精译/阅读采分点/英语短文与作文升格）＋3 期听写|一键打印教研风 A4 补缺卷与全科 253 条带口诀默写纸，3 台设备云端同步" data-poster-colors="#164e3f,#0e352a"></div>
-        </section>
-        <details class="free-way" data-free-way>
-          <summary><b>🎁 买后邀 3 位朋友返现 15 元</b><span>按 14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元 ›</span></summary>
+      <details class="share-save-fold" id="shareSaveFold" open>
+        <summary>👥 3 人拼团每人低至 ¥59.9（立省 ¥40）｜或单人分享省 ¥20 ›</summary>
+        <details class="free-way" data-free-way open>
+          <summary><b>👥 3 人组团最划算 · 每人低至 ¥59.9（团长另有专属优惠）</b><span>一次发 3 个独立兑换码，各用 3 台设备 ›</span></summary>
           <ol>
-            <li><b>先按 14.9 买：</b>把专属链接发到家长群，3 位朋友点开就能按 14.9 买；点朋友邀请链接进来的，直接买好友价 14.9。</li>
-            <li><b>买完你也有邀请链接：</b>解锁后首页会出现你的专属邀请链接和二维码海报，朋友点你的链接按 14.9 买也省 5 元。</li>
-            <li><b>邀满 3 位返现 15 元：</b>作者确认后 24 小时内打到微信或支付宝，也可换考证题库完整版。</li>
+            <li><b>找 2 位同班/同学家长一起拼：</b>3 人成团每人公开团购价 <b>¥59.9</b>，比单买（¥99.9）每人立省 <b>¥40</b>！</li>
+            <li><b>发 3 个独立兑换码：</b>每个家庭独享 1 个 10 位兑换码，各自独立激活 3 台设备＋独立云端错题本同步，互不干扰。</li>
+            <li><b>想当团长发起 3 人团？</b>直接打开闲鱼搜索 <b>王者荣耀速度飞车</b> 私信「我要开 3 人团」，<b>团长另享额外专属福利</b>！</li>
           </ol>
-          <p class="free-note">朋友用你的邀请码兑换题库才算邀请成功；双题库套餐不参加邀请奖励。</p>
+          <p class="free-note">一次下单发 3 个独立码，无需等待拼单或繁琐操作，拿到码立刻各自兑换生效。</p>
         </details>
+        <section id="shareOffer">
+          <div data-share-offer data-price="79.9" data-message="我在用爱丽克丝中考题库给孩子全科提分：作者写给自家孩子用、期中考冲进名列前茅，包含小四门《考点演播室》视频+57关闯关、数理化395点与59大压轴模型秒搜、《语英提分工坊》10大实战台166关+9期中英双语音频和全科253条带口诀A4默写纸。3人拼团每人低至59.9，点链接先免费试：" data-poster-title="爱丽克丝中考题库" data-poster-sub="自家孩子亲用期中冲进名列前茅 · 全科三大提分主线" data-poster-points="作者自家孩子同步自用，本次期中从年级中上游冲进名列前茅|小四门《考点演播室》双主持视频＋57 关反死记硬背闯关＋6 期女声故事|数理化 395 个知识点与 59 大压轴模型秒搜直达＋125 道规范解答大题|《语英提分工坊》166 关（古诗/文言/12 部名著/英语短文对话作文升格）＋9 期中英音频|一键打印教研风 A4 补缺卷与全科 253 条带口诀默写纸，3 台设备云端同步" data-poster-colors="#164e3f,#0e352a"></div>
+        </section>
       </details>
       <section id="bundleOffer">
-        <h3>双题库套餐 ¥29.8 <span class="offer-badge">家长+孩子一起省 ¥10</span></h3>
-        <p class="muted offer-note">中考题库 + <b>爱丽克丝考证题库</b>（初级/中级会计、中级审计、软考、税务师，tinawin.cc.cd），家里大人在考证一起买更划算。</p>
-        <button class="btn primary" type="button" id="directPayBundle" hidden>微信/支付宝直接买套餐 ¥29.8</button>
+        <h3>双题库套餐 ¥109.8 <span class="offer-badge">中考+考证合买省 ¥10</span></h3>
+        <p class="muted offer-note">中考题库（¥99.9）+ <b>爱丽克丝考证题库</b>（¥19.9，初级/中级会计、中级审计、软考、税务师，tinawin.cc.cd），家里大人在考证一起买更划算。</p>
+        <button class="btn primary" type="button" id="directPayBundle" hidden>微信/支付宝直接买套餐 ¥109.8</button>
         <div class="offer-cta-row">
           <a class="btn" target="_blank" rel="noopener noreferrer" hidden>去闲鱼购买套餐</a>
           <button class="btn" type="button" hidden>复制套餐口令</button>
@@ -183,14 +183,14 @@
       </section>
     </div>
     <div class="direct-pay-box" id="directPayBox" hidden role="status"></div>
-    <p class="seller-fallback">闲鱼链接打不开？打开闲鱼 App，搜索用户 <b>王者荣耀速度飞车</b> <button class="btn text-button" type="button" id="copySeller">复制用户名</button></p>
+    <p class="seller-fallback">闲鱼链接打不开或咨询 3 人团长价？打开闲鱼 App，搜索用户 <b>王者荣耀速度飞车</b> <button class="btn text-button" type="button" id="copySeller">复制用户名</button></p>
     <details class="price-rules-fold">
-      <summary>查看原价 19.9 / 分享价 14.9 / 好友价说明</summary>
+      <summary>查看单买 ¥99.9 / 分享价 ¥79.9 / 3 人拼团说明</summary>
       <div class="price-rules">
-        <p><b>原价 19.9</b>：直接在闲鱼拍，拿到兑换码填在下面就行，<b>不用填邀请码</b>。</p>
-        <p><b>分享价 14.9</b>：把上面的专属链接发到朋友圈、家长群或学习群，3 位朋友点开后解锁验证码，在闲鱼发给作者按 14.9 买，<b>不用填邀请码</b>。</p>
-        <p><b>好友价 14.9</b>：只限点朋友的专属邀请链接进来的新用户；兑换时要填朋友的邀请码。没有邀请链接就按原价买或分享后买。</p>
-        <p><b>优惠不叠加</b>：三种价格只能选一种，最低 14.9。点朋友邀请链接进来的，直接买好友价就行，不用再分享。</p>
+        <p><b>单买原价 ¥99.9</b>：直接在闲鱼拍，拿到兑换码填在下面即可永久解锁，<b>不用填邀请码</b>。</p>
+        <p><b>单人分享价 ¥79.9（立省 ¥20）</b>：把上面的专属链接发到朋友圈或家长群，3 位朋友点开后解锁 6 位验证码，在闲鱼发给作者按 ¥79.9 买。</p>
+        <p><b>👥 3 人拼团价（每人低至 ¥59.9）</b>：找 2 位家长一起组团，一次性领取 3 个独立兑换码，每人各省 ¥40；在闲鱼私信作者发起 3 人团，团长另有专属优惠。</p>
+        <p><b>优惠不叠加</b>：以上优惠方案任选其一，不可叠加使用。</p>
       </div>
     </details>
     <details class="buy-faq">
@@ -208,14 +208,14 @@
         <input type="text" id="accessCode" maxlength="64" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required>
         <button class="btn primary" type="submit">兑换</button>
       </div>
-      <details class="referral-fold" id="inviteFold"><summary>按好友价 14.9 买的？点这里填邀请码</summary>
-      <label class="referral-input">邀请码（ALIX- 开头，问邀请你的朋友要；原价、分享价买的不用填）<input id="inviteCode" type="text" maxlength="13" autocomplete="off" autocapitalize="characters"></label></details>
+      <details class="referral-fold" id="inviteFold" hidden><summary>已有邀请码？（可选填）</summary>
+      <label class="referral-input">邀请码（ALIX- 开头，普通单买与 3 人拼团均不用填）<input id="inviteCode" type="text" maxlength="13" autocomplete="off" autocapitalize="characters"></label></details>
     </form>
     <p id="redeemMessage" class="muted" role="status"></p>
   </dialog>
   <dialog class="dialog video-dialog" id="demoDialog" aria-label="52 秒全科三大主线演示">
     <form method="dialog"><button class="btn text-button" aria-label="关闭演示视频">关闭</button></form>
-    <video id="demoVideo" controls playsinline preload="none" data-poster="./assets/video/zhongkao-demo-poster.jpg?v=3" data-src="./assets/video/zhongkao-demo.mp4?v=3"></video>
+    <video id="demoVideo" controls playsinline preload="none" data-poster="./assets/video/zhongkao-demo-poster.jpg?v=4" data-src="./assets/video/zhongkao-demo.mp4?v=4"></video>
   </dialog>
   <dialog class="dialog" id="claimConfirmDialog" aria-labelledby="claimConfirmTitle">
     <div class="dialog-head">

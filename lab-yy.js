@@ -40,7 +40,7 @@
   const loadProg = () => { try { return JSON.parse(localStorage.getItem(PROG_KEY) || '{}') || {}; } catch { return {}; } };
   const saveProg = (p) => { try { localStorage.setItem(PROG_KEY, JSON.stringify(p)); } catch {} };
 
-  const DATA = window.YY_LAB_DATA || { poems: [], translate: [], reading: [], clinic: [], vocab: [], grammar: [], passage: [], writing: [], audio: [] };
+  const DATA = window.YY_LAB_DATA || { poems: [], translate: [], classics: [], reading: [], clinic: [], vocab: [], grammar: [], passage: [], dialogue: [], writing: [], audio: [] };
   const prog = loadProg();
   const canSpeak = typeof window !== 'undefined' && 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
 
@@ -64,13 +64,15 @@
 
   const state = {
     tab: 'poems',
-    idx: { poems: 0, translate: 0, reading: 0, clinic: 0, vocab: 0, grammar: 0, passage: 0, writing: 0 },
+    idx: { poems: 0, translate: 0, classics: 0, reading: 0, clinic: 0, vocab: 0, grammar: 0, passage: 0, dialogue: 0, writing: 0 },
     // poems
     pActiveSlot: 0,
     pPicked: {},
     pMaskMode: false,
     // translate
     tAns: {},
+    // classics
+    clChoice: -1,
     // reading
     rPicked: new Set(),
     rChecked: false,
@@ -87,21 +89,24 @@
     // passage
     psActive: 0,
     psAns: {},
+    // dialogue
+    dChoice: -1,
     // writing
     wTier: 'lv10',
     wBuildAns: {},
     // audio
+    audioFilter: 'all',
     audioId: (DATA.audio?.[0]?.id) || 'yy-ep01',
     audioRate: 1,
     audioMask: false,
   };
 
   function allLevelIds() {
-    return ['poems', 'translate', 'reading', 'clinic', 'vocab', 'grammar', 'passage', 'writing'].flatMap(k => (DATA[k] || []).map(x => x.id));
+    return ['poems', 'translate', 'classics', 'reading', 'clinic', 'vocab', 'grammar', 'passage', 'dialogue', 'writing'].flatMap(k => (DATA[k] || []).map(x => x.id));
   }
   function updateProgress() {
     const ids = allLevelIds();
-    const total = ids.length || 142;
+    const total = ids.length || 166;
     const done = ids.filter(id => prog[id]).length;
     if (progSummary) progSummary.textContent = `已攻克 ${done} / ${total} 关`;
     if (progFill) progFill.style.width = `${Math.round((done / total) * 100)}%`;
@@ -118,11 +123,13 @@
   function resetLevel(tab) {
     if (tab === 'poems') { state.pActiveSlot = 0; state.pPicked = {}; }
     else if (tab === 'translate') { state.tAns = {}; }
+    else if (tab === 'classics') { state.clChoice = -1; }
     else if (tab === 'reading') { state.rPicked = new Set(); state.rChecked = false; }
     else if (tab === 'clinic') { state.cWenyanAns = {}; state.cBugPicked = -1; state.cTypePicked = -1; }
     else if (tab === 'vocab') { state.vAns = {}; }
     else if (tab === 'grammar') { state.gClueFound = false; state.gWrongClue = -1; state.gChoice = -1; }
     else if (tab === 'passage') { state.psActive = 0; state.psAns = {}; }
+    else if (tab === 'dialogue') { state.dChoice = -1; }
     else if (tab === 'writing') { state.wTier = 'lv10'; state.wBuildAns = {}; }
   }
 
@@ -140,9 +147,9 @@
     return `<div class="yy-lock-box">
       <span class="yy-chip gold">前 ${freeCnt} 关已免费体验</span>
       <h3>解锁全部 ${totalCnt} 关「${esc(moduleName)}」</h3>
-      <p>开通爱丽克丝中考题库完整版（¥19.9 一次买断），立即解锁《语英提分工坊》全 114 关 ＋ 3 期女声听写 ＋ 全科 253 条带口诀 A4 默写纸 ＋ 小四门《考点演播室》＋ 数理化 395 点与 59 大压轴模型，绝不二次收费。</p>
+      <p>开通爱丽克丝中考题库完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人，一次买断用到中考），立即解锁《语英提分工坊》全 166 关 ＋ 9 期中英双语音频 ＋ 全科 253 条带口诀 A4 默写纸 ＋ 小四门《考点演播室》＋ 数理化 395 点与 59 大压轴模型。</p>
       <div class="yy-actions">
-        <a class="yy-btn primary" href="./?from=lab-yy-lock">去首页开通完整版 ¥19.9 →</a>
+        <a class="yy-btn primary" href="./?from=lab-yy-lock">去首页解锁完整版（3 人团低至 ¥59.9/人）→</a>
         <button type="button" class="yy-btn" data-pick-lv="0">先重温免费关卡</button>
       </div>
     </div>`;
@@ -270,6 +277,89 @@
       </article>`;
   }
 
+  // ==================== 1.8 中考 12 部必考名著导读 & 情节排雷 ====================
+  function renderClassics() {
+    const list = DATA.classics || [];
+    const cur = state.idx.classics;
+    const lv = list[cur];
+    if (!lv) return '';
+    if (!paidAccess && !lv.free) return levelStripHTML('classics', list) + lockBoxHTML('中考 12 部必考名著排雷', list.length, 3);
+
+    const solved = state.clChoice === lv.answer;
+    if (solved) markDone(lv.id);
+
+    return `${levelStripHTML('classics', list)}
+      <article class="yy-card">
+        <div class="yy-card-head">
+          <span class="yy-chip">${esc(lv.stage)} · 必考名著 ${cur + 1}/${list.length}</span>
+          <button type="button" class="yy-btn sm gold" id="yyPrintClassics">🖨️ 印 A4《12 部名著排雷手卡》</button>
+        </div>
+        <h2>${esc(lv.title)}</h2>
+        <div class="yy-excerpt">
+          <div><b>核心人物：</b>${esc(lv.hero)}</div>
+          <div style="margin-top:4px"><b>必考主旨：</b>${esc(lv.theme)}</div>
+        </div>
+        <div class="yy-sub"><b>情节排雷：</b>${esc(lv.prompt)}</div>
+        <div class="yy-opts">
+          ${lv.options.map((opt, oi) => {
+            const cls = ['yy-opt', state.clChoice === oi ? (oi === lv.answer ? 'is-right' : 'is-wrong') : ''].filter(Boolean).join(' ');
+            return `<button type="button" class="${cls}" data-cl-opt="${oi}">${String.fromCharCode(65 + oi)}. ${esc(opt)}</button>`;
+          }).join('')}
+        </div>
+        ${state.clChoice >= 0 ? `
+          <div class="yy-feedback ${solved ? 'is-ok' : 'is-bad'}">
+            <b>${solved ? '✅ 精准避坑！' : '⚠️ 踩到张冠李戴陷阱啦！'}</b>
+            <div>${esc(lv.explain)}</div>
+            <div class="yy-mnemonic">💡 名著秒记口诀：${esc(lv.mnemonic)}</div>
+          </div>
+          ${solved ? `<div class="yy-actions">${nextBtnHTML('classics', list)}</div>` : ''}
+        ` : ''}
+      </article>`;
+  }
+
+  // ==================== 5.8 中考英语情景交际 & 补全对话（12 关） ====================
+  function renderDialogue() {
+    const list = DATA.dialogue || [];
+    const cur = state.idx.dialogue;
+    const lv = list[cur];
+    if (!lv) return '';
+    if (!paidAccess && !lv.free) return levelStripHTML('dialogue', list) + lockBoxHTML('中考英语情景交际补全对话', list.length, 3);
+
+    const solved = state.dChoice === lv.answer;
+    if (solved) markDone(lv.id);
+
+    return `${levelStripHTML('dialogue', list)}
+      <article class="yy-card">
+        <div class="yy-card-head">
+          <span class="yy-chip en">${esc(lv.scene)} · 第 ${cur + 1}/${list.length} 关</span>
+          <div class="yy-actions">
+            ${speakBtnHTML(lv.fullEn, '🔊 听完整对话')}
+            <button type="button" class="yy-btn sm" data-jump-en-audio>🎧 4 期英语真实听力 MP3</button>
+          </div>
+        </div>
+        <h2>${esc(lv.title)}</h2>
+        <div class="yy-passage-body" style="display:grid;gap:8px;line-height:1.65">
+          ${lv.lines.map(l => {
+            const txt = l.en === '____' ? (solved ? `<b style="color:#15803d">${esc(lv.choices[lv.answer])}</b>` : '<b style="color:#92400e;background:#fef3c7;padding:2px 8px;border-radius:6px">（选择最得体的英语回应）</b>') : esc(l.en);
+            return `<div><b style="color:#1e3a5f">${esc(l.who)}:</b> ${txt}</div>`;
+          }).join('')}
+        </div>
+        <div class="yy-opts">
+          ${lv.choices.map((c, ci) => {
+            const cls = ['yy-opt', state.dChoice === ci ? (ci === lv.answer ? 'is-right' : 'is-wrong') : ''].filter(Boolean).join(' ');
+            return `<button type="button" class="${cls}" data-dl-opt="${ci}">${String.fromCharCode(65 + ci)}. ${esc(c)}</button>`;
+          }).join('')}
+        </div>
+        ${state.dChoice >= 0 ? `
+          <div class="yy-feedback ${solved ? 'is-ok' : 'is-bad'}">
+            <b>${solved ? '✅ 地道得体！' : '⚠️ 不符合英语交际语境，再选一次：'}</b>
+            <div class="yy-mnemonic">💡 考场交际红线：${esc(lv.tip)}</div>
+          </div>
+          ${solved ? `<div class="yy-actions">${nextBtnHTML('dialogue', list)}</div>` : ''}
+        ` : ''}
+      </article>`;
+  }
+
   // ==================== 5.5 英语短文语法填空 & 还原句子（12 篇） ====================
   function renderPassage() {
     const list = DATA.passage || [];
@@ -304,7 +394,10 @@
       <article class="yy-card">
         <div class="yy-card-head">
           <span class="yy-chip en">${esc(lv.topic)} · 第 ${cur + 1}/${list.length} 篇</span>
-          ${allRight ? speakBtnHTML(lv.fullEn, '🔊 朗读全文') : ''}
+          <div class="yy-actions">
+            ${speakBtnHTML(lv.fullEn, '🔊 朗读本篇全文')}
+            <button type="button" class="yy-btn sm" data-jump-en-audio>🎧 英语真实听力 MP3</button>
+          </div>
         </div>
         <h2>${esc(lv.title)}</h2>
         <p class="yy-sub">${esc(lv.hint)}</p>
@@ -499,7 +592,10 @@
       <article class="yy-card">
         <div class="yy-card-head">
           <span class="yy-chip en">${esc(lv.category)} · 第 ${cur + 1}/${list.length} 组</span>
-          <span class="yy-sub">${canSpeak ? '答对可点 🔊 跟读完整例句' : '真题语境快刷'}</span>
+          <div class="yy-actions">
+            ${speakBtnHTML(lv.items.map(x => x.en).join(' '), '🔊 朗读本组例句')}
+            <button type="button" class="yy-btn sm" data-jump-en-audio>🎧 4 期英语真实 MP3</button>
+          </div>
         </div>
         <h2>${esc(lv.title)}</h2>
         <div class="yy-mnemonic">💡 秒记口诀：${esc(lv.mnemonic)}</div>
@@ -509,7 +605,7 @@
           return `<div class="yy-vocab-item">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
               <span class="yy-vocab-stem">${ii + 1}. ${esc(isOk ? it.en : it.stem)}</span>
-              ${isOk ? speakBtnHTML(it.en) : ''}
+              ${speakBtnHTML(it.en, '🔊 读句')}
             </div>
             <div class="yy-vocab-choices">
               ${it.choices.map((c, ci) => {
@@ -539,7 +635,10 @@
       <article class="yy-card">
         <div class="yy-card-head">
           <span class="yy-chip en">${esc(lv.category)} · 第 ${cur + 1}/${list.length} 关</span>
-          ${solved ? speakBtnHTML(lv.fullEn, '🔊 朗读完整句') : ''}
+          <div class="yy-actions">
+            ${speakBtnHTML(lv.fullEn, '🔊 朗读例句')}
+            <button type="button" class="yy-btn sm" data-jump-en-audio>🎧 英语真实 MP3</button>
+          </div>
         </div>
         <h2>${esc(lv.title)}</h2>
         <p class="yy-sub"><b>第 1 步（先找证据再选答案）：</b>${esc(lv.clueHint)}</p>
@@ -653,22 +752,29 @@
       </article>`;
   }
 
-  // ==================== 7. 语文古诗文易错字听写磨耳朵 ====================
+  // ==================== 7. 中英双语听写与听力磨耳朵（9 期真实 MP3） ====================
   function renderAudio() {
-    const eps = DATA.audio || [];
-    const cur = eps.find(e => e.id === state.audioId) || eps[0];
+    const allEps = DATA.audio || [];
+    const eps = state.audioFilter === 'all' ? allEps : allEps.filter(e => (e.lang || 'zh') === state.audioFilter);
+    const cur = eps.find(e => e.id === state.audioId) || eps[0] || allEps[0];
     if (!cur) return '';
     const locked = !paidAccess && !cur.free;
+    const isEn = cur.lang === 'en';
 
     return `
+      <div class="yy-actions" style="margin-bottom:10px">
+        <button type="button" class="yy-pill ${state.audioFilter === 'all' ? 'is-cur' : ''}" data-af="all">全部音频（${allEps.length} 期）</button>
+        <button type="button" class="yy-pill ${state.audioFilter === 'zh' ? 'is-cur' : ''}" data-af="zh">🇨🇳 语文听写（${allEps.filter(e => e.lang !== 'en').length} 期）</button>
+        <button type="button" class="yy-pill ${state.audioFilter === 'en' ? 'is-cur' : ''}" data-af="en">🇬🇧 英语听力与跟读（${allEps.filter(e => e.lang === 'en').length} 期）</button>
+      </div>
       <div class="yy-audio-player">
-        <span class="yy-badge" style="justify-self:start">🎧 专属女声 · 古诗文易错字听写磨耳朵</span>
+        <span class="yy-badge" style="justify-self:start">${isEn ? '🇬🇧 美式标准发音 · 英语听力与高分句跟读' : '🇨🇳 专属女声 · 古诗文与字音文言听写磨耳朵'}</span>
         <div class="yy-ap-title">${esc(cur.title)}</div>
         <div class="yy-ap-sub">${esc(cur.subtitle)} · ${esc(cur.duration)}</div>
         ${locked ? `
           <div style="padding:12px;border-radius:10px;background:rgba(255,255,255,.12);font-size:13.5px">
-            本讲为完整版专属（前 2 期免费听写）。开通 ¥19.9 完整版立即解锁全 3 期语文听写 ＋ 6 期小四门故事音频！
-            <div style="margin-top:8px"><a class="yy-btn gold sm" href="./?from=lab-yy-audio">去首页解锁完整版 ¥19.9 →</a></div>
+            本讲为完整版专属（前 5 期中英音频免费听）。开通完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人）立即解锁全 9 期中英音频＋小四门 6 期故事！
+            <div style="margin-top:8px"><a class="yy-btn gold sm" href="./?from=lab-yy-audio">去首页解锁完整版 →</a></div>
           </div>
         ` : `
           <audio id="yyAudioEl" controls preload="metadata" src="${esc(cur.src)}"></audio>
@@ -685,7 +791,7 @@
           const epLocked = !paidAccess && !ep.free;
           return `<button type="button" class="yy-ep-row ${ep.id === cur.id ? 'is-active' : ''}" data-ep="${esc(ep.id)}">
             <div>
-              <div style="font-weight:700;font-size:14.5px">${epLocked ? '🔒 ' : '▶ '}${esc(ep.title)}</div>
+              <div style="font-weight:700;font-size:14.5px">${epLocked ? '🔒 ' : '▶ '}${ep.lang === 'en' ? '🇬🇧 ' : '🇨🇳 '}${esc(ep.title)}</div>
               <div class="yy-sub">${esc(ep.subtitle)}</div>
             </div>
             <span class="yy-chip ${ep.free ? '' : 'gold'}">${ep.free ? '免费' : '完整版'}</span>
@@ -696,14 +802,14 @@
       ${!locked ? `
         <article class="yy-card">
           <div class="yy-card-head">
-            <span class="yy-chip gold">📝 本期必默易错字红线（${cur.checkpoints.length} 组）</span>
-            <span class="yy-sub">${state.audioMask ? '已遮罩：点击任意词块单独核对' : '建议先点上方“遮住红线词”边听边在纸上默写'}</span>
+            <span class="yy-chip gold">📝 本期必听必默红线（${cur.checkpoints.length} 组）</span>
+            <span class="yy-sub">${state.audioMask ? '已遮罩：点击任意词块单独核对' : '建议先点上方“遮住红线词”边听边默写/跟读'}</span>
           </div>
           <div class="yy-cp-chips">
             ${cur.checkpoints.map(cp => `<span class="yy-cp-chip ${state.audioMask ? 'is-masked' : ''}" data-cp-chip>${esc(cp)}</span>`).join('')}
           </div>
           <details>
-            <summary style="cursor:pointer;font-weight:700;color:var(--indigo)">展开本期完整规范文字稿（核对字形用）›</summary>
+            <summary style="cursor:pointer;font-weight:700;color:var(--indigo)">展开本期完整规范文字稿（核对拼写/字形用）›</summary>
             <div style="margin-top:8px;display:grid;gap:8px;font-size:14px;line-height:1.75;color:#2b3530">
               ${cur.displayScript.map(p => `<p style="margin:0">${esc(p)}</p>`).join('')}
             </div>
@@ -720,11 +826,15 @@
     if (old) old.remove();
     const isReading = kind === 'reading';
     const isTranslate = kind === 'translate';
-    const list = isReading ? (DATA.reading || []) : (isTranslate ? (DATA.translate || []) : (DATA.writing || []));
+    const isClassics = kind === 'classics';
+    const list = isReading ? (DATA.reading || []) : (isTranslate ? (DATA.translate || []) : (isClassics ? (DATA.classics || []) : (DATA.writing || [])));
     const freeLimit = isReading || isTranslate ? 4 : 3;
     const picked = paidAccess ? list : list.slice(0, freeLimit);
     const omitted = list.length - picked.length;
-    const title = isReading ? '中考语文阅读答题公式速查卡' : (isTranslate ? '中考 16 篇文言必考句精译手卡' : '中考英语作文三级升格金句手卡');
+    const title = isReading ? '中考语文阅读答题公式速查卡'
+      : isTranslate ? '中考 16 篇文言必考句精译手卡'
+      : isClassics ? '中考 12 部必考名著导读排雷手卡'
+      : '中考英语作文三级升格金句手卡';
 
     const itemsHtml = isReading
       ? picked.map((it, i) => `<div class="yy-pr-item">
@@ -740,12 +850,19 @@
             <p><b>标准直译：</b><b>${esc(it.translation)}</b></p>
             <p><b>采分口诀：</b>${esc(it.mnemonic)}</p>
           </div>`).join('')
-        : picked.map((it, i) => `<div class="yy-pr-item">
-            <h3>${i + 1}. 【${esc(it.topic)}】${esc(it.title)} <small style="font-weight:400;color:#555">（${esc(it.scene)}）</small></h3>
-            <p><b>普通 10 分句：</b>${esc(it.levels.lv10.en)}</p>
-            <p><b>高分 15 分句：</b><b>${esc(it.levels.lv15.en)}</b>（${esc(it.levels.lv15.cn)}）</p>
-            <p><b>万能模板：</b>${it.templates.map(t => `${esc(t.en)}`).join(' ｜ ')}</p>
-          </div>`).join('');
+        : isClassics
+          ? picked.map((it, i) => `<div class="yy-pr-item">
+              <h3>${i + 1}. ${esc(it.title)} <small style="font-weight:400;color:#555">（${esc(it.stage)}）</small></h3>
+              <p><b>核心人物：</b>${esc(it.hero)} ｜ <b>主旨：</b>${esc(it.theme)}</p>
+              <p><b>高频排雷：</b>${esc(it.explain)}</p>
+              <p><b>秒记口诀：</b><b>${esc(it.mnemonic)}</b></p>
+            </div>`).join('')
+          : picked.map((it, i) => `<div class="yy-pr-item">
+              <h3>${i + 1}. 【${esc(it.topic)}】${esc(it.title)} <small style="font-weight:400;color:#555">（${esc(it.scene)}）</small></h3>
+              <p><b>普通 10 分句：</b>${esc(it.levels.lv10.en)}</p>
+              <p><b>高分 15 分句：</b><b>${esc(it.levels.lv15.en)}</b>（${esc(it.levels.lv15.cn)}）</p>
+              <p><b>万能模板：</b>${it.templates.map(t => `${esc(t.en)}`).join(' ｜ ')}</p>
+            </div>`).join('');
 
     const overlay = document.createElement('div');
     overlay.id = 'yyPrintOverlay';
@@ -754,13 +871,13 @@
       <div class="yy-pr-bar no-print">
         <b>${title}（共 ${picked.length} 项）</b>
         <div class="yy-actions">
-          ${!paidAccess && omitted > 0 ? `<a class="yy-btn gold sm" href="./?from=lab-yy-print">回首页开通 ¥19.9 印全部 ${list.length} 项</a>` : ''}
+          ${!paidAccess && omitted > 0 ? `<a class="yy-btn gold sm" href="./?from=lab-yy-print">回首页解锁完整版（印全部 ${list.length} 项）</a>` : ''}
           <button type="button" class="yy-btn green sm" id="yyPrGo">立即打印 / 存 PDF</button>
           <button type="button" class="yy-btn sm" id="yyPrClose">关闭</button>
         </div>
       </div>
       <div class="yy-pr-page">
-        ${!paidAccess && omitted > 0 ? `<div class="yy-pr-note">免费体验可打印前 ${freeLimit} 项，完整版 ¥19.9 一次买断可无水印打印全部 ${list.length} 项及全科 253 条默写纸。</div>` : ''}
+        ${!paidAccess && omitted > 0 ? `<div class="yy-pr-note">免费体验可打印前 ${freeLimit} 项，完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人）一次买断可无水印打印全部 ${list.length} 项及全科 253 条默写纸。</div>` : ''}
         <header class="yy-pr-head">
           <h1>爱丽克丝中考题库 · ${title}</h1>
           <p>初一到初三通用 · 姓名：__________　日期：__________</p>
@@ -783,11 +900,13 @@
     });
     if (state.tab === 'poems') stageEl.innerHTML = renderPoems();
     else if (state.tab === 'translate') stageEl.innerHTML = renderTranslate();
+    else if (state.tab === 'classics') stageEl.innerHTML = renderClassics();
     else if (state.tab === 'reading') stageEl.innerHTML = renderReading();
     else if (state.tab === 'clinic') stageEl.innerHTML = renderClinic();
     else if (state.tab === 'vocab') stageEl.innerHTML = renderVocab();
     else if (state.tab === 'grammar') stageEl.innerHTML = renderGrammar();
     else if (state.tab === 'passage') stageEl.innerHTML = renderPassage();
+    else if (state.tab === 'dialogue') stageEl.innerHTML = renderDialogue();
     else if (state.tab === 'writing') stageEl.innerHTML = renderWriting();
     else if (state.tab === 'audio') stageEl.innerHTML = renderAudio();
     wireStage();
@@ -823,6 +942,30 @@
         const nextEmpty = blanks.findIndex((bl, bi) => state.pPicked[bi] !== bl.blank);
         if (nextEmpty >= 0) state.pActiveSlot = nextEmpty;
       }
+      render();
+    }));
+
+    // classics & dialogue & jump to en audio
+    stageEl.querySelectorAll('[data-cl-opt]').forEach(b => b.addEventListener('click', () => {
+      state.clChoice = Number(b.dataset.clOpt);
+      render();
+    }));
+    stageEl.querySelector('#yyPrintClassics')?.addEventListener('click', () => openPrintSheet('classics'));
+    stageEl.querySelectorAll('[data-dl-opt]').forEach(b => b.addEventListener('click', () => {
+      state.dChoice = Number(b.dataset.dlOpt);
+      render();
+    }));
+    stageEl.querySelectorAll('[data-jump-en-audio]').forEach(b => b.addEventListener('click', () => {
+      state.tab = 'audio';
+      state.audioFilter = 'en';
+      state.audioId = 'yy-en-01';
+      render();
+    }));
+    stageEl.querySelectorAll('[data-af]').forEach(b => b.addEventListener('click', () => {
+      state.audioFilter = b.dataset.af;
+      const allEps = DATA.audio || [];
+      const eps = state.audioFilter === 'all' ? allEps : allEps.filter(e => (e.lang || 'zh') === state.audioFilter);
+      if (eps.length && !eps.some(e => e.id === state.audioId)) state.audioId = eps[0].id;
       render();
     }));
 
@@ -935,8 +1078,13 @@
   }));
 
   const initTab = new URLSearchParams(location.search).get('tab');
-  if (['poems', 'translate', 'reading', 'clinic', 'vocab', 'grammar', 'passage', 'writing', 'audio'].includes(initTab)) {
+  if (['poems', 'translate', 'classics', 'reading', 'clinic', 'vocab', 'grammar', 'passage', 'dialogue', 'writing', 'audio'].includes(initTab)) {
     state.tab = initTab;
+  }
+  const initLang = new URLSearchParams(location.search).get('lang');
+  if (initLang === 'en' || initLang === 'zh') {
+    state.audioFilter = initLang;
+    if (initLang === 'en') state.audioId = 'yy-en-01';
   }
   render();
 })();

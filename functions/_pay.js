@@ -5,10 +5,10 @@ import { findReferrer } from "./_referrals.js";
 import { bump, chinaDay, normalizeSource } from "./api/_stats.js";
 
 const SKU_CONFIG = {
-  xiaosimen_full: { scope: "xiaosimen", amountCents: 1990, friendPrice: 0, title: "爱丽克丝中考题库完整版（原价）" },
-  xiaosimen_share: { scope: "xiaosimen", amountCents: 1490, friendPrice: 0, title: "爱丽克丝中考题库完整版（分享价）" },
-  xiaosimen_friend: { scope: "xiaosimen", amountCents: 1490, friendPrice: 1, title: "爱丽克丝中考题库完整版（好友价）" },
-  bundle: { scope: "bundle", amountCents: 2980, friendPrice: 0, title: "爱丽克丝双题库套餐（中考 + 考证）" },
+  xiaosimen_full: { scope: "xiaosimen", amountCents: 9990, friendPrice: 0, title: "爱丽克丝中考题库完整版（单买）" },
+  xiaosimen_share: { scope: "xiaosimen", amountCents: 7990, friendPrice: 0, title: "爱丽克丝中考题库完整版（分享价）" },
+  xiaosimen_friend: { scope: "xiaosimen", amountCents: 5990, friendPrice: 0, title: "爱丽克丝中考题库完整版（拼团价）" },
+  bundle: { scope: "bundle", amountCents: 10980, friendPrice: 0, title: "爱丽克丝双题库套餐（中考 + 考证）" },
 };
 const CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
 

@@ -6,16 +6,16 @@ import {Background, Badge, Box, Caption, FONT, Phone, fade} from './kit';
 const GREEN = '#145843';
 const INDIGO = '#1e3a5f';
 const B = boxes as unknown as Record<string, Record<string, Box>>;
-export const ZHONGKAO_FRAMES = 1590;
+export const ZHONGKAO_FRAMES = 1620;
 
 const captions = [
   {from: 185, to: 315, step: '主线一 · 小四门', color: GREEN, title: '告别死记硬背\n听故事＋玩闯关', sub: '首页 5 大 Tab 直达 · 57 关趣味闯关 ＋ 6 期女声故事'},
   {from: 315, to: 440, step: '主线一 · 演播室', color: '#9a3412', title: '《考点演播室》\n男女双主持视频', sub: '讲到考点自动弹得分横幅 · 每集前 10 分钟免费试看'},
   {from: 440, to: 570, step: '主线二 · 数理化', color: GREEN, title: '395 个知识点\n按点精准补缺', sub: '3 分钟测弱项出《体检单》 · 129 套名师 4 步微课'},
   {from: 570, to: 700, step: '主线二 · 压轴模型', color: GREEN, title: '59 大名师压轴模型\n一秒搜到直接练', sub: '婆罗摩笈多 / 阿氏圆 / 安阻法 / 万能瓶 · 支持 A4 打印'},
-  {from: 700, to: 820, step: '主线三 · 语文英语', color: INDIGO, title: '《语英提分工坊》\n8 大实战台 142 关', sub: '首页 5 秒试玩排雷与升格 ＋ 3 期专属女声易错字听写'},
-  {from: 820, to: 940, step: '主线三 · 语文提分', color: INDIGO, title: '古诗易错字排雷\n文言精译＋阅读踩点', sub: '30 篇易错字 ＋ 16 篇文言精译 ＋ 18 个阅读 1 分 vs 满分对比'},
-  {from: 940, to: 1060, step: '主线三 · 英语提分', color: INDIGO, title: '短文还原找线索\n作文 10→15 分升格', sub: '12 篇短文填空还原 ＋ 12 大作文主题三级升格与英文点读'},
+  {from: 700, to: 820, step: '主线三 · 语文英语', color: INDIGO, title: '《语英提分工坊》\n10 大实战台 166 关', sub: '12 部名著排雷 ＋ 9 期中英双语真实听力与跟读'},
+  {from: 820, to: 940, step: '主线三 · 语文提分', color: INDIGO, title: '古诗易错字排雷\n文言精译＋12 部名著', sub: '30 篇易错字 ＋ 16 篇文言精译 ＋ 18 个阅读 1 分 vs 满分对比'},
+  {from: 940, to: 1060, step: '主线三 · 英语提分', color: INDIGO, title: '美式双声听力跟读\n短文还原＋作文升格', sub: '4 期英语真实音频 ＋ 情景对话 ＋ 作文 10→15 分三级升格'},
   {from: 1060, to: 1205, step: '全科默写纸', color: GREEN, title: '253 条带口诀\n一键印 A4 默写纸', sub: '语英＋小四门 100% 配口诀 · 零透字背诵遮罩自测'},
   {from: 1205, to: 1350, step: '同步真题 · 云端', color: GREEN, title: '同步卷＋全国真题\n3 台设备云端同步', sub: '错题 1/3/7/14 天自动复习 · 换手机不丢闯关与错题进度'},
 ];
@@ -52,9 +52,9 @@ const Cta: React.FC = () => {
   const lines = [
     '小四门《考点演播室》＋57 关闯关＋6 期故事',
     '数理化 395 知识点＋59 大名师压轴模型秒搜',
-    '《语英提分工坊》8 大实战台 142 关＋3 期听写',
+    '《语英提分工坊》10 大实战台 166 关＋9 期中英音频',
     '全科 253 条口诀 A4 默写纸 · 3 台云端同步',
-    '先免费试 · 完整版 ¥19.9 一次买断用到中考',
+    '单买 ¥99.9 · 3 人拼团低至 ¥59.9/人 · 用到中考',
   ];
   const logo = spring({frame: f - s0, fps, config: {damping: 13}});
   return (

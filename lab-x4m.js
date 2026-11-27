@@ -154,9 +154,9 @@
     return `<div class="lx-lock-box">
       <span class="lx-chip gold">前 3 关已免费体验</span>
       <h3>解锁全部 ${totalCnt} 关${esc(subjectName)}趣味记忆</h3>
-      <p>开通爱丽克丝中考题库完整版（¥19.9 一次买断），立即解锁小四门全部 57 关反死记硬背闯关 ＋ 6 期专属女声故事磨耳朵 ＋ 253 条全科 A4 默写纸 ＋ 数理化 395 点与 59 大压轴模型，绝不二次收费。</p>
+      <p>开通爱丽克丝中考题库完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人，一次买断用到中考），立即解锁小四门全部 57 关反死记硬背闯关 ＋ 6 期专属女声故事磨耳朵 ＋ 253 条全科 A4 默写纸 ＋ 数理化 395 点与 59 大压轴模型 ＋ 语英工坊 166 关。</p>
       <div class="lx-actions">
-        <a class="lx-btn primary" href="./?from=lab-x4m-lock">去首页开通完整版 ¥19.9 →</a>
+        <a class="lx-btn primary" href="./?from=lab-x4m-lock">去首页解锁完整版（3 人团低至 ¥59.9/人）→</a>
         <button type="button" class="lx-btn" data-pick-lv="0">先重温免费前 3 关</button>
       </div>
     </div>`;
@@ -449,9 +449,9 @@
            ${state.showLockedHit && !paidAccess && !cur.free ? `
              <div class="lx-video-lock-overlay">
                <h3>已免费试看前 ${previewMin} 分钟</h3>
-               <p>开通爱丽克丝中考题库完整版（¥19.9 一次买断），畅看《考点演播室》全季男女双主持视频＋57 关趣味闯关＋395 个数理化知识点与 59 大压轴模型。</p>
+               <p>开通爱丽克丝中考题库完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人），畅看《考点演播室》全季男女双主持视频＋57 关趣味闯关＋395 个数理化知识点与 59 大压轴模型＋语英工坊 166 关。</p>
                <div class="lx-actions">
-                 <a class="lx-btn gold" href="./?from=studio-preview">去首页解锁完整版 ¥19.9 →</a>
+                 <a class="lx-btn gold" href="./?from=studio-preview">去首页解锁完整版（3 人团低至 ¥59.9/人）→</a>
                  <button type="button" class="lx-btn" id="lxStudioRewind">重温前 ${previewMin} 分钟</button>
                </div>
              </div>` : ''}
@@ -531,8 +531,8 @@
                <button type="button" class="lx-ap-btn ${state.scriptMask ? 'is-on' : ''}" id="lxScriptMask">${state.scriptMask ? '👁️ 关闭文稿遮罩' : '🙈 遮罩边听边背'}</button>
              </div>`
           : `<div class="lx-lock-box" style="background:rgba(255,255,255,.1);border-color:rgba(255,229,170,.45);color:#fff">
-               <p style="color:#e2f3ee">前 4 期（历史/道法/地理）完全免费试听，第 5–6 期随 ¥19.9 完整版解锁。</p>
-               <a class="lx-btn gold" href="./?from=lab-x4m-audio">回首页解锁完整版 ¥19.9 →</a>
+               <p style="color:#e2f3ee">前 4 期（历史/道法/地理）完全免费试听，第 5–6 期随完整版解锁（单买 ¥99.9，3 人团低至 ¥59.9/人）。</p>
+               <a class="lx-btn gold" href="./?from=lab-x4m-audio">回首页解锁完整版 →</a>
              </div>`}
       </div>` : '';
 

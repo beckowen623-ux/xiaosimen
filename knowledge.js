@@ -508,7 +508,7 @@
         const hasEssay = list.some(q => q.type === 'essay');
         const totals = totalSummaryCounts();
         app.unlock(hasEssay
-          ? `中考压轴解答大题（含分步审题思路＋采分点自评）属于完整版专属：一次买断 ¥19.9，解锁全部 ${totals.essays} 道数理化解答大题、${totals.pts} 个知识点与无限 A4 打印。`
+          ? `中考压轴解答大题（含分步审题思路＋采分点自评）属于完整版专属：一次买断 ¥99.9（3 人拼团低至 ¥59.9/人），解锁全部 ${totals.essays} 道数理化解答大题、${totals.pts} 个知识点与无限 A4 打印。`
           : '这些知识点的提高/拓展题属于完整版：每个知识点前 3 题与 3 分钟快测免费，完整版全部开放。');
         return;
       }
@@ -615,13 +615,13 @@
     overlay.id = 'kpPrintOverlay';
     overlay.className = 'kp-print-overlay';
     const previewStrip = !paid
-      ? `<div class="kp-pr-preview-note">体验样卷预览（每点含前 3 道免费题${omitted ? `，另有 ${omitted} 道提高/拓展${omittedEssays ? `与 ${omittedEssays} 道压轴解答大题` : ''}在完整版开放` : ''}）· 解锁完整版 ¥19.9 可无水印打印全部薄弱点与家长引导页</div>`
+      ? `<div class="kp-pr-preview-note">体验样卷预览（每点含前 3 道免费题${omitted ? `，另有 ${omitted} 道提高/拓展${omittedEssays ? `与 ${omittedEssays} 道压轴解答大题` : ''}在完整版开放` : ''}）· 解锁完整版（3 人团低至 ¥59.9/人）可无水印打印全部薄弱点与家长引导页</div>`
       : '';
     overlay.innerHTML = `
       <div class="kp-pr-bar no-print">
         <div class="kp-pr-bar-info"><b>教研风 A4 补缺卷预览</b> · 共 ${points.length} 个知识点、${qNo} 道题${!paid && omitted ? `（完整版可印全部 ${qNo + omitted} 题）` : ''}</div>
         <div class="kp-pr-bar-btns">
-          ${!paid ? '<button type="button" class="btn" id="kpPrUnlock">解锁完整无水印打印 ¥19.9</button>' : ''}
+          ${!paid ? '<button type="button" class="btn" id="kpPrUnlock">解锁完整无水印打印</button>' : ''}
           <button type="button" class="btn primary" id="kpPrGo">立即打印 / 存 PDF</button>
           <button type="button" class="btn" id="kpPrClose">关闭</button>
         </div>
@@ -652,7 +652,7 @@
     overlay.querySelector('#kpPrUnlock')?.addEventListener('click', () => {
       overlay.remove();
       document.body.classList.remove('kp-printing');
-      app.unlock(`开通完整版（¥19.9 一次买断），即可无水印无限打印${totals.subjects}全部 ${totals.pts} 个知识点的完整练习卷、${totals.essays} 道压轴解答大题与家长引导页。`);
+      app.unlock(`开通完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人），即可无水印无限打印${totals.subjects}全部 ${totals.pts} 个知识点的完整练习卷、${totals.essays} 道压轴解答大题与家长引导页。`);
     });
   }
 
@@ -1014,7 +1014,7 @@
       : `本次检测的 <b>${tested.length}</b> 个知识点全部过关（掌握率 100%）！建议直接挑战“专题与压轴”里的中考解答大题。`;
     const totals = totalSummaryCounts();
     const upsell = !app.hasAccess()
-      ? `<div class="kp-rx-upsell"><span>已锁定薄弱点！完整版 <b>¥19.9 一次买断</b>（分享家长群可享 ¥14.9）：解锁${esc(totals.subjects)}全部 ${totals.pts} 个知识点与 59 大压轴模型、${totals.essays} 道解答大题＋无水印 A4 专属补缺卷无限打印（3 台设备共用）。</span><button class="btn primary" type="button" id="kpRxUnlock">开通完整版 ¥19.9</button></div>`
+      ? `<div class="kp-rx-upsell"><span>已锁定薄弱点！完整版 <b>单买 ¥99.9（3 人拼团低至 ¥59.9/人）</b>：解锁${esc(totals.subjects)}全部 ${totals.pts} 个知识点与 59 大压轴模型、${totals.essays} 道解答大题＋无水印 A4 专属补缺卷无限打印（3 台设备共用）。</span><button class="btn primary" type="button" id="kpRxUnlock">开通完整版</button></div>`
       : '';
     return `<div class="kp-rx">
       <div class="kp-rx-head"><span class="kp-badge">${isQuick ? '3 分钟快测报告' : '学情体检单'}</span><h3>孩子本次学情体检单</h3></div>
@@ -1191,7 +1191,7 @@
     root.querySelector('#kpRxPoster')?.addEventListener('click', () => { void openRxPoster(queue, results); });
     root.querySelector('#kpRxUnlock')?.addEventListener('click', () => {
       const totals = totalSummaryCounts();
-      app.unlock(`开通完整版（¥19.9 一次买断），解锁全部薄弱点分层题、${totals.essays} 道数理化解答大题与无水印 A4 补缺卷无限打印。`);
+      app.unlock(`开通完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人），解锁全部薄弱点分层题、${totals.essays} 道数理化解答大题与无水印 A4 补缺卷无限打印。`);
     });
   }
 

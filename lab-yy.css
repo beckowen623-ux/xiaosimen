@@ -44,7 +44,7 @@ a { color: var(--brand); text-decoration: none; }
 .yy-prog-track { flex: 1; height: 8px; border-radius: 999px; background: rgba(255, 255, 255, .18); overflow: hidden; }
 .yy-prog-track i { display: block; height: 100%; background: #ffe5aa; border-radius: 999px; transition: width .25s ease; }
 
-.yy-tabs { position: sticky; top: 53px; z-index: 20; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 5px; padding: 8px 0 10px; background: rgba(244, 242, 232, .94); backdrop-filter: blur(8px); }
+.yy-tabs { position: sticky; top: 53px; z-index: 20; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 5px; padding: 8px 0 10px; background: rgba(244, 242, 232, .94); backdrop-filter: blur(8px); }
 .yy-tab { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 8px 4px; border-radius: 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer; text-align: center; }
 .yy-tab small { font-size: 10.5px; color: var(--muted); font-weight: 600; }
 .yy-tab.is-active { background: var(--brand); border-color: var(--brand); color: #fff; }

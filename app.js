@@ -1005,7 +1005,7 @@ redeemForm.addEventListener('submit', async event => {
     unlockDialog.close();
     renderHome('homeTitle');
     void refreshReferralProfile();
-    toast('已解锁完整版！可在「进度管理」一键云端备份错题本，首页也已生成你的专属邀请链接（邀 3 位朋友返现 15 元）。');
+    toast('已解锁完整版！可在「进度管理」一键云端备份错题本与两座实验室通关进度。');
   } catch {
     redeemMessage.textContent = '兑换服务暂时不可用，请稍后再试。';
   } finally {
@@ -1024,8 +1024,8 @@ function accessNoticeHTML(days) {
   const expired = legacyTrialStartedAt() !== null ? '<p class="muted">7 天完整版体验已结束，原答题记录已保留。</p>' : '';
   return `<section class="card mini-card access-notice slim-notice">
     <div>${expired}<p><b>免费送：</b>每个家庭 1 套手机整卷（${freeUses.phone ? '已用' : '未用'}）+ 1 次整卷打印（${freeUses.print ? '已用' : '未用'}），任选一套；其他卷子前 5 题免费，各地原卷免费看。</p>
-    <p class="muted access-value-line"><b>作者自家孩子同步自用，每天都在完善</b>，内容价值远超 <b>¥19.9</b>（后期会调价，已购用户长期不限使用，分享可省 5 元）：3 台设备共用 · 云端错题本同步 · 后续新增知识点、大题与真题全部免费更新。</p></div>
-    <button class="btn primary" type="button" id="openUnlock">开通完整版 ¥19.9</button>
+    <p class="muted access-value-line"><b>作者自家孩子同步自用，每天都在完善</b>，涵盖全科三大提分主线（<b>单买 ¥99.9，3 人拼团低至 ¥59.9/人</b>，一次买断初一用到初三）：3 台设备共用 · 云端错题本与实验室进度同步 · 后续新课新题全部免费更新。</p></div>
+    <button class="btn primary" type="button" id="openUnlock">开通完整版 ¥99.9（3 人团 ¥59.9）</button>
   </section>`;
 }
 
@@ -1334,6 +1334,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-27', '《语英提分工坊》重磅升级至 10 大实战台 166 关 ＋ 9 期中英双语真实音频：语文新增「📚 12 部中考必考名著导读排雷（附 A4 排雷手卡打印）」与 2 期女声听写（高频字音字形＋16 篇文言古今异义）；英语新增「🗣️ 12 关情景交际与补全对话」、4 期美式标准男女双声 MP3（不规则动词韵律/易混词/15 分作文金句跟读/6 大情景微对话），且全部英语实战台顶部常驻 🔊 朗读按钮，微信与手机端随时点听。'],
   ['2026-11-27', '《语英提分工坊》V2 扩容定型至 8 大实战台 142 关：新增语文「📜 中考 16 篇文言必考句精译」（逐词踩中古今异义/活用/倒装采分点，支持一键印 A4 精译手卡）与英语「📰 短文语法填空 & 还原句子（五选五）12 篇实战微短文」（配衔接线索高亮与英文朗读），全站语文 4 台 + 英语 4 台全题型打通。'],
   ['2026-11-27', '学习进度备份、云端同步与《本周孩子补缺战报》全面接入《小四门反死记硬背实验室》（57 关）和《语英提分工坊》（142 关）通关进度，换手机或平板恢复云端备份时两座实验室的闯关记录也会一并保留。'],
   ['2026-11-27', '重磅上线首页第 3 大主线「📖 语英主线」与《语英提分工坊》（lab-yy.html）：语文含 30 篇古诗文易错字“火眼金睛”排雷、18 个阅读采分点公式（1 分答案 vs 满分答案同屏对比＋A4 公式速查卡打印）、18 关文言一字多面与病句手术台、3 期专属女声古诗文易错字听写磨耳朵；英语含 18 组词形与固定搭配点读快刷、18 关语法与微完形“线索词破案”、12 大中考作文 10→15 分三级升格工坊（支持英文朗读＋A4 金句手卡打印）；同时为 90 条语英速记考点全部补齐 1 行秒记口诀，全站 253 条速记默写 100% 带口诀。'],
@@ -1601,7 +1602,7 @@ function contentStatsHTML() {
     claude && `精编卷 ${claude} 套`,
     real && `真题 ${real} 套`,
     `小四门 ${x4mCount} 题`,
-    '语英/小四门 199 关工坊',
+    '语英/小四门 223 关工坊',
     '253 条口诀默写',
   ].filter(Boolean);
   return items.length ? `<p class="content-stats" aria-label="题库现有内容">${items.join(' · ')}</p>` : '';
@@ -1626,7 +1627,7 @@ function homeIntroHTML() {
       <div class="hero-trust-strip">
         <span>✓ 闲鱼 100% 好评</span>
         <span>✓ 3 台设备 + 云端错题</span>
-        <span>✓ ¥19.9 一次买断用到中考</span>
+        <span>✓ ¥99.9 一次买断（3 人团 ¥59.9/人）</span>
       </div>
       ${contentStatsHTML()}
       <div class="editorial-hero-actions">
@@ -2000,7 +2001,7 @@ function showEarlybirdMark(paper, list, boxId) {
       <div class="weekly-actions"><button class="btn" type="button" data-mark-poster>生成成绩单海报</button></div>
       ${rx.length ? `<div class="eb-rx"><p class="earlybird-next">下一步：错题集中在下面几章，先做这几章的<b>同步章节卷</b>，一章一章补见效最快：</p>
         ${rx.map(x => `<div class="eb-rx-row"><span>${esc(x.unit.replace(/^[^·]+·/, ''))}<small>错 ${x.n} 题</small></span><div>${x.papers.map(p => `<button class="btn" type="button" data-rx-paper="${p.id}">做「${esc(p.label || p.title)}」→</button>`).join('')}</div></div>`).join('')}
-        ${!hasFullAccess() ? `<div class="eb-rx-upsell"><span class="muted">每章前 5 题可免费试做；完整版 ¥19.9 解锁全套同步卷 + 无限打印 + 云端错题本同步。</span><button class="btn primary" type="button" data-mark-upsell>看看完整版</button></div>` : ''}</div>` : ''}</div>`;
+        ${!hasFullAccess() ? `<div class="eb-rx-upsell"><span class="muted">每章前 5 题可免费试做；完整版（单买 ¥99.9，3 人团低至 ¥59.9/人）解锁全套同步卷 + 无限打印 + 云端同步。</span><button class="btn primary" type="button" data-mark-upsell>看看完整版</button></div>` : ''}</div>` : ''}</div>`;
     box.querySelector('[data-mark-poster]')?.addEventListener('click', () => void openScorePoster({
       title: paper.title || '早鸟自测卷',
       metric: `${score} 分`,
@@ -2009,7 +2010,7 @@ function showEarlybirdMark(paper, list, boxId) {
       focusLine: rx.length ? `本次诊断薄弱章：${rx.map(x => x.unit.replace(/^[^·]+·/, '')).join('、')}` : '错题已自动进错题本，按 1/3/7/14 天提醒复习。',
     }));
     box.querySelectorAll('[data-rx-paper]').forEach(b => b.addEventListener('click', () => { trackVisit('eb_rx'); claudePaperAction(b.dataset.rxPaper, 'phone'); }));
-    box.querySelector('[data-mark-upsell]')?.addEventListener('click', () => openUnlock('开通完整版（¥19.9 一次买断），即可做完并打印全部薄弱章节同步卷，并开启 1/3/7/14 天错题自动复习与云端同步。'));
+    box.querySelector('[data-mark-upsell]')?.addEventListener('click', () => openUnlock('开通完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人），即可做完并打印全部薄弱章节同步卷，并开启 1/3/7/14 天错题自动复习与云端同步。'));
     const small = document.querySelector(`[data-earlybird="${paper.id}"] small`);
     if (small) small.textContent = `上次 ${score} 分`;
   });
@@ -2021,17 +2022,17 @@ function syncPapers(stage = state.stage) {
   return (nationalCatalog || []).filter(p => p.sync && p.stage === stage).sort((a, b) => (a.order || 0) - (b.order || 0));
 }
 // 同步章节卷每套做了多少：题目 id 是 national-<paperId>-qNN
-// “题库可以免费拿”：14.9 买 → 邀 3 位朋友也买 → 返现 15 元（规则见 functions/_referrals.js，套餐不参加）
+// 3 人拼团优惠说明（一次发 3 个独立兑换码，团长私信享额外福利）
 function freeWayHTML() {
   if (paidAccess) return '';
   return `<details class="card fold-row free-way" data-free-way ${state.freeWayOpen ? 'open' : ''}>
-      <summary><b>买后还能免单</b><span>分享/好友价 14.9 买下 → 邀 3 位朋友也来买 → 返现 15 元，等于免费用 ›</span></summary>
+      <summary><b>👥 3 人拼团每人低至 ¥59.9</b><span>找 2 位同班家长组团，每人立省 ¥40，团长另有专属优惠 ›</span></summary>
       <ol>
-        <li><b>先按 14.9 买：</b>点“完整版 19.9”，选分享价，把专属链接发到家长群，3 位朋友点开就能按 14.9 买；点朋友邀请链接进来的，直接买好友价 14.9。</li>
-        <li><b>买完你也有邀请链接：</b>解锁后首页会出现你的专属邀请链接和二维码海报。朋友点你的链接，按好友价 14.9 买，比原价省 5 元，他也划算。</li>
-        <li><b>邀满 3 位，返现 15 元：</b>作者确认后 24 小时内打到你的微信或支付宝，题库等于免费用。不要返现的，也可以换考证题库完整版。邀到第 1 位就先解锁冲刺卷。</li>
+        <li><b>3 人组团每人立省 ¥40：</b>单买原价 ¥99.9，找 2 位同班或同学家长凑齐 3 人，每人公开团购价仅需 <b>¥59.9</b>！</li>
+        <li><b>发 3 个独立兑换码：</b>每个家庭独享 1 个 10 位兑换码，各自独立绑定 3 台设备与云端错题本同步，互不干扰。</li>
+        <li><b>想当团长发起 3 人团？</b>打开闲鱼搜索 <b>王者荣耀速度飞车</b> 私信「我要开 3 人团」，<b>团长另享额外专属福利</b>！</li>
       </ol>
-      <p class="free-note">朋友用你的邀请码兑换题库才算邀请成功；双题库套餐不参加邀请奖励。</p>
+      <p class="free-note">不想组团的个人买家，也可以点「开通完整版」走单人分享价（¥79.9，立省 ¥20）。</p>
     </details>`;
 }
 function syncPaperProgress(paperId, progress) {
@@ -2326,7 +2327,7 @@ async function openWrongPrintSheet(mode) {
     : `我的专属 A4 错题重做卷（体验样卷 · 完整版可印全部 ${all.length} 题）`;
   printQuestions(title, picked);
   if (!paid && all.length > picked.length) {
-    toast(`当前为免费体验样卷（前 ${picked.length} 题），开通完整版 ¥19.9 可无限打印全部 ${all.length} 道错题。`);
+    toast(`当前为免费体验样卷（前 ${picked.length} 题），开通完整版（单买 ¥99.9，3 人团低至 ¥59.9/人）可无限打印全部 ${all.length} 道错题。`);
   }
 }
 function printCardHTML() {
@@ -2387,7 +2388,7 @@ function originCardHTML() {
     <p><b>会用工具，但每题自己把关：</b>整理和编写时我会借助 AI 工具提高效率，但考什么、怎么考、哪道题该留，都由我自己判断。每套卷子上线前，我都从头到尾亲自做一遍，有错误、有歧义的题一律剔除。不押题、不保过，只帮孩子多练手、查漏补缺、稳步提分。</p>
     <p>说句实在话：孩子自己不花时间，再多的书和题也只是摆设。我们能做的，是让他的每一分钟都花在值得做的题上。</p>
     <p><b>手机党、纸笔党都照顾到：</b>每张卷子都能打印，答案单独一页。纸上做完，回来在“本周一卷”里点出错题号，错题本照样记着，到时间提醒复习。</p>
-    <p><b>为什么收费：</b>整理题目、编写解析要用到付费的 AI 工具，服务器也要钱。各地原卷永远免费看、免费打印；手机刷真题、精编模拟卷整卷、本周一卷和错题复习属于完整版，19.9 一次买断。先免费试，孩子用得上再买。</p>
+    <p><b>为什么收费：</b>整理全科题库、制作《考点演播室》视频与中英双语音频、维护云端服务器都要持续投入精力与成本。各地原卷永远免费看、免费打印；完整版单买 ¥99.9（3 人拼团低至 ¥59.9/人），一次买断初一用到初三。先免费试，孩子用得上再买。</p>
     <p>有想要的科目、地区、题型，到作者主页留言，我会按大家的需要加题。</p>
   </details>`;
 }
@@ -2483,8 +2484,8 @@ function yyShowcaseCardHTML() {
       <span class="yy-ml-badge">📖 语英主线 · 默写零错字 · 踩点拿高分</span>
       <a class="yy-ml-more" href="./lab-yy.html">进入完整工坊 →</a>
     </div>
-    <h2>《语英提分工坊》8 大实战台 ＋ 3 期女声听写磨耳朵</h2>
-    <p class="x4m-ml-lead">语文 4 台全覆盖：<b>古诗易错字排雷、16 篇文言必考句精译、阅读 1 分 vs 满分对比、文言病句动手术</b>；英语 4 台全打通：<b>词形搭配点读、语法完形找线索、短文填空与还原句子、作文 10→15 分三级升格</b>！</p>
+    <h2>《语英提分工坊》10 大实战台 166 关 ＋ 9 期中英双语音频</h2>
+    <p class="x4m-ml-lead">语文 5 台全覆盖：<b>古诗易错字、16 篇文言精译、12 部必考名著排雷、阅读采分点对比、文言病句手术</b>；英语 5 台全打通：<b>词形搭配、语法线索、短文填空还原、情景对话、作文三级升格</b>，全配常驻 <b>🔊 英文朗读</b> 与 <b>4 期真实美式音频</b>！</p>
     <div class="yy-ml-demo-grid">
       <div class="yy-ml-demo-box">
         <b>✍️ 5 秒试玩 · 古诗文易错字排雷</b>
@@ -2505,28 +2506,40 @@ function yyShowcaseCardHTML() {
         </div>
       </div>
     </div>
-    <div class="x4m-ml-audio-bar yy-ml-audio-bar">
-      <div class="x4m-ml-audio-info">
-        <b>🎧 首页 1 秒免费听写：古诗文高频易错字第 1 期</b>
-        <span>《观沧海·次北固山下·论语·木兰诗》13 组必考红线字，专属女声慢速播报</span>
+    <div class="yy-ml-demo-grid">
+      <div class="x4m-ml-audio-bar yy-ml-audio-bar" style="margin-bottom:0">
+        <div class="x4m-ml-audio-info">
+          <b>🇨🇳 1 秒试听 · 语文易错字听写第 1 期</b>
+          <span>观沧海·次北固山下·论语·木兰诗 13 组红线字</span>
+        </div>
+        <audio class="x4m-ml-mini-audio" controls preload="none" src="./assets/audio/yy-ep01.mp3"></audio>
       </div>
-      <audio class="x4m-ml-mini-audio" controls preload="none" src="./assets/audio/yy-ep01.mp3"></audio>
+      <div class="x4m-ml-audio-bar yy-ml-audio-bar" style="margin-bottom:0">
+        <div class="x4m-ml-audio-info">
+          <b>🇬🇧 1 秒试听 · 英语作文 15 分金句跟读</b>
+          <span>美式标准发音 · 6 大必考主题高分句慢速跟读</span>
+        </div>
+        <audio class="x4m-ml-mini-audio" controls preload="none" src="./assets/audio/yy-en-03.mp3"></audio>
+      </div>
     </div>
-    <div class="x4m-ml-grid">
+    <div class="x4m-ml-grid" style="margin-top:10px">
       <a class="x4m-ml-tile" href="./lab-yy.html?tab=poems"><b>✍️ 古诗易错字</b><small>30 篇排雷 · 前 6 关免费</small></a>
-      <a class="x4m-ml-tile" href="./lab-yy.html?tab=translate"><b>📜 文言句精译</b><small>16 篇采分词 · 可印 A4 卡</small></a>
-      <a class="x4m-ml-tile" href="./lab-yy.html?tab=reading"><b>🔍 阅读采分点</b><small>18 母题对比 · 可印 A4 卡</small></a>
+      <a class="x4m-ml-tile" href="./lab-yy.html?tab=translate"><b>📜 文言句精译</b><small>16 篇采分词 · 印 A4 卡</small></a>
+      <a class="x4m-ml-tile" href="./lab-yy.html?tab=classics"><b>📚 名著排雷</b><small>12 部必考名著 · 印 A4 卡</small></a>
+      <a class="x4m-ml-tile" href="./lab-yy.html?tab=reading"><b>🔍 阅读采分点</b><small>18 母题对比 · 印 A4 卡</small></a>
       <a class="x4m-ml-tile" href="./lab-yy.html?tab=clinic"><b>🩺 文言与病句</b><small>18 关找茬手术 · 前 4 关免费</small></a>
-      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=vocab"><b>⚡ 词形与搭配</b><small>18 组点读快刷 · 前 4 组免费</small></a>
-      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=grammar"><b>🧩 语法找线索</b><small>18 关完形破案 · 前 4 关免费</small></a>
-      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=passage"><b>📰 短文与还原</b><small>12 篇真题微短文 · 前 3 篇免费</small></a>
+      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=vocab"><b>⚡ 词形与搭配</b><small>18 组常驻 🔊 点读</small></a>
+      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=grammar"><b>🧩 语法找线索</b><small>18 关完形破案 · 常驻 🔊</small></a>
+      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=passage"><b>📰 短文与还原</b><small>12 篇真题微短文 · 常驻 🔊</small></a>
+      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=dialogue"><b>🗣️ 情景对话</b><small>12 关交际补全 · 常驻 🔊</small></a>
       <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=writing"><b>✨ 作文升格</b><small>12 话题 10→15 分 · 印金句卡</small></a>
-      <a class="x4m-ml-tile is-audio" href="./lab-yy.html?tab=audio"><b>🎧 听写磨耳朵</b><small>3 期女声易错字 · 前 2 期免费</small></a>
+      <a class="x4m-ml-tile is-audio" href="./lab-yy.html?tab=audio&lang=zh"><b>🇨🇳 语文听写</b><small>5 期女声 · 字音/古诗/文言</small></a>
+      <a class="x4m-ml-tile is-audio" href="./lab-yy.html?tab=audio&lang=en"><b>🇬🇧 英语听力</b><small>4 期美式男女声 · 动词/金句/对话</small></a>
     </div>
     <div class="x4m-ml-foot">
-      <a class="btn primary" href="./lab-yy.html">▶ 进入《语英提分工坊》（142 关＋3 期听写）→</a>
+      <a class="btn primary" href="./lab-yy.html">▶ 进入《语英提分工坊》（166 关＋9 期中英音频）→</a>
       <a class="btn" href="./key-points.html?subject=yuwen">📝 90 条语英带口诀 A4 默写纸</a>
-      <a class="btn" href="./lab-yy.html?tab=audio">🎧 3 期女声易错字听写</a>
+      <a class="btn" href="./lab-yy.html?tab=audio&lang=en">🎧 听 4 期英语真实音频</a>
     </div>
   </section>
   <section class="card yy-papers-bridge" aria-label="语英同步卷与真题直达">
@@ -3204,7 +3217,7 @@ async function startVariantCheck(q) {
   }
   const usable = paid ? candidates : candidates.filter(isTrialQuestion);
   if (!usable.length) {
-    openUnlock('更多同类变式题验收属于完整版：一次买断 ¥19.9，解锁全部 385 个数理化知识点变式题、115 道解答大题与 71 套同步章节卷。');
+    openUnlock('更多同类变式题验收属于完整版：单买 ¥99.9（3 人拼团低至 ¥59.9/人），解锁全部 395 个数理化知识点变式题、125 道解答大题与 71 套同步章节卷。');
     return;
   }
   const picked = usable[0];
@@ -3683,8 +3696,8 @@ function trialUpsellHTML() {
   if (!paper || !state.queue.length || state.queue.length >= paper.questionCount) return '';
   const rest = paper.questionCount - state.queue.length;
   return `<div class="trial-upsell"><p><b>这套卷还有 ${rest} 题</b>（含压轴解答题与逐题解析）在完整版里。</p>
-    <p class="muted">完整版 ¥19.9 一次买断（分享可省 5 元）：71 套同步章节卷、全国真题、精编模拟卷整卷做与打印、3 台设备共用、错题按 1/3/7/14 天自动复习，后续新卷免费更新。</p>
-    <button class="btn primary" type="button" id="upsellBtn">解锁完整版（¥19.9）</button></div>`;
+    <p class="muted">完整版单买 ¥99.9（3 人拼团低至 ¥59.9/人）：71 套同步章节卷、全国真题、全科三大主线工坊与演播室、3 台设备共用、错题按 1/3/7/14 天自动复习，后续新课新卷免费更新。</p>
+    <button class="btn primary" type="button" id="upsellBtn">解锁完整版（3 人团低至 ¥59.9/人）</button></div>`;
 }
 // 早鸟卷做完：按错题所在章节，直接给出那一章的同步章节卷（错得多的章排前面，最多 3 章）
 // 早鸟卷里跨学期合并的考点模块，对应到同步卷的章节
@@ -3889,7 +3902,7 @@ async function openWeeklyPoster() {
     const tiles = [
       { label: '累计答题数', value: `${totalAnswered} 题`, sub: `本周新答 ${weekAnswered} 题`, accent: '#164e3f' },
       { label: '综合正确率', value: totalAnswered ? `${acc}%` : '待开启', sub: `累计答对 ${totalCorrect} 题`, accent: '#15803d' },
-      { label: '连续学习天数', value: `${streak} 天`, sub: `小四门 ${x4mCleared}/57 关 · 语英 ${yyCleared}/142 关`, accent: '#b45309' },
+      { label: '连续学习天数', value: `${streak} 天`, sub: `小四门 ${x4mCleared}/57 关 · 语英 ${yyCleared}/166 关`, accent: '#b45309' },
       { label: '已练知识点 / 错题本', value: `${kpPoints.size} 个点`, sub: wrongCount ? `错题本待清 ${wrongCount} 题` : '错题本已清零', accent: '#b83b2a' },
     ];
     const cardW = 306, cardH = 152, gapX = 20, gapY = 18, startX = 44, startY = 274;
@@ -4036,7 +4049,7 @@ function renderSummary() {
         ${rx.length ? `<div class="eb-rx"><p class="earlybird-next">下一步：错题集中在下面几章，先做这几章的<b>同步章节卷</b>，一章一章补，比整卷反复刷更快见效。</p>
           ${rx.map(x => `<div class="eb-rx-row"><span>${esc(x.unit.replace(/^[^·]+·/, ''))}<small>错 ${x.n} 题</small></span><div>${x.papers.map(p => `<button class="btn" type="button" data-rx-paper="${p.id}">做「${esc(p.label || p.title)}」→</button>`).join('')}</div></div>`).join('')}
           <button class="btn ghost" type="button" id="toSyncBtn">看全部同步章节卷</button>
-          ${!hasFullAccess() ? `<div class="eb-rx-upsell"><span class="muted">每章前 5 题可免费试做；完整版 ¥19.9 解锁全套同步卷 + 自动错题复习（3 台设备共用）。</span><button class="btn primary" type="button" id="ebUpsellBtn">看看完整版</button></div>` : ''}</div>`
+          ${!hasFullAccess() ? `<div class="eb-rx-upsell"><span class="muted">每章前 5 题可免费试做；完整版（单买 ¥99.9，3 人团低至 ¥59.9/人）解锁全套同步卷 + 自动错题复习（3 台设备共用）。</span><button class="btn primary" type="button" id="ebUpsellBtn">看看完整版</button></div>` : ''}</div>`
         : paper && paper.stage !== 'xsc' && syncPapers(paper.stage).some(p => p.subject === paper.subject) ? `<p class="earlybird-next">下一步：看看错题集中在哪几章，用<b>同步章节卷</b>一章一章补，比整卷反复刷更快见效。</p>
         <button class="btn" type="button" id="toSyncBtn">去同步章节卷补弱项 →</button>` : ''}
       </section>
@@ -4051,7 +4064,7 @@ function renderSummary() {
       verdict: head,
       focusLine: rx.length ? `本次诊断薄弱章：${rx.map(x => x.unit.replace(/^[^·]+·/, '')).join('、')}` : '错题已自动进错题本，按 1/3/7/14 天提醒复习。',
     }));
-    byId('ebUpsellBtn')?.addEventListener('click', () => openUnlock('开通完整版（¥19.9 一次买断），即可做完整套薄弱章节同步卷并开启 1/3/7/14 天错题自动复习。'));
+    byId('ebUpsellBtn')?.addEventListener('click', () => openUnlock('开通完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人），即可做完整套薄弱章节同步卷并开启 1/3/7/14 天错题自动复习。'));
     byId('homeBtn').addEventListener('click', () => { const xsc = paper?.stage === 'xsc'; if (xsc) { state.xscOpen = true; state.xscSubject = paper.subject; } renderHome('homeTitle'); byId(xsc ? 'xsc' : 'earlybird')?.scrollIntoView(); });
     state.keys = null;
     moveFocus(byId('summaryTitle'), true);
@@ -4159,7 +4172,7 @@ async function refreshCloudSyncUI() {
 }
 byId('cloudUnlockBtn')?.addEventListener('click', () => {
   progressDialog.close();
-  openUnlock('云端错题本同步与 3 台设备跨端恢复属于完整版（¥19.9 一次买断，换手机或清微信缓存也不丢错题）。');
+  openUnlock('云端错题本同步与 3 台设备跨端恢复属于完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人，换手机或清微信缓存也不丢错题与实验室进度）。');
 });
 byId('cloudSaveBtn')?.addEventListener('click', async () => {
   const btn = byId('cloudSaveBtn');

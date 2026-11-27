@@ -2,8 +2,8 @@
 window.YY_LAB_DATA = {
   audio: [
     {
-      id: 'yy-ep01',
-      title: '第 1 期：七年级古诗文必考易错字听写（观沧海·次北固山下·论语·木兰诗）',
+      id: 'yy-ep01', lang: 'zh',
+      title: '语文第 1 期：七年级古诗文必考易错字听写（观沧海·次北固山下·论语·木兰诗）',
       subtitle: '专属女声慢速播报 + 偏旁拆解防错 · 边听边在纸上默写',
       duration: '约 1 分 40 秒',
       free: true,
@@ -18,8 +18,8 @@ window.YY_LAB_DATA = {
       ]
     },
     {
-      id: 'yy-ep02',
-      title: '第 2 期：八年级古诗文必考易错字听写（陋室铭·爱莲说·桃花源记·三峡·岳阳楼记）',
+      id: 'yy-ep02', lang: 'zh',
+      title: '语文第 2 期：八年级古诗文必考易错字听写（陋室铭·爱莲说·桃花源记·三峡·岳阳楼记）',
       subtitle: '专治“会背但错偏旁”的 13 个高频失分字',
       duration: '约 1 分 45 秒',
       free: true,
@@ -34,8 +34,8 @@ window.YY_LAB_DATA = {
       ]
     },
     {
-      id: 'yy-ep03',
-      title: '第 3 期：九年级冲刺易错字听写（醉翁亭记·水调歌头·行路难·出师表·破阵子）',
+      id: 'yy-ep03', lang: 'zh',
+      title: '语文第 3 期：九年级冲刺易错字听写（醉翁亭记·水调歌头·行路难·出师表·破阵子）',
       subtitle: '中考压轴名篇易错字全清零 · 考前磨耳朵必备',
       duration: '约 1 分 40 秒',
       free: false,
@@ -47,6 +47,98 @@ window.YY_LAB_DATA = {
         '第二组，《水调歌头》与《行路难》：但愿人长久，千里共婵娟；又恐琼楼玉宇，高处不胜寒；长风破浪会有时，直挂云帆济沧海。记住：婵娟两个字都是女字旁；琼楼玉宇的琼是王字旁；济沧海的济是三点水。',
         '第三组，《出师表》：陟罚臧否，不宜异同；不宜妄自菲薄，引喻失义；至于斟酌损益，进尽忠言。记住：陟是左耳旁，臧否的否这里读痞；菲薄的菲是草字头。',
         '第四组，《破阵子》：八百里分麾下炙，五十弦翻塞外声；马作的卢飞快，弓如霹雳弦惊。记住：麾下炙的炙是上面月字变形下面火，表示烤肉；霹雳上面都是雨字头。听写结束，立刻对照下方核对！'
+      ]
+    },
+    {
+      id: 'yy-ep04', lang: 'zh',
+      title: '语文第 4 期：中考高频字音字形红线听写（莅临·粗犷·称职·殷红·拾级而上）',
+      subtitle: '专属女声逐词纠音 + 易错字形拆解 · 积累与运用稳拿分',
+      duration: '约 1 分 15 秒',
+      free: false,
+      src: './assets/audio/yy-ep04.mp3',
+      checkpoints: ['莅临(lì)', '粗犷(guǎng)', '称职(chèn)', '参差不齐(cēn cī)', '殷红(yān)', '拾级而上(shè)', '人声鼎沸', '翻来覆去', '油然而生', '截然不同', '再接再厉', '迫不及待'],
+      displayScript: [
+        '欢迎来到爱丽克丝中考语文高频字音字形红线听写。这些词年年考、一读就容易顺嘴错，拿出纸笔边听边写！',
+        '第一组，高频易错字音：莅临的莅读四声 lì，别读成 wèi；粗犷的犷读三声 guǎng，别读成 kuàng；称职表示相配时读四声 chèn，别读成 chēng；参差不齐读 cēn cī，别读成 cān chā；殷红的殷读一声 yān，不是 yīn；拾级而上的拾读四声 shè，不是 shí。',
+        '第二组，高频易错字形：人声鼎沸的“鼎”下面别少竖折；翻来覆去是覆盖的“覆”，不是重复的“复”；油然而生是加油的“油”，不是由来的“由”；截然不同是截取的“截”，别少一撇；再接再厉是严厉的“厉”，不是鼓励的“励”；迫不及待是来不及的“及”，不是着急的“急”。听写结束，立刻对照下方红线核对！'
+      ]
+    },
+    {
+      id: 'yy-ep05', lang: 'zh',
+      title: '语文第 5 期：16 篇必考文言文古今异义词磨耳朵（妻子·绝境·卑鄙·狱·谤讥）',
+      subtitle: '专治文言翻译“按现代意思瞎译”丢分黑洞',
+      duration: '约 1 分 20 秒',
+      free: false,
+      src: './assets/audio/yy-ep05.mp3',
+      checkpoints: ['妻子=妻和儿女', '绝境=与世隔绝之地', '无论=不要说', '卑鄙=地位低微见识浅', '痛恨=痛心遗憾', '狱=诉讼案件', '谤讥=公开议论(中性)', '野马=山野雾气', '但=只是'],
+      displayScript: [
+        '欢迎来到中考十六篇必考文言文古今异义磨耳朵。文言翻译丢分，八成是把古义当现代词直接译了，听完立刻避坑！',
+        '第一组，《桃花源记》：率妻子邑人来此绝境，妻子是妻子和儿女，不是老婆；绝境是与世隔绝的地方，不是走投无路；无论魏晋的无论，是不要说、更不必说。',
+        '第二组，《出师表》与《曹刿论战》：先帝不以臣卑鄙，卑鄙是身份低微、见识短浅，完全没有贬义；未尝不叹息痛恨于桓灵也，痛恨是痛心遗憾；小大之狱的狱，是指诉讼案件，不是监狱。',
+        '第三组，《邹忌讽齐王纳谏》与《北冥有鱼》：能谤讥于市朝，谤讥是公开指责议论，没有造谣诽谤的贬义；野马也尘埃也，野马是指山野中奔腾的雾气；但少闲人如吾两人者耳，文言里的“但”，九成译作只是，不是转折但是。记牢这些红线词，文言翻译稳拿满分！'
+      ]
+    },
+    {
+      id: 'yy-en-01', lang: 'en',
+      title: '英语第 1 期：不规则动词 AAA / ABB / ABC 韵律跟读磨耳朵',
+      subtitle: '美式标准发音 · 听 3 遍形成条件反射，短文填空再也不拼错',
+      duration: '约 1 分 05 秒',
+      free: true,
+      src: './assets/audio/yy-en-01.mp3',
+      checkpoints: ['cost-cost-cost', 'cut-cut-cut', 'read-read(/red/)-read', 'buy-bought-bought', 'bring-brought-brought', 'teach-taught-taught', 'keep-kept-kept', 'feel-felt-felt', 'begin-began-begun', 'swim-swam-swum', 'drink-drank-drunk'],
+      displayScript: [
+        'Group 1 (AAA): cost-cost-cost | cut-cut-cut | put-put-put | hurt-hurt-hurt | read-read(/red/)-read | spread-spread-spread.',
+        'Group 2 (ABB): buy-bought-bought | bring-brought-brought | teach-taught-taught | catch-caught-caught | keep-kept-kept | feel-felt-felt.',
+        'Group 3 (ABC i-a-u): begin-began-begun | swim-swam-swum | drink-drank-drunk | sing-sang-sung | ring-rang-rung.'
+      ]
+    },
+    {
+      id: 'yy-en-02', lang: 'en',
+      title: '英语第 2 期：高频易混词 & 固定搭配真题例句听读',
+      subtitle: 'spend/cost/take/pay · borrow/lend/keep · used to · to+doing 全覆盖',
+      duration: '约 1 分 05 秒',
+      free: true,
+      src: './assets/audio/yy-en-02.mp3',
+      checkpoints: ['It takes sb. time to do', 'spend ... on', 'cost + money', 'borrow / keep for 2 weeks', 'used to do', 'be used to doing', 'look forward to hearing', 'pay attention to checking'],
+      displayScript: [
+        '1. It takes me two hours to finish my homework every evening. / Tom spent 200 yuan on a pair of running shoes. / The concert ticket cost him 300 yuan.',
+        '2. May I borrow your dictionary for a minute? / How long may I keep this library book? I have kept it for two weeks.',
+        '3. My father used to drink coffee, but now he prefers tea. / She is used to getting up early to read English. / Wood is used to make paper and furniture.',
+        '4. I am looking forward to hearing from you soon. / You must pay attention to checking your spelling in the exam.'
+      ]
+    },
+    {
+      id: 'yy-en-03', lang: 'en',
+      title: '英语第 3 期：中考英语作文 15 分高分金句慢速跟读',
+      subtitle: '6 大必考主题倒装/强调/比较级万能句 · 边听边背直接搬上考场',
+      duration: '约 1 分 00 秒',
+      free: true,
+      src: './assets/audio/yy-en-03.mp3',
+      checkpoints: ['Not only does green travel...', 'have the responsibility to pass down', 'The more... the more confident...', 'double-edged sword / rather than', 'It was ... that taught me...', 'spare no effort to turn... into reality'],
+      displayScript: [
+        '1. Green Travel: Not only does green travel cut down air pollution, but it also helps us build a healthier lifestyle.',
+        '2. Traditional Culture: As teenagers, we have the responsibility to pass down our traditional culture.',
+        '3. Study Advice: The more you expose yourself to English reading, the more confident you will become in the exam.',
+        '4. Technology & AI: Technology is a double-edged sword. We should treat AI as a helpful assistant rather than a replacement for our brains.',
+        '5. Growth & Courage: It was that unforgettable failure that taught me courage is the will to keep moving forward.',
+        '6. Dreams: With a clear goal in mind, I am determined to spare no effort to turn my dream into reality.'
+      ]
+    },
+    {
+      id: 'yy-en-04', lang: 'en',
+      title: '英语第 4 期：中考英语男女双声情景听力微对话（6 大高频场景）',
+      subtitle: '美式男女双声真实对话 · 问路 / 看病 / 邀请 / 点餐 / 购物 / 提建议',
+      duration: '约 1 分 25 秒',
+      free: false,
+      src: './assets/audio/yy-en-04.mp3',
+      checkpoints: ['turn left at the second crossing', 'have a bad headache and a fever', 'I’d love to, but...', 'May I take your order?', 'trying on size medium / I’ll take it', 'Why not join our English club?'],
+      displayScript: [
+        'Dialogue 1 (Asking the way): —Excuse me, could you tell me how to get to the nearest subway station? —Sure! Go straight along this street and turn left at the second crossing. It is right across from the bank.',
+        'Dialogue 2 (At the doctor’s): —What’s the matter with you? You look pale today. —I have had a bad headache and a fever since last night.',
+        'Dialogue 3 (Invitation): —Would you like to go hiking with us this Saturday morning? —I’d love to, but I have to look after my little sister at home. Maybe next time!',
+        'Dialogue 4 (Restaurant): —May I take your order now, madam? —Yes, I’d like a bowl of beef noodles and a glass of warm water, please.',
+        'Dialogue 5 (Shopping): —This blue jacket looks great on you. How about trying on size medium? —Thanks! It fits very well. I’ll take it.',
+        'Dialogue 6 (Suggestions): —I’m worried about my spoken English. What should I do? —Why not join our English club and practice speaking for 15 minutes every day?'
       ]
     }
   ],
@@ -1998,6 +2090,392 @@ window.YY_LAB_DATA = {
         ' Patience builds deep trust in any friendship.'
       ],
       fullEn: 'Good communication is not just about speaking well. Everyone loves friends who truly listen to them. How can you become a better listener? Put down your phone and look at the speaker’s eyes. Eye contact shows that you respect their words. Let the other person finish speaking before you share your own opinion. Patience builds deep trust in any friendship.'
+    }
+  ],
+
+  classics: [
+    {
+      id: 'cl-01', stage: '初一上', title: '《朝花夕拾》· 鲁迅', free: true,
+      hero: '阿长（长妈妈）、藤野先生、范爱农、寿镜吾老先生',
+      theme: '回忆性散文集（原名《旧事重提》），温情怀念与锋利批判交织。',
+      prompt: '选出下列关于《朝花夕拾》中“唯一正确”的表述（排雷张冠李戴）：',
+      options: [
+        '《阿长与〈山海经〉》中，阿长虽迷信唠叨，却热心为鲁迅买来渴慕已久的绘图《山海经》',
+        '《藤野先生》写的是鲁迅在南京矿路学堂求学时遇到的严师',
+        '《五猖会》表现了父亲非常支持儿童自由看戏的天性',
+        '《从百草园到三味书屋》选自鲁迅的小说集《呐喊》'
+      ],
+      answer: 0,
+      explain: '高频排雷：藤野先生是在日本仙台医专；《五猖会》父亲强迫背《鉴略》压抑了孩子天性；《从百草园到三味书屋》选自散文集《朝花夕拾》（非《呐喊》）！',
+      mnemonic: '朝花夕拾散文集：仙台藤野添改讲义、阿长买《山海经》、五猖会背《鉴略》扫兴'
+    },
+    {
+      id: 'cl-02', stage: '初一上', title: '《西游记》· 吴承恩', free: true,
+      hero: '孙悟空、唐僧、猪八戒、沙僧',
+      theme: '浪漫主义神魔章回小说，歌颂不畏艰险、百折不挠的抗争精神。',
+      prompt: '选出关于孙悟空“三调芭蕉扇”与成长脉络的正确表述：',
+      options: [
+        '一借芭蕉扇得到假扇越扇火越大；二借变作牛魔王骗来真扇又被牛魔王变猪八戒骗回；三借在众神协助下才收服牛魔王',
+        '三打白骨精后，猪八戒极力替孙悟空说好话挽留他',
+        '孙悟空在车迟国大闹天宫偷吃蟠桃',
+        '红孩儿是牛魔王与白骨精的儿子'
+      ],
+      answer: 0,
+      explain: '高频排雷：三打白骨精是猪八戒挑唆唐僧赶走悟空；红孩儿是牛魔王与铁扇公主（罗刹女）之子；大闹天宫在取经之前！',
+      mnemonic: '西游必考三件事：大闹天宫反权威、三打白骨辨忠奸、三调芭蕉智取胜'
+    },
+    {
+      id: 'cl-03', stage: '初一下', title: '《骆驼祥子》· 老舍', free: true,
+      hero: '祥子、虎妞、小福子、曹先生、刘四爷',
+      theme: '控诉旧社会把勤劳老实的底层劳动者逼成行尸走肉的黑暗制度。',
+      prompt: '选出关于祥子“三起三落”买车悲剧的正确表述：',
+      options: [
+        '第一辆车被大兵抢走；第二次攒的钱被孙侦探敲诈一空；第三辆车为安葬虎妞被迫卖掉',
+        '祥子第一次买车靠的是虎妞给的私房钱',
+        '小福子最终和祥子幸福地生活在一起',
+        '曹先生是一个压榨车夫的贪婪军阀'
+      ],
+      answer: 0,
+      explain: '高频排雷：第一辆车是祥子苦干三年自己攒钱买的；曹先生是同情祥子的进步教授；小福子绝望自杀成为压垮祥子的最后一根稻草！',
+      mnemonic: '祥子三落红线：一落大兵抢车 → 二落孙侦探敲诈 → 三落葬虎妞卖车'
+    },
+    {
+      id: 'cl-04', stage: '初一下', title: '《海底两万里》· 凡尔纳', free: false,
+      hero: '尼摩船长、阿龙纳斯教授、康塞尔、尼德·兰',
+      theme: '科幻冒险名著，赞美人类探索未知的勇气与反对殖民压迫的正义感。',
+      prompt: '选出关于“诺第留斯号（鹦鹉螺号）”航程与人物的正确表述：',
+      options: [
+        '阿龙纳斯教授的仆人康塞尔精通生物分类，捕鲸手尼德·兰性格暴躁、一心想逃离潜艇',
+        '尼摩船长驾驶“诺第留斯号”使用的是燃煤蒸汽动力',
+        '他们在南极冰盖下航行时一帆风顺，未遇任何险情',
+        '尼摩船长冷酷无情，从未救助过采珠人或反抗压迫的人民'
+      ],
+      answer: 0,
+      explain: '高频排雷：潜艇动力来自海洋提取的“钠电池电力”；在南极曾遭遇冰山封路险些缺氧；尼摩船长在锡兰采珠场勇斗鲨鱼救下印度采珠人！',
+      mnemonic: '鹦鹉螺号用电跑：尼摩神秘反压迫、康塞尔爱分类、尼德·兰想逃跑'
+    },
+    {
+      id: 'cl-05', stage: '初二上', title: '《红星照耀中国》· 埃德加·斯诺', free: false,
+      hero: '毛泽东、周恩来、彭德怀、朱德、贺龙、“红小鬼”',
+      theme: '纪实文学（原名《西行漫记》），客观向世界报道中国工农红军与延安真相。',
+      prompt: '选出关于《红星照耀中国》人物事迹匹配正确的一项：',
+      options: [
+        '周恩来温文尔雅、平易近人，曾亲自为斯诺规划了 92 天的红区采访行程',
+        '彭德怀性格沉默寡言，从不和“红小鬼”开玩笑',
+        '贺龙出身豪门望族，靠两把菜刀起家是虚构传说',
+        '作者斯诺是英国作家，在抗战胜利后才进入陕北'
+      ],
+      answer: 0,
+      explain: '高频排雷：斯诺是美国记者，1936 年进入陕北苏区；彭德怀爽朗乐观、把棉衣披给小号手；贺龙确有“两把菜刀闹革命”的传奇！',
+      mnemonic: '美国记者斯诺写：周恩来儒雅定行程、彭德怀爽朗爱士兵、红小鬼乐观有骨气'
+    },
+    {
+      id: 'cl-06', stage: '初二上', title: '《昆虫记》· 法布尔', free: false,
+      hero: '蝉、螳螂、圣甲虫（屎壳郎）、红蚂蚁、杨柳天牛',
+      theme: '“昆虫的史诗”，兼具科学严谨性与文学诗意，敬畏每一个微小生命。',
+      prompt: '选出《昆虫记》中昆虫习性描述完全正确的一项：',
+      options: [
+        '蝉在地下黑暗中苦熬四年，却只在阳光下歌唱约五个星期；螳螂是凶猛的肉食捕猎者',
+        '法布尔主要靠把昆虫做成干标本在实验室解剖来写这本书',
+        '圣甲虫（屎壳郎）生性懒惰，从不搬运食物',
+        '萤火虫是纯素食昆虫，靠吃花蜜维生'
+      ],
+      answer: 0,
+      explain: '高频排雷：法布尔坚持“野外活体观察”反对死标本；圣甲虫极其勤劳；萤火虫是肉食动物（先注射麻醉液再吃蜗牛）！',
+      mnemonic: '法布尔野外看活虫：蝉潜四年唱五周、螳螂凶猛、萤火虫麻醉蜗牛'
+    },
+    {
+      id: 'cl-07', stage: '初二下', title: '《傅雷家书》· 傅雷', free: false,
+      hero: '傅雷（父亲）、傅聪（钢琴家儿子）',
+      theme: '苦心孤诣的教子篇，核心训诫：先做人，次做艺术家，再做音乐家，最后做钢琴家。',
+      prompt: '选出符合《傅雷家书》教育理念的表述：',
+      options: [
+        '傅雷强调“赤子之心”，教导傅聪在顺境中保持清醒谦虚，在逆境中坚强不屈',
+        '傅雷认为只要钢琴弹得好，品格修养无关紧要',
+        '信件全部写于傅聪童年小学时期',
+        '傅雷从不反思自己的严厉，始终以家长权威压人'
+      ],
+      answer: 0,
+      explain: '高频排雷：家书写于傅聪留学波兰及旅居海外期间；傅雷在信中多次真诚向儿子道歉反思早年的过度严厉，父子如益友！',
+      mnemonic: '傅雷教子四步阶：先做人 → 艺术家 → 音乐家 → 钢琴家，永葆赤子心'
+    },
+    {
+      id: 'cl-08', stage: '初二下', title: '《钢铁是怎样炼成的》· 奥斯特洛夫斯基', free: false,
+      hero: '保尔·柯察金、朱赫来、冬妮娅、达雅',
+      theme: '以钢铁般的革命意志战胜伤病与绝望，把生命献给人类解放事业。',
+      prompt: '选出关于保尔·柯察金成长历程的正确表述：',
+      options: [
+        '朱赫来是保尔的革命引路人；保尔在双目失明、全身瘫痪后，坚持创作《暴风雨所诞生的》重新战斗',
+        '保尔因为爱慕虚荣最终与冬妮娅结为夫妻',
+        '保尔在筑路时因贪图享乐中途当了逃兵',
+        '保尔在全身瘫痪后彻底放弃了生活希望'
+      ],
+      answer: 0,
+      explain: '高频排雷：保尔与冬妮娅因人生理想分道扬镳；筑路期间冒严寒伤寒拼死坚持；最终用文学作武器写下《暴风雨所诞生的》！',
+      mnemonic: '保尔成长线：朱赫来引路 → 筑路炼意志 → 失明写《暴风雨所诞生的》'
+    },
+    {
+      id: 'cl-09', stage: '初三上', title: '《艾青诗选》· 艾青', free: false,
+      hero: '核心意象：土地、太阳、火把、黎明',
+      theme: '深沉的爱国情怀与对光明的执着追求，“诗中有画”的自由体新诗。',
+      prompt: '选出关于《艾青诗选》艺术特征与名句的正确表述：',
+      options: [
+        '“为什么我的眼里常含泪水？因为我对这土地爱得深沉”出自《我爱这土地》，“土地”与“太阳”是艾青诗歌核心意象',
+        '《大堰河——我的保姆》写的是诗人出国留学时的风景见闻',
+        '艾青诗歌严格遵守古代五言律诗格律与平仄',
+        '艾青早年作品基调全是轻松欢快的田园牧歌'
+      ],
+      answer: 0,
+      explain: '高频排雷：《大堰河——我的保姆》抒发对乳母的深切怀念与底层悲悯；艾青擅长不拘格律的自由诗，早期充满忧郁沉重与爱国呐喊！',
+      mnemonic: '艾青两大核心意象：“土地”（爱国苦难）与“太阳”（光明希望）'
+    },
+    {
+      id: 'cl-10', stage: '初三上', title: '《水浒传》· 施耐庵', free: false,
+      hero: '宋江、林冲、鲁智深、武松、吴用、李逵',
+      theme: '官逼民反的英雄传奇，采用“先分传后合传”的链式章回结构。',
+      prompt: '选出人物与经典情节匹配完全正确的一项：',
+      options: [
+        '鲁智深：拳打镇关西、倒拔垂杨柳、大闹野猪林；林冲：误入白虎堂、风雪山神庙',
+        '武松：智取生辰纲、三打祝家庄',
+        '林冲：景阳冈打虎、醉打蒋门神',
+        '鲁智深：大闹飞云浦、血溅鸳鸯楼'
+      ],
+      answer: 0,
+      explain: '高频排雷：景阳冈打虎、醉打蒋门神、大闹飞云浦、血溅鸳鸯楼全是武松；智取生辰纲是晁盖、吴用等七星！',
+      mnemonic: '水浒防串线：鲁智深救林冲（野猪林）、武松打虎蒋门神、吴用智取生辰纲'
+    },
+    {
+      id: 'cl-11', stage: '初三下', title: '《儒林外史》· 吴敬梓', free: false,
+      hero: '范进、严监生、周进、王冕、杜少卿',
+      theme: '中国古代讽刺小说巅峰，以辛辣笔触揭露八股科举对读书人灵魂的毒害。',
+      prompt: '选出关于《儒林外史》人物形象与情节的正确表述：',
+      options: [
+        '范进中举后喜极而疯，被胡屠户一巴掌打醒；严监生临死伸两根手指是因为灯盏里点着两茎灯草',
+        '王冕是全书最热衷追名逐利的反面典型',
+        '杜少卿吝啬成性，一毛不拔',
+        '严监生和严贡生都是慷慨仗义的君子'
+      ],
+      answer: 0,
+      explain: '高频排雷：王冕和杜少卿是作者寄托理想的正面人物（淡泊名利、慷慨仗义）；严贡生是贪婪无赖（吃云片糕赖船钱），严监生是极端吝啬鬼！',
+      mnemonic: '儒林群像：范进疯癫、严监生两茎灯草、严贡生赖船钱；王冕杜少卿为清流'
+    },
+    {
+      id: 'cl-12', stage: '初三下', title: '《简·爱》· 夏洛蒂·勃朗特', free: false,
+      hero: '简·爱、罗切斯特、谭波尔小姐、圣约翰',
+      theme: '自尊自爱、追求人格独立与精神平等的女性成长史诗。',
+      prompt: '选出关于简·爱人生选择与精神内核的正确表述：',
+      options: [
+        '得知罗切斯特已有疯妻后，简·爱维护人格尊严毅然离开桑菲尔德庄园；后来在罗切斯特失明破产时选择平等相守',
+        '简·爱为了巨额财富答应了表哥圣约翰的求婚',
+        '简·爱在舅妈里德太太家备受溺爱',
+        '简·爱最终屈从于社会偏见，放弃了独立追求'
+      ],
+      answer: 0,
+      explain: '高频排雷：简·爱在盖茨赫德府饱受舅妈虐待；她拒绝圣约翰没有爱情的功利婚姻；她爱的是平等独立的灵魂！',
+      mnemonic: '简·爱核心魂：贫穷渺小不自卑，追求人格独立与精神平等'
+    }
+  ],
+
+  dialogue: [
+    {
+      id: 'd-01', scene: '问路指路', title: '情景①：Asking the Way（问路）', free: true,
+      lines: [
+        { who: 'A', en: 'Excuse me, could you tell me how to get to the nearest subway station?' },
+        { who: 'B', en: '____' },
+        { who: 'A', en: 'How far is it from here? Should I take a bus?' },
+        { who: 'B', en: 'No, it’s only about a five-minute walk.' }
+      ],
+      choices: [
+        'Sure! Go straight along this street and turn left at the second crossing.',
+        'You are welcome. Have a nice day.',
+        'I’m sorry to hear that.',
+        'It’s sunny and warm today.'
+      ],
+      answer: 0,
+      fullEn: 'Excuse me, could you tell me how to get to the nearest subway station? Sure! Go straight along this street and turn left at the second crossing.',
+      tip: '问路核心句型：Go straight along... / turn left at the second crossing / It’s across from...'
+    },
+    {
+      id: 'd-02', scene: '医院看病', title: '情景②：At the Doctor’s（就医问诊）', free: true,
+      lines: [
+        { who: 'Doctor', en: '____ You look a bit pale today.' },
+        { who: 'Patient', en: 'I’ve had a bad headache and a fever since last night.' },
+        { who: 'Doctor', en: 'Let me take your temperature. Nothing serious, just a cold.' }
+      ],
+      choices: [
+        'What’s the matter with you?',
+        'How much is the medicine?',
+        'Where are you going for vacation?',
+        'What size would you like?'
+      ],
+      answer: 0,
+      fullEn: 'What’s the matter with you? You look a bit pale today. I have had a bad headache and a fever since last night.',
+      tip: '看病开场铁句：What’s the matter / What’s wrong with you? / How long have you been like this?'
+    },
+    {
+      id: 'd-03', scene: '邀请与婉拒', title: '情景③：Invitation & Polite Refusal（邀请）', free: true,
+      lines: [
+        { who: 'A', en: 'Would you like to go hiking with us this Saturday morning?' },
+        { who: 'B', en: '____ Maybe next time!' },
+        { who: 'A', en: 'That’s a pity. Hope we can go together soon.' }
+      ],
+      choices: [
+        'I’d love to, but I have to look after my little sister at home.',
+        'No, I don’t like you at all.',
+        'Yes, I’m busy this Saturday.',
+        'Never mind.'
+      ],
+      answer: 0,
+      fullEn: 'Would you like to go hiking with us this Saturday morning? I’d love to, but I have to look after my little sister at home. Maybe next time!',
+      tip: '英语婉拒必须先表达意愿再说原因：I’d love to, but...（直接说 No 属于文化失礼坑！）'
+    },
+    {
+      id: 'd-04', scene: '餐厅点餐', title: '情景④：Ordering Food（餐厅点餐）', free: false,
+      lines: [
+        { who: 'Waiter', en: 'Good evening! May I take your order now?' },
+        { who: 'Customer', en: '____' },
+        { who: 'Waiter', en: 'Sure. Would you like anything to drink?' }
+      ],
+      choices: [
+        'Yes, I’d like a bowl of beef noodles and some dumplings, please.',
+        'Yes, I’m looking for size medium.',
+        'No, I’m just looking around.',
+        'Hold on, please.'
+      ],
+      answer: 0,
+      fullEn: 'Good evening! May I take your order now? Yes, I’d like a bowl of beef noodles and some dumplings, please.',
+      tip: '餐厅点餐核心：May I take your order? → Yes, I’d like... please.'
+    },
+    {
+      id: 'd-05', scene: '商店购物', title: '情景⑤：Shopping（买衣服试穿）', free: false,
+      lines: [
+        { who: 'Clerk', en: 'This blue jacket looks great on you. How does it fit?' },
+        { who: 'Customer', en: 'It fits very well and feels comfortable. ____' },
+        { who: 'Clerk', en: 'It’s 180 yuan, and it’s on sale today.' }
+      ],
+      choices: [
+        'How much is it?',
+        'How many is it?',
+        'What color is it?',
+        'Who made it?'
+      ],
+      answer: 0,
+      fullEn: 'It fits very well and feels comfortable. How much is it? It’s 180 yuan, and it’s on sale today.',
+      tip: '问价格永远用 How much is it? / What’s the price of it?（绝不用 How many！）'
+    },
+    {
+      id: 'd-06', scene: '打电话', title: '情景⑥：Making a Phone Call（电话用语）', free: false,
+      lines: [
+        { who: 'A', en: 'Hello! May I speak to Tom, please?' },
+        { who: 'B', en: '____ He is watering the flowers in the garden.' }
+      ],
+      choices: [
+        'Hold on, please. I’ll go and get him.',
+        'I am Tom. Who are you?',
+        'Yes, I’m speaking.',
+        'See you tomorrow.'
+      ],
+      answer: 0,
+      fullEn: 'Hello! May I speak to Tom, please? Hold on, please. I’ll go and get him.',
+      tip: '电话红线：我是某人用 This is... speaking；请问你是谁用 Who’s that?；稍等用 Hold on, please.'
+    },
+    {
+      id: 'd-07', scene: '道歉与回应', title: '情景⑦：Apologizing（道歉与谅解）', free: false,
+      lines: [
+        { who: 'A', en: 'I’m terribly sorry for breaking your favorite cup!' },
+        { who: 'B', en: '____ I know you didn’t mean to do it.' }
+      ],
+      choices: [
+        'Never mind. / It doesn’t matter.',
+        'That’s right.',
+        'With pleasure.',
+        'You’re welcome.'
+      ],
+      answer: 0,
+      fullEn: 'I’m terribly sorry for breaking your favorite cup! Never mind. I know you didn’t mean to do it.',
+      tip: '回应道歉用 Never mind / It doesn’t matter / That’s all right；回应感谢才用 You’re welcome！'
+    },
+    {
+      id: 'd-08', scene: '请求许可', title: '情景⑧：Asking for Permission（介意吗）', free: false,
+      lines: [
+        { who: 'A', en: 'Would you mind if I open the window to let some fresh air in?' },
+        { who: 'B', en: '____ Go ahead, please.' }
+      ],
+      choices: [
+        'Of course not. / Not at all.',
+        'Yes, please.',
+        'No, you can’t.',
+        'You’d better not.'
+      ],
+      answer: 0,
+      fullEn: 'Would you mind if I open the window? Of course not. Go ahead, please.',
+      tip: '超高频坑！Would you mind...? 表示同意（不介意）必须用否定形式：Not at all / Of course not！'
+    },
+    {
+      id: 'd-09', scene: '提建议', title: '情景⑨：Giving Advice（学习建议）', free: false,
+      lines: [
+        { who: 'A', en: 'I’m really worried about my spoken English. What should I do?' },
+        { who: 'B', en: '____' },
+        { who: 'A', en: 'Sounds like a great idea! I’ll try it.' }
+      ],
+      choices: [
+        'Why not join our English club and practice speaking every day?',
+        'What a pity!',
+        'Congratulations!',
+        'Help yourself to some fruit.'
+      ],
+      answer: 0,
+      fullEn: 'Why not join our English club and practice speaking every day? Sounds like a great idea!',
+      tip: '提建议三剑客：Why not + 动原 / How about + doing / You’d better + 动原。'
+    },
+    {
+      id: 'd-10', scene: '赞美与回应', title: '情景⑩：Compliments（接受夸奖）', free: false,
+      lines: [
+        { who: 'A', en: 'Your speech in the competition was amazing! Well done!' },
+        { who: 'B', en: '____' }
+      ],
+      choices: [
+        'Thank you very much! I’m glad you liked it.',
+        'No, no, my speech was terrible.',
+        'Nothing much.',
+        'Take it easy.'
+      ],
+      answer: 0,
+      fullEn: 'Your speech in the competition was amazing! Thank you very much! I’m glad you liked it.',
+      tip: '跨文化交际红线：西方文化接受夸奖应大方道谢 Thank you!，不要中式谦虚说 No, it’s bad！'
+    },
+    {
+      id: 'd-11', scene: '询问天气', title: '情景⑪：Talking about Weather（天气）', free: false,
+      lines: [
+        { who: 'A', en: '____' },
+        { who: 'B', en: 'It’s cloudy now, and the weather report says it will rain later.' }
+      ],
+      choices: [
+        'What’s the weather like today?',
+        'How is the weather like today?',
+        'What day is it today?',
+        'What’s the date today?'
+      ],
+      answer: 0,
+      fullEn: 'What’s the weather like today? It’s cloudy now, and it will rain later.',
+      tip: '语法铁律：What’s the weather like? = How is the weather?（绝不能混写成 How...like!）'
+    },
+    {
+      id: 'd-12', scene: '祝愿与告别', title: '情景⑫：Good Wishes（出行祝愿）', free: false,
+      lines: [
+        { who: 'A', en: 'I’m flying to Beijing for the summer camp tomorrow!' },
+        { who: 'B', en: '____' },
+        { who: 'A', en: 'Thank you! I’ll send you some photos.' }
+      ],
+      choices: [
+        'Have a wonderful trip! / Enjoy yourself!',
+        'Good luck next time.',
+        'That’s too bad.',
+        'Don’t mention it.'
+      ],
+      answer: 0,
+      fullEn: 'I’m flying to Beijing for the summer camp tomorrow! Have a wonderful trip!',
+      tip: '出行/过节送祝福：Have a great trip / Enjoy yourself / Have a good time!'
     }
   ]
 };

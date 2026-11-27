@@ -140,13 +140,13 @@ function openPointsPrint(matches, blankMode) {
     <div class="pt-pr-bar no-print">
       <div><b>${escapeHTML(subjectInfo[subject].name)} · ${modeLabel}（共 ${picked.length} 条）</b></div>
       <div class="pt-pr-btns">
-        ${!paidAccess && omitted > 0 ? `<a class="btn" href="./">回首页开通完整版 ¥19.9（印全部 ${matches.length} 条）</a>` : ''}
+        ${!paidAccess && omitted > 0 ? `<a class="btn" href="./">回首页解锁完整版（印全部 ${matches.length} 条）</a>` : ''}
         <button type="button" class="btn primary" id="ptPrGo">立即打印 / 存 PDF</button>
         <button type="button" class="btn" id="ptPrClose">关闭</button>
       </div>
     </div>
     <div class="pt-pr-page">
-      ${!paidAccess && omitted > 0 ? `<div class="pt-pr-note">免费体验可打印每科前 5 条，完整版 ¥19.9 一次买断可无水印打印全部 253 条全科（语英＋小四门）权威口诀速记与默写纸。</div>` : ''}
+      ${!paidAccess && omitted > 0 ? `<div class="pt-pr-note">免费体验可打印每科前 5 条，完整版（单买 ¥99.9，3 人拼团低至 ¥59.9/人）一次买断可无水印打印全部 253 条全科（语英＋小四门）权威口诀速记与默写纸。</div>` : ''}
       <header class="pt-pr-head">
         <h1>爱丽克丝中考题库 · ${escapeHTML(subjectInfo[subject].name)}${modeLabel}</h1>
         <p>人教版 · 姓名：__________　日期：__________　核对得分：______</p>

@@ -73,7 +73,8 @@ check(appJs.includes("trackVisit('buy_click')") && appJs.includes("trackVisit('c
   '核心成交漏斗埋点调用完整', 'app.js 缺少 buy_click / copy_code / redeem_success 埋点调用');
 check(appJs.includes("unlockDialog.scrollTop = 0;"), '购买弹窗打开时自动置顶', 'app.js openUnlock 缺少 scrollTop 置顶');
 check(appJs.includes("fetch('/api/access/backup'"), '前端云端错题本同步已接入', 'app.js 缺少 /api/access/backup 请求');
-check(appJs.includes('access-value-line') && appJs.includes('开通完整版 ¥19.9'), '首页转化横幅含核心权益与主 CTA', 'app.js 缺少首页转化横幅权益文案');
+check(appJs.includes('access-value-line') && appJs.includes('开通完整版 ¥99.9'), '首页转化横幅含核心权益与主 CTA', 'app.js 缺少首页转化横幅权益文案');
+check(!indexHtml.includes('119.8') && !appJs.includes('119.8'), '前端零泄露团长私信底价', '前端不应出现团长私信底价 119.8');
 check(appJs.includes('async function openScorePoster(') && appJs.includes('id="analysisPosterBtn"') && read('functions/api/_stats.js').includes('"score_poster"'), '成绩单与学情诊断海报及埋点完整', '缺少成绩单/学情诊断海报或 score_poster 埋点');
 check(indexHtml.includes('id="claimConfirmDialog"') && appJs.includes('function confirmFreeClaim('), '免费整卷领取使用站内弹窗避免 WebView 拦截', '缺少 #claimConfirmDialog 或 confirmFreeClaim');
 check(appJs.includes('data-mark-poster') && appJs.includes('data-mark-upsell'), '纸上登记完成后含弱项处方、海报与转化引导', 'showEarlybirdMark 缺少海报或转化引导');
