@@ -36,6 +36,7 @@ const pages = [
   "app.js", "styles.css", "referrals.js", "share-offer.js", "referrals.css", "qrcode.js",
   "key-points.html", "key-points.js", "key-points.css",
   "models.html", "models.css", "models.js", "lab-x4m.html", "lab-x4m.css", "lab-x4m.js",
+  "lab-yy.html", "lab-yy.css", "lab-yy.js",
   "robots.txt", "sitemap.xml",
   "manifest.webmanifest", "_routes.json", "_headers", "sw.js",
   "national-exams.js", "national-exams.css", "knowledge.js", "knowledge.css",
@@ -77,7 +78,7 @@ const knowledgeScript = join(output, "knowledge.js");
 writeFileSync(knowledgeScript, readFileSync(knowledgeScript, "utf8").replace("__KNOWLEDGE_VERSION__", knowledgeHash.digest("hex").slice(0, 12)));
 
 // 每次发布按文件内容生成版本号（?v=内容哈希），文件一改，访客浏览器就会拿新文件。
-for (const page of ["index.html", "key-points.html", "models.html", "lab-x4m.html"]) {
+for (const page of ["index.html", "key-points.html", "models.html", "lab-x4m.html", "lab-yy.html"]) {
   const file = join(output, page);
   const html = readFileSync(file, "utf8").replace(/(["'])\.\/([\w./-]+\.(?:js|css))\?v=[\w-]+\1/g, (match, quote, path) => {
     const target = join(output, path);

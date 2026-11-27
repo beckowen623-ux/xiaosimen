@@ -1,5 +1,19 @@
 # 技术变更记录
 
+## 2026-11-27 · Antigravity · 上线首页第 3 主线「📖 语英主线」＋《语英提分工坊》(lab-yy.html) ＋ 3 期同音字发音稿语文听写音频 ＋ 语英 90 条口诀补齐（main）
+- **首页第 3 大主线 Tab (`app.js`, `styles.css`, `index.html`)**：
+  - 首页导航扩展为 5 枚吸顶 Tab（`🎬 小四门 / 🎯 数理化 / 📖 语英 / 📝 同步真题 / 📕 错题更多`），补齐预留第 3 槽位；
+  - `📖 语英` 主线内嵌「5 秒试玩：古诗文易错字排雷 + 英语作文 10→15 分一键升格」微体验、第 1 期古诗文易错字听写 1 秒试听条、6 大工坊快捷瓷砖，并直接联动当前学期已收录的 62 套语英整卷（语文 18 套 + 英语 44 套）；新增 `?go=lab-yy` / `?go=yy` 直达深链。
+- **《语英提分工坊》独立专题页 (`lab-yy.html`, `lab-yy.css`, `lab-yy.js`, `data/yy-lab-data.js`)**：
+  - 围绕文科“避坑、踩点、找线索、升格”设计 6 大差异化实战台（共 114 关，独立进度 key `xiaosimen-yy-lab-v1`）：语文古诗文易错字排雷 30 篇（前 6 关免费）、现代文/古诗阅读采分点公式对比 18 母题（前 4 关免费＋A4 速查卡打印）、文言一字多面与病句手术台 18 关（前 4 关免费）；英语词形与固定搭配 18 组（前 4 组免费＋原生英文朗读）、语法与微完形线索词破案 18 关（前 4 关免费）、中考作文 12 大主题 10→15 分三级升格与仿写组装（前 3 套免费＋A4 金句手卡打印）。
+- **显示稿 / 发音稿分离的 3 期语文听写磨耳朵音频 (`assets/audio/yy-ep01..03.mp3`)**：
+  - 针对古诗文生僻字/多音字（如 澹澹、竦峙、金柝、亵玩、绝巘、属引凄异、浩浩汤汤、陟罚臧否、麾下炙 等），采用「屏幕规范汉字显示稿 + 常见同音字 TTS 发音稿」分离方案，用本机 GPT-SoVITS 合成并逐期通过本机 `whisper.bat --check` 读音核验。
+- **全站 253 条速记 100% 带口诀 (`data/key-points-yuwen.js`, `data/key-points-yingyu.js`, `key-points.html`)**：
+  - 为语文 45 条与英语 45 条速记考点全部补齐 1 行 `mnemonic` 秒记口诀。
+- **打包、埋点与回归护栏 (`tools/stage_pages_release.mjs`, `sitemap.xml`, `functions/api/_stats.js`, `tests/smoke.mjs`)**：
+  - 新增 `lab-yy.{html,css,js}` 发布白名单与哈希版本替换、`sitemap.xml` 收录、`yy_lab_open / yy_lab_clear / yy_print / yy_audio_play` 埋点白名单与 `smoke.mjs` 语法防回归。
+- **验证**：3 期音频 Whisper `--check` 核验、`validate.mjs`、`smoke.mjs`（43/43）与 `stage_pages_release.mjs` 全部通过。
+
 ## 2026-11-26 · Antigravity · 小四门主线首屏 C 位扶正 ＋ 《🎬 考点演播室》双人视频剧场（前 10 分钟免费试看）＋ Remotion 零成本双轨托管流水线（main）
 - **首屏 C 位主线改造 (`app.js`, `styles.css`, `index.html`)**：
   - 首页顶部 4 枚吸顶 Tab 升级为 `🎯 提分双主线 / 🎬 小四门主线 / 📝 同步与真题 / 📕 错题与更多`；

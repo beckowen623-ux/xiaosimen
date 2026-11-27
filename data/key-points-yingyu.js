@@ -12,6 +12,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     // ==================== 七年级上册（7 条） ====================
     {
       id: 'yingyu-be-verb', stage: '7-up', topic: '基础语法', type: 'core', title: 'be 动词（am / is / are）搭配口诀',
+      mnemonic: '我用 am 你用 are，is 连他她它，不可数全用 is 复数全用 are',
       rule: '一般现在时 be 动词速记口诀：“我用 am，你用 are，is 连着他/她/它（he/she/it），单数不可数全用 is，复数主语全用 are”。变否定在 be 后加 not，变一般疑问把 be 提句首。',
       pitfall: '易错红线：不可数名词（如“water / news / advice”）作主语一律用“is”；“My parents”是复数用 are，但“The pair of shoes”中心词是 pair，谓语用“is”。',
       question: 'The news ____ very exciting, and my parents ____ happy about it. 填什么？',
@@ -20,6 +21,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-noun-plural', stage: '7-up', topic: '名词辨析', type: 'trap', title: '不规则名词复数与不可数名词红线',
+      mnemonic: '中日绵羊鹿同形，child 变 children；advice/news 不可数不加 a/s',
       rule: '高频不规则复数：“child → children”“foot → feet”“tooth → teeth”“mouse → mice”“man/woman → men/women”；单复数同形：“sheep / deer / Chinese / Japanese”。高频不可数名词：“information / advice / news / homework / weather / progress / fun”。',
       pitfall: '易错红线：绝对不能在不可数名词前直接加“a / an”，也不能在词尾加“-s”（如不能说 an advice 或 informations，要说“a piece of advice”）；“German”复数是“Germans”（非 Germen）。',
       question: '“一条建议”和“三个德国人”用英语怎么正确表达？',
@@ -28,6 +30,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-pronouns', stage: '7-up', topic: '代词辨析', type: 'trap', title: '人称代词与物主代词速判',
+      mnemonic: '动介之后用宾格，有名形物无名名物，of 后双重所有格用 mine',
       rule: '核心口诀：“动词/介词后用宾格”（help me / with him）；“有名用形物，无名用名物”（my book = mine）；主语和宾语指同一人时用“反身代词”（teach oneself / enjoy oneself / help oneself to）。',
       pitfall: '易错红线：双重所有格结构“a friend of mine”中 of 后必须用“名词性物主代词”（mine/hers/theirs），不能写成 a friend of me 或 a friend of my。',
       question: 'She is a good friend of ____ (I / my / mine). 应选哪一个？',
@@ -36,6 +39,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-present-simple', stage: '7-up', topic: '动词时态', type: 'core', title: '一般现在时三单变化与频度副词',
+      mnemonic: '三单动词加 s/es，doesn’t/Does 一出场，实义动词立刻回原形',
       rule: '当主语是“第三人称单数”时，实义动词要加 -s/-es（以 s/x/ch/sh/o 结尾加 -es，辅音+y 结尾变 y 为 i 加 -es，have 变 has）。频度副词（always/usually/often/sometimes/never）位置：“be 情助之后，实义动词之前”。',
       pitfall: '易错红线：否定句“doesn’t”和疑问句“Does ...”出现后，后面的实义动词必须“还原为原形”（如 He doesn’t like...，切勿写成 doesn’t likes）。',
       question: '把“Tom studies math every day.”改为否定句。',
@@ -44,6 +48,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-prepositions-time', stage: '7-up', topic: '介词辨析', type: 'trap', title: '时间介词 in / on / at 核心区分',
+      mnemonic: 'in 大年月季、on 具体某天（含修饰早晚）、at 精准时刻点',
       rule: '时间介词口诀：“in 管大时间”（年/月/季节/泛指早中晚：in 2026 / in May / in summer / in the morning）；“on 管具体某天”（星期/日期/具体某天的早中晚：on Monday / on June 1st / on a cold morning）；“at 管时间点”（at 7:30 / at noon / at night）。',
       pitfall: '易错红线：只要 morning/afternoon/evening 前面加上了修饰词或具体日期（如“on Sunday morning”“on a rainy night”），介词立刻由 in/at 变为“on”。',
       question: 'We arrived ____ a rainy evening ____ October. 应填什么介词？',
@@ -52,6 +57,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-there-be-have', stage: '7-up', topic: '核心句型', type: 'trap', title: 'there be 就近原则与 have 辨析',
+      mnemonic: '某地存在 there be（就近原则），某人拥有用 have，绝不连写 there have',
       rule: '“there be”表示“某地存在有某物”，be 动词单复数遵循“就近原则”（看离 be 最近的那个名词）；“have / has”表示“某人拥有某物”，主语通常是人或所属主体。',
       pitfall: '易错红线：绝不能把 there be 和 have 混写成“There have...”；there be 的一般将来时是“There will be...”或“There is/are going to be...”，不能写成 There will have。',
       question: 'There ____ (be) a pen and two books on the desk. 填什么？',
@@ -60,6 +66,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-some-any', stage: '7-up', topic: '词汇辨析', type: 'trap', title: 'some 与 any 的特殊用法',
+      mnemonic: '肯 some 否疑 any，但“请求建议求肯定”疑问句照样用 some',
       rule: '常规规则：“some 用于肯定句，any 用于否定句和疑问句”。特殊规则：表示“请求、建议并希望得到肯定回答”的疑问句中，必须用“some”（如 Would you like some tea? / Could I have some water?）。',
       pitfall: '易错红线：“any”用在肯定句中意为“任何一个”（如 You can take any book you like.），此时后接单数可数名词。',
       question: '—Would you like ____ coffee? —Yes, please. 应填 some 还是 any？',
@@ -70,6 +77,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     // ==================== 七年级下册（7 条） ====================
     {
       id: 'yingyu-present-continuous', stage: '7-down', topic: '动词时态', type: 'core', title: '现在进行时结构与 -ing 变化',
+      mnemonic: 'be + doing 别漏 be；lie/die/tie 变 ie 为 y 再加 ing',
       rule: '结构为“am / is / are + 动词-ing”，常见标志词：“now / look! / listen! / at the moment”。双写尾字母再加 -ing 高频词：“run / swim / sit / get / put / cut / shop / stop / begin / plan”。',
       pitfall: '易错红线：写现在进行时最容易漏掉前面的“be 动词”；以不发音 e 结尾去 e 加 -ing（write → writing），但“lie → lying”“die → dying”“tie → tying”是特殊变 ie 为 y 再加 -ing。',
       question: 'Look! The boys ____ (swim) in the river while a dog ____ (lie) on the grass.',
@@ -78,6 +86,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-past-simple', stage: '7-down', topic: '动词时态', type: 'core', title: '一般过去时标志词与句型转换',
+      mnemonic: 'yesterday/ago/just now 用过去，did/didn’t 后动词立刻回原形',
       rule: '表示过去发生的动作或状态，常见标志词：“yesterday / ... ago / last week / in 2020 / just now”。助动词用“did / didn’t”，其后动词必须“还原为原形”。',
       pitfall: '易错红线：看到“just now（刚才）”要用“一般过去时”（非现在完成时）；而“just（刚刚）”多用于现在完成时（has just finished）。',
       question: 'He ____ (leave) the office just now. 括号词填什么形式？',
@@ -86,6 +95,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-irregular-aaa', stage: '7-down', topic: '不规则动词', type: 'core', title: '不规则动词分组①：AAA 型与 AAB 型',
+      mnemonic: '让放切打伤，花费读设关展（let/put/cut/hit/hurt/cost/read/set/shut/spread）',
       rule: 'AAA 型（原形、过去式、过去分词同形）高频词：“cost / cut / hit / hurt / let / put / read / set / shut / spread”（口诀：让放切打伤，花费读设关展）；AAB 型：“beat — beat — beaten”。',
       pitfall: '易错红线：“read”三形拼写完全相同，但过去式和过去分词读音为“/red/”（像 red）；切勿把 cost/put/cut 误加成 costed/puted/cutted。',
       question: '写出 hurt、cost、beat 的过去式和过去分词。',
@@ -94,6 +104,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-irregular-abb', stage: '7-down', topic: '不规则动词', type: 'core', title: '不规则动词分组②：ABB 型高频归类',
+      mnemonic: '买带想打 -ought，抓教 -aught，保持睡感扫 -ept，花寄借 -ent',
       rule: 'ABB 型按韵律归类记忆：①“-ought”组：buy-bought、bring-brought、think-thought、fight-fought；②“-aught”组：catch-caught、teach-taught；③“-ept”组：keep-kept、sleep-slept、feel-felt、sweep-swept；④“-ent”组：spend-spent、send-sent、lend-lent；⑤其他高频：build-built、hear-heard、leave-left、pay-paid、say-said、sell-sold、tell-told、win-won。',
       pitfall: '易错红线：区分“bring（带来）→ brought”与“buy（买）→ bought”（差一个 r）；“pay → paid”“lay（放置/下蛋）→ laid”，不要误拼为 payed/layed。',
       question: '写出 teach、bring、lend、feel 的过去式和过去分词。',
@@ -102,6 +113,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-in-front-of', stage: '7-down', topic: '介词辨析', type: 'trap', title: 'in front of 与 in the front of 辨析',
+      mnemonic: '无 the 在外部前面（车头外），有 the 在内部前排（司机位）',
       rule: '核心区别在于是否有“the”：“in front of”指在某一物体“外部的前面”（如 There is a tree in front of the house.）；“in the front of”指在某一物体“内部的前部”（如 The teacher stands in the front of the classroom.）。',
       pitfall: '易错红线：司机坐在公交车内部前排是“in the front of the bus”；行人站在公交车车头外面是“in front of the bus”。少一个 the 意思完全相反。',
       question: 'The driver sits ____ the bus, and a boy is standing ____ the bus waiting to cross.',
@@ -110,6 +122,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-across-through-over', stage: '7-down', topic: '介词辨析', type: 'trap', title: '穿过介词 across / through / over / past',
+      mnemonic: '表面横穿 across，内部穿过 through，上方越过 over，旁过 past',
       rule: '四大穿过介词区分：①“across”从物体“表面横穿”（过马路/过桥/游过河）；②“through”从物体“内部空间穿过”（穿过森林/隧道/窗户）；③“over”从物体“上方越过”（飞越/翻墙）；④“past”从旁边“经过”。',
       pitfall: '易错红线：“cross”是动词（= go across），而“across”是介词，绝不能连写成“cross across”或漏掉动词写成“He across the street”。',
       question: 'Walk ____ the forest and go ____ the bridge, then you will see the park.',
@@ -118,6 +131,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-say-speak-talk-tell', stage: '7-down', topic: '动词辨析', type: 'trap', title: '「说」类四大动词 say / speak / talk / tell',
+      mnemonic: 'say 内容、speak 语言、talk 交谈（to/with/about）、tell 告诉讲故事',
       rule: '四词精准分工：①“say”强调说的“具体内容”（say sth. to sb.）；②“speak”后接“语言”或指发言/打电话（speak English / May I speak to...）；③“talk”指双方“交谈”（talk with/to sb. about sth.）；④“tell”指“告诉/讲述”（tell sb. sth. / tell a story / tell a lie / tell sb. (not) to do sth.）。',
       pitfall: '易错红线：切勿说“say me”或“speak a story”——说语言用 speak，告诉某人某事/讲故事用 tell，强调说了什么话用 say。',
       question: 'My grandma often ____ me stories, and she can ____ a little English.',
@@ -128,6 +142,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     // ==================== 八年级上册（8 条） ====================
     {
       id: 'yingyu-few-little', stage: '8-up', topic: '代词辨析', type: 'trap', title: 'few / a few 与 little / a little 四选一',
+      mnemonic: 'few 可数 little 不可数；有 a 表肯定“有一点”，无 a 表否定“几乎无”',
       rule: '两维速判表：①看可数：“few / a few”修饰“可数名词复数”，“little / a little”修饰“不可数名词”；②看肯定否定：带“a”表肯定“有一点/几个”，不带“a”表否定“几乎没有”。',
       pitfall: '易错红线：在反意疑问句中，“few / little”本身带“否定含义”，后面的附加疑问句必须用“肯定形式”（如 There is little milk left, is there?）。',
       question: 'Hurry up! There is ____ time left, and ____ students are still in the classroom.',
@@ -136,6 +151,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-comparative-superlative', stage: '8-up', topic: '形容词副词', type: 'core', title: '比较级与最高级高频句型',
+      mnemonic: '两者比较 than，三者以上 the+最高级；the+比较级表“越…越…”',
       rule: '五大中考必考句型：①“the + 比较级 ..., the + 比较级 ...”（越……越……）；②“比较级 + and + 比较级”（越来越……）；③“one of the + 最高级 + 可数名词复数”（最……之一）；④“the + 序数词 + 最高级”（第几最……）；⑤修饰比较级用“much / even / a lot / a little / far”。',
       pitfall: '易错红线：切勿用“very / quite / too”修饰比较级（不能说 very taller，要说“much taller”）；“one of the + 最高级”后名词必用“复数”，但作主语时谓语用“单数”。',
       question: 'The ____ (hard) you work, the ____ (good) grades you will get.',
@@ -144,6 +160,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-remember-forget-stop', stage: '8-up', topic: '固定搭配', type: 'trap', title: 'remember / forget / stop 后接 doing 与 to do',
+      mnemonic: 'to do 未做/停下去做另一件，doing 已做/停下手中正在做的事',
       rule: '核心区分看“动作是否已发生”：①“remember / forget to do”记得/忘记“去做某事”（未做），“remember / forget doing”记得/忘记“做过某事”（已做）；②“stop to do”停下来去“做另一件事”，“stop doing”停止“正在做的事”；③“try to do”尽力做，“try doing”尝试做。',
       pitfall: '易错红线：出门前提醒“别忘锁门”是未发生动作，必须用“Don’t forget to lock the door”；走进教室“停止说话”是停下正在进行的动作，用“stop talking”。',
       question: 'When the teacher came in, the students stopped ____ (talk) and started listening.',
@@ -152,6 +169,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-spend-cost-take-pay', stage: '8-up', topic: '固定搭配', type: 'trap', title: '四大「花费」spend / cost / take / pay',
+      mnemonic: '人 spend/pay，物 cost，It takes sb. time to do sth.',
       rule: '看主语与介词一秒锁定：①“人 + spend + 时间/钱 + on sth. / (in) doing sth.”；②“人 + pay + 钱 + for sth.”；③“物 + cost + 人 + 钱”；④“It takes + 人 + 时间 + to do sth.”。',
       pitfall: '易错红线：“spend”后面动词必须是“doing”（不能用 to do）；“cost”主语只能是“物”，不能说 I cost 50 yuan；“It takes”主语是形式主语 It，真正主语是后面的“to do”。',
       question: 'It ____ me two hours to finish the project, and I ____ 20 yuan for the materials.',
@@ -160,6 +178,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-because-of', stage: '8-up', topic: '连词介词', type: 'trap', title: 'because 与 because of（及 instead of）',
+      mnemonic: 'because 接完整句子，because of / instead of 接名词或 doing',
       rule: '“because”是连词，后面接“完整句子”（主语+谓语）；“because of”是介词短语，后面只能接“名词、代词或动名词（doing）”。同理，“instead”是副词常放句末，“instead of”是介词短语后接名词/doing。',
       pitfall: '易错红线：英语中“because”与“so”绝不能同时出现在同一个句子中，“although / though”与“but”也不能连用（只能二选一）。',
       question: 'The match was put off ____ the heavy rain. 填 because 还是 because of？',
@@ -168,6 +187,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-enough-too-to', stage: '8-up', topic: '核心句型', type: 'trap', title: 'enough 位置红线与 too...to... 转换',
+      mnemonic: '名在 enough 后，形副在 enough 前（old enough / enough time）',
       rule: 'enough 位置口诀：“名后形前？错！是‘形副在 enough 前，名词在 enough 后’”（old enough / fast enough / enough money）。句型转换：“too + adj. + to do”（太……而不能……）= “not + 反义adj. + enough to do” = “so + adj. + that sb. can’t...”。',
       pitfall: '易错红线：切勿把“足够大”写成 enough old，必须写“old enough”；做同义句转换时，注意“too young to go”转为 enough 句型要换成反义词“not old enough to go”。',
       question: '把“The boy is too young to go to school.”改为含 enough 的同义句。',
@@ -176,6 +196,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-irregular-abc', stage: '8-up', topic: '不规则动词', type: 'core', title: '不规则动词分组③：ABC 型高频归类',
+      mnemonic: 'i-a-u（swim/sing/drink/begin）与 -ew/-own（know/grow/throw/fly）成组背',
       rule: 'ABC 型按元音变化速记：①“i-a-u”组：begin-began-begun、drink-drank-drunk、ring-rang-rung、sing-sang-sung、swim-swam-swum；②“ow-ew-own”组：blow-blew-blown、grow-grew-grown、know-knew-known、throw-threw-thrown；③“-en”高频组：drive-drove-driven、ride-rode-ridden、write-wrote-written、eat-ate-eaten、fall-fell-fallen、give-gave-given、see-saw-seen、take-took-taken、speak-spoke-spoken、choose-chose-chosen。',
       pitfall: '易错红线：区分“fall（掉落）→ fell → fallen”与“feel（感觉）→ felt → felt”；“write → written”和“ride → ridden”过去分词要双写 t/d；“fly → flew → flown”（非 flied）。',
       question: '写出 write、choose、swim、grow 的过去式和过去分词。',
@@ -184,6 +205,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-adv-clause-future', stage: '8-up', topic: '状语从句', type: 'trap', title: '时间/条件状语从句「主将从现」',
+      mnemonic: 'if/when/as soon as/until 引导时间条件从句，主句将来从句一般现在',
       rule: '在“if（如果）、unless（除非）、as soon as（一……就）、until（直到）、when（当……时）”引导的条件或时间状语从句中，如果主句是“一般将来时（will）、祈使句或含情态动词”，从句必须用“一般现在时”表将来。',
       pitfall: '易错红线：分清“if”的双重身份——表“如果”（条件状语从句）用主将从现；表“是否”（宾语从句，如 I don’t know if it will rain tomorrow.）则按实际时间用“一般将来时”。',
       question: 'I don’t know if he ____ (come) tomorrow. If he ____ (come), I will tell you.',
@@ -194,6 +216,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     // ==================== 八年级下册（8 条） ====================
     {
       id: 'yingyu-present-perfect-basic', stage: '8-down', topic: '动词时态', type: 'core', title: '现在完成时结构与标志词',
+      mnemonic: 'have/has + done；already/yet/ever/never/so far/in the past years 必选现完',
       rule: '结构为“have / has + 过去分词（done）”，强调过去动作对现在的影响或持续至今。常见标志词：“already / yet / ever / never / just / before / recently / so far / in the past few years / since / for + 一段时间”。',
       pitfall: '易错红线：“already”多用于肯定句，“yet”用于否定句和疑问句句末；句中若出现明确过去时间点（如 yesterday / in 2022），绝不能用现在完成时，必须用“一般过去时”。',
       question: 'Great changes ____ (take) place in our hometown in the past ten years.',
@@ -202,6 +225,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-for-since-duration', stage: '8-down', topic: '动词时态', type: 'trap', title: 'for / since 与瞬间动词→延续性动词转换',
+      mnemonic: 'for+时间段，since+时间点；配延续动词：buy→have、borrow→keep、die→be dead',
       rule: '现在完成时中，“for + 一段时间”，“since + 过去时间点 / 一般过去时从句”。与 for / since / How long 连用时，瞬间动词必须转换为延续性表达：“buy → have”“borrow → keep”“die → be dead”“leave → be away (from)”“begin/start → be on”“join → be in / be a member of”“marry → be married”“open → be open”。',
       pitfall: '易错红线：不能说“He has died for 3 years”或“I have bought the book since 2024”，必须改用“has been dead”“have had”。注意“die → be dead”“leave → be away”都要保留 be 动词的过去分词 been。',
       question: 'The movie ____ (begin) ten minutes ago. → The movie ____ (be on) for ten minutes.',
@@ -210,6 +234,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-have-been-gone', stage: '8-down', topic: '固定搭配', type: 'trap', title: 'have been to / have gone to / have been in',
+      mnemonic: 'been to 去过已回，gone to 去了未回，been in 待在某地',
       rule: '三兄弟核心区分：①“have been to + 地点”去过某地（人已回来，常与 once/twice/never/ever 连用）；②“have gone to + 地点”去了某地（人不在说话现场，在路上或已在彼处）；③“have been in + 地点 + 一段时间”待在某地多久了。',
       pitfall: '易错红线：第一、二人称（I / we / you）面对面交谈时一般不用“have gone to”；若后面接地点副词“here / there / home / abroad”，要省去介词 to（如 have been there）。',
       question: '—Where is Tom? —He ____ the library. He ____ there twice this week.',
@@ -218,6 +243,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-borrow-lend-keep', stage: '8-down', topic: '动词辨析', type: 'trap', title: '「借」类动词 borrow / lend / keep 辨析',
+      mnemonic: '借入 borrow from，借出 lend to，借多久（配 for/how long）用 keep',
       rule: '方向与延续性速判：①“borrow sth. from sb.”向某人“借入”（瞬间动词）；②“lend sb. sth. = lend sth. to sb.”把某物“借出”给某人（瞬间动词）；③“keep + 物 + for 一段时间”借用并“保存”多久（延续性动词）。',
       pitfall: '易错红线：看到后面有“for two weeks”或疑问词“How long”，立刻排除 borrow 和 lend，只能选“keep”（如 How long can I keep the book?）。',
       question: '—Can I ____ your dictionary? —Sure, you can ____ it for three days.',
@@ -226,6 +252,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-look-for-find', stage: '8-down', topic: '固定搭配', type: 'trap', title: 'look for / find / find out 辨析',
+      mnemonic: 'look for 找动作，find 找结果，find out 查明真相/信息',
       rule: '三词精准区分：①“look for”强调“寻找的过程”（不一定找到）；②“find”强调“找到的结果”（通常指丢失的物品或偶遇）；③“find out”指经过调查、询问、研究“查明真相或信息”。',
       pitfall: '易错红线：“查明谁打破了窗户”“查一下火车几点开”必须用“find out”，不能用 find 或 look for。',
       question: 'Please ____ when the train leaves. I am ____ my ticket everywhere, but I can’t ____ it.',
@@ -234,6 +261,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-used-to', stage: '8-down', topic: '固定搭配', type: 'trap', title: 'used to do / be used to doing / be used to do',
+      mnemonic: 'used to do 过去常，be used to doing 习惯于，be used to do 被用来',
       rule: '三大结构一表看穿：①“used to do sth.”过去常常做某事（现在不做了）；②“be / get used to doing sth. / sth.”习惯于做某事（to 是介词）；③“be used to do sth. = be used for doing sth.”被用来做某事（被动语态）。',
       pitfall: '易错红线：先看主语是“人”还是“物”！物作主语（如 Wood / Knives）通常是“被用来做”（be used to do）；人作主语再看句意是“过去常做”（used to do）还是“习惯于”（be used to doing）。',
       question: 'He used to ____ (live) in the village, but now he is used to ____ (live) in the city.',
@@ -242,6 +270,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-it-is-adj-of-for', stage: '8-down', topic: '核心句型', type: 'trap', title: 'It is + adj. + of sb. vs for sb. + to do',
+      mnemonic: '形容人品格（kind/clever/polite）用 of，形容事情本身（important/easy）用 for',
       rule: '形式主语句型区分看形容词修饰谁：①形容词修饰“人的品质性格”（如“kind / nice / clever / polite / brave / careless / foolish”），用“of sb.”；②形容词修饰“事情本身的性质”（如“important / necessary / easy / hard / useful / possible”），用“for sb.”。',
       pitfall: '易错红线：检验技巧——把句子改写成“sb. is + adj.”看通不通顺：You are kind（通顺 → 用 of）；You are important to learn English（不通顺 → 用 for）。',
       question: 'It is very kind ____ you to help me, and it is necessary ____ us to exercise daily.',
@@ -250,6 +279,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-so-such-that', stage: '8-down', topic: '核心句型', type: 'trap', title: 'so...that... 与 such...that... 核心规则',
+      mnemonic: 'so 配形副（及 many/much/few/little），such 配名词短语',
       rule: '基本公式：“so + 形容词/副词 + that”“such + (a/an) + 形容词 + 名词 + that”（看中心词：形副用 so，名词用 such）。特例口诀：“名多多少少（many / much / few / little 表数量少），一律只用 so”（如 so many books / so little water）。',
       pitfall: '易错红线：当“little”意为“小的”（如 such a little boy）而非“数量少”时，仍用“such”；区分“so + adj. + a/an + 单数名词”等价于“such + a/an + adj. + 单数名词”。',
       question: 'It was ____ fine weather that we had ____ much fun in the park.',
@@ -260,6 +290,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     // ==================== 九年级上册（8 条） ====================
     {
       id: 'yingyu-passive-voice', stage: '9-up', topic: '被动语态', type: 'core', title: '被动语态各时态结构与主动表被动',
+      mnemonic: '被动核心 be + done；感官系动词（taste/smell/sell well）主动表被动',
       rule: '被动语态核心骨架“be + 过去分词（done）”：①一般现在时“am/is/are + done”；②一般过去时“was/were + done”；③一般将来时“will be + done”；④含情态动词“can/must/should be + done”。',
       pitfall: '易错红线：不及物动词/短语“happen / take place / break out / come out”无被动语态；感官系动词（look/sound/smell/taste/feel）和“sell well / wash easily”常用“主动形式表被动意义”（如 The book sells well.）。',
       question: 'The 2026 sports meeting ____ (hold) next month, and this kind of pen ____ (sell) well.',
@@ -268,6 +299,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-object-clause', stage: '9-up', topic: '复合句', type: 'core', title: '宾语从句三要素（引导词/语序/时态）',
+      mnemonic: '宾从三铁律：陈述语序（主在前动在后）、主过从过、真理永现',
       rule: '宾语从句必查三要素：①引导词（陈述句用 that 可省，一般疑问句用 if/whether，特殊疑问句用原疑问词）；②语序一律用“陈述语序”（连接词 + 主语 + 谓语）；③时态遵循“主现从任、主过从过、客观真理永现”。',
       pitfall: '易错红线：千万不要写成“Could you tell me where is the bank?”（应为“where the bank is”）；“Could you please...”是委婉语气并非过去时，从句按实际需要选时态；与“or not”连用或作介词宾语时只能用“whether”不能用 if。',
       question: 'Could you tell me ____ (where does he live / where he lives)?',
@@ -276,6 +308,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-exclamatory', stage: '9-up', topic: '核心句型', type: 'trap', title: '感叹句 What 与 How 一秒速判法',
+      mnemonic: '去主谓看中心词：名词用 What（单可数加 a/an），形副用 How',
       rule: '去主谓看末尾词速判法：划掉末尾的“主语 + 谓语”，剩下的最后一个词若是“名词”，选“What”（可数单数加 a/an，复数与不可数不加）；若只剩“形容词或副词”，选“How”。',
       pitfall: '易错红线：高频不可数名词考坑——“weather / news / advice / information / music / fun / progress / work”前面绝对不能加“a / an”（如 What fine weather it is!）。',
       question: '____ useful advice it is! / ____ fast the boy runs! 分别填 What 还是 How？',
@@ -284,6 +317,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-neither-either-both', stage: '9-up', topic: '连词与一致', type: 'trap', title: 'neither...nor / either...or / both...and 辨析',
+      mnemonic: 'both 复数，neither…nor / either…or 谓语动词就近原则',
       rule: '语义与谓语规则：①“both...and...”（两者都）连接主语谓语一律用“复数”；②“neither...nor...”（既不……也不……）、“either...or...”（要么……要么……）、“not only...but also...”（不但……而且……）连接主语时，谓语一律遵循“就近原则”。',
       pitfall: '易错红线：区分两者与三者以上——两者都用 both，两者都不 neither，两者之一 either；三者及以上都用“all”，全都不“none”。',
       question: 'Neither my sister nor I ____ (be) interested in that game, but both Tom and Jack ____ (like) it.',
@@ -292,6 +326,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-modal-deduction', stage: '9-up', topic: '情态动词', type: 'trap', title: '情态动词表推测与 Must 问答红线',
+      mnemonic: 'must 肯定推测、can’t 否定推测；Must 提问否定答 needn’t / don’t have to',
       rule: '情态动词表推测：①“must”一定（只用于肯定句）；②“can’t”不可能（否定推测，不用 mustn’t）；③“may / might / could”可能。问答红线：“Must I...?”的否定回答必须是“No, you needn’t / No, you don’t have to”（不必），绝不能用 mustn’t（禁止）。',
       pitfall: '易错红线：“mustn’t”意为“禁止、绝对不可以”（You mustn’t play on the road.），不表示“不必”，也不表示“不可能”。',
       question: '—Must we finish the report today? —No, you ____. You can hand it in tomorrow.',
@@ -300,6 +335,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-attributive-clause', stage: '9-up', topic: '复合句', type: 'core', title: '定语从句关系词与只用 that 的情况',
+      mnemonic: '指人 who/that，指物 which/that；最高级/序数词/不定代词/人和物只用 that',
       rule: '关系代词速判：先行词指人用“who / that”（作宾语可用 whom），指物用“which / that”，表所属关系“……的”用“whose”。只用“that”不用 which 的五种情况：①先行词是不定代词（all/everything/nothing/something）；②被最高级或序数词修饰；③被 the only / the very 修饰；④既有人又有物；⑤主句以 who/which 开头。',
       pitfall: '易错红线：介词后面指物只能用“which”，指人只能用“whom”，绝不能用 that（如 the house in which I lived）；定语从句谓语单复数由“先行词”决定。',
       question: 'This is the most interesting book ____ I have ever read.',
@@ -308,6 +344,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-used-to-would', stage: '9-up', topic: '动词辨析', type: 'trap', title: 'used to 与 would 表过去习惯的区别',
+      mnemonic: 'used to 可表过去状态或习惯，would 只表过去反复动作不表状态',
       rule: '两者都可表“过去常常做某事”，但“used to”既可表过去的习惯动作，也可表过去的“状态”（如住在哪里、是什么样子），且暗含“现在不再如此”；“would”只表过去反复发生的“动作”，不表状态。',
       pitfall: '易错红线：与状态动词（be / live / have / like / know）连用表示过去的状态时，只能用“used to”，不能用 would（如 There used to be a river here. 不能写成 There would be）。',
       question: 'There ____ (used to / would) be a small bookstore near our school ten years ago.',
@@ -316,6 +353,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-phrasal-verbs-1', stage: '9-up', topic: '动词短语', type: 'core', title: '中考高频动词短语①（put / turn / give / take）',
+      mnemonic: 'put off 推迟、turn down 调小/拒绝、give up 放弃、take off 起飞/脱下',
       rule: '高频核心组：①“put”：put off（推迟）、put up（张贴/搭建/举起）、put out（扑灭）、put away（收好）；②“turn”：turn on/off（开/关）、turn up/down（调大/调小/拒绝）；③“give”：give up（放弃）、give out（分发）、give away（捐赠）；④“take”：take off（脱下/起飞）、take up（占据/开始从事）、take care of（照顾）。',
       pitfall: '易错红线：动副短语（如 put off / turn on / give up）接“代词宾语（it / them）”时，代词必须放在“动词和副词中间”（如 put it off、give them up），不能写成 put off it。',
       question: 'The problem is difficult, but don’t ____ (give up it / give it up).',
@@ -326,6 +364,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     // ==================== 九年级下册（7 条） ====================
     {
       id: 'yingyu-phrasal-verbs-2', stage: '9-down', topic: '动词短语', type: 'core', title: '中考高频动词短语②（look / get / make / set）',
+      mnemonic: 'look forward to doing 盼望，get along with 相处，make up 编造/组成，set up 建立',
       rule: '高频核心组：①“look”：look up（查阅/仰望）、look after（照顾）、look forward to + doing（期待）、look through（浏览）；②“get”：get on/along well with（与……相处融洽）、get over（克服）；③“make”：make up（编造/组成）、make sure（确保）、make progress（取得进步）；④“set”：set up（建立）、set out / set off（出发）。',
       pitfall: '易错红线：“look forward to”和“pay attention to”中的“to”都是介词，后面接动词必须用“doing”（如 I look forward to hearing from you.）。',
       question: 'I am looking forward to ____ (see) you again, and please look ____ the new word in the dictionary.',
@@ -334,6 +373,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-subject-verb-agreement', stage: '9-down', topic: '主谓一致', type: 'trap', title: '主谓一致四大高频考点',
+      mnemonic: 'a number of 复数、the number of 单数；with/together with 看前面主语',
       rule: '四大必考规则：①“the number of + 复数名词”（……的数量）谓语用“单数”，“a number of + 复数名词”（许多）谓语用“复数”；②“with / together with / as well as / except”连接主语遵循“就远原则”（看前面的主语）；③“动名词/不定式”作主语谓语用单数；④时间/金钱/距离作整体主语用单数（Two months is a long time.）。',
       pitfall: '易错红线：看到“Tom with his parents...”别被 parents 骗了，真正主语是前面的 Tom，谓语必须用“单数”（is / was / likes）。',
       question: 'The number of students in our club ____ (be) 50, and a number of them ____ (be) girls.',
@@ -342,6 +382,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-non-finite-verbs', stage: '9-down', topic: '非谓语动词', type: 'trap', title: '非谓语动词高频搭配速记表',
+      mnemonic: 'finish/enjoy/practice/mind/keep + doing；want/decide/plan/refuse + to do',
       rule: '三组必背搭配：①只接“doing”：enjoy / finish / mind / practice / avoid / keep / suggest / consider / can’t help / be worth；②只接“to do”：want / decide / plan / refuse / hope / wish / promise / afford / manage / expect；③省 to 不定式（主动）：“make / let / have sb. do”，但变为“被动语态”时必须“还原 to”（be made to do）。',
       pitfall: '易错红线：“suggest”只能说“suggest doing sth.”或“suggest that sb. (should) do”，绝不能说 suggest sb. to do；“be made to do”被动必须补回 to。',
       question: 'He avoids ____ (make) the same mistake, and he was made ____ (clean) the room.',
@@ -350,6 +391,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-suggestions-templates', stage: '9-down', topic: '写作句型', type: 'core', title: '提建议高频句型与逻辑衔接词',
+      mnemonic: 'Why not do / How about doing / It’s a good idea to do，搭配 First/Moreover/In short',
       rule: '提建议五大万能句型：①“Why not do sth.? / Why don’t you do sth.?”；②“How / What about doing sth.?”；③“You’d better (not) do sth.”；④“It is a good idea to do sth.”；⑤“I advise you to do sth. / I suggest doing sth.”。写作衔接词：First of all / What’s more / Besides / However / In a word / All in all。',
       pitfall: '易错红线：“had better”的否定形式是“had better not do”（not 放在 better 后、动词原形前），切勿写成 hadn’t better do 或 had better not to do。',
       question: '用两种不同句型把“你最好别熬夜”翻译成英文。',
@@ -358,6 +400,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-writing-opening-closing', stage: '9-down', topic: '写作句型', type: 'core', title: '中考英语作文高分开头与结尾模板',
+      mnemonic: '开头背景引入 + 中间论点举例 + 结尾呼吁展望（Only in this way can we...）',
       rule: '高分开头模板：①书信类：“I’m glad to hear from you. Knowing that you want to..., I’m writing to share some advice with you.”；②议论/观点类：“Nowadays, ... plays an important role in our daily life.”。高分结尾模板：“In a word, as long as we..., we will surely make great progress. I hope my suggestions will be helpful to you.”',
       pitfall: '易错红线：中考作文审题先定“人称与时态”（记叙过去用一般过去时，说明建议用一般现在时），切忌整篇只堆简单句，至少融入 1–2 个“定语/状语从句或 It is + adj. + to do 句型”。',
       question: '写英语建议信时，结尾常用哪一句礼貌收束？',
@@ -366,6 +409,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-cloze-reading-skills', stage: '9-down', topic: '阅读与完形', type: 'core', title: '完形填空与阅读理解高分避坑策略',
+      mnemonic: '完形找原词复现与逻辑连词，阅读先看题干划定位词、警惕偷换概念',
       rule: '完形填空三步法：①通读首句定基调（首句通常不设空）；②紧盯逻辑信号词（“but / however / although”表转折，“so / therefore”表因果，“and / also”表并列）和上下文“原词/同义复现”；③复读核对词义与固定搭配。阅读主旨题紧盯“首尾段与各段首句”。',
       pitfall: '易错红线：阅读细节题警惕选项“偷换概念、无中生有、以偏概全”；标题/主旨题选“涵盖全文”的选项，不选只覆盖某一段细节的干扰项。',
       question: '完形填空遇到空格前后出现 however 或 although 时，应优先考虑什么逻辑关系？',
@@ -374,6 +418,7 @@ window.XIAOSIMEN_KEY_POINTS.yingyu = {
     },
     {
       id: 'yingyu-other-another', stage: '9-down', topic: '代词辨析', type: 'trap', title: 'other / the other / others / the others / another 五兄弟',
+      mnemonic: '三者以上另一个 another，两者另一个 the other，泛指 others，其余全部 the others',
       rule: '五词速判：①“another”指三者及以上中的“另一个”（+ 单数名词）；②“the other”指两者中的“另一个”（one... the other...）；③“other + 复数名词”泛指“其他的……”；④“others”= other + 复数（泛指其他的人/物，some... others...）；⑤“the others”= the other + 复数（特指其余全部）。',
       pitfall: '易错红线：看到“two / hands / sides / eyes”等明确“两者”语境，另一个必定是“the other”（带 the）；看到“some ...”表泛指另一些，搭配“others”（不带 the）。',
       question: 'I have two pens: one is red, and ____ is blue. / This shirt is too small; please show me ____ one.',

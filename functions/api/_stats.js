@@ -44,6 +44,10 @@ export const TRACK_EVENTS = new Set([
   "x4m_audio_play",
   "x4m_studio_open",
   "x4m_studio_play",
+  "yy_lab_open",
+  "yy_lab_clear",
+  "yy_print",
+  "yy_audio_play",
 ]);
 
 export function normalizeSource(value) {

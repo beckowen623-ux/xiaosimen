@@ -794,8 +794,8 @@ body { font-variant-numeric: tabular-nums; }
 .hero-stage-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
 .hero-stage-chips .drill-chip { min-height: 34px; padding: 4px 12px; font-size: 13px; border-radius: 999px; }
 .hero-trust-strip { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0 10px; font-size: 12.5px; color: var(--green-dark); font-weight: 600; }
-.home-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 5px; margin: 12px 0 14px; background: rgba(234, 231, 220, 0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(24, 54, 42, .08); border-radius: 14px; position: sticky; top: 6px; z-index: 20; box-shadow: 0 6px 18px rgba(24, 54, 42, .1); }
-.home-tab-btn { min-height: 44px; padding: 6px 8px; border: 0; border-radius: 10px; background: transparent; color: var(--muted); font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; transition: background .18s ease, color .18s ease, box-shadow .18s ease; }
+.home-tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; padding: 5px; margin: 12px 0 14px; background: rgba(234, 231, 220, 0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(24, 54, 42, .08); border-radius: 14px; position: sticky; top: 6px; z-index: 20; box-shadow: 0 6px 18px rgba(24, 54, 42, .1); }
+.home-tab-btn { min-height: 44px; padding: 6px 4px; border: 0; border-radius: 10px; background: transparent; color: var(--muted); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .18s ease, color .18s ease, box-shadow .18s ease; white-space: nowrap; }
 .home-tab-btn[aria-selected="true"] { background: #fff; color: var(--green-dark); font-weight: 700; box-shadow: 0 2px 8px rgba(0, 0, 0, .09); }
 .hero-story-banner { margin: 10px 0 12px; padding: 12px 14px; border-radius: 12px; background: linear-gradient(135deg, #fffdf7 0%, #f1f8f3 100%); border: 1px solid #c9dfd1; border-left: 4px solid var(--green); box-shadow: 0 4px 12px rgba(20, 62, 47, .05); }
 .hero-story-tag { display: inline-block; margin-bottom: 4px; padding: 2px 8px; border-radius: 999px; background: var(--green-soft); color: var(--green-dark); font-size: 11.5px; font-weight: 800; letter-spacing: .02em; }
@@ -872,4 +872,25 @@ body { font-variant-numeric: tabular-nums; }
 .x4m-ml-foot { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 @media (max-width: 560px) {
   .x4m-ml-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-tab-btn { font-size: 11.5px; padding: 6px 2px; }
+}
+
+/* 语英主线大卡与首页微体验 */
+.yy-mainline-card { border: 1.5px solid #9eb9d9; background: linear-gradient(180deg, #fafdff 0%, #f3f7fb 100%); box-shadow: 0 6px 20px rgba(30, 58, 95, .08); margin-bottom: 14px; }
+.yy-mainline-card h2 { margin: 0 0 6px; font-size: clamp(18px, 4.4vw, 22px); line-height: 1.35; color: #162e4d; }
+.yy-ml-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; background: #1e3a5f; color: #ffe5aa; font-size: 12px; font-weight: 700; }
+.yy-ml-more { font-size: 13px; font-weight: 700; color: #1e3a5f; text-decoration: none; }
+.yy-ml-demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; }
+.yy-ml-demo-box { padding: 10px 12px; border-radius: 12px; background: #fff; border: 1px solid #d5e0ee; display: grid; gap: 6px; }
+.yy-ml-demo-box b { font-size: 13px; color: #1e3a5f; }
+.yy-ml-demo-line { font-size: 14.5px; font-weight: 700; color: #1f2421; }
+.yy-ml-blank { display: inline-block; min-width: 24px; text-align: center; padding: 0 5px; border-radius: 6px; background: #fef3c7; color: #92400e; border: 1px dashed #d97706; }
+.yy-ml-demo-en { font-size: 13.5px; font-weight: 700; color: #0f2540; line-height: 1.5; }
+.yy-ml-demo-btns { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.yy-ml-audio-bar { background: linear-gradient(135deg, #1e3a5f 0%, #164e3f 100%); }
+.x4m-ml-tile.is-yy-en { background: #f8fbff; border-color: #c5d6ec; }
+.x4m-ml-tile.is-yy-en b { color: #1e3a5f; }
+.yy-papers-bridge { margin-bottom: 14px; }
+@media (max-width: 640px) {
+  .yy-ml-demo-grid { grid-template-columns: 1fr; }
 }

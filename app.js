@@ -1310,6 +1310,7 @@ function reviewCardsHTML(progress) {
 }
 // 首页“更新日志”（折叠），新内容加在最前面。
 const UPDATE_LOG = [
+  ['2026-11-27', '重磅上线首页第 3 大主线「📖 语英主线」与《语英提分工坊》（lab-yy.html）：语文含 30 篇古诗文易错字“火眼金睛”排雷、18 个阅读采分点公式（1 分答案 vs 满分答案同屏对比＋A4 公式速查卡打印）、18 关文言一字多面与病句手术台、3 期专属女声古诗文易错字听写磨耳朵；英语含 18 组词形与固定搭配点读快刷、18 关语法与微完形“线索词破案”、12 大中考作文 10→15 分三级升格工坊（支持英文朗读＋A4 金句手卡打印）；同时为 90 条语英速记考点全部补齐 1 行秒记口诀，全站 253 条速记默写 100% 带口诀。'],
   ['2026-11-26', '首屏 C 位升级为「🎯 提分双主线」并正式上线《🎬 考点演播室》节目剧场：一进首页即可直接试听专属女声历史故事、一键直达 4 科 57 关反死记硬背闯关与 253 条带口诀 A4 默写纸；演播室支持 15–20 分钟男女双主持视频节目（讲到考点自动弹横幅＋下方可点击考点书签 1 秒跳转重看，每集前 10 分钟免费试看）。'],
   ['2026-11-26', '重磅上线《🎮 小四门反死记硬背实验室》（lab-x4m.html）＋全科速记权威勘误扩容至 253 条：历史「专属女声故事磨耳朵＋12 关时间轴排雷」、道法「18 关 30 秒生活小判官」、地理「15 关因果多米诺推导」、生物「12 关红细胞/原尿/米饭生命流程大冒险」（共 57 关每科前 3 关免费＋6 期专属女声故事前 4 期免费）；小四门 123 条旧考点全量复核并全部加配「💡 一句话秒记口诀」，补齐 40 条中考/会考高频漏点。'],
   ['2026-11-26', '上线《🏆 初中数理化 59 大名师压轴模型速查图鉴》（models.html）：数学 32 / 物理 13 / 化学 14 一页速查，全量免费在线浏览并支持开启零透字背诵遮罩、单模型 1 秒直达 4 步微课（?pt= 深链）与一键打印《A4 压轴口诀速查手册》（前 10 大镇站模型免费预览）；解锁弹窗新增买前 3 个常见疑问速答。'],
@@ -2435,6 +2436,82 @@ function x4mShowcaseCardHTML(compact = true) {
   </section>`;
 }
 
+function yyShowcaseCardHTML() {
+  const stage = state.stage || '7-up';
+  const list = Array.isArray(nationalCatalog) ? nationalCatalog : [];
+  const yyEb = list.filter(p => p.earlybird && (p.subject === 'chinese' || p.subject === 'english') && p.stage === stage);
+  const enSync = list.filter(p => p.sync && p.subject === 'english' && p.stage === stage);
+  const chCount = list.filter(p => p.subject === 'chinese').length;
+  const enCount = list.filter(p => p.subject === 'english').length;
+  const demoTier = state.yyDemoTier || 'lv10';
+  const demoPoem = state.yyDemoPoem || '';
+  const demoSentences = {
+    lv10: { tag: '普通 10 分句', en: 'We should protect the environment. It is very important for us.', tip: '简单句堆砌，阅卷通常给 10–11 分' },
+    lv15: { tag: '🔥 高分 15 分句', en: 'Not only does green travel cut down air pollution, but it also helps us build a healthier lifestyle.', tip: 'Not only 部分倒装 + cut down 高级表达，立拉 3–4 分！' },
+  };
+  const curDemo = demoSentences[demoTier] || demoSentences.lv10;
+  return `<section class="card yy-mainline-card" aria-label="语英主线：语英提分工坊">
+    <div class="x4m-ml-head">
+      <span class="yy-ml-badge">📖 语英主线 · 默写零错字 · 踩点拿高分</span>
+      <a class="yy-ml-more" href="./lab-yy.html">进入完整工坊 →</a>
+    </div>
+    <h2>《语英提分工坊》6 大实战台 ＋ 3 期女声听写磨耳朵</h2>
+    <p class="x4m-ml-lead">语文不靠瞎蒙：<b>古诗易错字排雷、阅读 1 分 vs 满分采分点对比、文言病句动手术</b>；英语不背死表：<b>词形搭配点读、语法完形先划线索词、中考作文 10→15 分三级升格</b>！</p>
+    <div class="yy-ml-demo-grid">
+      <div class="yy-ml-demo-box">
+        <b>✍️ 5 秒试玩 · 古诗文易错字排雷</b>
+        <div class="yy-ml-demo-line">《次北固山下》：海日 <span class="yy-ml-blank">${demoPoem ? esc(demoPoem) : '？'}</span> 残夜，江春入旧年。</div>
+        <div class="yy-ml-demo-btns">
+          <button type="button" class="btn sm ${demoPoem === '生' ? 'primary' : ''}" data-yy-demo-poem="生">生</button>
+          <button type="button" class="btn sm" data-yy-demo-poem="升">升</button>
+          <span class="muted" style="font-size:12px">${demoPoem === '生' ? '✅ 正确！“生”有孕育新生之意（非升）' : demoPoem === '升' ? '❌ 踩坑啦！原文是生长的“生”不是升！' : '点选正确汉字试试'}</span>
+        </div>
+      </div>
+      <div class="yy-ml-demo-box">
+        <b>✨ 5 秒试玩 · 英语作文一键升格</b>
+        <div class="yy-ml-demo-en">${esc(curDemo.en)}</div>
+        <div class="yy-ml-demo-btns">
+          <button type="button" class="btn sm ${demoTier === 'lv10' ? 'primary' : ''}" data-yy-demo-tier="lv10">普通 10 分句</button>
+          <button type="button" class="btn sm ${demoTier === 'lv15' ? 'primary' : ''}" data-yy-demo-tier="lv15">🔥 升格 15 分句</button>
+          <span class="muted" style="font-size:12px">${esc(curDemo.tip)}</span>
+        </div>
+      </div>
+    </div>
+    <div class="x4m-ml-audio-bar yy-ml-audio-bar">
+      <div class="x4m-ml-audio-info">
+        <b>🎧 首页 1 秒免费听写：古诗文高频易错字第 1 期</b>
+        <span>《观沧海·次北固山下·论语·木兰诗》13 组必考红线字，专属女声慢速播报</span>
+      </div>
+      <audio class="x4m-ml-mini-audio" controls preload="none" src="./assets/audio/yy-ep01.mp3"></audio>
+    </div>
+    <div class="x4m-ml-grid">
+      <a class="x4m-ml-tile" href="./lab-yy.html?tab=poems"><b>✍️ 古诗易错字</b><small>30 篇排雷 · 前 6 关免费</small></a>
+      <a class="x4m-ml-tile" href="./lab-yy.html?tab=reading"><b>🔍 阅读采分点</b><small>18 母题对比 · 可印 A4 卡</small></a>
+      <a class="x4m-ml-tile" href="./lab-yy.html?tab=clinic"><b>🩺 文言与病句</b><small>18 关找茬手术 · 前 4 关免费</small></a>
+      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=vocab"><b>⚡ 词形与搭配</b><small>18 组点读快刷 · 前 4 组免费</small></a>
+      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=grammar"><b>🧩 语法找线索</b><small>18 关完形破案 · 前 4 关免费</small></a>
+      <a class="x4m-ml-tile is-yy-en" href="./lab-yy.html?tab=writing"><b>✨ 作文升格</b><small>12 话题 10→15 分 · 印金句卡</small></a>
+    </div>
+    <div class="x4m-ml-foot">
+      <a class="btn primary" href="./lab-yy.html">▶ 进入《语英提分工坊》（114 关＋3 期听写）→</a>
+      <a class="btn" href="./key-points.html?subject=yuwen">📝 90 条语英带口诀 A4 默写纸</a>
+      <a class="btn" href="./lab-yy.html?tab=audio">🎧 3 期女声易错字听写</a>
+    </div>
+  </section>
+  <section class="card yy-papers-bridge" aria-label="语英同步卷与真题直达">
+    <div class="x4m-ml-head">
+      <b>📚 配套刷卷巩固（已收录语文 ${chCount} 套 ＋ 英语 ${enCount} 套）</b>
+      <button type="button" class="btn sm" data-home-tab="papers">查看全部语英整卷 ›</button>
+    </div>
+    <p class="muted" style="margin:4px 0 10px;font-size:13px">当前学期：<b>${esc(STAGE_MAP[stage]?.label || stage)}</b> · 学完工坊方法后，直接拿对应早鸟卷或英语同步章节卷检验效果。</p>
+    <div class="x4m-ml-foot">
+      ${yyEb.map(p => `<button type="button" class="btn sm" data-earlybird="${esc(p.id)}">📄 ${esc(gradeText(p.title))}</button>`).join('')}
+      ${enSync.slice(0, 2).map(p => `<button type="button" class="btn sm" data-claude-phone="${esc(p.id)}">📘 ${esc(gradeText(p.title))}</button>`).join('')}
+      <a class="btn sm" href="./key-points.html?subject=yingyu">英语 45 条口诀默写纸 ›</a>
+    </div>
+  </section>`;
+}
+
 function renderHome(focus = '') {
   if (!nationalCatalog && !banks) { renderLiteHome(); return; }
   window.NationalExams?.leave();
@@ -2447,12 +2524,13 @@ function renderHome(focus = '') {
   const accessNotice = accessNoticeHTML(trialDays);
   refreshStreak(progress);
   byId('headerSearch').hidden = false;
-  const homeTab = ['x4m', 'kp', 'papers', 'review'].includes(state.homeTab) ? state.homeTab : 'x4m';
+  const homeTab = ['x4m', 'kp', 'yy', 'papers', 'review'].includes(state.homeTab) ? state.homeTab : 'x4m';
   const homeTabs = [
-    ['x4m', '🎬 小四门主线'],
-    ['kp', '🎯 数理化主线'],
-    ['papers', '📝 同步与真题'],
-    ['review', '📕 错题与更多'],
+    ['x4m', '🎬 小四门'],
+    ['kp', '🎯 数理化'],
+    ['yy', '📖 语英'],
+    ['papers', '📝 同步真题'],
+    ['review', '📕 错题更多'],
   ];
   view.innerHTML = `
     ${homeIntroHTML()}
@@ -2465,15 +2543,25 @@ function renderHome(focus = '') {
         ${x4mGroupHTML(queue, progress, true)}
       </div>
       <section class="card home-tab-hint">
-        <div><b>还需要补数理化知识点（395 点与 59 大压轴模型）？</b><span class="muted">点上方「🎯 数理化主线」即可秒搜考点、3 分钟测弱项并印 A4 补缺卷。</span></div>
-        <button type="button" class="btn" data-home-tab="kp">去看数理化主线 ›</button>
+        <div><b>还需要补数理化或语文英语？</b><span class="muted">点上方「🎯 数理化」秒搜 395 考点与 59 大压轴模型，或点「📖 语英」进提分工坊练默写、阅读与作文升格。</span></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button type="button" class="btn" data-home-tab="kp">去看数理化 ›</button>
+          <button type="button" class="btn" data-home-tab="yy">去看语英 ›</button>
+        </div>
       </section>
     </div>
     <div class="home-tab-panel" data-tab-panel="kp" ${homeTab !== 'kp' ? 'hidden' : ''}>
       ${window.KnowledgeHub?.homeCardHTML(state.stage) || ''}
       <section class="card home-tab-hint">
-        <div><b>还需要刷整套同步章节卷、早鸟卷或全国各地真题？</b><span class="muted">点上方「📝 同步与真题」即可按学期刷卷或整卷打印；错题本与更多说明在「📕 错题与更多」。</span></div>
-        <button type="button" class="btn" data-home-tab="papers">去看同步与真题 ›</button>
+        <div><b>语文古诗文容易写错字、英语作文写不出高分句？</b><span class="muted">点上方「📖 语英」体验 6 大语英提分工坊与 3 期女声听写磨耳朵。</span></div>
+        <button type="button" class="btn" data-home-tab="yy">去看语英主线 ›</button>
+      </section>
+    </div>
+    <div class="home-tab-panel" data-tab-panel="yy" ${homeTab !== 'yy' ? 'hidden' : ''}>
+      ${yyShowcaseCardHTML()}
+      <section class="card home-tab-hint">
+        <div><b>还需要刷整套同步章节卷、早鸟卷或全国各地真题？</b><span class="muted">点上方「📝 同步真题」即可按学期刷卷或整卷打印；错题本与更多说明在「📕 错题更多」。</span></div>
+        <button type="button" class="btn" data-home-tab="papers">去看同步真题 ›</button>
       </section>
     </div>
     <div class="home-tab-panel" data-tab-panel="papers" ${homeTab !== 'papers' ? 'hidden' : ''}>
@@ -2571,6 +2659,9 @@ function wireTopCards() {
   }));
   view.querySelectorAll('[data-earlybird]').forEach(b => b.addEventListener('click', () => { void earlybirdAction(b.dataset.earlybird, b.closest('#xsc') ? 'xscMark' : 'ebMark'); }));
   view.querySelectorAll('[data-eb-mode]').forEach(b => b.addEventListener('click', () => setEbMode(b.dataset.ebMode)));
+  view.querySelectorAll('[data-yy-demo-poem]').forEach(b => b.addEventListener('click', () => { state.yyDemoPoem = b.dataset.yyDemoPoem; rerenderHomeInPlace(); }));
+  view.querySelectorAll('[data-yy-demo-tier]').forEach(b => b.addEventListener('click', () => { state.yyDemoTier = b.dataset.yyDemoTier; rerenderHomeInPlace(); }));
+  view.querySelectorAll('.yy-papers-bridge [data-claude-phone]').forEach(b => b.addEventListener('click', () => { void claudePaperAction(b.dataset.claudePhone, 'phone'); }));
 }
 // 主页、视频里的直达链接：x4m.cc.cd/?go=earlybird / xsc / sync / sprint7 / quick-diag / weekly-poster / yuwen / yingyu，只跳一次
 function jumpToGoTarget() {
@@ -2602,6 +2693,11 @@ function jumpToGoTarget() {
   if (go === 'lab-x4m') {
     state.earlybirdJumped = true;
     location.replace('./lab-x4m.html');
+    return;
+  }
+  if (go === 'lab-yy' || go === 'yy') {
+    state.earlybirdJumped = true;
+    location.replace('./lab-yy.html');
     return;
   }
   if (go === 'yuwen' || go === 'yingyu') {

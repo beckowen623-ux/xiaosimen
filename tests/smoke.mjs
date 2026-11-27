@@ -16,7 +16,7 @@ const check = (cond, passMsg, failMsg) => {
 const read = rel => fs.readFileSync(path.join(root, rel), 'utf8');
 
 // 1. 全量前端脚本与 Cloudflare Functions 语法检查
-const classicJs = ['app.js', 'national-exams.js', 'knowledge.js', 'key-points.js', 'referrals.js', 'share-offer.js', 'sw.js'];
+const classicJs = ['app.js', 'national-exams.js', 'knowledge.js', 'key-points.js', 'lab-x4m.js', 'lab-yy.js', 'data/yy-lab-data.js', 'referrals.js', 'share-offer.js', 'sw.js'];
 for (const rel of classicJs) {
   try {
     new vm.Script(read(rel), { filename: rel });
