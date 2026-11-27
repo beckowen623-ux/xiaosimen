@@ -1630,7 +1630,7 @@ function homeIntroHTML() {
       </div>
       ${contentStatsHTML()}
       <div class="editorial-hero-actions">
-        <button class="btn demo-btn" type="button" data-demo-video>▶ 39 秒看怎么用</button>
+        <button class="btn demo-btn" type="button" data-demo-video>▶ 52 秒看三大主线怎么用</button>
       </div>
     </div>
     <figure class="editorial-hero-art" aria-hidden="true">

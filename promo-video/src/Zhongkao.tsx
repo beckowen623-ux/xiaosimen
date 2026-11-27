@@ -1,21 +1,23 @@
 import React from 'react';
-import {AbsoluteFill, Audio, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import boxes from '../public/zk/boxes.json';
 import {Background, Badge, Box, Caption, FONT, Phone, fade} from './kit';
 
 const GREEN = '#145843';
+const INDIGO = '#1e3a5f';
 const B = boxes as unknown as Record<string, Record<string, Box>>;
-export const ZHONGKAO_FRAMES = 1495;
+export const ZHONGKAO_FRAMES = 1590;
 
 const captions = [
-  {from: 105, to: 255, step: '第 1 步', title: '先测：按学期\n早鸟自测卷', sub: '各科一套，手机做或打印整卷，做完出百分制总分'},
-  {from: 255, to: 355, step: '第 1 步', title: '做完就知道\n该补哪几章', sub: '按错题所在章节，直接给出要做的同步章节卷'},
-  {from: 355, to: 475, step: '第 2 步', title: '同步章节卷\n一章一套补弱项', sub: '跟着课本章节出题，对标期中期末，带坑点解析'},
-  {from: 475, to: 610, step: '第 3 步', title: '哪里弱，按章节专项练', sub: '每道题标了教材章节，能直接搜“浮力”“二次函数”'},
-  {from: 610, to: 730, step: '小升初', title: '语数英按七上章节\n提前衔接', sub: '六年级暑假就能用，限时免费'},
-  {from: 730, to: 880, step: '第 4 步', title: '每周一卷，打印纸上做', sub: '做完点出错的题号，10 秒登记进错题本'},
-  {from: 880, to: 1030, step: '第 5 步', title: '错题自动排进复习', sub: '第 1、3、7、14 天提醒，重做到会为止（完整版）'},
-  {from: 1030, to: 1180, step: '第 6 步', title: '学情分析\n找出最该补的章节', sub: '按科目、章节统计正确率，给出复习建议'},
+  {from: 185, to: 315, step: '主线一 · 小四门', color: GREEN, title: '告别死记硬背\n听故事＋玩闯关', sub: '首页 5 大 Tab 直达 · 57 关趣味闯关 ＋ 6 期女声故事'},
+  {from: 315, to: 440, step: '主线一 · 演播室', color: '#9a3412', title: '《考点演播室》\n男女双主持视频', sub: '讲到考点自动弹得分横幅 · 每集前 10 分钟免费试看'},
+  {from: 440, to: 570, step: '主线二 · 数理化', color: GREEN, title: '395 个知识点\n按点精准补缺', sub: '3 分钟测弱项出《体检单》 · 129 套名师 4 步微课'},
+  {from: 570, to: 700, step: '主线二 · 压轴模型', color: GREEN, title: '59 大名师压轴模型\n一秒搜到直接练', sub: '婆罗摩笈多 / 阿氏圆 / 安阻法 / 万能瓶 · 支持 A4 打印'},
+  {from: 700, to: 820, step: '主线三 · 语文英语', color: INDIGO, title: '《语英提分工坊》\n8 大实战台 142 关', sub: '首页 5 秒试玩排雷与升格 ＋ 3 期专属女声易错字听写'},
+  {from: 820, to: 940, step: '主线三 · 语文提分', color: INDIGO, title: '古诗易错字排雷\n文言精译＋阅读踩点', sub: '30 篇易错字 ＋ 16 篇文言精译 ＋ 18 个阅读 1 分 vs 满分对比'},
+  {from: 940, to: 1060, step: '主线三 · 英语提分', color: INDIGO, title: '短文还原找线索\n作文 10→15 分升格', sub: '12 篇短文填空还原 ＋ 12 大作文主题三级升格与英文点读'},
+  {from: 1060, to: 1205, step: '全科默写纸', color: GREEN, title: '253 条带口诀\n一键印 A4 默写纸', sub: '语英＋小四门 100% 配口诀 · 零透字背诵遮罩自测'},
+  {from: 1205, to: 1350, step: '同步真题 · 云端', color: GREEN, title: '同步卷＋全国真题\n3 台设备云端同步', sub: '错题 1/3/7/14 天自动复习 · 换手机不丢闯关与错题进度'},
 ];
 
 const Hook: React.FC = () => {
@@ -23,46 +25,22 @@ const Hook: React.FC = () => {
   const {fps} = useVideoConfig();
   const a = spring({frame: f - 4, fps, config: {damping: 14}});
   const b = spring({frame: f - 30, fps, config: {damping: 14}});
-  const out = 1 - fade(f, 95, 108);
+  const c = spring({frame: f - 65, fps, config: {damping: 15}});
+  const out = 1 - fade(f, 170, 185);
   return (
-    <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center', justifyContent: 'center', opacity: out, padding: 70, textAlign: 'center'}}>
-      <div style={{fontWeight: 900, fontSize: 104, lineHeight: 1.2, color: '#1c2924', transform: `scale(${0.8 + a * 0.2})`, opacity: a}}>
-        孩子哪里弱？<br /><span style={{color: '#c0392b'}}>同一类题错了又错？</span>
+    <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center', justifyContent: 'center', opacity: out, padding: 64, textAlign: 'center'}}>
+      <div style={{display: 'inline-block', background: GREEN, color: '#ffe5aa', fontWeight: 900, fontSize: 38, padding: '10px 30px', borderRadius: 999, marginBottom: 38, opacity: a}}>
+        👨‍👩‍👧 自家娃亲用期中冲进名列前茅
       </div>
-      <div style={{fontWeight: 500, fontSize: 46, color: '#46554e', marginTop: 48, opacity: b, transform: `translateY(${(1 - b) * 30}px)`}}>
-        先测 → 按章节补 → 错题复习到会<br />用科学的刷题方法帮孩子提分
+      <div style={{fontWeight: 900, fontSize: 96, lineHeight: 1.22, color: '#1c2924', transform: `scale(${0.84 + a * 0.16})`, opacity: a}}>
+        初中刷题抓不住重点？<br /><span style={{color: '#b83b2a'}}>全科三大主线一次搞定</span>
       </div>
-    </AbsoluteFill>
-  );
-};
-
-
-// “题库可以免费拿”：结尾前 3.5 秒
-const FreeWay: React.FC<{start: number; color: string}> = ({start, color}) => {
-  const f = useCurrentFrame();
-  const {fps} = useVideoConfig();
-  const steps = [
-    ['① 先按 14.9 买', '分享价或好友价，都比原价省 5 元'],
-    ['② 邀 3 位朋友也来买', '朋友点你的链接，用好友价 14.9 买'],
-    ['③ 返现 15 元', '等于白用，还多 1 毛'],
-  ];
-  const op = fade(f, start, start + 10) * (1 - fade(f, start + 95, start + 105));
-  const head = spring({frame: f - start, fps, config: {damping: 13}});
-  return (
-    <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center', paddingTop: 250, opacity: op}}>
-      <div style={{fontWeight: 900, fontSize: 100, color: '#b45309', transform: `scale(${0.85 + head * 0.15})`}}>🎁 题库可以免费拿</div>
-      <div style={{marginTop: 70, display: 'flex', flexDirection: 'column', gap: 30, width: 900}}>
-        {steps.map(([a, b], i) => {
-          const p = spring({frame: f - start - 12 - i * 14, fps, config: {damping: 15}});
-          return (
-            <div key={a} style={{background: '#fffefa', border: '4px solid #f2e5af', borderRadius: 30, padding: '28px 40px', opacity: p, transform: `translateX(${(1 - p) * 90}px)`}}>
-              <div style={{fontSize: 56, fontWeight: 900, color: i === 2 ? '#b45309' : '#1c2924'}}>{a}</div>
-              <div style={{fontSize: 38, color: '#46554e', marginTop: 8}}>{b}</div>
-            </div>
-          );
-        })}
+      <div style={{fontWeight: 500, fontSize: 44, color: '#46554e', marginTop: 44, lineHeight: 1.55, opacity: b, transform: `translateY(${(1 - b) * 28}px)`}}>
+        🎬 小四门演播室＋闯关 · 🎯 数理化 59 大模型<br />📖 语英 8 大提分工坊 · 📝 253 条口诀默写纸
       </div>
-      <div style={{marginTop: 60, fontSize: 42, fontWeight: 900, color, opacity: fade(f, start + 55, start + 70)}}>买完，题库里就有你的专属邀请链接</div>
+      <div style={{marginTop: 52, fontSize: 38, fontWeight: 900, color: GREEN, background: '#fffefa', border: '3px solid #d5e2dc', padding: '16px 38px', borderRadius: 999, opacity: c}}>
+        初一到初三 · 手机刷、印 A4 卷都行
+      </div>
     </AbsoluteFill>
   );
 };
@@ -70,26 +48,32 @@ const FreeWay: React.FC<{start: number; color: string}> = ({start, color}) => {
 const Cta: React.FC = () => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const s0 = 1285;
-  const lines = ['早鸟自测卷 · 小升初衔接 限时免费', '同步章节卷 一章一套 · 前 5 题免费试', '各地中考原卷 免费看 · 免费打印', '完整版 19.9 一次买断'];
+  const s0 = 1350;
+  const lines = [
+    '小四门《考点演播室》＋57 关闯关＋6 期故事',
+    '数理化 395 知识点＋59 大名师压轴模型秒搜',
+    '《语英提分工坊》8 大实战台 142 关＋3 期听写',
+    '全科 253 条口诀 A4 默写纸 · 3 台云端同步',
+    '先免费试 · 完整版 ¥19.9 一次买断用到中考',
+  ];
   const logo = spring({frame: f - s0, fps, config: {damping: 13}});
   return (
-    <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center', paddingTop: 170, opacity: fade(f, s0, s0 + 10)}}>
-      <div style={{transform: `scale(${logo})`}}><Badge size={230} /></div>
-      <div style={{fontWeight: 900, fontSize: 84, color: '#1c2924', marginTop: 36}}>爱丽克丝中考题库</div>
-      <div style={{fontWeight: 500, fontSize: 40, color: '#46554e', marginTop: 10}}>初一到初三 · 同步章节卷 · 中考精编卷 · 可打印</div>
-      <div style={{fontWeight: 900, fontSize: 40, color: GREEN, marginTop: 26, textAlign: 'center', lineHeight: 1.45, opacity: fade(f, s0 + 10, s0 + 22)}}>有能力 · 有决心 · 有诚意<br />用科学的刷题方法帮孩子掌握知识点</div>
-      <div style={{marginTop: 50, display: 'flex', flexDirection: 'column', gap: 26}}>
+    <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center', paddingTop: 150, opacity: fade(f, s0, s0 + 12)}}>
+      <div style={{transform: `scale(${logo})`}}><Badge size={210} /></div>
+      <div style={{fontWeight: 900, fontSize: 82, color: '#1c2924', marginTop: 28}}>爱丽克丝中考题库</div>
+      <div style={{fontWeight: 500, fontSize: 38, color: '#46554e', marginTop: 8}}>初一到初三 · 全科三大提分主线 · 可打印</div>
+      <div style={{marginTop: 42, display: 'flex', flexDirection: 'column', gap: 22, width: 940}}>
         {lines.map((t, i) => {
-          const p = spring({frame: f - s0 - 18 - i * 12, fps, config: {damping: 15}});
+          const p = spring({frame: f - s0 - 14 - i * 10, fps, config: {damping: 15}});
+          const isLast = i === lines.length - 1;
           return (
-            <div key={t} style={{background: '#fffefa', border: '3px solid #dedfd6', borderRadius: 28, padding: '24px 40px', fontSize: 44, fontWeight: 900, color: i === lines.length - 1 ? GREEN : '#1c2924', opacity: p, transform: `translateX(${(1 - p) * 80}px)`}}>
+            <div key={t} style={{background: isLast ? '#eef7f4' : '#fffefa', border: `3px solid ${isLast ? GREEN : '#dedfd6'}`, borderRadius: 26, padding: '22px 34px', fontSize: 40, fontWeight: 900, color: isLast ? GREEN : '#1c2924', opacity: p, transform: `translateX(${(1 - p) * 70}px)`}}>
               ✅ {t}
             </div>
           );
         })}
       </div>
-      <div style={{marginTop: 60, fontWeight: 900, fontSize: 58, color: '#fff', background: GREEN, padding: '22px 60px', borderRadius: 999, opacity: fade(f, s0 + 60, s0 + 75), transform: `scale(${1 + Math.sin((f - s0) / 8) * 0.02})`}}>
+      <div style={{marginTop: 52, fontWeight: 900, fontSize: 56, color: '#fff', background: GREEN, padding: '22px 62px', borderRadius: 999, opacity: fade(f, s0 + 55, s0 + 70), transform: `scale(${1 + Math.sin((f - s0) / 8) * 0.02})`}}>
         先免费试 · x4m.cc.cd
       </div>
     </AbsoluteFill>
@@ -99,50 +83,41 @@ const Cta: React.FC = () => {
 export const Zhongkao: React.FC = () => {
   const f = useCurrentFrame();
   const cap = captions.find(c => f >= c.from && f < c.to);
-  const phoneOut = 1 - fade(f, 1170, 1185);
+  const phoneOut = 1 - fade(f, 1340, 1355);
   return (
     <AbsoluteFill>
-      <Background color={GREEN} />
-      <Audio loop src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1465, 1495], [0, 0.8, 0.8, 0], {extrapolateRight: 'clamp'})} />
-      {f < 110 ? <Hook /> : null}
-      {cap ? <Caption key={cap.from} start={cap.from} step={cap.step} title={cap.title} sub={cap.sub} color={GREEN} /> : null}
-      {f >= 100 && f < 1190 ? (
+      <Background color={cap?.color || GREEN} />
+      <Audio loop src={staticFile('bgm.wav')} volume={(fr) => interpolate(fr, [0, 15, 1545, 1590], [0, 0.16, 0.16, 0], {extrapolateRight: 'clamp'})} />
+      <Sequence from={6}>
+        <Audio src={staticFile('zk-vo.mp3')} volume={1} />
+      </Sequence>
+      {f < 188 ? <Hook /> : null}
+      {cap ? <Caption key={cap.from} start={cap.from} step={cap.step} title={cap.title} sub={cap.sub} color={cap.color} /> : null}
+      {f >= 180 && f < 1360 ? (
         <div style={{opacity: phoneOut}}>
           <Phone
-            enterAt={100}
+            enterAt={180}
             shots={[
-              {src: 'zk/01-stage.png', from: 100},
-              {src: 'zk/01b-grid.png', from: 176},
-              {src: 'zk/12-rx.png', from: 255},
-              {src: 'zk/11-sync.png', from: 355},
-              {src: 'zk/02-unit.png', from: 475},
-              {src: 'zk/03-xsc.png', from: 610},
-              {src: 'zk/04-weekly.png', from: 730},
-              {src: 'zk/05-print.png', from: 790},
-              {src: 'zk/06-marked.png', from: 830},
-              {src: 'zk/08-review-hub.png', from: 880},
-              {src: 'zk/09-answered.png', from: 955},
-              {src: 'zk/10-analysis.png', from: 1030},
+              {src: 'zk/01-home-x4m.png', from: 180},
+              {src: 'zk/02-studio.png', from: 315},
+              {src: 'zk/03-home-kp.png', from: 440},
+              {src: 'zk/04-models.png', from: 570},
+              {src: 'zk/05-home-yy.png', from: 700},
+              {src: 'zk/06-yy-poem.png', from: 820},
+              {src: 'zk/07-yy-writing.png', from: 940},
+              {src: 'zk/08-keypoints.png', from: 1060},
+              {src: 'zk/09-papers.png', from: 1205},
             ]}
             highlight={[
-              {shot: 'zk/01-stage.png', box: B['01-stage'].chips, from: 125, to: 175},
-              {shot: 'zk/01b-grid.png', box: B['01b-grid'].modes, from: 180, to: 215},
-              {shot: 'zk/01b-grid.png', box: B['01b-grid'].grid, from: 218, to: 255},
-              {shot: 'zk/12-rx.png', box: B['12-rx'].rx, from: 265, to: 355},
-              {shot: 'zk/11-sync.png', box: B['11-sync'].rows, from: 370, to: 475},
-              {shot: 'zk/02-unit.png', box: B['02-unit'].list, from: 495, to: 610},
-              {shot: 'zk/03-xsc.png', box: B['03-xsc'].list, from: 630, to: 730},
-              {shot: 'zk/04-weekly.png', box: B['04-weekly'].print, from: 745, to: 790},
-              {shot: 'zk/06-marked.png', box: B['06-marked'].grid, from: 835, to: 880},
-              {shot: 'zk/08-review-hub.png', box: B['08-review-hub'].wrong, from: 900, to: 955},
-              {shot: 'zk/09-answered.png', box: B['09-answered'].fb, from: 970, to: 1030},
-              {shot: 'zk/10-analysis.png', box: B['10-analysis'].out, from: 1050, to: 1170},
+              ...(B['01-home-x4m']?.tabs ? [{shot: 'zk/01-home-x4m.png', box: B['01-home-x4m'].tabs, from: 205, to: 305}] : []),
+              ...(B['05-home-yy']?.demo ? [{shot: 'zk/05-home-yy.png', box: B['05-home-yy'].demo, from: 725, to: 810}] : []),
+              ...(B['07-yy-writing']?.upgrade ? [{shot: 'zk/07-yy-writing.png', box: B['07-yy-writing'].upgrade, from: 965, to: 1050}] : []),
+              ...(B['09-papers']?.sync ? [{shot: 'zk/09-papers.png', box: B['09-papers'].sync, from: 1230, to: 1335}] : []),
             ]}
           />
         </div>
       ) : null}
-      {f >= 1175 && f < 1290 ? <FreeWay start={1180} color={GREEN} /> : null}
-      {f >= 1280 ? <Cta /> : null}
+      {f >= 1345 ? <Cta /> : null}
     </AbsoluteFill>
   );
 };
